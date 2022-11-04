@@ -1,15 +1,15 @@
 /*
- * UniswapV2PairV2DTO.h
+ * UniswapV2.PairV2DTO.h
  *
  * Information about a pair. Includes references to each token within the pair, volume information, liquidity information, and more. The pair entity mirrors the pair smart contract, and also contains aggregated information about use.
  */
 
-#ifndef _UniswapV2PairV2DTO_H_
-#define _UniswapV2PairV2DTO_H_
+#ifndef _UniswapV2.PairV2DTO_H_
+#define _UniswapV2.PairV2DTO_H_
 
 
 #include <string>
-#include "NumericsBigInteger.h"
+#include "Numerics.BigInteger.h"
 #include "Object.h"
 
 /** \defgroup Models Data Structures for API
@@ -27,16 +27,16 @@ namespace ArtikCloud {
  *
  */
 
-class UniswapV2PairV2DTO : public Object {
+class UniswapV2.PairV2DTO : public Object {
 public:
 	/*! \brief Constructor.
 	 */
-	UniswapV2PairV2DTO();
-	UniswapV2PairV2DTO(char* str);
+	UniswapV2.PairV2DTO();
+	UniswapV2.PairV2DTO(char* str);
 
 	/*! \brief Destructor.
 	 */
-	virtual ~UniswapV2PairV2DTO();
+	virtual ~UniswapV2.PairV2DTO();
 
 	/*! \brief Retrieve a string JSON representation of this class.
 	 */
@@ -181,11 +181,11 @@ public:
 	void setUntrackedVolumeUsd(std::string  untracked_volume_usd);
 	/*! \brief Get 
 	 */
-	NumericsBigInteger getTxCount();
+	Numerics.BigInteger getTxCount();
 
 	/*! \brief Set 
 	 */
-	void setTxCount(NumericsBigInteger  tx_count);
+	void setTxCount(Numerics.BigInteger  tx_count);
 	/*! \brief Get Timestamp contract was created.
 	 */
 	std::string getCreatedAtTimestamp();
@@ -228,7 +228,7 @@ private:
 	std::string volume_token_1;
 	std::string volume_usd;
 	std::string untracked_volume_usd;
-	NumericsBigInteger tx_count;
+	Numerics.BigInteger tx_count;
 	std::string created_at_timestamp;
 	std::string liquidity_provider_count;
 	double evaluated_ask;
@@ -239,4 +239,4 @@ private:
 }
 }
 
-#endif /* _UniswapV2PairV2DTO_H_ */
+#endif /* _UniswapV2.PairV2DTO_H_ */

@@ -51,7 +51,7 @@ class SushiswapPairDTO implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'SushiswapPairDTO';
+    protected static $openAPIModelName = 'Sushiswap.PairDTO';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -29,7 +29,7 @@ namespace CoinAPI.EMS.REST.V1.Model
     /// <summary>
     /// Hourly stats tracker for pool.
     /// </summary>
-    [DataContract(Name = "UniswapV3PoolHourDataV3DTO")]
+    [DataContract(Name = "UniswapV3.PoolHourDataV3DTO")]
     public partial class UniswapV3PoolHourDataV3DTO : IEquatable<UniswapV3PoolHourDataV3DTO>, IValidatableObject
     {
         /// <summary>

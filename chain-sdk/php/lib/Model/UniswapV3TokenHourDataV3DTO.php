@@ -51,7 +51,7 @@ class UniswapV3TokenHourDataV3DTO implements ModelInterface, ArrayAccess, \JsonS
       *
       * @var string
       */
-    protected static $openAPIModelName = 'UniswapV3TokenHourDataV3DTO';
+    protected static $openAPIModelName = 'UniswapV3.TokenHourDataV3DTO';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

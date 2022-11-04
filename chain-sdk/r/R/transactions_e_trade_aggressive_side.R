@@ -18,7 +18,7 @@ TransactionsETradeAggressiveSide <- R6::R6Class(
     initialize = function(...) {
       local.optional.var <- list(...)
       val <- unlist(local.optional.var)
-      enumvec <- .parse_TransactionsETradeAggressiveSide()
+      enumvec <- .parse_Transactions.ETradeAggressiveSide()
 
       stopifnot(length(val) == 1L)
 
@@ -81,7 +81,7 @@ TransactionsETradeAggressiveSide <- R6::R6Class(
 )
 
 # add to utils.R
-.parse_TransactionsETradeAggressiveSide <- function(vals) {
+.parse_Transactions.ETradeAggressiveSide <- function(vals) {
   res <- gsub("^\\[|\\]$", "", "[Buy, Sell, EstimatedBuy, EstimatedSell, Unknown]")
   unlist(strsplit(res, ", "))
 }

@@ -29,7 +29,7 @@ namespace CoinAPI.EMS.REST.V1.Model
     /// <summary>
     /// Swap are created for each token swap within a pair.
     /// </summary>
-    [DataContract(Name = "UniswapV3SwapV3DTO")]
+    [DataContract(Name = "UniswapV3.SwapV3DTO")]
     public partial class UniswapV3SwapV3DTO : IEquatable<UniswapV3SwapV3DTO>, IValidatableObject
     {
 

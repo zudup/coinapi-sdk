@@ -5,23 +5,23 @@
 #include "Helpers.h"
 
 
-#include "SushiswapPairDTO.h"
+#include "Sushiswap.PairDTO.h"
 
 using namespace std;
 using namespace Tizen::ArtikCloud;
 
-SushiswapPairDTO::SushiswapPairDTO()
+Sushiswap.PairDTO::Sushiswap.PairDTO()
 {
 	//__init();
 }
 
-SushiswapPairDTO::~SushiswapPairDTO()
+Sushiswap.PairDTO::~Sushiswap.PairDTO()
 {
 	//__cleanup();
 }
 
 void
-SushiswapPairDTO::__init()
+Sushiswap.PairDTO::__init()
 {
 	//entry_time = null;
 	//recv_time = null;
@@ -52,7 +52,7 @@ SushiswapPairDTO::__init()
 }
 
 void
-SushiswapPairDTO::__cleanup()
+Sushiswap.PairDTO::__cleanup()
 {
 	//if(entry_time != NULL) {
 	//
@@ -188,7 +188,7 @@ SushiswapPairDTO::__cleanup()
 }
 
 void
-SushiswapPairDTO::fromJson(char* jsonStr)
+Sushiswap.PairDTO::fromJson(char* jsonStr)
 {
 	JsonObject *pJsonObject = json_node_get_object(json_from_string(jsonStr,NULL));
 	JsonNode *node;
@@ -480,13 +480,13 @@ SushiswapPairDTO::fromJson(char* jsonStr)
 	}
 }
 
-SushiswapPairDTO::SushiswapPairDTO(char* json)
+Sushiswap.PairDTO::Sushiswap.PairDTO(char* json)
 {
 	this->fromJson(json);
 }
 
 char*
-SushiswapPairDTO::toJson()
+Sushiswap.PairDTO::toJson()
 {
 	JsonObject *pJsonObject = json_object_new();
 	JsonNode *node;
@@ -733,313 +733,313 @@ SushiswapPairDTO::toJson()
 }
 
 std::string
-SushiswapPairDTO::getEntryTime()
+Sushiswap.PairDTO::getEntryTime()
 {
 	return entry_time;
 }
 
 void
-SushiswapPairDTO::setEntryTime(std::string  entry_time)
+Sushiswap.PairDTO::setEntryTime(std::string  entry_time)
 {
 	this->entry_time = entry_time;
 }
 
 std::string
-SushiswapPairDTO::getRecvTime()
+Sushiswap.PairDTO::getRecvTime()
 {
 	return recv_time;
 }
 
 void
-SushiswapPairDTO::setRecvTime(std::string  recv_time)
+Sushiswap.PairDTO::setRecvTime(std::string  recv_time)
 {
 	this->recv_time = recv_time;
 }
 
 long long
-SushiswapPairDTO::getBlockNumber()
+Sushiswap.PairDTO::getBlockNumber()
 {
 	return block_number;
 }
 
 void
-SushiswapPairDTO::setBlockNumber(long long  block_number)
+Sushiswap.PairDTO::setBlockNumber(long long  block_number)
 {
 	this->block_number = block_number;
 }
 
 std::string
-SushiswapPairDTO::getId()
+Sushiswap.PairDTO::getId()
 {
 	return id;
 }
 
 void
-SushiswapPairDTO::setId(std::string  id)
+Sushiswap.PairDTO::setId(std::string  id)
 {
 	this->id = id;
 }
 
 std::string
-SushiswapPairDTO::getFactory()
+Sushiswap.PairDTO::getFactory()
 {
 	return factory;
 }
 
 void
-SushiswapPairDTO::setFactory(std::string  factory)
+Sushiswap.PairDTO::setFactory(std::string  factory)
 {
 	this->factory = factory;
 }
 
 std::string
-SushiswapPairDTO::getName()
+Sushiswap.PairDTO::getName()
 {
 	return name;
 }
 
 void
-SushiswapPairDTO::setName(std::string  name)
+Sushiswap.PairDTO::setName(std::string  name)
 {
 	this->name = name;
 }
 
 std::string
-SushiswapPairDTO::getToken0()
+Sushiswap.PairDTO::getToken0()
 {
 	return token_0;
 }
 
 void
-SushiswapPairDTO::setToken0(std::string  token_0)
+Sushiswap.PairDTO::setToken0(std::string  token_0)
 {
 	this->token_0 = token_0;
 }
 
 std::string
-SushiswapPairDTO::getToken1()
+Sushiswap.PairDTO::getToken1()
 {
 	return token_1;
 }
 
 void
-SushiswapPairDTO::setToken1(std::string  token_1)
+Sushiswap.PairDTO::setToken1(std::string  token_1)
 {
 	this->token_1 = token_1;
 }
 
 std::string
-SushiswapPairDTO::getReserve0()
+Sushiswap.PairDTO::getReserve0()
 {
 	return reserve_0;
 }
 
 void
-SushiswapPairDTO::setReserve0(std::string  reserve_0)
+Sushiswap.PairDTO::setReserve0(std::string  reserve_0)
 {
 	this->reserve_0 = reserve_0;
 }
 
 std::string
-SushiswapPairDTO::getReserve1()
+Sushiswap.PairDTO::getReserve1()
 {
 	return reserve_1;
 }
 
 void
-SushiswapPairDTO::setReserve1(std::string  reserve_1)
+Sushiswap.PairDTO::setReserve1(std::string  reserve_1)
 {
 	this->reserve_1 = reserve_1;
 }
 
 std::string
-SushiswapPairDTO::getTotalSupply()
+Sushiswap.PairDTO::getTotalSupply()
 {
 	return total_supply;
 }
 
 void
-SushiswapPairDTO::setTotalSupply(std::string  total_supply)
+Sushiswap.PairDTO::setTotalSupply(std::string  total_supply)
 {
 	this->total_supply = total_supply;
 }
 
 std::string
-SushiswapPairDTO::getReserveEth()
+Sushiswap.PairDTO::getReserveEth()
 {
 	return reserve_eth;
 }
 
 void
-SushiswapPairDTO::setReserveEth(std::string  reserve_eth)
+Sushiswap.PairDTO::setReserveEth(std::string  reserve_eth)
 {
 	this->reserve_eth = reserve_eth;
 }
 
 std::string
-SushiswapPairDTO::getReserveUsd()
+Sushiswap.PairDTO::getReserveUsd()
 {
 	return reserve_usd;
 }
 
 void
-SushiswapPairDTO::setReserveUsd(std::string  reserve_usd)
+Sushiswap.PairDTO::setReserveUsd(std::string  reserve_usd)
 {
 	this->reserve_usd = reserve_usd;
 }
 
 std::string
-SushiswapPairDTO::getTrackedReserveEth()
+Sushiswap.PairDTO::getTrackedReserveEth()
 {
 	return tracked_reserve_eth;
 }
 
 void
-SushiswapPairDTO::setTrackedReserveEth(std::string  tracked_reserve_eth)
+Sushiswap.PairDTO::setTrackedReserveEth(std::string  tracked_reserve_eth)
 {
 	this->tracked_reserve_eth = tracked_reserve_eth;
 }
 
 std::string
-SushiswapPairDTO::getToken0Price()
+Sushiswap.PairDTO::getToken0Price()
 {
 	return token_0_price;
 }
 
 void
-SushiswapPairDTO::setToken0Price(std::string  token_0_price)
+Sushiswap.PairDTO::setToken0Price(std::string  token_0_price)
 {
 	this->token_0_price = token_0_price;
 }
 
 std::string
-SushiswapPairDTO::getToken1Price()
+Sushiswap.PairDTO::getToken1Price()
 {
 	return token_1_price;
 }
 
 void
-SushiswapPairDTO::setToken1Price(std::string  token_1_price)
+Sushiswap.PairDTO::setToken1Price(std::string  token_1_price)
 {
 	this->token_1_price = token_1_price;
 }
 
 std::string
-SushiswapPairDTO::getVolumeToken0()
+Sushiswap.PairDTO::getVolumeToken0()
 {
 	return volume_token_0;
 }
 
 void
-SushiswapPairDTO::setVolumeToken0(std::string  volume_token_0)
+Sushiswap.PairDTO::setVolumeToken0(std::string  volume_token_0)
 {
 	this->volume_token_0 = volume_token_0;
 }
 
 std::string
-SushiswapPairDTO::getVolumeToken1()
+Sushiswap.PairDTO::getVolumeToken1()
 {
 	return volume_token_1;
 }
 
 void
-SushiswapPairDTO::setVolumeToken1(std::string  volume_token_1)
+Sushiswap.PairDTO::setVolumeToken1(std::string  volume_token_1)
 {
 	this->volume_token_1 = volume_token_1;
 }
 
 std::string
-SushiswapPairDTO::getVolumeUsd()
+Sushiswap.PairDTO::getVolumeUsd()
 {
 	return volume_usd;
 }
 
 void
-SushiswapPairDTO::setVolumeUsd(std::string  volume_usd)
+Sushiswap.PairDTO::setVolumeUsd(std::string  volume_usd)
 {
 	this->volume_usd = volume_usd;
 }
 
 std::string
-SushiswapPairDTO::getUntrackedVolumeUsd()
+Sushiswap.PairDTO::getUntrackedVolumeUsd()
 {
 	return untracked_volume_usd;
 }
 
 void
-SushiswapPairDTO::setUntrackedVolumeUsd(std::string  untracked_volume_usd)
+Sushiswap.PairDTO::setUntrackedVolumeUsd(std::string  untracked_volume_usd)
 {
 	this->untracked_volume_usd = untracked_volume_usd;
 }
 
 std::string
-SushiswapPairDTO::getTxCount()
+Sushiswap.PairDTO::getTxCount()
 {
 	return tx_count;
 }
 
 void
-SushiswapPairDTO::setTxCount(std::string  tx_count)
+Sushiswap.PairDTO::setTxCount(std::string  tx_count)
 {
 	this->tx_count = tx_count;
 }
 
 std::string
-SushiswapPairDTO::getLiquidityProviderCount()
+Sushiswap.PairDTO::getLiquidityProviderCount()
 {
 	return liquidity_provider_count;
 }
 
 void
-SushiswapPairDTO::setLiquidityProviderCount(std::string  liquidity_provider_count)
+Sushiswap.PairDTO::setLiquidityProviderCount(std::string  liquidity_provider_count)
 {
 	this->liquidity_provider_count = liquidity_provider_count;
 }
 
 std::string
-SushiswapPairDTO::getTimestamp()
+Sushiswap.PairDTO::getTimestamp()
 {
 	return timestamp;
 }
 
 void
-SushiswapPairDTO::setTimestamp(std::string  timestamp)
+Sushiswap.PairDTO::setTimestamp(std::string  timestamp)
 {
 	this->timestamp = timestamp;
 }
 
 std::string
-SushiswapPairDTO::getBlock()
+Sushiswap.PairDTO::getBlock()
 {
 	return block;
 }
 
 void
-SushiswapPairDTO::setBlock(std::string  block)
+Sushiswap.PairDTO::setBlock(std::string  block)
 {
 	this->block = block;
 }
 
 long long
-SushiswapPairDTO::getVid()
+Sushiswap.PairDTO::getVid()
 {
 	return vid;
 }
 
 void
-SushiswapPairDTO::setVid(long long  vid)
+Sushiswap.PairDTO::setVid(long long  vid)
 {
 	this->vid = vid;
 }
 
 double
-SushiswapPairDTO::getEvaluatedAsk()
+Sushiswap.PairDTO::getEvaluatedAsk()
 {
 	return evaluated_ask;
 }
 
 void
-SushiswapPairDTO::setEvaluatedAsk(double  evaluated_ask)
+Sushiswap.PairDTO::setEvaluatedAsk(double  evaluated_ask)
 {
 	this->evaluated_ask = evaluated_ask;
 }

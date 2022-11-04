@@ -1,4 +1,4 @@
-# UniswapV3TokenV3DTO
+# UniswapV3.TokenV3DTO
 
 ## Properties
 Name | Type | Description | Notes

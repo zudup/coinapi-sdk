@@ -204,7 +204,7 @@
 #' Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
 #'
 #' \itemize{
-#' \item \emph{ @returnType } list( \link{SushiswapPairDTO} ) \cr
+#' \item \emph{ @returnType } list( \link{Sushiswap.PairDTO} ) \cr
 #'
 #'
 #' \item status code : 200 | successful operation
@@ -224,7 +224,7 @@
 #' \item \emph{ @param } start_date character
 #' \item \emph{ @param } end_date character
 #' \item \emph{ @param } pool_id character
-#' \item \emph{ @returnType } list( \link{SushiswapPairDTO} ) \cr
+#' \item \emph{ @returnType } list( \link{Sushiswap.PairDTO} ) \cr
 #'
 #'
 #' \item status code : 200 | successful operation
@@ -239,7 +239,7 @@
 #' \strong{ DappsSushiswapSwapsCurrentGet } \emph{ GetSwaps }
 #'
 #' \itemize{
-#' \item \emph{ @returnType } list( \link{SushiswapSwapDTO} ) \cr
+#' \item \emph{ @returnType } list( \link{Sushiswap.SwapDTO} ) \cr
 #'
 #'
 #' \item status code : 200 | successful operation
@@ -259,7 +259,7 @@
 #' \item \emph{ @param } start_date character
 #' \item \emph{ @param } end_date character
 #' \item \emph{ @param } pool_id character
-#' \item \emph{ @returnType } list( \link{SushiswapSwapDTO} ) \cr
+#' \item \emph{ @returnType } list( \link{Sushiswap.SwapDTO} ) \cr
 #'
 #'
 #' \item status code : 200 | successful operation
@@ -293,7 +293,7 @@
 #' \strong{ DappsSushiswapTokensCurrentGet } \emph{ GetTokens }
 #'
 #' \itemize{
-#' \item \emph{ @returnType } list( \link{SushiswapTokenDTO} ) \cr
+#' \item \emph{ @returnType } list( \link{Sushiswap.TokenDTO} ) \cr
 #'
 #'
 #' \item status code : 200 | successful operation
@@ -313,7 +313,7 @@
 #' \item \emph{ @param } start_date character
 #' \item \emph{ @param } end_date character
 #' \item \emph{ @param } token_id character
-#' \item \emph{ @returnType } list( \link{SushiswapTokenDTO} ) \cr
+#' \item \emph{ @returnType } list( \link{Sushiswap.TokenDTO} ) \cr
 #'
 #'
 #' \item status code : 200 | successful operation

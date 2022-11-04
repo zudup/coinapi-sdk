@@ -1,4 +1,4 @@
-goog.provide('API.Client.SushiswapSwapDTO');
+goog.provide('API.Client.Sushiswap.SwapDTO');
 
 /**
  * Swap are created for each token swap within a pair.
@@ -141,7 +141,7 @@ API.Client.SushiswapSwapDTO.prototype.evaluatedPrice;
 API.Client.SushiswapSwapDTO.prototype.evaluatedAmount;
 
 /**
- * @type {!API.Client.TransactionsETradeAggressiveSide}
+ * @type {!API.Client.Transactions.ETradeAggressiveSide}
  * @export
  */
 API.Client.SushiswapSwapDTO.prototype.evaluatedAggressor;

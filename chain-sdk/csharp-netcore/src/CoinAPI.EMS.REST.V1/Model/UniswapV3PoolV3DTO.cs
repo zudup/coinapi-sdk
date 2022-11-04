@@ -29,7 +29,7 @@ namespace CoinAPI.EMS.REST.V1.Model
     /// <summary>
     /// Information about a pool. Includes references to each token within the pool, volume information, liquidity information, and more. The pool entity mirrors the pool smart contract, and also contains aggregated information about use.
     /// </summary>
-    [DataContract(Name = "UniswapV3PoolV3DTO")]
+    [DataContract(Name = "UniswapV3.PoolV3DTO")]
     public partial class UniswapV3PoolV3DTO : IEquatable<UniswapV3PoolV3DTO>, IValidatableObject
     {
         /// <summary>

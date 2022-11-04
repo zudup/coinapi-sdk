@@ -1,6 +1,6 @@
 
 
-# UniswapV3UniswapDayDataV3DTO
+# UniswapDayDataV3DTO
 
 Data accumulated and condensed into day stats for all of Uniswap.
 
@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **volumeUsd** | **String** | Total volume across all pairs on this day, stored as a derived amount of USD. |  [optional]
 **volumeUsdUntracked** | **String** | Total daily volume in Uniswap derived in terms of USD untracked. |  [optional]
 **feesUsd** | **String** | Fees in USD |  [optional]
-**txCount** | [**NumericsBigInteger**](NumericsBigInteger.md) |  |  [optional]
+**txCount** | [**BigInteger**](BigInteger.md) |  |  [optional]
 **tvlUsd** | **String** | Tvl in terms of USD. |  [optional]
 
 

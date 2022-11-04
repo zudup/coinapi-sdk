@@ -1,6 +1,6 @@
 
 
-# UniswapV3TickDayDataV3DTO
+# TickDayDataV3DTO
 
 Data accumulated and condensed into day stats for each exchange. Entity gets saved only if there is a change during the day
 

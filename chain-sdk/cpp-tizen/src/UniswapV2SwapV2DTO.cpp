@@ -5,23 +5,23 @@
 #include "Helpers.h"
 
 
-#include "UniswapV2SwapV2DTO.h"
+#include "UniswapV2.SwapV2DTO.h"
 
 using namespace std;
 using namespace Tizen::ArtikCloud;
 
-UniswapV2SwapV2DTO::UniswapV2SwapV2DTO()
+UniswapV2.SwapV2DTO::UniswapV2.SwapV2DTO()
 {
 	//__init();
 }
 
-UniswapV2SwapV2DTO::~UniswapV2SwapV2DTO()
+UniswapV2.SwapV2DTO::~UniswapV2.SwapV2DTO()
 {
 	//__cleanup();
 }
 
 void
-UniswapV2SwapV2DTO::__init()
+UniswapV2.SwapV2DTO::__init()
 {
 	//entry_time = null;
 	//recv_time = null;
@@ -38,17 +38,17 @@ UniswapV2SwapV2DTO::__init()
 	//amount_0_out = std::string();
 	//amount_1_out = std::string();
 	//to = std::string();
-	//log_index = new NumericsBigInteger();
+	//log_index = new Numerics.BigInteger();
 	//amount_usd = std::string();
 	//evaluated_price = double(0);
 	//evaluated_amount = double(0);
-	//evaluated_aggressor = new TransactionsETradeAggressiveSide();
+	//evaluated_aggressor = new Transactions.ETradeAggressiveSide();
 	//pool_id = std::string();
 	//transaction_id = std::string();
 }
 
 void
-UniswapV2SwapV2DTO::__cleanup()
+UniswapV2.SwapV2DTO::__cleanup()
 {
 	//if(entry_time != NULL) {
 	//
@@ -164,7 +164,7 @@ UniswapV2SwapV2DTO::__cleanup()
 }
 
 void
-UniswapV2SwapV2DTO::fromJson(char* jsonStr)
+UniswapV2.SwapV2DTO::fromJson(char* jsonStr)
 {
 	JsonObject *pJsonObject = json_node_get_object(json_from_string(jsonStr,NULL));
 	JsonNode *node;
@@ -338,11 +338,11 @@ UniswapV2SwapV2DTO::fromJson(char* jsonStr)
 	if (node !=NULL) {
 	
 
-		if (isprimitive("NumericsBigInteger")) {
-			jsonToValue(&log_index, node, "NumericsBigInteger", "NumericsBigInteger");
+		if (isprimitive("Numerics.BigInteger")) {
+			jsonToValue(&log_index, node, "Numerics.BigInteger", "Numerics.BigInteger");
 		} else {
 			
-			NumericsBigInteger* obj = static_cast<NumericsBigInteger*> (&log_index);
+			Numerics.BigInteger* obj = static_cast<Numerics.BigInteger*> (&log_index);
 			obj->fromJson(json_to_string(node, false));
 			
 		}
@@ -385,11 +385,11 @@ UniswapV2SwapV2DTO::fromJson(char* jsonStr)
 	if (node !=NULL) {
 	
 
-		if (isprimitive("TransactionsETradeAggressiveSide")) {
-			jsonToValue(&evaluated_aggressor, node, "TransactionsETradeAggressiveSide", "TransactionsETradeAggressiveSide");
+		if (isprimitive("Transactions.ETradeAggressiveSide")) {
+			jsonToValue(&evaluated_aggressor, node, "Transactions.ETradeAggressiveSide", "Transactions.ETradeAggressiveSide");
 		} else {
 			
-			TransactionsETradeAggressiveSide* obj = static_cast<TransactionsETradeAggressiveSide*> (&evaluated_aggressor);
+			Transactions.ETradeAggressiveSide* obj = static_cast<Transactions.ETradeAggressiveSide*> (&evaluated_aggressor);
 			obj->fromJson(json_to_string(node, false));
 			
 		}
@@ -418,13 +418,13 @@ UniswapV2SwapV2DTO::fromJson(char* jsonStr)
 	}
 }
 
-UniswapV2SwapV2DTO::UniswapV2SwapV2DTO(char* json)
+UniswapV2.SwapV2DTO::UniswapV2.SwapV2DTO(char* json)
 {
 	this->fromJson(json);
 }
 
 char*
-UniswapV2SwapV2DTO::toJson()
+UniswapV2.SwapV2DTO::toJson()
 {
 	JsonObject *pJsonObject = json_object_new();
 	JsonNode *node;
@@ -563,13 +563,13 @@ UniswapV2SwapV2DTO::toJson()
 	}
 	const gchar *toKey = "to";
 	json_object_set_member(pJsonObject, toKey, node);
-	if (isprimitive("NumericsBigInteger")) {
-		NumericsBigInteger obj = getLogIndex();
-		node = converttoJson(&obj, "NumericsBigInteger", "");
+	if (isprimitive("Numerics.BigInteger")) {
+		Numerics.BigInteger obj = getLogIndex();
+		node = converttoJson(&obj, "Numerics.BigInteger", "");
 	}
 	else {
 		
-		NumericsBigInteger obj = static_cast<NumericsBigInteger> (getLogIndex());
+		Numerics.BigInteger obj = static_cast<Numerics.BigInteger> (getLogIndex());
 		GError *mygerror;
 		mygerror = NULL;
 		node = json_from_string(obj.toJson(), &mygerror);
@@ -604,13 +604,13 @@ UniswapV2SwapV2DTO::toJson()
 	}
 	const gchar *evaluated_amountKey = "evaluated_amount";
 	json_object_set_member(pJsonObject, evaluated_amountKey, node);
-	if (isprimitive("TransactionsETradeAggressiveSide")) {
-		TransactionsETradeAggressiveSide obj = getEvaluatedAggressor();
-		node = converttoJson(&obj, "TransactionsETradeAggressiveSide", "");
+	if (isprimitive("Transactions.ETradeAggressiveSide")) {
+		Transactions.ETradeAggressiveSide obj = getEvaluatedAggressor();
+		node = converttoJson(&obj, "Transactions.ETradeAggressiveSide", "");
 	}
 	else {
 		
-		TransactionsETradeAggressiveSide obj = static_cast<TransactionsETradeAggressiveSide> (getEvaluatedAggressor());
+		Transactions.ETradeAggressiveSide obj = static_cast<Transactions.ETradeAggressiveSide> (getEvaluatedAggressor());
 		GError *mygerror;
 		mygerror = NULL;
 		node = json_from_string(obj.toJson(), &mygerror);
@@ -645,265 +645,265 @@ UniswapV2SwapV2DTO::toJson()
 }
 
 std::string
-UniswapV2SwapV2DTO::getEntryTime()
+UniswapV2.SwapV2DTO::getEntryTime()
 {
 	return entry_time;
 }
 
 void
-UniswapV2SwapV2DTO::setEntryTime(std::string  entry_time)
+UniswapV2.SwapV2DTO::setEntryTime(std::string  entry_time)
 {
 	this->entry_time = entry_time;
 }
 
 std::string
-UniswapV2SwapV2DTO::getRecvTime()
+UniswapV2.SwapV2DTO::getRecvTime()
 {
 	return recv_time;
 }
 
 void
-UniswapV2SwapV2DTO::setRecvTime(std::string  recv_time)
+UniswapV2.SwapV2DTO::setRecvTime(std::string  recv_time)
 {
 	this->recv_time = recv_time;
 }
 
 long long
-UniswapV2SwapV2DTO::getBlockNumber()
+UniswapV2.SwapV2DTO::getBlockNumber()
 {
 	return block_number;
 }
 
 void
-UniswapV2SwapV2DTO::setBlockNumber(long long  block_number)
+UniswapV2.SwapV2DTO::setBlockNumber(long long  block_number)
 {
 	this->block_number = block_number;
 }
 
 long long
-UniswapV2SwapV2DTO::getVid()
+UniswapV2.SwapV2DTO::getVid()
 {
 	return vid;
 }
 
 void
-UniswapV2SwapV2DTO::setVid(long long  vid)
+UniswapV2.SwapV2DTO::setVid(long long  vid)
 {
 	this->vid = vid;
 }
 
 std::string
-UniswapV2SwapV2DTO::getId()
+UniswapV2.SwapV2DTO::getId()
 {
 	return id;
 }
 
 void
-UniswapV2SwapV2DTO::setId(std::string  id)
+UniswapV2.SwapV2DTO::setId(std::string  id)
 {
 	this->id = id;
 }
 
 std::string
-UniswapV2SwapV2DTO::getTransaction()
+UniswapV2.SwapV2DTO::getTransaction()
 {
 	return transaction;
 }
 
 void
-UniswapV2SwapV2DTO::setTransaction(std::string  transaction)
+UniswapV2.SwapV2DTO::setTransaction(std::string  transaction)
 {
 	this->transaction = transaction;
 }
 
 std::string
-UniswapV2SwapV2DTO::getTimestamp()
+UniswapV2.SwapV2DTO::getTimestamp()
 {
 	return timestamp;
 }
 
 void
-UniswapV2SwapV2DTO::setTimestamp(std::string  timestamp)
+UniswapV2.SwapV2DTO::setTimestamp(std::string  timestamp)
 {
 	this->timestamp = timestamp;
 }
 
 std::string
-UniswapV2SwapV2DTO::getPair()
+UniswapV2.SwapV2DTO::getPair()
 {
 	return pair;
 }
 
 void
-UniswapV2SwapV2DTO::setPair(std::string  pair)
+UniswapV2.SwapV2DTO::setPair(std::string  pair)
 {
 	this->pair = pair;
 }
 
 std::string
-UniswapV2SwapV2DTO::getSender()
+UniswapV2.SwapV2DTO::getSender()
 {
 	return sender;
 }
 
 void
-UniswapV2SwapV2DTO::setSender(std::string  sender)
+UniswapV2.SwapV2DTO::setSender(std::string  sender)
 {
 	this->sender = sender;
 }
 
 std::string
-UniswapV2SwapV2DTO::getFrom()
+UniswapV2.SwapV2DTO::getFrom()
 {
 	return from;
 }
 
 void
-UniswapV2SwapV2DTO::setFrom(std::string  from)
+UniswapV2.SwapV2DTO::setFrom(std::string  from)
 {
 	this->from = from;
 }
 
 std::string
-UniswapV2SwapV2DTO::getAmount0In()
+UniswapV2.SwapV2DTO::getAmount0In()
 {
 	return amount_0_in;
 }
 
 void
-UniswapV2SwapV2DTO::setAmount0In(std::string  amount_0_in)
+UniswapV2.SwapV2DTO::setAmount0In(std::string  amount_0_in)
 {
 	this->amount_0_in = amount_0_in;
 }
 
 std::string
-UniswapV2SwapV2DTO::getAmount1In()
+UniswapV2.SwapV2DTO::getAmount1In()
 {
 	return amount_1_in;
 }
 
 void
-UniswapV2SwapV2DTO::setAmount1In(std::string  amount_1_in)
+UniswapV2.SwapV2DTO::setAmount1In(std::string  amount_1_in)
 {
 	this->amount_1_in = amount_1_in;
 }
 
 std::string
-UniswapV2SwapV2DTO::getAmount0Out()
+UniswapV2.SwapV2DTO::getAmount0Out()
 {
 	return amount_0_out;
 }
 
 void
-UniswapV2SwapV2DTO::setAmount0Out(std::string  amount_0_out)
+UniswapV2.SwapV2DTO::setAmount0Out(std::string  amount_0_out)
 {
 	this->amount_0_out = amount_0_out;
 }
 
 std::string
-UniswapV2SwapV2DTO::getAmount1Out()
+UniswapV2.SwapV2DTO::getAmount1Out()
 {
 	return amount_1_out;
 }
 
 void
-UniswapV2SwapV2DTO::setAmount1Out(std::string  amount_1_out)
+UniswapV2.SwapV2DTO::setAmount1Out(std::string  amount_1_out)
 {
 	this->amount_1_out = amount_1_out;
 }
 
 std::string
-UniswapV2SwapV2DTO::getTo()
+UniswapV2.SwapV2DTO::getTo()
 {
 	return to;
 }
 
 void
-UniswapV2SwapV2DTO::setTo(std::string  to)
+UniswapV2.SwapV2DTO::setTo(std::string  to)
 {
 	this->to = to;
 }
 
-NumericsBigInteger
-UniswapV2SwapV2DTO::getLogIndex()
+Numerics.BigInteger
+UniswapV2.SwapV2DTO::getLogIndex()
 {
 	return log_index;
 }
 
 void
-UniswapV2SwapV2DTO::setLogIndex(NumericsBigInteger  log_index)
+UniswapV2.SwapV2DTO::setLogIndex(Numerics.BigInteger  log_index)
 {
 	this->log_index = log_index;
 }
 
 std::string
-UniswapV2SwapV2DTO::getAmountUsd()
+UniswapV2.SwapV2DTO::getAmountUsd()
 {
 	return amount_usd;
 }
 
 void
-UniswapV2SwapV2DTO::setAmountUsd(std::string  amount_usd)
+UniswapV2.SwapV2DTO::setAmountUsd(std::string  amount_usd)
 {
 	this->amount_usd = amount_usd;
 }
 
 double
-UniswapV2SwapV2DTO::getEvaluatedPrice()
+UniswapV2.SwapV2DTO::getEvaluatedPrice()
 {
 	return evaluated_price;
 }
 
 void
-UniswapV2SwapV2DTO::setEvaluatedPrice(double  evaluated_price)
+UniswapV2.SwapV2DTO::setEvaluatedPrice(double  evaluated_price)
 {
 	this->evaluated_price = evaluated_price;
 }
 
 double
-UniswapV2SwapV2DTO::getEvaluatedAmount()
+UniswapV2.SwapV2DTO::getEvaluatedAmount()
 {
 	return evaluated_amount;
 }
 
 void
-UniswapV2SwapV2DTO::setEvaluatedAmount(double  evaluated_amount)
+UniswapV2.SwapV2DTO::setEvaluatedAmount(double  evaluated_amount)
 {
 	this->evaluated_amount = evaluated_amount;
 }
 
-TransactionsETradeAggressiveSide
-UniswapV2SwapV2DTO::getEvaluatedAggressor()
+Transactions.ETradeAggressiveSide
+UniswapV2.SwapV2DTO::getEvaluatedAggressor()
 {
 	return evaluated_aggressor;
 }
 
 void
-UniswapV2SwapV2DTO::setEvaluatedAggressor(TransactionsETradeAggressiveSide  evaluated_aggressor)
+UniswapV2.SwapV2DTO::setEvaluatedAggressor(Transactions.ETradeAggressiveSide  evaluated_aggressor)
 {
 	this->evaluated_aggressor = evaluated_aggressor;
 }
 
 std::string
-UniswapV2SwapV2DTO::getPoolId()
+UniswapV2.SwapV2DTO::getPoolId()
 {
 	return pool_id;
 }
 
 void
-UniswapV2SwapV2DTO::setPoolId(std::string  pool_id)
+UniswapV2.SwapV2DTO::setPoolId(std::string  pool_id)
 {
 	this->pool_id = pool_id;
 }
 
 std::string
-UniswapV2SwapV2DTO::getTransactionId()
+UniswapV2.SwapV2DTO::getTransactionId()
 {
 	return transaction_id;
 }
 
 void
-UniswapV2SwapV2DTO::setTransactionId(std::string  transaction_id)
+UniswapV2.SwapV2DTO::setTransactionId(std::string  transaction_id)
 {
 	this->transaction_id = transaction_id;
 }

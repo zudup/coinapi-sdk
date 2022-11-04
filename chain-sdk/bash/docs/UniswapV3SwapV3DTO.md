@@ -1,4 +1,4 @@
-# UniswapV3SwapV3DTO
+# UniswapV3.SwapV3DTO
 
 ## Properties
 Name | Type | Description | Notes

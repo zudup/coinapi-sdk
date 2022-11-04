@@ -5,23 +5,23 @@
 #include "Helpers.h"
 
 
-#include "UniswapV3TickDayDataV3DTO.h"
+#include "UniswapV3.TickDayDataV3DTO.h"
 
 using namespace std;
 using namespace Tizen::ArtikCloud;
 
-UniswapV3TickDayDataV3DTO::UniswapV3TickDayDataV3DTO()
+UniswapV3.TickDayDataV3DTO::UniswapV3.TickDayDataV3DTO()
 {
 	//__init();
 }
 
-UniswapV3TickDayDataV3DTO::~UniswapV3TickDayDataV3DTO()
+UniswapV3.TickDayDataV3DTO::~UniswapV3.TickDayDataV3DTO()
 {
 	//__cleanup();
 }
 
 void
-UniswapV3TickDayDataV3DTO::__init()
+UniswapV3.TickDayDataV3DTO::__init()
 {
 	//entry_time = null;
 	//recv_time = null;
@@ -42,7 +42,7 @@ UniswapV3TickDayDataV3DTO::__init()
 }
 
 void
-UniswapV3TickDayDataV3DTO::__cleanup()
+UniswapV3.TickDayDataV3DTO::__cleanup()
 {
 	//if(entry_time != NULL) {
 	//
@@ -128,7 +128,7 @@ UniswapV3TickDayDataV3DTO::__cleanup()
 }
 
 void
-UniswapV3TickDayDataV3DTO::fromJson(char* jsonStr)
+UniswapV3.TickDayDataV3DTO::fromJson(char* jsonStr)
 {
 	JsonObject *pJsonObject = json_node_get_object(json_from_string(jsonStr,NULL));
 	JsonNode *node;
@@ -310,13 +310,13 @@ UniswapV3TickDayDataV3DTO::fromJson(char* jsonStr)
 	}
 }
 
-UniswapV3TickDayDataV3DTO::UniswapV3TickDayDataV3DTO(char* json)
+UniswapV3.TickDayDataV3DTO::UniswapV3.TickDayDataV3DTO(char* json)
 {
 	this->fromJson(json);
 }
 
 char*
-UniswapV3TickDayDataV3DTO::toJson()
+UniswapV3.TickDayDataV3DTO::toJson()
 {
 	JsonObject *pJsonObject = json_object_new();
 	JsonNode *node;
@@ -473,193 +473,193 @@ UniswapV3TickDayDataV3DTO::toJson()
 }
 
 std::string
-UniswapV3TickDayDataV3DTO::getEntryTime()
+UniswapV3.TickDayDataV3DTO::getEntryTime()
 {
 	return entry_time;
 }
 
 void
-UniswapV3TickDayDataV3DTO::setEntryTime(std::string  entry_time)
+UniswapV3.TickDayDataV3DTO::setEntryTime(std::string  entry_time)
 {
 	this->entry_time = entry_time;
 }
 
 std::string
-UniswapV3TickDayDataV3DTO::getRecvTime()
+UniswapV3.TickDayDataV3DTO::getRecvTime()
 {
 	return recv_time;
 }
 
 void
-UniswapV3TickDayDataV3DTO::setRecvTime(std::string  recv_time)
+UniswapV3.TickDayDataV3DTO::setRecvTime(std::string  recv_time)
 {
 	this->recv_time = recv_time;
 }
 
 long long
-UniswapV3TickDayDataV3DTO::getBlockNumber()
+UniswapV3.TickDayDataV3DTO::getBlockNumber()
 {
 	return block_number;
 }
 
 void
-UniswapV3TickDayDataV3DTO::setBlockNumber(long long  block_number)
+UniswapV3.TickDayDataV3DTO::setBlockNumber(long long  block_number)
 {
 	this->block_number = block_number;
 }
 
 std::string
-UniswapV3TickDayDataV3DTO::getId()
+UniswapV3.TickDayDataV3DTO::getId()
 {
 	return id;
 }
 
 void
-UniswapV3TickDayDataV3DTO::setId(std::string  id)
+UniswapV3.TickDayDataV3DTO::setId(std::string  id)
 {
 	this->id = id;
 }
 
 int
-UniswapV3TickDayDataV3DTO::getDate()
+UniswapV3.TickDayDataV3DTO::getDate()
 {
 	return date;
 }
 
 void
-UniswapV3TickDayDataV3DTO::setDate(int  date)
+UniswapV3.TickDayDataV3DTO::setDate(int  date)
 {
 	this->date = date;
 }
 
 std::string
-UniswapV3TickDayDataV3DTO::getPool()
+UniswapV3.TickDayDataV3DTO::getPool()
 {
 	return pool;
 }
 
 void
-UniswapV3TickDayDataV3DTO::setPool(std::string  pool)
+UniswapV3.TickDayDataV3DTO::setPool(std::string  pool)
 {
 	this->pool = pool;
 }
 
 std::string
-UniswapV3TickDayDataV3DTO::getTick()
+UniswapV3.TickDayDataV3DTO::getTick()
 {
 	return tick;
 }
 
 void
-UniswapV3TickDayDataV3DTO::setTick(std::string  tick)
+UniswapV3.TickDayDataV3DTO::setTick(std::string  tick)
 {
 	this->tick = tick;
 }
 
 std::string
-UniswapV3TickDayDataV3DTO::getLiquidityGross()
+UniswapV3.TickDayDataV3DTO::getLiquidityGross()
 {
 	return liquidity_gross;
 }
 
 void
-UniswapV3TickDayDataV3DTO::setLiquidityGross(std::string  liquidity_gross)
+UniswapV3.TickDayDataV3DTO::setLiquidityGross(std::string  liquidity_gross)
 {
 	this->liquidity_gross = liquidity_gross;
 }
 
 std::string
-UniswapV3TickDayDataV3DTO::getLiquidityNet()
+UniswapV3.TickDayDataV3DTO::getLiquidityNet()
 {
 	return liquidity_net;
 }
 
 void
-UniswapV3TickDayDataV3DTO::setLiquidityNet(std::string  liquidity_net)
+UniswapV3.TickDayDataV3DTO::setLiquidityNet(std::string  liquidity_net)
 {
 	this->liquidity_net = liquidity_net;
 }
 
 std::string
-UniswapV3TickDayDataV3DTO::getVolumeToken0()
+UniswapV3.TickDayDataV3DTO::getVolumeToken0()
 {
 	return volume_token_0;
 }
 
 void
-UniswapV3TickDayDataV3DTO::setVolumeToken0(std::string  volume_token_0)
+UniswapV3.TickDayDataV3DTO::setVolumeToken0(std::string  volume_token_0)
 {
 	this->volume_token_0 = volume_token_0;
 }
 
 std::string
-UniswapV3TickDayDataV3DTO::getVolumeToken1()
+UniswapV3.TickDayDataV3DTO::getVolumeToken1()
 {
 	return volume_token_1;
 }
 
 void
-UniswapV3TickDayDataV3DTO::setVolumeToken1(std::string  volume_token_1)
+UniswapV3.TickDayDataV3DTO::setVolumeToken1(std::string  volume_token_1)
 {
 	this->volume_token_1 = volume_token_1;
 }
 
 std::string
-UniswapV3TickDayDataV3DTO::getVolumeUsd()
+UniswapV3.TickDayDataV3DTO::getVolumeUsd()
 {
 	return volume_usd;
 }
 
 void
-UniswapV3TickDayDataV3DTO::setVolumeUsd(std::string  volume_usd)
+UniswapV3.TickDayDataV3DTO::setVolumeUsd(std::string  volume_usd)
 {
 	this->volume_usd = volume_usd;
 }
 
 std::string
-UniswapV3TickDayDataV3DTO::getFeesUsd()
+UniswapV3.TickDayDataV3DTO::getFeesUsd()
 {
 	return fees_usd;
 }
 
 void
-UniswapV3TickDayDataV3DTO::setFeesUsd(std::string  fees_usd)
+UniswapV3.TickDayDataV3DTO::setFeesUsd(std::string  fees_usd)
 {
 	this->fees_usd = fees_usd;
 }
 
 std::string
-UniswapV3TickDayDataV3DTO::getFeeGrowthOutside0x128()
+UniswapV3.TickDayDataV3DTO::getFeeGrowthOutside0x128()
 {
 	return fee_growth_outside_0x128;
 }
 
 void
-UniswapV3TickDayDataV3DTO::setFeeGrowthOutside0x128(std::string  fee_growth_outside_0x128)
+UniswapV3.TickDayDataV3DTO::setFeeGrowthOutside0x128(std::string  fee_growth_outside_0x128)
 {
 	this->fee_growth_outside_0x128 = fee_growth_outside_0x128;
 }
 
 std::string
-UniswapV3TickDayDataV3DTO::getFeeGrowthOutside1x128()
+UniswapV3.TickDayDataV3DTO::getFeeGrowthOutside1x128()
 {
 	return fee_growth_outside_1x128;
 }
 
 void
-UniswapV3TickDayDataV3DTO::setFeeGrowthOutside1x128(std::string  fee_growth_outside_1x128)
+UniswapV3.TickDayDataV3DTO::setFeeGrowthOutside1x128(std::string  fee_growth_outside_1x128)
 {
 	this->fee_growth_outside_1x128 = fee_growth_outside_1x128;
 }
 
 long long
-UniswapV3TickDayDataV3DTO::getVid()
+UniswapV3.TickDayDataV3DTO::getVid()
 {
 	return vid;
 }
 
 void
-UniswapV3TickDayDataV3DTO::setVid(long long  vid)
+UniswapV3.TickDayDataV3DTO::setVid(long long  vid)
 {
 	this->vid = vid;
 }

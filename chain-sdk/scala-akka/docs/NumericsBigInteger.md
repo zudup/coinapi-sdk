@@ -1,6 +1,6 @@
 
 
-# NumericsBigInteger
+# BigInteger
 
 
 ## Properties

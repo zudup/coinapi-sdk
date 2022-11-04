@@ -51,7 +51,7 @@ class SushiswapTokenDTO implements ModelInterface, ArrayAccess, \JsonSerializabl
       *
       * @var string
       */
-    protected static $openAPIModelName = 'SushiswapTokenDTO';
+    protected static $openAPIModelName = 'Sushiswap.TokenDTO';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

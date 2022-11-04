@@ -1,15 +1,15 @@
 /*
- * UniswapV3UniswapDayDataV3DTO.h
+ * UniswapV3.UniswapDayDataV3DTO.h
  *
  * Data accumulated and condensed into day stats for all of Uniswap.
  */
 
-#ifndef _UniswapV3UniswapDayDataV3DTO_H_
-#define _UniswapV3UniswapDayDataV3DTO_H_
+#ifndef _UniswapV3.UniswapDayDataV3DTO_H_
+#define _UniswapV3.UniswapDayDataV3DTO_H_
 
 
 #include <string>
-#include "NumericsBigInteger.h"
+#include "Numerics.BigInteger.h"
 #include "Object.h"
 
 /** \defgroup Models Data Structures for API
@@ -27,16 +27,16 @@ namespace ArtikCloud {
  *
  */
 
-class UniswapV3UniswapDayDataV3DTO : public Object {
+class UniswapV3.UniswapDayDataV3DTO : public Object {
 public:
 	/*! \brief Constructor.
 	 */
-	UniswapV3UniswapDayDataV3DTO();
-	UniswapV3UniswapDayDataV3DTO(char* str);
+	UniswapV3.UniswapDayDataV3DTO();
+	UniswapV3.UniswapDayDataV3DTO(char* str);
 
 	/*! \brief Destructor.
 	 */
-	virtual ~UniswapV3UniswapDayDataV3DTO();
+	virtual ~UniswapV3.UniswapDayDataV3DTO();
 
 	/*! \brief Retrieve a string JSON representation of this class.
 	 */
@@ -118,11 +118,11 @@ public:
 	void setFeesUsd(std::string  fees_usd);
 	/*! \brief Get 
 	 */
-	NumericsBigInteger getTxCount();
+	Numerics.BigInteger getTxCount();
 
 	/*! \brief Set 
 	 */
-	void setTxCount(NumericsBigInteger  tx_count);
+	void setTxCount(Numerics.BigInteger  tx_count);
 	/*! \brief Get Tvl in terms of USD.
 	 */
 	std::string getTvlUsd();
@@ -142,7 +142,7 @@ private:
 	std::string volume_usd;
 	std::string volume_usd_untracked;
 	std::string fees_usd;
-	NumericsBigInteger tx_count;
+	Numerics.BigInteger tx_count;
 	std::string tvl_usd;
 	void __init();
 	void __cleanup();
@@ -151,4 +151,4 @@ private:
 }
 }
 
-#endif /* _UniswapV3UniswapDayDataV3DTO_H_ */
+#endif /* _UniswapV3.UniswapDayDataV3DTO_H_ */

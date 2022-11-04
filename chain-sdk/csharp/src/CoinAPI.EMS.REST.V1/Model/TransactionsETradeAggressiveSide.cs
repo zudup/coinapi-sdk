@@ -25,7 +25,7 @@ using OpenAPIDateConverter = CoinAPI.EMS.REST.V1.Client.OpenAPIDateConverter;
 namespace CoinAPI.EMS.REST.V1.Model
 {
     /// <summary>
-    /// Defines TransactionsETradeAggressiveSide
+    /// Defines Transactions.ETradeAggressiveSide
     /// </summary>
     
     [JsonConverter(typeof(StringEnumConverter))]

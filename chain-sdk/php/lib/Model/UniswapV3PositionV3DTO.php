@@ -51,7 +51,7 @@ class UniswapV3PositionV3DTO implements ModelInterface, ArrayAccess, \JsonSerial
       *
       * @var string
       */
-    protected static $openAPIModelName = 'UniswapV3PositionV3DTO';
+    protected static $openAPIModelName = 'UniswapV3.PositionV3DTO';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

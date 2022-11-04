@@ -1,11 +1,11 @@
 /*
- * UniswapV3TokenHourDataV3DTO.h
+ * UniswapV3.TokenHourDataV3DTO.h
  *
  * Token data aggregated across all pairs that include token.
  */
 
-#ifndef _UniswapV3TokenHourDataV3DTO_H_
-#define _UniswapV3TokenHourDataV3DTO_H_
+#ifndef _UniswapV3.TokenHourDataV3DTO_H_
+#define _UniswapV3.TokenHourDataV3DTO_H_
 
 
 #include <string>
@@ -26,16 +26,16 @@ namespace ArtikCloud {
  *
  */
 
-class UniswapV3TokenHourDataV3DTO : public Object {
+class UniswapV3.TokenHourDataV3DTO : public Object {
 public:
 	/*! \brief Constructor.
 	 */
-	UniswapV3TokenHourDataV3DTO();
-	UniswapV3TokenHourDataV3DTO(char* str);
+	UniswapV3.TokenHourDataV3DTO();
+	UniswapV3.TokenHourDataV3DTO(char* str);
 
 	/*! \brief Destructor.
 	 */
-	virtual ~UniswapV3TokenHourDataV3DTO();
+	virtual ~UniswapV3.TokenHourDataV3DTO();
 
 	/*! \brief Retrieve a string JSON representation of this class.
 	 */
@@ -198,4 +198,4 @@ private:
 }
 }
 
-#endif /* _UniswapV3TokenHourDataV3DTO_H_ */
+#endif /* _UniswapV3.TokenHourDataV3DTO_H_ */

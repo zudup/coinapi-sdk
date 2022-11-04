@@ -5,23 +5,23 @@
 #include "Helpers.h"
 
 
-#include "UniswapV3UniswapDayDataV3DTO.h"
+#include "UniswapV3.UniswapDayDataV3DTO.h"
 
 using namespace std;
 using namespace Tizen::ArtikCloud;
 
-UniswapV3UniswapDayDataV3DTO::UniswapV3UniswapDayDataV3DTO()
+UniswapV3.UniswapDayDataV3DTO::UniswapV3.UniswapDayDataV3DTO()
 {
 	//__init();
 }
 
-UniswapV3UniswapDayDataV3DTO::~UniswapV3UniswapDayDataV3DTO()
+UniswapV3.UniswapDayDataV3DTO::~UniswapV3.UniswapDayDataV3DTO()
 {
 	//__cleanup();
 }
 
 void
-UniswapV3UniswapDayDataV3DTO::__init()
+UniswapV3.UniswapDayDataV3DTO::__init()
 {
 	//entry_time = null;
 	//recv_time = null;
@@ -33,12 +33,12 @@ UniswapV3UniswapDayDataV3DTO::__init()
 	//volume_usd = std::string();
 	//volume_usd_untracked = std::string();
 	//fees_usd = std::string();
-	//tx_count = new NumericsBigInteger();
+	//tx_count = new Numerics.BigInteger();
 	//tvl_usd = std::string();
 }
 
 void
-UniswapV3UniswapDayDataV3DTO::__cleanup()
+UniswapV3.UniswapDayDataV3DTO::__cleanup()
 {
 	//if(entry_time != NULL) {
 	//
@@ -104,7 +104,7 @@ UniswapV3UniswapDayDataV3DTO::__cleanup()
 }
 
 void
-UniswapV3UniswapDayDataV3DTO::fromJson(char* jsonStr)
+UniswapV3.UniswapDayDataV3DTO::fromJson(char* jsonStr)
 {
 	JsonObject *pJsonObject = json_node_get_object(json_from_string(jsonStr,NULL));
 	JsonNode *node;
@@ -223,11 +223,11 @@ UniswapV3UniswapDayDataV3DTO::fromJson(char* jsonStr)
 	if (node !=NULL) {
 	
 
-		if (isprimitive("NumericsBigInteger")) {
-			jsonToValue(&tx_count, node, "NumericsBigInteger", "NumericsBigInteger");
+		if (isprimitive("Numerics.BigInteger")) {
+			jsonToValue(&tx_count, node, "Numerics.BigInteger", "Numerics.BigInteger");
 		} else {
 			
-			NumericsBigInteger* obj = static_cast<NumericsBigInteger*> (&tx_count);
+			Numerics.BigInteger* obj = static_cast<Numerics.BigInteger*> (&tx_count);
 			obj->fromJson(json_to_string(node, false));
 			
 		}
@@ -245,13 +245,13 @@ UniswapV3UniswapDayDataV3DTO::fromJson(char* jsonStr)
 	}
 }
 
-UniswapV3UniswapDayDataV3DTO::UniswapV3UniswapDayDataV3DTO(char* json)
+UniswapV3.UniswapDayDataV3DTO::UniswapV3.UniswapDayDataV3DTO(char* json)
 {
 	this->fromJson(json);
 }
 
 char*
-UniswapV3UniswapDayDataV3DTO::toJson()
+UniswapV3.UniswapDayDataV3DTO::toJson()
 {
 	JsonObject *pJsonObject = json_object_new();
 	JsonNode *node;
@@ -345,13 +345,13 @@ UniswapV3UniswapDayDataV3DTO::toJson()
 	}
 	const gchar *fees_usdKey = "fees_usd";
 	json_object_set_member(pJsonObject, fees_usdKey, node);
-	if (isprimitive("NumericsBigInteger")) {
-		NumericsBigInteger obj = getTxCount();
-		node = converttoJson(&obj, "NumericsBigInteger", "");
+	if (isprimitive("Numerics.BigInteger")) {
+		Numerics.BigInteger obj = getTxCount();
+		node = converttoJson(&obj, "Numerics.BigInteger", "");
 	}
 	else {
 		
-		NumericsBigInteger obj = static_cast<NumericsBigInteger> (getTxCount());
+		Numerics.BigInteger obj = static_cast<Numerics.BigInteger> (getTxCount());
 		GError *mygerror;
 		mygerror = NULL;
 		node = json_from_string(obj.toJson(), &mygerror);
@@ -377,145 +377,145 @@ UniswapV3UniswapDayDataV3DTO::toJson()
 }
 
 std::string
-UniswapV3UniswapDayDataV3DTO::getEntryTime()
+UniswapV3.UniswapDayDataV3DTO::getEntryTime()
 {
 	return entry_time;
 }
 
 void
-UniswapV3UniswapDayDataV3DTO::setEntryTime(std::string  entry_time)
+UniswapV3.UniswapDayDataV3DTO::setEntryTime(std::string  entry_time)
 {
 	this->entry_time = entry_time;
 }
 
 std::string
-UniswapV3UniswapDayDataV3DTO::getRecvTime()
+UniswapV3.UniswapDayDataV3DTO::getRecvTime()
 {
 	return recv_time;
 }
 
 void
-UniswapV3UniswapDayDataV3DTO::setRecvTime(std::string  recv_time)
+UniswapV3.UniswapDayDataV3DTO::setRecvTime(std::string  recv_time)
 {
 	this->recv_time = recv_time;
 }
 
 long long
-UniswapV3UniswapDayDataV3DTO::getBlockNumber()
+UniswapV3.UniswapDayDataV3DTO::getBlockNumber()
 {
 	return block_number;
 }
 
 void
-UniswapV3UniswapDayDataV3DTO::setBlockNumber(long long  block_number)
+UniswapV3.UniswapDayDataV3DTO::setBlockNumber(long long  block_number)
 {
 	this->block_number = block_number;
 }
 
 long long
-UniswapV3UniswapDayDataV3DTO::getVid()
+UniswapV3.UniswapDayDataV3DTO::getVid()
 {
 	return vid;
 }
 
 void
-UniswapV3UniswapDayDataV3DTO::setVid(long long  vid)
+UniswapV3.UniswapDayDataV3DTO::setVid(long long  vid)
 {
 	this->vid = vid;
 }
 
 std::string
-UniswapV3UniswapDayDataV3DTO::getId()
+UniswapV3.UniswapDayDataV3DTO::getId()
 {
 	return id;
 }
 
 void
-UniswapV3UniswapDayDataV3DTO::setId(std::string  id)
+UniswapV3.UniswapDayDataV3DTO::setId(std::string  id)
 {
 	this->id = id;
 }
 
 int
-UniswapV3UniswapDayDataV3DTO::getDate()
+UniswapV3.UniswapDayDataV3DTO::getDate()
 {
 	return date;
 }
 
 void
-UniswapV3UniswapDayDataV3DTO::setDate(int  date)
+UniswapV3.UniswapDayDataV3DTO::setDate(int  date)
 {
 	this->date = date;
 }
 
 std::string
-UniswapV3UniswapDayDataV3DTO::getVolumeEth()
+UniswapV3.UniswapDayDataV3DTO::getVolumeEth()
 {
 	return volume_eth;
 }
 
 void
-UniswapV3UniswapDayDataV3DTO::setVolumeEth(std::string  volume_eth)
+UniswapV3.UniswapDayDataV3DTO::setVolumeEth(std::string  volume_eth)
 {
 	this->volume_eth = volume_eth;
 }
 
 std::string
-UniswapV3UniswapDayDataV3DTO::getVolumeUsd()
+UniswapV3.UniswapDayDataV3DTO::getVolumeUsd()
 {
 	return volume_usd;
 }
 
 void
-UniswapV3UniswapDayDataV3DTO::setVolumeUsd(std::string  volume_usd)
+UniswapV3.UniswapDayDataV3DTO::setVolumeUsd(std::string  volume_usd)
 {
 	this->volume_usd = volume_usd;
 }
 
 std::string
-UniswapV3UniswapDayDataV3DTO::getVolumeUsdUntracked()
+UniswapV3.UniswapDayDataV3DTO::getVolumeUsdUntracked()
 {
 	return volume_usd_untracked;
 }
 
 void
-UniswapV3UniswapDayDataV3DTO::setVolumeUsdUntracked(std::string  volume_usd_untracked)
+UniswapV3.UniswapDayDataV3DTO::setVolumeUsdUntracked(std::string  volume_usd_untracked)
 {
 	this->volume_usd_untracked = volume_usd_untracked;
 }
 
 std::string
-UniswapV3UniswapDayDataV3DTO::getFeesUsd()
+UniswapV3.UniswapDayDataV3DTO::getFeesUsd()
 {
 	return fees_usd;
 }
 
 void
-UniswapV3UniswapDayDataV3DTO::setFeesUsd(std::string  fees_usd)
+UniswapV3.UniswapDayDataV3DTO::setFeesUsd(std::string  fees_usd)
 {
 	this->fees_usd = fees_usd;
 }
 
-NumericsBigInteger
-UniswapV3UniswapDayDataV3DTO::getTxCount()
+Numerics.BigInteger
+UniswapV3.UniswapDayDataV3DTO::getTxCount()
 {
 	return tx_count;
 }
 
 void
-UniswapV3UniswapDayDataV3DTO::setTxCount(NumericsBigInteger  tx_count)
+UniswapV3.UniswapDayDataV3DTO::setTxCount(Numerics.BigInteger  tx_count)
 {
 	this->tx_count = tx_count;
 }
 
 std::string
-UniswapV3UniswapDayDataV3DTO::getTvlUsd()
+UniswapV3.UniswapDayDataV3DTO::getTvlUsd()
 {
 	return tvl_usd;
 }
 
 void
-UniswapV3UniswapDayDataV3DTO::setTvlUsd(std::string  tvl_usd)
+UniswapV3.UniswapDayDataV3DTO::setTvlUsd(std::string  tvl_usd)
 {
 	this->tvl_usd = tvl_usd;
 }

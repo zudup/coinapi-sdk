@@ -5,23 +5,23 @@
 #include "Helpers.h"
 
 
-#include "NumericsBigInteger.h"
+#include "Numerics.BigInteger.h"
 
 using namespace std;
 using namespace Tizen::ArtikCloud;
 
-NumericsBigInteger::NumericsBigInteger()
+Numerics.BigInteger::Numerics.BigInteger()
 {
 	//__init();
 }
 
-NumericsBigInteger::~NumericsBigInteger()
+Numerics.BigInteger::~Numerics.BigInteger()
 {
 	//__cleanup();
 }
 
 void
-NumericsBigInteger::__init()
+Numerics.BigInteger::__init()
 {
 	//is_power_of_two = bool(false);
 	//is_zero = bool(false);
@@ -31,7 +31,7 @@ NumericsBigInteger::__init()
 }
 
 void
-NumericsBigInteger::__cleanup()
+Numerics.BigInteger::__cleanup()
 {
 	//if(is_power_of_two != NULL) {
 	//
@@ -62,7 +62,7 @@ NumericsBigInteger::__cleanup()
 }
 
 void
-NumericsBigInteger::fromJson(char* jsonStr)
+Numerics.BigInteger::fromJson(char* jsonStr)
 {
 	JsonObject *pJsonObject = json_node_get_object(json_from_string(jsonStr,NULL));
 	JsonNode *node;
@@ -123,13 +123,13 @@ NumericsBigInteger::fromJson(char* jsonStr)
 	}
 }
 
-NumericsBigInteger::NumericsBigInteger(char* json)
+Numerics.BigInteger::Numerics.BigInteger(char* json)
 {
 	this->fromJson(json);
 }
 
 char*
-NumericsBigInteger::toJson()
+Numerics.BigInteger::toJson()
 {
 	JsonObject *pJsonObject = json_object_new();
 	JsonNode *node;
@@ -187,61 +187,61 @@ NumericsBigInteger::toJson()
 }
 
 bool
-NumericsBigInteger::getIsPowerOfTwo()
+Numerics.BigInteger::getIsPowerOfTwo()
 {
 	return is_power_of_two;
 }
 
 void
-NumericsBigInteger::setIsPowerOfTwo(bool  is_power_of_two)
+Numerics.BigInteger::setIsPowerOfTwo(bool  is_power_of_two)
 {
 	this->is_power_of_two = is_power_of_two;
 }
 
 bool
-NumericsBigInteger::getIsZero()
+Numerics.BigInteger::getIsZero()
 {
 	return is_zero;
 }
 
 void
-NumericsBigInteger::setIsZero(bool  is_zero)
+Numerics.BigInteger::setIsZero(bool  is_zero)
 {
 	this->is_zero = is_zero;
 }
 
 bool
-NumericsBigInteger::getIsOne()
+Numerics.BigInteger::getIsOne()
 {
 	return is_one;
 }
 
 void
-NumericsBigInteger::setIsOne(bool  is_one)
+Numerics.BigInteger::setIsOne(bool  is_one)
 {
 	this->is_one = is_one;
 }
 
 bool
-NumericsBigInteger::getIsEven()
+Numerics.BigInteger::getIsEven()
 {
 	return is_even;
 }
 
 void
-NumericsBigInteger::setIsEven(bool  is_even)
+Numerics.BigInteger::setIsEven(bool  is_even)
 {
 	this->is_even = is_even;
 }
 
 int
-NumericsBigInteger::getSign()
+Numerics.BigInteger::getSign()
 {
 	return sign;
 }
 
 void
-NumericsBigInteger::setSign(int  sign)
+Numerics.BigInteger::setSign(int  sign)
 {
 	this->sign = sign;
 }

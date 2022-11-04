@@ -1,4 +1,4 @@
-goog.provide('API.Client.UniswapV3TokenHourDataV3DTO');
+goog.provide('API.Client.UniswapV3.TokenHourDataV3DTO');
 
 /**
  * Token data aggregated across all pairs that include token.

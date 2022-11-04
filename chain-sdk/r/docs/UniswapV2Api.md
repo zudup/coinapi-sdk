@@ -479,7 +479,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**array[UniswapV2PairV2DTO]**](UniswapV2PairV2DTO.md)
+[**array[UniswapV2PairV2DTO]**](UniswapV2.PairV2DTO.md)
 
 ### Authorization
 
@@ -567,7 +567,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**array[UniswapV2SwapV2DTO]**](UniswapV2SwapV2DTO.md)
+[**array[UniswapV2SwapV2DTO]**](UniswapV2.SwapV2DTO.md)
 
 ### Authorization
 
@@ -703,7 +703,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**array[UniswapV2TokenV2DTO]**](UniswapV2TokenV2DTO.md)
+[**array[UniswapV2TokenV2DTO]**](UniswapV2.TokenV2DTO.md)
 
 ### Authorization
 

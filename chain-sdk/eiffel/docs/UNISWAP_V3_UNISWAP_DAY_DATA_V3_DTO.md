@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **volume_usd** | [**STRING_32**](STRING_32.md) | Total volume across all pairs on this day, stored as a derived amount of USD. | [optional] [default to null]
 **volume_usd_untracked** | [**STRING_32**](STRING_32.md) | Total daily volume in Uniswap derived in terms of USD untracked. | [optional] [default to null]
 **fees_usd** | [**STRING_32**](STRING_32.md) | Fees in USD | [optional] [default to null]
-**tx_count** | [**NUMERICS_BIG_INTEGER**](NumericsBigInteger.md) |  | [optional] [default to null]
+**tx_count** | [**NUMERICS_BIG_INTEGER**](Numerics.BigInteger.md) |  | [optional] [default to null]
 **tvl_usd** | [**STRING_32**](STRING_32.md) | Tvl in terms of USD. | [optional] [default to null]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -1,11 +1,11 @@
 /*
- * UniswapV3PositionSnapshotV3DTO.h
+ * UniswapV3.PositionSnapshotV3DTO.h
  *
  * 
  */
 
-#ifndef _UniswapV3PositionSnapshotV3DTO_H_
-#define _UniswapV3PositionSnapshotV3DTO_H_
+#ifndef _UniswapV3.PositionSnapshotV3DTO_H_
+#define _UniswapV3.PositionSnapshotV3DTO_H_
 
 
 #include <string>
@@ -26,16 +26,16 @@ namespace ArtikCloud {
  *
  */
 
-class UniswapV3PositionSnapshotV3DTO : public Object {
+class UniswapV3.PositionSnapshotV3DTO : public Object {
 public:
 	/*! \brief Constructor.
 	 */
-	UniswapV3PositionSnapshotV3DTO();
-	UniswapV3PositionSnapshotV3DTO(char* str);
+	UniswapV3.PositionSnapshotV3DTO();
+	UniswapV3.PositionSnapshotV3DTO(char* str);
 
 	/*! \brief Destructor.
 	 */
-	virtual ~UniswapV3PositionSnapshotV3DTO();
+	virtual ~UniswapV3.PositionSnapshotV3DTO();
 
 	/*! \brief Retrieve a string JSON representation of this class.
 	 */
@@ -206,4 +206,4 @@ private:
 }
 }
 
-#endif /* _UniswapV3PositionSnapshotV3DTO_H_ */
+#endif /* _UniswapV3.PositionSnapshotV3DTO_H_ */

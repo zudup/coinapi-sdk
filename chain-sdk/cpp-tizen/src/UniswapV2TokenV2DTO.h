@@ -1,15 +1,15 @@
 /*
- * UniswapV2TokenV2DTO.h
+ * UniswapV2.TokenV2DTO.h
  *
  * Stores aggregated information for a specific token across all pairs that token is included in.
  */
 
-#ifndef _UniswapV2TokenV2DTO_H_
-#define _UniswapV2TokenV2DTO_H_
+#ifndef _UniswapV2.TokenV2DTO_H_
+#define _UniswapV2.TokenV2DTO_H_
 
 
 #include <string>
-#include "NumericsBigInteger.h"
+#include "Numerics.BigInteger.h"
 #include "Object.h"
 
 /** \defgroup Models Data Structures for API
@@ -27,16 +27,16 @@ namespace ArtikCloud {
  *
  */
 
-class UniswapV2TokenV2DTO : public Object {
+class UniswapV2.TokenV2DTO : public Object {
 public:
 	/*! \brief Constructor.
 	 */
-	UniswapV2TokenV2DTO();
-	UniswapV2TokenV2DTO(char* str);
+	UniswapV2.TokenV2DTO();
+	UniswapV2.TokenV2DTO(char* str);
 
 	/*! \brief Destructor.
 	 */
-	virtual ~UniswapV2TokenV2DTO();
+	virtual ~UniswapV2.TokenV2DTO();
 
 	/*! \brief Retrieve a string JSON representation of this class.
 	 */
@@ -104,11 +104,11 @@ public:
 	void setDecimals(int  decimals);
 	/*! \brief Get 
 	 */
-	NumericsBigInteger getTotalSupply();
+	Numerics.BigInteger getTotalSupply();
 
 	/*! \brief Set 
 	 */
-	void setTotalSupply(NumericsBigInteger  total_supply);
+	void setTotalSupply(Numerics.BigInteger  total_supply);
 	/*! \brief Get Amount of token traded all time across all pairs.
 	 */
 	std::string getTradeVolume();
@@ -132,11 +132,11 @@ public:
 	void setUntrackedVolumeUsd(std::string  untracked_volume_usd);
 	/*! \brief Get 
 	 */
-	NumericsBigInteger getTxCount();
+	Numerics.BigInteger getTxCount();
 
 	/*! \brief Set 
 	 */
-	void setTxCount(NumericsBigInteger  tx_count);
+	void setTxCount(Numerics.BigInteger  tx_count);
 	/*! \brief Get Total amount of token provided as liquidity across all pairs.
 	 */
 	std::string getTotalLiquidity();
@@ -168,11 +168,11 @@ private:
 	std::string symbol;
 	std::string name;
 	int decimals;
-	NumericsBigInteger total_supply;
+	Numerics.BigInteger total_supply;
 	std::string trade_volume;
 	std::string trade_volume_usd;
 	std::string untracked_volume_usd;
-	NumericsBigInteger tx_count;
+	Numerics.BigInteger tx_count;
 	std::string total_liquidity;
 	std::string derived_eth;
 	std::string token_symbol;
@@ -183,4 +183,4 @@ private:
 }
 }
 
-#endif /* _UniswapV2TokenV2DTO_H_ */
+#endif /* _UniswapV2.TokenV2DTO_H_ */

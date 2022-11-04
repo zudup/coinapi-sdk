@@ -5,23 +5,23 @@
 #include "Helpers.h"
 
 
-#include "UniswapV3BundleV3DTO.h"
+#include "UniswapV3.BundleV3DTO.h"
 
 using namespace std;
 using namespace Tizen::ArtikCloud;
 
-UniswapV3BundleV3DTO::UniswapV3BundleV3DTO()
+UniswapV3.BundleV3DTO::UniswapV3.BundleV3DTO()
 {
 	//__init();
 }
 
-UniswapV3BundleV3DTO::~UniswapV3BundleV3DTO()
+UniswapV3.BundleV3DTO::~UniswapV3.BundleV3DTO()
 {
 	//__cleanup();
 }
 
 void
-UniswapV3BundleV3DTO::__init()
+UniswapV3.BundleV3DTO::__init()
 {
 	//entry_time = null;
 	//recv_time = null;
@@ -32,7 +32,7 @@ UniswapV3BundleV3DTO::__init()
 }
 
 void
-UniswapV3BundleV3DTO::__cleanup()
+UniswapV3.BundleV3DTO::__cleanup()
 {
 	//if(entry_time != NULL) {
 	//
@@ -68,7 +68,7 @@ UniswapV3BundleV3DTO::__cleanup()
 }
 
 void
-UniswapV3BundleV3DTO::fromJson(char* jsonStr)
+UniswapV3.BundleV3DTO::fromJson(char* jsonStr)
 {
 	JsonObject *pJsonObject = json_node_get_object(json_from_string(jsonStr,NULL));
 	JsonNode *node;
@@ -140,13 +140,13 @@ UniswapV3BundleV3DTO::fromJson(char* jsonStr)
 	}
 }
 
-UniswapV3BundleV3DTO::UniswapV3BundleV3DTO(char* json)
+UniswapV3.BundleV3DTO::UniswapV3.BundleV3DTO(char* json)
 {
 	this->fromJson(json);
 }
 
 char*
-UniswapV3BundleV3DTO::toJson()
+UniswapV3.BundleV3DTO::toJson()
 {
 	JsonObject *pJsonObject = json_object_new();
 	JsonNode *node;
@@ -213,73 +213,73 @@ UniswapV3BundleV3DTO::toJson()
 }
 
 std::string
-UniswapV3BundleV3DTO::getEntryTime()
+UniswapV3.BundleV3DTO::getEntryTime()
 {
 	return entry_time;
 }
 
 void
-UniswapV3BundleV3DTO::setEntryTime(std::string  entry_time)
+UniswapV3.BundleV3DTO::setEntryTime(std::string  entry_time)
 {
 	this->entry_time = entry_time;
 }
 
 std::string
-UniswapV3BundleV3DTO::getRecvTime()
+UniswapV3.BundleV3DTO::getRecvTime()
 {
 	return recv_time;
 }
 
 void
-UniswapV3BundleV3DTO::setRecvTime(std::string  recv_time)
+UniswapV3.BundleV3DTO::setRecvTime(std::string  recv_time)
 {
 	this->recv_time = recv_time;
 }
 
 long long
-UniswapV3BundleV3DTO::getBlockNumber()
+UniswapV3.BundleV3DTO::getBlockNumber()
 {
 	return block_number;
 }
 
 void
-UniswapV3BundleV3DTO::setBlockNumber(long long  block_number)
+UniswapV3.BundleV3DTO::setBlockNumber(long long  block_number)
 {
 	this->block_number = block_number;
 }
 
 std::string
-UniswapV3BundleV3DTO::getId()
+UniswapV3.BundleV3DTO::getId()
 {
 	return id;
 }
 
 void
-UniswapV3BundleV3DTO::setId(std::string  id)
+UniswapV3.BundleV3DTO::setId(std::string  id)
 {
 	this->id = id;
 }
 
 std::string
-UniswapV3BundleV3DTO::getEthPriceUsd()
+UniswapV3.BundleV3DTO::getEthPriceUsd()
 {
 	return eth_price_usd;
 }
 
 void
-UniswapV3BundleV3DTO::setEthPriceUsd(std::string  eth_price_usd)
+UniswapV3.BundleV3DTO::setEthPriceUsd(std::string  eth_price_usd)
 {
 	this->eth_price_usd = eth_price_usd;
 }
 
 long long
-UniswapV3BundleV3DTO::getVid()
+UniswapV3.BundleV3DTO::getVid()
 {
 	return vid;
 }
 
 void
-UniswapV3BundleV3DTO::setVid(long long  vid)
+UniswapV3.BundleV3DTO::setVid(long long  vid)
 {
 	this->vid = vid;
 }

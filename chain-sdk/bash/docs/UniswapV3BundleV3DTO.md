@@ -1,4 +1,4 @@
-# UniswapV3BundleV3DTO
+# UniswapV3.BundleV3DTO
 
 ## Properties
 Name | Type | Description | Notes

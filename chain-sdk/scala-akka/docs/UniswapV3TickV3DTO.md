@@ -1,6 +1,6 @@
 
 
-# UniswapV3TickV3DTO
+# TickV3DTO
 
 Ticks are the boundaries between discrete areas in price space.
 
@@ -14,10 +14,10 @@ Name | Type | Description | Notes
 **vid** | **Long** |  |  [optional]
 **id** | **String** | Identifier, format: &lt;pool address&gt;#&lt;tick index&gt; |  [optional]
 **poolAddress** | **String** | Pool address. |  [optional]
-**tickIdx** | [**NumericsBigInteger**](NumericsBigInteger.md) |  |  [optional]
+**tickIdx** | [**BigInteger**](BigInteger.md) |  |  [optional]
 **pool** | **String** | Pool address. |  [optional]
-**liquidityGross** | [**NumericsBigInteger**](NumericsBigInteger.md) |  |  [optional]
-**liquidityNet** | [**NumericsBigInteger**](NumericsBigInteger.md) |  |  [optional]
+**liquidityGross** | [**BigInteger**](BigInteger.md) |  |  [optional]
+**liquidityNet** | [**BigInteger**](BigInteger.md) |  |  [optional]
 **price0** | **String** | Calculated price of token0 of tick within this pool - constant. |  [optional]
 **price1** | **String** | Calculated price of token1 of tick within this pool - constant. |  [optional]
 **volumeToken0** | **String** | Lifetime volume of token0 with this tick in range. |  [optional]
@@ -29,9 +29,9 @@ Name | Type | Description | Notes
 **collectedFeesToken1** | **String** | All time collected fees in token1. |  [optional]
 **collectedFeesUsd** | **String** | All time collected fees in USD. |  [optional]
 **createdAtTimestamp** | **OffsetDateTime** | Created time. |  [optional]
-**liquidityProviderCount** | [**NumericsBigInteger**](NumericsBigInteger.md) |  |  [optional]
-**feeGrowthOutside0x128** | [**NumericsBigInteger**](NumericsBigInteger.md) |  |  [optional]
-**feeGrowthOutside1x128** | [**NumericsBigInteger**](NumericsBigInteger.md) |  |  [optional]
+**liquidityProviderCount** | [**BigInteger**](BigInteger.md) |  |  [optional]
+**feeGrowthOutside0x128** | [**BigInteger**](BigInteger.md) |  |  [optional]
+**feeGrowthOutside1x128** | [**BigInteger**](BigInteger.md) |  |  [optional]
 
 
 

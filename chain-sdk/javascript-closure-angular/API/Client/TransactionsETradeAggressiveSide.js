@@ -1,4 +1,4 @@
-goog.provide('API.Client.TransactionsETradeAggressiveSide');
+goog.provide('API.Client.Transactions.ETradeAggressiveSide');
 
 /**
  * @record

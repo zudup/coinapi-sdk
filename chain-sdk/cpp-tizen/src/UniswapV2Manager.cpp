@@ -1461,13 +1461,13 @@ bool UniswapV2Manager::dappsUniswapv2PoolHourDataHistoricalGetSync(char * access
 static bool dappsUniswapv2PoolsCurrentGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
-	void(* handler)(std::list<UniswapV2PairV2DTO>, Error, void* )
-	= reinterpret_cast<void(*)(std::list<UniswapV2PairV2DTO>, Error, void* )> (voidHandler);
+	void(* handler)(std::list<UniswapV2.PairV2DTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<UniswapV2.PairV2DTO>, Error, void* )> (voidHandler);
 	
 	JsonNode* pJson;
 	char * data = p_chunk.memory;
 
-	std::list<UniswapV2PairV2DTO> out;
+	std::list<UniswapV2.PairV2DTO> out;
 	
 
 	if (code >= 200 && code < 300) {
@@ -1481,7 +1481,7 @@ static bool dappsUniswapv2PoolsCurrentGetProcessor(MemoryStruct_s p_chunk, long 
 		for(guint i = 0; i < length; i++){
 			JsonNode* myJson = json_array_get_element (jsonarray, i);
 			char * singlenodestr = json_to_string(myJson, false);
-			UniswapV2PairV2DTO singlemodel;
+			UniswapV2.PairV2DTO singlemodel;
 			singlemodel.fromJson(singlenodestr);
 			out.push_front(singlemodel);
 			g_free(static_cast<gpointer>(singlenodestr));
@@ -1507,7 +1507,7 @@ static bool dappsUniswapv2PoolsCurrentGetProcessor(MemoryStruct_s p_chunk, long 
 
 static bool dappsUniswapv2PoolsCurrentGetHelper(char * accessToken,
 	std::string filterPoolId, 
-	void(* handler)(std::list<UniswapV2PairV2DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV2.PairV2DTO>, Error, void* )
 	, void* userData, bool isAsync)
 {
 
@@ -1585,7 +1585,7 @@ static bool dappsUniswapv2PoolsCurrentGetHelper(char * accessToken,
 
 bool UniswapV2Manager::dappsUniswapv2PoolsCurrentGetAsync(char * accessToken,
 	std::string filterPoolId, 
-	void(* handler)(std::list<UniswapV2PairV2DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV2.PairV2DTO>, Error, void* )
 	, void* userData)
 {
 	return dappsUniswapv2PoolsCurrentGetHelper(accessToken,
@@ -1595,7 +1595,7 @@ bool UniswapV2Manager::dappsUniswapv2PoolsCurrentGetAsync(char * accessToken,
 
 bool UniswapV2Manager::dappsUniswapv2PoolsCurrentGetSync(char * accessToken,
 	std::string filterPoolId, 
-	void(* handler)(std::list<UniswapV2PairV2DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV2.PairV2DTO>, Error, void* )
 	, void* userData)
 {
 	return dappsUniswapv2PoolsCurrentGetHelper(accessToken,
@@ -1765,13 +1765,13 @@ bool UniswapV2Manager::dappsUniswapv2PoolsHistoricalGetSync(char * accessToken,
 static bool dappsUniswapv2SwapsCurrentGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
-	void(* handler)(std::list<UniswapV2SwapV2DTO>, Error, void* )
-	= reinterpret_cast<void(*)(std::list<UniswapV2SwapV2DTO>, Error, void* )> (voidHandler);
+	void(* handler)(std::list<UniswapV2.SwapV2DTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<UniswapV2.SwapV2DTO>, Error, void* )> (voidHandler);
 	
 	JsonNode* pJson;
 	char * data = p_chunk.memory;
 
-	std::list<UniswapV2SwapV2DTO> out;
+	std::list<UniswapV2.SwapV2DTO> out;
 	
 
 	if (code >= 200 && code < 300) {
@@ -1785,7 +1785,7 @@ static bool dappsUniswapv2SwapsCurrentGetProcessor(MemoryStruct_s p_chunk, long 
 		for(guint i = 0; i < length; i++){
 			JsonNode* myJson = json_array_get_element (jsonarray, i);
 			char * singlenodestr = json_to_string(myJson, false);
-			UniswapV2SwapV2DTO singlemodel;
+			UniswapV2.SwapV2DTO singlemodel;
 			singlemodel.fromJson(singlenodestr);
 			out.push_front(singlemodel);
 			g_free(static_cast<gpointer>(singlenodestr));
@@ -1811,7 +1811,7 @@ static bool dappsUniswapv2SwapsCurrentGetProcessor(MemoryStruct_s p_chunk, long 
 
 static bool dappsUniswapv2SwapsCurrentGetHelper(char * accessToken,
 	
-	void(* handler)(std::list<UniswapV2SwapV2DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV2.SwapV2DTO>, Error, void* )
 	, void* userData, bool isAsync)
 {
 
@@ -1882,7 +1882,7 @@ static bool dappsUniswapv2SwapsCurrentGetHelper(char * accessToken,
 
 bool UniswapV2Manager::dappsUniswapv2SwapsCurrentGetAsync(char * accessToken,
 	
-	void(* handler)(std::list<UniswapV2SwapV2DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV2.SwapV2DTO>, Error, void* )
 	, void* userData)
 {
 	return dappsUniswapv2SwapsCurrentGetHelper(accessToken,
@@ -1892,7 +1892,7 @@ bool UniswapV2Manager::dappsUniswapv2SwapsCurrentGetAsync(char * accessToken,
 
 bool UniswapV2Manager::dappsUniswapv2SwapsCurrentGetSync(char * accessToken,
 	
-	void(* handler)(std::list<UniswapV2SwapV2DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV2.SwapV2DTO>, Error, void* )
 	, void* userData)
 {
 	return dappsUniswapv2SwapsCurrentGetHelper(accessToken,
@@ -2221,13 +2221,13 @@ bool UniswapV2Manager::dappsUniswapv2TokenDayDataHistoricalGetSync(char * access
 static bool dappsUniswapv2TokensCurrentGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
-	void(* handler)(std::list<UniswapV2TokenV2DTO>, Error, void* )
-	= reinterpret_cast<void(*)(std::list<UniswapV2TokenV2DTO>, Error, void* )> (voidHandler);
+	void(* handler)(std::list<UniswapV2.TokenV2DTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<UniswapV2.TokenV2DTO>, Error, void* )> (voidHandler);
 	
 	JsonNode* pJson;
 	char * data = p_chunk.memory;
 
-	std::list<UniswapV2TokenV2DTO> out;
+	std::list<UniswapV2.TokenV2DTO> out;
 	
 
 	if (code >= 200 && code < 300) {
@@ -2241,7 +2241,7 @@ static bool dappsUniswapv2TokensCurrentGetProcessor(MemoryStruct_s p_chunk, long
 		for(guint i = 0; i < length; i++){
 			JsonNode* myJson = json_array_get_element (jsonarray, i);
 			char * singlenodestr = json_to_string(myJson, false);
-			UniswapV2TokenV2DTO singlemodel;
+			UniswapV2.TokenV2DTO singlemodel;
 			singlemodel.fromJson(singlenodestr);
 			out.push_front(singlemodel);
 			g_free(static_cast<gpointer>(singlenodestr));
@@ -2267,7 +2267,7 @@ static bool dappsUniswapv2TokensCurrentGetProcessor(MemoryStruct_s p_chunk, long
 
 static bool dappsUniswapv2TokensCurrentGetHelper(char * accessToken,
 	
-	void(* handler)(std::list<UniswapV2TokenV2DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV2.TokenV2DTO>, Error, void* )
 	, void* userData, bool isAsync)
 {
 
@@ -2338,7 +2338,7 @@ static bool dappsUniswapv2TokensCurrentGetHelper(char * accessToken,
 
 bool UniswapV2Manager::dappsUniswapv2TokensCurrentGetAsync(char * accessToken,
 	
-	void(* handler)(std::list<UniswapV2TokenV2DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV2.TokenV2DTO>, Error, void* )
 	, void* userData)
 {
 	return dappsUniswapv2TokensCurrentGetHelper(accessToken,
@@ -2348,7 +2348,7 @@ bool UniswapV2Manager::dappsUniswapv2TokensCurrentGetAsync(char * accessToken,
 
 bool UniswapV2Manager::dappsUniswapv2TokensCurrentGetSync(char * accessToken,
 	
-	void(* handler)(std::list<UniswapV2TokenV2DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV2.TokenV2DTO>, Error, void* )
 	, void* userData)
 {
 	return dappsUniswapv2TokensCurrentGetHelper(accessToken,

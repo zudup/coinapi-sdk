@@ -1,6 +1,6 @@
 
 
-# UniswapV3TokenV3DayDataDTO
+# TokenV3DayDataDTO
 
 Token data aggregated across all pairs that include token.
 

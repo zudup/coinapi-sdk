@@ -29,7 +29,7 @@ namespace CoinAPI.EMS.REST.V1.Model
     /// <summary>
     /// NumericsBigInteger
     /// </summary>
-    [DataContract(Name = "NumericsBigInteger")]
+    [DataContract(Name = "Numerics.BigInteger")]
     public partial class NumericsBigInteger : IEquatable<NumericsBigInteger>, IValidatableObject
     {
         /// <summary>

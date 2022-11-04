@@ -1,4 +1,4 @@
-goog.provide('API.Client.UniswapV3PositionV3DTO');
+goog.provide('API.Client.UniswapV3.PositionV3DTO');
 
 /**
  * Positions created through NonfungiblePositionManager. Positions are represented as NFTs (ERC-721 tokens) as opposed to the fungible ERC-20 tokens on Uniswap V1 and V2.

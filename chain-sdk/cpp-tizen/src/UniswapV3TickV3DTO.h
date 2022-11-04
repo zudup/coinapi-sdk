@@ -1,15 +1,15 @@
 /*
- * UniswapV3TickV3DTO.h
+ * UniswapV3.TickV3DTO.h
  *
  * Ticks are the boundaries between discrete areas in price space.
  */
 
-#ifndef _UniswapV3TickV3DTO_H_
-#define _UniswapV3TickV3DTO_H_
+#ifndef _UniswapV3.TickV3DTO_H_
+#define _UniswapV3.TickV3DTO_H_
 
 
 #include <string>
-#include "NumericsBigInteger.h"
+#include "Numerics.BigInteger.h"
 #include "Object.h"
 
 /** \defgroup Models Data Structures for API
@@ -27,16 +27,16 @@ namespace ArtikCloud {
  *
  */
 
-class UniswapV3TickV3DTO : public Object {
+class UniswapV3.TickV3DTO : public Object {
 public:
 	/*! \brief Constructor.
 	 */
-	UniswapV3TickV3DTO();
-	UniswapV3TickV3DTO(char* str);
+	UniswapV3.TickV3DTO();
+	UniswapV3.TickV3DTO(char* str);
 
 	/*! \brief Destructor.
 	 */
-	virtual ~UniswapV3TickV3DTO();
+	virtual ~UniswapV3.TickV3DTO();
 
 	/*! \brief Retrieve a string JSON representation of this class.
 	 */
@@ -90,11 +90,11 @@ public:
 	void setPoolAddress(std::string  pool_address);
 	/*! \brief Get 
 	 */
-	NumericsBigInteger getTickIdx();
+	Numerics.BigInteger getTickIdx();
 
 	/*! \brief Set 
 	 */
-	void setTickIdx(NumericsBigInteger  tick_idx);
+	void setTickIdx(Numerics.BigInteger  tick_idx);
 	/*! \brief Get Pool address.
 	 */
 	std::string getPool();
@@ -104,18 +104,18 @@ public:
 	void setPool(std::string  pool);
 	/*! \brief Get 
 	 */
-	NumericsBigInteger getLiquidityGross();
+	Numerics.BigInteger getLiquidityGross();
 
 	/*! \brief Set 
 	 */
-	void setLiquidityGross(NumericsBigInteger  liquidity_gross);
+	void setLiquidityGross(Numerics.BigInteger  liquidity_gross);
 	/*! \brief Get 
 	 */
-	NumericsBigInteger getLiquidityNet();
+	Numerics.BigInteger getLiquidityNet();
 
 	/*! \brief Set 
 	 */
-	void setLiquidityNet(NumericsBigInteger  liquidity_net);
+	void setLiquidityNet(Numerics.BigInteger  liquidity_net);
 	/*! \brief Get Calculated price of token0 of tick within this pool - constant.
 	 */
 	std::string getPrice0();
@@ -195,25 +195,25 @@ public:
 	void setCreatedAtTimestamp(std::string  created_at_timestamp);
 	/*! \brief Get 
 	 */
-	NumericsBigInteger getLiquidityProviderCount();
+	Numerics.BigInteger getLiquidityProviderCount();
 
 	/*! \brief Set 
 	 */
-	void setLiquidityProviderCount(NumericsBigInteger  liquidity_provider_count);
+	void setLiquidityProviderCount(Numerics.BigInteger  liquidity_provider_count);
 	/*! \brief Get 
 	 */
-	NumericsBigInteger getFeeGrowthOutside0x128();
+	Numerics.BigInteger getFeeGrowthOutside0x128();
 
 	/*! \brief Set 
 	 */
-	void setFeeGrowthOutside0x128(NumericsBigInteger  fee_growth_outside_0x128);
+	void setFeeGrowthOutside0x128(Numerics.BigInteger  fee_growth_outside_0x128);
 	/*! \brief Get 
 	 */
-	NumericsBigInteger getFeeGrowthOutside1x128();
+	Numerics.BigInteger getFeeGrowthOutside1x128();
 
 	/*! \brief Set 
 	 */
-	void setFeeGrowthOutside1x128(NumericsBigInteger  fee_growth_outside_1x128);
+	void setFeeGrowthOutside1x128(Numerics.BigInteger  fee_growth_outside_1x128);
 
 private:
 	std::string entry_time;
@@ -222,10 +222,10 @@ private:
 	long long vid;
 	std::string id;
 	std::string pool_address;
-	NumericsBigInteger tick_idx;
+	Numerics.BigInteger tick_idx;
 	std::string pool;
-	NumericsBigInteger liquidity_gross;
-	NumericsBigInteger liquidity_net;
+	Numerics.BigInteger liquidity_gross;
+	Numerics.BigInteger liquidity_net;
 	std::string price_0;
 	std::string price_1;
 	std::string volume_token_0;
@@ -237,9 +237,9 @@ private:
 	std::string collected_fees_token_1;
 	std::string collected_fees_usd;
 	std::string created_at_timestamp;
-	NumericsBigInteger liquidity_provider_count;
-	NumericsBigInteger fee_growth_outside_0x128;
-	NumericsBigInteger fee_growth_outside_1x128;
+	Numerics.BigInteger liquidity_provider_count;
+	Numerics.BigInteger fee_growth_outside_0x128;
+	Numerics.BigInteger fee_growth_outside_1x128;
 	void __init();
 	void __cleanup();
 
@@ -247,4 +247,4 @@ private:
 }
 }
 
-#endif /* _UniswapV3TickV3DTO_H_ */
+#endif /* _UniswapV3.TickV3DTO_H_ */

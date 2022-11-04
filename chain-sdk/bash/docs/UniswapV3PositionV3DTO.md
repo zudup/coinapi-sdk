@@ -1,4 +1,4 @@
-# UniswapV3PositionV3DTO
+# UniswapV3.PositionV3DTO
 
 ## Properties
 Name | Type | Description | Notes

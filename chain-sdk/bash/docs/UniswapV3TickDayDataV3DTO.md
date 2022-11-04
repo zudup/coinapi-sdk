@@ -1,4 +1,4 @@
-# UniswapV3TickDayDataV3DTO
+# UniswapV3.TickDayDataV3DTO
 
 ## Properties
 Name | Type | Description | Notes

@@ -51,7 +51,7 @@ class UniswapV3UniswapDayDataV3DTO implements ModelInterface, ArrayAccess, \Json
       *
       * @var string
       */
-    protected static $openAPIModelName = 'UniswapV3UniswapDayDataV3DTO';
+    protected static $openAPIModelName = 'UniswapV3.UniswapDayDataV3DTO';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

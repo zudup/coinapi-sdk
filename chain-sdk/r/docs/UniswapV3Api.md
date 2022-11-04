@@ -63,7 +63,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**array[UniswapV3BundleV3DTO]**](UniswapV3BundleV3DTO.md)
+[**array[UniswapV3BundleV3DTO]**](UniswapV3.BundleV3DTO.md)
 
 ### Authorization
 
@@ -154,7 +154,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**array[UniswapV3BurnV3DTO]**](UniswapV3BurnV3DTO.md)
+[**array[UniswapV3BurnV3DTO]**](UniswapV3.BurnV3DTO.md)
 
 ### Authorization
 
@@ -293,7 +293,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**array[UniswapV3FactoryV3DTO]**](UniswapV3FactoryV3DTO.md)
+[**array[UniswapV3FactoryV3DTO]**](UniswapV3.FactoryV3DTO.md)
 
 ### Authorization
 
@@ -384,7 +384,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**array[UniswapV3MintV3DTO]**](UniswapV3MintV3DTO.md)
+[**array[UniswapV3MintV3DTO]**](UniswapV3.MintV3DTO.md)
 
 ### Authorization
 
@@ -573,7 +573,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**array[UniswapV3PoolV3DTO]**](UniswapV3PoolV3DTO.md)
+[**array[UniswapV3PoolV3DTO]**](UniswapV3.PoolV3DTO.md)
 
 ### Authorization
 
@@ -618,7 +618,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**array[UniswapV3PoolDayDataV3DTO]**](UniswapV3PoolDayDataV3DTO.md)
+[**array[UniswapV3PoolDayDataV3DTO]**](UniswapV3.PoolDayDataV3DTO.md)
 
 ### Authorization
 
@@ -711,7 +711,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**array[UniswapV3PoolHourDataV3DTO]**](UniswapV3PoolHourDataV3DTO.md)
+[**array[UniswapV3PoolHourDataV3DTO]**](UniswapV3.PoolHourDataV3DTO.md)
 
 ### Authorization
 
@@ -804,7 +804,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**array[UniswapV3PositionSnapshotV3DTO]**](UniswapV3PositionSnapshotV3DTO.md)
+[**array[UniswapV3PositionSnapshotV3DTO]**](UniswapV3.PositionSnapshotV3DTO.md)
 
 ### Authorization
 
@@ -849,7 +849,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**array[UniswapV3PositionV3DTO]**](UniswapV3PositionV3DTO.md)
+[**array[UniswapV3PositionV3DTO]**](UniswapV3.PositionV3DTO.md)
 
 ### Authorization
 
@@ -942,7 +942,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**array[UniswapV3SwapV3DTO]**](UniswapV3SwapV3DTO.md)
+[**array[UniswapV3SwapV3DTO]**](UniswapV3.SwapV3DTO.md)
 
 ### Authorization
 
@@ -1083,7 +1083,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**array[UniswapV3TickV3DTO]**](UniswapV3TickV3DTO.md)
+[**array[UniswapV3TickV3DTO]**](UniswapV3.TickV3DTO.md)
 
 ### Authorization
 
@@ -1128,7 +1128,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**array[UniswapV3TickDayDataV3DTO]**](UniswapV3TickDayDataV3DTO.md)
+[**array[UniswapV3TickDayDataV3DTO]**](UniswapV3.TickDayDataV3DTO.md)
 
 ### Authorization
 
@@ -1317,7 +1317,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**array[UniswapV3TokenV3DTO]**](UniswapV3TokenV3DTO.md)
+[**array[UniswapV3TokenV3DTO]**](UniswapV3.TokenV3DTO.md)
 
 ### Authorization
 
@@ -1362,7 +1362,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**array[UniswapV3TokenV3DayDataDTO]**](UniswapV3TokenV3DayDataDTO.md)
+[**array[UniswapV3TokenV3DayDataDTO]**](UniswapV3.TokenV3DayDataDTO.md)
 
 ### Authorization
 
@@ -1455,7 +1455,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**array[UniswapV3TokenHourDataV3DTO]**](UniswapV3TokenHourDataV3DTO.md)
+[**array[UniswapV3TokenHourDataV3DTO]**](UniswapV3.TokenHourDataV3DTO.md)
 
 ### Authorization
 
@@ -1541,7 +1541,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**array[UniswapV3UniswapDayDataV3DTO]**](UniswapV3UniswapDayDataV3DTO.md)
+[**array[UniswapV3UniswapDayDataV3DTO]**](UniswapV3.UniswapDayDataV3DTO.md)
 
 ### Authorization
 

@@ -5,23 +5,23 @@
 #include "Helpers.h"
 
 
-#include "UniswapV3TokenV3DTO.h"
+#include "UniswapV3.TokenV3DTO.h"
 
 using namespace std;
 using namespace Tizen::ArtikCloud;
 
-UniswapV3TokenV3DTO::UniswapV3TokenV3DTO()
+UniswapV3.TokenV3DTO::UniswapV3.TokenV3DTO()
 {
 	//__init();
 }
 
-UniswapV3TokenV3DTO::~UniswapV3TokenV3DTO()
+UniswapV3.TokenV3DTO::~UniswapV3.TokenV3DTO()
 {
 	//__cleanup();
 }
 
 void
-UniswapV3TokenV3DTO::__init()
+UniswapV3.TokenV3DTO::__init()
 {
 	//entry_time = null;
 	//recv_time = null;
@@ -31,13 +31,13 @@ UniswapV3TokenV3DTO::__init()
 	//symbol = std::string();
 	//name = std::string();
 	//decimals = int(0);
-	//total_supply = new NumericsBigInteger();
+	//total_supply = new Numerics.BigInteger();
 	//volume = std::string();
 	//volume_usd = std::string();
 	//untracked_volume_usd = std::string();
 	//fees_usd = std::string();
-	//tx_count = new NumericsBigInteger();
-	//pool_count = new NumericsBigInteger();
+	//tx_count = new Numerics.BigInteger();
+	//pool_count = new Numerics.BigInteger();
 	//total_value_locked = std::string();
 	//total_value_locked_usd = std::string();
 	//total_value_locked_usd_untracked = std::string();
@@ -47,7 +47,7 @@ UniswapV3TokenV3DTO::__init()
 }
 
 void
-UniswapV3TokenV3DTO::__cleanup()
+UniswapV3.TokenV3DTO::__cleanup()
 {
 	//if(entry_time != NULL) {
 	//
@@ -158,7 +158,7 @@ UniswapV3TokenV3DTO::__cleanup()
 }
 
 void
-UniswapV3TokenV3DTO::fromJson(char* jsonStr)
+UniswapV3.TokenV3DTO::fromJson(char* jsonStr)
 {
 	JsonObject *pJsonObject = json_node_get_object(json_from_string(jsonStr,NULL));
 	JsonNode *node;
@@ -255,11 +255,11 @@ UniswapV3TokenV3DTO::fromJson(char* jsonStr)
 	if (node !=NULL) {
 	
 
-		if (isprimitive("NumericsBigInteger")) {
-			jsonToValue(&total_supply, node, "NumericsBigInteger", "NumericsBigInteger");
+		if (isprimitive("Numerics.BigInteger")) {
+			jsonToValue(&total_supply, node, "Numerics.BigInteger", "Numerics.BigInteger");
 		} else {
 			
-			NumericsBigInteger* obj = static_cast<NumericsBigInteger*> (&total_supply);
+			Numerics.BigInteger* obj = static_cast<Numerics.BigInteger*> (&total_supply);
 			obj->fromJson(json_to_string(node, false));
 			
 		}
@@ -313,11 +313,11 @@ UniswapV3TokenV3DTO::fromJson(char* jsonStr)
 	if (node !=NULL) {
 	
 
-		if (isprimitive("NumericsBigInteger")) {
-			jsonToValue(&tx_count, node, "NumericsBigInteger", "NumericsBigInteger");
+		if (isprimitive("Numerics.BigInteger")) {
+			jsonToValue(&tx_count, node, "Numerics.BigInteger", "Numerics.BigInteger");
 		} else {
 			
-			NumericsBigInteger* obj = static_cast<NumericsBigInteger*> (&tx_count);
+			Numerics.BigInteger* obj = static_cast<Numerics.BigInteger*> (&tx_count);
 			obj->fromJson(json_to_string(node, false));
 			
 		}
@@ -327,11 +327,11 @@ UniswapV3TokenV3DTO::fromJson(char* jsonStr)
 	if (node !=NULL) {
 	
 
-		if (isprimitive("NumericsBigInteger")) {
-			jsonToValue(&pool_count, node, "NumericsBigInteger", "NumericsBigInteger");
+		if (isprimitive("Numerics.BigInteger")) {
+			jsonToValue(&pool_count, node, "Numerics.BigInteger", "Numerics.BigInteger");
 		} else {
 			
-			NumericsBigInteger* obj = static_cast<NumericsBigInteger*> (&pool_count);
+			Numerics.BigInteger* obj = static_cast<Numerics.BigInteger*> (&pool_count);
 			obj->fromJson(json_to_string(node, false));
 			
 		}
@@ -415,13 +415,13 @@ UniswapV3TokenV3DTO::fromJson(char* jsonStr)
 	}
 }
 
-UniswapV3TokenV3DTO::UniswapV3TokenV3DTO(char* json)
+UniswapV3.TokenV3DTO::UniswapV3.TokenV3DTO(char* json)
 {
 	this->fromJson(json);
 }
 
 char*
-UniswapV3TokenV3DTO::toJson()
+UniswapV3.TokenV3DTO::toJson()
 {
 	JsonObject *pJsonObject = json_object_new();
 	JsonNode *node;
@@ -497,13 +497,13 @@ UniswapV3TokenV3DTO::toJson()
 	}
 	const gchar *decimalsKey = "decimals";
 	json_object_set_member(pJsonObject, decimalsKey, node);
-	if (isprimitive("NumericsBigInteger")) {
-		NumericsBigInteger obj = getTotalSupply();
-		node = converttoJson(&obj, "NumericsBigInteger", "");
+	if (isprimitive("Numerics.BigInteger")) {
+		Numerics.BigInteger obj = getTotalSupply();
+		node = converttoJson(&obj, "Numerics.BigInteger", "");
 	}
 	else {
 		
-		NumericsBigInteger obj = static_cast<NumericsBigInteger> (getTotalSupply());
+		Numerics.BigInteger obj = static_cast<Numerics.BigInteger> (getTotalSupply());
 		GError *mygerror;
 		mygerror = NULL;
 		node = json_from_string(obj.toJson(), &mygerror);
@@ -547,13 +547,13 @@ UniswapV3TokenV3DTO::toJson()
 	}
 	const gchar *fees_usdKey = "fees_usd";
 	json_object_set_member(pJsonObject, fees_usdKey, node);
-	if (isprimitive("NumericsBigInteger")) {
-		NumericsBigInteger obj = getTxCount();
-		node = converttoJson(&obj, "NumericsBigInteger", "");
+	if (isprimitive("Numerics.BigInteger")) {
+		Numerics.BigInteger obj = getTxCount();
+		node = converttoJson(&obj, "Numerics.BigInteger", "");
 	}
 	else {
 		
-		NumericsBigInteger obj = static_cast<NumericsBigInteger> (getTxCount());
+		Numerics.BigInteger obj = static_cast<Numerics.BigInteger> (getTxCount());
 		GError *mygerror;
 		mygerror = NULL;
 		node = json_from_string(obj.toJson(), &mygerror);
@@ -561,13 +561,13 @@ UniswapV3TokenV3DTO::toJson()
 	}
 	const gchar *tx_countKey = "tx_count";
 	json_object_set_member(pJsonObject, tx_countKey, node);
-	if (isprimitive("NumericsBigInteger")) {
-		NumericsBigInteger obj = getPoolCount();
-		node = converttoJson(&obj, "NumericsBigInteger", "");
+	if (isprimitive("Numerics.BigInteger")) {
+		Numerics.BigInteger obj = getPoolCount();
+		node = converttoJson(&obj, "Numerics.BigInteger", "");
 	}
 	else {
 		
-		NumericsBigInteger obj = static_cast<NumericsBigInteger> (getPoolCount());
+		Numerics.BigInteger obj = static_cast<Numerics.BigInteger> (getPoolCount());
 		GError *mygerror;
 		mygerror = NULL;
 		node = json_from_string(obj.toJson(), &mygerror);
@@ -644,253 +644,253 @@ UniswapV3TokenV3DTO::toJson()
 }
 
 std::string
-UniswapV3TokenV3DTO::getEntryTime()
+UniswapV3.TokenV3DTO::getEntryTime()
 {
 	return entry_time;
 }
 
 void
-UniswapV3TokenV3DTO::setEntryTime(std::string  entry_time)
+UniswapV3.TokenV3DTO::setEntryTime(std::string  entry_time)
 {
 	this->entry_time = entry_time;
 }
 
 std::string
-UniswapV3TokenV3DTO::getRecvTime()
+UniswapV3.TokenV3DTO::getRecvTime()
 {
 	return recv_time;
 }
 
 void
-UniswapV3TokenV3DTO::setRecvTime(std::string  recv_time)
+UniswapV3.TokenV3DTO::setRecvTime(std::string  recv_time)
 {
 	this->recv_time = recv_time;
 }
 
 long long
-UniswapV3TokenV3DTO::getBlockNumber()
+UniswapV3.TokenV3DTO::getBlockNumber()
 {
 	return block_number;
 }
 
 void
-UniswapV3TokenV3DTO::setBlockNumber(long long  block_number)
+UniswapV3.TokenV3DTO::setBlockNumber(long long  block_number)
 {
 	this->block_number = block_number;
 }
 
 long long
-UniswapV3TokenV3DTO::getVid()
+UniswapV3.TokenV3DTO::getVid()
 {
 	return vid;
 }
 
 void
-UniswapV3TokenV3DTO::setVid(long long  vid)
+UniswapV3.TokenV3DTO::setVid(long long  vid)
 {
 	this->vid = vid;
 }
 
 std::string
-UniswapV3TokenV3DTO::getId()
+UniswapV3.TokenV3DTO::getId()
 {
 	return id;
 }
 
 void
-UniswapV3TokenV3DTO::setId(std::string  id)
+UniswapV3.TokenV3DTO::setId(std::string  id)
 {
 	this->id = id;
 }
 
 std::string
-UniswapV3TokenV3DTO::getSymbol()
+UniswapV3.TokenV3DTO::getSymbol()
 {
 	return symbol;
 }
 
 void
-UniswapV3TokenV3DTO::setSymbol(std::string  symbol)
+UniswapV3.TokenV3DTO::setSymbol(std::string  symbol)
 {
 	this->symbol = symbol;
 }
 
 std::string
-UniswapV3TokenV3DTO::getName()
+UniswapV3.TokenV3DTO::getName()
 {
 	return name;
 }
 
 void
-UniswapV3TokenV3DTO::setName(std::string  name)
+UniswapV3.TokenV3DTO::setName(std::string  name)
 {
 	this->name = name;
 }
 
 int
-UniswapV3TokenV3DTO::getDecimals()
+UniswapV3.TokenV3DTO::getDecimals()
 {
 	return decimals;
 }
 
 void
-UniswapV3TokenV3DTO::setDecimals(int  decimals)
+UniswapV3.TokenV3DTO::setDecimals(int  decimals)
 {
 	this->decimals = decimals;
 }
 
-NumericsBigInteger
-UniswapV3TokenV3DTO::getTotalSupply()
+Numerics.BigInteger
+UniswapV3.TokenV3DTO::getTotalSupply()
 {
 	return total_supply;
 }
 
 void
-UniswapV3TokenV3DTO::setTotalSupply(NumericsBigInteger  total_supply)
+UniswapV3.TokenV3DTO::setTotalSupply(Numerics.BigInteger  total_supply)
 {
 	this->total_supply = total_supply;
 }
 
 std::string
-UniswapV3TokenV3DTO::getVolume()
+UniswapV3.TokenV3DTO::getVolume()
 {
 	return volume;
 }
 
 void
-UniswapV3TokenV3DTO::setVolume(std::string  volume)
+UniswapV3.TokenV3DTO::setVolume(std::string  volume)
 {
 	this->volume = volume;
 }
 
 std::string
-UniswapV3TokenV3DTO::getVolumeUsd()
+UniswapV3.TokenV3DTO::getVolumeUsd()
 {
 	return volume_usd;
 }
 
 void
-UniswapV3TokenV3DTO::setVolumeUsd(std::string  volume_usd)
+UniswapV3.TokenV3DTO::setVolumeUsd(std::string  volume_usd)
 {
 	this->volume_usd = volume_usd;
 }
 
 std::string
-UniswapV3TokenV3DTO::getUntrackedVolumeUsd()
+UniswapV3.TokenV3DTO::getUntrackedVolumeUsd()
 {
 	return untracked_volume_usd;
 }
 
 void
-UniswapV3TokenV3DTO::setUntrackedVolumeUsd(std::string  untracked_volume_usd)
+UniswapV3.TokenV3DTO::setUntrackedVolumeUsd(std::string  untracked_volume_usd)
 {
 	this->untracked_volume_usd = untracked_volume_usd;
 }
 
 std::string
-UniswapV3TokenV3DTO::getFeesUsd()
+UniswapV3.TokenV3DTO::getFeesUsd()
 {
 	return fees_usd;
 }
 
 void
-UniswapV3TokenV3DTO::setFeesUsd(std::string  fees_usd)
+UniswapV3.TokenV3DTO::setFeesUsd(std::string  fees_usd)
 {
 	this->fees_usd = fees_usd;
 }
 
-NumericsBigInteger
-UniswapV3TokenV3DTO::getTxCount()
+Numerics.BigInteger
+UniswapV3.TokenV3DTO::getTxCount()
 {
 	return tx_count;
 }
 
 void
-UniswapV3TokenV3DTO::setTxCount(NumericsBigInteger  tx_count)
+UniswapV3.TokenV3DTO::setTxCount(Numerics.BigInteger  tx_count)
 {
 	this->tx_count = tx_count;
 }
 
-NumericsBigInteger
-UniswapV3TokenV3DTO::getPoolCount()
+Numerics.BigInteger
+UniswapV3.TokenV3DTO::getPoolCount()
 {
 	return pool_count;
 }
 
 void
-UniswapV3TokenV3DTO::setPoolCount(NumericsBigInteger  pool_count)
+UniswapV3.TokenV3DTO::setPoolCount(Numerics.BigInteger  pool_count)
 {
 	this->pool_count = pool_count;
 }
 
 std::string
-UniswapV3TokenV3DTO::getTotalValueLocked()
+UniswapV3.TokenV3DTO::getTotalValueLocked()
 {
 	return total_value_locked;
 }
 
 void
-UniswapV3TokenV3DTO::setTotalValueLocked(std::string  total_value_locked)
+UniswapV3.TokenV3DTO::setTotalValueLocked(std::string  total_value_locked)
 {
 	this->total_value_locked = total_value_locked;
 }
 
 std::string
-UniswapV3TokenV3DTO::getTotalValueLockedUsd()
+UniswapV3.TokenV3DTO::getTotalValueLockedUsd()
 {
 	return total_value_locked_usd;
 }
 
 void
-UniswapV3TokenV3DTO::setTotalValueLockedUsd(std::string  total_value_locked_usd)
+UniswapV3.TokenV3DTO::setTotalValueLockedUsd(std::string  total_value_locked_usd)
 {
 	this->total_value_locked_usd = total_value_locked_usd;
 }
 
 std::string
-UniswapV3TokenV3DTO::getTotalValueLockedUsdUntracked()
+UniswapV3.TokenV3DTO::getTotalValueLockedUsdUntracked()
 {
 	return total_value_locked_usd_untracked;
 }
 
 void
-UniswapV3TokenV3DTO::setTotalValueLockedUsdUntracked(std::string  total_value_locked_usd_untracked)
+UniswapV3.TokenV3DTO::setTotalValueLockedUsdUntracked(std::string  total_value_locked_usd_untracked)
 {
 	this->total_value_locked_usd_untracked = total_value_locked_usd_untracked;
 }
 
 std::string
-UniswapV3TokenV3DTO::getDerivedEth()
+UniswapV3.TokenV3DTO::getDerivedEth()
 {
 	return derived_eth;
 }
 
 void
-UniswapV3TokenV3DTO::setDerivedEth(std::string  derived_eth)
+UniswapV3.TokenV3DTO::setDerivedEth(std::string  derived_eth)
 {
 	this->derived_eth = derived_eth;
 }
 
 std::list<std::string>
-UniswapV3TokenV3DTO::getWhitelistPools()
+UniswapV3.TokenV3DTO::getWhitelistPools()
 {
 	return whitelist_pools;
 }
 
 void
-UniswapV3TokenV3DTO::setWhitelistPools(std::list <std::string> whitelist_pools)
+UniswapV3.TokenV3DTO::setWhitelistPools(std::list <std::string> whitelist_pools)
 {
 	this->whitelist_pools = whitelist_pools;
 }
 
 std::string
-UniswapV3TokenV3DTO::getTokenSymbol()
+UniswapV3.TokenV3DTO::getTokenSymbol()
 {
 	return token_symbol;
 }
 
 void
-UniswapV3TokenV3DTO::setTokenSymbol(std::string  token_symbol)
+UniswapV3.TokenV3DTO::setTokenSymbol(std::string  token_symbol)
 {
 	this->token_symbol = token_symbol;
 }

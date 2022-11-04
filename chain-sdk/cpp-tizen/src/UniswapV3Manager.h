@@ -5,22 +5,22 @@
 #include <cstring>
 #include <list>
 #include <glib.h>
-#include "UniswapV3BundleV3DTO.h"
-#include "UniswapV3BurnV3DTO.h"
-#include "UniswapV3FactoryV3DTO.h"
-#include "UniswapV3MintV3DTO.h"
-#include "UniswapV3PoolDayDataV3DTO.h"
-#include "UniswapV3PoolHourDataV3DTO.h"
-#include "UniswapV3PoolV3DTO.h"
-#include "UniswapV3PositionSnapshotV3DTO.h"
-#include "UniswapV3PositionV3DTO.h"
-#include "UniswapV3SwapV3DTO.h"
-#include "UniswapV3TickDayDataV3DTO.h"
-#include "UniswapV3TickV3DTO.h"
-#include "UniswapV3TokenHourDataV3DTO.h"
-#include "UniswapV3TokenV3DTO.h"
-#include "UniswapV3TokenV3DayDataDTO.h"
-#include "UniswapV3UniswapDayDataV3DTO.h"
+#include "UniswapV3.BundleV3DTO.h"
+#include "UniswapV3.BurnV3DTO.h"
+#include "UniswapV3.FactoryV3DTO.h"
+#include "UniswapV3.MintV3DTO.h"
+#include "UniswapV3.PoolDayDataV3DTO.h"
+#include "UniswapV3.PoolHourDataV3DTO.h"
+#include "UniswapV3.PoolV3DTO.h"
+#include "UniswapV3.PositionSnapshotV3DTO.h"
+#include "UniswapV3.PositionV3DTO.h"
+#include "UniswapV3.SwapV3DTO.h"
+#include "UniswapV3.TickDayDataV3DTO.h"
+#include "UniswapV3.TickV3DTO.h"
+#include "UniswapV3.TokenHourDataV3DTO.h"
+#include "UniswapV3.TokenV3DTO.h"
+#include "UniswapV3.TokenV3DayDataDTO.h"
+#include "UniswapV3.UniswapDayDataV3DTO.h"
 #include "Error.h"
 
 /** \defgroup Operations API Endpoints
@@ -48,7 +48,7 @@ public:
  */
 bool dappsUniswapv3BundleCurrentGetSync(char * accessToken,
 	
-	void(* handler)(std::list<UniswapV3BundleV3DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV3.BundleV3DTO>, Error, void* )
 	, void* userData);
 
 /*! \brief GetBundles. *Asynchronous*
@@ -60,7 +60,7 @@ bool dappsUniswapv3BundleCurrentGetSync(char * accessToken,
  */
 bool dappsUniswapv3BundleCurrentGetAsync(char * accessToken,
 	
-	void(* handler)(std::list<UniswapV3BundleV3DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV3.BundleV3DTO>, Error, void* )
 	, void* userData);
 
 
@@ -107,7 +107,7 @@ bool dappsUniswapv3BundlesHistoricalGetAsync(char * accessToken,
  */
 bool dappsUniswapv3BurnsCurrentGetSync(char * accessToken,
 	std::string filterPoolId, 
-	void(* handler)(std::list<UniswapV3BurnV3DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV3.BurnV3DTO>, Error, void* )
 	, void* userData);
 
 /*! \brief GetBurns. *Asynchronous*
@@ -120,7 +120,7 @@ bool dappsUniswapv3BurnsCurrentGetSync(char * accessToken,
  */
 bool dappsUniswapv3BurnsCurrentGetAsync(char * accessToken,
 	std::string filterPoolId, 
-	void(* handler)(std::list<UniswapV3BurnV3DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV3.BurnV3DTO>, Error, void* )
 	, void* userData);
 
 
@@ -202,7 +202,7 @@ bool dappsUniswapv3DayDataHistoricalGetAsync(char * accessToken,
  */
 bool dappsUniswapv3FactoryCurrentGetSync(char * accessToken,
 	std::string chainId, 
-	void(* handler)(std::list<UniswapV3FactoryV3DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV3.FactoryV3DTO>, Error, void* )
 	, void* userData);
 
 /*! \brief GetFactory. *Asynchronous*
@@ -215,7 +215,7 @@ bool dappsUniswapv3FactoryCurrentGetSync(char * accessToken,
  */
 bool dappsUniswapv3FactoryCurrentGetAsync(char * accessToken,
 	std::string chainId, 
-	void(* handler)(std::list<UniswapV3FactoryV3DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV3.FactoryV3DTO>, Error, void* )
 	, void* userData);
 
 
@@ -262,7 +262,7 @@ bool dappsUniswapv3FactoryHistoricalGetAsync(char * accessToken,
  */
 bool dappsUniswapv3MintsCurrentGetSync(char * accessToken,
 	std::string filterPoolId, 
-	void(* handler)(std::list<UniswapV3MintV3DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV3.MintV3DTO>, Error, void* )
 	, void* userData);
 
 /*! \brief GetMints. *Asynchronous*
@@ -275,7 +275,7 @@ bool dappsUniswapv3MintsCurrentGetSync(char * accessToken,
  */
 bool dappsUniswapv3MintsCurrentGetAsync(char * accessToken,
 	std::string filterPoolId, 
-	void(* handler)(std::list<UniswapV3MintV3DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV3.MintV3DTO>, Error, void* )
 	, void* userData);
 
 
@@ -394,7 +394,7 @@ bool dappsUniswapv3PoolHourDataHistoricalGetAsync(char * accessToken,
  */
 bool dappsUniswapv3PoolsCurrentGetSync(char * accessToken,
 	std::string filterPoolId, 
-	void(* handler)(std::list<UniswapV3PoolV3DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV3.PoolV3DTO>, Error, void* )
 	, void* userData);
 
 /*! \brief GetPools. *Asynchronous*
@@ -407,7 +407,7 @@ bool dappsUniswapv3PoolsCurrentGetSync(char * accessToken,
  */
 bool dappsUniswapv3PoolsCurrentGetAsync(char * accessToken,
 	std::string filterPoolId, 
-	void(* handler)(std::list<UniswapV3PoolV3DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV3.PoolV3DTO>, Error, void* )
 	, void* userData);
 
 
@@ -421,7 +421,7 @@ bool dappsUniswapv3PoolsCurrentGetAsync(char * accessToken,
  */
 bool dappsUniswapv3PoolsDayDataCurrentGetSync(char * accessToken,
 	std::string filterPoolId, 
-	void(* handler)(std::list<UniswapV3PoolDayDataV3DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV3.PoolDayDataV3DTO>, Error, void* )
 	, void* userData);
 
 /*! \brief GetPoolsDayData. *Asynchronous*
@@ -434,7 +434,7 @@ bool dappsUniswapv3PoolsDayDataCurrentGetSync(char * accessToken,
  */
 bool dappsUniswapv3PoolsDayDataCurrentGetAsync(char * accessToken,
 	std::string filterPoolId, 
-	void(* handler)(std::list<UniswapV3PoolDayDataV3DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV3.PoolDayDataV3DTO>, Error, void* )
 	, void* userData);
 
 
@@ -483,7 +483,7 @@ bool dappsUniswapv3PoolsHistoricalGetAsync(char * accessToken,
  */
 bool dappsUniswapv3PoolsHourDataCurrentGetSync(char * accessToken,
 	std::string filterPoolId, 
-	void(* handler)(std::list<UniswapV3PoolHourDataV3DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV3.PoolHourDataV3DTO>, Error, void* )
 	, void* userData);
 
 /*! \brief GetPoolsHourData. *Asynchronous*
@@ -496,7 +496,7 @@ bool dappsUniswapv3PoolsHourDataCurrentGetSync(char * accessToken,
  */
 bool dappsUniswapv3PoolsHourDataCurrentGetAsync(char * accessToken,
 	std::string filterPoolId, 
-	void(* handler)(std::list<UniswapV3PoolHourDataV3DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV3.PoolHourDataV3DTO>, Error, void* )
 	, void* userData);
 
 
@@ -545,7 +545,7 @@ bool dappsUniswapv3PositionSnapshotHistoricalGetAsync(char * accessToken,
  */
 bool dappsUniswapv3PositionSnapshotsCurrentGetSync(char * accessToken,
 	std::string filterPoolId, 
-	void(* handler)(std::list<UniswapV3PositionSnapshotV3DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV3.PositionSnapshotV3DTO>, Error, void* )
 	, void* userData);
 
 /*! \brief GetPositionSnapshot. *Asynchronous*
@@ -558,7 +558,7 @@ bool dappsUniswapv3PositionSnapshotsCurrentGetSync(char * accessToken,
  */
 bool dappsUniswapv3PositionSnapshotsCurrentGetAsync(char * accessToken,
 	std::string filterPoolId, 
-	void(* handler)(std::list<UniswapV3PositionSnapshotV3DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV3.PositionSnapshotV3DTO>, Error, void* )
 	, void* userData);
 
 
@@ -572,7 +572,7 @@ bool dappsUniswapv3PositionSnapshotsCurrentGetAsync(char * accessToken,
  */
 bool dappsUniswapv3PositionsCurrentGetSync(char * accessToken,
 	std::string filterPoolId, 
-	void(* handler)(std::list<UniswapV3PositionV3DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV3.PositionV3DTO>, Error, void* )
 	, void* userData);
 
 /*! \brief GetPositions. *Asynchronous*
@@ -585,7 +585,7 @@ bool dappsUniswapv3PositionsCurrentGetSync(char * accessToken,
  */
 bool dappsUniswapv3PositionsCurrentGetAsync(char * accessToken,
 	std::string filterPoolId, 
-	void(* handler)(std::list<UniswapV3PositionV3DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV3.PositionV3DTO>, Error, void* )
 	, void* userData);
 
 
@@ -634,7 +634,7 @@ bool dappsUniswapv3PositionsHistoricalGetAsync(char * accessToken,
  */
 bool dappsUniswapv3SwapsCurrentGetSync(char * accessToken,
 	std::string filterPoolId, 
-	void(* handler)(std::list<UniswapV3SwapV3DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV3.SwapV3DTO>, Error, void* )
 	, void* userData);
 
 /*! \brief GetSwaps. *Asynchronous*
@@ -647,7 +647,7 @@ bool dappsUniswapv3SwapsCurrentGetSync(char * accessToken,
  */
 bool dappsUniswapv3SwapsCurrentGetAsync(char * accessToken,
 	std::string filterPoolId, 
-	void(* handler)(std::list<UniswapV3SwapV3DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV3.SwapV3DTO>, Error, void* )
 	, void* userData);
 
 
@@ -731,7 +731,7 @@ bool dappsUniswapv3TickDayDataHistoricalGetAsync(char * accessToken,
  */
 bool dappsUniswapv3TicksCurrentGetSync(char * accessToken,
 	std::string filterPoolId, 
-	void(* handler)(std::list<UniswapV3TickV3DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV3.TickV3DTO>, Error, void* )
 	, void* userData);
 
 /*! \brief GetTicks. *Asynchronous*
@@ -744,7 +744,7 @@ bool dappsUniswapv3TicksCurrentGetSync(char * accessToken,
  */
 bool dappsUniswapv3TicksCurrentGetAsync(char * accessToken,
 	std::string filterPoolId, 
-	void(* handler)(std::list<UniswapV3TickV3DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV3.TickV3DTO>, Error, void* )
 	, void* userData);
 
 
@@ -758,7 +758,7 @@ bool dappsUniswapv3TicksCurrentGetAsync(char * accessToken,
  */
 bool dappsUniswapv3TicksDayDataCurrentGetSync(char * accessToken,
 	std::string filterPoolId, 
-	void(* handler)(std::list<UniswapV3TickDayDataV3DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV3.TickDayDataV3DTO>, Error, void* )
 	, void* userData);
 
 /*! \brief GetTicksDayData. *Asynchronous*
@@ -771,7 +771,7 @@ bool dappsUniswapv3TicksDayDataCurrentGetSync(char * accessToken,
  */
 bool dappsUniswapv3TicksDayDataCurrentGetAsync(char * accessToken,
 	std::string filterPoolId, 
-	void(* handler)(std::list<UniswapV3TickDayDataV3DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV3.TickDayDataV3DTO>, Error, void* )
 	, void* userData);
 
 
@@ -890,7 +890,7 @@ bool dappsUniswapv3TokenHourDataHistoricalGetAsync(char * accessToken,
  */
 bool dappsUniswapv3TokensCurrentGetSync(char * accessToken,
 	std::string filterTokenId, 
-	void(* handler)(std::list<UniswapV3TokenV3DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV3.TokenV3DTO>, Error, void* )
 	, void* userData);
 
 /*! \brief GetTokens. *Asynchronous*
@@ -903,7 +903,7 @@ bool dappsUniswapv3TokensCurrentGetSync(char * accessToken,
  */
 bool dappsUniswapv3TokensCurrentGetAsync(char * accessToken,
 	std::string filterTokenId, 
-	void(* handler)(std::list<UniswapV3TokenV3DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV3.TokenV3DTO>, Error, void* )
 	, void* userData);
 
 
@@ -917,7 +917,7 @@ bool dappsUniswapv3TokensCurrentGetAsync(char * accessToken,
  */
 bool dappsUniswapv3TokensDayDataCurrentGetSync(char * accessToken,
 	std::string filterTokenId, 
-	void(* handler)(std::list<UniswapV3TokenV3DayDataDTO>, Error, void* )
+	void(* handler)(std::list<UniswapV3.TokenV3DayDataDTO>, Error, void* )
 	, void* userData);
 
 /*! \brief GetTokensDayData. *Asynchronous*
@@ -930,7 +930,7 @@ bool dappsUniswapv3TokensDayDataCurrentGetSync(char * accessToken,
  */
 bool dappsUniswapv3TokensDayDataCurrentGetAsync(char * accessToken,
 	std::string filterTokenId, 
-	void(* handler)(std::list<UniswapV3TokenV3DayDataDTO>, Error, void* )
+	void(* handler)(std::list<UniswapV3.TokenV3DayDataDTO>, Error, void* )
 	, void* userData);
 
 
@@ -979,7 +979,7 @@ bool dappsUniswapv3TokensHistoricalGetAsync(char * accessToken,
  */
 bool dappsUniswapv3TokensHourDataCurrentGetSync(char * accessToken,
 	std::string filterTokenId, 
-	void(* handler)(std::list<UniswapV3TokenHourDataV3DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV3.TokenHourDataV3DTO>, Error, void* )
 	, void* userData);
 
 /*! \brief GetTokensHourData. *Asynchronous*
@@ -992,7 +992,7 @@ bool dappsUniswapv3TokensHourDataCurrentGetSync(char * accessToken,
  */
 bool dappsUniswapv3TokensHourDataCurrentGetAsync(char * accessToken,
 	std::string filterTokenId, 
-	void(* handler)(std::list<UniswapV3TokenHourDataV3DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV3.TokenHourDataV3DTO>, Error, void* )
 	, void* userData);
 
 
@@ -1038,7 +1038,7 @@ bool dappsUniswapv3TransactionsHistoricalGetAsync(char * accessToken,
  */
 bool dappsUniswapv3UniswapDayDataCurrentGetSync(char * accessToken,
 	
-	void(* handler)(std::list<UniswapV3UniswapDayDataV3DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV3.UniswapDayDataV3DTO>, Error, void* )
 	, void* userData);
 
 /*! \brief GetUniswapDayData. *Asynchronous*
@@ -1050,7 +1050,7 @@ bool dappsUniswapv3UniswapDayDataCurrentGetSync(char * accessToken,
  */
 bool dappsUniswapv3UniswapDayDataCurrentGetAsync(char * accessToken,
 	
-	void(* handler)(std::list<UniswapV3UniswapDayDataV3DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV3.UniswapDayDataV3DTO>, Error, void* )
 	, void* userData);
 
 

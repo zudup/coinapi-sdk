@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **volume_usd** | **character** | Total volume across all pairs on this day, stored as a derived amount of USD. | [optional] 
 **volume_usd_untracked** | **character** | Total daily volume in Uniswap derived in terms of USD untracked. | [optional] 
 **fees_usd** | **character** | Fees in USD | [optional] 
-**tx_count** | [**NumericsBigInteger**](NumericsBigInteger.md) |  | [optional] 
+**tx_count** | [**NumericsBigInteger**](Numerics.BigInteger.md) |  | [optional] 
 **tvl_usd** | **character** | Tvl in terms of USD. | [optional] 
 
 

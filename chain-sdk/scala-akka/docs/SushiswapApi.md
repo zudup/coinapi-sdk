@@ -925,7 +925,7 @@ No authorization required
 
 ## dappsSushiswapPoolsCurrentGet
 
-> dappsSushiswapPoolsCurrentGet(): ApiRequest[Seq[SushiswapPairDTO]]
+> dappsSushiswapPoolsCurrentGet(): ApiRequest[Seq[PairDTO]]
 
 GetPools
 
@@ -980,7 +980,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-ApiRequest[[**Seq[SushiswapPairDTO]**](SushiswapPairDTO.md)]
+ApiRequest[[**Seq[PairDTO]**](PairDTO.md)]
 
 
 ### Authorization
@@ -1000,7 +1000,7 @@ No authorization required
 
 ## dappsSushiswapPoolsHistoricalGet
 
-> dappsSushiswapPoolsHistoricalGet(dappsSushiswapPoolsHistoricalGetRequest): ApiRequest[Seq[SushiswapPairDTO]]
+> dappsSushiswapPoolsHistoricalGet(dappsSushiswapPoolsHistoricalGetRequest): ApiRequest[Seq[PairDTO]]
 
 GetPools (historical)
 
@@ -1071,7 +1071,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-ApiRequest[[**Seq[SushiswapPairDTO]**](SushiswapPairDTO.md)]
+ApiRequest[[**Seq[PairDTO]**](PairDTO.md)]
 
 
 ### Authorization
@@ -1091,7 +1091,7 @@ No authorization required
 
 ## dappsSushiswapSwapsCurrentGet
 
-> dappsSushiswapSwapsCurrentGet(): ApiRequest[Seq[SushiswapSwapDTO]]
+> dappsSushiswapSwapsCurrentGet(): ApiRequest[Seq[SwapDTO]]
 
 GetSwaps
 
@@ -1144,7 +1144,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-ApiRequest[[**Seq[SushiswapSwapDTO]**](SushiswapSwapDTO.md)]
+ApiRequest[[**Seq[SwapDTO]**](SwapDTO.md)]
 
 
 ### Authorization
@@ -1164,7 +1164,7 @@ No authorization required
 
 ## dappsSushiswapSwapsHistoricalGet
 
-> dappsSushiswapSwapsHistoricalGet(dappsSushiswapSwapsHistoricalGetRequest): ApiRequest[Seq[SushiswapSwapDTO]]
+> dappsSushiswapSwapsHistoricalGet(dappsSushiswapSwapsHistoricalGetRequest): ApiRequest[Seq[SwapDTO]]
 
 GetSwaps (historical)
 
@@ -1235,7 +1235,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-ApiRequest[[**Seq[SushiswapSwapDTO]**](SushiswapSwapDTO.md)]
+ApiRequest[[**Seq[SwapDTO]**](SwapDTO.md)]
 
 
 ### Authorization
@@ -1344,7 +1344,7 @@ No authorization required
 
 ## dappsSushiswapTokensCurrentGet
 
-> dappsSushiswapTokensCurrentGet(): ApiRequest[Seq[SushiswapTokenDTO]]
+> dappsSushiswapTokensCurrentGet(): ApiRequest[Seq[TokenDTO]]
 
 GetTokens
 
@@ -1397,7 +1397,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-ApiRequest[[**Seq[SushiswapTokenDTO]**](SushiswapTokenDTO.md)]
+ApiRequest[[**Seq[TokenDTO]**](TokenDTO.md)]
 
 
 ### Authorization
@@ -1417,7 +1417,7 @@ No authorization required
 
 ## dappsSushiswapTokensHistoricalGet
 
-> dappsSushiswapTokensHistoricalGet(dappsSushiswapTokensHistoricalGetRequest): ApiRequest[Seq[SushiswapTokenDTO]]
+> dappsSushiswapTokensHistoricalGet(dappsSushiswapTokensHistoricalGetRequest): ApiRequest[Seq[TokenDTO]]
 
 GetTokens (historical)
 
@@ -1488,7 +1488,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-ApiRequest[[**Seq[SushiswapTokenDTO]**](SushiswapTokenDTO.md)]
+ApiRequest[[**Seq[TokenDTO]**](TokenDTO.md)]
 
 
 ### Authorization

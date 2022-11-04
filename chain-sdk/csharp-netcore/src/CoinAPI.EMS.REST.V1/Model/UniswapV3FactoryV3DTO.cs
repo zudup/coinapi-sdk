@@ -29,7 +29,7 @@ namespace CoinAPI.EMS.REST.V1.Model
     /// <summary>
     /// The Uniswap Factory entity is responsible for storing aggregate information across all Uniswap pairs. It can be used to view stats about total liquidity, volume, amount of pairs and more.
     /// </summary>
-    [DataContract(Name = "UniswapV3FactoryV3DTO")]
+    [DataContract(Name = "UniswapV3.FactoryV3DTO")]
     public partial class UniswapV3FactoryV3DTO : IEquatable<UniswapV3FactoryV3DTO>, IValidatableObject
     {
         /// <summary>

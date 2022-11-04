@@ -5,23 +5,23 @@
 #include "Helpers.h"
 
 
-#include "UniswapV2TokenV2DTO.h"
+#include "UniswapV2.TokenV2DTO.h"
 
 using namespace std;
 using namespace Tizen::ArtikCloud;
 
-UniswapV2TokenV2DTO::UniswapV2TokenV2DTO()
+UniswapV2.TokenV2DTO::UniswapV2.TokenV2DTO()
 {
 	//__init();
 }
 
-UniswapV2TokenV2DTO::~UniswapV2TokenV2DTO()
+UniswapV2.TokenV2DTO::~UniswapV2.TokenV2DTO()
 {
 	//__cleanup();
 }
 
 void
-UniswapV2TokenV2DTO::__init()
+UniswapV2.TokenV2DTO::__init()
 {
 	//entry_time = null;
 	//recv_time = null;
@@ -31,18 +31,18 @@ UniswapV2TokenV2DTO::__init()
 	//symbol = std::string();
 	//name = std::string();
 	//decimals = int(0);
-	//total_supply = new NumericsBigInteger();
+	//total_supply = new Numerics.BigInteger();
 	//trade_volume = std::string();
 	//trade_volume_usd = std::string();
 	//untracked_volume_usd = std::string();
-	//tx_count = new NumericsBigInteger();
+	//tx_count = new Numerics.BigInteger();
 	//total_liquidity = std::string();
 	//derived_eth = std::string();
 	//token_symbol = std::string();
 }
 
 void
-UniswapV2TokenV2DTO::__cleanup()
+UniswapV2.TokenV2DTO::__cleanup()
 {
 	//if(entry_time != NULL) {
 	//
@@ -128,7 +128,7 @@ UniswapV2TokenV2DTO::__cleanup()
 }
 
 void
-UniswapV2TokenV2DTO::fromJson(char* jsonStr)
+UniswapV2.TokenV2DTO::fromJson(char* jsonStr)
 {
 	JsonObject *pJsonObject = json_node_get_object(json_from_string(jsonStr,NULL));
 	JsonNode *node;
@@ -225,11 +225,11 @@ UniswapV2TokenV2DTO::fromJson(char* jsonStr)
 	if (node !=NULL) {
 	
 
-		if (isprimitive("NumericsBigInteger")) {
-			jsonToValue(&total_supply, node, "NumericsBigInteger", "NumericsBigInteger");
+		if (isprimitive("Numerics.BigInteger")) {
+			jsonToValue(&total_supply, node, "Numerics.BigInteger", "Numerics.BigInteger");
 		} else {
 			
-			NumericsBigInteger* obj = static_cast<NumericsBigInteger*> (&total_supply);
+			Numerics.BigInteger* obj = static_cast<Numerics.BigInteger*> (&total_supply);
 			obj->fromJson(json_to_string(node, false));
 			
 		}
@@ -272,11 +272,11 @@ UniswapV2TokenV2DTO::fromJson(char* jsonStr)
 	if (node !=NULL) {
 	
 
-		if (isprimitive("NumericsBigInteger")) {
-			jsonToValue(&tx_count, node, "NumericsBigInteger", "NumericsBigInteger");
+		if (isprimitive("Numerics.BigInteger")) {
+			jsonToValue(&tx_count, node, "Numerics.BigInteger", "Numerics.BigInteger");
 		} else {
 			
-			NumericsBigInteger* obj = static_cast<NumericsBigInteger*> (&tx_count);
+			Numerics.BigInteger* obj = static_cast<Numerics.BigInteger*> (&tx_count);
 			obj->fromJson(json_to_string(node, false));
 			
 		}
@@ -316,13 +316,13 @@ UniswapV2TokenV2DTO::fromJson(char* jsonStr)
 	}
 }
 
-UniswapV2TokenV2DTO::UniswapV2TokenV2DTO(char* json)
+UniswapV2.TokenV2DTO::UniswapV2.TokenV2DTO(char* json)
 {
 	this->fromJson(json);
 }
 
 char*
-UniswapV2TokenV2DTO::toJson()
+UniswapV2.TokenV2DTO::toJson()
 {
 	JsonObject *pJsonObject = json_object_new();
 	JsonNode *node;
@@ -398,13 +398,13 @@ UniswapV2TokenV2DTO::toJson()
 	}
 	const gchar *decimalsKey = "decimals";
 	json_object_set_member(pJsonObject, decimalsKey, node);
-	if (isprimitive("NumericsBigInteger")) {
-		NumericsBigInteger obj = getTotalSupply();
-		node = converttoJson(&obj, "NumericsBigInteger", "");
+	if (isprimitive("Numerics.BigInteger")) {
+		Numerics.BigInteger obj = getTotalSupply();
+		node = converttoJson(&obj, "Numerics.BigInteger", "");
 	}
 	else {
 		
-		NumericsBigInteger obj = static_cast<NumericsBigInteger> (getTotalSupply());
+		Numerics.BigInteger obj = static_cast<Numerics.BigInteger> (getTotalSupply());
 		GError *mygerror;
 		mygerror = NULL;
 		node = json_from_string(obj.toJson(), &mygerror);
@@ -439,13 +439,13 @@ UniswapV2TokenV2DTO::toJson()
 	}
 	const gchar *untracked_volume_usdKey = "untracked_volume_usd";
 	json_object_set_member(pJsonObject, untracked_volume_usdKey, node);
-	if (isprimitive("NumericsBigInteger")) {
-		NumericsBigInteger obj = getTxCount();
-		node = converttoJson(&obj, "NumericsBigInteger", "");
+	if (isprimitive("Numerics.BigInteger")) {
+		Numerics.BigInteger obj = getTxCount();
+		node = converttoJson(&obj, "Numerics.BigInteger", "");
 	}
 	else {
 		
-		NumericsBigInteger obj = static_cast<NumericsBigInteger> (getTxCount());
+		Numerics.BigInteger obj = static_cast<Numerics.BigInteger> (getTxCount());
 		GError *mygerror;
 		mygerror = NULL;
 		node = json_from_string(obj.toJson(), &mygerror);
@@ -489,193 +489,193 @@ UniswapV2TokenV2DTO::toJson()
 }
 
 std::string
-UniswapV2TokenV2DTO::getEntryTime()
+UniswapV2.TokenV2DTO::getEntryTime()
 {
 	return entry_time;
 }
 
 void
-UniswapV2TokenV2DTO::setEntryTime(std::string  entry_time)
+UniswapV2.TokenV2DTO::setEntryTime(std::string  entry_time)
 {
 	this->entry_time = entry_time;
 }
 
 std::string
-UniswapV2TokenV2DTO::getRecvTime()
+UniswapV2.TokenV2DTO::getRecvTime()
 {
 	return recv_time;
 }
 
 void
-UniswapV2TokenV2DTO::setRecvTime(std::string  recv_time)
+UniswapV2.TokenV2DTO::setRecvTime(std::string  recv_time)
 {
 	this->recv_time = recv_time;
 }
 
 long long
-UniswapV2TokenV2DTO::getBlockNumber()
+UniswapV2.TokenV2DTO::getBlockNumber()
 {
 	return block_number;
 }
 
 void
-UniswapV2TokenV2DTO::setBlockNumber(long long  block_number)
+UniswapV2.TokenV2DTO::setBlockNumber(long long  block_number)
 {
 	this->block_number = block_number;
 }
 
 long long
-UniswapV2TokenV2DTO::getVid()
+UniswapV2.TokenV2DTO::getVid()
 {
 	return vid;
 }
 
 void
-UniswapV2TokenV2DTO::setVid(long long  vid)
+UniswapV2.TokenV2DTO::setVid(long long  vid)
 {
 	this->vid = vid;
 }
 
 std::string
-UniswapV2TokenV2DTO::getId()
+UniswapV2.TokenV2DTO::getId()
 {
 	return id;
 }
 
 void
-UniswapV2TokenV2DTO::setId(std::string  id)
+UniswapV2.TokenV2DTO::setId(std::string  id)
 {
 	this->id = id;
 }
 
 std::string
-UniswapV2TokenV2DTO::getSymbol()
+UniswapV2.TokenV2DTO::getSymbol()
 {
 	return symbol;
 }
 
 void
-UniswapV2TokenV2DTO::setSymbol(std::string  symbol)
+UniswapV2.TokenV2DTO::setSymbol(std::string  symbol)
 {
 	this->symbol = symbol;
 }
 
 std::string
-UniswapV2TokenV2DTO::getName()
+UniswapV2.TokenV2DTO::getName()
 {
 	return name;
 }
 
 void
-UniswapV2TokenV2DTO::setName(std::string  name)
+UniswapV2.TokenV2DTO::setName(std::string  name)
 {
 	this->name = name;
 }
 
 int
-UniswapV2TokenV2DTO::getDecimals()
+UniswapV2.TokenV2DTO::getDecimals()
 {
 	return decimals;
 }
 
 void
-UniswapV2TokenV2DTO::setDecimals(int  decimals)
+UniswapV2.TokenV2DTO::setDecimals(int  decimals)
 {
 	this->decimals = decimals;
 }
 
-NumericsBigInteger
-UniswapV2TokenV2DTO::getTotalSupply()
+Numerics.BigInteger
+UniswapV2.TokenV2DTO::getTotalSupply()
 {
 	return total_supply;
 }
 
 void
-UniswapV2TokenV2DTO::setTotalSupply(NumericsBigInteger  total_supply)
+UniswapV2.TokenV2DTO::setTotalSupply(Numerics.BigInteger  total_supply)
 {
 	this->total_supply = total_supply;
 }
 
 std::string
-UniswapV2TokenV2DTO::getTradeVolume()
+UniswapV2.TokenV2DTO::getTradeVolume()
 {
 	return trade_volume;
 }
 
 void
-UniswapV2TokenV2DTO::setTradeVolume(std::string  trade_volume)
+UniswapV2.TokenV2DTO::setTradeVolume(std::string  trade_volume)
 {
 	this->trade_volume = trade_volume;
 }
 
 std::string
-UniswapV2TokenV2DTO::getTradeVolumeUsd()
+UniswapV2.TokenV2DTO::getTradeVolumeUsd()
 {
 	return trade_volume_usd;
 }
 
 void
-UniswapV2TokenV2DTO::setTradeVolumeUsd(std::string  trade_volume_usd)
+UniswapV2.TokenV2DTO::setTradeVolumeUsd(std::string  trade_volume_usd)
 {
 	this->trade_volume_usd = trade_volume_usd;
 }
 
 std::string
-UniswapV2TokenV2DTO::getUntrackedVolumeUsd()
+UniswapV2.TokenV2DTO::getUntrackedVolumeUsd()
 {
 	return untracked_volume_usd;
 }
 
 void
-UniswapV2TokenV2DTO::setUntrackedVolumeUsd(std::string  untracked_volume_usd)
+UniswapV2.TokenV2DTO::setUntrackedVolumeUsd(std::string  untracked_volume_usd)
 {
 	this->untracked_volume_usd = untracked_volume_usd;
 }
 
-NumericsBigInteger
-UniswapV2TokenV2DTO::getTxCount()
+Numerics.BigInteger
+UniswapV2.TokenV2DTO::getTxCount()
 {
 	return tx_count;
 }
 
 void
-UniswapV2TokenV2DTO::setTxCount(NumericsBigInteger  tx_count)
+UniswapV2.TokenV2DTO::setTxCount(Numerics.BigInteger  tx_count)
 {
 	this->tx_count = tx_count;
 }
 
 std::string
-UniswapV2TokenV2DTO::getTotalLiquidity()
+UniswapV2.TokenV2DTO::getTotalLiquidity()
 {
 	return total_liquidity;
 }
 
 void
-UniswapV2TokenV2DTO::setTotalLiquidity(std::string  total_liquidity)
+UniswapV2.TokenV2DTO::setTotalLiquidity(std::string  total_liquidity)
 {
 	this->total_liquidity = total_liquidity;
 }
 
 std::string
-UniswapV2TokenV2DTO::getDerivedEth()
+UniswapV2.TokenV2DTO::getDerivedEth()
 {
 	return derived_eth;
 }
 
 void
-UniswapV2TokenV2DTO::setDerivedEth(std::string  derived_eth)
+UniswapV2.TokenV2DTO::setDerivedEth(std::string  derived_eth)
 {
 	this->derived_eth = derived_eth;
 }
 
 std::string
-UniswapV2TokenV2DTO::getTokenSymbol()
+UniswapV2.TokenV2DTO::getTokenSymbol()
 {
 	return token_symbol;
 }
 
 void
-UniswapV2TokenV2DTO::setTokenSymbol(std::string  token_symbol)
+UniswapV2.TokenV2DTO::setTokenSymbol(std::string  token_symbol)
 {
 	this->token_symbol = token_symbol;
 }

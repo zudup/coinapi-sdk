@@ -1,4 +1,4 @@
-# UniswapV3PoolDayDataV3DTO
+# UniswapV3.PoolDayDataV3DTO
 
 ## Properties
 Name | Type | Description | Notes

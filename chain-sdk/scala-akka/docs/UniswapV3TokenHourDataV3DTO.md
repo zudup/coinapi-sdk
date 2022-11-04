@@ -1,6 +1,6 @@
 
 
-# UniswapV3TokenHourDataV3DTO
+# TokenHourDataV3DTO
 
 Token data aggregated across all pairs that include token.
 

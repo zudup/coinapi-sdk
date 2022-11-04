@@ -1,4 +1,4 @@
-# UniswapV2PairV2DTO
+# UniswapV2.PairV2DTO
 
 ## Properties
 Name | Type | Description | Notes

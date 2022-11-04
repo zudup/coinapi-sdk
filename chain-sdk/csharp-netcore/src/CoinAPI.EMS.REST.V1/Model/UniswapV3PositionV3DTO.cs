@@ -29,7 +29,7 @@ namespace CoinAPI.EMS.REST.V1.Model
     /// <summary>
     /// Positions created through NonfungiblePositionManager. Positions are represented as NFTs (ERC-721 tokens) as opposed to the fungible ERC-20 tokens on Uniswap V1 and V2.
     /// </summary>
-    [DataContract(Name = "UniswapV3PositionV3DTO")]
+    [DataContract(Name = "UniswapV3.PositionV3DTO")]
     public partial class UniswapV3PositionV3DTO : IEquatable<UniswapV3PositionV3DTO>, IValidatableObject
     {
         /// <summary>

@@ -51,7 +51,7 @@ class UniswapV3MintV3DTO implements ModelInterface, ArrayAccess, \JsonSerializab
       *
       * @var string
       */
-    protected static $openAPIModelName = 'UniswapV3MintV3DTO';
+    protected static $openAPIModelName = 'UniswapV3.MintV3DTO';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

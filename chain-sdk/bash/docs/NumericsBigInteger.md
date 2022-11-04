@@ -1,4 +1,4 @@
-# NumericsBigInteger
+# Numerics.BigInteger
 
 ## Properties
 Name | Type | Description | Notes

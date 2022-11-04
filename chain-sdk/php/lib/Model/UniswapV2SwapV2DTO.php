@@ -51,7 +51,7 @@ class UniswapV2SwapV2DTO implements ModelInterface, ArrayAccess, \JsonSerializab
       *
       * @var string
       */
-    protected static $openAPIModelName = 'UniswapV2SwapV2DTO';
+    protected static $openAPIModelName = 'UniswapV2.SwapV2DTO';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

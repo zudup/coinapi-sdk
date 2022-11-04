@@ -36,7 +36,7 @@ UniswapV3Api::~UniswapV3Api()
 {
 }
 
-pplx::task<std::vector<std::shared_ptr<UniswapV3BundleV3DTO>>> UniswapV3Api::dappsUniswapv3BundleCurrentGet() const
+pplx::task<std::vector<std::shared_ptr<UniswapV3_BundleV3DTO>>> UniswapV3Api::dappsUniswapv3BundleCurrentGet() const
 {
 
 
@@ -139,14 +139,14 @@ pplx::task<std::vector<std::shared_ptr<UniswapV3BundleV3DTO>>> UniswapV3Api::dap
     })
     .then([=](utility::string_t localVarResponse)
     {
-        std::vector<std::shared_ptr<UniswapV3BundleV3DTO>> localVarResult;
+        std::vector<std::shared_ptr<UniswapV3_BundleV3DTO>> localVarResult;
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
             web::json::value localVarJson = web::json::value::parse(localVarResponse);
             for( auto& localVarItem : localVarJson.as_array() )
             {
-                std::shared_ptr<UniswapV3BundleV3DTO> localVarItemObj;
+                std::shared_ptr<UniswapV3_BundleV3DTO> localVarItemObj;
                 ModelBase::fromJson(localVarItem, localVarItemObj);
                 localVarResult.push_back(localVarItemObj);
             }
@@ -283,7 +283,7 @@ pplx::task<void> UniswapV3Api::dappsUniswapv3BundlesHistoricalGet(boost::optiona
         return void();
     });
 }
-pplx::task<std::vector<std::shared_ptr<UniswapV3BurnV3DTO>>> UniswapV3Api::dappsUniswapv3BurnsCurrentGet(boost::optional<utility::string_t> filterPoolId) const
+pplx::task<std::vector<std::shared_ptr<UniswapV3_BurnV3DTO>>> UniswapV3Api::dappsUniswapv3BurnsCurrentGet(boost::optional<utility::string_t> filterPoolId) const
 {
 
 
@@ -390,14 +390,14 @@ pplx::task<std::vector<std::shared_ptr<UniswapV3BurnV3DTO>>> UniswapV3Api::dapps
     })
     .then([=](utility::string_t localVarResponse)
     {
-        std::vector<std::shared_ptr<UniswapV3BurnV3DTO>> localVarResult;
+        std::vector<std::shared_ptr<UniswapV3_BurnV3DTO>> localVarResult;
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
             web::json::value localVarJson = web::json::value::parse(localVarResponse);
             for( auto& localVarItem : localVarJson.as_array() )
             {
-                std::shared_ptr<UniswapV3BurnV3DTO> localVarItemObj;
+                std::shared_ptr<UniswapV3_BurnV3DTO> localVarItemObj;
                 ModelBase::fromJson(localVarItem, localVarItemObj);
                 localVarResult.push_back(localVarItemObj);
             }
@@ -657,7 +657,7 @@ pplx::task<void> UniswapV3Api::dappsUniswapv3DayDataHistoricalGet(boost::optiona
         return void();
     });
 }
-pplx::task<std::vector<std::shared_ptr<UniswapV3FactoryV3DTO>>> UniswapV3Api::dappsUniswapv3FactoryCurrentGet(utility::string_t chainId) const
+pplx::task<std::vector<std::shared_ptr<UniswapV3_FactoryV3DTO>>> UniswapV3Api::dappsUniswapv3FactoryCurrentGet(utility::string_t chainId) const
 {
 
 
@@ -761,14 +761,14 @@ pplx::task<std::vector<std::shared_ptr<UniswapV3FactoryV3DTO>>> UniswapV3Api::da
     })
     .then([=](utility::string_t localVarResponse)
     {
-        std::vector<std::shared_ptr<UniswapV3FactoryV3DTO>> localVarResult;
+        std::vector<std::shared_ptr<UniswapV3_FactoryV3DTO>> localVarResult;
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
             web::json::value localVarJson = web::json::value::parse(localVarResponse);
             for( auto& localVarItem : localVarJson.as_array() )
             {
-                std::shared_ptr<UniswapV3FactoryV3DTO> localVarItemObj;
+                std::shared_ptr<UniswapV3_FactoryV3DTO> localVarItemObj;
                 ModelBase::fromJson(localVarItem, localVarItemObj);
                 localVarResult.push_back(localVarItemObj);
             }
@@ -905,7 +905,7 @@ pplx::task<void> UniswapV3Api::dappsUniswapv3FactoryHistoricalGet(boost::optiona
         return void();
     });
 }
-pplx::task<std::vector<std::shared_ptr<UniswapV3MintV3DTO>>> UniswapV3Api::dappsUniswapv3MintsCurrentGet(boost::optional<utility::string_t> filterPoolId) const
+pplx::task<std::vector<std::shared_ptr<UniswapV3_MintV3DTO>>> UniswapV3Api::dappsUniswapv3MintsCurrentGet(boost::optional<utility::string_t> filterPoolId) const
 {
 
 
@@ -1012,14 +1012,14 @@ pplx::task<std::vector<std::shared_ptr<UniswapV3MintV3DTO>>> UniswapV3Api::dapps
     })
     .then([=](utility::string_t localVarResponse)
     {
-        std::vector<std::shared_ptr<UniswapV3MintV3DTO>> localVarResult;
+        std::vector<std::shared_ptr<UniswapV3_MintV3DTO>> localVarResult;
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
             web::json::value localVarJson = web::json::value::parse(localVarResponse);
             for( auto& localVarItem : localVarJson.as_array() )
             {
-                std::shared_ptr<UniswapV3MintV3DTO> localVarItemObj;
+                std::shared_ptr<UniswapV3_MintV3DTO> localVarItemObj;
                 ModelBase::fromJson(localVarItem, localVarItemObj);
                 localVarResult.push_back(localVarItemObj);
             }
@@ -1406,7 +1406,7 @@ pplx::task<void> UniswapV3Api::dappsUniswapv3PoolHourDataHistoricalGet(boost::op
         return void();
     });
 }
-pplx::task<std::vector<std::shared_ptr<UniswapV3PoolV3DTO>>> UniswapV3Api::dappsUniswapv3PoolsCurrentGet(boost::optional<utility::string_t> filterPoolId) const
+pplx::task<std::vector<std::shared_ptr<UniswapV3_PoolV3DTO>>> UniswapV3Api::dappsUniswapv3PoolsCurrentGet(boost::optional<utility::string_t> filterPoolId) const
 {
 
 
@@ -1513,14 +1513,14 @@ pplx::task<std::vector<std::shared_ptr<UniswapV3PoolV3DTO>>> UniswapV3Api::dapps
     })
     .then([=](utility::string_t localVarResponse)
     {
-        std::vector<std::shared_ptr<UniswapV3PoolV3DTO>> localVarResult;
+        std::vector<std::shared_ptr<UniswapV3_PoolV3DTO>> localVarResult;
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
             web::json::value localVarJson = web::json::value::parse(localVarResponse);
             for( auto& localVarItem : localVarJson.as_array() )
             {
-                std::shared_ptr<UniswapV3PoolV3DTO> localVarItemObj;
+                std::shared_ptr<UniswapV3_PoolV3DTO> localVarItemObj;
                 ModelBase::fromJson(localVarItem, localVarItemObj);
                 localVarResult.push_back(localVarItemObj);
             }
@@ -1538,7 +1538,7 @@ pplx::task<std::vector<std::shared_ptr<UniswapV3PoolV3DTO>>> UniswapV3Api::dapps
         return localVarResult;
     });
 }
-pplx::task<std::vector<std::shared_ptr<UniswapV3PoolDayDataV3DTO>>> UniswapV3Api::dappsUniswapv3PoolsDayDataCurrentGet(boost::optional<utility::string_t> filterPoolId) const
+pplx::task<std::vector<std::shared_ptr<UniswapV3_PoolDayDataV3DTO>>> UniswapV3Api::dappsUniswapv3PoolsDayDataCurrentGet(boost::optional<utility::string_t> filterPoolId) const
 {
 
 
@@ -1645,14 +1645,14 @@ pplx::task<std::vector<std::shared_ptr<UniswapV3PoolDayDataV3DTO>>> UniswapV3Api
     })
     .then([=](utility::string_t localVarResponse)
     {
-        std::vector<std::shared_ptr<UniswapV3PoolDayDataV3DTO>> localVarResult;
+        std::vector<std::shared_ptr<UniswapV3_PoolDayDataV3DTO>> localVarResult;
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
             web::json::value localVarJson = web::json::value::parse(localVarResponse);
             for( auto& localVarItem : localVarJson.as_array() )
             {
-                std::shared_ptr<UniswapV3PoolDayDataV3DTO> localVarItemObj;
+                std::shared_ptr<UniswapV3_PoolDayDataV3DTO> localVarItemObj;
                 ModelBase::fromJson(localVarItem, localVarItemObj);
                 localVarResult.push_back(localVarItemObj);
             }
@@ -1793,7 +1793,7 @@ pplx::task<void> UniswapV3Api::dappsUniswapv3PoolsHistoricalGet(boost::optional<
         return void();
     });
 }
-pplx::task<std::vector<std::shared_ptr<UniswapV3PoolHourDataV3DTO>>> UniswapV3Api::dappsUniswapv3PoolsHourDataCurrentGet(boost::optional<utility::string_t> filterPoolId) const
+pplx::task<std::vector<std::shared_ptr<UniswapV3_PoolHourDataV3DTO>>> UniswapV3Api::dappsUniswapv3PoolsHourDataCurrentGet(boost::optional<utility::string_t> filterPoolId) const
 {
 
 
@@ -1900,14 +1900,14 @@ pplx::task<std::vector<std::shared_ptr<UniswapV3PoolHourDataV3DTO>>> UniswapV3Ap
     })
     .then([=](utility::string_t localVarResponse)
     {
-        std::vector<std::shared_ptr<UniswapV3PoolHourDataV3DTO>> localVarResult;
+        std::vector<std::shared_ptr<UniswapV3_PoolHourDataV3DTO>> localVarResult;
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
             web::json::value localVarJson = web::json::value::parse(localVarResponse);
             for( auto& localVarItem : localVarJson.as_array() )
             {
-                std::shared_ptr<UniswapV3PoolHourDataV3DTO> localVarItemObj;
+                std::shared_ptr<UniswapV3_PoolHourDataV3DTO> localVarItemObj;
                 ModelBase::fromJson(localVarItem, localVarItemObj);
                 localVarResult.push_back(localVarItemObj);
             }
@@ -2048,7 +2048,7 @@ pplx::task<void> UniswapV3Api::dappsUniswapv3PositionSnapshotHistoricalGet(boost
         return void();
     });
 }
-pplx::task<std::vector<std::shared_ptr<UniswapV3PositionSnapshotV3DTO>>> UniswapV3Api::dappsUniswapv3PositionSnapshotsCurrentGet(boost::optional<utility::string_t> filterPoolId) const
+pplx::task<std::vector<std::shared_ptr<UniswapV3_PositionSnapshotV3DTO>>> UniswapV3Api::dappsUniswapv3PositionSnapshotsCurrentGet(boost::optional<utility::string_t> filterPoolId) const
 {
 
 
@@ -2155,14 +2155,14 @@ pplx::task<std::vector<std::shared_ptr<UniswapV3PositionSnapshotV3DTO>>> Uniswap
     })
     .then([=](utility::string_t localVarResponse)
     {
-        std::vector<std::shared_ptr<UniswapV3PositionSnapshotV3DTO>> localVarResult;
+        std::vector<std::shared_ptr<UniswapV3_PositionSnapshotV3DTO>> localVarResult;
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
             web::json::value localVarJson = web::json::value::parse(localVarResponse);
             for( auto& localVarItem : localVarJson.as_array() )
             {
-                std::shared_ptr<UniswapV3PositionSnapshotV3DTO> localVarItemObj;
+                std::shared_ptr<UniswapV3_PositionSnapshotV3DTO> localVarItemObj;
                 ModelBase::fromJson(localVarItem, localVarItemObj);
                 localVarResult.push_back(localVarItemObj);
             }
@@ -2180,7 +2180,7 @@ pplx::task<std::vector<std::shared_ptr<UniswapV3PositionSnapshotV3DTO>>> Uniswap
         return localVarResult;
     });
 }
-pplx::task<std::vector<std::shared_ptr<UniswapV3PositionV3DTO>>> UniswapV3Api::dappsUniswapv3PositionsCurrentGet(boost::optional<utility::string_t> filterPoolId) const
+pplx::task<std::vector<std::shared_ptr<UniswapV3_PositionV3DTO>>> UniswapV3Api::dappsUniswapv3PositionsCurrentGet(boost::optional<utility::string_t> filterPoolId) const
 {
 
 
@@ -2287,14 +2287,14 @@ pplx::task<std::vector<std::shared_ptr<UniswapV3PositionV3DTO>>> UniswapV3Api::d
     })
     .then([=](utility::string_t localVarResponse)
     {
-        std::vector<std::shared_ptr<UniswapV3PositionV3DTO>> localVarResult;
+        std::vector<std::shared_ptr<UniswapV3_PositionV3DTO>> localVarResult;
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
             web::json::value localVarJson = web::json::value::parse(localVarResponse);
             for( auto& localVarItem : localVarJson.as_array() )
             {
-                std::shared_ptr<UniswapV3PositionV3DTO> localVarItemObj;
+                std::shared_ptr<UniswapV3_PositionV3DTO> localVarItemObj;
                 ModelBase::fromJson(localVarItem, localVarItemObj);
                 localVarResult.push_back(localVarItemObj);
             }
@@ -2435,7 +2435,7 @@ pplx::task<void> UniswapV3Api::dappsUniswapv3PositionsHistoricalGet(boost::optio
         return void();
     });
 }
-pplx::task<std::vector<std::shared_ptr<UniswapV3SwapV3DTO>>> UniswapV3Api::dappsUniswapv3SwapsCurrentGet(boost::optional<utility::string_t> filterPoolId) const
+pplx::task<std::vector<std::shared_ptr<UniswapV3_SwapV3DTO>>> UniswapV3Api::dappsUniswapv3SwapsCurrentGet(boost::optional<utility::string_t> filterPoolId) const
 {
 
 
@@ -2542,14 +2542,14 @@ pplx::task<std::vector<std::shared_ptr<UniswapV3SwapV3DTO>>> UniswapV3Api::dapps
     })
     .then([=](utility::string_t localVarResponse)
     {
-        std::vector<std::shared_ptr<UniswapV3SwapV3DTO>> localVarResult;
+        std::vector<std::shared_ptr<UniswapV3_SwapV3DTO>> localVarResult;
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
             web::json::value localVarJson = web::json::value::parse(localVarResponse);
             for( auto& localVarItem : localVarJson.as_array() )
             {
-                std::shared_ptr<UniswapV3SwapV3DTO> localVarItemObj;
+                std::shared_ptr<UniswapV3_SwapV3DTO> localVarItemObj;
                 ModelBase::fromJson(localVarItem, localVarItemObj);
                 localVarResult.push_back(localVarItemObj);
             }
@@ -2813,7 +2813,7 @@ pplx::task<void> UniswapV3Api::dappsUniswapv3TickDayDataHistoricalGet(boost::opt
         return void();
     });
 }
-pplx::task<std::vector<std::shared_ptr<UniswapV3TickV3DTO>>> UniswapV3Api::dappsUniswapv3TicksCurrentGet(boost::optional<utility::string_t> filterPoolId) const
+pplx::task<std::vector<std::shared_ptr<UniswapV3_TickV3DTO>>> UniswapV3Api::dappsUniswapv3TicksCurrentGet(boost::optional<utility::string_t> filterPoolId) const
 {
 
 
@@ -2920,14 +2920,14 @@ pplx::task<std::vector<std::shared_ptr<UniswapV3TickV3DTO>>> UniswapV3Api::dapps
     })
     .then([=](utility::string_t localVarResponse)
     {
-        std::vector<std::shared_ptr<UniswapV3TickV3DTO>> localVarResult;
+        std::vector<std::shared_ptr<UniswapV3_TickV3DTO>> localVarResult;
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
             web::json::value localVarJson = web::json::value::parse(localVarResponse);
             for( auto& localVarItem : localVarJson.as_array() )
             {
-                std::shared_ptr<UniswapV3TickV3DTO> localVarItemObj;
+                std::shared_ptr<UniswapV3_TickV3DTO> localVarItemObj;
                 ModelBase::fromJson(localVarItem, localVarItemObj);
                 localVarResult.push_back(localVarItemObj);
             }
@@ -2945,7 +2945,7 @@ pplx::task<std::vector<std::shared_ptr<UniswapV3TickV3DTO>>> UniswapV3Api::dapps
         return localVarResult;
     });
 }
-pplx::task<std::vector<std::shared_ptr<UniswapV3TickDayDataV3DTO>>> UniswapV3Api::dappsUniswapv3TicksDayDataCurrentGet(boost::optional<utility::string_t> filterPoolId) const
+pplx::task<std::vector<std::shared_ptr<UniswapV3_TickDayDataV3DTO>>> UniswapV3Api::dappsUniswapv3TicksDayDataCurrentGet(boost::optional<utility::string_t> filterPoolId) const
 {
 
 
@@ -3052,14 +3052,14 @@ pplx::task<std::vector<std::shared_ptr<UniswapV3TickDayDataV3DTO>>> UniswapV3Api
     })
     .then([=](utility::string_t localVarResponse)
     {
-        std::vector<std::shared_ptr<UniswapV3TickDayDataV3DTO>> localVarResult;
+        std::vector<std::shared_ptr<UniswapV3_TickDayDataV3DTO>> localVarResult;
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
             web::json::value localVarJson = web::json::value::parse(localVarResponse);
             for( auto& localVarItem : localVarJson.as_array() )
             {
-                std::shared_ptr<UniswapV3TickDayDataV3DTO> localVarItemObj;
+                std::shared_ptr<UniswapV3_TickDayDataV3DTO> localVarItemObj;
                 ModelBase::fromJson(localVarItem, localVarItemObj);
                 localVarResult.push_back(localVarItemObj);
             }
@@ -3446,7 +3446,7 @@ pplx::task<void> UniswapV3Api::dappsUniswapv3TokenHourDataHistoricalGet(boost::o
         return void();
     });
 }
-pplx::task<std::vector<std::shared_ptr<UniswapV3TokenV3DTO>>> UniswapV3Api::dappsUniswapv3TokensCurrentGet(boost::optional<utility::string_t> filterTokenId) const
+pplx::task<std::vector<std::shared_ptr<UniswapV3_TokenV3DTO>>> UniswapV3Api::dappsUniswapv3TokensCurrentGet(boost::optional<utility::string_t> filterTokenId) const
 {
 
 
@@ -3553,14 +3553,14 @@ pplx::task<std::vector<std::shared_ptr<UniswapV3TokenV3DTO>>> UniswapV3Api::dapp
     })
     .then([=](utility::string_t localVarResponse)
     {
-        std::vector<std::shared_ptr<UniswapV3TokenV3DTO>> localVarResult;
+        std::vector<std::shared_ptr<UniswapV3_TokenV3DTO>> localVarResult;
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
             web::json::value localVarJson = web::json::value::parse(localVarResponse);
             for( auto& localVarItem : localVarJson.as_array() )
             {
-                std::shared_ptr<UniswapV3TokenV3DTO> localVarItemObj;
+                std::shared_ptr<UniswapV3_TokenV3DTO> localVarItemObj;
                 ModelBase::fromJson(localVarItem, localVarItemObj);
                 localVarResult.push_back(localVarItemObj);
             }
@@ -3578,7 +3578,7 @@ pplx::task<std::vector<std::shared_ptr<UniswapV3TokenV3DTO>>> UniswapV3Api::dapp
         return localVarResult;
     });
 }
-pplx::task<std::vector<std::shared_ptr<UniswapV3TokenV3DayDataDTO>>> UniswapV3Api::dappsUniswapv3TokensDayDataCurrentGet(boost::optional<utility::string_t> filterTokenId) const
+pplx::task<std::vector<std::shared_ptr<UniswapV3_TokenV3DayDataDTO>>> UniswapV3Api::dappsUniswapv3TokensDayDataCurrentGet(boost::optional<utility::string_t> filterTokenId) const
 {
 
 
@@ -3685,14 +3685,14 @@ pplx::task<std::vector<std::shared_ptr<UniswapV3TokenV3DayDataDTO>>> UniswapV3Ap
     })
     .then([=](utility::string_t localVarResponse)
     {
-        std::vector<std::shared_ptr<UniswapV3TokenV3DayDataDTO>> localVarResult;
+        std::vector<std::shared_ptr<UniswapV3_TokenV3DayDataDTO>> localVarResult;
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
             web::json::value localVarJson = web::json::value::parse(localVarResponse);
             for( auto& localVarItem : localVarJson.as_array() )
             {
-                std::shared_ptr<UniswapV3TokenV3DayDataDTO> localVarItemObj;
+                std::shared_ptr<UniswapV3_TokenV3DayDataDTO> localVarItemObj;
                 ModelBase::fromJson(localVarItem, localVarItemObj);
                 localVarResult.push_back(localVarItemObj);
             }
@@ -3833,7 +3833,7 @@ pplx::task<void> UniswapV3Api::dappsUniswapv3TokensHistoricalGet(boost::optional
         return void();
     });
 }
-pplx::task<std::vector<std::shared_ptr<UniswapV3TokenHourDataV3DTO>>> UniswapV3Api::dappsUniswapv3TokensHourDataCurrentGet(boost::optional<utility::string_t> filterTokenId) const
+pplx::task<std::vector<std::shared_ptr<UniswapV3_TokenHourDataV3DTO>>> UniswapV3Api::dappsUniswapv3TokensHourDataCurrentGet(boost::optional<utility::string_t> filterTokenId) const
 {
 
 
@@ -3940,14 +3940,14 @@ pplx::task<std::vector<std::shared_ptr<UniswapV3TokenHourDataV3DTO>>> UniswapV3A
     })
     .then([=](utility::string_t localVarResponse)
     {
-        std::vector<std::shared_ptr<UniswapV3TokenHourDataV3DTO>> localVarResult;
+        std::vector<std::shared_ptr<UniswapV3_TokenHourDataV3DTO>> localVarResult;
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
             web::json::value localVarJson = web::json::value::parse(localVarResponse);
             for( auto& localVarItem : localVarJson.as_array() )
             {
-                std::shared_ptr<UniswapV3TokenHourDataV3DTO> localVarItemObj;
+                std::shared_ptr<UniswapV3_TokenHourDataV3DTO> localVarItemObj;
                 ModelBase::fromJson(localVarItem, localVarItemObj);
                 localVarResult.push_back(localVarItemObj);
             }
@@ -4084,7 +4084,7 @@ pplx::task<void> UniswapV3Api::dappsUniswapv3TransactionsHistoricalGet(boost::op
         return void();
     });
 }
-pplx::task<std::vector<std::shared_ptr<UniswapV3UniswapDayDataV3DTO>>> UniswapV3Api::dappsUniswapv3UniswapDayDataCurrentGet() const
+pplx::task<std::vector<std::shared_ptr<UniswapV3_UniswapDayDataV3DTO>>> UniswapV3Api::dappsUniswapv3UniswapDayDataCurrentGet() const
 {
 
 
@@ -4187,14 +4187,14 @@ pplx::task<std::vector<std::shared_ptr<UniswapV3UniswapDayDataV3DTO>>> UniswapV3
     })
     .then([=](utility::string_t localVarResponse)
     {
-        std::vector<std::shared_ptr<UniswapV3UniswapDayDataV3DTO>> localVarResult;
+        std::vector<std::shared_ptr<UniswapV3_UniswapDayDataV3DTO>> localVarResult;
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
             web::json::value localVarJson = web::json::value::parse(localVarResponse);
             for( auto& localVarItem : localVarJson.as_array() )
             {
-                std::shared_ptr<UniswapV3UniswapDayDataV3DTO> localVarItemObj;
+                std::shared_ptr<UniswapV3_UniswapDayDataV3DTO> localVarItemObj;
                 ModelBase::fromJson(localVarItem, localVarItemObj);
                 localVarResult.push_back(localVarItemObj);
             }

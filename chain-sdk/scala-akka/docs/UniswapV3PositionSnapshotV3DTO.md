@@ -1,6 +1,6 @@
 
 
-# UniswapV3PositionSnapshotV3DTO
+# PositionSnapshotV3DTO
 
 
 ## Properties

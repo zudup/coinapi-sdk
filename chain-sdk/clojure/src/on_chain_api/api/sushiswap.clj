@@ -3,30 +3,30 @@
             [clojure.spec.alpha :as s]
             [spec-tools.core :as st]
             [orchestra.core :refer [defn-spec]]
-            [on-chain-api.specs.uniswap-v3-tick-day-data-v3-dto :refer :all]
-            [on-chain-api.specs.sushiswap-pair-dto :refer :all]
-            [on-chain-api.specs.transactions-e-trade-aggressive-side :refer :all]
-            [on-chain-api.specs.uniswap-v3-token-v3-dto :refer :all]
-            [on-chain-api.specs.uniswap-v2-token-v2-dto :refer :all]
-            [on-chain-api.specs.uniswap-v3-position-v3-dto :refer :all]
-            [on-chain-api.specs.uniswap-v3-token-v3-day-data-dto :refer :all]
-            [on-chain-api.specs.sushiswap-swap-dto :refer :all]
-            [on-chain-api.specs.uniswap-v3-bundle-v3-dto :refer :all]
-            [on-chain-api.specs.uniswap-v3-swap-v3-dto :refer :all]
-            [on-chain-api.specs.uniswap-v3-token-hour-data-v3-dto :refer :all]
-            [on-chain-api.specs.sushiswap-token-dto :refer :all]
-            [on-chain-api.specs.uniswap-v3-uniswap-day-data-v3-dto :refer :all]
-            [on-chain-api.specs.uniswap-v3-burn-v3-dto :refer :all]
-            [on-chain-api.specs.uniswap-v3-pool-v3-dto :refer :all]
-            [on-chain-api.specs.uniswap-v3-tick-v3-dto :refer :all]
-            [on-chain-api.specs.uniswap-v3-pool-hour-data-v3-dto :refer :all]
-            [on-chain-api.specs.uniswap-v3-position-snapshot-v3-dto :refer :all]
-            [on-chain-api.specs.uniswap-v3-pool-day-data-v3-dto :refer :all]
-            [on-chain-api.specs.uniswap-v2-pair-v2-dto :refer :all]
-            [on-chain-api.specs.uniswap-v2-swap-v2-dto :refer :all]
-            [on-chain-api.specs.uniswap-v3-factory-v3-dto :refer :all]
-            [on-chain-api.specs.numerics-big-integer :refer :all]
-            [on-chain-api.specs.uniswap-v3-mint-v3-dto :refer :all]
+            [on-chain-api.specs.uniswap-v2/swap-v2-dto :refer :all]
+            [on-chain-api.specs.uniswap-v2/token-v2-dto :refer :all]
+            [on-chain-api.specs.transactions/e-trade-aggressive-side :refer :all]
+            [on-chain-api.specs.uniswap-v3/factory-v3-dto :refer :all]
+            [on-chain-api.specs.sushiswap/token-dto :refer :all]
+            [on-chain-api.specs.uniswap-v3/tick-v3-dto :refer :all]
+            [on-chain-api.specs.sushiswap/swap-dto :refer :all]
+            [on-chain-api.specs.uniswap-v3/bundle-v3-dto :refer :all]
+            [on-chain-api.specs.sushiswap/pair-dto :refer :all]
+            [on-chain-api.specs.uniswap-v3/token-hour-data-v3-dto :refer :all]
+            [on-chain-api.specs.uniswap-v3/uniswap-day-data-v3-dto :refer :all]
+            [on-chain-api.specs.uniswap-v3/swap-v3-dto :refer :all]
+            [on-chain-api.specs.uniswap-v3/position-v3-dto :refer :all]
+            [on-chain-api.specs.uniswap-v3/burn-v3-dto :refer :all]
+            [on-chain-api.specs.uniswap-v3/tick-day-data-v3-dto :refer :all]
+            [on-chain-api.specs.uniswap-v3/position-snapshot-v3-dto :refer :all]
+            [on-chain-api.specs.numerics/big-integer :refer :all]
+            [on-chain-api.specs.uniswap-v3/pool-v3-dto :refer :all]
+            [on-chain-api.specs.uniswap-v3/pool-day-data-v3-dto :refer :all]
+            [on-chain-api.specs.uniswap-v3/token-v3-day-data-dto :refer :all]
+            [on-chain-api.specs.uniswap-v3/pool-hour-data-v3-dto :refer :all]
+            [on-chain-api.specs.uniswap-v2/pair-v2-dto :refer :all]
+            [on-chain-api.specs.uniswap-v3/token-v3-dto :refer :all]
+            [on-chain-api.specs.uniswap-v3/mint-v3-dto :refer :all]
             )
   (:import (java.io File)))
 
@@ -274,13 +274,13 @@
              :accepts       ["text/plain" "application/json" "text/json"]
              :auth-names    []}))
 
-(defn-spec dapps-sushiswap-pools-current-get (s/coll-of sushiswap-pair-dto-spec)
+(defn-spec dapps-sushiswap-pools-current-get (s/coll-of sushiswap/pair-dto-spec)
   "GetPools
   Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
   []
   (let [res (:data (dapps-sushiswap-pools-current-get-with-http-info))]
     (if (:decode-models *api-context*)
-       (st/decode (s/coll-of sushiswap-pair-dto-spec) res st/string-transformer)
+       (st/decode (s/coll-of sushiswap/pair-dto-spec) res st/string-transformer)
        res)))
 
 
@@ -297,13 +297,13 @@
               :accepts       ["text/plain" "application/json" "text/json"]
               :auth-names    []})))
 
-(defn-spec dapps-sushiswap-pools-historical-get (s/coll-of sushiswap-pair-dto-spec)
+(defn-spec dapps-sushiswap-pools-historical-get (s/coll-of sushiswap/pair-dto-spec)
   "GetPools (historical)"
   ([] (dapps-sushiswap-pools-historical-get nil))
   ([optional-params any?]
    (let [res (:data (dapps-sushiswap-pools-historical-get-with-http-info optional-params))]
      (if (:decode-models *api-context*)
-        (st/decode (s/coll-of sushiswap-pair-dto-spec) res st/string-transformer)
+        (st/decode (s/coll-of sushiswap/pair-dto-spec) res st/string-transformer)
         res))))
 
 
@@ -319,12 +319,12 @@
              :accepts       ["text/plain" "application/json" "text/json"]
              :auth-names    []}))
 
-(defn-spec dapps-sushiswap-swaps-current-get (s/coll-of sushiswap-swap-dto-spec)
+(defn-spec dapps-sushiswap-swaps-current-get (s/coll-of sushiswap/swap-dto-spec)
   "GetSwaps"
   []
   (let [res (:data (dapps-sushiswap-swaps-current-get-with-http-info))]
     (if (:decode-models *api-context*)
-       (st/decode (s/coll-of sushiswap-swap-dto-spec) res st/string-transformer)
+       (st/decode (s/coll-of sushiswap/swap-dto-spec) res st/string-transformer)
        res)))
 
 
@@ -341,13 +341,13 @@
               :accepts       ["text/plain" "application/json" "text/json"]
               :auth-names    []})))
 
-(defn-spec dapps-sushiswap-swaps-historical-get (s/coll-of sushiswap-swap-dto-spec)
+(defn-spec dapps-sushiswap-swaps-historical-get (s/coll-of sushiswap/swap-dto-spec)
   "GetSwaps (historical)"
   ([] (dapps-sushiswap-swaps-historical-get nil))
   ([optional-params any?]
    (let [res (:data (dapps-sushiswap-swaps-historical-get-with-http-info optional-params))]
      (if (:decode-models *api-context*)
-        (st/decode (s/coll-of sushiswap-swap-dto-spec) res st/string-transformer)
+        (st/decode (s/coll-of sushiswap/swap-dto-spec) res st/string-transformer)
         res))))
 
 
@@ -386,12 +386,12 @@
              :accepts       ["text/plain" "application/json" "text/json"]
              :auth-names    []}))
 
-(defn-spec dapps-sushiswap-tokens-current-get (s/coll-of sushiswap-token-dto-spec)
+(defn-spec dapps-sushiswap-tokens-current-get (s/coll-of sushiswap/token-dto-spec)
   "GetTokens"
   []
   (let [res (:data (dapps-sushiswap-tokens-current-get-with-http-info))]
     (if (:decode-models *api-context*)
-       (st/decode (s/coll-of sushiswap-token-dto-spec) res st/string-transformer)
+       (st/decode (s/coll-of sushiswap/token-dto-spec) res st/string-transformer)
        res)))
 
 
@@ -408,13 +408,13 @@
               :accepts       ["text/plain" "application/json" "text/json"]
               :auth-names    []})))
 
-(defn-spec dapps-sushiswap-tokens-historical-get (s/coll-of sushiswap-token-dto-spec)
+(defn-spec dapps-sushiswap-tokens-historical-get (s/coll-of sushiswap/token-dto-spec)
   "GetTokens (historical)"
   ([] (dapps-sushiswap-tokens-historical-get nil))
   ([optional-params any?]
    (let [res (:data (dapps-sushiswap-tokens-historical-get-with-http-info optional-params))]
      (if (:decode-models *api-context*)
-        (st/decode (s/coll-of sushiswap-token-dto-spec) res st/string-transformer)
+        (st/decode (s/coll-of sushiswap/token-dto-spec) res st/string-transformer)
         res))))
 
 

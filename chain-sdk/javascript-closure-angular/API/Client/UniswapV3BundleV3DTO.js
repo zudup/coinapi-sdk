@@ -1,4 +1,4 @@
-goog.provide('API.Client.UniswapV3BundleV3DTO');
+goog.provide('API.Client.UniswapV3.BundleV3DTO');
 
 /**
  * The Bundle is used as a global store of derived ETH price in USD. This provides a strong estimate for the USD price of ETH.

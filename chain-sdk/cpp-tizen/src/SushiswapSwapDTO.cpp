@@ -5,23 +5,23 @@
 #include "Helpers.h"
 
 
-#include "SushiswapSwapDTO.h"
+#include "Sushiswap.SwapDTO.h"
 
 using namespace std;
 using namespace Tizen::ArtikCloud;
 
-SushiswapSwapDTO::SushiswapSwapDTO()
+Sushiswap.SwapDTO::Sushiswap.SwapDTO()
 {
 	//__init();
 }
 
-SushiswapSwapDTO::~SushiswapSwapDTO()
+Sushiswap.SwapDTO::~Sushiswap.SwapDTO()
 {
 	//__cleanup();
 }
 
 void
-SushiswapSwapDTO::__init()
+Sushiswap.SwapDTO::__init()
 {
 	//entry_time = null;
 	//recv_time = null;
@@ -43,11 +43,11 @@ SushiswapSwapDTO::__init()
 	//transaction_id = std::string();
 	//evaluated_price = double(0);
 	//evaluated_amount = double(0);
-	//evaluated_aggressor = new TransactionsETradeAggressiveSide();
+	//evaluated_aggressor = new Transactions.ETradeAggressiveSide();
 }
 
 void
-SushiswapSwapDTO::__cleanup()
+Sushiswap.SwapDTO::__cleanup()
 {
 	//if(entry_time != NULL) {
 	//
@@ -158,7 +158,7 @@ SushiswapSwapDTO::__cleanup()
 }
 
 void
-SushiswapSwapDTO::fromJson(char* jsonStr)
+Sushiswap.SwapDTO::fromJson(char* jsonStr)
 {
 	JsonObject *pJsonObject = json_node_get_object(json_from_string(jsonStr,NULL));
 	JsonNode *node;
@@ -387,24 +387,24 @@ SushiswapSwapDTO::fromJson(char* jsonStr)
 	if (node !=NULL) {
 	
 
-		if (isprimitive("TransactionsETradeAggressiveSide")) {
-			jsonToValue(&evaluated_aggressor, node, "TransactionsETradeAggressiveSide", "TransactionsETradeAggressiveSide");
+		if (isprimitive("Transactions.ETradeAggressiveSide")) {
+			jsonToValue(&evaluated_aggressor, node, "Transactions.ETradeAggressiveSide", "Transactions.ETradeAggressiveSide");
 		} else {
 			
-			TransactionsETradeAggressiveSide* obj = static_cast<TransactionsETradeAggressiveSide*> (&evaluated_aggressor);
+			Transactions.ETradeAggressiveSide* obj = static_cast<Transactions.ETradeAggressiveSide*> (&evaluated_aggressor);
 			obj->fromJson(json_to_string(node, false));
 			
 		}
 	}
 }
 
-SushiswapSwapDTO::SushiswapSwapDTO(char* json)
+Sushiswap.SwapDTO::Sushiswap.SwapDTO(char* json)
 {
 	this->fromJson(json);
 }
 
 char*
-SushiswapSwapDTO::toJson()
+Sushiswap.SwapDTO::toJson()
 {
 	JsonObject *pJsonObject = json_object_new();
 	JsonNode *node;
@@ -588,13 +588,13 @@ SushiswapSwapDTO::toJson()
 	}
 	const gchar *evaluated_amountKey = "evaluated_amount";
 	json_object_set_member(pJsonObject, evaluated_amountKey, node);
-	if (isprimitive("TransactionsETradeAggressiveSide")) {
-		TransactionsETradeAggressiveSide obj = getEvaluatedAggressor();
-		node = converttoJson(&obj, "TransactionsETradeAggressiveSide", "");
+	if (isprimitive("Transactions.ETradeAggressiveSide")) {
+		Transactions.ETradeAggressiveSide obj = getEvaluatedAggressor();
+		node = converttoJson(&obj, "Transactions.ETradeAggressiveSide", "");
 	}
 	else {
 		
-		TransactionsETradeAggressiveSide obj = static_cast<TransactionsETradeAggressiveSide> (getEvaluatedAggressor());
+		Transactions.ETradeAggressiveSide obj = static_cast<Transactions.ETradeAggressiveSide> (getEvaluatedAggressor());
 		GError *mygerror;
 		mygerror = NULL;
 		node = json_from_string(obj.toJson(), &mygerror);
@@ -611,253 +611,253 @@ SushiswapSwapDTO::toJson()
 }
 
 std::string
-SushiswapSwapDTO::getEntryTime()
+Sushiswap.SwapDTO::getEntryTime()
 {
 	return entry_time;
 }
 
 void
-SushiswapSwapDTO::setEntryTime(std::string  entry_time)
+Sushiswap.SwapDTO::setEntryTime(std::string  entry_time)
 {
 	this->entry_time = entry_time;
 }
 
 std::string
-SushiswapSwapDTO::getRecvTime()
+Sushiswap.SwapDTO::getRecvTime()
 {
 	return recv_time;
 }
 
 void
-SushiswapSwapDTO::setRecvTime(std::string  recv_time)
+Sushiswap.SwapDTO::setRecvTime(std::string  recv_time)
 {
 	this->recv_time = recv_time;
 }
 
 long long
-SushiswapSwapDTO::getBlockNumber()
+Sushiswap.SwapDTO::getBlockNumber()
 {
 	return block_number;
 }
 
 void
-SushiswapSwapDTO::setBlockNumber(long long  block_number)
+Sushiswap.SwapDTO::setBlockNumber(long long  block_number)
 {
 	this->block_number = block_number;
 }
 
 std::string
-SushiswapSwapDTO::getId()
+Sushiswap.SwapDTO::getId()
 {
 	return id;
 }
 
 void
-SushiswapSwapDTO::setId(std::string  id)
+Sushiswap.SwapDTO::setId(std::string  id)
 {
 	this->id = id;
 }
 
 std::string
-SushiswapSwapDTO::getTransaction()
+Sushiswap.SwapDTO::getTransaction()
 {
 	return transaction;
 }
 
 void
-SushiswapSwapDTO::setTransaction(std::string  transaction)
+Sushiswap.SwapDTO::setTransaction(std::string  transaction)
 {
 	this->transaction = transaction;
 }
 
 std::string
-SushiswapSwapDTO::getTimestamp()
+Sushiswap.SwapDTO::getTimestamp()
 {
 	return timestamp;
 }
 
 void
-SushiswapSwapDTO::setTimestamp(std::string  timestamp)
+Sushiswap.SwapDTO::setTimestamp(std::string  timestamp)
 {
 	this->timestamp = timestamp;
 }
 
 std::string
-SushiswapSwapDTO::getPair()
+Sushiswap.SwapDTO::getPair()
 {
 	return pair;
 }
 
 void
-SushiswapSwapDTO::setPair(std::string  pair)
+Sushiswap.SwapDTO::setPair(std::string  pair)
 {
 	this->pair = pair;
 }
 
 std::string
-SushiswapSwapDTO::getSender()
+Sushiswap.SwapDTO::getSender()
 {
 	return sender;
 }
 
 void
-SushiswapSwapDTO::setSender(std::string  sender)
+Sushiswap.SwapDTO::setSender(std::string  sender)
 {
 	this->sender = sender;
 }
 
 std::string
-SushiswapSwapDTO::getAmount0In()
+Sushiswap.SwapDTO::getAmount0In()
 {
 	return amount_0_in;
 }
 
 void
-SushiswapSwapDTO::setAmount0In(std::string  amount_0_in)
+Sushiswap.SwapDTO::setAmount0In(std::string  amount_0_in)
 {
 	this->amount_0_in = amount_0_in;
 }
 
 std::string
-SushiswapSwapDTO::getAmount1In()
+Sushiswap.SwapDTO::getAmount1In()
 {
 	return amount_1_in;
 }
 
 void
-SushiswapSwapDTO::setAmount1In(std::string  amount_1_in)
+Sushiswap.SwapDTO::setAmount1In(std::string  amount_1_in)
 {
 	this->amount_1_in = amount_1_in;
 }
 
 std::string
-SushiswapSwapDTO::getAmount0Out()
+Sushiswap.SwapDTO::getAmount0Out()
 {
 	return amount_0_out;
 }
 
 void
-SushiswapSwapDTO::setAmount0Out(std::string  amount_0_out)
+Sushiswap.SwapDTO::setAmount0Out(std::string  amount_0_out)
 {
 	this->amount_0_out = amount_0_out;
 }
 
 std::string
-SushiswapSwapDTO::getAmount1Out()
+Sushiswap.SwapDTO::getAmount1Out()
 {
 	return amount_1_out;
 }
 
 void
-SushiswapSwapDTO::setAmount1Out(std::string  amount_1_out)
+Sushiswap.SwapDTO::setAmount1Out(std::string  amount_1_out)
 {
 	this->amount_1_out = amount_1_out;
 }
 
 std::string
-SushiswapSwapDTO::getTo()
+Sushiswap.SwapDTO::getTo()
 {
 	return to;
 }
 
 void
-SushiswapSwapDTO::setTo(std::string  to)
+Sushiswap.SwapDTO::setTo(std::string  to)
 {
 	this->to = to;
 }
 
 std::string
-SushiswapSwapDTO::getLogIndex()
+Sushiswap.SwapDTO::getLogIndex()
 {
 	return log_index;
 }
 
 void
-SushiswapSwapDTO::setLogIndex(std::string  log_index)
+Sushiswap.SwapDTO::setLogIndex(std::string  log_index)
 {
 	this->log_index = log_index;
 }
 
 std::string
-SushiswapSwapDTO::getAmountUsd()
+Sushiswap.SwapDTO::getAmountUsd()
 {
 	return amount_usd;
 }
 
 void
-SushiswapSwapDTO::setAmountUsd(std::string  amount_usd)
+Sushiswap.SwapDTO::setAmountUsd(std::string  amount_usd)
 {
 	this->amount_usd = amount_usd;
 }
 
 long long
-SushiswapSwapDTO::getVid()
+Sushiswap.SwapDTO::getVid()
 {
 	return vid;
 }
 
 void
-SushiswapSwapDTO::setVid(long long  vid)
+Sushiswap.SwapDTO::setVid(long long  vid)
 {
 	this->vid = vid;
 }
 
 std::string
-SushiswapSwapDTO::getPoolId()
+Sushiswap.SwapDTO::getPoolId()
 {
 	return pool_id;
 }
 
 void
-SushiswapSwapDTO::setPoolId(std::string  pool_id)
+Sushiswap.SwapDTO::setPoolId(std::string  pool_id)
 {
 	this->pool_id = pool_id;
 }
 
 std::string
-SushiswapSwapDTO::getTransactionId()
+Sushiswap.SwapDTO::getTransactionId()
 {
 	return transaction_id;
 }
 
 void
-SushiswapSwapDTO::setTransactionId(std::string  transaction_id)
+Sushiswap.SwapDTO::setTransactionId(std::string  transaction_id)
 {
 	this->transaction_id = transaction_id;
 }
 
 double
-SushiswapSwapDTO::getEvaluatedPrice()
+Sushiswap.SwapDTO::getEvaluatedPrice()
 {
 	return evaluated_price;
 }
 
 void
-SushiswapSwapDTO::setEvaluatedPrice(double  evaluated_price)
+Sushiswap.SwapDTO::setEvaluatedPrice(double  evaluated_price)
 {
 	this->evaluated_price = evaluated_price;
 }
 
 double
-SushiswapSwapDTO::getEvaluatedAmount()
+Sushiswap.SwapDTO::getEvaluatedAmount()
 {
 	return evaluated_amount;
 }
 
 void
-SushiswapSwapDTO::setEvaluatedAmount(double  evaluated_amount)
+Sushiswap.SwapDTO::setEvaluatedAmount(double  evaluated_amount)
 {
 	this->evaluated_amount = evaluated_amount;
 }
 
-TransactionsETradeAggressiveSide
-SushiswapSwapDTO::getEvaluatedAggressor()
+Transactions.ETradeAggressiveSide
+Sushiswap.SwapDTO::getEvaluatedAggressor()
 {
 	return evaluated_aggressor;
 }
 
 void
-SushiswapSwapDTO::setEvaluatedAggressor(TransactionsETradeAggressiveSide  evaluated_aggressor)
+Sushiswap.SwapDTO::setEvaluatedAggressor(Transactions.ETradeAggressiveSide  evaluated_aggressor)
 {
 	this->evaluated_aggressor = evaluated_aggressor;
 }

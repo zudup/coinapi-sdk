@@ -5,23 +5,23 @@
 #include "Helpers.h"
 
 
-#include "UniswapV3TokenHourDataV3DTO.h"
+#include "UniswapV3.TokenHourDataV3DTO.h"
 
 using namespace std;
 using namespace Tizen::ArtikCloud;
 
-UniswapV3TokenHourDataV3DTO::UniswapV3TokenHourDataV3DTO()
+UniswapV3.TokenHourDataV3DTO::UniswapV3.TokenHourDataV3DTO()
 {
 	//__init();
 }
 
-UniswapV3TokenHourDataV3DTO::~UniswapV3TokenHourDataV3DTO()
+UniswapV3.TokenHourDataV3DTO::~UniswapV3.TokenHourDataV3DTO()
 {
 	//__cleanup();
 }
 
 void
-UniswapV3TokenHourDataV3DTO::__init()
+UniswapV3.TokenHourDataV3DTO::__init()
 {
 	//entry_time = null;
 	//recv_time = null;
@@ -44,7 +44,7 @@ UniswapV3TokenHourDataV3DTO::__init()
 }
 
 void
-UniswapV3TokenHourDataV3DTO::__cleanup()
+UniswapV3.TokenHourDataV3DTO::__cleanup()
 {
 	//if(entry_time != NULL) {
 	//
@@ -140,7 +140,7 @@ UniswapV3TokenHourDataV3DTO::__cleanup()
 }
 
 void
-UniswapV3TokenHourDataV3DTO::fromJson(char* jsonStr)
+UniswapV3.TokenHourDataV3DTO::fromJson(char* jsonStr)
 {
 	JsonObject *pJsonObject = json_node_get_object(json_from_string(jsonStr,NULL));
 	JsonNode *node;
@@ -344,13 +344,13 @@ UniswapV3TokenHourDataV3DTO::fromJson(char* jsonStr)
 	}
 }
 
-UniswapV3TokenHourDataV3DTO::UniswapV3TokenHourDataV3DTO(char* json)
+UniswapV3.TokenHourDataV3DTO::UniswapV3.TokenHourDataV3DTO(char* json)
 {
 	this->fromJson(json);
 }
 
 char*
-UniswapV3TokenHourDataV3DTO::toJson()
+UniswapV3.TokenHourDataV3DTO::toJson()
 {
 	JsonObject *pJsonObject = json_object_new();
 	JsonNode *node;
@@ -525,217 +525,217 @@ UniswapV3TokenHourDataV3DTO::toJson()
 }
 
 std::string
-UniswapV3TokenHourDataV3DTO::getEntryTime()
+UniswapV3.TokenHourDataV3DTO::getEntryTime()
 {
 	return entry_time;
 }
 
 void
-UniswapV3TokenHourDataV3DTO::setEntryTime(std::string  entry_time)
+UniswapV3.TokenHourDataV3DTO::setEntryTime(std::string  entry_time)
 {
 	this->entry_time = entry_time;
 }
 
 std::string
-UniswapV3TokenHourDataV3DTO::getRecvTime()
+UniswapV3.TokenHourDataV3DTO::getRecvTime()
 {
 	return recv_time;
 }
 
 void
-UniswapV3TokenHourDataV3DTO::setRecvTime(std::string  recv_time)
+UniswapV3.TokenHourDataV3DTO::setRecvTime(std::string  recv_time)
 {
 	this->recv_time = recv_time;
 }
 
 long long
-UniswapV3TokenHourDataV3DTO::getBlockNumber()
+UniswapV3.TokenHourDataV3DTO::getBlockNumber()
 {
 	return block_number;
 }
 
 void
-UniswapV3TokenHourDataV3DTO::setBlockNumber(long long  block_number)
+UniswapV3.TokenHourDataV3DTO::setBlockNumber(long long  block_number)
 {
 	this->block_number = block_number;
 }
 
 std::string
-UniswapV3TokenHourDataV3DTO::getId()
+UniswapV3.TokenHourDataV3DTO::getId()
 {
 	return id;
 }
 
 void
-UniswapV3TokenHourDataV3DTO::setId(std::string  id)
+UniswapV3.TokenHourDataV3DTO::setId(std::string  id)
 {
 	this->id = id;
 }
 
 int
-UniswapV3TokenHourDataV3DTO::getPeriodStartUnix()
+UniswapV3.TokenHourDataV3DTO::getPeriodStartUnix()
 {
 	return period_start_unix;
 }
 
 void
-UniswapV3TokenHourDataV3DTO::setPeriodStartUnix(int  period_start_unix)
+UniswapV3.TokenHourDataV3DTO::setPeriodStartUnix(int  period_start_unix)
 {
 	this->period_start_unix = period_start_unix;
 }
 
 std::string
-UniswapV3TokenHourDataV3DTO::getToken()
+UniswapV3.TokenHourDataV3DTO::getToken()
 {
 	return token;
 }
 
 void
-UniswapV3TokenHourDataV3DTO::setToken(std::string  token)
+UniswapV3.TokenHourDataV3DTO::setToken(std::string  token)
 {
 	this->token = token;
 }
 
 std::string
-UniswapV3TokenHourDataV3DTO::getVolume()
+UniswapV3.TokenHourDataV3DTO::getVolume()
 {
 	return volume;
 }
 
 void
-UniswapV3TokenHourDataV3DTO::setVolume(std::string  volume)
+UniswapV3.TokenHourDataV3DTO::setVolume(std::string  volume)
 {
 	this->volume = volume;
 }
 
 std::string
-UniswapV3TokenHourDataV3DTO::getVolumeUsd()
+UniswapV3.TokenHourDataV3DTO::getVolumeUsd()
 {
 	return volume_usd;
 }
 
 void
-UniswapV3TokenHourDataV3DTO::setVolumeUsd(std::string  volume_usd)
+UniswapV3.TokenHourDataV3DTO::setVolumeUsd(std::string  volume_usd)
 {
 	this->volume_usd = volume_usd;
 }
 
 std::string
-UniswapV3TokenHourDataV3DTO::getUntrackedVolumeUsd()
+UniswapV3.TokenHourDataV3DTO::getUntrackedVolumeUsd()
 {
 	return untracked_volume_usd;
 }
 
 void
-UniswapV3TokenHourDataV3DTO::setUntrackedVolumeUsd(std::string  untracked_volume_usd)
+UniswapV3.TokenHourDataV3DTO::setUntrackedVolumeUsd(std::string  untracked_volume_usd)
 {
 	this->untracked_volume_usd = untracked_volume_usd;
 }
 
 std::string
-UniswapV3TokenHourDataV3DTO::getTotalValueLocked()
+UniswapV3.TokenHourDataV3DTO::getTotalValueLocked()
 {
 	return total_value_locked;
 }
 
 void
-UniswapV3TokenHourDataV3DTO::setTotalValueLocked(std::string  total_value_locked)
+UniswapV3.TokenHourDataV3DTO::setTotalValueLocked(std::string  total_value_locked)
 {
 	this->total_value_locked = total_value_locked;
 }
 
 std::string
-UniswapV3TokenHourDataV3DTO::getTotalValueLockedUsd()
+UniswapV3.TokenHourDataV3DTO::getTotalValueLockedUsd()
 {
 	return total_value_locked_usd;
 }
 
 void
-UniswapV3TokenHourDataV3DTO::setTotalValueLockedUsd(std::string  total_value_locked_usd)
+UniswapV3.TokenHourDataV3DTO::setTotalValueLockedUsd(std::string  total_value_locked_usd)
 {
 	this->total_value_locked_usd = total_value_locked_usd;
 }
 
 std::string
-UniswapV3TokenHourDataV3DTO::getPriceUsd()
+UniswapV3.TokenHourDataV3DTO::getPriceUsd()
 {
 	return price_usd;
 }
 
 void
-UniswapV3TokenHourDataV3DTO::setPriceUsd(std::string  price_usd)
+UniswapV3.TokenHourDataV3DTO::setPriceUsd(std::string  price_usd)
 {
 	this->price_usd = price_usd;
 }
 
 std::string
-UniswapV3TokenHourDataV3DTO::getFeesUsd()
+UniswapV3.TokenHourDataV3DTO::getFeesUsd()
 {
 	return fees_usd;
 }
 
 void
-UniswapV3TokenHourDataV3DTO::setFeesUsd(std::string  fees_usd)
+UniswapV3.TokenHourDataV3DTO::setFeesUsd(std::string  fees_usd)
 {
 	this->fees_usd = fees_usd;
 }
 
 std::string
-UniswapV3TokenHourDataV3DTO::getOpen()
+UniswapV3.TokenHourDataV3DTO::getOpen()
 {
 	return open;
 }
 
 void
-UniswapV3TokenHourDataV3DTO::setOpen(std::string  open)
+UniswapV3.TokenHourDataV3DTO::setOpen(std::string  open)
 {
 	this->open = open;
 }
 
 std::string
-UniswapV3TokenHourDataV3DTO::getHigh()
+UniswapV3.TokenHourDataV3DTO::getHigh()
 {
 	return high;
 }
 
 void
-UniswapV3TokenHourDataV3DTO::setHigh(std::string  high)
+UniswapV3.TokenHourDataV3DTO::setHigh(std::string  high)
 {
 	this->high = high;
 }
 
 std::string
-UniswapV3TokenHourDataV3DTO::getLow()
+UniswapV3.TokenHourDataV3DTO::getLow()
 {
 	return low;
 }
 
 void
-UniswapV3TokenHourDataV3DTO::setLow(std::string  low)
+UniswapV3.TokenHourDataV3DTO::setLow(std::string  low)
 {
 	this->low = low;
 }
 
 std::string
-UniswapV3TokenHourDataV3DTO::getClose()
+UniswapV3.TokenHourDataV3DTO::getClose()
 {
 	return close;
 }
 
 void
-UniswapV3TokenHourDataV3DTO::setClose(std::string  close)
+UniswapV3.TokenHourDataV3DTO::setClose(std::string  close)
 {
 	this->close = close;
 }
 
 long long
-UniswapV3TokenHourDataV3DTO::getVid()
+UniswapV3.TokenHourDataV3DTO::getVid()
 {
 	return vid;
 }
 
 void
-UniswapV3TokenHourDataV3DTO::setVid(long long  vid)
+UniswapV3.TokenHourDataV3DTO::setVid(long long  vid)
 {
 	this->vid = vid;
 }

@@ -1,4 +1,4 @@
-goog.provide('API.Client.UniswapV3TokenV3DTO');
+goog.provide('API.Client.UniswapV3.TokenV3DTO');
 
 /**
  * Stores aggregated information for a specific token across all pairs that token is included in.
@@ -61,7 +61,7 @@ API.Client.UniswapV3TokenV3DTO.prototype.name;
 API.Client.UniswapV3TokenV3DTO.prototype.decimals;
 
 /**
- * @type {!API.Client.NumericsBigInteger}
+ * @type {!API.Client.Numerics.BigInteger}
  * @export
  */
 API.Client.UniswapV3TokenV3DTO.prototype.totalSupply;
@@ -95,13 +95,13 @@ API.Client.UniswapV3TokenV3DTO.prototype.untrackedVolumeUsd;
 API.Client.UniswapV3TokenV3DTO.prototype.feesUsd;
 
 /**
- * @type {!API.Client.NumericsBigInteger}
+ * @type {!API.Client.Numerics.BigInteger}
  * @export
  */
 API.Client.UniswapV3TokenV3DTO.prototype.txCount;
 
 /**
- * @type {!API.Client.NumericsBigInteger}
+ * @type {!API.Client.Numerics.BigInteger}
  * @export
  */
 API.Client.UniswapV3TokenV3DTO.prototype.poolCount;

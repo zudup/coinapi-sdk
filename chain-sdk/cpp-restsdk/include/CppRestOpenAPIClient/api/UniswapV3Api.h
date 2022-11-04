@@ -23,22 +23,22 @@
 
 #include "CppRestOpenAPIClient/ApiClient.h"
 
-#include "CppRestOpenAPIClient/model/UniswapV3BundleV3DTO.h"
-#include "CppRestOpenAPIClient/model/UniswapV3BurnV3DTO.h"
-#include "CppRestOpenAPIClient/model/UniswapV3FactoryV3DTO.h"
-#include "CppRestOpenAPIClient/model/UniswapV3MintV3DTO.h"
-#include "CppRestOpenAPIClient/model/UniswapV3PoolDayDataV3DTO.h"
-#include "CppRestOpenAPIClient/model/UniswapV3PoolHourDataV3DTO.h"
-#include "CppRestOpenAPIClient/model/UniswapV3PoolV3DTO.h"
-#include "CppRestOpenAPIClient/model/UniswapV3PositionSnapshotV3DTO.h"
-#include "CppRestOpenAPIClient/model/UniswapV3PositionV3DTO.h"
-#include "CppRestOpenAPIClient/model/UniswapV3SwapV3DTO.h"
-#include "CppRestOpenAPIClient/model/UniswapV3TickDayDataV3DTO.h"
-#include "CppRestOpenAPIClient/model/UniswapV3TickV3DTO.h"
-#include "CppRestOpenAPIClient/model/UniswapV3TokenHourDataV3DTO.h"
-#include "CppRestOpenAPIClient/model/UniswapV3TokenV3DTO.h"
-#include "CppRestOpenAPIClient/model/UniswapV3TokenV3DayDataDTO.h"
-#include "CppRestOpenAPIClient/model/UniswapV3UniswapDayDataV3DTO.h"
+#include "CppRestOpenAPIClient/model/UniswapV3_BundleV3DTO.h"
+#include "CppRestOpenAPIClient/model/UniswapV3_BurnV3DTO.h"
+#include "CppRestOpenAPIClient/model/UniswapV3_FactoryV3DTO.h"
+#include "CppRestOpenAPIClient/model/UniswapV3_MintV3DTO.h"
+#include "CppRestOpenAPIClient/model/UniswapV3_PoolDayDataV3DTO.h"
+#include "CppRestOpenAPIClient/model/UniswapV3_PoolHourDataV3DTO.h"
+#include "CppRestOpenAPIClient/model/UniswapV3_PoolV3DTO.h"
+#include "CppRestOpenAPIClient/model/UniswapV3_PositionSnapshotV3DTO.h"
+#include "CppRestOpenAPIClient/model/UniswapV3_PositionV3DTO.h"
+#include "CppRestOpenAPIClient/model/UniswapV3_SwapV3DTO.h"
+#include "CppRestOpenAPIClient/model/UniswapV3_TickDayDataV3DTO.h"
+#include "CppRestOpenAPIClient/model/UniswapV3_TickV3DTO.h"
+#include "CppRestOpenAPIClient/model/UniswapV3_TokenHourDataV3DTO.h"
+#include "CppRestOpenAPIClient/model/UniswapV3_TokenV3DTO.h"
+#include "CppRestOpenAPIClient/model/UniswapV3_TokenV3DayDataDTO.h"
+#include "CppRestOpenAPIClient/model/UniswapV3_UniswapDayDataV3DTO.h"
 #include <cpprest/details/basic_types.h>
 #include <boost/optional.hpp>
 
@@ -65,7 +65,7 @@ public:
     /// <remarks>
     /// 
     /// </remarks>
-    pplx::task<std::vector<std::shared_ptr<UniswapV3BundleV3DTO>>> dappsUniswapv3BundleCurrentGet(
+    pplx::task<std::vector<std::shared_ptr<UniswapV3_BundleV3DTO>>> dappsUniswapv3BundleCurrentGet(
     ) const;
     /// <summary>
     /// 
@@ -90,7 +90,7 @@ public:
     /// 
     /// </remarks>
     /// <param name="filterPoolId">Filter pool id (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<UniswapV3BurnV3DTO>>> dappsUniswapv3BurnsCurrentGet(
+    pplx::task<std::vector<std::shared_ptr<UniswapV3_BurnV3DTO>>> dappsUniswapv3BurnsCurrentGet(
         boost::optional<utility::string_t> filterPoolId
     ) const;
     /// <summary>
@@ -134,7 +134,7 @@ public:
     /// 
     /// </remarks>
     /// <param name="chainId"></param>
-    pplx::task<std::vector<std::shared_ptr<UniswapV3FactoryV3DTO>>> dappsUniswapv3FactoryCurrentGet(
+    pplx::task<std::vector<std::shared_ptr<UniswapV3_FactoryV3DTO>>> dappsUniswapv3FactoryCurrentGet(
         utility::string_t chainId
     ) const;
     /// <summary>
@@ -160,7 +160,7 @@ public:
     /// 
     /// </remarks>
     /// <param name="filterPoolId">Filter pool id (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<UniswapV3MintV3DTO>>> dappsUniswapv3MintsCurrentGet(
+    pplx::task<std::vector<std::shared_ptr<UniswapV3_MintV3DTO>>> dappsUniswapv3MintsCurrentGet(
         boost::optional<utility::string_t> filterPoolId
     ) const;
     /// <summary>
@@ -224,7 +224,7 @@ public:
     /// 
     /// </remarks>
     /// <param name="filterPoolId">Filter pool id (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<UniswapV3PoolV3DTO>>> dappsUniswapv3PoolsCurrentGet(
+    pplx::task<std::vector<std::shared_ptr<UniswapV3_PoolV3DTO>>> dappsUniswapv3PoolsCurrentGet(
         boost::optional<utility::string_t> filterPoolId
     ) const;
     /// <summary>
@@ -234,7 +234,7 @@ public:
     /// 
     /// </remarks>
     /// <param name="filterPoolId">Filter pool id (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<UniswapV3PoolDayDataV3DTO>>> dappsUniswapv3PoolsDayDataCurrentGet(
+    pplx::task<std::vector<std::shared_ptr<UniswapV3_PoolDayDataV3DTO>>> dappsUniswapv3PoolsDayDataCurrentGet(
         boost::optional<utility::string_t> filterPoolId
     ) const;
     /// <summary>
@@ -262,7 +262,7 @@ public:
     /// 
     /// </remarks>
     /// <param name="filterPoolId">Filter pool id (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<UniswapV3PoolHourDataV3DTO>>> dappsUniswapv3PoolsHourDataCurrentGet(
+    pplx::task<std::vector<std::shared_ptr<UniswapV3_PoolHourDataV3DTO>>> dappsUniswapv3PoolsHourDataCurrentGet(
         boost::optional<utility::string_t> filterPoolId
     ) const;
     /// <summary>
@@ -290,7 +290,7 @@ public:
     /// 
     /// </remarks>
     /// <param name="filterPoolId">Filter pool id (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<UniswapV3PositionSnapshotV3DTO>>> dappsUniswapv3PositionSnapshotsCurrentGet(
+    pplx::task<std::vector<std::shared_ptr<UniswapV3_PositionSnapshotV3DTO>>> dappsUniswapv3PositionSnapshotsCurrentGet(
         boost::optional<utility::string_t> filterPoolId
     ) const;
     /// <summary>
@@ -300,7 +300,7 @@ public:
     /// 
     /// </remarks>
     /// <param name="filterPoolId">Filter pool id (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<UniswapV3PositionV3DTO>>> dappsUniswapv3PositionsCurrentGet(
+    pplx::task<std::vector<std::shared_ptr<UniswapV3_PositionV3DTO>>> dappsUniswapv3PositionsCurrentGet(
         boost::optional<utility::string_t> filterPoolId
     ) const;
     /// <summary>
@@ -328,7 +328,7 @@ public:
     /// 
     /// </remarks>
     /// <param name="filterPoolId">Filter pool id (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<UniswapV3SwapV3DTO>>> dappsUniswapv3SwapsCurrentGet(
+    pplx::task<std::vector<std::shared_ptr<UniswapV3_SwapV3DTO>>> dappsUniswapv3SwapsCurrentGet(
         boost::optional<utility::string_t> filterPoolId
     ) const;
     /// <summary>
@@ -374,7 +374,7 @@ public:
     /// 
     /// </remarks>
     /// <param name="filterPoolId">Filter pool id (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<UniswapV3TickV3DTO>>> dappsUniswapv3TicksCurrentGet(
+    pplx::task<std::vector<std::shared_ptr<UniswapV3_TickV3DTO>>> dappsUniswapv3TicksCurrentGet(
         boost::optional<utility::string_t> filterPoolId
     ) const;
     /// <summary>
@@ -384,7 +384,7 @@ public:
     /// 
     /// </remarks>
     /// <param name="filterPoolId">Filter pool id (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<UniswapV3TickDayDataV3DTO>>> dappsUniswapv3TicksDayDataCurrentGet(
+    pplx::task<std::vector<std::shared_ptr<UniswapV3_TickDayDataV3DTO>>> dappsUniswapv3TicksDayDataCurrentGet(
         boost::optional<utility::string_t> filterPoolId
     ) const;
     /// <summary>
@@ -448,7 +448,7 @@ public:
     /// 
     /// </remarks>
     /// <param name="filterTokenId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<UniswapV3TokenV3DTO>>> dappsUniswapv3TokensCurrentGet(
+    pplx::task<std::vector<std::shared_ptr<UniswapV3_TokenV3DTO>>> dappsUniswapv3TokensCurrentGet(
         boost::optional<utility::string_t> filterTokenId
     ) const;
     /// <summary>
@@ -458,7 +458,7 @@ public:
     /// 
     /// </remarks>
     /// <param name="filterTokenId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<UniswapV3TokenV3DayDataDTO>>> dappsUniswapv3TokensDayDataCurrentGet(
+    pplx::task<std::vector<std::shared_ptr<UniswapV3_TokenV3DayDataDTO>>> dappsUniswapv3TokensDayDataCurrentGet(
         boost::optional<utility::string_t> filterTokenId
     ) const;
     /// <summary>
@@ -486,7 +486,7 @@ public:
     /// 
     /// </remarks>
     /// <param name="filterTokenId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<UniswapV3TokenHourDataV3DTO>>> dappsUniswapv3TokensHourDataCurrentGet(
+    pplx::task<std::vector<std::shared_ptr<UniswapV3_TokenHourDataV3DTO>>> dappsUniswapv3TokensHourDataCurrentGet(
         boost::optional<utility::string_t> filterTokenId
     ) const;
     /// <summary>
@@ -511,7 +511,7 @@ public:
     /// <remarks>
     /// 
     /// </remarks>
-    pplx::task<std::vector<std::shared_ptr<UniswapV3UniswapDayDataV3DTO>>> dappsUniswapv3UniswapDayDataCurrentGet(
+    pplx::task<std::vector<std::shared_ptr<UniswapV3_UniswapDayDataV3DTO>>> dappsUniswapv3UniswapDayDataCurrentGet(
     ) const;
 
 protected:

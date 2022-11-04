@@ -23,9 +23,9 @@
 
 #include "CppRestOpenAPIClient/ApiClient.h"
 
-#include "CppRestOpenAPIClient/model/UniswapV2PairV2DTO.h"
-#include "CppRestOpenAPIClient/model/UniswapV2SwapV2DTO.h"
-#include "CppRestOpenAPIClient/model/UniswapV2TokenV2DTO.h"
+#include "CppRestOpenAPIClient/model/UniswapV2_PairV2DTO.h"
+#include "CppRestOpenAPIClient/model/UniswapV2_SwapV2DTO.h"
+#include "CppRestOpenAPIClient/model/UniswapV2_TokenV2DTO.h"
 #include <cpprest/details/basic_types.h>
 #include <boost/optional.hpp>
 
@@ -209,7 +209,7 @@ public:
     /// 
     /// </remarks>
     /// <param name="filterPoolId">Filter pool id (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<UniswapV2PairV2DTO>>> dappsUniswapv2PoolsCurrentGet(
+    pplx::task<std::vector<std::shared_ptr<UniswapV2_PairV2DTO>>> dappsUniswapv2PoolsCurrentGet(
         boost::optional<utility::string_t> filterPoolId
     ) const;
     /// <summary>
@@ -236,7 +236,7 @@ public:
     /// <remarks>
     /// 
     /// </remarks>
-    pplx::task<std::vector<std::shared_ptr<UniswapV2SwapV2DTO>>> dappsUniswapv2SwapsCurrentGet(
+    pplx::task<std::vector<std::shared_ptr<UniswapV2_SwapV2DTO>>> dappsUniswapv2SwapsCurrentGet(
     ) const;
     /// <summary>
     /// 
@@ -280,7 +280,7 @@ public:
     /// <remarks>
     /// 
     /// </remarks>
-    pplx::task<std::vector<std::shared_ptr<UniswapV2TokenV2DTO>>> dappsUniswapv2TokensCurrentGet(
+    pplx::task<std::vector<std::shared_ptr<UniswapV2_TokenV2DTO>>> dappsUniswapv2TokensCurrentGet(
     ) const;
     /// <summary>
     /// 

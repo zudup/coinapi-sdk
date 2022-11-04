@@ -1,16 +1,16 @@
 /*
- * UniswapV2SwapV2DTO.h
+ * UniswapV2.SwapV2DTO.h
  *
  * Swap are created for each token swap within a pair.
  */
 
-#ifndef _UniswapV2SwapV2DTO_H_
-#define _UniswapV2SwapV2DTO_H_
+#ifndef _UniswapV2.SwapV2DTO_H_
+#define _UniswapV2.SwapV2DTO_H_
 
 
 #include <string>
-#include "NumericsBigInteger.h"
-#include "TransactionsETradeAggressiveSide.h"
+#include "Numerics.BigInteger.h"
+#include "Transactions.ETradeAggressiveSide.h"
 #include "Object.h"
 
 /** \defgroup Models Data Structures for API
@@ -28,16 +28,16 @@ namespace ArtikCloud {
  *
  */
 
-class UniswapV2SwapV2DTO : public Object {
+class UniswapV2.SwapV2DTO : public Object {
 public:
 	/*! \brief Constructor.
 	 */
-	UniswapV2SwapV2DTO();
-	UniswapV2SwapV2DTO(char* str);
+	UniswapV2.SwapV2DTO();
+	UniswapV2.SwapV2DTO(char* str);
 
 	/*! \brief Destructor.
 	 */
-	virtual ~UniswapV2SwapV2DTO();
+	virtual ~UniswapV2.SwapV2DTO();
 
 	/*! \brief Retrieve a string JSON representation of this class.
 	 */
@@ -154,11 +154,11 @@ public:
 	void setTo(std::string  to);
 	/*! \brief Get 
 	 */
-	NumericsBigInteger getLogIndex();
+	Numerics.BigInteger getLogIndex();
 
 	/*! \brief Set 
 	 */
-	void setLogIndex(NumericsBigInteger  log_index);
+	void setLogIndex(Numerics.BigInteger  log_index);
 	/*! \brief Get Derived amount of tokens sold in USD.
 	 */
 	std::string getAmountUsd();
@@ -182,11 +182,11 @@ public:
 	void setEvaluatedAmount(double  evaluated_amount);
 	/*! \brief Get 
 	 */
-	TransactionsETradeAggressiveSide getEvaluatedAggressor();
+	Transactions.ETradeAggressiveSide getEvaluatedAggressor();
 
 	/*! \brief Set 
 	 */
-	void setEvaluatedAggressor(TransactionsETradeAggressiveSide  evaluated_aggressor);
+	void setEvaluatedAggressor(Transactions.ETradeAggressiveSide  evaluated_aggressor);
 	/*! \brief Get 
 	 */
 	std::string getPoolId();
@@ -218,11 +218,11 @@ private:
 	std::string amount_0_out;
 	std::string amount_1_out;
 	std::string to;
-	NumericsBigInteger log_index;
+	Numerics.BigInteger log_index;
 	std::string amount_usd;
 	double evaluated_price;
 	double evaluated_amount;
-	TransactionsETradeAggressiveSide evaluated_aggressor;
+	Transactions.ETradeAggressiveSide evaluated_aggressor;
 	std::string pool_id;
 	std::string transaction_id;
 	void __init();
@@ -232,4 +232,4 @@ private:
 }
 }
 
-#endif /* _UniswapV2SwapV2DTO_H_ */
+#endif /* _UniswapV2.SwapV2DTO_H_ */

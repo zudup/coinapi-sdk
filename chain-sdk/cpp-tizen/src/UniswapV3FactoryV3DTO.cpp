@@ -5,23 +5,23 @@
 #include "Helpers.h"
 
 
-#include "UniswapV3FactoryV3DTO.h"
+#include "UniswapV3.FactoryV3DTO.h"
 
 using namespace std;
 using namespace Tizen::ArtikCloud;
 
-UniswapV3FactoryV3DTO::UniswapV3FactoryV3DTO()
+UniswapV3.FactoryV3DTO::UniswapV3.FactoryV3DTO()
 {
 	//__init();
 }
 
-UniswapV3FactoryV3DTO::~UniswapV3FactoryV3DTO()
+UniswapV3.FactoryV3DTO::~UniswapV3.FactoryV3DTO()
 {
 	//__cleanup();
 }
 
 void
-UniswapV3FactoryV3DTO::__init()
+UniswapV3.FactoryV3DTO::__init()
 {
 	//entry_time = null;
 	//recv_time = null;
@@ -43,7 +43,7 @@ UniswapV3FactoryV3DTO::__init()
 }
 
 void
-UniswapV3FactoryV3DTO::__cleanup()
+UniswapV3.FactoryV3DTO::__cleanup()
 {
 	//if(entry_time != NULL) {
 	//
@@ -134,7 +134,7 @@ UniswapV3FactoryV3DTO::__cleanup()
 }
 
 void
-UniswapV3FactoryV3DTO::fromJson(char* jsonStr)
+UniswapV3.FactoryV3DTO::fromJson(char* jsonStr)
 {
 	JsonObject *pJsonObject = json_node_get_object(json_from_string(jsonStr,NULL));
 	JsonNode *node;
@@ -327,13 +327,13 @@ UniswapV3FactoryV3DTO::fromJson(char* jsonStr)
 	}
 }
 
-UniswapV3FactoryV3DTO::UniswapV3FactoryV3DTO(char* json)
+UniswapV3.FactoryV3DTO::UniswapV3.FactoryV3DTO(char* json)
 {
 	this->fromJson(json);
 }
 
 char*
-UniswapV3FactoryV3DTO::toJson()
+UniswapV3.FactoryV3DTO::toJson()
 {
 	JsonObject *pJsonObject = json_object_new();
 	JsonNode *node;
@@ -499,205 +499,205 @@ UniswapV3FactoryV3DTO::toJson()
 }
 
 std::string
-UniswapV3FactoryV3DTO::getEntryTime()
+UniswapV3.FactoryV3DTO::getEntryTime()
 {
 	return entry_time;
 }
 
 void
-UniswapV3FactoryV3DTO::setEntryTime(std::string  entry_time)
+UniswapV3.FactoryV3DTO::setEntryTime(std::string  entry_time)
 {
 	this->entry_time = entry_time;
 }
 
 std::string
-UniswapV3FactoryV3DTO::getRecvTime()
+UniswapV3.FactoryV3DTO::getRecvTime()
 {
 	return recv_time;
 }
 
 void
-UniswapV3FactoryV3DTO::setRecvTime(std::string  recv_time)
+UniswapV3.FactoryV3DTO::setRecvTime(std::string  recv_time)
 {
 	this->recv_time = recv_time;
 }
 
 long long
-UniswapV3FactoryV3DTO::getBlockNumber()
+UniswapV3.FactoryV3DTO::getBlockNumber()
 {
 	return block_number;
 }
 
 void
-UniswapV3FactoryV3DTO::setBlockNumber(long long  block_number)
+UniswapV3.FactoryV3DTO::setBlockNumber(long long  block_number)
 {
 	this->block_number = block_number;
 }
 
 std::string
-UniswapV3FactoryV3DTO::getId()
+UniswapV3.FactoryV3DTO::getId()
 {
 	return id;
 }
 
 void
-UniswapV3FactoryV3DTO::setId(std::string  id)
+UniswapV3.FactoryV3DTO::setId(std::string  id)
 {
 	this->id = id;
 }
 
 std::string
-UniswapV3FactoryV3DTO::getPoolCount()
+UniswapV3.FactoryV3DTO::getPoolCount()
 {
 	return pool_count;
 }
 
 void
-UniswapV3FactoryV3DTO::setPoolCount(std::string  pool_count)
+UniswapV3.FactoryV3DTO::setPoolCount(std::string  pool_count)
 {
 	this->pool_count = pool_count;
 }
 
 std::string
-UniswapV3FactoryV3DTO::getTxCount()
+UniswapV3.FactoryV3DTO::getTxCount()
 {
 	return tx_count;
 }
 
 void
-UniswapV3FactoryV3DTO::setTxCount(std::string  tx_count)
+UniswapV3.FactoryV3DTO::setTxCount(std::string  tx_count)
 {
 	this->tx_count = tx_count;
 }
 
 std::string
-UniswapV3FactoryV3DTO::getTotalVolumeUsd()
+UniswapV3.FactoryV3DTO::getTotalVolumeUsd()
 {
 	return total_volume_usd;
 }
 
 void
-UniswapV3FactoryV3DTO::setTotalVolumeUsd(std::string  total_volume_usd)
+UniswapV3.FactoryV3DTO::setTotalVolumeUsd(std::string  total_volume_usd)
 {
 	this->total_volume_usd = total_volume_usd;
 }
 
 std::string
-UniswapV3FactoryV3DTO::getTotalVolumeEth()
+UniswapV3.FactoryV3DTO::getTotalVolumeEth()
 {
 	return total_volume_eth;
 }
 
 void
-UniswapV3FactoryV3DTO::setTotalVolumeEth(std::string  total_volume_eth)
+UniswapV3.FactoryV3DTO::setTotalVolumeEth(std::string  total_volume_eth)
 {
 	this->total_volume_eth = total_volume_eth;
 }
 
 std::string
-UniswapV3FactoryV3DTO::getTotalFeesUsd()
+UniswapV3.FactoryV3DTO::getTotalFeesUsd()
 {
 	return total_fees_usd;
 }
 
 void
-UniswapV3FactoryV3DTO::setTotalFeesUsd(std::string  total_fees_usd)
+UniswapV3.FactoryV3DTO::setTotalFeesUsd(std::string  total_fees_usd)
 {
 	this->total_fees_usd = total_fees_usd;
 }
 
 std::string
-UniswapV3FactoryV3DTO::getTotalFeesEth()
+UniswapV3.FactoryV3DTO::getTotalFeesEth()
 {
 	return total_fees_eth;
 }
 
 void
-UniswapV3FactoryV3DTO::setTotalFeesEth(std::string  total_fees_eth)
+UniswapV3.FactoryV3DTO::setTotalFeesEth(std::string  total_fees_eth)
 {
 	this->total_fees_eth = total_fees_eth;
 }
 
 std::string
-UniswapV3FactoryV3DTO::getUntrackedVolumeUsd()
+UniswapV3.FactoryV3DTO::getUntrackedVolumeUsd()
 {
 	return untracked_volume_usd;
 }
 
 void
-UniswapV3FactoryV3DTO::setUntrackedVolumeUsd(std::string  untracked_volume_usd)
+UniswapV3.FactoryV3DTO::setUntrackedVolumeUsd(std::string  untracked_volume_usd)
 {
 	this->untracked_volume_usd = untracked_volume_usd;
 }
 
 std::string
-UniswapV3FactoryV3DTO::getTotalValueLockedUsd()
+UniswapV3.FactoryV3DTO::getTotalValueLockedUsd()
 {
 	return total_value_locked_usd;
 }
 
 void
-UniswapV3FactoryV3DTO::setTotalValueLockedUsd(std::string  total_value_locked_usd)
+UniswapV3.FactoryV3DTO::setTotalValueLockedUsd(std::string  total_value_locked_usd)
 {
 	this->total_value_locked_usd = total_value_locked_usd;
 }
 
 std::string
-UniswapV3FactoryV3DTO::getTotalValueLockedEth()
+UniswapV3.FactoryV3DTO::getTotalValueLockedEth()
 {
 	return total_value_locked_eth;
 }
 
 void
-UniswapV3FactoryV3DTO::setTotalValueLockedEth(std::string  total_value_locked_eth)
+UniswapV3.FactoryV3DTO::setTotalValueLockedEth(std::string  total_value_locked_eth)
 {
 	this->total_value_locked_eth = total_value_locked_eth;
 }
 
 std::string
-UniswapV3FactoryV3DTO::getTotalValueLockedUsdUntracked()
+UniswapV3.FactoryV3DTO::getTotalValueLockedUsdUntracked()
 {
 	return total_value_locked_usd_untracked;
 }
 
 void
-UniswapV3FactoryV3DTO::setTotalValueLockedUsdUntracked(std::string  total_value_locked_usd_untracked)
+UniswapV3.FactoryV3DTO::setTotalValueLockedUsdUntracked(std::string  total_value_locked_usd_untracked)
 {
 	this->total_value_locked_usd_untracked = total_value_locked_usd_untracked;
 }
 
 std::string
-UniswapV3FactoryV3DTO::getTotalValueLockedEthUntracked()
+UniswapV3.FactoryV3DTO::getTotalValueLockedEthUntracked()
 {
 	return total_value_locked_eth_untracked;
 }
 
 void
-UniswapV3FactoryV3DTO::setTotalValueLockedEthUntracked(std::string  total_value_locked_eth_untracked)
+UniswapV3.FactoryV3DTO::setTotalValueLockedEthUntracked(std::string  total_value_locked_eth_untracked)
 {
 	this->total_value_locked_eth_untracked = total_value_locked_eth_untracked;
 }
 
 std::string
-UniswapV3FactoryV3DTO::getOwner()
+UniswapV3.FactoryV3DTO::getOwner()
 {
 	return owner;
 }
 
 void
-UniswapV3FactoryV3DTO::setOwner(std::string  owner)
+UniswapV3.FactoryV3DTO::setOwner(std::string  owner)
 {
 	this->owner = owner;
 }
 
 long long
-UniswapV3FactoryV3DTO::getVid()
+UniswapV3.FactoryV3DTO::getVid()
 {
 	return vid;
 }
 
 void
-UniswapV3FactoryV3DTO::setVid(long long  vid)
+UniswapV3.FactoryV3DTO::setVid(long long  vid)
 {
 	this->vid = vid;
 }

@@ -1,11 +1,11 @@
 /*
- * UniswapV3PoolDayDataV3DTO.h
+ * UniswapV3.PoolDayDataV3DTO.h
  *
  * Data accumulated and condensed into day stats for each pool.
  */
 
-#ifndef _UniswapV3PoolDayDataV3DTO_H_
-#define _UniswapV3PoolDayDataV3DTO_H_
+#ifndef _UniswapV3.PoolDayDataV3DTO_H_
+#define _UniswapV3.PoolDayDataV3DTO_H_
 
 
 #include <string>
@@ -26,16 +26,16 @@ namespace ArtikCloud {
  *
  */
 
-class UniswapV3PoolDayDataV3DTO : public Object {
+class UniswapV3.PoolDayDataV3DTO : public Object {
 public:
 	/*! \brief Constructor.
 	 */
-	UniswapV3PoolDayDataV3DTO();
-	UniswapV3PoolDayDataV3DTO(char* str);
+	UniswapV3.PoolDayDataV3DTO();
+	UniswapV3.PoolDayDataV3DTO(char* str);
 
 	/*! \brief Destructor.
 	 */
-	virtual ~UniswapV3PoolDayDataV3DTO();
+	virtual ~UniswapV3.PoolDayDataV3DTO();
 
 	/*! \brief Retrieve a string JSON representation of this class.
 	 */
@@ -246,4 +246,4 @@ private:
 }
 }
 
-#endif /* _UniswapV3PoolDayDataV3DTO_H_ */
+#endif /* _UniswapV3.PoolDayDataV3DTO_H_ */

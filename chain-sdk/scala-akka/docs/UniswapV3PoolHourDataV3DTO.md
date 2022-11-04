@@ -1,6 +1,6 @@
 
 
-# UniswapV3PoolHourDataV3DTO
+# PoolHourDataV3DTO
 
 Hourly stats tracker for pool.
 

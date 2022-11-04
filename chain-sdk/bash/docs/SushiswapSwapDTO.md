@@ -1,4 +1,4 @@
-# SushiswapSwapDTO
+# Sushiswap.SwapDTO
 
 ## Properties
 Name | Type | Description | Notes

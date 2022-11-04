@@ -50,7 +50,7 @@ class UniswapV3PositionSnapshotV3DTO implements ModelInterface, ArrayAccess, \Js
       *
       * @var string
       */
-    protected static $openAPIModelName = 'UniswapV3PositionSnapshotV3DTO';
+    protected static $openAPIModelName = 'UniswapV3.PositionSnapshotV3DTO';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

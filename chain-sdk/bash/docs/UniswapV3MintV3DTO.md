@@ -1,4 +1,4 @@
-# UniswapV3MintV3DTO
+# UniswapV3.MintV3DTO
 
 ## Properties
 Name | Type | Description | Notes

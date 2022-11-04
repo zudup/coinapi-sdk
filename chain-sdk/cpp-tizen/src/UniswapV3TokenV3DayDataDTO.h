@@ -1,11 +1,11 @@
 /*
- * UniswapV3TokenV3DayDataDTO.h
+ * UniswapV3.TokenV3DayDataDTO.h
  *
  * Token data aggregated across all pairs that include token.
  */
 
-#ifndef _UniswapV3TokenV3DayDataDTO_H_
-#define _UniswapV3TokenV3DayDataDTO_H_
+#ifndef _UniswapV3.TokenV3DayDataDTO_H_
+#define _UniswapV3.TokenV3DayDataDTO_H_
 
 
 #include <string>
@@ -26,16 +26,16 @@ namespace ArtikCloud {
  *
  */
 
-class UniswapV3TokenV3DayDataDTO : public Object {
+class UniswapV3.TokenV3DayDataDTO : public Object {
 public:
 	/*! \brief Constructor.
 	 */
-	UniswapV3TokenV3DayDataDTO();
-	UniswapV3TokenV3DayDataDTO(char* str);
+	UniswapV3.TokenV3DayDataDTO();
+	UniswapV3.TokenV3DayDataDTO(char* str);
 
 	/*! \brief Destructor.
 	 */
-	virtual ~UniswapV3TokenV3DayDataDTO();
+	virtual ~UniswapV3.TokenV3DayDataDTO();
 
 	/*! \brief Retrieve a string JSON representation of this class.
 	 */
@@ -198,4 +198,4 @@ private:
 }
 }
 
-#endif /* _UniswapV3TokenV3DayDataDTO_H_ */
+#endif /* _UniswapV3.TokenV3DayDataDTO_H_ */

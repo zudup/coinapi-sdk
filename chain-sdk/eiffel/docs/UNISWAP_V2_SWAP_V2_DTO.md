@@ -18,11 +18,11 @@ Name | Type | Description | Notes
 **amount_0_out** | [**STRING_32**](STRING_32.md) | Amount of token0 received. | [optional] [default to null]
 **amount_1_out** | [**STRING_32**](STRING_32.md) | Amount of token1 received. | [optional] [default to null]
 **to** | [**STRING_32**](STRING_32.md) | Recipient of output tokens. | [optional] [default to null]
-**log_index** | [**NUMERICS_BIG_INTEGER**](NumericsBigInteger.md) |  | [optional] [default to null]
+**log_index** | [**NUMERICS_BIG_INTEGER**](Numerics.BigInteger.md) |  | [optional] [default to null]
 **amount_usd** | [**STRING_32**](STRING_32.md) | Derived amount of tokens sold in USD. | [optional] [default to null]
 **evaluated_price** | **REAL_64** |  | [optional] [readonly] [default to null]
 **evaluated_amount** | **REAL_64** |  | [optional] [readonly] [default to null]
-**evaluated_aggressor** | [**TRANSACTIONS_E_TRADE_AGGRESSIVE_SIDE**](TransactionsETradeAggressiveSide.md) |  | [optional] [default to null]
+**evaluated_aggressor** | [**TRANSACTIONS_E_TRADE_AGGRESSIVE_SIDE**](Transactions.ETradeAggressiveSide.md) |  | [optional] [default to null]
 **pool_id** | [**STRING_32**](STRING_32.md) |  | [optional] [readonly] [default to null]
 **transaction_id** | [**STRING_32**](STRING_32.md) |  | [optional] [readonly] [default to null]
 

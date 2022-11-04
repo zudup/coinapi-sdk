@@ -5,23 +5,23 @@
 #include "Helpers.h"
 
 
-#include "UniswapV3PositionV3DTO.h"
+#include "UniswapV3.PositionV3DTO.h"
 
 using namespace std;
 using namespace Tizen::ArtikCloud;
 
-UniswapV3PositionV3DTO::UniswapV3PositionV3DTO()
+UniswapV3.PositionV3DTO::UniswapV3.PositionV3DTO()
 {
 	//__init();
 }
 
-UniswapV3PositionV3DTO::~UniswapV3PositionV3DTO()
+UniswapV3.PositionV3DTO::~UniswapV3.PositionV3DTO()
 {
 	//__cleanup();
 }
 
 void
-UniswapV3PositionV3DTO::__init()
+UniswapV3.PositionV3DTO::__init()
 {
 	//entry_time = null;
 	//recv_time = null;
@@ -47,7 +47,7 @@ UniswapV3PositionV3DTO::__init()
 }
 
 void
-UniswapV3PositionV3DTO::__cleanup()
+UniswapV3.PositionV3DTO::__cleanup()
 {
 	//if(entry_time != NULL) {
 	//
@@ -158,7 +158,7 @@ UniswapV3PositionV3DTO::__cleanup()
 }
 
 void
-UniswapV3PositionV3DTO::fromJson(char* jsonStr)
+UniswapV3.PositionV3DTO::fromJson(char* jsonStr)
 {
 	JsonObject *pJsonObject = json_node_get_object(json_from_string(jsonStr,NULL));
 	JsonNode *node;
@@ -395,13 +395,13 @@ UniswapV3PositionV3DTO::fromJson(char* jsonStr)
 	}
 }
 
-UniswapV3PositionV3DTO::UniswapV3PositionV3DTO(char* json)
+UniswapV3.PositionV3DTO::UniswapV3.PositionV3DTO(char* json)
 {
 	this->fromJson(json);
 }
 
 char*
-UniswapV3PositionV3DTO::toJson()
+UniswapV3.PositionV3DTO::toJson()
 {
 	JsonObject *pJsonObject = json_object_new();
 	JsonNode *node;
@@ -603,253 +603,253 @@ UniswapV3PositionV3DTO::toJson()
 }
 
 std::string
-UniswapV3PositionV3DTO::getEntryTime()
+UniswapV3.PositionV3DTO::getEntryTime()
 {
 	return entry_time;
 }
 
 void
-UniswapV3PositionV3DTO::setEntryTime(std::string  entry_time)
+UniswapV3.PositionV3DTO::setEntryTime(std::string  entry_time)
 {
 	this->entry_time = entry_time;
 }
 
 std::string
-UniswapV3PositionV3DTO::getRecvTime()
+UniswapV3.PositionV3DTO::getRecvTime()
 {
 	return recv_time;
 }
 
 void
-UniswapV3PositionV3DTO::setRecvTime(std::string  recv_time)
+UniswapV3.PositionV3DTO::setRecvTime(std::string  recv_time)
 {
 	this->recv_time = recv_time;
 }
 
 long long
-UniswapV3PositionV3DTO::getBlockNumber()
+UniswapV3.PositionV3DTO::getBlockNumber()
 {
 	return block_number;
 }
 
 void
-UniswapV3PositionV3DTO::setBlockNumber(long long  block_number)
+UniswapV3.PositionV3DTO::setBlockNumber(long long  block_number)
 {
 	this->block_number = block_number;
 }
 
 std::string
-UniswapV3PositionV3DTO::getId()
+UniswapV3.PositionV3DTO::getId()
 {
 	return id;
 }
 
 void
-UniswapV3PositionV3DTO::setId(std::string  id)
+UniswapV3.PositionV3DTO::setId(std::string  id)
 {
 	this->id = id;
 }
 
 std::string
-UniswapV3PositionV3DTO::getOwner()
+UniswapV3.PositionV3DTO::getOwner()
 {
 	return owner;
 }
 
 void
-UniswapV3PositionV3DTO::setOwner(std::string  owner)
+UniswapV3.PositionV3DTO::setOwner(std::string  owner)
 {
 	this->owner = owner;
 }
 
 std::string
-UniswapV3PositionV3DTO::getPool()
+UniswapV3.PositionV3DTO::getPool()
 {
 	return pool;
 }
 
 void
-UniswapV3PositionV3DTO::setPool(std::string  pool)
+UniswapV3.PositionV3DTO::setPool(std::string  pool)
 {
 	this->pool = pool;
 }
 
 std::string
-UniswapV3PositionV3DTO::getToken0()
+UniswapV3.PositionV3DTO::getToken0()
 {
 	return token_0;
 }
 
 void
-UniswapV3PositionV3DTO::setToken0(std::string  token_0)
+UniswapV3.PositionV3DTO::setToken0(std::string  token_0)
 {
 	this->token_0 = token_0;
 }
 
 std::string
-UniswapV3PositionV3DTO::getToken1()
+UniswapV3.PositionV3DTO::getToken1()
 {
 	return token_1;
 }
 
 void
-UniswapV3PositionV3DTO::setToken1(std::string  token_1)
+UniswapV3.PositionV3DTO::setToken1(std::string  token_1)
 {
 	this->token_1 = token_1;
 }
 
 std::string
-UniswapV3PositionV3DTO::getTickLower()
+UniswapV3.PositionV3DTO::getTickLower()
 {
 	return tick_lower;
 }
 
 void
-UniswapV3PositionV3DTO::setTickLower(std::string  tick_lower)
+UniswapV3.PositionV3DTO::setTickLower(std::string  tick_lower)
 {
 	this->tick_lower = tick_lower;
 }
 
 std::string
-UniswapV3PositionV3DTO::getTickUpper()
+UniswapV3.PositionV3DTO::getTickUpper()
 {
 	return tick_upper;
 }
 
 void
-UniswapV3PositionV3DTO::setTickUpper(std::string  tick_upper)
+UniswapV3.PositionV3DTO::setTickUpper(std::string  tick_upper)
 {
 	this->tick_upper = tick_upper;
 }
 
 std::string
-UniswapV3PositionV3DTO::getLiquidity()
+UniswapV3.PositionV3DTO::getLiquidity()
 {
 	return liquidity;
 }
 
 void
-UniswapV3PositionV3DTO::setLiquidity(std::string  liquidity)
+UniswapV3.PositionV3DTO::setLiquidity(std::string  liquidity)
 {
 	this->liquidity = liquidity;
 }
 
 std::string
-UniswapV3PositionV3DTO::getDepositedToken0()
+UniswapV3.PositionV3DTO::getDepositedToken0()
 {
 	return deposited_token_0;
 }
 
 void
-UniswapV3PositionV3DTO::setDepositedToken0(std::string  deposited_token_0)
+UniswapV3.PositionV3DTO::setDepositedToken0(std::string  deposited_token_0)
 {
 	this->deposited_token_0 = deposited_token_0;
 }
 
 std::string
-UniswapV3PositionV3DTO::getDepositedToken1()
+UniswapV3.PositionV3DTO::getDepositedToken1()
 {
 	return deposited_token_1;
 }
 
 void
-UniswapV3PositionV3DTO::setDepositedToken1(std::string  deposited_token_1)
+UniswapV3.PositionV3DTO::setDepositedToken1(std::string  deposited_token_1)
 {
 	this->deposited_token_1 = deposited_token_1;
 }
 
 std::string
-UniswapV3PositionV3DTO::getWithdrawnToken0()
+UniswapV3.PositionV3DTO::getWithdrawnToken0()
 {
 	return withdrawn_token_0;
 }
 
 void
-UniswapV3PositionV3DTO::setWithdrawnToken0(std::string  withdrawn_token_0)
+UniswapV3.PositionV3DTO::setWithdrawnToken0(std::string  withdrawn_token_0)
 {
 	this->withdrawn_token_0 = withdrawn_token_0;
 }
 
 std::string
-UniswapV3PositionV3DTO::getWithdrawnToken1()
+UniswapV3.PositionV3DTO::getWithdrawnToken1()
 {
 	return withdrawn_token_1;
 }
 
 void
-UniswapV3PositionV3DTO::setWithdrawnToken1(std::string  withdrawn_token_1)
+UniswapV3.PositionV3DTO::setWithdrawnToken1(std::string  withdrawn_token_1)
 {
 	this->withdrawn_token_1 = withdrawn_token_1;
 }
 
 std::string
-UniswapV3PositionV3DTO::getCollectedFeesToken0()
+UniswapV3.PositionV3DTO::getCollectedFeesToken0()
 {
 	return collected_fees_token_0;
 }
 
 void
-UniswapV3PositionV3DTO::setCollectedFeesToken0(std::string  collected_fees_token_0)
+UniswapV3.PositionV3DTO::setCollectedFeesToken0(std::string  collected_fees_token_0)
 {
 	this->collected_fees_token_0 = collected_fees_token_0;
 }
 
 std::string
-UniswapV3PositionV3DTO::getCollectedFeesToken1()
+UniswapV3.PositionV3DTO::getCollectedFeesToken1()
 {
 	return collected_fees_token_1;
 }
 
 void
-UniswapV3PositionV3DTO::setCollectedFeesToken1(std::string  collected_fees_token_1)
+UniswapV3.PositionV3DTO::setCollectedFeesToken1(std::string  collected_fees_token_1)
 {
 	this->collected_fees_token_1 = collected_fees_token_1;
 }
 
 std::string
-UniswapV3PositionV3DTO::getTransaction()
+UniswapV3.PositionV3DTO::getTransaction()
 {
 	return transaction;
 }
 
 void
-UniswapV3PositionV3DTO::setTransaction(std::string  transaction)
+UniswapV3.PositionV3DTO::setTransaction(std::string  transaction)
 {
 	this->transaction = transaction;
 }
 
 std::string
-UniswapV3PositionV3DTO::getFeeGrowthInside0LastX128()
+UniswapV3.PositionV3DTO::getFeeGrowthInside0LastX128()
 {
 	return fee_growth_inside_0_last_x128;
 }
 
 void
-UniswapV3PositionV3DTO::setFeeGrowthInside0LastX128(std::string  fee_growth_inside_0_last_x128)
+UniswapV3.PositionV3DTO::setFeeGrowthInside0LastX128(std::string  fee_growth_inside_0_last_x128)
 {
 	this->fee_growth_inside_0_last_x128 = fee_growth_inside_0_last_x128;
 }
 
 std::string
-UniswapV3PositionV3DTO::getFeeGrowthInside1LastX128()
+UniswapV3.PositionV3DTO::getFeeGrowthInside1LastX128()
 {
 	return fee_growth_inside_1_last_x128;
 }
 
 void
-UniswapV3PositionV3DTO::setFeeGrowthInside1LastX128(std::string  fee_growth_inside_1_last_x128)
+UniswapV3.PositionV3DTO::setFeeGrowthInside1LastX128(std::string  fee_growth_inside_1_last_x128)
 {
 	this->fee_growth_inside_1_last_x128 = fee_growth_inside_1_last_x128;
 }
 
 long long
-UniswapV3PositionV3DTO::getVid()
+UniswapV3.PositionV3DTO::getVid()
 {
 	return vid;
 }
 
 void
-UniswapV3PositionV3DTO::setVid(long long  vid)
+UniswapV3.PositionV3DTO::setVid(long long  vid)
 {
 	this->vid = vid;
 }

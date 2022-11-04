@@ -1,11 +1,11 @@
 /*
- * TransactionsETradeAggressiveSide.h
+ * Transactions.ETradeAggressiveSide.h
  *
  * 
  */
 
-#ifndef _TransactionsETradeAggressiveSide_H_
-#define _TransactionsETradeAggressiveSide_H_
+#ifndef _Transactions.ETradeAggressiveSide_H_
+#define _Transactions.ETradeAggressiveSide_H_
 
 
 #include <string>
@@ -26,16 +26,16 @@ namespace ArtikCloud {
  *
  */
 
-class TransactionsETradeAggressiveSide : public Object {
+class Transactions.ETradeAggressiveSide : public Object {
 public:
 	/*! \brief Constructor.
 	 */
-	TransactionsETradeAggressiveSide();
-	TransactionsETradeAggressiveSide(char* str);
+	Transactions.ETradeAggressiveSide();
+	Transactions.ETradeAggressiveSide(char* str);
 
 	/*! \brief Destructor.
 	 */
-	virtual ~TransactionsETradeAggressiveSide();
+	virtual ~Transactions.ETradeAggressiveSide();
 
 	/*! \brief Retrieve a string JSON representation of this class.
 	 */
@@ -54,4 +54,4 @@ private:
 }
 }
 
-#endif /* _TransactionsETradeAggressiveSide_H_ */
+#endif /* _Transactions.ETradeAggressiveSide_H_ */

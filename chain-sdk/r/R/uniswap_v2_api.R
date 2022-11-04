@@ -186,7 +186,7 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } filter_pool_id character
-#' \item \emph{ @returnType } list( \link{UniswapV2PairV2DTO} ) \cr
+#' \item \emph{ @returnType } list( \link{UniswapV2.PairV2DTO} ) \cr
 #'
 #'
 #' \item status code : 200 | successful operation
@@ -220,7 +220,7 @@
 #' \strong{ DappsUniswapv2SwapsCurrentGet } \emph{ GetSwaps }
 #'
 #' \itemize{
-#' \item \emph{ @returnType } list( \link{UniswapV2SwapV2DTO} ) \cr
+#' \item \emph{ @returnType } list( \link{UniswapV2.SwapV2DTO} ) \cr
 #'
 #'
 #' \item status code : 200 | successful operation
@@ -273,7 +273,7 @@
 #' \strong{ DappsUniswapv2TokensCurrentGet } \emph{ GetTokens }
 #'
 #' \itemize{
-#' \item \emph{ @returnType } list( \link{UniswapV2TokenV2DTO} ) \cr
+#' \item \emph{ @returnType } list( \link{UniswapV2.TokenV2DTO} ) \cr
 #'
 #'
 #' \item status code : 200 | successful operation

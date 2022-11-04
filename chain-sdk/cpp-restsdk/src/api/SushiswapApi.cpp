@@ -1250,7 +1250,7 @@ pplx::task<void> SushiswapApi::dappsSushiswapPoolHourDataHistoricalGet(boost::op
         return void();
     });
 }
-pplx::task<std::vector<std::shared_ptr<SushiswapPairDTO>>> SushiswapApi::dappsSushiswapPoolsCurrentGet() const
+pplx::task<std::vector<std::shared_ptr<Sushiswap_PairDTO>>> SushiswapApi::dappsSushiswapPoolsCurrentGet() const
 {
 
 
@@ -1353,14 +1353,14 @@ pplx::task<std::vector<std::shared_ptr<SushiswapPairDTO>>> SushiswapApi::dappsSu
     })
     .then([=](utility::string_t localVarResponse)
     {
-        std::vector<std::shared_ptr<SushiswapPairDTO>> localVarResult;
+        std::vector<std::shared_ptr<Sushiswap_PairDTO>> localVarResult;
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
             web::json::value localVarJson = web::json::value::parse(localVarResponse);
             for( auto& localVarItem : localVarJson.as_array() )
             {
-                std::shared_ptr<SushiswapPairDTO> localVarItemObj;
+                std::shared_ptr<Sushiswap_PairDTO> localVarItemObj;
                 ModelBase::fromJson(localVarItem, localVarItemObj);
                 localVarResult.push_back(localVarItemObj);
             }
@@ -1378,7 +1378,7 @@ pplx::task<std::vector<std::shared_ptr<SushiswapPairDTO>>> SushiswapApi::dappsSu
         return localVarResult;
     });
 }
-pplx::task<std::vector<std::shared_ptr<SushiswapPairDTO>>> SushiswapApi::dappsSushiswapPoolsHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> poolId) const
+pplx::task<std::vector<std::shared_ptr<Sushiswap_PairDTO>>> SushiswapApi::dappsSushiswapPoolsHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> poolId) const
 {
 
 
@@ -1501,14 +1501,14 @@ pplx::task<std::vector<std::shared_ptr<SushiswapPairDTO>>> SushiswapApi::dappsSu
     })
     .then([=](utility::string_t localVarResponse)
     {
-        std::vector<std::shared_ptr<SushiswapPairDTO>> localVarResult;
+        std::vector<std::shared_ptr<Sushiswap_PairDTO>> localVarResult;
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
             web::json::value localVarJson = web::json::value::parse(localVarResponse);
             for( auto& localVarItem : localVarJson.as_array() )
             {
-                std::shared_ptr<SushiswapPairDTO> localVarItemObj;
+                std::shared_ptr<Sushiswap_PairDTO> localVarItemObj;
                 ModelBase::fromJson(localVarItem, localVarItemObj);
                 localVarResult.push_back(localVarItemObj);
             }
@@ -1526,7 +1526,7 @@ pplx::task<std::vector<std::shared_ptr<SushiswapPairDTO>>> SushiswapApi::dappsSu
         return localVarResult;
     });
 }
-pplx::task<std::vector<std::shared_ptr<SushiswapSwapDTO>>> SushiswapApi::dappsSushiswapSwapsCurrentGet() const
+pplx::task<std::vector<std::shared_ptr<Sushiswap_SwapDTO>>> SushiswapApi::dappsSushiswapSwapsCurrentGet() const
 {
 
 
@@ -1629,14 +1629,14 @@ pplx::task<std::vector<std::shared_ptr<SushiswapSwapDTO>>> SushiswapApi::dappsSu
     })
     .then([=](utility::string_t localVarResponse)
     {
-        std::vector<std::shared_ptr<SushiswapSwapDTO>> localVarResult;
+        std::vector<std::shared_ptr<Sushiswap_SwapDTO>> localVarResult;
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
             web::json::value localVarJson = web::json::value::parse(localVarResponse);
             for( auto& localVarItem : localVarJson.as_array() )
             {
-                std::shared_ptr<SushiswapSwapDTO> localVarItemObj;
+                std::shared_ptr<Sushiswap_SwapDTO> localVarItemObj;
                 ModelBase::fromJson(localVarItem, localVarItemObj);
                 localVarResult.push_back(localVarItemObj);
             }
@@ -1654,7 +1654,7 @@ pplx::task<std::vector<std::shared_ptr<SushiswapSwapDTO>>> SushiswapApi::dappsSu
         return localVarResult;
     });
 }
-pplx::task<std::vector<std::shared_ptr<SushiswapSwapDTO>>> SushiswapApi::dappsSushiswapSwapsHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> poolId) const
+pplx::task<std::vector<std::shared_ptr<Sushiswap_SwapDTO>>> SushiswapApi::dappsSushiswapSwapsHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> poolId) const
 {
 
 
@@ -1777,14 +1777,14 @@ pplx::task<std::vector<std::shared_ptr<SushiswapSwapDTO>>> SushiswapApi::dappsSu
     })
     .then([=](utility::string_t localVarResponse)
     {
-        std::vector<std::shared_ptr<SushiswapSwapDTO>> localVarResult;
+        std::vector<std::shared_ptr<Sushiswap_SwapDTO>> localVarResult;
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
             web::json::value localVarJson = web::json::value::parse(localVarResponse);
             for( auto& localVarItem : localVarJson.as_array() )
             {
-                std::shared_ptr<SushiswapSwapDTO> localVarItemObj;
+                std::shared_ptr<Sushiswap_SwapDTO> localVarItemObj;
                 ModelBase::fromJson(localVarItem, localVarItemObj);
                 localVarResult.push_back(localVarItemObj);
             }
@@ -1925,7 +1925,7 @@ pplx::task<void> SushiswapApi::dappsSushiswapTokenDayDataHistoricalGet(boost::op
         return void();
     });
 }
-pplx::task<std::vector<std::shared_ptr<SushiswapTokenDTO>>> SushiswapApi::dappsSushiswapTokensCurrentGet() const
+pplx::task<std::vector<std::shared_ptr<Sushiswap_TokenDTO>>> SushiswapApi::dappsSushiswapTokensCurrentGet() const
 {
 
 
@@ -2028,14 +2028,14 @@ pplx::task<std::vector<std::shared_ptr<SushiswapTokenDTO>>> SushiswapApi::dappsS
     })
     .then([=](utility::string_t localVarResponse)
     {
-        std::vector<std::shared_ptr<SushiswapTokenDTO>> localVarResult;
+        std::vector<std::shared_ptr<Sushiswap_TokenDTO>> localVarResult;
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
             web::json::value localVarJson = web::json::value::parse(localVarResponse);
             for( auto& localVarItem : localVarJson.as_array() )
             {
-                std::shared_ptr<SushiswapTokenDTO> localVarItemObj;
+                std::shared_ptr<Sushiswap_TokenDTO> localVarItemObj;
                 ModelBase::fromJson(localVarItem, localVarItemObj);
                 localVarResult.push_back(localVarItemObj);
             }
@@ -2053,7 +2053,7 @@ pplx::task<std::vector<std::shared_ptr<SushiswapTokenDTO>>> SushiswapApi::dappsS
         return localVarResult;
     });
 }
-pplx::task<std::vector<std::shared_ptr<SushiswapTokenDTO>>> SushiswapApi::dappsSushiswapTokensHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> tokenId) const
+pplx::task<std::vector<std::shared_ptr<Sushiswap_TokenDTO>>> SushiswapApi::dappsSushiswapTokensHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> tokenId) const
 {
 
 
@@ -2176,14 +2176,14 @@ pplx::task<std::vector<std::shared_ptr<SushiswapTokenDTO>>> SushiswapApi::dappsS
     })
     .then([=](utility::string_t localVarResponse)
     {
-        std::vector<std::shared_ptr<SushiswapTokenDTO>> localVarResult;
+        std::vector<std::shared_ptr<Sushiswap_TokenDTO>> localVarResult;
 
         if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
         {
             web::json::value localVarJson = web::json::value::parse(localVarResponse);
             for( auto& localVarItem : localVarJson.as_array() )
             {
-                std::shared_ptr<SushiswapTokenDTO> localVarItemObj;
+                std::shared_ptr<Sushiswap_TokenDTO> localVarItemObj;
                 ModelBase::fromJson(localVarItem, localVarItemObj);
                 localVarResult.push_back(localVarItemObj);
             }

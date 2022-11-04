@@ -1,4 +1,4 @@
-goog.provide('API.Client.UniswapV3FactoryV3DTO');
+goog.provide('API.Client.UniswapV3.FactoryV3DTO');
 
 /**
  * The Uniswap Factory entity is responsible for storing aggregate information across all Uniswap pairs. It can be used to view stats about total liquidity, volume, amount of pairs and more.

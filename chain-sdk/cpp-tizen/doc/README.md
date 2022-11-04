@@ -306,28 +306,28 @@ Method | HTTP request | Description
 ## What are the Model files for the data structures/objects?
 Class | Description
 ------------- | -------------
- *NumericsBigInteger* | 
- *SushiswapPairDTO* | Information about a pair. Includes references to each token within the pair, volume information, liquidity information, and more. The pair entity mirrors the pair smart contract, and also contains aggregated information about use.
- *SushiswapSwapDTO* | Swap are created for each token swap within a pair.
- *SushiswapTokenDTO* | Stores aggregated information for a specific token across all pairs that token is included in.
- *TransactionsETradeAggressiveSide* | 
- *UniswapV2PairV2DTO* | Information about a pair. Includes references to each token within the pair, volume information, liquidity information, and more. The pair entity mirrors the pair smart contract, and also contains aggregated information about use.
- *UniswapV2SwapV2DTO* | Swap are created for each token swap within a pair.
- *UniswapV2TokenV2DTO* | Stores aggregated information for a specific token across all pairs that token is included in.
- *UniswapV3BundleV3DTO* | The Bundle is used as a global store of derived ETH price in USD. This provides a strong estimate for the USD price of ETH.
- *UniswapV3BurnV3DTO* | Burn entities are created for every emitted Burn event on the Uniswap core contracts. The Burn entity stores key data about the event like token amounts, who burned, who received tokens, and more. This entity can be used to track liquidity removals on pairs.
- *UniswapV3FactoryV3DTO* | The Uniswap Factory entity is responsible for storing aggregate information across all Uniswap pairs. It can be used to view stats about total liquidity, volume, amount of pairs and more.
- *UniswapV3MintV3DTO* | Mint entities are created for every emitted Mint event on the Uniswap core contracts. The Mint entity stores key data about the event like token amounts, who sent the transaction, and more.
- *UniswapV3PoolDayDataV3DTO* | Data accumulated and condensed into day stats for each pool.
- *UniswapV3PoolHourDataV3DTO* | Hourly stats tracker for pool.
- *UniswapV3PoolV3DTO* | Information about a pool. Includes references to each token within the pool, volume information, liquidity information, and more. The pool entity mirrors the pool smart contract, and also contains aggregated information about use.
- *UniswapV3PositionSnapshotV3DTO* | 
- *UniswapV3PositionV3DTO* | Positions created through NonfungiblePositionManager. Positions are represented as NFTs (ERC-721 tokens) as opposed to the fungible ERC-20 tokens on Uniswap V1 and V2.
- *UniswapV3SwapV3DTO* | Swap are created for each token swap within a pair.
- *UniswapV3TickDayDataV3DTO* | Data accumulated and condensed into day stats for each exchange. Entity gets saved only if there is a change during the day
- *UniswapV3TickV3DTO* | Ticks are the boundaries between discrete areas in price space.
- *UniswapV3TokenHourDataV3DTO* | Token data aggregated across all pairs that include token.
- *UniswapV3TokenV3DTO* | Stores aggregated information for a specific token across all pairs that token is included in.
- *UniswapV3TokenV3DayDataDTO* | Token data aggregated across all pairs that include token.
- *UniswapV3UniswapDayDataV3DTO* | Data accumulated and condensed into day stats for all of Uniswap.
+ *Numerics.BigInteger* | 
+ *Sushiswap.PairDTO* | Information about a pair. Includes references to each token within the pair, volume information, liquidity information, and more. The pair entity mirrors the pair smart contract, and also contains aggregated information about use.
+ *Sushiswap.SwapDTO* | Swap are created for each token swap within a pair.
+ *Sushiswap.TokenDTO* | Stores aggregated information for a specific token across all pairs that token is included in.
+ *Transactions.ETradeAggressiveSide* | 
+ *UniswapV2.PairV2DTO* | Information about a pair. Includes references to each token within the pair, volume information, liquidity information, and more. The pair entity mirrors the pair smart contract, and also contains aggregated information about use.
+ *UniswapV2.SwapV2DTO* | Swap are created for each token swap within a pair.
+ *UniswapV2.TokenV2DTO* | Stores aggregated information for a specific token across all pairs that token is included in.
+ *UniswapV3.BundleV3DTO* | The Bundle is used as a global store of derived ETH price in USD. This provides a strong estimate for the USD price of ETH.
+ *UniswapV3.BurnV3DTO* | Burn entities are created for every emitted Burn event on the Uniswap core contracts. The Burn entity stores key data about the event like token amounts, who burned, who received tokens, and more. This entity can be used to track liquidity removals on pairs.
+ *UniswapV3.FactoryV3DTO* | The Uniswap Factory entity is responsible for storing aggregate information across all Uniswap pairs. It can be used to view stats about total liquidity, volume, amount of pairs and more.
+ *UniswapV3.MintV3DTO* | Mint entities are created for every emitted Mint event on the Uniswap core contracts. The Mint entity stores key data about the event like token amounts, who sent the transaction, and more.
+ *UniswapV3.PoolDayDataV3DTO* | Data accumulated and condensed into day stats for each pool.
+ *UniswapV3.PoolHourDataV3DTO* | Hourly stats tracker for pool.
+ *UniswapV3.PoolV3DTO* | Information about a pool. Includes references to each token within the pool, volume information, liquidity information, and more. The pool entity mirrors the pool smart contract, and also contains aggregated information about use.
+ *UniswapV3.PositionSnapshotV3DTO* | 
+ *UniswapV3.PositionV3DTO* | Positions created through NonfungiblePositionManager. Positions are represented as NFTs (ERC-721 tokens) as opposed to the fungible ERC-20 tokens on Uniswap V1 and V2.
+ *UniswapV3.SwapV3DTO* | Swap are created for each token swap within a pair.
+ *UniswapV3.TickDayDataV3DTO* | Data accumulated and condensed into day stats for each exchange. Entity gets saved only if there is a change during the day
+ *UniswapV3.TickV3DTO* | Ticks are the boundaries between discrete areas in price space.
+ *UniswapV3.TokenHourDataV3DTO* | Token data aggregated across all pairs that include token.
+ *UniswapV3.TokenV3DTO* | Stores aggregated information for a specific token across all pairs that token is included in.
+ *UniswapV3.TokenV3DayDataDTO* | Token data aggregated across all pairs that include token.
+ *UniswapV3.UniswapDayDataV3DTO* | Data accumulated and condensed into day stats for all of Uniswap.
 

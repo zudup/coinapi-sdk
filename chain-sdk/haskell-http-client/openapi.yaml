@@ -46,17 +46,17 @@ paths:
             text/plain:
               schema:
                 items:
-                  $ref: '#/components/schemas/SushiswapPairDTO'
+                  $ref: '#/components/schemas/Sushiswap.PairDTO'
                 type: array
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/SushiswapPairDTO'
+                  $ref: '#/components/schemas/Sushiswap.PairDTO'
                 type: array
             text/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/SushiswapPairDTO'
+                  $ref: '#/components/schemas/Sushiswap.PairDTO'
                 type: array
           description: successful operation
       summary: GetPools
@@ -70,17 +70,17 @@ paths:
             text/plain:
               schema:
                 items:
-                  $ref: '#/components/schemas/SushiswapSwapDTO'
+                  $ref: '#/components/schemas/Sushiswap.SwapDTO'
                 type: array
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/SushiswapSwapDTO'
+                  $ref: '#/components/schemas/Sushiswap.SwapDTO'
                 type: array
             text/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/SushiswapSwapDTO'
+                  $ref: '#/components/schemas/Sushiswap.SwapDTO'
                 type: array
           description: successful operation
       summary: GetSwaps
@@ -94,17 +94,17 @@ paths:
             text/plain:
               schema:
                 items:
-                  $ref: '#/components/schemas/SushiswapTokenDTO'
+                  $ref: '#/components/schemas/Sushiswap.TokenDTO'
                 type: array
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/SushiswapTokenDTO'
+                  $ref: '#/components/schemas/Sushiswap.TokenDTO'
                 type: array
             text/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/SushiswapTokenDTO'
+                  $ref: '#/components/schemas/Sushiswap.TokenDTO'
                 type: array
           description: successful operation
       summary: GetTokens
@@ -158,17 +158,17 @@ paths:
             text/plain:
               schema:
                 items:
-                  $ref: '#/components/schemas/SushiswapPairDTO'
+                  $ref: '#/components/schemas/Sushiswap.PairDTO'
                 type: array
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/SushiswapPairDTO'
+                  $ref: '#/components/schemas/Sushiswap.PairDTO'
                 type: array
             text/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/SushiswapPairDTO'
+                  $ref: '#/components/schemas/Sushiswap.PairDTO'
                 type: array
           description: successful operation
       summary: GetPools (historical)
@@ -222,17 +222,17 @@ paths:
             text/plain:
               schema:
                 items:
-                  $ref: '#/components/schemas/SushiswapSwapDTO'
+                  $ref: '#/components/schemas/Sushiswap.SwapDTO'
                 type: array
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/SushiswapSwapDTO'
+                  $ref: '#/components/schemas/Sushiswap.SwapDTO'
                 type: array
             text/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/SushiswapSwapDTO'
+                  $ref: '#/components/schemas/Sushiswap.SwapDTO'
                 type: array
           description: successful operation
       summary: GetSwaps (historical)
@@ -286,17 +286,17 @@ paths:
             text/plain:
               schema:
                 items:
-                  $ref: '#/components/schemas/SushiswapTokenDTO'
+                  $ref: '#/components/schemas/Sushiswap.TokenDTO'
                 type: array
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/SushiswapTokenDTO'
+                  $ref: '#/components/schemas/Sushiswap.TokenDTO'
                 type: array
             text/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/SushiswapTokenDTO'
+                  $ref: '#/components/schemas/Sushiswap.TokenDTO'
                 type: array
           description: successful operation
       summary: GetTokens (historical)
@@ -531,17 +531,17 @@ paths:
             text/plain:
               schema:
                 items:
-                  $ref: '#/components/schemas/UniswapV3BundleV3DTO'
+                  $ref: '#/components/schemas/UniswapV3.BundleV3DTO'
                 type: array
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/UniswapV3BundleV3DTO'
+                  $ref: '#/components/schemas/UniswapV3.BundleV3DTO'
                 type: array
             text/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/UniswapV3BundleV3DTO'
+                  $ref: '#/components/schemas/UniswapV3.BundleV3DTO'
                 type: array
           description: successful operation
       summary: GetBundles
@@ -825,17 +825,17 @@ paths:
             text/plain:
               schema:
                 items:
-                  $ref: '#/components/schemas/UniswapV3BurnV3DTO'
+                  $ref: '#/components/schemas/UniswapV3.BurnV3DTO'
                 type: array
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/UniswapV3BurnV3DTO'
+                  $ref: '#/components/schemas/UniswapV3.BurnV3DTO'
                 type: array
             text/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/UniswapV3BurnV3DTO'
+                  $ref: '#/components/schemas/UniswapV3.BurnV3DTO'
                 type: array
           description: successful operation
       summary: GetBurns
@@ -1252,17 +1252,17 @@ paths:
             text/plain:
               schema:
                 items:
-                  $ref: '#/components/schemas/UniswapV3FactoryV3DTO'
+                  $ref: '#/components/schemas/UniswapV3.FactoryV3DTO'
                 type: array
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/UniswapV3FactoryV3DTO'
+                  $ref: '#/components/schemas/UniswapV3.FactoryV3DTO'
                 type: array
             text/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/UniswapV3FactoryV3DTO'
+                  $ref: '#/components/schemas/UniswapV3.FactoryV3DTO'
                 type: array
           description: successful operation
       summary: GetFactory
@@ -2162,17 +2162,17 @@ paths:
             text/plain:
               schema:
                 items:
-                  $ref: '#/components/schemas/UniswapV3MintV3DTO'
+                  $ref: '#/components/schemas/UniswapV3.MintV3DTO'
                 type: array
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/UniswapV3MintV3DTO'
+                  $ref: '#/components/schemas/UniswapV3.MintV3DTO'
                 type: array
             text/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/UniswapV3MintV3DTO'
+                  $ref: '#/components/schemas/UniswapV3.MintV3DTO'
                 type: array
           description: successful operation
       summary: GetMints
@@ -2705,17 +2705,17 @@ paths:
             text/plain:
               schema:
                 items:
-                  $ref: '#/components/schemas/UniswapV3PoolV3DTO'
+                  $ref: '#/components/schemas/UniswapV3.PoolV3DTO'
                 type: array
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/UniswapV3PoolV3DTO'
+                  $ref: '#/components/schemas/UniswapV3.PoolV3DTO'
                 type: array
             text/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/UniswapV3PoolV3DTO'
+                  $ref: '#/components/schemas/UniswapV3.PoolV3DTO'
                 type: array
           description: successful operation
       summary: GetPools
@@ -2738,17 +2738,17 @@ paths:
             text/plain:
               schema:
                 items:
-                  $ref: '#/components/schemas/UniswapV2PairV2DTO'
+                  $ref: '#/components/schemas/UniswapV2.PairV2DTO'
                 type: array
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/UniswapV2PairV2DTO'
+                  $ref: '#/components/schemas/UniswapV2.PairV2DTO'
                 type: array
             text/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/UniswapV2PairV2DTO'
+                  $ref: '#/components/schemas/UniswapV2.PairV2DTO'
                 type: array
           description: successful operation
       summary: GetPools
@@ -2771,17 +2771,17 @@ paths:
             text/plain:
               schema:
                 items:
-                  $ref: '#/components/schemas/UniswapV3PoolDayDataV3DTO'
+                  $ref: '#/components/schemas/UniswapV3.PoolDayDataV3DTO'
                 type: array
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/UniswapV3PoolDayDataV3DTO'
+                  $ref: '#/components/schemas/UniswapV3.PoolDayDataV3DTO'
                 type: array
             text/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/UniswapV3PoolDayDataV3DTO'
+                  $ref: '#/components/schemas/UniswapV3.PoolDayDataV3DTO'
                 type: array
           description: successful operation
       summary: GetPoolsDayData
@@ -2804,17 +2804,17 @@ paths:
             text/plain:
               schema:
                 items:
-                  $ref: '#/components/schemas/UniswapV3PoolHourDataV3DTO'
+                  $ref: '#/components/schemas/UniswapV3.PoolHourDataV3DTO'
                 type: array
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/UniswapV3PoolHourDataV3DTO'
+                  $ref: '#/components/schemas/UniswapV3.PoolHourDataV3DTO'
                 type: array
             text/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/UniswapV3PoolHourDataV3DTO'
+                  $ref: '#/components/schemas/UniswapV3.PoolHourDataV3DTO'
                 type: array
           description: successful operation
       summary: GetPoolsHourData
@@ -2884,17 +2884,17 @@ paths:
             text/plain:
               schema:
                 items:
-                  $ref: '#/components/schemas/UniswapV3PositionV3DTO'
+                  $ref: '#/components/schemas/UniswapV3.PositionV3DTO'
                 type: array
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/UniswapV3PositionV3DTO'
+                  $ref: '#/components/schemas/UniswapV3.PositionV3DTO'
                 type: array
             text/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/UniswapV3PositionV3DTO'
+                  $ref: '#/components/schemas/UniswapV3.PositionV3DTO'
                 type: array
           description: successful operation
       summary: GetPositions
@@ -2964,17 +2964,17 @@ paths:
             text/plain:
               schema:
                 items:
-                  $ref: '#/components/schemas/UniswapV3PositionSnapshotV3DTO'
+                  $ref: '#/components/schemas/UniswapV3.PositionSnapshotV3DTO'
                 type: array
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/UniswapV3PositionSnapshotV3DTO'
+                  $ref: '#/components/schemas/UniswapV3.PositionSnapshotV3DTO'
                 type: array
             text/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/UniswapV3PositionSnapshotV3DTO'
+                  $ref: '#/components/schemas/UniswapV3.PositionSnapshotV3DTO'
                 type: array
           description: successful operation
       summary: GetPositionSnapshot
@@ -3486,17 +3486,17 @@ paths:
             text/plain:
               schema:
                 items:
-                  $ref: '#/components/schemas/UniswapV3SwapV3DTO'
+                  $ref: '#/components/schemas/UniswapV3.SwapV3DTO'
                 type: array
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/UniswapV3SwapV3DTO'
+                  $ref: '#/components/schemas/UniswapV3.SwapV3DTO'
                 type: array
             text/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/UniswapV3SwapV3DTO'
+                  $ref: '#/components/schemas/UniswapV3.SwapV3DTO'
                 type: array
           description: successful operation
       summary: GetSwaps
@@ -3510,17 +3510,17 @@ paths:
             text/plain:
               schema:
                 items:
-                  $ref: '#/components/schemas/UniswapV2SwapV2DTO'
+                  $ref: '#/components/schemas/UniswapV2.SwapV2DTO'
                 type: array
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/UniswapV2SwapV2DTO'
+                  $ref: '#/components/schemas/UniswapV2.SwapV2DTO'
                 type: array
             text/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/UniswapV2SwapV2DTO'
+                  $ref: '#/components/schemas/UniswapV2.SwapV2DTO'
                 type: array
           description: successful operation
       summary: GetSwaps
@@ -3677,17 +3677,17 @@ paths:
             text/plain:
               schema:
                 items:
-                  $ref: '#/components/schemas/UniswapV3TickV3DTO'
+                  $ref: '#/components/schemas/UniswapV3.TickV3DTO'
                 type: array
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/UniswapV3TickV3DTO'
+                  $ref: '#/components/schemas/UniswapV3.TickV3DTO'
                 type: array
             text/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/UniswapV3TickV3DTO'
+                  $ref: '#/components/schemas/UniswapV3.TickV3DTO'
                 type: array
           description: successful operation
       summary: GetTicks
@@ -3710,17 +3710,17 @@ paths:
             text/plain:
               schema:
                 items:
-                  $ref: '#/components/schemas/UniswapV3TickDayDataV3DTO'
+                  $ref: '#/components/schemas/UniswapV3.TickDayDataV3DTO'
                 type: array
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/UniswapV3TickDayDataV3DTO'
+                  $ref: '#/components/schemas/UniswapV3.TickDayDataV3DTO'
                 type: array
             text/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/UniswapV3TickDayDataV3DTO'
+                  $ref: '#/components/schemas/UniswapV3.TickDayDataV3DTO'
                 type: array
           description: successful operation
       summary: GetTicksDayData
@@ -4118,17 +4118,17 @@ paths:
             text/plain:
               schema:
                 items:
-                  $ref: '#/components/schemas/UniswapV3TokenV3DTO'
+                  $ref: '#/components/schemas/UniswapV3.TokenV3DTO'
                 type: array
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/UniswapV3TokenV3DTO'
+                  $ref: '#/components/schemas/UniswapV3.TokenV3DTO'
                 type: array
             text/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/UniswapV3TokenV3DTO'
+                  $ref: '#/components/schemas/UniswapV3.TokenV3DTO'
                 type: array
           description: successful operation
       summary: GetTokens
@@ -4142,17 +4142,17 @@ paths:
             text/plain:
               schema:
                 items:
-                  $ref: '#/components/schemas/UniswapV2TokenV2DTO'
+                  $ref: '#/components/schemas/UniswapV2.TokenV2DTO'
                 type: array
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/UniswapV2TokenV2DTO'
+                  $ref: '#/components/schemas/UniswapV2.TokenV2DTO'
                 type: array
             text/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/UniswapV2TokenV2DTO'
+                  $ref: '#/components/schemas/UniswapV2.TokenV2DTO'
                 type: array
           description: successful operation
       summary: GetTokens
@@ -4174,17 +4174,17 @@ paths:
             text/plain:
               schema:
                 items:
-                  $ref: '#/components/schemas/UniswapV3TokenV3DayDataDTO'
+                  $ref: '#/components/schemas/UniswapV3.TokenV3DayDataDTO'
                 type: array
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/UniswapV3TokenV3DayDataDTO'
+                  $ref: '#/components/schemas/UniswapV3.TokenV3DayDataDTO'
                 type: array
             text/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/UniswapV3TokenV3DayDataDTO'
+                  $ref: '#/components/schemas/UniswapV3.TokenV3DayDataDTO'
                 type: array
           description: successful operation
       summary: GetTokensDayData
@@ -4206,17 +4206,17 @@ paths:
             text/plain:
               schema:
                 items:
-                  $ref: '#/components/schemas/UniswapV3TokenHourDataV3DTO'
+                  $ref: '#/components/schemas/UniswapV3.TokenHourDataV3DTO'
                 type: array
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/UniswapV3TokenHourDataV3DTO'
+                  $ref: '#/components/schemas/UniswapV3.TokenHourDataV3DTO'
                 type: array
             text/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/UniswapV3TokenHourDataV3DTO'
+                  $ref: '#/components/schemas/UniswapV3.TokenHourDataV3DTO'
                 type: array
           description: successful operation
       summary: GetTokensHourData
@@ -4604,17 +4604,17 @@ paths:
             text/plain:
               schema:
                 items:
-                  $ref: '#/components/schemas/UniswapV3UniswapDayDataV3DTO'
+                  $ref: '#/components/schemas/UniswapV3.UniswapDayDataV3DTO'
                 type: array
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/UniswapV3UniswapDayDataV3DTO'
+                  $ref: '#/components/schemas/UniswapV3.UniswapDayDataV3DTO'
                 type: array
             text/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/UniswapV3UniswapDayDataV3DTO'
+                  $ref: '#/components/schemas/UniswapV3.UniswapDayDataV3DTO'
                 type: array
           description: successful operation
       summary: GetUniswapDayData
@@ -4963,7 +4963,7 @@ paths:
       - Dex
 components:
   schemas:
-    NumericsBigInteger:
+    Numerics.BigInteger:
       additionalProperties: false
       example:
         is_zero: true
@@ -4989,7 +4989,7 @@ components:
           readOnly: true
           type: integer
       type: object
-    SushiswapPairDTO:
+    Sushiswap.PairDTO:
       additionalProperties: false
       description: "Information about a pair. Includes references to each token within\
         \ the pair, volume information, liquidity information, and more. The pair\
@@ -5128,7 +5128,7 @@ components:
           readOnly: true
           type: number
       type: object
-    SushiswapSwapDTO:
+    Sushiswap.SwapDTO:
       additionalProperties: false
       description: Swap are created for each token swap within a pair.
       example:
@@ -5233,9 +5233,9 @@ components:
           readOnly: true
           type: number
         evaluated_aggressor:
-          $ref: '#/components/schemas/TransactionsETradeAggressiveSide'
+          $ref: '#/components/schemas/Transactions.ETradeAggressiveSide'
       type: object
-    SushiswapTokenDTO:
+    Sushiswap.TokenDTO:
       additionalProperties: false
       description: Stores aggregated information for a specific token across all pairs
         that token is included in.
@@ -5336,7 +5336,7 @@ components:
           readOnly: true
           type: string
       type: object
-    TransactionsETradeAggressiveSide:
+    Transactions.ETradeAggressiveSide:
       enum:
       - Buy
       - Sell
@@ -5344,7 +5344,7 @@ components:
       - EstimatedSell
       - Unknown
       type: string
-    UniswapV2PairV2DTO:
+    UniswapV2.PairV2DTO:
       additionalProperties: false
       description: "Information about a pair. Includes references to each token within\
         \ the pair, volume information, liquidity information, and more. The pair\
@@ -5457,7 +5457,7 @@ components:
           nullable: true
           type: string
         tx_count:
-          $ref: '#/components/schemas/NumericsBigInteger'
+          $ref: '#/components/schemas/Numerics.BigInteger'
         created_at_timestamp:
           description: Timestamp contract was created.
           format: date-time
@@ -5471,7 +5471,7 @@ components:
           readOnly: true
           type: number
       type: object
-    UniswapV2SwapV2DTO:
+    UniswapV2.SwapV2DTO:
       additionalProperties: false
       description: Swap are created for each token swap within a pair.
       example:
@@ -5562,7 +5562,7 @@ components:
           nullable: true
           type: string
         log_index:
-          $ref: '#/components/schemas/NumericsBigInteger'
+          $ref: '#/components/schemas/Numerics.BigInteger'
         amount_usd:
           description: Derived amount of tokens sold in USD.
           nullable: true
@@ -5576,7 +5576,7 @@ components:
           readOnly: true
           type: number
         evaluated_aggressor:
-          $ref: '#/components/schemas/TransactionsETradeAggressiveSide'
+          $ref: '#/components/schemas/Transactions.ETradeAggressiveSide'
         pool_id:
           nullable: true
           readOnly: true
@@ -5586,7 +5586,7 @@ components:
           readOnly: true
           type: string
       type: object
-    UniswapV2TokenV2DTO:
+    UniswapV2.TokenV2DTO:
       additionalProperties: false
       description: Stores aggregated information for a specific token across all pairs
         that token is included in.
@@ -5649,7 +5649,7 @@ components:
           format: int32
           type: integer
         total_supply:
-          $ref: '#/components/schemas/NumericsBigInteger'
+          $ref: '#/components/schemas/Numerics.BigInteger'
         trade_volume:
           description: Amount of token traded all time across all pairs.
           nullable: true
@@ -5665,7 +5665,7 @@ components:
           nullable: true
           type: string
         tx_count:
-          $ref: '#/components/schemas/NumericsBigInteger'
+          $ref: '#/components/schemas/Numerics.BigInteger'
         total_liquidity:
           description: Total amount of token provided as liquidity across all pairs.
           nullable: true
@@ -5679,7 +5679,7 @@ components:
           readOnly: true
           type: string
       type: object
-    UniswapV3BundleV3DTO:
+    UniswapV3.BundleV3DTO:
       additionalProperties: false
       description: The Bundle is used as a global store of derived ETH price in USD.
         This provides a strong estimate for the USD price of ETH.
@@ -5714,7 +5714,7 @@ components:
           format: int64
           type: integer
       type: object
-    UniswapV3BurnV3DTO:
+    UniswapV3.BurnV3DTO:
       additionalProperties: false
       description: "Burn entities are created for every emitted Burn event on the\
         \ Uniswap core contracts. The Burn entity stores key data about the event\
@@ -5817,7 +5817,7 @@ components:
           format: int64
           type: integer
       type: object
-    UniswapV3FactoryV3DTO:
+    UniswapV3.FactoryV3DTO:
       additionalProperties: false
       description: "The Uniswap Factory entity is responsible for storing aggregate\
         \ information across all Uniswap pairs. It can be used to view stats about\
@@ -5908,7 +5908,7 @@ components:
           format: int64
           type: integer
       type: object
-    UniswapV3MintV3DTO:
+    UniswapV3.MintV3DTO:
       additionalProperties: false
       description: "Mint entities are created for every emitted Mint event on the\
         \ Uniswap core contracts. The Mint entity stores key data about the event\
@@ -6015,7 +6015,7 @@ components:
           format: int64
           type: integer
       type: object
-    UniswapV3PoolDayDataV3DTO:
+    UniswapV3.PoolDayDataV3DTO:
       additionalProperties: false
       description: Data accumulated and condensed into day stats for each pool.
       example:
@@ -6139,7 +6139,7 @@ components:
           format: int64
           type: integer
       type: object
-    UniswapV3PoolHourDataV3DTO:
+    UniswapV3.PoolHourDataV3DTO:
       additionalProperties: false
       description: Hourly stats tracker for pool.
       example:
@@ -6263,7 +6263,7 @@ components:
           format: int64
           type: integer
       type: object
-    UniswapV3PoolV3DTO:
+    UniswapV3.PoolV3DTO:
       additionalProperties: false
       description: "Information about a pool. Includes references to each token within\
         \ the pool, volume information, liquidity information, and more. The pool\
@@ -6375,15 +6375,15 @@ components:
           nullable: true
           type: string
         fee_tier:
-          $ref: '#/components/schemas/NumericsBigInteger'
+          $ref: '#/components/schemas/Numerics.BigInteger'
         liquidity:
-          $ref: '#/components/schemas/NumericsBigInteger'
+          $ref: '#/components/schemas/Numerics.BigInteger'
         sqrt_price:
-          $ref: '#/components/schemas/NumericsBigInteger'
+          $ref: '#/components/schemas/Numerics.BigInteger'
         fee_growth_global_0x128:
-          $ref: '#/components/schemas/NumericsBigInteger'
+          $ref: '#/components/schemas/Numerics.BigInteger'
         fee_growth_global_1x128:
-          $ref: '#/components/schemas/NumericsBigInteger'
+          $ref: '#/components/schemas/Numerics.BigInteger'
         token_0_price:
           description: Token0 per token1.
           nullable: true
@@ -6393,9 +6393,9 @@ components:
           nullable: true
           type: string
         tick:
-          $ref: '#/components/schemas/NumericsBigInteger'
+          $ref: '#/components/schemas/Numerics.BigInteger'
         observation_index:
-          $ref: '#/components/schemas/NumericsBigInteger'
+          $ref: '#/components/schemas/Numerics.BigInteger'
         volume_token_0:
           description: All time token0 swapped.
           nullable: true
@@ -6417,7 +6417,7 @@ components:
           nullable: true
           type: string
         tx_count:
-          $ref: '#/components/schemas/NumericsBigInteger'
+          $ref: '#/components/schemas/Numerics.BigInteger'
         collected_fees_token_0:
           description: All time fees collected token0.
           nullable: true
@@ -6459,7 +6459,7 @@ components:
           readOnly: true
           type: number
       type: object
-    UniswapV3PositionSnapshotV3DTO:
+    UniswapV3.PositionSnapshotV3DTO:
       additionalProperties: false
       example:
         owner: owner
@@ -6557,7 +6557,7 @@ components:
           format: int64
           type: integer
       type: object
-    UniswapV3PositionV3DTO:
+    UniswapV3.PositionV3DTO:
       additionalProperties: false
       description: Positions created through NonfungiblePositionManager. Positions
         are represented as NFTs (ERC-721 tokens) as opposed to the fungible ERC-20
@@ -6668,7 +6668,7 @@ components:
           format: int64
           type: integer
       type: object
-    UniswapV3SwapV3DTO:
+    UniswapV3.SwapV3DTO:
       additionalProperties: false
       description: Swap are created for each token swap within a pair.
       example:
@@ -6777,11 +6777,11 @@ components:
           nullable: true
           type: string
         sqrt_price_x96:
-          $ref: '#/components/schemas/NumericsBigInteger'
+          $ref: '#/components/schemas/Numerics.BigInteger'
         tick:
-          $ref: '#/components/schemas/NumericsBigInteger'
+          $ref: '#/components/schemas/Numerics.BigInteger'
         log_index:
-          $ref: '#/components/schemas/NumericsBigInteger'
+          $ref: '#/components/schemas/Numerics.BigInteger'
         evaluated_price:
           format: double
           readOnly: true
@@ -6791,7 +6791,7 @@ components:
           readOnly: true
           type: number
         evaluated_aggressor:
-          $ref: '#/components/schemas/TransactionsETradeAggressiveSide'
+          $ref: '#/components/schemas/Transactions.ETradeAggressiveSide'
         pool_id:
           nullable: true
           readOnly: true
@@ -6801,7 +6801,7 @@ components:
           readOnly: true
           type: string
       type: object
-    UniswapV3TickDayDataV3DTO:
+    UniswapV3.TickDayDataV3DTO:
       additionalProperties: false
       description: Data accumulated and condensed into day stats for each exchange.
         Entity gets saved only if there is a change during the day
@@ -6886,7 +6886,7 @@ components:
           format: int64
           type: integer
       type: object
-    UniswapV3TickV3DTO:
+    UniswapV3.TickV3DTO:
       additionalProperties: false
       description: Ticks are the boundaries between discrete areas in price space.
       example:
@@ -6968,15 +6968,15 @@ components:
           nullable: true
           type: string
         tick_idx:
-          $ref: '#/components/schemas/NumericsBigInteger'
+          $ref: '#/components/schemas/Numerics.BigInteger'
         pool:
           description: Pool address.
           nullable: true
           type: string
         liquidity_gross:
-          $ref: '#/components/schemas/NumericsBigInteger'
+          $ref: '#/components/schemas/Numerics.BigInteger'
         liquidity_net:
-          $ref: '#/components/schemas/NumericsBigInteger'
+          $ref: '#/components/schemas/Numerics.BigInteger'
         price_0:
           description: Calculated price of token0 of tick within this pool - constant.
           nullable: true
@@ -7022,13 +7022,13 @@ components:
           format: date-time
           type: string
         liquidity_provider_count:
-          $ref: '#/components/schemas/NumericsBigInteger'
+          $ref: '#/components/schemas/Numerics.BigInteger'
         fee_growth_outside_0x128:
-          $ref: '#/components/schemas/NumericsBigInteger'
+          $ref: '#/components/schemas/Numerics.BigInteger'
         fee_growth_outside_1x128:
-          $ref: '#/components/schemas/NumericsBigInteger'
+          $ref: '#/components/schemas/Numerics.BigInteger'
       type: object
-    UniswapV3TokenHourDataV3DTO:
+    UniswapV3.TokenHourDataV3DTO:
       additionalProperties: false
       description: Token data aggregated across all pairs that include token.
       example:
@@ -7122,7 +7122,7 @@ components:
           format: int64
           type: integer
       type: object
-    UniswapV3TokenV3DTO:
+    UniswapV3.TokenV3DTO:
       additionalProperties: false
       description: Stores aggregated information for a specific token across all pairs
         that token is included in.
@@ -7197,7 +7197,7 @@ components:
           format: int32
           type: integer
         total_supply:
-          $ref: '#/components/schemas/NumericsBigInteger'
+          $ref: '#/components/schemas/Numerics.BigInteger'
         volume:
           description: Volume in token units.
           nullable: true
@@ -7215,9 +7215,9 @@ components:
           nullable: true
           type: string
         tx_count:
-          $ref: '#/components/schemas/NumericsBigInteger'
+          $ref: '#/components/schemas/Numerics.BigInteger'
         pool_count:
-          $ref: '#/components/schemas/NumericsBigInteger'
+          $ref: '#/components/schemas/Numerics.BigInteger'
         total_value_locked:
           description: Liquidity across all pools in token units.
           nullable: true
@@ -7245,7 +7245,7 @@ components:
           readOnly: true
           type: string
       type: object
-    UniswapV3TokenV3DayDataDTO:
+    UniswapV3.TokenV3DayDataDTO:
       additionalProperties: false
       description: Token data aggregated across all pairs that include token.
       example:
@@ -7339,7 +7339,7 @@ components:
           nullable: true
           type: string
       type: object
-    UniswapV3UniswapDayDataV3DTO:
+    UniswapV3.UniswapDayDataV3DTO:
       additionalProperties: false
       description: Data accumulated and condensed into day stats for all of Uniswap.
       example:
@@ -7402,7 +7402,7 @@ components:
           nullable: true
           type: string
         tx_count:
-          $ref: '#/components/schemas/NumericsBigInteger'
+          $ref: '#/components/schemas/Numerics.BigInteger'
         tvl_usd:
           description: Tvl in terms of USD.
           nullable: true

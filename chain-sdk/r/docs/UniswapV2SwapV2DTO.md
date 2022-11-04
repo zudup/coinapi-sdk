@@ -20,11 +20,11 @@ Name | Type | Description | Notes
 **amount_0_out** | **character** | Amount of token0 received. | [optional] 
 **amount_1_out** | **character** | Amount of token1 received. | [optional] 
 **to** | **character** | Recipient of output tokens. | [optional] 
-**log_index** | [**NumericsBigInteger**](NumericsBigInteger.md) |  | [optional] 
+**log_index** | [**NumericsBigInteger**](Numerics.BigInteger.md) |  | [optional] 
 **amount_usd** | **character** | Derived amount of tokens sold in USD. | [optional] 
 **evaluated_price** | **numeric** |  | [optional] [readonly] 
 **evaluated_amount** | **numeric** |  | [optional] [readonly] 
-**evaluated_aggressor** | [**TransactionsETradeAggressiveSide**](TransactionsETradeAggressiveSide.md) |  | [optional] 
+**evaluated_aggressor** | [**TransactionsETradeAggressiveSide**](Transactions.ETradeAggressiveSide.md) |  | [optional] 
 **pool_id** | **character** |  | [optional] [readonly] 
 **transaction_id** | **character** |  | [optional] [readonly] 
 

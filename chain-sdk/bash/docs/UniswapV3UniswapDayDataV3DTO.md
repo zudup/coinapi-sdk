@@ -1,4 +1,4 @@
-# UniswapV3UniswapDayDataV3DTO
+# UniswapV3.UniswapDayDataV3DTO
 
 ## Properties
 Name | Type | Description | Notes

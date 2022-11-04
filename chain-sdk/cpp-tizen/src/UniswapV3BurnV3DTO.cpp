@@ -5,23 +5,23 @@
 #include "Helpers.h"
 
 
-#include "UniswapV3BurnV3DTO.h"
+#include "UniswapV3.BurnV3DTO.h"
 
 using namespace std;
 using namespace Tizen::ArtikCloud;
 
-UniswapV3BurnV3DTO::UniswapV3BurnV3DTO()
+UniswapV3.BurnV3DTO::UniswapV3.BurnV3DTO()
 {
 	//__init();
 }
 
-UniswapV3BurnV3DTO::~UniswapV3BurnV3DTO()
+UniswapV3.BurnV3DTO::~UniswapV3.BurnV3DTO()
 {
 	//__cleanup();
 }
 
 void
-UniswapV3BurnV3DTO::__init()
+UniswapV3.BurnV3DTO::__init()
 {
 	//entry_time = null;
 	//recv_time = null;
@@ -45,7 +45,7 @@ UniswapV3BurnV3DTO::__init()
 }
 
 void
-UniswapV3BurnV3DTO::__cleanup()
+UniswapV3.BurnV3DTO::__cleanup()
 {
 	//if(entry_time != NULL) {
 	//
@@ -146,7 +146,7 @@ UniswapV3BurnV3DTO::__cleanup()
 }
 
 void
-UniswapV3BurnV3DTO::fromJson(char* jsonStr)
+UniswapV3.BurnV3DTO::fromJson(char* jsonStr)
 {
 	JsonObject *pJsonObject = json_node_get_object(json_from_string(jsonStr,NULL));
 	JsonNode *node;
@@ -361,13 +361,13 @@ UniswapV3BurnV3DTO::fromJson(char* jsonStr)
 	}
 }
 
-UniswapV3BurnV3DTO::UniswapV3BurnV3DTO(char* json)
+UniswapV3.BurnV3DTO::UniswapV3.BurnV3DTO(char* json)
 {
 	this->fromJson(json);
 }
 
 char*
-UniswapV3BurnV3DTO::toJson()
+UniswapV3.BurnV3DTO::toJson()
 {
 	JsonObject *pJsonObject = json_object_new();
 	JsonNode *node;
@@ -551,229 +551,229 @@ UniswapV3BurnV3DTO::toJson()
 }
 
 std::string
-UniswapV3BurnV3DTO::getEntryTime()
+UniswapV3.BurnV3DTO::getEntryTime()
 {
 	return entry_time;
 }
 
 void
-UniswapV3BurnV3DTO::setEntryTime(std::string  entry_time)
+UniswapV3.BurnV3DTO::setEntryTime(std::string  entry_time)
 {
 	this->entry_time = entry_time;
 }
 
 std::string
-UniswapV3BurnV3DTO::getRecvTime()
+UniswapV3.BurnV3DTO::getRecvTime()
 {
 	return recv_time;
 }
 
 void
-UniswapV3BurnV3DTO::setRecvTime(std::string  recv_time)
+UniswapV3.BurnV3DTO::setRecvTime(std::string  recv_time)
 {
 	this->recv_time = recv_time;
 }
 
 long long
-UniswapV3BurnV3DTO::getBlockNumber()
+UniswapV3.BurnV3DTO::getBlockNumber()
 {
 	return block_number;
 }
 
 void
-UniswapV3BurnV3DTO::setBlockNumber(long long  block_number)
+UniswapV3.BurnV3DTO::setBlockNumber(long long  block_number)
 {
 	this->block_number = block_number;
 }
 
 std::string
-UniswapV3BurnV3DTO::getId()
+UniswapV3.BurnV3DTO::getId()
 {
 	return id;
 }
 
 void
-UniswapV3BurnV3DTO::setId(std::string  id)
+UniswapV3.BurnV3DTO::setId(std::string  id)
 {
 	this->id = id;
 }
 
 std::string
-UniswapV3BurnV3DTO::getTransaction()
+UniswapV3.BurnV3DTO::getTransaction()
 {
 	return transaction;
 }
 
 void
-UniswapV3BurnV3DTO::setTransaction(std::string  transaction)
+UniswapV3.BurnV3DTO::setTransaction(std::string  transaction)
 {
 	this->transaction = transaction;
 }
 
 std::string
-UniswapV3BurnV3DTO::getPool()
+UniswapV3.BurnV3DTO::getPool()
 {
 	return pool;
 }
 
 void
-UniswapV3BurnV3DTO::setPool(std::string  pool)
+UniswapV3.BurnV3DTO::setPool(std::string  pool)
 {
 	this->pool = pool;
 }
 
 std::string
-UniswapV3BurnV3DTO::getToken0()
+UniswapV3.BurnV3DTO::getToken0()
 {
 	return token_0;
 }
 
 void
-UniswapV3BurnV3DTO::setToken0(std::string  token_0)
+UniswapV3.BurnV3DTO::setToken0(std::string  token_0)
 {
 	this->token_0 = token_0;
 }
 
 std::string
-UniswapV3BurnV3DTO::getToken1()
+UniswapV3.BurnV3DTO::getToken1()
 {
 	return token_1;
 }
 
 void
-UniswapV3BurnV3DTO::setToken1(std::string  token_1)
+UniswapV3.BurnV3DTO::setToken1(std::string  token_1)
 {
 	this->token_1 = token_1;
 }
 
 std::string
-UniswapV3BurnV3DTO::getTimestamp()
+UniswapV3.BurnV3DTO::getTimestamp()
 {
 	return timestamp;
 }
 
 void
-UniswapV3BurnV3DTO::setTimestamp(std::string  timestamp)
+UniswapV3.BurnV3DTO::setTimestamp(std::string  timestamp)
 {
 	this->timestamp = timestamp;
 }
 
 std::string
-UniswapV3BurnV3DTO::getOwner()
+UniswapV3.BurnV3DTO::getOwner()
 {
 	return owner;
 }
 
 void
-UniswapV3BurnV3DTO::setOwner(std::string  owner)
+UniswapV3.BurnV3DTO::setOwner(std::string  owner)
 {
 	this->owner = owner;
 }
 
 std::string
-UniswapV3BurnV3DTO::getOrigin()
+UniswapV3.BurnV3DTO::getOrigin()
 {
 	return origin;
 }
 
 void
-UniswapV3BurnV3DTO::setOrigin(std::string  origin)
+UniswapV3.BurnV3DTO::setOrigin(std::string  origin)
 {
 	this->origin = origin;
 }
 
 std::string
-UniswapV3BurnV3DTO::getAmount()
+UniswapV3.BurnV3DTO::getAmount()
 {
 	return amount;
 }
 
 void
-UniswapV3BurnV3DTO::setAmount(std::string  amount)
+UniswapV3.BurnV3DTO::setAmount(std::string  amount)
 {
 	this->amount = amount;
 }
 
 std::string
-UniswapV3BurnV3DTO::getAmount0()
+UniswapV3.BurnV3DTO::getAmount0()
 {
 	return amount_0;
 }
 
 void
-UniswapV3BurnV3DTO::setAmount0(std::string  amount_0)
+UniswapV3.BurnV3DTO::setAmount0(std::string  amount_0)
 {
 	this->amount_0 = amount_0;
 }
 
 std::string
-UniswapV3BurnV3DTO::getAmount1()
+UniswapV3.BurnV3DTO::getAmount1()
 {
 	return amount_1;
 }
 
 void
-UniswapV3BurnV3DTO::setAmount1(std::string  amount_1)
+UniswapV3.BurnV3DTO::setAmount1(std::string  amount_1)
 {
 	this->amount_1 = amount_1;
 }
 
 std::string
-UniswapV3BurnV3DTO::getAmountUsd()
+UniswapV3.BurnV3DTO::getAmountUsd()
 {
 	return amount_usd;
 }
 
 void
-UniswapV3BurnV3DTO::setAmountUsd(std::string  amount_usd)
+UniswapV3.BurnV3DTO::setAmountUsd(std::string  amount_usd)
 {
 	this->amount_usd = amount_usd;
 }
 
 std::string
-UniswapV3BurnV3DTO::getTickLower()
+UniswapV3.BurnV3DTO::getTickLower()
 {
 	return tick_lower;
 }
 
 void
-UniswapV3BurnV3DTO::setTickLower(std::string  tick_lower)
+UniswapV3.BurnV3DTO::setTickLower(std::string  tick_lower)
 {
 	this->tick_lower = tick_lower;
 }
 
 std::string
-UniswapV3BurnV3DTO::getTickUpper()
+UniswapV3.BurnV3DTO::getTickUpper()
 {
 	return tick_upper;
 }
 
 void
-UniswapV3BurnV3DTO::setTickUpper(std::string  tick_upper)
+UniswapV3.BurnV3DTO::setTickUpper(std::string  tick_upper)
 {
 	this->tick_upper = tick_upper;
 }
 
 std::string
-UniswapV3BurnV3DTO::getLogIndex()
+UniswapV3.BurnV3DTO::getLogIndex()
 {
 	return log_index;
 }
 
 void
-UniswapV3BurnV3DTO::setLogIndex(std::string  log_index)
+UniswapV3.BurnV3DTO::setLogIndex(std::string  log_index)
 {
 	this->log_index = log_index;
 }
 
 long long
-UniswapV3BurnV3DTO::getVid()
+UniswapV3.BurnV3DTO::getVid()
 {
 	return vid;
 }
 
 void
-UniswapV3BurnV3DTO::setVid(long long  vid)
+UniswapV3.BurnV3DTO::setVid(long long  vid)
 {
 	this->vid = vid;
 }

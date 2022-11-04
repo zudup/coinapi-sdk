@@ -1,4 +1,4 @@
-# SushiswapPairDTO
+# Sushiswap.PairDTO
 
 ## Properties
 Name | Type | Description | Notes

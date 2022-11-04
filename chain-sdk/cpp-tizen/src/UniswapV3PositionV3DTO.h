@@ -1,11 +1,11 @@
 /*
- * UniswapV3PositionV3DTO.h
+ * UniswapV3.PositionV3DTO.h
  *
  * Positions created through NonfungiblePositionManager. Positions are represented as NFTs (ERC-721 tokens) as opposed to the fungible ERC-20 tokens on Uniswap V1 and V2.
  */
 
-#ifndef _UniswapV3PositionV3DTO_H_
-#define _UniswapV3PositionV3DTO_H_
+#ifndef _UniswapV3.PositionV3DTO_H_
+#define _UniswapV3.PositionV3DTO_H_
 
 
 #include <string>
@@ -26,16 +26,16 @@ namespace ArtikCloud {
  *
  */
 
-class UniswapV3PositionV3DTO : public Object {
+class UniswapV3.PositionV3DTO : public Object {
 public:
 	/*! \brief Constructor.
 	 */
-	UniswapV3PositionV3DTO();
-	UniswapV3PositionV3DTO(char* str);
+	UniswapV3.PositionV3DTO();
+	UniswapV3.PositionV3DTO(char* str);
 
 	/*! \brief Destructor.
 	 */
-	virtual ~UniswapV3PositionV3DTO();
+	virtual ~UniswapV3.PositionV3DTO();
 
 	/*! \brief Retrieve a string JSON representation of this class.
 	 */
@@ -222,4 +222,4 @@ private:
 }
 }
 
-#endif /* _UniswapV3PositionV3DTO_H_ */
+#endif /* _UniswapV3.PositionV3DTO_H_ */

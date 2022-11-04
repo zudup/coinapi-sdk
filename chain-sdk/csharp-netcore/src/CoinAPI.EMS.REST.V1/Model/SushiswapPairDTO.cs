@@ -29,7 +29,7 @@ namespace CoinAPI.EMS.REST.V1.Model
     /// <summary>
     /// Information about a pair. Includes references to each token within the pair, volume information, liquidity information, and more. The pair entity mirrors the pair smart contract, and also contains aggregated information about use.
     /// </summary>
-    [DataContract(Name = "SushiswapPairDTO")]
+    [DataContract(Name = "Sushiswap.PairDTO")]
     public partial class SushiswapPairDTO : IEquatable<SushiswapPairDTO>, IValidatableObject
     {
         /// <summary>

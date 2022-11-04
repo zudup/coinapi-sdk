@@ -1,4 +1,4 @@
-# UniswapV3TokenHourDataV3DTO
+# UniswapV3.TokenHourDataV3DTO
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-goog.provide('API.Client.UniswapV3PoolV3DTO');
+goog.provide('API.Client.UniswapV3.PoolV3DTO');
 
 /**
  * Information about a pool. Includes references to each token within the pool, volume information, liquidity information, and more. The pool entity mirrors the pool smart contract, and also contains aggregated information about use.
@@ -61,31 +61,31 @@ API.Client.UniswapV3PoolV3DTO.prototype.token0;
 API.Client.UniswapV3PoolV3DTO.prototype.token1;
 
 /**
- * @type {!API.Client.NumericsBigInteger}
+ * @type {!API.Client.Numerics.BigInteger}
  * @export
  */
 API.Client.UniswapV3PoolV3DTO.prototype.feeTier;
 
 /**
- * @type {!API.Client.NumericsBigInteger}
+ * @type {!API.Client.Numerics.BigInteger}
  * @export
  */
 API.Client.UniswapV3PoolV3DTO.prototype.liquidity;
 
 /**
- * @type {!API.Client.NumericsBigInteger}
+ * @type {!API.Client.Numerics.BigInteger}
  * @export
  */
 API.Client.UniswapV3PoolV3DTO.prototype.sqrtPrice;
 
 /**
- * @type {!API.Client.NumericsBigInteger}
+ * @type {!API.Client.Numerics.BigInteger}
  * @export
  */
 API.Client.UniswapV3PoolV3DTO.prototype.feeGrowthGlobal0x128;
 
 /**
- * @type {!API.Client.NumericsBigInteger}
+ * @type {!API.Client.Numerics.BigInteger}
  * @export
  */
 API.Client.UniswapV3PoolV3DTO.prototype.feeGrowthGlobal1x128;
@@ -105,13 +105,13 @@ API.Client.UniswapV3PoolV3DTO.prototype.token0Price;
 API.Client.UniswapV3PoolV3DTO.prototype.token1Price;
 
 /**
- * @type {!API.Client.NumericsBigInteger}
+ * @type {!API.Client.Numerics.BigInteger}
  * @export
  */
 API.Client.UniswapV3PoolV3DTO.prototype.tick;
 
 /**
- * @type {!API.Client.NumericsBigInteger}
+ * @type {!API.Client.Numerics.BigInteger}
  * @export
  */
 API.Client.UniswapV3PoolV3DTO.prototype.observationIndex;
@@ -152,7 +152,7 @@ API.Client.UniswapV3PoolV3DTO.prototype.untrackedVolumeUsd;
 API.Client.UniswapV3PoolV3DTO.prototype.feesUsd;
 
 /**
- * @type {!API.Client.NumericsBigInteger}
+ * @type {!API.Client.Numerics.BigInteger}
  * @export
  */
 API.Client.UniswapV3PoolV3DTO.prototype.txCount;

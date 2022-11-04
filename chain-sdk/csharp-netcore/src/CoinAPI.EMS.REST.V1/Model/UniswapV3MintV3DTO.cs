@@ -29,7 +29,7 @@ namespace CoinAPI.EMS.REST.V1.Model
     /// <summary>
     /// Mint entities are created for every emitted Mint event on the Uniswap core contracts. The Mint entity stores key data about the event like token amounts, who sent the transaction, and more.
     /// </summary>
-    [DataContract(Name = "UniswapV3MintV3DTO")]
+    [DataContract(Name = "UniswapV3.MintV3DTO")]
     public partial class UniswapV3MintV3DTO : IEquatable<UniswapV3MintV3DTO>, IValidatableObject
     {
         /// <summary>

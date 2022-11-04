@@ -1,6 +1,6 @@
 
 
-# SushiswapPairDTO
+# PairDTO
 
 Information about a pair. Includes references to each token within the pair, volume information, liquidity information, and more. The pair entity mirrors the pair smart contract, and also contains aggregated information about use.
 

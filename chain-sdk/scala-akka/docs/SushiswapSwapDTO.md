@@ -1,6 +1,6 @@
 
 
-# SushiswapSwapDTO
+# SwapDTO
 
 Swap are created for each token swap within a pair.
 
@@ -28,7 +28,7 @@ Name | Type | Description | Notes
 **transactionId** | **String** |  |  [optional] [readonly]
 **evaluatedPrice** | **Double** |  |  [optional] [readonly]
 **evaluatedAmount** | **Double** |  |  [optional] [readonly]
-**evaluatedAggressor** | **TransactionsETradeAggressiveSide** |  |  [optional]
+**evaluatedAggressor** | **ETradeAggressiveSide** |  |  [optional]
 
 
 

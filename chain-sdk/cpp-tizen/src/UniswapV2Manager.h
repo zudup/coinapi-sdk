@@ -5,9 +5,9 @@
 #include <cstring>
 #include <list>
 #include <glib.h>
-#include "UniswapV2PairV2DTO.h"
-#include "UniswapV2SwapV2DTO.h"
-#include "UniswapV2TokenV2DTO.h"
+#include "UniswapV2.PairV2DTO.h"
+#include "UniswapV2.SwapV2DTO.h"
+#include "UniswapV2.TokenV2DTO.h"
 #include "Error.h"
 
 /** \defgroup Operations API Endpoints
@@ -345,7 +345,7 @@ bool dappsUniswapv2PoolHourDataHistoricalGetAsync(char * accessToken,
  */
 bool dappsUniswapv2PoolsCurrentGetSync(char * accessToken,
 	std::string filterPoolId, 
-	void(* handler)(std::list<UniswapV2PairV2DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV2.PairV2DTO>, Error, void* )
 	, void* userData);
 
 /*! \brief GetPools. *Asynchronous*
@@ -358,7 +358,7 @@ bool dappsUniswapv2PoolsCurrentGetSync(char * accessToken,
  */
 bool dappsUniswapv2PoolsCurrentGetAsync(char * accessToken,
 	std::string filterPoolId, 
-	void(* handler)(std::list<UniswapV2PairV2DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV2.PairV2DTO>, Error, void* )
 	, void* userData);
 
 
@@ -406,7 +406,7 @@ bool dappsUniswapv2PoolsHistoricalGetAsync(char * accessToken,
  */
 bool dappsUniswapv2SwapsCurrentGetSync(char * accessToken,
 	
-	void(* handler)(std::list<UniswapV2SwapV2DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV2.SwapV2DTO>, Error, void* )
 	, void* userData);
 
 /*! \brief GetSwaps. *Asynchronous*
@@ -418,7 +418,7 @@ bool dappsUniswapv2SwapsCurrentGetSync(char * accessToken,
  */
 bool dappsUniswapv2SwapsCurrentGetAsync(char * accessToken,
 	
-	void(* handler)(std::list<UniswapV2SwapV2DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV2.SwapV2DTO>, Error, void* )
 	, void* userData);
 
 
@@ -501,7 +501,7 @@ bool dappsUniswapv2TokenDayDataHistoricalGetAsync(char * accessToken,
  */
 bool dappsUniswapv2TokensCurrentGetSync(char * accessToken,
 	
-	void(* handler)(std::list<UniswapV2TokenV2DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV2.TokenV2DTO>, Error, void* )
 	, void* userData);
 
 /*! \brief GetTokens. *Asynchronous*
@@ -513,7 +513,7 @@ bool dappsUniswapv2TokensCurrentGetSync(char * accessToken,
  */
 bool dappsUniswapv2TokensCurrentGetAsync(char * accessToken,
 	
-	void(* handler)(std::list<UniswapV2TokenV2DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV2.TokenV2DTO>, Error, void* )
 	, void* userData);
 
 

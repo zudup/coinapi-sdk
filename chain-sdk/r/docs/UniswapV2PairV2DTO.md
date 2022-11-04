@@ -24,7 +24,7 @@ Name | Type | Description | Notes
 **volume_token_1** | **character** | Amount of token1 swapped on this pair. | [optional] 
 **volume_usd** | **character** | Total amount swapped all time in this pair stored in USD (only tracked if USD liquidity is above minimum threshold). | [optional] 
 **untracked_volume_usd** | **character** | Total amount swapped all time in this pair stored in USD, no minimum liquidity threshold. | [optional] 
-**tx_count** | [**NumericsBigInteger**](NumericsBigInteger.md) |  | [optional] 
+**tx_count** | [**NumericsBigInteger**](Numerics.BigInteger.md) |  | [optional] 
 **created_at_timestamp** | **character** | Timestamp contract was created. | [optional] 
 **liquidity_provider_count** | **character** | Total number of LPs. | [optional] 
 **evaluated_ask** | **numeric** |  | [optional] [readonly] 

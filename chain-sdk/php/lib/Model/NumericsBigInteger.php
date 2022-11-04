@@ -50,7 +50,7 @@ class NumericsBigInteger implements ModelInterface, ArrayAccess, \JsonSerializab
       *
       * @var string
       */
-    protected static $openAPIModelName = 'NumericsBigInteger';
+    protected static $openAPIModelName = 'Numerics.BigInteger';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

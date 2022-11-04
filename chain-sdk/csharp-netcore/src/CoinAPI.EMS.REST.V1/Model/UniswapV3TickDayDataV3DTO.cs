@@ -29,7 +29,7 @@ namespace CoinAPI.EMS.REST.V1.Model
     /// <summary>
     /// Data accumulated and condensed into day stats for each exchange. Entity gets saved only if there is a change during the day
     /// </summary>
-    [DataContract(Name = "UniswapV3TickDayDataV3DTO")]
+    [DataContract(Name = "UniswapV3.TickDayDataV3DTO")]
     public partial class UniswapV3TickDayDataV3DTO : IEquatable<UniswapV3TickDayDataV3DTO>, IValidatableObject
     {
         /// <summary>

@@ -51,7 +51,7 @@ class UniswapV3TickV3DTO implements ModelInterface, ArrayAccess, \JsonSerializab
       *
       * @var string
       */
-    protected static $openAPIModelName = 'UniswapV3TickV3DTO';
+    protected static $openAPIModelName = 'UniswapV3.TickV3DTO';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

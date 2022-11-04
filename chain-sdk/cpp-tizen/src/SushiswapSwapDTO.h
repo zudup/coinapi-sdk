@@ -1,15 +1,15 @@
 /*
- * SushiswapSwapDTO.h
+ * Sushiswap.SwapDTO.h
  *
  * Swap are created for each token swap within a pair.
  */
 
-#ifndef _SushiswapSwapDTO_H_
-#define _SushiswapSwapDTO_H_
+#ifndef _Sushiswap.SwapDTO_H_
+#define _Sushiswap.SwapDTO_H_
 
 
 #include <string>
-#include "TransactionsETradeAggressiveSide.h"
+#include "Transactions.ETradeAggressiveSide.h"
 #include "Object.h"
 
 /** \defgroup Models Data Structures for API
@@ -27,16 +27,16 @@ namespace ArtikCloud {
  *
  */
 
-class SushiswapSwapDTO : public Object {
+class Sushiswap.SwapDTO : public Object {
 public:
 	/*! \brief Constructor.
 	 */
-	SushiswapSwapDTO();
-	SushiswapSwapDTO(char* str);
+	Sushiswap.SwapDTO();
+	Sushiswap.SwapDTO(char* str);
 
 	/*! \brief Destructor.
 	 */
-	virtual ~SushiswapSwapDTO();
+	virtual ~Sushiswap.SwapDTO();
 
 	/*! \brief Retrieve a string JSON representation of this class.
 	 */
@@ -188,11 +188,11 @@ public:
 	void setEvaluatedAmount(double  evaluated_amount);
 	/*! \brief Get 
 	 */
-	TransactionsETradeAggressiveSide getEvaluatedAggressor();
+	Transactions.ETradeAggressiveSide getEvaluatedAggressor();
 
 	/*! \brief Set 
 	 */
-	void setEvaluatedAggressor(TransactionsETradeAggressiveSide  evaluated_aggressor);
+	void setEvaluatedAggressor(Transactions.ETradeAggressiveSide  evaluated_aggressor);
 
 private:
 	std::string entry_time;
@@ -215,7 +215,7 @@ private:
 	std::string transaction_id;
 	double evaluated_price;
 	double evaluated_amount;
-	TransactionsETradeAggressiveSide evaluated_aggressor;
+	Transactions.ETradeAggressiveSide evaluated_aggressor;
 	void __init();
 	void __cleanup();
 
@@ -223,4 +223,4 @@ private:
 }
 }
 
-#endif /* _SushiswapSwapDTO_H_ */
+#endif /* _Sushiswap.SwapDTO_H_ */

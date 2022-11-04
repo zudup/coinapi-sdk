@@ -17,7 +17,7 @@
 #' \strong{ DappsUniswapv3BundleCurrentGet } \emph{ GetBundles }
 #'
 #' \itemize{
-#' \item \emph{ @returnType } list( \link{UniswapV3BundleV3DTO} ) \cr
+#' \item \emph{ @returnType } list( \link{UniswapV3.BundleV3DTO} ) \cr
 #'
 #'
 #' \item status code : 200 | successful operation
@@ -51,7 +51,7 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } filter_pool_id character
-#' \item \emph{ @returnType } list( \link{UniswapV3BurnV3DTO} ) \cr
+#' \item \emph{ @returnType } list( \link{UniswapV3.BurnV3DTO} ) \cr
 #'
 #'
 #' \item status code : 200 | successful operation
@@ -104,7 +104,7 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } chain_id character
-#' \item \emph{ @returnType } list( \link{UniswapV3FactoryV3DTO} ) \cr
+#' \item \emph{ @returnType } list( \link{UniswapV3.FactoryV3DTO} ) \cr
 #'
 #'
 #' \item status code : 200 | successful operation
@@ -138,7 +138,7 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } filter_pool_id character
-#' \item \emph{ @returnType } list( \link{UniswapV3MintV3DTO} ) \cr
+#' \item \emph{ @returnType } list( \link{UniswapV3.MintV3DTO} ) \cr
 #'
 #'
 #' \item status code : 200 | successful operation
@@ -211,7 +211,7 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } filter_pool_id character
-#' \item \emph{ @returnType } list( \link{UniswapV3PoolV3DTO} ) \cr
+#' \item \emph{ @returnType } list( \link{UniswapV3.PoolV3DTO} ) \cr
 #'
 #'
 #' \item status code : 200 | successful operation
@@ -227,7 +227,7 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } filter_pool_id character
-#' \item \emph{ @returnType } list( \link{UniswapV3PoolDayDataV3DTO} ) \cr
+#' \item \emph{ @returnType } list( \link{UniswapV3.PoolDayDataV3DTO} ) \cr
 #'
 #'
 #' \item status code : 200 | successful operation
@@ -262,7 +262,7 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } filter_pool_id character
-#' \item \emph{ @returnType } list( \link{UniswapV3PoolHourDataV3DTO} ) \cr
+#' \item \emph{ @returnType } list( \link{UniswapV3.PoolHourDataV3DTO} ) \cr
 #'
 #'
 #' \item status code : 200 | successful operation
@@ -297,7 +297,7 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } filter_pool_id character
-#' \item \emph{ @returnType } list( \link{UniswapV3PositionSnapshotV3DTO} ) \cr
+#' \item \emph{ @returnType } list( \link{UniswapV3.PositionSnapshotV3DTO} ) \cr
 #'
 #'
 #' \item status code : 200 | successful operation
@@ -313,7 +313,7 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } filter_pool_id character
-#' \item \emph{ @returnType } list( \link{UniswapV3PositionV3DTO} ) \cr
+#' \item \emph{ @returnType } list( \link{UniswapV3.PositionV3DTO} ) \cr
 #'
 #'
 #' \item status code : 200 | successful operation
@@ -348,7 +348,7 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } filter_pool_id character
-#' \item \emph{ @returnType } list( \link{UniswapV3SwapV3DTO} ) \cr
+#' \item \emph{ @returnType } list( \link{UniswapV3.SwapV3DTO} ) \cr
 #'
 #'
 #' \item status code : 200 | successful operation
@@ -402,7 +402,7 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } filter_pool_id character
-#' \item \emph{ @returnType } list( \link{UniswapV3TickV3DTO} ) \cr
+#' \item \emph{ @returnType } list( \link{UniswapV3.TickV3DTO} ) \cr
 #'
 #'
 #' \item status code : 200 | successful operation
@@ -418,7 +418,7 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } filter_pool_id character
-#' \item \emph{ @returnType } list( \link{UniswapV3TickDayDataV3DTO} ) \cr
+#' \item \emph{ @returnType } list( \link{UniswapV3.TickDayDataV3DTO} ) \cr
 #'
 #'
 #' \item status code : 200 | successful operation
@@ -491,7 +491,7 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } filter_token_id character
-#' \item \emph{ @returnType } list( \link{UniswapV3TokenV3DTO} ) \cr
+#' \item \emph{ @returnType } list( \link{UniswapV3.TokenV3DTO} ) \cr
 #'
 #'
 #' \item status code : 200 | successful operation
@@ -507,7 +507,7 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } filter_token_id character
-#' \item \emph{ @returnType } list( \link{UniswapV3TokenV3DayDataDTO} ) \cr
+#' \item \emph{ @returnType } list( \link{UniswapV3.TokenV3DayDataDTO} ) \cr
 #'
 #'
 #' \item status code : 200 | successful operation
@@ -542,7 +542,7 @@
 #'
 #' \itemize{
 #' \item \emph{ @param } filter_token_id character
-#' \item \emph{ @returnType } list( \link{UniswapV3TokenHourDataV3DTO} ) \cr
+#' \item \emph{ @returnType } list( \link{UniswapV3.TokenHourDataV3DTO} ) \cr
 #'
 #'
 #' \item status code : 200 | successful operation
@@ -575,7 +575,7 @@
 #' \strong{ DappsUniswapv3UniswapDayDataCurrentGet } \emph{ GetUniswapDayData }
 #'
 #' \itemize{
-#' \item \emph{ @returnType } list( \link{UniswapV3UniswapDayDataV3DTO} ) \cr
+#' \item \emph{ @returnType } list( \link{UniswapV3.UniswapDayDataV3DTO} ) \cr
 #'
 #'
 #' \item status code : 200 | successful operation

@@ -1,11 +1,11 @@
 /*
- * SushiswapPairDTO.h
+ * Sushiswap.PairDTO.h
  *
  * Information about a pair. Includes references to each token within the pair, volume information, liquidity information, and more. The pair entity mirrors the pair smart contract, and also contains aggregated information about use.
  */
 
-#ifndef _SushiswapPairDTO_H_
-#define _SushiswapPairDTO_H_
+#ifndef _Sushiswap.PairDTO_H_
+#define _Sushiswap.PairDTO_H_
 
 
 #include <string>
@@ -26,16 +26,16 @@ namespace ArtikCloud {
  *
  */
 
-class SushiswapPairDTO : public Object {
+class Sushiswap.PairDTO : public Object {
 public:
 	/*! \brief Constructor.
 	 */
-	SushiswapPairDTO();
-	SushiswapPairDTO(char* str);
+	Sushiswap.PairDTO();
+	Sushiswap.PairDTO(char* str);
 
 	/*! \brief Destructor.
 	 */
-	virtual ~SushiswapPairDTO();
+	virtual ~Sushiswap.PairDTO();
 
 	/*! \brief Retrieve a string JSON representation of this class.
 	 */
@@ -262,4 +262,4 @@ private:
 }
 }
 
-#endif /* _SushiswapPairDTO_H_ */
+#endif /* _Sushiswap.PairDTO_H_ */

@@ -1,6 +1,6 @@
 
 
-# UniswapV3PoolV3DTO
+# PoolV3DTO
 
 Information about a pool. Includes references to each token within the pool, volume information, liquidity information, and more. The pool entity mirrors the pool smart contract, and also contains aggregated information about use.
 
@@ -16,21 +16,21 @@ Name | Type | Description | Notes
 **createdAtTimestamp** | **OffsetDateTime** | Creation time. |  [optional]
 **token0** | **String** | Reference to token0 as stored in pool contract. |  [optional]
 **token1** | **String** | Reference to token1 as stored in pool contract. |  [optional]
-**feeTier** | [**NumericsBigInteger**](NumericsBigInteger.md) |  |  [optional]
-**liquidity** | [**NumericsBigInteger**](NumericsBigInteger.md) |  |  [optional]
-**sqrtPrice** | [**NumericsBigInteger**](NumericsBigInteger.md) |  |  [optional]
-**feeGrowthGlobal0x128** | [**NumericsBigInteger**](NumericsBigInteger.md) |  |  [optional]
-**feeGrowthGlobal1x128** | [**NumericsBigInteger**](NumericsBigInteger.md) |  |  [optional]
+**feeTier** | [**BigInteger**](BigInteger.md) |  |  [optional]
+**liquidity** | [**BigInteger**](BigInteger.md) |  |  [optional]
+**sqrtPrice** | [**BigInteger**](BigInteger.md) |  |  [optional]
+**feeGrowthGlobal0x128** | [**BigInteger**](BigInteger.md) |  |  [optional]
+**feeGrowthGlobal1x128** | [**BigInteger**](BigInteger.md) |  |  [optional]
 **token0Price** | **String** | Token0 per token1. |  [optional]
 **token1Price** | **String** | Token1 per token0. |  [optional]
-**tick** | [**NumericsBigInteger**](NumericsBigInteger.md) |  |  [optional]
-**observationIndex** | [**NumericsBigInteger**](NumericsBigInteger.md) |  |  [optional]
+**tick** | [**BigInteger**](BigInteger.md) |  |  [optional]
+**observationIndex** | [**BigInteger**](BigInteger.md) |  |  [optional]
 **volumeToken0** | **String** | All time token0 swapped. |  [optional]
 **volumeToken1** | **String** | All time token1 swapped. |  [optional]
 **volumeUsd** | **String** | All time USD swapped. |  [optional]
 **untrackedVolumeUsd** | **String** | All time USD swapped, unfiltered for unreliable USD pools. |  [optional]
 **feesUsd** | **String** | Fees in USD. |  [optional]
-**txCount** | [**NumericsBigInteger**](NumericsBigInteger.md) |  |  [optional]
+**txCount** | [**BigInteger**](BigInteger.md) |  |  [optional]
 **collectedFeesToken0** | **String** | All time fees collected token0. |  [optional]
 **collectedFeesToken1** | **String** | All time fees collected token1. |  [optional]
 **collectedFeesUsd** | **String** | All time fees collected derived USD. |  [optional]

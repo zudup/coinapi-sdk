@@ -1,4 +1,4 @@
-goog.provide('API.Client.UniswapV2PairV2DTO');
+goog.provide('API.Client.UniswapV2.PairV2DTO');
 
 /**
  * Information about a pair. Includes references to each token within the pair, volume information, liquidity information, and more. The pair entity mirrors the pair smart contract, and also contains aggregated information about use.
@@ -138,7 +138,7 @@ API.Client.UniswapV2PairV2DTO.prototype.volumeUsd;
 API.Client.UniswapV2PairV2DTO.prototype.untrackedVolumeUsd;
 
 /**
- * @type {!API.Client.NumericsBigInteger}
+ * @type {!API.Client.Numerics.BigInteger}
  * @export
  */
 API.Client.UniswapV2PairV2DTO.prototype.txCount;

@@ -1,4 +1,4 @@
-goog.provide('API.Client.UniswapV3UniswapDayDataV3DTO');
+goog.provide('API.Client.UniswapV3.UniswapDayDataV3DTO');
 
 /**
  * Data accumulated and condensed into day stats for all of Uniswap.
@@ -75,7 +75,7 @@ API.Client.UniswapV3UniswapDayDataV3DTO.prototype.volumeUsdUntracked;
 API.Client.UniswapV3UniswapDayDataV3DTO.prototype.feesUsd;
 
 /**
- * @type {!API.Client.NumericsBigInteger}
+ * @type {!API.Client.Numerics.BigInteger}
  * @export
  */
 API.Client.UniswapV3UniswapDayDataV3DTO.prototype.txCount;

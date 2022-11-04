@@ -5,23 +5,23 @@
 #include "Helpers.h"
 
 
-#include "UniswapV3PositionSnapshotV3DTO.h"
+#include "UniswapV3.PositionSnapshotV3DTO.h"
 
 using namespace std;
 using namespace Tizen::ArtikCloud;
 
-UniswapV3PositionSnapshotV3DTO::UniswapV3PositionSnapshotV3DTO()
+UniswapV3.PositionSnapshotV3DTO::UniswapV3.PositionSnapshotV3DTO()
 {
 	//__init();
 }
 
-UniswapV3PositionSnapshotV3DTO::~UniswapV3PositionSnapshotV3DTO()
+UniswapV3.PositionSnapshotV3DTO::~UniswapV3.PositionSnapshotV3DTO()
 {
 	//__cleanup();
 }
 
 void
-UniswapV3PositionSnapshotV3DTO::__init()
+UniswapV3.PositionSnapshotV3DTO::__init()
 {
 	//entry_time = null;
 	//recv_time = null;
@@ -45,7 +45,7 @@ UniswapV3PositionSnapshotV3DTO::__init()
 }
 
 void
-UniswapV3PositionSnapshotV3DTO::__cleanup()
+UniswapV3.PositionSnapshotV3DTO::__cleanup()
 {
 	//if(entry_time != NULL) {
 	//
@@ -146,7 +146,7 @@ UniswapV3PositionSnapshotV3DTO::__cleanup()
 }
 
 void
-UniswapV3PositionSnapshotV3DTO::fromJson(char* jsonStr)
+UniswapV3.PositionSnapshotV3DTO::fromJson(char* jsonStr)
 {
 	JsonObject *pJsonObject = json_node_get_object(json_from_string(jsonStr,NULL));
 	JsonNode *node;
@@ -361,13 +361,13 @@ UniswapV3PositionSnapshotV3DTO::fromJson(char* jsonStr)
 	}
 }
 
-UniswapV3PositionSnapshotV3DTO::UniswapV3PositionSnapshotV3DTO(char* json)
+UniswapV3.PositionSnapshotV3DTO::UniswapV3.PositionSnapshotV3DTO(char* json)
 {
 	this->fromJson(json);
 }
 
 char*
-UniswapV3PositionSnapshotV3DTO::toJson()
+UniswapV3.PositionSnapshotV3DTO::toJson()
 {
 	JsonObject *pJsonObject = json_object_new();
 	JsonNode *node;
@@ -551,229 +551,229 @@ UniswapV3PositionSnapshotV3DTO::toJson()
 }
 
 std::string
-UniswapV3PositionSnapshotV3DTO::getEntryTime()
+UniswapV3.PositionSnapshotV3DTO::getEntryTime()
 {
 	return entry_time;
 }
 
 void
-UniswapV3PositionSnapshotV3DTO::setEntryTime(std::string  entry_time)
+UniswapV3.PositionSnapshotV3DTO::setEntryTime(std::string  entry_time)
 {
 	this->entry_time = entry_time;
 }
 
 std::string
-UniswapV3PositionSnapshotV3DTO::getRecvTime()
+UniswapV3.PositionSnapshotV3DTO::getRecvTime()
 {
 	return recv_time;
 }
 
 void
-UniswapV3PositionSnapshotV3DTO::setRecvTime(std::string  recv_time)
+UniswapV3.PositionSnapshotV3DTO::setRecvTime(std::string  recv_time)
 {
 	this->recv_time = recv_time;
 }
 
 long long
-UniswapV3PositionSnapshotV3DTO::getBlockNumber()
+UniswapV3.PositionSnapshotV3DTO::getBlockNumber()
 {
 	return block_number;
 }
 
 void
-UniswapV3PositionSnapshotV3DTO::setBlockNumber(long long  block_number)
+UniswapV3.PositionSnapshotV3DTO::setBlockNumber(long long  block_number)
 {
 	this->block_number = block_number;
 }
 
 std::string
-UniswapV3PositionSnapshotV3DTO::getId()
+UniswapV3.PositionSnapshotV3DTO::getId()
 {
 	return id;
 }
 
 void
-UniswapV3PositionSnapshotV3DTO::setId(std::string  id)
+UniswapV3.PositionSnapshotV3DTO::setId(std::string  id)
 {
 	this->id = id;
 }
 
 std::string
-UniswapV3PositionSnapshotV3DTO::getOwner()
+UniswapV3.PositionSnapshotV3DTO::getOwner()
 {
 	return owner;
 }
 
 void
-UniswapV3PositionSnapshotV3DTO::setOwner(std::string  owner)
+UniswapV3.PositionSnapshotV3DTO::setOwner(std::string  owner)
 {
 	this->owner = owner;
 }
 
 std::string
-UniswapV3PositionSnapshotV3DTO::getPool()
+UniswapV3.PositionSnapshotV3DTO::getPool()
 {
 	return pool;
 }
 
 void
-UniswapV3PositionSnapshotV3DTO::setPool(std::string  pool)
+UniswapV3.PositionSnapshotV3DTO::setPool(std::string  pool)
 {
 	this->pool = pool;
 }
 
 std::string
-UniswapV3PositionSnapshotV3DTO::getPosition()
+UniswapV3.PositionSnapshotV3DTO::getPosition()
 {
 	return position;
 }
 
 void
-UniswapV3PositionSnapshotV3DTO::setPosition(std::string  position)
+UniswapV3.PositionSnapshotV3DTO::setPosition(std::string  position)
 {
 	this->position = position;
 }
 
 std::string
-UniswapV3PositionSnapshotV3DTO::getTimestamp()
+UniswapV3.PositionSnapshotV3DTO::getTimestamp()
 {
 	return timestamp;
 }
 
 void
-UniswapV3PositionSnapshotV3DTO::setTimestamp(std::string  timestamp)
+UniswapV3.PositionSnapshotV3DTO::setTimestamp(std::string  timestamp)
 {
 	this->timestamp = timestamp;
 }
 
 std::string
-UniswapV3PositionSnapshotV3DTO::getLiquidity()
+UniswapV3.PositionSnapshotV3DTO::getLiquidity()
 {
 	return liquidity;
 }
 
 void
-UniswapV3PositionSnapshotV3DTO::setLiquidity(std::string  liquidity)
+UniswapV3.PositionSnapshotV3DTO::setLiquidity(std::string  liquidity)
 {
 	this->liquidity = liquidity;
 }
 
 std::string
-UniswapV3PositionSnapshotV3DTO::getDepositedToken0()
+UniswapV3.PositionSnapshotV3DTO::getDepositedToken0()
 {
 	return deposited_token_0;
 }
 
 void
-UniswapV3PositionSnapshotV3DTO::setDepositedToken0(std::string  deposited_token_0)
+UniswapV3.PositionSnapshotV3DTO::setDepositedToken0(std::string  deposited_token_0)
 {
 	this->deposited_token_0 = deposited_token_0;
 }
 
 std::string
-UniswapV3PositionSnapshotV3DTO::getDepositedToken1()
+UniswapV3.PositionSnapshotV3DTO::getDepositedToken1()
 {
 	return deposited_token_1;
 }
 
 void
-UniswapV3PositionSnapshotV3DTO::setDepositedToken1(std::string  deposited_token_1)
+UniswapV3.PositionSnapshotV3DTO::setDepositedToken1(std::string  deposited_token_1)
 {
 	this->deposited_token_1 = deposited_token_1;
 }
 
 std::string
-UniswapV3PositionSnapshotV3DTO::getWithdrawnToken0()
+UniswapV3.PositionSnapshotV3DTO::getWithdrawnToken0()
 {
 	return withdrawn_token_0;
 }
 
 void
-UniswapV3PositionSnapshotV3DTO::setWithdrawnToken0(std::string  withdrawn_token_0)
+UniswapV3.PositionSnapshotV3DTO::setWithdrawnToken0(std::string  withdrawn_token_0)
 {
 	this->withdrawn_token_0 = withdrawn_token_0;
 }
 
 std::string
-UniswapV3PositionSnapshotV3DTO::getWithdrawnToken1()
+UniswapV3.PositionSnapshotV3DTO::getWithdrawnToken1()
 {
 	return withdrawn_token_1;
 }
 
 void
-UniswapV3PositionSnapshotV3DTO::setWithdrawnToken1(std::string  withdrawn_token_1)
+UniswapV3.PositionSnapshotV3DTO::setWithdrawnToken1(std::string  withdrawn_token_1)
 {
 	this->withdrawn_token_1 = withdrawn_token_1;
 }
 
 std::string
-UniswapV3PositionSnapshotV3DTO::getCollectedFeesToken0()
+UniswapV3.PositionSnapshotV3DTO::getCollectedFeesToken0()
 {
 	return collected_fees_token_0;
 }
 
 void
-UniswapV3PositionSnapshotV3DTO::setCollectedFeesToken0(std::string  collected_fees_token_0)
+UniswapV3.PositionSnapshotV3DTO::setCollectedFeesToken0(std::string  collected_fees_token_0)
 {
 	this->collected_fees_token_0 = collected_fees_token_0;
 }
 
 std::string
-UniswapV3PositionSnapshotV3DTO::getCollectedFeesToken1()
+UniswapV3.PositionSnapshotV3DTO::getCollectedFeesToken1()
 {
 	return collected_fees_token_1;
 }
 
 void
-UniswapV3PositionSnapshotV3DTO::setCollectedFeesToken1(std::string  collected_fees_token_1)
+UniswapV3.PositionSnapshotV3DTO::setCollectedFeesToken1(std::string  collected_fees_token_1)
 {
 	this->collected_fees_token_1 = collected_fees_token_1;
 }
 
 std::string
-UniswapV3PositionSnapshotV3DTO::getTransaction()
+UniswapV3.PositionSnapshotV3DTO::getTransaction()
 {
 	return transaction;
 }
 
 void
-UniswapV3PositionSnapshotV3DTO::setTransaction(std::string  transaction)
+UniswapV3.PositionSnapshotV3DTO::setTransaction(std::string  transaction)
 {
 	this->transaction = transaction;
 }
 
 std::string
-UniswapV3PositionSnapshotV3DTO::getFeeGrowthInside0LastX128()
+UniswapV3.PositionSnapshotV3DTO::getFeeGrowthInside0LastX128()
 {
 	return fee_growth_inside_0_last_x128;
 }
 
 void
-UniswapV3PositionSnapshotV3DTO::setFeeGrowthInside0LastX128(std::string  fee_growth_inside_0_last_x128)
+UniswapV3.PositionSnapshotV3DTO::setFeeGrowthInside0LastX128(std::string  fee_growth_inside_0_last_x128)
 {
 	this->fee_growth_inside_0_last_x128 = fee_growth_inside_0_last_x128;
 }
 
 std::string
-UniswapV3PositionSnapshotV3DTO::getFeeGrowthInside1LastX128()
+UniswapV3.PositionSnapshotV3DTO::getFeeGrowthInside1LastX128()
 {
 	return fee_growth_inside_1_last_x128;
 }
 
 void
-UniswapV3PositionSnapshotV3DTO::setFeeGrowthInside1LastX128(std::string  fee_growth_inside_1_last_x128)
+UniswapV3.PositionSnapshotV3DTO::setFeeGrowthInside1LastX128(std::string  fee_growth_inside_1_last_x128)
 {
 	this->fee_growth_inside_1_last_x128 = fee_growth_inside_1_last_x128;
 }
 
 long long
-UniswapV3PositionSnapshotV3DTO::getVid()
+UniswapV3.PositionSnapshotV3DTO::getVid()
 {
 	return vid;
 }
 
 void
-UniswapV3PositionSnapshotV3DTO::setVid(long long  vid)
+UniswapV3.PositionSnapshotV3DTO::setVid(long long  vid)
 {
 	this->vid = vid;
 }

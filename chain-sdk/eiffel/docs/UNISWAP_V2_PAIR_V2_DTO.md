@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 **volume_token_1** | [**STRING_32**](STRING_32.md) | Amount of token1 swapped on this pair. | [optional] [default to null]
 **volume_usd** | [**STRING_32**](STRING_32.md) | Total amount swapped all time in this pair stored in USD (only tracked if USD liquidity is above minimum threshold). | [optional] [default to null]
 **untracked_volume_usd** | [**STRING_32**](STRING_32.md) | Total amount swapped all time in this pair stored in USD, no minimum liquidity threshold. | [optional] [default to null]
-**tx_count** | [**NUMERICS_BIG_INTEGER**](NumericsBigInteger.md) |  | [optional] [default to null]
+**tx_count** | [**NUMERICS_BIG_INTEGER**](Numerics.BigInteger.md) |  | [optional] [default to null]
 **created_at_timestamp** | [**DATE_TIME**](DATE_TIME.md) | Timestamp contract was created. | [optional] [default to null]
 **liquidity_provider_count** | [**STRING_32**](STRING_32.md) | Total number of LPs. | [optional] [default to null]
 **evaluated_ask** | **REAL_64** |  | [optional] [readonly] [default to null]

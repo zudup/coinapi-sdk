@@ -51,7 +51,7 @@ class UniswapV3FactoryV3DTO implements ModelInterface, ArrayAccess, \JsonSeriali
       *
       * @var string
       */
-    protected static $openAPIModelName = 'UniswapV3FactoryV3DTO';
+    protected static $openAPIModelName = 'UniswapV3.FactoryV3DTO';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

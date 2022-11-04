@@ -1,11 +1,11 @@
 /*
- * UniswapV3PoolHourDataV3DTO.h
+ * UniswapV3.PoolHourDataV3DTO.h
  *
  * Hourly stats tracker for pool.
  */
 
-#ifndef _UniswapV3PoolHourDataV3DTO_H_
-#define _UniswapV3PoolHourDataV3DTO_H_
+#ifndef _UniswapV3.PoolHourDataV3DTO_H_
+#define _UniswapV3.PoolHourDataV3DTO_H_
 
 
 #include <string>
@@ -26,16 +26,16 @@ namespace ArtikCloud {
  *
  */
 
-class UniswapV3PoolHourDataV3DTO : public Object {
+class UniswapV3.PoolHourDataV3DTO : public Object {
 public:
 	/*! \brief Constructor.
 	 */
-	UniswapV3PoolHourDataV3DTO();
-	UniswapV3PoolHourDataV3DTO(char* str);
+	UniswapV3.PoolHourDataV3DTO();
+	UniswapV3.PoolHourDataV3DTO(char* str);
 
 	/*! \brief Destructor.
 	 */
-	virtual ~UniswapV3PoolHourDataV3DTO();
+	virtual ~UniswapV3.PoolHourDataV3DTO();
 
 	/*! \brief Retrieve a string JSON representation of this class.
 	 */
@@ -246,4 +246,4 @@ private:
 }
 }
 
-#endif /* _UniswapV3PoolHourDataV3DTO_H_ */
+#endif /* _UniswapV3.PoolHourDataV3DTO_H_ */

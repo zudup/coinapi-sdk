@@ -29,7 +29,7 @@ namespace CoinAPI.EMS.REST.V1.Model
     /// <summary>
     /// Token data aggregated across all pairs that include token.
     /// </summary>
-    [DataContract(Name = "UniswapV3TokenHourDataV3DTO")]
+    [DataContract(Name = "UniswapV3.TokenHourDataV3DTO")]
     public partial class UniswapV3TokenHourDataV3DTO : IEquatable<UniswapV3TokenHourDataV3DTO>, IValidatableObject
     {
         /// <summary>

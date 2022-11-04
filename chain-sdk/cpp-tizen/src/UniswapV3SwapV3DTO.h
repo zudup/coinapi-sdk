@@ -1,16 +1,16 @@
 /*
- * UniswapV3SwapV3DTO.h
+ * UniswapV3.SwapV3DTO.h
  *
  * Swap are created for each token swap within a pair.
  */
 
-#ifndef _UniswapV3SwapV3DTO_H_
-#define _UniswapV3SwapV3DTO_H_
+#ifndef _UniswapV3.SwapV3DTO_H_
+#define _UniswapV3.SwapV3DTO_H_
 
 
 #include <string>
-#include "NumericsBigInteger.h"
-#include "TransactionsETradeAggressiveSide.h"
+#include "Numerics.BigInteger.h"
+#include "Transactions.ETradeAggressiveSide.h"
 #include "Object.h"
 
 /** \defgroup Models Data Structures for API
@@ -28,16 +28,16 @@ namespace ArtikCloud {
  *
  */
 
-class UniswapV3SwapV3DTO : public Object {
+class UniswapV3.SwapV3DTO : public Object {
 public:
 	/*! \brief Constructor.
 	 */
-	UniswapV3SwapV3DTO();
-	UniswapV3SwapV3DTO(char* str);
+	UniswapV3.SwapV3DTO();
+	UniswapV3.SwapV3DTO(char* str);
 
 	/*! \brief Destructor.
 	 */
-	virtual ~UniswapV3SwapV3DTO();
+	virtual ~UniswapV3.SwapV3DTO();
 
 	/*! \brief Retrieve a string JSON representation of this class.
 	 */
@@ -161,25 +161,25 @@ public:
 	void setAmountUsd(std::string  amount_usd);
 	/*! \brief Get 
 	 */
-	NumericsBigInteger getSqrtPriceX96();
+	Numerics.BigInteger getSqrtPriceX96();
 
 	/*! \brief Set 
 	 */
-	void setSqrtPriceX96(NumericsBigInteger  sqrt_price_x96);
+	void setSqrtPriceX96(Numerics.BigInteger  sqrt_price_x96);
 	/*! \brief Get 
 	 */
-	NumericsBigInteger getTick();
+	Numerics.BigInteger getTick();
 
 	/*! \brief Set 
 	 */
-	void setTick(NumericsBigInteger  tick);
+	void setTick(Numerics.BigInteger  tick);
 	/*! \brief Get 
 	 */
-	NumericsBigInteger getLogIndex();
+	Numerics.BigInteger getLogIndex();
 
 	/*! \brief Set 
 	 */
-	void setLogIndex(NumericsBigInteger  log_index);
+	void setLogIndex(Numerics.BigInteger  log_index);
 	/*! \brief Get 
 	 */
 	double getEvaluatedPrice();
@@ -196,11 +196,11 @@ public:
 	void setEvaluatedAmount(double  evaluated_amount);
 	/*! \brief Get 
 	 */
-	TransactionsETradeAggressiveSide getEvaluatedAggressor();
+	Transactions.ETradeAggressiveSide getEvaluatedAggressor();
 
 	/*! \brief Set 
 	 */
-	void setEvaluatedAggressor(TransactionsETradeAggressiveSide  evaluated_aggressor);
+	void setEvaluatedAggressor(Transactions.ETradeAggressiveSide  evaluated_aggressor);
 	/*! \brief Get 
 	 */
 	std::string getPoolId();
@@ -233,12 +233,12 @@ private:
 	std::string amount_0;
 	std::string amount_1;
 	std::string amount_usd;
-	NumericsBigInteger sqrt_price_x96;
-	NumericsBigInteger tick;
-	NumericsBigInteger log_index;
+	Numerics.BigInteger sqrt_price_x96;
+	Numerics.BigInteger tick;
+	Numerics.BigInteger log_index;
 	double evaluated_price;
 	double evaluated_amount;
-	TransactionsETradeAggressiveSide evaluated_aggressor;
+	Transactions.ETradeAggressiveSide evaluated_aggressor;
 	std::string pool_id;
 	std::string transaction_id;
 	void __init();
@@ -248,4 +248,4 @@ private:
 }
 }
 
-#endif /* _UniswapV3SwapV3DTO_H_ */
+#endif /* _UniswapV3.SwapV3DTO_H_ */

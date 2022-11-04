@@ -1,4 +1,4 @@
-goog.provide('API.Client.UniswapV3PositionSnapshotV3DTO');
+goog.provide('API.Client.UniswapV3.PositionSnapshotV3DTO');
 
 /**
  * @record

@@ -1,4 +1,4 @@
-# TransactionsETradeAggressiveSide
+# Transactions.ETradeAggressiveSide
 
 ## Properties
 Name | Type | Description | Notes

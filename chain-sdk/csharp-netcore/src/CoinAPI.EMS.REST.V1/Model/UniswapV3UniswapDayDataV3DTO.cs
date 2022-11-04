@@ -29,7 +29,7 @@ namespace CoinAPI.EMS.REST.V1.Model
     /// <summary>
     /// Data accumulated and condensed into day stats for all of Uniswap.
     /// </summary>
-    [DataContract(Name = "UniswapV3UniswapDayDataV3DTO")]
+    [DataContract(Name = "UniswapV3.UniswapDayDataV3DTO")]
     public partial class UniswapV3UniswapDayDataV3DTO : IEquatable<UniswapV3UniswapDayDataV3DTO>, IValidatableObject
     {
         /// <summary>

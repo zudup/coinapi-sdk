@@ -1,11 +1,11 @@
 /*
- * UniswapV3BundleV3DTO.h
+ * UniswapV3.BundleV3DTO.h
  *
  * The Bundle is used as a global store of derived ETH price in USD. This provides a strong estimate for the USD price of ETH.
  */
 
-#ifndef _UniswapV3BundleV3DTO_H_
-#define _UniswapV3BundleV3DTO_H_
+#ifndef _UniswapV3.BundleV3DTO_H_
+#define _UniswapV3.BundleV3DTO_H_
 
 
 #include <string>
@@ -26,16 +26,16 @@ namespace ArtikCloud {
  *
  */
 
-class UniswapV3BundleV3DTO : public Object {
+class UniswapV3.BundleV3DTO : public Object {
 public:
 	/*! \brief Constructor.
 	 */
-	UniswapV3BundleV3DTO();
-	UniswapV3BundleV3DTO(char* str);
+	UniswapV3.BundleV3DTO();
+	UniswapV3.BundleV3DTO(char* str);
 
 	/*! \brief Destructor.
 	 */
-	virtual ~UniswapV3BundleV3DTO();
+	virtual ~UniswapV3.BundleV3DTO();
 
 	/*! \brief Retrieve a string JSON representation of this class.
 	 */
@@ -102,4 +102,4 @@ private:
 }
 }
 
-#endif /* _UniswapV3BundleV3DTO_H_ */
+#endif /* _UniswapV3.BundleV3DTO_H_ */

@@ -5,23 +5,23 @@
 #include "Helpers.h"
 
 
-#include "UniswapV2PairV2DTO.h"
+#include "UniswapV2.PairV2DTO.h"
 
 using namespace std;
 using namespace Tizen::ArtikCloud;
 
-UniswapV2PairV2DTO::UniswapV2PairV2DTO()
+UniswapV2.PairV2DTO::UniswapV2.PairV2DTO()
 {
 	//__init();
 }
 
-UniswapV2PairV2DTO::~UniswapV2PairV2DTO()
+UniswapV2.PairV2DTO::~UniswapV2.PairV2DTO()
 {
 	//__cleanup();
 }
 
 void
-UniswapV2PairV2DTO::__init()
+UniswapV2.PairV2DTO::__init()
 {
 	//entry_time = null;
 	//recv_time = null;
@@ -42,14 +42,14 @@ UniswapV2PairV2DTO::__init()
 	//volume_token_1 = std::string();
 	//volume_usd = std::string();
 	//untracked_volume_usd = std::string();
-	//tx_count = new NumericsBigInteger();
+	//tx_count = new Numerics.BigInteger();
 	//created_at_timestamp = null;
 	//liquidity_provider_count = std::string();
 	//evaluated_ask = double(0);
 }
 
 void
-UniswapV2PairV2DTO::__cleanup()
+UniswapV2.PairV2DTO::__cleanup()
 {
 	//if(entry_time != NULL) {
 	//
@@ -170,7 +170,7 @@ UniswapV2PairV2DTO::__cleanup()
 }
 
 void
-UniswapV2PairV2DTO::fromJson(char* jsonStr)
+UniswapV2.PairV2DTO::fromJson(char* jsonStr)
 {
 	JsonObject *pJsonObject = json_node_get_object(json_from_string(jsonStr,NULL));
 	JsonNode *node;
@@ -388,11 +388,11 @@ UniswapV2PairV2DTO::fromJson(char* jsonStr)
 	if (node !=NULL) {
 	
 
-		if (isprimitive("NumericsBigInteger")) {
-			jsonToValue(&tx_count, node, "NumericsBigInteger", "NumericsBigInteger");
+		if (isprimitive("Numerics.BigInteger")) {
+			jsonToValue(&tx_count, node, "Numerics.BigInteger", "Numerics.BigInteger");
 		} else {
 			
-			NumericsBigInteger* obj = static_cast<NumericsBigInteger*> (&tx_count);
+			Numerics.BigInteger* obj = static_cast<Numerics.BigInteger*> (&tx_count);
 			obj->fromJson(json_to_string(node, false));
 			
 		}
@@ -432,13 +432,13 @@ UniswapV2PairV2DTO::fromJson(char* jsonStr)
 	}
 }
 
-UniswapV2PairV2DTO::UniswapV2PairV2DTO(char* json)
+UniswapV2.PairV2DTO::UniswapV2.PairV2DTO(char* json)
 {
 	this->fromJson(json);
 }
 
 char*
-UniswapV2PairV2DTO::toJson()
+UniswapV2.PairV2DTO::toJson()
 {
 	JsonObject *pJsonObject = json_object_new();
 	JsonNode *node;
@@ -613,13 +613,13 @@ UniswapV2PairV2DTO::toJson()
 	}
 	const gchar *untracked_volume_usdKey = "untracked_volume_usd";
 	json_object_set_member(pJsonObject, untracked_volume_usdKey, node);
-	if (isprimitive("NumericsBigInteger")) {
-		NumericsBigInteger obj = getTxCount();
-		node = converttoJson(&obj, "NumericsBigInteger", "");
+	if (isprimitive("Numerics.BigInteger")) {
+		Numerics.BigInteger obj = getTxCount();
+		node = converttoJson(&obj, "Numerics.BigInteger", "");
 	}
 	else {
 		
-		NumericsBigInteger obj = static_cast<NumericsBigInteger> (getTxCount());
+		Numerics.BigInteger obj = static_cast<Numerics.BigInteger> (getTxCount());
 		GError *mygerror;
 		mygerror = NULL;
 		node = json_from_string(obj.toJson(), &mygerror);
@@ -663,277 +663,277 @@ UniswapV2PairV2DTO::toJson()
 }
 
 std::string
-UniswapV2PairV2DTO::getEntryTime()
+UniswapV2.PairV2DTO::getEntryTime()
 {
 	return entry_time;
 }
 
 void
-UniswapV2PairV2DTO::setEntryTime(std::string  entry_time)
+UniswapV2.PairV2DTO::setEntryTime(std::string  entry_time)
 {
 	this->entry_time = entry_time;
 }
 
 std::string
-UniswapV2PairV2DTO::getRecvTime()
+UniswapV2.PairV2DTO::getRecvTime()
 {
 	return recv_time;
 }
 
 void
-UniswapV2PairV2DTO::setRecvTime(std::string  recv_time)
+UniswapV2.PairV2DTO::setRecvTime(std::string  recv_time)
 {
 	this->recv_time = recv_time;
 }
 
 long long
-UniswapV2PairV2DTO::getBlockNumber()
+UniswapV2.PairV2DTO::getBlockNumber()
 {
 	return block_number;
 }
 
 void
-UniswapV2PairV2DTO::setBlockNumber(long long  block_number)
+UniswapV2.PairV2DTO::setBlockNumber(long long  block_number)
 {
 	this->block_number = block_number;
 }
 
 long long
-UniswapV2PairV2DTO::getVid()
+UniswapV2.PairV2DTO::getVid()
 {
 	return vid;
 }
 
 void
-UniswapV2PairV2DTO::setVid(long long  vid)
+UniswapV2.PairV2DTO::setVid(long long  vid)
 {
 	this->vid = vid;
 }
 
 std::string
-UniswapV2PairV2DTO::getId()
+UniswapV2.PairV2DTO::getId()
 {
 	return id;
 }
 
 void
-UniswapV2PairV2DTO::setId(std::string  id)
+UniswapV2.PairV2DTO::setId(std::string  id)
 {
 	this->id = id;
 }
 
 std::string
-UniswapV2PairV2DTO::getToken0()
+UniswapV2.PairV2DTO::getToken0()
 {
 	return token_0;
 }
 
 void
-UniswapV2PairV2DTO::setToken0(std::string  token_0)
+UniswapV2.PairV2DTO::setToken0(std::string  token_0)
 {
 	this->token_0 = token_0;
 }
 
 std::string
-UniswapV2PairV2DTO::getToken1()
+UniswapV2.PairV2DTO::getToken1()
 {
 	return token_1;
 }
 
 void
-UniswapV2PairV2DTO::setToken1(std::string  token_1)
+UniswapV2.PairV2DTO::setToken1(std::string  token_1)
 {
 	this->token_1 = token_1;
 }
 
 std::string
-UniswapV2PairV2DTO::getReserve0()
+UniswapV2.PairV2DTO::getReserve0()
 {
 	return reserve_0;
 }
 
 void
-UniswapV2PairV2DTO::setReserve0(std::string  reserve_0)
+UniswapV2.PairV2DTO::setReserve0(std::string  reserve_0)
 {
 	this->reserve_0 = reserve_0;
 }
 
 std::string
-UniswapV2PairV2DTO::getReserve1()
+UniswapV2.PairV2DTO::getReserve1()
 {
 	return reserve_1;
 }
 
 void
-UniswapV2PairV2DTO::setReserve1(std::string  reserve_1)
+UniswapV2.PairV2DTO::setReserve1(std::string  reserve_1)
 {
 	this->reserve_1 = reserve_1;
 }
 
 std::string
-UniswapV2PairV2DTO::getTotalSupply()
+UniswapV2.PairV2DTO::getTotalSupply()
 {
 	return total_supply;
 }
 
 void
-UniswapV2PairV2DTO::setTotalSupply(std::string  total_supply)
+UniswapV2.PairV2DTO::setTotalSupply(std::string  total_supply)
 {
 	this->total_supply = total_supply;
 }
 
 std::string
-UniswapV2PairV2DTO::getReserveEth()
+UniswapV2.PairV2DTO::getReserveEth()
 {
 	return reserve_eth;
 }
 
 void
-UniswapV2PairV2DTO::setReserveEth(std::string  reserve_eth)
+UniswapV2.PairV2DTO::setReserveEth(std::string  reserve_eth)
 {
 	this->reserve_eth = reserve_eth;
 }
 
 std::string
-UniswapV2PairV2DTO::getReserveUsd()
+UniswapV2.PairV2DTO::getReserveUsd()
 {
 	return reserve_usd;
 }
 
 void
-UniswapV2PairV2DTO::setReserveUsd(std::string  reserve_usd)
+UniswapV2.PairV2DTO::setReserveUsd(std::string  reserve_usd)
 {
 	this->reserve_usd = reserve_usd;
 }
 
 std::string
-UniswapV2PairV2DTO::getTrackedReserveEth()
+UniswapV2.PairV2DTO::getTrackedReserveEth()
 {
 	return tracked_reserve_eth;
 }
 
 void
-UniswapV2PairV2DTO::setTrackedReserveEth(std::string  tracked_reserve_eth)
+UniswapV2.PairV2DTO::setTrackedReserveEth(std::string  tracked_reserve_eth)
 {
 	this->tracked_reserve_eth = tracked_reserve_eth;
 }
 
 std::string
-UniswapV2PairV2DTO::getToken0Price()
+UniswapV2.PairV2DTO::getToken0Price()
 {
 	return token_0_price;
 }
 
 void
-UniswapV2PairV2DTO::setToken0Price(std::string  token_0_price)
+UniswapV2.PairV2DTO::setToken0Price(std::string  token_0_price)
 {
 	this->token_0_price = token_0_price;
 }
 
 std::string
-UniswapV2PairV2DTO::getToken1Price()
+UniswapV2.PairV2DTO::getToken1Price()
 {
 	return token_1_price;
 }
 
 void
-UniswapV2PairV2DTO::setToken1Price(std::string  token_1_price)
+UniswapV2.PairV2DTO::setToken1Price(std::string  token_1_price)
 {
 	this->token_1_price = token_1_price;
 }
 
 std::string
-UniswapV2PairV2DTO::getVolumeToken0()
+UniswapV2.PairV2DTO::getVolumeToken0()
 {
 	return volume_token_0;
 }
 
 void
-UniswapV2PairV2DTO::setVolumeToken0(std::string  volume_token_0)
+UniswapV2.PairV2DTO::setVolumeToken0(std::string  volume_token_0)
 {
 	this->volume_token_0 = volume_token_0;
 }
 
 std::string
-UniswapV2PairV2DTO::getVolumeToken1()
+UniswapV2.PairV2DTO::getVolumeToken1()
 {
 	return volume_token_1;
 }
 
 void
-UniswapV2PairV2DTO::setVolumeToken1(std::string  volume_token_1)
+UniswapV2.PairV2DTO::setVolumeToken1(std::string  volume_token_1)
 {
 	this->volume_token_1 = volume_token_1;
 }
 
 std::string
-UniswapV2PairV2DTO::getVolumeUsd()
+UniswapV2.PairV2DTO::getVolumeUsd()
 {
 	return volume_usd;
 }
 
 void
-UniswapV2PairV2DTO::setVolumeUsd(std::string  volume_usd)
+UniswapV2.PairV2DTO::setVolumeUsd(std::string  volume_usd)
 {
 	this->volume_usd = volume_usd;
 }
 
 std::string
-UniswapV2PairV2DTO::getUntrackedVolumeUsd()
+UniswapV2.PairV2DTO::getUntrackedVolumeUsd()
 {
 	return untracked_volume_usd;
 }
 
 void
-UniswapV2PairV2DTO::setUntrackedVolumeUsd(std::string  untracked_volume_usd)
+UniswapV2.PairV2DTO::setUntrackedVolumeUsd(std::string  untracked_volume_usd)
 {
 	this->untracked_volume_usd = untracked_volume_usd;
 }
 
-NumericsBigInteger
-UniswapV2PairV2DTO::getTxCount()
+Numerics.BigInteger
+UniswapV2.PairV2DTO::getTxCount()
 {
 	return tx_count;
 }
 
 void
-UniswapV2PairV2DTO::setTxCount(NumericsBigInteger  tx_count)
+UniswapV2.PairV2DTO::setTxCount(Numerics.BigInteger  tx_count)
 {
 	this->tx_count = tx_count;
 }
 
 std::string
-UniswapV2PairV2DTO::getCreatedAtTimestamp()
+UniswapV2.PairV2DTO::getCreatedAtTimestamp()
 {
 	return created_at_timestamp;
 }
 
 void
-UniswapV2PairV2DTO::setCreatedAtTimestamp(std::string  created_at_timestamp)
+UniswapV2.PairV2DTO::setCreatedAtTimestamp(std::string  created_at_timestamp)
 {
 	this->created_at_timestamp = created_at_timestamp;
 }
 
 std::string
-UniswapV2PairV2DTO::getLiquidityProviderCount()
+UniswapV2.PairV2DTO::getLiquidityProviderCount()
 {
 	return liquidity_provider_count;
 }
 
 void
-UniswapV2PairV2DTO::setLiquidityProviderCount(std::string  liquidity_provider_count)
+UniswapV2.PairV2DTO::setLiquidityProviderCount(std::string  liquidity_provider_count)
 {
 	this->liquidity_provider_count = liquidity_provider_count;
 }
 
 double
-UniswapV2PairV2DTO::getEvaluatedAsk()
+UniswapV2.PairV2DTO::getEvaluatedAsk()
 {
 	return evaluated_ask;
 }
 
 void
-UniswapV2PairV2DTO::setEvaluatedAsk(double  evaluated_ask)
+UniswapV2.PairV2DTO::setEvaluatedAsk(double  evaluated_ask)
 {
 	this->evaluated_ask = evaluated_ask;
 }

@@ -24,7 +24,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 
 /**
- * Gets or Sets TransactionsETradeAggressiveSide
+ * Gets or Sets Transactions.ETradeAggressiveSide
  */
 @JsonAdapter(TransactionsETradeAggressiveSide.Adapter.class)
 public enum TransactionsETradeAggressiveSide {

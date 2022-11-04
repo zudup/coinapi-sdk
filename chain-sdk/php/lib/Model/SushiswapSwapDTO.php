@@ -51,7 +51,7 @@ class SushiswapSwapDTO implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'SushiswapSwapDTO';
+    protected static $openAPIModelName = 'Sushiswap.SwapDTO';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

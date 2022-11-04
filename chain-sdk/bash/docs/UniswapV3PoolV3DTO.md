@@ -1,4 +1,4 @@
-# UniswapV3PoolV3DTO
+# UniswapV3.PoolV3DTO
 
 ## Properties
 Name | Type | Description | Notes

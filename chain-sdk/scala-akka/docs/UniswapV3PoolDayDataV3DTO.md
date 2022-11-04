@@ -1,6 +1,6 @@
 
 
-# UniswapV3PoolDayDataV3DTO
+# PoolDayDataV3DTO
 
 Data accumulated and condensed into day stats for each pool.
 

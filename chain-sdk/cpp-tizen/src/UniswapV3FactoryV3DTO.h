@@ -1,11 +1,11 @@
 /*
- * UniswapV3FactoryV3DTO.h
+ * UniswapV3.FactoryV3DTO.h
  *
  * The Uniswap Factory entity is responsible for storing aggregate information across all Uniswap pairs. It can be used to view stats about total liquidity, volume, amount of pairs and more.
  */
 
-#ifndef _UniswapV3FactoryV3DTO_H_
-#define _UniswapV3FactoryV3DTO_H_
+#ifndef _UniswapV3.FactoryV3DTO_H_
+#define _UniswapV3.FactoryV3DTO_H_
 
 
 #include <string>
@@ -26,16 +26,16 @@ namespace ArtikCloud {
  *
  */
 
-class UniswapV3FactoryV3DTO : public Object {
+class UniswapV3.FactoryV3DTO : public Object {
 public:
 	/*! \brief Constructor.
 	 */
-	UniswapV3FactoryV3DTO();
-	UniswapV3FactoryV3DTO(char* str);
+	UniswapV3.FactoryV3DTO();
+	UniswapV3.FactoryV3DTO(char* str);
 
 	/*! \brief Destructor.
 	 */
-	virtual ~UniswapV3FactoryV3DTO();
+	virtual ~UniswapV3.FactoryV3DTO();
 
 	/*! \brief Retrieve a string JSON representation of this class.
 	 */
@@ -190,4 +190,4 @@ private:
 }
 }
 
-#endif /* _UniswapV3FactoryV3DTO_H_ */
+#endif /* _UniswapV3.FactoryV3DTO_H_ */

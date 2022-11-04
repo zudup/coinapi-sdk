@@ -1,15 +1,15 @@
 /*
- * UniswapV3PoolV3DTO.h
+ * UniswapV3.PoolV3DTO.h
  *
  * Information about a pool. Includes references to each token within the pool, volume information, liquidity information, and more. The pool entity mirrors the pool smart contract, and also contains aggregated information about use.
  */
 
-#ifndef _UniswapV3PoolV3DTO_H_
-#define _UniswapV3PoolV3DTO_H_
+#ifndef _UniswapV3.PoolV3DTO_H_
+#define _UniswapV3.PoolV3DTO_H_
 
 
 #include <string>
-#include "NumericsBigInteger.h"
+#include "Numerics.BigInteger.h"
 #include "Object.h"
 
 /** \defgroup Models Data Structures for API
@@ -27,16 +27,16 @@ namespace ArtikCloud {
  *
  */
 
-class UniswapV3PoolV3DTO : public Object {
+class UniswapV3.PoolV3DTO : public Object {
 public:
 	/*! \brief Constructor.
 	 */
-	UniswapV3PoolV3DTO();
-	UniswapV3PoolV3DTO(char* str);
+	UniswapV3.PoolV3DTO();
+	UniswapV3.PoolV3DTO(char* str);
 
 	/*! \brief Destructor.
 	 */
-	virtual ~UniswapV3PoolV3DTO();
+	virtual ~UniswapV3.PoolV3DTO();
 
 	/*! \brief Retrieve a string JSON representation of this class.
 	 */
@@ -104,39 +104,39 @@ public:
 	void setToken1(std::string  token_1);
 	/*! \brief Get 
 	 */
-	NumericsBigInteger getFeeTier();
+	Numerics.BigInteger getFeeTier();
 
 	/*! \brief Set 
 	 */
-	void setFeeTier(NumericsBigInteger  fee_tier);
+	void setFeeTier(Numerics.BigInteger  fee_tier);
 	/*! \brief Get 
 	 */
-	NumericsBigInteger getLiquidity();
+	Numerics.BigInteger getLiquidity();
 
 	/*! \brief Set 
 	 */
-	void setLiquidity(NumericsBigInteger  liquidity);
+	void setLiquidity(Numerics.BigInteger  liquidity);
 	/*! \brief Get 
 	 */
-	NumericsBigInteger getSqrtPrice();
+	Numerics.BigInteger getSqrtPrice();
 
 	/*! \brief Set 
 	 */
-	void setSqrtPrice(NumericsBigInteger  sqrt_price);
+	void setSqrtPrice(Numerics.BigInteger  sqrt_price);
 	/*! \brief Get 
 	 */
-	NumericsBigInteger getFeeGrowthGlobal0x128();
+	Numerics.BigInteger getFeeGrowthGlobal0x128();
 
 	/*! \brief Set 
 	 */
-	void setFeeGrowthGlobal0x128(NumericsBigInteger  fee_growth_global_0x128);
+	void setFeeGrowthGlobal0x128(Numerics.BigInteger  fee_growth_global_0x128);
 	/*! \brief Get 
 	 */
-	NumericsBigInteger getFeeGrowthGlobal1x128();
+	Numerics.BigInteger getFeeGrowthGlobal1x128();
 
 	/*! \brief Set 
 	 */
-	void setFeeGrowthGlobal1x128(NumericsBigInteger  fee_growth_global_1x128);
+	void setFeeGrowthGlobal1x128(Numerics.BigInteger  fee_growth_global_1x128);
 	/*! \brief Get Token0 per token1.
 	 */
 	std::string getToken0Price();
@@ -153,18 +153,18 @@ public:
 	void setToken1Price(std::string  token_1_price);
 	/*! \brief Get 
 	 */
-	NumericsBigInteger getTick();
+	Numerics.BigInteger getTick();
 
 	/*! \brief Set 
 	 */
-	void setTick(NumericsBigInteger  tick);
+	void setTick(Numerics.BigInteger  tick);
 	/*! \brief Get 
 	 */
-	NumericsBigInteger getObservationIndex();
+	Numerics.BigInteger getObservationIndex();
 
 	/*! \brief Set 
 	 */
-	void setObservationIndex(NumericsBigInteger  observation_index);
+	void setObservationIndex(Numerics.BigInteger  observation_index);
 	/*! \brief Get All time token0 swapped.
 	 */
 	std::string getVolumeToken0();
@@ -202,11 +202,11 @@ public:
 	void setFeesUsd(std::string  fees_usd);
 	/*! \brief Get 
 	 */
-	NumericsBigInteger getTxCount();
+	Numerics.BigInteger getTxCount();
 
 	/*! \brief Set 
 	 */
-	void setTxCount(NumericsBigInteger  tx_count);
+	void setTxCount(Numerics.BigInteger  tx_count);
 	/*! \brief Get All time fees collected token0.
 	 */
 	std::string getCollectedFeesToken0();
@@ -287,21 +287,21 @@ private:
 	std::string created_at_timestamp;
 	std::string token_0;
 	std::string token_1;
-	NumericsBigInteger fee_tier;
-	NumericsBigInteger liquidity;
-	NumericsBigInteger sqrt_price;
-	NumericsBigInteger fee_growth_global_0x128;
-	NumericsBigInteger fee_growth_global_1x128;
+	Numerics.BigInteger fee_tier;
+	Numerics.BigInteger liquidity;
+	Numerics.BigInteger sqrt_price;
+	Numerics.BigInteger fee_growth_global_0x128;
+	Numerics.BigInteger fee_growth_global_1x128;
 	std::string token_0_price;
 	std::string token_1_price;
-	NumericsBigInteger tick;
-	NumericsBigInteger observation_index;
+	Numerics.BigInteger tick;
+	Numerics.BigInteger observation_index;
 	std::string volume_token_0;
 	std::string volume_token_1;
 	std::string volume_usd;
 	std::string untracked_volume_usd;
 	std::string fees_usd;
-	NumericsBigInteger tx_count;
+	Numerics.BigInteger tx_count;
 	std::string collected_fees_token_0;
 	std::string collected_fees_token_1;
 	std::string collected_fees_usd;
@@ -319,4 +319,4 @@ private:
 }
 }
 
-#endif /* _UniswapV3PoolV3DTO_H_ */
+#endif /* _UniswapV3.PoolV3DTO_H_ */

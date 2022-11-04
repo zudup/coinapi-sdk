@@ -1,4 +1,4 @@
-# UniswapV3BurnV3DTO
+# UniswapV3.BurnV3DTO
 
 ## Properties
 Name | Type | Description | Notes

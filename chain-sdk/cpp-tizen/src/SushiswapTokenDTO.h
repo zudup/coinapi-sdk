@@ -1,11 +1,11 @@
 /*
- * SushiswapTokenDTO.h
+ * Sushiswap.TokenDTO.h
  *
  * Stores aggregated information for a specific token across all pairs that token is included in.
  */
 
-#ifndef _SushiswapTokenDTO_H_
-#define _SushiswapTokenDTO_H_
+#ifndef _Sushiswap.TokenDTO_H_
+#define _Sushiswap.TokenDTO_H_
 
 
 #include <string>
@@ -27,16 +27,16 @@ namespace ArtikCloud {
  *
  */
 
-class SushiswapTokenDTO : public Object {
+class Sushiswap.TokenDTO : public Object {
 public:
 	/*! \brief Constructor.
 	 */
-	SushiswapTokenDTO();
-	SushiswapTokenDTO(char* str);
+	Sushiswap.TokenDTO();
+	Sushiswap.TokenDTO(char* str);
 
 	/*! \brief Destructor.
 	 */
-	virtual ~SushiswapTokenDTO();
+	virtual ~Sushiswap.TokenDTO();
 
 	/*! \brief Retrieve a string JSON representation of this class.
 	 */
@@ -199,4 +199,4 @@ private:
 }
 }
 
-#endif /* _SushiswapTokenDTO_H_ */
+#endif /* _Sushiswap.TokenDTO_H_ */

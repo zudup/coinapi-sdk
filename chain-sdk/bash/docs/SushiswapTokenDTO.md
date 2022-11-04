@@ -1,4 +1,4 @@
-# SushiswapTokenDTO
+# Sushiswap.TokenDTO
 
 ## Properties
 Name | Type | Description | Notes

@@ -11,7 +11,7 @@
  */
 
 /**
- * Gets or Sets TransactionsETradeAggressiveSide
+ * Gets or Sets Transactions.ETradeAggressiveSide
  */
 public enum OASTransactionsETradeAggressiveSide {
     BUY,

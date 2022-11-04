@@ -1,11 +1,11 @@
 /*
- * NumericsBigInteger.h
+ * Numerics.BigInteger.h
  *
  * 
  */
 
-#ifndef _NumericsBigInteger_H_
-#define _NumericsBigInteger_H_
+#ifndef _Numerics.BigInteger_H_
+#define _Numerics.BigInteger_H_
 
 
 #include <string>
@@ -26,16 +26,16 @@ namespace ArtikCloud {
  *
  */
 
-class NumericsBigInteger : public Object {
+class Numerics.BigInteger : public Object {
 public:
 	/*! \brief Constructor.
 	 */
-	NumericsBigInteger();
-	NumericsBigInteger(char* str);
+	Numerics.BigInteger();
+	Numerics.BigInteger(char* str);
 
 	/*! \brief Destructor.
 	 */
-	virtual ~NumericsBigInteger();
+	virtual ~Numerics.BigInteger();
 
 	/*! \brief Retrieve a string JSON representation of this class.
 	 */
@@ -94,4 +94,4 @@ private:
 }
 }
 
-#endif /* _NumericsBigInteger_H_ */
+#endif /* _Numerics.BigInteger_H_ */

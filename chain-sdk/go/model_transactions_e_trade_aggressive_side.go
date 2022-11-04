@@ -19,7 +19,7 @@ import (
 // TransactionsETradeAggressiveSide the model 'TransactionsETradeAggressiveSide'
 type TransactionsETradeAggressiveSide string
 
-// List of TransactionsETradeAggressiveSide
+// List of Transactions.ETradeAggressiveSide
 const (
 	BUY TransactionsETradeAggressiveSide = "Buy"
 	SELL TransactionsETradeAggressiveSide = "Sell"
@@ -75,7 +75,7 @@ func (v TransactionsETradeAggressiveSide) IsValid() bool {
 	return false
 }
 
-// Ptr returns reference to TransactionsETradeAggressiveSide value
+// Ptr returns reference to Transactions.ETradeAggressiveSide value
 func (v TransactionsETradeAggressiveSide) Ptr() *TransactionsETradeAggressiveSide {
 	return &v
 }

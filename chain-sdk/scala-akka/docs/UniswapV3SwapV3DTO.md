@@ -1,6 +1,6 @@
 
 
-# UniswapV3SwapV3DTO
+# SwapV3DTO
 
 Swap are created for each token swap within a pair.
 
@@ -24,12 +24,12 @@ Name | Type | Description | Notes
 **amount0** | **String** | Delta of token0 swapped. |  [optional]
 **amount1** | **String** | Delta of token1 swapped. |  [optional]
 **amountUsd** | **String** | Derived amount of tokens sold in USD. |  [optional]
-**sqrtPriceX96** | [**NumericsBigInteger**](NumericsBigInteger.md) |  |  [optional]
-**tick** | [**NumericsBigInteger**](NumericsBigInteger.md) |  |  [optional]
-**logIndex** | [**NumericsBigInteger**](NumericsBigInteger.md) |  |  [optional]
+**sqrtPriceX96** | [**BigInteger**](BigInteger.md) |  |  [optional]
+**tick** | [**BigInteger**](BigInteger.md) |  |  [optional]
+**logIndex** | [**BigInteger**](BigInteger.md) |  |  [optional]
 **evaluatedPrice** | **Double** |  |  [optional] [readonly]
 **evaluatedAmount** | **Double** |  |  [optional] [readonly]
-**evaluatedAggressor** | **TransactionsETradeAggressiveSide** |  |  [optional]
+**evaluatedAggressor** | **ETradeAggressiveSide** |  |  [optional]
 **poolId** | **String** |  |  [optional] [readonly]
 **transactionId** | **String** |  |  [optional] [readonly]
 

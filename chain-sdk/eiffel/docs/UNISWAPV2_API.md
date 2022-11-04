@@ -324,7 +324,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LIST [UNISWAP_V2_PAIR_V2_DTO]**](UniswapV2PairV2DTO.md)
+[**LIST [UNISWAP_V2_PAIR_V2_DTO]**](UniswapV2.PairV2DTO.md)
 
 ### Authorization
 
@@ -381,7 +381,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**LIST [UNISWAP_V2_SWAP_V2_DTO]**](UniswapV2SwapV2DTO.md)
+[**LIST [UNISWAP_V2_SWAP_V2_DTO]**](UniswapV2.SwapV2DTO.md)
 
 ### Authorization
 
@@ -470,7 +470,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**LIST [UNISWAP_V2_TOKEN_V2_DTO]**](UniswapV2TokenV2DTO.md)
+[**LIST [UNISWAP_V2_TOKEN_V2_DTO]**](UniswapV2.TokenV2DTO.md)
 
 ### Authorization
 

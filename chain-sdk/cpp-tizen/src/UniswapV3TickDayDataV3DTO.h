@@ -1,11 +1,11 @@
 /*
- * UniswapV3TickDayDataV3DTO.h
+ * UniswapV3.TickDayDataV3DTO.h
  *
  * Data accumulated and condensed into day stats for each exchange. Entity gets saved only if there is a change during the day
  */
 
-#ifndef _UniswapV3TickDayDataV3DTO_H_
-#define _UniswapV3TickDayDataV3DTO_H_
+#ifndef _UniswapV3.TickDayDataV3DTO_H_
+#define _UniswapV3.TickDayDataV3DTO_H_
 
 
 #include <string>
@@ -26,16 +26,16 @@ namespace ArtikCloud {
  *
  */
 
-class UniswapV3TickDayDataV3DTO : public Object {
+class UniswapV3.TickDayDataV3DTO : public Object {
 public:
 	/*! \brief Constructor.
 	 */
-	UniswapV3TickDayDataV3DTO();
-	UniswapV3TickDayDataV3DTO(char* str);
+	UniswapV3.TickDayDataV3DTO();
+	UniswapV3.TickDayDataV3DTO(char* str);
 
 	/*! \brief Destructor.
 	 */
-	virtual ~UniswapV3TickDayDataV3DTO();
+	virtual ~UniswapV3.TickDayDataV3DTO();
 
 	/*! \brief Retrieve a string JSON representation of this class.
 	 */
@@ -182,4 +182,4 @@ private:
 }
 }
 
-#endif /* _UniswapV3TickDayDataV3DTO_H_ */
+#endif /* _UniswapV3.TickDayDataV3DTO_H_ */

@@ -1,4 +1,4 @@
-goog.provide('API.Client.UniswapV3PoolHourDataV3DTO');
+goog.provide('API.Client.UniswapV3.PoolHourDataV3DTO');
 
 /**
  * Hourly stats tracker for pool.

@@ -523,7 +523,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**array[SushiswapPairDTO]**](SushiswapPairDTO.md)
+[**array[SushiswapPairDTO]**](Sushiswap.PairDTO.md)
 
 ### Authorization
 
@@ -576,7 +576,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**array[SushiswapPairDTO]**](SushiswapPairDTO.md)
+[**array[SushiswapPairDTO]**](Sushiswap.PairDTO.md)
 
 ### Authorization
 
@@ -616,7 +616,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**array[SushiswapSwapDTO]**](SushiswapSwapDTO.md)
+[**array[SushiswapSwapDTO]**](Sushiswap.SwapDTO.md)
 
 ### Authorization
 
@@ -669,7 +669,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**array[SushiswapSwapDTO]**](SushiswapSwapDTO.md)
+[**array[SushiswapSwapDTO]**](Sushiswap.SwapDTO.md)
 
 ### Authorization
 
@@ -757,7 +757,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**array[SushiswapTokenDTO]**](SushiswapTokenDTO.md)
+[**array[SushiswapTokenDTO]**](Sushiswap.TokenDTO.md)
 
 ### Authorization
 
@@ -810,7 +810,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**array[SushiswapTokenDTO]**](SushiswapTokenDTO.md)
+[**array[SushiswapTokenDTO]**](Sushiswap.TokenDTO.md)
 
 ### Authorization
 

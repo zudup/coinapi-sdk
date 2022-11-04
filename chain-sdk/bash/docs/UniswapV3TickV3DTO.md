@@ -1,4 +1,4 @@
-# UniswapV3TickV3DTO
+# UniswapV3.TickV3DTO
 
 ## Properties
 Name | Type | Description | Notes

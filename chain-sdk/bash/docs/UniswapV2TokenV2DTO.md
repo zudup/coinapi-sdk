@@ -1,4 +1,4 @@
-# UniswapV2TokenV2DTO
+# UniswapV2.TokenV2DTO
 
 ## Properties
 Name | Type | Description | Notes

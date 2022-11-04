@@ -837,7 +837,7 @@ No authorization required
 
 ## dappsUniswapv2PoolsCurrentGet
 
-> dappsUniswapv2PoolsCurrentGet(dappsUniswapv2PoolsCurrentGetRequest): ApiRequest[Seq[UniswapV2PairV2DTO]]
+> dappsUniswapv2PoolsCurrentGet(dappsUniswapv2PoolsCurrentGetRequest): ApiRequest[Seq[PairV2DTO]]
 
 GetPools
 
@@ -895,7 +895,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-ApiRequest[[**Seq[UniswapV2PairV2DTO]**](UniswapV2PairV2DTO.md)]
+ApiRequest[[**Seq[PairV2DTO]**](PairV2DTO.md)]
 
 
 ### Authorization
@@ -1004,7 +1004,7 @@ No authorization required
 
 ## dappsUniswapv2SwapsCurrentGet
 
-> dappsUniswapv2SwapsCurrentGet(): ApiRequest[Seq[UniswapV2SwapV2DTO]]
+> dappsUniswapv2SwapsCurrentGet(): ApiRequest[Seq[SwapV2DTO]]
 
 GetSwaps
 
@@ -1057,7 +1057,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-ApiRequest[[**Seq[UniswapV2SwapV2DTO]**](UniswapV2SwapV2DTO.md)]
+ApiRequest[[**Seq[SwapV2DTO]**](SwapV2DTO.md)]
 
 
 ### Authorization
@@ -1255,7 +1255,7 @@ No authorization required
 
 ## dappsUniswapv2TokensCurrentGet
 
-> dappsUniswapv2TokensCurrentGet(): ApiRequest[Seq[UniswapV2TokenV2DTO]]
+> dappsUniswapv2TokensCurrentGet(): ApiRequest[Seq[TokenV2DTO]]
 
 GetTokens
 
@@ -1308,7 +1308,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-ApiRequest[[**Seq[UniswapV2TokenV2DTO]**](UniswapV2TokenV2DTO.md)]
+ApiRequest[[**Seq[TokenV2DTO]**](TokenV2DTO.md)]
 
 
 ### Authorization

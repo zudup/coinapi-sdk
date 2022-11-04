@@ -1,6 +1,6 @@
 
 
-# UniswapV2PairV2DTO
+# PairV2DTO
 
 Information about a pair. Includes references to each token within the pair, volume information, liquidity information, and more. The pair entity mirrors the pair smart contract, and also contains aggregated information about use.
 
@@ -27,7 +27,7 @@ Name | Type | Description | Notes
 **volumeToken1** | **String** | Amount of token1 swapped on this pair. |  [optional]
 **volumeUsd** | **String** | Total amount swapped all time in this pair stored in USD (only tracked if USD liquidity is above minimum threshold). |  [optional]
 **untrackedVolumeUsd** | **String** | Total amount swapped all time in this pair stored in USD, no minimum liquidity threshold. |  [optional]
-**txCount** | [**NumericsBigInteger**](NumericsBigInteger.md) |  |  [optional]
+**txCount** | [**BigInteger**](BigInteger.md) |  |  [optional]
 **createdAtTimestamp** | **OffsetDateTime** | Timestamp contract was created. |  [optional]
 **liquidityProviderCount** | **String** | Total number of LPs. |  [optional]
 **evaluatedAsk** | **Double** |  |  [optional] [readonly]

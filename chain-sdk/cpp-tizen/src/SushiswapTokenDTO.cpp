@@ -5,23 +5,23 @@
 #include "Helpers.h"
 
 
-#include "SushiswapTokenDTO.h"
+#include "Sushiswap.TokenDTO.h"
 
 using namespace std;
 using namespace Tizen::ArtikCloud;
 
-SushiswapTokenDTO::SushiswapTokenDTO()
+Sushiswap.TokenDTO::Sushiswap.TokenDTO()
 {
 	//__init();
 }
 
-SushiswapTokenDTO::~SushiswapTokenDTO()
+Sushiswap.TokenDTO::~Sushiswap.TokenDTO()
 {
 	//__cleanup();
 }
 
 void
-SushiswapTokenDTO::__init()
+Sushiswap.TokenDTO::__init()
 {
 	//entry_time = null;
 	//recv_time = null;
@@ -44,7 +44,7 @@ SushiswapTokenDTO::__init()
 }
 
 void
-SushiswapTokenDTO::__cleanup()
+Sushiswap.TokenDTO::__cleanup()
 {
 	//if(entry_time != NULL) {
 	//
@@ -140,7 +140,7 @@ SushiswapTokenDTO::__cleanup()
 }
 
 void
-SushiswapTokenDTO::fromJson(char* jsonStr)
+Sushiswap.TokenDTO::fromJson(char* jsonStr)
 {
 	JsonObject *pJsonObject = json_node_get_object(json_from_string(jsonStr,NULL));
 	JsonNode *node;
@@ -355,13 +355,13 @@ SushiswapTokenDTO::fromJson(char* jsonStr)
 	}
 }
 
-SushiswapTokenDTO::SushiswapTokenDTO(char* json)
+Sushiswap.TokenDTO::Sushiswap.TokenDTO(char* json)
 {
 	this->fromJson(json);
 }
 
 char*
-SushiswapTokenDTO::toJson()
+Sushiswap.TokenDTO::toJson()
 {
 	JsonObject *pJsonObject = json_object_new();
 	JsonNode *node;
@@ -542,217 +542,217 @@ SushiswapTokenDTO::toJson()
 }
 
 std::string
-SushiswapTokenDTO::getEntryTime()
+Sushiswap.TokenDTO::getEntryTime()
 {
 	return entry_time;
 }
 
 void
-SushiswapTokenDTO::setEntryTime(std::string  entry_time)
+Sushiswap.TokenDTO::setEntryTime(std::string  entry_time)
 {
 	this->entry_time = entry_time;
 }
 
 std::string
-SushiswapTokenDTO::getRecvTime()
+Sushiswap.TokenDTO::getRecvTime()
 {
 	return recv_time;
 }
 
 void
-SushiswapTokenDTO::setRecvTime(std::string  recv_time)
+Sushiswap.TokenDTO::setRecvTime(std::string  recv_time)
 {
 	this->recv_time = recv_time;
 }
 
 long long
-SushiswapTokenDTO::getBlockNumber()
+Sushiswap.TokenDTO::getBlockNumber()
 {
 	return block_number;
 }
 
 void
-SushiswapTokenDTO::setBlockNumber(long long  block_number)
+Sushiswap.TokenDTO::setBlockNumber(long long  block_number)
 {
 	this->block_number = block_number;
 }
 
 std::string
-SushiswapTokenDTO::getId()
+Sushiswap.TokenDTO::getId()
 {
 	return id;
 }
 
 void
-SushiswapTokenDTO::setId(std::string  id)
+Sushiswap.TokenDTO::setId(std::string  id)
 {
 	this->id = id;
 }
 
 std::string
-SushiswapTokenDTO::getFactory()
+Sushiswap.TokenDTO::getFactory()
 {
 	return factory;
 }
 
 void
-SushiswapTokenDTO::setFactory(std::string  factory)
+Sushiswap.TokenDTO::setFactory(std::string  factory)
 {
 	this->factory = factory;
 }
 
 std::string
-SushiswapTokenDTO::getSymbol()
+Sushiswap.TokenDTO::getSymbol()
 {
 	return symbol;
 }
 
 void
-SushiswapTokenDTO::setSymbol(std::string  symbol)
+Sushiswap.TokenDTO::setSymbol(std::string  symbol)
 {
 	this->symbol = symbol;
 }
 
 std::string
-SushiswapTokenDTO::getName()
+Sushiswap.TokenDTO::getName()
 {
 	return name;
 }
 
 void
-SushiswapTokenDTO::setName(std::string  name)
+Sushiswap.TokenDTO::setName(std::string  name)
 {
 	this->name = name;
 }
 
 std::string
-SushiswapTokenDTO::getDecimals()
+Sushiswap.TokenDTO::getDecimals()
 {
 	return decimals;
 }
 
 void
-SushiswapTokenDTO::setDecimals(std::string  decimals)
+Sushiswap.TokenDTO::setDecimals(std::string  decimals)
 {
 	this->decimals = decimals;
 }
 
 std::string
-SushiswapTokenDTO::getTotalSupply()
+Sushiswap.TokenDTO::getTotalSupply()
 {
 	return total_supply;
 }
 
 void
-SushiswapTokenDTO::setTotalSupply(std::string  total_supply)
+Sushiswap.TokenDTO::setTotalSupply(std::string  total_supply)
 {
 	this->total_supply = total_supply;
 }
 
 std::string
-SushiswapTokenDTO::getVolume()
+Sushiswap.TokenDTO::getVolume()
 {
 	return volume;
 }
 
 void
-SushiswapTokenDTO::setVolume(std::string  volume)
+Sushiswap.TokenDTO::setVolume(std::string  volume)
 {
 	this->volume = volume;
 }
 
 std::string
-SushiswapTokenDTO::getVolumeUsd()
+Sushiswap.TokenDTO::getVolumeUsd()
 {
 	return volume_usd;
 }
 
 void
-SushiswapTokenDTO::setVolumeUsd(std::string  volume_usd)
+Sushiswap.TokenDTO::setVolumeUsd(std::string  volume_usd)
 {
 	this->volume_usd = volume_usd;
 }
 
 std::string
-SushiswapTokenDTO::getUntrackedVolumeUsd()
+Sushiswap.TokenDTO::getUntrackedVolumeUsd()
 {
 	return untracked_volume_usd;
 }
 
 void
-SushiswapTokenDTO::setUntrackedVolumeUsd(std::string  untracked_volume_usd)
+Sushiswap.TokenDTO::setUntrackedVolumeUsd(std::string  untracked_volume_usd)
 {
 	this->untracked_volume_usd = untracked_volume_usd;
 }
 
 std::string
-SushiswapTokenDTO::getTxCount()
+Sushiswap.TokenDTO::getTxCount()
 {
 	return tx_count;
 }
 
 void
-SushiswapTokenDTO::setTxCount(std::string  tx_count)
+Sushiswap.TokenDTO::setTxCount(std::string  tx_count)
 {
 	this->tx_count = tx_count;
 }
 
 std::string
-SushiswapTokenDTO::getLiquidity()
+Sushiswap.TokenDTO::getLiquidity()
 {
 	return liquidity;
 }
 
 void
-SushiswapTokenDTO::setLiquidity(std::string  liquidity)
+Sushiswap.TokenDTO::setLiquidity(std::string  liquidity)
 {
 	this->liquidity = liquidity;
 }
 
 std::string
-SushiswapTokenDTO::getDerivedEth()
+Sushiswap.TokenDTO::getDerivedEth()
 {
 	return derived_eth;
 }
 
 void
-SushiswapTokenDTO::setDerivedEth(std::string  derived_eth)
+Sushiswap.TokenDTO::setDerivedEth(std::string  derived_eth)
 {
 	this->derived_eth = derived_eth;
 }
 
 std::list<std::string>
-SushiswapTokenDTO::getWhitelistPairs()
+Sushiswap.TokenDTO::getWhitelistPairs()
 {
 	return whitelist_pairs;
 }
 
 void
-SushiswapTokenDTO::setWhitelistPairs(std::list <std::string> whitelist_pairs)
+Sushiswap.TokenDTO::setWhitelistPairs(std::list <std::string> whitelist_pairs)
 {
 	this->whitelist_pairs = whitelist_pairs;
 }
 
 long long
-SushiswapTokenDTO::getVid()
+Sushiswap.TokenDTO::getVid()
 {
 	return vid;
 }
 
 void
-SushiswapTokenDTO::setVid(long long  vid)
+Sushiswap.TokenDTO::setVid(long long  vid)
 {
 	this->vid = vid;
 }
 
 std::string
-SushiswapTokenDTO::getTokenSymbol()
+Sushiswap.TokenDTO::getTokenSymbol()
 {
 	return token_symbol;
 }
 
 void
-SushiswapTokenDTO::setTokenSymbol(std::string  token_symbol)
+Sushiswap.TokenDTO::setTokenSymbol(std::string  token_symbol)
 {
 	this->token_symbol = token_symbol;
 }

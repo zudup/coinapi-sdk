@@ -51,7 +51,7 @@ class UniswapV3PoolDayDataV3DTO implements ModelInterface, ArrayAccess, \JsonSer
       *
       * @var string
       */
-    protected static $openAPIModelName = 'UniswapV3PoolDayDataV3DTO';
+    protected static $openAPIModelName = 'UniswapV3.PoolDayDataV3DTO';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

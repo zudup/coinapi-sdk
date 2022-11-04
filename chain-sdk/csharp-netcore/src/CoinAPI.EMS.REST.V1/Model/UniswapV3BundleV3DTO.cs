@@ -29,7 +29,7 @@ namespace CoinAPI.EMS.REST.V1.Model
     /// <summary>
     /// The Bundle is used as a global store of derived ETH price in USD. This provides a strong estimate for the USD price of ETH.
     /// </summary>
-    [DataContract(Name = "UniswapV3BundleV3DTO")]
+    [DataContract(Name = "UniswapV3.BundleV3DTO")]
     public partial class UniswapV3BundleV3DTO : IEquatable<UniswapV3BundleV3DTO>, IValidatableObject
     {
         /// <summary>

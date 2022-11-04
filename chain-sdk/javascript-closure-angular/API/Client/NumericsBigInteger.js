@@ -1,4 +1,4 @@
-goog.provide('API.Client.NumericsBigInteger');
+goog.provide('API.Client.Numerics.BigInteger');
 
 /**
  * @record

@@ -1,6 +1,6 @@
 
 
-# TransactionsETradeAggressiveSide
+# ETradeAggressiveSide
 
 ## Enum
 

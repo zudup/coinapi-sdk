@@ -1,11 +1,11 @@
 /*
- * UniswapV3BurnV3DTO.h
+ * UniswapV3.BurnV3DTO.h
  *
  * Burn entities are created for every emitted Burn event on the Uniswap core contracts. The Burn entity stores key data about the event like token amounts, who burned, who received tokens, and more. This entity can be used to track liquidity removals on pairs.
  */
 
-#ifndef _UniswapV3BurnV3DTO_H_
-#define _UniswapV3BurnV3DTO_H_
+#ifndef _UniswapV3.BurnV3DTO_H_
+#define _UniswapV3.BurnV3DTO_H_
 
 
 #include <string>
@@ -26,16 +26,16 @@ namespace ArtikCloud {
  *
  */
 
-class UniswapV3BurnV3DTO : public Object {
+class UniswapV3.BurnV3DTO : public Object {
 public:
 	/*! \brief Constructor.
 	 */
-	UniswapV3BurnV3DTO();
-	UniswapV3BurnV3DTO(char* str);
+	UniswapV3.BurnV3DTO();
+	UniswapV3.BurnV3DTO(char* str);
 
 	/*! \brief Destructor.
 	 */
-	virtual ~UniswapV3BurnV3DTO();
+	virtual ~UniswapV3.BurnV3DTO();
 
 	/*! \brief Retrieve a string JSON representation of this class.
 	 */
@@ -206,4 +206,4 @@ private:
 }
 }
 
-#endif /* _UniswapV3BurnV3DTO_H_ */
+#endif /* _UniswapV3.BurnV3DTO_H_ */

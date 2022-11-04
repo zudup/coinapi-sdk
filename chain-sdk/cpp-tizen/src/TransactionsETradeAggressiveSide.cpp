@@ -5,46 +5,46 @@
 #include "Helpers.h"
 
 
-#include "TransactionsETradeAggressiveSide.h"
+#include "Transactions.ETradeAggressiveSide.h"
 
 using namespace std;
 using namespace Tizen::ArtikCloud;
 
-TransactionsETradeAggressiveSide::TransactionsETradeAggressiveSide()
+Transactions.ETradeAggressiveSide::Transactions.ETradeAggressiveSide()
 {
 	//__init();
 }
 
-TransactionsETradeAggressiveSide::~TransactionsETradeAggressiveSide()
+Transactions.ETradeAggressiveSide::~Transactions.ETradeAggressiveSide()
 {
 	//__cleanup();
 }
 
 void
-TransactionsETradeAggressiveSide::__init()
+Transactions.ETradeAggressiveSide::__init()
 {
 }
 
 void
-TransactionsETradeAggressiveSide::__cleanup()
+Transactions.ETradeAggressiveSide::__cleanup()
 {
 	//
 }
 
 void
-TransactionsETradeAggressiveSide::fromJson(char* jsonStr)
+Transactions.ETradeAggressiveSide::fromJson(char* jsonStr)
 {
 	JsonObject *pJsonObject = json_node_get_object(json_from_string(jsonStr,NULL));
 	JsonNode *node;
 }
 
-TransactionsETradeAggressiveSide::TransactionsETradeAggressiveSide(char* json)
+Transactions.ETradeAggressiveSide::Transactions.ETradeAggressiveSide(char* json)
 {
 	this->fromJson(json);
 }
 
 char*
-TransactionsETradeAggressiveSide::toJson()
+Transactions.ETradeAggressiveSide::toJson()
 {
 	JsonObject *pJsonObject = json_object_new();
 	JsonNode *node;

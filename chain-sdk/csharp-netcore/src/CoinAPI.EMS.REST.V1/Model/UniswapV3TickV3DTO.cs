@@ -29,7 +29,7 @@ namespace CoinAPI.EMS.REST.V1.Model
     /// <summary>
     /// Ticks are the boundaries between discrete areas in price space.
     /// </summary>
-    [DataContract(Name = "UniswapV3TickV3DTO")]
+    [DataContract(Name = "UniswapV3.TickV3DTO")]
     public partial class UniswapV3TickV3DTO : IEquatable<UniswapV3TickV3DTO>, IValidatableObject
     {
         /// <summary>

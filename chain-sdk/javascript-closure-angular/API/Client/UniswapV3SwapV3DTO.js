@@ -1,4 +1,4 @@
-goog.provide('API.Client.UniswapV3SwapV3DTO');
+goog.provide('API.Client.UniswapV3.SwapV3DTO');
 
 /**
  * Swap are created for each token swap within a pair.
@@ -117,19 +117,19 @@ API.Client.UniswapV3SwapV3DTO.prototype.amount1;
 API.Client.UniswapV3SwapV3DTO.prototype.amountUsd;
 
 /**
- * @type {!API.Client.NumericsBigInteger}
+ * @type {!API.Client.Numerics.BigInteger}
  * @export
  */
 API.Client.UniswapV3SwapV3DTO.prototype.sqrtPriceX96;
 
 /**
- * @type {!API.Client.NumericsBigInteger}
+ * @type {!API.Client.Numerics.BigInteger}
  * @export
  */
 API.Client.UniswapV3SwapV3DTO.prototype.tick;
 
 /**
- * @type {!API.Client.NumericsBigInteger}
+ * @type {!API.Client.Numerics.BigInteger}
  * @export
  */
 API.Client.UniswapV3SwapV3DTO.prototype.logIndex;
@@ -147,7 +147,7 @@ API.Client.UniswapV3SwapV3DTO.prototype.evaluatedPrice;
 API.Client.UniswapV3SwapV3DTO.prototype.evaluatedAmount;
 
 /**
- * @type {!API.Client.TransactionsETradeAggressiveSide}
+ * @type {!API.Client.Transactions.ETradeAggressiveSide}
  * @export
  */
 API.Client.UniswapV3SwapV3DTO.prototype.evaluatedAggressor;

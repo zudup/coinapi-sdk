@@ -1,11 +1,11 @@
 /*
- * UniswapV3MintV3DTO.h
+ * UniswapV3.MintV3DTO.h
  *
  * Mint entities are created for every emitted Mint event on the Uniswap core contracts. The Mint entity stores key data about the event like token amounts, who sent the transaction, and more.
  */
 
-#ifndef _UniswapV3MintV3DTO_H_
-#define _UniswapV3MintV3DTO_H_
+#ifndef _UniswapV3.MintV3DTO_H_
+#define _UniswapV3.MintV3DTO_H_
 
 
 #include <string>
@@ -26,16 +26,16 @@ namespace ArtikCloud {
  *
  */
 
-class UniswapV3MintV3DTO : public Object {
+class UniswapV3.MintV3DTO : public Object {
 public:
 	/*! \brief Constructor.
 	 */
-	UniswapV3MintV3DTO();
-	UniswapV3MintV3DTO(char* str);
+	UniswapV3.MintV3DTO();
+	UniswapV3.MintV3DTO(char* str);
 
 	/*! \brief Destructor.
 	 */
-	virtual ~UniswapV3MintV3DTO();
+	virtual ~UniswapV3.MintV3DTO();
 
 	/*! \brief Retrieve a string JSON representation of this class.
 	 */
@@ -214,4 +214,4 @@ private:
 }
 }
 
-#endif /* _UniswapV3MintV3DTO_H_ */
+#endif /* _UniswapV3.MintV3DTO_H_ */

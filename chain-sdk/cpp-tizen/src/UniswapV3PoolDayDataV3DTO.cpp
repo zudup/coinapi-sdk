@@ -5,23 +5,23 @@
 #include "Helpers.h"
 
 
-#include "UniswapV3PoolDayDataV3DTO.h"
+#include "UniswapV3.PoolDayDataV3DTO.h"
 
 using namespace std;
 using namespace Tizen::ArtikCloud;
 
-UniswapV3PoolDayDataV3DTO::UniswapV3PoolDayDataV3DTO()
+UniswapV3.PoolDayDataV3DTO::UniswapV3.PoolDayDataV3DTO()
 {
 	//__init();
 }
 
-UniswapV3PoolDayDataV3DTO::~UniswapV3PoolDayDataV3DTO()
+UniswapV3.PoolDayDataV3DTO::~UniswapV3.PoolDayDataV3DTO()
 {
 	//__cleanup();
 }
 
 void
-UniswapV3PoolDayDataV3DTO::__init()
+UniswapV3.PoolDayDataV3DTO::__init()
 {
 	//entry_time = null;
 	//recv_time = null;
@@ -50,7 +50,7 @@ UniswapV3PoolDayDataV3DTO::__init()
 }
 
 void
-UniswapV3PoolDayDataV3DTO::__cleanup()
+UniswapV3.PoolDayDataV3DTO::__cleanup()
 {
 	//if(entry_time != NULL) {
 	//
@@ -176,7 +176,7 @@ UniswapV3PoolDayDataV3DTO::__cleanup()
 }
 
 void
-UniswapV3PoolDayDataV3DTO::fromJson(char* jsonStr)
+UniswapV3.PoolDayDataV3DTO::fromJson(char* jsonStr)
 {
 	JsonObject *pJsonObject = json_node_get_object(json_from_string(jsonStr,NULL));
 	JsonNode *node;
@@ -446,13 +446,13 @@ UniswapV3PoolDayDataV3DTO::fromJson(char* jsonStr)
 	}
 }
 
-UniswapV3PoolDayDataV3DTO::UniswapV3PoolDayDataV3DTO(char* json)
+UniswapV3.PoolDayDataV3DTO::UniswapV3.PoolDayDataV3DTO(char* json)
 {
 	this->fromJson(json);
 }
 
 char*
-UniswapV3PoolDayDataV3DTO::toJson()
+UniswapV3.PoolDayDataV3DTO::toJson()
 {
 	JsonObject *pJsonObject = json_object_new();
 	JsonNode *node;
@@ -681,289 +681,289 @@ UniswapV3PoolDayDataV3DTO::toJson()
 }
 
 std::string
-UniswapV3PoolDayDataV3DTO::getEntryTime()
+UniswapV3.PoolDayDataV3DTO::getEntryTime()
 {
 	return entry_time;
 }
 
 void
-UniswapV3PoolDayDataV3DTO::setEntryTime(std::string  entry_time)
+UniswapV3.PoolDayDataV3DTO::setEntryTime(std::string  entry_time)
 {
 	this->entry_time = entry_time;
 }
 
 std::string
-UniswapV3PoolDayDataV3DTO::getRecvTime()
+UniswapV3.PoolDayDataV3DTO::getRecvTime()
 {
 	return recv_time;
 }
 
 void
-UniswapV3PoolDayDataV3DTO::setRecvTime(std::string  recv_time)
+UniswapV3.PoolDayDataV3DTO::setRecvTime(std::string  recv_time)
 {
 	this->recv_time = recv_time;
 }
 
 long long
-UniswapV3PoolDayDataV3DTO::getBlockNumber()
+UniswapV3.PoolDayDataV3DTO::getBlockNumber()
 {
 	return block_number;
 }
 
 void
-UniswapV3PoolDayDataV3DTO::setBlockNumber(long long  block_number)
+UniswapV3.PoolDayDataV3DTO::setBlockNumber(long long  block_number)
 {
 	this->block_number = block_number;
 }
 
 std::string
-UniswapV3PoolDayDataV3DTO::getId()
+UniswapV3.PoolDayDataV3DTO::getId()
 {
 	return id;
 }
 
 void
-UniswapV3PoolDayDataV3DTO::setId(std::string  id)
+UniswapV3.PoolDayDataV3DTO::setId(std::string  id)
 {
 	this->id = id;
 }
 
 int
-UniswapV3PoolDayDataV3DTO::getDate()
+UniswapV3.PoolDayDataV3DTO::getDate()
 {
 	return date;
 }
 
 void
-UniswapV3PoolDayDataV3DTO::setDate(int  date)
+UniswapV3.PoolDayDataV3DTO::setDate(int  date)
 {
 	this->date = date;
 }
 
 std::string
-UniswapV3PoolDayDataV3DTO::getPool()
+UniswapV3.PoolDayDataV3DTO::getPool()
 {
 	return pool;
 }
 
 void
-UniswapV3PoolDayDataV3DTO::setPool(std::string  pool)
+UniswapV3.PoolDayDataV3DTO::setPool(std::string  pool)
 {
 	this->pool = pool;
 }
 
 std::string
-UniswapV3PoolDayDataV3DTO::getLiquidity()
+UniswapV3.PoolDayDataV3DTO::getLiquidity()
 {
 	return liquidity;
 }
 
 void
-UniswapV3PoolDayDataV3DTO::setLiquidity(std::string  liquidity)
+UniswapV3.PoolDayDataV3DTO::setLiquidity(std::string  liquidity)
 {
 	this->liquidity = liquidity;
 }
 
 std::string
-UniswapV3PoolDayDataV3DTO::getSqrtPrice()
+UniswapV3.PoolDayDataV3DTO::getSqrtPrice()
 {
 	return sqrt_price;
 }
 
 void
-UniswapV3PoolDayDataV3DTO::setSqrtPrice(std::string  sqrt_price)
+UniswapV3.PoolDayDataV3DTO::setSqrtPrice(std::string  sqrt_price)
 {
 	this->sqrt_price = sqrt_price;
 }
 
 std::string
-UniswapV3PoolDayDataV3DTO::getToken0Price()
+UniswapV3.PoolDayDataV3DTO::getToken0Price()
 {
 	return token_0_price;
 }
 
 void
-UniswapV3PoolDayDataV3DTO::setToken0Price(std::string  token_0_price)
+UniswapV3.PoolDayDataV3DTO::setToken0Price(std::string  token_0_price)
 {
 	this->token_0_price = token_0_price;
 }
 
 std::string
-UniswapV3PoolDayDataV3DTO::getToken1Price()
+UniswapV3.PoolDayDataV3DTO::getToken1Price()
 {
 	return token_1_price;
 }
 
 void
-UniswapV3PoolDayDataV3DTO::setToken1Price(std::string  token_1_price)
+UniswapV3.PoolDayDataV3DTO::setToken1Price(std::string  token_1_price)
 {
 	this->token_1_price = token_1_price;
 }
 
 std::string
-UniswapV3PoolDayDataV3DTO::getTick()
+UniswapV3.PoolDayDataV3DTO::getTick()
 {
 	return tick;
 }
 
 void
-UniswapV3PoolDayDataV3DTO::setTick(std::string  tick)
+UniswapV3.PoolDayDataV3DTO::setTick(std::string  tick)
 {
 	this->tick = tick;
 }
 
 std::string
-UniswapV3PoolDayDataV3DTO::getFeeGrowthGlobal0x128()
+UniswapV3.PoolDayDataV3DTO::getFeeGrowthGlobal0x128()
 {
 	return fee_growth_global_0x128;
 }
 
 void
-UniswapV3PoolDayDataV3DTO::setFeeGrowthGlobal0x128(std::string  fee_growth_global_0x128)
+UniswapV3.PoolDayDataV3DTO::setFeeGrowthGlobal0x128(std::string  fee_growth_global_0x128)
 {
 	this->fee_growth_global_0x128 = fee_growth_global_0x128;
 }
 
 std::string
-UniswapV3PoolDayDataV3DTO::getFeeGrowthGlobal1x128()
+UniswapV3.PoolDayDataV3DTO::getFeeGrowthGlobal1x128()
 {
 	return fee_growth_global_1x128;
 }
 
 void
-UniswapV3PoolDayDataV3DTO::setFeeGrowthGlobal1x128(std::string  fee_growth_global_1x128)
+UniswapV3.PoolDayDataV3DTO::setFeeGrowthGlobal1x128(std::string  fee_growth_global_1x128)
 {
 	this->fee_growth_global_1x128 = fee_growth_global_1x128;
 }
 
 std::string
-UniswapV3PoolDayDataV3DTO::getTvlUsd()
+UniswapV3.PoolDayDataV3DTO::getTvlUsd()
 {
 	return tvl_usd;
 }
 
 void
-UniswapV3PoolDayDataV3DTO::setTvlUsd(std::string  tvl_usd)
+UniswapV3.PoolDayDataV3DTO::setTvlUsd(std::string  tvl_usd)
 {
 	this->tvl_usd = tvl_usd;
 }
 
 std::string
-UniswapV3PoolDayDataV3DTO::getVolumeToken0()
+UniswapV3.PoolDayDataV3DTO::getVolumeToken0()
 {
 	return volume_token_0;
 }
 
 void
-UniswapV3PoolDayDataV3DTO::setVolumeToken0(std::string  volume_token_0)
+UniswapV3.PoolDayDataV3DTO::setVolumeToken0(std::string  volume_token_0)
 {
 	this->volume_token_0 = volume_token_0;
 }
 
 std::string
-UniswapV3PoolDayDataV3DTO::getVolumeToken1()
+UniswapV3.PoolDayDataV3DTO::getVolumeToken1()
 {
 	return volume_token_1;
 }
 
 void
-UniswapV3PoolDayDataV3DTO::setVolumeToken1(std::string  volume_token_1)
+UniswapV3.PoolDayDataV3DTO::setVolumeToken1(std::string  volume_token_1)
 {
 	this->volume_token_1 = volume_token_1;
 }
 
 std::string
-UniswapV3PoolDayDataV3DTO::getVolumeUsd()
+UniswapV3.PoolDayDataV3DTO::getVolumeUsd()
 {
 	return volume_usd;
 }
 
 void
-UniswapV3PoolDayDataV3DTO::setVolumeUsd(std::string  volume_usd)
+UniswapV3.PoolDayDataV3DTO::setVolumeUsd(std::string  volume_usd)
 {
 	this->volume_usd = volume_usd;
 }
 
 std::string
-UniswapV3PoolDayDataV3DTO::getFeesUsd()
+UniswapV3.PoolDayDataV3DTO::getFeesUsd()
 {
 	return fees_usd;
 }
 
 void
-UniswapV3PoolDayDataV3DTO::setFeesUsd(std::string  fees_usd)
+UniswapV3.PoolDayDataV3DTO::setFeesUsd(std::string  fees_usd)
 {
 	this->fees_usd = fees_usd;
 }
 
 std::string
-UniswapV3PoolDayDataV3DTO::getTxCount()
+UniswapV3.PoolDayDataV3DTO::getTxCount()
 {
 	return tx_count;
 }
 
 void
-UniswapV3PoolDayDataV3DTO::setTxCount(std::string  tx_count)
+UniswapV3.PoolDayDataV3DTO::setTxCount(std::string  tx_count)
 {
 	this->tx_count = tx_count;
 }
 
 std::string
-UniswapV3PoolDayDataV3DTO::getOpen()
+UniswapV3.PoolDayDataV3DTO::getOpen()
 {
 	return open;
 }
 
 void
-UniswapV3PoolDayDataV3DTO::setOpen(std::string  open)
+UniswapV3.PoolDayDataV3DTO::setOpen(std::string  open)
 {
 	this->open = open;
 }
 
 std::string
-UniswapV3PoolDayDataV3DTO::getHigh()
+UniswapV3.PoolDayDataV3DTO::getHigh()
 {
 	return high;
 }
 
 void
-UniswapV3PoolDayDataV3DTO::setHigh(std::string  high)
+UniswapV3.PoolDayDataV3DTO::setHigh(std::string  high)
 {
 	this->high = high;
 }
 
 std::string
-UniswapV3PoolDayDataV3DTO::getLow()
+UniswapV3.PoolDayDataV3DTO::getLow()
 {
 	return low;
 }
 
 void
-UniswapV3PoolDayDataV3DTO::setLow(std::string  low)
+UniswapV3.PoolDayDataV3DTO::setLow(std::string  low)
 {
 	this->low = low;
 }
 
 std::string
-UniswapV3PoolDayDataV3DTO::getClose()
+UniswapV3.PoolDayDataV3DTO::getClose()
 {
 	return close;
 }
 
 void
-UniswapV3PoolDayDataV3DTO::setClose(std::string  close)
+UniswapV3.PoolDayDataV3DTO::setClose(std::string  close)
 {
 	this->close = close;
 }
 
 long long
-UniswapV3PoolDayDataV3DTO::getVid()
+UniswapV3.PoolDayDataV3DTO::getVid()
 {
 	return vid;
 }
 
 void
-UniswapV3PoolDayDataV3DTO::setVid(long long  vid)
+UniswapV3.PoolDayDataV3DTO::setVid(long long  vid)
 {
 	this->vid = vid;
 }

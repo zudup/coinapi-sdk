@@ -1,4 +1,4 @@
-# UniswapV3FactoryV3DTO
+# UniswapV3.FactoryV3DTO
 
 ## Properties
 Name | Type | Description | Notes

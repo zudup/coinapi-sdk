@@ -1,4 +1,4 @@
-goog.provide('API.Client.UniswapV3TickV3DTO');
+goog.provide('API.Client.UniswapV3.TickV3DTO');
 
 /**
  * Ticks are the boundaries between discrete areas in price space.
@@ -47,7 +47,7 @@ API.Client.UniswapV3TickV3DTO.prototype.id;
 API.Client.UniswapV3TickV3DTO.prototype.poolAddress;
 
 /**
- * @type {!API.Client.NumericsBigInteger}
+ * @type {!API.Client.Numerics.BigInteger}
  * @export
  */
 API.Client.UniswapV3TickV3DTO.prototype.tickIdx;
@@ -60,13 +60,13 @@ API.Client.UniswapV3TickV3DTO.prototype.tickIdx;
 API.Client.UniswapV3TickV3DTO.prototype.pool;
 
 /**
- * @type {!API.Client.NumericsBigInteger}
+ * @type {!API.Client.Numerics.BigInteger}
  * @export
  */
 API.Client.UniswapV3TickV3DTO.prototype.liquidityGross;
 
 /**
- * @type {!API.Client.NumericsBigInteger}
+ * @type {!API.Client.Numerics.BigInteger}
  * @export
  */
 API.Client.UniswapV3TickV3DTO.prototype.liquidityNet;
@@ -149,19 +149,19 @@ API.Client.UniswapV3TickV3DTO.prototype.collectedFeesUsd;
 API.Client.UniswapV3TickV3DTO.prototype.createdAtTimestamp;
 
 /**
- * @type {!API.Client.NumericsBigInteger}
+ * @type {!API.Client.Numerics.BigInteger}
  * @export
  */
 API.Client.UniswapV3TickV3DTO.prototype.liquidityProviderCount;
 
 /**
- * @type {!API.Client.NumericsBigInteger}
+ * @type {!API.Client.Numerics.BigInteger}
  * @export
  */
 API.Client.UniswapV3TickV3DTO.prototype.feeGrowthOutside0x128;
 
 /**
- * @type {!API.Client.NumericsBigInteger}
+ * @type {!API.Client.Numerics.BigInteger}
  * @export
  */
 API.Client.UniswapV3TickV3DTO.prototype.feeGrowthOutside1x128;

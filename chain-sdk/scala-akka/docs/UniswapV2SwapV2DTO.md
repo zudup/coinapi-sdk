@@ -1,6 +1,6 @@
 
 
-# UniswapV2SwapV2DTO
+# SwapV2DTO
 
 Swap are created for each token swap within a pair.
 
@@ -23,11 +23,11 @@ Name | Type | Description | Notes
 **amount0Out** | **String** | Amount of token0 received. |  [optional]
 **amount1Out** | **String** | Amount of token1 received. |  [optional]
 **to** | **String** | Recipient of output tokens. |  [optional]
-**logIndex** | [**NumericsBigInteger**](NumericsBigInteger.md) |  |  [optional]
+**logIndex** | [**BigInteger**](BigInteger.md) |  |  [optional]
 **amountUsd** | **String** | Derived amount of tokens sold in USD. |  [optional]
 **evaluatedPrice** | **Double** |  |  [optional] [readonly]
 **evaluatedAmount** | **Double** |  |  [optional] [readonly]
-**evaluatedAggressor** | **TransactionsETradeAggressiveSide** |  |  [optional]
+**evaluatedAggressor** | **ETradeAggressiveSide** |  |  [optional]
 **poolId** | **String** |  |  [optional] [readonly]
 **transactionId** | **String** |  |  [optional] [readonly]
 

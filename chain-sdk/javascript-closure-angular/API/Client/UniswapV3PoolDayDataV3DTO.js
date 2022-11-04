@@ -1,4 +1,4 @@
-goog.provide('API.Client.UniswapV3PoolDayDataV3DTO');
+goog.provide('API.Client.UniswapV3.PoolDayDataV3DTO');
 
 /**
  * Data accumulated and condensed into day stats for each pool.

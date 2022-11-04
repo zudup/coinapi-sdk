@@ -355,7 +355,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**LIST [SUSHISWAP_PAIR_DTO]**](SushiswapPairDTO.md)
+[**LIST [SUSHISWAP_PAIR_DTO]**](Sushiswap.PairDTO.md)
 
 ### Authorization
 
@@ -387,7 +387,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LIST [SUSHISWAP_PAIR_DTO]**](SushiswapPairDTO.md)
+[**LIST [SUSHISWAP_PAIR_DTO]**](Sushiswap.PairDTO.md)
 
 ### Authorization
 
@@ -412,7 +412,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**LIST [SUSHISWAP_SWAP_DTO]**](SushiswapSwapDTO.md)
+[**LIST [SUSHISWAP_SWAP_DTO]**](Sushiswap.SwapDTO.md)
 
 ### Authorization
 
@@ -444,7 +444,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LIST [SUSHISWAP_SWAP_DTO]**](SushiswapSwapDTO.md)
+[**LIST [SUSHISWAP_SWAP_DTO]**](Sushiswap.SwapDTO.md)
 
 ### Authorization
 
@@ -501,7 +501,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**LIST [SUSHISWAP_TOKEN_DTO]**](SushiswapTokenDTO.md)
+[**LIST [SUSHISWAP_TOKEN_DTO]**](Sushiswap.TokenDTO.md)
 
 ### Authorization
 
@@ -533,7 +533,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LIST [SUSHISWAP_TOKEN_DTO]**](SushiswapTokenDTO.md)
+[**LIST [SUSHISWAP_TOKEN_DTO]**](Sushiswap.TokenDTO.md)
 
 ### Authorization
 

@@ -29,7 +29,7 @@ namespace CoinAPI.EMS.REST.V1.Model
     /// <summary>
     /// UniswapV3PositionSnapshotV3DTO
     /// </summary>
-    [DataContract(Name = "UniswapV3PositionSnapshotV3DTO")]
+    [DataContract(Name = "UniswapV3.PositionSnapshotV3DTO")]
     public partial class UniswapV3PositionSnapshotV3DTO : IEquatable<UniswapV3PositionSnapshotV3DTO>, IValidatableObject
     {
         /// <summary>

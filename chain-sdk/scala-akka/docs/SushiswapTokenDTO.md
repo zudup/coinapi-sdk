@@ -1,6 +1,6 @@
 
 
-# SushiswapTokenDTO
+# TokenDTO
 
 Stores aggregated information for a specific token across all pairs that token is included in.
 

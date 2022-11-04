@@ -1,15 +1,15 @@
 /*
- * UniswapV3TokenV3DTO.h
+ * UniswapV3.TokenV3DTO.h
  *
  * Stores aggregated information for a specific token across all pairs that token is included in.
  */
 
-#ifndef _UniswapV3TokenV3DTO_H_
-#define _UniswapV3TokenV3DTO_H_
+#ifndef _UniswapV3.TokenV3DTO_H_
+#define _UniswapV3.TokenV3DTO_H_
 
 
 #include <string>
-#include "NumericsBigInteger.h"
+#include "Numerics.BigInteger.h"
 #include <list>
 #include "Object.h"
 
@@ -28,16 +28,16 @@ namespace ArtikCloud {
  *
  */
 
-class UniswapV3TokenV3DTO : public Object {
+class UniswapV3.TokenV3DTO : public Object {
 public:
 	/*! \brief Constructor.
 	 */
-	UniswapV3TokenV3DTO();
-	UniswapV3TokenV3DTO(char* str);
+	UniswapV3.TokenV3DTO();
+	UniswapV3.TokenV3DTO(char* str);
 
 	/*! \brief Destructor.
 	 */
-	virtual ~UniswapV3TokenV3DTO();
+	virtual ~UniswapV3.TokenV3DTO();
 
 	/*! \brief Retrieve a string JSON representation of this class.
 	 */
@@ -105,11 +105,11 @@ public:
 	void setDecimals(int  decimals);
 	/*! \brief Get 
 	 */
-	NumericsBigInteger getTotalSupply();
+	Numerics.BigInteger getTotalSupply();
 
 	/*! \brief Set 
 	 */
-	void setTotalSupply(NumericsBigInteger  total_supply);
+	void setTotalSupply(Numerics.BigInteger  total_supply);
 	/*! \brief Get Volume in token units.
 	 */
 	std::string getVolume();
@@ -140,18 +140,18 @@ public:
 	void setFeesUsd(std::string  fees_usd);
 	/*! \brief Get 
 	 */
-	NumericsBigInteger getTxCount();
+	Numerics.BigInteger getTxCount();
 
 	/*! \brief Set 
 	 */
-	void setTxCount(NumericsBigInteger  tx_count);
+	void setTxCount(Numerics.BigInteger  tx_count);
 	/*! \brief Get 
 	 */
-	NumericsBigInteger getPoolCount();
+	Numerics.BigInteger getPoolCount();
 
 	/*! \brief Set 
 	 */
-	void setPoolCount(NumericsBigInteger  pool_count);
+	void setPoolCount(Numerics.BigInteger  pool_count);
 	/*! \brief Get Liquidity across all pools in token units.
 	 */
 	std::string getTotalValueLocked();
@@ -204,13 +204,13 @@ private:
 	std::string symbol;
 	std::string name;
 	int decimals;
-	NumericsBigInteger total_supply;
+	Numerics.BigInteger total_supply;
 	std::string volume;
 	std::string volume_usd;
 	std::string untracked_volume_usd;
 	std::string fees_usd;
-	NumericsBigInteger tx_count;
-	NumericsBigInteger pool_count;
+	Numerics.BigInteger tx_count;
+	Numerics.BigInteger pool_count;
 	std::string total_value_locked;
 	std::string total_value_locked_usd;
 	std::string total_value_locked_usd_untracked;
@@ -224,4 +224,4 @@ private:
 }
 }
 
-#endif /* _UniswapV3TokenV3DTO_H_ */
+#endif /* _UniswapV3.TokenV3DTO_H_ */
