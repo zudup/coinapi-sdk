@@ -618,7 +618,7 @@ export default class SushiswapApi {
      */
 
     /**
-     * GetSwaps
+     * GetSwaps (historical)
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
      * @param {Number} opts.endBlock 

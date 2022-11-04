@@ -557,7 +557,7 @@ feature -- API Access
 		end
 
 	dapps_sushiswap_swaps_historical_get (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [SWAP_DTO]
-			-- GetSwaps
+			-- GetSwaps (historical)
 			-- 
 			-- 
 			-- argument: start_block  (optional, default to null)

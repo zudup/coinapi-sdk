@@ -18,7 +18,7 @@ Method | HTTP request | Description
 [**dapps_sushiswap_pools_current_get**](#dapps_sushiswap_pools_current_get) | **get** /dapps/sushiswap/pools/current | GetPools
 [**dapps_sushiswap_pools_historical_get**](#dapps_sushiswap_pools_historical_get) | **get** /dapps/sushiswap/pools/historical | GetPools
 [**dapps_sushiswap_swaps_current_get**](#dapps_sushiswap_swaps_current_get) | **get** /dapps/sushiswap/swaps/current | GetSwaps
-[**dapps_sushiswap_swaps_historical_get**](#dapps_sushiswap_swaps_historical_get) | **get** /dapps/sushiswap/swaps/historical | GetSwaps
+[**dapps_sushiswap_swaps_historical_get**](#dapps_sushiswap_swaps_historical_get) | **get** /dapps/sushiswap/swaps/historical | GetSwaps (historical)
 [**dapps_sushiswap_token_day_data_historical_get**](#dapps_sushiswap_token_day_data_historical_get) | **get** /dapps/sushiswap/tokenDayData/historical | 
 [**dapps_sushiswap_tokens_current_get**](#dapps_sushiswap_tokens_current_get) | **get** /dapps/sushiswap/tokens/current | GetTokens
 [**dapps_sushiswap_tokens_historical_get**](#dapps_sushiswap_tokens_historical_get) | **get** /dapps/sushiswap/tokens/historical | GetTokens
@@ -1471,7 +1471,7 @@ No authorization required
 <a name="dapps_sushiswap_swaps_historical_get"></a>
 > [SwapDTO] dapps_sushiswap_swaps_historical_get()
 
-GetSwaps
+GetSwaps (historical)
 
 ### Example
 
@@ -1500,7 +1500,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'poolId': "poolId_example",
     }
     try:
-        # GetSwaps
+        # GetSwaps (historical)
         api_response = api_instance.dapps_sushiswap_swaps_historical_get(
             query_params=query_params,
         )

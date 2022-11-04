@@ -883,7 +883,7 @@ class SushiswapApi {
     return null;
   }
 
-  /// GetSwaps
+  /// GetSwaps (historical)
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -939,7 +939,7 @@ class SushiswapApi {
     );
   }
 
-  /// GetSwaps
+  /// GetSwaps (historical)
   ///
   /// Parameters:
   ///

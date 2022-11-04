@@ -295,7 +295,7 @@ dapps_sushiswap_swaps_current_get(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc GetSwaps
+%% @doc GetSwaps (historical)
 %% 
 -spec dapps_sushiswap_swaps_historical_get(ctx:ctx()) -> {ok, [openapi_swap_dto:openapi_swap_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dapps_sushiswap_swaps_historical_get(Ctx) ->

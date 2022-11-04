@@ -17,7 +17,7 @@ Feature | HTTP request | Description
 [**dapps_sushiswap_pools_current_get**](SUSHISWAP_API.md#dapps_sushiswap_pools_current_get) | **Get** /dapps/sushiswap/pools/current | GetPools
 [**dapps_sushiswap_pools_historical_get**](SUSHISWAP_API.md#dapps_sushiswap_pools_historical_get) | **Get** /dapps/sushiswap/pools/historical | GetPools
 [**dapps_sushiswap_swaps_current_get**](SUSHISWAP_API.md#dapps_sushiswap_swaps_current_get) | **Get** /dapps/sushiswap/swaps/current | GetSwaps
-[**dapps_sushiswap_swaps_historical_get**](SUSHISWAP_API.md#dapps_sushiswap_swaps_historical_get) | **Get** /dapps/sushiswap/swaps/historical | GetSwaps
+[**dapps_sushiswap_swaps_historical_get**](SUSHISWAP_API.md#dapps_sushiswap_swaps_historical_get) | **Get** /dapps/sushiswap/swaps/historical | GetSwaps (historical)
 [**dapps_sushiswap_token_day_data_historical_get**](SUSHISWAP_API.md#dapps_sushiswap_token_day_data_historical_get) | **Get** /dapps/sushiswap/tokenDayData/historical | 
 [**dapps_sushiswap_tokens_current_get**](SUSHISWAP_API.md#dapps_sushiswap_tokens_current_get) | **Get** /dapps/sushiswap/tokens/current | GetTokens
 [**dapps_sushiswap_tokens_historical_get**](SUSHISWAP_API.md#dapps_sushiswap_tokens_historical_get) | **Get** /dapps/sushiswap/tokens/historical | GetTokens
@@ -429,7 +429,7 @@ No authorization required
 > dapps_sushiswap_swaps_historical_get (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; pool_id:  detachable STRING_32 ): detachable LIST [SWAP_DTO]
 
 
-GetSwaps
+GetSwaps (historical)
 
 
 ### Parameters

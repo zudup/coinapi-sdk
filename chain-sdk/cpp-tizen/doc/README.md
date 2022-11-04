@@ -177,8 +177,8 @@ Method | HTTP request | Description
 *dappsSushiswapPoolsHistoricalGetASync* | *GET* /dapps/sushiswap/pools/historical | GetPools.
 *dappsSushiswapSwapsCurrentGetSync* | *GET* /dapps/sushiswap/swaps/current | GetSwaps.
 *dappsSushiswapSwapsCurrentGetASync* | *GET* /dapps/sushiswap/swaps/current | GetSwaps.
-*dappsSushiswapSwapsHistoricalGetSync* | *GET* /dapps/sushiswap/swaps/historical | GetSwaps.
-*dappsSushiswapSwapsHistoricalGetASync* | *GET* /dapps/sushiswap/swaps/historical | GetSwaps.
+*dappsSushiswapSwapsHistoricalGetSync* | *GET* /dapps/sushiswap/swaps/historical | GetSwaps (historical).
+*dappsSushiswapSwapsHistoricalGetASync* | *GET* /dapps/sushiswap/swaps/historical | GetSwaps (historical).
 *dappsSushiswapTokenDayDataHistoricalGetSync* | *GET* /dapps/sushiswap/tokenDayData/historical | .
 *dappsSushiswapTokenDayDataHistoricalGetASync* | *GET* /dapps/sushiswap/tokenDayData/historical | .
 *dappsSushiswapTokensCurrentGetSync* | *GET* /dapps/sushiswap/tokens/current | GetTokens.

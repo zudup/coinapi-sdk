@@ -190,7 +190,7 @@ Class | Method | HTTP request | Description
 *OnChainApi.SushiswapApi* | [**dappsSushiswapPoolsCurrentGet**](docs/SushiswapApi.md#dappsSushiswapPoolsCurrentGet) | **GET** /dapps/sushiswap/pools/current | GetPools
 *OnChainApi.SushiswapApi* | [**dappsSushiswapPoolsHistoricalGet**](docs/SushiswapApi.md#dappsSushiswapPoolsHistoricalGet) | **GET** /dapps/sushiswap/pools/historical | GetPools
 *OnChainApi.SushiswapApi* | [**dappsSushiswapSwapsCurrentGet**](docs/SushiswapApi.md#dappsSushiswapSwapsCurrentGet) | **GET** /dapps/sushiswap/swaps/current | GetSwaps
-*OnChainApi.SushiswapApi* | [**dappsSushiswapSwapsHistoricalGet**](docs/SushiswapApi.md#dappsSushiswapSwapsHistoricalGet) | **GET** /dapps/sushiswap/swaps/historical | GetSwaps
+*OnChainApi.SushiswapApi* | [**dappsSushiswapSwapsHistoricalGet**](docs/SushiswapApi.md#dappsSushiswapSwapsHistoricalGet) | **GET** /dapps/sushiswap/swaps/historical | GetSwaps (historical)
 *OnChainApi.SushiswapApi* | [**dappsSushiswapTokenDayDataHistoricalGet**](docs/SushiswapApi.md#dappsSushiswapTokenDayDataHistoricalGet) | **GET** /dapps/sushiswap/tokenDayData/historical | 
 *OnChainApi.SushiswapApi* | [**dappsSushiswapTokensCurrentGet**](docs/SushiswapApi.md#dappsSushiswapTokensCurrentGet) | **GET** /dapps/sushiswap/tokens/current | GetTokens
 *OnChainApi.SushiswapApi* | [**dappsSushiswapTokensHistoricalGet**](docs/SushiswapApi.md#dappsSushiswapTokensHistoricalGet) | **GET** /dapps/sushiswap/tokens/historical | GetTokens

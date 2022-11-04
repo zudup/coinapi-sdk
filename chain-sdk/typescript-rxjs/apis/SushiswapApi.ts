@@ -402,7 +402,7 @@ export class SushiswapApi extends BaseAPI {
     };
 
     /**
-     * GetSwaps
+     * GetSwaps (historical)
      */
     dappsSushiswapSwapsHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsSushiswapSwapsHistoricalGetRequest): Observable<Array<SwapDTO>>
     dappsSushiswapSwapsHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsSushiswapSwapsHistoricalGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<SwapDTO>>>

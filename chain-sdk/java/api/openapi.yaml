@@ -3407,7 +3407,7 @@ paths:
                   $ref: '#/components/schemas/SwapDTO'
                 type: array
           description: successful operation
-      summary: GetSwaps
+      summary: GetSwaps (historical)
       tags:
       - Sushiswap
       x-accepts: application/json

@@ -375,7 +375,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>ApiResponse of List<SwapDTO></returns>
         ApiResponse<List<SwapDTO>> DappsSushiswapSwapsCurrentGetWithHttpInfo ();
         /// <summary>
-        /// GetSwaps
+        /// GetSwaps (historical)
         /// </summary>
         /// <remarks>
         /// 
@@ -390,7 +390,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         List<SwapDTO> DappsSushiswapSwapsHistoricalGet (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string));
 
         /// <summary>
-        /// GetSwaps
+        /// GetSwaps (historical)
         /// </summary>
         /// <remarks>
         /// 
@@ -912,7 +912,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>Task of ApiResponse (List&lt;SwapDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<SwapDTO>>> DappsSushiswapSwapsCurrentGetWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
-        /// GetSwaps
+        /// GetSwaps (historical)
         /// </summary>
         /// <remarks>
         /// 
@@ -928,7 +928,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         System.Threading.Tasks.Task<List<SwapDTO>> DappsSushiswapSwapsHistoricalGetAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// GetSwaps
+        /// GetSwaps (historical)
         /// </summary>
         /// <remarks>
         /// 
@@ -3072,7 +3072,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetSwaps 
+        /// GetSwaps (historical) 
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -3088,7 +3088,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetSwaps 
+        /// GetSwaps (historical) 
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -3149,7 +3149,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetSwaps 
+        /// GetSwaps (historical) 
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -3167,7 +3167,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetSwaps 
+        /// GetSwaps (historical) 
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>

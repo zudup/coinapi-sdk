@@ -1676,7 +1676,7 @@ func (r ApiDappsSushiswapSwapsHistoricalGetRequest) Execute() ([]SwapDTO, *http.
 }
 
 /*
-DappsSushiswapSwapsHistoricalGet GetSwaps
+DappsSushiswapSwapsHistoricalGet GetSwaps (historical)
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiDappsSushiswapSwapsHistoricalGetRequest

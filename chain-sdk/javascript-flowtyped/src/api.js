@@ -6070,7 +6070,7 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * 
-         * @summary GetSwaps
+         * @summary GetSwaps (historical)
          * @throws {RequiredError}
          */
         dappsSushiswapSwapsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
@@ -6526,7 +6526,7 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * 
-         * @summary GetSwaps
+         * @summary GetSwaps (historical)
          * @throws {RequiredError}
          */
         dappsSushiswapSwapsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<SwapDTO>> {

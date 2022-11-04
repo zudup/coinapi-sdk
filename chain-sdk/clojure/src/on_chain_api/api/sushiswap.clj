@@ -329,7 +329,7 @@
 
 
 (defn-spec dapps-sushiswap-swaps-historical-get-with-http-info any?
-  "GetSwaps"
+  "GetSwaps (historical)"
   ([] (dapps-sushiswap-swaps-historical-get-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
    (call-api "/dapps/sushiswap/swaps/historical" :get
@@ -342,7 +342,7 @@
               :auth-names    []})))
 
 (defn-spec dapps-sushiswap-swaps-historical-get (s/coll-of swap-dto-spec)
-  "GetSwaps"
+  "GetSwaps (historical)"
   ([] (dapps-sushiswap-swaps-historical-get nil))
   ([optional-params any?]
    (let [res (:data (dapps-sushiswap-swaps-historical-get-with-http-info optional-params))]

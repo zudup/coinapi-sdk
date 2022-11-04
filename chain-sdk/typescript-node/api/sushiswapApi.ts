@@ -1061,7 +1061,7 @@ export class SushiswapApi {
     }
     /**
      * 
-     * @summary GetSwaps
+     * @summary GetSwaps (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 

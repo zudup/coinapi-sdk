@@ -353,7 +353,7 @@ case $state in
             "dappsSushiswapPoolsCurrentGet[GetPools]" \
             "dappsSushiswapPoolsHistoricalGet[GetPools]" \
             "dappsSushiswapSwapsCurrentGet[GetSwaps]" \
-            "dappsSushiswapSwapsHistoricalGet[GetSwaps]" \
+            "dappsSushiswapSwapsHistoricalGet[GetSwaps (historical)]" \
             "dappsSushiswapTokenDayDataHistoricalGet[]" \
             "dappsSushiswapTokensCurrentGet[GetTokens]" \
             "dappsSushiswapTokensHistoricalGet[GetTokens]" \

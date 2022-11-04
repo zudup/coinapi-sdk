@@ -231,7 +231,7 @@ class SushiswapApiTest extends TestCase
     /**
      * Test case for dappsSushiswapSwapsHistoricalGet
      *
-     * GetSwaps.
+     * GetSwaps (historical).
      *
      */
     public function testDappsSushiswapSwapsHistoricalGet()

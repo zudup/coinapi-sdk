@@ -524,7 +524,7 @@ package .Clients is
       (Client : in out Client_Type;
        Result : out .Models.SwapDTO_Type_Vectors.Vector);
 
-   --  GetSwaps
+   --  GetSwaps (historical)
    procedure Dapps_Sushiswap_Swaps_Historical_Get
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;

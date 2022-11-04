@@ -1217,7 +1217,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetSwaps
+     * GetSwaps (historical)
      * 
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1252,7 +1252,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetSwaps
+     * GetSwaps (historical)
      * 
      * @param startBlock  (optional)
      * @param endBlock  (optional)

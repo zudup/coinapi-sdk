@@ -251,7 +251,7 @@
 #' }
 #' }
 #'
-#' \strong{ DappsSushiswapSwapsHistoricalGet } \emph{ GetSwaps }
+#' \strong{ DappsSushiswapSwapsHistoricalGet } \emph{ GetSwaps (historical) }
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
@@ -555,7 +555,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
-#' #GetSwaps
+#' #GetSwaps (historical)
 #' api_instance <- SushiswapApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -1900,10 +1900,10 @@ SushiswapApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetSwaps
+    #' GetSwaps (historical)
     #'
     #' @description
-    #' GetSwaps
+    #' GetSwaps (historical)
     #'
     #' @param start_block (optional) No description
     #' @param end_block (optional) No description
@@ -1926,10 +1926,10 @@ SushiswapApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetSwaps
+    #' GetSwaps (historical)
     #'
     #' @description
-    #' GetSwaps
+    #' GetSwaps (historical)
     #'
     #' @param start_block (optional) No description
     #' @param end_block (optional) No description

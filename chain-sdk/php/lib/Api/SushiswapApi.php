@@ -3744,7 +3744,7 @@ class SushiswapApi
     /**
      * Operation dappsSushiswapSwapsHistoricalGet
      *
-     * GetSwaps
+     * GetSwaps (historical)
      *
      * @param  int $start_block start_block (optional)
      * @param  int $end_block end_block (optional)
@@ -3766,7 +3766,7 @@ class SushiswapApi
     /**
      * Operation dappsSushiswapSwapsHistoricalGetWithHttpInfo
      *
-     * GetSwaps
+     * GetSwaps (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -3870,7 +3870,7 @@ class SushiswapApi
     /**
      * Operation dappsSushiswapSwapsHistoricalGetAsync
      *
-     * GetSwaps
+     * GetSwaps (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -3895,7 +3895,7 @@ class SushiswapApi
     /**
      * Operation dappsSushiswapSwapsHistoricalGetAsyncWithHttpInfo
      *
-     * GetSwaps
+     * GetSwaps (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)

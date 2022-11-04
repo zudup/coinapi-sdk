@@ -1998,7 +1998,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetSwaps
+     * GetSwaps (historical)
      * 
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2019,7 +2019,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetSwaps
+     * GetSwaps (historical)
      * 
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2041,7 +2041,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetSwaps (asynchronously)
+     * GetSwaps (historical) (asynchronously)
      * 
      * @param startBlock  (optional)
      * @param endBlock  (optional)

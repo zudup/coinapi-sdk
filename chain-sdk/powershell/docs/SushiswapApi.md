@@ -17,7 +17,7 @@ Method | HTTP request | Description
 [**Invoke-DappsSushiswapPoolsCurrentGet**](SushiswapApi.md#Invoke-DappsSushiswapPoolsCurrentGet) | **GET** /dapps/sushiswap/pools/current | GetPools
 [**Invoke-DappsSushiswapPoolsHistoricalGet**](SushiswapApi.md#Invoke-DappsSushiswapPoolsHistoricalGet) | **GET** /dapps/sushiswap/pools/historical | GetPools
 [**Invoke-DappsSushiswapSwapsCurrentGet**](SushiswapApi.md#Invoke-DappsSushiswapSwapsCurrentGet) | **GET** /dapps/sushiswap/swaps/current | GetSwaps
-[**Invoke-DappsSushiswapSwapsHistoricalGet**](SushiswapApi.md#Invoke-DappsSushiswapSwapsHistoricalGet) | **GET** /dapps/sushiswap/swaps/historical | GetSwaps
+[**Invoke-DappsSushiswapSwapsHistoricalGet**](SushiswapApi.md#Invoke-DappsSushiswapSwapsHistoricalGet) | **GET** /dapps/sushiswap/swaps/historical | GetSwaps (historical)
 [**Invoke-DappsSushiswapTokenDayDataHistoricalGet**](SushiswapApi.md#Invoke-DappsSushiswapTokenDayDataHistoricalGet) | **GET** /dapps/sushiswap/tokenDayData/historical | 
 [**Invoke-DappsSushiswapTokensCurrentGet**](SushiswapApi.md#Invoke-DappsSushiswapTokensCurrentGet) | **GET** /dapps/sushiswap/tokens/current | GetTokens
 [**Invoke-DappsSushiswapTokensHistoricalGet**](SushiswapApi.md#Invoke-DappsSushiswapTokensHistoricalGet) | **GET** /dapps/sushiswap/tokens/historical | GetTokens
@@ -669,7 +669,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
 
-GetSwaps
+GetSwaps (historical)
 
 ### Example
 ```powershell
@@ -679,7 +679,7 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $PoolId = "MyPoolId" # String |  (optional)
 
-# GetSwaps
+# GetSwaps (historical)
 try {
     $Result = Invoke-DappsSushiswapSwapsHistoricalGet -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
 } catch {

@@ -253,7 +253,7 @@ public:
     pplx::task<std::vector<std::shared_ptr<SwapDTO>>> dappsSushiswapSwapsCurrentGet(
     ) const;
     /// <summary>
-    /// GetSwaps
+    /// GetSwaps (historical)
     /// </summary>
     /// <remarks>
     /// 

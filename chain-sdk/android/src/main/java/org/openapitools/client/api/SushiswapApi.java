@@ -1680,7 +1680,7 @@ public class SushiswapApi {
     }
   }
   /**
-  * GetSwaps
+  * GetSwaps (historical)
   * 
    * @param startBlock 
    * @param endBlock 
@@ -1746,7 +1746,7 @@ public class SushiswapApi {
   }
 
       /**
-   * GetSwaps
+   * GetSwaps (historical)
    * 
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param poolId 
   */

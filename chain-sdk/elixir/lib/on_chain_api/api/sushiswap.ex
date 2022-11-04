@@ -511,7 +511,7 @@ defmodule OnChainAPI.Api.Sushiswap do
   end
 
   @doc """
-  GetSwaps
+  GetSwaps (historical)
 
   ### Parameters
 

@@ -211,7 +211,7 @@ public class SushiswapApiTest {
     }
 
     /**
-     * GetSwaps
+     * GetSwaps (historical)
      *
      * @throws ApiException if the Api call fails
      */

@@ -849,7 +849,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetSwaps
+    # GetSwaps (historical)
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
@@ -862,7 +862,7 @@ module OpenapiClient
       data
     end
 
-    # GetSwaps
+    # GetSwaps (historical)
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 

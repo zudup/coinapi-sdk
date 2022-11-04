@@ -424,7 +424,7 @@ public class OASSushiswapApi {
         );
     }
     /**
-     * GetSwaps
+     * GetSwaps (historical)
      * 
      * @param startBlock  (optional)
      * @param endBlock  (optional)

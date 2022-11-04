@@ -17,7 +17,7 @@ Method | HTTP request | Description
 [**DappsSushiswapPoolsCurrentGet**](SushiswapApi.md#DappsSushiswapPoolsCurrentGet) | **GET** /dapps/sushiswap/pools/current | GetPools
 [**DappsSushiswapPoolsHistoricalGet**](SushiswapApi.md#DappsSushiswapPoolsHistoricalGet) | **GET** /dapps/sushiswap/pools/historical | GetPools
 [**DappsSushiswapSwapsCurrentGet**](SushiswapApi.md#DappsSushiswapSwapsCurrentGet) | **GET** /dapps/sushiswap/swaps/current | GetSwaps
-[**DappsSushiswapSwapsHistoricalGet**](SushiswapApi.md#DappsSushiswapSwapsHistoricalGet) | **GET** /dapps/sushiswap/swaps/historical | GetSwaps
+[**DappsSushiswapSwapsHistoricalGet**](SushiswapApi.md#DappsSushiswapSwapsHistoricalGet) | **GET** /dapps/sushiswap/swaps/historical | GetSwaps (historical)
 [**DappsSushiswapTokenDayDataHistoricalGet**](SushiswapApi.md#DappsSushiswapTokenDayDataHistoricalGet) | **GET** /dapps/sushiswap/tokenDayData/historical | 
 [**DappsSushiswapTokensCurrentGet**](SushiswapApi.md#DappsSushiswapTokensCurrentGet) | **GET** /dapps/sushiswap/tokens/current | GetTokens
 [**DappsSushiswapTokensHistoricalGet**](SushiswapApi.md#DappsSushiswapTokensHistoricalGet) | **GET** /dapps/sushiswap/tokens/historical | GetTokens
@@ -635,13 +635,13 @@ No authorization required
 # **DappsSushiswapSwapsHistoricalGet**
 > array[SwapDTO] DappsSushiswapSwapsHistoricalGet(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
 
-GetSwaps
+GetSwaps (historical)
 
 ### Example
 ```R
 library(openapi)
 
-# GetSwaps
+# GetSwaps (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)

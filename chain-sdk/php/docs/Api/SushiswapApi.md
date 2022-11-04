@@ -17,7 +17,7 @@ All URIs are relative to https://onchain.coinapi.io, except if the operation def
 | [**dappsSushiswapPoolsCurrentGet()**](SushiswapApi.md#dappsSushiswapPoolsCurrentGet) | **GET** /dapps/sushiswap/pools/current | GetPools |
 | [**dappsSushiswapPoolsHistoricalGet()**](SushiswapApi.md#dappsSushiswapPoolsHistoricalGet) | **GET** /dapps/sushiswap/pools/historical | GetPools |
 | [**dappsSushiswapSwapsCurrentGet()**](SushiswapApi.md#dappsSushiswapSwapsCurrentGet) | **GET** /dapps/sushiswap/swaps/current | GetSwaps |
-| [**dappsSushiswapSwapsHistoricalGet()**](SushiswapApi.md#dappsSushiswapSwapsHistoricalGet) | **GET** /dapps/sushiswap/swaps/historical | GetSwaps |
+| [**dappsSushiswapSwapsHistoricalGet()**](SushiswapApi.md#dappsSushiswapSwapsHistoricalGet) | **GET** /dapps/sushiswap/swaps/historical | GetSwaps (historical) |
 | [**dappsSushiswapTokenDayDataHistoricalGet()**](SushiswapApi.md#dappsSushiswapTokenDayDataHistoricalGet) | **GET** /dapps/sushiswap/tokenDayData/historical |  |
 | [**dappsSushiswapTokensCurrentGet()**](SushiswapApi.md#dappsSushiswapTokensCurrentGet) | **GET** /dapps/sushiswap/tokens/current | GetTokens |
 | [**dappsSushiswapTokensHistoricalGet()**](SushiswapApi.md#dappsSushiswapTokensHistoricalGet) | **GET** /dapps/sushiswap/tokens/historical | GetTokens |
@@ -799,7 +799,7 @@ No authorization required
 dappsSushiswapSwapsHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id): \OpenAPI\Client\Model\SwapDTO[]
 ```
 
-GetSwaps
+GetSwaps (historical)
 
 ### Example
 

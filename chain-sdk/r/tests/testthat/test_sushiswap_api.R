@@ -180,7 +180,7 @@ test_that("DappsSushiswapSwapsCurrentGet", {
 test_that("DappsSushiswapSwapsHistoricalGet", {
   # tests for DappsSushiswapSwapsHistoricalGet
   # base path: https://onchain.coinapi.io
-  # GetSwaps
+  # GetSwaps (historical)
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
   # @param start_date character  (optional)

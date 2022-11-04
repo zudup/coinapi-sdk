@@ -1335,7 +1335,7 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Dapps_Sushiswap_Swaps_Current_Get;
 
-   --  GetSwaps
+   --  GetSwaps (historical)
    procedure Dapps_Sushiswap_Swaps_Historical_Get
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;

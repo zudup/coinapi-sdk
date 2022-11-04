@@ -1929,7 +1929,7 @@ read -r -d '' ops <<EOF
   ${CYAN}dappsSushiswapPoolsCurrentGet${OFF};GetPools
   ${CYAN}dappsSushiswapPoolsHistoricalGet${OFF};GetPools
   ${CYAN}dappsSushiswapSwapsCurrentGet${OFF};GetSwaps
-  ${CYAN}dappsSushiswapSwapsHistoricalGet${OFF};GetSwaps
+  ${CYAN}dappsSushiswapSwapsHistoricalGet${OFF};GetSwaps (historical)
   ${CYAN}dappsSushiswapTokenDayDataHistoricalGet${OFF};
   ${CYAN}dappsSushiswapTokensCurrentGet${OFF};GetTokens
   ${CYAN}dappsSushiswapTokensHistoricalGet${OFF};GetTokens
@@ -3488,7 +3488,7 @@ print_dappsSushiswapSwapsCurrentGet_help() {
 ##############################################################################
 print_dappsSushiswapSwapsHistoricalGet_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsSushiswapSwapsHistoricalGet - GetSwaps${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}dappsSushiswapSwapsHistoricalGet - GetSwaps (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \

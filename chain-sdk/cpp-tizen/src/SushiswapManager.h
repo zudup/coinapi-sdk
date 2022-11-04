@@ -453,7 +453,7 @@ bool dappsSushiswapSwapsCurrentGetAsync(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetSwaps. *Synchronous*
+/*! \brief GetSwaps (historical). *Synchronous*
  *
  * 
  * \param startBlock 
@@ -470,7 +470,7 @@ bool dappsSushiswapSwapsHistoricalGetSync(char * accessToken,
 	void(* handler)(std::list<SwapDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetSwaps. *Asynchronous*
+/*! \brief GetSwaps (historical). *Asynchronous*
  *
  * 
  * \param startBlock 

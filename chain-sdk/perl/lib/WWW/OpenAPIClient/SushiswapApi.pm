@@ -1209,7 +1209,7 @@ sub dapps_sushiswap_swaps_current_get {
 #
 # dapps_sushiswap_swaps_historical_get
 #
-# GetSwaps
+# GetSwaps (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -1245,7 +1245,7 @@ sub dapps_sushiswap_swaps_current_get {
     },
     };
     __PACKAGE__->method_documentation->{ 'dapps_sushiswap_swaps_historical_get' } = {
-        summary => 'GetSwaps',
+        summary => 'GetSwaps (historical)',
         params => $params,
         returns => 'ARRAY[SwapDTO]',
         };

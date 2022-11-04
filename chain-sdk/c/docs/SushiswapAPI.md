@@ -17,7 +17,7 @@ Method | HTTP request | Description
 [**SushiswapAPI_dappsSushiswapPoolsCurrentGet**](SushiswapAPI.md#SushiswapAPI_dappsSushiswapPoolsCurrentGet) | **GET** /dapps/sushiswap/pools/current | GetPools
 [**SushiswapAPI_dappsSushiswapPoolsHistoricalGet**](SushiswapAPI.md#SushiswapAPI_dappsSushiswapPoolsHistoricalGet) | **GET** /dapps/sushiswap/pools/historical | GetPools
 [**SushiswapAPI_dappsSushiswapSwapsCurrentGet**](SushiswapAPI.md#SushiswapAPI_dappsSushiswapSwapsCurrentGet) | **GET** /dapps/sushiswap/swaps/current | GetSwaps
-[**SushiswapAPI_dappsSushiswapSwapsHistoricalGet**](SushiswapAPI.md#SushiswapAPI_dappsSushiswapSwapsHistoricalGet) | **GET** /dapps/sushiswap/swaps/historical | GetSwaps
+[**SushiswapAPI_dappsSushiswapSwapsHistoricalGet**](SushiswapAPI.md#SushiswapAPI_dappsSushiswapSwapsHistoricalGet) | **GET** /dapps/sushiswap/swaps/historical | GetSwaps (historical)
 [**SushiswapAPI_dappsSushiswapTokenDayDataHistoricalGet**](SushiswapAPI.md#SushiswapAPI_dappsSushiswapTokenDayDataHistoricalGet) | **GET** /dapps/sushiswap/tokenDayData/historical | 
 [**SushiswapAPI_dappsSushiswapTokensCurrentGet**](SushiswapAPI.md#SushiswapAPI_dappsSushiswapTokensCurrentGet) | **GET** /dapps/sushiswap/tokens/current | GetTokens
 [**SushiswapAPI_dappsSushiswapTokensHistoricalGet**](SushiswapAPI.md#SushiswapAPI_dappsSushiswapTokensHistoricalGet) | **GET** /dapps/sushiswap/tokens/historical | GetTokens
@@ -414,7 +414,7 @@ No authorization required
 
 # **SushiswapAPI_dappsSushiswapSwapsHistoricalGet**
 ```c
-// GetSwaps
+// GetSwaps (historical)
 //
 list_t* SushiswapAPI_dappsSushiswapSwapsHistoricalGet(apiClient_t *apiClient, long startBlock, long endBlock, char startDate, char endDate, char * poolId);
 ```

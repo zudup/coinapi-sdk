@@ -17,7 +17,7 @@ Method | HTTP request | Description
 [**dappsSushiswapPoolsCurrentGet**](SushiswapApi.md#dappsSushiswapPoolsCurrentGet) | **GET** /dapps/sushiswap/pools/current | GetPools
 [**dappsSushiswapPoolsHistoricalGet**](SushiswapApi.md#dappsSushiswapPoolsHistoricalGet) | **GET** /dapps/sushiswap/pools/historical | GetPools
 [**dappsSushiswapSwapsCurrentGet**](SushiswapApi.md#dappsSushiswapSwapsCurrentGet) | **GET** /dapps/sushiswap/swaps/current | GetSwaps
-[**dappsSushiswapSwapsHistoricalGet**](SushiswapApi.md#dappsSushiswapSwapsHistoricalGet) | **GET** /dapps/sushiswap/swaps/historical | GetSwaps
+[**dappsSushiswapSwapsHistoricalGet**](SushiswapApi.md#dappsSushiswapSwapsHistoricalGet) | **GET** /dapps/sushiswap/swaps/historical | GetSwaps (historical)
 [**dappsSushiswapTokenDayDataHistoricalGet**](SushiswapApi.md#dappsSushiswapTokenDayDataHistoricalGet) | **GET** /dapps/sushiswap/tokenDayData/historical | 
 [**dappsSushiswapTokensCurrentGet**](SushiswapApi.md#dappsSushiswapTokensCurrentGet) | **GET** /dapps/sushiswap/tokens/current | GetTokens
 [**dappsSushiswapTokensHistoricalGet**](SushiswapApi.md#dappsSushiswapTokensHistoricalGet) | **GET** /dapps/sushiswap/tokens/historical | GetTokens
@@ -685,7 +685,7 @@ No authorization required
 
 > [SwapDTO] dappsSushiswapSwapsHistoricalGet(opts)
 
-GetSwaps
+GetSwaps (historical)
 
 ### Example
 

@@ -704,7 +704,7 @@ API.Client.SushiswapApi.prototype.dappsSushiswapSwapsCurrentGet = function(opt_e
 }
 
 /**
- * GetSwaps
+ * GetSwaps (historical)
  * 
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 

@@ -2,7 +2,7 @@
 
 OnChain API
 - API version: v1
-  - Build date: 2022-11-04T09:24:18.629114Z[Etc/UTC]
+  - Build date: 2022-11-04T09:38:01.556661Z[Etc/UTC]
 
 
 This section will provide necessary information about the `OnChain API` protocol. 
@@ -181,7 +181,7 @@ Class | Method | HTTP request | Description
 *SushiswapApi* | [**dappsSushiswapPoolsCurrentGet**](docs/SushiswapApi.md#dappsSushiswapPoolsCurrentGet) | **GET** /dapps/sushiswap/pools/current | GetPools
 *SushiswapApi* | [**dappsSushiswapPoolsHistoricalGet**](docs/SushiswapApi.md#dappsSushiswapPoolsHistoricalGet) | **GET** /dapps/sushiswap/pools/historical | GetPools
 *SushiswapApi* | [**dappsSushiswapSwapsCurrentGet**](docs/SushiswapApi.md#dappsSushiswapSwapsCurrentGet) | **GET** /dapps/sushiswap/swaps/current | GetSwaps
-*SushiswapApi* | [**dappsSushiswapSwapsHistoricalGet**](docs/SushiswapApi.md#dappsSushiswapSwapsHistoricalGet) | **GET** /dapps/sushiswap/swaps/historical | GetSwaps
+*SushiswapApi* | [**dappsSushiswapSwapsHistoricalGet**](docs/SushiswapApi.md#dappsSushiswapSwapsHistoricalGet) | **GET** /dapps/sushiswap/swaps/historical | GetSwaps (historical)
 *SushiswapApi* | [**dappsSushiswapTokenDayDataHistoricalGet**](docs/SushiswapApi.md#dappsSushiswapTokenDayDataHistoricalGet) | **GET** /dapps/sushiswap/tokenDayData/historical | 
 *SushiswapApi* | [**dappsSushiswapTokensCurrentGet**](docs/SushiswapApi.md#dappsSushiswapTokensCurrentGet) | **GET** /dapps/sushiswap/tokens/current | GetTokens
 *SushiswapApi* | [**dappsSushiswapTokensHistoricalGet**](docs/SushiswapApi.md#dappsSushiswapTokensHistoricalGet) | **GET** /dapps/sushiswap/tokens/historical | GetTokens

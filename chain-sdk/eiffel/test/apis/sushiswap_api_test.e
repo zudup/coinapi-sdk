@@ -224,7 +224,7 @@ feature -- Test routines
         end
 
     test_dapps_sushiswap_swaps_historical_get
-            -- GetSwaps
+            -- GetSwaps (historical)
             --
             -- 
         local

@@ -410,7 +410,7 @@ instance Produces DappsSushiswapSwapsCurrentGet MimePlainText
 
 -- | @GET \/dapps\/sushiswap\/swaps\/historical@
 -- 
--- GetSwaps
+-- GetSwaps (historical)
 -- 
 dappsSushiswapSwapsHistoricalGet
   :: Accept accept -- ^ request accept ('MimeType')

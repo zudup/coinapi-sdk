@@ -70,7 +70,7 @@ list_t*
 SushiswapAPI_dappsSushiswapSwapsCurrentGet(apiClient_t *apiClient);
 
 
-// GetSwaps
+// GetSwaps (historical)
 //
 list_t*
 SushiswapAPI_dappsSushiswapSwapsHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );

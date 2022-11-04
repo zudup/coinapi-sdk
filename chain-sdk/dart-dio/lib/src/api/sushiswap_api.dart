@@ -884,7 +884,7 @@ class SushiswapApi {
     );
   }
 
-  /// GetSwaps
+  /// GetSwaps (historical)
   /// 
   ///
   /// Parameters:

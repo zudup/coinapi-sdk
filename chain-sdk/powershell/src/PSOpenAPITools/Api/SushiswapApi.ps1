@@ -1344,7 +1344,7 @@ function Invoke-DappsSushiswapSwapsCurrentGet {
 <#
 .SYNOPSIS
 
-GetSwaps
+GetSwaps (historical)
 
 .DESCRIPTION
 

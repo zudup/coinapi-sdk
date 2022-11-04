@@ -86,7 +86,7 @@ Class | Method | HTTP request | Description
 *SUSHISWAP_API* | [**dapps_sushiswap_pools_current_get**](docs/SUSHISWAP_API.md#dapps_sushiswap_pools_current_get) | **Get** /dapps/sushiswap/pools/current | GetPools
 *SUSHISWAP_API* | [**dapps_sushiswap_pools_historical_get**](docs/SUSHISWAP_API.md#dapps_sushiswap_pools_historical_get) | **Get** /dapps/sushiswap/pools/historical | GetPools
 *SUSHISWAP_API* | [**dapps_sushiswap_swaps_current_get**](docs/SUSHISWAP_API.md#dapps_sushiswap_swaps_current_get) | **Get** /dapps/sushiswap/swaps/current | GetSwaps
-*SUSHISWAP_API* | [**dapps_sushiswap_swaps_historical_get**](docs/SUSHISWAP_API.md#dapps_sushiswap_swaps_historical_get) | **Get** /dapps/sushiswap/swaps/historical | GetSwaps
+*SUSHISWAP_API* | [**dapps_sushiswap_swaps_historical_get**](docs/SUSHISWAP_API.md#dapps_sushiswap_swaps_historical_get) | **Get** /dapps/sushiswap/swaps/historical | GetSwaps (historical)
 *SUSHISWAP_API* | [**dapps_sushiswap_token_day_data_historical_get**](docs/SUSHISWAP_API.md#dapps_sushiswap_token_day_data_historical_get) | **Get** /dapps/sushiswap/tokenDayData/historical | 
 *SUSHISWAP_API* | [**dapps_sushiswap_tokens_current_get**](docs/SUSHISWAP_API.md#dapps_sushiswap_tokens_current_get) | **Get** /dapps/sushiswap/tokens/current | GetTokens
 *SUSHISWAP_API* | [**dapps_sushiswap_tokens_historical_get**](docs/SUSHISWAP_API.md#dapps_sushiswap_tokens_historical_get) | **Get** /dapps/sushiswap/tokens/historical | GetTokens

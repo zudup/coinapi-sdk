@@ -80,7 +80,7 @@ void main() {
       // TODO
     });
 
-    // GetSwaps
+    // GetSwaps (historical)
     //
     //Future<BuiltList<SwapDTO>> dappsSushiswapSwapsHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
     test('test dappsSushiswapSwapsHistoricalGet', () async {

@@ -17,7 +17,7 @@ All URIs are relative to *https://onchain.coinapi.io*
 | [**DappsSushiswapPoolsCurrentGet**](SushiswapApi.md#dappssushiswappoolscurrentget) | **GET** /dapps/sushiswap/pools/current | GetPools |
 | [**DappsSushiswapPoolsHistoricalGet**](SushiswapApi.md#dappssushiswappoolshistoricalget) | **GET** /dapps/sushiswap/pools/historical | GetPools |
 | [**DappsSushiswapSwapsCurrentGet**](SushiswapApi.md#dappssushiswapswapscurrentget) | **GET** /dapps/sushiswap/swaps/current | GetSwaps |
-| [**DappsSushiswapSwapsHistoricalGet**](SushiswapApi.md#dappssushiswapswapshistoricalget) | **GET** /dapps/sushiswap/swaps/historical | GetSwaps |
+| [**DappsSushiswapSwapsHistoricalGet**](SushiswapApi.md#dappssushiswapswapshistoricalget) | **GET** /dapps/sushiswap/swaps/historical | GetSwaps (historical) |
 | [**DappsSushiswapTokenDayDataHistoricalGet**](SushiswapApi.md#dappssushiswaptokendaydatahistoricalget) | **GET** /dapps/sushiswap/tokenDayData/historical |  |
 | [**DappsSushiswapTokensCurrentGet**](SushiswapApi.md#dappssushiswaptokenscurrentget) | **GET** /dapps/sushiswap/tokens/current | GetTokens |
 | [**DappsSushiswapTokensHistoricalGet**](SushiswapApi.md#dappssushiswaptokenshistoricalget) | **GET** /dapps/sushiswap/tokens/historical | GetTokens |
@@ -1197,7 +1197,7 @@ No authorization required
 # **DappsSushiswapSwapsHistoricalGet**
 > List&lt;SwapDTO&gt; DappsSushiswapSwapsHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
 
-GetSwaps
+GetSwaps (historical)
 
 ### Example
 ```csharp
@@ -1224,7 +1224,7 @@ namespace Example
 
             try
             {
-                // GetSwaps
+                // GetSwaps (historical)
                 List<SwapDTO> result = apiInstance.DappsSushiswapSwapsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
                 Debug.WriteLine(result);
             }
@@ -1245,7 +1245,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // GetSwaps
+    // GetSwaps (historical)
     ApiResponse<List<SwapDTO>> response = apiInstance.DappsSushiswapSwapsHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);

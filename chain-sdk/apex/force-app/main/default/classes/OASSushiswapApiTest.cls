@@ -421,7 +421,7 @@ private class OASSushiswapApiTest {
     }
 
     /**
-     * GetSwaps
+     * GetSwaps (historical)
      *
      * 
      */

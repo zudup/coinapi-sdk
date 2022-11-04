@@ -1073,7 +1073,7 @@ export class SushiswapService {
     }
 
     /**
-     * GetSwaps
+     * GetSwaps (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 

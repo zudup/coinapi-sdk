@@ -205,7 +205,7 @@ describe 'SushiswapApi' do
   end
 
   # unit tests for dapps_sushiswap_swaps_historical_get
-  # GetSwaps
+  # GetSwaps (historical)
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
   # @option opts [Integer] :end_block 
