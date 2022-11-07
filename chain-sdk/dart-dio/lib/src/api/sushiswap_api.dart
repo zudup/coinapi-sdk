@@ -9,9 +9,22 @@ import 'package:dio/dio.dart';
 
 import 'package:built_collection/built_collection.dart';
 import 'package:openapi/src/api_util.dart';
+import 'package:openapi/src/model/sushiswap_bundle_dto.dart';
+import 'package:openapi/src/model/sushiswap_burn_dto.dart';
+import 'package:openapi/src/model/sushiswap_day_data_dto.dart';
+import 'package:openapi/src/model/sushiswap_factory_dto.dart';
+import 'package:openapi/src/model/sushiswap_hour_data_dto.dart';
+import 'package:openapi/src/model/sushiswap_liquidity_position_dto.dart';
+import 'package:openapi/src/model/sushiswap_liquidity_position_snapshot_dto.dart';
+import 'package:openapi/src/model/sushiswap_mint_dto.dart';
+import 'package:openapi/src/model/sushiswap_pair_day_data_dto.dart';
 import 'package:openapi/src/model/sushiswap_pair_dto.dart';
+import 'package:openapi/src/model/sushiswap_pair_hour_data_dto.dart';
 import 'package:openapi/src/model/sushiswap_swap_dto.dart';
+import 'package:openapi/src/model/sushiswap_token_day_data_dto.dart';
 import 'package:openapi/src/model/sushiswap_token_dto.dart';
+import 'package:openapi/src/model/sushiswap_transaction_dto.dart';
+import 'package:openapi/src/model/sushiswap_user_dto.dart';
 
 class SushiswapApi {
 
@@ -21,8 +34,8 @@ class SushiswapApi {
 
   const SushiswapApi(this._dio, this._serializers);
 
-  /// dappsSushiswapBundlesHistoricalGet
-  /// 
+  /// GetBundles (historical)
+  /// Gets bundles.
   ///
   /// Parameters:
   /// * [startBlock] 
@@ -36,9 +49,9 @@ class SushiswapApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future]
+  /// Returns a [Future] containing a [Response] with a [BuiltList<SushiswapBundleDTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<void>> dappsSushiswapBundlesHistoricalGet({ 
+  Future<Response<BuiltList<SushiswapBundleDTO>>> sushiswapGetBundlesHistorical({ 
     int? startBlock,
     int? endBlock,
     DateTime? startDate,
@@ -79,11 +92,38 @@ class SushiswapApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    return _response;
+    BuiltList<SushiswapBundleDTO> _responseData;
+
+    try {
+      const _responseType = FullType(BuiltList, [FullType(SushiswapBundleDTO)]);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as BuiltList<SushiswapBundleDTO>;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<BuiltList<SushiswapBundleDTO>>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
   }
 
-  /// dappsSushiswapBurnsHistoricalGet
-  /// 
+  /// GetBurns (historical)
+  /// Gets burns.
   ///
   /// Parameters:
   /// * [startBlock] 
@@ -98,9 +138,9 @@ class SushiswapApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future]
+  /// Returns a [Future] containing a [Response] with a [BuiltList<SushiswapBurnDTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<void>> dappsSushiswapBurnsHistoricalGet({ 
+  Future<Response<BuiltList<SushiswapBurnDTO>>> sushiswapGetBurnsHistorical({ 
     int? startBlock,
     int? endBlock,
     DateTime? startDate,
@@ -143,11 +183,38 @@ class SushiswapApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    return _response;
+    BuiltList<SushiswapBurnDTO> _responseData;
+
+    try {
+      const _responseType = FullType(BuiltList, [FullType(SushiswapBurnDTO)]);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as BuiltList<SushiswapBurnDTO>;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<BuiltList<SushiswapBurnDTO>>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
   }
 
-  /// dappsSushiswapDayDataHistoricalGet
-  /// 
+  /// GetDayData (historical)
+  /// Gets day data.
   ///
   /// Parameters:
   /// * [startBlock] 
@@ -161,9 +228,9 @@ class SushiswapApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future]
+  /// Returns a [Future] containing a [Response] with a [BuiltList<SushiswapDayDataDTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<void>> dappsSushiswapDayDataHistoricalGet({ 
+  Future<Response<BuiltList<SushiswapDayDataDTO>>> sushiswapGetDayDataHistorical({ 
     int? startBlock,
     int? endBlock,
     DateTime? startDate,
@@ -204,11 +271,38 @@ class SushiswapApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    return _response;
+    BuiltList<SushiswapDayDataDTO> _responseData;
+
+    try {
+      const _responseType = FullType(BuiltList, [FullType(SushiswapDayDataDTO)]);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as BuiltList<SushiswapDayDataDTO>;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<BuiltList<SushiswapDayDataDTO>>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
   }
 
-  /// dappsSushiswapFactoryHistoricalGet
-  /// 
+  /// GetFactory (historical)
+  /// Gets factory.
   ///
   /// Parameters:
   /// * [startBlock] 
@@ -222,9 +316,9 @@ class SushiswapApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future]
+  /// Returns a [Future] containing a [Response] with a [BuiltList<SushiswapFactoryDTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<void>> dappsSushiswapFactoryHistoricalGet({ 
+  Future<Response<BuiltList<SushiswapFactoryDTO>>> sushiswapGetFactoryHistorical({ 
     int? startBlock,
     int? endBlock,
     DateTime? startDate,
@@ -265,11 +359,38 @@ class SushiswapApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    return _response;
+    BuiltList<SushiswapFactoryDTO> _responseData;
+
+    try {
+      const _responseType = FullType(BuiltList, [FullType(SushiswapFactoryDTO)]);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as BuiltList<SushiswapFactoryDTO>;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<BuiltList<SushiswapFactoryDTO>>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
   }
 
-  /// dappsSushiswapHourDataHistoricalGet
-  /// 
+  /// GetHourData (historical)
+  /// Gets hour data.
   ///
   /// Parameters:
   /// * [startBlock] 
@@ -283,9 +404,9 @@ class SushiswapApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future]
+  /// Returns a [Future] containing a [Response] with a [BuiltList<SushiswapHourDataDTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<void>> dappsSushiswapHourDataHistoricalGet({ 
+  Future<Response<BuiltList<SushiswapHourDataDTO>>> sushiswapGetHourDataHistorical({ 
     int? startBlock,
     int? endBlock,
     DateTime? startDate,
@@ -326,11 +447,38 @@ class SushiswapApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    return _response;
+    BuiltList<SushiswapHourDataDTO> _responseData;
+
+    try {
+      const _responseType = FullType(BuiltList, [FullType(SushiswapHourDataDTO)]);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as BuiltList<SushiswapHourDataDTO>;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<BuiltList<SushiswapHourDataDTO>>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
   }
 
-  /// dappsSushiswapLiquidityPositionHistoricalGet
-  /// 
+  /// GetLiquidityPosition (historical)
+  /// Gets liquidity position.
   ///
   /// Parameters:
   /// * [startBlock] 
@@ -345,9 +493,9 @@ class SushiswapApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future]
+  /// Returns a [Future] containing a [Response] with a [BuiltList<SushiswapLiquidityPositionDTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<void>> dappsSushiswapLiquidityPositionHistoricalGet({ 
+  Future<Response<BuiltList<SushiswapLiquidityPositionDTO>>> sushiswapGetLiquidityPositionHistorical({ 
     int? startBlock,
     int? endBlock,
     DateTime? startDate,
@@ -390,11 +538,38 @@ class SushiswapApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    return _response;
+    BuiltList<SushiswapLiquidityPositionDTO> _responseData;
+
+    try {
+      const _responseType = FullType(BuiltList, [FullType(SushiswapLiquidityPositionDTO)]);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as BuiltList<SushiswapLiquidityPositionDTO>;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<BuiltList<SushiswapLiquidityPositionDTO>>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
   }
 
-  /// dappsSushiswapLiquidityPositionSnapshotsHistoricalGet
-  /// 
+  /// GetLiquidityPositionSnapshot (historical)
+  /// Gets liquidity position snapshot.
   ///
   /// Parameters:
   /// * [startBlock] 
@@ -409,9 +584,9 @@ class SushiswapApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future]
+  /// Returns a [Future] containing a [Response] with a [BuiltList<SushiswapLiquidityPositionSnapshotDTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<void>> dappsSushiswapLiquidityPositionSnapshotsHistoricalGet({ 
+  Future<Response<BuiltList<SushiswapLiquidityPositionSnapshotDTO>>> sushiswapGetLiquidityPositionSnapshotHistorical({ 
     int? startBlock,
     int? endBlock,
     DateTime? startDate,
@@ -454,11 +629,38 @@ class SushiswapApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    return _response;
+    BuiltList<SushiswapLiquidityPositionSnapshotDTO> _responseData;
+
+    try {
+      const _responseType = FullType(BuiltList, [FullType(SushiswapLiquidityPositionSnapshotDTO)]);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as BuiltList<SushiswapLiquidityPositionSnapshotDTO>;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<BuiltList<SushiswapLiquidityPositionSnapshotDTO>>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
   }
 
-  /// dappsSushiswapMintsHistoricalGet
-  /// 
+  /// GetMints (historical)
+  /// Gets mints.
   ///
   /// Parameters:
   /// * [startBlock] 
@@ -473,9 +675,9 @@ class SushiswapApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future]
+  /// Returns a [Future] containing a [Response] with a [BuiltList<SushiswapMintDTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<void>> dappsSushiswapMintsHistoricalGet({ 
+  Future<Response<BuiltList<SushiswapMintDTO>>> sushiswapGetMintsHistorical({ 
     int? startBlock,
     int? endBlock,
     DateTime? startDate,
@@ -518,321 +720,34 @@ class SushiswapApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    return _response;
-  }
+    BuiltList<SushiswapMintDTO> _responseData;
 
-  /// dappsSushiswapPoolDayDataHistoricalGet
-  /// 
-  ///
-  /// Parameters:
-  /// * [startBlock] 
-  /// * [endBlock] 
-  /// * [startDate] 
-  /// * [endDate] 
-  /// * [poolId] 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future]
-  /// Throws [DioError] if API call or serialization fails
-  Future<Response<void>> dappsSushiswapPoolDayDataHistoricalGet({ 
-    int? startBlock,
-    int? endBlock,
-    DateTime? startDate,
-    DateTime? endDate,
-    String? poolId,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/dapps/sushiswap/poolDayData/historical';
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
+    try {
+      const _responseType = FullType(BuiltList, [FullType(SushiswapMintDTO)]);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as BuiltList<SushiswapMintDTO>;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<BuiltList<SushiswapMintDTO>>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
     );
-
-    final _queryParameters = <String, dynamic>{
-      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
-      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
-      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
-      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
-      if (poolId != null) r'poolId': encodeQueryParameter(_serializers, poolId, const FullType(String)),
-    };
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      queryParameters: _queryParameters,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    return _response;
-  }
-
-  /// dappsSushiswapPoolHourDataHistoricalGet
-  /// 
-  ///
-  /// Parameters:
-  /// * [startBlock] 
-  /// * [endBlock] 
-  /// * [startDate] 
-  /// * [endDate] 
-  /// * [poolId] 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future]
-  /// Throws [DioError] if API call or serialization fails
-  Future<Response<void>> dappsSushiswapPoolHourDataHistoricalGet({ 
-    int? startBlock,
-    int? endBlock,
-    DateTime? startDate,
-    DateTime? endDate,
-    String? poolId,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/dapps/sushiswap/poolHourData/historical';
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _queryParameters = <String, dynamic>{
-      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
-      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
-      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
-      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
-      if (poolId != null) r'poolId': encodeQueryParameter(_serializers, poolId, const FullType(String)),
-    };
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      queryParameters: _queryParameters,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    return _response;
-  }
-
-  /// dappsSushiswapTokenDayDataHistoricalGet
-  /// 
-  ///
-  /// Parameters:
-  /// * [startBlock] 
-  /// * [endBlock] 
-  /// * [startDate] 
-  /// * [endDate] 
-  /// * [tokenId] 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future]
-  /// Throws [DioError] if API call or serialization fails
-  Future<Response<void>> dappsSushiswapTokenDayDataHistoricalGet({ 
-    int? startBlock,
-    int? endBlock,
-    DateTime? startDate,
-    DateTime? endDate,
-    String? tokenId,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/dapps/sushiswap/tokenDayData/historical';
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _queryParameters = <String, dynamic>{
-      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
-      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
-      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
-      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
-      if (tokenId != null) r'tokenId': encodeQueryParameter(_serializers, tokenId, const FullType(String)),
-    };
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      queryParameters: _queryParameters,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    return _response;
-  }
-
-  /// dappsSushiswapTransactionsHistoricalGet
-  /// 
-  ///
-  /// Parameters:
-  /// * [startBlock] 
-  /// * [endBlock] 
-  /// * [startDate] 
-  /// * [endDate] 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future]
-  /// Throws [DioError] if API call or serialization fails
-  Future<Response<void>> dappsSushiswapTransactionsHistoricalGet({ 
-    int? startBlock,
-    int? endBlock,
-    DateTime? startDate,
-    DateTime? endDate,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/dapps/sushiswap/transactions/historical';
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _queryParameters = <String, dynamic>{
-      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
-      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
-      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
-      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
-    };
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      queryParameters: _queryParameters,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    return _response;
-  }
-
-  /// dappsSushiswapUsersHistoricalGet
-  /// 
-  ///
-  /// Parameters:
-  /// * [startBlock] 
-  /// * [endBlock] 
-  /// * [startDate] 
-  /// * [endDate] 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future]
-  /// Throws [DioError] if API call or serialization fails
-  Future<Response<void>> dappsSushiswapUsersHistoricalGet({ 
-    int? startBlock,
-    int? endBlock,
-    DateTime? startDate,
-    DateTime? endDate,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/dapps/sushiswap/users/historical';
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _queryParameters = <String, dynamic>{
-      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
-      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
-      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
-      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
-    };
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      queryParameters: _queryParameters,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    return _response;
   }
 
   /// GetPools (current)
@@ -896,6 +811,97 @@ class SushiswapApi {
     }
 
     return Response<BuiltList<SushiswapPairDTO>>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// GetPoolsDayData (historical)
+  /// Gets pools day data.
+  ///
+  /// Parameters:
+  /// * [startBlock] 
+  /// * [endBlock] 
+  /// * [startDate] 
+  /// * [endDate] 
+  /// * [poolId] 
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [BuiltList<SushiswapPairDayDataDTO>] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<BuiltList<SushiswapPairDayDataDTO>>> sushiswapGetPoolsDayDataHistorical({ 
+    int? startBlock,
+    int? endBlock,
+    DateTime? startDate,
+    DateTime? endDate,
+    String? poolId,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/dapps/sushiswap/poolsDayData/historical';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _queryParameters = <String, dynamic>{
+      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
+      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
+      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
+      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
+      if (poolId != null) r'poolId': encodeQueryParameter(_serializers, poolId, const FullType(String)),
+    };
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      queryParameters: _queryParameters,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    BuiltList<SushiswapPairDayDataDTO> _responseData;
+
+    try {
+      const _responseType = FullType(BuiltList, [FullType(SushiswapPairDayDataDTO)]);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as BuiltList<SushiswapPairDayDataDTO>;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<BuiltList<SushiswapPairDayDataDTO>>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -998,6 +1004,97 @@ class SushiswapApi {
     );
   }
 
+  /// GetPoolsHourData (historical)
+  /// Gets pools tracked each our.
+  ///
+  /// Parameters:
+  /// * [startBlock] 
+  /// * [endBlock] 
+  /// * [startDate] 
+  /// * [endDate] 
+  /// * [poolId] 
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [BuiltList<SushiswapPairHourDataDTO>] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<BuiltList<SushiswapPairHourDataDTO>>> sushiswapGetPoolsHourDataHistorical({ 
+    int? startBlock,
+    int? endBlock,
+    DateTime? startDate,
+    DateTime? endDate,
+    String? poolId,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/dapps/sushiswap/poolsHourData/historical';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _queryParameters = <String, dynamic>{
+      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
+      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
+      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
+      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
+      if (poolId != null) r'poolId': encodeQueryParameter(_serializers, poolId, const FullType(String)),
+    };
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      queryParameters: _queryParameters,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    BuiltList<SushiswapPairHourDataDTO> _responseData;
+
+    try {
+      const _responseType = FullType(BuiltList, [FullType(SushiswapPairHourDataDTO)]);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as BuiltList<SushiswapPairHourDataDTO>;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<BuiltList<SushiswapPairHourDataDTO>>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
   /// GetSwaps (current)
   /// Gets swaps.
   ///
@@ -1009,9 +1106,9 @@ class SushiswapApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [SushiswapSwapDTO] as data
+  /// Returns a [Future] containing a [Response] with a [BuiltList<SushiswapSwapDTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<SushiswapSwapDTO>> sushiswapGetSwapsCurrent({ 
+  Future<Response<BuiltList<SushiswapSwapDTO>>> sushiswapGetSwapsCurrent({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -1040,14 +1137,14 @@ class SushiswapApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    SushiswapSwapDTO _responseData;
+    BuiltList<SushiswapSwapDTO> _responseData;
 
     try {
-      const _responseType = FullType(SushiswapSwapDTO);
+      const _responseType = FullType(BuiltList, [FullType(SushiswapSwapDTO)]);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as SushiswapSwapDTO;
+      ) as BuiltList<SushiswapSwapDTO>;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -1058,7 +1155,7 @@ class SushiswapApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<SushiswapSwapDTO>(
+    return Response<BuiltList<SushiswapSwapDTO>>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -1172,9 +1269,9 @@ class SushiswapApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [SushiswapTokenDTO] as data
+  /// Returns a [Future] containing a [Response] with a [BuiltList<SushiswapTokenDTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<SushiswapTokenDTO>> sushiswapGetTokensCurrent({ 
+  Future<Response<BuiltList<SushiswapTokenDTO>>> sushiswapGetTokensCurrent({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -1203,14 +1300,14 @@ class SushiswapApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    SushiswapTokenDTO _responseData;
+    BuiltList<SushiswapTokenDTO> _responseData;
 
     try {
-      const _responseType = FullType(SushiswapTokenDTO);
+      const _responseType = FullType(BuiltList, [FullType(SushiswapTokenDTO)]);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as SushiswapTokenDTO;
+      ) as BuiltList<SushiswapTokenDTO>;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -1221,7 +1318,98 @@ class SushiswapApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<SushiswapTokenDTO>(
+    return Response<BuiltList<SushiswapTokenDTO>>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// GetTokensDayData (historical)
+  /// Gets tokens day data.
+  ///
+  /// Parameters:
+  /// * [startBlock] 
+  /// * [endBlock] 
+  /// * [startDate] 
+  /// * [endDate] 
+  /// * [tokenId] 
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [BuiltList<SushiswapTokenDayDataDTO>] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<BuiltList<SushiswapTokenDayDataDTO>>> sushiswapGetTokensDayDataHistorical({ 
+    int? startBlock,
+    int? endBlock,
+    DateTime? startDate,
+    DateTime? endDate,
+    String? tokenId,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/dapps/sushiswap/tokensDayData/historical';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _queryParameters = <String, dynamic>{
+      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
+      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
+      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
+      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
+      if (tokenId != null) r'tokenId': encodeQueryParameter(_serializers, tokenId, const FullType(String)),
+    };
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      queryParameters: _queryParameters,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    BuiltList<SushiswapTokenDayDataDTO> _responseData;
+
+    try {
+      const _responseType = FullType(BuiltList, [FullType(SushiswapTokenDayDataDTO)]);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as BuiltList<SushiswapTokenDayDataDTO>;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<BuiltList<SushiswapTokenDayDataDTO>>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -1313,6 +1501,182 @@ class SushiswapApi {
     }
 
     return Response<BuiltList<SushiswapTokenDTO>>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// GetTransactions (historical)
+  /// Gets transactions.
+  ///
+  /// Parameters:
+  /// * [startBlock] 
+  /// * [endBlock] 
+  /// * [startDate] 
+  /// * [endDate] 
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [BuiltList<SushiswapTransactionDTO>] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<BuiltList<SushiswapTransactionDTO>>> sushiswapGetTransactionsHistorical({ 
+    int? startBlock,
+    int? endBlock,
+    DateTime? startDate,
+    DateTime? endDate,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/dapps/sushiswap/transactions/historical';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _queryParameters = <String, dynamic>{
+      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
+      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
+      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
+      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
+    };
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      queryParameters: _queryParameters,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    BuiltList<SushiswapTransactionDTO> _responseData;
+
+    try {
+      const _responseType = FullType(BuiltList, [FullType(SushiswapTransactionDTO)]);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as BuiltList<SushiswapTransactionDTO>;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<BuiltList<SushiswapTransactionDTO>>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// GetUsers (historical)
+  /// Gets users.
+  ///
+  /// Parameters:
+  /// * [startBlock] 
+  /// * [endBlock] 
+  /// * [startDate] 
+  /// * [endDate] 
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [BuiltList<SushiswapUserDTO>] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<BuiltList<SushiswapUserDTO>>> sushiswapGetUsersHistorical({ 
+    int? startBlock,
+    int? endBlock,
+    DateTime? startDate,
+    DateTime? endDate,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/dapps/sushiswap/users/historical';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _queryParameters = <String, dynamic>{
+      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
+      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
+      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
+      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
+    };
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      queryParameters: _queryParameters,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    BuiltList<SushiswapUserDTO> _responseData;
+
+    try {
+      const _responseType = FullType(BuiltList, [FullType(SushiswapUserDTO)]);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as BuiltList<SushiswapUserDTO>;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<BuiltList<SushiswapUserDTO>>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

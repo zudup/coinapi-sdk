@@ -151,36 +151,30 @@ Method | HTTP request | Description
 ### SushiswapManager
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-*dappsSushiswapBundlesHistoricalGetSync* | *GET* /dapps/sushiswap/bundles/historical | .
-*dappsSushiswapBundlesHistoricalGetASync* | *GET* /dapps/sushiswap/bundles/historical | .
-*dappsSushiswapBurnsHistoricalGetSync* | *GET* /dapps/sushiswap/burns/historical | .
-*dappsSushiswapBurnsHistoricalGetASync* | *GET* /dapps/sushiswap/burns/historical | .
-*dappsSushiswapDayDataHistoricalGetSync* | *GET* /dapps/sushiswap/dayData/historical | .
-*dappsSushiswapDayDataHistoricalGetASync* | *GET* /dapps/sushiswap/dayData/historical | .
-*dappsSushiswapFactoryHistoricalGetSync* | *GET* /dapps/sushiswap/factory/historical | .
-*dappsSushiswapFactoryHistoricalGetASync* | *GET* /dapps/sushiswap/factory/historical | .
-*dappsSushiswapHourDataHistoricalGetSync* | *GET* /dapps/sushiswap/hourData/historical | .
-*dappsSushiswapHourDataHistoricalGetASync* | *GET* /dapps/sushiswap/hourData/historical | .
-*dappsSushiswapLiquidityPositionHistoricalGetSync* | *GET* /dapps/sushiswap/liquidityPosition/historical | .
-*dappsSushiswapLiquidityPositionHistoricalGetASync* | *GET* /dapps/sushiswap/liquidityPosition/historical | .
-*dappsSushiswapLiquidityPositionSnapshotsHistoricalGetSync* | *GET* /dapps/sushiswap/liquidityPositionSnapshots/historical | .
-*dappsSushiswapLiquidityPositionSnapshotsHistoricalGetASync* | *GET* /dapps/sushiswap/liquidityPositionSnapshots/historical | .
-*dappsSushiswapMintsHistoricalGetSync* | *GET* /dapps/sushiswap/mints/historical | .
-*dappsSushiswapMintsHistoricalGetASync* | *GET* /dapps/sushiswap/mints/historical | .
-*dappsSushiswapPoolDayDataHistoricalGetSync* | *GET* /dapps/sushiswap/poolDayData/historical | .
-*dappsSushiswapPoolDayDataHistoricalGetASync* | *GET* /dapps/sushiswap/poolDayData/historical | .
-*dappsSushiswapPoolHourDataHistoricalGetSync* | *GET* /dapps/sushiswap/poolHourData/historical | .
-*dappsSushiswapPoolHourDataHistoricalGetASync* | *GET* /dapps/sushiswap/poolHourData/historical | .
-*dappsSushiswapTokenDayDataHistoricalGetSync* | *GET* /dapps/sushiswap/tokenDayData/historical | .
-*dappsSushiswapTokenDayDataHistoricalGetASync* | *GET* /dapps/sushiswap/tokenDayData/historical | .
-*dappsSushiswapTransactionsHistoricalGetSync* | *GET* /dapps/sushiswap/transactions/historical | .
-*dappsSushiswapTransactionsHistoricalGetASync* | *GET* /dapps/sushiswap/transactions/historical | .
-*dappsSushiswapUsersHistoricalGetSync* | *GET* /dapps/sushiswap/users/historical | .
-*dappsSushiswapUsersHistoricalGetASync* | *GET* /dapps/sushiswap/users/historical | .
+*sushiswapGetBundles (historical)Sync* | *GET* /dapps/sushiswap/bundles/historical | GetBundles (historical).
+*sushiswapGetBundles (historical)ASync* | *GET* /dapps/sushiswap/bundles/historical | GetBundles (historical).
+*sushiswapGetBurns (historical)Sync* | *GET* /dapps/sushiswap/burns/historical | GetBurns (historical).
+*sushiswapGetBurns (historical)ASync* | *GET* /dapps/sushiswap/burns/historical | GetBurns (historical).
+*sushiswapGetDayData (historical)Sync* | *GET* /dapps/sushiswap/dayData/historical | GetDayData (historical).
+*sushiswapGetDayData (historical)ASync* | *GET* /dapps/sushiswap/dayData/historical | GetDayData (historical).
+*sushiswapGetFactory (historical)Sync* | *GET* /dapps/sushiswap/factory/historical | GetFactory (historical).
+*sushiswapGetFactory (historical)ASync* | *GET* /dapps/sushiswap/factory/historical | GetFactory (historical).
+*sushiswapGetHourData (historical)Sync* | *GET* /dapps/sushiswap/hourData/historical | GetHourData (historical).
+*sushiswapGetHourData (historical)ASync* | *GET* /dapps/sushiswap/hourData/historical | GetHourData (historical).
+*sushiswapGetLiquidityPosition (historical)Sync* | *GET* /dapps/sushiswap/liquidityPosition/historical | GetLiquidityPosition (historical).
+*sushiswapGetLiquidityPosition (historical)ASync* | *GET* /dapps/sushiswap/liquidityPosition/historical | GetLiquidityPosition (historical).
+*sushiswapGetLiquidityPositionSnapshot (historical)Sync* | *GET* /dapps/sushiswap/liquidityPositionSnapshots/historical | GetLiquidityPositionSnapshot (historical).
+*sushiswapGetLiquidityPositionSnapshot (historical)ASync* | *GET* /dapps/sushiswap/liquidityPositionSnapshots/historical | GetLiquidityPositionSnapshot (historical).
+*sushiswapGetMints (historical)Sync* | *GET* /dapps/sushiswap/mints/historical | GetMints (historical).
+*sushiswapGetMints (historical)ASync* | *GET* /dapps/sushiswap/mints/historical | GetMints (historical).
 *sushiswapGetPools (current)Sync* | *GET* /dapps/sushiswap/pools/current | GetPools (current).
 *sushiswapGetPools (current)ASync* | *GET* /dapps/sushiswap/pools/current | GetPools (current).
 *sushiswapGetPools (historical)Sync* | *GET* /dapps/sushiswap/pools/historical | GetPools (historical).
 *sushiswapGetPools (historical)ASync* | *GET* /dapps/sushiswap/pools/historical | GetPools (historical).
+*sushiswapGetPoolsDayData (historical)Sync* | *GET* /dapps/sushiswap/poolsDayData/historical | GetPoolsDayData (historical).
+*sushiswapGetPoolsDayData (historical)ASync* | *GET* /dapps/sushiswap/poolsDayData/historical | GetPoolsDayData (historical).
+*sushiswapGetPoolsHourData (historical)Sync* | *GET* /dapps/sushiswap/poolsHourData/historical | GetPoolsHourData (historical).
+*sushiswapGetPoolsHourData (historical)ASync* | *GET* /dapps/sushiswap/poolsHourData/historical | GetPoolsHourData (historical).
 *sushiswapGetSwaps (current)Sync* | *GET* /dapps/sushiswap/swaps/current | GetSwaps (current).
 *sushiswapGetSwaps (current)ASync* | *GET* /dapps/sushiswap/swaps/current | GetSwaps (current).
 *sushiswapGetSwaps (historical)Sync* | *GET* /dapps/sushiswap/swaps/historical | GetSwaps (historical).
@@ -189,6 +183,12 @@ Method | HTTP request | Description
 *sushiswapGetTokens (current)ASync* | *GET* /dapps/sushiswap/tokens/current | GetTokens (current).
 *sushiswapGetTokens (historical)Sync* | *GET* /dapps/sushiswap/tokens/historical | GetTokens (historical).
 *sushiswapGetTokens (historical)ASync* | *GET* /dapps/sushiswap/tokens/historical | GetTokens (historical).
+*sushiswapGetTokensDayData (historical)Sync* | *GET* /dapps/sushiswap/tokensDayData/historical | GetTokensDayData (historical).
+*sushiswapGetTokensDayData (historical)ASync* | *GET* /dapps/sushiswap/tokensDayData/historical | GetTokensDayData (historical).
+*sushiswapGetTransactions (historical)Sync* | *GET* /dapps/sushiswap/transactions/historical | GetTransactions (historical).
+*sushiswapGetTransactions (historical)ASync* | *GET* /dapps/sushiswap/transactions/historical | GetTransactions (historical).
+*sushiswapGetUsers (historical)Sync* | *GET* /dapps/sushiswap/users/historical | GetUsers (historical).
+*sushiswapGetUsers (historical)ASync* | *GET* /dapps/sushiswap/users/historical | GetUsers (historical).
 
 
 ### UniswapV2Manager
@@ -307,9 +307,22 @@ Method | HTTP request | Description
 Class | Description
 ------------- | -------------
  *Numerics.BigInteger* | 
+ *Sushiswap.BundleDTO* | The Bundle is used as a global store of derived ETH price in USD.
+ *Sushiswap.BurnDTO* | Burn entities are created for every emitted Burn event on the Uniswap core contracts. The Burn entity stores key data about the event like token amounts, who burned LP tokens, who received tokens, and more. This entity can be used to track liquidity removals on pairs.
+ *Sushiswap.DayDataDTO* | Tracks data across all pairs aggregated into a daily bucket.
+ *Sushiswap.FactoryDTO* | The Sushiswap Factory entity is responsible for storing aggregate information across all Sushiswap pairs. It can be used to view stats about total liquidity, volume, amount of pairs and more.
+ *Sushiswap.HourDataDTO* | 
+ *Sushiswap.LiquidityPositionDTO* | 
+ *Sushiswap.LiquidityPositionSnapshotDTO* | This entity is used to store data about a user's liquidity position over time. This information, along with information from the pair itself can be used to provide position sizes, token deposits, and more. It gets created and never updated.
+ *Sushiswap.MintDTO* | Mint entities are created for every emitted Mint event on the Sushiswap core contracts. The Mint entity stores key data about the event like token amounts, who sent the transaction, who received the liquidity, and more. This entity can be used to track liquidity provisions on pairs.
  *Sushiswap.PairDTO* | Information about a pair. Includes references to each token within the pair, volume information, liquidity information, and more. The pair entity mirrors the pair smart contract, and also contains aggregated information about use.
+ *Sushiswap.PairDayDataDTO* | Tracks pair data across each day.
+ *Sushiswap.PairHourDataDTO* | Tracks pair data across each hour.
  *Sushiswap.SwapDTO* | Swap are created for each token swap within a pair.
  *Sushiswap.TokenDTO* | Stores aggregated information for a specific token across all pairs that token is included in.
+ *Sushiswap.TokenDayDataDTO* | Token data aggregated across all pairs that include token.
+ *Sushiswap.TransactionDTO* | Transaction entities are created for each Ethereum transaction that contains an interaction within Sushiswap contracts. Each transaction contains 3 arrays, and at least one of these arrays has a length of 1.
+ *Sushiswap.UserDTO* | 
  *Transactions.ETradeAggressiveSide* | 
  *UniswapV2.PairV2DTO* | Information about a pair. Includes references to each token within the pair, volume information, liquidity information, and more. The pair entity mirrors the pair smart contract, and also contains aggregated information about use.
  *UniswapV2.SwapV2DTO* | Swap are created for each token swap within a pair.

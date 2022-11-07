@@ -73,156 +73,96 @@ class SushiswapApiTest extends TestCase
     }
 
     /**
-     * Test case for dappsSushiswapBundlesHistoricalGet
+     * Test case for sushiswapGetBundlesHistorical
      *
-     * .
+     * GetBundles (historical).
      *
      */
-    public function testDappsSushiswapBundlesHistoricalGet()
+    public function testSushiswapGetBundlesHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsSushiswapBurnsHistoricalGet
+     * Test case for sushiswapGetBurnsHistorical
      *
-     * .
+     * GetBurns (historical).
      *
      */
-    public function testDappsSushiswapBurnsHistoricalGet()
+    public function testSushiswapGetBurnsHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsSushiswapDayDataHistoricalGet
+     * Test case for sushiswapGetDayDataHistorical
      *
-     * .
+     * GetDayData (historical).
      *
      */
-    public function testDappsSushiswapDayDataHistoricalGet()
+    public function testSushiswapGetDayDataHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsSushiswapFactoryHistoricalGet
+     * Test case for sushiswapGetFactoryHistorical
      *
-     * .
+     * GetFactory (historical).
      *
      */
-    public function testDappsSushiswapFactoryHistoricalGet()
+    public function testSushiswapGetFactoryHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsSushiswapHourDataHistoricalGet
+     * Test case for sushiswapGetHourDataHistorical
      *
-     * .
+     * GetHourData (historical).
      *
      */
-    public function testDappsSushiswapHourDataHistoricalGet()
+    public function testSushiswapGetHourDataHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsSushiswapLiquidityPositionHistoricalGet
+     * Test case for sushiswapGetLiquidityPositionHistorical
      *
-     * .
+     * GetLiquidityPosition (historical).
      *
      */
-    public function testDappsSushiswapLiquidityPositionHistoricalGet()
+    public function testSushiswapGetLiquidityPositionHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsSushiswapLiquidityPositionSnapshotsHistoricalGet
+     * Test case for sushiswapGetLiquidityPositionSnapshotHistorical
      *
-     * .
+     * GetLiquidityPositionSnapshot (historical).
      *
      */
-    public function testDappsSushiswapLiquidityPositionSnapshotsHistoricalGet()
+    public function testSushiswapGetLiquidityPositionSnapshotHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsSushiswapMintsHistoricalGet
+     * Test case for sushiswapGetMintsHistorical
      *
-     * .
-     *
-     */
-    public function testDappsSushiswapMintsHistoricalGet()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for dappsSushiswapPoolDayDataHistoricalGet
-     *
-     * .
+     * GetMints (historical).
      *
      */
-    public function testDappsSushiswapPoolDayDataHistoricalGet()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for dappsSushiswapPoolHourDataHistoricalGet
-     *
-     * .
-     *
-     */
-    public function testDappsSushiswapPoolHourDataHistoricalGet()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for dappsSushiswapTokenDayDataHistoricalGet
-     *
-     * .
-     *
-     */
-    public function testDappsSushiswapTokenDayDataHistoricalGet()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for dappsSushiswapTransactionsHistoricalGet
-     *
-     * .
-     *
-     */
-    public function testDappsSushiswapTransactionsHistoricalGet()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for dappsSushiswapUsersHistoricalGet
-     *
-     * .
-     *
-     */
-    public function testDappsSushiswapUsersHistoricalGet()
+    public function testSushiswapGetMintsHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -241,12 +181,36 @@ class SushiswapApiTest extends TestCase
     }
 
     /**
+     * Test case for sushiswapGetPoolsDayDataHistorical
+     *
+     * GetPoolsDayData (historical).
+     *
+     */
+    public function testSushiswapGetPoolsDayDataHistorical()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for sushiswapGetPoolsHistorical
      *
      * GetPools (historical).
      *
      */
     public function testSushiswapGetPoolsHistorical()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for sushiswapGetPoolsHourDataHistorical
+     *
+     * GetPoolsHourData (historical).
+     *
+     */
+    public function testSushiswapGetPoolsHourDataHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -289,12 +253,48 @@ class SushiswapApiTest extends TestCase
     }
 
     /**
+     * Test case for sushiswapGetTokensDayDataHistorical
+     *
+     * GetTokensDayData (historical).
+     *
+     */
+    public function testSushiswapGetTokensDayDataHistorical()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for sushiswapGetTokensHistorical
      *
      * GetTokens (historical).
      *
      */
     public function testSushiswapGetTokensHistorical()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for sushiswapGetTransactionsHistorical
+     *
+     * GetTransactions (historical).
+     *
+     */
+    public function testSushiswapGetTransactionsHistorical()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for sushiswapGetUsersHistorical
+     *
+     * GetUsers (historical).
+     *
+     */
+    public function testSushiswapGetUsersHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

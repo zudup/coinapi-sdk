@@ -27,9 +27,84 @@ from openapi_client import schemas  # noqa: F401
 
 from openapi_client.model.sushiswap_token_dto import SushiswapTokenDTO
 
-SchemaFor200ResponseBodyTextPlain = SushiswapTokenDTO
-SchemaFor200ResponseBodyApplicationJson = SushiswapTokenDTO
-SchemaFor200ResponseBodyTextJson = SushiswapTokenDTO
+
+
+class SchemaFor200ResponseBodyTextPlain(
+    schemas.ListSchema
+):
+
+
+    class MetaOapg:
+        
+        @staticmethod
+        def items() -> typing.Type['SushiswapTokenDTO']:
+            return SushiswapTokenDTO
+
+    def __new__(
+        cls,
+        arg: typing.Union[typing.Tuple['SushiswapTokenDTO'], typing.List['SushiswapTokenDTO']],
+        _configuration: typing.Optional[schemas.Configuration] = None,
+    ) -> 'SchemaFor200ResponseBodyTextPlain':
+        return super().__new__(
+            cls,
+            arg,
+            _configuration=_configuration,
+        )
+
+    def __getitem__(self, i: int) -> 'SushiswapTokenDTO':
+        return super().__getitem__(i)
+
+
+class SchemaFor200ResponseBodyApplicationJson(
+    schemas.ListSchema
+):
+
+
+    class MetaOapg:
+        
+        @staticmethod
+        def items() -> typing.Type['SushiswapTokenDTO']:
+            return SushiswapTokenDTO
+
+    def __new__(
+        cls,
+        arg: typing.Union[typing.Tuple['SushiswapTokenDTO'], typing.List['SushiswapTokenDTO']],
+        _configuration: typing.Optional[schemas.Configuration] = None,
+    ) -> 'SchemaFor200ResponseBodyApplicationJson':
+        return super().__new__(
+            cls,
+            arg,
+            _configuration=_configuration,
+        )
+
+    def __getitem__(self, i: int) -> 'SushiswapTokenDTO':
+        return super().__getitem__(i)
+
+
+class SchemaFor200ResponseBodyTextJson(
+    schemas.ListSchema
+):
+
+
+    class MetaOapg:
+        
+        @staticmethod
+        def items() -> typing.Type['SushiswapTokenDTO']:
+            return SushiswapTokenDTO
+
+    def __new__(
+        cls,
+        arg: typing.Union[typing.Tuple['SushiswapTokenDTO'], typing.List['SushiswapTokenDTO']],
+        _configuration: typing.Optional[schemas.Configuration] = None,
+    ) -> 'SchemaFor200ResponseBodyTextJson':
+        return super().__new__(
+            cls,
+            arg,
+            _configuration=_configuration,
+        )
+
+    def __getitem__(self, i: int) -> 'SushiswapTokenDTO':
+        return super().__getitem__(i)
 
 
 @dataclass

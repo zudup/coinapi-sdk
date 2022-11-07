@@ -14,25 +14,28 @@
 #'
 #' @section Methods:
 #' \describe{
-#' \strong{ DappsSushiswapBundlesHistoricalGet } \emph{  }
+#' \strong{ SushiswapGetBundlesHistorical } \emph{ GetBundles (historical) }
+#' Gets bundles.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
 #' \item \emph{ @param } end_block integer
 #' \item \emph{ @param } start_date character
 #' \item \emph{ @param } end_date character
+#' \item \emph{ @returnType } list( \link{Sushiswap.BundleDTO} ) \cr
 #'
 #'
-#' \item status code : 200 | Success
+#' \item status code : 200 | successful operation
 #'
-#'
+#' \item return type : array[SushiswapBundleDTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
 #' }
 #' }
 #'
-#' \strong{ DappsSushiswapBurnsHistoricalGet } \emph{  }
+#' \strong{ SushiswapGetBurnsHistorical } \emph{ GetBurns (historical) }
+#' Gets burns.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
@@ -40,91 +43,80 @@
 #' \item \emph{ @param } start_date character
 #' \item \emph{ @param } end_date character
 #' \item \emph{ @param } pool_id character
+#' \item \emph{ @returnType } list( \link{Sushiswap.BurnDTO} ) \cr
 #'
 #'
-#' \item status code : 200 | Success
+#' \item status code : 200 | successful operation
 #'
-#'
+#' \item return type : array[SushiswapBurnDTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
 #' }
 #' }
 #'
-#' \strong{ DappsSushiswapDayDataHistoricalGet } \emph{  }
+#' \strong{ SushiswapGetDayDataHistorical } \emph{ GetDayData (historical) }
+#' Gets day data.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
 #' \item \emph{ @param } end_block integer
 #' \item \emph{ @param } start_date character
 #' \item \emph{ @param } end_date character
+#' \item \emph{ @returnType } list( \link{Sushiswap.DayDataDTO} ) \cr
 #'
 #'
-#' \item status code : 200 | Success
+#' \item status code : 200 | successful operation
 #'
-#'
+#' \item return type : array[SushiswapDayDataDTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
 #' }
 #' }
 #'
-#' \strong{ DappsSushiswapFactoryHistoricalGet } \emph{  }
+#' \strong{ SushiswapGetFactoryHistorical } \emph{ GetFactory (historical) }
+#' Gets factory.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
 #' \item \emph{ @param } end_block integer
 #' \item \emph{ @param } start_date character
 #' \item \emph{ @param } end_date character
+#' \item \emph{ @returnType } list( \link{Sushiswap.FactoryDTO} ) \cr
 #'
 #'
-#' \item status code : 200 | Success
+#' \item status code : 200 | successful operation
 #'
-#'
+#' \item return type : array[SushiswapFactoryDTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
 #' }
 #' }
 #'
-#' \strong{ DappsSushiswapHourDataHistoricalGet } \emph{  }
+#' \strong{ SushiswapGetHourDataHistorical } \emph{ GetHourData (historical) }
+#' Gets hour data.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
 #' \item \emph{ @param } end_block integer
 #' \item \emph{ @param } start_date character
 #' \item \emph{ @param } end_date character
+#' \item \emph{ @returnType } list( \link{Sushiswap.HourDataDTO} ) \cr
 #'
 #'
-#' \item status code : 200 | Success
+#' \item status code : 200 | successful operation
 #'
-#'
+#' \item return type : array[SushiswapHourDataDTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
 #' }
 #' }
 #'
-#' \strong{ DappsSushiswapLiquidityPositionHistoricalGet } \emph{  }
-#'
-#' \itemize{
-#' \item \emph{ @param } start_block integer
-#' \item \emph{ @param } end_block integer
-#' \item \emph{ @param } start_date character
-#' \item \emph{ @param } end_date character
-#' \item \emph{ @param } pool_id character
-#'
-#'
-#' \item status code : 200 | Success
-#'
-#'
-#' \item response headers :
-#'
-#' \tabular{ll}{
-#' }
-#' }
-#'
-#' \strong{ DappsSushiswapLiquidityPositionSnapshotsHistoricalGet } \emph{  }
+#' \strong{ SushiswapGetLiquidityPositionHistorical } \emph{ GetLiquidityPosition (historical) }
+#' Gets liquidity position.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
@@ -132,18 +124,20 @@
 #' \item \emph{ @param } start_date character
 #' \item \emph{ @param } end_date character
 #' \item \emph{ @param } pool_id character
+#' \item \emph{ @returnType } list( \link{Sushiswap.LiquidityPositionDTO} ) \cr
 #'
 #'
-#' \item status code : 200 | Success
+#' \item status code : 200 | successful operation
 #'
-#'
+#' \item return type : array[SushiswapLiquidityPositionDTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
 #' }
 #' }
 #'
-#' \strong{ DappsSushiswapMintsHistoricalGet } \emph{  }
+#' \strong{ SushiswapGetLiquidityPositionSnapshotHistorical } \emph{ GetLiquidityPositionSnapshot (historical) }
+#' Gets liquidity position snapshot.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
@@ -151,18 +145,20 @@
 #' \item \emph{ @param } start_date character
 #' \item \emph{ @param } end_date character
 #' \item \emph{ @param } pool_id character
+#' \item \emph{ @returnType } list( \link{Sushiswap.LiquidityPositionSnapshotDTO} ) \cr
 #'
 #'
-#' \item status code : 200 | Success
+#' \item status code : 200 | successful operation
 #'
-#'
+#' \item return type : array[SushiswapLiquidityPositionSnapshotDTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
 #' }
 #' }
 #'
-#' \strong{ DappsSushiswapPoolDayDataHistoricalGet } \emph{  }
+#' \strong{ SushiswapGetMintsHistorical } \emph{ GetMints (historical) }
+#' Gets mints.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
@@ -170,85 +166,12 @@
 #' \item \emph{ @param } start_date character
 #' \item \emph{ @param } end_date character
 #' \item \emph{ @param } pool_id character
+#' \item \emph{ @returnType } list( \link{Sushiswap.MintDTO} ) \cr
 #'
 #'
-#' \item status code : 200 | Success
+#' \item status code : 200 | successful operation
 #'
-#'
-#' \item response headers :
-#'
-#' \tabular{ll}{
-#' }
-#' }
-#'
-#' \strong{ DappsSushiswapPoolHourDataHistoricalGet } \emph{  }
-#'
-#' \itemize{
-#' \item \emph{ @param } start_block integer
-#' \item \emph{ @param } end_block integer
-#' \item \emph{ @param } start_date character
-#' \item \emph{ @param } end_date character
-#' \item \emph{ @param } pool_id character
-#'
-#'
-#' \item status code : 200 | Success
-#'
-#'
-#' \item response headers :
-#'
-#' \tabular{ll}{
-#' }
-#' }
-#'
-#' \strong{ DappsSushiswapTokenDayDataHistoricalGet } \emph{  }
-#'
-#' \itemize{
-#' \item \emph{ @param } start_block integer
-#' \item \emph{ @param } end_block integer
-#' \item \emph{ @param } start_date character
-#' \item \emph{ @param } end_date character
-#' \item \emph{ @param } token_id character
-#'
-#'
-#' \item status code : 200 | Success
-#'
-#'
-#' \item response headers :
-#'
-#' \tabular{ll}{
-#' }
-#' }
-#'
-#' \strong{ DappsSushiswapTransactionsHistoricalGet } \emph{  }
-#'
-#' \itemize{
-#' \item \emph{ @param } start_block integer
-#' \item \emph{ @param } end_block integer
-#' \item \emph{ @param } start_date character
-#' \item \emph{ @param } end_date character
-#'
-#'
-#' \item status code : 200 | Success
-#'
-#'
-#' \item response headers :
-#'
-#' \tabular{ll}{
-#' }
-#' }
-#'
-#' \strong{ DappsSushiswapUsersHistoricalGet } \emph{  }
-#'
-#' \itemize{
-#' \item \emph{ @param } start_block integer
-#' \item \emph{ @param } end_block integer
-#' \item \emph{ @param } start_date character
-#' \item \emph{ @param } end_date character
-#'
-#'
-#' \item status code : 200 | Success
-#'
-#'
+#' \item return type : array[SushiswapMintDTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -265,6 +188,27 @@
 #' \item status code : 200 | successful operation
 #'
 #' \item return type : array[SushiswapPairDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ SushiswapGetPoolsDayDataHistorical } \emph{ GetPoolsDayData (historical) }
+#' Gets pools day data.
+#'
+#' \itemize{
+#' \item \emph{ @param } start_block integer
+#' \item \emph{ @param } end_block integer
+#' \item \emph{ @param } start_date character
+#' \item \emph{ @param } end_date character
+#' \item \emph{ @param } pool_id character
+#' \item \emph{ @returnType } list( \link{Sushiswap.PairDayDataDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[SushiswapPairDayDataDTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -292,16 +236,37 @@
 #' }
 #' }
 #'
-#' \strong{ SushiswapGetSwapsCurrent } \emph{ GetSwaps (current) }
-#' Gets swaps.
+#' \strong{ SushiswapGetPoolsHourDataHistorical } \emph{ GetPoolsHourData (historical) }
+#' Gets pools tracked each our.
 #'
 #' \itemize{
-#' \item \emph{ @returnType } \link{SushiswapSwapDTO} \cr
+#' \item \emph{ @param } start_block integer
+#' \item \emph{ @param } end_block integer
+#' \item \emph{ @param } start_date character
+#' \item \emph{ @param } end_date character
+#' \item \emph{ @param } pool_id character
+#' \item \emph{ @returnType } list( \link{Sushiswap.PairHourDataDTO} ) \cr
 #'
 #'
 #' \item status code : 200 | successful operation
 #'
-#' \item return type : SushiswapSwapDTO
+#' \item return type : array[SushiswapPairHourDataDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ SushiswapGetSwapsCurrent } \emph{ GetSwaps (current) }
+#' Gets swaps.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{Sushiswap.SwapDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[SushiswapSwapDTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -333,12 +298,33 @@
 #' Gets tokens.
 #'
 #' \itemize{
-#' \item \emph{ @returnType } \link{SushiswapTokenDTO} \cr
+#' \item \emph{ @returnType } list( \link{Sushiswap.TokenDTO} ) \cr
 #'
 #'
 #' \item status code : 200 | successful operation
 #'
-#' \item return type : SushiswapTokenDTO
+#' \item return type : array[SushiswapTokenDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ SushiswapGetTokensDayDataHistorical } \emph{ GetTokensDayData (historical) }
+#' Gets tokens day data.
+#'
+#' \itemize{
+#' \item \emph{ @param } start_block integer
+#' \item \emph{ @param } end_block integer
+#' \item \emph{ @param } start_date character
+#' \item \emph{ @param } end_date character
+#' \item \emph{ @param } token_id character
+#' \item \emph{ @returnType } list( \link{Sushiswap.TokenDayDataDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[SushiswapTokenDayDataDTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -366,12 +352,52 @@
 #' }
 #' }
 #'
+#' \strong{ SushiswapGetTransactionsHistorical } \emph{ GetTransactions (historical) }
+#' Gets transactions.
+#'
+#' \itemize{
+#' \item \emph{ @param } start_block integer
+#' \item \emph{ @param } end_block integer
+#' \item \emph{ @param } start_date character
+#' \item \emph{ @param } end_date character
+#' \item \emph{ @returnType } list( \link{Sushiswap.TransactionDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[SushiswapTransactionDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ SushiswapGetUsersHistorical } \emph{ GetUsers (historical) }
+#' Gets users.
+#'
+#' \itemize{
+#' \item \emph{ @param } start_block integer
+#' \item \emph{ @param } end_block integer
+#' \item \emph{ @param } start_date character
+#' \item \emph{ @param } end_date character
+#' \item \emph{ @returnType } list( \link{Sushiswap.UserDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[SushiswapUserDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
 #' }
 #'
 #'
 #' @examples
 #' \dontrun{
-#' ####################  DappsSushiswapBundlesHistoricalGet  ####################
+#' ####################  SushiswapGetBundlesHistorical  ####################
 #'
 #' library(openapi)
 #' var_start_block <- 56 # integer |  (Optional)
@@ -379,65 +405,16 @@
 #' var_start_date <- "start_date_example" # character |  (Optional)
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #'
+#' #GetBundles (historical)
 #' api_instance <- SushiswapApi$new()
 #'
-#' api_instance$DappsSushiswapBundlesHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$SushiswapGetBundlesHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_datedata_file = "result.txt")
+#' result <- api_instance$SushiswapGetBundlesHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
+#' dput(result)
 #'
 #'
-#' ####################  DappsSushiswapBurnsHistoricalGet  ####################
-#'
-#' library(openapi)
-#' var_start_block <- 56 # integer |  (Optional)
-#' var_end_block <- 56 # integer |  (Optional)
-#' var_start_date <- "start_date_example" # character |  (Optional)
-#' var_end_date <- "end_date_example" # character |  (Optional)
-#' var_pool_id <- "pool_id_example" # character |  (Optional)
-#'
-#' api_instance <- SushiswapApi$new()
-#'
-#' api_instance$DappsSushiswapBurnsHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
-#'
-#'
-#' ####################  DappsSushiswapDayDataHistoricalGet  ####################
-#'
-#' library(openapi)
-#' var_start_block <- 56 # integer |  (Optional)
-#' var_end_block <- 56 # integer |  (Optional)
-#' var_start_date <- "start_date_example" # character |  (Optional)
-#' var_end_date <- "end_date_example" # character |  (Optional)
-#'
-#' api_instance <- SushiswapApi$new()
-#'
-#' api_instance$DappsSushiswapDayDataHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
-#'
-#'
-#' ####################  DappsSushiswapFactoryHistoricalGet  ####################
-#'
-#' library(openapi)
-#' var_start_block <- 56 # integer |  (Optional)
-#' var_end_block <- 56 # integer |  (Optional)
-#' var_start_date <- "start_date_example" # character |  (Optional)
-#' var_end_date <- "end_date_example" # character |  (Optional)
-#'
-#' api_instance <- SushiswapApi$new()
-#'
-#' api_instance$DappsSushiswapFactoryHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
-#'
-#'
-#' ####################  DappsSushiswapHourDataHistoricalGet  ####################
-#'
-#' library(openapi)
-#' var_start_block <- 56 # integer |  (Optional)
-#' var_end_block <- 56 # integer |  (Optional)
-#' var_start_date <- "start_date_example" # character |  (Optional)
-#' var_end_date <- "end_date_example" # character |  (Optional)
-#'
-#' api_instance <- SushiswapApi$new()
-#'
-#' api_instance$DappsSushiswapHourDataHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
-#'
-#'
-#' ####################  DappsSushiswapLiquidityPositionHistoricalGet  ####################
+#' ####################  SushiswapGetBurnsHistorical  ####################
 #'
 #' library(openapi)
 #' var_start_block <- 56 # integer |  (Optional)
@@ -446,12 +423,67 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
+#' #GetBurns (historical)
 #' api_instance <- SushiswapApi$new()
 #'
-#' api_instance$DappsSushiswapLiquidityPositionHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$SushiswapGetBurnsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+#' result <- api_instance$SushiswapGetBurnsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+#' dput(result)
 #'
 #'
-#' ####################  DappsSushiswapLiquidityPositionSnapshotsHistoricalGet  ####################
+#' ####################  SushiswapGetDayDataHistorical  ####################
+#'
+#' library(openapi)
+#' var_start_block <- 56 # integer |  (Optional)
+#' var_end_block <- 56 # integer |  (Optional)
+#' var_start_date <- "start_date_example" # character |  (Optional)
+#' var_end_date <- "end_date_example" # character |  (Optional)
+#'
+#' #GetDayData (historical)
+#' api_instance <- SushiswapApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$SushiswapGetDayDataHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_datedata_file = "result.txt")
+#' result <- api_instance$SushiswapGetDayDataHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
+#' dput(result)
+#'
+#'
+#' ####################  SushiswapGetFactoryHistorical  ####################
+#'
+#' library(openapi)
+#' var_start_block <- 56 # integer |  (Optional)
+#' var_end_block <- 56 # integer |  (Optional)
+#' var_start_date <- "start_date_example" # character |  (Optional)
+#' var_end_date <- "end_date_example" # character |  (Optional)
+#'
+#' #GetFactory (historical)
+#' api_instance <- SushiswapApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$SushiswapGetFactoryHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_datedata_file = "result.txt")
+#' result <- api_instance$SushiswapGetFactoryHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
+#' dput(result)
+#'
+#'
+#' ####################  SushiswapGetHourDataHistorical  ####################
+#'
+#' library(openapi)
+#' var_start_block <- 56 # integer |  (Optional)
+#' var_end_block <- 56 # integer |  (Optional)
+#' var_start_date <- "start_date_example" # character |  (Optional)
+#' var_end_date <- "end_date_example" # character |  (Optional)
+#'
+#' #GetHourData (historical)
+#' api_instance <- SushiswapApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$SushiswapGetHourDataHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_datedata_file = "result.txt")
+#' result <- api_instance$SushiswapGetHourDataHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
+#' dput(result)
+#'
+#'
+#' ####################  SushiswapGetLiquidityPositionHistorical  ####################
 #'
 #' library(openapi)
 #' var_start_block <- 56 # integer |  (Optional)
@@ -460,12 +492,16 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
+#' #GetLiquidityPosition (historical)
 #' api_instance <- SushiswapApi$new()
 #'
-#' api_instance$DappsSushiswapLiquidityPositionSnapshotsHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$SushiswapGetLiquidityPositionHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+#' result <- api_instance$SushiswapGetLiquidityPositionHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+#' dput(result)
 #'
 #'
-#' ####################  DappsSushiswapMintsHistoricalGet  ####################
+#' ####################  SushiswapGetLiquidityPositionSnapshotHistorical  ####################
 #'
 #' library(openapi)
 #' var_start_block <- 56 # integer |  (Optional)
@@ -474,12 +510,16 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
+#' #GetLiquidityPositionSnapshot (historical)
 #' api_instance <- SushiswapApi$new()
 #'
-#' api_instance$DappsSushiswapMintsHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$SushiswapGetLiquidityPositionSnapshotHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+#' result <- api_instance$SushiswapGetLiquidityPositionSnapshotHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+#' dput(result)
 #'
 #'
-#' ####################  DappsSushiswapPoolDayDataHistoricalGet  ####################
+#' ####################  SushiswapGetMintsHistorical  ####################
 #'
 #' library(openapi)
 #' var_start_block <- 56 # integer |  (Optional)
@@ -488,63 +528,13 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
+#' #GetMints (historical)
 #' api_instance <- SushiswapApi$new()
 #'
-#' api_instance$DappsSushiswapPoolDayDataHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
-#'
-#'
-#' ####################  DappsSushiswapPoolHourDataHistoricalGet  ####################
-#'
-#' library(openapi)
-#' var_start_block <- 56 # integer |  (Optional)
-#' var_end_block <- 56 # integer |  (Optional)
-#' var_start_date <- "start_date_example" # character |  (Optional)
-#' var_end_date <- "end_date_example" # character |  (Optional)
-#' var_pool_id <- "pool_id_example" # character |  (Optional)
-#'
-#' api_instance <- SushiswapApi$new()
-#'
-#' api_instance$DappsSushiswapPoolHourDataHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
-#'
-#'
-#' ####################  DappsSushiswapTokenDayDataHistoricalGet  ####################
-#'
-#' library(openapi)
-#' var_start_block <- 56 # integer |  (Optional)
-#' var_end_block <- 56 # integer |  (Optional)
-#' var_start_date <- "start_date_example" # character |  (Optional)
-#' var_end_date <- "end_date_example" # character |  (Optional)
-#' var_token_id <- "token_id_example" # character |  (Optional)
-#'
-#' api_instance <- SushiswapApi$new()
-#'
-#' api_instance$DappsSushiswapTokenDayDataHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, token_id = var_token_id)
-#'
-#'
-#' ####################  DappsSushiswapTransactionsHistoricalGet  ####################
-#'
-#' library(openapi)
-#' var_start_block <- 56 # integer |  (Optional)
-#' var_end_block <- 56 # integer |  (Optional)
-#' var_start_date <- "start_date_example" # character |  (Optional)
-#' var_end_date <- "end_date_example" # character |  (Optional)
-#'
-#' api_instance <- SushiswapApi$new()
-#'
-#' api_instance$DappsSushiswapTransactionsHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
-#'
-#'
-#' ####################  DappsSushiswapUsersHistoricalGet  ####################
-#'
-#' library(openapi)
-#' var_start_block <- 56 # integer |  (Optional)
-#' var_end_block <- 56 # integer |  (Optional)
-#' var_start_date <- "start_date_example" # character |  (Optional)
-#' var_end_date <- "end_date_example" # character |  (Optional)
-#'
-#' api_instance <- SushiswapApi$new()
-#'
-#' api_instance$DappsSushiswapUsersHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$SushiswapGetMintsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+#' result <- api_instance$SushiswapGetMintsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+#' dput(result)
 #'
 #'
 #' ####################  SushiswapGetPoolsCurrent  ####################
@@ -557,6 +547,24 @@
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
 #' # result <- api_instance$SushiswapGetPoolsCurrent(data_file = "result.txt")
 #' result <- api_instance$SushiswapGetPoolsCurrent()
+#' dput(result)
+#'
+#'
+#' ####################  SushiswapGetPoolsDayDataHistorical  ####################
+#'
+#' library(openapi)
+#' var_start_block <- 56 # integer |  (Optional)
+#' var_end_block <- 56 # integer |  (Optional)
+#' var_start_date <- "start_date_example" # character |  (Optional)
+#' var_end_date <- "end_date_example" # character |  (Optional)
+#' var_pool_id <- "pool_id_example" # character |  (Optional)
+#'
+#' #GetPoolsDayData (historical)
+#' api_instance <- SushiswapApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$SushiswapGetPoolsDayDataHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+#' result <- api_instance$SushiswapGetPoolsDayDataHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
 #' dput(result)
 #'
 #'
@@ -575,6 +583,24 @@
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
 #' # result <- api_instance$SushiswapGetPoolsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
 #' result <- api_instance$SushiswapGetPoolsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+#' dput(result)
+#'
+#'
+#' ####################  SushiswapGetPoolsHourDataHistorical  ####################
+#'
+#' library(openapi)
+#' var_start_block <- 56 # integer |  (Optional)
+#' var_end_block <- 56 # integer |  (Optional)
+#' var_start_date <- "start_date_example" # character |  (Optional)
+#' var_end_date <- "end_date_example" # character |  (Optional)
+#' var_pool_id <- "pool_id_example" # character |  (Optional)
+#'
+#' #GetPoolsHourData (historical)
+#' api_instance <- SushiswapApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$SushiswapGetPoolsHourDataHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+#' result <- api_instance$SushiswapGetPoolsHourDataHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
 #' dput(result)
 #'
 #'
@@ -622,6 +648,24 @@
 #' dput(result)
 #'
 #'
+#' ####################  SushiswapGetTokensDayDataHistorical  ####################
+#'
+#' library(openapi)
+#' var_start_block <- 56 # integer |  (Optional)
+#' var_end_block <- 56 # integer |  (Optional)
+#' var_start_date <- "start_date_example" # character |  (Optional)
+#' var_end_date <- "end_date_example" # character |  (Optional)
+#' var_token_id <- "token_id_example" # character |  (Optional)
+#'
+#' #GetTokensDayData (historical)
+#' api_instance <- SushiswapApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$SushiswapGetTokensDayDataHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, token_id = var_token_iddata_file = "result.txt")
+#' result <- api_instance$SushiswapGetTokensDayDataHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, token_id = var_token_id)
+#' dput(result)
+#'
+#'
 #' ####################  SushiswapGetTokensHistorical  ####################
 #'
 #' library(openapi)
@@ -637,6 +681,40 @@
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
 #' # result <- api_instance$SushiswapGetTokensHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, token_id = var_token_iddata_file = "result.txt")
 #' result <- api_instance$SushiswapGetTokensHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, token_id = var_token_id)
+#' dput(result)
+#'
+#'
+#' ####################  SushiswapGetTransactionsHistorical  ####################
+#'
+#' library(openapi)
+#' var_start_block <- 56 # integer |  (Optional)
+#' var_end_block <- 56 # integer |  (Optional)
+#' var_start_date <- "start_date_example" # character |  (Optional)
+#' var_end_date <- "end_date_example" # character |  (Optional)
+#'
+#' #GetTransactions (historical)
+#' api_instance <- SushiswapApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$SushiswapGetTransactionsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_datedata_file = "result.txt")
+#' result <- api_instance$SushiswapGetTransactionsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
+#' dput(result)
+#'
+#'
+#' ####################  SushiswapGetUsersHistorical  ####################
+#'
+#' library(openapi)
+#' var_start_block <- 56 # integer |  (Optional)
+#' var_end_block <- 56 # integer |  (Optional)
+#' var_start_date <- "start_date_example" # character |  (Optional)
+#' var_end_date <- "end_date_example" # character |  (Optional)
+#'
+#' #GetUsers (historical)
+#' api_instance <- SushiswapApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$SushiswapGetUsersHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_datedata_file = "result.txt")
+#' result <- api_instance$SushiswapGetUsersHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
 #' dput(result)
 #'
 #'
@@ -662,20 +740,21 @@ SushiswapApi <- R6::R6Class(
         self$api_client <- ApiClient$new()
       }
     },
-    #' 
+    #' GetBundles (historical)
     #'
     #' @description
-    #' 
+    #' GetBundles (historical)
     #'
     #' @param start_block (optional) No description
     #' @param end_block (optional) No description
     #' @param start_date (optional) No description
     #' @param end_date (optional) No description
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return void
+    #' @return array[SushiswapBundleDTO]
     #' @export
-    DappsSushiswapBundlesHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
-      local_var_response <- self$DappsSushiswapBundlesHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, ...)
+    SushiswapGetBundlesHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, data_file = NULL, ...) {
+      local_var_response <- self$SushiswapGetBundlesHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -686,19 +765,20 @@ SushiswapApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' 
+    #' GetBundles (historical)
     #'
     #' @description
-    #' 
+    #' GetBundles (historical)
     #'
     #' @param start_block (optional) No description
     #' @param end_block (optional) No description
     #' @param start_date (optional) No description
     #' @param end_date (optional) No description
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
+    #' @return API response (array[SushiswapBundleDTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsSushiswapBundlesHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
+    SushiswapGetBundlesHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -723,7 +803,7 @@ SushiswapApi <- R6::R6Class(
       local_var_url_path <- "/dapps/sushiswap/bundles/historical"
 
       # The Accept request HTTP header
-      local_var_accepts <- list()
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -742,7 +822,18 @@ SushiswapApi <- R6::R6Class(
                                  ...)
 
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[SushiswapBundleDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
         local_var_resp
       } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
         ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
@@ -755,21 +846,22 @@ SushiswapApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' 
+    #' GetBurns (historical)
     #'
     #' @description
-    #' 
+    #' GetBurns (historical)
     #'
     #' @param start_block (optional) No description
     #' @param end_block (optional) No description
     #' @param start_date (optional) No description
     #' @param end_date (optional) No description
     #' @param pool_id (optional) No description
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return void
+    #' @return array[SushiswapBurnDTO]
     #' @export
-    DappsSushiswapBurnsHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
-      local_var_response <- self$DappsSushiswapBurnsHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, ...)
+    SushiswapGetBurnsHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$SushiswapGetBurnsHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -780,20 +872,21 @@ SushiswapApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' 
+    #' GetBurns (historical)
     #'
     #' @description
-    #' 
+    #' GetBurns (historical)
     #'
     #' @param start_block (optional) No description
     #' @param end_block (optional) No description
     #' @param start_date (optional) No description
     #' @param end_date (optional) No description
     #' @param pool_id (optional) No description
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
+    #' @return API response (array[SushiswapBurnDTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsSushiswapBurnsHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
+    SushiswapGetBurnsHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -821,7 +914,7 @@ SushiswapApi <- R6::R6Class(
       local_var_url_path <- "/dapps/sushiswap/burns/historical"
 
       # The Accept request HTTP header
-      local_var_accepts <- list()
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -840,7 +933,18 @@ SushiswapApi <- R6::R6Class(
                                  ...)
 
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[SushiswapBurnDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
         local_var_resp
       } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
         ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
@@ -853,20 +957,21 @@ SushiswapApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' 
+    #' GetDayData (historical)
     #'
     #' @description
-    #' 
+    #' GetDayData (historical)
     #'
     #' @param start_block (optional) No description
     #' @param end_block (optional) No description
     #' @param start_date (optional) No description
     #' @param end_date (optional) No description
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return void
+    #' @return array[SushiswapDayDataDTO]
     #' @export
-    DappsSushiswapDayDataHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
-      local_var_response <- self$DappsSushiswapDayDataHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, ...)
+    SushiswapGetDayDataHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, data_file = NULL, ...) {
+      local_var_response <- self$SushiswapGetDayDataHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -877,19 +982,20 @@ SushiswapApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' 
+    #' GetDayData (historical)
     #'
     #' @description
-    #' 
+    #' GetDayData (historical)
     #'
     #' @param start_block (optional) No description
     #' @param end_block (optional) No description
     #' @param start_date (optional) No description
     #' @param end_date (optional) No description
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
+    #' @return API response (array[SushiswapDayDataDTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsSushiswapDayDataHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
+    SushiswapGetDayDataHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -914,7 +1020,7 @@ SushiswapApi <- R6::R6Class(
       local_var_url_path <- "/dapps/sushiswap/dayData/historical"
 
       # The Accept request HTTP header
-      local_var_accepts <- list()
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -933,7 +1039,18 @@ SushiswapApi <- R6::R6Class(
                                  ...)
 
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[SushiswapDayDataDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
         local_var_resp
       } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
         ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
@@ -946,20 +1063,21 @@ SushiswapApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' 
+    #' GetFactory (historical)
     #'
     #' @description
-    #' 
+    #' GetFactory (historical)
     #'
     #' @param start_block (optional) No description
     #' @param end_block (optional) No description
     #' @param start_date (optional) No description
     #' @param end_date (optional) No description
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return void
+    #' @return array[SushiswapFactoryDTO]
     #' @export
-    DappsSushiswapFactoryHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
-      local_var_response <- self$DappsSushiswapFactoryHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, ...)
+    SushiswapGetFactoryHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, data_file = NULL, ...) {
+      local_var_response <- self$SushiswapGetFactoryHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -970,19 +1088,20 @@ SushiswapApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' 
+    #' GetFactory (historical)
     #'
     #' @description
-    #' 
+    #' GetFactory (historical)
     #'
     #' @param start_block (optional) No description
     #' @param end_block (optional) No description
     #' @param start_date (optional) No description
     #' @param end_date (optional) No description
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
+    #' @return API response (array[SushiswapFactoryDTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsSushiswapFactoryHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
+    SushiswapGetFactoryHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -1007,7 +1126,7 @@ SushiswapApi <- R6::R6Class(
       local_var_url_path <- "/dapps/sushiswap/factory/historical"
 
       # The Accept request HTTP header
-      local_var_accepts <- list()
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -1026,7 +1145,18 @@ SushiswapApi <- R6::R6Class(
                                  ...)
 
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[SushiswapFactoryDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
         local_var_resp
       } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
         ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
@@ -1039,20 +1169,21 @@ SushiswapApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' 
+    #' GetHourData (historical)
     #'
     #' @description
-    #' 
+    #' GetHourData (historical)
     #'
     #' @param start_block (optional) No description
     #' @param end_block (optional) No description
     #' @param start_date (optional) No description
     #' @param end_date (optional) No description
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return void
+    #' @return array[SushiswapHourDataDTO]
     #' @export
-    DappsSushiswapHourDataHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
-      local_var_response <- self$DappsSushiswapHourDataHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, ...)
+    SushiswapGetHourDataHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, data_file = NULL, ...) {
+      local_var_response <- self$SushiswapGetHourDataHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -1063,19 +1194,20 @@ SushiswapApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' 
+    #' GetHourData (historical)
     #'
     #' @description
-    #' 
+    #' GetHourData (historical)
     #'
     #' @param start_block (optional) No description
     #' @param end_block (optional) No description
     #' @param start_date (optional) No description
     #' @param end_date (optional) No description
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
+    #' @return API response (array[SushiswapHourDataDTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsSushiswapHourDataHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
+    SushiswapGetHourDataHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -1100,7 +1232,7 @@ SushiswapApi <- R6::R6Class(
       local_var_url_path <- "/dapps/sushiswap/hourData/historical"
 
       # The Accept request HTTP header
-      local_var_accepts <- list()
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -1119,7 +1251,18 @@ SushiswapApi <- R6::R6Class(
                                  ...)
 
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[SushiswapHourDataDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
         local_var_resp
       } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
         ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
@@ -1132,21 +1275,22 @@ SushiswapApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' 
+    #' GetLiquidityPosition (historical)
     #'
     #' @description
-    #' 
+    #' GetLiquidityPosition (historical)
     #'
     #' @param start_block (optional) No description
     #' @param end_block (optional) No description
     #' @param start_date (optional) No description
     #' @param end_date (optional) No description
     #' @param pool_id (optional) No description
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return void
+    #' @return array[SushiswapLiquidityPositionDTO]
     #' @export
-    DappsSushiswapLiquidityPositionHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
-      local_var_response <- self$DappsSushiswapLiquidityPositionHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, ...)
+    SushiswapGetLiquidityPositionHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$SushiswapGetLiquidityPositionHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -1157,20 +1301,21 @@ SushiswapApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' 
+    #' GetLiquidityPosition (historical)
     #'
     #' @description
-    #' 
+    #' GetLiquidityPosition (historical)
     #'
     #' @param start_block (optional) No description
     #' @param end_block (optional) No description
     #' @param start_date (optional) No description
     #' @param end_date (optional) No description
     #' @param pool_id (optional) No description
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
+    #' @return API response (array[SushiswapLiquidityPositionDTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsSushiswapLiquidityPositionHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
+    SushiswapGetLiquidityPositionHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -1198,7 +1343,7 @@ SushiswapApi <- R6::R6Class(
       local_var_url_path <- "/dapps/sushiswap/liquidityPosition/historical"
 
       # The Accept request HTTP header
-      local_var_accepts <- list()
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -1217,7 +1362,18 @@ SushiswapApi <- R6::R6Class(
                                  ...)
 
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[SushiswapLiquidityPositionDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
         local_var_resp
       } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
         ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
@@ -1230,21 +1386,22 @@ SushiswapApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' 
+    #' GetLiquidityPositionSnapshot (historical)
     #'
     #' @description
-    #' 
+    #' GetLiquidityPositionSnapshot (historical)
     #'
     #' @param start_block (optional) No description
     #' @param end_block (optional) No description
     #' @param start_date (optional) No description
     #' @param end_date (optional) No description
     #' @param pool_id (optional) No description
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return void
+    #' @return array[SushiswapLiquidityPositionSnapshotDTO]
     #' @export
-    DappsSushiswapLiquidityPositionSnapshotsHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
-      local_var_response <- self$DappsSushiswapLiquidityPositionSnapshotsHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, ...)
+    SushiswapGetLiquidityPositionSnapshotHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$SushiswapGetLiquidityPositionSnapshotHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -1255,20 +1412,21 @@ SushiswapApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' 
+    #' GetLiquidityPositionSnapshot (historical)
     #'
     #' @description
-    #' 
+    #' GetLiquidityPositionSnapshot (historical)
     #'
     #' @param start_block (optional) No description
     #' @param end_block (optional) No description
     #' @param start_date (optional) No description
     #' @param end_date (optional) No description
     #' @param pool_id (optional) No description
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
+    #' @return API response (array[SushiswapLiquidityPositionSnapshotDTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsSushiswapLiquidityPositionSnapshotsHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
+    SushiswapGetLiquidityPositionSnapshotHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -1296,7 +1454,7 @@ SushiswapApi <- R6::R6Class(
       local_var_url_path <- "/dapps/sushiswap/liquidityPositionSnapshots/historical"
 
       # The Accept request HTTP header
-      local_var_accepts <- list()
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -1315,7 +1473,18 @@ SushiswapApi <- R6::R6Class(
                                  ...)
 
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[SushiswapLiquidityPositionSnapshotDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
         local_var_resp
       } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
         ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
@@ -1328,21 +1497,22 @@ SushiswapApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' 
+    #' GetMints (historical)
     #'
     #' @description
-    #' 
+    #' GetMints (historical)
     #'
     #' @param start_block (optional) No description
     #' @param end_block (optional) No description
     #' @param start_date (optional) No description
     #' @param end_date (optional) No description
     #' @param pool_id (optional) No description
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return void
+    #' @return array[SushiswapMintDTO]
     #' @export
-    DappsSushiswapMintsHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
-      local_var_response <- self$DappsSushiswapMintsHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, ...)
+    SushiswapGetMintsHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$SushiswapGetMintsHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -1353,20 +1523,21 @@ SushiswapApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' 
+    #' GetMints (historical)
     #'
     #' @description
-    #' 
+    #' GetMints (historical)
     #'
     #' @param start_block (optional) No description
     #' @param end_block (optional) No description
     #' @param start_date (optional) No description
     #' @param end_date (optional) No description
     #' @param pool_id (optional) No description
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
+    #' @return API response (array[SushiswapMintDTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsSushiswapMintsHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
+    SushiswapGetMintsHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -1394,7 +1565,7 @@ SushiswapApi <- R6::R6Class(
       local_var_url_path <- "/dapps/sushiswap/mints/historical"
 
       # The Accept request HTTP header
-      local_var_accepts <- list()
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -1413,487 +1584,18 @@ SushiswapApi <- R6::R6Class(
                                  ...)
 
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
-        local_var_resp
-      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
-        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
-      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
-        ApiResponse$new("API client error", local_var_resp)
-      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
-        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
-          local_var_resp$response <- "API server error"
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
         }
-        local_var_resp
-      }
-    },
-    #' 
-    #'
-    #' @description
-    #' 
-    #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
-    #' @param ... Other optional arguments
-    #' @return void
-    #' @export
-    DappsSushiswapPoolDayDataHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
-      local_var_response <- self$DappsSushiswapPoolDayDataHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, ...)
-      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
-        local_var_response$content
-      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
-        local_var_response
-      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
-        local_var_response
-      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
-        local_var_response
-      }
-    },
-    #' 
-    #'
-    #' @description
-    #' 
-    #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
-    #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
-    #' @export
-    DappsSushiswapPoolDayDataHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
-      args <- list(...)
-      query_params <- list()
-      header_params <- c()
-      form_params <- list()
-      file_params <- list()
-      local_var_body <- NULL
-      oauth_scopes <- NULL
-      is_oauth <- FALSE
 
-
-
-
-
-
-      query_params[["startBlock"]] <- `start_block`
-
-      query_params[["endBlock"]] <- `end_block`
-
-      query_params[["startDate"]] <- `start_date`
-
-      query_params[["endDate"]] <- `end_date`
-
-      query_params[["poolId"]] <- `pool_id`
-
-      local_var_url_path <- "/dapps/sushiswap/poolDayData/historical"
-
-      # The Accept request HTTP header
-      local_var_accepts <- list()
-
-      # The Content-Type representation header
-      local_var_content_types <- list()
-
-      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
-                                 method = "GET",
-                                 query_params = query_params,
-                                 header_params = header_params,
-                                 form_params = form_params,
-                                 file_params = file_params,
-                                 accepts = local_var_accepts,
-                                 content_types = local_var_content_types,
-                                 body = local_var_body,
-                                 is_oauth = is_oauth,
-                                 oauth_scopes = oauth_scopes,
-                                 ...)
-
-      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
-        local_var_resp
-      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
-        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
-      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
-        ApiResponse$new("API client error", local_var_resp)
-      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
-        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
-          local_var_resp$response <- "API server error"
-        }
-        local_var_resp
-      }
-    },
-    #' 
-    #'
-    #' @description
-    #' 
-    #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
-    #' @param ... Other optional arguments
-    #' @return void
-    #' @export
-    DappsSushiswapPoolHourDataHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
-      local_var_response <- self$DappsSushiswapPoolHourDataHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, ...)
-      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
-        local_var_response$content
-      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
-        local_var_response
-      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
-        local_var_response
-      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
-        local_var_response
-      }
-    },
-    #' 
-    #'
-    #' @description
-    #' 
-    #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
-    #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
-    #' @export
-    DappsSushiswapPoolHourDataHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
-      args <- list(...)
-      query_params <- list()
-      header_params <- c()
-      form_params <- list()
-      file_params <- list()
-      local_var_body <- NULL
-      oauth_scopes <- NULL
-      is_oauth <- FALSE
-
-
-
-
-
-
-      query_params[["startBlock"]] <- `start_block`
-
-      query_params[["endBlock"]] <- `end_block`
-
-      query_params[["startDate"]] <- `start_date`
-
-      query_params[["endDate"]] <- `end_date`
-
-      query_params[["poolId"]] <- `pool_id`
-
-      local_var_url_path <- "/dapps/sushiswap/poolHourData/historical"
-
-      # The Accept request HTTP header
-      local_var_accepts <- list()
-
-      # The Content-Type representation header
-      local_var_content_types <- list()
-
-      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
-                                 method = "GET",
-                                 query_params = query_params,
-                                 header_params = header_params,
-                                 form_params = form_params,
-                                 file_params = file_params,
-                                 accepts = local_var_accepts,
-                                 content_types = local_var_content_types,
-                                 body = local_var_body,
-                                 is_oauth = is_oauth,
-                                 oauth_scopes = oauth_scopes,
-                                 ...)
-
-      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
-        local_var_resp
-      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
-        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
-      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
-        ApiResponse$new("API client error", local_var_resp)
-      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
-        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
-          local_var_resp$response <- "API server error"
-        }
-        local_var_resp
-      }
-    },
-    #' 
-    #'
-    #' @description
-    #' 
-    #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param token_id (optional) No description
-    #' @param ... Other optional arguments
-    #' @return void
-    #' @export
-    DappsSushiswapTokenDayDataHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, token_id = NULL, ...) {
-      local_var_response <- self$DappsSushiswapTokenDayDataHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, token_id, ...)
-      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
-        local_var_response$content
-      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
-        local_var_response
-      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
-        local_var_response
-      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
-        local_var_response
-      }
-    },
-    #' 
-    #'
-    #' @description
-    #' 
-    #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param token_id (optional) No description
-    #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
-    #' @export
-    DappsSushiswapTokenDayDataHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, token_id = NULL, ...) {
-      args <- list(...)
-      query_params <- list()
-      header_params <- c()
-      form_params <- list()
-      file_params <- list()
-      local_var_body <- NULL
-      oauth_scopes <- NULL
-      is_oauth <- FALSE
-
-
-
-
-
-
-      query_params[["startBlock"]] <- `start_block`
-
-      query_params[["endBlock"]] <- `end_block`
-
-      query_params[["startDate"]] <- `start_date`
-
-      query_params[["endDate"]] <- `end_date`
-
-      query_params[["tokenId"]] <- `token_id`
-
-      local_var_url_path <- "/dapps/sushiswap/tokenDayData/historical"
-
-      # The Accept request HTTP header
-      local_var_accepts <- list()
-
-      # The Content-Type representation header
-      local_var_content_types <- list()
-
-      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
-                                 method = "GET",
-                                 query_params = query_params,
-                                 header_params = header_params,
-                                 form_params = form_params,
-                                 file_params = file_params,
-                                 accepts = local_var_accepts,
-                                 content_types = local_var_content_types,
-                                 body = local_var_body,
-                                 is_oauth = is_oauth,
-                                 oauth_scopes = oauth_scopes,
-                                 ...)
-
-      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
-        local_var_resp
-      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
-        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
-      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
-        ApiResponse$new("API client error", local_var_resp)
-      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
-        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
-          local_var_resp$response <- "API server error"
-        }
-        local_var_resp
-      }
-    },
-    #' 
-    #'
-    #' @description
-    #' 
-    #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param ... Other optional arguments
-    #' @return void
-    #' @export
-    DappsSushiswapTransactionsHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
-      local_var_response <- self$DappsSushiswapTransactionsHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, ...)
-      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
-        local_var_response$content
-      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
-        local_var_response
-      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
-        local_var_response
-      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
-        local_var_response
-      }
-    },
-    #' 
-    #'
-    #' @description
-    #' 
-    #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
-    #' @export
-    DappsSushiswapTransactionsHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
-      args <- list(...)
-      query_params <- list()
-      header_params <- c()
-      form_params <- list()
-      file_params <- list()
-      local_var_body <- NULL
-      oauth_scopes <- NULL
-      is_oauth <- FALSE
-
-
-
-
-
-      query_params[["startBlock"]] <- `start_block`
-
-      query_params[["endBlock"]] <- `end_block`
-
-      query_params[["startDate"]] <- `start_date`
-
-      query_params[["endDate"]] <- `end_date`
-
-      local_var_url_path <- "/dapps/sushiswap/transactions/historical"
-
-      # The Accept request HTTP header
-      local_var_accepts <- list()
-
-      # The Content-Type representation header
-      local_var_content_types <- list()
-
-      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
-                                 method = "GET",
-                                 query_params = query_params,
-                                 header_params = header_params,
-                                 form_params = form_params,
-                                 file_params = file_params,
-                                 accepts = local_var_accepts,
-                                 content_types = local_var_content_types,
-                                 body = local_var_body,
-                                 is_oauth = is_oauth,
-                                 oauth_scopes = oauth_scopes,
-                                 ...)
-
-      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
-        local_var_resp
-      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
-        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
-      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
-        ApiResponse$new("API client error", local_var_resp)
-      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
-        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
-          local_var_resp$response <- "API server error"
-        }
-        local_var_resp
-      }
-    },
-    #' 
-    #'
-    #' @description
-    #' 
-    #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param ... Other optional arguments
-    #' @return void
-    #' @export
-    DappsSushiswapUsersHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
-      local_var_response <- self$DappsSushiswapUsersHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, ...)
-      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
-        local_var_response$content
-      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
-        local_var_response
-      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
-        local_var_response
-      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
-        local_var_response
-      }
-    },
-    #' 
-    #'
-    #' @description
-    #' 
-    #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
-    #' @export
-    DappsSushiswapUsersHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
-      args <- list(...)
-      query_params <- list()
-      header_params <- c()
-      form_params <- list()
-      file_params <- list()
-      local_var_body <- NULL
-      oauth_scopes <- NULL
-      is_oauth <- FALSE
-
-
-
-
-
-      query_params[["startBlock"]] <- `start_block`
-
-      query_params[["endBlock"]] <- `end_block`
-
-      query_params[["startDate"]] <- `start_date`
-
-      query_params[["endDate"]] <- `end_date`
-
-      local_var_url_path <- "/dapps/sushiswap/users/historical"
-
-      # The Accept request HTTP header
-      local_var_accepts <- list()
-
-      # The Content-Type representation header
-      local_var_content_types <- list()
-
-      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
-                                 method = "GET",
-                                 query_params = query_params,
-                                 header_params = header_params,
-                                 form_params = form_params,
-                                 file_params = file_params,
-                                 accepts = local_var_accepts,
-                                 content_types = local_var_content_types,
-                                 body = local_var_body,
-                                 is_oauth = is_oauth,
-                                 oauth_scopes = oauth_scopes,
-                                 ...)
-
-      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[SushiswapMintDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
         local_var_resp
       } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
         ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
@@ -1975,6 +1677,117 @@ SushiswapApi <- R6::R6Class(
 
         deserialized_resp_obj <- tryCatch(
           self$api_client$deserialize(local_var_resp$response, "array[SushiswapPairDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' GetPoolsDayData (historical)
+    #'
+    #' @description
+    #' GetPoolsDayData (historical)
+    #'
+    #' @param start_block (optional) No description
+    #' @param end_block (optional) No description
+    #' @param start_date (optional) No description
+    #' @param end_date (optional) No description
+    #' @param pool_id (optional) No description
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[SushiswapPairDayDataDTO]
+    #' @export
+    SushiswapGetPoolsDayDataHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$SushiswapGetPoolsDayDataHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' GetPoolsDayData (historical)
+    #'
+    #' @description
+    #' GetPoolsDayData (historical)
+    #'
+    #' @param start_block (optional) No description
+    #' @param end_block (optional) No description
+    #' @param start_date (optional) No description
+    #' @param end_date (optional) No description
+    #' @param pool_id (optional) No description
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[SushiswapPairDayDataDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    SushiswapGetPoolsDayDataHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+
+
+
+
+
+      query_params[["startBlock"]] <- `start_block`
+
+      query_params[["endBlock"]] <- `end_block`
+
+      query_params[["startDate"]] <- `start_date`
+
+      query_params[["endDate"]] <- `end_date`
+
+      query_params[["poolId"]] <- `pool_id`
+
+      local_var_url_path <- "/dapps/sushiswap/poolsDayData/historical"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[SushiswapPairDayDataDTO]", loadNamespace("openapi")),
           error = function(e) {
             stop("Failed to deserialize response")
           }
@@ -2103,6 +1916,117 @@ SushiswapApi <- R6::R6Class(
         local_var_resp
       }
     },
+    #' GetPoolsHourData (historical)
+    #'
+    #' @description
+    #' GetPoolsHourData (historical)
+    #'
+    #' @param start_block (optional) No description
+    #' @param end_block (optional) No description
+    #' @param start_date (optional) No description
+    #' @param end_date (optional) No description
+    #' @param pool_id (optional) No description
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[SushiswapPairHourDataDTO]
+    #' @export
+    SushiswapGetPoolsHourDataHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$SushiswapGetPoolsHourDataHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' GetPoolsHourData (historical)
+    #'
+    #' @description
+    #' GetPoolsHourData (historical)
+    #'
+    #' @param start_block (optional) No description
+    #' @param end_block (optional) No description
+    #' @param start_date (optional) No description
+    #' @param end_date (optional) No description
+    #' @param pool_id (optional) No description
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[SushiswapPairHourDataDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    SushiswapGetPoolsHourDataHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+
+
+
+
+
+      query_params[["startBlock"]] <- `start_block`
+
+      query_params[["endBlock"]] <- `end_block`
+
+      query_params[["startDate"]] <- `start_date`
+
+      query_params[["endDate"]] <- `end_date`
+
+      query_params[["poolId"]] <- `pool_id`
+
+      local_var_url_path <- "/dapps/sushiswap/poolsHourData/historical"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[SushiswapPairHourDataDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
     #' GetSwaps (current)
     #'
     #' @description
@@ -2110,7 +2034,7 @@ SushiswapApi <- R6::R6Class(
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return SushiswapSwapDTO
+    #' @return array[SushiswapSwapDTO]
     #' @export
     SushiswapGetSwapsCurrent = function(data_file = NULL, ...) {
       local_var_response <- self$SushiswapGetSwapsCurrentWithHttpInfo(data_file = data_file, ...)
@@ -2131,7 +2055,7 @@ SushiswapApi <- R6::R6Class(
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (SushiswapSwapDTO) with additional information such as HTTP status code, headers
+    #' @return API response (array[SushiswapSwapDTO]) with additional information such as HTTP status code, headers
     #' @export
     SushiswapGetSwapsCurrentWithHttpInfo = function(data_file = NULL, ...) {
       args <- list(...)
@@ -2171,7 +2095,7 @@ SushiswapApi <- R6::R6Class(
         }
 
         deserialized_resp_obj <- tryCatch(
-          self$api_client$deserialize(local_var_resp$response, "SushiswapSwapDTO", loadNamespace("openapi")),
+          self$api_client$deserialize(local_var_resp$response, "array[SushiswapSwapDTO]", loadNamespace("openapi")),
           error = function(e) {
             stop("Failed to deserialize response")
           }
@@ -2307,7 +2231,7 @@ SushiswapApi <- R6::R6Class(
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return SushiswapTokenDTO
+    #' @return array[SushiswapTokenDTO]
     #' @export
     SushiswapGetTokensCurrent = function(data_file = NULL, ...) {
       local_var_response <- self$SushiswapGetTokensCurrentWithHttpInfo(data_file = data_file, ...)
@@ -2328,7 +2252,7 @@ SushiswapApi <- R6::R6Class(
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (SushiswapTokenDTO) with additional information such as HTTP status code, headers
+    #' @return API response (array[SushiswapTokenDTO]) with additional information such as HTTP status code, headers
     #' @export
     SushiswapGetTokensCurrentWithHttpInfo = function(data_file = NULL, ...) {
       args <- list(...)
@@ -2368,7 +2292,118 @@ SushiswapApi <- R6::R6Class(
         }
 
         deserialized_resp_obj <- tryCatch(
-          self$api_client$deserialize(local_var_resp$response, "SushiswapTokenDTO", loadNamespace("openapi")),
+          self$api_client$deserialize(local_var_resp$response, "array[SushiswapTokenDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' GetTokensDayData (historical)
+    #'
+    #' @description
+    #' GetTokensDayData (historical)
+    #'
+    #' @param start_block (optional) No description
+    #' @param end_block (optional) No description
+    #' @param start_date (optional) No description
+    #' @param end_date (optional) No description
+    #' @param token_id (optional) No description
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[SushiswapTokenDayDataDTO]
+    #' @export
+    SushiswapGetTokensDayDataHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, token_id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$SushiswapGetTokensDayDataHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, token_id, data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' GetTokensDayData (historical)
+    #'
+    #' @description
+    #' GetTokensDayData (historical)
+    #'
+    #' @param start_block (optional) No description
+    #' @param end_block (optional) No description
+    #' @param start_date (optional) No description
+    #' @param end_date (optional) No description
+    #' @param token_id (optional) No description
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[SushiswapTokenDayDataDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    SushiswapGetTokensDayDataHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, token_id = NULL, data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+
+
+
+
+
+      query_params[["startBlock"]] <- `start_block`
+
+      query_params[["endBlock"]] <- `end_block`
+
+      query_params[["startDate"]] <- `start_date`
+
+      query_params[["endDate"]] <- `end_date`
+
+      query_params[["tokenId"]] <- `token_id`
+
+      local_var_url_path <- "/dapps/sushiswap/tokensDayData/historical"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[SushiswapTokenDayDataDTO]", loadNamespace("openapi")),
           error = function(e) {
             stop("Failed to deserialize response")
           }
@@ -2480,6 +2515,218 @@ SushiswapApi <- R6::R6Class(
 
         deserialized_resp_obj <- tryCatch(
           self$api_client$deserialize(local_var_resp$response, "array[SushiswapTokenDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' GetTransactions (historical)
+    #'
+    #' @description
+    #' GetTransactions (historical)
+    #'
+    #' @param start_block (optional) No description
+    #' @param end_block (optional) No description
+    #' @param start_date (optional) No description
+    #' @param end_date (optional) No description
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[SushiswapTransactionDTO]
+    #' @export
+    SushiswapGetTransactionsHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, data_file = NULL, ...) {
+      local_var_response <- self$SushiswapGetTransactionsHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' GetTransactions (historical)
+    #'
+    #' @description
+    #' GetTransactions (historical)
+    #'
+    #' @param start_block (optional) No description
+    #' @param end_block (optional) No description
+    #' @param start_date (optional) No description
+    #' @param end_date (optional) No description
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[SushiswapTransactionDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    SushiswapGetTransactionsHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+
+
+
+
+      query_params[["startBlock"]] <- `start_block`
+
+      query_params[["endBlock"]] <- `end_block`
+
+      query_params[["startDate"]] <- `start_date`
+
+      query_params[["endDate"]] <- `end_date`
+
+      local_var_url_path <- "/dapps/sushiswap/transactions/historical"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[SushiswapTransactionDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' GetUsers (historical)
+    #'
+    #' @description
+    #' GetUsers (historical)
+    #'
+    #' @param start_block (optional) No description
+    #' @param end_block (optional) No description
+    #' @param start_date (optional) No description
+    #' @param end_date (optional) No description
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[SushiswapUserDTO]
+    #' @export
+    SushiswapGetUsersHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, data_file = NULL, ...) {
+      local_var_response <- self$SushiswapGetUsersHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' GetUsers (historical)
+    #'
+    #' @description
+    #' GetUsers (historical)
+    #'
+    #' @param start_block (optional) No description
+    #' @param end_block (optional) No description
+    #' @param start_date (optional) No description
+    #' @param end_date (optional) No description
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[SushiswapUserDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    SushiswapGetUsersHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+
+
+
+
+      query_params[["startBlock"]] <- `start_block`
+
+      query_params[["endBlock"]] <- `end_block`
+
+      query_params[["startDate"]] <- `start_date`
+
+      query_params[["endDate"]] <- `end_date`
+
+      local_var_url_path <- "/dapps/sushiswap/users/historical"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[SushiswapUserDTO]", loadNamespace("openapi")),
           error = function(e) {
             stop("Failed to deserialize response")
           }

@@ -4,33 +4,35 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**dappsSushiswapBundlesHistoricalGet**](SushiswapApi.md#dappsSushiswapBundlesHistoricalGet) | **GET** /dapps/sushiswap/bundles/historical | 
-[**dappsSushiswapBurnsHistoricalGet**](SushiswapApi.md#dappsSushiswapBurnsHistoricalGet) | **GET** /dapps/sushiswap/burns/historical | 
-[**dappsSushiswapDayDataHistoricalGet**](SushiswapApi.md#dappsSushiswapDayDataHistoricalGet) | **GET** /dapps/sushiswap/dayData/historical | 
-[**dappsSushiswapFactoryHistoricalGet**](SushiswapApi.md#dappsSushiswapFactoryHistoricalGet) | **GET** /dapps/sushiswap/factory/historical | 
-[**dappsSushiswapHourDataHistoricalGet**](SushiswapApi.md#dappsSushiswapHourDataHistoricalGet) | **GET** /dapps/sushiswap/hourData/historical | 
-[**dappsSushiswapLiquidityPositionHistoricalGet**](SushiswapApi.md#dappsSushiswapLiquidityPositionHistoricalGet) | **GET** /dapps/sushiswap/liquidityPosition/historical | 
-[**dappsSushiswapLiquidityPositionSnapshotsHistoricalGet**](SushiswapApi.md#dappsSushiswapLiquidityPositionSnapshotsHistoricalGet) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/historical | 
-[**dappsSushiswapMintsHistoricalGet**](SushiswapApi.md#dappsSushiswapMintsHistoricalGet) | **GET** /dapps/sushiswap/mints/historical | 
-[**dappsSushiswapPoolDayDataHistoricalGet**](SushiswapApi.md#dappsSushiswapPoolDayDataHistoricalGet) | **GET** /dapps/sushiswap/poolDayData/historical | 
-[**dappsSushiswapPoolHourDataHistoricalGet**](SushiswapApi.md#dappsSushiswapPoolHourDataHistoricalGet) | **GET** /dapps/sushiswap/poolHourData/historical | 
-[**dappsSushiswapTokenDayDataHistoricalGet**](SushiswapApi.md#dappsSushiswapTokenDayDataHistoricalGet) | **GET** /dapps/sushiswap/tokenDayData/historical | 
-[**dappsSushiswapTransactionsHistoricalGet**](SushiswapApi.md#dappsSushiswapTransactionsHistoricalGet) | **GET** /dapps/sushiswap/transactions/historical | 
-[**dappsSushiswapUsersHistoricalGet**](SushiswapApi.md#dappsSushiswapUsersHistoricalGet) | **GET** /dapps/sushiswap/users/historical | 
+[**sushiswapGetBundlesHistorical**](SushiswapApi.md#sushiswapGetBundlesHistorical) | **GET** /dapps/sushiswap/bundles/historical | GetBundles (historical)
+[**sushiswapGetBurnsHistorical**](SushiswapApi.md#sushiswapGetBurnsHistorical) | **GET** /dapps/sushiswap/burns/historical | GetBurns (historical)
+[**sushiswapGetDayDataHistorical**](SushiswapApi.md#sushiswapGetDayDataHistorical) | **GET** /dapps/sushiswap/dayData/historical | GetDayData (historical)
+[**sushiswapGetFactoryHistorical**](SushiswapApi.md#sushiswapGetFactoryHistorical) | **GET** /dapps/sushiswap/factory/historical | GetFactory (historical)
+[**sushiswapGetHourDataHistorical**](SushiswapApi.md#sushiswapGetHourDataHistorical) | **GET** /dapps/sushiswap/hourData/historical | GetHourData (historical)
+[**sushiswapGetLiquidityPositionHistorical**](SushiswapApi.md#sushiswapGetLiquidityPositionHistorical) | **GET** /dapps/sushiswap/liquidityPosition/historical | GetLiquidityPosition (historical)
+[**sushiswapGetLiquidityPositionSnapshotHistorical**](SushiswapApi.md#sushiswapGetLiquidityPositionSnapshotHistorical) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/historical | GetLiquidityPositionSnapshot (historical)
+[**sushiswapGetMintsHistorical**](SushiswapApi.md#sushiswapGetMintsHistorical) | **GET** /dapps/sushiswap/mints/historical | GetMints (historical)
 [**sushiswapGetPoolsCurrent**](SushiswapApi.md#sushiswapGetPoolsCurrent) | **GET** /dapps/sushiswap/pools/current | GetPools (current)
+[**sushiswapGetPoolsDayDataHistorical**](SushiswapApi.md#sushiswapGetPoolsDayDataHistorical) | **GET** /dapps/sushiswap/poolsDayData/historical | GetPoolsDayData (historical)
 [**sushiswapGetPoolsHistorical**](SushiswapApi.md#sushiswapGetPoolsHistorical) | **GET** /dapps/sushiswap/pools/historical | GetPools (historical)
+[**sushiswapGetPoolsHourDataHistorical**](SushiswapApi.md#sushiswapGetPoolsHourDataHistorical) | **GET** /dapps/sushiswap/poolsHourData/historical | GetPoolsHourData (historical)
 [**sushiswapGetSwapsCurrent**](SushiswapApi.md#sushiswapGetSwapsCurrent) | **GET** /dapps/sushiswap/swaps/current | GetSwaps (current)
 [**sushiswapGetSwapsHistorical**](SushiswapApi.md#sushiswapGetSwapsHistorical) | **GET** /dapps/sushiswap/swaps/historical | GetSwaps (historical)
 [**sushiswapGetTokensCurrent**](SushiswapApi.md#sushiswapGetTokensCurrent) | **GET** /dapps/sushiswap/tokens/current | GetTokens (current)
+[**sushiswapGetTokensDayDataHistorical**](SushiswapApi.md#sushiswapGetTokensDayDataHistorical) | **GET** /dapps/sushiswap/tokensDayData/historical | GetTokensDayData (historical)
 [**sushiswapGetTokensHistorical**](SushiswapApi.md#sushiswapGetTokensHistorical) | **GET** /dapps/sushiswap/tokens/historical | GetTokens (historical)
+[**sushiswapGetTransactionsHistorical**](SushiswapApi.md#sushiswapGetTransactionsHistorical) | **GET** /dapps/sushiswap/transactions/historical | GetTransactions (historical)
+[**sushiswapGetUsersHistorical**](SushiswapApi.md#sushiswapGetUsersHistorical) | **GET** /dapps/sushiswap/users/historical | GetUsers (historical)
 
 
 
-## dappsSushiswapBundlesHistoricalGet
+## sushiswapGetBundlesHistorical
 
-> dappsSushiswapBundlesHistoricalGet(opts)
+> [SushiswapBundleDTO] sushiswapGetBundlesHistorical(opts)
 
+GetBundles (historical)
 
+Gets bundles.
 
 ### Example
 
@@ -44,11 +46,11 @@ let opts = {
   'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'endDate': new Date("2013-10-20T19:20:30+01:00") // Date | 
 };
-apiInstance.dappsSushiswapBundlesHistoricalGet(opts, (error, data, response) => {
+apiInstance.sushiswapGetBundlesHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -65,7 +67,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**[SushiswapBundleDTO]**](SushiswapBundleDTO.md)
 
 ### Authorization
 
@@ -74,14 +76,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsSushiswapBurnsHistoricalGet
+## sushiswapGetBurnsHistorical
 
-> dappsSushiswapBurnsHistoricalGet(opts)
+> [SushiswapBurnDTO] sushiswapGetBurnsHistorical(opts)
 
+GetBurns (historical)
 
+Gets burns.
 
 ### Example
 
@@ -96,11 +100,11 @@ let opts = {
   'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'poolId': "poolId_example" // String | 
 };
-apiInstance.dappsSushiswapBurnsHistoricalGet(opts, (error, data, response) => {
+apiInstance.sushiswapGetBurnsHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -118,7 +122,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**[SushiswapBurnDTO]**](SushiswapBurnDTO.md)
 
 ### Authorization
 
@@ -127,14 +131,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsSushiswapDayDataHistoricalGet
+## sushiswapGetDayDataHistorical
 
-> dappsSushiswapDayDataHistoricalGet(opts)
+> [SushiswapDayDataDTO] sushiswapGetDayDataHistorical(opts)
 
+GetDayData (historical)
 
+Gets day data.
 
 ### Example
 
@@ -148,11 +154,11 @@ let opts = {
   'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'endDate': new Date("2013-10-20T19:20:30+01:00") // Date | 
 };
-apiInstance.dappsSushiswapDayDataHistoricalGet(opts, (error, data, response) => {
+apiInstance.sushiswapGetDayDataHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -169,7 +175,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**[SushiswapDayDataDTO]**](SushiswapDayDataDTO.md)
 
 ### Authorization
 
@@ -178,14 +184,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsSushiswapFactoryHistoricalGet
+## sushiswapGetFactoryHistorical
 
-> dappsSushiswapFactoryHistoricalGet(opts)
+> [SushiswapFactoryDTO] sushiswapGetFactoryHistorical(opts)
 
+GetFactory (historical)
 
+Gets factory.
 
 ### Example
 
@@ -199,11 +207,11 @@ let opts = {
   'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'endDate': new Date("2013-10-20T19:20:30+01:00") // Date | 
 };
-apiInstance.dappsSushiswapFactoryHistoricalGet(opts, (error, data, response) => {
+apiInstance.sushiswapGetFactoryHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -220,7 +228,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**[SushiswapFactoryDTO]**](SushiswapFactoryDTO.md)
 
 ### Authorization
 
@@ -229,14 +237,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsSushiswapHourDataHistoricalGet
+## sushiswapGetHourDataHistorical
 
-> dappsSushiswapHourDataHistoricalGet(opts)
+> [SushiswapHourDataDTO] sushiswapGetHourDataHistorical(opts)
 
+GetHourData (historical)
 
+Gets hour data.
 
 ### Example
 
@@ -250,11 +260,11 @@ let opts = {
   'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'endDate': new Date("2013-10-20T19:20:30+01:00") // Date | 
 };
-apiInstance.dappsSushiswapHourDataHistoricalGet(opts, (error, data, response) => {
+apiInstance.sushiswapGetHourDataHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -271,7 +281,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**[SushiswapHourDataDTO]**](SushiswapHourDataDTO.md)
 
 ### Authorization
 
@@ -280,14 +290,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsSushiswapLiquidityPositionHistoricalGet
+## sushiswapGetLiquidityPositionHistorical
 
-> dappsSushiswapLiquidityPositionHistoricalGet(opts)
+> [SushiswapLiquidityPositionDTO] sushiswapGetLiquidityPositionHistorical(opts)
 
+GetLiquidityPosition (historical)
 
+Gets liquidity position.
 
 ### Example
 
@@ -302,11 +314,11 @@ let opts = {
   'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'poolId': "poolId_example" // String | 
 };
-apiInstance.dappsSushiswapLiquidityPositionHistoricalGet(opts, (error, data, response) => {
+apiInstance.sushiswapGetLiquidityPositionHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -324,7 +336,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**[SushiswapLiquidityPositionDTO]**](SushiswapLiquidityPositionDTO.md)
 
 ### Authorization
 
@@ -333,14 +345,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsSushiswapLiquidityPositionSnapshotsHistoricalGet
+## sushiswapGetLiquidityPositionSnapshotHistorical
 
-> dappsSushiswapLiquidityPositionSnapshotsHistoricalGet(opts)
+> [SushiswapLiquidityPositionSnapshotDTO] sushiswapGetLiquidityPositionSnapshotHistorical(opts)
 
+GetLiquidityPositionSnapshot (historical)
 
+Gets liquidity position snapshot.
 
 ### Example
 
@@ -355,11 +369,11 @@ let opts = {
   'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'poolId': "poolId_example" // String | 
 };
-apiInstance.dappsSushiswapLiquidityPositionSnapshotsHistoricalGet(opts, (error, data, response) => {
+apiInstance.sushiswapGetLiquidityPositionSnapshotHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -377,7 +391,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**[SushiswapLiquidityPositionSnapshotDTO]**](SushiswapLiquidityPositionSnapshotDTO.md)
 
 ### Authorization
 
@@ -386,14 +400,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsSushiswapMintsHistoricalGet
+## sushiswapGetMintsHistorical
 
-> dappsSushiswapMintsHistoricalGet(opts)
+> [SushiswapMintDTO] sushiswapGetMintsHistorical(opts)
 
+GetMints (historical)
 
+Gets mints.
 
 ### Example
 
@@ -408,11 +424,11 @@ let opts = {
   'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'poolId': "poolId_example" // String | 
 };
-apiInstance.dappsSushiswapMintsHistoricalGet(opts, (error, data, response) => {
+apiInstance.sushiswapGetMintsHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -430,7 +446,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**[SushiswapMintDTO]**](SushiswapMintDTO.md)
 
 ### Authorization
 
@@ -439,268 +455,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
-
-
-## dappsSushiswapPoolDayDataHistoricalGet
-
-> dappsSushiswapPoolDayDataHistoricalGet(opts)
-
-
-
-### Example
-
-```javascript
-import OnChainApi from 'on_chain_api';
-
-let apiInstance = new OnChainApi.SushiswapApi();
-let opts = {
-  'startBlock': 789, // Number | 
-  'endBlock': 789, // Number | 
-  'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'poolId': "poolId_example" // String | 
-};
-apiInstance.dappsSushiswapPoolDayDataHistoricalGet(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **Number**|  | [optional] 
- **endBlock** | **Number**|  | [optional] 
- **startDate** | **Date**|  | [optional] 
- **endDate** | **Date**|  | [optional] 
- **poolId** | **String**|  | [optional] 
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-
-## dappsSushiswapPoolHourDataHistoricalGet
-
-> dappsSushiswapPoolHourDataHistoricalGet(opts)
-
-
-
-### Example
-
-```javascript
-import OnChainApi from 'on_chain_api';
-
-let apiInstance = new OnChainApi.SushiswapApi();
-let opts = {
-  'startBlock': 789, // Number | 
-  'endBlock': 789, // Number | 
-  'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'poolId': "poolId_example" // String | 
-};
-apiInstance.dappsSushiswapPoolHourDataHistoricalGet(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **Number**|  | [optional] 
- **endBlock** | **Number**|  | [optional] 
- **startDate** | **Date**|  | [optional] 
- **endDate** | **Date**|  | [optional] 
- **poolId** | **String**|  | [optional] 
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-
-## dappsSushiswapTokenDayDataHistoricalGet
-
-> dappsSushiswapTokenDayDataHistoricalGet(opts)
-
-
-
-### Example
-
-```javascript
-import OnChainApi from 'on_chain_api';
-
-let apiInstance = new OnChainApi.SushiswapApi();
-let opts = {
-  'startBlock': 789, // Number | 
-  'endBlock': 789, // Number | 
-  'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'tokenId': "tokenId_example" // String | 
-};
-apiInstance.dappsSushiswapTokenDayDataHistoricalGet(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **Number**|  | [optional] 
- **endBlock** | **Number**|  | [optional] 
- **startDate** | **Date**|  | [optional] 
- **endDate** | **Date**|  | [optional] 
- **tokenId** | **String**|  | [optional] 
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-
-## dappsSushiswapTransactionsHistoricalGet
-
-> dappsSushiswapTransactionsHistoricalGet(opts)
-
-
-
-### Example
-
-```javascript
-import OnChainApi from 'on_chain_api';
-
-let apiInstance = new OnChainApi.SushiswapApi();
-let opts = {
-  'startBlock': 789, // Number | 
-  'endBlock': 789, // Number | 
-  'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'endDate': new Date("2013-10-20T19:20:30+01:00") // Date | 
-};
-apiInstance.dappsSushiswapTransactionsHistoricalGet(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **Number**|  | [optional] 
- **endBlock** | **Number**|  | [optional] 
- **startDate** | **Date**|  | [optional] 
- **endDate** | **Date**|  | [optional] 
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-
-## dappsSushiswapUsersHistoricalGet
-
-> dappsSushiswapUsersHistoricalGet(opts)
-
-
-
-### Example
-
-```javascript
-import OnChainApi from 'on_chain_api';
-
-let apiInstance = new OnChainApi.SushiswapApi();
-let opts = {
-  'startBlock': 789, // Number | 
-  'endBlock': 789, // Number | 
-  'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'endDate': new Date("2013-10-20T19:20:30+01:00") // Date | 
-};
-apiInstance.dappsSushiswapUsersHistoricalGet(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **Number**|  | [optional] 
- **endBlock** | **Number**|  | [optional] 
- **startDate** | **Date**|  | [optional] 
- **endDate** | **Date**|  | [optional] 
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
 ## sushiswapGetPoolsCurrent
@@ -733,6 +488,61 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**[SushiswapPairDTO]**](SushiswapPairDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## sushiswapGetPoolsDayDataHistorical
+
+> [SushiswapPairDayDataDTO] sushiswapGetPoolsDayDataHistorical(opts)
+
+GetPoolsDayData (historical)
+
+Gets pools day data.
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.SushiswapApi();
+let opts = {
+  'startBlock': 789, // Number | 
+  'endBlock': 789, // Number | 
+  'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'poolId': "poolId_example" // String | 
+};
+apiInstance.sushiswapGetPoolsDayDataHistorical(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Number**|  | [optional] 
+ **endBlock** | **Number**|  | [optional] 
+ **startDate** | **Date**|  | [optional] 
+ **endDate** | **Date**|  | [optional] 
+ **poolId** | **String**|  | [optional] 
+
+### Return type
+
+[**[SushiswapPairDayDataDTO]**](SushiswapPairDayDataDTO.md)
 
 ### Authorization
 
@@ -799,9 +609,64 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
+## sushiswapGetPoolsHourDataHistorical
+
+> [SushiswapPairHourDataDTO] sushiswapGetPoolsHourDataHistorical(opts)
+
+GetPoolsHourData (historical)
+
+Gets pools tracked each our.
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.SushiswapApi();
+let opts = {
+  'startBlock': 789, // Number | 
+  'endBlock': 789, // Number | 
+  'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'poolId': "poolId_example" // String | 
+};
+apiInstance.sushiswapGetPoolsHourDataHistorical(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Number**|  | [optional] 
+ **endBlock** | **Number**|  | [optional] 
+ **startDate** | **Date**|  | [optional] 
+ **endDate** | **Date**|  | [optional] 
+ **poolId** | **String**|  | [optional] 
+
+### Return type
+
+[**[SushiswapPairHourDataDTO]**](SushiswapPairHourDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
 ## sushiswapGetSwapsCurrent
 
-> SushiswapSwapDTO sushiswapGetSwapsCurrent()
+> [SushiswapSwapDTO] sushiswapGetSwapsCurrent()
 
 GetSwaps (current)
 
@@ -828,7 +693,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**SushiswapSwapDTO**](SushiswapSwapDTO.md)
+[**[SushiswapSwapDTO]**](SushiswapSwapDTO.md)
 
 ### Authorization
 
@@ -897,7 +762,7 @@ No authorization required
 
 ## sushiswapGetTokensCurrent
 
-> SushiswapTokenDTO sushiswapGetTokensCurrent()
+> [SushiswapTokenDTO] sushiswapGetTokensCurrent()
 
 GetTokens (current)
 
@@ -924,7 +789,62 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**SushiswapTokenDTO**](SushiswapTokenDTO.md)
+[**[SushiswapTokenDTO]**](SushiswapTokenDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## sushiswapGetTokensDayDataHistorical
+
+> [SushiswapTokenDayDataDTO] sushiswapGetTokensDayDataHistorical(opts)
+
+GetTokensDayData (historical)
+
+Gets tokens day data.
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.SushiswapApi();
+let opts = {
+  'startBlock': 789, // Number | 
+  'endBlock': 789, // Number | 
+  'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'tokenId': "tokenId_example" // String | 
+};
+apiInstance.sushiswapGetTokensDayDataHistorical(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Number**|  | [optional] 
+ **endBlock** | **Number**|  | [optional] 
+ **startDate** | **Date**|  | [optional] 
+ **endDate** | **Date**|  | [optional] 
+ **tokenId** | **String**|  | [optional] 
+
+### Return type
+
+[**[SushiswapTokenDayDataDTO]**](SushiswapTokenDayDataDTO.md)
 
 ### Authorization
 
@@ -980,6 +900,112 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**[SushiswapTokenDTO]**](SushiswapTokenDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## sushiswapGetTransactionsHistorical
+
+> [SushiswapTransactionDTO] sushiswapGetTransactionsHistorical(opts)
+
+GetTransactions (historical)
+
+Gets transactions.
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.SushiswapApi();
+let opts = {
+  'startBlock': 789, // Number | 
+  'endBlock': 789, // Number | 
+  'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'endDate': new Date("2013-10-20T19:20:30+01:00") // Date | 
+};
+apiInstance.sushiswapGetTransactionsHistorical(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Number**|  | [optional] 
+ **endBlock** | **Number**|  | [optional] 
+ **startDate** | **Date**|  | [optional] 
+ **endDate** | **Date**|  | [optional] 
+
+### Return type
+
+[**[SushiswapTransactionDTO]**](SushiswapTransactionDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## sushiswapGetUsersHistorical
+
+> [SushiswapUserDTO] sushiswapGetUsersHistorical(opts)
+
+GetUsers (historical)
+
+Gets users.
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.SushiswapApi();
+let opts = {
+  'startBlock': 789, // Number | 
+  'endBlock': 789, // Number | 
+  'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'endDate': new Date("2013-10-20T19:20:30+01:00") // Date | 
+};
+apiInstance.sushiswapGetUsersHistorical(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Number**|  | [optional] 
+ **endBlock** | **Number**|  | [optional] 
+ **startDate** | **Date**|  | [optional] 
+ **endDate** | **Date**|  | [optional] 
+
+### Return type
+
+[**[SushiswapUserDTO]**](SushiswapUserDTO.md)
 
 ### Authorization
 

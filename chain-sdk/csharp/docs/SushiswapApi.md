@@ -4,33 +4,35 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**DappsSushiswapBundlesHistoricalGet**](SushiswapApi.md#dappssushiswapbundleshistoricalget) | **GET** /dapps/sushiswap/bundles/historical | 
-[**DappsSushiswapBurnsHistoricalGet**](SushiswapApi.md#dappssushiswapburnshistoricalget) | **GET** /dapps/sushiswap/burns/historical | 
-[**DappsSushiswapDayDataHistoricalGet**](SushiswapApi.md#dappssushiswapdaydatahistoricalget) | **GET** /dapps/sushiswap/dayData/historical | 
-[**DappsSushiswapFactoryHistoricalGet**](SushiswapApi.md#dappssushiswapfactoryhistoricalget) | **GET** /dapps/sushiswap/factory/historical | 
-[**DappsSushiswapHourDataHistoricalGet**](SushiswapApi.md#dappssushiswaphourdatahistoricalget) | **GET** /dapps/sushiswap/hourData/historical | 
-[**DappsSushiswapLiquidityPositionHistoricalGet**](SushiswapApi.md#dappssushiswapliquiditypositionhistoricalget) | **GET** /dapps/sushiswap/liquidityPosition/historical | 
-[**DappsSushiswapLiquidityPositionSnapshotsHistoricalGet**](SushiswapApi.md#dappssushiswapliquiditypositionsnapshotshistoricalget) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/historical | 
-[**DappsSushiswapMintsHistoricalGet**](SushiswapApi.md#dappssushiswapmintshistoricalget) | **GET** /dapps/sushiswap/mints/historical | 
-[**DappsSushiswapPoolDayDataHistoricalGet**](SushiswapApi.md#dappssushiswappooldaydatahistoricalget) | **GET** /dapps/sushiswap/poolDayData/historical | 
-[**DappsSushiswapPoolHourDataHistoricalGet**](SushiswapApi.md#dappssushiswappoolhourdatahistoricalget) | **GET** /dapps/sushiswap/poolHourData/historical | 
-[**DappsSushiswapTokenDayDataHistoricalGet**](SushiswapApi.md#dappssushiswaptokendaydatahistoricalget) | **GET** /dapps/sushiswap/tokenDayData/historical | 
-[**DappsSushiswapTransactionsHistoricalGet**](SushiswapApi.md#dappssushiswaptransactionshistoricalget) | **GET** /dapps/sushiswap/transactions/historical | 
-[**DappsSushiswapUsersHistoricalGet**](SushiswapApi.md#dappssushiswapusershistoricalget) | **GET** /dapps/sushiswap/users/historical | 
+[**SushiswapGetBundlesHistorical**](SushiswapApi.md#sushiswapgetbundleshistorical) | **GET** /dapps/sushiswap/bundles/historical | GetBundles (historical)
+[**SushiswapGetBurnsHistorical**](SushiswapApi.md#sushiswapgetburnshistorical) | **GET** /dapps/sushiswap/burns/historical | GetBurns (historical)
+[**SushiswapGetDayDataHistorical**](SushiswapApi.md#sushiswapgetdaydatahistorical) | **GET** /dapps/sushiswap/dayData/historical | GetDayData (historical)
+[**SushiswapGetFactoryHistorical**](SushiswapApi.md#sushiswapgetfactoryhistorical) | **GET** /dapps/sushiswap/factory/historical | GetFactory (historical)
+[**SushiswapGetHourDataHistorical**](SushiswapApi.md#sushiswapgethourdatahistorical) | **GET** /dapps/sushiswap/hourData/historical | GetHourData (historical)
+[**SushiswapGetLiquidityPositionHistorical**](SushiswapApi.md#sushiswapgetliquiditypositionhistorical) | **GET** /dapps/sushiswap/liquidityPosition/historical | GetLiquidityPosition (historical)
+[**SushiswapGetLiquidityPositionSnapshotHistorical**](SushiswapApi.md#sushiswapgetliquiditypositionsnapshothistorical) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/historical | GetLiquidityPositionSnapshot (historical)
+[**SushiswapGetMintsHistorical**](SushiswapApi.md#sushiswapgetmintshistorical) | **GET** /dapps/sushiswap/mints/historical | GetMints (historical)
 [**SushiswapGetPoolsCurrent**](SushiswapApi.md#sushiswapgetpoolscurrent) | **GET** /dapps/sushiswap/pools/current | GetPools (current)
+[**SushiswapGetPoolsDayDataHistorical**](SushiswapApi.md#sushiswapgetpoolsdaydatahistorical) | **GET** /dapps/sushiswap/poolsDayData/historical | GetPoolsDayData (historical)
 [**SushiswapGetPoolsHistorical**](SushiswapApi.md#sushiswapgetpoolshistorical) | **GET** /dapps/sushiswap/pools/historical | GetPools (historical)
+[**SushiswapGetPoolsHourDataHistorical**](SushiswapApi.md#sushiswapgetpoolshourdatahistorical) | **GET** /dapps/sushiswap/poolsHourData/historical | GetPoolsHourData (historical)
 [**SushiswapGetSwapsCurrent**](SushiswapApi.md#sushiswapgetswapscurrent) | **GET** /dapps/sushiswap/swaps/current | GetSwaps (current)
 [**SushiswapGetSwapsHistorical**](SushiswapApi.md#sushiswapgetswapshistorical) | **GET** /dapps/sushiswap/swaps/historical | GetSwaps (historical)
 [**SushiswapGetTokensCurrent**](SushiswapApi.md#sushiswapgettokenscurrent) | **GET** /dapps/sushiswap/tokens/current | GetTokens (current)
+[**SushiswapGetTokensDayDataHistorical**](SushiswapApi.md#sushiswapgettokensdaydatahistorical) | **GET** /dapps/sushiswap/tokensDayData/historical | GetTokensDayData (historical)
 [**SushiswapGetTokensHistorical**](SushiswapApi.md#sushiswapgettokenshistorical) | **GET** /dapps/sushiswap/tokens/historical | GetTokens (historical)
+[**SushiswapGetTransactionsHistorical**](SushiswapApi.md#sushiswapgettransactionshistorical) | **GET** /dapps/sushiswap/transactions/historical | GetTransactions (historical)
+[**SushiswapGetUsersHistorical**](SushiswapApi.md#sushiswapgetusershistorical) | **GET** /dapps/sushiswap/users/historical | GetUsers (historical)
 
 
 
-## DappsSushiswapBundlesHistoricalGet
+## SushiswapGetBundlesHistorical
 
-> void DappsSushiswapBundlesHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
+> List&lt;SushiswapBundleDTO&gt; SushiswapGetBundlesHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
 
+GetBundles (historical)
 
+Gets bundles.
 
 ### Example
 
@@ -43,7 +45,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class DappsSushiswapBundlesHistoricalGetExample
+    public class SushiswapGetBundlesHistoricalExample
     {
         public static void Main()
         {
@@ -56,11 +58,13 @@ namespace Example
 
             try
             {
-                apiInstance.DappsSushiswapBundlesHistoricalGet(startBlock, endBlock, startDate, endDate);
+                // GetBundles (historical)
+                List<SushiswapBundleDTO> result = apiInstance.SushiswapGetBundlesHistorical(startBlock, endBlock, startDate, endDate);
+                Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling SushiswapApi.DappsSushiswapBundlesHistoricalGet: " + e.Message );
+                Debug.Print("Exception when calling SushiswapApi.SushiswapGetBundlesHistorical: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -81,7 +85,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**List&lt;SushiswapBundleDTO&gt;**](SushiswapBundleDTO.md)
 
 ### Authorization
 
@@ -90,13 +94,13 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
 [[Back to top]](#)
 [[Back to API list]](../README.md#documentation-for-api-endpoints)
@@ -104,11 +108,13 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## DappsSushiswapBurnsHistoricalGet
+## SushiswapGetBurnsHistorical
 
-> void DappsSushiswapBurnsHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
+> List&lt;SushiswapBurnDTO&gt; SushiswapGetBurnsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
 
+GetBurns (historical)
 
+Gets burns.
 
 ### Example
 
@@ -121,7 +127,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class DappsSushiswapBurnsHistoricalGetExample
+    public class SushiswapGetBurnsHistoricalExample
     {
         public static void Main()
         {
@@ -135,11 +141,13 @@ namespace Example
 
             try
             {
-                apiInstance.DappsSushiswapBurnsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+                // GetBurns (historical)
+                List<SushiswapBurnDTO> result = apiInstance.SushiswapGetBurnsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+                Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling SushiswapApi.DappsSushiswapBurnsHistoricalGet: " + e.Message );
+                Debug.Print("Exception when calling SushiswapApi.SushiswapGetBurnsHistorical: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -161,7 +169,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**List&lt;SushiswapBurnDTO&gt;**](SushiswapBurnDTO.md)
 
 ### Authorization
 
@@ -170,13 +178,13 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
 [[Back to top]](#)
 [[Back to API list]](../README.md#documentation-for-api-endpoints)
@@ -184,11 +192,13 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## DappsSushiswapDayDataHistoricalGet
+## SushiswapGetDayDataHistorical
 
-> void DappsSushiswapDayDataHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
+> List&lt;SushiswapDayDataDTO&gt; SushiswapGetDayDataHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
 
+GetDayData (historical)
 
+Gets day data.
 
 ### Example
 
@@ -201,7 +211,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class DappsSushiswapDayDataHistoricalGetExample
+    public class SushiswapGetDayDataHistoricalExample
     {
         public static void Main()
         {
@@ -214,11 +224,13 @@ namespace Example
 
             try
             {
-                apiInstance.DappsSushiswapDayDataHistoricalGet(startBlock, endBlock, startDate, endDate);
+                // GetDayData (historical)
+                List<SushiswapDayDataDTO> result = apiInstance.SushiswapGetDayDataHistorical(startBlock, endBlock, startDate, endDate);
+                Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling SushiswapApi.DappsSushiswapDayDataHistoricalGet: " + e.Message );
+                Debug.Print("Exception when calling SushiswapApi.SushiswapGetDayDataHistorical: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -239,7 +251,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**List&lt;SushiswapDayDataDTO&gt;**](SushiswapDayDataDTO.md)
 
 ### Authorization
 
@@ -248,13 +260,13 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
 [[Back to top]](#)
 [[Back to API list]](../README.md#documentation-for-api-endpoints)
@@ -262,11 +274,13 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## DappsSushiswapFactoryHistoricalGet
+## SushiswapGetFactoryHistorical
 
-> void DappsSushiswapFactoryHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
+> List&lt;SushiswapFactoryDTO&gt; SushiswapGetFactoryHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
 
+GetFactory (historical)
 
+Gets factory.
 
 ### Example
 
@@ -279,7 +293,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class DappsSushiswapFactoryHistoricalGetExample
+    public class SushiswapGetFactoryHistoricalExample
     {
         public static void Main()
         {
@@ -292,11 +306,13 @@ namespace Example
 
             try
             {
-                apiInstance.DappsSushiswapFactoryHistoricalGet(startBlock, endBlock, startDate, endDate);
+                // GetFactory (historical)
+                List<SushiswapFactoryDTO> result = apiInstance.SushiswapGetFactoryHistorical(startBlock, endBlock, startDate, endDate);
+                Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling SushiswapApi.DappsSushiswapFactoryHistoricalGet: " + e.Message );
+                Debug.Print("Exception when calling SushiswapApi.SushiswapGetFactoryHistorical: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -317,7 +333,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**List&lt;SushiswapFactoryDTO&gt;**](SushiswapFactoryDTO.md)
 
 ### Authorization
 
@@ -326,13 +342,13 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
 [[Back to top]](#)
 [[Back to API list]](../README.md#documentation-for-api-endpoints)
@@ -340,11 +356,13 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## DappsSushiswapHourDataHistoricalGet
+## SushiswapGetHourDataHistorical
 
-> void DappsSushiswapHourDataHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
+> List&lt;SushiswapHourDataDTO&gt; SushiswapGetHourDataHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
 
+GetHourData (historical)
 
+Gets hour data.
 
 ### Example
 
@@ -357,7 +375,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class DappsSushiswapHourDataHistoricalGetExample
+    public class SushiswapGetHourDataHistoricalExample
     {
         public static void Main()
         {
@@ -370,11 +388,13 @@ namespace Example
 
             try
             {
-                apiInstance.DappsSushiswapHourDataHistoricalGet(startBlock, endBlock, startDate, endDate);
+                // GetHourData (historical)
+                List<SushiswapHourDataDTO> result = apiInstance.SushiswapGetHourDataHistorical(startBlock, endBlock, startDate, endDate);
+                Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling SushiswapApi.DappsSushiswapHourDataHistoricalGet: " + e.Message );
+                Debug.Print("Exception when calling SushiswapApi.SushiswapGetHourDataHistorical: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -395,7 +415,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**List&lt;SushiswapHourDataDTO&gt;**](SushiswapHourDataDTO.md)
 
 ### Authorization
 
@@ -404,13 +424,13 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
 [[Back to top]](#)
 [[Back to API list]](../README.md#documentation-for-api-endpoints)
@@ -418,11 +438,13 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## DappsSushiswapLiquidityPositionHistoricalGet
+## SushiswapGetLiquidityPositionHistorical
 
-> void DappsSushiswapLiquidityPositionHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
+> List&lt;SushiswapLiquidityPositionDTO&gt; SushiswapGetLiquidityPositionHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
 
+GetLiquidityPosition (historical)
 
+Gets liquidity position.
 
 ### Example
 
@@ -435,7 +457,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class DappsSushiswapLiquidityPositionHistoricalGetExample
+    public class SushiswapGetLiquidityPositionHistoricalExample
     {
         public static void Main()
         {
@@ -449,11 +471,13 @@ namespace Example
 
             try
             {
-                apiInstance.DappsSushiswapLiquidityPositionHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+                // GetLiquidityPosition (historical)
+                List<SushiswapLiquidityPositionDTO> result = apiInstance.SushiswapGetLiquidityPositionHistorical(startBlock, endBlock, startDate, endDate, poolId);
+                Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling SushiswapApi.DappsSushiswapLiquidityPositionHistoricalGet: " + e.Message );
+                Debug.Print("Exception when calling SushiswapApi.SushiswapGetLiquidityPositionHistorical: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -475,7 +499,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**List&lt;SushiswapLiquidityPositionDTO&gt;**](SushiswapLiquidityPositionDTO.md)
 
 ### Authorization
 
@@ -484,13 +508,13 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
 [[Back to top]](#)
 [[Back to API list]](../README.md#documentation-for-api-endpoints)
@@ -498,11 +522,13 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## DappsSushiswapLiquidityPositionSnapshotsHistoricalGet
+## SushiswapGetLiquidityPositionSnapshotHistorical
 
-> void DappsSushiswapLiquidityPositionSnapshotsHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
+> List&lt;SushiswapLiquidityPositionSnapshotDTO&gt; SushiswapGetLiquidityPositionSnapshotHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
 
+GetLiquidityPositionSnapshot (historical)
 
+Gets liquidity position snapshot.
 
 ### Example
 
@@ -515,7 +541,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class DappsSushiswapLiquidityPositionSnapshotsHistoricalGetExample
+    public class SushiswapGetLiquidityPositionSnapshotHistoricalExample
     {
         public static void Main()
         {
@@ -529,11 +555,13 @@ namespace Example
 
             try
             {
-                apiInstance.DappsSushiswapLiquidityPositionSnapshotsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+                // GetLiquidityPositionSnapshot (historical)
+                List<SushiswapLiquidityPositionSnapshotDTO> result = apiInstance.SushiswapGetLiquidityPositionSnapshotHistorical(startBlock, endBlock, startDate, endDate, poolId);
+                Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling SushiswapApi.DappsSushiswapLiquidityPositionSnapshotsHistoricalGet: " + e.Message );
+                Debug.Print("Exception when calling SushiswapApi.SushiswapGetLiquidityPositionSnapshotHistorical: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -555,7 +583,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**List&lt;SushiswapLiquidityPositionSnapshotDTO&gt;**](SushiswapLiquidityPositionSnapshotDTO.md)
 
 ### Authorization
 
@@ -564,13 +592,13 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
 [[Back to top]](#)
 [[Back to API list]](../README.md#documentation-for-api-endpoints)
@@ -578,11 +606,13 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## DappsSushiswapMintsHistoricalGet
+## SushiswapGetMintsHistorical
 
-> void DappsSushiswapMintsHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
+> List&lt;SushiswapMintDTO&gt; SushiswapGetMintsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
 
+GetMints (historical)
 
+Gets mints.
 
 ### Example
 
@@ -595,7 +625,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class DappsSushiswapMintsHistoricalGetExample
+    public class SushiswapGetMintsHistoricalExample
     {
         public static void Main()
         {
@@ -609,11 +639,13 @@ namespace Example
 
             try
             {
-                apiInstance.DappsSushiswapMintsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+                // GetMints (historical)
+                List<SushiswapMintDTO> result = apiInstance.SushiswapGetMintsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+                Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling SushiswapApi.DappsSushiswapMintsHistoricalGet: " + e.Message );
+                Debug.Print("Exception when calling SushiswapApi.SushiswapGetMintsHistorical: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -635,7 +667,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**List&lt;SushiswapMintDTO&gt;**](SushiswapMintDTO.md)
 
 ### Authorization
 
@@ -644,409 +676,13 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
-
-[[Back to top]](#)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## DappsSushiswapPoolDayDataHistoricalGet
-
-> void DappsSushiswapPoolDayDataHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
-
-
-
-### Example
-
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using CoinAPI.EMS.REST.V1.Api;
-using CoinAPI.EMS.REST.V1.Client;
-using CoinAPI.EMS.REST.V1.Model;
-
-namespace Example
-{
-    public class DappsSushiswapPoolDayDataHistoricalGetExample
-    {
-        public static void Main()
-        {
-            Configuration.Default.BasePath = "https://onchain.coinapi.io";
-            var apiInstance = new SushiswapApi(Configuration.Default);
-            var startBlock = 789L;  // long? |  (optional) 
-            var endBlock = 789L;  // long? |  (optional) 
-            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
-            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
-            var poolId = "poolId_example";  // string |  (optional) 
-
-            try
-            {
-                apiInstance.DappsSushiswapPoolDayDataHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
-            }
-            catch (ApiException e)
-            {
-                Debug.Print("Exception when calling SushiswapApi.DappsSushiswapPoolDayDataHistoricalGet: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **long?**|  | [optional] 
- **endBlock** | **long?**|  | [optional] 
- **startDate** | **DateTime?**|  | [optional] 
- **endDate** | **DateTime?**|  | [optional] 
- **poolId** | **string**|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-
-[[Back to top]](#)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## DappsSushiswapPoolHourDataHistoricalGet
-
-> void DappsSushiswapPoolHourDataHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
-
-
-
-### Example
-
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using CoinAPI.EMS.REST.V1.Api;
-using CoinAPI.EMS.REST.V1.Client;
-using CoinAPI.EMS.REST.V1.Model;
-
-namespace Example
-{
-    public class DappsSushiswapPoolHourDataHistoricalGetExample
-    {
-        public static void Main()
-        {
-            Configuration.Default.BasePath = "https://onchain.coinapi.io";
-            var apiInstance = new SushiswapApi(Configuration.Default);
-            var startBlock = 789L;  // long? |  (optional) 
-            var endBlock = 789L;  // long? |  (optional) 
-            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
-            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
-            var poolId = "poolId_example";  // string |  (optional) 
-
-            try
-            {
-                apiInstance.DappsSushiswapPoolHourDataHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
-            }
-            catch (ApiException e)
-            {
-                Debug.Print("Exception when calling SushiswapApi.DappsSushiswapPoolHourDataHistoricalGet: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **long?**|  | [optional] 
- **endBlock** | **long?**|  | [optional] 
- **startDate** | **DateTime?**|  | [optional] 
- **endDate** | **DateTime?**|  | [optional] 
- **poolId** | **string**|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-
-[[Back to top]](#)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## DappsSushiswapTokenDayDataHistoricalGet
-
-> void DappsSushiswapTokenDayDataHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string tokenId = null)
-
-
-
-### Example
-
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using CoinAPI.EMS.REST.V1.Api;
-using CoinAPI.EMS.REST.V1.Client;
-using CoinAPI.EMS.REST.V1.Model;
-
-namespace Example
-{
-    public class DappsSushiswapTokenDayDataHistoricalGetExample
-    {
-        public static void Main()
-        {
-            Configuration.Default.BasePath = "https://onchain.coinapi.io";
-            var apiInstance = new SushiswapApi(Configuration.Default);
-            var startBlock = 789L;  // long? |  (optional) 
-            var endBlock = 789L;  // long? |  (optional) 
-            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
-            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
-            var tokenId = "tokenId_example";  // string |  (optional) 
-
-            try
-            {
-                apiInstance.DappsSushiswapTokenDayDataHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId);
-            }
-            catch (ApiException e)
-            {
-                Debug.Print("Exception when calling SushiswapApi.DappsSushiswapTokenDayDataHistoricalGet: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **long?**|  | [optional] 
- **endBlock** | **long?**|  | [optional] 
- **startDate** | **DateTime?**|  | [optional] 
- **endDate** | **DateTime?**|  | [optional] 
- **tokenId** | **string**|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-
-[[Back to top]](#)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## DappsSushiswapTransactionsHistoricalGet
-
-> void DappsSushiswapTransactionsHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
-
-
-
-### Example
-
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using CoinAPI.EMS.REST.V1.Api;
-using CoinAPI.EMS.REST.V1.Client;
-using CoinAPI.EMS.REST.V1.Model;
-
-namespace Example
-{
-    public class DappsSushiswapTransactionsHistoricalGetExample
-    {
-        public static void Main()
-        {
-            Configuration.Default.BasePath = "https://onchain.coinapi.io";
-            var apiInstance = new SushiswapApi(Configuration.Default);
-            var startBlock = 789L;  // long? |  (optional) 
-            var endBlock = 789L;  // long? |  (optional) 
-            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
-            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
-
-            try
-            {
-                apiInstance.DappsSushiswapTransactionsHistoricalGet(startBlock, endBlock, startDate, endDate);
-            }
-            catch (ApiException e)
-            {
-                Debug.Print("Exception when calling SushiswapApi.DappsSushiswapTransactionsHistoricalGet: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **long?**|  | [optional] 
- **endBlock** | **long?**|  | [optional] 
- **startDate** | **DateTime?**|  | [optional] 
- **endDate** | **DateTime?**|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-
-[[Back to top]](#)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## DappsSushiswapUsersHistoricalGet
-
-> void DappsSushiswapUsersHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
-
-
-
-### Example
-
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using CoinAPI.EMS.REST.V1.Api;
-using CoinAPI.EMS.REST.V1.Client;
-using CoinAPI.EMS.REST.V1.Model;
-
-namespace Example
-{
-    public class DappsSushiswapUsersHistoricalGetExample
-    {
-        public static void Main()
-        {
-            Configuration.Default.BasePath = "https://onchain.coinapi.io";
-            var apiInstance = new SushiswapApi(Configuration.Default);
-            var startBlock = 789L;  // long? |  (optional) 
-            var endBlock = 789L;  // long? |  (optional) 
-            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
-            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
-
-            try
-            {
-                apiInstance.DappsSushiswapUsersHistoricalGet(startBlock, endBlock, startDate, endDate);
-            }
-            catch (ApiException e)
-            {
-                Debug.Print("Exception when calling SushiswapApi.DappsSushiswapUsersHistoricalGet: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **long?**|  | [optional] 
- **endBlock** | **long?**|  | [optional] 
- **startDate** | **DateTime?**|  | [optional] 
- **endDate** | **DateTime?**|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
 [[Back to top]](#)
 [[Back to API list]](../README.md#documentation-for-api-endpoints)
@@ -1104,6 +740,90 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**List&lt;SushiswapPairDTO&gt;**](SushiswapPairDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## SushiswapGetPoolsDayDataHistorical
+
+> List&lt;SushiswapPairDayDataDTO&gt; SushiswapGetPoolsDayDataHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
+
+GetPoolsDayData (historical)
+
+Gets pools day data.
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class SushiswapGetPoolsDayDataHistoricalExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new SushiswapApi(Configuration.Default);
+            var startBlock = 789L;  // long? |  (optional) 
+            var endBlock = 789L;  // long? |  (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var poolId = "poolId_example";  // string |  (optional) 
+
+            try
+            {
+                // GetPoolsDayData (historical)
+                List<SushiswapPairDayDataDTO> result = apiInstance.SushiswapGetPoolsDayDataHistorical(startBlock, endBlock, startDate, endDate, poolId);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling SushiswapApi.SushiswapGetPoolsDayDataHistorical: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **long?**|  | [optional] 
+ **endBlock** | **long?**|  | [optional] 
+ **startDate** | **DateTime?**|  | [optional] 
+ **endDate** | **DateTime?**|  | [optional] 
+ **poolId** | **string**|  | [optional] 
+
+### Return type
+
+[**List&lt;SushiswapPairDayDataDTO&gt;**](SushiswapPairDayDataDTO.md)
 
 ### Authorization
 
@@ -1210,9 +930,93 @@ No authorization required
 [[Back to README]](../README.md)
 
 
+## SushiswapGetPoolsHourDataHistorical
+
+> List&lt;SushiswapPairHourDataDTO&gt; SushiswapGetPoolsHourDataHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
+
+GetPoolsHourData (historical)
+
+Gets pools tracked each our.
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class SushiswapGetPoolsHourDataHistoricalExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new SushiswapApi(Configuration.Default);
+            var startBlock = 789L;  // long? |  (optional) 
+            var endBlock = 789L;  // long? |  (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var poolId = "poolId_example";  // string |  (optional) 
+
+            try
+            {
+                // GetPoolsHourData (historical)
+                List<SushiswapPairHourDataDTO> result = apiInstance.SushiswapGetPoolsHourDataHistorical(startBlock, endBlock, startDate, endDate, poolId);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling SushiswapApi.SushiswapGetPoolsHourDataHistorical: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **long?**|  | [optional] 
+ **endBlock** | **long?**|  | [optional] 
+ **startDate** | **DateTime?**|  | [optional] 
+ **endDate** | **DateTime?**|  | [optional] 
+ **poolId** | **string**|  | [optional] 
+
+### Return type
+
+[**List&lt;SushiswapPairHourDataDTO&gt;**](SushiswapPairHourDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## SushiswapGetSwapsCurrent
 
-> SushiswapSwapDTO SushiswapGetSwapsCurrent ()
+> List&lt;SushiswapSwapDTO&gt; SushiswapGetSwapsCurrent ()
 
 GetSwaps (current)
 
@@ -1239,7 +1043,7 @@ namespace Example
             try
             {
                 // GetSwaps (current)
-                SushiswapSwapDTO result = apiInstance.SushiswapGetSwapsCurrent();
+                List<SushiswapSwapDTO> result = apiInstance.SushiswapGetSwapsCurrent();
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -1259,7 +1063,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**SushiswapSwapDTO**](SushiswapSwapDTO.md)
+[**List&lt;SushiswapSwapDTO&gt;**](SushiswapSwapDTO.md)
 
 ### Authorization
 
@@ -1368,7 +1172,7 @@ No authorization required
 
 ## SushiswapGetTokensCurrent
 
-> SushiswapTokenDTO SushiswapGetTokensCurrent ()
+> List&lt;SushiswapTokenDTO&gt; SushiswapGetTokensCurrent ()
 
 GetTokens (current)
 
@@ -1395,7 +1199,7 @@ namespace Example
             try
             {
                 // GetTokens (current)
-                SushiswapTokenDTO result = apiInstance.SushiswapGetTokensCurrent();
+                List<SushiswapTokenDTO> result = apiInstance.SushiswapGetTokensCurrent();
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -1415,7 +1219,91 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**SushiswapTokenDTO**](SushiswapTokenDTO.md)
+[**List&lt;SushiswapTokenDTO&gt;**](SushiswapTokenDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## SushiswapGetTokensDayDataHistorical
+
+> List&lt;SushiswapTokenDayDataDTO&gt; SushiswapGetTokensDayDataHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string tokenId = null)
+
+GetTokensDayData (historical)
+
+Gets tokens day data.
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class SushiswapGetTokensDayDataHistoricalExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new SushiswapApi(Configuration.Default);
+            var startBlock = 789L;  // long? |  (optional) 
+            var endBlock = 789L;  // long? |  (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var tokenId = "tokenId_example";  // string |  (optional) 
+
+            try
+            {
+                // GetTokensDayData (historical)
+                List<SushiswapTokenDayDataDTO> result = apiInstance.SushiswapGetTokensDayDataHistorical(startBlock, endBlock, startDate, endDate, tokenId);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling SushiswapApi.SushiswapGetTokensDayDataHistorical: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **long?**|  | [optional] 
+ **endBlock** | **long?**|  | [optional] 
+ **startDate** | **DateTime?**|  | [optional] 
+ **endDate** | **DateTime?**|  | [optional] 
+ **tokenId** | **string**|  | [optional] 
+
+### Return type
+
+[**List&lt;SushiswapTokenDayDataDTO&gt;**](SushiswapTokenDayDataDTO.md)
 
 ### Authorization
 
@@ -1500,6 +1388,170 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**List&lt;SushiswapTokenDTO&gt;**](SushiswapTokenDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## SushiswapGetTransactionsHistorical
+
+> List&lt;SushiswapTransactionDTO&gt; SushiswapGetTransactionsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
+
+GetTransactions (historical)
+
+Gets transactions.
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class SushiswapGetTransactionsHistoricalExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new SushiswapApi(Configuration.Default);
+            var startBlock = 789L;  // long? |  (optional) 
+            var endBlock = 789L;  // long? |  (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+
+            try
+            {
+                // GetTransactions (historical)
+                List<SushiswapTransactionDTO> result = apiInstance.SushiswapGetTransactionsHistorical(startBlock, endBlock, startDate, endDate);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling SushiswapApi.SushiswapGetTransactionsHistorical: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **long?**|  | [optional] 
+ **endBlock** | **long?**|  | [optional] 
+ **startDate** | **DateTime?**|  | [optional] 
+ **endDate** | **DateTime?**|  | [optional] 
+
+### Return type
+
+[**List&lt;SushiswapTransactionDTO&gt;**](SushiswapTransactionDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## SushiswapGetUsersHistorical
+
+> List&lt;SushiswapUserDTO&gt; SushiswapGetUsersHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
+
+GetUsers (historical)
+
+Gets users.
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class SushiswapGetUsersHistoricalExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new SushiswapApi(Configuration.Default);
+            var startBlock = 789L;  // long? |  (optional) 
+            var endBlock = 789L;  // long? |  (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+
+            try
+            {
+                // GetUsers (historical)
+                List<SushiswapUserDTO> result = apiInstance.SushiswapGetUsersHistorical(startBlock, endBlock, startDate, endDate);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling SushiswapApi.SushiswapGetUsersHistorical: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **long?**|  | [optional] 
+ **endBlock** | **long?**|  | [optional] 
+ **startDate** | **DateTime?**|  | [optional] 
+ **endDate** | **DateTime?**|  | [optional] 
+
+### Return type
+
+[**List&lt;SushiswapUserDTO&gt;**](SushiswapUserDTO.md)
 
 ### Authorization
 

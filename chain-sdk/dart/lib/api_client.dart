@@ -183,12 +183,38 @@ class ApiClient {
           return value is DateTime ? value : DateTime.tryParse(value);
         case 'NumericsBigInteger':
           return NumericsBigInteger.fromJson(value);
+        case 'SushiswapBundleDTO':
+          return SushiswapBundleDTO.fromJson(value);
+        case 'SushiswapBurnDTO':
+          return SushiswapBurnDTO.fromJson(value);
+        case 'SushiswapDayDataDTO':
+          return SushiswapDayDataDTO.fromJson(value);
+        case 'SushiswapFactoryDTO':
+          return SushiswapFactoryDTO.fromJson(value);
+        case 'SushiswapHourDataDTO':
+          return SushiswapHourDataDTO.fromJson(value);
+        case 'SushiswapLiquidityPositionDTO':
+          return SushiswapLiquidityPositionDTO.fromJson(value);
+        case 'SushiswapLiquidityPositionSnapshotDTO':
+          return SushiswapLiquidityPositionSnapshotDTO.fromJson(value);
+        case 'SushiswapMintDTO':
+          return SushiswapMintDTO.fromJson(value);
         case 'SushiswapPairDTO':
           return SushiswapPairDTO.fromJson(value);
+        case 'SushiswapPairDayDataDTO':
+          return SushiswapPairDayDataDTO.fromJson(value);
+        case 'SushiswapPairHourDataDTO':
+          return SushiswapPairHourDataDTO.fromJson(value);
         case 'SushiswapSwapDTO':
           return SushiswapSwapDTO.fromJson(value);
         case 'SushiswapTokenDTO':
           return SushiswapTokenDTO.fromJson(value);
+        case 'SushiswapTokenDayDataDTO':
+          return SushiswapTokenDayDataDTO.fromJson(value);
+        case 'SushiswapTransactionDTO':
+          return SushiswapTransactionDTO.fromJson(value);
+        case 'SushiswapUserDTO':
+          return SushiswapUserDTO.fromJson(value);
         case 'TransactionsETradeAggressiveSide':
           return TransactionsETradeAggressiveSideTypeTransformer().decode(value);
         case 'UniswapV2PairV2DTO':

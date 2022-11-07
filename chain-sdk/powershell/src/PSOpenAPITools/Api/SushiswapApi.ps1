@@ -9,7 +9,7 @@
 <#
 .SYNOPSIS
 
-No summary available.
+GetBundles (historical)
 
 .DESCRIPTION
 
@@ -27,15 +27,19 @@ No description available.
 .PARAMETER EndDate
 No description available.
 
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
 .PARAMETER WithHttpInfo
 
 A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
 
 .OUTPUTS
 
-None
+SushiswapBundleDTO[]
 #>
-function Invoke-DappsSushiswapBundlesHistoricalGet {
+function Invoke-SushiswapGetBundlesHistorical {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -50,12 +54,15 @@ function Invoke-DappsSushiswapBundlesHistoricalGet {
         [Parameter(Position = 3, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
         [System.Nullable[System.DateTime]]
         ${EndDate},
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
         [Switch]
         $WithHttpInfo
     )
 
     Process {
-        'Calling method: Invoke-DappsSushiswapBundlesHistoricalGet' | Write-Debug
+        'Calling method: Invoke-SushiswapGetBundlesHistorical' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -68,6 +75,14 @@ function Invoke-DappsSushiswapBundlesHistoricalGet {
         $LocalVarBodyParameter = $null
 
         $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
         $LocalVarUri = '/dapps/sushiswap/bundles/historical'
 
         if ($StartBlock) {
@@ -95,7 +110,7 @@ function Invoke-DappsSushiswapBundlesHistoricalGet {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "" `
+                                -ReturnType "SushiswapBundleDTO[]" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {
@@ -109,7 +124,7 @@ function Invoke-DappsSushiswapBundlesHistoricalGet {
 <#
 .SYNOPSIS
 
-No summary available.
+GetBurns (historical)
 
 .DESCRIPTION
 
@@ -130,15 +145,19 @@ No description available.
 .PARAMETER PoolId
 No description available.
 
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
 .PARAMETER WithHttpInfo
 
 A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
 
 .OUTPUTS
 
-None
+SushiswapBurnDTO[]
 #>
-function Invoke-DappsSushiswapBurnsHistoricalGet {
+function Invoke-SushiswapGetBurnsHistorical {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -156,12 +175,15 @@ function Invoke-DappsSushiswapBurnsHistoricalGet {
         [Parameter(Position = 4, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
         [String]
         ${PoolId},
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
         [Switch]
         $WithHttpInfo
     )
 
     Process {
-        'Calling method: Invoke-DappsSushiswapBurnsHistoricalGet' | Write-Debug
+        'Calling method: Invoke-SushiswapGetBurnsHistorical' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -174,6 +196,14 @@ function Invoke-DappsSushiswapBurnsHistoricalGet {
         $LocalVarBodyParameter = $null
 
         $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
         $LocalVarUri = '/dapps/sushiswap/burns/historical'
 
         if ($StartBlock) {
@@ -205,7 +235,7 @@ function Invoke-DappsSushiswapBurnsHistoricalGet {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "" `
+                                -ReturnType "SushiswapBurnDTO[]" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {
@@ -219,7 +249,7 @@ function Invoke-DappsSushiswapBurnsHistoricalGet {
 <#
 .SYNOPSIS
 
-No summary available.
+GetDayData (historical)
 
 .DESCRIPTION
 
@@ -237,15 +267,19 @@ No description available.
 .PARAMETER EndDate
 No description available.
 
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
 .PARAMETER WithHttpInfo
 
 A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
 
 .OUTPUTS
 
-None
+SushiswapDayDataDTO[]
 #>
-function Invoke-DappsSushiswapDayDataHistoricalGet {
+function Invoke-SushiswapGetDayDataHistorical {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -260,12 +294,15 @@ function Invoke-DappsSushiswapDayDataHistoricalGet {
         [Parameter(Position = 3, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
         [System.Nullable[System.DateTime]]
         ${EndDate},
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
         [Switch]
         $WithHttpInfo
     )
 
     Process {
-        'Calling method: Invoke-DappsSushiswapDayDataHistoricalGet' | Write-Debug
+        'Calling method: Invoke-SushiswapGetDayDataHistorical' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -278,6 +315,14 @@ function Invoke-DappsSushiswapDayDataHistoricalGet {
         $LocalVarBodyParameter = $null
 
         $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
         $LocalVarUri = '/dapps/sushiswap/dayData/historical'
 
         if ($StartBlock) {
@@ -305,7 +350,7 @@ function Invoke-DappsSushiswapDayDataHistoricalGet {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "" `
+                                -ReturnType "SushiswapDayDataDTO[]" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {
@@ -319,7 +364,7 @@ function Invoke-DappsSushiswapDayDataHistoricalGet {
 <#
 .SYNOPSIS
 
-No summary available.
+GetFactory (historical)
 
 .DESCRIPTION
 
@@ -337,15 +382,19 @@ No description available.
 .PARAMETER EndDate
 No description available.
 
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
 .PARAMETER WithHttpInfo
 
 A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
 
 .OUTPUTS
 
-None
+SushiswapFactoryDTO[]
 #>
-function Invoke-DappsSushiswapFactoryHistoricalGet {
+function Invoke-SushiswapGetFactoryHistorical {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -360,12 +409,15 @@ function Invoke-DappsSushiswapFactoryHistoricalGet {
         [Parameter(Position = 3, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
         [System.Nullable[System.DateTime]]
         ${EndDate},
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
         [Switch]
         $WithHttpInfo
     )
 
     Process {
-        'Calling method: Invoke-DappsSushiswapFactoryHistoricalGet' | Write-Debug
+        'Calling method: Invoke-SushiswapGetFactoryHistorical' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -378,6 +430,14 @@ function Invoke-DappsSushiswapFactoryHistoricalGet {
         $LocalVarBodyParameter = $null
 
         $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
         $LocalVarUri = '/dapps/sushiswap/factory/historical'
 
         if ($StartBlock) {
@@ -405,7 +465,7 @@ function Invoke-DappsSushiswapFactoryHistoricalGet {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "" `
+                                -ReturnType "SushiswapFactoryDTO[]" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {
@@ -419,7 +479,7 @@ function Invoke-DappsSushiswapFactoryHistoricalGet {
 <#
 .SYNOPSIS
 
-No summary available.
+GetHourData (historical)
 
 .DESCRIPTION
 
@@ -437,15 +497,19 @@ No description available.
 .PARAMETER EndDate
 No description available.
 
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
 .PARAMETER WithHttpInfo
 
 A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
 
 .OUTPUTS
 
-None
+SushiswapHourDataDTO[]
 #>
-function Invoke-DappsSushiswapHourDataHistoricalGet {
+function Invoke-SushiswapGetHourDataHistorical {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -460,12 +524,15 @@ function Invoke-DappsSushiswapHourDataHistoricalGet {
         [Parameter(Position = 3, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
         [System.Nullable[System.DateTime]]
         ${EndDate},
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
         [Switch]
         $WithHttpInfo
     )
 
     Process {
-        'Calling method: Invoke-DappsSushiswapHourDataHistoricalGet' | Write-Debug
+        'Calling method: Invoke-SushiswapGetHourDataHistorical' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -478,6 +545,14 @@ function Invoke-DappsSushiswapHourDataHistoricalGet {
         $LocalVarBodyParameter = $null
 
         $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
         $LocalVarUri = '/dapps/sushiswap/hourData/historical'
 
         if ($StartBlock) {
@@ -505,7 +580,7 @@ function Invoke-DappsSushiswapHourDataHistoricalGet {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "" `
+                                -ReturnType "SushiswapHourDataDTO[]" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {
@@ -519,7 +594,7 @@ function Invoke-DappsSushiswapHourDataHistoricalGet {
 <#
 .SYNOPSIS
 
-No summary available.
+GetLiquidityPositionSnapshot (historical)
 
 .DESCRIPTION
 
@@ -540,15 +615,19 @@ No description available.
 .PARAMETER PoolId
 No description available.
 
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
 .PARAMETER WithHttpInfo
 
 A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
 
 .OUTPUTS
 
-None
+SushiswapLiquidityPositionSnapshotDTO[]
 #>
-function Invoke-DappsSushiswapLiquidityPositionHistoricalGet {
+function Invoke-SushiswapGetLiquidityPositionSnapshotHistorical {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -566,122 +645,15 @@ function Invoke-DappsSushiswapLiquidityPositionHistoricalGet {
         [Parameter(Position = 4, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
         [String]
         ${PoolId},
-        [Switch]
-        $WithHttpInfo
-    )
-
-    Process {
-        'Calling method: Invoke-DappsSushiswapLiquidityPositionHistoricalGet' | Write-Debug
-        $PSBoundParameters | Out-DebugParameter | Write-Debug
-
-        $LocalVarAccepts = @()
-        $LocalVarContentTypes = @()
-        $LocalVarQueryParameters = @{}
-        $LocalVarHeaderParameters = @{}
-        $LocalVarFormParameters = @{}
-        $LocalVarPathParameters = @{}
-        $LocalVarCookieParameters = @{}
-        $LocalVarBodyParameter = $null
-
-        $Configuration = Get-Configuration
-        $LocalVarUri = '/dapps/sushiswap/liquidityPosition/historical'
-
-        if ($StartBlock) {
-            $LocalVarQueryParameters['startBlock'] = $StartBlock
-        }
-
-        if ($EndBlock) {
-            $LocalVarQueryParameters['endBlock'] = $EndBlock
-        }
-
-        if ($StartDate) {
-            $LocalVarQueryParameters['startDate'] = $StartDate
-        }
-
-        if ($EndDate) {
-            $LocalVarQueryParameters['endDate'] = $EndDate
-        }
-
-        if ($PoolId) {
-            $LocalVarQueryParameters['poolId'] = $PoolId
-        }
-
-        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
-                                -Uri $LocalVarUri `
-                                -Accepts $LocalVarAccepts `
-                                -ContentTypes $LocalVarContentTypes `
-                                -Body $LocalVarBodyParameter `
-                                -HeaderParameters $LocalVarHeaderParameters `
-                                -QueryParameters $LocalVarQueryParameters `
-                                -FormParameters $LocalVarFormParameters `
-                                -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "" `
-                                -IsBodyNullable $false
-
-        if ($WithHttpInfo.IsPresent) {
-            return $LocalVarResult
-        } else {
-            return $LocalVarResult["Response"]
-        }
-    }
-}
-
-<#
-.SYNOPSIS
-
-No summary available.
-
-.DESCRIPTION
-
-No description available.
-
-.PARAMETER StartBlock
-No description available.
-
-.PARAMETER EndBlock
-No description available.
-
-.PARAMETER StartDate
-No description available.
-
-.PARAMETER EndDate
-No description available.
-
-.PARAMETER PoolId
-No description available.
-
-.PARAMETER WithHttpInfo
-
-A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
-
-.OUTPUTS
-
-None
-#>
-function Invoke-DappsSushiswapLiquidityPositionSnapshotsHistoricalGet {
-    [CmdletBinding()]
-    Param (
-        [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
-        [System.Nullable[Int64]]
-        ${StartBlock},
-        [Parameter(Position = 1, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
-        [System.Nullable[Int64]]
-        ${EndBlock},
-        [Parameter(Position = 2, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
-        [System.Nullable[System.DateTime]]
-        ${StartDate},
-        [Parameter(Position = 3, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
-        [System.Nullable[System.DateTime]]
-        ${EndDate},
-        [Parameter(Position = 4, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
         [String]
-        ${PoolId},
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
         [Switch]
         $WithHttpInfo
     )
 
     Process {
-        'Calling method: Invoke-DappsSushiswapLiquidityPositionSnapshotsHistoricalGet' | Write-Debug
+        'Calling method: Invoke-SushiswapGetLiquidityPositionSnapshotHistorical' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -694,6 +666,14 @@ function Invoke-DappsSushiswapLiquidityPositionSnapshotsHistoricalGet {
         $LocalVarBodyParameter = $null
 
         $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
         $LocalVarUri = '/dapps/sushiswap/liquidityPositionSnapshots/historical'
 
         if ($StartBlock) {
@@ -725,7 +705,7 @@ function Invoke-DappsSushiswapLiquidityPositionSnapshotsHistoricalGet {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "" `
+                                -ReturnType "SushiswapLiquidityPositionSnapshotDTO[]" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {
@@ -739,7 +719,7 @@ function Invoke-DappsSushiswapLiquidityPositionSnapshotsHistoricalGet {
 <#
 .SYNOPSIS
 
-No summary available.
+GetLiquidityPosition (historical)
 
 .DESCRIPTION
 
@@ -760,15 +740,19 @@ No description available.
 .PARAMETER PoolId
 No description available.
 
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
 .PARAMETER WithHttpInfo
 
 A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
 
 .OUTPUTS
 
-None
+SushiswapLiquidityPositionDTO[]
 #>
-function Invoke-DappsSushiswapMintsHistoricalGet {
+function Invoke-SushiswapGetLiquidityPositionHistorical {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -786,12 +770,15 @@ function Invoke-DappsSushiswapMintsHistoricalGet {
         [Parameter(Position = 4, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
         [String]
         ${PoolId},
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
         [Switch]
         $WithHttpInfo
     )
 
     Process {
-        'Calling method: Invoke-DappsSushiswapMintsHistoricalGet' | Write-Debug
+        'Calling method: Invoke-SushiswapGetLiquidityPositionHistorical' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -804,6 +791,139 @@ function Invoke-DappsSushiswapMintsHistoricalGet {
         $LocalVarBodyParameter = $null
 
         $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/sushiswap/liquidityPosition/historical'
+
+        if ($StartBlock) {
+            $LocalVarQueryParameters['startBlock'] = $StartBlock
+        }
+
+        if ($EndBlock) {
+            $LocalVarQueryParameters['endBlock'] = $EndBlock
+        }
+
+        if ($StartDate) {
+            $LocalVarQueryParameters['startDate'] = $StartDate
+        }
+
+        if ($EndDate) {
+            $LocalVarQueryParameters['endDate'] = $EndDate
+        }
+
+        if ($PoolId) {
+            $LocalVarQueryParameters['poolId'] = $PoolId
+        }
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "SushiswapLiquidityPositionDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+GetMints (historical)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER StartBlock
+No description available.
+
+.PARAMETER EndBlock
+No description available.
+
+.PARAMETER StartDate
+No description available.
+
+.PARAMETER EndDate
+No description available.
+
+.PARAMETER PoolId
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+SushiswapMintDTO[]
+#>
+function Invoke-SushiswapGetMintsHistorical {
+    [CmdletBinding()]
+    Param (
+        [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [System.Nullable[Int64]]
+        ${StartBlock},
+        [Parameter(Position = 1, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [System.Nullable[Int64]]
+        ${EndBlock},
+        [Parameter(Position = 2, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [System.Nullable[System.DateTime]]
+        ${StartDate},
+        [Parameter(Position = 3, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [System.Nullable[System.DateTime]]
+        ${EndDate},
+        [Parameter(Position = 4, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [String]
+        ${PoolId},
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-SushiswapGetMintsHistorical' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
         $LocalVarUri = '/dapps/sushiswap/mints/historical'
 
         if ($StartBlock) {
@@ -835,7 +955,7 @@ function Invoke-DappsSushiswapMintsHistoricalGet {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "" `
+                                -ReturnType "SushiswapMintDTO[]" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {
@@ -849,7 +969,7 @@ function Invoke-DappsSushiswapMintsHistoricalGet {
 <#
 .SYNOPSIS
 
-No summary available.
+GetPoolsDayData (historical)
 
 .DESCRIPTION
 
@@ -870,15 +990,19 @@ No description available.
 .PARAMETER PoolId
 No description available.
 
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
 .PARAMETER WithHttpInfo
 
 A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
 
 .OUTPUTS
 
-None
+SushiswapPairDayDataDTO[]
 #>
-function Invoke-DappsSushiswapPoolDayDataHistoricalGet {
+function Invoke-SushiswapGetPoolsDayDataHistorical {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -896,12 +1020,15 @@ function Invoke-DappsSushiswapPoolDayDataHistoricalGet {
         [Parameter(Position = 4, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
         [String]
         ${PoolId},
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
         [Switch]
         $WithHttpInfo
     )
 
     Process {
-        'Calling method: Invoke-DappsSushiswapPoolDayDataHistoricalGet' | Write-Debug
+        'Calling method: Invoke-SushiswapGetPoolsDayDataHistorical' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -914,7 +1041,15 @@ function Invoke-DappsSushiswapPoolDayDataHistoricalGet {
         $LocalVarBodyParameter = $null
 
         $Configuration = Get-Configuration
-        $LocalVarUri = '/dapps/sushiswap/poolDayData/historical'
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/sushiswap/poolsDayData/historical'
 
         if ($StartBlock) {
             $LocalVarQueryParameters['startBlock'] = $StartBlock
@@ -945,7 +1080,7 @@ function Invoke-DappsSushiswapPoolDayDataHistoricalGet {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "" `
+                                -ReturnType "SushiswapPairDayDataDTO[]" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {
@@ -959,7 +1094,7 @@ function Invoke-DappsSushiswapPoolDayDataHistoricalGet {
 <#
 .SYNOPSIS
 
-No summary available.
+GetPoolsHourData (historical)
 
 .DESCRIPTION
 
@@ -980,15 +1115,19 @@ No description available.
 .PARAMETER PoolId
 No description available.
 
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
 .PARAMETER WithHttpInfo
 
 A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
 
 .OUTPUTS
 
-None
+SushiswapPairHourDataDTO[]
 #>
-function Invoke-DappsSushiswapPoolHourDataHistoricalGet {
+function Invoke-SushiswapGetPoolsHourDataHistorical {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -1006,12 +1145,15 @@ function Invoke-DappsSushiswapPoolHourDataHistoricalGet {
         [Parameter(Position = 4, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
         [String]
         ${PoolId},
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
         [Switch]
         $WithHttpInfo
     )
 
     Process {
-        'Calling method: Invoke-DappsSushiswapPoolHourDataHistoricalGet' | Write-Debug
+        'Calling method: Invoke-SushiswapGetPoolsHourDataHistorical' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -1024,7 +1166,15 @@ function Invoke-DappsSushiswapPoolHourDataHistoricalGet {
         $LocalVarBodyParameter = $null
 
         $Configuration = Get-Configuration
-        $LocalVarUri = '/dapps/sushiswap/poolHourData/historical'
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/sushiswap/poolsHourData/historical'
 
         if ($StartBlock) {
             $LocalVarQueryParameters['startBlock'] = $StartBlock
@@ -1055,317 +1205,7 @@ function Invoke-DappsSushiswapPoolHourDataHistoricalGet {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "" `
-                                -IsBodyNullable $false
-
-        if ($WithHttpInfo.IsPresent) {
-            return $LocalVarResult
-        } else {
-            return $LocalVarResult["Response"]
-        }
-    }
-}
-
-<#
-.SYNOPSIS
-
-No summary available.
-
-.DESCRIPTION
-
-No description available.
-
-.PARAMETER StartBlock
-No description available.
-
-.PARAMETER EndBlock
-No description available.
-
-.PARAMETER StartDate
-No description available.
-
-.PARAMETER EndDate
-No description available.
-
-.PARAMETER TokenId
-No description available.
-
-.PARAMETER WithHttpInfo
-
-A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
-
-.OUTPUTS
-
-None
-#>
-function Invoke-DappsSushiswapTokenDayDataHistoricalGet {
-    [CmdletBinding()]
-    Param (
-        [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
-        [System.Nullable[Int64]]
-        ${StartBlock},
-        [Parameter(Position = 1, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
-        [System.Nullable[Int64]]
-        ${EndBlock},
-        [Parameter(Position = 2, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
-        [System.Nullable[System.DateTime]]
-        ${StartDate},
-        [Parameter(Position = 3, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
-        [System.Nullable[System.DateTime]]
-        ${EndDate},
-        [Parameter(Position = 4, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
-        [String]
-        ${TokenId},
-        [Switch]
-        $WithHttpInfo
-    )
-
-    Process {
-        'Calling method: Invoke-DappsSushiswapTokenDayDataHistoricalGet' | Write-Debug
-        $PSBoundParameters | Out-DebugParameter | Write-Debug
-
-        $LocalVarAccepts = @()
-        $LocalVarContentTypes = @()
-        $LocalVarQueryParameters = @{}
-        $LocalVarHeaderParameters = @{}
-        $LocalVarFormParameters = @{}
-        $LocalVarPathParameters = @{}
-        $LocalVarCookieParameters = @{}
-        $LocalVarBodyParameter = $null
-
-        $Configuration = Get-Configuration
-        $LocalVarUri = '/dapps/sushiswap/tokenDayData/historical'
-
-        if ($StartBlock) {
-            $LocalVarQueryParameters['startBlock'] = $StartBlock
-        }
-
-        if ($EndBlock) {
-            $LocalVarQueryParameters['endBlock'] = $EndBlock
-        }
-
-        if ($StartDate) {
-            $LocalVarQueryParameters['startDate'] = $StartDate
-        }
-
-        if ($EndDate) {
-            $LocalVarQueryParameters['endDate'] = $EndDate
-        }
-
-        if ($TokenId) {
-            $LocalVarQueryParameters['tokenId'] = $TokenId
-        }
-
-        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
-                                -Uri $LocalVarUri `
-                                -Accepts $LocalVarAccepts `
-                                -ContentTypes $LocalVarContentTypes `
-                                -Body $LocalVarBodyParameter `
-                                -HeaderParameters $LocalVarHeaderParameters `
-                                -QueryParameters $LocalVarQueryParameters `
-                                -FormParameters $LocalVarFormParameters `
-                                -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "" `
-                                -IsBodyNullable $false
-
-        if ($WithHttpInfo.IsPresent) {
-            return $LocalVarResult
-        } else {
-            return $LocalVarResult["Response"]
-        }
-    }
-}
-
-<#
-.SYNOPSIS
-
-No summary available.
-
-.DESCRIPTION
-
-No description available.
-
-.PARAMETER StartBlock
-No description available.
-
-.PARAMETER EndBlock
-No description available.
-
-.PARAMETER StartDate
-No description available.
-
-.PARAMETER EndDate
-No description available.
-
-.PARAMETER WithHttpInfo
-
-A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
-
-.OUTPUTS
-
-None
-#>
-function Invoke-DappsSushiswapTransactionsHistoricalGet {
-    [CmdletBinding()]
-    Param (
-        [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
-        [System.Nullable[Int64]]
-        ${StartBlock},
-        [Parameter(Position = 1, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
-        [System.Nullable[Int64]]
-        ${EndBlock},
-        [Parameter(Position = 2, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
-        [System.Nullable[System.DateTime]]
-        ${StartDate},
-        [Parameter(Position = 3, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
-        [System.Nullable[System.DateTime]]
-        ${EndDate},
-        [Switch]
-        $WithHttpInfo
-    )
-
-    Process {
-        'Calling method: Invoke-DappsSushiswapTransactionsHistoricalGet' | Write-Debug
-        $PSBoundParameters | Out-DebugParameter | Write-Debug
-
-        $LocalVarAccepts = @()
-        $LocalVarContentTypes = @()
-        $LocalVarQueryParameters = @{}
-        $LocalVarHeaderParameters = @{}
-        $LocalVarFormParameters = @{}
-        $LocalVarPathParameters = @{}
-        $LocalVarCookieParameters = @{}
-        $LocalVarBodyParameter = $null
-
-        $Configuration = Get-Configuration
-        $LocalVarUri = '/dapps/sushiswap/transactions/historical'
-
-        if ($StartBlock) {
-            $LocalVarQueryParameters['startBlock'] = $StartBlock
-        }
-
-        if ($EndBlock) {
-            $LocalVarQueryParameters['endBlock'] = $EndBlock
-        }
-
-        if ($StartDate) {
-            $LocalVarQueryParameters['startDate'] = $StartDate
-        }
-
-        if ($EndDate) {
-            $LocalVarQueryParameters['endDate'] = $EndDate
-        }
-
-        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
-                                -Uri $LocalVarUri `
-                                -Accepts $LocalVarAccepts `
-                                -ContentTypes $LocalVarContentTypes `
-                                -Body $LocalVarBodyParameter `
-                                -HeaderParameters $LocalVarHeaderParameters `
-                                -QueryParameters $LocalVarQueryParameters `
-                                -FormParameters $LocalVarFormParameters `
-                                -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "" `
-                                -IsBodyNullable $false
-
-        if ($WithHttpInfo.IsPresent) {
-            return $LocalVarResult
-        } else {
-            return $LocalVarResult["Response"]
-        }
-    }
-}
-
-<#
-.SYNOPSIS
-
-No summary available.
-
-.DESCRIPTION
-
-No description available.
-
-.PARAMETER StartBlock
-No description available.
-
-.PARAMETER EndBlock
-No description available.
-
-.PARAMETER StartDate
-No description available.
-
-.PARAMETER EndDate
-No description available.
-
-.PARAMETER WithHttpInfo
-
-A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
-
-.OUTPUTS
-
-None
-#>
-function Invoke-DappsSushiswapUsersHistoricalGet {
-    [CmdletBinding()]
-    Param (
-        [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
-        [System.Nullable[Int64]]
-        ${StartBlock},
-        [Parameter(Position = 1, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
-        [System.Nullable[Int64]]
-        ${EndBlock},
-        [Parameter(Position = 2, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
-        [System.Nullable[System.DateTime]]
-        ${StartDate},
-        [Parameter(Position = 3, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
-        [System.Nullable[System.DateTime]]
-        ${EndDate},
-        [Switch]
-        $WithHttpInfo
-    )
-
-    Process {
-        'Calling method: Invoke-DappsSushiswapUsersHistoricalGet' | Write-Debug
-        $PSBoundParameters | Out-DebugParameter | Write-Debug
-
-        $LocalVarAccepts = @()
-        $LocalVarContentTypes = @()
-        $LocalVarQueryParameters = @{}
-        $LocalVarHeaderParameters = @{}
-        $LocalVarFormParameters = @{}
-        $LocalVarPathParameters = @{}
-        $LocalVarCookieParameters = @{}
-        $LocalVarBodyParameter = $null
-
-        $Configuration = Get-Configuration
-        $LocalVarUri = '/dapps/sushiswap/users/historical'
-
-        if ($StartBlock) {
-            $LocalVarQueryParameters['startBlock'] = $StartBlock
-        }
-
-        if ($EndBlock) {
-            $LocalVarQueryParameters['endBlock'] = $EndBlock
-        }
-
-        if ($StartDate) {
-            $LocalVarQueryParameters['startDate'] = $StartDate
-        }
-
-        if ($EndDate) {
-            $LocalVarQueryParameters['endDate'] = $EndDate
-        }
-
-        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
-                                -Uri $LocalVarUri `
-                                -Accepts $LocalVarAccepts `
-                                -ContentTypes $LocalVarContentTypes `
-                                -Body $LocalVarBodyParameter `
-                                -HeaderParameters $LocalVarHeaderParameters `
-                                -QueryParameters $LocalVarQueryParameters `
-                                -FormParameters $LocalVarFormParameters `
-                                -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "" `
+                                -ReturnType "SushiswapPairHourDataDTO[]" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {
@@ -1595,7 +1435,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 .OUTPUTS
 
-SushiswapSwapDTO
+SushiswapSwapDTO[]
 #>
 function Invoke-SushiswapGetSwapsCurrent {
     [CmdletBinding()]
@@ -1640,7 +1480,7 @@ function Invoke-SushiswapGetSwapsCurrent {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "SushiswapSwapDTO" `
+                                -ReturnType "SushiswapSwapDTO[]" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {
@@ -1779,6 +1619,131 @@ function Invoke-SushiswapGetSwapsHistorical {
 <#
 .SYNOPSIS
 
+GetTokensDayData (historical)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER StartBlock
+No description available.
+
+.PARAMETER EndBlock
+No description available.
+
+.PARAMETER StartDate
+No description available.
+
+.PARAMETER EndDate
+No description available.
+
+.PARAMETER TokenId
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+SushiswapTokenDayDataDTO[]
+#>
+function Invoke-SushiswapGetTokensDayDataHistorical {
+    [CmdletBinding()]
+    Param (
+        [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [System.Nullable[Int64]]
+        ${StartBlock},
+        [Parameter(Position = 1, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [System.Nullable[Int64]]
+        ${EndBlock},
+        [Parameter(Position = 2, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [System.Nullable[System.DateTime]]
+        ${StartDate},
+        [Parameter(Position = 3, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [System.Nullable[System.DateTime]]
+        ${EndDate},
+        [Parameter(Position = 4, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [String]
+        ${TokenId},
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-SushiswapGetTokensDayDataHistorical' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/sushiswap/tokensDayData/historical'
+
+        if ($StartBlock) {
+            $LocalVarQueryParameters['startBlock'] = $StartBlock
+        }
+
+        if ($EndBlock) {
+            $LocalVarQueryParameters['endBlock'] = $EndBlock
+        }
+
+        if ($StartDate) {
+            $LocalVarQueryParameters['startDate'] = $StartDate
+        }
+
+        if ($EndDate) {
+            $LocalVarQueryParameters['endDate'] = $EndDate
+        }
+
+        if ($TokenId) {
+            $LocalVarQueryParameters['tokenId'] = $TokenId
+        }
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "SushiswapTokenDayDataDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
 GetTokens (current)
 
 .DESCRIPTION
@@ -1795,7 +1760,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 .OUTPUTS
 
-SushiswapTokenDTO
+SushiswapTokenDTO[]
 #>
 function Invoke-SushiswapGetTokensCurrent {
     [CmdletBinding()]
@@ -1840,7 +1805,7 @@ function Invoke-SushiswapGetTokensCurrent {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "SushiswapTokenDTO" `
+                                -ReturnType "SushiswapTokenDTO[]" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {
@@ -1966,6 +1931,236 @@ function Invoke-SushiswapGetTokensHistorical {
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
                                 -ReturnType "SushiswapTokenDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+GetTransactions (historical)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER StartBlock
+No description available.
+
+.PARAMETER EndBlock
+No description available.
+
+.PARAMETER StartDate
+No description available.
+
+.PARAMETER EndDate
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+SushiswapTransactionDTO[]
+#>
+function Invoke-SushiswapGetTransactionsHistorical {
+    [CmdletBinding()]
+    Param (
+        [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [System.Nullable[Int64]]
+        ${StartBlock},
+        [Parameter(Position = 1, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [System.Nullable[Int64]]
+        ${EndBlock},
+        [Parameter(Position = 2, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [System.Nullable[System.DateTime]]
+        ${StartDate},
+        [Parameter(Position = 3, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [System.Nullable[System.DateTime]]
+        ${EndDate},
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-SushiswapGetTransactionsHistorical' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/sushiswap/transactions/historical'
+
+        if ($StartBlock) {
+            $LocalVarQueryParameters['startBlock'] = $StartBlock
+        }
+
+        if ($EndBlock) {
+            $LocalVarQueryParameters['endBlock'] = $EndBlock
+        }
+
+        if ($StartDate) {
+            $LocalVarQueryParameters['startDate'] = $StartDate
+        }
+
+        if ($EndDate) {
+            $LocalVarQueryParameters['endDate'] = $EndDate
+        }
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "SushiswapTransactionDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+GetUsers (historical)
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER StartBlock
+No description available.
+
+.PARAMETER EndBlock
+No description available.
+
+.PARAMETER StartDate
+No description available.
+
+.PARAMETER EndDate
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+SushiswapUserDTO[]
+#>
+function Invoke-SushiswapGetUsersHistorical {
+    [CmdletBinding()]
+    Param (
+        [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [System.Nullable[Int64]]
+        ${StartBlock},
+        [Parameter(Position = 1, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [System.Nullable[Int64]]
+        ${EndBlock},
+        [Parameter(Position = 2, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [System.Nullable[System.DateTime]]
+        ${StartDate},
+        [Parameter(Position = 3, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [System.Nullable[System.DateTime]]
+        ${EndDate},
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-SushiswapGetUsersHistorical' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/sushiswap/users/historical'
+
+        if ($StartBlock) {
+            $LocalVarQueryParameters['startBlock'] = $StartBlock
+        }
+
+        if ($EndBlock) {
+            $LocalVarQueryParameters['endBlock'] = $EndBlock
+        }
+
+        if ($StartDate) {
+            $LocalVarQueryParameters['startDate'] = $StartDate
+        }
+
+        if ($EndDate) {
+            $LocalVarQueryParameters['endDate'] = $EndDate
+        }
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "SushiswapUserDTO[]" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {

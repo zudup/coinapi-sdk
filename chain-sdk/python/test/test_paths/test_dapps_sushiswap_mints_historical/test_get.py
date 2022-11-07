@@ -21,6 +21,7 @@ from .. import ApiTestMixin
 class TestDappsSushiswapMintsHistorical(ApiTestMixin, unittest.TestCase):
     """
     DappsSushiswapMintsHistorical unit test stubs
+        GetMints (historical)  # noqa: E501
     """
     _configuration = configuration.Configuration()
 
@@ -32,7 +33,12 @@ class TestDappsSushiswapMintsHistorical(ApiTestMixin, unittest.TestCase):
         pass
 
     response_status = 200
-    response_body = ''
+
+
+
+
+
+
 
 
 if __name__ == '__main__':

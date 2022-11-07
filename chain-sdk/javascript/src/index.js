@@ -14,9 +14,22 @@
 
 import ApiClient from './ApiClient';
 import NumericsBigInteger from './model/NumericsBigInteger';
+import SushiswapBundleDTO from './model/SushiswapBundleDTO';
+import SushiswapBurnDTO from './model/SushiswapBurnDTO';
+import SushiswapDayDataDTO from './model/SushiswapDayDataDTO';
+import SushiswapFactoryDTO from './model/SushiswapFactoryDTO';
+import SushiswapHourDataDTO from './model/SushiswapHourDataDTO';
+import SushiswapLiquidityPositionDTO from './model/SushiswapLiquidityPositionDTO';
+import SushiswapLiquidityPositionSnapshotDTO from './model/SushiswapLiquidityPositionSnapshotDTO';
+import SushiswapMintDTO from './model/SushiswapMintDTO';
 import SushiswapPairDTO from './model/SushiswapPairDTO';
+import SushiswapPairDayDataDTO from './model/SushiswapPairDayDataDTO';
+import SushiswapPairHourDataDTO from './model/SushiswapPairHourDataDTO';
 import SushiswapSwapDTO from './model/SushiswapSwapDTO';
 import SushiswapTokenDTO from './model/SushiswapTokenDTO';
+import SushiswapTokenDayDataDTO from './model/SushiswapTokenDayDataDTO';
+import SushiswapTransactionDTO from './model/SushiswapTransactionDTO';
+import SushiswapUserDTO from './model/SushiswapUserDTO';
 import TransactionsETradeAggressiveSide from './model/TransactionsETradeAggressiveSide';
 import UniswapV2PairV2DTO from './model/UniswapV2PairV2DTO';
 import UniswapV2SwapV2DTO from './model/UniswapV2SwapV2DTO';
@@ -90,10 +103,70 @@ export {
     NumericsBigInteger,
 
     /**
+     * The SushiswapBundleDTO model constructor.
+     * @property {module:model/SushiswapBundleDTO}
+     */
+    SushiswapBundleDTO,
+
+    /**
+     * The SushiswapBurnDTO model constructor.
+     * @property {module:model/SushiswapBurnDTO}
+     */
+    SushiswapBurnDTO,
+
+    /**
+     * The SushiswapDayDataDTO model constructor.
+     * @property {module:model/SushiswapDayDataDTO}
+     */
+    SushiswapDayDataDTO,
+
+    /**
+     * The SushiswapFactoryDTO model constructor.
+     * @property {module:model/SushiswapFactoryDTO}
+     */
+    SushiswapFactoryDTO,
+
+    /**
+     * The SushiswapHourDataDTO model constructor.
+     * @property {module:model/SushiswapHourDataDTO}
+     */
+    SushiswapHourDataDTO,
+
+    /**
+     * The SushiswapLiquidityPositionDTO model constructor.
+     * @property {module:model/SushiswapLiquidityPositionDTO}
+     */
+    SushiswapLiquidityPositionDTO,
+
+    /**
+     * The SushiswapLiquidityPositionSnapshotDTO model constructor.
+     * @property {module:model/SushiswapLiquidityPositionSnapshotDTO}
+     */
+    SushiswapLiquidityPositionSnapshotDTO,
+
+    /**
+     * The SushiswapMintDTO model constructor.
+     * @property {module:model/SushiswapMintDTO}
+     */
+    SushiswapMintDTO,
+
+    /**
      * The SushiswapPairDTO model constructor.
      * @property {module:model/SushiswapPairDTO}
      */
     SushiswapPairDTO,
+
+    /**
+     * The SushiswapPairDayDataDTO model constructor.
+     * @property {module:model/SushiswapPairDayDataDTO}
+     */
+    SushiswapPairDayDataDTO,
+
+    /**
+     * The SushiswapPairHourDataDTO model constructor.
+     * @property {module:model/SushiswapPairHourDataDTO}
+     */
+    SushiswapPairHourDataDTO,
 
     /**
      * The SushiswapSwapDTO model constructor.
@@ -106,6 +179,24 @@ export {
      * @property {module:model/SushiswapTokenDTO}
      */
     SushiswapTokenDTO,
+
+    /**
+     * The SushiswapTokenDayDataDTO model constructor.
+     * @property {module:model/SushiswapTokenDayDataDTO}
+     */
+    SushiswapTokenDayDataDTO,
+
+    /**
+     * The SushiswapTransactionDTO model constructor.
+     * @property {module:model/SushiswapTransactionDTO}
+     */
+    SushiswapTransactionDTO,
+
+    /**
+     * The SushiswapUserDTO model constructor.
+     * @property {module:model/SushiswapUserDTO}
+     */
+    SushiswapUserDTO,
 
     /**
      * The TransactionsETradeAggressiveSide model constructor.

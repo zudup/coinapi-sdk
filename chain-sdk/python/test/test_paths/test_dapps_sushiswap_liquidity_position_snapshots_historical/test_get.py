@@ -21,6 +21,7 @@ from .. import ApiTestMixin
 class TestDappsSushiswapLiquidityPositionSnapshotsHistorical(ApiTestMixin, unittest.TestCase):
     """
     DappsSushiswapLiquidityPositionSnapshotsHistorical unit test stubs
+        GetLiquidityPositionSnapshot (historical)  # noqa: E501
     """
     _configuration = configuration.Configuration()
 
@@ -32,7 +33,12 @@ class TestDappsSushiswapLiquidityPositionSnapshotsHistorical(ApiTestMixin, unitt
         pass
 
     response_status = 200
-    response_body = ''
+
+
+
+
+
+
 
 
 if __name__ == '__main__':

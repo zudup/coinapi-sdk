@@ -177,25 +177,25 @@ Class | Method | HTTP request | Description
 *OnChainApi.DexApi* | [**dappsDexUsersHistoricalGet**](docs/DexApi.md#dappsDexUsersHistoricalGet) | **GET** /dapps/dex/users/historical | 
 *OnChainApi.DexApi* | [**dappsDexWithdrawHistoricalGet**](docs/DexApi.md#dappsDexWithdrawHistoricalGet) | **GET** /dapps/dex/withdraw/historical | 
 *OnChainApi.DexApi* | [**dappsDexWithdrawRequestHistoricalGet**](docs/DexApi.md#dappsDexWithdrawRequestHistoricalGet) | **GET** /dapps/dex/withdrawRequest/historical | 
-*OnChainApi.SushiswapApi* | [**dappsSushiswapBundlesHistoricalGet**](docs/SushiswapApi.md#dappsSushiswapBundlesHistoricalGet) | **GET** /dapps/sushiswap/bundles/historical | 
-*OnChainApi.SushiswapApi* | [**dappsSushiswapBurnsHistoricalGet**](docs/SushiswapApi.md#dappsSushiswapBurnsHistoricalGet) | **GET** /dapps/sushiswap/burns/historical | 
-*OnChainApi.SushiswapApi* | [**dappsSushiswapDayDataHistoricalGet**](docs/SushiswapApi.md#dappsSushiswapDayDataHistoricalGet) | **GET** /dapps/sushiswap/dayData/historical | 
-*OnChainApi.SushiswapApi* | [**dappsSushiswapFactoryHistoricalGet**](docs/SushiswapApi.md#dappsSushiswapFactoryHistoricalGet) | **GET** /dapps/sushiswap/factory/historical | 
-*OnChainApi.SushiswapApi* | [**dappsSushiswapHourDataHistoricalGet**](docs/SushiswapApi.md#dappsSushiswapHourDataHistoricalGet) | **GET** /dapps/sushiswap/hourData/historical | 
-*OnChainApi.SushiswapApi* | [**dappsSushiswapLiquidityPositionHistoricalGet**](docs/SushiswapApi.md#dappsSushiswapLiquidityPositionHistoricalGet) | **GET** /dapps/sushiswap/liquidityPosition/historical | 
-*OnChainApi.SushiswapApi* | [**dappsSushiswapLiquidityPositionSnapshotsHistoricalGet**](docs/SushiswapApi.md#dappsSushiswapLiquidityPositionSnapshotsHistoricalGet) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/historical | 
-*OnChainApi.SushiswapApi* | [**dappsSushiswapMintsHistoricalGet**](docs/SushiswapApi.md#dappsSushiswapMintsHistoricalGet) | **GET** /dapps/sushiswap/mints/historical | 
-*OnChainApi.SushiswapApi* | [**dappsSushiswapPoolDayDataHistoricalGet**](docs/SushiswapApi.md#dappsSushiswapPoolDayDataHistoricalGet) | **GET** /dapps/sushiswap/poolDayData/historical | 
-*OnChainApi.SushiswapApi* | [**dappsSushiswapPoolHourDataHistoricalGet**](docs/SushiswapApi.md#dappsSushiswapPoolHourDataHistoricalGet) | **GET** /dapps/sushiswap/poolHourData/historical | 
-*OnChainApi.SushiswapApi* | [**dappsSushiswapTokenDayDataHistoricalGet**](docs/SushiswapApi.md#dappsSushiswapTokenDayDataHistoricalGet) | **GET** /dapps/sushiswap/tokenDayData/historical | 
-*OnChainApi.SushiswapApi* | [**dappsSushiswapTransactionsHistoricalGet**](docs/SushiswapApi.md#dappsSushiswapTransactionsHistoricalGet) | **GET** /dapps/sushiswap/transactions/historical | 
-*OnChainApi.SushiswapApi* | [**dappsSushiswapUsersHistoricalGet**](docs/SushiswapApi.md#dappsSushiswapUsersHistoricalGet) | **GET** /dapps/sushiswap/users/historical | 
+*OnChainApi.SushiswapApi* | [**sushiswapGetBundlesHistorical**](docs/SushiswapApi.md#sushiswapGetBundlesHistorical) | **GET** /dapps/sushiswap/bundles/historical | GetBundles (historical)
+*OnChainApi.SushiswapApi* | [**sushiswapGetBurnsHistorical**](docs/SushiswapApi.md#sushiswapGetBurnsHistorical) | **GET** /dapps/sushiswap/burns/historical | GetBurns (historical)
+*OnChainApi.SushiswapApi* | [**sushiswapGetDayDataHistorical**](docs/SushiswapApi.md#sushiswapGetDayDataHistorical) | **GET** /dapps/sushiswap/dayData/historical | GetDayData (historical)
+*OnChainApi.SushiswapApi* | [**sushiswapGetFactoryHistorical**](docs/SushiswapApi.md#sushiswapGetFactoryHistorical) | **GET** /dapps/sushiswap/factory/historical | GetFactory (historical)
+*OnChainApi.SushiswapApi* | [**sushiswapGetHourDataHistorical**](docs/SushiswapApi.md#sushiswapGetHourDataHistorical) | **GET** /dapps/sushiswap/hourData/historical | GetHourData (historical)
+*OnChainApi.SushiswapApi* | [**sushiswapGetLiquidityPositionHistorical**](docs/SushiswapApi.md#sushiswapGetLiquidityPositionHistorical) | **GET** /dapps/sushiswap/liquidityPosition/historical | GetLiquidityPosition (historical)
+*OnChainApi.SushiswapApi* | [**sushiswapGetLiquidityPositionSnapshotHistorical**](docs/SushiswapApi.md#sushiswapGetLiquidityPositionSnapshotHistorical) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/historical | GetLiquidityPositionSnapshot (historical)
+*OnChainApi.SushiswapApi* | [**sushiswapGetMintsHistorical**](docs/SushiswapApi.md#sushiswapGetMintsHistorical) | **GET** /dapps/sushiswap/mints/historical | GetMints (historical)
 *OnChainApi.SushiswapApi* | [**sushiswapGetPoolsCurrent**](docs/SushiswapApi.md#sushiswapGetPoolsCurrent) | **GET** /dapps/sushiswap/pools/current | GetPools (current)
+*OnChainApi.SushiswapApi* | [**sushiswapGetPoolsDayDataHistorical**](docs/SushiswapApi.md#sushiswapGetPoolsDayDataHistorical) | **GET** /dapps/sushiswap/poolsDayData/historical | GetPoolsDayData (historical)
 *OnChainApi.SushiswapApi* | [**sushiswapGetPoolsHistorical**](docs/SushiswapApi.md#sushiswapGetPoolsHistorical) | **GET** /dapps/sushiswap/pools/historical | GetPools (historical)
+*OnChainApi.SushiswapApi* | [**sushiswapGetPoolsHourDataHistorical**](docs/SushiswapApi.md#sushiswapGetPoolsHourDataHistorical) | **GET** /dapps/sushiswap/poolsHourData/historical | GetPoolsHourData (historical)
 *OnChainApi.SushiswapApi* | [**sushiswapGetSwapsCurrent**](docs/SushiswapApi.md#sushiswapGetSwapsCurrent) | **GET** /dapps/sushiswap/swaps/current | GetSwaps (current)
 *OnChainApi.SushiswapApi* | [**sushiswapGetSwapsHistorical**](docs/SushiswapApi.md#sushiswapGetSwapsHistorical) | **GET** /dapps/sushiswap/swaps/historical | GetSwaps (historical)
 *OnChainApi.SushiswapApi* | [**sushiswapGetTokensCurrent**](docs/SushiswapApi.md#sushiswapGetTokensCurrent) | **GET** /dapps/sushiswap/tokens/current | GetTokens (current)
+*OnChainApi.SushiswapApi* | [**sushiswapGetTokensDayDataHistorical**](docs/SushiswapApi.md#sushiswapGetTokensDayDataHistorical) | **GET** /dapps/sushiswap/tokensDayData/historical | GetTokensDayData (historical)
 *OnChainApi.SushiswapApi* | [**sushiswapGetTokensHistorical**](docs/SushiswapApi.md#sushiswapGetTokensHistorical) | **GET** /dapps/sushiswap/tokens/historical | GetTokens (historical)
+*OnChainApi.SushiswapApi* | [**sushiswapGetTransactionsHistorical**](docs/SushiswapApi.md#sushiswapGetTransactionsHistorical) | **GET** /dapps/sushiswap/transactions/historical | GetTransactions (historical)
+*OnChainApi.SushiswapApi* | [**sushiswapGetUsersHistorical**](docs/SushiswapApi.md#sushiswapGetUsersHistorical) | **GET** /dapps/sushiswap/users/historical | GetUsers (historical)
 *OnChainApi.UniswapV2Api* | [**dappsUniswapv2BundlesHistoricalGet**](docs/UniswapV2Api.md#dappsUniswapv2BundlesHistoricalGet) | **GET** /dapps/uniswapv2/bundles/historical | 
 *OnChainApi.UniswapV2Api* | [**dappsUniswapv2BurnsHistoricalGet**](docs/UniswapV2Api.md#dappsUniswapv2BurnsHistoricalGet) | **GET** /dapps/uniswapv2/burns/historical | 
 *OnChainApi.UniswapV2Api* | [**dappsUniswapv2DayDataHistoricalGet**](docs/UniswapV2Api.md#dappsUniswapv2DayDataHistoricalGet) | **GET** /dapps/uniswapv2/dayData/historical | 
@@ -252,9 +252,22 @@ Class | Method | HTTP request | Description
 ## Documentation for Models
 
  - [OnChainApi.NumericsBigInteger](docs/NumericsBigInteger.md)
+ - [OnChainApi.SushiswapBundleDTO](docs/SushiswapBundleDTO.md)
+ - [OnChainApi.SushiswapBurnDTO](docs/SushiswapBurnDTO.md)
+ - [OnChainApi.SushiswapDayDataDTO](docs/SushiswapDayDataDTO.md)
+ - [OnChainApi.SushiswapFactoryDTO](docs/SushiswapFactoryDTO.md)
+ - [OnChainApi.SushiswapHourDataDTO](docs/SushiswapHourDataDTO.md)
+ - [OnChainApi.SushiswapLiquidityPositionDTO](docs/SushiswapLiquidityPositionDTO.md)
+ - [OnChainApi.SushiswapLiquidityPositionSnapshotDTO](docs/SushiswapLiquidityPositionSnapshotDTO.md)
+ - [OnChainApi.SushiswapMintDTO](docs/SushiswapMintDTO.md)
  - [OnChainApi.SushiswapPairDTO](docs/SushiswapPairDTO.md)
+ - [OnChainApi.SushiswapPairDayDataDTO](docs/SushiswapPairDayDataDTO.md)
+ - [OnChainApi.SushiswapPairHourDataDTO](docs/SushiswapPairHourDataDTO.md)
  - [OnChainApi.SushiswapSwapDTO](docs/SushiswapSwapDTO.md)
  - [OnChainApi.SushiswapTokenDTO](docs/SushiswapTokenDTO.md)
+ - [OnChainApi.SushiswapTokenDayDataDTO](docs/SushiswapTokenDayDataDTO.md)
+ - [OnChainApi.SushiswapTransactionDTO](docs/SushiswapTransactionDTO.md)
+ - [OnChainApi.SushiswapUserDTO](docs/SushiswapUserDTO.md)
  - [OnChainApi.TransactionsETradeAggressiveSide](docs/TransactionsETradeAggressiveSide.md)
  - [OnChainApi.UniswapV2PairV2DTO](docs/UniswapV2PairV2DTO.md)
  - [OnChainApi.UniswapV2SwapV2DTO](docs/UniswapV2SwapV2DTO.md)

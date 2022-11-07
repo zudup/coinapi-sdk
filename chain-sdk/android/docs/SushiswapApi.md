@@ -4,33 +4,35 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**dappsSushiswapBundlesHistoricalGet**](SushiswapApi.md#dappsSushiswapBundlesHistoricalGet) | **GET** /dapps/sushiswap/bundles/historical | 
-[**dappsSushiswapBurnsHistoricalGet**](SushiswapApi.md#dappsSushiswapBurnsHistoricalGet) | **GET** /dapps/sushiswap/burns/historical | 
-[**dappsSushiswapDayDataHistoricalGet**](SushiswapApi.md#dappsSushiswapDayDataHistoricalGet) | **GET** /dapps/sushiswap/dayData/historical | 
-[**dappsSushiswapFactoryHistoricalGet**](SushiswapApi.md#dappsSushiswapFactoryHistoricalGet) | **GET** /dapps/sushiswap/factory/historical | 
-[**dappsSushiswapHourDataHistoricalGet**](SushiswapApi.md#dappsSushiswapHourDataHistoricalGet) | **GET** /dapps/sushiswap/hourData/historical | 
-[**dappsSushiswapLiquidityPositionHistoricalGet**](SushiswapApi.md#dappsSushiswapLiquidityPositionHistoricalGet) | **GET** /dapps/sushiswap/liquidityPosition/historical | 
-[**dappsSushiswapLiquidityPositionSnapshotsHistoricalGet**](SushiswapApi.md#dappsSushiswapLiquidityPositionSnapshotsHistoricalGet) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/historical | 
-[**dappsSushiswapMintsHistoricalGet**](SushiswapApi.md#dappsSushiswapMintsHistoricalGet) | **GET** /dapps/sushiswap/mints/historical | 
-[**dappsSushiswapPoolDayDataHistoricalGet**](SushiswapApi.md#dappsSushiswapPoolDayDataHistoricalGet) | **GET** /dapps/sushiswap/poolDayData/historical | 
-[**dappsSushiswapPoolHourDataHistoricalGet**](SushiswapApi.md#dappsSushiswapPoolHourDataHistoricalGet) | **GET** /dapps/sushiswap/poolHourData/historical | 
-[**dappsSushiswapTokenDayDataHistoricalGet**](SushiswapApi.md#dappsSushiswapTokenDayDataHistoricalGet) | **GET** /dapps/sushiswap/tokenDayData/historical | 
-[**dappsSushiswapTransactionsHistoricalGet**](SushiswapApi.md#dappsSushiswapTransactionsHistoricalGet) | **GET** /dapps/sushiswap/transactions/historical | 
-[**dappsSushiswapUsersHistoricalGet**](SushiswapApi.md#dappsSushiswapUsersHistoricalGet) | **GET** /dapps/sushiswap/users/historical | 
+[**sushiswapGetBundlesHistorical**](SushiswapApi.md#sushiswapGetBundlesHistorical) | **GET** /dapps/sushiswap/bundles/historical | GetBundles (historical)
+[**sushiswapGetBurnsHistorical**](SushiswapApi.md#sushiswapGetBurnsHistorical) | **GET** /dapps/sushiswap/burns/historical | GetBurns (historical)
+[**sushiswapGetDayDataHistorical**](SushiswapApi.md#sushiswapGetDayDataHistorical) | **GET** /dapps/sushiswap/dayData/historical | GetDayData (historical)
+[**sushiswapGetFactoryHistorical**](SushiswapApi.md#sushiswapGetFactoryHistorical) | **GET** /dapps/sushiswap/factory/historical | GetFactory (historical)
+[**sushiswapGetHourDataHistorical**](SushiswapApi.md#sushiswapGetHourDataHistorical) | **GET** /dapps/sushiswap/hourData/historical | GetHourData (historical)
+[**sushiswapGetLiquidityPositionHistorical**](SushiswapApi.md#sushiswapGetLiquidityPositionHistorical) | **GET** /dapps/sushiswap/liquidityPosition/historical | GetLiquidityPosition (historical)
+[**sushiswapGetLiquidityPositionSnapshotHistorical**](SushiswapApi.md#sushiswapGetLiquidityPositionSnapshotHistorical) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/historical | GetLiquidityPositionSnapshot (historical)
+[**sushiswapGetMintsHistorical**](SushiswapApi.md#sushiswapGetMintsHistorical) | **GET** /dapps/sushiswap/mints/historical | GetMints (historical)
 [**sushiswapGetPoolsCurrent**](SushiswapApi.md#sushiswapGetPoolsCurrent) | **GET** /dapps/sushiswap/pools/current | GetPools (current)
+[**sushiswapGetPoolsDayDataHistorical**](SushiswapApi.md#sushiswapGetPoolsDayDataHistorical) | **GET** /dapps/sushiswap/poolsDayData/historical | GetPoolsDayData (historical)
 [**sushiswapGetPoolsHistorical**](SushiswapApi.md#sushiswapGetPoolsHistorical) | **GET** /dapps/sushiswap/pools/historical | GetPools (historical)
+[**sushiswapGetPoolsHourDataHistorical**](SushiswapApi.md#sushiswapGetPoolsHourDataHistorical) | **GET** /dapps/sushiswap/poolsHourData/historical | GetPoolsHourData (historical)
 [**sushiswapGetSwapsCurrent**](SushiswapApi.md#sushiswapGetSwapsCurrent) | **GET** /dapps/sushiswap/swaps/current | GetSwaps (current)
 [**sushiswapGetSwapsHistorical**](SushiswapApi.md#sushiswapGetSwapsHistorical) | **GET** /dapps/sushiswap/swaps/historical | GetSwaps (historical)
 [**sushiswapGetTokensCurrent**](SushiswapApi.md#sushiswapGetTokensCurrent) | **GET** /dapps/sushiswap/tokens/current | GetTokens (current)
+[**sushiswapGetTokensDayDataHistorical**](SushiswapApi.md#sushiswapGetTokensDayDataHistorical) | **GET** /dapps/sushiswap/tokensDayData/historical | GetTokensDayData (historical)
 [**sushiswapGetTokensHistorical**](SushiswapApi.md#sushiswapGetTokensHistorical) | **GET** /dapps/sushiswap/tokens/historical | GetTokens (historical)
+[**sushiswapGetTransactionsHistorical**](SushiswapApi.md#sushiswapGetTransactionsHistorical) | **GET** /dapps/sushiswap/transactions/historical | GetTransactions (historical)
+[**sushiswapGetUsersHistorical**](SushiswapApi.md#sushiswapGetUsersHistorical) | **GET** /dapps/sushiswap/users/historical | GetUsers (historical)
 
 
 
-## dappsSushiswapBundlesHistoricalGet
+## sushiswapGetBundlesHistorical
 
-> dappsSushiswapBundlesHistoricalGet(startBlock, endBlock, startDate, endDate)
+> List&lt;SushiswapBundleDTO&gt; sushiswapGetBundlesHistorical(startBlock, endBlock, startDate, endDate)
 
+GetBundles (historical)
 
+Gets bundles.
 
 ### Example
 
@@ -44,9 +46,10 @@ Long endBlock = null; // Long |
 Date startDate = null; // Date | 
 Date endDate = null; // Date | 
 try {
-    apiInstance.dappsSushiswapBundlesHistoricalGet(startBlock, endBlock, startDate, endDate);
+    List<SushiswapBundleDTO> result = apiInstance.sushiswapGetBundlesHistorical(startBlock, endBlock, startDate, endDate);
+    System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling SushiswapApi#dappsSushiswapBundlesHistoricalGet");
+    System.err.println("Exception when calling SushiswapApi#sushiswapGetBundlesHistorical");
     e.printStackTrace();
 }
 ```
@@ -63,7 +66,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**List&lt;SushiswapBundleDTO&gt;**](SushiswapBundleDTO.md)
 
 ### Authorization
 
@@ -72,14 +75,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsSushiswapBurnsHistoricalGet
+## sushiswapGetBurnsHistorical
 
-> dappsSushiswapBurnsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+> List&lt;SushiswapBurnDTO&gt; sushiswapGetBurnsHistorical(startBlock, endBlock, startDate, endDate, poolId)
 
+GetBurns (historical)
 
+Gets burns.
 
 ### Example
 
@@ -94,9 +99,10 @@ Date startDate = null; // Date |
 Date endDate = null; // Date | 
 String poolId = null; // String | 
 try {
-    apiInstance.dappsSushiswapBurnsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+    List<SushiswapBurnDTO> result = apiInstance.sushiswapGetBurnsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+    System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling SushiswapApi#dappsSushiswapBurnsHistoricalGet");
+    System.err.println("Exception when calling SushiswapApi#sushiswapGetBurnsHistorical");
     e.printStackTrace();
 }
 ```
@@ -114,7 +120,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**List&lt;SushiswapBurnDTO&gt;**](SushiswapBurnDTO.md)
 
 ### Authorization
 
@@ -123,14 +129,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsSushiswapDayDataHistoricalGet
+## sushiswapGetDayDataHistorical
 
-> dappsSushiswapDayDataHistoricalGet(startBlock, endBlock, startDate, endDate)
+> List&lt;SushiswapDayDataDTO&gt; sushiswapGetDayDataHistorical(startBlock, endBlock, startDate, endDate)
 
+GetDayData (historical)
 
+Gets day data.
 
 ### Example
 
@@ -144,9 +152,10 @@ Long endBlock = null; // Long |
 Date startDate = null; // Date | 
 Date endDate = null; // Date | 
 try {
-    apiInstance.dappsSushiswapDayDataHistoricalGet(startBlock, endBlock, startDate, endDate);
+    List<SushiswapDayDataDTO> result = apiInstance.sushiswapGetDayDataHistorical(startBlock, endBlock, startDate, endDate);
+    System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling SushiswapApi#dappsSushiswapDayDataHistoricalGet");
+    System.err.println("Exception when calling SushiswapApi#sushiswapGetDayDataHistorical");
     e.printStackTrace();
 }
 ```
@@ -163,7 +172,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**List&lt;SushiswapDayDataDTO&gt;**](SushiswapDayDataDTO.md)
 
 ### Authorization
 
@@ -172,14 +181,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsSushiswapFactoryHistoricalGet
+## sushiswapGetFactoryHistorical
 
-> dappsSushiswapFactoryHistoricalGet(startBlock, endBlock, startDate, endDate)
+> List&lt;SushiswapFactoryDTO&gt; sushiswapGetFactoryHistorical(startBlock, endBlock, startDate, endDate)
 
+GetFactory (historical)
 
+Gets factory.
 
 ### Example
 
@@ -193,9 +204,10 @@ Long endBlock = null; // Long |
 Date startDate = null; // Date | 
 Date endDate = null; // Date | 
 try {
-    apiInstance.dappsSushiswapFactoryHistoricalGet(startBlock, endBlock, startDate, endDate);
+    List<SushiswapFactoryDTO> result = apiInstance.sushiswapGetFactoryHistorical(startBlock, endBlock, startDate, endDate);
+    System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling SushiswapApi#dappsSushiswapFactoryHistoricalGet");
+    System.err.println("Exception when calling SushiswapApi#sushiswapGetFactoryHistorical");
     e.printStackTrace();
 }
 ```
@@ -212,7 +224,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**List&lt;SushiswapFactoryDTO&gt;**](SushiswapFactoryDTO.md)
 
 ### Authorization
 
@@ -221,14 +233,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsSushiswapHourDataHistoricalGet
+## sushiswapGetHourDataHistorical
 
-> dappsSushiswapHourDataHistoricalGet(startBlock, endBlock, startDate, endDate)
+> List&lt;SushiswapHourDataDTO&gt; sushiswapGetHourDataHistorical(startBlock, endBlock, startDate, endDate)
 
+GetHourData (historical)
 
+Gets hour data.
 
 ### Example
 
@@ -242,9 +256,10 @@ Long endBlock = null; // Long |
 Date startDate = null; // Date | 
 Date endDate = null; // Date | 
 try {
-    apiInstance.dappsSushiswapHourDataHistoricalGet(startBlock, endBlock, startDate, endDate);
+    List<SushiswapHourDataDTO> result = apiInstance.sushiswapGetHourDataHistorical(startBlock, endBlock, startDate, endDate);
+    System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling SushiswapApi#dappsSushiswapHourDataHistoricalGet");
+    System.err.println("Exception when calling SushiswapApi#sushiswapGetHourDataHistorical");
     e.printStackTrace();
 }
 ```
@@ -261,7 +276,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**List&lt;SushiswapHourDataDTO&gt;**](SushiswapHourDataDTO.md)
 
 ### Authorization
 
@@ -270,14 +285,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsSushiswapLiquidityPositionHistoricalGet
+## sushiswapGetLiquidityPositionHistorical
 
-> dappsSushiswapLiquidityPositionHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+> List&lt;SushiswapLiquidityPositionDTO&gt; sushiswapGetLiquidityPositionHistorical(startBlock, endBlock, startDate, endDate, poolId)
 
+GetLiquidityPosition (historical)
 
+Gets liquidity position.
 
 ### Example
 
@@ -292,9 +309,10 @@ Date startDate = null; // Date |
 Date endDate = null; // Date | 
 String poolId = null; // String | 
 try {
-    apiInstance.dappsSushiswapLiquidityPositionHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+    List<SushiswapLiquidityPositionDTO> result = apiInstance.sushiswapGetLiquidityPositionHistorical(startBlock, endBlock, startDate, endDate, poolId);
+    System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling SushiswapApi#dappsSushiswapLiquidityPositionHistoricalGet");
+    System.err.println("Exception when calling SushiswapApi#sushiswapGetLiquidityPositionHistorical");
     e.printStackTrace();
 }
 ```
@@ -312,7 +330,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**List&lt;SushiswapLiquidityPositionDTO&gt;**](SushiswapLiquidityPositionDTO.md)
 
 ### Authorization
 
@@ -321,14 +339,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsSushiswapLiquidityPositionSnapshotsHistoricalGet
+## sushiswapGetLiquidityPositionSnapshotHistorical
 
-> dappsSushiswapLiquidityPositionSnapshotsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+> List&lt;SushiswapLiquidityPositionSnapshotDTO&gt; sushiswapGetLiquidityPositionSnapshotHistorical(startBlock, endBlock, startDate, endDate, poolId)
 
+GetLiquidityPositionSnapshot (historical)
 
+Gets liquidity position snapshot.
 
 ### Example
 
@@ -343,9 +363,10 @@ Date startDate = null; // Date |
 Date endDate = null; // Date | 
 String poolId = null; // String | 
 try {
-    apiInstance.dappsSushiswapLiquidityPositionSnapshotsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+    List<SushiswapLiquidityPositionSnapshotDTO> result = apiInstance.sushiswapGetLiquidityPositionSnapshotHistorical(startBlock, endBlock, startDate, endDate, poolId);
+    System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling SushiswapApi#dappsSushiswapLiquidityPositionSnapshotsHistoricalGet");
+    System.err.println("Exception when calling SushiswapApi#sushiswapGetLiquidityPositionSnapshotHistorical");
     e.printStackTrace();
 }
 ```
@@ -363,7 +384,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**List&lt;SushiswapLiquidityPositionSnapshotDTO&gt;**](SushiswapLiquidityPositionSnapshotDTO.md)
 
 ### Authorization
 
@@ -372,14 +393,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsSushiswapMintsHistoricalGet
+## sushiswapGetMintsHistorical
 
-> dappsSushiswapMintsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+> List&lt;SushiswapMintDTO&gt; sushiswapGetMintsHistorical(startBlock, endBlock, startDate, endDate, poolId)
 
+GetMints (historical)
 
+Gets mints.
 
 ### Example
 
@@ -394,9 +417,10 @@ Date startDate = null; // Date |
 Date endDate = null; // Date | 
 String poolId = null; // String | 
 try {
-    apiInstance.dappsSushiswapMintsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+    List<SushiswapMintDTO> result = apiInstance.sushiswapGetMintsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+    System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling SushiswapApi#dappsSushiswapMintsHistoricalGet");
+    System.err.println("Exception when calling SushiswapApi#sushiswapGetMintsHistorical");
     e.printStackTrace();
 }
 ```
@@ -414,7 +438,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**List&lt;SushiswapMintDTO&gt;**](SushiswapMintDTO.md)
 
 ### Authorization
 
@@ -423,258 +447,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
-
-
-## dappsSushiswapPoolDayDataHistoricalGet
-
-> dappsSushiswapPoolDayDataHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
-
-
-
-### Example
-
-```java
-// Import classes:
-//import org.openapitools.client.api.SushiswapApi;
-
-SushiswapApi apiInstance = new SushiswapApi();
-Long startBlock = null; // Long | 
-Long endBlock = null; // Long | 
-Date startDate = null; // Date | 
-Date endDate = null; // Date | 
-String poolId = null; // String | 
-try {
-    apiInstance.dappsSushiswapPoolDayDataHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
-} catch (ApiException e) {
-    System.err.println("Exception when calling SushiswapApi#dappsSushiswapPoolDayDataHistoricalGet");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional] [default to null]
- **endBlock** | **Long**|  | [optional] [default to null]
- **startDate** | **Date**|  | [optional] [default to null]
- **endDate** | **Date**|  | [optional] [default to null]
- **poolId** | **String**|  | [optional] [default to null]
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-
-## dappsSushiswapPoolHourDataHistoricalGet
-
-> dappsSushiswapPoolHourDataHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
-
-
-
-### Example
-
-```java
-// Import classes:
-//import org.openapitools.client.api.SushiswapApi;
-
-SushiswapApi apiInstance = new SushiswapApi();
-Long startBlock = null; // Long | 
-Long endBlock = null; // Long | 
-Date startDate = null; // Date | 
-Date endDate = null; // Date | 
-String poolId = null; // String | 
-try {
-    apiInstance.dappsSushiswapPoolHourDataHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
-} catch (ApiException e) {
-    System.err.println("Exception when calling SushiswapApi#dappsSushiswapPoolHourDataHistoricalGet");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional] [default to null]
- **endBlock** | **Long**|  | [optional] [default to null]
- **startDate** | **Date**|  | [optional] [default to null]
- **endDate** | **Date**|  | [optional] [default to null]
- **poolId** | **String**|  | [optional] [default to null]
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-
-## dappsSushiswapTokenDayDataHistoricalGet
-
-> dappsSushiswapTokenDayDataHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId)
-
-
-
-### Example
-
-```java
-// Import classes:
-//import org.openapitools.client.api.SushiswapApi;
-
-SushiswapApi apiInstance = new SushiswapApi();
-Long startBlock = null; // Long | 
-Long endBlock = null; // Long | 
-Date startDate = null; // Date | 
-Date endDate = null; // Date | 
-String tokenId = null; // String | 
-try {
-    apiInstance.dappsSushiswapTokenDayDataHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId);
-} catch (ApiException e) {
-    System.err.println("Exception when calling SushiswapApi#dappsSushiswapTokenDayDataHistoricalGet");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional] [default to null]
- **endBlock** | **Long**|  | [optional] [default to null]
- **startDate** | **Date**|  | [optional] [default to null]
- **endDate** | **Date**|  | [optional] [default to null]
- **tokenId** | **String**|  | [optional] [default to null]
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-
-## dappsSushiswapTransactionsHistoricalGet
-
-> dappsSushiswapTransactionsHistoricalGet(startBlock, endBlock, startDate, endDate)
-
-
-
-### Example
-
-```java
-// Import classes:
-//import org.openapitools.client.api.SushiswapApi;
-
-SushiswapApi apiInstance = new SushiswapApi();
-Long startBlock = null; // Long | 
-Long endBlock = null; // Long | 
-Date startDate = null; // Date | 
-Date endDate = null; // Date | 
-try {
-    apiInstance.dappsSushiswapTransactionsHistoricalGet(startBlock, endBlock, startDate, endDate);
-} catch (ApiException e) {
-    System.err.println("Exception when calling SushiswapApi#dappsSushiswapTransactionsHistoricalGet");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional] [default to null]
- **endBlock** | **Long**|  | [optional] [default to null]
- **startDate** | **Date**|  | [optional] [default to null]
- **endDate** | **Date**|  | [optional] [default to null]
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-
-## dappsSushiswapUsersHistoricalGet
-
-> dappsSushiswapUsersHistoricalGet(startBlock, endBlock, startDate, endDate)
-
-
-
-### Example
-
-```java
-// Import classes:
-//import org.openapitools.client.api.SushiswapApi;
-
-SushiswapApi apiInstance = new SushiswapApi();
-Long startBlock = null; // Long | 
-Long endBlock = null; // Long | 
-Date startDate = null; // Date | 
-Date endDate = null; // Date | 
-try {
-    apiInstance.dappsSushiswapUsersHistoricalGet(startBlock, endBlock, startDate, endDate);
-} catch (ApiException e) {
-    System.err.println("Exception when calling SushiswapApi#dappsSushiswapUsersHistoricalGet");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional] [default to null]
- **endBlock** | **Long**|  | [optional] [default to null]
- **startDate** | **Date**|  | [optional] [default to null]
- **endDate** | **Date**|  | [optional] [default to null]
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
 ## sushiswapGetPoolsCurrent
@@ -708,6 +481,60 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**List&lt;SushiswapPairDTO&gt;**](SushiswapPairDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## sushiswapGetPoolsDayDataHistorical
+
+> List&lt;SushiswapPairDayDataDTO&gt; sushiswapGetPoolsDayDataHistorical(startBlock, endBlock, startDate, endDate, poolId)
+
+GetPoolsDayData (historical)
+
+Gets pools day data.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.SushiswapApi;
+
+SushiswapApi apiInstance = new SushiswapApi();
+Long startBlock = null; // Long | 
+Long endBlock = null; // Long | 
+Date startDate = null; // Date | 
+Date endDate = null; // Date | 
+String poolId = null; // String | 
+try {
+    List<SushiswapPairDayDataDTO> result = apiInstance.sushiswapGetPoolsDayDataHistorical(startBlock, endBlock, startDate, endDate, poolId);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling SushiswapApi#sushiswapGetPoolsDayDataHistorical");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Long**|  | [optional] [default to null]
+ **endBlock** | **Long**|  | [optional] [default to null]
+ **startDate** | **Date**|  | [optional] [default to null]
+ **endDate** | **Date**|  | [optional] [default to null]
+ **poolId** | **String**|  | [optional] [default to null]
+
+### Return type
+
+[**List&lt;SushiswapPairDayDataDTO&gt;**](SushiswapPairDayDataDTO.md)
 
 ### Authorization
 
@@ -773,9 +600,63 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
+## sushiswapGetPoolsHourDataHistorical
+
+> List&lt;SushiswapPairHourDataDTO&gt; sushiswapGetPoolsHourDataHistorical(startBlock, endBlock, startDate, endDate, poolId)
+
+GetPoolsHourData (historical)
+
+Gets pools tracked each our.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.SushiswapApi;
+
+SushiswapApi apiInstance = new SushiswapApi();
+Long startBlock = null; // Long | 
+Long endBlock = null; // Long | 
+Date startDate = null; // Date | 
+Date endDate = null; // Date | 
+String poolId = null; // String | 
+try {
+    List<SushiswapPairHourDataDTO> result = apiInstance.sushiswapGetPoolsHourDataHistorical(startBlock, endBlock, startDate, endDate, poolId);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling SushiswapApi#sushiswapGetPoolsHourDataHistorical");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Long**|  | [optional] [default to null]
+ **endBlock** | **Long**|  | [optional] [default to null]
+ **startDate** | **Date**|  | [optional] [default to null]
+ **endDate** | **Date**|  | [optional] [default to null]
+ **poolId** | **String**|  | [optional] [default to null]
+
+### Return type
+
+[**List&lt;SushiswapPairHourDataDTO&gt;**](SushiswapPairHourDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
 ## sushiswapGetSwapsCurrent
 
-> SushiswapSwapDTO sushiswapGetSwapsCurrent()
+> List&lt;SushiswapSwapDTO&gt; sushiswapGetSwapsCurrent()
 
 GetSwaps (current)
 
@@ -789,7 +670,7 @@ Gets swaps.
 
 SushiswapApi apiInstance = new SushiswapApi();
 try {
-    SushiswapSwapDTO result = apiInstance.sushiswapGetSwapsCurrent();
+    List<SushiswapSwapDTO> result = apiInstance.sushiswapGetSwapsCurrent();
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling SushiswapApi#sushiswapGetSwapsCurrent");
@@ -803,7 +684,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**SushiswapSwapDTO**](SushiswapSwapDTO.md)
+[**List&lt;SushiswapSwapDTO&gt;**](SushiswapSwapDTO.md)
 
 ### Authorization
 
@@ -871,7 +752,7 @@ No authorization required
 
 ## sushiswapGetTokensCurrent
 
-> SushiswapTokenDTO sushiswapGetTokensCurrent()
+> List&lt;SushiswapTokenDTO&gt; sushiswapGetTokensCurrent()
 
 GetTokens (current)
 
@@ -885,7 +766,7 @@ Gets tokens.
 
 SushiswapApi apiInstance = new SushiswapApi();
 try {
-    SushiswapTokenDTO result = apiInstance.sushiswapGetTokensCurrent();
+    List<SushiswapTokenDTO> result = apiInstance.sushiswapGetTokensCurrent();
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling SushiswapApi#sushiswapGetTokensCurrent");
@@ -899,7 +780,61 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**SushiswapTokenDTO**](SushiswapTokenDTO.md)
+[**List&lt;SushiswapTokenDTO&gt;**](SushiswapTokenDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## sushiswapGetTokensDayDataHistorical
+
+> List&lt;SushiswapTokenDayDataDTO&gt; sushiswapGetTokensDayDataHistorical(startBlock, endBlock, startDate, endDate, tokenId)
+
+GetTokensDayData (historical)
+
+Gets tokens day data.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.SushiswapApi;
+
+SushiswapApi apiInstance = new SushiswapApi();
+Long startBlock = null; // Long | 
+Long endBlock = null; // Long | 
+Date startDate = null; // Date | 
+Date endDate = null; // Date | 
+String tokenId = null; // String | 
+try {
+    List<SushiswapTokenDayDataDTO> result = apiInstance.sushiswapGetTokensDayDataHistorical(startBlock, endBlock, startDate, endDate, tokenId);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling SushiswapApi#sushiswapGetTokensDayDataHistorical");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Long**|  | [optional] [default to null]
+ **endBlock** | **Long**|  | [optional] [default to null]
+ **startDate** | **Date**|  | [optional] [default to null]
+ **endDate** | **Date**|  | [optional] [default to null]
+ **tokenId** | **String**|  | [optional] [default to null]
+
+### Return type
+
+[**List&lt;SushiswapTokenDayDataDTO&gt;**](SushiswapTokenDayDataDTO.md)
 
 ### Authorization
 
@@ -954,6 +889,110 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**List&lt;SushiswapTokenDTO&gt;**](SushiswapTokenDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## sushiswapGetTransactionsHistorical
+
+> List&lt;SushiswapTransactionDTO&gt; sushiswapGetTransactionsHistorical(startBlock, endBlock, startDate, endDate)
+
+GetTransactions (historical)
+
+Gets transactions.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.SushiswapApi;
+
+SushiswapApi apiInstance = new SushiswapApi();
+Long startBlock = null; // Long | 
+Long endBlock = null; // Long | 
+Date startDate = null; // Date | 
+Date endDate = null; // Date | 
+try {
+    List<SushiswapTransactionDTO> result = apiInstance.sushiswapGetTransactionsHistorical(startBlock, endBlock, startDate, endDate);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling SushiswapApi#sushiswapGetTransactionsHistorical");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Long**|  | [optional] [default to null]
+ **endBlock** | **Long**|  | [optional] [default to null]
+ **startDate** | **Date**|  | [optional] [default to null]
+ **endDate** | **Date**|  | [optional] [default to null]
+
+### Return type
+
+[**List&lt;SushiswapTransactionDTO&gt;**](SushiswapTransactionDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## sushiswapGetUsersHistorical
+
+> List&lt;SushiswapUserDTO&gt; sushiswapGetUsersHistorical(startBlock, endBlock, startDate, endDate)
+
+GetUsers (historical)
+
+Gets users.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.SushiswapApi;
+
+SushiswapApi apiInstance = new SushiswapApi();
+Long startBlock = null; // Long | 
+Long endBlock = null; // Long | 
+Date startDate = null; // Date | 
+Date endDate = null; // Date | 
+try {
+    List<SushiswapUserDTO> result = apiInstance.sushiswapGetUsersHistorical(startBlock, endBlock, startDate, endDate);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling SushiswapApi#sushiswapGetUsersHistorical");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Long**|  | [optional] [default to null]
+ **endBlock** | **Long**|  | [optional] [default to null]
+ **startDate** | **Date**|  | [optional] [default to null]
+ **endDate** | **Date**|  | [optional] [default to null]
+
+### Return type
+
+[**List&lt;SushiswapUserDTO&gt;**](SushiswapUserDTO.md)
 
 ### Authorization
 

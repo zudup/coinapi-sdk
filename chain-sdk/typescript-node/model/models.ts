@@ -1,9 +1,22 @@
 import localVarRequest from 'request';
 
 export * from './numericsBigInteger';
+export * from './sushiswapBundleDTO';
+export * from './sushiswapBurnDTO';
+export * from './sushiswapDayDataDTO';
+export * from './sushiswapFactoryDTO';
+export * from './sushiswapHourDataDTO';
+export * from './sushiswapLiquidityPositionDTO';
+export * from './sushiswapLiquidityPositionSnapshotDTO';
+export * from './sushiswapMintDTO';
 export * from './sushiswapPairDTO';
+export * from './sushiswapPairDayDataDTO';
+export * from './sushiswapPairHourDataDTO';
 export * from './sushiswapSwapDTO';
 export * from './sushiswapTokenDTO';
+export * from './sushiswapTokenDayDataDTO';
+export * from './sushiswapTransactionDTO';
+export * from './sushiswapUserDTO';
 export * from './transactionsETradeAggressiveSide';
 export * from './uniswapV2PairV2DTO';
 export * from './uniswapV2SwapV2DTO';
@@ -39,9 +52,22 @@ export type RequestFile = string | Buffer | fs.ReadStream | RequestDetailedFile;
 
 
 import { NumericsBigInteger } from './numericsBigInteger';
+import { SushiswapBundleDTO } from './sushiswapBundleDTO';
+import { SushiswapBurnDTO } from './sushiswapBurnDTO';
+import { SushiswapDayDataDTO } from './sushiswapDayDataDTO';
+import { SushiswapFactoryDTO } from './sushiswapFactoryDTO';
+import { SushiswapHourDataDTO } from './sushiswapHourDataDTO';
+import { SushiswapLiquidityPositionDTO } from './sushiswapLiquidityPositionDTO';
+import { SushiswapLiquidityPositionSnapshotDTO } from './sushiswapLiquidityPositionSnapshotDTO';
+import { SushiswapMintDTO } from './sushiswapMintDTO';
 import { SushiswapPairDTO } from './sushiswapPairDTO';
+import { SushiswapPairDayDataDTO } from './sushiswapPairDayDataDTO';
+import { SushiswapPairHourDataDTO } from './sushiswapPairHourDataDTO';
 import { SushiswapSwapDTO } from './sushiswapSwapDTO';
 import { SushiswapTokenDTO } from './sushiswapTokenDTO';
+import { SushiswapTokenDayDataDTO } from './sushiswapTokenDayDataDTO';
+import { SushiswapTransactionDTO } from './sushiswapTransactionDTO';
+import { SushiswapUserDTO } from './sushiswapUserDTO';
 import { TransactionsETradeAggressiveSide } from './transactionsETradeAggressiveSide';
 import { UniswapV2PairV2DTO } from './uniswapV2PairV2DTO';
 import { UniswapV2SwapV2DTO } from './uniswapV2SwapV2DTO';
@@ -81,9 +107,22 @@ let enumsMap: {[index: string]: any} = {
 
 let typeMap: {[index: string]: any} = {
     "NumericsBigInteger": NumericsBigInteger,
+    "SushiswapBundleDTO": SushiswapBundleDTO,
+    "SushiswapBurnDTO": SushiswapBurnDTO,
+    "SushiswapDayDataDTO": SushiswapDayDataDTO,
+    "SushiswapFactoryDTO": SushiswapFactoryDTO,
+    "SushiswapHourDataDTO": SushiswapHourDataDTO,
+    "SushiswapLiquidityPositionDTO": SushiswapLiquidityPositionDTO,
+    "SushiswapLiquidityPositionSnapshotDTO": SushiswapLiquidityPositionSnapshotDTO,
+    "SushiswapMintDTO": SushiswapMintDTO,
     "SushiswapPairDTO": SushiswapPairDTO,
+    "SushiswapPairDayDataDTO": SushiswapPairDayDataDTO,
+    "SushiswapPairHourDataDTO": SushiswapPairHourDataDTO,
     "SushiswapSwapDTO": SushiswapSwapDTO,
     "SushiswapTokenDTO": SushiswapTokenDTO,
+    "SushiswapTokenDayDataDTO": SushiswapTokenDayDataDTO,
+    "SushiswapTransactionDTO": SushiswapTransactionDTO,
+    "SushiswapUserDTO": SushiswapUserDTO,
     "UniswapV2PairV2DTO": UniswapV2PairV2DTO,
     "UniswapV2SwapV2DTO": UniswapV2SwapV2DTO,
     "UniswapV2TokenV2DTO": UniswapV2TokenV2DTO,

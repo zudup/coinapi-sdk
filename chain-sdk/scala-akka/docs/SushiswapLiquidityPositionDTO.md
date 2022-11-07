@@ -1,0 +1,22 @@
+
+
+# LiquidityPositionDTO
+
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**entryTime** | **OffsetDateTime** |  |  [optional]
+**recvTime** | **OffsetDateTime** |  |  [optional]
+**blockNumber** | **Long** | Number of block in which entity was recorded. |  [optional]
+**id** | **String** | Identifier, format: &lt;pair address&gt;-&lt;user address&gt; |  [optional]
+**user** | **String** | User address. |  [optional]
+**pair** | **String** | Pair address. |  [optional]
+**liquidityTokenBalance** | **String** | Amount of LP tokens minted for this position. |  [optional]
+**block** | **Int** | Block number at which position was created. |  [optional]
+**timestamp** | **Int** | Creation time. |  [optional]
+**vid** | **Long** |  |  [optional]
+
+
+

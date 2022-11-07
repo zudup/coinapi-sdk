@@ -107,6 +107,710 @@ export type NumericsBigInteger = {
 }
 
 /**
+ * The Bundle is used as a global store of derived ETH price in USD.
+ * @export
+ */
+export type SushiswapBundleDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof SushiswapBundleDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof SushiswapBundleDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof SushiswapBundleDTO
+     */
+    block_number?: number;
+    /**
+     * Hardcoded to \'1\'.
+     * @type {string}
+     * @memberof SushiswapBundleDTO
+     */
+    id?: string;
+    /**
+     * Price of native.
+     * @type {string}
+     * @memberof SushiswapBundleDTO
+     */
+    eth_price?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof SushiswapBundleDTO
+     */
+    vid?: number;
+}
+
+/**
+ * Burn entities are created for every emitted Burn event on the Uniswap core contracts. The Burn entity stores key data about the event like token amounts, who burned LP tokens, who received tokens, and more. This entity can be used to track liquidity removals on pairs.
+ * @export
+ */
+export type SushiswapBurnDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof SushiswapBurnDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof SushiswapBurnDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof SushiswapBurnDTO
+     */
+    block_number?: number;
+    /**
+     * Identifier, format: <transaction id>:<transaction.burns.length>.
+     * @type {string}
+     * @memberof SushiswapBurnDTO
+     */
+    id?: string;
+    /**
+     * Reference to the transaction Burn was included in.
+     * @type {string}
+     * @memberof SushiswapBurnDTO
+     */
+    transaction?: string;
+    /**
+     * Timestamp of Burn, used to sort recent liquidity removals.
+     * @type {string}
+     * @memberof SushiswapBurnDTO
+     */
+    timestamp?: string;
+    /**
+     * Reference to pair.
+     * @type {string}
+     * @memberof SushiswapBurnDTO
+     */
+    pair?: string;
+    /**
+     * Amount of liquidity tokens burned.
+     * @type {string}
+     * @memberof SushiswapBurnDTO
+     */
+    liquidity?: string;
+    /**
+     * Address that initiated the liquidity removal.
+     * @type {string}
+     * @memberof SushiswapBurnDTO
+     */
+    sender?: string;
+    /**
+     * Amount of token0 removed.
+     * @type {string}
+     * @memberof SushiswapBurnDTO
+     */
+    amount_0?: string;
+    /**
+     * Amount of token1 removed.
+     * @type {string}
+     * @memberof SushiswapBurnDTO
+     */
+    amount_1?: string;
+    /**
+     * Recipient of tokens.
+     * @type {string}
+     * @memberof SushiswapBurnDTO
+     */
+    to?: string;
+    /**
+     * Index in the transaction event was emitted.
+     * @type {string}
+     * @memberof SushiswapBurnDTO
+     */
+    log_index?: string;
+    /**
+     * Derived amount based on available prices of tokens.
+     * @type {string}
+     * @memberof SushiswapBurnDTO
+     */
+    amount_usd?: string;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SushiswapBurnDTO
+     */
+    complete?: boolean;
+    /**
+     * Address of fee recipient (if fee is on).
+     * @type {string}
+     * @memberof SushiswapBurnDTO
+     */
+    fee_to?: string;
+    /**
+     * Amount of tokens sent to fee recipient (if fee is on).
+     * @type {string}
+     * @memberof SushiswapBurnDTO
+     */
+    fee_liquidity?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof SushiswapBurnDTO
+     */
+    vid?: number;
+}
+
+/**
+ * Tracks data across all pairs aggregated into a daily bucket.
+ * @export
+ */
+export type SushiswapDayDataDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof SushiswapDayDataDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof SushiswapDayDataDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof SushiswapDayDataDTO
+     */
+    block_number?: number;
+    /**
+     * Unix timestamp for start of day / 86400 giving a unique day index.
+     * @type {string}
+     * @memberof SushiswapDayDataDTO
+     */
+    id?: string;
+    /**
+     * Unix timestamp for start of day.
+     * @type {number}
+     * @memberof SushiswapDayDataDTO
+     */
+    _date?: number;
+    /**
+     * Factory address.
+     * @type {string}
+     * @memberof SushiswapDayDataDTO
+     */
+    factory?: string;
+    /**
+     * Total volume across all pairs on this day, stored as a derived amount of ETH.
+     * @type {string}
+     * @memberof SushiswapDayDataDTO
+     */
+    volume_eth?: string;
+    /**
+     * Total volume across all pairs on this day, stored as a derived amount of USD.
+     * @type {string}
+     * @memberof SushiswapDayDataDTO
+     */
+    volume_usd?: string;
+    /**
+     * Total volume across all pairs on this day, untracked
+     * @type {string}
+     * @memberof SushiswapDayDataDTO
+     */
+    untracked_volume?: string;
+    /**
+     * Total liquidity across all pairs in ETH up to and including this day.
+     * @type {string}
+     * @memberof SushiswapDayDataDTO
+     */
+    liquidity_eth?: string;
+    /**
+     * Total liquidity across all pairs in USD up to and including this day.
+     * @type {string}
+     * @memberof SushiswapDayDataDTO
+     */
+    liquidity_usd?: string;
+    /**
+     * Number of transactions throughout this day.
+     * @type {string}
+     * @memberof SushiswapDayDataDTO
+     */
+    tx_count?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof SushiswapDayDataDTO
+     */
+    vid?: number;
+}
+
+/**
+ * The Sushiswap Factory entity is responsible for storing aggregate information across all Sushiswap pairs. It can be used to view stats about total liquidity, volume, amount of pairs and more.
+ * @export
+ */
+export type SushiswapFactoryDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof SushiswapFactoryDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof SushiswapFactoryDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof SushiswapFactoryDTO
+     */
+    block_number?: number;
+    /**
+     * Factory address.
+     * @type {string}
+     * @memberof SushiswapFactoryDTO
+     */
+    id?: string;
+    /**
+     * Amount of pairs created by the Sushiswap factory.
+     * @type {string}
+     * @memberof SushiswapFactoryDTO
+     */
+    pair_count?: string;
+    /**
+     * All time USD volume across all pairs (USD is derived).
+     * @type {string}
+     * @memberof SushiswapFactoryDTO
+     */
+    volume_usd?: string;
+    /**
+     * All time volume in ETH across all pairs (ETH is derived).
+     * @type {string}
+     * @memberof SushiswapFactoryDTO
+     */
+    volume_eth?: string;
+    /**
+     * Untracked volume USD.
+     * @type {string}
+     * @memberof SushiswapFactoryDTO
+     */
+    untracked_volume_usd?: string;
+    /**
+     * Total liquidity across all pairs stored as a derived USD amount.
+     * @type {string}
+     * @memberof SushiswapFactoryDTO
+     */
+    liquidity_usd?: string;
+    /**
+     * Total liquidity across all pairs stored as a derived ETH amount.
+     * @type {string}
+     * @memberof SushiswapFactoryDTO
+     */
+    liquidity_eth?: string;
+    /**
+     * All time amount of transactions across all pairs.
+     * @type {string}
+     * @memberof SushiswapFactoryDTO
+     */
+    tx_count?: string;
+    /**
+     * Total count of tokens.
+     * @type {string}
+     * @memberof SushiswapFactoryDTO
+     */
+    token_count?: string;
+    /**
+     * Users count.
+     * @type {string}
+     * @memberof SushiswapFactoryDTO
+     */
+    user_count?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof SushiswapFactoryDTO
+     */
+    vid?: number;
+}
+
+/**
+ * 
+ * @export
+ */
+export type SushiswapHourDataDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof SushiswapHourDataDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof SushiswapHourDataDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof SushiswapHourDataDTO
+     */
+    block_number?: number;
+    /**
+     * Start of hour timestamp.
+     * @type {string}
+     * @memberof SushiswapHourDataDTO
+     */
+    id?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof SushiswapHourDataDTO
+     */
+    _date?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof SushiswapHourDataDTO
+     */
+    factory?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof SushiswapHourDataDTO
+     */
+    volume_eth?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof SushiswapHourDataDTO
+     */
+    volume_usd?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof SushiswapHourDataDTO
+     */
+    untracked_volume?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof SushiswapHourDataDTO
+     */
+    liquidity_eth?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof SushiswapHourDataDTO
+     */
+    liquidity_usd?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof SushiswapHourDataDTO
+     */
+    tx_count?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof SushiswapHourDataDTO
+     */
+    vid?: number;
+}
+
+/**
+ * 
+ * @export
+ */
+export type SushiswapLiquidityPositionDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof SushiswapLiquidityPositionDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof SushiswapLiquidityPositionDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof SushiswapLiquidityPositionDTO
+     */
+    block_number?: number;
+    /**
+     * Identifier, format: <pair address>-<user address>
+     * @type {string}
+     * @memberof SushiswapLiquidityPositionDTO
+     */
+    id?: string;
+    /**
+     * User address.
+     * @type {string}
+     * @memberof SushiswapLiquidityPositionDTO
+     */
+    user?: string;
+    /**
+     * Pair address.
+     * @type {string}
+     * @memberof SushiswapLiquidityPositionDTO
+     */
+    pair?: string;
+    /**
+     * Amount of LP tokens minted for this position.
+     * @type {string}
+     * @memberof SushiswapLiquidityPositionDTO
+     */
+    liquidity_token_balance?: string;
+    /**
+     * Block number at which position was created.
+     * @type {number}
+     * @memberof SushiswapLiquidityPositionDTO
+     */
+    block?: number;
+    /**
+     * Creation time.
+     * @type {number}
+     * @memberof SushiswapLiquidityPositionDTO
+     */
+    timestamp?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof SushiswapLiquidityPositionDTO
+     */
+    vid?: number;
+}
+
+/**
+ * This entity is used to store data about a user\'s liquidity position over time. This information, along with information from the pair itself can be used to provide position sizes, token deposits, and more. It gets created and never updated.
+ * @export
+ */
+export type SushiswapLiquidityPositionSnapshotDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof SushiswapLiquidityPositionSnapshotDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof SushiswapLiquidityPositionSnapshotDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof SushiswapLiquidityPositionSnapshotDTO
+     */
+    block_number?: number;
+    /**
+     * Identifier, format: <pair address>-<user address>-<timestamp>
+     * @type {string}
+     * @memberof SushiswapLiquidityPositionSnapshotDTO
+     */
+    id?: string;
+    /**
+     * Reference to LP identifier.
+     * @type {string}
+     * @memberof SushiswapLiquidityPositionSnapshotDTO
+     */
+    liquidity_position?: string;
+    /**
+     * Creation time.
+     * @type {number}
+     * @memberof SushiswapLiquidityPositionSnapshotDTO
+     */
+    timestamp?: number;
+    /**
+     * Block in which snapshot has been created.
+     * @type {number}
+     * @memberof SushiswapLiquidityPositionSnapshotDTO
+     */
+    block?: number;
+    /**
+     * Reference to user.
+     * @type {string}
+     * @memberof SushiswapLiquidityPositionSnapshotDTO
+     */
+    user?: string;
+    /**
+     * Reference to the pair liquidity is being provided on.
+     * @type {string}
+     * @memberof SushiswapLiquidityPositionSnapshotDTO
+     */
+    pair?: string;
+    /**
+     * Snapshot of token0 price in USD.
+     * @type {string}
+     * @memberof SushiswapLiquidityPositionSnapshotDTO
+     */
+    token_0_price_usd?: string;
+    /**
+     * Snapshot of token0 price in USD.
+     * @type {string}
+     * @memberof SushiswapLiquidityPositionSnapshotDTO
+     */
+    token_1_price_usd?: string;
+    /**
+     * Snapshot of pair token0 reserves.
+     * @type {string}
+     * @memberof SushiswapLiquidityPositionSnapshotDTO
+     */
+    reserve_0?: string;
+    /**
+     * Snapshot of pair token1 reserves.
+     * @type {string}
+     * @memberof SushiswapLiquidityPositionSnapshotDTO
+     */
+    reserve_1?: string;
+    /**
+     * Snapshot of pair reserves in USD.
+     * @type {string}
+     * @memberof SushiswapLiquidityPositionSnapshotDTO
+     */
+    reserve_usd?: string;
+    /**
+     * Snapshot of pool token supply.
+     * @type {string}
+     * @memberof SushiswapLiquidityPositionSnapshotDTO
+     */
+    liquidity_token_total_supply?: string;
+    /**
+     * Snapshot of users pool token balance.
+     * @type {string}
+     * @memberof SushiswapLiquidityPositionSnapshotDTO
+     */
+    liquidity_token_balance?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof SushiswapLiquidityPositionSnapshotDTO
+     */
+    vid?: number;
+}
+
+/**
+ * Mint entities are created for every emitted Mint event on the Sushiswap core contracts. The Mint entity stores key data about the event like token amounts, who sent the transaction, who received the liquidity, and more. This entity can be used to track liquidity provisions on pairs.
+ * @export
+ */
+export type SushiswapMintDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof SushiswapMintDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof SushiswapMintDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof SushiswapMintDTO
+     */
+    block_number?: number;
+    /**
+     * Identifier, format: <transaction hash>-<index in the transaction mint array>.
+     * @type {string}
+     * @memberof SushiswapMintDTO
+     */
+    id?: string;
+    /**
+     * Reference to the transaction Mint was included in.
+     * @type {string}
+     * @memberof SushiswapMintDTO
+     */
+    transaction?: string;
+    /**
+     * Timestamp of Mint, used to sort recent liquidity provisions.
+     * @type {string}
+     * @memberof SushiswapMintDTO
+     */
+    timestamp?: string;
+    /**
+     * Reference to pair.
+     * @type {string}
+     * @memberof SushiswapMintDTO
+     */
+    pair?: string;
+    /**
+     * Recipient of liquidity tokens.
+     * @type {string}
+     * @memberof SushiswapMintDTO
+     */
+    to?: string;
+    /**
+     * Amount of liquidity tokens minted.
+     * @type {string}
+     * @memberof SushiswapMintDTO
+     */
+    liquidity?: string;
+    /**
+     * Address that initiated the liquidity provision.
+     * @type {string}
+     * @memberof SushiswapMintDTO
+     */
+    sender?: string;
+    /**
+     * Amount of token0 provided.
+     * @type {string}
+     * @memberof SushiswapMintDTO
+     */
+    amount_0?: string;
+    /**
+     * Amount of token1 provided.
+     * @type {string}
+     * @memberof SushiswapMintDTO
+     */
+    amount_1?: string;
+    /**
+     * Index in the transaction event was emitted.
+     * @type {string}
+     * @memberof SushiswapMintDTO
+     */
+    log_index?: string;
+    /**
+     * Derived USD value of token0 amount plus token1 amount.
+     * @type {string}
+     * @memberof SushiswapMintDTO
+     */
+    amount_usd?: string;
+    /**
+     * Address of fee recipient (if fee is on).
+     * @type {string}
+     * @memberof SushiswapMintDTO
+     */
+    fee_to?: string;
+    /**
+     * Amount of liquidity sent to fee recipient (if fee is on).
+     * @type {string}
+     * @memberof SushiswapMintDTO
+     */
+    fee_liquidity?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof SushiswapMintDTO
+     */
+    vid?: number;
+}
+
+/**
  * Information about a pair. Includes references to each token within the pair, volume information, liquidity information, and more. The pair entity mirrors the pair smart contract, and also contains aggregated information about use.
  * @export
  */
@@ -267,6 +971,206 @@ export type SushiswapPairDTO = {
      * @memberof SushiswapPairDTO
      */
     evaluated_ask?: number;
+}
+
+/**
+ * Tracks pair data across each day.
+ * @export
+ */
+export type SushiswapPairDayDataDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof SushiswapPairDayDataDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof SushiswapPairDayDataDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof SushiswapPairDayDataDTO
+     */
+    block_number?: number;
+    /**
+     * Identifier, format: <pair id>-<day start timestamp>.
+     * @type {string}
+     * @memberof SushiswapPairDayDataDTO
+     */
+    id?: string;
+    /**
+     * Unix timestamp for start of day.
+     * @type {number}
+     * @memberof SushiswapPairDayDataDTO
+     */
+    _date?: number;
+    /**
+     * Reference to pair.
+     * @type {string}
+     * @memberof SushiswapPairDayDataDTO
+     */
+    pair?: string;
+    /**
+     * Reference to token0.
+     * @type {string}
+     * @memberof SushiswapPairDayDataDTO
+     */
+    token_0?: string;
+    /**
+     * Reference to token1.
+     * @type {string}
+     * @memberof SushiswapPairDayDataDTO
+     */
+    token_1?: string;
+    /**
+     * Reserve of token0 (updated during each transaction on pair).
+     * @type {string}
+     * @memberof SushiswapPairDayDataDTO
+     */
+    reserve_0?: string;
+    /**
+     * Reserve of token1 (updated during each transaction on pair).
+     * @type {string}
+     * @memberof SushiswapPairDayDataDTO
+     */
+    reserve_1?: string;
+    /**
+     * Total supply of liquidity token distributed to LPs.
+     * @type {string}
+     * @memberof SushiswapPairDayDataDTO
+     */
+    total_supply?: string;
+    /**
+     * Reserve of token0 plus token1 stored as a derived USD amount.
+     * @type {string}
+     * @memberof SushiswapPairDayDataDTO
+     */
+    reserve_usd?: string;
+    /**
+     * Total amount of token0 swapped throughout day.
+     * @type {string}
+     * @memberof SushiswapPairDayDataDTO
+     */
+    volume_token_0?: string;
+    /**
+     * Total amount of token1 swapped throughout day.
+     * @type {string}
+     * @memberof SushiswapPairDayDataDTO
+     */
+    volume_token_1?: string;
+    /**
+     * Total volume within pair throughout day.
+     * @type {string}
+     * @memberof SushiswapPairDayDataDTO
+     */
+    volume_usd?: string;
+    /**
+     * Amount of transactions on pair throughout day.
+     * @type {string}
+     * @memberof SushiswapPairDayDataDTO
+     */
+    tx_count?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof SushiswapPairDayDataDTO
+     */
+    vid?: number;
+}
+
+/**
+ * Tracks pair data across each hour.
+ * @export
+ */
+export type SushiswapPairHourDataDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof SushiswapPairHourDataDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof SushiswapPairHourDataDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof SushiswapPairHourDataDTO
+     */
+    block_number?: number;
+    /**
+     * Identifier, format: <pair id>-<hour start timestamp>.
+     * @type {string}
+     * @memberof SushiswapPairHourDataDTO
+     */
+    id?: string;
+    /**
+     * Hour start timestamp.
+     * @type {number}
+     * @memberof SushiswapPairHourDataDTO
+     */
+    _date?: number;
+    /**
+     * Reference to pair.
+     * @type {string}
+     * @memberof SushiswapPairHourDataDTO
+     */
+    pair?: string;
+    /**
+     * Reserve of token0 (updated during each transaction on pair).
+     * @type {string}
+     * @memberof SushiswapPairHourDataDTO
+     */
+    reserve_0?: string;
+    /**
+     * Reserve of token1 (updated during each transaction on pair).
+     * @type {string}
+     * @memberof SushiswapPairHourDataDTO
+     */
+    reserve_1?: string;
+    /**
+     * Reserve of token0 plus token1 stored as a derived USD amount.
+     * @type {string}
+     * @memberof SushiswapPairHourDataDTO
+     */
+    reserve_usd?: string;
+    /**
+     * Total amount of token0 swapped throughout hour.
+     * @type {string}
+     * @memberof SushiswapPairHourDataDTO
+     */
+    volume_token_0?: string;
+    /**
+     * Total amount of token1 swapped throughout hour.
+     * @type {string}
+     * @memberof SushiswapPairHourDataDTO
+     */
+    volume_token_1?: string;
+    /**
+     * Total volume within pair throughout hour.
+     * @type {string}
+     * @memberof SushiswapPairHourDataDTO
+     */
+    volume_usd?: string;
+    /**
+     * Amount of transactions on pair throughout hour.
+     * @type {string}
+     * @memberof SushiswapPairHourDataDTO
+     */
+    tx_count?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof SushiswapPairHourDataDTO
+     */
+    vid?: number;
 }
 
 /**
@@ -515,6 +1419,201 @@ export type SushiswapTokenDTO = {
      * @memberof SushiswapTokenDTO
      */
     token_symbol?: string;
+}
+
+/**
+ * Token data aggregated across all pairs that include token.
+ * @export
+ */
+export type SushiswapTokenDayDataDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof SushiswapTokenDayDataDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof SushiswapTokenDayDataDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof SushiswapTokenDayDataDTO
+     */
+    block_number?: number;
+    /**
+     * Identifier, day start timestamp in unix / 86400.
+     * @type {string}
+     * @memberof SushiswapTokenDayDataDTO
+     */
+    id?: string;
+    /**
+     * Unix timestamp for start of day.
+     * @type {number}
+     * @memberof SushiswapTokenDayDataDTO
+     */
+    _date?: number;
+    /**
+     * Reference to token entity.
+     * @type {string}
+     * @memberof SushiswapTokenDayDataDTO
+     */
+    token?: string;
+    /**
+     * Amount of token swapped across all pairs throughout day.
+     * @type {string}
+     * @memberof SushiswapTokenDayDataDTO
+     */
+    volume?: string;
+    /**
+     * Amount of token swapped across all pairs throughout day stored as a derived amount of ETH.
+     * @type {string}
+     * @memberof SushiswapTokenDayDataDTO
+     */
+    volume_eth?: string;
+    /**
+     * Amount of token swapped across all pairs throughout day stored as a derived amount of USD.
+     * @type {string}
+     * @memberof SushiswapTokenDayDataDTO
+     */
+    volume_usd?: string;
+    /**
+     * Amount of transactions with this token across all pairs.
+     * @type {string}
+     * @memberof SushiswapTokenDayDataDTO
+     */
+    tx_count?: string;
+    /**
+     * Token amount of token deposited across all pairs.
+     * @type {string}
+     * @memberof SushiswapTokenDayDataDTO
+     */
+    liquidity?: string;
+    /**
+     * Token amount of token deposited across all pairs stored as amount of ETH.
+     * @type {string}
+     * @memberof SushiswapTokenDayDataDTO
+     */
+    liquidity_eth?: string;
+    /**
+     * Token amount of token deposited across all pairs stored as amount of USD.
+     * @type {string}
+     * @memberof SushiswapTokenDayDataDTO
+     */
+    liquidity_usd?: string;
+    /**
+     * Price of token in derived USD.
+     * @type {string}
+     * @memberof SushiswapTokenDayDataDTO
+     */
+    price_usd?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof SushiswapTokenDayDataDTO
+     */
+    vid?: number;
+}
+
+/**
+ * Transaction entities are created for each Ethereum transaction that contains an interaction within Sushiswap contracts. Each transaction contains 3 arrays, and at least one of these arrays has a length of 1.
+ * @export
+ */
+export type SushiswapTransactionDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof SushiswapTransactionDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof SushiswapTransactionDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof SushiswapTransactionDTO
+     */
+    block_number?: number;
+    /**
+     * Ethereum transaction hash.
+     * @type {string}
+     * @memberof SushiswapTransactionDTO
+     */
+    id?: string;
+    /**
+     * Timestamp.
+     * @type {string}
+     * @memberof SushiswapTransactionDTO
+     */
+    timestamp?: string;
+    /**
+     * Array of Mint events within the transaction, 0 or greater.
+     * @type {Array<string>}
+     * @memberof SushiswapTransactionDTO
+     */
+    mints?: Array<string>;
+    /**
+     * Array of Burn events within transaction, 0 or greater.
+     * @type {Array<string>}
+     * @memberof SushiswapTransactionDTO
+     */
+    burns?: Array<string>;
+    /**
+     * Array of Swap events within transaction, 0 or greater.
+     * @type {Array<string>}
+     * @memberof SushiswapTransactionDTO
+     */
+    swaps?: Array<string>;
+    /**
+     * 
+     * @type {number}
+     * @memberof SushiswapTransactionDTO
+     */
+    vid?: number;
+}
+
+/**
+ * 
+ * @export
+ */
+export type SushiswapUserDTO = {
+    /**
+     * 
+     * @type {Date}
+     * @memberof SushiswapUserDTO
+     */
+    entry_time?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof SushiswapUserDTO
+     */
+    recv_time?: Date;
+    /**
+     * Number of block in which entity was recorded.
+     * @type {number}
+     * @memberof SushiswapUserDTO
+     */
+    block_number?: number;
+    /**
+     * User address.
+     * @type {string}
+     * @memberof SushiswapUserDTO
+     */
+    id?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof SushiswapUserDTO
+     */
+    vid?: number;
 }
 
 /**
@@ -5589,10 +6688,11 @@ export const DexApi = function(configuration?: Configuration, fetch: FetchAPI = 
 export const SushiswapApiFetchParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * 
+         * Gets bundles.
+         * @summary GetBundles (historical)
          * @throws {RequiredError}
          */
-        dappsSushiswapBundlesHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
+        sushiswapGetBundlesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
             const localVarPath = `/dapps/sushiswap/bundles/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
@@ -5626,10 +6726,11 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * 
+         * Gets burns.
+         * @summary GetBurns (historical)
          * @throws {RequiredError}
          */
-        dappsSushiswapBurnsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
+        sushiswapGetBurnsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
             const localVarPath = `/dapps/sushiswap/burns/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
@@ -5667,10 +6768,11 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * 
+         * Gets day data.
+         * @summary GetDayData (historical)
          * @throws {RequiredError}
          */
-        dappsSushiswapDayDataHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
+        sushiswapGetDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
             const localVarPath = `/dapps/sushiswap/dayData/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
@@ -5704,10 +6806,11 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * 
+         * Gets factory.
+         * @summary GetFactory (historical)
          * @throws {RequiredError}
          */
-        dappsSushiswapFactoryHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
+        sushiswapGetFactoryHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
             const localVarPath = `/dapps/sushiswap/factory/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
@@ -5741,10 +6844,11 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * 
+         * Gets hour data.
+         * @summary GetHourData (historical)
          * @throws {RequiredError}
          */
-        dappsSushiswapHourDataHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
+        sushiswapGetHourDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
             const localVarPath = `/dapps/sushiswap/hourData/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
@@ -5778,10 +6882,11 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * 
+         * Gets liquidity position.
+         * @summary GetLiquidityPosition (historical)
          * @throws {RequiredError}
          */
-        dappsSushiswapLiquidityPositionHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
+        sushiswapGetLiquidityPositionHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
             const localVarPath = `/dapps/sushiswap/liquidityPosition/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
@@ -5819,10 +6924,11 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * 
+         * Gets liquidity position snapshot.
+         * @summary GetLiquidityPositionSnapshot (historical)
          * @throws {RequiredError}
          */
-        dappsSushiswapLiquidityPositionSnapshotsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
+        sushiswapGetLiquidityPositionSnapshotHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
             const localVarPath = `/dapps/sushiswap/liquidityPositionSnapshots/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
@@ -5860,10 +6966,11 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * 
+         * Gets mints.
+         * @summary GetMints (historical)
          * @throws {RequiredError}
          */
-        dappsSushiswapMintsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
+        sushiswapGetMintsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
             const localVarPath = `/dapps/sushiswap/mints/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
@@ -5901,203 +7008,6 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * 
-         * @throws {RequiredError}
-         */
-        dappsSushiswapPoolDayDataHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/poolDayData/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @throws {RequiredError}
-         */
-        dappsSushiswapPoolHourDataHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/poolHourData/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @throws {RequiredError}
-         */
-        dappsSushiswapTokenDayDataHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/tokenDayData/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (tokenId !== undefined) {
-                localVarQueryParameter['tokenId'] = ((tokenId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @throws {RequiredError}
-         */
-        dappsSushiswapTransactionsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/transactions/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @throws {RequiredError}
-         */
-        dappsSushiswapUsersHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/users/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
          * Gets pools.
          * @summary GetPools (current)
          * @throws {RequiredError}
@@ -6120,12 +7030,96 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
+         * Gets pools day data.
+         * @summary GetPoolsDayData (historical)
+         * @throws {RequiredError}
+         */
+        sushiswapGetPoolsDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/sushiswap/poolsDayData/historical`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (startBlock !== undefined) {
+                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
+            }
+
+            if (endBlock !== undefined) {
+                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
+            }
+
+            if (startDate !== undefined) {
+                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
+            }
+
+            if (endDate !== undefined) {
+                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
+            }
+
+            if (poolId !== undefined) {
+                localVarQueryParameter['poolId'] = ((poolId:any):string);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Gets list of pools for given filters.
          * @summary GetPools (historical)
          * @throws {RequiredError}
          */
         sushiswapGetPoolsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
             const localVarPath = `/dapps/sushiswap/pools/historical`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (startBlock !== undefined) {
+                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
+            }
+
+            if (endBlock !== undefined) {
+                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
+            }
+
+            if (startDate !== undefined) {
+                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
+            }
+
+            if (endDate !== undefined) {
+                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
+            }
+
+            if (poolId !== undefined) {
+                localVarQueryParameter['poolId'] = ((poolId:any):string);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets pools tracked each our.
+         * @summary GetPoolsHourData (historical)
+         * @throws {RequiredError}
+         */
+        sushiswapGetPoolsHourDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/sushiswap/poolsHourData/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -6248,6 +7242,48 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
+         * Gets tokens day data.
+         * @summary GetTokensDayData (historical)
+         * @throws {RequiredError}
+         */
+        sushiswapGetTokensDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/sushiswap/tokensDayData/historical`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (startBlock !== undefined) {
+                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
+            }
+
+            if (endBlock !== undefined) {
+                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
+            }
+
+            if (startDate !== undefined) {
+                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
+            }
+
+            if (endDate !== undefined) {
+                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
+            }
+
+            if (tokenId !== undefined) {
+                localVarQueryParameter['tokenId'] = ((tokenId:any):string);
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Gets list of tokens for given filters.
          * @summary GetTokens (historical)
          * @throws {RequiredError}
@@ -6289,47 +7325,123 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
                 options: localVarRequestOptions,
             };
         },
+        /**
+         * Gets transactions.
+         * @summary GetTransactions (historical)
+         * @throws {RequiredError}
+         */
+        sushiswapGetTransactionsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/sushiswap/transactions/historical`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (startBlock !== undefined) {
+                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
+            }
+
+            if (endBlock !== undefined) {
+                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
+            }
+
+            if (startDate !== undefined) {
+                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
+            }
+
+            if (endDate !== undefined) {
+                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Gets users.
+         * @summary GetUsers (historical)
+         * @throws {RequiredError}
+         */
+        sushiswapGetUsersHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/sushiswap/users/historical`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+
+            if (startBlock !== undefined) {
+                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
+            }
+
+            if (endBlock !== undefined) {
+                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
+            }
+
+            if (startDate !== undefined) {
+                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
+            }
+
+            if (endDate !== undefined) {
+                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
+            }
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
     }
 };
 
 export type SushiswapApiType = { 
-    dappsSushiswapBundlesHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Response>,
+    sushiswapGetBundlesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Array<SushiswapBundleDTO>>,
 
-    dappsSushiswapBurnsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Response>,
+    sushiswapGetBurnsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<SushiswapBurnDTO>>,
 
-    dappsSushiswapDayDataHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Response>,
+    sushiswapGetDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Array<SushiswapDayDataDTO>>,
 
-    dappsSushiswapFactoryHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Response>,
+    sushiswapGetFactoryHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Array<SushiswapFactoryDTO>>,
 
-    dappsSushiswapHourDataHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Response>,
+    sushiswapGetHourDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Array<SushiswapHourDataDTO>>,
 
-    dappsSushiswapLiquidityPositionHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Response>,
+    sushiswapGetLiquidityPositionHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<SushiswapLiquidityPositionDTO>>,
 
-    dappsSushiswapLiquidityPositionSnapshotsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Response>,
+    sushiswapGetLiquidityPositionSnapshotHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<SushiswapLiquidityPositionSnapshotDTO>>,
 
-    dappsSushiswapMintsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Response>,
-
-    dappsSushiswapPoolDayDataHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Response>,
-
-    dappsSushiswapPoolHourDataHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Response>,
-
-    dappsSushiswapTokenDayDataHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions): Promise<Response>,
-
-    dappsSushiswapTransactionsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Response>,
-
-    dappsSushiswapUsersHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Response>,
+    sushiswapGetMintsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<SushiswapMintDTO>>,
 
     sushiswapGetPoolsCurrent(options?: RequestOptions): Promise<Array<SushiswapPairDTO>>,
 
+    sushiswapGetPoolsDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<SushiswapPairDayDataDTO>>,
+
     sushiswapGetPoolsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<SushiswapPairDTO>>,
 
-    sushiswapGetSwapsCurrent(options?: RequestOptions): Promise<SushiswapSwapDTO>,
+    sushiswapGetPoolsHourDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<SushiswapPairHourDataDTO>>,
+
+    sushiswapGetSwapsCurrent(options?: RequestOptions): Promise<Array<SushiswapSwapDTO>>,
 
     sushiswapGetSwapsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<SushiswapSwapDTO>>,
 
-    sushiswapGetTokensCurrent(options?: RequestOptions): Promise<SushiswapTokenDTO>,
+    sushiswapGetTokensCurrent(options?: RequestOptions): Promise<Array<SushiswapTokenDTO>>,
+
+    sushiswapGetTokensDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions): Promise<Array<SushiswapTokenDayDataDTO>>,
 
     sushiswapGetTokensHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions): Promise<Array<SushiswapTokenDTO>>,
+
+    sushiswapGetTransactionsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Array<SushiswapTransactionDTO>>,
+
+    sushiswapGetUsersHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Array<SushiswapUserDTO>>,
 }
 
 /**
@@ -6340,182 +7452,120 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
     const basePath: string = (configuration && configuration.basePath) || BASE_PATH;
     return {
         /**
-         * 
+         * Gets bundles.
+         * @summary GetBundles (historical)
          * @throws {RequiredError}
          */
-        dappsSushiswapBundlesHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Response> {
-            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).dappsSushiswapBundlesHistoricalGet(startBlock, endBlock, startDate, endDate, options);
+        sushiswapGetBundlesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Array<SushiswapBundleDTO>> {
+            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapGetBundlesHistorical(startBlock, endBlock, startDate, endDate, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
-                    return response;
+                    return response.json();
                 } else {
                     throw response;
                 }
             });
         },
         /**
-         * 
+         * Gets burns.
+         * @summary GetBurns (historical)
          * @throws {RequiredError}
          */
-        dappsSushiswapBurnsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Response> {
-            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).dappsSushiswapBurnsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId, options);
+        sushiswapGetBurnsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<SushiswapBurnDTO>> {
+            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapGetBurnsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
-                    return response;
+                    return response.json();
                 } else {
                     throw response;
                 }
             });
         },
         /**
-         * 
+         * Gets day data.
+         * @summary GetDayData (historical)
          * @throws {RequiredError}
          */
-        dappsSushiswapDayDataHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Response> {
-            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).dappsSushiswapDayDataHistoricalGet(startBlock, endBlock, startDate, endDate, options);
+        sushiswapGetDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Array<SushiswapDayDataDTO>> {
+            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapGetDayDataHistorical(startBlock, endBlock, startDate, endDate, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
-                    return response;
+                    return response.json();
                 } else {
                     throw response;
                 }
             });
         },
         /**
-         * 
+         * Gets factory.
+         * @summary GetFactory (historical)
          * @throws {RequiredError}
          */
-        dappsSushiswapFactoryHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Response> {
-            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).dappsSushiswapFactoryHistoricalGet(startBlock, endBlock, startDate, endDate, options);
+        sushiswapGetFactoryHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Array<SushiswapFactoryDTO>> {
+            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapGetFactoryHistorical(startBlock, endBlock, startDate, endDate, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
-                    return response;
+                    return response.json();
                 } else {
                     throw response;
                 }
             });
         },
         /**
-         * 
+         * Gets hour data.
+         * @summary GetHourData (historical)
          * @throws {RequiredError}
          */
-        dappsSushiswapHourDataHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Response> {
-            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).dappsSushiswapHourDataHistoricalGet(startBlock, endBlock, startDate, endDate, options);
+        sushiswapGetHourDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Array<SushiswapHourDataDTO>> {
+            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapGetHourDataHistorical(startBlock, endBlock, startDate, endDate, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
-                    return response;
+                    return response.json();
                 } else {
                     throw response;
                 }
             });
         },
         /**
-         * 
+         * Gets liquidity position.
+         * @summary GetLiquidityPosition (historical)
          * @throws {RequiredError}
          */
-        dappsSushiswapLiquidityPositionHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Response> {
-            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).dappsSushiswapLiquidityPositionHistoricalGet(startBlock, endBlock, startDate, endDate, poolId, options);
+        sushiswapGetLiquidityPositionHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<SushiswapLiquidityPositionDTO>> {
+            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapGetLiquidityPositionHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
-                    return response;
+                    return response.json();
                 } else {
                     throw response;
                 }
             });
         },
         /**
-         * 
+         * Gets liquidity position snapshot.
+         * @summary GetLiquidityPositionSnapshot (historical)
          * @throws {RequiredError}
          */
-        dappsSushiswapLiquidityPositionSnapshotsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Response> {
-            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).dappsSushiswapLiquidityPositionSnapshotsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId, options);
+        sushiswapGetLiquidityPositionSnapshotHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<SushiswapLiquidityPositionSnapshotDTO>> {
+            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapGetLiquidityPositionSnapshotHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
-                    return response;
+                    return response.json();
                 } else {
                     throw response;
                 }
             });
         },
         /**
-         * 
+         * Gets mints.
+         * @summary GetMints (historical)
          * @throws {RequiredError}
          */
-        dappsSushiswapMintsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Response> {
-            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).dappsSushiswapMintsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId, options);
+        sushiswapGetMintsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<SushiswapMintDTO>> {
+            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapGetMintsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
-                    return response;
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * 
-         * @throws {RequiredError}
-         */
-        dappsSushiswapPoolDayDataHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Response> {
-            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).dappsSushiswapPoolDayDataHistoricalGet(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response;
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * 
-         * @throws {RequiredError}
-         */
-        dappsSushiswapPoolHourDataHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Response> {
-            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).dappsSushiswapPoolHourDataHistoricalGet(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response;
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * 
-         * @throws {RequiredError}
-         */
-        dappsSushiswapTokenDayDataHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions = {}): Promise<Response> {
-            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).dappsSushiswapTokenDayDataHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response;
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * 
-         * @throws {RequiredError}
-         */
-        dappsSushiswapTransactionsHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Response> {
-            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).dappsSushiswapTransactionsHistoricalGet(startBlock, endBlock, startDate, endDate, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response;
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * 
-         * @throws {RequiredError}
-         */
-        dappsSushiswapUsersHistoricalGet(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Response> {
-            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).dappsSushiswapUsersHistoricalGet(startBlock, endBlock, startDate, endDate, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response;
+                    return response.json();
                 } else {
                     throw response;
                 }
@@ -6528,6 +7578,21 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
          */
         sushiswapGetPoolsCurrent(options?: RequestOptions = {}): Promise<Array<SushiswapPairDTO>> {
             const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapGetPoolsCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets pools day data.
+         * @summary GetPoolsDayData (historical)
+         * @throws {RequiredError}
+         */
+        sushiswapGetPoolsDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<SushiswapPairDayDataDTO>> {
+            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapGetPoolsDayDataHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -6552,11 +7617,26 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
+         * Gets pools tracked each our.
+         * @summary GetPoolsHourData (historical)
+         * @throws {RequiredError}
+         */
+        sushiswapGetPoolsHourDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<SushiswapPairHourDataDTO>> {
+            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapGetPoolsHourDataHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
          * Gets swaps.
          * @summary GetSwaps (current)
          * @throws {RequiredError}
          */
-        sushiswapGetSwapsCurrent(options?: RequestOptions = {}): Promise<SushiswapSwapDTO> {
+        sushiswapGetSwapsCurrent(options?: RequestOptions = {}): Promise<Array<SushiswapSwapDTO>> {
             const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapGetSwapsCurrent(options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
@@ -6586,8 +7666,23 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
          * @summary GetTokens (current)
          * @throws {RequiredError}
          */
-        sushiswapGetTokensCurrent(options?: RequestOptions = {}): Promise<SushiswapTokenDTO> {
+        sushiswapGetTokensCurrent(options?: RequestOptions = {}): Promise<Array<SushiswapTokenDTO>> {
             const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapGetTokensCurrent(options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets tokens day data.
+         * @summary GetTokensDayData (historical)
+         * @throws {RequiredError}
+         */
+        sushiswapGetTokensDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions = {}): Promise<Array<SushiswapTokenDayDataDTO>> {
+            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapGetTokensDayDataHistorical(startBlock, endBlock, startDate, endDate, tokenId, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -6603,6 +7698,36 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
          */
         sushiswapGetTokensHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions = {}): Promise<Array<SushiswapTokenDTO>> {
             const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapGetTokensHistorical(startBlock, endBlock, startDate, endDate, tokenId, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets transactions.
+         * @summary GetTransactions (historical)
+         * @throws {RequiredError}
+         */
+        sushiswapGetTransactionsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Array<SushiswapTransactionDTO>> {
+            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapGetTransactionsHistorical(startBlock, endBlock, startDate, endDate, options);
+            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                if (response.status >= 200 && response.status < 300) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            });
+        },
+        /**
+         * Gets users.
+         * @summary GetUsers (historical)
+         * @throws {RequiredError}
+         */
+        sushiswapGetUsersHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Array<SushiswapUserDTO>> {
+            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapGetUsersHistorical(startBlock, endBlock, startDate, endDate, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();

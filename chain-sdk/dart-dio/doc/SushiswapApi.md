@@ -9,31 +9,33 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**dappsSushiswapBundlesHistoricalGet**](SushiswapApi.md#dappssushiswapbundleshistoricalget) | **GET** /dapps/sushiswap/bundles/historical | 
-[**dappsSushiswapBurnsHistoricalGet**](SushiswapApi.md#dappssushiswapburnshistoricalget) | **GET** /dapps/sushiswap/burns/historical | 
-[**dappsSushiswapDayDataHistoricalGet**](SushiswapApi.md#dappssushiswapdaydatahistoricalget) | **GET** /dapps/sushiswap/dayData/historical | 
-[**dappsSushiswapFactoryHistoricalGet**](SushiswapApi.md#dappssushiswapfactoryhistoricalget) | **GET** /dapps/sushiswap/factory/historical | 
-[**dappsSushiswapHourDataHistoricalGet**](SushiswapApi.md#dappssushiswaphourdatahistoricalget) | **GET** /dapps/sushiswap/hourData/historical | 
-[**dappsSushiswapLiquidityPositionHistoricalGet**](SushiswapApi.md#dappssushiswapliquiditypositionhistoricalget) | **GET** /dapps/sushiswap/liquidityPosition/historical | 
-[**dappsSushiswapLiquidityPositionSnapshotsHistoricalGet**](SushiswapApi.md#dappssushiswapliquiditypositionsnapshotshistoricalget) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/historical | 
-[**dappsSushiswapMintsHistoricalGet**](SushiswapApi.md#dappssushiswapmintshistoricalget) | **GET** /dapps/sushiswap/mints/historical | 
-[**dappsSushiswapPoolDayDataHistoricalGet**](SushiswapApi.md#dappssushiswappooldaydatahistoricalget) | **GET** /dapps/sushiswap/poolDayData/historical | 
-[**dappsSushiswapPoolHourDataHistoricalGet**](SushiswapApi.md#dappssushiswappoolhourdatahistoricalget) | **GET** /dapps/sushiswap/poolHourData/historical | 
-[**dappsSushiswapTokenDayDataHistoricalGet**](SushiswapApi.md#dappssushiswaptokendaydatahistoricalget) | **GET** /dapps/sushiswap/tokenDayData/historical | 
-[**dappsSushiswapTransactionsHistoricalGet**](SushiswapApi.md#dappssushiswaptransactionshistoricalget) | **GET** /dapps/sushiswap/transactions/historical | 
-[**dappsSushiswapUsersHistoricalGet**](SushiswapApi.md#dappssushiswapusershistoricalget) | **GET** /dapps/sushiswap/users/historical | 
+[**sushiswapGetBundlesHistorical**](SushiswapApi.md#sushiswapgetbundleshistorical) | **GET** /dapps/sushiswap/bundles/historical | GetBundles (historical)
+[**sushiswapGetBurnsHistorical**](SushiswapApi.md#sushiswapgetburnshistorical) | **GET** /dapps/sushiswap/burns/historical | GetBurns (historical)
+[**sushiswapGetDayDataHistorical**](SushiswapApi.md#sushiswapgetdaydatahistorical) | **GET** /dapps/sushiswap/dayData/historical | GetDayData (historical)
+[**sushiswapGetFactoryHistorical**](SushiswapApi.md#sushiswapgetfactoryhistorical) | **GET** /dapps/sushiswap/factory/historical | GetFactory (historical)
+[**sushiswapGetHourDataHistorical**](SushiswapApi.md#sushiswapgethourdatahistorical) | **GET** /dapps/sushiswap/hourData/historical | GetHourData (historical)
+[**sushiswapGetLiquidityPositionHistorical**](SushiswapApi.md#sushiswapgetliquiditypositionhistorical) | **GET** /dapps/sushiswap/liquidityPosition/historical | GetLiquidityPosition (historical)
+[**sushiswapGetLiquidityPositionSnapshotHistorical**](SushiswapApi.md#sushiswapgetliquiditypositionsnapshothistorical) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/historical | GetLiquidityPositionSnapshot (historical)
+[**sushiswapGetMintsHistorical**](SushiswapApi.md#sushiswapgetmintshistorical) | **GET** /dapps/sushiswap/mints/historical | GetMints (historical)
 [**sushiswapGetPoolsCurrent**](SushiswapApi.md#sushiswapgetpoolscurrent) | **GET** /dapps/sushiswap/pools/current | GetPools (current)
+[**sushiswapGetPoolsDayDataHistorical**](SushiswapApi.md#sushiswapgetpoolsdaydatahistorical) | **GET** /dapps/sushiswap/poolsDayData/historical | GetPoolsDayData (historical)
 [**sushiswapGetPoolsHistorical**](SushiswapApi.md#sushiswapgetpoolshistorical) | **GET** /dapps/sushiswap/pools/historical | GetPools (historical)
+[**sushiswapGetPoolsHourDataHistorical**](SushiswapApi.md#sushiswapgetpoolshourdatahistorical) | **GET** /dapps/sushiswap/poolsHourData/historical | GetPoolsHourData (historical)
 [**sushiswapGetSwapsCurrent**](SushiswapApi.md#sushiswapgetswapscurrent) | **GET** /dapps/sushiswap/swaps/current | GetSwaps (current)
 [**sushiswapGetSwapsHistorical**](SushiswapApi.md#sushiswapgetswapshistorical) | **GET** /dapps/sushiswap/swaps/historical | GetSwaps (historical)
 [**sushiswapGetTokensCurrent**](SushiswapApi.md#sushiswapgettokenscurrent) | **GET** /dapps/sushiswap/tokens/current | GetTokens (current)
+[**sushiswapGetTokensDayDataHistorical**](SushiswapApi.md#sushiswapgettokensdaydatahistorical) | **GET** /dapps/sushiswap/tokensDayData/historical | GetTokensDayData (historical)
 [**sushiswapGetTokensHistorical**](SushiswapApi.md#sushiswapgettokenshistorical) | **GET** /dapps/sushiswap/tokens/historical | GetTokens (historical)
+[**sushiswapGetTransactionsHistorical**](SushiswapApi.md#sushiswapgettransactionshistorical) | **GET** /dapps/sushiswap/transactions/historical | GetTransactions (historical)
+[**sushiswapGetUsersHistorical**](SushiswapApi.md#sushiswapgetusershistorical) | **GET** /dapps/sushiswap/users/historical | GetUsers (historical)
 
 
-# **dappsSushiswapBundlesHistoricalGet**
-> dappsSushiswapBundlesHistoricalGet(startBlock, endBlock, startDate, endDate)
+# **sushiswapGetBundlesHistorical**
+> BuiltList<SushiswapBundleDTO> sushiswapGetBundlesHistorical(startBlock, endBlock, startDate, endDate)
 
+GetBundles (historical)
 
+Gets bundles.
 
 ### Example
 ```dart
@@ -46,9 +48,10 @@ final DateTime startDate = 2013-10-20T19:20:30+01:00; // DateTime |
 final DateTime endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
 
 try {
-    api.dappsSushiswapBundlesHistoricalGet(startBlock, endBlock, startDate, endDate);
+    final response = api.sushiswapGetBundlesHistorical(startBlock, endBlock, startDate, endDate);
+    print(response);
 } catch on DioError (e) {
-    print('Exception when calling SushiswapApi->dappsSushiswapBundlesHistoricalGet: $e\n');
+    print('Exception when calling SushiswapApi->sushiswapGetBundlesHistorical: $e\n');
 }
 ```
 
@@ -63,7 +66,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**BuiltList&lt;SushiswapBundleDTO&gt;**](SushiswapBundleDTO.md)
 
 ### Authorization
 
@@ -72,14 +75,16 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dappsSushiswapBurnsHistoricalGet**
-> dappsSushiswapBurnsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+# **sushiswapGetBurnsHistorical**
+> BuiltList<SushiswapBurnDTO> sushiswapGetBurnsHistorical(startBlock, endBlock, startDate, endDate, poolId)
 
+GetBurns (historical)
 
+Gets burns.
 
 ### Example
 ```dart
@@ -93,9 +98,10 @@ final DateTime endDate = 2013-10-20T19:20:30+01:00; // DateTime |
 final String poolId = poolId_example; // String | 
 
 try {
-    api.dappsSushiswapBurnsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+    final response = api.sushiswapGetBurnsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+    print(response);
 } catch on DioError (e) {
-    print('Exception when calling SushiswapApi->dappsSushiswapBurnsHistoricalGet: $e\n');
+    print('Exception when calling SushiswapApi->sushiswapGetBurnsHistorical: $e\n');
 }
 ```
 
@@ -111,7 +117,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**BuiltList&lt;SushiswapBurnDTO&gt;**](SushiswapBurnDTO.md)
 
 ### Authorization
 
@@ -120,14 +126,16 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dappsSushiswapDayDataHistoricalGet**
-> dappsSushiswapDayDataHistoricalGet(startBlock, endBlock, startDate, endDate)
+# **sushiswapGetDayDataHistorical**
+> BuiltList<SushiswapDayDataDTO> sushiswapGetDayDataHistorical(startBlock, endBlock, startDate, endDate)
 
+GetDayData (historical)
 
+Gets day data.
 
 ### Example
 ```dart
@@ -140,9 +148,10 @@ final DateTime startDate = 2013-10-20T19:20:30+01:00; // DateTime |
 final DateTime endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
 
 try {
-    api.dappsSushiswapDayDataHistoricalGet(startBlock, endBlock, startDate, endDate);
+    final response = api.sushiswapGetDayDataHistorical(startBlock, endBlock, startDate, endDate);
+    print(response);
 } catch on DioError (e) {
-    print('Exception when calling SushiswapApi->dappsSushiswapDayDataHistoricalGet: $e\n');
+    print('Exception when calling SushiswapApi->sushiswapGetDayDataHistorical: $e\n');
 }
 ```
 
@@ -157,7 +166,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**BuiltList&lt;SushiswapDayDataDTO&gt;**](SushiswapDayDataDTO.md)
 
 ### Authorization
 
@@ -166,14 +175,16 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dappsSushiswapFactoryHistoricalGet**
-> dappsSushiswapFactoryHistoricalGet(startBlock, endBlock, startDate, endDate)
+# **sushiswapGetFactoryHistorical**
+> BuiltList<SushiswapFactoryDTO> sushiswapGetFactoryHistorical(startBlock, endBlock, startDate, endDate)
 
+GetFactory (historical)
 
+Gets factory.
 
 ### Example
 ```dart
@@ -186,9 +197,10 @@ final DateTime startDate = 2013-10-20T19:20:30+01:00; // DateTime |
 final DateTime endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
 
 try {
-    api.dappsSushiswapFactoryHistoricalGet(startBlock, endBlock, startDate, endDate);
+    final response = api.sushiswapGetFactoryHistorical(startBlock, endBlock, startDate, endDate);
+    print(response);
 } catch on DioError (e) {
-    print('Exception when calling SushiswapApi->dappsSushiswapFactoryHistoricalGet: $e\n');
+    print('Exception when calling SushiswapApi->sushiswapGetFactoryHistorical: $e\n');
 }
 ```
 
@@ -203,7 +215,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**BuiltList&lt;SushiswapFactoryDTO&gt;**](SushiswapFactoryDTO.md)
 
 ### Authorization
 
@@ -212,14 +224,16 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dappsSushiswapHourDataHistoricalGet**
-> dappsSushiswapHourDataHistoricalGet(startBlock, endBlock, startDate, endDate)
+# **sushiswapGetHourDataHistorical**
+> BuiltList<SushiswapHourDataDTO> sushiswapGetHourDataHistorical(startBlock, endBlock, startDate, endDate)
 
+GetHourData (historical)
 
+Gets hour data.
 
 ### Example
 ```dart
@@ -232,9 +246,10 @@ final DateTime startDate = 2013-10-20T19:20:30+01:00; // DateTime |
 final DateTime endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
 
 try {
-    api.dappsSushiswapHourDataHistoricalGet(startBlock, endBlock, startDate, endDate);
+    final response = api.sushiswapGetHourDataHistorical(startBlock, endBlock, startDate, endDate);
+    print(response);
 } catch on DioError (e) {
-    print('Exception when calling SushiswapApi->dappsSushiswapHourDataHistoricalGet: $e\n');
+    print('Exception when calling SushiswapApi->sushiswapGetHourDataHistorical: $e\n');
 }
 ```
 
@@ -249,7 +264,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**BuiltList&lt;SushiswapHourDataDTO&gt;**](SushiswapHourDataDTO.md)
 
 ### Authorization
 
@@ -258,14 +273,16 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dappsSushiswapLiquidityPositionHistoricalGet**
-> dappsSushiswapLiquidityPositionHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+# **sushiswapGetLiquidityPositionHistorical**
+> BuiltList<SushiswapLiquidityPositionDTO> sushiswapGetLiquidityPositionHistorical(startBlock, endBlock, startDate, endDate, poolId)
 
+GetLiquidityPosition (historical)
 
+Gets liquidity position.
 
 ### Example
 ```dart
@@ -279,9 +296,10 @@ final DateTime endDate = 2013-10-20T19:20:30+01:00; // DateTime |
 final String poolId = poolId_example; // String | 
 
 try {
-    api.dappsSushiswapLiquidityPositionHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+    final response = api.sushiswapGetLiquidityPositionHistorical(startBlock, endBlock, startDate, endDate, poolId);
+    print(response);
 } catch on DioError (e) {
-    print('Exception when calling SushiswapApi->dappsSushiswapLiquidityPositionHistoricalGet: $e\n');
+    print('Exception when calling SushiswapApi->sushiswapGetLiquidityPositionHistorical: $e\n');
 }
 ```
 
@@ -297,7 +315,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**BuiltList&lt;SushiswapLiquidityPositionDTO&gt;**](SushiswapLiquidityPositionDTO.md)
 
 ### Authorization
 
@@ -306,14 +324,16 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dappsSushiswapLiquidityPositionSnapshotsHistoricalGet**
-> dappsSushiswapLiquidityPositionSnapshotsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+# **sushiswapGetLiquidityPositionSnapshotHistorical**
+> BuiltList<SushiswapLiquidityPositionSnapshotDTO> sushiswapGetLiquidityPositionSnapshotHistorical(startBlock, endBlock, startDate, endDate, poolId)
 
+GetLiquidityPositionSnapshot (historical)
 
+Gets liquidity position snapshot.
 
 ### Example
 ```dart
@@ -327,9 +347,10 @@ final DateTime endDate = 2013-10-20T19:20:30+01:00; // DateTime |
 final String poolId = poolId_example; // String | 
 
 try {
-    api.dappsSushiswapLiquidityPositionSnapshotsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+    final response = api.sushiswapGetLiquidityPositionSnapshotHistorical(startBlock, endBlock, startDate, endDate, poolId);
+    print(response);
 } catch on DioError (e) {
-    print('Exception when calling SushiswapApi->dappsSushiswapLiquidityPositionSnapshotsHistoricalGet: $e\n');
+    print('Exception when calling SushiswapApi->sushiswapGetLiquidityPositionSnapshotHistorical: $e\n');
 }
 ```
 
@@ -345,7 +366,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**BuiltList&lt;SushiswapLiquidityPositionSnapshotDTO&gt;**](SushiswapLiquidityPositionSnapshotDTO.md)
 
 ### Authorization
 
@@ -354,14 +375,16 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dappsSushiswapMintsHistoricalGet**
-> dappsSushiswapMintsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+# **sushiswapGetMintsHistorical**
+> BuiltList<SushiswapMintDTO> sushiswapGetMintsHistorical(startBlock, endBlock, startDate, endDate, poolId)
 
+GetMints (historical)
 
+Gets mints.
 
 ### Example
 ```dart
@@ -375,9 +398,10 @@ final DateTime endDate = 2013-10-20T19:20:30+01:00; // DateTime |
 final String poolId = poolId_example; // String | 
 
 try {
-    api.dappsSushiswapMintsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+    final response = api.sushiswapGetMintsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+    print(response);
 } catch on DioError (e) {
-    print('Exception when calling SushiswapApi->dappsSushiswapMintsHistoricalGet: $e\n');
+    print('Exception when calling SushiswapApi->sushiswapGetMintsHistorical: $e\n');
 }
 ```
 
@@ -393,7 +417,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**BuiltList&lt;SushiswapMintDTO&gt;**](SushiswapMintDTO.md)
 
 ### Authorization
 
@@ -402,243 +426,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **dappsSushiswapPoolDayDataHistoricalGet**
-> dappsSushiswapPoolDayDataHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
-
-
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-
-final api = Openapi().getSushiswapApi();
-final int startBlock = 789; // int | 
-final int endBlock = 789; // int | 
-final DateTime startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-final DateTime endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-final String poolId = poolId_example; // String | 
-
-try {
-    api.dappsSushiswapPoolDayDataHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
-} catch on DioError (e) {
-    print('Exception when calling SushiswapApi->dappsSushiswapPoolDayDataHistoricalGet: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **int**|  | [optional] 
- **endBlock** | **int**|  | [optional] 
- **startDate** | **DateTime**|  | [optional] 
- **endDate** | **DateTime**|  | [optional] 
- **poolId** | **String**|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **dappsSushiswapPoolHourDataHistoricalGet**
-> dappsSushiswapPoolHourDataHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
-
-
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-
-final api = Openapi().getSushiswapApi();
-final int startBlock = 789; // int | 
-final int endBlock = 789; // int | 
-final DateTime startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-final DateTime endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-final String poolId = poolId_example; // String | 
-
-try {
-    api.dappsSushiswapPoolHourDataHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
-} catch on DioError (e) {
-    print('Exception when calling SushiswapApi->dappsSushiswapPoolHourDataHistoricalGet: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **int**|  | [optional] 
- **endBlock** | **int**|  | [optional] 
- **startDate** | **DateTime**|  | [optional] 
- **endDate** | **DateTime**|  | [optional] 
- **poolId** | **String**|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **dappsSushiswapTokenDayDataHistoricalGet**
-> dappsSushiswapTokenDayDataHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId)
-
-
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-
-final api = Openapi().getSushiswapApi();
-final int startBlock = 789; // int | 
-final int endBlock = 789; // int | 
-final DateTime startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-final DateTime endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-final String tokenId = tokenId_example; // String | 
-
-try {
-    api.dappsSushiswapTokenDayDataHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId);
-} catch on DioError (e) {
-    print('Exception when calling SushiswapApi->dappsSushiswapTokenDayDataHistoricalGet: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **int**|  | [optional] 
- **endBlock** | **int**|  | [optional] 
- **startDate** | **DateTime**|  | [optional] 
- **endDate** | **DateTime**|  | [optional] 
- **tokenId** | **String**|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **dappsSushiswapTransactionsHistoricalGet**
-> dappsSushiswapTransactionsHistoricalGet(startBlock, endBlock, startDate, endDate)
-
-
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-
-final api = Openapi().getSushiswapApi();
-final int startBlock = 789; // int | 
-final int endBlock = 789; // int | 
-final DateTime startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-final DateTime endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-
-try {
-    api.dappsSushiswapTransactionsHistoricalGet(startBlock, endBlock, startDate, endDate);
-} catch on DioError (e) {
-    print('Exception when calling SushiswapApi->dappsSushiswapTransactionsHistoricalGet: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **int**|  | [optional] 
- **endBlock** | **int**|  | [optional] 
- **startDate** | **DateTime**|  | [optional] 
- **endDate** | **DateTime**|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **dappsSushiswapUsersHistoricalGet**
-> dappsSushiswapUsersHistoricalGet(startBlock, endBlock, startDate, endDate)
-
-
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-
-final api = Openapi().getSushiswapApi();
-final int startBlock = 789; // int | 
-final int endBlock = 789; // int | 
-final DateTime startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-final DateTime endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-
-try {
-    api.dappsSushiswapUsersHistoricalGet(startBlock, endBlock, startDate, endDate);
-} catch on DioError (e) {
-    print('Exception when calling SushiswapApi->dappsSushiswapUsersHistoricalGet: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **int**|  | [optional] 
- **endBlock** | **int**|  | [optional] 
- **startDate** | **DateTime**|  | [optional] 
- **endDate** | **DateTime**|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -669,6 +457,57 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**BuiltList&lt;SushiswapPairDTO&gt;**](SushiswapPairDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **sushiswapGetPoolsDayDataHistorical**
+> BuiltList<SushiswapPairDayDataDTO> sushiswapGetPoolsDayDataHistorical(startBlock, endBlock, startDate, endDate, poolId)
+
+GetPoolsDayData (historical)
+
+Gets pools day data.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getSushiswapApi();
+final int startBlock = 789; // int | 
+final int endBlock = 789; // int | 
+final DateTime startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final DateTime endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final String poolId = poolId_example; // String | 
+
+try {
+    final response = api.sushiswapGetPoolsDayDataHistorical(startBlock, endBlock, startDate, endDate, poolId);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling SushiswapApi->sushiswapGetPoolsDayDataHistorical: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int**|  | [optional] 
+ **endBlock** | **int**|  | [optional] 
+ **startDate** | **DateTime**|  | [optional] 
+ **endDate** | **DateTime**|  | [optional] 
+ **poolId** | **String**|  | [optional] 
+
+### Return type
+
+[**BuiltList&lt;SushiswapPairDayDataDTO&gt;**](SushiswapPairDayDataDTO.md)
 
 ### Authorization
 
@@ -732,8 +571,59 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **sushiswapGetPoolsHourDataHistorical**
+> BuiltList<SushiswapPairHourDataDTO> sushiswapGetPoolsHourDataHistorical(startBlock, endBlock, startDate, endDate, poolId)
+
+GetPoolsHourData (historical)
+
+Gets pools tracked each our.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getSushiswapApi();
+final int startBlock = 789; // int | 
+final int endBlock = 789; // int | 
+final DateTime startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final DateTime endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final String poolId = poolId_example; // String | 
+
+try {
+    final response = api.sushiswapGetPoolsHourDataHistorical(startBlock, endBlock, startDate, endDate, poolId);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling SushiswapApi->sushiswapGetPoolsHourDataHistorical: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int**|  | [optional] 
+ **endBlock** | **int**|  | [optional] 
+ **startDate** | **DateTime**|  | [optional] 
+ **endDate** | **DateTime**|  | [optional] 
+ **poolId** | **String**|  | [optional] 
+
+### Return type
+
+[**BuiltList&lt;SushiswapPairHourDataDTO&gt;**](SushiswapPairHourDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **sushiswapGetSwapsCurrent**
-> SushiswapSwapDTO sushiswapGetSwapsCurrent()
+> BuiltList<SushiswapSwapDTO> sushiswapGetSwapsCurrent()
 
 GetSwaps (current)
 
@@ -758,7 +648,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**SushiswapSwapDTO**](SushiswapSwapDTO.md)
+[**BuiltList&lt;SushiswapSwapDTO&gt;**](SushiswapSwapDTO.md)
 
 ### Authorization
 
@@ -823,7 +713,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **sushiswapGetTokensCurrent**
-> SushiswapTokenDTO sushiswapGetTokensCurrent()
+> BuiltList<SushiswapTokenDTO> sushiswapGetTokensCurrent()
 
 GetTokens (current)
 
@@ -848,7 +738,58 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**SushiswapTokenDTO**](SushiswapTokenDTO.md)
+[**BuiltList&lt;SushiswapTokenDTO&gt;**](SushiswapTokenDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **sushiswapGetTokensDayDataHistorical**
+> BuiltList<SushiswapTokenDayDataDTO> sushiswapGetTokensDayDataHistorical(startBlock, endBlock, startDate, endDate, tokenId)
+
+GetTokensDayData (historical)
+
+Gets tokens day data.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getSushiswapApi();
+final int startBlock = 789; // int | 
+final int endBlock = 789; // int | 
+final DateTime startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final DateTime endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final String tokenId = tokenId_example; // String | 
+
+try {
+    final response = api.sushiswapGetTokensDayDataHistorical(startBlock, endBlock, startDate, endDate, tokenId);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling SushiswapApi->sushiswapGetTokensDayDataHistorical: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int**|  | [optional] 
+ **endBlock** | **int**|  | [optional] 
+ **startDate** | **DateTime**|  | [optional] 
+ **endDate** | **DateTime**|  | [optional] 
+ **tokenId** | **String**|  | [optional] 
+
+### Return type
+
+[**BuiltList&lt;SushiswapTokenDayDataDTO&gt;**](SushiswapTokenDayDataDTO.md)
 
 ### Authorization
 
@@ -900,6 +841,104 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**BuiltList&lt;SushiswapTokenDTO&gt;**](SushiswapTokenDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **sushiswapGetTransactionsHistorical**
+> BuiltList<SushiswapTransactionDTO> sushiswapGetTransactionsHistorical(startBlock, endBlock, startDate, endDate)
+
+GetTransactions (historical)
+
+Gets transactions.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getSushiswapApi();
+final int startBlock = 789; // int | 
+final int endBlock = 789; // int | 
+final DateTime startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final DateTime endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+
+try {
+    final response = api.sushiswapGetTransactionsHistorical(startBlock, endBlock, startDate, endDate);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling SushiswapApi->sushiswapGetTransactionsHistorical: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int**|  | [optional] 
+ **endBlock** | **int**|  | [optional] 
+ **startDate** | **DateTime**|  | [optional] 
+ **endDate** | **DateTime**|  | [optional] 
+
+### Return type
+
+[**BuiltList&lt;SushiswapTransactionDTO&gt;**](SushiswapTransactionDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **sushiswapGetUsersHistorical**
+> BuiltList<SushiswapUserDTO> sushiswapGetUsersHistorical(startBlock, endBlock, startDate, endDate)
+
+GetUsers (historical)
+
+Gets users.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getSushiswapApi();
+final int startBlock = 789; // int | 
+final int endBlock = 789; // int | 
+final DateTime startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final DateTime endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+
+try {
+    final response = api.sushiswapGetUsersHistorical(startBlock, endBlock, startDate, endDate);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling SushiswapApi->sushiswapGetUsersHistorical: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int**|  | [optional] 
+ **endBlock** | **int**|  | [optional] 
+ **startDate** | **DateTime**|  | [optional] 
+ **endDate** | **DateTime**|  | [optional] 
+
+### Return type
+
+[**BuiltList&lt;SushiswapUserDTO&gt;**](SushiswapUserDTO.md)
 
 ### Authorization
 

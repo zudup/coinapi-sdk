@@ -205,100 +205,287 @@ package .Models is
 
 
 
-   type SushiswapTokenDTO_Type is
+   type SushiswapUserDTO_Type is
      record
        Entry_Time : Swagger.Nullable_Date;
        Recv_Time : Swagger.Nullable_Date;
        Block_Number : Swagger.Nullable_Long;
        Id : Swagger.Nullable_UString;
-       Factory : Swagger.Nullable_UString;
-       Symbol : Swagger.Nullable_UString;
-       Name : Swagger.Nullable_UString;
-       Decimals : Swagger.Nullable_UString;
-       Total_Supply : Swagger.Nullable_UString;
-       Volume : Swagger.Nullable_UString;
-       Volume_Usd : Swagger.Nullable_UString;
-       Untracked_Volume_Usd : Swagger.Nullable_UString;
-       Tx_Count : Swagger.Nullable_UString;
-       Liquidity : Swagger.Nullable_UString;
-       Derived_Eth : Swagger.Nullable_UString;
-       Whitelist_Pairs : Swagger.UString_Vectors.Vector;
        Vid : Swagger.Nullable_Long;
-       Token_Symbol : Swagger.Nullable_UString;
      end record;
 
-   package SushiswapTokenDTO_Type_Vectors is
+   package SushiswapUserDTO_Type_Vectors is
       new Ada.Containers.Vectors (Index_Type   => Positive,
-                                  Element_Type => SushiswapTokenDTO_Type);
+                                  Element_Type => SushiswapUserDTO_Type);
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in SushiswapTokenDTO_Type);
+                        Value : in SushiswapUserDTO_Type);
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in SushiswapTokenDTO_Type_Vectors.Vector);
+                        Value : in SushiswapUserDTO_Type_Vectors.Vector);
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out SushiswapTokenDTO_Type);
+                          Value : out SushiswapUserDTO_Type);
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out SushiswapTokenDTO_Type_Vectors.Vector);
+                          Value : out SushiswapUserDTO_Type_Vectors.Vector);
 
 
 
 
-   type SushiswapPairDTO_Type is
+   type SushiswapTokenDayDataDTO_Type is
      record
        Entry_Time : Swagger.Nullable_Date;
        Recv_Time : Swagger.Nullable_Date;
        Block_Number : Swagger.Nullable_Long;
        Id : Swagger.Nullable_UString;
-       Factory : Swagger.Nullable_UString;
-       Name : Swagger.Nullable_UString;
+       Date : Swagger.Nullable_Integer;
+       Token : Swagger.Nullable_UString;
+       Volume : Swagger.Nullable_UString;
+       Volume_Eth : Swagger.Nullable_UString;
+       Volume_Usd : Swagger.Nullable_UString;
+       Tx_Count : Swagger.Nullable_UString;
+       Liquidity : Swagger.Nullable_UString;
+       Liquidity_Eth : Swagger.Nullable_UString;
+       Liquidity_Usd : Swagger.Nullable_UString;
+       Price_Usd : Swagger.Nullable_UString;
+       Vid : Swagger.Nullable_Long;
+     end record;
+
+   package SushiswapTokenDayDataDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => SushiswapTokenDayDataDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SushiswapTokenDayDataDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SushiswapTokenDayDataDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SushiswapTokenDayDataDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SushiswapTokenDayDataDTO_Type_Vectors.Vector);
+
+
+
+
+   type SushiswapPairDayDataDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Id : Swagger.Nullable_UString;
+       Date : Swagger.Nullable_Integer;
+       Pair : Swagger.Nullable_UString;
        Token_0 : Swagger.Nullable_UString;
        Token_1 : Swagger.Nullable_UString;
        Reserve_0 : Swagger.Nullable_UString;
        Reserve_1 : Swagger.Nullable_UString;
        Total_Supply : Swagger.Nullable_UString;
-       Reserve_Eth : Swagger.Nullable_UString;
        Reserve_Usd : Swagger.Nullable_UString;
-       Tracked_Reserve_Eth : Swagger.Nullable_UString;
-       Token_0_Price : Swagger.Nullable_UString;
-       Token_1_Price : Swagger.Nullable_UString;
        Volume_Token_0 : Swagger.Nullable_UString;
        Volume_Token_1 : Swagger.Nullable_UString;
        Volume_Usd : Swagger.Nullable_UString;
-       Untracked_Volume_Usd : Swagger.Nullable_UString;
        Tx_Count : Swagger.Nullable_UString;
-       Liquidity_Provider_Count : Swagger.Nullable_UString;
-       Timestamp : Swagger.Nullable_UString;
-       Block : Swagger.Nullable_UString;
        Vid : Swagger.Nullable_Long;
-       Evaluated_Ask : double;
      end record;
 
-   package SushiswapPairDTO_Type_Vectors is
+   package SushiswapPairDayDataDTO_Type_Vectors is
       new Ada.Containers.Vectors (Index_Type   => Positive,
-                                  Element_Type => SushiswapPairDTO_Type);
+                                  Element_Type => SushiswapPairDayDataDTO_Type);
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in SushiswapPairDTO_Type);
+                        Value : in SushiswapPairDayDataDTO_Type);
 
    procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
                         Name  : in String;
-                        Value : in SushiswapPairDTO_Type_Vectors.Vector);
+                        Value : in SushiswapPairDayDataDTO_Type_Vectors.Vector);
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out SushiswapPairDTO_Type);
+                          Value : out SushiswapPairDayDataDTO_Type);
 
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
-                          Value : out SushiswapPairDTO_Type_Vectors.Vector);
+                          Value : out SushiswapPairDayDataDTO_Type_Vectors.Vector);
+
+
+
+
+   type SushiswapMintDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Id : Swagger.Nullable_UString;
+       Transaction : Swagger.Nullable_UString;
+       Timestamp : Swagger.Nullable_UString;
+       Pair : Swagger.Nullable_UString;
+       To : Swagger.Nullable_UString;
+       Liquidity : Swagger.Nullable_UString;
+       Sender : Swagger.Nullable_UString;
+       Amount_0 : Swagger.Nullable_UString;
+       Amount_1 : Swagger.Nullable_UString;
+       Log_Index : Swagger.Nullable_UString;
+       Amount_Usd : Swagger.Nullable_UString;
+       Fee_To : Swagger.Nullable_UString;
+       Fee_Liquidity : Swagger.Nullable_UString;
+       Vid : Swagger.Nullable_Long;
+     end record;
+
+   package SushiswapMintDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => SushiswapMintDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SushiswapMintDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SushiswapMintDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SushiswapMintDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SushiswapMintDTO_Type_Vectors.Vector);
+
+
+
+
+   type SushiswapLiquidityPositionDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Id : Swagger.Nullable_UString;
+       User : Swagger.Nullable_UString;
+       Pair : Swagger.Nullable_UString;
+       Liquidity_Token_Balance : Swagger.Nullable_UString;
+       Block : Swagger.Nullable_Integer;
+       Timestamp : Swagger.Nullable_Integer;
+       Vid : Swagger.Nullable_Long;
+     end record;
+
+   package SushiswapLiquidityPositionDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => SushiswapLiquidityPositionDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SushiswapLiquidityPositionDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SushiswapLiquidityPositionDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SushiswapLiquidityPositionDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SushiswapLiquidityPositionDTO_Type_Vectors.Vector);
+
+
+
+
+   type SushiswapFactoryDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Id : Swagger.Nullable_UString;
+       Pair_Count : Swagger.Nullable_UString;
+       Volume_Usd : Swagger.Nullable_UString;
+       Volume_Eth : Swagger.Nullable_UString;
+       Untracked_Volume_Usd : Swagger.Nullable_UString;
+       Liquidity_Usd : Swagger.Nullable_UString;
+       Liquidity_Eth : Swagger.Nullable_UString;
+       Tx_Count : Swagger.Nullable_UString;
+       Token_Count : Swagger.Nullable_UString;
+       User_Count : Swagger.Nullable_UString;
+       Vid : Swagger.Nullable_Long;
+     end record;
+
+   package SushiswapFactoryDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => SushiswapFactoryDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SushiswapFactoryDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SushiswapFactoryDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SushiswapFactoryDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SushiswapFactoryDTO_Type_Vectors.Vector);
+
+
+
+
+   type SushiswapBurnDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Id : Swagger.Nullable_UString;
+       Transaction : Swagger.Nullable_UString;
+       Timestamp : Swagger.Nullable_UString;
+       Pair : Swagger.Nullable_UString;
+       Liquidity : Swagger.Nullable_UString;
+       Sender : Swagger.Nullable_UString;
+       Amount_0 : Swagger.Nullable_UString;
+       Amount_1 : Swagger.Nullable_UString;
+       To : Swagger.Nullable_UString;
+       Log_Index : Swagger.Nullable_UString;
+       Amount_Usd : Swagger.Nullable_UString;
+       Complete : Swagger.Nullable_Boolean;
+       Fee_To : Swagger.Nullable_UString;
+       Fee_Liquidity : Swagger.Nullable_UString;
+       Vid : Swagger.Nullable_Long;
+     end record;
+
+   package SushiswapBurnDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => SushiswapBurnDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SushiswapBurnDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SushiswapBurnDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SushiswapBurnDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SushiswapBurnDTO_Type_Vectors.Vector);
 
 
 
@@ -622,6 +809,338 @@ package .Models is
    procedure Deserialize (From  : in Swagger.Value_Type;
                           Name  : in String;
                           Value : out UniswapV3PoolV3DTO_Type_Vectors.Vector);
+
+
+
+
+   type SushiswapBundleDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Id : Swagger.Nullable_UString;
+       Eth_Price : Swagger.Nullable_UString;
+       Vid : Swagger.Nullable_Long;
+     end record;
+
+   package SushiswapBundleDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => SushiswapBundleDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SushiswapBundleDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SushiswapBundleDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SushiswapBundleDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SushiswapBundleDTO_Type_Vectors.Vector);
+
+
+
+
+   type SushiswapDayDataDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Id : Swagger.Nullable_UString;
+       Date : Swagger.Nullable_Integer;
+       Factory : Swagger.Nullable_UString;
+       Volume_Eth : Swagger.Nullable_UString;
+       Volume_Usd : Swagger.Nullable_UString;
+       Untracked_Volume : Swagger.Nullable_UString;
+       Liquidity_Eth : Swagger.Nullable_UString;
+       Liquidity_Usd : Swagger.Nullable_UString;
+       Tx_Count : Swagger.Nullable_UString;
+       Vid : Swagger.Nullable_Long;
+     end record;
+
+   package SushiswapDayDataDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => SushiswapDayDataDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SushiswapDayDataDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SushiswapDayDataDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SushiswapDayDataDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SushiswapDayDataDTO_Type_Vectors.Vector);
+
+
+
+
+   type SushiswapHourDataDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Id : Swagger.Nullable_UString;
+       Date : Swagger.Nullable_Integer;
+       Factory : Swagger.Nullable_UString;
+       Volume_Eth : Swagger.Nullable_UString;
+       Volume_Usd : Swagger.Nullable_UString;
+       Untracked_Volume : Swagger.Nullable_UString;
+       Liquidity_Eth : Swagger.Nullable_UString;
+       Liquidity_Usd : Swagger.Nullable_UString;
+       Tx_Count : Swagger.Nullable_UString;
+       Vid : Swagger.Nullable_Long;
+     end record;
+
+   package SushiswapHourDataDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => SushiswapHourDataDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SushiswapHourDataDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SushiswapHourDataDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SushiswapHourDataDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SushiswapHourDataDTO_Type_Vectors.Vector);
+
+
+
+
+   type SushiswapLiquidityPositionSnapshotDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Id : Swagger.Nullable_UString;
+       Liquidity_Position : Swagger.Nullable_UString;
+       Timestamp : Swagger.Nullable_Integer;
+       Block : Swagger.Nullable_Integer;
+       User : Swagger.Nullable_UString;
+       Pair : Swagger.Nullable_UString;
+       Token_0_Price_Usd : Swagger.Nullable_UString;
+       Token_1_Price_Usd : Swagger.Nullable_UString;
+       Reserve_0 : Swagger.Nullable_UString;
+       Reserve_1 : Swagger.Nullable_UString;
+       Reserve_Usd : Swagger.Nullable_UString;
+       Liquidity_Token_Total_Supply : Swagger.Nullable_UString;
+       Liquidity_Token_Balance : Swagger.Nullable_UString;
+       Vid : Swagger.Nullable_Long;
+     end record;
+
+   package SushiswapLiquidityPositionSnapshotDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => SushiswapLiquidityPositionSnapshotDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SushiswapLiquidityPositionSnapshotDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SushiswapLiquidityPositionSnapshotDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SushiswapLiquidityPositionSnapshotDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SushiswapLiquidityPositionSnapshotDTO_Type_Vectors.Vector);
+
+
+
+
+   type SushiswapPairDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Id : Swagger.Nullable_UString;
+       Factory : Swagger.Nullable_UString;
+       Name : Swagger.Nullable_UString;
+       Token_0 : Swagger.Nullable_UString;
+       Token_1 : Swagger.Nullable_UString;
+       Reserve_0 : Swagger.Nullable_UString;
+       Reserve_1 : Swagger.Nullable_UString;
+       Total_Supply : Swagger.Nullable_UString;
+       Reserve_Eth : Swagger.Nullable_UString;
+       Reserve_Usd : Swagger.Nullable_UString;
+       Tracked_Reserve_Eth : Swagger.Nullable_UString;
+       Token_0_Price : Swagger.Nullable_UString;
+       Token_1_Price : Swagger.Nullable_UString;
+       Volume_Token_0 : Swagger.Nullable_UString;
+       Volume_Token_1 : Swagger.Nullable_UString;
+       Volume_Usd : Swagger.Nullable_UString;
+       Untracked_Volume_Usd : Swagger.Nullable_UString;
+       Tx_Count : Swagger.Nullable_UString;
+       Liquidity_Provider_Count : Swagger.Nullable_UString;
+       Timestamp : Swagger.Nullable_UString;
+       Block : Swagger.Nullable_UString;
+       Vid : Swagger.Nullable_Long;
+       Evaluated_Ask : double;
+     end record;
+
+   package SushiswapPairDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => SushiswapPairDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SushiswapPairDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SushiswapPairDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SushiswapPairDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SushiswapPairDTO_Type_Vectors.Vector);
+
+
+
+
+   type SushiswapPairHourDataDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Id : Swagger.Nullable_UString;
+       Date : Swagger.Nullable_Integer;
+       Pair : Swagger.Nullable_UString;
+       Reserve_0 : Swagger.Nullable_UString;
+       Reserve_1 : Swagger.Nullable_UString;
+       Reserve_Usd : Swagger.Nullable_UString;
+       Volume_Token_0 : Swagger.Nullable_UString;
+       Volume_Token_1 : Swagger.Nullable_UString;
+       Volume_Usd : Swagger.Nullable_UString;
+       Tx_Count : Swagger.Nullable_UString;
+       Vid : Swagger.Nullable_Long;
+     end record;
+
+   package SushiswapPairHourDataDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => SushiswapPairHourDataDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SushiswapPairHourDataDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SushiswapPairHourDataDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SushiswapPairHourDataDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SushiswapPairHourDataDTO_Type_Vectors.Vector);
+
+
+
+
+   type SushiswapTokenDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Id : Swagger.Nullable_UString;
+       Factory : Swagger.Nullable_UString;
+       Symbol : Swagger.Nullable_UString;
+       Name : Swagger.Nullable_UString;
+       Decimals : Swagger.Nullable_UString;
+       Total_Supply : Swagger.Nullable_UString;
+       Volume : Swagger.Nullable_UString;
+       Volume_Usd : Swagger.Nullable_UString;
+       Untracked_Volume_Usd : Swagger.Nullable_UString;
+       Tx_Count : Swagger.Nullable_UString;
+       Liquidity : Swagger.Nullable_UString;
+       Derived_Eth : Swagger.Nullable_UString;
+       Whitelist_Pairs : Swagger.UString_Vectors.Vector;
+       Vid : Swagger.Nullable_Long;
+       Token_Symbol : Swagger.Nullable_UString;
+     end record;
+
+   package SushiswapTokenDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => SushiswapTokenDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SushiswapTokenDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SushiswapTokenDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SushiswapTokenDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SushiswapTokenDTO_Type_Vectors.Vector);
+
+
+
+
+   type SushiswapTransactionDTO_Type is
+     record
+       Entry_Time : Swagger.Nullable_Date;
+       Recv_Time : Swagger.Nullable_Date;
+       Block_Number : Swagger.Nullable_Long;
+       Id : Swagger.Nullable_UString;
+       Timestamp : Swagger.Nullable_UString;
+       Mints : Swagger.UString_Vectors.Vector;
+       Burns : Swagger.UString_Vectors.Vector;
+       Swaps : Swagger.UString_Vectors.Vector;
+       Vid : Swagger.Nullable_Long;
+     end record;
+
+   package SushiswapTransactionDTO_Type_Vectors is
+      new Ada.Containers.Vectors (Index_Type   => Positive,
+                                  Element_Type => SushiswapTransactionDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SushiswapTransactionDTO_Type);
+
+   procedure Serialize (Into  : in out Swagger.Streams.Output_Stream'Class;
+                        Name  : in String;
+                        Value : in SushiswapTransactionDTO_Type_Vectors.Vector);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SushiswapTransactionDTO_Type);
+
+   procedure Deserialize (From  : in Swagger.Value_Type;
+                          Name  : in String;
+                          Value : out SushiswapTransactionDTO_Type_Vectors.Vector);
 
 
 

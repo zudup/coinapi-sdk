@@ -55,9 +55,22 @@ set(SRCS
     external/cJSON.c
     model/object.c
     model/numerics_big_integer.c
+    model/sushiswap_bundle_dto.c
+    model/sushiswap_burn_dto.c
+    model/sushiswap_day_data_dto.c
+    model/sushiswap_factory_dto.c
+    model/sushiswap_hour_data_dto.c
+    model/sushiswap_liquidity_position_dto.c
+    model/sushiswap_liquidity_position_snapshot_dto.c
+    model/sushiswap_mint_dto.c
+    model/sushiswap_pair_day_data_dto.c
     model/sushiswap_pair_dto.c
+    model/sushiswap_pair_hour_data_dto.c
     model/sushiswap_swap_dto.c
+    model/sushiswap_token_day_data_dto.c
     model/sushiswap_token_dto.c
+    model/sushiswap_transaction_dto.c
+    model/sushiswap_user_dto.c
     model/transactions_e_trade_aggressive_side.c
     model/uniswap_v2_pair_v2_dto.c
     model/uniswap_v2_swap_v2_dto.c
@@ -95,9 +108,22 @@ set(HDRS
     external/cJSON.h
     model/object.h
     model/numerics_big_integer.h
+    model/sushiswap_bundle_dto.h
+    model/sushiswap_burn_dto.h
+    model/sushiswap_day_data_dto.h
+    model/sushiswap_factory_dto.h
+    model/sushiswap_hour_data_dto.h
+    model/sushiswap_liquidity_position_dto.h
+    model/sushiswap_liquidity_position_snapshot_dto.h
+    model/sushiswap_mint_dto.h
+    model/sushiswap_pair_day_data_dto.h
     model/sushiswap_pair_dto.h
+    model/sushiswap_pair_hour_data_dto.h
     model/sushiswap_swap_dto.h
+    model/sushiswap_token_day_data_dto.h
     model/sushiswap_token_dto.h
+    model/sushiswap_transaction_dto.h
+    model/sushiswap_user_dto.h
     model/transactions_e_trade_aggressive_side.h
     model/uniswap_v2_pair_v2_dto.h
     model/uniswap_v2_swap_v2_dto.h

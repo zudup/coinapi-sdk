@@ -24,7 +24,7 @@ import (
 // SushiswapApiService SushiswapApi service
 type SushiswapApiService service
 
-type ApiDappsSushiswapBundlesHistoricalGetRequest struct {
+type ApiSushiswapGetBundlesHistoricalRequest struct {
 	ctx context.Context
 	ApiService *SushiswapApiService
 	startBlock *int64
@@ -33,54 +33,58 @@ type ApiDappsSushiswapBundlesHistoricalGetRequest struct {
 	endDate *time.Time
 }
 
-func (r ApiDappsSushiswapBundlesHistoricalGetRequest) StartBlock(startBlock int64) ApiDappsSushiswapBundlesHistoricalGetRequest {
+func (r ApiSushiswapGetBundlesHistoricalRequest) StartBlock(startBlock int64) ApiSushiswapGetBundlesHistoricalRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
-func (r ApiDappsSushiswapBundlesHistoricalGetRequest) EndBlock(endBlock int64) ApiDappsSushiswapBundlesHistoricalGetRequest {
+func (r ApiSushiswapGetBundlesHistoricalRequest) EndBlock(endBlock int64) ApiSushiswapGetBundlesHistoricalRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
-func (r ApiDappsSushiswapBundlesHistoricalGetRequest) StartDate(startDate time.Time) ApiDappsSushiswapBundlesHistoricalGetRequest {
+func (r ApiSushiswapGetBundlesHistoricalRequest) StartDate(startDate time.Time) ApiSushiswapGetBundlesHistoricalRequest {
 	r.startDate = &startDate
 	return r
 }
 
-func (r ApiDappsSushiswapBundlesHistoricalGetRequest) EndDate(endDate time.Time) ApiDappsSushiswapBundlesHistoricalGetRequest {
+func (r ApiSushiswapGetBundlesHistoricalRequest) EndDate(endDate time.Time) ApiSushiswapGetBundlesHistoricalRequest {
 	r.endDate = &endDate
 	return r
 }
 
-func (r ApiDappsSushiswapBundlesHistoricalGetRequest) Execute() (*http.Response, error) {
-	return r.ApiService.DappsSushiswapBundlesHistoricalGetExecute(r)
+func (r ApiSushiswapGetBundlesHistoricalRequest) Execute() ([]SushiswapBundleDTO, *http.Response, error) {
+	return r.ApiService.SushiswapGetBundlesHistoricalExecute(r)
 }
 
 /*
-DappsSushiswapBundlesHistoricalGet Method for DappsSushiswapBundlesHistoricalGet
+SushiswapGetBundlesHistorical GetBundles (historical)
+
+Gets bundles.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiDappsSushiswapBundlesHistoricalGetRequest
+ @return ApiSushiswapGetBundlesHistoricalRequest
 */
-func (a *SushiswapApiService) DappsSushiswapBundlesHistoricalGet(ctx context.Context) ApiDappsSushiswapBundlesHistoricalGetRequest {
-	return ApiDappsSushiswapBundlesHistoricalGetRequest{
+func (a *SushiswapApiService) SushiswapGetBundlesHistorical(ctx context.Context) ApiSushiswapGetBundlesHistoricalRequest {
+	return ApiSushiswapGetBundlesHistoricalRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-func (a *SushiswapApiService) DappsSushiswapBundlesHistoricalGetExecute(r ApiDappsSushiswapBundlesHistoricalGetRequest) (*http.Response, error) {
+//  @return []SushiswapBundleDTO
+func (a *SushiswapApiService) SushiswapGetBundlesHistoricalExecute(r ApiSushiswapGetBundlesHistoricalRequest) ([]SushiswapBundleDTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
+		localVarReturnValue  []SushiswapBundleDTO
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.DappsSushiswapBundlesHistoricalGet")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.SushiswapGetBundlesHistorical")
 	if err != nil {
-		return nil, &GenericOpenAPIError{error: err.Error()}
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
 	localVarPath := localBasePath + "/dapps/sushiswap/bundles/historical"
@@ -111,7 +115,7 @@ func (a *SushiswapApiService) DappsSushiswapBundlesHistoricalGetExecute(r ApiDap
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{}
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -120,19 +124,19 @@ func (a *SushiswapApiService) DappsSushiswapBundlesHistoricalGetExecute(r ApiDap
 	}
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
-		return nil, err
+		return localVarReturnValue, nil, err
 	}
 
 	localVarHTTPResponse, err := a.client.callAPI(req)
 	if err != nil || localVarHTTPResponse == nil {
-		return localVarHTTPResponse, err
+		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
 	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
 	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
-		return localVarHTTPResponse, err
+		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
 	if localVarHTTPResponse.StatusCode >= 300 {
@@ -140,13 +144,22 @@ func (a *SushiswapApiService) DappsSushiswapBundlesHistoricalGetExecute(r ApiDap
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		return localVarHTTPResponse, newErr
+		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
 
-	return localVarHTTPResponse, nil
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiDappsSushiswapBurnsHistoricalGetRequest struct {
+type ApiSushiswapGetBurnsHistoricalRequest struct {
 	ctx context.Context
 	ApiService *SushiswapApiService
 	startBlock *int64
@@ -156,59 +169,63 @@ type ApiDappsSushiswapBurnsHistoricalGetRequest struct {
 	poolId *string
 }
 
-func (r ApiDappsSushiswapBurnsHistoricalGetRequest) StartBlock(startBlock int64) ApiDappsSushiswapBurnsHistoricalGetRequest {
+func (r ApiSushiswapGetBurnsHistoricalRequest) StartBlock(startBlock int64) ApiSushiswapGetBurnsHistoricalRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
-func (r ApiDappsSushiswapBurnsHistoricalGetRequest) EndBlock(endBlock int64) ApiDappsSushiswapBurnsHistoricalGetRequest {
+func (r ApiSushiswapGetBurnsHistoricalRequest) EndBlock(endBlock int64) ApiSushiswapGetBurnsHistoricalRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
-func (r ApiDappsSushiswapBurnsHistoricalGetRequest) StartDate(startDate time.Time) ApiDappsSushiswapBurnsHistoricalGetRequest {
+func (r ApiSushiswapGetBurnsHistoricalRequest) StartDate(startDate time.Time) ApiSushiswapGetBurnsHistoricalRequest {
 	r.startDate = &startDate
 	return r
 }
 
-func (r ApiDappsSushiswapBurnsHistoricalGetRequest) EndDate(endDate time.Time) ApiDappsSushiswapBurnsHistoricalGetRequest {
+func (r ApiSushiswapGetBurnsHistoricalRequest) EndDate(endDate time.Time) ApiSushiswapGetBurnsHistoricalRequest {
 	r.endDate = &endDate
 	return r
 }
 
-func (r ApiDappsSushiswapBurnsHistoricalGetRequest) PoolId(poolId string) ApiDappsSushiswapBurnsHistoricalGetRequest {
+func (r ApiSushiswapGetBurnsHistoricalRequest) PoolId(poolId string) ApiSushiswapGetBurnsHistoricalRequest {
 	r.poolId = &poolId
 	return r
 }
 
-func (r ApiDappsSushiswapBurnsHistoricalGetRequest) Execute() (*http.Response, error) {
-	return r.ApiService.DappsSushiswapBurnsHistoricalGetExecute(r)
+func (r ApiSushiswapGetBurnsHistoricalRequest) Execute() ([]SushiswapBurnDTO, *http.Response, error) {
+	return r.ApiService.SushiswapGetBurnsHistoricalExecute(r)
 }
 
 /*
-DappsSushiswapBurnsHistoricalGet Method for DappsSushiswapBurnsHistoricalGet
+SushiswapGetBurnsHistorical GetBurns (historical)
+
+Gets burns.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiDappsSushiswapBurnsHistoricalGetRequest
+ @return ApiSushiswapGetBurnsHistoricalRequest
 */
-func (a *SushiswapApiService) DappsSushiswapBurnsHistoricalGet(ctx context.Context) ApiDappsSushiswapBurnsHistoricalGetRequest {
-	return ApiDappsSushiswapBurnsHistoricalGetRequest{
+func (a *SushiswapApiService) SushiswapGetBurnsHistorical(ctx context.Context) ApiSushiswapGetBurnsHistoricalRequest {
+	return ApiSushiswapGetBurnsHistoricalRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-func (a *SushiswapApiService) DappsSushiswapBurnsHistoricalGetExecute(r ApiDappsSushiswapBurnsHistoricalGetRequest) (*http.Response, error) {
+//  @return []SushiswapBurnDTO
+func (a *SushiswapApiService) SushiswapGetBurnsHistoricalExecute(r ApiSushiswapGetBurnsHistoricalRequest) ([]SushiswapBurnDTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
+		localVarReturnValue  []SushiswapBurnDTO
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.DappsSushiswapBurnsHistoricalGet")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.SushiswapGetBurnsHistorical")
 	if err != nil {
-		return nil, &GenericOpenAPIError{error: err.Error()}
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
 	localVarPath := localBasePath + "/dapps/sushiswap/burns/historical"
@@ -242,7 +259,7 @@ func (a *SushiswapApiService) DappsSushiswapBurnsHistoricalGetExecute(r ApiDapps
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{}
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -251,19 +268,19 @@ func (a *SushiswapApiService) DappsSushiswapBurnsHistoricalGetExecute(r ApiDapps
 	}
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
-		return nil, err
+		return localVarReturnValue, nil, err
 	}
 
 	localVarHTTPResponse, err := a.client.callAPI(req)
 	if err != nil || localVarHTTPResponse == nil {
-		return localVarHTTPResponse, err
+		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
 	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
 	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
-		return localVarHTTPResponse, err
+		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
 	if localVarHTTPResponse.StatusCode >= 300 {
@@ -271,13 +288,22 @@ func (a *SushiswapApiService) DappsSushiswapBurnsHistoricalGetExecute(r ApiDapps
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		return localVarHTTPResponse, newErr
+		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
 
-	return localVarHTTPResponse, nil
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiDappsSushiswapDayDataHistoricalGetRequest struct {
+type ApiSushiswapGetDayDataHistoricalRequest struct {
 	ctx context.Context
 	ApiService *SushiswapApiService
 	startBlock *int64
@@ -286,54 +312,58 @@ type ApiDappsSushiswapDayDataHistoricalGetRequest struct {
 	endDate *time.Time
 }
 
-func (r ApiDappsSushiswapDayDataHistoricalGetRequest) StartBlock(startBlock int64) ApiDappsSushiswapDayDataHistoricalGetRequest {
+func (r ApiSushiswapGetDayDataHistoricalRequest) StartBlock(startBlock int64) ApiSushiswapGetDayDataHistoricalRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
-func (r ApiDappsSushiswapDayDataHistoricalGetRequest) EndBlock(endBlock int64) ApiDappsSushiswapDayDataHistoricalGetRequest {
+func (r ApiSushiswapGetDayDataHistoricalRequest) EndBlock(endBlock int64) ApiSushiswapGetDayDataHistoricalRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
-func (r ApiDappsSushiswapDayDataHistoricalGetRequest) StartDate(startDate time.Time) ApiDappsSushiswapDayDataHistoricalGetRequest {
+func (r ApiSushiswapGetDayDataHistoricalRequest) StartDate(startDate time.Time) ApiSushiswapGetDayDataHistoricalRequest {
 	r.startDate = &startDate
 	return r
 }
 
-func (r ApiDappsSushiswapDayDataHistoricalGetRequest) EndDate(endDate time.Time) ApiDappsSushiswapDayDataHistoricalGetRequest {
+func (r ApiSushiswapGetDayDataHistoricalRequest) EndDate(endDate time.Time) ApiSushiswapGetDayDataHistoricalRequest {
 	r.endDate = &endDate
 	return r
 }
 
-func (r ApiDappsSushiswapDayDataHistoricalGetRequest) Execute() (*http.Response, error) {
-	return r.ApiService.DappsSushiswapDayDataHistoricalGetExecute(r)
+func (r ApiSushiswapGetDayDataHistoricalRequest) Execute() ([]SushiswapDayDataDTO, *http.Response, error) {
+	return r.ApiService.SushiswapGetDayDataHistoricalExecute(r)
 }
 
 /*
-DappsSushiswapDayDataHistoricalGet Method for DappsSushiswapDayDataHistoricalGet
+SushiswapGetDayDataHistorical GetDayData (historical)
+
+Gets day data.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiDappsSushiswapDayDataHistoricalGetRequest
+ @return ApiSushiswapGetDayDataHistoricalRequest
 */
-func (a *SushiswapApiService) DappsSushiswapDayDataHistoricalGet(ctx context.Context) ApiDappsSushiswapDayDataHistoricalGetRequest {
-	return ApiDappsSushiswapDayDataHistoricalGetRequest{
+func (a *SushiswapApiService) SushiswapGetDayDataHistorical(ctx context.Context) ApiSushiswapGetDayDataHistoricalRequest {
+	return ApiSushiswapGetDayDataHistoricalRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-func (a *SushiswapApiService) DappsSushiswapDayDataHistoricalGetExecute(r ApiDappsSushiswapDayDataHistoricalGetRequest) (*http.Response, error) {
+//  @return []SushiswapDayDataDTO
+func (a *SushiswapApiService) SushiswapGetDayDataHistoricalExecute(r ApiSushiswapGetDayDataHistoricalRequest) ([]SushiswapDayDataDTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
+		localVarReturnValue  []SushiswapDayDataDTO
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.DappsSushiswapDayDataHistoricalGet")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.SushiswapGetDayDataHistorical")
 	if err != nil {
-		return nil, &GenericOpenAPIError{error: err.Error()}
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
 	localVarPath := localBasePath + "/dapps/sushiswap/dayData/historical"
@@ -364,7 +394,7 @@ func (a *SushiswapApiService) DappsSushiswapDayDataHistoricalGetExecute(r ApiDap
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{}
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -373,19 +403,19 @@ func (a *SushiswapApiService) DappsSushiswapDayDataHistoricalGetExecute(r ApiDap
 	}
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
-		return nil, err
+		return localVarReturnValue, nil, err
 	}
 
 	localVarHTTPResponse, err := a.client.callAPI(req)
 	if err != nil || localVarHTTPResponse == nil {
-		return localVarHTTPResponse, err
+		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
 	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
 	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
-		return localVarHTTPResponse, err
+		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
 	if localVarHTTPResponse.StatusCode >= 300 {
@@ -393,13 +423,22 @@ func (a *SushiswapApiService) DappsSushiswapDayDataHistoricalGetExecute(r ApiDap
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		return localVarHTTPResponse, newErr
+		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
 
-	return localVarHTTPResponse, nil
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiDappsSushiswapFactoryHistoricalGetRequest struct {
+type ApiSushiswapGetFactoryHistoricalRequest struct {
 	ctx context.Context
 	ApiService *SushiswapApiService
 	startBlock *int64
@@ -408,54 +447,58 @@ type ApiDappsSushiswapFactoryHistoricalGetRequest struct {
 	endDate *time.Time
 }
 
-func (r ApiDappsSushiswapFactoryHistoricalGetRequest) StartBlock(startBlock int64) ApiDappsSushiswapFactoryHistoricalGetRequest {
+func (r ApiSushiswapGetFactoryHistoricalRequest) StartBlock(startBlock int64) ApiSushiswapGetFactoryHistoricalRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
-func (r ApiDappsSushiswapFactoryHistoricalGetRequest) EndBlock(endBlock int64) ApiDappsSushiswapFactoryHistoricalGetRequest {
+func (r ApiSushiswapGetFactoryHistoricalRequest) EndBlock(endBlock int64) ApiSushiswapGetFactoryHistoricalRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
-func (r ApiDappsSushiswapFactoryHistoricalGetRequest) StartDate(startDate time.Time) ApiDappsSushiswapFactoryHistoricalGetRequest {
+func (r ApiSushiswapGetFactoryHistoricalRequest) StartDate(startDate time.Time) ApiSushiswapGetFactoryHistoricalRequest {
 	r.startDate = &startDate
 	return r
 }
 
-func (r ApiDappsSushiswapFactoryHistoricalGetRequest) EndDate(endDate time.Time) ApiDappsSushiswapFactoryHistoricalGetRequest {
+func (r ApiSushiswapGetFactoryHistoricalRequest) EndDate(endDate time.Time) ApiSushiswapGetFactoryHistoricalRequest {
 	r.endDate = &endDate
 	return r
 }
 
-func (r ApiDappsSushiswapFactoryHistoricalGetRequest) Execute() (*http.Response, error) {
-	return r.ApiService.DappsSushiswapFactoryHistoricalGetExecute(r)
+func (r ApiSushiswapGetFactoryHistoricalRequest) Execute() ([]SushiswapFactoryDTO, *http.Response, error) {
+	return r.ApiService.SushiswapGetFactoryHistoricalExecute(r)
 }
 
 /*
-DappsSushiswapFactoryHistoricalGet Method for DappsSushiswapFactoryHistoricalGet
+SushiswapGetFactoryHistorical GetFactory (historical)
+
+Gets factory.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiDappsSushiswapFactoryHistoricalGetRequest
+ @return ApiSushiswapGetFactoryHistoricalRequest
 */
-func (a *SushiswapApiService) DappsSushiswapFactoryHistoricalGet(ctx context.Context) ApiDappsSushiswapFactoryHistoricalGetRequest {
-	return ApiDappsSushiswapFactoryHistoricalGetRequest{
+func (a *SushiswapApiService) SushiswapGetFactoryHistorical(ctx context.Context) ApiSushiswapGetFactoryHistoricalRequest {
+	return ApiSushiswapGetFactoryHistoricalRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-func (a *SushiswapApiService) DappsSushiswapFactoryHistoricalGetExecute(r ApiDappsSushiswapFactoryHistoricalGetRequest) (*http.Response, error) {
+//  @return []SushiswapFactoryDTO
+func (a *SushiswapApiService) SushiswapGetFactoryHistoricalExecute(r ApiSushiswapGetFactoryHistoricalRequest) ([]SushiswapFactoryDTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
+		localVarReturnValue  []SushiswapFactoryDTO
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.DappsSushiswapFactoryHistoricalGet")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.SushiswapGetFactoryHistorical")
 	if err != nil {
-		return nil, &GenericOpenAPIError{error: err.Error()}
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
 	localVarPath := localBasePath + "/dapps/sushiswap/factory/historical"
@@ -486,7 +529,7 @@ func (a *SushiswapApiService) DappsSushiswapFactoryHistoricalGetExecute(r ApiDap
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{}
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -495,19 +538,19 @@ func (a *SushiswapApiService) DappsSushiswapFactoryHistoricalGetExecute(r ApiDap
 	}
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
-		return nil, err
+		return localVarReturnValue, nil, err
 	}
 
 	localVarHTTPResponse, err := a.client.callAPI(req)
 	if err != nil || localVarHTTPResponse == nil {
-		return localVarHTTPResponse, err
+		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
 	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
 	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
-		return localVarHTTPResponse, err
+		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
 	if localVarHTTPResponse.StatusCode >= 300 {
@@ -515,13 +558,22 @@ func (a *SushiswapApiService) DappsSushiswapFactoryHistoricalGetExecute(r ApiDap
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		return localVarHTTPResponse, newErr
+		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
 
-	return localVarHTTPResponse, nil
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiDappsSushiswapHourDataHistoricalGetRequest struct {
+type ApiSushiswapGetHourDataHistoricalRequest struct {
 	ctx context.Context
 	ApiService *SushiswapApiService
 	startBlock *int64
@@ -530,54 +582,58 @@ type ApiDappsSushiswapHourDataHistoricalGetRequest struct {
 	endDate *time.Time
 }
 
-func (r ApiDappsSushiswapHourDataHistoricalGetRequest) StartBlock(startBlock int64) ApiDappsSushiswapHourDataHistoricalGetRequest {
+func (r ApiSushiswapGetHourDataHistoricalRequest) StartBlock(startBlock int64) ApiSushiswapGetHourDataHistoricalRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
-func (r ApiDappsSushiswapHourDataHistoricalGetRequest) EndBlock(endBlock int64) ApiDappsSushiswapHourDataHistoricalGetRequest {
+func (r ApiSushiswapGetHourDataHistoricalRequest) EndBlock(endBlock int64) ApiSushiswapGetHourDataHistoricalRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
-func (r ApiDappsSushiswapHourDataHistoricalGetRequest) StartDate(startDate time.Time) ApiDappsSushiswapHourDataHistoricalGetRequest {
+func (r ApiSushiswapGetHourDataHistoricalRequest) StartDate(startDate time.Time) ApiSushiswapGetHourDataHistoricalRequest {
 	r.startDate = &startDate
 	return r
 }
 
-func (r ApiDappsSushiswapHourDataHistoricalGetRequest) EndDate(endDate time.Time) ApiDappsSushiswapHourDataHistoricalGetRequest {
+func (r ApiSushiswapGetHourDataHistoricalRequest) EndDate(endDate time.Time) ApiSushiswapGetHourDataHistoricalRequest {
 	r.endDate = &endDate
 	return r
 }
 
-func (r ApiDappsSushiswapHourDataHistoricalGetRequest) Execute() (*http.Response, error) {
-	return r.ApiService.DappsSushiswapHourDataHistoricalGetExecute(r)
+func (r ApiSushiswapGetHourDataHistoricalRequest) Execute() ([]SushiswapHourDataDTO, *http.Response, error) {
+	return r.ApiService.SushiswapGetHourDataHistoricalExecute(r)
 }
 
 /*
-DappsSushiswapHourDataHistoricalGet Method for DappsSushiswapHourDataHistoricalGet
+SushiswapGetHourDataHistorical GetHourData (historical)
+
+Gets hour data.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiDappsSushiswapHourDataHistoricalGetRequest
+ @return ApiSushiswapGetHourDataHistoricalRequest
 */
-func (a *SushiswapApiService) DappsSushiswapHourDataHistoricalGet(ctx context.Context) ApiDappsSushiswapHourDataHistoricalGetRequest {
-	return ApiDappsSushiswapHourDataHistoricalGetRequest{
+func (a *SushiswapApiService) SushiswapGetHourDataHistorical(ctx context.Context) ApiSushiswapGetHourDataHistoricalRequest {
+	return ApiSushiswapGetHourDataHistoricalRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-func (a *SushiswapApiService) DappsSushiswapHourDataHistoricalGetExecute(r ApiDappsSushiswapHourDataHistoricalGetRequest) (*http.Response, error) {
+//  @return []SushiswapHourDataDTO
+func (a *SushiswapApiService) SushiswapGetHourDataHistoricalExecute(r ApiSushiswapGetHourDataHistoricalRequest) ([]SushiswapHourDataDTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
+		localVarReturnValue  []SushiswapHourDataDTO
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.DappsSushiswapHourDataHistoricalGet")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.SushiswapGetHourDataHistorical")
 	if err != nil {
-		return nil, &GenericOpenAPIError{error: err.Error()}
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
 	localVarPath := localBasePath + "/dapps/sushiswap/hourData/historical"
@@ -608,7 +664,7 @@ func (a *SushiswapApiService) DappsSushiswapHourDataHistoricalGetExecute(r ApiDa
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{}
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -617,19 +673,19 @@ func (a *SushiswapApiService) DappsSushiswapHourDataHistoricalGetExecute(r ApiDa
 	}
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
-		return nil, err
+		return localVarReturnValue, nil, err
 	}
 
 	localVarHTTPResponse, err := a.client.callAPI(req)
 	if err != nil || localVarHTTPResponse == nil {
-		return localVarHTTPResponse, err
+		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
 	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
 	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
-		return localVarHTTPResponse, err
+		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
 	if localVarHTTPResponse.StatusCode >= 300 {
@@ -637,13 +693,22 @@ func (a *SushiswapApiService) DappsSushiswapHourDataHistoricalGetExecute(r ApiDa
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		return localVarHTTPResponse, newErr
+		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
 
-	return localVarHTTPResponse, nil
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiDappsSushiswapLiquidityPositionHistoricalGetRequest struct {
+type ApiSushiswapGetLiquidityPositionHistoricalRequest struct {
 	ctx context.Context
 	ApiService *SushiswapApiService
 	startBlock *int64
@@ -653,59 +718,63 @@ type ApiDappsSushiswapLiquidityPositionHistoricalGetRequest struct {
 	poolId *string
 }
 
-func (r ApiDappsSushiswapLiquidityPositionHistoricalGetRequest) StartBlock(startBlock int64) ApiDappsSushiswapLiquidityPositionHistoricalGetRequest {
+func (r ApiSushiswapGetLiquidityPositionHistoricalRequest) StartBlock(startBlock int64) ApiSushiswapGetLiquidityPositionHistoricalRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
-func (r ApiDappsSushiswapLiquidityPositionHistoricalGetRequest) EndBlock(endBlock int64) ApiDappsSushiswapLiquidityPositionHistoricalGetRequest {
+func (r ApiSushiswapGetLiquidityPositionHistoricalRequest) EndBlock(endBlock int64) ApiSushiswapGetLiquidityPositionHistoricalRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
-func (r ApiDappsSushiswapLiquidityPositionHistoricalGetRequest) StartDate(startDate time.Time) ApiDappsSushiswapLiquidityPositionHistoricalGetRequest {
+func (r ApiSushiswapGetLiquidityPositionHistoricalRequest) StartDate(startDate time.Time) ApiSushiswapGetLiquidityPositionHistoricalRequest {
 	r.startDate = &startDate
 	return r
 }
 
-func (r ApiDappsSushiswapLiquidityPositionHistoricalGetRequest) EndDate(endDate time.Time) ApiDappsSushiswapLiquidityPositionHistoricalGetRequest {
+func (r ApiSushiswapGetLiquidityPositionHistoricalRequest) EndDate(endDate time.Time) ApiSushiswapGetLiquidityPositionHistoricalRequest {
 	r.endDate = &endDate
 	return r
 }
 
-func (r ApiDappsSushiswapLiquidityPositionHistoricalGetRequest) PoolId(poolId string) ApiDappsSushiswapLiquidityPositionHistoricalGetRequest {
+func (r ApiSushiswapGetLiquidityPositionHistoricalRequest) PoolId(poolId string) ApiSushiswapGetLiquidityPositionHistoricalRequest {
 	r.poolId = &poolId
 	return r
 }
 
-func (r ApiDappsSushiswapLiquidityPositionHistoricalGetRequest) Execute() (*http.Response, error) {
-	return r.ApiService.DappsSushiswapLiquidityPositionHistoricalGetExecute(r)
+func (r ApiSushiswapGetLiquidityPositionHistoricalRequest) Execute() ([]SushiswapLiquidityPositionDTO, *http.Response, error) {
+	return r.ApiService.SushiswapGetLiquidityPositionHistoricalExecute(r)
 }
 
 /*
-DappsSushiswapLiquidityPositionHistoricalGet Method for DappsSushiswapLiquidityPositionHistoricalGet
+SushiswapGetLiquidityPositionHistorical GetLiquidityPosition (historical)
+
+Gets liquidity position.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiDappsSushiswapLiquidityPositionHistoricalGetRequest
+ @return ApiSushiswapGetLiquidityPositionHistoricalRequest
 */
-func (a *SushiswapApiService) DappsSushiswapLiquidityPositionHistoricalGet(ctx context.Context) ApiDappsSushiswapLiquidityPositionHistoricalGetRequest {
-	return ApiDappsSushiswapLiquidityPositionHistoricalGetRequest{
+func (a *SushiswapApiService) SushiswapGetLiquidityPositionHistorical(ctx context.Context) ApiSushiswapGetLiquidityPositionHistoricalRequest {
+	return ApiSushiswapGetLiquidityPositionHistoricalRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-func (a *SushiswapApiService) DappsSushiswapLiquidityPositionHistoricalGetExecute(r ApiDappsSushiswapLiquidityPositionHistoricalGetRequest) (*http.Response, error) {
+//  @return []SushiswapLiquidityPositionDTO
+func (a *SushiswapApiService) SushiswapGetLiquidityPositionHistoricalExecute(r ApiSushiswapGetLiquidityPositionHistoricalRequest) ([]SushiswapLiquidityPositionDTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
+		localVarReturnValue  []SushiswapLiquidityPositionDTO
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.DappsSushiswapLiquidityPositionHistoricalGet")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.SushiswapGetLiquidityPositionHistorical")
 	if err != nil {
-		return nil, &GenericOpenAPIError{error: err.Error()}
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
 	localVarPath := localBasePath + "/dapps/sushiswap/liquidityPosition/historical"
@@ -739,7 +808,7 @@ func (a *SushiswapApiService) DappsSushiswapLiquidityPositionHistoricalGetExecut
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{}
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -748,19 +817,19 @@ func (a *SushiswapApiService) DappsSushiswapLiquidityPositionHistoricalGetExecut
 	}
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
-		return nil, err
+		return localVarReturnValue, nil, err
 	}
 
 	localVarHTTPResponse, err := a.client.callAPI(req)
 	if err != nil || localVarHTTPResponse == nil {
-		return localVarHTTPResponse, err
+		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
 	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
 	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
-		return localVarHTTPResponse, err
+		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
 	if localVarHTTPResponse.StatusCode >= 300 {
@@ -768,13 +837,22 @@ func (a *SushiswapApiService) DappsSushiswapLiquidityPositionHistoricalGetExecut
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		return localVarHTTPResponse, newErr
+		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
 
-	return localVarHTTPResponse, nil
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiDappsSushiswapLiquidityPositionSnapshotsHistoricalGetRequest struct {
+type ApiSushiswapGetLiquidityPositionSnapshotHistoricalRequest struct {
 	ctx context.Context
 	ApiService *SushiswapApiService
 	startBlock *int64
@@ -784,59 +862,63 @@ type ApiDappsSushiswapLiquidityPositionSnapshotsHistoricalGetRequest struct {
 	poolId *string
 }
 
-func (r ApiDappsSushiswapLiquidityPositionSnapshotsHistoricalGetRequest) StartBlock(startBlock int64) ApiDappsSushiswapLiquidityPositionSnapshotsHistoricalGetRequest {
+func (r ApiSushiswapGetLiquidityPositionSnapshotHistoricalRequest) StartBlock(startBlock int64) ApiSushiswapGetLiquidityPositionSnapshotHistoricalRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
-func (r ApiDappsSushiswapLiquidityPositionSnapshotsHistoricalGetRequest) EndBlock(endBlock int64) ApiDappsSushiswapLiquidityPositionSnapshotsHistoricalGetRequest {
+func (r ApiSushiswapGetLiquidityPositionSnapshotHistoricalRequest) EndBlock(endBlock int64) ApiSushiswapGetLiquidityPositionSnapshotHistoricalRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
-func (r ApiDappsSushiswapLiquidityPositionSnapshotsHistoricalGetRequest) StartDate(startDate time.Time) ApiDappsSushiswapLiquidityPositionSnapshotsHistoricalGetRequest {
+func (r ApiSushiswapGetLiquidityPositionSnapshotHistoricalRequest) StartDate(startDate time.Time) ApiSushiswapGetLiquidityPositionSnapshotHistoricalRequest {
 	r.startDate = &startDate
 	return r
 }
 
-func (r ApiDappsSushiswapLiquidityPositionSnapshotsHistoricalGetRequest) EndDate(endDate time.Time) ApiDappsSushiswapLiquidityPositionSnapshotsHistoricalGetRequest {
+func (r ApiSushiswapGetLiquidityPositionSnapshotHistoricalRequest) EndDate(endDate time.Time) ApiSushiswapGetLiquidityPositionSnapshotHistoricalRequest {
 	r.endDate = &endDate
 	return r
 }
 
-func (r ApiDappsSushiswapLiquidityPositionSnapshotsHistoricalGetRequest) PoolId(poolId string) ApiDappsSushiswapLiquidityPositionSnapshotsHistoricalGetRequest {
+func (r ApiSushiswapGetLiquidityPositionSnapshotHistoricalRequest) PoolId(poolId string) ApiSushiswapGetLiquidityPositionSnapshotHistoricalRequest {
 	r.poolId = &poolId
 	return r
 }
 
-func (r ApiDappsSushiswapLiquidityPositionSnapshotsHistoricalGetRequest) Execute() (*http.Response, error) {
-	return r.ApiService.DappsSushiswapLiquidityPositionSnapshotsHistoricalGetExecute(r)
+func (r ApiSushiswapGetLiquidityPositionSnapshotHistoricalRequest) Execute() ([]SushiswapLiquidityPositionSnapshotDTO, *http.Response, error) {
+	return r.ApiService.SushiswapGetLiquidityPositionSnapshotHistoricalExecute(r)
 }
 
 /*
-DappsSushiswapLiquidityPositionSnapshotsHistoricalGet Method for DappsSushiswapLiquidityPositionSnapshotsHistoricalGet
+SushiswapGetLiquidityPositionSnapshotHistorical GetLiquidityPositionSnapshot (historical)
+
+Gets liquidity position snapshot.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiDappsSushiswapLiquidityPositionSnapshotsHistoricalGetRequest
+ @return ApiSushiswapGetLiquidityPositionSnapshotHistoricalRequest
 */
-func (a *SushiswapApiService) DappsSushiswapLiquidityPositionSnapshotsHistoricalGet(ctx context.Context) ApiDappsSushiswapLiquidityPositionSnapshotsHistoricalGetRequest {
-	return ApiDappsSushiswapLiquidityPositionSnapshotsHistoricalGetRequest{
+func (a *SushiswapApiService) SushiswapGetLiquidityPositionSnapshotHistorical(ctx context.Context) ApiSushiswapGetLiquidityPositionSnapshotHistoricalRequest {
+	return ApiSushiswapGetLiquidityPositionSnapshotHistoricalRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-func (a *SushiswapApiService) DappsSushiswapLiquidityPositionSnapshotsHistoricalGetExecute(r ApiDappsSushiswapLiquidityPositionSnapshotsHistoricalGetRequest) (*http.Response, error) {
+//  @return []SushiswapLiquidityPositionSnapshotDTO
+func (a *SushiswapApiService) SushiswapGetLiquidityPositionSnapshotHistoricalExecute(r ApiSushiswapGetLiquidityPositionSnapshotHistoricalRequest) ([]SushiswapLiquidityPositionSnapshotDTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
+		localVarReturnValue  []SushiswapLiquidityPositionSnapshotDTO
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.DappsSushiswapLiquidityPositionSnapshotsHistoricalGet")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.SushiswapGetLiquidityPositionSnapshotHistorical")
 	if err != nil {
-		return nil, &GenericOpenAPIError{error: err.Error()}
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
 	localVarPath := localBasePath + "/dapps/sushiswap/liquidityPositionSnapshots/historical"
@@ -870,7 +952,7 @@ func (a *SushiswapApiService) DappsSushiswapLiquidityPositionSnapshotsHistorical
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{}
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -879,19 +961,19 @@ func (a *SushiswapApiService) DappsSushiswapLiquidityPositionSnapshotsHistorical
 	}
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
-		return nil, err
+		return localVarReturnValue, nil, err
 	}
 
 	localVarHTTPResponse, err := a.client.callAPI(req)
 	if err != nil || localVarHTTPResponse == nil {
-		return localVarHTTPResponse, err
+		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
 	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
 	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
-		return localVarHTTPResponse, err
+		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
 	if localVarHTTPResponse.StatusCode >= 300 {
@@ -899,13 +981,22 @@ func (a *SushiswapApiService) DappsSushiswapLiquidityPositionSnapshotsHistorical
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		return localVarHTTPResponse, newErr
+		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
 
-	return localVarHTTPResponse, nil
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiDappsSushiswapMintsHistoricalGetRequest struct {
+type ApiSushiswapGetMintsHistoricalRequest struct {
 	ctx context.Context
 	ApiService *SushiswapApiService
 	startBlock *int64
@@ -915,59 +1006,63 @@ type ApiDappsSushiswapMintsHistoricalGetRequest struct {
 	poolId *string
 }
 
-func (r ApiDappsSushiswapMintsHistoricalGetRequest) StartBlock(startBlock int64) ApiDappsSushiswapMintsHistoricalGetRequest {
+func (r ApiSushiswapGetMintsHistoricalRequest) StartBlock(startBlock int64) ApiSushiswapGetMintsHistoricalRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
-func (r ApiDappsSushiswapMintsHistoricalGetRequest) EndBlock(endBlock int64) ApiDappsSushiswapMintsHistoricalGetRequest {
+func (r ApiSushiswapGetMintsHistoricalRequest) EndBlock(endBlock int64) ApiSushiswapGetMintsHistoricalRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
-func (r ApiDappsSushiswapMintsHistoricalGetRequest) StartDate(startDate time.Time) ApiDappsSushiswapMintsHistoricalGetRequest {
+func (r ApiSushiswapGetMintsHistoricalRequest) StartDate(startDate time.Time) ApiSushiswapGetMintsHistoricalRequest {
 	r.startDate = &startDate
 	return r
 }
 
-func (r ApiDappsSushiswapMintsHistoricalGetRequest) EndDate(endDate time.Time) ApiDappsSushiswapMintsHistoricalGetRequest {
+func (r ApiSushiswapGetMintsHistoricalRequest) EndDate(endDate time.Time) ApiSushiswapGetMintsHistoricalRequest {
 	r.endDate = &endDate
 	return r
 }
 
-func (r ApiDappsSushiswapMintsHistoricalGetRequest) PoolId(poolId string) ApiDappsSushiswapMintsHistoricalGetRequest {
+func (r ApiSushiswapGetMintsHistoricalRequest) PoolId(poolId string) ApiSushiswapGetMintsHistoricalRequest {
 	r.poolId = &poolId
 	return r
 }
 
-func (r ApiDappsSushiswapMintsHistoricalGetRequest) Execute() (*http.Response, error) {
-	return r.ApiService.DappsSushiswapMintsHistoricalGetExecute(r)
+func (r ApiSushiswapGetMintsHistoricalRequest) Execute() ([]SushiswapMintDTO, *http.Response, error) {
+	return r.ApiService.SushiswapGetMintsHistoricalExecute(r)
 }
 
 /*
-DappsSushiswapMintsHistoricalGet Method for DappsSushiswapMintsHistoricalGet
+SushiswapGetMintsHistorical GetMints (historical)
+
+Gets mints.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiDappsSushiswapMintsHistoricalGetRequest
+ @return ApiSushiswapGetMintsHistoricalRequest
 */
-func (a *SushiswapApiService) DappsSushiswapMintsHistoricalGet(ctx context.Context) ApiDappsSushiswapMintsHistoricalGetRequest {
-	return ApiDappsSushiswapMintsHistoricalGetRequest{
+func (a *SushiswapApiService) SushiswapGetMintsHistorical(ctx context.Context) ApiSushiswapGetMintsHistoricalRequest {
+	return ApiSushiswapGetMintsHistoricalRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-func (a *SushiswapApiService) DappsSushiswapMintsHistoricalGetExecute(r ApiDappsSushiswapMintsHistoricalGetRequest) (*http.Response, error) {
+//  @return []SushiswapMintDTO
+func (a *SushiswapApiService) SushiswapGetMintsHistoricalExecute(r ApiSushiswapGetMintsHistoricalRequest) ([]SushiswapMintDTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
+		localVarReturnValue  []SushiswapMintDTO
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.DappsSushiswapMintsHistoricalGet")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.SushiswapGetMintsHistorical")
 	if err != nil {
-		return nil, &GenericOpenAPIError{error: err.Error()}
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
 	localVarPath := localBasePath + "/dapps/sushiswap/mints/historical"
@@ -1001,7 +1096,7 @@ func (a *SushiswapApiService) DappsSushiswapMintsHistoricalGetExecute(r ApiDapps
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{}
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -1010,19 +1105,19 @@ func (a *SushiswapApiService) DappsSushiswapMintsHistoricalGetExecute(r ApiDapps
 	}
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
-		return nil, err
+		return localVarReturnValue, nil, err
 	}
 
 	localVarHTTPResponse, err := a.client.callAPI(req)
 	if err != nil || localVarHTTPResponse == nil {
-		return localVarHTTPResponse, err
+		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
 	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
 	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
-		return localVarHTTPResponse, err
+		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
 	if localVarHTTPResponse.StatusCode >= 300 {
@@ -1030,647 +1125,19 @@ func (a *SushiswapApiService) DappsSushiswapMintsHistoricalGetExecute(r ApiDapps
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		return localVarHTTPResponse, newErr
+		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
 
-	return localVarHTTPResponse, nil
-}
-
-type ApiDappsSushiswapPoolDayDataHistoricalGetRequest struct {
-	ctx context.Context
-	ApiService *SushiswapApiService
-	startBlock *int64
-	endBlock *int64
-	startDate *time.Time
-	endDate *time.Time
-	poolId *string
-}
-
-func (r ApiDappsSushiswapPoolDayDataHistoricalGetRequest) StartBlock(startBlock int64) ApiDappsSushiswapPoolDayDataHistoricalGetRequest {
-	r.startBlock = &startBlock
-	return r
-}
-
-func (r ApiDappsSushiswapPoolDayDataHistoricalGetRequest) EndBlock(endBlock int64) ApiDappsSushiswapPoolDayDataHistoricalGetRequest {
-	r.endBlock = &endBlock
-	return r
-}
-
-func (r ApiDappsSushiswapPoolDayDataHistoricalGetRequest) StartDate(startDate time.Time) ApiDappsSushiswapPoolDayDataHistoricalGetRequest {
-	r.startDate = &startDate
-	return r
-}
-
-func (r ApiDappsSushiswapPoolDayDataHistoricalGetRequest) EndDate(endDate time.Time) ApiDappsSushiswapPoolDayDataHistoricalGetRequest {
-	r.endDate = &endDate
-	return r
-}
-
-func (r ApiDappsSushiswapPoolDayDataHistoricalGetRequest) PoolId(poolId string) ApiDappsSushiswapPoolDayDataHistoricalGetRequest {
-	r.poolId = &poolId
-	return r
-}
-
-func (r ApiDappsSushiswapPoolDayDataHistoricalGetRequest) Execute() (*http.Response, error) {
-	return r.ApiService.DappsSushiswapPoolDayDataHistoricalGetExecute(r)
-}
-
-/*
-DappsSushiswapPoolDayDataHistoricalGet Method for DappsSushiswapPoolDayDataHistoricalGet
-
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiDappsSushiswapPoolDayDataHistoricalGetRequest
-*/
-func (a *SushiswapApiService) DappsSushiswapPoolDayDataHistoricalGet(ctx context.Context) ApiDappsSushiswapPoolDayDataHistoricalGetRequest {
-	return ApiDappsSushiswapPoolDayDataHistoricalGetRequest{
-		ApiService: a,
-		ctx: ctx,
-	}
-}
-
-// Execute executes the request
-func (a *SushiswapApiService) DappsSushiswapPoolDayDataHistoricalGetExecute(r ApiDappsSushiswapPoolDayDataHistoricalGetRequest) (*http.Response, error) {
-	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-	)
-
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.DappsSushiswapPoolDayDataHistoricalGet")
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
-		return nil, &GenericOpenAPIError{error: err.Error()}
-	}
-
-	localVarPath := localBasePath + "/dapps/sushiswap/poolDayData/historical"
-
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
-
-	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
-	}
-	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
-	}
-	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
-	}
-	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
-	}
-	if r.poolId != nil {
-		localVarQueryParams.Add("poolId", parameterToString(*r.poolId, ""))
-	}
-	// to determine the Content-Type header
-	localVarHTTPContentTypes := []string{}
-
-	// set Content-Type header
-	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
-	if localVarHTTPContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
-	}
-
-	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{}
-
-	// set Accept header
-	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
-	if localVarHTTPHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
-	}
-	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
-	if err != nil {
-		return nil, err
-	}
-
-	localVarHTTPResponse, err := a.client.callAPI(req)
-	if err != nil || localVarHTTPResponse == nil {
-		return localVarHTTPResponse, err
-	}
-
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
-	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
-	if err != nil {
-		return localVarHTTPResponse, err
-	}
-
-	if localVarHTTPResponse.StatusCode >= 300 {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
-			error: localVarHTTPResponse.Status,
+			error: err.Error(),
 		}
-		return localVarHTTPResponse, newErr
+		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
 
-	return localVarHTTPResponse, nil
-}
-
-type ApiDappsSushiswapPoolHourDataHistoricalGetRequest struct {
-	ctx context.Context
-	ApiService *SushiswapApiService
-	startBlock *int64
-	endBlock *int64
-	startDate *time.Time
-	endDate *time.Time
-	poolId *string
-}
-
-func (r ApiDappsSushiswapPoolHourDataHistoricalGetRequest) StartBlock(startBlock int64) ApiDappsSushiswapPoolHourDataHistoricalGetRequest {
-	r.startBlock = &startBlock
-	return r
-}
-
-func (r ApiDappsSushiswapPoolHourDataHistoricalGetRequest) EndBlock(endBlock int64) ApiDappsSushiswapPoolHourDataHistoricalGetRequest {
-	r.endBlock = &endBlock
-	return r
-}
-
-func (r ApiDappsSushiswapPoolHourDataHistoricalGetRequest) StartDate(startDate time.Time) ApiDappsSushiswapPoolHourDataHistoricalGetRequest {
-	r.startDate = &startDate
-	return r
-}
-
-func (r ApiDappsSushiswapPoolHourDataHistoricalGetRequest) EndDate(endDate time.Time) ApiDappsSushiswapPoolHourDataHistoricalGetRequest {
-	r.endDate = &endDate
-	return r
-}
-
-func (r ApiDappsSushiswapPoolHourDataHistoricalGetRequest) PoolId(poolId string) ApiDappsSushiswapPoolHourDataHistoricalGetRequest {
-	r.poolId = &poolId
-	return r
-}
-
-func (r ApiDappsSushiswapPoolHourDataHistoricalGetRequest) Execute() (*http.Response, error) {
-	return r.ApiService.DappsSushiswapPoolHourDataHistoricalGetExecute(r)
-}
-
-/*
-DappsSushiswapPoolHourDataHistoricalGet Method for DappsSushiswapPoolHourDataHistoricalGet
-
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiDappsSushiswapPoolHourDataHistoricalGetRequest
-*/
-func (a *SushiswapApiService) DappsSushiswapPoolHourDataHistoricalGet(ctx context.Context) ApiDappsSushiswapPoolHourDataHistoricalGetRequest {
-	return ApiDappsSushiswapPoolHourDataHistoricalGetRequest{
-		ApiService: a,
-		ctx: ctx,
-	}
-}
-
-// Execute executes the request
-func (a *SushiswapApiService) DappsSushiswapPoolHourDataHistoricalGetExecute(r ApiDappsSushiswapPoolHourDataHistoricalGetRequest) (*http.Response, error) {
-	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-	)
-
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.DappsSushiswapPoolHourDataHistoricalGet")
-	if err != nil {
-		return nil, &GenericOpenAPIError{error: err.Error()}
-	}
-
-	localVarPath := localBasePath + "/dapps/sushiswap/poolHourData/historical"
-
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
-
-	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
-	}
-	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
-	}
-	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
-	}
-	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
-	}
-	if r.poolId != nil {
-		localVarQueryParams.Add("poolId", parameterToString(*r.poolId, ""))
-	}
-	// to determine the Content-Type header
-	localVarHTTPContentTypes := []string{}
-
-	// set Content-Type header
-	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
-	if localVarHTTPContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
-	}
-
-	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{}
-
-	// set Accept header
-	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
-	if localVarHTTPHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
-	}
-	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
-	if err != nil {
-		return nil, err
-	}
-
-	localVarHTTPResponse, err := a.client.callAPI(req)
-	if err != nil || localVarHTTPResponse == nil {
-		return localVarHTTPResponse, err
-	}
-
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
-	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
-	if err != nil {
-		return localVarHTTPResponse, err
-	}
-
-	if localVarHTTPResponse.StatusCode >= 300 {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: localVarHTTPResponse.Status,
-		}
-		return localVarHTTPResponse, newErr
-	}
-
-	return localVarHTTPResponse, nil
-}
-
-type ApiDappsSushiswapTokenDayDataHistoricalGetRequest struct {
-	ctx context.Context
-	ApiService *SushiswapApiService
-	startBlock *int64
-	endBlock *int64
-	startDate *time.Time
-	endDate *time.Time
-	tokenId *string
-}
-
-func (r ApiDappsSushiswapTokenDayDataHistoricalGetRequest) StartBlock(startBlock int64) ApiDappsSushiswapTokenDayDataHistoricalGetRequest {
-	r.startBlock = &startBlock
-	return r
-}
-
-func (r ApiDappsSushiswapTokenDayDataHistoricalGetRequest) EndBlock(endBlock int64) ApiDappsSushiswapTokenDayDataHistoricalGetRequest {
-	r.endBlock = &endBlock
-	return r
-}
-
-func (r ApiDappsSushiswapTokenDayDataHistoricalGetRequest) StartDate(startDate time.Time) ApiDappsSushiswapTokenDayDataHistoricalGetRequest {
-	r.startDate = &startDate
-	return r
-}
-
-func (r ApiDappsSushiswapTokenDayDataHistoricalGetRequest) EndDate(endDate time.Time) ApiDappsSushiswapTokenDayDataHistoricalGetRequest {
-	r.endDate = &endDate
-	return r
-}
-
-func (r ApiDappsSushiswapTokenDayDataHistoricalGetRequest) TokenId(tokenId string) ApiDappsSushiswapTokenDayDataHistoricalGetRequest {
-	r.tokenId = &tokenId
-	return r
-}
-
-func (r ApiDappsSushiswapTokenDayDataHistoricalGetRequest) Execute() (*http.Response, error) {
-	return r.ApiService.DappsSushiswapTokenDayDataHistoricalGetExecute(r)
-}
-
-/*
-DappsSushiswapTokenDayDataHistoricalGet Method for DappsSushiswapTokenDayDataHistoricalGet
-
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiDappsSushiswapTokenDayDataHistoricalGetRequest
-*/
-func (a *SushiswapApiService) DappsSushiswapTokenDayDataHistoricalGet(ctx context.Context) ApiDappsSushiswapTokenDayDataHistoricalGetRequest {
-	return ApiDappsSushiswapTokenDayDataHistoricalGetRequest{
-		ApiService: a,
-		ctx: ctx,
-	}
-}
-
-// Execute executes the request
-func (a *SushiswapApiService) DappsSushiswapTokenDayDataHistoricalGetExecute(r ApiDappsSushiswapTokenDayDataHistoricalGetRequest) (*http.Response, error) {
-	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-	)
-
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.DappsSushiswapTokenDayDataHistoricalGet")
-	if err != nil {
-		return nil, &GenericOpenAPIError{error: err.Error()}
-	}
-
-	localVarPath := localBasePath + "/dapps/sushiswap/tokenDayData/historical"
-
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
-
-	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
-	}
-	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
-	}
-	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
-	}
-	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
-	}
-	if r.tokenId != nil {
-		localVarQueryParams.Add("tokenId", parameterToString(*r.tokenId, ""))
-	}
-	// to determine the Content-Type header
-	localVarHTTPContentTypes := []string{}
-
-	// set Content-Type header
-	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
-	if localVarHTTPContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
-	}
-
-	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{}
-
-	// set Accept header
-	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
-	if localVarHTTPHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
-	}
-	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
-	if err != nil {
-		return nil, err
-	}
-
-	localVarHTTPResponse, err := a.client.callAPI(req)
-	if err != nil || localVarHTTPResponse == nil {
-		return localVarHTTPResponse, err
-	}
-
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
-	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
-	if err != nil {
-		return localVarHTTPResponse, err
-	}
-
-	if localVarHTTPResponse.StatusCode >= 300 {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: localVarHTTPResponse.Status,
-		}
-		return localVarHTTPResponse, newErr
-	}
-
-	return localVarHTTPResponse, nil
-}
-
-type ApiDappsSushiswapTransactionsHistoricalGetRequest struct {
-	ctx context.Context
-	ApiService *SushiswapApiService
-	startBlock *int64
-	endBlock *int64
-	startDate *time.Time
-	endDate *time.Time
-}
-
-func (r ApiDappsSushiswapTransactionsHistoricalGetRequest) StartBlock(startBlock int64) ApiDappsSushiswapTransactionsHistoricalGetRequest {
-	r.startBlock = &startBlock
-	return r
-}
-
-func (r ApiDappsSushiswapTransactionsHistoricalGetRequest) EndBlock(endBlock int64) ApiDappsSushiswapTransactionsHistoricalGetRequest {
-	r.endBlock = &endBlock
-	return r
-}
-
-func (r ApiDappsSushiswapTransactionsHistoricalGetRequest) StartDate(startDate time.Time) ApiDappsSushiswapTransactionsHistoricalGetRequest {
-	r.startDate = &startDate
-	return r
-}
-
-func (r ApiDappsSushiswapTransactionsHistoricalGetRequest) EndDate(endDate time.Time) ApiDappsSushiswapTransactionsHistoricalGetRequest {
-	r.endDate = &endDate
-	return r
-}
-
-func (r ApiDappsSushiswapTransactionsHistoricalGetRequest) Execute() (*http.Response, error) {
-	return r.ApiService.DappsSushiswapTransactionsHistoricalGetExecute(r)
-}
-
-/*
-DappsSushiswapTransactionsHistoricalGet Method for DappsSushiswapTransactionsHistoricalGet
-
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiDappsSushiswapTransactionsHistoricalGetRequest
-*/
-func (a *SushiswapApiService) DappsSushiswapTransactionsHistoricalGet(ctx context.Context) ApiDappsSushiswapTransactionsHistoricalGetRequest {
-	return ApiDappsSushiswapTransactionsHistoricalGetRequest{
-		ApiService: a,
-		ctx: ctx,
-	}
-}
-
-// Execute executes the request
-func (a *SushiswapApiService) DappsSushiswapTransactionsHistoricalGetExecute(r ApiDappsSushiswapTransactionsHistoricalGetRequest) (*http.Response, error) {
-	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-	)
-
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.DappsSushiswapTransactionsHistoricalGet")
-	if err != nil {
-		return nil, &GenericOpenAPIError{error: err.Error()}
-	}
-
-	localVarPath := localBasePath + "/dapps/sushiswap/transactions/historical"
-
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
-
-	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
-	}
-	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
-	}
-	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
-	}
-	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
-	}
-	// to determine the Content-Type header
-	localVarHTTPContentTypes := []string{}
-
-	// set Content-Type header
-	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
-	if localVarHTTPContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
-	}
-
-	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{}
-
-	// set Accept header
-	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
-	if localVarHTTPHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
-	}
-	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
-	if err != nil {
-		return nil, err
-	}
-
-	localVarHTTPResponse, err := a.client.callAPI(req)
-	if err != nil || localVarHTTPResponse == nil {
-		return localVarHTTPResponse, err
-	}
-
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
-	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
-	if err != nil {
-		return localVarHTTPResponse, err
-	}
-
-	if localVarHTTPResponse.StatusCode >= 300 {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: localVarHTTPResponse.Status,
-		}
-		return localVarHTTPResponse, newErr
-	}
-
-	return localVarHTTPResponse, nil
-}
-
-type ApiDappsSushiswapUsersHistoricalGetRequest struct {
-	ctx context.Context
-	ApiService *SushiswapApiService
-	startBlock *int64
-	endBlock *int64
-	startDate *time.Time
-	endDate *time.Time
-}
-
-func (r ApiDappsSushiswapUsersHistoricalGetRequest) StartBlock(startBlock int64) ApiDappsSushiswapUsersHistoricalGetRequest {
-	r.startBlock = &startBlock
-	return r
-}
-
-func (r ApiDappsSushiswapUsersHistoricalGetRequest) EndBlock(endBlock int64) ApiDappsSushiswapUsersHistoricalGetRequest {
-	r.endBlock = &endBlock
-	return r
-}
-
-func (r ApiDappsSushiswapUsersHistoricalGetRequest) StartDate(startDate time.Time) ApiDappsSushiswapUsersHistoricalGetRequest {
-	r.startDate = &startDate
-	return r
-}
-
-func (r ApiDappsSushiswapUsersHistoricalGetRequest) EndDate(endDate time.Time) ApiDappsSushiswapUsersHistoricalGetRequest {
-	r.endDate = &endDate
-	return r
-}
-
-func (r ApiDappsSushiswapUsersHistoricalGetRequest) Execute() (*http.Response, error) {
-	return r.ApiService.DappsSushiswapUsersHistoricalGetExecute(r)
-}
-
-/*
-DappsSushiswapUsersHistoricalGet Method for DappsSushiswapUsersHistoricalGet
-
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiDappsSushiswapUsersHistoricalGetRequest
-*/
-func (a *SushiswapApiService) DappsSushiswapUsersHistoricalGet(ctx context.Context) ApiDappsSushiswapUsersHistoricalGetRequest {
-	return ApiDappsSushiswapUsersHistoricalGetRequest{
-		ApiService: a,
-		ctx: ctx,
-	}
-}
-
-// Execute executes the request
-func (a *SushiswapApiService) DappsSushiswapUsersHistoricalGetExecute(r ApiDappsSushiswapUsersHistoricalGetRequest) (*http.Response, error) {
-	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-	)
-
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.DappsSushiswapUsersHistoricalGet")
-	if err != nil {
-		return nil, &GenericOpenAPIError{error: err.Error()}
-	}
-
-	localVarPath := localBasePath + "/dapps/sushiswap/users/historical"
-
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
-
-	if r.startBlock != nil {
-		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
-	}
-	if r.endBlock != nil {
-		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
-	}
-	if r.startDate != nil {
-		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
-	}
-	if r.endDate != nil {
-		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
-	}
-	// to determine the Content-Type header
-	localVarHTTPContentTypes := []string{}
-
-	// set Content-Type header
-	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
-	if localVarHTTPContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
-	}
-
-	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{}
-
-	// set Accept header
-	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
-	if localVarHTTPHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
-	}
-	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
-	if err != nil {
-		return nil, err
-	}
-
-	localVarHTTPResponse, err := a.client.callAPI(req)
-	if err != nil || localVarHTTPResponse == nil {
-		return localVarHTTPResponse, err
-	}
-
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
-	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
-	if err != nil {
-		return localVarHTTPResponse, err
-	}
-
-	if localVarHTTPResponse.StatusCode >= 300 {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: localVarHTTPResponse.Status,
-		}
-		return localVarHTTPResponse, newErr
-	}
-
-	return localVarHTTPResponse, nil
+	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
 type ApiSushiswapGetPoolsCurrentRequest struct {
@@ -1718,6 +1185,150 @@ func (a *SushiswapApiService) SushiswapGetPoolsCurrentExecute(r ApiSushiswapGetP
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiSushiswapGetPoolsDayDataHistoricalRequest struct {
+	ctx context.Context
+	ApiService *SushiswapApiService
+	startBlock *int64
+	endBlock *int64
+	startDate *time.Time
+	endDate *time.Time
+	poolId *string
+}
+
+func (r ApiSushiswapGetPoolsDayDataHistoricalRequest) StartBlock(startBlock int64) ApiSushiswapGetPoolsDayDataHistoricalRequest {
+	r.startBlock = &startBlock
+	return r
+}
+
+func (r ApiSushiswapGetPoolsDayDataHistoricalRequest) EndBlock(endBlock int64) ApiSushiswapGetPoolsDayDataHistoricalRequest {
+	r.endBlock = &endBlock
+	return r
+}
+
+func (r ApiSushiswapGetPoolsDayDataHistoricalRequest) StartDate(startDate time.Time) ApiSushiswapGetPoolsDayDataHistoricalRequest {
+	r.startDate = &startDate
+	return r
+}
+
+func (r ApiSushiswapGetPoolsDayDataHistoricalRequest) EndDate(endDate time.Time) ApiSushiswapGetPoolsDayDataHistoricalRequest {
+	r.endDate = &endDate
+	return r
+}
+
+func (r ApiSushiswapGetPoolsDayDataHistoricalRequest) PoolId(poolId string) ApiSushiswapGetPoolsDayDataHistoricalRequest {
+	r.poolId = &poolId
+	return r
+}
+
+func (r ApiSushiswapGetPoolsDayDataHistoricalRequest) Execute() ([]SushiswapPairDayDataDTO, *http.Response, error) {
+	return r.ApiService.SushiswapGetPoolsDayDataHistoricalExecute(r)
+}
+
+/*
+SushiswapGetPoolsDayDataHistorical GetPoolsDayData (historical)
+
+Gets pools day data.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiSushiswapGetPoolsDayDataHistoricalRequest
+*/
+func (a *SushiswapApiService) SushiswapGetPoolsDayDataHistorical(ctx context.Context) ApiSushiswapGetPoolsDayDataHistoricalRequest {
+	return ApiSushiswapGetPoolsDayDataHistoricalRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []SushiswapPairDayDataDTO
+func (a *SushiswapApiService) SushiswapGetPoolsDayDataHistoricalExecute(r ApiSushiswapGetPoolsDayDataHistoricalRequest) ([]SushiswapPairDayDataDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []SushiswapPairDayDataDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.SushiswapGetPoolsDayDataHistorical")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/sushiswap/poolsDayData/historical"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.startBlock != nil {
+		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+	}
+	if r.endBlock != nil {
+		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+	}
+	if r.startDate != nil {
+		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+	}
+	if r.endDate != nil {
+		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	if r.poolId != nil {
+		localVarQueryParams.Add("poolId", parameterToString(*r.poolId, ""))
+	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
 
@@ -1916,12 +1527,156 @@ func (a *SushiswapApiService) SushiswapGetPoolsHistoricalExecute(r ApiSushiswapG
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
+type ApiSushiswapGetPoolsHourDataHistoricalRequest struct {
+	ctx context.Context
+	ApiService *SushiswapApiService
+	startBlock *int64
+	endBlock *int64
+	startDate *time.Time
+	endDate *time.Time
+	poolId *string
+}
+
+func (r ApiSushiswapGetPoolsHourDataHistoricalRequest) StartBlock(startBlock int64) ApiSushiswapGetPoolsHourDataHistoricalRequest {
+	r.startBlock = &startBlock
+	return r
+}
+
+func (r ApiSushiswapGetPoolsHourDataHistoricalRequest) EndBlock(endBlock int64) ApiSushiswapGetPoolsHourDataHistoricalRequest {
+	r.endBlock = &endBlock
+	return r
+}
+
+func (r ApiSushiswapGetPoolsHourDataHistoricalRequest) StartDate(startDate time.Time) ApiSushiswapGetPoolsHourDataHistoricalRequest {
+	r.startDate = &startDate
+	return r
+}
+
+func (r ApiSushiswapGetPoolsHourDataHistoricalRequest) EndDate(endDate time.Time) ApiSushiswapGetPoolsHourDataHistoricalRequest {
+	r.endDate = &endDate
+	return r
+}
+
+func (r ApiSushiswapGetPoolsHourDataHistoricalRequest) PoolId(poolId string) ApiSushiswapGetPoolsHourDataHistoricalRequest {
+	r.poolId = &poolId
+	return r
+}
+
+func (r ApiSushiswapGetPoolsHourDataHistoricalRequest) Execute() ([]SushiswapPairHourDataDTO, *http.Response, error) {
+	return r.ApiService.SushiswapGetPoolsHourDataHistoricalExecute(r)
+}
+
+/*
+SushiswapGetPoolsHourDataHistorical GetPoolsHourData (historical)
+
+Gets pools tracked each our.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiSushiswapGetPoolsHourDataHistoricalRequest
+*/
+func (a *SushiswapApiService) SushiswapGetPoolsHourDataHistorical(ctx context.Context) ApiSushiswapGetPoolsHourDataHistoricalRequest {
+	return ApiSushiswapGetPoolsHourDataHistoricalRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []SushiswapPairHourDataDTO
+func (a *SushiswapApiService) SushiswapGetPoolsHourDataHistoricalExecute(r ApiSushiswapGetPoolsHourDataHistoricalRequest) ([]SushiswapPairHourDataDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []SushiswapPairHourDataDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.SushiswapGetPoolsHourDataHistorical")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/sushiswap/poolsHourData/historical"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.startBlock != nil {
+		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+	}
+	if r.endBlock != nil {
+		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+	}
+	if r.startDate != nil {
+		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+	}
+	if r.endDate != nil {
+		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	if r.poolId != nil {
+		localVarQueryParams.Add("poolId", parameterToString(*r.poolId, ""))
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
 type ApiSushiswapGetSwapsCurrentRequest struct {
 	ctx context.Context
 	ApiService *SushiswapApiService
 }
 
-func (r ApiSushiswapGetSwapsCurrentRequest) Execute() (*SushiswapSwapDTO, *http.Response, error) {
+func (r ApiSushiswapGetSwapsCurrentRequest) Execute() ([]SushiswapSwapDTO, *http.Response, error) {
 	return r.ApiService.SushiswapGetSwapsCurrentExecute(r)
 }
 
@@ -1941,13 +1696,13 @@ func (a *SushiswapApiService) SushiswapGetSwapsCurrent(ctx context.Context) ApiS
 }
 
 // Execute executes the request
-//  @return SushiswapSwapDTO
-func (a *SushiswapApiService) SushiswapGetSwapsCurrentExecute(r ApiSushiswapGetSwapsCurrentRequest) (*SushiswapSwapDTO, *http.Response, error) {
+//  @return []SushiswapSwapDTO
+func (a *SushiswapApiService) SushiswapGetSwapsCurrentExecute(r ApiSushiswapGetSwapsCurrentRequest) ([]SushiswapSwapDTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *SushiswapSwapDTO
+		localVarReturnValue  []SushiswapSwapDTO
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.SushiswapGetSwapsCurrent")
@@ -2164,7 +1919,7 @@ type ApiSushiswapGetTokensCurrentRequest struct {
 	ApiService *SushiswapApiService
 }
 
-func (r ApiSushiswapGetTokensCurrentRequest) Execute() (*SushiswapTokenDTO, *http.Response, error) {
+func (r ApiSushiswapGetTokensCurrentRequest) Execute() ([]SushiswapTokenDTO, *http.Response, error) {
 	return r.ApiService.SushiswapGetTokensCurrentExecute(r)
 }
 
@@ -2184,13 +1939,13 @@ func (a *SushiswapApiService) SushiswapGetTokensCurrent(ctx context.Context) Api
 }
 
 // Execute executes the request
-//  @return SushiswapTokenDTO
-func (a *SushiswapApiService) SushiswapGetTokensCurrentExecute(r ApiSushiswapGetTokensCurrentRequest) (*SushiswapTokenDTO, *http.Response, error) {
+//  @return []SushiswapTokenDTO
+func (a *SushiswapApiService) SushiswapGetTokensCurrentExecute(r ApiSushiswapGetTokensCurrentRequest) ([]SushiswapTokenDTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *SushiswapTokenDTO
+		localVarReturnValue  []SushiswapTokenDTO
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.SushiswapGetTokensCurrent")
@@ -2204,6 +1959,150 @@ func (a *SushiswapApiService) SushiswapGetTokensCurrentExecute(r ApiSushiswapGet
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiSushiswapGetTokensDayDataHistoricalRequest struct {
+	ctx context.Context
+	ApiService *SushiswapApiService
+	startBlock *int64
+	endBlock *int64
+	startDate *time.Time
+	endDate *time.Time
+	tokenId *string
+}
+
+func (r ApiSushiswapGetTokensDayDataHistoricalRequest) StartBlock(startBlock int64) ApiSushiswapGetTokensDayDataHistoricalRequest {
+	r.startBlock = &startBlock
+	return r
+}
+
+func (r ApiSushiswapGetTokensDayDataHistoricalRequest) EndBlock(endBlock int64) ApiSushiswapGetTokensDayDataHistoricalRequest {
+	r.endBlock = &endBlock
+	return r
+}
+
+func (r ApiSushiswapGetTokensDayDataHistoricalRequest) StartDate(startDate time.Time) ApiSushiswapGetTokensDayDataHistoricalRequest {
+	r.startDate = &startDate
+	return r
+}
+
+func (r ApiSushiswapGetTokensDayDataHistoricalRequest) EndDate(endDate time.Time) ApiSushiswapGetTokensDayDataHistoricalRequest {
+	r.endDate = &endDate
+	return r
+}
+
+func (r ApiSushiswapGetTokensDayDataHistoricalRequest) TokenId(tokenId string) ApiSushiswapGetTokensDayDataHistoricalRequest {
+	r.tokenId = &tokenId
+	return r
+}
+
+func (r ApiSushiswapGetTokensDayDataHistoricalRequest) Execute() ([]SushiswapTokenDayDataDTO, *http.Response, error) {
+	return r.ApiService.SushiswapGetTokensDayDataHistoricalExecute(r)
+}
+
+/*
+SushiswapGetTokensDayDataHistorical GetTokensDayData (historical)
+
+Gets tokens day data.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiSushiswapGetTokensDayDataHistoricalRequest
+*/
+func (a *SushiswapApiService) SushiswapGetTokensDayDataHistorical(ctx context.Context) ApiSushiswapGetTokensDayDataHistoricalRequest {
+	return ApiSushiswapGetTokensDayDataHistoricalRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []SushiswapTokenDayDataDTO
+func (a *SushiswapApiService) SushiswapGetTokensDayDataHistoricalExecute(r ApiSushiswapGetTokensDayDataHistoricalRequest) ([]SushiswapTokenDayDataDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []SushiswapTokenDayDataDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.SushiswapGetTokensDayDataHistorical")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/sushiswap/tokensDayData/historical"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.startBlock != nil {
+		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+	}
+	if r.endBlock != nil {
+		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+	}
+	if r.startDate != nil {
+		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+	}
+	if r.endDate != nil {
+		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	if r.tokenId != nil {
+		localVarQueryParams.Add("tokenId", parameterToString(*r.tokenId, ""))
+	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
 
@@ -2347,6 +2246,276 @@ func (a *SushiswapApiService) SushiswapGetTokensHistoricalExecute(r ApiSushiswap
 	}
 	if r.tokenId != nil {
 		localVarQueryParams.Add("tokenId", parameterToString(*r.tokenId, ""))
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiSushiswapGetTransactionsHistoricalRequest struct {
+	ctx context.Context
+	ApiService *SushiswapApiService
+	startBlock *int64
+	endBlock *int64
+	startDate *time.Time
+	endDate *time.Time
+}
+
+func (r ApiSushiswapGetTransactionsHistoricalRequest) StartBlock(startBlock int64) ApiSushiswapGetTransactionsHistoricalRequest {
+	r.startBlock = &startBlock
+	return r
+}
+
+func (r ApiSushiswapGetTransactionsHistoricalRequest) EndBlock(endBlock int64) ApiSushiswapGetTransactionsHistoricalRequest {
+	r.endBlock = &endBlock
+	return r
+}
+
+func (r ApiSushiswapGetTransactionsHistoricalRequest) StartDate(startDate time.Time) ApiSushiswapGetTransactionsHistoricalRequest {
+	r.startDate = &startDate
+	return r
+}
+
+func (r ApiSushiswapGetTransactionsHistoricalRequest) EndDate(endDate time.Time) ApiSushiswapGetTransactionsHistoricalRequest {
+	r.endDate = &endDate
+	return r
+}
+
+func (r ApiSushiswapGetTransactionsHistoricalRequest) Execute() ([]SushiswapTransactionDTO, *http.Response, error) {
+	return r.ApiService.SushiswapGetTransactionsHistoricalExecute(r)
+}
+
+/*
+SushiswapGetTransactionsHistorical GetTransactions (historical)
+
+Gets transactions.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiSushiswapGetTransactionsHistoricalRequest
+*/
+func (a *SushiswapApiService) SushiswapGetTransactionsHistorical(ctx context.Context) ApiSushiswapGetTransactionsHistoricalRequest {
+	return ApiSushiswapGetTransactionsHistoricalRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []SushiswapTransactionDTO
+func (a *SushiswapApiService) SushiswapGetTransactionsHistoricalExecute(r ApiSushiswapGetTransactionsHistoricalRequest) ([]SushiswapTransactionDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []SushiswapTransactionDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.SushiswapGetTransactionsHistorical")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/sushiswap/transactions/historical"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.startBlock != nil {
+		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+	}
+	if r.endBlock != nil {
+		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+	}
+	if r.startDate != nil {
+		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+	}
+	if r.endDate != nil {
+		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiSushiswapGetUsersHistoricalRequest struct {
+	ctx context.Context
+	ApiService *SushiswapApiService
+	startBlock *int64
+	endBlock *int64
+	startDate *time.Time
+	endDate *time.Time
+}
+
+func (r ApiSushiswapGetUsersHistoricalRequest) StartBlock(startBlock int64) ApiSushiswapGetUsersHistoricalRequest {
+	r.startBlock = &startBlock
+	return r
+}
+
+func (r ApiSushiswapGetUsersHistoricalRequest) EndBlock(endBlock int64) ApiSushiswapGetUsersHistoricalRequest {
+	r.endBlock = &endBlock
+	return r
+}
+
+func (r ApiSushiswapGetUsersHistoricalRequest) StartDate(startDate time.Time) ApiSushiswapGetUsersHistoricalRequest {
+	r.startDate = &startDate
+	return r
+}
+
+func (r ApiSushiswapGetUsersHistoricalRequest) EndDate(endDate time.Time) ApiSushiswapGetUsersHistoricalRequest {
+	r.endDate = &endDate
+	return r
+}
+
+func (r ApiSushiswapGetUsersHistoricalRequest) Execute() ([]SushiswapUserDTO, *http.Response, error) {
+	return r.ApiService.SushiswapGetUsersHistoricalExecute(r)
+}
+
+/*
+SushiswapGetUsersHistorical GetUsers (historical)
+
+Gets users.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiSushiswapGetUsersHistoricalRequest
+*/
+func (a *SushiswapApiService) SushiswapGetUsersHistorical(ctx context.Context) ApiSushiswapGetUsersHistoricalRequest {
+	return ApiSushiswapGetUsersHistoricalRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []SushiswapUserDTO
+func (a *SushiswapApiService) SushiswapGetUsersHistoricalExecute(r ApiSushiswapGetUsersHistoricalRequest) ([]SushiswapUserDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []SushiswapUserDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.SushiswapGetUsersHistorical")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/sushiswap/users/historical"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.startBlock != nil {
+		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+	}
+	if r.endBlock != nil {
+		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+	}
+	if r.startDate != nil {
+		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+	}
+	if r.endDate != nil {
+		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}

@@ -61,8 +61,48 @@ public class JsonUtil {
       return new TypeToken<List<NumericsBigInteger>>(){}.getType();
     }
     
+    if ("SushiswapBundleDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<SushiswapBundleDTO>>(){}.getType();
+    }
+    
+    if ("SushiswapBurnDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<SushiswapBurnDTO>>(){}.getType();
+    }
+    
+    if ("SushiswapDayDataDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<SushiswapDayDataDTO>>(){}.getType();
+    }
+    
+    if ("SushiswapFactoryDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<SushiswapFactoryDTO>>(){}.getType();
+    }
+    
+    if ("SushiswapHourDataDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<SushiswapHourDataDTO>>(){}.getType();
+    }
+    
+    if ("SushiswapLiquidityPositionDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<SushiswapLiquidityPositionDTO>>(){}.getType();
+    }
+    
+    if ("SushiswapLiquidityPositionSnapshotDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<SushiswapLiquidityPositionSnapshotDTO>>(){}.getType();
+    }
+    
+    if ("SushiswapMintDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<SushiswapMintDTO>>(){}.getType();
+    }
+    
     if ("SushiswapPairDTO".equalsIgnoreCase(className)) {
       return new TypeToken<List<SushiswapPairDTO>>(){}.getType();
+    }
+    
+    if ("SushiswapPairDayDataDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<SushiswapPairDayDataDTO>>(){}.getType();
+    }
+    
+    if ("SushiswapPairHourDataDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<SushiswapPairHourDataDTO>>(){}.getType();
     }
     
     if ("SushiswapSwapDTO".equalsIgnoreCase(className)) {
@@ -71,6 +111,18 @@ public class JsonUtil {
     
     if ("SushiswapTokenDTO".equalsIgnoreCase(className)) {
       return new TypeToken<List<SushiswapTokenDTO>>(){}.getType();
+    }
+    
+    if ("SushiswapTokenDayDataDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<SushiswapTokenDayDataDTO>>(){}.getType();
+    }
+    
+    if ("SushiswapTransactionDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<SushiswapTransactionDTO>>(){}.getType();
+    }
+    
+    if ("SushiswapUserDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<List<SushiswapUserDTO>>(){}.getType();
     }
     
     if ("TransactionsETradeAggressiveSide".equalsIgnoreCase(className)) {
@@ -163,8 +215,48 @@ public class JsonUtil {
       return new TypeToken<NumericsBigInteger>(){}.getType();
     }
     
+    if ("SushiswapBundleDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<SushiswapBundleDTO>(){}.getType();
+    }
+    
+    if ("SushiswapBurnDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<SushiswapBurnDTO>(){}.getType();
+    }
+    
+    if ("SushiswapDayDataDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<SushiswapDayDataDTO>(){}.getType();
+    }
+    
+    if ("SushiswapFactoryDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<SushiswapFactoryDTO>(){}.getType();
+    }
+    
+    if ("SushiswapHourDataDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<SushiswapHourDataDTO>(){}.getType();
+    }
+    
+    if ("SushiswapLiquidityPositionDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<SushiswapLiquidityPositionDTO>(){}.getType();
+    }
+    
+    if ("SushiswapLiquidityPositionSnapshotDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<SushiswapLiquidityPositionSnapshotDTO>(){}.getType();
+    }
+    
+    if ("SushiswapMintDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<SushiswapMintDTO>(){}.getType();
+    }
+    
     if ("SushiswapPairDTO".equalsIgnoreCase(className)) {
       return new TypeToken<SushiswapPairDTO>(){}.getType();
+    }
+    
+    if ("SushiswapPairDayDataDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<SushiswapPairDayDataDTO>(){}.getType();
+    }
+    
+    if ("SushiswapPairHourDataDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<SushiswapPairHourDataDTO>(){}.getType();
     }
     
     if ("SushiswapSwapDTO".equalsIgnoreCase(className)) {
@@ -173,6 +265,18 @@ public class JsonUtil {
     
     if ("SushiswapTokenDTO".equalsIgnoreCase(className)) {
       return new TypeToken<SushiswapTokenDTO>(){}.getType();
+    }
+    
+    if ("SushiswapTokenDayDataDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<SushiswapTokenDayDataDTO>(){}.getType();
+    }
+    
+    if ("SushiswapTransactionDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<SushiswapTransactionDTO>(){}.getType();
+    }
+    
+    if ("SushiswapUserDTO".equalsIgnoreCase(className)) {
+      return new TypeToken<SushiswapUserDTO>(){}.getType();
     }
     
     if ("TransactionsETradeAggressiveSide".equalsIgnoreCase(className)) {

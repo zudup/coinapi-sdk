@@ -66,6 +66,578 @@ numericsBigIntegerSignL f NumericsBigInteger{..} = (\numericsBigIntegerSign -> N
 
 
 
+-- * SushiswapBundleDTO
+
+-- | 'sushiswapBundleDTOEntryTime' Lens
+sushiswapBundleDTOEntryTimeL :: Lens_' SushiswapBundleDTO (Maybe DateTime)
+sushiswapBundleDTOEntryTimeL f SushiswapBundleDTO{..} = (\sushiswapBundleDTOEntryTime -> SushiswapBundleDTO { sushiswapBundleDTOEntryTime, ..} ) <$> f sushiswapBundleDTOEntryTime
+{-# INLINE sushiswapBundleDTOEntryTimeL #-}
+
+-- | 'sushiswapBundleDTORecvTime' Lens
+sushiswapBundleDTORecvTimeL :: Lens_' SushiswapBundleDTO (Maybe DateTime)
+sushiswapBundleDTORecvTimeL f SushiswapBundleDTO{..} = (\sushiswapBundleDTORecvTime -> SushiswapBundleDTO { sushiswapBundleDTORecvTime, ..} ) <$> f sushiswapBundleDTORecvTime
+{-# INLINE sushiswapBundleDTORecvTimeL #-}
+
+-- | 'sushiswapBundleDTOBlockNumber' Lens
+sushiswapBundleDTOBlockNumberL :: Lens_' SushiswapBundleDTO (Maybe Integer)
+sushiswapBundleDTOBlockNumberL f SushiswapBundleDTO{..} = (\sushiswapBundleDTOBlockNumber -> SushiswapBundleDTO { sushiswapBundleDTOBlockNumber, ..} ) <$> f sushiswapBundleDTOBlockNumber
+{-# INLINE sushiswapBundleDTOBlockNumberL #-}
+
+-- | 'sushiswapBundleDTOId' Lens
+sushiswapBundleDTOIdL :: Lens_' SushiswapBundleDTO (Maybe Text)
+sushiswapBundleDTOIdL f SushiswapBundleDTO{..} = (\sushiswapBundleDTOId -> SushiswapBundleDTO { sushiswapBundleDTOId, ..} ) <$> f sushiswapBundleDTOId
+{-# INLINE sushiswapBundleDTOIdL #-}
+
+-- | 'sushiswapBundleDTOEthPrice' Lens
+sushiswapBundleDTOEthPriceL :: Lens_' SushiswapBundleDTO (Maybe Text)
+sushiswapBundleDTOEthPriceL f SushiswapBundleDTO{..} = (\sushiswapBundleDTOEthPrice -> SushiswapBundleDTO { sushiswapBundleDTOEthPrice, ..} ) <$> f sushiswapBundleDTOEthPrice
+{-# INLINE sushiswapBundleDTOEthPriceL #-}
+
+-- | 'sushiswapBundleDTOVid' Lens
+sushiswapBundleDTOVidL :: Lens_' SushiswapBundleDTO (Maybe Integer)
+sushiswapBundleDTOVidL f SushiswapBundleDTO{..} = (\sushiswapBundleDTOVid -> SushiswapBundleDTO { sushiswapBundleDTOVid, ..} ) <$> f sushiswapBundleDTOVid
+{-# INLINE sushiswapBundleDTOVidL #-}
+
+
+
+-- * SushiswapBurnDTO
+
+-- | 'sushiswapBurnDTOEntryTime' Lens
+sushiswapBurnDTOEntryTimeL :: Lens_' SushiswapBurnDTO (Maybe DateTime)
+sushiswapBurnDTOEntryTimeL f SushiswapBurnDTO{..} = (\sushiswapBurnDTOEntryTime -> SushiswapBurnDTO { sushiswapBurnDTOEntryTime, ..} ) <$> f sushiswapBurnDTOEntryTime
+{-# INLINE sushiswapBurnDTOEntryTimeL #-}
+
+-- | 'sushiswapBurnDTORecvTime' Lens
+sushiswapBurnDTORecvTimeL :: Lens_' SushiswapBurnDTO (Maybe DateTime)
+sushiswapBurnDTORecvTimeL f SushiswapBurnDTO{..} = (\sushiswapBurnDTORecvTime -> SushiswapBurnDTO { sushiswapBurnDTORecvTime, ..} ) <$> f sushiswapBurnDTORecvTime
+{-# INLINE sushiswapBurnDTORecvTimeL #-}
+
+-- | 'sushiswapBurnDTOBlockNumber' Lens
+sushiswapBurnDTOBlockNumberL :: Lens_' SushiswapBurnDTO (Maybe Integer)
+sushiswapBurnDTOBlockNumberL f SushiswapBurnDTO{..} = (\sushiswapBurnDTOBlockNumber -> SushiswapBurnDTO { sushiswapBurnDTOBlockNumber, ..} ) <$> f sushiswapBurnDTOBlockNumber
+{-# INLINE sushiswapBurnDTOBlockNumberL #-}
+
+-- | 'sushiswapBurnDTOId' Lens
+sushiswapBurnDTOIdL :: Lens_' SushiswapBurnDTO (Maybe Text)
+sushiswapBurnDTOIdL f SushiswapBurnDTO{..} = (\sushiswapBurnDTOId -> SushiswapBurnDTO { sushiswapBurnDTOId, ..} ) <$> f sushiswapBurnDTOId
+{-# INLINE sushiswapBurnDTOIdL #-}
+
+-- | 'sushiswapBurnDTOTransaction' Lens
+sushiswapBurnDTOTransactionL :: Lens_' SushiswapBurnDTO (Maybe Text)
+sushiswapBurnDTOTransactionL f SushiswapBurnDTO{..} = (\sushiswapBurnDTOTransaction -> SushiswapBurnDTO { sushiswapBurnDTOTransaction, ..} ) <$> f sushiswapBurnDTOTransaction
+{-# INLINE sushiswapBurnDTOTransactionL #-}
+
+-- | 'sushiswapBurnDTOTimestamp' Lens
+sushiswapBurnDTOTimestampL :: Lens_' SushiswapBurnDTO (Maybe Text)
+sushiswapBurnDTOTimestampL f SushiswapBurnDTO{..} = (\sushiswapBurnDTOTimestamp -> SushiswapBurnDTO { sushiswapBurnDTOTimestamp, ..} ) <$> f sushiswapBurnDTOTimestamp
+{-# INLINE sushiswapBurnDTOTimestampL #-}
+
+-- | 'sushiswapBurnDTOPair' Lens
+sushiswapBurnDTOPairL :: Lens_' SushiswapBurnDTO (Maybe Text)
+sushiswapBurnDTOPairL f SushiswapBurnDTO{..} = (\sushiswapBurnDTOPair -> SushiswapBurnDTO { sushiswapBurnDTOPair, ..} ) <$> f sushiswapBurnDTOPair
+{-# INLINE sushiswapBurnDTOPairL #-}
+
+-- | 'sushiswapBurnDTOLiquidity' Lens
+sushiswapBurnDTOLiquidityL :: Lens_' SushiswapBurnDTO (Maybe Text)
+sushiswapBurnDTOLiquidityL f SushiswapBurnDTO{..} = (\sushiswapBurnDTOLiquidity -> SushiswapBurnDTO { sushiswapBurnDTOLiquidity, ..} ) <$> f sushiswapBurnDTOLiquidity
+{-# INLINE sushiswapBurnDTOLiquidityL #-}
+
+-- | 'sushiswapBurnDTOSender' Lens
+sushiswapBurnDTOSenderL :: Lens_' SushiswapBurnDTO (Maybe Text)
+sushiswapBurnDTOSenderL f SushiswapBurnDTO{..} = (\sushiswapBurnDTOSender -> SushiswapBurnDTO { sushiswapBurnDTOSender, ..} ) <$> f sushiswapBurnDTOSender
+{-# INLINE sushiswapBurnDTOSenderL #-}
+
+-- | 'sushiswapBurnDTOAmount0' Lens
+sushiswapBurnDTOAmount0L :: Lens_' SushiswapBurnDTO (Maybe Text)
+sushiswapBurnDTOAmount0L f SushiswapBurnDTO{..} = (\sushiswapBurnDTOAmount0 -> SushiswapBurnDTO { sushiswapBurnDTOAmount0, ..} ) <$> f sushiswapBurnDTOAmount0
+{-# INLINE sushiswapBurnDTOAmount0L #-}
+
+-- | 'sushiswapBurnDTOAmount1' Lens
+sushiswapBurnDTOAmount1L :: Lens_' SushiswapBurnDTO (Maybe Text)
+sushiswapBurnDTOAmount1L f SushiswapBurnDTO{..} = (\sushiswapBurnDTOAmount1 -> SushiswapBurnDTO { sushiswapBurnDTOAmount1, ..} ) <$> f sushiswapBurnDTOAmount1
+{-# INLINE sushiswapBurnDTOAmount1L #-}
+
+-- | 'sushiswapBurnDTOTo' Lens
+sushiswapBurnDTOToL :: Lens_' SushiswapBurnDTO (Maybe Text)
+sushiswapBurnDTOToL f SushiswapBurnDTO{..} = (\sushiswapBurnDTOTo -> SushiswapBurnDTO { sushiswapBurnDTOTo, ..} ) <$> f sushiswapBurnDTOTo
+{-# INLINE sushiswapBurnDTOToL #-}
+
+-- | 'sushiswapBurnDTOLogIndex' Lens
+sushiswapBurnDTOLogIndexL :: Lens_' SushiswapBurnDTO (Maybe Text)
+sushiswapBurnDTOLogIndexL f SushiswapBurnDTO{..} = (\sushiswapBurnDTOLogIndex -> SushiswapBurnDTO { sushiswapBurnDTOLogIndex, ..} ) <$> f sushiswapBurnDTOLogIndex
+{-# INLINE sushiswapBurnDTOLogIndexL #-}
+
+-- | 'sushiswapBurnDTOAmountUsd' Lens
+sushiswapBurnDTOAmountUsdL :: Lens_' SushiswapBurnDTO (Maybe Text)
+sushiswapBurnDTOAmountUsdL f SushiswapBurnDTO{..} = (\sushiswapBurnDTOAmountUsd -> SushiswapBurnDTO { sushiswapBurnDTOAmountUsd, ..} ) <$> f sushiswapBurnDTOAmountUsd
+{-# INLINE sushiswapBurnDTOAmountUsdL #-}
+
+-- | 'sushiswapBurnDTOComplete' Lens
+sushiswapBurnDTOCompleteL :: Lens_' SushiswapBurnDTO (Maybe Bool)
+sushiswapBurnDTOCompleteL f SushiswapBurnDTO{..} = (\sushiswapBurnDTOComplete -> SushiswapBurnDTO { sushiswapBurnDTOComplete, ..} ) <$> f sushiswapBurnDTOComplete
+{-# INLINE sushiswapBurnDTOCompleteL #-}
+
+-- | 'sushiswapBurnDTOFeeTo' Lens
+sushiswapBurnDTOFeeToL :: Lens_' SushiswapBurnDTO (Maybe Text)
+sushiswapBurnDTOFeeToL f SushiswapBurnDTO{..} = (\sushiswapBurnDTOFeeTo -> SushiswapBurnDTO { sushiswapBurnDTOFeeTo, ..} ) <$> f sushiswapBurnDTOFeeTo
+{-# INLINE sushiswapBurnDTOFeeToL #-}
+
+-- | 'sushiswapBurnDTOFeeLiquidity' Lens
+sushiswapBurnDTOFeeLiquidityL :: Lens_' SushiswapBurnDTO (Maybe Text)
+sushiswapBurnDTOFeeLiquidityL f SushiswapBurnDTO{..} = (\sushiswapBurnDTOFeeLiquidity -> SushiswapBurnDTO { sushiswapBurnDTOFeeLiquidity, ..} ) <$> f sushiswapBurnDTOFeeLiquidity
+{-# INLINE sushiswapBurnDTOFeeLiquidityL #-}
+
+-- | 'sushiswapBurnDTOVid' Lens
+sushiswapBurnDTOVidL :: Lens_' SushiswapBurnDTO (Maybe Integer)
+sushiswapBurnDTOVidL f SushiswapBurnDTO{..} = (\sushiswapBurnDTOVid -> SushiswapBurnDTO { sushiswapBurnDTOVid, ..} ) <$> f sushiswapBurnDTOVid
+{-# INLINE sushiswapBurnDTOVidL #-}
+
+
+
+-- * SushiswapDayDataDTO
+
+-- | 'sushiswapDayDataDTOEntryTime' Lens
+sushiswapDayDataDTOEntryTimeL :: Lens_' SushiswapDayDataDTO (Maybe DateTime)
+sushiswapDayDataDTOEntryTimeL f SushiswapDayDataDTO{..} = (\sushiswapDayDataDTOEntryTime -> SushiswapDayDataDTO { sushiswapDayDataDTOEntryTime, ..} ) <$> f sushiswapDayDataDTOEntryTime
+{-# INLINE sushiswapDayDataDTOEntryTimeL #-}
+
+-- | 'sushiswapDayDataDTORecvTime' Lens
+sushiswapDayDataDTORecvTimeL :: Lens_' SushiswapDayDataDTO (Maybe DateTime)
+sushiswapDayDataDTORecvTimeL f SushiswapDayDataDTO{..} = (\sushiswapDayDataDTORecvTime -> SushiswapDayDataDTO { sushiswapDayDataDTORecvTime, ..} ) <$> f sushiswapDayDataDTORecvTime
+{-# INLINE sushiswapDayDataDTORecvTimeL #-}
+
+-- | 'sushiswapDayDataDTOBlockNumber' Lens
+sushiswapDayDataDTOBlockNumberL :: Lens_' SushiswapDayDataDTO (Maybe Integer)
+sushiswapDayDataDTOBlockNumberL f SushiswapDayDataDTO{..} = (\sushiswapDayDataDTOBlockNumber -> SushiswapDayDataDTO { sushiswapDayDataDTOBlockNumber, ..} ) <$> f sushiswapDayDataDTOBlockNumber
+{-# INLINE sushiswapDayDataDTOBlockNumberL #-}
+
+-- | 'sushiswapDayDataDTOId' Lens
+sushiswapDayDataDTOIdL :: Lens_' SushiswapDayDataDTO (Maybe Text)
+sushiswapDayDataDTOIdL f SushiswapDayDataDTO{..} = (\sushiswapDayDataDTOId -> SushiswapDayDataDTO { sushiswapDayDataDTOId, ..} ) <$> f sushiswapDayDataDTOId
+{-# INLINE sushiswapDayDataDTOIdL #-}
+
+-- | 'sushiswapDayDataDTODate' Lens
+sushiswapDayDataDTODateL :: Lens_' SushiswapDayDataDTO (Maybe Int)
+sushiswapDayDataDTODateL f SushiswapDayDataDTO{..} = (\sushiswapDayDataDTODate -> SushiswapDayDataDTO { sushiswapDayDataDTODate, ..} ) <$> f sushiswapDayDataDTODate
+{-# INLINE sushiswapDayDataDTODateL #-}
+
+-- | 'sushiswapDayDataDTOFactory' Lens
+sushiswapDayDataDTOFactoryL :: Lens_' SushiswapDayDataDTO (Maybe Text)
+sushiswapDayDataDTOFactoryL f SushiswapDayDataDTO{..} = (\sushiswapDayDataDTOFactory -> SushiswapDayDataDTO { sushiswapDayDataDTOFactory, ..} ) <$> f sushiswapDayDataDTOFactory
+{-# INLINE sushiswapDayDataDTOFactoryL #-}
+
+-- | 'sushiswapDayDataDTOVolumeEth' Lens
+sushiswapDayDataDTOVolumeEthL :: Lens_' SushiswapDayDataDTO (Maybe Text)
+sushiswapDayDataDTOVolumeEthL f SushiswapDayDataDTO{..} = (\sushiswapDayDataDTOVolumeEth -> SushiswapDayDataDTO { sushiswapDayDataDTOVolumeEth, ..} ) <$> f sushiswapDayDataDTOVolumeEth
+{-# INLINE sushiswapDayDataDTOVolumeEthL #-}
+
+-- | 'sushiswapDayDataDTOVolumeUsd' Lens
+sushiswapDayDataDTOVolumeUsdL :: Lens_' SushiswapDayDataDTO (Maybe Text)
+sushiswapDayDataDTOVolumeUsdL f SushiswapDayDataDTO{..} = (\sushiswapDayDataDTOVolumeUsd -> SushiswapDayDataDTO { sushiswapDayDataDTOVolumeUsd, ..} ) <$> f sushiswapDayDataDTOVolumeUsd
+{-# INLINE sushiswapDayDataDTOVolumeUsdL #-}
+
+-- | 'sushiswapDayDataDTOUntrackedVolume' Lens
+sushiswapDayDataDTOUntrackedVolumeL :: Lens_' SushiswapDayDataDTO (Maybe Text)
+sushiswapDayDataDTOUntrackedVolumeL f SushiswapDayDataDTO{..} = (\sushiswapDayDataDTOUntrackedVolume -> SushiswapDayDataDTO { sushiswapDayDataDTOUntrackedVolume, ..} ) <$> f sushiswapDayDataDTOUntrackedVolume
+{-# INLINE sushiswapDayDataDTOUntrackedVolumeL #-}
+
+-- | 'sushiswapDayDataDTOLiquidityEth' Lens
+sushiswapDayDataDTOLiquidityEthL :: Lens_' SushiswapDayDataDTO (Maybe Text)
+sushiswapDayDataDTOLiquidityEthL f SushiswapDayDataDTO{..} = (\sushiswapDayDataDTOLiquidityEth -> SushiswapDayDataDTO { sushiswapDayDataDTOLiquidityEth, ..} ) <$> f sushiswapDayDataDTOLiquidityEth
+{-# INLINE sushiswapDayDataDTOLiquidityEthL #-}
+
+-- | 'sushiswapDayDataDTOLiquidityUsd' Lens
+sushiswapDayDataDTOLiquidityUsdL :: Lens_' SushiswapDayDataDTO (Maybe Text)
+sushiswapDayDataDTOLiquidityUsdL f SushiswapDayDataDTO{..} = (\sushiswapDayDataDTOLiquidityUsd -> SushiswapDayDataDTO { sushiswapDayDataDTOLiquidityUsd, ..} ) <$> f sushiswapDayDataDTOLiquidityUsd
+{-# INLINE sushiswapDayDataDTOLiquidityUsdL #-}
+
+-- | 'sushiswapDayDataDTOTxCount' Lens
+sushiswapDayDataDTOTxCountL :: Lens_' SushiswapDayDataDTO (Maybe Text)
+sushiswapDayDataDTOTxCountL f SushiswapDayDataDTO{..} = (\sushiswapDayDataDTOTxCount -> SushiswapDayDataDTO { sushiswapDayDataDTOTxCount, ..} ) <$> f sushiswapDayDataDTOTxCount
+{-# INLINE sushiswapDayDataDTOTxCountL #-}
+
+-- | 'sushiswapDayDataDTOVid' Lens
+sushiswapDayDataDTOVidL :: Lens_' SushiswapDayDataDTO (Maybe Integer)
+sushiswapDayDataDTOVidL f SushiswapDayDataDTO{..} = (\sushiswapDayDataDTOVid -> SushiswapDayDataDTO { sushiswapDayDataDTOVid, ..} ) <$> f sushiswapDayDataDTOVid
+{-# INLINE sushiswapDayDataDTOVidL #-}
+
+
+
+-- * SushiswapFactoryDTO
+
+-- | 'sushiswapFactoryDTOEntryTime' Lens
+sushiswapFactoryDTOEntryTimeL :: Lens_' SushiswapFactoryDTO (Maybe DateTime)
+sushiswapFactoryDTOEntryTimeL f SushiswapFactoryDTO{..} = (\sushiswapFactoryDTOEntryTime -> SushiswapFactoryDTO { sushiswapFactoryDTOEntryTime, ..} ) <$> f sushiswapFactoryDTOEntryTime
+{-# INLINE sushiswapFactoryDTOEntryTimeL #-}
+
+-- | 'sushiswapFactoryDTORecvTime' Lens
+sushiswapFactoryDTORecvTimeL :: Lens_' SushiswapFactoryDTO (Maybe DateTime)
+sushiswapFactoryDTORecvTimeL f SushiswapFactoryDTO{..} = (\sushiswapFactoryDTORecvTime -> SushiswapFactoryDTO { sushiswapFactoryDTORecvTime, ..} ) <$> f sushiswapFactoryDTORecvTime
+{-# INLINE sushiswapFactoryDTORecvTimeL #-}
+
+-- | 'sushiswapFactoryDTOBlockNumber' Lens
+sushiswapFactoryDTOBlockNumberL :: Lens_' SushiswapFactoryDTO (Maybe Integer)
+sushiswapFactoryDTOBlockNumberL f SushiswapFactoryDTO{..} = (\sushiswapFactoryDTOBlockNumber -> SushiswapFactoryDTO { sushiswapFactoryDTOBlockNumber, ..} ) <$> f sushiswapFactoryDTOBlockNumber
+{-# INLINE sushiswapFactoryDTOBlockNumberL #-}
+
+-- | 'sushiswapFactoryDTOId' Lens
+sushiswapFactoryDTOIdL :: Lens_' SushiswapFactoryDTO (Maybe Text)
+sushiswapFactoryDTOIdL f SushiswapFactoryDTO{..} = (\sushiswapFactoryDTOId -> SushiswapFactoryDTO { sushiswapFactoryDTOId, ..} ) <$> f sushiswapFactoryDTOId
+{-# INLINE sushiswapFactoryDTOIdL #-}
+
+-- | 'sushiswapFactoryDTOPairCount' Lens
+sushiswapFactoryDTOPairCountL :: Lens_' SushiswapFactoryDTO (Maybe Text)
+sushiswapFactoryDTOPairCountL f SushiswapFactoryDTO{..} = (\sushiswapFactoryDTOPairCount -> SushiswapFactoryDTO { sushiswapFactoryDTOPairCount, ..} ) <$> f sushiswapFactoryDTOPairCount
+{-# INLINE sushiswapFactoryDTOPairCountL #-}
+
+-- | 'sushiswapFactoryDTOVolumeUsd' Lens
+sushiswapFactoryDTOVolumeUsdL :: Lens_' SushiswapFactoryDTO (Maybe Text)
+sushiswapFactoryDTOVolumeUsdL f SushiswapFactoryDTO{..} = (\sushiswapFactoryDTOVolumeUsd -> SushiswapFactoryDTO { sushiswapFactoryDTOVolumeUsd, ..} ) <$> f sushiswapFactoryDTOVolumeUsd
+{-# INLINE sushiswapFactoryDTOVolumeUsdL #-}
+
+-- | 'sushiswapFactoryDTOVolumeEth' Lens
+sushiswapFactoryDTOVolumeEthL :: Lens_' SushiswapFactoryDTO (Maybe Text)
+sushiswapFactoryDTOVolumeEthL f SushiswapFactoryDTO{..} = (\sushiswapFactoryDTOVolumeEth -> SushiswapFactoryDTO { sushiswapFactoryDTOVolumeEth, ..} ) <$> f sushiswapFactoryDTOVolumeEth
+{-# INLINE sushiswapFactoryDTOVolumeEthL #-}
+
+-- | 'sushiswapFactoryDTOUntrackedVolumeUsd' Lens
+sushiswapFactoryDTOUntrackedVolumeUsdL :: Lens_' SushiswapFactoryDTO (Maybe Text)
+sushiswapFactoryDTOUntrackedVolumeUsdL f SushiswapFactoryDTO{..} = (\sushiswapFactoryDTOUntrackedVolumeUsd -> SushiswapFactoryDTO { sushiswapFactoryDTOUntrackedVolumeUsd, ..} ) <$> f sushiswapFactoryDTOUntrackedVolumeUsd
+{-# INLINE sushiswapFactoryDTOUntrackedVolumeUsdL #-}
+
+-- | 'sushiswapFactoryDTOLiquidityUsd' Lens
+sushiswapFactoryDTOLiquidityUsdL :: Lens_' SushiswapFactoryDTO (Maybe Text)
+sushiswapFactoryDTOLiquidityUsdL f SushiswapFactoryDTO{..} = (\sushiswapFactoryDTOLiquidityUsd -> SushiswapFactoryDTO { sushiswapFactoryDTOLiquidityUsd, ..} ) <$> f sushiswapFactoryDTOLiquidityUsd
+{-# INLINE sushiswapFactoryDTOLiquidityUsdL #-}
+
+-- | 'sushiswapFactoryDTOLiquidityEth' Lens
+sushiswapFactoryDTOLiquidityEthL :: Lens_' SushiswapFactoryDTO (Maybe Text)
+sushiswapFactoryDTOLiquidityEthL f SushiswapFactoryDTO{..} = (\sushiswapFactoryDTOLiquidityEth -> SushiswapFactoryDTO { sushiswapFactoryDTOLiquidityEth, ..} ) <$> f sushiswapFactoryDTOLiquidityEth
+{-# INLINE sushiswapFactoryDTOLiquidityEthL #-}
+
+-- | 'sushiswapFactoryDTOTxCount' Lens
+sushiswapFactoryDTOTxCountL :: Lens_' SushiswapFactoryDTO (Maybe Text)
+sushiswapFactoryDTOTxCountL f SushiswapFactoryDTO{..} = (\sushiswapFactoryDTOTxCount -> SushiswapFactoryDTO { sushiswapFactoryDTOTxCount, ..} ) <$> f sushiswapFactoryDTOTxCount
+{-# INLINE sushiswapFactoryDTOTxCountL #-}
+
+-- | 'sushiswapFactoryDTOTokenCount' Lens
+sushiswapFactoryDTOTokenCountL :: Lens_' SushiswapFactoryDTO (Maybe Text)
+sushiswapFactoryDTOTokenCountL f SushiswapFactoryDTO{..} = (\sushiswapFactoryDTOTokenCount -> SushiswapFactoryDTO { sushiswapFactoryDTOTokenCount, ..} ) <$> f sushiswapFactoryDTOTokenCount
+{-# INLINE sushiswapFactoryDTOTokenCountL #-}
+
+-- | 'sushiswapFactoryDTOUserCount' Lens
+sushiswapFactoryDTOUserCountL :: Lens_' SushiswapFactoryDTO (Maybe Text)
+sushiswapFactoryDTOUserCountL f SushiswapFactoryDTO{..} = (\sushiswapFactoryDTOUserCount -> SushiswapFactoryDTO { sushiswapFactoryDTOUserCount, ..} ) <$> f sushiswapFactoryDTOUserCount
+{-# INLINE sushiswapFactoryDTOUserCountL #-}
+
+-- | 'sushiswapFactoryDTOVid' Lens
+sushiswapFactoryDTOVidL :: Lens_' SushiswapFactoryDTO (Maybe Integer)
+sushiswapFactoryDTOVidL f SushiswapFactoryDTO{..} = (\sushiswapFactoryDTOVid -> SushiswapFactoryDTO { sushiswapFactoryDTOVid, ..} ) <$> f sushiswapFactoryDTOVid
+{-# INLINE sushiswapFactoryDTOVidL #-}
+
+
+
+-- * SushiswapHourDataDTO
+
+-- | 'sushiswapHourDataDTOEntryTime' Lens
+sushiswapHourDataDTOEntryTimeL :: Lens_' SushiswapHourDataDTO (Maybe DateTime)
+sushiswapHourDataDTOEntryTimeL f SushiswapHourDataDTO{..} = (\sushiswapHourDataDTOEntryTime -> SushiswapHourDataDTO { sushiswapHourDataDTOEntryTime, ..} ) <$> f sushiswapHourDataDTOEntryTime
+{-# INLINE sushiswapHourDataDTOEntryTimeL #-}
+
+-- | 'sushiswapHourDataDTORecvTime' Lens
+sushiswapHourDataDTORecvTimeL :: Lens_' SushiswapHourDataDTO (Maybe DateTime)
+sushiswapHourDataDTORecvTimeL f SushiswapHourDataDTO{..} = (\sushiswapHourDataDTORecvTime -> SushiswapHourDataDTO { sushiswapHourDataDTORecvTime, ..} ) <$> f sushiswapHourDataDTORecvTime
+{-# INLINE sushiswapHourDataDTORecvTimeL #-}
+
+-- | 'sushiswapHourDataDTOBlockNumber' Lens
+sushiswapHourDataDTOBlockNumberL :: Lens_' SushiswapHourDataDTO (Maybe Integer)
+sushiswapHourDataDTOBlockNumberL f SushiswapHourDataDTO{..} = (\sushiswapHourDataDTOBlockNumber -> SushiswapHourDataDTO { sushiswapHourDataDTOBlockNumber, ..} ) <$> f sushiswapHourDataDTOBlockNumber
+{-# INLINE sushiswapHourDataDTOBlockNumberL #-}
+
+-- | 'sushiswapHourDataDTOId' Lens
+sushiswapHourDataDTOIdL :: Lens_' SushiswapHourDataDTO (Maybe Text)
+sushiswapHourDataDTOIdL f SushiswapHourDataDTO{..} = (\sushiswapHourDataDTOId -> SushiswapHourDataDTO { sushiswapHourDataDTOId, ..} ) <$> f sushiswapHourDataDTOId
+{-# INLINE sushiswapHourDataDTOIdL #-}
+
+-- | 'sushiswapHourDataDTODate' Lens
+sushiswapHourDataDTODateL :: Lens_' SushiswapHourDataDTO (Maybe Int)
+sushiswapHourDataDTODateL f SushiswapHourDataDTO{..} = (\sushiswapHourDataDTODate -> SushiswapHourDataDTO { sushiswapHourDataDTODate, ..} ) <$> f sushiswapHourDataDTODate
+{-# INLINE sushiswapHourDataDTODateL #-}
+
+-- | 'sushiswapHourDataDTOFactory' Lens
+sushiswapHourDataDTOFactoryL :: Lens_' SushiswapHourDataDTO (Maybe Text)
+sushiswapHourDataDTOFactoryL f SushiswapHourDataDTO{..} = (\sushiswapHourDataDTOFactory -> SushiswapHourDataDTO { sushiswapHourDataDTOFactory, ..} ) <$> f sushiswapHourDataDTOFactory
+{-# INLINE sushiswapHourDataDTOFactoryL #-}
+
+-- | 'sushiswapHourDataDTOVolumeEth' Lens
+sushiswapHourDataDTOVolumeEthL :: Lens_' SushiswapHourDataDTO (Maybe Text)
+sushiswapHourDataDTOVolumeEthL f SushiswapHourDataDTO{..} = (\sushiswapHourDataDTOVolumeEth -> SushiswapHourDataDTO { sushiswapHourDataDTOVolumeEth, ..} ) <$> f sushiswapHourDataDTOVolumeEth
+{-# INLINE sushiswapHourDataDTOVolumeEthL #-}
+
+-- | 'sushiswapHourDataDTOVolumeUsd' Lens
+sushiswapHourDataDTOVolumeUsdL :: Lens_' SushiswapHourDataDTO (Maybe Text)
+sushiswapHourDataDTOVolumeUsdL f SushiswapHourDataDTO{..} = (\sushiswapHourDataDTOVolumeUsd -> SushiswapHourDataDTO { sushiswapHourDataDTOVolumeUsd, ..} ) <$> f sushiswapHourDataDTOVolumeUsd
+{-# INLINE sushiswapHourDataDTOVolumeUsdL #-}
+
+-- | 'sushiswapHourDataDTOUntrackedVolume' Lens
+sushiswapHourDataDTOUntrackedVolumeL :: Lens_' SushiswapHourDataDTO (Maybe Text)
+sushiswapHourDataDTOUntrackedVolumeL f SushiswapHourDataDTO{..} = (\sushiswapHourDataDTOUntrackedVolume -> SushiswapHourDataDTO { sushiswapHourDataDTOUntrackedVolume, ..} ) <$> f sushiswapHourDataDTOUntrackedVolume
+{-# INLINE sushiswapHourDataDTOUntrackedVolumeL #-}
+
+-- | 'sushiswapHourDataDTOLiquidityEth' Lens
+sushiswapHourDataDTOLiquidityEthL :: Lens_' SushiswapHourDataDTO (Maybe Text)
+sushiswapHourDataDTOLiquidityEthL f SushiswapHourDataDTO{..} = (\sushiswapHourDataDTOLiquidityEth -> SushiswapHourDataDTO { sushiswapHourDataDTOLiquidityEth, ..} ) <$> f sushiswapHourDataDTOLiquidityEth
+{-# INLINE sushiswapHourDataDTOLiquidityEthL #-}
+
+-- | 'sushiswapHourDataDTOLiquidityUsd' Lens
+sushiswapHourDataDTOLiquidityUsdL :: Lens_' SushiswapHourDataDTO (Maybe Text)
+sushiswapHourDataDTOLiquidityUsdL f SushiswapHourDataDTO{..} = (\sushiswapHourDataDTOLiquidityUsd -> SushiswapHourDataDTO { sushiswapHourDataDTOLiquidityUsd, ..} ) <$> f sushiswapHourDataDTOLiquidityUsd
+{-# INLINE sushiswapHourDataDTOLiquidityUsdL #-}
+
+-- | 'sushiswapHourDataDTOTxCount' Lens
+sushiswapHourDataDTOTxCountL :: Lens_' SushiswapHourDataDTO (Maybe Text)
+sushiswapHourDataDTOTxCountL f SushiswapHourDataDTO{..} = (\sushiswapHourDataDTOTxCount -> SushiswapHourDataDTO { sushiswapHourDataDTOTxCount, ..} ) <$> f sushiswapHourDataDTOTxCount
+{-# INLINE sushiswapHourDataDTOTxCountL #-}
+
+-- | 'sushiswapHourDataDTOVid' Lens
+sushiswapHourDataDTOVidL :: Lens_' SushiswapHourDataDTO (Maybe Integer)
+sushiswapHourDataDTOVidL f SushiswapHourDataDTO{..} = (\sushiswapHourDataDTOVid -> SushiswapHourDataDTO { sushiswapHourDataDTOVid, ..} ) <$> f sushiswapHourDataDTOVid
+{-# INLINE sushiswapHourDataDTOVidL #-}
+
+
+
+-- * SushiswapLiquidityPositionDTO
+
+-- | 'sushiswapLiquidityPositionDTOEntryTime' Lens
+sushiswapLiquidityPositionDTOEntryTimeL :: Lens_' SushiswapLiquidityPositionDTO (Maybe DateTime)
+sushiswapLiquidityPositionDTOEntryTimeL f SushiswapLiquidityPositionDTO{..} = (\sushiswapLiquidityPositionDTOEntryTime -> SushiswapLiquidityPositionDTO { sushiswapLiquidityPositionDTOEntryTime, ..} ) <$> f sushiswapLiquidityPositionDTOEntryTime
+{-# INLINE sushiswapLiquidityPositionDTOEntryTimeL #-}
+
+-- | 'sushiswapLiquidityPositionDTORecvTime' Lens
+sushiswapLiquidityPositionDTORecvTimeL :: Lens_' SushiswapLiquidityPositionDTO (Maybe DateTime)
+sushiswapLiquidityPositionDTORecvTimeL f SushiswapLiquidityPositionDTO{..} = (\sushiswapLiquidityPositionDTORecvTime -> SushiswapLiquidityPositionDTO { sushiswapLiquidityPositionDTORecvTime, ..} ) <$> f sushiswapLiquidityPositionDTORecvTime
+{-# INLINE sushiswapLiquidityPositionDTORecvTimeL #-}
+
+-- | 'sushiswapLiquidityPositionDTOBlockNumber' Lens
+sushiswapLiquidityPositionDTOBlockNumberL :: Lens_' SushiswapLiquidityPositionDTO (Maybe Integer)
+sushiswapLiquidityPositionDTOBlockNumberL f SushiswapLiquidityPositionDTO{..} = (\sushiswapLiquidityPositionDTOBlockNumber -> SushiswapLiquidityPositionDTO { sushiswapLiquidityPositionDTOBlockNumber, ..} ) <$> f sushiswapLiquidityPositionDTOBlockNumber
+{-# INLINE sushiswapLiquidityPositionDTOBlockNumberL #-}
+
+-- | 'sushiswapLiquidityPositionDTOId' Lens
+sushiswapLiquidityPositionDTOIdL :: Lens_' SushiswapLiquidityPositionDTO (Maybe Text)
+sushiswapLiquidityPositionDTOIdL f SushiswapLiquidityPositionDTO{..} = (\sushiswapLiquidityPositionDTOId -> SushiswapLiquidityPositionDTO { sushiswapLiquidityPositionDTOId, ..} ) <$> f sushiswapLiquidityPositionDTOId
+{-# INLINE sushiswapLiquidityPositionDTOIdL #-}
+
+-- | 'sushiswapLiquidityPositionDTOUser' Lens
+sushiswapLiquidityPositionDTOUserL :: Lens_' SushiswapLiquidityPositionDTO (Maybe Text)
+sushiswapLiquidityPositionDTOUserL f SushiswapLiquidityPositionDTO{..} = (\sushiswapLiquidityPositionDTOUser -> SushiswapLiquidityPositionDTO { sushiswapLiquidityPositionDTOUser, ..} ) <$> f sushiswapLiquidityPositionDTOUser
+{-# INLINE sushiswapLiquidityPositionDTOUserL #-}
+
+-- | 'sushiswapLiquidityPositionDTOPair' Lens
+sushiswapLiquidityPositionDTOPairL :: Lens_' SushiswapLiquidityPositionDTO (Maybe Text)
+sushiswapLiquidityPositionDTOPairL f SushiswapLiquidityPositionDTO{..} = (\sushiswapLiquidityPositionDTOPair -> SushiswapLiquidityPositionDTO { sushiswapLiquidityPositionDTOPair, ..} ) <$> f sushiswapLiquidityPositionDTOPair
+{-# INLINE sushiswapLiquidityPositionDTOPairL #-}
+
+-- | 'sushiswapLiquidityPositionDTOLiquidityTokenBalance' Lens
+sushiswapLiquidityPositionDTOLiquidityTokenBalanceL :: Lens_' SushiswapLiquidityPositionDTO (Maybe Text)
+sushiswapLiquidityPositionDTOLiquidityTokenBalanceL f SushiswapLiquidityPositionDTO{..} = (\sushiswapLiquidityPositionDTOLiquidityTokenBalance -> SushiswapLiquidityPositionDTO { sushiswapLiquidityPositionDTOLiquidityTokenBalance, ..} ) <$> f sushiswapLiquidityPositionDTOLiquidityTokenBalance
+{-# INLINE sushiswapLiquidityPositionDTOLiquidityTokenBalanceL #-}
+
+-- | 'sushiswapLiquidityPositionDTOBlock' Lens
+sushiswapLiquidityPositionDTOBlockL :: Lens_' SushiswapLiquidityPositionDTO (Maybe Int)
+sushiswapLiquidityPositionDTOBlockL f SushiswapLiquidityPositionDTO{..} = (\sushiswapLiquidityPositionDTOBlock -> SushiswapLiquidityPositionDTO { sushiswapLiquidityPositionDTOBlock, ..} ) <$> f sushiswapLiquidityPositionDTOBlock
+{-# INLINE sushiswapLiquidityPositionDTOBlockL #-}
+
+-- | 'sushiswapLiquidityPositionDTOTimestamp' Lens
+sushiswapLiquidityPositionDTOTimestampL :: Lens_' SushiswapLiquidityPositionDTO (Maybe Int)
+sushiswapLiquidityPositionDTOTimestampL f SushiswapLiquidityPositionDTO{..} = (\sushiswapLiquidityPositionDTOTimestamp -> SushiswapLiquidityPositionDTO { sushiswapLiquidityPositionDTOTimestamp, ..} ) <$> f sushiswapLiquidityPositionDTOTimestamp
+{-# INLINE sushiswapLiquidityPositionDTOTimestampL #-}
+
+-- | 'sushiswapLiquidityPositionDTOVid' Lens
+sushiswapLiquidityPositionDTOVidL :: Lens_' SushiswapLiquidityPositionDTO (Maybe Integer)
+sushiswapLiquidityPositionDTOVidL f SushiswapLiquidityPositionDTO{..} = (\sushiswapLiquidityPositionDTOVid -> SushiswapLiquidityPositionDTO { sushiswapLiquidityPositionDTOVid, ..} ) <$> f sushiswapLiquidityPositionDTOVid
+{-# INLINE sushiswapLiquidityPositionDTOVidL #-}
+
+
+
+-- * SushiswapLiquidityPositionSnapshotDTO
+
+-- | 'sushiswapLiquidityPositionSnapshotDTOEntryTime' Lens
+sushiswapLiquidityPositionSnapshotDTOEntryTimeL :: Lens_' SushiswapLiquidityPositionSnapshotDTO (Maybe DateTime)
+sushiswapLiquidityPositionSnapshotDTOEntryTimeL f SushiswapLiquidityPositionSnapshotDTO{..} = (\sushiswapLiquidityPositionSnapshotDTOEntryTime -> SushiswapLiquidityPositionSnapshotDTO { sushiswapLiquidityPositionSnapshotDTOEntryTime, ..} ) <$> f sushiswapLiquidityPositionSnapshotDTOEntryTime
+{-# INLINE sushiswapLiquidityPositionSnapshotDTOEntryTimeL #-}
+
+-- | 'sushiswapLiquidityPositionSnapshotDTORecvTime' Lens
+sushiswapLiquidityPositionSnapshotDTORecvTimeL :: Lens_' SushiswapLiquidityPositionSnapshotDTO (Maybe DateTime)
+sushiswapLiquidityPositionSnapshotDTORecvTimeL f SushiswapLiquidityPositionSnapshotDTO{..} = (\sushiswapLiquidityPositionSnapshotDTORecvTime -> SushiswapLiquidityPositionSnapshotDTO { sushiswapLiquidityPositionSnapshotDTORecvTime, ..} ) <$> f sushiswapLiquidityPositionSnapshotDTORecvTime
+{-# INLINE sushiswapLiquidityPositionSnapshotDTORecvTimeL #-}
+
+-- | 'sushiswapLiquidityPositionSnapshotDTOBlockNumber' Lens
+sushiswapLiquidityPositionSnapshotDTOBlockNumberL :: Lens_' SushiswapLiquidityPositionSnapshotDTO (Maybe Integer)
+sushiswapLiquidityPositionSnapshotDTOBlockNumberL f SushiswapLiquidityPositionSnapshotDTO{..} = (\sushiswapLiquidityPositionSnapshotDTOBlockNumber -> SushiswapLiquidityPositionSnapshotDTO { sushiswapLiquidityPositionSnapshotDTOBlockNumber, ..} ) <$> f sushiswapLiquidityPositionSnapshotDTOBlockNumber
+{-# INLINE sushiswapLiquidityPositionSnapshotDTOBlockNumberL #-}
+
+-- | 'sushiswapLiquidityPositionSnapshotDTOId' Lens
+sushiswapLiquidityPositionSnapshotDTOIdL :: Lens_' SushiswapLiquidityPositionSnapshotDTO (Maybe Text)
+sushiswapLiquidityPositionSnapshotDTOIdL f SushiswapLiquidityPositionSnapshotDTO{..} = (\sushiswapLiquidityPositionSnapshotDTOId -> SushiswapLiquidityPositionSnapshotDTO { sushiswapLiquidityPositionSnapshotDTOId, ..} ) <$> f sushiswapLiquidityPositionSnapshotDTOId
+{-# INLINE sushiswapLiquidityPositionSnapshotDTOIdL #-}
+
+-- | 'sushiswapLiquidityPositionSnapshotDTOLiquidityPosition' Lens
+sushiswapLiquidityPositionSnapshotDTOLiquidityPositionL :: Lens_' SushiswapLiquidityPositionSnapshotDTO (Maybe Text)
+sushiswapLiquidityPositionSnapshotDTOLiquidityPositionL f SushiswapLiquidityPositionSnapshotDTO{..} = (\sushiswapLiquidityPositionSnapshotDTOLiquidityPosition -> SushiswapLiquidityPositionSnapshotDTO { sushiswapLiquidityPositionSnapshotDTOLiquidityPosition, ..} ) <$> f sushiswapLiquidityPositionSnapshotDTOLiquidityPosition
+{-# INLINE sushiswapLiquidityPositionSnapshotDTOLiquidityPositionL #-}
+
+-- | 'sushiswapLiquidityPositionSnapshotDTOTimestamp' Lens
+sushiswapLiquidityPositionSnapshotDTOTimestampL :: Lens_' SushiswapLiquidityPositionSnapshotDTO (Maybe Int)
+sushiswapLiquidityPositionSnapshotDTOTimestampL f SushiswapLiquidityPositionSnapshotDTO{..} = (\sushiswapLiquidityPositionSnapshotDTOTimestamp -> SushiswapLiquidityPositionSnapshotDTO { sushiswapLiquidityPositionSnapshotDTOTimestamp, ..} ) <$> f sushiswapLiquidityPositionSnapshotDTOTimestamp
+{-# INLINE sushiswapLiquidityPositionSnapshotDTOTimestampL #-}
+
+-- | 'sushiswapLiquidityPositionSnapshotDTOBlock' Lens
+sushiswapLiquidityPositionSnapshotDTOBlockL :: Lens_' SushiswapLiquidityPositionSnapshotDTO (Maybe Int)
+sushiswapLiquidityPositionSnapshotDTOBlockL f SushiswapLiquidityPositionSnapshotDTO{..} = (\sushiswapLiquidityPositionSnapshotDTOBlock -> SushiswapLiquidityPositionSnapshotDTO { sushiswapLiquidityPositionSnapshotDTOBlock, ..} ) <$> f sushiswapLiquidityPositionSnapshotDTOBlock
+{-# INLINE sushiswapLiquidityPositionSnapshotDTOBlockL #-}
+
+-- | 'sushiswapLiquidityPositionSnapshotDTOUser' Lens
+sushiswapLiquidityPositionSnapshotDTOUserL :: Lens_' SushiswapLiquidityPositionSnapshotDTO (Maybe Text)
+sushiswapLiquidityPositionSnapshotDTOUserL f SushiswapLiquidityPositionSnapshotDTO{..} = (\sushiswapLiquidityPositionSnapshotDTOUser -> SushiswapLiquidityPositionSnapshotDTO { sushiswapLiquidityPositionSnapshotDTOUser, ..} ) <$> f sushiswapLiquidityPositionSnapshotDTOUser
+{-# INLINE sushiswapLiquidityPositionSnapshotDTOUserL #-}
+
+-- | 'sushiswapLiquidityPositionSnapshotDTOPair' Lens
+sushiswapLiquidityPositionSnapshotDTOPairL :: Lens_' SushiswapLiquidityPositionSnapshotDTO (Maybe Text)
+sushiswapLiquidityPositionSnapshotDTOPairL f SushiswapLiquidityPositionSnapshotDTO{..} = (\sushiswapLiquidityPositionSnapshotDTOPair -> SushiswapLiquidityPositionSnapshotDTO { sushiswapLiquidityPositionSnapshotDTOPair, ..} ) <$> f sushiswapLiquidityPositionSnapshotDTOPair
+{-# INLINE sushiswapLiquidityPositionSnapshotDTOPairL #-}
+
+-- | 'sushiswapLiquidityPositionSnapshotDTOToken0PriceUsd' Lens
+sushiswapLiquidityPositionSnapshotDTOToken0PriceUsdL :: Lens_' SushiswapLiquidityPositionSnapshotDTO (Maybe Text)
+sushiswapLiquidityPositionSnapshotDTOToken0PriceUsdL f SushiswapLiquidityPositionSnapshotDTO{..} = (\sushiswapLiquidityPositionSnapshotDTOToken0PriceUsd -> SushiswapLiquidityPositionSnapshotDTO { sushiswapLiquidityPositionSnapshotDTOToken0PriceUsd, ..} ) <$> f sushiswapLiquidityPositionSnapshotDTOToken0PriceUsd
+{-# INLINE sushiswapLiquidityPositionSnapshotDTOToken0PriceUsdL #-}
+
+-- | 'sushiswapLiquidityPositionSnapshotDTOToken1PriceUsd' Lens
+sushiswapLiquidityPositionSnapshotDTOToken1PriceUsdL :: Lens_' SushiswapLiquidityPositionSnapshotDTO (Maybe Text)
+sushiswapLiquidityPositionSnapshotDTOToken1PriceUsdL f SushiswapLiquidityPositionSnapshotDTO{..} = (\sushiswapLiquidityPositionSnapshotDTOToken1PriceUsd -> SushiswapLiquidityPositionSnapshotDTO { sushiswapLiquidityPositionSnapshotDTOToken1PriceUsd, ..} ) <$> f sushiswapLiquidityPositionSnapshotDTOToken1PriceUsd
+{-# INLINE sushiswapLiquidityPositionSnapshotDTOToken1PriceUsdL #-}
+
+-- | 'sushiswapLiquidityPositionSnapshotDTOReserve0' Lens
+sushiswapLiquidityPositionSnapshotDTOReserve0L :: Lens_' SushiswapLiquidityPositionSnapshotDTO (Maybe Text)
+sushiswapLiquidityPositionSnapshotDTOReserve0L f SushiswapLiquidityPositionSnapshotDTO{..} = (\sushiswapLiquidityPositionSnapshotDTOReserve0 -> SushiswapLiquidityPositionSnapshotDTO { sushiswapLiquidityPositionSnapshotDTOReserve0, ..} ) <$> f sushiswapLiquidityPositionSnapshotDTOReserve0
+{-# INLINE sushiswapLiquidityPositionSnapshotDTOReserve0L #-}
+
+-- | 'sushiswapLiquidityPositionSnapshotDTOReserve1' Lens
+sushiswapLiquidityPositionSnapshotDTOReserve1L :: Lens_' SushiswapLiquidityPositionSnapshotDTO (Maybe Text)
+sushiswapLiquidityPositionSnapshotDTOReserve1L f SushiswapLiquidityPositionSnapshotDTO{..} = (\sushiswapLiquidityPositionSnapshotDTOReserve1 -> SushiswapLiquidityPositionSnapshotDTO { sushiswapLiquidityPositionSnapshotDTOReserve1, ..} ) <$> f sushiswapLiquidityPositionSnapshotDTOReserve1
+{-# INLINE sushiswapLiquidityPositionSnapshotDTOReserve1L #-}
+
+-- | 'sushiswapLiquidityPositionSnapshotDTOReserveUsd' Lens
+sushiswapLiquidityPositionSnapshotDTOReserveUsdL :: Lens_' SushiswapLiquidityPositionSnapshotDTO (Maybe Text)
+sushiswapLiquidityPositionSnapshotDTOReserveUsdL f SushiswapLiquidityPositionSnapshotDTO{..} = (\sushiswapLiquidityPositionSnapshotDTOReserveUsd -> SushiswapLiquidityPositionSnapshotDTO { sushiswapLiquidityPositionSnapshotDTOReserveUsd, ..} ) <$> f sushiswapLiquidityPositionSnapshotDTOReserveUsd
+{-# INLINE sushiswapLiquidityPositionSnapshotDTOReserveUsdL #-}
+
+-- | 'sushiswapLiquidityPositionSnapshotDTOLiquidityTokenTotalSupply' Lens
+sushiswapLiquidityPositionSnapshotDTOLiquidityTokenTotalSupplyL :: Lens_' SushiswapLiquidityPositionSnapshotDTO (Maybe Text)
+sushiswapLiquidityPositionSnapshotDTOLiquidityTokenTotalSupplyL f SushiswapLiquidityPositionSnapshotDTO{..} = (\sushiswapLiquidityPositionSnapshotDTOLiquidityTokenTotalSupply -> SushiswapLiquidityPositionSnapshotDTO { sushiswapLiquidityPositionSnapshotDTOLiquidityTokenTotalSupply, ..} ) <$> f sushiswapLiquidityPositionSnapshotDTOLiquidityTokenTotalSupply
+{-# INLINE sushiswapLiquidityPositionSnapshotDTOLiquidityTokenTotalSupplyL #-}
+
+-- | 'sushiswapLiquidityPositionSnapshotDTOLiquidityTokenBalance' Lens
+sushiswapLiquidityPositionSnapshotDTOLiquidityTokenBalanceL :: Lens_' SushiswapLiquidityPositionSnapshotDTO (Maybe Text)
+sushiswapLiquidityPositionSnapshotDTOLiquidityTokenBalanceL f SushiswapLiquidityPositionSnapshotDTO{..} = (\sushiswapLiquidityPositionSnapshotDTOLiquidityTokenBalance -> SushiswapLiquidityPositionSnapshotDTO { sushiswapLiquidityPositionSnapshotDTOLiquidityTokenBalance, ..} ) <$> f sushiswapLiquidityPositionSnapshotDTOLiquidityTokenBalance
+{-# INLINE sushiswapLiquidityPositionSnapshotDTOLiquidityTokenBalanceL #-}
+
+-- | 'sushiswapLiquidityPositionSnapshotDTOVid' Lens
+sushiswapLiquidityPositionSnapshotDTOVidL :: Lens_' SushiswapLiquidityPositionSnapshotDTO (Maybe Integer)
+sushiswapLiquidityPositionSnapshotDTOVidL f SushiswapLiquidityPositionSnapshotDTO{..} = (\sushiswapLiquidityPositionSnapshotDTOVid -> SushiswapLiquidityPositionSnapshotDTO { sushiswapLiquidityPositionSnapshotDTOVid, ..} ) <$> f sushiswapLiquidityPositionSnapshotDTOVid
+{-# INLINE sushiswapLiquidityPositionSnapshotDTOVidL #-}
+
+
+
+-- * SushiswapMintDTO
+
+-- | 'sushiswapMintDTOEntryTime' Lens
+sushiswapMintDTOEntryTimeL :: Lens_' SushiswapMintDTO (Maybe DateTime)
+sushiswapMintDTOEntryTimeL f SushiswapMintDTO{..} = (\sushiswapMintDTOEntryTime -> SushiswapMintDTO { sushiswapMintDTOEntryTime, ..} ) <$> f sushiswapMintDTOEntryTime
+{-# INLINE sushiswapMintDTOEntryTimeL #-}
+
+-- | 'sushiswapMintDTORecvTime' Lens
+sushiswapMintDTORecvTimeL :: Lens_' SushiswapMintDTO (Maybe DateTime)
+sushiswapMintDTORecvTimeL f SushiswapMintDTO{..} = (\sushiswapMintDTORecvTime -> SushiswapMintDTO { sushiswapMintDTORecvTime, ..} ) <$> f sushiswapMintDTORecvTime
+{-# INLINE sushiswapMintDTORecvTimeL #-}
+
+-- | 'sushiswapMintDTOBlockNumber' Lens
+sushiswapMintDTOBlockNumberL :: Lens_' SushiswapMintDTO (Maybe Integer)
+sushiswapMintDTOBlockNumberL f SushiswapMintDTO{..} = (\sushiswapMintDTOBlockNumber -> SushiswapMintDTO { sushiswapMintDTOBlockNumber, ..} ) <$> f sushiswapMintDTOBlockNumber
+{-# INLINE sushiswapMintDTOBlockNumberL #-}
+
+-- | 'sushiswapMintDTOId' Lens
+sushiswapMintDTOIdL :: Lens_' SushiswapMintDTO (Maybe Text)
+sushiswapMintDTOIdL f SushiswapMintDTO{..} = (\sushiswapMintDTOId -> SushiswapMintDTO { sushiswapMintDTOId, ..} ) <$> f sushiswapMintDTOId
+{-# INLINE sushiswapMintDTOIdL #-}
+
+-- | 'sushiswapMintDTOTransaction' Lens
+sushiswapMintDTOTransactionL :: Lens_' SushiswapMintDTO (Maybe Text)
+sushiswapMintDTOTransactionL f SushiswapMintDTO{..} = (\sushiswapMintDTOTransaction -> SushiswapMintDTO { sushiswapMintDTOTransaction, ..} ) <$> f sushiswapMintDTOTransaction
+{-# INLINE sushiswapMintDTOTransactionL #-}
+
+-- | 'sushiswapMintDTOTimestamp' Lens
+sushiswapMintDTOTimestampL :: Lens_' SushiswapMintDTO (Maybe Text)
+sushiswapMintDTOTimestampL f SushiswapMintDTO{..} = (\sushiswapMintDTOTimestamp -> SushiswapMintDTO { sushiswapMintDTOTimestamp, ..} ) <$> f sushiswapMintDTOTimestamp
+{-# INLINE sushiswapMintDTOTimestampL #-}
+
+-- | 'sushiswapMintDTOPair' Lens
+sushiswapMintDTOPairL :: Lens_' SushiswapMintDTO (Maybe Text)
+sushiswapMintDTOPairL f SushiswapMintDTO{..} = (\sushiswapMintDTOPair -> SushiswapMintDTO { sushiswapMintDTOPair, ..} ) <$> f sushiswapMintDTOPair
+{-# INLINE sushiswapMintDTOPairL #-}
+
+-- | 'sushiswapMintDTOTo' Lens
+sushiswapMintDTOToL :: Lens_' SushiswapMintDTO (Maybe Text)
+sushiswapMintDTOToL f SushiswapMintDTO{..} = (\sushiswapMintDTOTo -> SushiswapMintDTO { sushiswapMintDTOTo, ..} ) <$> f sushiswapMintDTOTo
+{-# INLINE sushiswapMintDTOToL #-}
+
+-- | 'sushiswapMintDTOLiquidity' Lens
+sushiswapMintDTOLiquidityL :: Lens_' SushiswapMintDTO (Maybe Text)
+sushiswapMintDTOLiquidityL f SushiswapMintDTO{..} = (\sushiswapMintDTOLiquidity -> SushiswapMintDTO { sushiswapMintDTOLiquidity, ..} ) <$> f sushiswapMintDTOLiquidity
+{-# INLINE sushiswapMintDTOLiquidityL #-}
+
+-- | 'sushiswapMintDTOSender' Lens
+sushiswapMintDTOSenderL :: Lens_' SushiswapMintDTO (Maybe Text)
+sushiswapMintDTOSenderL f SushiswapMintDTO{..} = (\sushiswapMintDTOSender -> SushiswapMintDTO { sushiswapMintDTOSender, ..} ) <$> f sushiswapMintDTOSender
+{-# INLINE sushiswapMintDTOSenderL #-}
+
+-- | 'sushiswapMintDTOAmount0' Lens
+sushiswapMintDTOAmount0L :: Lens_' SushiswapMintDTO (Maybe Text)
+sushiswapMintDTOAmount0L f SushiswapMintDTO{..} = (\sushiswapMintDTOAmount0 -> SushiswapMintDTO { sushiswapMintDTOAmount0, ..} ) <$> f sushiswapMintDTOAmount0
+{-# INLINE sushiswapMintDTOAmount0L #-}
+
+-- | 'sushiswapMintDTOAmount1' Lens
+sushiswapMintDTOAmount1L :: Lens_' SushiswapMintDTO (Maybe Text)
+sushiswapMintDTOAmount1L f SushiswapMintDTO{..} = (\sushiswapMintDTOAmount1 -> SushiswapMintDTO { sushiswapMintDTOAmount1, ..} ) <$> f sushiswapMintDTOAmount1
+{-# INLINE sushiswapMintDTOAmount1L #-}
+
+-- | 'sushiswapMintDTOLogIndex' Lens
+sushiswapMintDTOLogIndexL :: Lens_' SushiswapMintDTO (Maybe Text)
+sushiswapMintDTOLogIndexL f SushiswapMintDTO{..} = (\sushiswapMintDTOLogIndex -> SushiswapMintDTO { sushiswapMintDTOLogIndex, ..} ) <$> f sushiswapMintDTOLogIndex
+{-# INLINE sushiswapMintDTOLogIndexL #-}
+
+-- | 'sushiswapMintDTOAmountUsd' Lens
+sushiswapMintDTOAmountUsdL :: Lens_' SushiswapMintDTO (Maybe Text)
+sushiswapMintDTOAmountUsdL f SushiswapMintDTO{..} = (\sushiswapMintDTOAmountUsd -> SushiswapMintDTO { sushiswapMintDTOAmountUsd, ..} ) <$> f sushiswapMintDTOAmountUsd
+{-# INLINE sushiswapMintDTOAmountUsdL #-}
+
+-- | 'sushiswapMintDTOFeeTo' Lens
+sushiswapMintDTOFeeToL :: Lens_' SushiswapMintDTO (Maybe Text)
+sushiswapMintDTOFeeToL f SushiswapMintDTO{..} = (\sushiswapMintDTOFeeTo -> SushiswapMintDTO { sushiswapMintDTOFeeTo, ..} ) <$> f sushiswapMintDTOFeeTo
+{-# INLINE sushiswapMintDTOFeeToL #-}
+
+-- | 'sushiswapMintDTOFeeLiquidity' Lens
+sushiswapMintDTOFeeLiquidityL :: Lens_' SushiswapMintDTO (Maybe Text)
+sushiswapMintDTOFeeLiquidityL f SushiswapMintDTO{..} = (\sushiswapMintDTOFeeLiquidity -> SushiswapMintDTO { sushiswapMintDTOFeeLiquidity, ..} ) <$> f sushiswapMintDTOFeeLiquidity
+{-# INLINE sushiswapMintDTOFeeLiquidityL #-}
+
+-- | 'sushiswapMintDTOVid' Lens
+sushiswapMintDTOVidL :: Lens_' SushiswapMintDTO (Maybe Integer)
+sushiswapMintDTOVidL f SushiswapMintDTO{..} = (\sushiswapMintDTOVid -> SushiswapMintDTO { sushiswapMintDTOVid, ..} ) <$> f sushiswapMintDTOVid
+{-# INLINE sushiswapMintDTOVidL #-}
+
+
+
 -- * SushiswapPairDTO
 
 -- | 'sushiswapPairDTOEntryTime' Lens
@@ -197,6 +769,169 @@ sushiswapPairDTOVidL f SushiswapPairDTO{..} = (\sushiswapPairDTOVid -> Sushiswap
 sushiswapPairDTOEvaluatedAskL :: Lens_' SushiswapPairDTO (Maybe Double)
 sushiswapPairDTOEvaluatedAskL f SushiswapPairDTO{..} = (\sushiswapPairDTOEvaluatedAsk -> SushiswapPairDTO { sushiswapPairDTOEvaluatedAsk, ..} ) <$> f sushiswapPairDTOEvaluatedAsk
 {-# INLINE sushiswapPairDTOEvaluatedAskL #-}
+
+
+
+-- * SushiswapPairDayDataDTO
+
+-- | 'sushiswapPairDayDataDTOEntryTime' Lens
+sushiswapPairDayDataDTOEntryTimeL :: Lens_' SushiswapPairDayDataDTO (Maybe DateTime)
+sushiswapPairDayDataDTOEntryTimeL f SushiswapPairDayDataDTO{..} = (\sushiswapPairDayDataDTOEntryTime -> SushiswapPairDayDataDTO { sushiswapPairDayDataDTOEntryTime, ..} ) <$> f sushiswapPairDayDataDTOEntryTime
+{-# INLINE sushiswapPairDayDataDTOEntryTimeL #-}
+
+-- | 'sushiswapPairDayDataDTORecvTime' Lens
+sushiswapPairDayDataDTORecvTimeL :: Lens_' SushiswapPairDayDataDTO (Maybe DateTime)
+sushiswapPairDayDataDTORecvTimeL f SushiswapPairDayDataDTO{..} = (\sushiswapPairDayDataDTORecvTime -> SushiswapPairDayDataDTO { sushiswapPairDayDataDTORecvTime, ..} ) <$> f sushiswapPairDayDataDTORecvTime
+{-# INLINE sushiswapPairDayDataDTORecvTimeL #-}
+
+-- | 'sushiswapPairDayDataDTOBlockNumber' Lens
+sushiswapPairDayDataDTOBlockNumberL :: Lens_' SushiswapPairDayDataDTO (Maybe Integer)
+sushiswapPairDayDataDTOBlockNumberL f SushiswapPairDayDataDTO{..} = (\sushiswapPairDayDataDTOBlockNumber -> SushiswapPairDayDataDTO { sushiswapPairDayDataDTOBlockNumber, ..} ) <$> f sushiswapPairDayDataDTOBlockNumber
+{-# INLINE sushiswapPairDayDataDTOBlockNumberL #-}
+
+-- | 'sushiswapPairDayDataDTOId' Lens
+sushiswapPairDayDataDTOIdL :: Lens_' SushiswapPairDayDataDTO (Maybe Text)
+sushiswapPairDayDataDTOIdL f SushiswapPairDayDataDTO{..} = (\sushiswapPairDayDataDTOId -> SushiswapPairDayDataDTO { sushiswapPairDayDataDTOId, ..} ) <$> f sushiswapPairDayDataDTOId
+{-# INLINE sushiswapPairDayDataDTOIdL #-}
+
+-- | 'sushiswapPairDayDataDTODate' Lens
+sushiswapPairDayDataDTODateL :: Lens_' SushiswapPairDayDataDTO (Maybe Int)
+sushiswapPairDayDataDTODateL f SushiswapPairDayDataDTO{..} = (\sushiswapPairDayDataDTODate -> SushiswapPairDayDataDTO { sushiswapPairDayDataDTODate, ..} ) <$> f sushiswapPairDayDataDTODate
+{-# INLINE sushiswapPairDayDataDTODateL #-}
+
+-- | 'sushiswapPairDayDataDTOPair' Lens
+sushiswapPairDayDataDTOPairL :: Lens_' SushiswapPairDayDataDTO (Maybe Text)
+sushiswapPairDayDataDTOPairL f SushiswapPairDayDataDTO{..} = (\sushiswapPairDayDataDTOPair -> SushiswapPairDayDataDTO { sushiswapPairDayDataDTOPair, ..} ) <$> f sushiswapPairDayDataDTOPair
+{-# INLINE sushiswapPairDayDataDTOPairL #-}
+
+-- | 'sushiswapPairDayDataDTOToken0' Lens
+sushiswapPairDayDataDTOToken0L :: Lens_' SushiswapPairDayDataDTO (Maybe Text)
+sushiswapPairDayDataDTOToken0L f SushiswapPairDayDataDTO{..} = (\sushiswapPairDayDataDTOToken0 -> SushiswapPairDayDataDTO { sushiswapPairDayDataDTOToken0, ..} ) <$> f sushiswapPairDayDataDTOToken0
+{-# INLINE sushiswapPairDayDataDTOToken0L #-}
+
+-- | 'sushiswapPairDayDataDTOToken1' Lens
+sushiswapPairDayDataDTOToken1L :: Lens_' SushiswapPairDayDataDTO (Maybe Text)
+sushiswapPairDayDataDTOToken1L f SushiswapPairDayDataDTO{..} = (\sushiswapPairDayDataDTOToken1 -> SushiswapPairDayDataDTO { sushiswapPairDayDataDTOToken1, ..} ) <$> f sushiswapPairDayDataDTOToken1
+{-# INLINE sushiswapPairDayDataDTOToken1L #-}
+
+-- | 'sushiswapPairDayDataDTOReserve0' Lens
+sushiswapPairDayDataDTOReserve0L :: Lens_' SushiswapPairDayDataDTO (Maybe Text)
+sushiswapPairDayDataDTOReserve0L f SushiswapPairDayDataDTO{..} = (\sushiswapPairDayDataDTOReserve0 -> SushiswapPairDayDataDTO { sushiswapPairDayDataDTOReserve0, ..} ) <$> f sushiswapPairDayDataDTOReserve0
+{-# INLINE sushiswapPairDayDataDTOReserve0L #-}
+
+-- | 'sushiswapPairDayDataDTOReserve1' Lens
+sushiswapPairDayDataDTOReserve1L :: Lens_' SushiswapPairDayDataDTO (Maybe Text)
+sushiswapPairDayDataDTOReserve1L f SushiswapPairDayDataDTO{..} = (\sushiswapPairDayDataDTOReserve1 -> SushiswapPairDayDataDTO { sushiswapPairDayDataDTOReserve1, ..} ) <$> f sushiswapPairDayDataDTOReserve1
+{-# INLINE sushiswapPairDayDataDTOReserve1L #-}
+
+-- | 'sushiswapPairDayDataDTOTotalSupply' Lens
+sushiswapPairDayDataDTOTotalSupplyL :: Lens_' SushiswapPairDayDataDTO (Maybe Text)
+sushiswapPairDayDataDTOTotalSupplyL f SushiswapPairDayDataDTO{..} = (\sushiswapPairDayDataDTOTotalSupply -> SushiswapPairDayDataDTO { sushiswapPairDayDataDTOTotalSupply, ..} ) <$> f sushiswapPairDayDataDTOTotalSupply
+{-# INLINE sushiswapPairDayDataDTOTotalSupplyL #-}
+
+-- | 'sushiswapPairDayDataDTOReserveUsd' Lens
+sushiswapPairDayDataDTOReserveUsdL :: Lens_' SushiswapPairDayDataDTO (Maybe Text)
+sushiswapPairDayDataDTOReserveUsdL f SushiswapPairDayDataDTO{..} = (\sushiswapPairDayDataDTOReserveUsd -> SushiswapPairDayDataDTO { sushiswapPairDayDataDTOReserveUsd, ..} ) <$> f sushiswapPairDayDataDTOReserveUsd
+{-# INLINE sushiswapPairDayDataDTOReserveUsdL #-}
+
+-- | 'sushiswapPairDayDataDTOVolumeToken0' Lens
+sushiswapPairDayDataDTOVolumeToken0L :: Lens_' SushiswapPairDayDataDTO (Maybe Text)
+sushiswapPairDayDataDTOVolumeToken0L f SushiswapPairDayDataDTO{..} = (\sushiswapPairDayDataDTOVolumeToken0 -> SushiswapPairDayDataDTO { sushiswapPairDayDataDTOVolumeToken0, ..} ) <$> f sushiswapPairDayDataDTOVolumeToken0
+{-# INLINE sushiswapPairDayDataDTOVolumeToken0L #-}
+
+-- | 'sushiswapPairDayDataDTOVolumeToken1' Lens
+sushiswapPairDayDataDTOVolumeToken1L :: Lens_' SushiswapPairDayDataDTO (Maybe Text)
+sushiswapPairDayDataDTOVolumeToken1L f SushiswapPairDayDataDTO{..} = (\sushiswapPairDayDataDTOVolumeToken1 -> SushiswapPairDayDataDTO { sushiswapPairDayDataDTOVolumeToken1, ..} ) <$> f sushiswapPairDayDataDTOVolumeToken1
+{-# INLINE sushiswapPairDayDataDTOVolumeToken1L #-}
+
+-- | 'sushiswapPairDayDataDTOVolumeUsd' Lens
+sushiswapPairDayDataDTOVolumeUsdL :: Lens_' SushiswapPairDayDataDTO (Maybe Text)
+sushiswapPairDayDataDTOVolumeUsdL f SushiswapPairDayDataDTO{..} = (\sushiswapPairDayDataDTOVolumeUsd -> SushiswapPairDayDataDTO { sushiswapPairDayDataDTOVolumeUsd, ..} ) <$> f sushiswapPairDayDataDTOVolumeUsd
+{-# INLINE sushiswapPairDayDataDTOVolumeUsdL #-}
+
+-- | 'sushiswapPairDayDataDTOTxCount' Lens
+sushiswapPairDayDataDTOTxCountL :: Lens_' SushiswapPairDayDataDTO (Maybe Text)
+sushiswapPairDayDataDTOTxCountL f SushiswapPairDayDataDTO{..} = (\sushiswapPairDayDataDTOTxCount -> SushiswapPairDayDataDTO { sushiswapPairDayDataDTOTxCount, ..} ) <$> f sushiswapPairDayDataDTOTxCount
+{-# INLINE sushiswapPairDayDataDTOTxCountL #-}
+
+-- | 'sushiswapPairDayDataDTOVid' Lens
+sushiswapPairDayDataDTOVidL :: Lens_' SushiswapPairDayDataDTO (Maybe Integer)
+sushiswapPairDayDataDTOVidL f SushiswapPairDayDataDTO{..} = (\sushiswapPairDayDataDTOVid -> SushiswapPairDayDataDTO { sushiswapPairDayDataDTOVid, ..} ) <$> f sushiswapPairDayDataDTOVid
+{-# INLINE sushiswapPairDayDataDTOVidL #-}
+
+
+
+-- * SushiswapPairHourDataDTO
+
+-- | 'sushiswapPairHourDataDTOEntryTime' Lens
+sushiswapPairHourDataDTOEntryTimeL :: Lens_' SushiswapPairHourDataDTO (Maybe DateTime)
+sushiswapPairHourDataDTOEntryTimeL f SushiswapPairHourDataDTO{..} = (\sushiswapPairHourDataDTOEntryTime -> SushiswapPairHourDataDTO { sushiswapPairHourDataDTOEntryTime, ..} ) <$> f sushiswapPairHourDataDTOEntryTime
+{-# INLINE sushiswapPairHourDataDTOEntryTimeL #-}
+
+-- | 'sushiswapPairHourDataDTORecvTime' Lens
+sushiswapPairHourDataDTORecvTimeL :: Lens_' SushiswapPairHourDataDTO (Maybe DateTime)
+sushiswapPairHourDataDTORecvTimeL f SushiswapPairHourDataDTO{..} = (\sushiswapPairHourDataDTORecvTime -> SushiswapPairHourDataDTO { sushiswapPairHourDataDTORecvTime, ..} ) <$> f sushiswapPairHourDataDTORecvTime
+{-# INLINE sushiswapPairHourDataDTORecvTimeL #-}
+
+-- | 'sushiswapPairHourDataDTOBlockNumber' Lens
+sushiswapPairHourDataDTOBlockNumberL :: Lens_' SushiswapPairHourDataDTO (Maybe Integer)
+sushiswapPairHourDataDTOBlockNumberL f SushiswapPairHourDataDTO{..} = (\sushiswapPairHourDataDTOBlockNumber -> SushiswapPairHourDataDTO { sushiswapPairHourDataDTOBlockNumber, ..} ) <$> f sushiswapPairHourDataDTOBlockNumber
+{-# INLINE sushiswapPairHourDataDTOBlockNumberL #-}
+
+-- | 'sushiswapPairHourDataDTOId' Lens
+sushiswapPairHourDataDTOIdL :: Lens_' SushiswapPairHourDataDTO (Maybe Text)
+sushiswapPairHourDataDTOIdL f SushiswapPairHourDataDTO{..} = (\sushiswapPairHourDataDTOId -> SushiswapPairHourDataDTO { sushiswapPairHourDataDTOId, ..} ) <$> f sushiswapPairHourDataDTOId
+{-# INLINE sushiswapPairHourDataDTOIdL #-}
+
+-- | 'sushiswapPairHourDataDTODate' Lens
+sushiswapPairHourDataDTODateL :: Lens_' SushiswapPairHourDataDTO (Maybe Int)
+sushiswapPairHourDataDTODateL f SushiswapPairHourDataDTO{..} = (\sushiswapPairHourDataDTODate -> SushiswapPairHourDataDTO { sushiswapPairHourDataDTODate, ..} ) <$> f sushiswapPairHourDataDTODate
+{-# INLINE sushiswapPairHourDataDTODateL #-}
+
+-- | 'sushiswapPairHourDataDTOPair' Lens
+sushiswapPairHourDataDTOPairL :: Lens_' SushiswapPairHourDataDTO (Maybe Text)
+sushiswapPairHourDataDTOPairL f SushiswapPairHourDataDTO{..} = (\sushiswapPairHourDataDTOPair -> SushiswapPairHourDataDTO { sushiswapPairHourDataDTOPair, ..} ) <$> f sushiswapPairHourDataDTOPair
+{-# INLINE sushiswapPairHourDataDTOPairL #-}
+
+-- | 'sushiswapPairHourDataDTOReserve0' Lens
+sushiswapPairHourDataDTOReserve0L :: Lens_' SushiswapPairHourDataDTO (Maybe Text)
+sushiswapPairHourDataDTOReserve0L f SushiswapPairHourDataDTO{..} = (\sushiswapPairHourDataDTOReserve0 -> SushiswapPairHourDataDTO { sushiswapPairHourDataDTOReserve0, ..} ) <$> f sushiswapPairHourDataDTOReserve0
+{-# INLINE sushiswapPairHourDataDTOReserve0L #-}
+
+-- | 'sushiswapPairHourDataDTOReserve1' Lens
+sushiswapPairHourDataDTOReserve1L :: Lens_' SushiswapPairHourDataDTO (Maybe Text)
+sushiswapPairHourDataDTOReserve1L f SushiswapPairHourDataDTO{..} = (\sushiswapPairHourDataDTOReserve1 -> SushiswapPairHourDataDTO { sushiswapPairHourDataDTOReserve1, ..} ) <$> f sushiswapPairHourDataDTOReserve1
+{-# INLINE sushiswapPairHourDataDTOReserve1L #-}
+
+-- | 'sushiswapPairHourDataDTOReserveUsd' Lens
+sushiswapPairHourDataDTOReserveUsdL :: Lens_' SushiswapPairHourDataDTO (Maybe Text)
+sushiswapPairHourDataDTOReserveUsdL f SushiswapPairHourDataDTO{..} = (\sushiswapPairHourDataDTOReserveUsd -> SushiswapPairHourDataDTO { sushiswapPairHourDataDTOReserveUsd, ..} ) <$> f sushiswapPairHourDataDTOReserveUsd
+{-# INLINE sushiswapPairHourDataDTOReserveUsdL #-}
+
+-- | 'sushiswapPairHourDataDTOVolumeToken0' Lens
+sushiswapPairHourDataDTOVolumeToken0L :: Lens_' SushiswapPairHourDataDTO (Maybe Text)
+sushiswapPairHourDataDTOVolumeToken0L f SushiswapPairHourDataDTO{..} = (\sushiswapPairHourDataDTOVolumeToken0 -> SushiswapPairHourDataDTO { sushiswapPairHourDataDTOVolumeToken0, ..} ) <$> f sushiswapPairHourDataDTOVolumeToken0
+{-# INLINE sushiswapPairHourDataDTOVolumeToken0L #-}
+
+-- | 'sushiswapPairHourDataDTOVolumeToken1' Lens
+sushiswapPairHourDataDTOVolumeToken1L :: Lens_' SushiswapPairHourDataDTO (Maybe Text)
+sushiswapPairHourDataDTOVolumeToken1L f SushiswapPairHourDataDTO{..} = (\sushiswapPairHourDataDTOVolumeToken1 -> SushiswapPairHourDataDTO { sushiswapPairHourDataDTOVolumeToken1, ..} ) <$> f sushiswapPairHourDataDTOVolumeToken1
+{-# INLINE sushiswapPairHourDataDTOVolumeToken1L #-}
+
+-- | 'sushiswapPairHourDataDTOVolumeUsd' Lens
+sushiswapPairHourDataDTOVolumeUsdL :: Lens_' SushiswapPairHourDataDTO (Maybe Text)
+sushiswapPairHourDataDTOVolumeUsdL f SushiswapPairHourDataDTO{..} = (\sushiswapPairHourDataDTOVolumeUsd -> SushiswapPairHourDataDTO { sushiswapPairHourDataDTOVolumeUsd, ..} ) <$> f sushiswapPairHourDataDTOVolumeUsd
+{-# INLINE sushiswapPairHourDataDTOVolumeUsdL #-}
+
+-- | 'sushiswapPairHourDataDTOTxCount' Lens
+sushiswapPairHourDataDTOTxCountL :: Lens_' SushiswapPairHourDataDTO (Maybe Text)
+sushiswapPairHourDataDTOTxCountL f SushiswapPairHourDataDTO{..} = (\sushiswapPairHourDataDTOTxCount -> SushiswapPairHourDataDTO { sushiswapPairHourDataDTOTxCount, ..} ) <$> f sushiswapPairHourDataDTOTxCount
+{-# INLINE sushiswapPairHourDataDTOTxCountL #-}
+
+-- | 'sushiswapPairHourDataDTOVid' Lens
+sushiswapPairHourDataDTOVidL :: Lens_' SushiswapPairHourDataDTO (Maybe Integer)
+sushiswapPairHourDataDTOVidL f SushiswapPairHourDataDTO{..} = (\sushiswapPairHourDataDTOVid -> SushiswapPairHourDataDTO { sushiswapPairHourDataDTOVid, ..} ) <$> f sushiswapPairHourDataDTOVid
+{-# INLINE sushiswapPairHourDataDTOVidL #-}
 
 
 
@@ -400,6 +1135,163 @@ sushiswapTokenDTOVidL f SushiswapTokenDTO{..} = (\sushiswapTokenDTOVid -> Sushis
 sushiswapTokenDTOTokenSymbolL :: Lens_' SushiswapTokenDTO (Maybe Text)
 sushiswapTokenDTOTokenSymbolL f SushiswapTokenDTO{..} = (\sushiswapTokenDTOTokenSymbol -> SushiswapTokenDTO { sushiswapTokenDTOTokenSymbol, ..} ) <$> f sushiswapTokenDTOTokenSymbol
 {-# INLINE sushiswapTokenDTOTokenSymbolL #-}
+
+
+
+-- * SushiswapTokenDayDataDTO
+
+-- | 'sushiswapTokenDayDataDTOEntryTime' Lens
+sushiswapTokenDayDataDTOEntryTimeL :: Lens_' SushiswapTokenDayDataDTO (Maybe DateTime)
+sushiswapTokenDayDataDTOEntryTimeL f SushiswapTokenDayDataDTO{..} = (\sushiswapTokenDayDataDTOEntryTime -> SushiswapTokenDayDataDTO { sushiswapTokenDayDataDTOEntryTime, ..} ) <$> f sushiswapTokenDayDataDTOEntryTime
+{-# INLINE sushiswapTokenDayDataDTOEntryTimeL #-}
+
+-- | 'sushiswapTokenDayDataDTORecvTime' Lens
+sushiswapTokenDayDataDTORecvTimeL :: Lens_' SushiswapTokenDayDataDTO (Maybe DateTime)
+sushiswapTokenDayDataDTORecvTimeL f SushiswapTokenDayDataDTO{..} = (\sushiswapTokenDayDataDTORecvTime -> SushiswapTokenDayDataDTO { sushiswapTokenDayDataDTORecvTime, ..} ) <$> f sushiswapTokenDayDataDTORecvTime
+{-# INLINE sushiswapTokenDayDataDTORecvTimeL #-}
+
+-- | 'sushiswapTokenDayDataDTOBlockNumber' Lens
+sushiswapTokenDayDataDTOBlockNumberL :: Lens_' SushiswapTokenDayDataDTO (Maybe Integer)
+sushiswapTokenDayDataDTOBlockNumberL f SushiswapTokenDayDataDTO{..} = (\sushiswapTokenDayDataDTOBlockNumber -> SushiswapTokenDayDataDTO { sushiswapTokenDayDataDTOBlockNumber, ..} ) <$> f sushiswapTokenDayDataDTOBlockNumber
+{-# INLINE sushiswapTokenDayDataDTOBlockNumberL #-}
+
+-- | 'sushiswapTokenDayDataDTOId' Lens
+sushiswapTokenDayDataDTOIdL :: Lens_' SushiswapTokenDayDataDTO (Maybe Text)
+sushiswapTokenDayDataDTOIdL f SushiswapTokenDayDataDTO{..} = (\sushiswapTokenDayDataDTOId -> SushiswapTokenDayDataDTO { sushiswapTokenDayDataDTOId, ..} ) <$> f sushiswapTokenDayDataDTOId
+{-# INLINE sushiswapTokenDayDataDTOIdL #-}
+
+-- | 'sushiswapTokenDayDataDTODate' Lens
+sushiswapTokenDayDataDTODateL :: Lens_' SushiswapTokenDayDataDTO (Maybe Int)
+sushiswapTokenDayDataDTODateL f SushiswapTokenDayDataDTO{..} = (\sushiswapTokenDayDataDTODate -> SushiswapTokenDayDataDTO { sushiswapTokenDayDataDTODate, ..} ) <$> f sushiswapTokenDayDataDTODate
+{-# INLINE sushiswapTokenDayDataDTODateL #-}
+
+-- | 'sushiswapTokenDayDataDTOToken' Lens
+sushiswapTokenDayDataDTOTokenL :: Lens_' SushiswapTokenDayDataDTO (Maybe Text)
+sushiswapTokenDayDataDTOTokenL f SushiswapTokenDayDataDTO{..} = (\sushiswapTokenDayDataDTOToken -> SushiswapTokenDayDataDTO { sushiswapTokenDayDataDTOToken, ..} ) <$> f sushiswapTokenDayDataDTOToken
+{-# INLINE sushiswapTokenDayDataDTOTokenL #-}
+
+-- | 'sushiswapTokenDayDataDTOVolume' Lens
+sushiswapTokenDayDataDTOVolumeL :: Lens_' SushiswapTokenDayDataDTO (Maybe Text)
+sushiswapTokenDayDataDTOVolumeL f SushiswapTokenDayDataDTO{..} = (\sushiswapTokenDayDataDTOVolume -> SushiswapTokenDayDataDTO { sushiswapTokenDayDataDTOVolume, ..} ) <$> f sushiswapTokenDayDataDTOVolume
+{-# INLINE sushiswapTokenDayDataDTOVolumeL #-}
+
+-- | 'sushiswapTokenDayDataDTOVolumeEth' Lens
+sushiswapTokenDayDataDTOVolumeEthL :: Lens_' SushiswapTokenDayDataDTO (Maybe Text)
+sushiswapTokenDayDataDTOVolumeEthL f SushiswapTokenDayDataDTO{..} = (\sushiswapTokenDayDataDTOVolumeEth -> SushiswapTokenDayDataDTO { sushiswapTokenDayDataDTOVolumeEth, ..} ) <$> f sushiswapTokenDayDataDTOVolumeEth
+{-# INLINE sushiswapTokenDayDataDTOVolumeEthL #-}
+
+-- | 'sushiswapTokenDayDataDTOVolumeUsd' Lens
+sushiswapTokenDayDataDTOVolumeUsdL :: Lens_' SushiswapTokenDayDataDTO (Maybe Text)
+sushiswapTokenDayDataDTOVolumeUsdL f SushiswapTokenDayDataDTO{..} = (\sushiswapTokenDayDataDTOVolumeUsd -> SushiswapTokenDayDataDTO { sushiswapTokenDayDataDTOVolumeUsd, ..} ) <$> f sushiswapTokenDayDataDTOVolumeUsd
+{-# INLINE sushiswapTokenDayDataDTOVolumeUsdL #-}
+
+-- | 'sushiswapTokenDayDataDTOTxCount' Lens
+sushiswapTokenDayDataDTOTxCountL :: Lens_' SushiswapTokenDayDataDTO (Maybe Text)
+sushiswapTokenDayDataDTOTxCountL f SushiswapTokenDayDataDTO{..} = (\sushiswapTokenDayDataDTOTxCount -> SushiswapTokenDayDataDTO { sushiswapTokenDayDataDTOTxCount, ..} ) <$> f sushiswapTokenDayDataDTOTxCount
+{-# INLINE sushiswapTokenDayDataDTOTxCountL #-}
+
+-- | 'sushiswapTokenDayDataDTOLiquidity' Lens
+sushiswapTokenDayDataDTOLiquidityL :: Lens_' SushiswapTokenDayDataDTO (Maybe Text)
+sushiswapTokenDayDataDTOLiquidityL f SushiswapTokenDayDataDTO{..} = (\sushiswapTokenDayDataDTOLiquidity -> SushiswapTokenDayDataDTO { sushiswapTokenDayDataDTOLiquidity, ..} ) <$> f sushiswapTokenDayDataDTOLiquidity
+{-# INLINE sushiswapTokenDayDataDTOLiquidityL #-}
+
+-- | 'sushiswapTokenDayDataDTOLiquidityEth' Lens
+sushiswapTokenDayDataDTOLiquidityEthL :: Lens_' SushiswapTokenDayDataDTO (Maybe Text)
+sushiswapTokenDayDataDTOLiquidityEthL f SushiswapTokenDayDataDTO{..} = (\sushiswapTokenDayDataDTOLiquidityEth -> SushiswapTokenDayDataDTO { sushiswapTokenDayDataDTOLiquidityEth, ..} ) <$> f sushiswapTokenDayDataDTOLiquidityEth
+{-# INLINE sushiswapTokenDayDataDTOLiquidityEthL #-}
+
+-- | 'sushiswapTokenDayDataDTOLiquidityUsd' Lens
+sushiswapTokenDayDataDTOLiquidityUsdL :: Lens_' SushiswapTokenDayDataDTO (Maybe Text)
+sushiswapTokenDayDataDTOLiquidityUsdL f SushiswapTokenDayDataDTO{..} = (\sushiswapTokenDayDataDTOLiquidityUsd -> SushiswapTokenDayDataDTO { sushiswapTokenDayDataDTOLiquidityUsd, ..} ) <$> f sushiswapTokenDayDataDTOLiquidityUsd
+{-# INLINE sushiswapTokenDayDataDTOLiquidityUsdL #-}
+
+-- | 'sushiswapTokenDayDataDTOPriceUsd' Lens
+sushiswapTokenDayDataDTOPriceUsdL :: Lens_' SushiswapTokenDayDataDTO (Maybe Text)
+sushiswapTokenDayDataDTOPriceUsdL f SushiswapTokenDayDataDTO{..} = (\sushiswapTokenDayDataDTOPriceUsd -> SushiswapTokenDayDataDTO { sushiswapTokenDayDataDTOPriceUsd, ..} ) <$> f sushiswapTokenDayDataDTOPriceUsd
+{-# INLINE sushiswapTokenDayDataDTOPriceUsdL #-}
+
+-- | 'sushiswapTokenDayDataDTOVid' Lens
+sushiswapTokenDayDataDTOVidL :: Lens_' SushiswapTokenDayDataDTO (Maybe Integer)
+sushiswapTokenDayDataDTOVidL f SushiswapTokenDayDataDTO{..} = (\sushiswapTokenDayDataDTOVid -> SushiswapTokenDayDataDTO { sushiswapTokenDayDataDTOVid, ..} ) <$> f sushiswapTokenDayDataDTOVid
+{-# INLINE sushiswapTokenDayDataDTOVidL #-}
+
+
+
+-- * SushiswapTransactionDTO
+
+-- | 'sushiswapTransactionDTOEntryTime' Lens
+sushiswapTransactionDTOEntryTimeL :: Lens_' SushiswapTransactionDTO (Maybe DateTime)
+sushiswapTransactionDTOEntryTimeL f SushiswapTransactionDTO{..} = (\sushiswapTransactionDTOEntryTime -> SushiswapTransactionDTO { sushiswapTransactionDTOEntryTime, ..} ) <$> f sushiswapTransactionDTOEntryTime
+{-# INLINE sushiswapTransactionDTOEntryTimeL #-}
+
+-- | 'sushiswapTransactionDTORecvTime' Lens
+sushiswapTransactionDTORecvTimeL :: Lens_' SushiswapTransactionDTO (Maybe DateTime)
+sushiswapTransactionDTORecvTimeL f SushiswapTransactionDTO{..} = (\sushiswapTransactionDTORecvTime -> SushiswapTransactionDTO { sushiswapTransactionDTORecvTime, ..} ) <$> f sushiswapTransactionDTORecvTime
+{-# INLINE sushiswapTransactionDTORecvTimeL #-}
+
+-- | 'sushiswapTransactionDTOBlockNumber' Lens
+sushiswapTransactionDTOBlockNumberL :: Lens_' SushiswapTransactionDTO (Maybe Integer)
+sushiswapTransactionDTOBlockNumberL f SushiswapTransactionDTO{..} = (\sushiswapTransactionDTOBlockNumber -> SushiswapTransactionDTO { sushiswapTransactionDTOBlockNumber, ..} ) <$> f sushiswapTransactionDTOBlockNumber
+{-# INLINE sushiswapTransactionDTOBlockNumberL #-}
+
+-- | 'sushiswapTransactionDTOId' Lens
+sushiswapTransactionDTOIdL :: Lens_' SushiswapTransactionDTO (Maybe Text)
+sushiswapTransactionDTOIdL f SushiswapTransactionDTO{..} = (\sushiswapTransactionDTOId -> SushiswapTransactionDTO { sushiswapTransactionDTOId, ..} ) <$> f sushiswapTransactionDTOId
+{-# INLINE sushiswapTransactionDTOIdL #-}
+
+-- | 'sushiswapTransactionDTOTimestamp' Lens
+sushiswapTransactionDTOTimestampL :: Lens_' SushiswapTransactionDTO (Maybe Text)
+sushiswapTransactionDTOTimestampL f SushiswapTransactionDTO{..} = (\sushiswapTransactionDTOTimestamp -> SushiswapTransactionDTO { sushiswapTransactionDTOTimestamp, ..} ) <$> f sushiswapTransactionDTOTimestamp
+{-# INLINE sushiswapTransactionDTOTimestampL #-}
+
+-- | 'sushiswapTransactionDTOMints' Lens
+sushiswapTransactionDTOMintsL :: Lens_' SushiswapTransactionDTO (Maybe [Text])
+sushiswapTransactionDTOMintsL f SushiswapTransactionDTO{..} = (\sushiswapTransactionDTOMints -> SushiswapTransactionDTO { sushiswapTransactionDTOMints, ..} ) <$> f sushiswapTransactionDTOMints
+{-# INLINE sushiswapTransactionDTOMintsL #-}
+
+-- | 'sushiswapTransactionDTOBurns' Lens
+sushiswapTransactionDTOBurnsL :: Lens_' SushiswapTransactionDTO (Maybe [Text])
+sushiswapTransactionDTOBurnsL f SushiswapTransactionDTO{..} = (\sushiswapTransactionDTOBurns -> SushiswapTransactionDTO { sushiswapTransactionDTOBurns, ..} ) <$> f sushiswapTransactionDTOBurns
+{-# INLINE sushiswapTransactionDTOBurnsL #-}
+
+-- | 'sushiswapTransactionDTOSwaps' Lens
+sushiswapTransactionDTOSwapsL :: Lens_' SushiswapTransactionDTO (Maybe [Text])
+sushiswapTransactionDTOSwapsL f SushiswapTransactionDTO{..} = (\sushiswapTransactionDTOSwaps -> SushiswapTransactionDTO { sushiswapTransactionDTOSwaps, ..} ) <$> f sushiswapTransactionDTOSwaps
+{-# INLINE sushiswapTransactionDTOSwapsL #-}
+
+-- | 'sushiswapTransactionDTOVid' Lens
+sushiswapTransactionDTOVidL :: Lens_' SushiswapTransactionDTO (Maybe Integer)
+sushiswapTransactionDTOVidL f SushiswapTransactionDTO{..} = (\sushiswapTransactionDTOVid -> SushiswapTransactionDTO { sushiswapTransactionDTOVid, ..} ) <$> f sushiswapTransactionDTOVid
+{-# INLINE sushiswapTransactionDTOVidL #-}
+
+
+
+-- * SushiswapUserDTO
+
+-- | 'sushiswapUserDTOEntryTime' Lens
+sushiswapUserDTOEntryTimeL :: Lens_' SushiswapUserDTO (Maybe DateTime)
+sushiswapUserDTOEntryTimeL f SushiswapUserDTO{..} = (\sushiswapUserDTOEntryTime -> SushiswapUserDTO { sushiswapUserDTOEntryTime, ..} ) <$> f sushiswapUserDTOEntryTime
+{-# INLINE sushiswapUserDTOEntryTimeL #-}
+
+-- | 'sushiswapUserDTORecvTime' Lens
+sushiswapUserDTORecvTimeL :: Lens_' SushiswapUserDTO (Maybe DateTime)
+sushiswapUserDTORecvTimeL f SushiswapUserDTO{..} = (\sushiswapUserDTORecvTime -> SushiswapUserDTO { sushiswapUserDTORecvTime, ..} ) <$> f sushiswapUserDTORecvTime
+{-# INLINE sushiswapUserDTORecvTimeL #-}
+
+-- | 'sushiswapUserDTOBlockNumber' Lens
+sushiswapUserDTOBlockNumberL :: Lens_' SushiswapUserDTO (Maybe Integer)
+sushiswapUserDTOBlockNumberL f SushiswapUserDTO{..} = (\sushiswapUserDTOBlockNumber -> SushiswapUserDTO { sushiswapUserDTOBlockNumber, ..} ) <$> f sushiswapUserDTOBlockNumber
+{-# INLINE sushiswapUserDTOBlockNumberL #-}
+
+-- | 'sushiswapUserDTOId' Lens
+sushiswapUserDTOIdL :: Lens_' SushiswapUserDTO (Maybe Text)
+sushiswapUserDTOIdL f SushiswapUserDTO{..} = (\sushiswapUserDTOId -> SushiswapUserDTO { sushiswapUserDTOId, ..} ) <$> f sushiswapUserDTOId
+{-# INLINE sushiswapUserDTOIdL #-}
+
+-- | 'sushiswapUserDTOVid' Lens
+sushiswapUserDTOVidL :: Lens_' SushiswapUserDTO (Maybe Integer)
+sushiswapUserDTOVidL f SushiswapUserDTO{..} = (\sushiswapUserDTOVid -> SushiswapUserDTO { sushiswapUserDTOVid, ..} ) <$> f sushiswapUserDTOVid
+{-# INLINE sushiswapUserDTOVidL #-}
 
 
 

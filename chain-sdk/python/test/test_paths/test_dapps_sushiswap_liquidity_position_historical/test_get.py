@@ -21,6 +21,7 @@ from .. import ApiTestMixin
 class TestDappsSushiswapLiquidityPositionHistorical(ApiTestMixin, unittest.TestCase):
     """
     DappsSushiswapLiquidityPositionHistorical unit test stubs
+        GetLiquidityPosition (historical)  # noqa: E501
     """
     _configuration = configuration.Configuration()
 
@@ -32,7 +33,12 @@ class TestDappsSushiswapLiquidityPositionHistorical(ApiTestMixin, unittest.TestC
         pass
 
     response_status = 200
-    response_body = ''
+
+
+
+
+
+
 
 
 if __name__ == '__main__':

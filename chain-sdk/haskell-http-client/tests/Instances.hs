@@ -125,6 +125,170 @@ genNumericsBigInteger n =
     <*> arbitraryReducedMaybe n -- numericsBigIntegerIsEven :: Maybe Bool
     <*> arbitraryReducedMaybe n -- numericsBigIntegerSign :: Maybe Int
   
+instance Arbitrary SushiswapBundleDTO where
+  arbitrary = sized genSushiswapBundleDTO
+
+genSushiswapBundleDTO :: Int -> Gen SushiswapBundleDTO
+genSushiswapBundleDTO n =
+  SushiswapBundleDTO
+    <$> arbitraryReducedMaybe n -- sushiswapBundleDTOEntryTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- sushiswapBundleDTORecvTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- sushiswapBundleDTOBlockNumber :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- sushiswapBundleDTOId :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapBundleDTOEthPrice :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapBundleDTOVid :: Maybe Integer
+  
+instance Arbitrary SushiswapBurnDTO where
+  arbitrary = sized genSushiswapBurnDTO
+
+genSushiswapBurnDTO :: Int -> Gen SushiswapBurnDTO
+genSushiswapBurnDTO n =
+  SushiswapBurnDTO
+    <$> arbitraryReducedMaybe n -- sushiswapBurnDTOEntryTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- sushiswapBurnDTORecvTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- sushiswapBurnDTOBlockNumber :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- sushiswapBurnDTOId :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapBurnDTOTransaction :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapBurnDTOTimestamp :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapBurnDTOPair :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapBurnDTOLiquidity :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapBurnDTOSender :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapBurnDTOAmount0 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapBurnDTOAmount1 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapBurnDTOTo :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapBurnDTOLogIndex :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapBurnDTOAmountUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapBurnDTOComplete :: Maybe Bool
+    <*> arbitraryReducedMaybe n -- sushiswapBurnDTOFeeTo :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapBurnDTOFeeLiquidity :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapBurnDTOVid :: Maybe Integer
+  
+instance Arbitrary SushiswapDayDataDTO where
+  arbitrary = sized genSushiswapDayDataDTO
+
+genSushiswapDayDataDTO :: Int -> Gen SushiswapDayDataDTO
+genSushiswapDayDataDTO n =
+  SushiswapDayDataDTO
+    <$> arbitraryReducedMaybe n -- sushiswapDayDataDTOEntryTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- sushiswapDayDataDTORecvTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- sushiswapDayDataDTOBlockNumber :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- sushiswapDayDataDTOId :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapDayDataDTODate :: Maybe Int
+    <*> arbitraryReducedMaybe n -- sushiswapDayDataDTOFactory :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapDayDataDTOVolumeEth :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapDayDataDTOVolumeUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapDayDataDTOUntrackedVolume :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapDayDataDTOLiquidityEth :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapDayDataDTOLiquidityUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapDayDataDTOTxCount :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapDayDataDTOVid :: Maybe Integer
+  
+instance Arbitrary SushiswapFactoryDTO where
+  arbitrary = sized genSushiswapFactoryDTO
+
+genSushiswapFactoryDTO :: Int -> Gen SushiswapFactoryDTO
+genSushiswapFactoryDTO n =
+  SushiswapFactoryDTO
+    <$> arbitraryReducedMaybe n -- sushiswapFactoryDTOEntryTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- sushiswapFactoryDTORecvTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- sushiswapFactoryDTOBlockNumber :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- sushiswapFactoryDTOId :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapFactoryDTOPairCount :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapFactoryDTOVolumeUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapFactoryDTOVolumeEth :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapFactoryDTOUntrackedVolumeUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapFactoryDTOLiquidityUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapFactoryDTOLiquidityEth :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapFactoryDTOTxCount :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapFactoryDTOTokenCount :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapFactoryDTOUserCount :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapFactoryDTOVid :: Maybe Integer
+  
+instance Arbitrary SushiswapHourDataDTO where
+  arbitrary = sized genSushiswapHourDataDTO
+
+genSushiswapHourDataDTO :: Int -> Gen SushiswapHourDataDTO
+genSushiswapHourDataDTO n =
+  SushiswapHourDataDTO
+    <$> arbitraryReducedMaybe n -- sushiswapHourDataDTOEntryTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- sushiswapHourDataDTORecvTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- sushiswapHourDataDTOBlockNumber :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- sushiswapHourDataDTOId :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapHourDataDTODate :: Maybe Int
+    <*> arbitraryReducedMaybe n -- sushiswapHourDataDTOFactory :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapHourDataDTOVolumeEth :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapHourDataDTOVolumeUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapHourDataDTOUntrackedVolume :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapHourDataDTOLiquidityEth :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapHourDataDTOLiquidityUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapHourDataDTOTxCount :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapHourDataDTOVid :: Maybe Integer
+  
+instance Arbitrary SushiswapLiquidityPositionDTO where
+  arbitrary = sized genSushiswapLiquidityPositionDTO
+
+genSushiswapLiquidityPositionDTO :: Int -> Gen SushiswapLiquidityPositionDTO
+genSushiswapLiquidityPositionDTO n =
+  SushiswapLiquidityPositionDTO
+    <$> arbitraryReducedMaybe n -- sushiswapLiquidityPositionDTOEntryTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- sushiswapLiquidityPositionDTORecvTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- sushiswapLiquidityPositionDTOBlockNumber :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- sushiswapLiquidityPositionDTOId :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapLiquidityPositionDTOUser :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapLiquidityPositionDTOPair :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapLiquidityPositionDTOLiquidityTokenBalance :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapLiquidityPositionDTOBlock :: Maybe Int
+    <*> arbitraryReducedMaybe n -- sushiswapLiquidityPositionDTOTimestamp :: Maybe Int
+    <*> arbitraryReducedMaybe n -- sushiswapLiquidityPositionDTOVid :: Maybe Integer
+  
+instance Arbitrary SushiswapLiquidityPositionSnapshotDTO where
+  arbitrary = sized genSushiswapLiquidityPositionSnapshotDTO
+
+genSushiswapLiquidityPositionSnapshotDTO :: Int -> Gen SushiswapLiquidityPositionSnapshotDTO
+genSushiswapLiquidityPositionSnapshotDTO n =
+  SushiswapLiquidityPositionSnapshotDTO
+    <$> arbitraryReducedMaybe n -- sushiswapLiquidityPositionSnapshotDTOEntryTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- sushiswapLiquidityPositionSnapshotDTORecvTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- sushiswapLiquidityPositionSnapshotDTOBlockNumber :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- sushiswapLiquidityPositionSnapshotDTOId :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapLiquidityPositionSnapshotDTOLiquidityPosition :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapLiquidityPositionSnapshotDTOTimestamp :: Maybe Int
+    <*> arbitraryReducedMaybe n -- sushiswapLiquidityPositionSnapshotDTOBlock :: Maybe Int
+    <*> arbitraryReducedMaybe n -- sushiswapLiquidityPositionSnapshotDTOUser :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapLiquidityPositionSnapshotDTOPair :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapLiquidityPositionSnapshotDTOToken0PriceUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapLiquidityPositionSnapshotDTOToken1PriceUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapLiquidityPositionSnapshotDTOReserve0 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapLiquidityPositionSnapshotDTOReserve1 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapLiquidityPositionSnapshotDTOReserveUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapLiquidityPositionSnapshotDTOLiquidityTokenTotalSupply :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapLiquidityPositionSnapshotDTOLiquidityTokenBalance :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapLiquidityPositionSnapshotDTOVid :: Maybe Integer
+  
+instance Arbitrary SushiswapMintDTO where
+  arbitrary = sized genSushiswapMintDTO
+
+genSushiswapMintDTO :: Int -> Gen SushiswapMintDTO
+genSushiswapMintDTO n =
+  SushiswapMintDTO
+    <$> arbitraryReducedMaybe n -- sushiswapMintDTOEntryTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- sushiswapMintDTORecvTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- sushiswapMintDTOBlockNumber :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- sushiswapMintDTOId :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapMintDTOTransaction :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapMintDTOTimestamp :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapMintDTOPair :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapMintDTOTo :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapMintDTOLiquidity :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapMintDTOSender :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapMintDTOAmount0 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapMintDTOAmount1 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapMintDTOLogIndex :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapMintDTOAmountUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapMintDTOFeeTo :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapMintDTOFeeLiquidity :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapMintDTOVid :: Maybe Integer
+  
 instance Arbitrary SushiswapPairDTO where
   arbitrary = sized genSushiswapPairDTO
 
@@ -157,6 +321,51 @@ genSushiswapPairDTO n =
     <*> arbitraryReducedMaybe n -- sushiswapPairDTOBlock :: Maybe Text
     <*> arbitraryReducedMaybe n -- sushiswapPairDTOVid :: Maybe Integer
     <*> arbitraryReducedMaybe n -- sushiswapPairDTOEvaluatedAsk :: Maybe Double
+  
+instance Arbitrary SushiswapPairDayDataDTO where
+  arbitrary = sized genSushiswapPairDayDataDTO
+
+genSushiswapPairDayDataDTO :: Int -> Gen SushiswapPairDayDataDTO
+genSushiswapPairDayDataDTO n =
+  SushiswapPairDayDataDTO
+    <$> arbitraryReducedMaybe n -- sushiswapPairDayDataDTOEntryTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- sushiswapPairDayDataDTORecvTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- sushiswapPairDayDataDTOBlockNumber :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- sushiswapPairDayDataDTOId :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapPairDayDataDTODate :: Maybe Int
+    <*> arbitraryReducedMaybe n -- sushiswapPairDayDataDTOPair :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapPairDayDataDTOToken0 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapPairDayDataDTOToken1 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapPairDayDataDTOReserve0 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapPairDayDataDTOReserve1 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapPairDayDataDTOTotalSupply :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapPairDayDataDTOReserveUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapPairDayDataDTOVolumeToken0 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapPairDayDataDTOVolumeToken1 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapPairDayDataDTOVolumeUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapPairDayDataDTOTxCount :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapPairDayDataDTOVid :: Maybe Integer
+  
+instance Arbitrary SushiswapPairHourDataDTO where
+  arbitrary = sized genSushiswapPairHourDataDTO
+
+genSushiswapPairHourDataDTO :: Int -> Gen SushiswapPairHourDataDTO
+genSushiswapPairHourDataDTO n =
+  SushiswapPairHourDataDTO
+    <$> arbitraryReducedMaybe n -- sushiswapPairHourDataDTOEntryTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- sushiswapPairHourDataDTORecvTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- sushiswapPairHourDataDTOBlockNumber :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- sushiswapPairHourDataDTOId :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapPairHourDataDTODate :: Maybe Int
+    <*> arbitraryReducedMaybe n -- sushiswapPairHourDataDTOPair :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapPairHourDataDTOReserve0 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapPairHourDataDTOReserve1 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapPairHourDataDTOReserveUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapPairHourDataDTOVolumeToken0 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapPairHourDataDTOVolumeToken1 :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapPairHourDataDTOVolumeUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapPairHourDataDTOTxCount :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapPairHourDataDTOVid :: Maybe Integer
   
 instance Arbitrary SushiswapSwapDTO where
   arbitrary = sized genSushiswapSwapDTO
@@ -210,6 +419,56 @@ genSushiswapTokenDTO n =
     <*> arbitraryReducedMaybe n -- sushiswapTokenDTOWhitelistPairs :: Maybe [Text]
     <*> arbitraryReducedMaybe n -- sushiswapTokenDTOVid :: Maybe Integer
     <*> arbitraryReducedMaybe n -- sushiswapTokenDTOTokenSymbol :: Maybe Text
+  
+instance Arbitrary SushiswapTokenDayDataDTO where
+  arbitrary = sized genSushiswapTokenDayDataDTO
+
+genSushiswapTokenDayDataDTO :: Int -> Gen SushiswapTokenDayDataDTO
+genSushiswapTokenDayDataDTO n =
+  SushiswapTokenDayDataDTO
+    <$> arbitraryReducedMaybe n -- sushiswapTokenDayDataDTOEntryTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- sushiswapTokenDayDataDTORecvTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- sushiswapTokenDayDataDTOBlockNumber :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- sushiswapTokenDayDataDTOId :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapTokenDayDataDTODate :: Maybe Int
+    <*> arbitraryReducedMaybe n -- sushiswapTokenDayDataDTOToken :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapTokenDayDataDTOVolume :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapTokenDayDataDTOVolumeEth :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapTokenDayDataDTOVolumeUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapTokenDayDataDTOTxCount :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapTokenDayDataDTOLiquidity :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapTokenDayDataDTOLiquidityEth :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapTokenDayDataDTOLiquidityUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapTokenDayDataDTOPriceUsd :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapTokenDayDataDTOVid :: Maybe Integer
+  
+instance Arbitrary SushiswapTransactionDTO where
+  arbitrary = sized genSushiswapTransactionDTO
+
+genSushiswapTransactionDTO :: Int -> Gen SushiswapTransactionDTO
+genSushiswapTransactionDTO n =
+  SushiswapTransactionDTO
+    <$> arbitraryReducedMaybe n -- sushiswapTransactionDTOEntryTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- sushiswapTransactionDTORecvTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- sushiswapTransactionDTOBlockNumber :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- sushiswapTransactionDTOId :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapTransactionDTOTimestamp :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapTransactionDTOMints :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- sushiswapTransactionDTOBurns :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- sushiswapTransactionDTOSwaps :: Maybe [Text]
+    <*> arbitraryReducedMaybe n -- sushiswapTransactionDTOVid :: Maybe Integer
+  
+instance Arbitrary SushiswapUserDTO where
+  arbitrary = sized genSushiswapUserDTO
+
+genSushiswapUserDTO :: Int -> Gen SushiswapUserDTO
+genSushiswapUserDTO n =
+  SushiswapUserDTO
+    <$> arbitraryReducedMaybe n -- sushiswapUserDTOEntryTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- sushiswapUserDTORecvTime :: Maybe DateTime
+    <*> arbitraryReducedMaybe n -- sushiswapUserDTOBlockNumber :: Maybe Integer
+    <*> arbitraryReducedMaybe n -- sushiswapUserDTOId :: Maybe Text
+    <*> arbitraryReducedMaybe n -- sushiswapUserDTOVid :: Maybe Integer
   
 instance Arbitrary UniswapV2PairV2DTO where
   arbitrary = sized genUniswapV2PairV2DTO

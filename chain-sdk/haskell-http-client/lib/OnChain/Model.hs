@@ -141,6 +141,636 @@ mkNumericsBigInteger =
   , numericsBigIntegerSign = Nothing
   }
 
+-- ** SushiswapBundleDTO
+-- | SushiswapBundleDTO
+-- The Bundle is used as a global store of derived ETH price in USD.
+data SushiswapBundleDTO = SushiswapBundleDTO
+  { sushiswapBundleDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , sushiswapBundleDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , sushiswapBundleDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , sushiswapBundleDTOId :: !(Maybe Text) -- ^ "id" - Hardcoded to &#39;1&#39;.
+  , sushiswapBundleDTOEthPrice :: !(Maybe Text) -- ^ "eth_price" - Price of native.
+  , sushiswapBundleDTOVid :: !(Maybe Integer) -- ^ "vid" - 
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON SushiswapBundleDTO
+instance A.FromJSON SushiswapBundleDTO where
+  parseJSON = A.withObject "SushiswapBundleDTO" $ \o ->
+    SushiswapBundleDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "id")
+      <*> (o .:? "eth_price")
+      <*> (o .:? "vid")
+
+-- | ToJSON SushiswapBundleDTO
+instance A.ToJSON SushiswapBundleDTO where
+  toJSON SushiswapBundleDTO {..} =
+   _omitNulls
+      [ "entry_time" .= sushiswapBundleDTOEntryTime
+      , "recv_time" .= sushiswapBundleDTORecvTime
+      , "block_number" .= sushiswapBundleDTOBlockNumber
+      , "id" .= sushiswapBundleDTOId
+      , "eth_price" .= sushiswapBundleDTOEthPrice
+      , "vid" .= sushiswapBundleDTOVid
+      ]
+
+
+-- | Construct a value of type 'SushiswapBundleDTO' (by applying it's required fields, if any)
+mkSushiswapBundleDTO
+  :: SushiswapBundleDTO
+mkSushiswapBundleDTO =
+  SushiswapBundleDTO
+  { sushiswapBundleDTOEntryTime = Nothing
+  , sushiswapBundleDTORecvTime = Nothing
+  , sushiswapBundleDTOBlockNumber = Nothing
+  , sushiswapBundleDTOId = Nothing
+  , sushiswapBundleDTOEthPrice = Nothing
+  , sushiswapBundleDTOVid = Nothing
+  }
+
+-- ** SushiswapBurnDTO
+-- | SushiswapBurnDTO
+-- Burn entities are created for every emitted Burn event on the Uniswap core contracts. The Burn entity stores key data about the event like token amounts, who burned LP tokens, who received tokens, and more. This entity can be used to track liquidity removals on pairs.
+data SushiswapBurnDTO = SushiswapBurnDTO
+  { sushiswapBurnDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , sushiswapBurnDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , sushiswapBurnDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , sushiswapBurnDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: &lt;transaction id&gt;:&lt;transaction.burns.length&gt;.
+  , sushiswapBurnDTOTransaction :: !(Maybe Text) -- ^ "transaction" - Reference to the transaction Burn was included in.
+  , sushiswapBurnDTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - Timestamp of Burn, used to sort recent liquidity removals.
+  , sushiswapBurnDTOPair :: !(Maybe Text) -- ^ "pair" - Reference to pair.
+  , sushiswapBurnDTOLiquidity :: !(Maybe Text) -- ^ "liquidity" - Amount of liquidity tokens burned.
+  , sushiswapBurnDTOSender :: !(Maybe Text) -- ^ "sender" - Address that initiated the liquidity removal.
+  , sushiswapBurnDTOAmount0 :: !(Maybe Text) -- ^ "amount_0" - Amount of token0 removed.
+  , sushiswapBurnDTOAmount1 :: !(Maybe Text) -- ^ "amount_1" - Amount of token1 removed.
+  , sushiswapBurnDTOTo :: !(Maybe Text) -- ^ "to" - Recipient of tokens.
+  , sushiswapBurnDTOLogIndex :: !(Maybe Text) -- ^ "log_index" - Index in the transaction event was emitted.
+  , sushiswapBurnDTOAmountUsd :: !(Maybe Text) -- ^ "amount_usd" - Derived amount based on available prices of tokens.
+  , sushiswapBurnDTOComplete :: !(Maybe Bool) -- ^ "complete" - 
+  , sushiswapBurnDTOFeeTo :: !(Maybe Text) -- ^ "fee_to" - Address of fee recipient (if fee is on).
+  , sushiswapBurnDTOFeeLiquidity :: !(Maybe Text) -- ^ "fee_liquidity" - Amount of tokens sent to fee recipient (if fee is on).
+  , sushiswapBurnDTOVid :: !(Maybe Integer) -- ^ "vid" - 
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON SushiswapBurnDTO
+instance A.FromJSON SushiswapBurnDTO where
+  parseJSON = A.withObject "SushiswapBurnDTO" $ \o ->
+    SushiswapBurnDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "id")
+      <*> (o .:? "transaction")
+      <*> (o .:? "timestamp")
+      <*> (o .:? "pair")
+      <*> (o .:? "liquidity")
+      <*> (o .:? "sender")
+      <*> (o .:? "amount_0")
+      <*> (o .:? "amount_1")
+      <*> (o .:? "to")
+      <*> (o .:? "log_index")
+      <*> (o .:? "amount_usd")
+      <*> (o .:? "complete")
+      <*> (o .:? "fee_to")
+      <*> (o .:? "fee_liquidity")
+      <*> (o .:? "vid")
+
+-- | ToJSON SushiswapBurnDTO
+instance A.ToJSON SushiswapBurnDTO where
+  toJSON SushiswapBurnDTO {..} =
+   _omitNulls
+      [ "entry_time" .= sushiswapBurnDTOEntryTime
+      , "recv_time" .= sushiswapBurnDTORecvTime
+      , "block_number" .= sushiswapBurnDTOBlockNumber
+      , "id" .= sushiswapBurnDTOId
+      , "transaction" .= sushiswapBurnDTOTransaction
+      , "timestamp" .= sushiswapBurnDTOTimestamp
+      , "pair" .= sushiswapBurnDTOPair
+      , "liquidity" .= sushiswapBurnDTOLiquidity
+      , "sender" .= sushiswapBurnDTOSender
+      , "amount_0" .= sushiswapBurnDTOAmount0
+      , "amount_1" .= sushiswapBurnDTOAmount1
+      , "to" .= sushiswapBurnDTOTo
+      , "log_index" .= sushiswapBurnDTOLogIndex
+      , "amount_usd" .= sushiswapBurnDTOAmountUsd
+      , "complete" .= sushiswapBurnDTOComplete
+      , "fee_to" .= sushiswapBurnDTOFeeTo
+      , "fee_liquidity" .= sushiswapBurnDTOFeeLiquidity
+      , "vid" .= sushiswapBurnDTOVid
+      ]
+
+
+-- | Construct a value of type 'SushiswapBurnDTO' (by applying it's required fields, if any)
+mkSushiswapBurnDTO
+  :: SushiswapBurnDTO
+mkSushiswapBurnDTO =
+  SushiswapBurnDTO
+  { sushiswapBurnDTOEntryTime = Nothing
+  , sushiswapBurnDTORecvTime = Nothing
+  , sushiswapBurnDTOBlockNumber = Nothing
+  , sushiswapBurnDTOId = Nothing
+  , sushiswapBurnDTOTransaction = Nothing
+  , sushiswapBurnDTOTimestamp = Nothing
+  , sushiswapBurnDTOPair = Nothing
+  , sushiswapBurnDTOLiquidity = Nothing
+  , sushiswapBurnDTOSender = Nothing
+  , sushiswapBurnDTOAmount0 = Nothing
+  , sushiswapBurnDTOAmount1 = Nothing
+  , sushiswapBurnDTOTo = Nothing
+  , sushiswapBurnDTOLogIndex = Nothing
+  , sushiswapBurnDTOAmountUsd = Nothing
+  , sushiswapBurnDTOComplete = Nothing
+  , sushiswapBurnDTOFeeTo = Nothing
+  , sushiswapBurnDTOFeeLiquidity = Nothing
+  , sushiswapBurnDTOVid = Nothing
+  }
+
+-- ** SushiswapDayDataDTO
+-- | SushiswapDayDataDTO
+-- Tracks data across all pairs aggregated into a daily bucket.
+data SushiswapDayDataDTO = SushiswapDayDataDTO
+  { sushiswapDayDataDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , sushiswapDayDataDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , sushiswapDayDataDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , sushiswapDayDataDTOId :: !(Maybe Text) -- ^ "id" - Unix timestamp for start of day / 86400 giving a unique day index.
+  , sushiswapDayDataDTODate :: !(Maybe Int) -- ^ "date" - Unix timestamp for start of day.
+  , sushiswapDayDataDTOFactory :: !(Maybe Text) -- ^ "factory" - Factory address.
+  , sushiswapDayDataDTOVolumeEth :: !(Maybe Text) -- ^ "volume_eth" - Total volume across all pairs on this day, stored as a derived amount of ETH.
+  , sushiswapDayDataDTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd" - Total volume across all pairs on this day, stored as a derived amount of USD.
+  , sushiswapDayDataDTOUntrackedVolume :: !(Maybe Text) -- ^ "untracked_volume" - Total volume across all pairs on this day, untracked
+  , sushiswapDayDataDTOLiquidityEth :: !(Maybe Text) -- ^ "liquidity_eth" - Total liquidity across all pairs in ETH up to and including this day.
+  , sushiswapDayDataDTOLiquidityUsd :: !(Maybe Text) -- ^ "liquidity_usd" - Total liquidity across all pairs in USD up to and including this day.
+  , sushiswapDayDataDTOTxCount :: !(Maybe Text) -- ^ "tx_count" - Number of transactions throughout this day.
+  , sushiswapDayDataDTOVid :: !(Maybe Integer) -- ^ "vid" - 
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON SushiswapDayDataDTO
+instance A.FromJSON SushiswapDayDataDTO where
+  parseJSON = A.withObject "SushiswapDayDataDTO" $ \o ->
+    SushiswapDayDataDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "id")
+      <*> (o .:? "date")
+      <*> (o .:? "factory")
+      <*> (o .:? "volume_eth")
+      <*> (o .:? "volume_usd")
+      <*> (o .:? "untracked_volume")
+      <*> (o .:? "liquidity_eth")
+      <*> (o .:? "liquidity_usd")
+      <*> (o .:? "tx_count")
+      <*> (o .:? "vid")
+
+-- | ToJSON SushiswapDayDataDTO
+instance A.ToJSON SushiswapDayDataDTO where
+  toJSON SushiswapDayDataDTO {..} =
+   _omitNulls
+      [ "entry_time" .= sushiswapDayDataDTOEntryTime
+      , "recv_time" .= sushiswapDayDataDTORecvTime
+      , "block_number" .= sushiswapDayDataDTOBlockNumber
+      , "id" .= sushiswapDayDataDTOId
+      , "date" .= sushiswapDayDataDTODate
+      , "factory" .= sushiswapDayDataDTOFactory
+      , "volume_eth" .= sushiswapDayDataDTOVolumeEth
+      , "volume_usd" .= sushiswapDayDataDTOVolumeUsd
+      , "untracked_volume" .= sushiswapDayDataDTOUntrackedVolume
+      , "liquidity_eth" .= sushiswapDayDataDTOLiquidityEth
+      , "liquidity_usd" .= sushiswapDayDataDTOLiquidityUsd
+      , "tx_count" .= sushiswapDayDataDTOTxCount
+      , "vid" .= sushiswapDayDataDTOVid
+      ]
+
+
+-- | Construct a value of type 'SushiswapDayDataDTO' (by applying it's required fields, if any)
+mkSushiswapDayDataDTO
+  :: SushiswapDayDataDTO
+mkSushiswapDayDataDTO =
+  SushiswapDayDataDTO
+  { sushiswapDayDataDTOEntryTime = Nothing
+  , sushiswapDayDataDTORecvTime = Nothing
+  , sushiswapDayDataDTOBlockNumber = Nothing
+  , sushiswapDayDataDTOId = Nothing
+  , sushiswapDayDataDTODate = Nothing
+  , sushiswapDayDataDTOFactory = Nothing
+  , sushiswapDayDataDTOVolumeEth = Nothing
+  , sushiswapDayDataDTOVolumeUsd = Nothing
+  , sushiswapDayDataDTOUntrackedVolume = Nothing
+  , sushiswapDayDataDTOLiquidityEth = Nothing
+  , sushiswapDayDataDTOLiquidityUsd = Nothing
+  , sushiswapDayDataDTOTxCount = Nothing
+  , sushiswapDayDataDTOVid = Nothing
+  }
+
+-- ** SushiswapFactoryDTO
+-- | SushiswapFactoryDTO
+-- The Sushiswap Factory entity is responsible for storing aggregate information across all Sushiswap pairs. It can be used to view stats about total liquidity, volume, amount of pairs and more.
+data SushiswapFactoryDTO = SushiswapFactoryDTO
+  { sushiswapFactoryDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , sushiswapFactoryDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , sushiswapFactoryDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , sushiswapFactoryDTOId :: !(Maybe Text) -- ^ "id" - Factory address.
+  , sushiswapFactoryDTOPairCount :: !(Maybe Text) -- ^ "pair_count" - Amount of pairs created by the Sushiswap factory.
+  , sushiswapFactoryDTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd" - All time USD volume across all pairs (USD is derived).
+  , sushiswapFactoryDTOVolumeEth :: !(Maybe Text) -- ^ "volume_eth" - All time volume in ETH across all pairs (ETH is derived).
+  , sushiswapFactoryDTOUntrackedVolumeUsd :: !(Maybe Text) -- ^ "untracked_volume_usd" - Untracked volume USD.
+  , sushiswapFactoryDTOLiquidityUsd :: !(Maybe Text) -- ^ "liquidity_usd" - Total liquidity across all pairs stored as a derived USD amount.
+  , sushiswapFactoryDTOLiquidityEth :: !(Maybe Text) -- ^ "liquidity_eth" - Total liquidity across all pairs stored as a derived ETH amount.
+  , sushiswapFactoryDTOTxCount :: !(Maybe Text) -- ^ "tx_count" - All time amount of transactions across all pairs.
+  , sushiswapFactoryDTOTokenCount :: !(Maybe Text) -- ^ "token_count" - Total count of tokens.
+  , sushiswapFactoryDTOUserCount :: !(Maybe Text) -- ^ "user_count" - Users count.
+  , sushiswapFactoryDTOVid :: !(Maybe Integer) -- ^ "vid" - 
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON SushiswapFactoryDTO
+instance A.FromJSON SushiswapFactoryDTO where
+  parseJSON = A.withObject "SushiswapFactoryDTO" $ \o ->
+    SushiswapFactoryDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "id")
+      <*> (o .:? "pair_count")
+      <*> (o .:? "volume_usd")
+      <*> (o .:? "volume_eth")
+      <*> (o .:? "untracked_volume_usd")
+      <*> (o .:? "liquidity_usd")
+      <*> (o .:? "liquidity_eth")
+      <*> (o .:? "tx_count")
+      <*> (o .:? "token_count")
+      <*> (o .:? "user_count")
+      <*> (o .:? "vid")
+
+-- | ToJSON SushiswapFactoryDTO
+instance A.ToJSON SushiswapFactoryDTO where
+  toJSON SushiswapFactoryDTO {..} =
+   _omitNulls
+      [ "entry_time" .= sushiswapFactoryDTOEntryTime
+      , "recv_time" .= sushiswapFactoryDTORecvTime
+      , "block_number" .= sushiswapFactoryDTOBlockNumber
+      , "id" .= sushiswapFactoryDTOId
+      , "pair_count" .= sushiswapFactoryDTOPairCount
+      , "volume_usd" .= sushiswapFactoryDTOVolumeUsd
+      , "volume_eth" .= sushiswapFactoryDTOVolumeEth
+      , "untracked_volume_usd" .= sushiswapFactoryDTOUntrackedVolumeUsd
+      , "liquidity_usd" .= sushiswapFactoryDTOLiquidityUsd
+      , "liquidity_eth" .= sushiswapFactoryDTOLiquidityEth
+      , "tx_count" .= sushiswapFactoryDTOTxCount
+      , "token_count" .= sushiswapFactoryDTOTokenCount
+      , "user_count" .= sushiswapFactoryDTOUserCount
+      , "vid" .= sushiswapFactoryDTOVid
+      ]
+
+
+-- | Construct a value of type 'SushiswapFactoryDTO' (by applying it's required fields, if any)
+mkSushiswapFactoryDTO
+  :: SushiswapFactoryDTO
+mkSushiswapFactoryDTO =
+  SushiswapFactoryDTO
+  { sushiswapFactoryDTOEntryTime = Nothing
+  , sushiswapFactoryDTORecvTime = Nothing
+  , sushiswapFactoryDTOBlockNumber = Nothing
+  , sushiswapFactoryDTOId = Nothing
+  , sushiswapFactoryDTOPairCount = Nothing
+  , sushiswapFactoryDTOVolumeUsd = Nothing
+  , sushiswapFactoryDTOVolumeEth = Nothing
+  , sushiswapFactoryDTOUntrackedVolumeUsd = Nothing
+  , sushiswapFactoryDTOLiquidityUsd = Nothing
+  , sushiswapFactoryDTOLiquidityEth = Nothing
+  , sushiswapFactoryDTOTxCount = Nothing
+  , sushiswapFactoryDTOTokenCount = Nothing
+  , sushiswapFactoryDTOUserCount = Nothing
+  , sushiswapFactoryDTOVid = Nothing
+  }
+
+-- ** SushiswapHourDataDTO
+-- | SushiswapHourDataDTO
+data SushiswapHourDataDTO = SushiswapHourDataDTO
+  { sushiswapHourDataDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , sushiswapHourDataDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , sushiswapHourDataDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , sushiswapHourDataDTOId :: !(Maybe Text) -- ^ "id" - Start of hour timestamp.
+  , sushiswapHourDataDTODate :: !(Maybe Int) -- ^ "date" - 
+  , sushiswapHourDataDTOFactory :: !(Maybe Text) -- ^ "factory" - 
+  , sushiswapHourDataDTOVolumeEth :: !(Maybe Text) -- ^ "volume_eth" - 
+  , sushiswapHourDataDTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd" - 
+  , sushiswapHourDataDTOUntrackedVolume :: !(Maybe Text) -- ^ "untracked_volume" - 
+  , sushiswapHourDataDTOLiquidityEth :: !(Maybe Text) -- ^ "liquidity_eth" - 
+  , sushiswapHourDataDTOLiquidityUsd :: !(Maybe Text) -- ^ "liquidity_usd" - 
+  , sushiswapHourDataDTOTxCount :: !(Maybe Text) -- ^ "tx_count" - 
+  , sushiswapHourDataDTOVid :: !(Maybe Integer) -- ^ "vid" - 
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON SushiswapHourDataDTO
+instance A.FromJSON SushiswapHourDataDTO where
+  parseJSON = A.withObject "SushiswapHourDataDTO" $ \o ->
+    SushiswapHourDataDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "id")
+      <*> (o .:? "date")
+      <*> (o .:? "factory")
+      <*> (o .:? "volume_eth")
+      <*> (o .:? "volume_usd")
+      <*> (o .:? "untracked_volume")
+      <*> (o .:? "liquidity_eth")
+      <*> (o .:? "liquidity_usd")
+      <*> (o .:? "tx_count")
+      <*> (o .:? "vid")
+
+-- | ToJSON SushiswapHourDataDTO
+instance A.ToJSON SushiswapHourDataDTO where
+  toJSON SushiswapHourDataDTO {..} =
+   _omitNulls
+      [ "entry_time" .= sushiswapHourDataDTOEntryTime
+      , "recv_time" .= sushiswapHourDataDTORecvTime
+      , "block_number" .= sushiswapHourDataDTOBlockNumber
+      , "id" .= sushiswapHourDataDTOId
+      , "date" .= sushiswapHourDataDTODate
+      , "factory" .= sushiswapHourDataDTOFactory
+      , "volume_eth" .= sushiswapHourDataDTOVolumeEth
+      , "volume_usd" .= sushiswapHourDataDTOVolumeUsd
+      , "untracked_volume" .= sushiswapHourDataDTOUntrackedVolume
+      , "liquidity_eth" .= sushiswapHourDataDTOLiquidityEth
+      , "liquidity_usd" .= sushiswapHourDataDTOLiquidityUsd
+      , "tx_count" .= sushiswapHourDataDTOTxCount
+      , "vid" .= sushiswapHourDataDTOVid
+      ]
+
+
+-- | Construct a value of type 'SushiswapHourDataDTO' (by applying it's required fields, if any)
+mkSushiswapHourDataDTO
+  :: SushiswapHourDataDTO
+mkSushiswapHourDataDTO =
+  SushiswapHourDataDTO
+  { sushiswapHourDataDTOEntryTime = Nothing
+  , sushiswapHourDataDTORecvTime = Nothing
+  , sushiswapHourDataDTOBlockNumber = Nothing
+  , sushiswapHourDataDTOId = Nothing
+  , sushiswapHourDataDTODate = Nothing
+  , sushiswapHourDataDTOFactory = Nothing
+  , sushiswapHourDataDTOVolumeEth = Nothing
+  , sushiswapHourDataDTOVolumeUsd = Nothing
+  , sushiswapHourDataDTOUntrackedVolume = Nothing
+  , sushiswapHourDataDTOLiquidityEth = Nothing
+  , sushiswapHourDataDTOLiquidityUsd = Nothing
+  , sushiswapHourDataDTOTxCount = Nothing
+  , sushiswapHourDataDTOVid = Nothing
+  }
+
+-- ** SushiswapLiquidityPositionDTO
+-- | SushiswapLiquidityPositionDTO
+data SushiswapLiquidityPositionDTO = SushiswapLiquidityPositionDTO
+  { sushiswapLiquidityPositionDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , sushiswapLiquidityPositionDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , sushiswapLiquidityPositionDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , sushiswapLiquidityPositionDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: &lt;pair address&gt;-&lt;user address&gt;
+  , sushiswapLiquidityPositionDTOUser :: !(Maybe Text) -- ^ "user" - User address.
+  , sushiswapLiquidityPositionDTOPair :: !(Maybe Text) -- ^ "pair" - Pair address.
+  , sushiswapLiquidityPositionDTOLiquidityTokenBalance :: !(Maybe Text) -- ^ "liquidity_token_balance" - Amount of LP tokens minted for this position.
+  , sushiswapLiquidityPositionDTOBlock :: !(Maybe Int) -- ^ "block" - Block number at which position was created.
+  , sushiswapLiquidityPositionDTOTimestamp :: !(Maybe Int) -- ^ "timestamp" - Creation time.
+  , sushiswapLiquidityPositionDTOVid :: !(Maybe Integer) -- ^ "vid" - 
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON SushiswapLiquidityPositionDTO
+instance A.FromJSON SushiswapLiquidityPositionDTO where
+  parseJSON = A.withObject "SushiswapLiquidityPositionDTO" $ \o ->
+    SushiswapLiquidityPositionDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "id")
+      <*> (o .:? "user")
+      <*> (o .:? "pair")
+      <*> (o .:? "liquidity_token_balance")
+      <*> (o .:? "block")
+      <*> (o .:? "timestamp")
+      <*> (o .:? "vid")
+
+-- | ToJSON SushiswapLiquidityPositionDTO
+instance A.ToJSON SushiswapLiquidityPositionDTO where
+  toJSON SushiswapLiquidityPositionDTO {..} =
+   _omitNulls
+      [ "entry_time" .= sushiswapLiquidityPositionDTOEntryTime
+      , "recv_time" .= sushiswapLiquidityPositionDTORecvTime
+      , "block_number" .= sushiswapLiquidityPositionDTOBlockNumber
+      , "id" .= sushiswapLiquidityPositionDTOId
+      , "user" .= sushiswapLiquidityPositionDTOUser
+      , "pair" .= sushiswapLiquidityPositionDTOPair
+      , "liquidity_token_balance" .= sushiswapLiquidityPositionDTOLiquidityTokenBalance
+      , "block" .= sushiswapLiquidityPositionDTOBlock
+      , "timestamp" .= sushiswapLiquidityPositionDTOTimestamp
+      , "vid" .= sushiswapLiquidityPositionDTOVid
+      ]
+
+
+-- | Construct a value of type 'SushiswapLiquidityPositionDTO' (by applying it's required fields, if any)
+mkSushiswapLiquidityPositionDTO
+  :: SushiswapLiquidityPositionDTO
+mkSushiswapLiquidityPositionDTO =
+  SushiswapLiquidityPositionDTO
+  { sushiswapLiquidityPositionDTOEntryTime = Nothing
+  , sushiswapLiquidityPositionDTORecvTime = Nothing
+  , sushiswapLiquidityPositionDTOBlockNumber = Nothing
+  , sushiswapLiquidityPositionDTOId = Nothing
+  , sushiswapLiquidityPositionDTOUser = Nothing
+  , sushiswapLiquidityPositionDTOPair = Nothing
+  , sushiswapLiquidityPositionDTOLiquidityTokenBalance = Nothing
+  , sushiswapLiquidityPositionDTOBlock = Nothing
+  , sushiswapLiquidityPositionDTOTimestamp = Nothing
+  , sushiswapLiquidityPositionDTOVid = Nothing
+  }
+
+-- ** SushiswapLiquidityPositionSnapshotDTO
+-- | SushiswapLiquidityPositionSnapshotDTO
+-- This entity is used to store data about a user's liquidity position over time. This information, along with information from the pair itself can be used to provide position sizes, token deposits, and more. It gets created and never updated.
+data SushiswapLiquidityPositionSnapshotDTO = SushiswapLiquidityPositionSnapshotDTO
+  { sushiswapLiquidityPositionSnapshotDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , sushiswapLiquidityPositionSnapshotDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , sushiswapLiquidityPositionSnapshotDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , sushiswapLiquidityPositionSnapshotDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: &lt;pair address&gt;-&lt;user address&gt;-&lt;timestamp&gt;
+  , sushiswapLiquidityPositionSnapshotDTOLiquidityPosition :: !(Maybe Text) -- ^ "liquidity_position" - Reference to LP identifier.
+  , sushiswapLiquidityPositionSnapshotDTOTimestamp :: !(Maybe Int) -- ^ "timestamp" - Creation time.
+  , sushiswapLiquidityPositionSnapshotDTOBlock :: !(Maybe Int) -- ^ "block" - Block in which snapshot has been created.
+  , sushiswapLiquidityPositionSnapshotDTOUser :: !(Maybe Text) -- ^ "user" - Reference to user.
+  , sushiswapLiquidityPositionSnapshotDTOPair :: !(Maybe Text) -- ^ "pair" - Reference to the pair liquidity is being provided on.
+  , sushiswapLiquidityPositionSnapshotDTOToken0PriceUsd :: !(Maybe Text) -- ^ "token_0_price_usd" - Snapshot of token0 price in USD.
+  , sushiswapLiquidityPositionSnapshotDTOToken1PriceUsd :: !(Maybe Text) -- ^ "token_1_price_usd" - Snapshot of token0 price in USD.
+  , sushiswapLiquidityPositionSnapshotDTOReserve0 :: !(Maybe Text) -- ^ "reserve_0" - Snapshot of pair token0 reserves.
+  , sushiswapLiquidityPositionSnapshotDTOReserve1 :: !(Maybe Text) -- ^ "reserve_1" - Snapshot of pair token1 reserves.
+  , sushiswapLiquidityPositionSnapshotDTOReserveUsd :: !(Maybe Text) -- ^ "reserve_usd" - Snapshot of pair reserves in USD.
+  , sushiswapLiquidityPositionSnapshotDTOLiquidityTokenTotalSupply :: !(Maybe Text) -- ^ "liquidity_token_total_supply" - Snapshot of pool token supply.
+  , sushiswapLiquidityPositionSnapshotDTOLiquidityTokenBalance :: !(Maybe Text) -- ^ "liquidity_token_balance" - Snapshot of users pool token balance.
+  , sushiswapLiquidityPositionSnapshotDTOVid :: !(Maybe Integer) -- ^ "vid" - 
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON SushiswapLiquidityPositionSnapshotDTO
+instance A.FromJSON SushiswapLiquidityPositionSnapshotDTO where
+  parseJSON = A.withObject "SushiswapLiquidityPositionSnapshotDTO" $ \o ->
+    SushiswapLiquidityPositionSnapshotDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "id")
+      <*> (o .:? "liquidity_position")
+      <*> (o .:? "timestamp")
+      <*> (o .:? "block")
+      <*> (o .:? "user")
+      <*> (o .:? "pair")
+      <*> (o .:? "token_0_price_usd")
+      <*> (o .:? "token_1_price_usd")
+      <*> (o .:? "reserve_0")
+      <*> (o .:? "reserve_1")
+      <*> (o .:? "reserve_usd")
+      <*> (o .:? "liquidity_token_total_supply")
+      <*> (o .:? "liquidity_token_balance")
+      <*> (o .:? "vid")
+
+-- | ToJSON SushiswapLiquidityPositionSnapshotDTO
+instance A.ToJSON SushiswapLiquidityPositionSnapshotDTO where
+  toJSON SushiswapLiquidityPositionSnapshotDTO {..} =
+   _omitNulls
+      [ "entry_time" .= sushiswapLiquidityPositionSnapshotDTOEntryTime
+      , "recv_time" .= sushiswapLiquidityPositionSnapshotDTORecvTime
+      , "block_number" .= sushiswapLiquidityPositionSnapshotDTOBlockNumber
+      , "id" .= sushiswapLiquidityPositionSnapshotDTOId
+      , "liquidity_position" .= sushiswapLiquidityPositionSnapshotDTOLiquidityPosition
+      , "timestamp" .= sushiswapLiquidityPositionSnapshotDTOTimestamp
+      , "block" .= sushiswapLiquidityPositionSnapshotDTOBlock
+      , "user" .= sushiswapLiquidityPositionSnapshotDTOUser
+      , "pair" .= sushiswapLiquidityPositionSnapshotDTOPair
+      , "token_0_price_usd" .= sushiswapLiquidityPositionSnapshotDTOToken0PriceUsd
+      , "token_1_price_usd" .= sushiswapLiquidityPositionSnapshotDTOToken1PriceUsd
+      , "reserve_0" .= sushiswapLiquidityPositionSnapshotDTOReserve0
+      , "reserve_1" .= sushiswapLiquidityPositionSnapshotDTOReserve1
+      , "reserve_usd" .= sushiswapLiquidityPositionSnapshotDTOReserveUsd
+      , "liquidity_token_total_supply" .= sushiswapLiquidityPositionSnapshotDTOLiquidityTokenTotalSupply
+      , "liquidity_token_balance" .= sushiswapLiquidityPositionSnapshotDTOLiquidityTokenBalance
+      , "vid" .= sushiswapLiquidityPositionSnapshotDTOVid
+      ]
+
+
+-- | Construct a value of type 'SushiswapLiquidityPositionSnapshotDTO' (by applying it's required fields, if any)
+mkSushiswapLiquidityPositionSnapshotDTO
+  :: SushiswapLiquidityPositionSnapshotDTO
+mkSushiswapLiquidityPositionSnapshotDTO =
+  SushiswapLiquidityPositionSnapshotDTO
+  { sushiswapLiquidityPositionSnapshotDTOEntryTime = Nothing
+  , sushiswapLiquidityPositionSnapshotDTORecvTime = Nothing
+  , sushiswapLiquidityPositionSnapshotDTOBlockNumber = Nothing
+  , sushiswapLiquidityPositionSnapshotDTOId = Nothing
+  , sushiswapLiquidityPositionSnapshotDTOLiquidityPosition = Nothing
+  , sushiswapLiquidityPositionSnapshotDTOTimestamp = Nothing
+  , sushiswapLiquidityPositionSnapshotDTOBlock = Nothing
+  , sushiswapLiquidityPositionSnapshotDTOUser = Nothing
+  , sushiswapLiquidityPositionSnapshotDTOPair = Nothing
+  , sushiswapLiquidityPositionSnapshotDTOToken0PriceUsd = Nothing
+  , sushiswapLiquidityPositionSnapshotDTOToken1PriceUsd = Nothing
+  , sushiswapLiquidityPositionSnapshotDTOReserve0 = Nothing
+  , sushiswapLiquidityPositionSnapshotDTOReserve1 = Nothing
+  , sushiswapLiquidityPositionSnapshotDTOReserveUsd = Nothing
+  , sushiswapLiquidityPositionSnapshotDTOLiquidityTokenTotalSupply = Nothing
+  , sushiswapLiquidityPositionSnapshotDTOLiquidityTokenBalance = Nothing
+  , sushiswapLiquidityPositionSnapshotDTOVid = Nothing
+  }
+
+-- ** SushiswapMintDTO
+-- | SushiswapMintDTO
+-- Mint entities are created for every emitted Mint event on the Sushiswap core contracts. The Mint entity stores key data about the event like token amounts, who sent the transaction, who received the liquidity, and more. This entity can be used to track liquidity provisions on pairs.
+data SushiswapMintDTO = SushiswapMintDTO
+  { sushiswapMintDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , sushiswapMintDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , sushiswapMintDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , sushiswapMintDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: &lt;transaction hash&gt;-&lt;index in the transaction mint array&gt;.
+  , sushiswapMintDTOTransaction :: !(Maybe Text) -- ^ "transaction" - Reference to the transaction Mint was included in.
+  , sushiswapMintDTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - Timestamp of Mint, used to sort recent liquidity provisions.
+  , sushiswapMintDTOPair :: !(Maybe Text) -- ^ "pair" - Reference to pair.
+  , sushiswapMintDTOTo :: !(Maybe Text) -- ^ "to" - Recipient of liquidity tokens.
+  , sushiswapMintDTOLiquidity :: !(Maybe Text) -- ^ "liquidity" - Amount of liquidity tokens minted.
+  , sushiswapMintDTOSender :: !(Maybe Text) -- ^ "sender" - Address that initiated the liquidity provision.
+  , sushiswapMintDTOAmount0 :: !(Maybe Text) -- ^ "amount_0" - Amount of token0 provided.
+  , sushiswapMintDTOAmount1 :: !(Maybe Text) -- ^ "amount_1" - Amount of token1 provided.
+  , sushiswapMintDTOLogIndex :: !(Maybe Text) -- ^ "log_index" - Index in the transaction event was emitted.
+  , sushiswapMintDTOAmountUsd :: !(Maybe Text) -- ^ "amount_usd" - Derived USD value of token0 amount plus token1 amount.
+  , sushiswapMintDTOFeeTo :: !(Maybe Text) -- ^ "fee_to" - Address of fee recipient (if fee is on).
+  , sushiswapMintDTOFeeLiquidity :: !(Maybe Text) -- ^ "fee_liquidity" - Amount of liquidity sent to fee recipient (if fee is on).
+  , sushiswapMintDTOVid :: !(Maybe Integer) -- ^ "vid" - 
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON SushiswapMintDTO
+instance A.FromJSON SushiswapMintDTO where
+  parseJSON = A.withObject "SushiswapMintDTO" $ \o ->
+    SushiswapMintDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "id")
+      <*> (o .:? "transaction")
+      <*> (o .:? "timestamp")
+      <*> (o .:? "pair")
+      <*> (o .:? "to")
+      <*> (o .:? "liquidity")
+      <*> (o .:? "sender")
+      <*> (o .:? "amount_0")
+      <*> (o .:? "amount_1")
+      <*> (o .:? "log_index")
+      <*> (o .:? "amount_usd")
+      <*> (o .:? "fee_to")
+      <*> (o .:? "fee_liquidity")
+      <*> (o .:? "vid")
+
+-- | ToJSON SushiswapMintDTO
+instance A.ToJSON SushiswapMintDTO where
+  toJSON SushiswapMintDTO {..} =
+   _omitNulls
+      [ "entry_time" .= sushiswapMintDTOEntryTime
+      , "recv_time" .= sushiswapMintDTORecvTime
+      , "block_number" .= sushiswapMintDTOBlockNumber
+      , "id" .= sushiswapMintDTOId
+      , "transaction" .= sushiswapMintDTOTransaction
+      , "timestamp" .= sushiswapMintDTOTimestamp
+      , "pair" .= sushiswapMintDTOPair
+      , "to" .= sushiswapMintDTOTo
+      , "liquidity" .= sushiswapMintDTOLiquidity
+      , "sender" .= sushiswapMintDTOSender
+      , "amount_0" .= sushiswapMintDTOAmount0
+      , "amount_1" .= sushiswapMintDTOAmount1
+      , "log_index" .= sushiswapMintDTOLogIndex
+      , "amount_usd" .= sushiswapMintDTOAmountUsd
+      , "fee_to" .= sushiswapMintDTOFeeTo
+      , "fee_liquidity" .= sushiswapMintDTOFeeLiquidity
+      , "vid" .= sushiswapMintDTOVid
+      ]
+
+
+-- | Construct a value of type 'SushiswapMintDTO' (by applying it's required fields, if any)
+mkSushiswapMintDTO
+  :: SushiswapMintDTO
+mkSushiswapMintDTO =
+  SushiswapMintDTO
+  { sushiswapMintDTOEntryTime = Nothing
+  , sushiswapMintDTORecvTime = Nothing
+  , sushiswapMintDTOBlockNumber = Nothing
+  , sushiswapMintDTOId = Nothing
+  , sushiswapMintDTOTransaction = Nothing
+  , sushiswapMintDTOTimestamp = Nothing
+  , sushiswapMintDTOPair = Nothing
+  , sushiswapMintDTOTo = Nothing
+  , sushiswapMintDTOLiquidity = Nothing
+  , sushiswapMintDTOSender = Nothing
+  , sushiswapMintDTOAmount0 = Nothing
+  , sushiswapMintDTOAmount1 = Nothing
+  , sushiswapMintDTOLogIndex = Nothing
+  , sushiswapMintDTOAmountUsd = Nothing
+  , sushiswapMintDTOFeeTo = Nothing
+  , sushiswapMintDTOFeeLiquidity = Nothing
+  , sushiswapMintDTOVid = Nothing
+  }
+
 -- ** SushiswapPairDTO
 -- | SushiswapPairDTO
 -- Information about a pair. Includes references to each token within the pair, volume information, liquidity information, and more. The pair entity mirrors the pair smart contract, and also contains aggregated information about use.
@@ -268,6 +898,180 @@ mkSushiswapPairDTO =
   , sushiswapPairDTOBlock = Nothing
   , sushiswapPairDTOVid = Nothing
   , sushiswapPairDTOEvaluatedAsk = Nothing
+  }
+
+-- ** SushiswapPairDayDataDTO
+-- | SushiswapPairDayDataDTO
+-- Tracks pair data across each day.
+data SushiswapPairDayDataDTO = SushiswapPairDayDataDTO
+  { sushiswapPairDayDataDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , sushiswapPairDayDataDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , sushiswapPairDayDataDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , sushiswapPairDayDataDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: &lt;pair id&gt;-&lt;day start timestamp&gt;.
+  , sushiswapPairDayDataDTODate :: !(Maybe Int) -- ^ "date" - Unix timestamp for start of day.
+  , sushiswapPairDayDataDTOPair :: !(Maybe Text) -- ^ "pair" - Reference to pair.
+  , sushiswapPairDayDataDTOToken0 :: !(Maybe Text) -- ^ "token_0" - Reference to token0.
+  , sushiswapPairDayDataDTOToken1 :: !(Maybe Text) -- ^ "token_1" - Reference to token1.
+  , sushiswapPairDayDataDTOReserve0 :: !(Maybe Text) -- ^ "reserve_0" - Reserve of token0 (updated during each transaction on pair).
+  , sushiswapPairDayDataDTOReserve1 :: !(Maybe Text) -- ^ "reserve_1" - Reserve of token1 (updated during each transaction on pair).
+  , sushiswapPairDayDataDTOTotalSupply :: !(Maybe Text) -- ^ "total_supply" - Total supply of liquidity token distributed to LPs.
+  , sushiswapPairDayDataDTOReserveUsd :: !(Maybe Text) -- ^ "reserve_usd" - Reserve of token0 plus token1 stored as a derived USD amount.
+  , sushiswapPairDayDataDTOVolumeToken0 :: !(Maybe Text) -- ^ "volume_token_0" - Total amount of token0 swapped throughout day.
+  , sushiswapPairDayDataDTOVolumeToken1 :: !(Maybe Text) -- ^ "volume_token_1" - Total amount of token1 swapped throughout day.
+  , sushiswapPairDayDataDTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd" - Total volume within pair throughout day.
+  , sushiswapPairDayDataDTOTxCount :: !(Maybe Text) -- ^ "tx_count" - Amount of transactions on pair throughout day.
+  , sushiswapPairDayDataDTOVid :: !(Maybe Integer) -- ^ "vid" - 
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON SushiswapPairDayDataDTO
+instance A.FromJSON SushiswapPairDayDataDTO where
+  parseJSON = A.withObject "SushiswapPairDayDataDTO" $ \o ->
+    SushiswapPairDayDataDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "id")
+      <*> (o .:? "date")
+      <*> (o .:? "pair")
+      <*> (o .:? "token_0")
+      <*> (o .:? "token_1")
+      <*> (o .:? "reserve_0")
+      <*> (o .:? "reserve_1")
+      <*> (o .:? "total_supply")
+      <*> (o .:? "reserve_usd")
+      <*> (o .:? "volume_token_0")
+      <*> (o .:? "volume_token_1")
+      <*> (o .:? "volume_usd")
+      <*> (o .:? "tx_count")
+      <*> (o .:? "vid")
+
+-- | ToJSON SushiswapPairDayDataDTO
+instance A.ToJSON SushiswapPairDayDataDTO where
+  toJSON SushiswapPairDayDataDTO {..} =
+   _omitNulls
+      [ "entry_time" .= sushiswapPairDayDataDTOEntryTime
+      , "recv_time" .= sushiswapPairDayDataDTORecvTime
+      , "block_number" .= sushiswapPairDayDataDTOBlockNumber
+      , "id" .= sushiswapPairDayDataDTOId
+      , "date" .= sushiswapPairDayDataDTODate
+      , "pair" .= sushiswapPairDayDataDTOPair
+      , "token_0" .= sushiswapPairDayDataDTOToken0
+      , "token_1" .= sushiswapPairDayDataDTOToken1
+      , "reserve_0" .= sushiswapPairDayDataDTOReserve0
+      , "reserve_1" .= sushiswapPairDayDataDTOReserve1
+      , "total_supply" .= sushiswapPairDayDataDTOTotalSupply
+      , "reserve_usd" .= sushiswapPairDayDataDTOReserveUsd
+      , "volume_token_0" .= sushiswapPairDayDataDTOVolumeToken0
+      , "volume_token_1" .= sushiswapPairDayDataDTOVolumeToken1
+      , "volume_usd" .= sushiswapPairDayDataDTOVolumeUsd
+      , "tx_count" .= sushiswapPairDayDataDTOTxCount
+      , "vid" .= sushiswapPairDayDataDTOVid
+      ]
+
+
+-- | Construct a value of type 'SushiswapPairDayDataDTO' (by applying it's required fields, if any)
+mkSushiswapPairDayDataDTO
+  :: SushiswapPairDayDataDTO
+mkSushiswapPairDayDataDTO =
+  SushiswapPairDayDataDTO
+  { sushiswapPairDayDataDTOEntryTime = Nothing
+  , sushiswapPairDayDataDTORecvTime = Nothing
+  , sushiswapPairDayDataDTOBlockNumber = Nothing
+  , sushiswapPairDayDataDTOId = Nothing
+  , sushiswapPairDayDataDTODate = Nothing
+  , sushiswapPairDayDataDTOPair = Nothing
+  , sushiswapPairDayDataDTOToken0 = Nothing
+  , sushiswapPairDayDataDTOToken1 = Nothing
+  , sushiswapPairDayDataDTOReserve0 = Nothing
+  , sushiswapPairDayDataDTOReserve1 = Nothing
+  , sushiswapPairDayDataDTOTotalSupply = Nothing
+  , sushiswapPairDayDataDTOReserveUsd = Nothing
+  , sushiswapPairDayDataDTOVolumeToken0 = Nothing
+  , sushiswapPairDayDataDTOVolumeToken1 = Nothing
+  , sushiswapPairDayDataDTOVolumeUsd = Nothing
+  , sushiswapPairDayDataDTOTxCount = Nothing
+  , sushiswapPairDayDataDTOVid = Nothing
+  }
+
+-- ** SushiswapPairHourDataDTO
+-- | SushiswapPairHourDataDTO
+-- Tracks pair data across each hour.
+data SushiswapPairHourDataDTO = SushiswapPairHourDataDTO
+  { sushiswapPairHourDataDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , sushiswapPairHourDataDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , sushiswapPairHourDataDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , sushiswapPairHourDataDTOId :: !(Maybe Text) -- ^ "id" - Identifier, format: &lt;pair id&gt;-&lt;hour start timestamp&gt;.
+  , sushiswapPairHourDataDTODate :: !(Maybe Int) -- ^ "date" - Hour start timestamp.
+  , sushiswapPairHourDataDTOPair :: !(Maybe Text) -- ^ "pair" - Reference to pair.
+  , sushiswapPairHourDataDTOReserve0 :: !(Maybe Text) -- ^ "reserve_0" - Reserve of token0 (updated during each transaction on pair).
+  , sushiswapPairHourDataDTOReserve1 :: !(Maybe Text) -- ^ "reserve_1" - Reserve of token1 (updated during each transaction on pair).
+  , sushiswapPairHourDataDTOReserveUsd :: !(Maybe Text) -- ^ "reserve_usd" - Reserve of token0 plus token1 stored as a derived USD amount.
+  , sushiswapPairHourDataDTOVolumeToken0 :: !(Maybe Text) -- ^ "volume_token_0" - Total amount of token0 swapped throughout hour.
+  , sushiswapPairHourDataDTOVolumeToken1 :: !(Maybe Text) -- ^ "volume_token_1" - Total amount of token1 swapped throughout hour.
+  , sushiswapPairHourDataDTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd" - Total volume within pair throughout hour.
+  , sushiswapPairHourDataDTOTxCount :: !(Maybe Text) -- ^ "tx_count" - Amount of transactions on pair throughout hour.
+  , sushiswapPairHourDataDTOVid :: !(Maybe Integer) -- ^ "vid" - 
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON SushiswapPairHourDataDTO
+instance A.FromJSON SushiswapPairHourDataDTO where
+  parseJSON = A.withObject "SushiswapPairHourDataDTO" $ \o ->
+    SushiswapPairHourDataDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "id")
+      <*> (o .:? "date")
+      <*> (o .:? "pair")
+      <*> (o .:? "reserve_0")
+      <*> (o .:? "reserve_1")
+      <*> (o .:? "reserve_usd")
+      <*> (o .:? "volume_token_0")
+      <*> (o .:? "volume_token_1")
+      <*> (o .:? "volume_usd")
+      <*> (o .:? "tx_count")
+      <*> (o .:? "vid")
+
+-- | ToJSON SushiswapPairHourDataDTO
+instance A.ToJSON SushiswapPairHourDataDTO where
+  toJSON SushiswapPairHourDataDTO {..} =
+   _omitNulls
+      [ "entry_time" .= sushiswapPairHourDataDTOEntryTime
+      , "recv_time" .= sushiswapPairHourDataDTORecvTime
+      , "block_number" .= sushiswapPairHourDataDTOBlockNumber
+      , "id" .= sushiswapPairHourDataDTOId
+      , "date" .= sushiswapPairHourDataDTODate
+      , "pair" .= sushiswapPairHourDataDTOPair
+      , "reserve_0" .= sushiswapPairHourDataDTOReserve0
+      , "reserve_1" .= sushiswapPairHourDataDTOReserve1
+      , "reserve_usd" .= sushiswapPairHourDataDTOReserveUsd
+      , "volume_token_0" .= sushiswapPairHourDataDTOVolumeToken0
+      , "volume_token_1" .= sushiswapPairHourDataDTOVolumeToken1
+      , "volume_usd" .= sushiswapPairHourDataDTOVolumeUsd
+      , "tx_count" .= sushiswapPairHourDataDTOTxCount
+      , "vid" .= sushiswapPairHourDataDTOVid
+      ]
+
+
+-- | Construct a value of type 'SushiswapPairHourDataDTO' (by applying it's required fields, if any)
+mkSushiswapPairHourDataDTO
+  :: SushiswapPairHourDataDTO
+mkSushiswapPairHourDataDTO =
+  SushiswapPairHourDataDTO
+  { sushiswapPairHourDataDTOEntryTime = Nothing
+  , sushiswapPairHourDataDTORecvTime = Nothing
+  , sushiswapPairHourDataDTOBlockNumber = Nothing
+  , sushiswapPairHourDataDTOId = Nothing
+  , sushiswapPairHourDataDTODate = Nothing
+  , sushiswapPairHourDataDTOPair = Nothing
+  , sushiswapPairHourDataDTOReserve0 = Nothing
+  , sushiswapPairHourDataDTOReserve1 = Nothing
+  , sushiswapPairHourDataDTOReserveUsd = Nothing
+  , sushiswapPairHourDataDTOVolumeToken0 = Nothing
+  , sushiswapPairHourDataDTOVolumeToken1 = Nothing
+  , sushiswapPairHourDataDTOVolumeUsd = Nothing
+  , sushiswapPairHourDataDTOTxCount = Nothing
+  , sushiswapPairHourDataDTOVid = Nothing
   }
 
 -- ** SushiswapSwapDTO
@@ -474,6 +1278,196 @@ mkSushiswapTokenDTO =
   , sushiswapTokenDTOWhitelistPairs = Nothing
   , sushiswapTokenDTOVid = Nothing
   , sushiswapTokenDTOTokenSymbol = Nothing
+  }
+
+-- ** SushiswapTokenDayDataDTO
+-- | SushiswapTokenDayDataDTO
+-- Token data aggregated across all pairs that include token.
+data SushiswapTokenDayDataDTO = SushiswapTokenDayDataDTO
+  { sushiswapTokenDayDataDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , sushiswapTokenDayDataDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , sushiswapTokenDayDataDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , sushiswapTokenDayDataDTOId :: !(Maybe Text) -- ^ "id" - Identifier, day start timestamp in unix / 86400.
+  , sushiswapTokenDayDataDTODate :: !(Maybe Int) -- ^ "date" - Unix timestamp for start of day.
+  , sushiswapTokenDayDataDTOToken :: !(Maybe Text) -- ^ "token" - Reference to token entity.
+  , sushiswapTokenDayDataDTOVolume :: !(Maybe Text) -- ^ "volume" - Amount of token swapped across all pairs throughout day.
+  , sushiswapTokenDayDataDTOVolumeEth :: !(Maybe Text) -- ^ "volume_eth" - Amount of token swapped across all pairs throughout day stored as a derived amount of ETH.
+  , sushiswapTokenDayDataDTOVolumeUsd :: !(Maybe Text) -- ^ "volume_usd" - Amount of token swapped across all pairs throughout day stored as a derived amount of USD.
+  , sushiswapTokenDayDataDTOTxCount :: !(Maybe Text) -- ^ "tx_count" - Amount of transactions with this token across all pairs.
+  , sushiswapTokenDayDataDTOLiquidity :: !(Maybe Text) -- ^ "liquidity" - Token amount of token deposited across all pairs.
+  , sushiswapTokenDayDataDTOLiquidityEth :: !(Maybe Text) -- ^ "liquidity_eth" - Token amount of token deposited across all pairs stored as amount of ETH.
+  , sushiswapTokenDayDataDTOLiquidityUsd :: !(Maybe Text) -- ^ "liquidity_usd" - Token amount of token deposited across all pairs stored as amount of USD.
+  , sushiswapTokenDayDataDTOPriceUsd :: !(Maybe Text) -- ^ "price_usd" - Price of token in derived USD.
+  , sushiswapTokenDayDataDTOVid :: !(Maybe Integer) -- ^ "vid" - 
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON SushiswapTokenDayDataDTO
+instance A.FromJSON SushiswapTokenDayDataDTO where
+  parseJSON = A.withObject "SushiswapTokenDayDataDTO" $ \o ->
+    SushiswapTokenDayDataDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "id")
+      <*> (o .:? "date")
+      <*> (o .:? "token")
+      <*> (o .:? "volume")
+      <*> (o .:? "volume_eth")
+      <*> (o .:? "volume_usd")
+      <*> (o .:? "tx_count")
+      <*> (o .:? "liquidity")
+      <*> (o .:? "liquidity_eth")
+      <*> (o .:? "liquidity_usd")
+      <*> (o .:? "price_usd")
+      <*> (o .:? "vid")
+
+-- | ToJSON SushiswapTokenDayDataDTO
+instance A.ToJSON SushiswapTokenDayDataDTO where
+  toJSON SushiswapTokenDayDataDTO {..} =
+   _omitNulls
+      [ "entry_time" .= sushiswapTokenDayDataDTOEntryTime
+      , "recv_time" .= sushiswapTokenDayDataDTORecvTime
+      , "block_number" .= sushiswapTokenDayDataDTOBlockNumber
+      , "id" .= sushiswapTokenDayDataDTOId
+      , "date" .= sushiswapTokenDayDataDTODate
+      , "token" .= sushiswapTokenDayDataDTOToken
+      , "volume" .= sushiswapTokenDayDataDTOVolume
+      , "volume_eth" .= sushiswapTokenDayDataDTOVolumeEth
+      , "volume_usd" .= sushiswapTokenDayDataDTOVolumeUsd
+      , "tx_count" .= sushiswapTokenDayDataDTOTxCount
+      , "liquidity" .= sushiswapTokenDayDataDTOLiquidity
+      , "liquidity_eth" .= sushiswapTokenDayDataDTOLiquidityEth
+      , "liquidity_usd" .= sushiswapTokenDayDataDTOLiquidityUsd
+      , "price_usd" .= sushiswapTokenDayDataDTOPriceUsd
+      , "vid" .= sushiswapTokenDayDataDTOVid
+      ]
+
+
+-- | Construct a value of type 'SushiswapTokenDayDataDTO' (by applying it's required fields, if any)
+mkSushiswapTokenDayDataDTO
+  :: SushiswapTokenDayDataDTO
+mkSushiswapTokenDayDataDTO =
+  SushiswapTokenDayDataDTO
+  { sushiswapTokenDayDataDTOEntryTime = Nothing
+  , sushiswapTokenDayDataDTORecvTime = Nothing
+  , sushiswapTokenDayDataDTOBlockNumber = Nothing
+  , sushiswapTokenDayDataDTOId = Nothing
+  , sushiswapTokenDayDataDTODate = Nothing
+  , sushiswapTokenDayDataDTOToken = Nothing
+  , sushiswapTokenDayDataDTOVolume = Nothing
+  , sushiswapTokenDayDataDTOVolumeEth = Nothing
+  , sushiswapTokenDayDataDTOVolumeUsd = Nothing
+  , sushiswapTokenDayDataDTOTxCount = Nothing
+  , sushiswapTokenDayDataDTOLiquidity = Nothing
+  , sushiswapTokenDayDataDTOLiquidityEth = Nothing
+  , sushiswapTokenDayDataDTOLiquidityUsd = Nothing
+  , sushiswapTokenDayDataDTOPriceUsd = Nothing
+  , sushiswapTokenDayDataDTOVid = Nothing
+  }
+
+-- ** SushiswapTransactionDTO
+-- | SushiswapTransactionDTO
+-- Transaction entities are created for each Ethereum transaction that contains an interaction within Sushiswap contracts. Each transaction contains 3 arrays, and at least one of these arrays has a length of 1.
+data SushiswapTransactionDTO = SushiswapTransactionDTO
+  { sushiswapTransactionDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , sushiswapTransactionDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , sushiswapTransactionDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , sushiswapTransactionDTOId :: !(Maybe Text) -- ^ "id" - Ethereum transaction hash.
+  , sushiswapTransactionDTOTimestamp :: !(Maybe Text) -- ^ "timestamp" - Timestamp.
+  , sushiswapTransactionDTOMints :: !(Maybe [Text]) -- ^ "mints" - Array of Mint events within the transaction, 0 or greater.
+  , sushiswapTransactionDTOBurns :: !(Maybe [Text]) -- ^ "burns" - Array of Burn events within transaction, 0 or greater.
+  , sushiswapTransactionDTOSwaps :: !(Maybe [Text]) -- ^ "swaps" - Array of Swap events within transaction, 0 or greater.
+  , sushiswapTransactionDTOVid :: !(Maybe Integer) -- ^ "vid" - 
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON SushiswapTransactionDTO
+instance A.FromJSON SushiswapTransactionDTO where
+  parseJSON = A.withObject "SushiswapTransactionDTO" $ \o ->
+    SushiswapTransactionDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "id")
+      <*> (o .:? "timestamp")
+      <*> (o .:? "mints")
+      <*> (o .:? "burns")
+      <*> (o .:? "swaps")
+      <*> (o .:? "vid")
+
+-- | ToJSON SushiswapTransactionDTO
+instance A.ToJSON SushiswapTransactionDTO where
+  toJSON SushiswapTransactionDTO {..} =
+   _omitNulls
+      [ "entry_time" .= sushiswapTransactionDTOEntryTime
+      , "recv_time" .= sushiswapTransactionDTORecvTime
+      , "block_number" .= sushiswapTransactionDTOBlockNumber
+      , "id" .= sushiswapTransactionDTOId
+      , "timestamp" .= sushiswapTransactionDTOTimestamp
+      , "mints" .= sushiswapTransactionDTOMints
+      , "burns" .= sushiswapTransactionDTOBurns
+      , "swaps" .= sushiswapTransactionDTOSwaps
+      , "vid" .= sushiswapTransactionDTOVid
+      ]
+
+
+-- | Construct a value of type 'SushiswapTransactionDTO' (by applying it's required fields, if any)
+mkSushiswapTransactionDTO
+  :: SushiswapTransactionDTO
+mkSushiswapTransactionDTO =
+  SushiswapTransactionDTO
+  { sushiswapTransactionDTOEntryTime = Nothing
+  , sushiswapTransactionDTORecvTime = Nothing
+  , sushiswapTransactionDTOBlockNumber = Nothing
+  , sushiswapTransactionDTOId = Nothing
+  , sushiswapTransactionDTOTimestamp = Nothing
+  , sushiswapTransactionDTOMints = Nothing
+  , sushiswapTransactionDTOBurns = Nothing
+  , sushiswapTransactionDTOSwaps = Nothing
+  , sushiswapTransactionDTOVid = Nothing
+  }
+
+-- ** SushiswapUserDTO
+-- | SushiswapUserDTO
+data SushiswapUserDTO = SushiswapUserDTO
+  { sushiswapUserDTOEntryTime :: !(Maybe DateTime) -- ^ "entry_time"
+  , sushiswapUserDTORecvTime :: !(Maybe DateTime) -- ^ "recv_time"
+  , sushiswapUserDTOBlockNumber :: !(Maybe Integer) -- ^ "block_number" - Number of block in which entity was recorded.
+  , sushiswapUserDTOId :: !(Maybe Text) -- ^ "id" - User address.
+  , sushiswapUserDTOVid :: !(Maybe Integer) -- ^ "vid" - 
+  } deriving (P.Show, P.Eq, P.Typeable)
+
+-- | FromJSON SushiswapUserDTO
+instance A.FromJSON SushiswapUserDTO where
+  parseJSON = A.withObject "SushiswapUserDTO" $ \o ->
+    SushiswapUserDTO
+      <$> (o .:? "entry_time")
+      <*> (o .:? "recv_time")
+      <*> (o .:? "block_number")
+      <*> (o .:? "id")
+      <*> (o .:? "vid")
+
+-- | ToJSON SushiswapUserDTO
+instance A.ToJSON SushiswapUserDTO where
+  toJSON SushiswapUserDTO {..} =
+   _omitNulls
+      [ "entry_time" .= sushiswapUserDTOEntryTime
+      , "recv_time" .= sushiswapUserDTORecvTime
+      , "block_number" .= sushiswapUserDTOBlockNumber
+      , "id" .= sushiswapUserDTOId
+      , "vid" .= sushiswapUserDTOVid
+      ]
+
+
+-- | Construct a value of type 'SushiswapUserDTO' (by applying it's required fields, if any)
+mkSushiswapUserDTO
+  :: SushiswapUserDTO
+mkSushiswapUserDTO =
+  SushiswapUserDTO
+  { sushiswapUserDTOEntryTime = Nothing
+  , sushiswapUserDTORecvTime = Nothing
+  , sushiswapUserDTOBlockNumber = Nothing
+  , sushiswapUserDTOId = Nothing
+  , sushiswapUserDTOVid = Nothing
   }
 
 -- ** UniswapV2PairV2DTO

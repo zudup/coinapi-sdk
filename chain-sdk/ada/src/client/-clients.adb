@@ -1052,16 +1052,21 @@ package body .Clients is
       Client.Call (Swagger.Clients.GET, URI);
    end Dapps_Dex_Withdraw_Request_Historical_Get;
 
-   --  
-   procedure Dapps_Sushiswap_Bundles_Historical_Get
+   --  GetBundles (historical)
+   --  Gets bundles.
+   procedure Sushiswap_Get_Bundles__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
        End_Block : in Swagger.Nullable_Long;
        Start_Date : in Swagger.Nullable_Date;
-       End_Date : in Swagger.Nullable_Date) is
+       End_Date : in Swagger.Nullable_Date;
+       Result : out .Models.SushiswapBundleDTO_Type_Vectors.Vector) is
       URI   : Swagger.Clients.URI_Type;
+      Reply : Swagger.Value_Type;
    begin
-
+      Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
+                          Swagger.Clients.APPLICATION_JSON,
+                          Swagger.Clients.TEXT_JSON));
 
       URI.Add_Param ("startBlock", Start_Block);
       URI.Add_Param ("endBlock", End_Block);
@@ -1070,20 +1075,26 @@ package body .Clients is
       URI.Add_Param ("endDate", End_Date);
       URI.Add_Param ("endDate", End_Date);
       URI.Set_Path ("/dapps/sushiswap/bundles/historical");
-      Client.Call (Swagger.Clients.GET, URI);
-   end Dapps_Sushiswap_Bundles_Historical_Get;
+      Client.Call (Swagger.Clients.GET, URI, Reply);
+      .Models.Deserialize (Reply, "", Result);
+   end Sushiswap_Get_Bundles__historical;
 
-   --  
-   procedure Dapps_Sushiswap_Burns_Historical_Get
+   --  GetBurns (historical)
+   --  Gets burns.
+   procedure Sushiswap_Get_Burns__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
        End_Block : in Swagger.Nullable_Long;
        Start_Date : in Swagger.Nullable_Date;
        End_Date : in Swagger.Nullable_Date;
-       Pool_Id : in Swagger.Nullable_UString) is
+       Pool_Id : in Swagger.Nullable_UString;
+       Result : out .Models.SushiswapBurnDTO_Type_Vectors.Vector) is
       URI   : Swagger.Clients.URI_Type;
+      Reply : Swagger.Value_Type;
    begin
-
+      Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
+                          Swagger.Clients.APPLICATION_JSON,
+                          Swagger.Clients.TEXT_JSON));
 
       URI.Add_Param ("startBlock", Start_Block);
       URI.Add_Param ("endBlock", End_Block);
@@ -1093,19 +1104,25 @@ package body .Clients is
       URI.Add_Param ("endDate", End_Date);
       URI.Add_Param ("poolId", Pool_Id);
       URI.Set_Path ("/dapps/sushiswap/burns/historical");
-      Client.Call (Swagger.Clients.GET, URI);
-   end Dapps_Sushiswap_Burns_Historical_Get;
+      Client.Call (Swagger.Clients.GET, URI, Reply);
+      .Models.Deserialize (Reply, "", Result);
+   end Sushiswap_Get_Burns__historical;
 
-   --  
-   procedure Dapps_Sushiswap_Day_Data_Historical_Get
+   --  GetDayData (historical)
+   --  Gets day data.
+   procedure Sushiswap_Get_Day_Data__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
        End_Block : in Swagger.Nullable_Long;
        Start_Date : in Swagger.Nullable_Date;
-       End_Date : in Swagger.Nullable_Date) is
+       End_Date : in Swagger.Nullable_Date;
+       Result : out .Models.SushiswapDayDataDTO_Type_Vectors.Vector) is
       URI   : Swagger.Clients.URI_Type;
+      Reply : Swagger.Value_Type;
    begin
-
+      Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
+                          Swagger.Clients.APPLICATION_JSON,
+                          Swagger.Clients.TEXT_JSON));
 
       URI.Add_Param ("startBlock", Start_Block);
       URI.Add_Param ("endBlock", End_Block);
@@ -1114,19 +1131,25 @@ package body .Clients is
       URI.Add_Param ("endDate", End_Date);
       URI.Add_Param ("endDate", End_Date);
       URI.Set_Path ("/dapps/sushiswap/dayData/historical");
-      Client.Call (Swagger.Clients.GET, URI);
-   end Dapps_Sushiswap_Day_Data_Historical_Get;
+      Client.Call (Swagger.Clients.GET, URI, Reply);
+      .Models.Deserialize (Reply, "", Result);
+   end Sushiswap_Get_Day_Data__historical;
 
-   --  
-   procedure Dapps_Sushiswap_Factory_Historical_Get
+   --  GetFactory (historical)
+   --  Gets factory.
+   procedure Sushiswap_Get_Factory__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
        End_Block : in Swagger.Nullable_Long;
        Start_Date : in Swagger.Nullable_Date;
-       End_Date : in Swagger.Nullable_Date) is
+       End_Date : in Swagger.Nullable_Date;
+       Result : out .Models.SushiswapFactoryDTO_Type_Vectors.Vector) is
       URI   : Swagger.Clients.URI_Type;
+      Reply : Swagger.Value_Type;
    begin
-
+      Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
+                          Swagger.Clients.APPLICATION_JSON,
+                          Swagger.Clients.TEXT_JSON));
 
       URI.Add_Param ("startBlock", Start_Block);
       URI.Add_Param ("endBlock", End_Block);
@@ -1135,19 +1158,25 @@ package body .Clients is
       URI.Add_Param ("endDate", End_Date);
       URI.Add_Param ("endDate", End_Date);
       URI.Set_Path ("/dapps/sushiswap/factory/historical");
-      Client.Call (Swagger.Clients.GET, URI);
-   end Dapps_Sushiswap_Factory_Historical_Get;
+      Client.Call (Swagger.Clients.GET, URI, Reply);
+      .Models.Deserialize (Reply, "", Result);
+   end Sushiswap_Get_Factory__historical;
 
-   --  
-   procedure Dapps_Sushiswap_Hour_Data_Historical_Get
+   --  GetHourData (historical)
+   --  Gets hour data.
+   procedure Sushiswap_Get_Hour_Data__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
        End_Block : in Swagger.Nullable_Long;
        Start_Date : in Swagger.Nullable_Date;
-       End_Date : in Swagger.Nullable_Date) is
+       End_Date : in Swagger.Nullable_Date;
+       Result : out .Models.SushiswapHourDataDTO_Type_Vectors.Vector) is
       URI   : Swagger.Clients.URI_Type;
+      Reply : Swagger.Value_Type;
    begin
-
+      Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
+                          Swagger.Clients.APPLICATION_JSON,
+                          Swagger.Clients.TEXT_JSON));
 
       URI.Add_Param ("startBlock", Start_Block);
       URI.Add_Param ("endBlock", End_Block);
@@ -1156,43 +1185,26 @@ package body .Clients is
       URI.Add_Param ("endDate", End_Date);
       URI.Add_Param ("endDate", End_Date);
       URI.Set_Path ("/dapps/sushiswap/hourData/historical");
-      Client.Call (Swagger.Clients.GET, URI);
-   end Dapps_Sushiswap_Hour_Data_Historical_Get;
+      Client.Call (Swagger.Clients.GET, URI, Reply);
+      .Models.Deserialize (Reply, "", Result);
+   end Sushiswap_Get_Hour_Data__historical;
 
-   --  
-   procedure Dapps_Sushiswap_Liquidity_Position_Historical_Get
+   --  GetLiquidityPositionSnapshot (historical)
+   --  Gets liquidity position snapshot.
+   procedure Sushiswap_Get_Liquidity_Position_Snapshot__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
        End_Block : in Swagger.Nullable_Long;
        Start_Date : in Swagger.Nullable_Date;
        End_Date : in Swagger.Nullable_Date;
-       Pool_Id : in Swagger.Nullable_UString) is
+       Pool_Id : in Swagger.Nullable_UString;
+       Result : out .Models.SushiswapLiquidityPositionSnapshotDTO_Type_Vectors.Vector) is
       URI   : Swagger.Clients.URI_Type;
+      Reply : Swagger.Value_Type;
    begin
-
-
-      URI.Add_Param ("startBlock", Start_Block);
-      URI.Add_Param ("endBlock", End_Block);
-      URI.Add_Param ("startDate", Start_Date);
-      URI.Add_Param ("startDate", Start_Date);
-      URI.Add_Param ("endDate", End_Date);
-      URI.Add_Param ("endDate", End_Date);
-      URI.Add_Param ("poolId", Pool_Id);
-      URI.Set_Path ("/dapps/sushiswap/liquidityPosition/historical");
-      Client.Call (Swagger.Clients.GET, URI);
-   end Dapps_Sushiswap_Liquidity_Position_Historical_Get;
-
-   --  
-   procedure Dapps_Sushiswap_Liquidity_Position_Snapshots_Historical_Get
-      (Client : in out Client_Type;
-       Start_Block : in Swagger.Nullable_Long;
-       End_Block : in Swagger.Nullable_Long;
-       Start_Date : in Swagger.Nullable_Date;
-       End_Date : in Swagger.Nullable_Date;
-       Pool_Id : in Swagger.Nullable_UString) is
-      URI   : Swagger.Clients.URI_Type;
-   begin
-
+      Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
+                          Swagger.Clients.APPLICATION_JSON,
+                          Swagger.Clients.TEXT_JSON));
 
       URI.Add_Param ("startBlock", Start_Block);
       URI.Add_Param ("endBlock", End_Block);
@@ -1202,20 +1214,55 @@ package body .Clients is
       URI.Add_Param ("endDate", End_Date);
       URI.Add_Param ("poolId", Pool_Id);
       URI.Set_Path ("/dapps/sushiswap/liquidityPositionSnapshots/historical");
-      Client.Call (Swagger.Clients.GET, URI);
-   end Dapps_Sushiswap_Liquidity_Position_Snapshots_Historical_Get;
+      Client.Call (Swagger.Clients.GET, URI, Reply);
+      .Models.Deserialize (Reply, "", Result);
+   end Sushiswap_Get_Liquidity_Position_Snapshot__historical;
 
-   --  
-   procedure Dapps_Sushiswap_Mints_Historical_Get
+   --  GetLiquidityPosition (historical)
+   --  Gets liquidity position.
+   procedure Sushiswap_Get_Liquidity_Position__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
        End_Block : in Swagger.Nullable_Long;
        Start_Date : in Swagger.Nullable_Date;
        End_Date : in Swagger.Nullable_Date;
-       Pool_Id : in Swagger.Nullable_UString) is
+       Pool_Id : in Swagger.Nullable_UString;
+       Result : out .Models.SushiswapLiquidityPositionDTO_Type_Vectors.Vector) is
       URI   : Swagger.Clients.URI_Type;
+      Reply : Swagger.Value_Type;
    begin
+      Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
+                          Swagger.Clients.APPLICATION_JSON,
+                          Swagger.Clients.TEXT_JSON));
 
+      URI.Add_Param ("startBlock", Start_Block);
+      URI.Add_Param ("endBlock", End_Block);
+      URI.Add_Param ("startDate", Start_Date);
+      URI.Add_Param ("startDate", Start_Date);
+      URI.Add_Param ("endDate", End_Date);
+      URI.Add_Param ("endDate", End_Date);
+      URI.Add_Param ("poolId", Pool_Id);
+      URI.Set_Path ("/dapps/sushiswap/liquidityPosition/historical");
+      Client.Call (Swagger.Clients.GET, URI, Reply);
+      .Models.Deserialize (Reply, "", Result);
+   end Sushiswap_Get_Liquidity_Position__historical;
+
+   --  GetMints (historical)
+   --  Gets mints.
+   procedure Sushiswap_Get_Mints__historical
+      (Client : in out Client_Type;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date;
+       Pool_Id : in Swagger.Nullable_UString;
+       Result : out .Models.SushiswapMintDTO_Type_Vectors.Vector) is
+      URI   : Swagger.Clients.URI_Type;
+      Reply : Swagger.Value_Type;
+   begin
+      Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
+                          Swagger.Clients.APPLICATION_JSON,
+                          Swagger.Clients.TEXT_JSON));
 
       URI.Add_Param ("startBlock", Start_Block);
       URI.Add_Param ("endBlock", End_Block);
@@ -1225,20 +1272,26 @@ package body .Clients is
       URI.Add_Param ("endDate", End_Date);
       URI.Add_Param ("poolId", Pool_Id);
       URI.Set_Path ("/dapps/sushiswap/mints/historical");
-      Client.Call (Swagger.Clients.GET, URI);
-   end Dapps_Sushiswap_Mints_Historical_Get;
+      Client.Call (Swagger.Clients.GET, URI, Reply);
+      .Models.Deserialize (Reply, "", Result);
+   end Sushiswap_Get_Mints__historical;
 
-   --  
-   procedure Dapps_Sushiswap_Pool_Day_Data_Historical_Get
+   --  GetPoolsDayData (historical)
+   --  Gets pools day data.
+   procedure Sushiswap_Get_Pools_Day_Data__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
        End_Block : in Swagger.Nullable_Long;
        Start_Date : in Swagger.Nullable_Date;
        End_Date : in Swagger.Nullable_Date;
-       Pool_Id : in Swagger.Nullable_UString) is
+       Pool_Id : in Swagger.Nullable_UString;
+       Result : out .Models.SushiswapPairDayDataDTO_Type_Vectors.Vector) is
       URI   : Swagger.Clients.URI_Type;
+      Reply : Swagger.Value_Type;
    begin
-
+      Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
+                          Swagger.Clients.APPLICATION_JSON,
+                          Swagger.Clients.TEXT_JSON));
 
       URI.Add_Param ("startBlock", Start_Block);
       URI.Add_Param ("endBlock", End_Block);
@@ -1247,21 +1300,27 @@ package body .Clients is
       URI.Add_Param ("endDate", End_Date);
       URI.Add_Param ("endDate", End_Date);
       URI.Add_Param ("poolId", Pool_Id);
-      URI.Set_Path ("/dapps/sushiswap/poolDayData/historical");
-      Client.Call (Swagger.Clients.GET, URI);
-   end Dapps_Sushiswap_Pool_Day_Data_Historical_Get;
+      URI.Set_Path ("/dapps/sushiswap/poolsDayData/historical");
+      Client.Call (Swagger.Clients.GET, URI, Reply);
+      .Models.Deserialize (Reply, "", Result);
+   end Sushiswap_Get_Pools_Day_Data__historical;
 
-   --  
-   procedure Dapps_Sushiswap_Pool_Hour_Data_Historical_Get
+   --  GetPoolsHourData (historical)
+   --  Gets pools tracked each our.
+   procedure Sushiswap_Get_Pools_Hour_Data__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
        End_Block : in Swagger.Nullable_Long;
        Start_Date : in Swagger.Nullable_Date;
        End_Date : in Swagger.Nullable_Date;
-       Pool_Id : in Swagger.Nullable_UString) is
+       Pool_Id : in Swagger.Nullable_UString;
+       Result : out .Models.SushiswapPairHourDataDTO_Type_Vectors.Vector) is
       URI   : Swagger.Clients.URI_Type;
+      Reply : Swagger.Value_Type;
    begin
-
+      Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
+                          Swagger.Clients.APPLICATION_JSON,
+                          Swagger.Clients.TEXT_JSON));
 
       URI.Add_Param ("startBlock", Start_Block);
       URI.Add_Param ("endBlock", End_Block);
@@ -1270,74 +1329,10 @@ package body .Clients is
       URI.Add_Param ("endDate", End_Date);
       URI.Add_Param ("endDate", End_Date);
       URI.Add_Param ("poolId", Pool_Id);
-      URI.Set_Path ("/dapps/sushiswap/poolHourData/historical");
-      Client.Call (Swagger.Clients.GET, URI);
-   end Dapps_Sushiswap_Pool_Hour_Data_Historical_Get;
-
-   --  
-   procedure Dapps_Sushiswap_Token_Day_Data_Historical_Get
-      (Client : in out Client_Type;
-       Start_Block : in Swagger.Nullable_Long;
-       End_Block : in Swagger.Nullable_Long;
-       Start_Date : in Swagger.Nullable_Date;
-       End_Date : in Swagger.Nullable_Date;
-       Token_Id : in Swagger.Nullable_UString) is
-      URI   : Swagger.Clients.URI_Type;
-   begin
-
-
-      URI.Add_Param ("startBlock", Start_Block);
-      URI.Add_Param ("endBlock", End_Block);
-      URI.Add_Param ("startDate", Start_Date);
-      URI.Add_Param ("startDate", Start_Date);
-      URI.Add_Param ("endDate", End_Date);
-      URI.Add_Param ("endDate", End_Date);
-      URI.Add_Param ("tokenId", Token_Id);
-      URI.Set_Path ("/dapps/sushiswap/tokenDayData/historical");
-      Client.Call (Swagger.Clients.GET, URI);
-   end Dapps_Sushiswap_Token_Day_Data_Historical_Get;
-
-   --  
-   procedure Dapps_Sushiswap_Transactions_Historical_Get
-      (Client : in out Client_Type;
-       Start_Block : in Swagger.Nullable_Long;
-       End_Block : in Swagger.Nullable_Long;
-       Start_Date : in Swagger.Nullable_Date;
-       End_Date : in Swagger.Nullable_Date) is
-      URI   : Swagger.Clients.URI_Type;
-   begin
-
-
-      URI.Add_Param ("startBlock", Start_Block);
-      URI.Add_Param ("endBlock", End_Block);
-      URI.Add_Param ("startDate", Start_Date);
-      URI.Add_Param ("startDate", Start_Date);
-      URI.Add_Param ("endDate", End_Date);
-      URI.Add_Param ("endDate", End_Date);
-      URI.Set_Path ("/dapps/sushiswap/transactions/historical");
-      Client.Call (Swagger.Clients.GET, URI);
-   end Dapps_Sushiswap_Transactions_Historical_Get;
-
-   --  
-   procedure Dapps_Sushiswap_Users_Historical_Get
-      (Client : in out Client_Type;
-       Start_Block : in Swagger.Nullable_Long;
-       End_Block : in Swagger.Nullable_Long;
-       Start_Date : in Swagger.Nullable_Date;
-       End_Date : in Swagger.Nullable_Date) is
-      URI   : Swagger.Clients.URI_Type;
-   begin
-
-
-      URI.Add_Param ("startBlock", Start_Block);
-      URI.Add_Param ("endBlock", End_Block);
-      URI.Add_Param ("startDate", Start_Date);
-      URI.Add_Param ("startDate", Start_Date);
-      URI.Add_Param ("endDate", End_Date);
-      URI.Add_Param ("endDate", End_Date);
-      URI.Set_Path ("/dapps/sushiswap/users/historical");
-      Client.Call (Swagger.Clients.GET, URI);
-   end Dapps_Sushiswap_Users_Historical_Get;
+      URI.Set_Path ("/dapps/sushiswap/poolsHourData/historical");
+      Client.Call (Swagger.Clients.GET, URI, Reply);
+      .Models.Deserialize (Reply, "", Result);
+   end Sushiswap_Get_Pools_Hour_Data__historical;
 
    --  GetPools (current)
    --  Gets pools.
@@ -1389,7 +1384,7 @@ package body .Clients is
    --  Gets swaps.
    procedure Sushiswap_Get_Swaps__current
       (Client : in out Client_Type;
-       Result : out .Models.SushiswapSwapDTO_Type) is
+       Result : out .Models.SushiswapSwapDTO_Type_Vectors.Vector) is
       URI   : Swagger.Clients.URI_Type;
       Reply : Swagger.Value_Type;
    begin
@@ -1431,11 +1426,40 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Sushiswap_Get_Swaps__historical;
 
+   --  GetTokensDayData (historical)
+   --  Gets tokens day data.
+   procedure Sushiswap_Get_Tokens_Day_Data__historical
+      (Client : in out Client_Type;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date;
+       Token_Id : in Swagger.Nullable_UString;
+       Result : out .Models.SushiswapTokenDayDataDTO_Type_Vectors.Vector) is
+      URI   : Swagger.Clients.URI_Type;
+      Reply : Swagger.Value_Type;
+   begin
+      Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
+                          Swagger.Clients.APPLICATION_JSON,
+                          Swagger.Clients.TEXT_JSON));
+
+      URI.Add_Param ("startBlock", Start_Block);
+      URI.Add_Param ("endBlock", End_Block);
+      URI.Add_Param ("startDate", Start_Date);
+      URI.Add_Param ("startDate", Start_Date);
+      URI.Add_Param ("endDate", End_Date);
+      URI.Add_Param ("endDate", End_Date);
+      URI.Add_Param ("tokenId", Token_Id);
+      URI.Set_Path ("/dapps/sushiswap/tokensDayData/historical");
+      Client.Call (Swagger.Clients.GET, URI, Reply);
+      .Models.Deserialize (Reply, "", Result);
+   end Sushiswap_Get_Tokens_Day_Data__historical;
+
    --  GetTokens (current)
    --  Gets tokens.
    procedure Sushiswap_Get_Tokens__current
       (Client : in out Client_Type;
-       Result : out .Models.SushiswapTokenDTO_Type) is
+       Result : out .Models.SushiswapTokenDTO_Type_Vectors.Vector) is
       URI   : Swagger.Clients.URI_Type;
       Reply : Swagger.Value_Type;
    begin
@@ -1476,6 +1500,60 @@ package body .Clients is
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
    end Sushiswap_Get_Tokens__historical;
+
+   --  GetTransactions (historical)
+   --  Gets transactions.
+   procedure Sushiswap_Get_Transactions__historical
+      (Client : in out Client_Type;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date;
+       Result : out .Models.SushiswapTransactionDTO_Type_Vectors.Vector) is
+      URI   : Swagger.Clients.URI_Type;
+      Reply : Swagger.Value_Type;
+   begin
+      Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
+                          Swagger.Clients.APPLICATION_JSON,
+                          Swagger.Clients.TEXT_JSON));
+
+      URI.Add_Param ("startBlock", Start_Block);
+      URI.Add_Param ("endBlock", End_Block);
+      URI.Add_Param ("startDate", Start_Date);
+      URI.Add_Param ("startDate", Start_Date);
+      URI.Add_Param ("endDate", End_Date);
+      URI.Add_Param ("endDate", End_Date);
+      URI.Set_Path ("/dapps/sushiswap/transactions/historical");
+      Client.Call (Swagger.Clients.GET, URI, Reply);
+      .Models.Deserialize (Reply, "", Result);
+   end Sushiswap_Get_Transactions__historical;
+
+   --  GetUsers (historical)
+   --  Gets users.
+   procedure Sushiswap_Get_Users__historical
+      (Client : in out Client_Type;
+       Start_Block : in Swagger.Nullable_Long;
+       End_Block : in Swagger.Nullable_Long;
+       Start_Date : in Swagger.Nullable_Date;
+       End_Date : in Swagger.Nullable_Date;
+       Result : out .Models.SushiswapUserDTO_Type_Vectors.Vector) is
+      URI   : Swagger.Clients.URI_Type;
+      Reply : Swagger.Value_Type;
+   begin
+      Client.Set_Accept ((Swagger.Clients.TEXT_PLAIN,
+                          Swagger.Clients.APPLICATION_JSON,
+                          Swagger.Clients.TEXT_JSON));
+
+      URI.Add_Param ("startBlock", Start_Block);
+      URI.Add_Param ("endBlock", End_Block);
+      URI.Add_Param ("startDate", Start_Date);
+      URI.Add_Param ("startDate", Start_Date);
+      URI.Add_Param ("endDate", End_Date);
+      URI.Add_Param ("endDate", End_Date);
+      URI.Set_Path ("/dapps/sushiswap/users/historical");
+      Client.Call (Swagger.Clients.GET, URI, Reply);
+      .Models.Deserialize (Reply, "", Result);
+   end Sushiswap_Get_Users__historical;
 
    --  
    procedure Dapps_Uniswapv_2Bundles_Historical_Get

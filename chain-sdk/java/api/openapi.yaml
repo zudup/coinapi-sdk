@@ -35,75 +35,6 @@ tags:
 - description: Dex tag descriptor ...
   name: Dex
 paths:
-  /dapps/sushiswap/pools/current:
-    get:
-      description: Gets pools.
-      operationId: Sushiswap.GetPools (current)
-      responses:
-        "200":
-          content:
-            text/plain:
-              schema:
-                items:
-                  $ref: '#/components/schemas/Sushiswap.PairDTO'
-                type: array
-            application/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/Sushiswap.PairDTO'
-                type: array
-            text/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/Sushiswap.PairDTO'
-                type: array
-          description: successful operation
-      summary: GetPools (current)
-      tags:
-      - Sushiswap
-      x-accepts: application/json
-  /dapps/sushiswap/swaps/current:
-    get:
-      description: Gets swaps.
-      operationId: Sushiswap.GetSwaps (current)
-      responses:
-        "200":
-          content:
-            text/plain:
-              schema:
-                $ref: '#/components/schemas/Sushiswap.SwapDTO'
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Sushiswap.SwapDTO'
-            text/json:
-              schema:
-                $ref: '#/components/schemas/Sushiswap.SwapDTO'
-          description: successful operation
-      summary: GetSwaps (current)
-      tags:
-      - Sushiswap
-      x-accepts: application/json
-  /dapps/sushiswap/tokens/current:
-    get:
-      description: Gets tokens.
-      operationId: Sushiswap.GetTokens (current)
-      responses:
-        "200":
-          content:
-            text/plain:
-              schema:
-                $ref: '#/components/schemas/Sushiswap.TokenDTO'
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Sushiswap.TokenDTO'
-            text/json:
-              schema:
-                $ref: '#/components/schemas/Sushiswap.TokenDTO'
-          description: successful operation
-      summary: GetTokens (current)
-      tags:
-      - Sushiswap
-      x-accepts: application/json
   /dapps/sushiswap/pools/historical:
     get:
       description: Gets list of pools for given filters.
@@ -168,6 +99,33 @@ paths:
                 type: array
           description: successful operation
       summary: GetPools (historical)
+      tags:
+      - Sushiswap
+      x-accepts: application/json
+  /dapps/sushiswap/pools/current:
+    get:
+      description: Gets pools.
+      operationId: Sushiswap.GetPools (current)
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.PairDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.PairDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.PairDTO'
+                type: array
+          description: successful operation
+      summary: GetPools (current)
       tags:
       - Sushiswap
       x-accepts: application/json
@@ -238,6 +196,33 @@ paths:
       tags:
       - Sushiswap
       x-accepts: application/json
+  /dapps/sushiswap/swaps/current:
+    get:
+      description: Gets swaps.
+      operationId: Sushiswap.GetSwaps (current)
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.SwapDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.SwapDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.SwapDTO'
+                type: array
+          description: successful operation
+      summary: GetSwaps (current)
+      tags:
+      - Sushiswap
+      x-accepts: application/json
   /dapps/sushiswap/tokens/historical:
     get:
       description: Gets list of tokens for given filters.
@@ -302,6 +287,33 @@ paths:
                 type: array
           description: successful operation
       summary: GetTokens (historical)
+      tags:
+      - Sushiswap
+      x-accepts: application/json
+  /dapps/sushiswap/tokens/current:
+    get:
+      description: Gets tokens.
+      operationId: Sushiswap.GetTokens (current)
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.TokenDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.TokenDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.TokenDTO'
+                type: array
+          description: successful operation
+      summary: GetTokens (current)
       tags:
       - Sushiswap
       x-accepts: application/json
@@ -640,6 +652,8 @@ paths:
       x-accepts: application/json
   /dapps/sushiswap/bundles/historical:
     get:
+      description: Gets bundles.
+      operationId: Sushiswap.GetBundles (historical)
       parameters:
       - explode: true
         in: query
@@ -675,7 +689,24 @@ paths:
         style: form
       responses:
         "200":
-          description: Success
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.BundleDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.BundleDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.BundleDTO'
+                type: array
+          description: successful operation
+      summary: GetBundles (historical)
       tags:
       - Sushiswap
       x-accepts: application/json
@@ -777,6 +808,8 @@ paths:
       x-accepts: application/json
   /dapps/sushiswap/burns/historical:
     get:
+      description: Gets burns.
+      operationId: Sushiswap.GetBurns (historical)
       parameters:
       - explode: true
         in: query
@@ -819,7 +852,24 @@ paths:
         style: form
       responses:
         "200":
-          description: Success
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.BurnDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.BurnDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.BurnDTO'
+                type: array
+          description: successful operation
+      summary: GetBurns (historical)
       tags:
       - Sushiswap
       x-accepts: application/json
@@ -1051,6 +1101,8 @@ paths:
       x-accepts: application/json
   /dapps/sushiswap/dayData/historical:
     get:
+      description: Gets day data.
+      operationId: Sushiswap.GetDayData (historical)
       parameters:
       - explode: true
         in: query
@@ -1086,7 +1138,24 @@ paths:
         style: form
       responses:
         "200":
-          description: Success
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.DayDataDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.DayDataDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.DayDataDTO'
+                type: array
+          description: successful operation
+      summary: GetDayData (historical)
       tags:
       - Sushiswap
       x-accepts: application/json
@@ -1222,6 +1291,8 @@ paths:
       x-accepts: application/json
   /dapps/sushiswap/factory/historical:
     get:
+      description: Gets factory.
+      operationId: Sushiswap.GetFactory (historical)
       parameters:
       - explode: true
         in: query
@@ -1257,7 +1328,24 @@ paths:
         style: form
       responses:
         "200":
-          description: Success
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.FactoryDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.FactoryDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.FactoryDTO'
+                type: array
+          description: successful operation
+      summary: GetFactory (historical)
       tags:
       - Sushiswap
       x-accepts: application/json
@@ -1720,6 +1808,8 @@ paths:
       x-accepts: application/json
   /dapps/sushiswap/hourData/historical:
     get:
+      description: Gets hour data.
+      operationId: Sushiswap.GetHourData (historical)
       parameters:
       - explode: true
         in: query
@@ -1755,7 +1845,24 @@ paths:
         style: form
       responses:
         "200":
-          description: Success
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.HourDataDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.HourDataDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.HourDataDTO'
+                type: array
+          description: successful operation
+      summary: GetHourData (historical)
       tags:
       - Sushiswap
       x-accepts: application/json
@@ -1857,6 +1964,8 @@ paths:
       x-accepts: application/json
   /dapps/sushiswap/liquidityPosition/historical:
     get:
+      description: Gets liquidity position.
+      operationId: Sushiswap.GetLiquidityPosition (historical)
       parameters:
       - explode: true
         in: query
@@ -1899,7 +2008,24 @@ paths:
         style: form
       responses:
         "200":
-          description: Success
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.LiquidityPositionDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.LiquidityPositionDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.LiquidityPositionDTO'
+                type: array
+          description: successful operation
+      summary: GetLiquidityPosition (historical)
       tags:
       - Sushiswap
       x-accepts: application/json
@@ -1953,6 +2079,8 @@ paths:
       x-accepts: application/json
   /dapps/sushiswap/liquidityPositionSnapshots/historical:
     get:
+      description: Gets liquidity position snapshot.
+      operationId: Sushiswap.GetLiquidityPositionSnapshot (historical)
       parameters:
       - explode: true
         in: query
@@ -1995,7 +2123,24 @@ paths:
         style: form
       responses:
         "200":
-          description: Success
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.LiquidityPositionSnapshotDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.LiquidityPositionSnapshotDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.LiquidityPositionSnapshotDTO'
+                type: array
+          description: successful operation
+      summary: GetLiquidityPositionSnapshot (historical)
       tags:
       - Sushiswap
       x-accepts: application/json
@@ -2145,6 +2290,8 @@ paths:
       x-accepts: application/json
   /dapps/sushiswap/mints/historical:
     get:
+      description: Gets mints.
+      operationId: Sushiswap.GetMints (historical)
       parameters:
       - explode: true
         in: query
@@ -2187,7 +2334,24 @@ paths:
         style: form
       responses:
         "200":
-          description: Success
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.MintDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.MintDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.MintDTO'
+                type: array
+          description: successful operation
+      summary: GetMints (historical)
       tags:
       - Sushiswap
       x-accepts: application/json
@@ -2410,54 +2574,6 @@ paths:
       tags:
       - UniswapV2
       x-accepts: application/json
-  /dapps/sushiswap/poolDayData/historical:
-    get:
-      parameters:
-      - explode: true
-        in: query
-        name: startBlock
-        required: false
-        schema:
-          format: int64
-          type: integer
-        style: form
-      - explode: true
-        in: query
-        name: endBlock
-        required: false
-        schema:
-          format: int64
-          type: integer
-        style: form
-      - explode: true
-        in: query
-        name: startDate
-        required: false
-        schema:
-          format: date-time
-          type: string
-        style: form
-      - explode: true
-        in: query
-        name: endDate
-        required: false
-        schema:
-          format: date-time
-          type: string
-        style: form
-      - explode: true
-        in: query
-        name: poolId
-        required: false
-        schema:
-          type: string
-        style: form
-      responses:
-        "200":
-          description: Success
-      tags:
-      - Sushiswap
-      x-accepts: application/json
   /dapps/uniswapv3/poolHourData/historical:
     get:
       parameters:
@@ -2553,54 +2669,6 @@ paths:
           description: Success
       tags:
       - UniswapV2
-      x-accepts: application/json
-  /dapps/sushiswap/poolHourData/historical:
-    get:
-      parameters:
-      - explode: true
-        in: query
-        name: startBlock
-        required: false
-        schema:
-          format: int64
-          type: integer
-        style: form
-      - explode: true
-        in: query
-        name: endBlock
-        required: false
-        schema:
-          format: int64
-          type: integer
-        style: form
-      - explode: true
-        in: query
-        name: startDate
-        required: false
-        schema:
-          format: date-time
-          type: string
-        style: form
-      - explode: true
-        in: query
-        name: endDate
-        required: false
-        schema:
-          format: date-time
-          type: string
-        style: form
-      - explode: true
-        in: query
-        name: poolId
-        required: false
-        schema:
-          type: string
-        style: form
-      responses:
-        "200":
-          description: Success
-      tags:
-      - Sushiswap
       x-accepts: application/json
   /dapps/uniswapv3/pools/historical:
     get:
@@ -2814,6 +2882,73 @@ paths:
       tags:
       - UniswapV2
       x-accepts: application/json
+  /dapps/sushiswap/poolsDayData/historical:
+    get:
+      description: Gets pools day data.
+      operationId: Sushiswap.GetPoolsDayData (historical)
+      parameters:
+      - explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.PairDayDataDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.PairDayDataDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.PairDayDataDTO'
+                type: array
+          description: successful operation
+      summary: GetPoolsDayData (historical)
+      tags:
+      - Sushiswap
+      x-accepts: application/json
   /dapps/uniswapv3/poolsDayData/current:
     get:
       parameters:
@@ -2847,6 +2982,73 @@ paths:
       summary: GetPoolsDayData
       tags:
       - UniswapV3
+      x-accepts: application/json
+  /dapps/sushiswap/poolsHourData/historical:
+    get:
+      description: Gets pools tracked each our.
+      operationId: Sushiswap.GetPoolsHourData (historical)
+      parameters:
+      - explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.PairHourDataDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.PairHourDataDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.PairHourDataDTO'
+                type: array
+          description: successful operation
+      summary: GetPoolsHourData (historical)
+      tags:
+      - Sushiswap
       x-accepts: application/json
   /dapps/uniswapv3/poolsHourData/current:
     get:
@@ -3906,54 +4108,6 @@ paths:
       tags:
       - UniswapV2
       x-accepts: application/json
-  /dapps/sushiswap/tokenDayData/historical:
-    get:
-      parameters:
-      - explode: true
-        in: query
-        name: startBlock
-        required: false
-        schema:
-          format: int64
-          type: integer
-        style: form
-      - explode: true
-        in: query
-        name: endBlock
-        required: false
-        schema:
-          format: int64
-          type: integer
-        style: form
-      - explode: true
-        in: query
-        name: startDate
-        required: false
-        schema:
-          format: date-time
-          type: string
-        style: form
-      - explode: true
-        in: query
-        name: endDate
-        required: false
-        schema:
-          format: date-time
-          type: string
-        style: form
-      - explode: true
-        in: query
-        name: tokenId
-        required: false
-        schema:
-          type: string
-        style: form
-      responses:
-        "200":
-          description: Success
-      tags:
-      - Sushiswap
-      x-accepts: application/json
   /dapps/uniswapv3/tokenHourData/historical:
     get:
       parameters:
@@ -4252,6 +4406,73 @@ paths:
       tags:
       - UniswapV2
       x-accepts: application/json
+  /dapps/sushiswap/tokensDayData/historical:
+    get:
+      description: Gets tokens day data.
+      operationId: Sushiswap.GetTokensDayData (historical)
+      parameters:
+      - explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: tokenId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.TokenDayDataDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.TokenDayDataDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.TokenDayDataDTO'
+                type: array
+          description: successful operation
+      summary: GetTokensDayData (historical)
+      tags:
+      - Sushiswap
+      x-accepts: application/json
   /dapps/uniswapv3/tokensDayData/current:
     get:
       parameters:
@@ -4484,6 +4705,8 @@ paths:
       x-accepts: application/json
   /dapps/sushiswap/transactions/historical:
     get:
+      description: Gets transactions.
+      operationId: Sushiswap.GetTransactions (historical)
       parameters:
       - explode: true
         in: query
@@ -4519,7 +4742,24 @@ paths:
         style: form
       responses:
         "200":
-          description: Success
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.TransactionDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.TransactionDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.TransactionDTO'
+                type: array
+          description: successful operation
+      summary: GetTransactions (historical)
       tags:
       - Sushiswap
       x-accepts: application/json
@@ -4769,6 +5009,8 @@ paths:
       x-accepts: application/json
   /dapps/sushiswap/users/historical:
     get:
+      description: Gets users.
+      operationId: Sushiswap.GetUsers (historical)
       parameters:
       - explode: true
         in: query
@@ -4804,7 +5046,24 @@ paths:
         style: form
       responses:
         "200":
-          description: Success
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.UserDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.UserDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.UserDTO'
+                type: array
+          description: successful operation
+      summary: GetUsers (historical)
       tags:
       - Sushiswap
       x-accepts: application/json
@@ -5103,6 +5362,592 @@ components:
           readOnly: true
           type: integer
       type: object
+    Sushiswap.BundleDTO:
+      additionalProperties: false
+      description: The Bundle is used as a global store of derived ETH price in USD.
+      example:
+        vid: 6
+        entry_time: 2000-01-23T04:56:07.000+00:00
+        recv_time: 2000-01-23T04:56:07.000+00:00
+        block_number: 0
+        id: id
+        eth_price: eth_price
+      properties:
+        entry_time:
+          format: date-time
+          type: string
+        recv_time:
+          format: date-time
+          type: string
+        block_number:
+          description: Number of block in which entity was recorded.
+          format: int64
+          type: integer
+        id:
+          description: Hardcoded to '1'.
+          nullable: true
+          type: string
+        eth_price:
+          description: Price of native.
+          nullable: true
+          type: string
+        vid:
+          description: ""
+          format: int64
+          type: integer
+      type: object
+    Sushiswap.BurnDTO:
+      additionalProperties: false
+      description: "Burn entities are created for every emitted Burn event on the\
+        \ Uniswap core contracts. The Burn entity stores key data about the event\
+        \ like token amounts, who burned LP tokens, who received tokens, and more.\
+        \ This entity can be used to track liquidity removals on pairs."
+      example:
+        entry_time: 2000-01-23T04:56:07.000+00:00
+        recv_time: 2000-01-23T04:56:07.000+00:00
+        fee_liquidity: fee_liquidity
+        amount_usd: amount_usd
+        block_number: 0
+        liquidity: liquidity
+        amount_1: amount_1
+        log_index: log_index
+        pair: pair
+        amount_0: amount_0
+        vid: 6
+        sender: sender
+        fee_to: fee_to
+        id: id
+        to: to
+        complete: true
+        transaction: transaction
+        timestamp: timestamp
+      properties:
+        entry_time:
+          format: date-time
+          type: string
+        recv_time:
+          format: date-time
+          type: string
+        block_number:
+          description: Number of block in which entity was recorded.
+          format: int64
+          type: integer
+        id:
+          description: "Identifier, format: <transaction id>:<transaction.burns.length>."
+          nullable: true
+          type: string
+        transaction:
+          description: Reference to the transaction Burn was included in.
+          nullable: true
+          type: string
+        timestamp:
+          description: "Timestamp of Burn, used to sort recent liquidity removals."
+          nullable: true
+          type: string
+        pair:
+          description: Reference to pair.
+          nullable: true
+          type: string
+        liquidity:
+          description: Amount of liquidity tokens burned.
+          nullable: true
+          type: string
+        sender:
+          description: Address that initiated the liquidity removal.
+          nullable: true
+          type: string
+        amount_0:
+          description: Amount of token0 removed.
+          nullable: true
+          type: string
+        amount_1:
+          description: Amount of token1 removed.
+          nullable: true
+          type: string
+        to:
+          description: Recipient of tokens.
+          nullable: true
+          type: string
+        log_index:
+          description: Index in the transaction event was emitted.
+          nullable: true
+          type: string
+        amount_usd:
+          description: Derived amount based on available prices of tokens.
+          nullable: true
+          type: string
+        complete:
+          description: ""
+          type: boolean
+        fee_to:
+          description: Address of fee recipient (if fee is on).
+          nullable: true
+          type: string
+        fee_liquidity:
+          description: Amount of tokens sent to fee recipient (if fee is on).
+          nullable: true
+          type: string
+        vid:
+          description: ""
+          format: int64
+          type: integer
+      type: object
+    Sushiswap.DayDataDTO:
+      additionalProperties: false
+      description: Tracks data across all pairs aggregated into a daily bucket.
+      example:
+        date: 6
+        entry_time: 2000-01-23T04:56:07.000+00:00
+        factory: factory
+        recv_time: 2000-01-23T04:56:07.000+00:00
+        tx_count: tx_count
+        untracked_volume: untracked_volume
+        liquidity_eth: liquidity_eth
+        block_number: 0
+        volume_eth: volume_eth
+        vid: 1
+        id: id
+        volume_usd: volume_usd
+        liquidity_usd: liquidity_usd
+      properties:
+        entry_time:
+          format: date-time
+          type: string
+        recv_time:
+          format: date-time
+          type: string
+        block_number:
+          description: Number of block in which entity was recorded.
+          format: int64
+          type: integer
+        id:
+          description: Unix timestamp for start of day / 86400 giving a unique day
+            index.
+          nullable: true
+          type: string
+        date:
+          description: Unix timestamp for start of day.
+          format: int32
+          type: integer
+        factory:
+          description: Factory address.
+          nullable: true
+          type: string
+        volume_eth:
+          description: "Total volume across all pairs on this day, stored as a derived\
+            \ amount of ETH."
+          nullable: true
+          type: string
+        volume_usd:
+          description: "Total volume across all pairs on this day, stored as a derived\
+            \ amount of USD."
+          nullable: true
+          type: string
+        untracked_volume:
+          description: "Total volume across all pairs on this day, untracked"
+          nullable: true
+          type: string
+        liquidity_eth:
+          description: Total liquidity across all pairs in ETH up to and including
+            this day.
+          nullable: true
+          type: string
+        liquidity_usd:
+          description: Total liquidity across all pairs in USD up to and including
+            this day.
+          nullable: true
+          type: string
+        tx_count:
+          description: Number of transactions throughout this day.
+          nullable: true
+          type: string
+        vid:
+          description: ""
+          format: int64
+          type: integer
+      type: object
+    Sushiswap.FactoryDTO:
+      additionalProperties: false
+      description: "The Sushiswap Factory entity is responsible for storing aggregate\
+        \ information across all Sushiswap pairs. It can be used to view stats about\
+        \ total liquidity, volume, amount of pairs and more."
+      example:
+        entry_time: 2000-01-23T04:56:07.000+00:00
+        untracked_volume_usd: untracked_volume_usd
+        recv_time: 2000-01-23T04:56:07.000+00:00
+        tx_count: tx_count
+        liquidity_eth: liquidity_eth
+        block_number: 0
+        volume_eth: volume_eth
+        vid: 6
+        token_count: token_count
+        user_count: user_count
+        id: id
+        volume_usd: volume_usd
+        liquidity_usd: liquidity_usd
+        pair_count: pair_count
+      properties:
+        entry_time:
+          format: date-time
+          type: string
+        recv_time:
+          format: date-time
+          type: string
+        block_number:
+          description: Number of block in which entity was recorded.
+          format: int64
+          type: integer
+        id:
+          description: Factory address.
+          nullable: true
+          type: string
+        pair_count:
+          description: Amount of pairs created by the Sushiswap factory.
+          nullable: true
+          type: string
+        volume_usd:
+          description: All time USD volume across all pairs (USD is derived).
+          nullable: true
+          type: string
+        volume_eth:
+          description: All time volume in ETH across all pairs (ETH is derived).
+          nullable: true
+          type: string
+        untracked_volume_usd:
+          description: Untracked volume USD.
+          nullable: true
+          type: string
+        liquidity_usd:
+          description: Total liquidity across all pairs stored as a derived USD amount.
+          nullable: true
+          type: string
+        liquidity_eth:
+          description: Total liquidity across all pairs stored as a derived ETH amount.
+          nullable: true
+          type: string
+        tx_count:
+          description: All time amount of transactions across all pairs.
+          nullable: true
+          type: string
+        token_count:
+          description: Total count of tokens.
+          nullable: true
+          type: string
+        user_count:
+          description: Users count.
+          nullable: true
+          type: string
+        vid:
+          description: ""
+          format: int64
+          type: integer
+      type: object
+    Sushiswap.HourDataDTO:
+      additionalProperties: false
+      example:
+        date: 6
+        entry_time: 2000-01-23T04:56:07.000+00:00
+        factory: factory
+        recv_time: 2000-01-23T04:56:07.000+00:00
+        tx_count: tx_count
+        untracked_volume: untracked_volume
+        liquidity_eth: liquidity_eth
+        block_number: 0
+        volume_eth: volume_eth
+        vid: 1
+        id: id
+        volume_usd: volume_usd
+        liquidity_usd: liquidity_usd
+      properties:
+        entry_time:
+          format: date-time
+          type: string
+        recv_time:
+          format: date-time
+          type: string
+        block_number:
+          description: Number of block in which entity was recorded.
+          format: int64
+          type: integer
+        id:
+          description: Start of hour timestamp.
+          nullable: true
+          type: string
+        date:
+          description: ""
+          format: int32
+          type: integer
+        factory:
+          description: ""
+          nullable: true
+          type: string
+        volume_eth:
+          description: ""
+          nullable: true
+          type: string
+        volume_usd:
+          description: ""
+          nullable: true
+          type: string
+        untracked_volume:
+          description: ""
+          nullable: true
+          type: string
+        liquidity_eth:
+          description: ""
+          nullable: true
+          type: string
+        liquidity_usd:
+          description: ""
+          nullable: true
+          type: string
+        tx_count:
+          description: ""
+          nullable: true
+          type: string
+        vid:
+          description: ""
+          format: int64
+          type: integer
+      type: object
+    Sushiswap.LiquidityPositionDTO:
+      additionalProperties: false
+      example:
+        vid: 5
+        entry_time: 2000-01-23T04:56:07.000+00:00
+        recv_time: 2000-01-23T04:56:07.000+00:00
+        liquidity_token_balance: liquidity_token_balance
+        block_number: 0
+        block: 6
+        id: id
+        user: user
+        pair: pair
+        timestamp: 1
+      properties:
+        entry_time:
+          format: date-time
+          type: string
+        recv_time:
+          format: date-time
+          type: string
+        block_number:
+          description: Number of block in which entity was recorded.
+          format: int64
+          type: integer
+        id:
+          description: "Identifier, format: <pair address>-<user address>"
+          nullable: true
+          type: string
+        user:
+          description: User address.
+          nullable: true
+          type: string
+        pair:
+          description: Pair address.
+          nullable: true
+          type: string
+        liquidity_token_balance:
+          description: Amount of LP tokens minted for this position.
+          nullable: true
+          type: string
+        block:
+          description: Block number at which position was created.
+          format: int32
+          type: integer
+        timestamp:
+          description: Creation time.
+          format: int32
+          type: integer
+        vid:
+          description: ""
+          format: int64
+          type: integer
+      type: object
+    Sushiswap.LiquidityPositionSnapshotDTO:
+      additionalProperties: false
+      description: "This entity is used to store data about a user's liquidity position\
+        \ over time. This information, along with information from the pair itself\
+        \ can be used to provide position sizes, token deposits, and more. It gets\
+        \ created and never updated."
+      example:
+        entry_time: 2000-01-23T04:56:07.000+00:00
+        token_0_price_usd: token_0_price_usd
+        liquidity_position: liquidity_position
+        token_1_price_usd: token_1_price_usd
+        recv_time: 2000-01-23T04:56:07.000+00:00
+        reserve_usd: reserve_usd
+        liquidity_token_total_supply: liquidity_token_total_supply
+        block_number: 0
+        pair: pair
+        vid: 5
+        liquidity_token_balance: liquidity_token_balance
+        block: 1
+        id: id
+        user: user
+        reserve_1: reserve_1
+        reserve_0: reserve_0
+        timestamp: 6
+      properties:
+        entry_time:
+          format: date-time
+          type: string
+        recv_time:
+          format: date-time
+          type: string
+        block_number:
+          description: Number of block in which entity was recorded.
+          format: int64
+          type: integer
+        id:
+          description: "Identifier, format: <pair address>-<user address>-<timestamp>"
+          nullable: true
+          type: string
+        liquidity_position:
+          description: Reference to LP identifier.
+          nullable: true
+          type: string
+        timestamp:
+          description: Creation time.
+          format: int32
+          type: integer
+        block:
+          description: Block in which snapshot has been created.
+          format: int32
+          type: integer
+        user:
+          description: Reference to user.
+          nullable: true
+          type: string
+        pair:
+          description: Reference to the pair liquidity is being provided on.
+          nullable: true
+          type: string
+        token_0_price_usd:
+          description: Snapshot of token0 price in USD.
+          nullable: true
+          type: string
+        token_1_price_usd:
+          description: Snapshot of token0 price in USD.
+          nullable: true
+          type: string
+        reserve_0:
+          description: Snapshot of pair token0 reserves.
+          nullable: true
+          type: string
+        reserve_1:
+          description: Snapshot of pair token1 reserves.
+          nullable: true
+          type: string
+        reserve_usd:
+          description: Snapshot of pair reserves in USD.
+          nullable: true
+          type: string
+        liquidity_token_total_supply:
+          description: Snapshot of pool token supply.
+          nullable: true
+          type: string
+        liquidity_token_balance:
+          description: Snapshot of users pool token balance.
+          nullable: true
+          type: string
+        vid:
+          description: ""
+          format: int64
+          type: integer
+      type: object
+    Sushiswap.MintDTO:
+      additionalProperties: false
+      description: "Mint entities are created for every emitted Mint event on the\
+        \ Sushiswap core contracts. The Mint entity stores key data about the event\
+        \ like token amounts, who sent the transaction, who received the liquidity,\
+        \ and more. This entity can be used to track liquidity provisions on pairs."
+      example:
+        entry_time: 2000-01-23T04:56:07.000+00:00
+        recv_time: 2000-01-23T04:56:07.000+00:00
+        fee_liquidity: fee_liquidity
+        amount_usd: amount_usd
+        block_number: 0
+        liquidity: liquidity
+        amount_1: amount_1
+        log_index: log_index
+        pair: pair
+        amount_0: amount_0
+        vid: 6
+        sender: sender
+        fee_to: fee_to
+        id: id
+        to: to
+        transaction: transaction
+        timestamp: timestamp
+      properties:
+        entry_time:
+          format: date-time
+          type: string
+        recv_time:
+          format: date-time
+          type: string
+        block_number:
+          description: Number of block in which entity was recorded.
+          format: int64
+          type: integer
+        id:
+          description: "Identifier, format: <transaction hash>-<index in the transaction\
+            \ mint array>."
+          nullable: true
+          type: string
+        transaction:
+          description: Reference to the transaction Mint was included in.
+          nullable: true
+          type: string
+        timestamp:
+          description: "Timestamp of Mint, used to sort recent liquidity provisions."
+          nullable: true
+          type: string
+        pair:
+          description: Reference to pair.
+          nullable: true
+          type: string
+        to:
+          description: Recipient of liquidity tokens.
+          nullable: true
+          type: string
+        liquidity:
+          description: Amount of liquidity tokens minted.
+          nullable: true
+          type: string
+        sender:
+          description: Address that initiated the liquidity provision.
+          nullable: true
+          type: string
+        amount_0:
+          description: Amount of token0 provided.
+          nullable: true
+          type: string
+        amount_1:
+          description: Amount of token1 provided.
+          nullable: true
+          type: string
+        log_index:
+          description: Index in the transaction event was emitted.
+          nullable: true
+          type: string
+        amount_usd:
+          description: Derived USD value of token0 amount plus token1 amount.
+          nullable: true
+          type: string
+        fee_to:
+          description: Address of fee recipient (if fee is on).
+          nullable: true
+          type: string
+        fee_liquidity:
+          description: Amount of liquidity sent to fee recipient (if fee is on).
+          nullable: true
+          type: string
+        vid:
+          description: ""
+          format: int64
+          type: integer
+      type: object
     Sushiswap.PairDTO:
       additionalProperties: false
       description: "Information about a pair. Includes references to each token within\
@@ -5241,6 +6086,169 @@ components:
           format: double
           readOnly: true
           type: number
+      type: object
+    Sushiswap.PairDayDataDTO:
+      additionalProperties: false
+      description: Tracks pair data across each day.
+      example:
+        date: 6
+        volume_token_1: volume_token_1
+        entry_time: 2000-01-23T04:56:07.000+00:00
+        recv_time: 2000-01-23T04:56:07.000+00:00
+        volume_token_0: volume_token_0
+        tx_count: tx_count
+        total_supply: total_supply
+        reserve_usd: reserve_usd
+        block_number: 0
+        pair: pair
+        vid: 1
+        token_0: token_0
+        id: id
+        token_1: token_1
+        volume_usd: volume_usd
+        reserve_1: reserve_1
+        reserve_0: reserve_0
+      properties:
+        entry_time:
+          format: date-time
+          type: string
+        recv_time:
+          format: date-time
+          type: string
+        block_number:
+          description: Number of block in which entity was recorded.
+          format: int64
+          type: integer
+        id:
+          description: "Identifier, format: <pair id>-<day start timestamp>."
+          nullable: true
+          type: string
+        date:
+          description: Unix timestamp for start of day.
+          format: int32
+          type: integer
+        pair:
+          description: Reference to pair.
+          nullable: true
+          type: string
+        token_0:
+          description: Reference to token0.
+          nullable: true
+          type: string
+        token_1:
+          description: Reference to token1.
+          nullable: true
+          type: string
+        reserve_0:
+          description: Reserve of token0 (updated during each transaction on pair).
+          nullable: true
+          type: string
+        reserve_1:
+          description: Reserve of token1 (updated during each transaction on pair).
+          nullable: true
+          type: string
+        total_supply:
+          description: Total supply of liquidity token distributed to LPs.
+          nullable: true
+          type: string
+        reserve_usd:
+          description: Reserve of token0 plus token1 stored as a derived USD amount.
+          nullable: true
+          type: string
+        volume_token_0:
+          description: Total amount of token0 swapped throughout day.
+          nullable: true
+          type: string
+        volume_token_1:
+          description: Total amount of token1 swapped throughout day.
+          nullable: true
+          type: string
+        volume_usd:
+          description: Total volume within pair throughout day.
+          nullable: true
+          type: string
+        tx_count:
+          description: Amount of transactions on pair throughout day.
+          nullable: true
+          type: string
+        vid:
+          description: ""
+          format: int64
+          type: integer
+      type: object
+    Sushiswap.PairHourDataDTO:
+      additionalProperties: false
+      description: Tracks pair data across each hour.
+      example:
+        date: 6
+        volume_token_1: volume_token_1
+        entry_time: 2000-01-23T04:56:07.000+00:00
+        recv_time: 2000-01-23T04:56:07.000+00:00
+        volume_token_0: volume_token_0
+        tx_count: tx_count
+        reserve_usd: reserve_usd
+        block_number: 0
+        pair: pair
+        vid: 1
+        id: id
+        volume_usd: volume_usd
+        reserve_1: reserve_1
+        reserve_0: reserve_0
+      properties:
+        entry_time:
+          format: date-time
+          type: string
+        recv_time:
+          format: date-time
+          type: string
+        block_number:
+          description: Number of block in which entity was recorded.
+          format: int64
+          type: integer
+        id:
+          description: "Identifier, format: <pair id>-<hour start timestamp>."
+          nullable: true
+          type: string
+        date:
+          description: Hour start timestamp.
+          format: int32
+          type: integer
+        pair:
+          description: Reference to pair.
+          nullable: true
+          type: string
+        reserve_0:
+          description: Reserve of token0 (updated during each transaction on pair).
+          nullable: true
+          type: string
+        reserve_1:
+          description: Reserve of token1 (updated during each transaction on pair).
+          nullable: true
+          type: string
+        reserve_usd:
+          description: Reserve of token0 plus token1 stored as a derived USD amount.
+          nullable: true
+          type: string
+        volume_token_0:
+          description: Total amount of token0 swapped throughout hour.
+          nullable: true
+          type: string
+        volume_token_1:
+          description: Total amount of token1 swapped throughout hour.
+          nullable: true
+          type: string
+        volume_usd:
+          description: Total volume within pair throughout hour.
+          nullable: true
+          type: string
+        tx_count:
+          description: Amount of transactions on pair throughout hour.
+          nullable: true
+          type: string
+        vid:
+          description: ""
+          format: int64
+          type: integer
       type: object
     Sushiswap.SwapDTO:
       additionalProperties: false
@@ -5449,6 +6457,180 @@ components:
           nullable: true
           readOnly: true
           type: string
+      type: object
+    Sushiswap.TokenDayDataDTO:
+      additionalProperties: false
+      description: Token data aggregated across all pairs that include token.
+      example:
+        date: 6
+        price_usd: price_usd
+        entry_time: 2000-01-23T04:56:07.000+00:00
+        recv_time: 2000-01-23T04:56:07.000+00:00
+        tx_count: tx_count
+        liquidity_eth: liquidity_eth
+        block_number: 0
+        liquidity: liquidity
+        volume_eth: volume_eth
+        token: token
+        volume: volume
+        vid: 1
+        id: id
+        volume_usd: volume_usd
+        liquidity_usd: liquidity_usd
+      properties:
+        entry_time:
+          format: date-time
+          type: string
+        recv_time:
+          format: date-time
+          type: string
+        block_number:
+          description: Number of block in which entity was recorded.
+          format: int64
+          type: integer
+        id:
+          description: "Identifier, day start timestamp in unix / 86400."
+          nullable: true
+          type: string
+        date:
+          description: Unix timestamp for start of day.
+          format: int32
+          type: integer
+        token:
+          description: Reference to token entity.
+          nullable: true
+          type: string
+        volume:
+          description: Amount of token swapped across all pairs throughout day.
+          nullable: true
+          type: string
+        volume_eth:
+          description: Amount of token swapped across all pairs throughout day stored
+            as a derived amount of ETH.
+          nullable: true
+          type: string
+        volume_usd:
+          description: Amount of token swapped across all pairs throughout day stored
+            as a derived amount of USD.
+          nullable: true
+          type: string
+        tx_count:
+          description: Amount of transactions with this token across all pairs.
+          nullable: true
+          type: string
+        liquidity:
+          description: Token amount of token deposited across all pairs.
+          nullable: true
+          type: string
+        liquidity_eth:
+          description: Token amount of token deposited across all pairs stored as
+            amount of ETH.
+          nullable: true
+          type: string
+        liquidity_usd:
+          description: Token amount of token deposited across all pairs stored as
+            amount of USD.
+          nullable: true
+          type: string
+        price_usd:
+          description: Price of token in derived USD.
+          nullable: true
+          type: string
+        vid:
+          description: ""
+          format: int64
+          type: integer
+      type: object
+    Sushiswap.TransactionDTO:
+      additionalProperties: false
+      description: "Transaction entities are created for each Ethereum transaction\
+        \ that contains an interaction within Sushiswap contracts. Each transaction\
+        \ contains 3 arrays, and at least one of these arrays has a length of 1."
+      example:
+        mints:
+        - mints
+        - mints
+        vid: 6
+        entry_time: 2000-01-23T04:56:07.000+00:00
+        recv_time: 2000-01-23T04:56:07.000+00:00
+        block_number: 0
+        id: id
+        swaps:
+        - swaps
+        - swaps
+        timestamp: timestamp
+        burns:
+        - burns
+        - burns
+      properties:
+        entry_time:
+          format: date-time
+          type: string
+        recv_time:
+          format: date-time
+          type: string
+        block_number:
+          description: Number of block in which entity was recorded.
+          format: int64
+          type: integer
+        id:
+          description: Ethereum transaction hash.
+          nullable: true
+          type: string
+        timestamp:
+          description: Timestamp.
+          nullable: true
+          type: string
+        mints:
+          description: "Array of Mint events within the transaction, 0 or greater."
+          items:
+            type: string
+          nullable: true
+          type: array
+        burns:
+          description: "Array of Burn events within transaction, 0 or greater."
+          items:
+            type: string
+          nullable: true
+          type: array
+        swaps:
+          description: "Array of Swap events within transaction, 0 or greater."
+          items:
+            type: string
+          nullable: true
+          type: array
+        vid:
+          description: ""
+          format: int64
+          type: integer
+      type: object
+    Sushiswap.UserDTO:
+      additionalProperties: false
+      example:
+        vid: 6
+        entry_time: 2000-01-23T04:56:07.000+00:00
+        recv_time: 2000-01-23T04:56:07.000+00:00
+        block_number: 0
+        id: id
+      properties:
+        entry_time:
+          format: date-time
+          type: string
+        recv_time:
+          format: date-time
+          type: string
+        block_number:
+          description: Number of block in which entity was recorded.
+          format: int64
+          type: integer
+        id:
+          description: User address.
+          nullable: true
+          type: string
+        vid:
+          description: ""
+          format: int64
+          type: integer
       type: object
     Transactions.ETradeAggressiveSide:
       enum:
