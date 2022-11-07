@@ -49,7 +49,7 @@ import org.openapitools.client.JSON;
 /**
  * ValidationError
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-07T11:26:52.586829Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-07T12:19:06.624179Z[Etc/UTC]")
 public class ValidationError {
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
