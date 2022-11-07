@@ -49,7 +49,7 @@ import org.openapitools.client.JSON;
 /**
  * MessageReject
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-07T11:18:33.190315Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-07T11:26:52.586829Z[Etc/UTC]")
 public class MessageReject {
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
