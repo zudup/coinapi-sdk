@@ -30,341 +30,341 @@ my $api = WWW::OpenAPIClient::CurveApi->new();
 isa_ok($api, 'WWW::OpenAPIClient::CurveApi');
 
 #
-# dapps_curve_accounts_historical_get test
+# curve_get_accounts__historical test
 #
 # uncomment below and update the test
-#my $dapps_curve_accounts_historical_get_start_block = undef; # replace NULL with a proper value
-#my $dapps_curve_accounts_historical_get_end_block = undef; # replace NULL with a proper value
-#my $dapps_curve_accounts_historical_get_start_date = undef; # replace NULL with a proper value
-#my $dapps_curve_accounts_historical_get_end_date = undef; # replace NULL with a proper value
-#my $dapps_curve_accounts_historical_get_result = $api->dapps_curve_accounts_historical_get(start_block => $dapps_curve_accounts_historical_get_start_block, end_block => $dapps_curve_accounts_historical_get_end_block, start_date => $dapps_curve_accounts_historical_get_start_date, end_date => $dapps_curve_accounts_historical_get_end_date);
+#my $curve_get_accounts__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_accounts__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_accounts__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_accounts__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_accounts__historical_result = $api->curve_get_accounts__historical(start_block => $curve_get_accounts__historical_start_block, end_block => $curve_get_accounts__historical_end_block, start_date => $curve_get_accounts__historical_start_date, end_date => $curve_get_accounts__historical_end_date);
 
 #
-# dapps_curve_add_liquidity_event_historical_get test
+# curve_get_add_liquidity_events__historical test
 #
 # uncomment below and update the test
-#my $dapps_curve_add_liquidity_event_historical_get_start_block = undef; # replace NULL with a proper value
-#my $dapps_curve_add_liquidity_event_historical_get_end_block = undef; # replace NULL with a proper value
-#my $dapps_curve_add_liquidity_event_historical_get_start_date = undef; # replace NULL with a proper value
-#my $dapps_curve_add_liquidity_event_historical_get_end_date = undef; # replace NULL with a proper value
-#my $dapps_curve_add_liquidity_event_historical_get_pool_id = undef; # replace NULL with a proper value
-#my $dapps_curve_add_liquidity_event_historical_get_result = $api->dapps_curve_add_liquidity_event_historical_get(start_block => $dapps_curve_add_liquidity_event_historical_get_start_block, end_block => $dapps_curve_add_liquidity_event_historical_get_end_block, start_date => $dapps_curve_add_liquidity_event_historical_get_start_date, end_date => $dapps_curve_add_liquidity_event_historical_get_end_date, pool_id => $dapps_curve_add_liquidity_event_historical_get_pool_id);
+#my $curve_get_add_liquidity_events__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_add_liquidity_events__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_add_liquidity_events__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_add_liquidity_events__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_add_liquidity_events__historical_pool_id = undef; # replace NULL with a proper value
+#my $curve_get_add_liquidity_events__historical_result = $api->curve_get_add_liquidity_events__historical(start_block => $curve_get_add_liquidity_events__historical_start_block, end_block => $curve_get_add_liquidity_events__historical_end_block, start_date => $curve_get_add_liquidity_events__historical_start_date, end_date => $curve_get_add_liquidity_events__historical_end_date, pool_id => $curve_get_add_liquidity_events__historical_pool_id);
 
 #
-# dapps_curve_admin_fee_change_log_historical_get test
+# curve_get_admin_fee_change_logs__historical test
 #
 # uncomment below and update the test
-#my $dapps_curve_admin_fee_change_log_historical_get_start_block = undef; # replace NULL with a proper value
-#my $dapps_curve_admin_fee_change_log_historical_get_end_block = undef; # replace NULL with a proper value
-#my $dapps_curve_admin_fee_change_log_historical_get_start_date = undef; # replace NULL with a proper value
-#my $dapps_curve_admin_fee_change_log_historical_get_end_date = undef; # replace NULL with a proper value
-#my $dapps_curve_admin_fee_change_log_historical_get_pool_id = undef; # replace NULL with a proper value
-#my $dapps_curve_admin_fee_change_log_historical_get_result = $api->dapps_curve_admin_fee_change_log_historical_get(start_block => $dapps_curve_admin_fee_change_log_historical_get_start_block, end_block => $dapps_curve_admin_fee_change_log_historical_get_end_block, start_date => $dapps_curve_admin_fee_change_log_historical_get_start_date, end_date => $dapps_curve_admin_fee_change_log_historical_get_end_date, pool_id => $dapps_curve_admin_fee_change_log_historical_get_pool_id);
+#my $curve_get_admin_fee_change_logs__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_admin_fee_change_logs__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_admin_fee_change_logs__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_admin_fee_change_logs__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_admin_fee_change_logs__historical_pool_id = undef; # replace NULL with a proper value
+#my $curve_get_admin_fee_change_logs__historical_result = $api->curve_get_admin_fee_change_logs__historical(start_block => $curve_get_admin_fee_change_logs__historical_start_block, end_block => $curve_get_admin_fee_change_logs__historical_end_block, start_date => $curve_get_admin_fee_change_logs__historical_start_date, end_date => $curve_get_admin_fee_change_logs__historical_end_date, pool_id => $curve_get_admin_fee_change_logs__historical_pool_id);
 
 #
-# dapps_curve_amplification_coeff_change_log_historical_get test
+# curve_get_amplification_coeff_change_logs__historical test
 #
 # uncomment below and update the test
-#my $dapps_curve_amplification_coeff_change_log_historical_get_start_block = undef; # replace NULL with a proper value
-#my $dapps_curve_amplification_coeff_change_log_historical_get_end_block = undef; # replace NULL with a proper value
-#my $dapps_curve_amplification_coeff_change_log_historical_get_start_date = undef; # replace NULL with a proper value
-#my $dapps_curve_amplification_coeff_change_log_historical_get_end_date = undef; # replace NULL with a proper value
-#my $dapps_curve_amplification_coeff_change_log_historical_get_pool_id = undef; # replace NULL with a proper value
-#my $dapps_curve_amplification_coeff_change_log_historical_get_result = $api->dapps_curve_amplification_coeff_change_log_historical_get(start_block => $dapps_curve_amplification_coeff_change_log_historical_get_start_block, end_block => $dapps_curve_amplification_coeff_change_log_historical_get_end_block, start_date => $dapps_curve_amplification_coeff_change_log_historical_get_start_date, end_date => $dapps_curve_amplification_coeff_change_log_historical_get_end_date, pool_id => $dapps_curve_amplification_coeff_change_log_historical_get_pool_id);
+#my $curve_get_amplification_coeff_change_logs__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_amplification_coeff_change_logs__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_amplification_coeff_change_logs__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_amplification_coeff_change_logs__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_amplification_coeff_change_logs__historical_pool_id = undef; # replace NULL with a proper value
+#my $curve_get_amplification_coeff_change_logs__historical_result = $api->curve_get_amplification_coeff_change_logs__historical(start_block => $curve_get_amplification_coeff_change_logs__historical_start_block, end_block => $curve_get_amplification_coeff_change_logs__historical_end_block, start_date => $curve_get_amplification_coeff_change_logs__historical_start_date, end_date => $curve_get_amplification_coeff_change_logs__historical_end_date, pool_id => $curve_get_amplification_coeff_change_logs__historical_pool_id);
 
 #
-# dapps_curve_coins_historical_get test
+# curve_get_coins__historical test
 #
 # uncomment below and update the test
-#my $dapps_curve_coins_historical_get_start_block = undef; # replace NULL with a proper value
-#my $dapps_curve_coins_historical_get_end_block = undef; # replace NULL with a proper value
-#my $dapps_curve_coins_historical_get_start_date = undef; # replace NULL with a proper value
-#my $dapps_curve_coins_historical_get_end_date = undef; # replace NULL with a proper value
-#my $dapps_curve_coins_historical_get_pool_id = undef; # replace NULL with a proper value
-#my $dapps_curve_coins_historical_get_result = $api->dapps_curve_coins_historical_get(start_block => $dapps_curve_coins_historical_get_start_block, end_block => $dapps_curve_coins_historical_get_end_block, start_date => $dapps_curve_coins_historical_get_start_date, end_date => $dapps_curve_coins_historical_get_end_date, pool_id => $dapps_curve_coins_historical_get_pool_id);
+#my $curve_get_coins__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_coins__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_coins__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_coins__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_coins__historical_pool_id = undef; # replace NULL with a proper value
+#my $curve_get_coins__historical_result = $api->curve_get_coins__historical(start_block => $curve_get_coins__historical_start_block, end_block => $curve_get_coins__historical_end_block, start_date => $curve_get_coins__historical_start_date, end_date => $curve_get_coins__historical_end_date, pool_id => $curve_get_coins__historical_pool_id);
 
 #
-# dapps_curve_contracts_historical_get test
+# curve_get_contracts__historical test
 #
 # uncomment below and update the test
-#my $dapps_curve_contracts_historical_get_start_block = undef; # replace NULL with a proper value
-#my $dapps_curve_contracts_historical_get_end_block = undef; # replace NULL with a proper value
-#my $dapps_curve_contracts_historical_get_start_date = undef; # replace NULL with a proper value
-#my $dapps_curve_contracts_historical_get_end_date = undef; # replace NULL with a proper value
-#my $dapps_curve_contracts_historical_get_pool_id = undef; # replace NULL with a proper value
-#my $dapps_curve_contracts_historical_get_result = $api->dapps_curve_contracts_historical_get(start_block => $dapps_curve_contracts_historical_get_start_block, end_block => $dapps_curve_contracts_historical_get_end_block, start_date => $dapps_curve_contracts_historical_get_start_date, end_date => $dapps_curve_contracts_historical_get_end_date, pool_id => $dapps_curve_contracts_historical_get_pool_id);
+#my $curve_get_contracts__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_contracts__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_contracts__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_contracts__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_contracts__historical_pool_id = undef; # replace NULL with a proper value
+#my $curve_get_contracts__historical_result = $api->curve_get_contracts__historical(start_block => $curve_get_contracts__historical_start_block, end_block => $curve_get_contracts__historical_end_block, start_date => $curve_get_contracts__historical_start_date, end_date => $curve_get_contracts__historical_end_date, pool_id => $curve_get_contracts__historical_pool_id);
 
 #
-# dapps_curve_contracts_version_historical_get test
+# curve_get_contracts_versions__historical test
 #
 # uncomment below and update the test
-#my $dapps_curve_contracts_version_historical_get_start_block = undef; # replace NULL with a proper value
-#my $dapps_curve_contracts_version_historical_get_end_block = undef; # replace NULL with a proper value
-#my $dapps_curve_contracts_version_historical_get_start_date = undef; # replace NULL with a proper value
-#my $dapps_curve_contracts_version_historical_get_end_date = undef; # replace NULL with a proper value
-#my $dapps_curve_contracts_version_historical_get_pool_id = undef; # replace NULL with a proper value
-#my $dapps_curve_contracts_version_historical_get_result = $api->dapps_curve_contracts_version_historical_get(start_block => $dapps_curve_contracts_version_historical_get_start_block, end_block => $dapps_curve_contracts_version_historical_get_end_block, start_date => $dapps_curve_contracts_version_historical_get_start_date, end_date => $dapps_curve_contracts_version_historical_get_end_date, pool_id => $dapps_curve_contracts_version_historical_get_pool_id);
+#my $curve_get_contracts_versions__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_contracts_versions__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_contracts_versions__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_contracts_versions__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_contracts_versions__historical_pool_id = undef; # replace NULL with a proper value
+#my $curve_get_contracts_versions__historical_result = $api->curve_get_contracts_versions__historical(start_block => $curve_get_contracts_versions__historical_start_block, end_block => $curve_get_contracts_versions__historical_end_block, start_date => $curve_get_contracts_versions__historical_start_date, end_date => $curve_get_contracts_versions__historical_end_date, pool_id => $curve_get_contracts_versions__historical_pool_id);
 
 #
-# dapps_curve_daily_volume_historical_get test
+# curve_get_daily_volumes__historical test
 #
 # uncomment below and update the test
-#my $dapps_curve_daily_volume_historical_get_start_block = undef; # replace NULL with a proper value
-#my $dapps_curve_daily_volume_historical_get_end_block = undef; # replace NULL with a proper value
-#my $dapps_curve_daily_volume_historical_get_start_date = undef; # replace NULL with a proper value
-#my $dapps_curve_daily_volume_historical_get_end_date = undef; # replace NULL with a proper value
-#my $dapps_curve_daily_volume_historical_get_pool_id = undef; # replace NULL with a proper value
-#my $dapps_curve_daily_volume_historical_get_result = $api->dapps_curve_daily_volume_historical_get(start_block => $dapps_curve_daily_volume_historical_get_start_block, end_block => $dapps_curve_daily_volume_historical_get_end_block, start_date => $dapps_curve_daily_volume_historical_get_start_date, end_date => $dapps_curve_daily_volume_historical_get_end_date, pool_id => $dapps_curve_daily_volume_historical_get_pool_id);
+#my $curve_get_daily_volumes__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_daily_volumes__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_daily_volumes__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_daily_volumes__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_daily_volumes__historical_pool_id = undef; # replace NULL with a proper value
+#my $curve_get_daily_volumes__historical_result = $api->curve_get_daily_volumes__historical(start_block => $curve_get_daily_volumes__historical_start_block, end_block => $curve_get_daily_volumes__historical_end_block, start_date => $curve_get_daily_volumes__historical_start_date, end_date => $curve_get_daily_volumes__historical_end_date, pool_id => $curve_get_daily_volumes__historical_pool_id);
 
 #
-# dapps_curve_fee_change_log_historical_get test
+# curve_get_exchanges__historical test
 #
 # uncomment below and update the test
-#my $dapps_curve_fee_change_log_historical_get_start_block = undef; # replace NULL with a proper value
-#my $dapps_curve_fee_change_log_historical_get_end_block = undef; # replace NULL with a proper value
-#my $dapps_curve_fee_change_log_historical_get_start_date = undef; # replace NULL with a proper value
-#my $dapps_curve_fee_change_log_historical_get_end_date = undef; # replace NULL with a proper value
-#my $dapps_curve_fee_change_log_historical_get_pool_id = undef; # replace NULL with a proper value
-#my $dapps_curve_fee_change_log_historical_get_result = $api->dapps_curve_fee_change_log_historical_get(start_block => $dapps_curve_fee_change_log_historical_get_start_block, end_block => $dapps_curve_fee_change_log_historical_get_end_block, start_date => $dapps_curve_fee_change_log_historical_get_start_date, end_date => $dapps_curve_fee_change_log_historical_get_end_date, pool_id => $dapps_curve_fee_change_log_historical_get_pool_id);
+#my $curve_get_exchanges__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_exchanges__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_exchanges__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_exchanges__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_exchanges__historical_pool_id = undef; # replace NULL with a proper value
+#my $curve_get_exchanges__historical_result = $api->curve_get_exchanges__historical(start_block => $curve_get_exchanges__historical_start_block, end_block => $curve_get_exchanges__historical_end_block, start_date => $curve_get_exchanges__historical_start_date, end_date => $curve_get_exchanges__historical_end_date, pool_id => $curve_get_exchanges__historical_pool_id);
 
 #
-# dapps_curve_gauge_deposit_historical_get test
+# curve_get_fee_change_logs__historical test
 #
 # uncomment below and update the test
-#my $dapps_curve_gauge_deposit_historical_get_start_block = undef; # replace NULL with a proper value
-#my $dapps_curve_gauge_deposit_historical_get_end_block = undef; # replace NULL with a proper value
-#my $dapps_curve_gauge_deposit_historical_get_start_date = undef; # replace NULL with a proper value
-#my $dapps_curve_gauge_deposit_historical_get_end_date = undef; # replace NULL with a proper value
-#my $dapps_curve_gauge_deposit_historical_get_result = $api->dapps_curve_gauge_deposit_historical_get(start_block => $dapps_curve_gauge_deposit_historical_get_start_block, end_block => $dapps_curve_gauge_deposit_historical_get_end_block, start_date => $dapps_curve_gauge_deposit_historical_get_start_date, end_date => $dapps_curve_gauge_deposit_historical_get_end_date);
+#my $curve_get_fee_change_logs__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_fee_change_logs__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_fee_change_logs__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_fee_change_logs__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_fee_change_logs__historical_pool_id = undef; # replace NULL with a proper value
+#my $curve_get_fee_change_logs__historical_result = $api->curve_get_fee_change_logs__historical(start_block => $curve_get_fee_change_logs__historical_start_block, end_block => $curve_get_fee_change_logs__historical_end_block, start_date => $curve_get_fee_change_logs__historical_start_date, end_date => $curve_get_fee_change_logs__historical_end_date, pool_id => $curve_get_fee_change_logs__historical_pool_id);
 
 #
-# dapps_curve_gauge_historical_get test
+# curve_get_gauges__historical test
 #
 # uncomment below and update the test
-#my $dapps_curve_gauge_historical_get_start_block = undef; # replace NULL with a proper value
-#my $dapps_curve_gauge_historical_get_end_block = undef; # replace NULL with a proper value
-#my $dapps_curve_gauge_historical_get_start_date = undef; # replace NULL with a proper value
-#my $dapps_curve_gauge_historical_get_end_date = undef; # replace NULL with a proper value
-#my $dapps_curve_gauge_historical_get_pool_id = undef; # replace NULL with a proper value
-#my $dapps_curve_gauge_historical_get_result = $api->dapps_curve_gauge_historical_get(start_block => $dapps_curve_gauge_historical_get_start_block, end_block => $dapps_curve_gauge_historical_get_end_block, start_date => $dapps_curve_gauge_historical_get_start_date, end_date => $dapps_curve_gauge_historical_get_end_date, pool_id => $dapps_curve_gauge_historical_get_pool_id);
+#my $curve_get_gauges__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_gauges__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_gauges__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_gauges__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_gauges__historical_pool_id = undef; # replace NULL with a proper value
+#my $curve_get_gauges__historical_result = $api->curve_get_gauges__historical(start_block => $curve_get_gauges__historical_start_block, end_block => $curve_get_gauges__historical_end_block, start_date => $curve_get_gauges__historical_start_date, end_date => $curve_get_gauges__historical_end_date, pool_id => $curve_get_gauges__historical_pool_id);
 
 #
-# dapps_curve_gauge_liquidity_historical_get test
+# curve_get_gauges_deposits__historical test
 #
 # uncomment below and update the test
-#my $dapps_curve_gauge_liquidity_historical_get_start_block = undef; # replace NULL with a proper value
-#my $dapps_curve_gauge_liquidity_historical_get_end_block = undef; # replace NULL with a proper value
-#my $dapps_curve_gauge_liquidity_historical_get_start_date = undef; # replace NULL with a proper value
-#my $dapps_curve_gauge_liquidity_historical_get_end_date = undef; # replace NULL with a proper value
-#my $dapps_curve_gauge_liquidity_historical_get_result = $api->dapps_curve_gauge_liquidity_historical_get(start_block => $dapps_curve_gauge_liquidity_historical_get_start_block, end_block => $dapps_curve_gauge_liquidity_historical_get_end_block, start_date => $dapps_curve_gauge_liquidity_historical_get_start_date, end_date => $dapps_curve_gauge_liquidity_historical_get_end_date);
+#my $curve_get_gauges_deposits__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_gauges_deposits__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_gauges_deposits__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_gauges_deposits__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_gauges_deposits__historical_result = $api->curve_get_gauges_deposits__historical(start_block => $curve_get_gauges_deposits__historical_start_block, end_block => $curve_get_gauges_deposits__historical_end_block, start_date => $curve_get_gauges_deposits__historical_start_date, end_date => $curve_get_gauges_deposits__historical_end_date);
 
 #
-# dapps_curve_gauge_total_weight_historical_get test
+# curve_get_gauges_liquidity__historical test
 #
 # uncomment below and update the test
-#my $dapps_curve_gauge_total_weight_historical_get_start_block = undef; # replace NULL with a proper value
-#my $dapps_curve_gauge_total_weight_historical_get_end_block = undef; # replace NULL with a proper value
-#my $dapps_curve_gauge_total_weight_historical_get_start_date = undef; # replace NULL with a proper value
-#my $dapps_curve_gauge_total_weight_historical_get_end_date = undef; # replace NULL with a proper value
-#my $dapps_curve_gauge_total_weight_historical_get_result = $api->dapps_curve_gauge_total_weight_historical_get(start_block => $dapps_curve_gauge_total_weight_historical_get_start_block, end_block => $dapps_curve_gauge_total_weight_historical_get_end_block, start_date => $dapps_curve_gauge_total_weight_historical_get_start_date, end_date => $dapps_curve_gauge_total_weight_historical_get_end_date);
+#my $curve_get_gauges_liquidity__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_gauges_liquidity__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_gauges_liquidity__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_gauges_liquidity__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_gauges_liquidity__historical_result = $api->curve_get_gauges_liquidity__historical(start_block => $curve_get_gauges_liquidity__historical_start_block, end_block => $curve_get_gauges_liquidity__historical_end_block, start_date => $curve_get_gauges_liquidity__historical_start_date, end_date => $curve_get_gauges_liquidity__historical_end_date);
 
 #
-# dapps_curve_gauge_type_historical_get test
+# curve_get_gauges_total_weights__historical test
 #
 # uncomment below and update the test
-#my $dapps_curve_gauge_type_historical_get_start_block = undef; # replace NULL with a proper value
-#my $dapps_curve_gauge_type_historical_get_end_block = undef; # replace NULL with a proper value
-#my $dapps_curve_gauge_type_historical_get_start_date = undef; # replace NULL with a proper value
-#my $dapps_curve_gauge_type_historical_get_end_date = undef; # replace NULL with a proper value
-#my $dapps_curve_gauge_type_historical_get_result = $api->dapps_curve_gauge_type_historical_get(start_block => $dapps_curve_gauge_type_historical_get_start_block, end_block => $dapps_curve_gauge_type_historical_get_end_block, start_date => $dapps_curve_gauge_type_historical_get_start_date, end_date => $dapps_curve_gauge_type_historical_get_end_date);
+#my $curve_get_gauges_total_weights__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_gauges_total_weights__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_gauges_total_weights__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_gauges_total_weights__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_gauges_total_weights__historical_result = $api->curve_get_gauges_total_weights__historical(start_block => $curve_get_gauges_total_weights__historical_start_block, end_block => $curve_get_gauges_total_weights__historical_end_block, start_date => $curve_get_gauges_total_weights__historical_start_date, end_date => $curve_get_gauges_total_weights__historical_end_date);
 
 #
-# dapps_curve_gauge_type_weight_historical_get test
+# curve_get_gauges_types__historical test
 #
 # uncomment below and update the test
-#my $dapps_curve_gauge_type_weight_historical_get_start_block = undef; # replace NULL with a proper value
-#my $dapps_curve_gauge_type_weight_historical_get_end_block = undef; # replace NULL with a proper value
-#my $dapps_curve_gauge_type_weight_historical_get_start_date = undef; # replace NULL with a proper value
-#my $dapps_curve_gauge_type_weight_historical_get_end_date = undef; # replace NULL with a proper value
-#my $dapps_curve_gauge_type_weight_historical_get_result = $api->dapps_curve_gauge_type_weight_historical_get(start_block => $dapps_curve_gauge_type_weight_historical_get_start_block, end_block => $dapps_curve_gauge_type_weight_historical_get_end_block, start_date => $dapps_curve_gauge_type_weight_historical_get_start_date, end_date => $dapps_curve_gauge_type_weight_historical_get_end_date);
+#my $curve_get_gauges_types__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_gauges_types__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_gauges_types__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_gauges_types__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_gauges_types__historical_result = $api->curve_get_gauges_types__historical(start_block => $curve_get_gauges_types__historical_start_block, end_block => $curve_get_gauges_types__historical_end_block, start_date => $curve_get_gauges_types__historical_start_date, end_date => $curve_get_gauges_types__historical_end_date);
 
 #
-# dapps_curve_gauge_weight_historical_get test
+# curve_get_gauges_types_weights__historical test
 #
 # uncomment below and update the test
-#my $dapps_curve_gauge_weight_historical_get_start_block = undef; # replace NULL with a proper value
-#my $dapps_curve_gauge_weight_historical_get_end_block = undef; # replace NULL with a proper value
-#my $dapps_curve_gauge_weight_historical_get_start_date = undef; # replace NULL with a proper value
-#my $dapps_curve_gauge_weight_historical_get_end_date = undef; # replace NULL with a proper value
-#my $dapps_curve_gauge_weight_historical_get_result = $api->dapps_curve_gauge_weight_historical_get(start_block => $dapps_curve_gauge_weight_historical_get_start_block, end_block => $dapps_curve_gauge_weight_historical_get_end_block, start_date => $dapps_curve_gauge_weight_historical_get_start_date, end_date => $dapps_curve_gauge_weight_historical_get_end_date);
+#my $curve_get_gauges_types_weights__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_gauges_types_weights__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_gauges_types_weights__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_gauges_types_weights__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_gauges_types_weights__historical_result = $api->curve_get_gauges_types_weights__historical(start_block => $curve_get_gauges_types_weights__historical_start_block, end_block => $curve_get_gauges_types_weights__historical_end_block, start_date => $curve_get_gauges_types_weights__historical_start_date, end_date => $curve_get_gauges_types_weights__historical_end_date);
 
 #
-# dapps_curve_gauge_weight_vote_historical_get test
+# curve_get_gauges_weights__historical test
 #
 # uncomment below and update the test
-#my $dapps_curve_gauge_weight_vote_historical_get_start_block = undef; # replace NULL with a proper value
-#my $dapps_curve_gauge_weight_vote_historical_get_end_block = undef; # replace NULL with a proper value
-#my $dapps_curve_gauge_weight_vote_historical_get_start_date = undef; # replace NULL with a proper value
-#my $dapps_curve_gauge_weight_vote_historical_get_end_date = undef; # replace NULL with a proper value
-#my $dapps_curve_gauge_weight_vote_historical_get_result = $api->dapps_curve_gauge_weight_vote_historical_get(start_block => $dapps_curve_gauge_weight_vote_historical_get_start_block, end_block => $dapps_curve_gauge_weight_vote_historical_get_end_block, start_date => $dapps_curve_gauge_weight_vote_historical_get_start_date, end_date => $dapps_curve_gauge_weight_vote_historical_get_end_date);
+#my $curve_get_gauges_weights__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_gauges_weights__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_gauges_weights__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_gauges_weights__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_gauges_weights__historical_result = $api->curve_get_gauges_weights__historical(start_block => $curve_get_gauges_weights__historical_start_block, end_block => $curve_get_gauges_weights__historical_end_block, start_date => $curve_get_gauges_weights__historical_start_date, end_date => $curve_get_gauges_weights__historical_end_date);
 
 #
-# dapps_curve_gauge_withdraw_historical_get test
+# curve_get_gauges_weights_votes__historical test
 #
 # uncomment below and update the test
-#my $dapps_curve_gauge_withdraw_historical_get_start_block = undef; # replace NULL with a proper value
-#my $dapps_curve_gauge_withdraw_historical_get_end_block = undef; # replace NULL with a proper value
-#my $dapps_curve_gauge_withdraw_historical_get_start_date = undef; # replace NULL with a proper value
-#my $dapps_curve_gauge_withdraw_historical_get_end_date = undef; # replace NULL with a proper value
-#my $dapps_curve_gauge_withdraw_historical_get_result = $api->dapps_curve_gauge_withdraw_historical_get(start_block => $dapps_curve_gauge_withdraw_historical_get_start_block, end_block => $dapps_curve_gauge_withdraw_historical_get_end_block, start_date => $dapps_curve_gauge_withdraw_historical_get_start_date, end_date => $dapps_curve_gauge_withdraw_historical_get_end_date);
+#my $curve_get_gauges_weights_votes__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_gauges_weights_votes__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_gauges_weights_votes__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_gauges_weights_votes__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_gauges_weights_votes__historical_result = $api->curve_get_gauges_weights_votes__historical(start_block => $curve_get_gauges_weights_votes__historical_start_block, end_block => $curve_get_gauges_weights_votes__historical_end_block, start_date => $curve_get_gauges_weights_votes__historical_start_date, end_date => $curve_get_gauges_weights_votes__historical_end_date);
 
 #
-# dapps_curve_hourly_volume_historical_get test
+# curve_get_gauges_withdraw__historical test
 #
 # uncomment below and update the test
-#my $dapps_curve_hourly_volume_historical_get_start_block = undef; # replace NULL with a proper value
-#my $dapps_curve_hourly_volume_historical_get_end_block = undef; # replace NULL with a proper value
-#my $dapps_curve_hourly_volume_historical_get_start_date = undef; # replace NULL with a proper value
-#my $dapps_curve_hourly_volume_historical_get_end_date = undef; # replace NULL with a proper value
-#my $dapps_curve_hourly_volume_historical_get_pool_id = undef; # replace NULL with a proper value
-#my $dapps_curve_hourly_volume_historical_get_result = $api->dapps_curve_hourly_volume_historical_get(start_block => $dapps_curve_hourly_volume_historical_get_start_block, end_block => $dapps_curve_hourly_volume_historical_get_end_block, start_date => $dapps_curve_hourly_volume_historical_get_start_date, end_date => $dapps_curve_hourly_volume_historical_get_end_date, pool_id => $dapps_curve_hourly_volume_historical_get_pool_id);
+#my $curve_get_gauges_withdraw__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_gauges_withdraw__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_gauges_withdraw__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_gauges_withdraw__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_gauges_withdraw__historical_result = $api->curve_get_gauges_withdraw__historical(start_block => $curve_get_gauges_withdraw__historical_start_block, end_block => $curve_get_gauges_withdraw__historical_end_block, start_date => $curve_get_gauges_withdraw__historical_start_date, end_date => $curve_get_gauges_withdraw__historical_end_date);
 
 #
-# dapps_curve_lp_token_historical_get test
+# curve_get_hourly_volumes__historical test
 #
 # uncomment below and update the test
-#my $dapps_curve_lp_token_historical_get_start_block = undef; # replace NULL with a proper value
-#my $dapps_curve_lp_token_historical_get_end_block = undef; # replace NULL with a proper value
-#my $dapps_curve_lp_token_historical_get_start_date = undef; # replace NULL with a proper value
-#my $dapps_curve_lp_token_historical_get_end_date = undef; # replace NULL with a proper value
-#my $dapps_curve_lp_token_historical_get_pool_id = undef; # replace NULL with a proper value
-#my $dapps_curve_lp_token_historical_get_result = $api->dapps_curve_lp_token_historical_get(start_block => $dapps_curve_lp_token_historical_get_start_block, end_block => $dapps_curve_lp_token_historical_get_end_block, start_date => $dapps_curve_lp_token_historical_get_start_date, end_date => $dapps_curve_lp_token_historical_get_end_date, pool_id => $dapps_curve_lp_token_historical_get_pool_id);
+#my $curve_get_hourly_volumes__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_hourly_volumes__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_hourly_volumes__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_hourly_volumes__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_hourly_volumes__historical_pool_id = undef; # replace NULL with a proper value
+#my $curve_get_hourly_volumes__historical_result = $api->curve_get_hourly_volumes__historical(start_block => $curve_get_hourly_volumes__historical_start_block, end_block => $curve_get_hourly_volumes__historical_end_block, start_date => $curve_get_hourly_volumes__historical_start_date, end_date => $curve_get_hourly_volumes__historical_end_date, pool_id => $curve_get_hourly_volumes__historical_pool_id);
 
 #
-# dapps_curve_pools_historical_get test
+# curve_get_lp_tokens__historical test
 #
 # uncomment below and update the test
-#my $dapps_curve_pools_historical_get_start_block = undef; # replace NULL with a proper value
-#my $dapps_curve_pools_historical_get_end_block = undef; # replace NULL with a proper value
-#my $dapps_curve_pools_historical_get_start_date = undef; # replace NULL with a proper value
-#my $dapps_curve_pools_historical_get_end_date = undef; # replace NULL with a proper value
-#my $dapps_curve_pools_historical_get_pool_id = undef; # replace NULL with a proper value
-#my $dapps_curve_pools_historical_get_result = $api->dapps_curve_pools_historical_get(start_block => $dapps_curve_pools_historical_get_start_block, end_block => $dapps_curve_pools_historical_get_end_block, start_date => $dapps_curve_pools_historical_get_start_date, end_date => $dapps_curve_pools_historical_get_end_date, pool_id => $dapps_curve_pools_historical_get_pool_id);
+#my $curve_get_lp_tokens__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_lp_tokens__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_lp_tokens__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_lp_tokens__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_lp_tokens__historical_pool_id = undef; # replace NULL with a proper value
+#my $curve_get_lp_tokens__historical_result = $api->curve_get_lp_tokens__historical(start_block => $curve_get_lp_tokens__historical_start_block, end_block => $curve_get_lp_tokens__historical_end_block, start_date => $curve_get_lp_tokens__historical_start_date, end_date => $curve_get_lp_tokens__historical_end_date, pool_id => $curve_get_lp_tokens__historical_pool_id);
 
 #
-# dapps_curve_proposals_historical_get test
+# curve_get_pools__historical test
 #
 # uncomment below and update the test
-#my $dapps_curve_proposals_historical_get_start_block = undef; # replace NULL with a proper value
-#my $dapps_curve_proposals_historical_get_end_block = undef; # replace NULL with a proper value
-#my $dapps_curve_proposals_historical_get_start_date = undef; # replace NULL with a proper value
-#my $dapps_curve_proposals_historical_get_end_date = undef; # replace NULL with a proper value
-#my $dapps_curve_proposals_historical_get_result = $api->dapps_curve_proposals_historical_get(start_block => $dapps_curve_proposals_historical_get_start_block, end_block => $dapps_curve_proposals_historical_get_end_block, start_date => $dapps_curve_proposals_historical_get_start_date, end_date => $dapps_curve_proposals_historical_get_end_date);
+#my $curve_get_pools__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_pools__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_pools__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_pools__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_pools__historical_pool_id = undef; # replace NULL with a proper value
+#my $curve_get_pools__historical_result = $api->curve_get_pools__historical(start_block => $curve_get_pools__historical_start_block, end_block => $curve_get_pools__historical_end_block, start_date => $curve_get_pools__historical_start_date, end_date => $curve_get_pools__historical_end_date, pool_id => $curve_get_pools__historical_pool_id);
 
 #
-# dapps_curve_proposals_vote_historical_get test
+# curve_get_proposals__historical test
 #
 # uncomment below and update the test
-#my $dapps_curve_proposals_vote_historical_get_start_block = undef; # replace NULL with a proper value
-#my $dapps_curve_proposals_vote_historical_get_end_block = undef; # replace NULL with a proper value
-#my $dapps_curve_proposals_vote_historical_get_start_date = undef; # replace NULL with a proper value
-#my $dapps_curve_proposals_vote_historical_get_end_date = undef; # replace NULL with a proper value
-#my $dapps_curve_proposals_vote_historical_get_result = $api->dapps_curve_proposals_vote_historical_get(start_block => $dapps_curve_proposals_vote_historical_get_start_block, end_block => $dapps_curve_proposals_vote_historical_get_end_block, start_date => $dapps_curve_proposals_vote_historical_get_start_date, end_date => $dapps_curve_proposals_vote_historical_get_end_date);
+#my $curve_get_proposals__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_proposals__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_proposals__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_proposals__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_proposals__historical_result = $api->curve_get_proposals__historical(start_block => $curve_get_proposals__historical_start_block, end_block => $curve_get_proposals__historical_end_block, start_date => $curve_get_proposals__historical_start_date, end_date => $curve_get_proposals__historical_end_date);
 
 #
-# dapps_curve_remove_liquidity_event_historical_get test
+# curve_get_proposals_votes__historical test
 #
 # uncomment below and update the test
-#my $dapps_curve_remove_liquidity_event_historical_get_start_block = undef; # replace NULL with a proper value
-#my $dapps_curve_remove_liquidity_event_historical_get_end_block = undef; # replace NULL with a proper value
-#my $dapps_curve_remove_liquidity_event_historical_get_start_date = undef; # replace NULL with a proper value
-#my $dapps_curve_remove_liquidity_event_historical_get_end_date = undef; # replace NULL with a proper value
-#my $dapps_curve_remove_liquidity_event_historical_get_pool_id = undef; # replace NULL with a proper value
-#my $dapps_curve_remove_liquidity_event_historical_get_result = $api->dapps_curve_remove_liquidity_event_historical_get(start_block => $dapps_curve_remove_liquidity_event_historical_get_start_block, end_block => $dapps_curve_remove_liquidity_event_historical_get_end_block, start_date => $dapps_curve_remove_liquidity_event_historical_get_start_date, end_date => $dapps_curve_remove_liquidity_event_historical_get_end_date, pool_id => $dapps_curve_remove_liquidity_event_historical_get_pool_id);
+#my $curve_get_proposals_votes__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_proposals_votes__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_proposals_votes__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_proposals_votes__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_proposals_votes__historical_result = $api->curve_get_proposals_votes__historical(start_block => $curve_get_proposals_votes__historical_start_block, end_block => $curve_get_proposals_votes__historical_end_block, start_date => $curve_get_proposals_votes__historical_start_date, end_date => $curve_get_proposals_votes__historical_end_date);
 
 #
-# dapps_curve_remove_liquidity_one_event_historical_get test
+# curve_get_remove_liquidity_events__historical test
 #
 # uncomment below and update the test
-#my $dapps_curve_remove_liquidity_one_event_historical_get_start_block = undef; # replace NULL with a proper value
-#my $dapps_curve_remove_liquidity_one_event_historical_get_end_block = undef; # replace NULL with a proper value
-#my $dapps_curve_remove_liquidity_one_event_historical_get_start_date = undef; # replace NULL with a proper value
-#my $dapps_curve_remove_liquidity_one_event_historical_get_end_date = undef; # replace NULL with a proper value
-#my $dapps_curve_remove_liquidity_one_event_historical_get_pool_id = undef; # replace NULL with a proper value
-#my $dapps_curve_remove_liquidity_one_event_historical_get_result = $api->dapps_curve_remove_liquidity_one_event_historical_get(start_block => $dapps_curve_remove_liquidity_one_event_historical_get_start_block, end_block => $dapps_curve_remove_liquidity_one_event_historical_get_end_block, start_date => $dapps_curve_remove_liquidity_one_event_historical_get_start_date, end_date => $dapps_curve_remove_liquidity_one_event_historical_get_end_date, pool_id => $dapps_curve_remove_liquidity_one_event_historical_get_pool_id);
+#my $curve_get_remove_liquidity_events__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_remove_liquidity_events__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_remove_liquidity_events__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_remove_liquidity_events__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_remove_liquidity_events__historical_pool_id = undef; # replace NULL with a proper value
+#my $curve_get_remove_liquidity_events__historical_result = $api->curve_get_remove_liquidity_events__historical(start_block => $curve_get_remove_liquidity_events__historical_start_block, end_block => $curve_get_remove_liquidity_events__historical_end_block, start_date => $curve_get_remove_liquidity_events__historical_start_date, end_date => $curve_get_remove_liquidity_events__historical_end_date, pool_id => $curve_get_remove_liquidity_events__historical_pool_id);
 
 #
-# dapps_curve_swaps_historical_get test
+# curve_get_remove_liquidity_one_events__historical test
 #
 # uncomment below and update the test
-#my $dapps_curve_swaps_historical_get_start_block = undef; # replace NULL with a proper value
-#my $dapps_curve_swaps_historical_get_end_block = undef; # replace NULL with a proper value
-#my $dapps_curve_swaps_historical_get_start_date = undef; # replace NULL with a proper value
-#my $dapps_curve_swaps_historical_get_end_date = undef; # replace NULL with a proper value
-#my $dapps_curve_swaps_historical_get_pool_id = undef; # replace NULL with a proper value
-#my $dapps_curve_swaps_historical_get_result = $api->dapps_curve_swaps_historical_get(start_block => $dapps_curve_swaps_historical_get_start_block, end_block => $dapps_curve_swaps_historical_get_end_block, start_date => $dapps_curve_swaps_historical_get_start_date, end_date => $dapps_curve_swaps_historical_get_end_date, pool_id => $dapps_curve_swaps_historical_get_pool_id);
+#my $curve_get_remove_liquidity_one_events__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_remove_liquidity_one_events__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_remove_liquidity_one_events__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_remove_liquidity_one_events__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_remove_liquidity_one_events__historical_pool_id = undef; # replace NULL with a proper value
+#my $curve_get_remove_liquidity_one_events__historical_result = $api->curve_get_remove_liquidity_one_events__historical(start_block => $curve_get_remove_liquidity_one_events__historical_start_block, end_block => $curve_get_remove_liquidity_one_events__historical_end_block, start_date => $curve_get_remove_liquidity_one_events__historical_start_date, end_date => $curve_get_remove_liquidity_one_events__historical_end_date, pool_id => $curve_get_remove_liquidity_one_events__historical_pool_id);
 
 #
-# dapps_curve_system_state_historical_get test
+# curve_get_system_states__historical test
 #
 # uncomment below and update the test
-#my $dapps_curve_system_state_historical_get_start_block = undef; # replace NULL with a proper value
-#my $dapps_curve_system_state_historical_get_end_block = undef; # replace NULL with a proper value
-#my $dapps_curve_system_state_historical_get_start_date = undef; # replace NULL with a proper value
-#my $dapps_curve_system_state_historical_get_end_date = undef; # replace NULL with a proper value
-#my $dapps_curve_system_state_historical_get_result = $api->dapps_curve_system_state_historical_get(start_block => $dapps_curve_system_state_historical_get_start_block, end_block => $dapps_curve_system_state_historical_get_end_block, start_date => $dapps_curve_system_state_historical_get_start_date, end_date => $dapps_curve_system_state_historical_get_end_date);
+#my $curve_get_system_states__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_system_states__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_system_states__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_system_states__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_system_states__historical_result = $api->curve_get_system_states__historical(start_block => $curve_get_system_states__historical_start_block, end_block => $curve_get_system_states__historical_end_block, start_date => $curve_get_system_states__historical_start_date, end_date => $curve_get_system_states__historical_end_date);
 
 #
-# dapps_curve_tokens_historical_get test
+# curve_get_tokens__historical test
 #
 # uncomment below and update the test
-#my $dapps_curve_tokens_historical_get_start_block = undef; # replace NULL with a proper value
-#my $dapps_curve_tokens_historical_get_end_block = undef; # replace NULL with a proper value
-#my $dapps_curve_tokens_historical_get_start_date = undef; # replace NULL with a proper value
-#my $dapps_curve_tokens_historical_get_end_date = undef; # replace NULL with a proper value
-#my $dapps_curve_tokens_historical_get_token_id = undef; # replace NULL with a proper value
-#my $dapps_curve_tokens_historical_get_result = $api->dapps_curve_tokens_historical_get(start_block => $dapps_curve_tokens_historical_get_start_block, end_block => $dapps_curve_tokens_historical_get_end_block, start_date => $dapps_curve_tokens_historical_get_start_date, end_date => $dapps_curve_tokens_historical_get_end_date, token_id => $dapps_curve_tokens_historical_get_token_id);
+#my $curve_get_tokens__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_tokens__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_tokens__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_tokens__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_tokens__historical_token_id = undef; # replace NULL with a proper value
+#my $curve_get_tokens__historical_result = $api->curve_get_tokens__historical(start_block => $curve_get_tokens__historical_start_block, end_block => $curve_get_tokens__historical_end_block, start_date => $curve_get_tokens__historical_start_date, end_date => $curve_get_tokens__historical_end_date, token_id => $curve_get_tokens__historical_token_id);
 
 #
-# dapps_curve_transfer_ownership_event_historical_get test
+# curve_get_transfer_ownership_events__historical test
 #
 # uncomment below and update the test
-#my $dapps_curve_transfer_ownership_event_historical_get_start_block = undef; # replace NULL with a proper value
-#my $dapps_curve_transfer_ownership_event_historical_get_end_block = undef; # replace NULL with a proper value
-#my $dapps_curve_transfer_ownership_event_historical_get_start_date = undef; # replace NULL with a proper value
-#my $dapps_curve_transfer_ownership_event_historical_get_end_date = undef; # replace NULL with a proper value
-#my $dapps_curve_transfer_ownership_event_historical_get_pool_id = undef; # replace NULL with a proper value
-#my $dapps_curve_transfer_ownership_event_historical_get_result = $api->dapps_curve_transfer_ownership_event_historical_get(start_block => $dapps_curve_transfer_ownership_event_historical_get_start_block, end_block => $dapps_curve_transfer_ownership_event_historical_get_end_block, start_date => $dapps_curve_transfer_ownership_event_historical_get_start_date, end_date => $dapps_curve_transfer_ownership_event_historical_get_end_date, pool_id => $dapps_curve_transfer_ownership_event_historical_get_pool_id);
+#my $curve_get_transfer_ownership_events__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_transfer_ownership_events__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_transfer_ownership_events__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_transfer_ownership_events__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_transfer_ownership_events__historical_pool_id = undef; # replace NULL with a proper value
+#my $curve_get_transfer_ownership_events__historical_result = $api->curve_get_transfer_ownership_events__historical(start_block => $curve_get_transfer_ownership_events__historical_start_block, end_block => $curve_get_transfer_ownership_events__historical_end_block, start_date => $curve_get_transfer_ownership_events__historical_start_date, end_date => $curve_get_transfer_ownership_events__historical_end_date, pool_id => $curve_get_transfer_ownership_events__historical_pool_id);
 
 #
-# dapps_curve_underlying_coin_historical_get test
+# curve_get_underlying_coins__historical test
 #
 # uncomment below and update the test
-#my $dapps_curve_underlying_coin_historical_get_start_block = undef; # replace NULL with a proper value
-#my $dapps_curve_underlying_coin_historical_get_end_block = undef; # replace NULL with a proper value
-#my $dapps_curve_underlying_coin_historical_get_start_date = undef; # replace NULL with a proper value
-#my $dapps_curve_underlying_coin_historical_get_end_date = undef; # replace NULL with a proper value
-#my $dapps_curve_underlying_coin_historical_get_pool_id = undef; # replace NULL with a proper value
-#my $dapps_curve_underlying_coin_historical_get_result = $api->dapps_curve_underlying_coin_historical_get(start_block => $dapps_curve_underlying_coin_historical_get_start_block, end_block => $dapps_curve_underlying_coin_historical_get_end_block, start_date => $dapps_curve_underlying_coin_historical_get_start_date, end_date => $dapps_curve_underlying_coin_historical_get_end_date, pool_id => $dapps_curve_underlying_coin_historical_get_pool_id);
+#my $curve_get_underlying_coins__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_underlying_coins__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_underlying_coins__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_underlying_coins__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_underlying_coins__historical_pool_id = undef; # replace NULL with a proper value
+#my $curve_get_underlying_coins__historical_result = $api->curve_get_underlying_coins__historical(start_block => $curve_get_underlying_coins__historical_start_block, end_block => $curve_get_underlying_coins__historical_end_block, start_date => $curve_get_underlying_coins__historical_start_date, end_date => $curve_get_underlying_coins__historical_end_date, pool_id => $curve_get_underlying_coins__historical_pool_id);
 
 #
-# dapps_curve_voting_app_historical_get test
+# curve_get_voting_apps__historical test
 #
 # uncomment below and update the test
-#my $dapps_curve_voting_app_historical_get_start_block = undef; # replace NULL with a proper value
-#my $dapps_curve_voting_app_historical_get_end_block = undef; # replace NULL with a proper value
-#my $dapps_curve_voting_app_historical_get_start_date = undef; # replace NULL with a proper value
-#my $dapps_curve_voting_app_historical_get_end_date = undef; # replace NULL with a proper value
-#my $dapps_curve_voting_app_historical_get_result = $api->dapps_curve_voting_app_historical_get(start_block => $dapps_curve_voting_app_historical_get_start_block, end_block => $dapps_curve_voting_app_historical_get_end_block, start_date => $dapps_curve_voting_app_historical_get_start_date, end_date => $dapps_curve_voting_app_historical_get_end_date);
+#my $curve_get_voting_apps__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_voting_apps__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_voting_apps__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_voting_apps__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_voting_apps__historical_result = $api->curve_get_voting_apps__historical(start_block => $curve_get_voting_apps__historical_start_block, end_block => $curve_get_voting_apps__historical_end_block, start_date => $curve_get_voting_apps__historical_start_date, end_date => $curve_get_voting_apps__historical_end_date);
 
 #
-# dapps_curve_weekly_volume_historical_get test
+# curve_get_weekly_volumes__historical test
 #
 # uncomment below and update the test
-#my $dapps_curve_weekly_volume_historical_get_start_block = undef; # replace NULL with a proper value
-#my $dapps_curve_weekly_volume_historical_get_end_block = undef; # replace NULL with a proper value
-#my $dapps_curve_weekly_volume_historical_get_start_date = undef; # replace NULL with a proper value
-#my $dapps_curve_weekly_volume_historical_get_end_date = undef; # replace NULL with a proper value
-#my $dapps_curve_weekly_volume_historical_get_pool_id = undef; # replace NULL with a proper value
-#my $dapps_curve_weekly_volume_historical_get_result = $api->dapps_curve_weekly_volume_historical_get(start_block => $dapps_curve_weekly_volume_historical_get_start_block, end_block => $dapps_curve_weekly_volume_historical_get_end_block, start_date => $dapps_curve_weekly_volume_historical_get_start_date, end_date => $dapps_curve_weekly_volume_historical_get_end_date, pool_id => $dapps_curve_weekly_volume_historical_get_pool_id);
+#my $curve_get_weekly_volumes__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_weekly_volumes__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_weekly_volumes__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_weekly_volumes__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_weekly_volumes__historical_pool_id = undef; # replace NULL with a proper value
+#my $curve_get_weekly_volumes__historical_result = $api->curve_get_weekly_volumes__historical(start_block => $curve_get_weekly_volumes__historical_start_block, end_block => $curve_get_weekly_volumes__historical_end_block, start_date => $curve_get_weekly_volumes__historical_start_date, end_date => $curve_get_weekly_volumes__historical_end_date, pool_id => $curve_get_weekly_volumes__historical_pool_id);
 

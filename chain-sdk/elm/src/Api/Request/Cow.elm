@@ -15,11 +15,11 @@
 
 
 module Api.Request.Cow exposing
-    ( dappsCowOrdersHistoricalGet
-    , dappsCowSettlementHistoricalGet
-    , dappsCowTokensHistoricalGet
-    , dappsCowTradesHistoricalGet
-    , dappsCowUsersHistoricalGet
+    ( cowGetOrdersHistorical
+    , cowGetSettlementsHistorical
+    , cowGetTokensHistorical
+    , cowGetTradesHistorical
+    , cowGetUsersHistorical
     )
 
 import Api
@@ -32,8 +32,10 @@ import Json.Encode
 
 
 
-dappsCowOrdersHistoricalGet : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Api.Request ()
-dappsCowOrdersHistoricalGet startBlock_query endBlock_query startDate_query endDate_query =
+{-| Gets orders.
+-}
+cowGetOrdersHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Api.Request (List Api.Data.CowOrderDTO)
+cowGetOrdersHistorical startBlock_query endBlock_query startDate_query endDate_query =
     Api.request
         "GET"
         "/dapps/cow/orders/historical"
@@ -41,25 +43,29 @@ dappsCowOrdersHistoricalGet startBlock_query endBlock_query startDate_query endD
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ) ]
         []
         Nothing
-        (Json.Decode.succeed ())
+        (Json.Decode.list Api.Data.cowOrderDTODecoder)
 
 
 
-dappsCowSettlementHistoricalGet : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Api.Request ()
-dappsCowSettlementHistoricalGet startBlock_query endBlock_query startDate_query endDate_query =
+{-| Gets settlements.
+-}
+cowGetSettlementsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Api.Request (List Api.Data.CowSettlementDTO)
+cowGetSettlementsHistorical startBlock_query endBlock_query startDate_query endDate_query =
     Api.request
         "GET"
-        "/dapps/cow/settlement/historical"
+        "/dapps/cow/settlements/historical"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ) ]
         []
         Nothing
-        (Json.Decode.succeed ())
+        (Json.Decode.list Api.Data.cowSettlementDTODecoder)
 
 
 
-dappsCowTokensHistoricalGet : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request ()
-dappsCowTokensHistoricalGet startBlock_query endBlock_query startDate_query endDate_query tokenId_query =
+{-| Gets tokens.
+-}
+cowGetTokensHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.CowTokenDTO)
+cowGetTokensHistorical startBlock_query endBlock_query startDate_query endDate_query tokenId_query =
     Api.request
         "GET"
         "/dapps/cow/tokens/historical"
@@ -67,12 +73,14 @@ dappsCowTokensHistoricalGet startBlock_query endBlock_query startDate_query endD
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "tokenId", Maybe.map identity tokenId_query ) ]
         []
         Nothing
-        (Json.Decode.succeed ())
+        (Json.Decode.list Api.Data.cowTokenDTODecoder)
 
 
 
-dappsCowTradesHistoricalGet : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Api.Request ()
-dappsCowTradesHistoricalGet startBlock_query endBlock_query startDate_query endDate_query =
+{-| Gets trades.
+-}
+cowGetTradesHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Api.Request (List Api.Data.CowTradeDTO)
+cowGetTradesHistorical startBlock_query endBlock_query startDate_query endDate_query =
     Api.request
         "GET"
         "/dapps/cow/trades/historical"
@@ -80,12 +88,14 @@ dappsCowTradesHistoricalGet startBlock_query endBlock_query startDate_query endD
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ) ]
         []
         Nothing
-        (Json.Decode.succeed ())
+        (Json.Decode.list Api.Data.cowTradeDTODecoder)
 
 
 
-dappsCowUsersHistoricalGet : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Api.Request ()
-dappsCowUsersHistoricalGet startBlock_query endBlock_query startDate_query endDate_query =
+{-| Gets users.
+-}
+cowGetUsersHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Api.Request (List Api.Data.CowUserDTO)
+cowGetUsersHistorical startBlock_query endBlock_query startDate_query endDate_query =
     Api.request
         "GET"
         "/dapps/cow/users/historical"
@@ -93,4 +103,4 @@ dappsCowUsersHistoricalGet startBlock_query endBlock_query startDate_query endDa
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ) ]
         []
         Nothing
-        (Json.Decode.succeed ())
+        (Json.Decode.list Api.Data.cowUserDTODecoder)

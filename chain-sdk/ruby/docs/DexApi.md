@@ -4,23 +4,26 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
-| [**dapps_dex_batch_historical_get**](DexApi.md#dapps_dex_batch_historical_get) | **GET** /dapps/dex/batch/historical |  |
-| [**dapps_dex_orders_historical_get**](DexApi.md#dapps_dex_orders_historical_get) | **GET** /dapps/dex/orders/historical |  |
-| [**dapps_dex_prices_historical_get**](DexApi.md#dapps_dex_prices_historical_get) | **GET** /dapps/dex/prices/historical |  |
-| [**dapps_dex_solution_historical_get**](DexApi.md#dapps_dex_solution_historical_get) | **GET** /dapps/dex/solution/historical |  |
-| [**dapps_dex_stats_historical_get**](DexApi.md#dapps_dex_stats_historical_get) | **GET** /dapps/dex/stats/historical |  |
-| [**dapps_dex_tokens_historical_get**](DexApi.md#dapps_dex_tokens_historical_get) | **GET** /dapps/dex/tokens/historical |  |
-| [**dapps_dex_trades_historical_get**](DexApi.md#dapps_dex_trades_historical_get) | **GET** /dapps/dex/trades/historical |  |
-| [**dapps_dex_users_historical_get**](DexApi.md#dapps_dex_users_historical_get) | **GET** /dapps/dex/users/historical |  |
-| [**dapps_dex_withdraw_historical_get**](DexApi.md#dapps_dex_withdraw_historical_get) | **GET** /dapps/dex/withdraw/historical |  |
-| [**dapps_dex_withdraw_request_historical_get**](DexApi.md#dapps_dex_withdraw_request_historical_get) | **GET** /dapps/dex/withdrawRequest/historical |  |
+| [**dex_get_batches__historical**](DexApi.md#dex_get_batches__historical) | **GET** /dapps/dex/batches/historical | GetBatches (historical) |
+| [**dex_get_deposits__historical**](DexApi.md#dex_get_deposits__historical) | **GET** /dapps/dex/deposits/historical | GetDeposits (historical) |
+| [**dex_get_orders__historical**](DexApi.md#dex_get_orders__historical) | **GET** /dapps/dex/orders/historical | GetOrders (historical) |
+| [**dex_get_prices__historical**](DexApi.md#dex_get_prices__historical) | **GET** /dapps/dex/prices/historical | GetPrices (historical) |
+| [**dex_get_solutions__historical**](DexApi.md#dex_get_solutions__historical) | **GET** /dapps/dex/solutions/historical | GetSolutions (historical) |
+| [**dex_get_stats__historical**](DexApi.md#dex_get_stats__historical) | **GET** /dapps/dex/stats/historical | GetStats (historical) |
+| [**dex_get_tokens__historical**](DexApi.md#dex_get_tokens__historical) | **GET** /dapps/dex/tokens/historical | GetTokens (historical) 🔥 |
+| [**dex_get_trades__historical**](DexApi.md#dex_get_trades__historical) | **GET** /dapps/dex/trades/historical | GetTrades (historical) 🔥 |
+| [**dex_get_users__historical**](DexApi.md#dex_get_users__historical) | **GET** /dapps/dex/users/historical | GetUsers (historical) |
+| [**dex_get_withdraws__historical**](DexApi.md#dex_get_withdraws__historical) | **GET** /dapps/dex/withdraws/historical | GetWithdraws (historical) |
+| [**dex_get_withdraws_requests__historical**](DexApi.md#dex_get_withdraws_requests__historical) | **GET** /dapps/dex/withdrawsRequests/historical | GetWithdrawsRequests (historical) |
 
 
-## dapps_dex_batch_historical_get
+## dex_get_batches__historical
 
-> dapps_dex_batch_historical_get(opts)
+> <Array<DexBatchDTO>> dex_get_batches__historical(opts)
 
+GetBatches (historical)
 
+Gets batches.
 
 ### Examples
 
@@ -37,28 +40,29 @@ opts = {
 }
 
 begin
-  
-  api_instance.dapps_dex_batch_historical_get(opts)
+  # GetBatches (historical)
+  result = api_instance.dex_get_batches__historical(opts)
+  p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling DexApi->dapps_dex_batch_historical_get: #{e}"
+  puts "Error when calling DexApi->dex_get_batches__historical: #{e}"
 end
 ```
 
-#### Using the dapps_dex_batch_historical_get_with_http_info variant
+#### Using the dex_get_batches__historical_with_http_info variant
 
-This returns an Array which contains the response data (`nil` in this case), status code and headers.
+This returns an Array which contains the response data, status code and headers.
 
-> <Array(nil, Integer, Hash)> dapps_dex_batch_historical_get_with_http_info(opts)
+> <Array(<Array<DexBatchDTO>>, Integer, Hash)> dex_get_batches__historical_with_http_info(opts)
 
 ```ruby
 begin
-  
-  data, status_code, headers = api_instance.dapps_dex_batch_historical_get_with_http_info(opts)
+  # GetBatches (historical)
+  data, status_code, headers = api_instance.dex_get_batches__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => nil
+  p data # => <Array<DexBatchDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling DexApi->dapps_dex_batch_historical_get_with_http_info: #{e}"
+  puts "Error when calling DexApi->dex_get_batches__historical_with_http_info: #{e}"
 end
 ```
 
@@ -73,7 +77,7 @@ end
 
 ### Return type
 
-nil (empty response body)
+[**Array&lt;DexBatchDTO&gt;**](DexBatchDTO.md)
 
 ### Authorization
 
@@ -82,14 +86,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dapps_dex_orders_historical_get
+## dex_get_deposits__historical
 
-> dapps_dex_orders_historical_get(opts)
+> <Array<DexDepositDTO>> dex_get_deposits__historical(opts)
 
+GetDeposits (historical)
 
+Gets deposits.
 
 ### Examples
 
@@ -107,28 +113,29 @@ opts = {
 }
 
 begin
-  
-  api_instance.dapps_dex_orders_historical_get(opts)
+  # GetDeposits (historical)
+  result = api_instance.dex_get_deposits__historical(opts)
+  p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling DexApi->dapps_dex_orders_historical_get: #{e}"
+  puts "Error when calling DexApi->dex_get_deposits__historical: #{e}"
 end
 ```
 
-#### Using the dapps_dex_orders_historical_get_with_http_info variant
+#### Using the dex_get_deposits__historical_with_http_info variant
 
-This returns an Array which contains the response data (`nil` in this case), status code and headers.
+This returns an Array which contains the response data, status code and headers.
 
-> <Array(nil, Integer, Hash)> dapps_dex_orders_historical_get_with_http_info(opts)
+> <Array(<Array<DexDepositDTO>>, Integer, Hash)> dex_get_deposits__historical_with_http_info(opts)
 
 ```ruby
 begin
-  
-  data, status_code, headers = api_instance.dapps_dex_orders_historical_get_with_http_info(opts)
+  # GetDeposits (historical)
+  data, status_code, headers = api_instance.dex_get_deposits__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => nil
+  p data # => <Array<DexDepositDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling DexApi->dapps_dex_orders_historical_get_with_http_info: #{e}"
+  puts "Error when calling DexApi->dex_get_deposits__historical_with_http_info: #{e}"
 end
 ```
 
@@ -144,7 +151,7 @@ end
 
 ### Return type
 
-nil (empty response body)
+[**Array&lt;DexDepositDTO&gt;**](DexDepositDTO.md)
 
 ### Authorization
 
@@ -153,14 +160,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dapps_dex_prices_historical_get
+## dex_get_orders__historical
 
-> dapps_dex_prices_historical_get(opts)
+> <Array<DexOrderDTO>> dex_get_orders__historical(opts)
 
+GetOrders (historical)
 
+Gets orders.
 
 ### Examples
 
@@ -178,28 +187,29 @@ opts = {
 }
 
 begin
-  
-  api_instance.dapps_dex_prices_historical_get(opts)
+  # GetOrders (historical)
+  result = api_instance.dex_get_orders__historical(opts)
+  p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling DexApi->dapps_dex_prices_historical_get: #{e}"
+  puts "Error when calling DexApi->dex_get_orders__historical: #{e}"
 end
 ```
 
-#### Using the dapps_dex_prices_historical_get_with_http_info variant
+#### Using the dex_get_orders__historical_with_http_info variant
 
-This returns an Array which contains the response data (`nil` in this case), status code and headers.
+This returns an Array which contains the response data, status code and headers.
 
-> <Array(nil, Integer, Hash)> dapps_dex_prices_historical_get_with_http_info(opts)
+> <Array(<Array<DexOrderDTO>>, Integer, Hash)> dex_get_orders__historical_with_http_info(opts)
 
 ```ruby
 begin
-  
-  data, status_code, headers = api_instance.dapps_dex_prices_historical_get_with_http_info(opts)
+  # GetOrders (historical)
+  data, status_code, headers = api_instance.dex_get_orders__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => nil
+  p data # => <Array<DexOrderDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling DexApi->dapps_dex_prices_historical_get_with_http_info: #{e}"
+  puts "Error when calling DexApi->dex_get_orders__historical_with_http_info: #{e}"
 end
 ```
 
@@ -215,7 +225,7 @@ end
 
 ### Return type
 
-nil (empty response body)
+[**Array&lt;DexOrderDTO&gt;**](DexOrderDTO.md)
 
 ### Authorization
 
@@ -224,14 +234,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dapps_dex_solution_historical_get
+## dex_get_prices__historical
 
-> dapps_dex_solution_historical_get(opts)
+> <Array<DexPriceDTO>> dex_get_prices__historical(opts)
 
+GetPrices (historical)
 
+Gets prices.
 
 ### Examples
 
@@ -249,28 +261,29 @@ opts = {
 }
 
 begin
-  
-  api_instance.dapps_dex_solution_historical_get(opts)
+  # GetPrices (historical)
+  result = api_instance.dex_get_prices__historical(opts)
+  p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling DexApi->dapps_dex_solution_historical_get: #{e}"
+  puts "Error when calling DexApi->dex_get_prices__historical: #{e}"
 end
 ```
 
-#### Using the dapps_dex_solution_historical_get_with_http_info variant
+#### Using the dex_get_prices__historical_with_http_info variant
 
-This returns an Array which contains the response data (`nil` in this case), status code and headers.
+This returns an Array which contains the response data, status code and headers.
 
-> <Array(nil, Integer, Hash)> dapps_dex_solution_historical_get_with_http_info(opts)
+> <Array(<Array<DexPriceDTO>>, Integer, Hash)> dex_get_prices__historical_with_http_info(opts)
 
 ```ruby
 begin
-  
-  data, status_code, headers = api_instance.dapps_dex_solution_historical_get_with_http_info(opts)
+  # GetPrices (historical)
+  data, status_code, headers = api_instance.dex_get_prices__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => nil
+  p data # => <Array<DexPriceDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling DexApi->dapps_dex_solution_historical_get_with_http_info: #{e}"
+  puts "Error when calling DexApi->dex_get_prices__historical_with_http_info: #{e}"
 end
 ```
 
@@ -286,7 +299,7 @@ end
 
 ### Return type
 
-nil (empty response body)
+[**Array&lt;DexPriceDTO&gt;**](DexPriceDTO.md)
 
 ### Authorization
 
@@ -295,14 +308,90 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dapps_dex_stats_historical_get
+## dex_get_solutions__historical
 
-> dapps_dex_stats_historical_get(opts)
+> <Array<DexSolutionDTO>> dex_get_solutions__historical(opts)
+
+GetSolutions (historical)
+
+Gets solutions.
+
+### Examples
+
+```ruby
+require 'time'
+require 'openapi_client'
+
+api_instance = OpenapiClient::DexApi.new
+opts = {
+  start_block: 789, # Integer | 
+  end_block: 789, # Integer | 
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  token_id: 'token_id_example' # String | 
+}
+
+begin
+  # GetSolutions (historical)
+  result = api_instance.dex_get_solutions__historical(opts)
+  p result
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling DexApi->dex_get_solutions__historical: #{e}"
+end
+```
+
+#### Using the dex_get_solutions__historical_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<Array<DexSolutionDTO>>, Integer, Hash)> dex_get_solutions__historical_with_http_info(opts)
+
+```ruby
+begin
+  # GetSolutions (historical)
+  data, status_code, headers = api_instance.dex_get_solutions__historical_with_http_info(opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <Array<DexSolutionDTO>>
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling DexApi->dex_get_solutions__historical_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **start_block** | **Integer** |  | [optional] |
+| **end_block** | **Integer** |  | [optional] |
+| **start_date** | **Time** |  | [optional] |
+| **end_date** | **Time** |  | [optional] |
+| **token_id** | **String** |  | [optional] |
+
+### Return type
+
+[**Array&lt;DexSolutionDTO&gt;**](DexSolutionDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
+## dex_get_stats__historical
+
+> <Array<DexStatsDTO>> dex_get_stats__historical(opts)
+
+GetStats (historical)
+
+Gets stats.
 
 ### Examples
 
@@ -319,28 +408,29 @@ opts = {
 }
 
 begin
-  
-  api_instance.dapps_dex_stats_historical_get(opts)
+  # GetStats (historical)
+  result = api_instance.dex_get_stats__historical(opts)
+  p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling DexApi->dapps_dex_stats_historical_get: #{e}"
+  puts "Error when calling DexApi->dex_get_stats__historical: #{e}"
 end
 ```
 
-#### Using the dapps_dex_stats_historical_get_with_http_info variant
+#### Using the dex_get_stats__historical_with_http_info variant
 
-This returns an Array which contains the response data (`nil` in this case), status code and headers.
+This returns an Array which contains the response data, status code and headers.
 
-> <Array(nil, Integer, Hash)> dapps_dex_stats_historical_get_with_http_info(opts)
+> <Array(<Array<DexStatsDTO>>, Integer, Hash)> dex_get_stats__historical_with_http_info(opts)
 
 ```ruby
 begin
-  
-  data, status_code, headers = api_instance.dapps_dex_stats_historical_get_with_http_info(opts)
+  # GetStats (historical)
+  data, status_code, headers = api_instance.dex_get_stats__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => nil
+  p data # => <Array<DexStatsDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling DexApi->dapps_dex_stats_historical_get_with_http_info: #{e}"
+  puts "Error when calling DexApi->dex_get_stats__historical_with_http_info: #{e}"
 end
 ```
 
@@ -355,7 +445,7 @@ end
 
 ### Return type
 
-nil (empty response body)
+[**Array&lt;DexStatsDTO&gt;**](DexStatsDTO.md)
 
 ### Authorization
 
@@ -364,14 +454,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dapps_dex_tokens_historical_get
+## dex_get_tokens__historical
 
-> dapps_dex_tokens_historical_get(opts)
+> <Array<DexTokenDTO>> dex_get_tokens__historical(opts)
 
+GetTokens (historical) 🔥
 
+Gets tokens.
 
 ### Examples
 
@@ -389,28 +481,29 @@ opts = {
 }
 
 begin
-  
-  api_instance.dapps_dex_tokens_historical_get(opts)
+  # GetTokens (historical) 🔥
+  result = api_instance.dex_get_tokens__historical(opts)
+  p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling DexApi->dapps_dex_tokens_historical_get: #{e}"
+  puts "Error when calling DexApi->dex_get_tokens__historical: #{e}"
 end
 ```
 
-#### Using the dapps_dex_tokens_historical_get_with_http_info variant
+#### Using the dex_get_tokens__historical_with_http_info variant
 
-This returns an Array which contains the response data (`nil` in this case), status code and headers.
+This returns an Array which contains the response data, status code and headers.
 
-> <Array(nil, Integer, Hash)> dapps_dex_tokens_historical_get_with_http_info(opts)
+> <Array(<Array<DexTokenDTO>>, Integer, Hash)> dex_get_tokens__historical_with_http_info(opts)
 
 ```ruby
 begin
-  
-  data, status_code, headers = api_instance.dapps_dex_tokens_historical_get_with_http_info(opts)
+  # GetTokens (historical) 🔥
+  data, status_code, headers = api_instance.dex_get_tokens__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => nil
+  p data # => <Array<DexTokenDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling DexApi->dapps_dex_tokens_historical_get_with_http_info: #{e}"
+  puts "Error when calling DexApi->dex_get_tokens__historical_with_http_info: #{e}"
 end
 ```
 
@@ -426,7 +519,7 @@ end
 
 ### Return type
 
-nil (empty response body)
+[**Array&lt;DexTokenDTO&gt;**](DexTokenDTO.md)
 
 ### Authorization
 
@@ -435,14 +528,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dapps_dex_trades_historical_get
+## dex_get_trades__historical
 
-> dapps_dex_trades_historical_get(opts)
+> <Array<DexTradeDTO>> dex_get_trades__historical(opts)
 
+GetTrades (historical) 🔥
 
+Gets trades.
 
 ### Examples
 
@@ -459,28 +554,29 @@ opts = {
 }
 
 begin
-  
-  api_instance.dapps_dex_trades_historical_get(opts)
+  # GetTrades (historical) 🔥
+  result = api_instance.dex_get_trades__historical(opts)
+  p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling DexApi->dapps_dex_trades_historical_get: #{e}"
+  puts "Error when calling DexApi->dex_get_trades__historical: #{e}"
 end
 ```
 
-#### Using the dapps_dex_trades_historical_get_with_http_info variant
+#### Using the dex_get_trades__historical_with_http_info variant
 
-This returns an Array which contains the response data (`nil` in this case), status code and headers.
+This returns an Array which contains the response data, status code and headers.
 
-> <Array(nil, Integer, Hash)> dapps_dex_trades_historical_get_with_http_info(opts)
+> <Array(<Array<DexTradeDTO>>, Integer, Hash)> dex_get_trades__historical_with_http_info(opts)
 
 ```ruby
 begin
-  
-  data, status_code, headers = api_instance.dapps_dex_trades_historical_get_with_http_info(opts)
+  # GetTrades (historical) 🔥
+  data, status_code, headers = api_instance.dex_get_trades__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => nil
+  p data # => <Array<DexTradeDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling DexApi->dapps_dex_trades_historical_get_with_http_info: #{e}"
+  puts "Error when calling DexApi->dex_get_trades__historical_with_http_info: #{e}"
 end
 ```
 
@@ -495,7 +591,7 @@ end
 
 ### Return type
 
-nil (empty response body)
+[**Array&lt;DexTradeDTO&gt;**](DexTradeDTO.md)
 
 ### Authorization
 
@@ -504,14 +600,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dapps_dex_users_historical_get
+## dex_get_users__historical
 
-> dapps_dex_users_historical_get(opts)
+> <Array<DexUserDTO>> dex_get_users__historical(opts)
 
+GetUsers (historical)
 
+Gets users.
 
 ### Examples
 
@@ -528,28 +626,29 @@ opts = {
 }
 
 begin
-  
-  api_instance.dapps_dex_users_historical_get(opts)
+  # GetUsers (historical)
+  result = api_instance.dex_get_users__historical(opts)
+  p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling DexApi->dapps_dex_users_historical_get: #{e}"
+  puts "Error when calling DexApi->dex_get_users__historical: #{e}"
 end
 ```
 
-#### Using the dapps_dex_users_historical_get_with_http_info variant
+#### Using the dex_get_users__historical_with_http_info variant
 
-This returns an Array which contains the response data (`nil` in this case), status code and headers.
+This returns an Array which contains the response data, status code and headers.
 
-> <Array(nil, Integer, Hash)> dapps_dex_users_historical_get_with_http_info(opts)
+> <Array(<Array<DexUserDTO>>, Integer, Hash)> dex_get_users__historical_with_http_info(opts)
 
 ```ruby
 begin
-  
-  data, status_code, headers = api_instance.dapps_dex_users_historical_get_with_http_info(opts)
+  # GetUsers (historical)
+  data, status_code, headers = api_instance.dex_get_users__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => nil
+  p data # => <Array<DexUserDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling DexApi->dapps_dex_users_historical_get_with_http_info: #{e}"
+  puts "Error when calling DexApi->dex_get_users__historical_with_http_info: #{e}"
 end
 ```
 
@@ -564,7 +663,7 @@ end
 
 ### Return type
 
-nil (empty response body)
+[**Array&lt;DexUserDTO&gt;**](DexUserDTO.md)
 
 ### Authorization
 
@@ -573,14 +672,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dapps_dex_withdraw_historical_get
+## dex_get_withdraws__historical
 
-> dapps_dex_withdraw_historical_get(opts)
+> <Array<DexWithdrawDTO>> dex_get_withdraws__historical(opts)
 
+GetWithdraws (historical)
 
+Gets withdraws.
 
 ### Examples
 
@@ -598,28 +699,29 @@ opts = {
 }
 
 begin
-  
-  api_instance.dapps_dex_withdraw_historical_get(opts)
+  # GetWithdraws (historical)
+  result = api_instance.dex_get_withdraws__historical(opts)
+  p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling DexApi->dapps_dex_withdraw_historical_get: #{e}"
+  puts "Error when calling DexApi->dex_get_withdraws__historical: #{e}"
 end
 ```
 
-#### Using the dapps_dex_withdraw_historical_get_with_http_info variant
+#### Using the dex_get_withdraws__historical_with_http_info variant
 
-This returns an Array which contains the response data (`nil` in this case), status code and headers.
+This returns an Array which contains the response data, status code and headers.
 
-> <Array(nil, Integer, Hash)> dapps_dex_withdraw_historical_get_with_http_info(opts)
+> <Array(<Array<DexWithdrawDTO>>, Integer, Hash)> dex_get_withdraws__historical_with_http_info(opts)
 
 ```ruby
 begin
-  
-  data, status_code, headers = api_instance.dapps_dex_withdraw_historical_get_with_http_info(opts)
+  # GetWithdraws (historical)
+  data, status_code, headers = api_instance.dex_get_withdraws__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => nil
+  p data # => <Array<DexWithdrawDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling DexApi->dapps_dex_withdraw_historical_get_with_http_info: #{e}"
+  puts "Error when calling DexApi->dex_get_withdraws__historical_with_http_info: #{e}"
 end
 ```
 
@@ -635,7 +737,7 @@ end
 
 ### Return type
 
-nil (empty response body)
+[**Array&lt;DexWithdrawDTO&gt;**](DexWithdrawDTO.md)
 
 ### Authorization
 
@@ -644,14 +746,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dapps_dex_withdraw_request_historical_get
+## dex_get_withdraws_requests__historical
 
-> dapps_dex_withdraw_request_historical_get(opts)
+> <Array<DexWithdrawRequestDTO>> dex_get_withdraws_requests__historical(opts)
 
+GetWithdrawsRequests (historical)
 
+Gets withdraws requests.
 
 ### Examples
 
@@ -669,28 +773,29 @@ opts = {
 }
 
 begin
-  
-  api_instance.dapps_dex_withdraw_request_historical_get(opts)
+  # GetWithdrawsRequests (historical)
+  result = api_instance.dex_get_withdraws_requests__historical(opts)
+  p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling DexApi->dapps_dex_withdraw_request_historical_get: #{e}"
+  puts "Error when calling DexApi->dex_get_withdraws_requests__historical: #{e}"
 end
 ```
 
-#### Using the dapps_dex_withdraw_request_historical_get_with_http_info variant
+#### Using the dex_get_withdraws_requests__historical_with_http_info variant
 
-This returns an Array which contains the response data (`nil` in this case), status code and headers.
+This returns an Array which contains the response data, status code and headers.
 
-> <Array(nil, Integer, Hash)> dapps_dex_withdraw_request_historical_get_with_http_info(opts)
+> <Array(<Array<DexWithdrawRequestDTO>>, Integer, Hash)> dex_get_withdraws_requests__historical_with_http_info(opts)
 
 ```ruby
 begin
-  
-  data, status_code, headers = api_instance.dapps_dex_withdraw_request_historical_get_with_http_info(opts)
+  # GetWithdrawsRequests (historical)
+  data, status_code, headers = api_instance.dex_get_withdraws_requests__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => nil
+  p data # => <Array<DexWithdrawRequestDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling DexApi->dapps_dex_withdraw_request_historical_get_with_http_info: #{e}"
+  puts "Error when calling DexApi->dex_get_withdraws_requests__historical_with_http_info: #{e}"
 end
 ```
 
@@ -706,7 +811,7 @@ end
 
 ### Return type
 
-nil (empty response body)
+[**Array&lt;DexWithdrawRequestDTO&gt;**](DexWithdrawRequestDTO.md)
 
 ### Authorization
 
@@ -715,5 +820,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 

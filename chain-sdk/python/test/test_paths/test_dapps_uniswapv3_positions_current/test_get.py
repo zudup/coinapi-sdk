@@ -21,7 +21,7 @@ from .. import ApiTestMixin
 class TestDappsUniswapv3PositionsCurrent(ApiTestMixin, unittest.TestCase):
     """
     DappsUniswapv3PositionsCurrent unit test stubs
-        GetPositions  # noqa: E501
+        GetPositions (current)  # noqa: E501
     """
     _configuration = configuration.Configuration()
 

@@ -4,22 +4,25 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**DappsDexBatchHistoricalGet**](DexApi.md#DappsDexBatchHistoricalGet) | **Get** /dapps/dex/batch/historical | 
-[**DappsDexOrdersHistoricalGet**](DexApi.md#DappsDexOrdersHistoricalGet) | **Get** /dapps/dex/orders/historical | 
-[**DappsDexPricesHistoricalGet**](DexApi.md#DappsDexPricesHistoricalGet) | **Get** /dapps/dex/prices/historical | 
-[**DappsDexSolutionHistoricalGet**](DexApi.md#DappsDexSolutionHistoricalGet) | **Get** /dapps/dex/solution/historical | 
-[**DappsDexStatsHistoricalGet**](DexApi.md#DappsDexStatsHistoricalGet) | **Get** /dapps/dex/stats/historical | 
-[**DappsDexTokensHistoricalGet**](DexApi.md#DappsDexTokensHistoricalGet) | **Get** /dapps/dex/tokens/historical | 
-[**DappsDexTradesHistoricalGet**](DexApi.md#DappsDexTradesHistoricalGet) | **Get** /dapps/dex/trades/historical | 
-[**DappsDexUsersHistoricalGet**](DexApi.md#DappsDexUsersHistoricalGet) | **Get** /dapps/dex/users/historical | 
-[**DappsDexWithdrawHistoricalGet**](DexApi.md#DappsDexWithdrawHistoricalGet) | **Get** /dapps/dex/withdraw/historical | 
-[**DappsDexWithdrawRequestHistoricalGet**](DexApi.md#DappsDexWithdrawRequestHistoricalGet) | **Get** /dapps/dex/withdrawRequest/historical | 
+[**DexGetBatchesHistorical**](DexApi.md#DexGetBatchesHistorical) | **Get** /dapps/dex/batches/historical | GetBatches (historical)
+[**DexGetDepositsHistorical**](DexApi.md#DexGetDepositsHistorical) | **Get** /dapps/dex/deposits/historical | GetDeposits (historical)
+[**DexGetOrdersHistorical**](DexApi.md#DexGetOrdersHistorical) | **Get** /dapps/dex/orders/historical | GetOrders (historical)
+[**DexGetPricesHistorical**](DexApi.md#DexGetPricesHistorical) | **Get** /dapps/dex/prices/historical | GetPrices (historical)
+[**DexGetSolutionsHistorical**](DexApi.md#DexGetSolutionsHistorical) | **Get** /dapps/dex/solutions/historical | GetSolutions (historical)
+[**DexGetStatsHistorical**](DexApi.md#DexGetStatsHistorical) | **Get** /dapps/dex/stats/historical | GetStats (historical)
+[**DexGetTokensHistorical**](DexApi.md#DexGetTokensHistorical) | **Get** /dapps/dex/tokens/historical | GetTokens (historical) 🔥
+[**DexGetTradesHistorical**](DexApi.md#DexGetTradesHistorical) | **Get** /dapps/dex/trades/historical | GetTrades (historical) 🔥
+[**DexGetUsersHistorical**](DexApi.md#DexGetUsersHistorical) | **Get** /dapps/dex/users/historical | GetUsers (historical)
+[**DexGetWithdrawsHistorical**](DexApi.md#DexGetWithdrawsHistorical) | **Get** /dapps/dex/withdraws/historical | GetWithdraws (historical)
+[**DexGetWithdrawsRequestsHistorical**](DexApi.md#DexGetWithdrawsRequestsHistorical) | **Get** /dapps/dex/withdrawsRequests/historical | GetWithdrawsRequests (historical)
 
 
 
-## DappsDexBatchHistoricalGet
+## DexGetBatchesHistorical
 
-> DappsDexBatchHistoricalGet(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Execute()
+> []DexBatchDTO DexGetBatchesHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Execute()
+
+GetBatches (historical)
 
 
 
@@ -44,11 +47,13 @@ func main() {
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.DexApi.DappsDexBatchHistoricalGet(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Execute()
+    resp, r, err := apiClient.DexApi.DexGetBatchesHistorical(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `DexApi.DappsDexBatchHistoricalGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `DexApi.DexGetBatchesHistorical``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
+    // response from `DexGetBatchesHistorical`: []DexBatchDTO
+    fmt.Fprintf(os.Stdout, "Response from `DexApi.DexGetBatchesHistorical`: %v\n", resp)
 }
 ```
 
@@ -58,7 +63,7 @@ func main() {
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiDappsDexBatchHistoricalGetRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiDexGetBatchesHistoricalRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -70,7 +75,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
- (empty response body)
+[**[]DexBatchDTO**](DexBatchDTO.md)
 
 ### Authorization
 
@@ -79,16 +84,18 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
 
-## DappsDexOrdersHistoricalGet
+## DexGetDepositsHistorical
 
-> DappsDexOrdersHistoricalGet(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).TokenId(tokenId).Execute()
+> []DexDepositDTO DexGetDepositsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).TokenId(tokenId).Execute()
+
+GetDeposits (historical)
 
 
 
@@ -114,11 +121,13 @@ func main() {
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.DexApi.DappsDexOrdersHistoricalGet(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).TokenId(tokenId).Execute()
+    resp, r, err := apiClient.DexApi.DexGetDepositsHistorical(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).TokenId(tokenId).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `DexApi.DappsDexOrdersHistoricalGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `DexApi.DexGetDepositsHistorical``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
+    // response from `DexGetDepositsHistorical`: []DexDepositDTO
+    fmt.Fprintf(os.Stdout, "Response from `DexApi.DexGetDepositsHistorical`: %v\n", resp)
 }
 ```
 
@@ -128,7 +137,7 @@ func main() {
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiDappsDexOrdersHistoricalGetRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiDexGetDepositsHistoricalRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -141,7 +150,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
- (empty response body)
+[**[]DexDepositDTO**](DexDepositDTO.md)
 
 ### Authorization
 
@@ -150,16 +159,18 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
 
-## DappsDexPricesHistoricalGet
+## DexGetOrdersHistorical
 
-> DappsDexPricesHistoricalGet(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).TokenId(tokenId).Execute()
+> []DexOrderDTO DexGetOrdersHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).TokenId(tokenId).Execute()
+
+GetOrders (historical)
 
 
 
@@ -185,11 +196,13 @@ func main() {
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.DexApi.DappsDexPricesHistoricalGet(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).TokenId(tokenId).Execute()
+    resp, r, err := apiClient.DexApi.DexGetOrdersHistorical(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).TokenId(tokenId).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `DexApi.DappsDexPricesHistoricalGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `DexApi.DexGetOrdersHistorical``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
+    // response from `DexGetOrdersHistorical`: []DexOrderDTO
+    fmt.Fprintf(os.Stdout, "Response from `DexApi.DexGetOrdersHistorical`: %v\n", resp)
 }
 ```
 
@@ -199,7 +212,7 @@ func main() {
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiDappsDexPricesHistoricalGetRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiDexGetOrdersHistoricalRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -212,7 +225,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
- (empty response body)
+[**[]DexOrderDTO**](DexOrderDTO.md)
 
 ### Authorization
 
@@ -221,16 +234,18 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
 
-## DappsDexSolutionHistoricalGet
+## DexGetPricesHistorical
 
-> DappsDexSolutionHistoricalGet(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).TokenId(tokenId).Execute()
+> []DexPriceDTO DexGetPricesHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).TokenId(tokenId).Execute()
+
+GetPrices (historical)
 
 
 
@@ -256,11 +271,13 @@ func main() {
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.DexApi.DappsDexSolutionHistoricalGet(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).TokenId(tokenId).Execute()
+    resp, r, err := apiClient.DexApi.DexGetPricesHistorical(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).TokenId(tokenId).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `DexApi.DappsDexSolutionHistoricalGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `DexApi.DexGetPricesHistorical``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
+    // response from `DexGetPricesHistorical`: []DexPriceDTO
+    fmt.Fprintf(os.Stdout, "Response from `DexApi.DexGetPricesHistorical`: %v\n", resp)
 }
 ```
 
@@ -270,7 +287,7 @@ func main() {
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiDappsDexSolutionHistoricalGetRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiDexGetPricesHistoricalRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -283,7 +300,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
- (empty response body)
+[**[]DexPriceDTO**](DexPriceDTO.md)
 
 ### Authorization
 
@@ -292,85 +309,18 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
 
-## DappsDexStatsHistoricalGet
+## DexGetSolutionsHistorical
 
-> DappsDexStatsHistoricalGet(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Execute()
+> []DexSolutionDTO DexGetSolutionsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).TokenId(tokenId).Execute()
 
-
-
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    "time"
-    openapiclient "./openapi"
-)
-
-func main() {
-    startBlock := int64(789) // int64 |  (optional)
-    endBlock := int64(789) // int64 |  (optional)
-    startDate := time.Now() // time.Time |  (optional)
-    endDate := time.Now() // time.Time |  (optional)
-
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.DexApi.DappsDexStatsHistoricalGet(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `DexApi.DappsDexStatsHistoricalGet``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-}
-```
-
-### Path Parameters
-
-
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiDappsDexStatsHistoricalGetRequest struct via the builder pattern
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **int64** |  | 
- **endBlock** | **int64** |  | 
- **startDate** | **time.Time** |  | 
- **endDate** | **time.Time** |  | 
-
-### Return type
-
- (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## DappsDexTokensHistoricalGet
-
-> DappsDexTokensHistoricalGet(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).TokenId(tokenId).Execute()
+GetSolutions (historical)
 
 
 
@@ -396,11 +346,13 @@ func main() {
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.DexApi.DappsDexTokensHistoricalGet(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).TokenId(tokenId).Execute()
+    resp, r, err := apiClient.DexApi.DexGetSolutionsHistorical(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).TokenId(tokenId).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `DexApi.DappsDexTokensHistoricalGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `DexApi.DexGetSolutionsHistorical``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
+    // response from `DexGetSolutionsHistorical`: []DexSolutionDTO
+    fmt.Fprintf(os.Stdout, "Response from `DexApi.DexGetSolutionsHistorical`: %v\n", resp)
 }
 ```
 
@@ -410,7 +362,7 @@ func main() {
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiDappsDexTokensHistoricalGetRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiDexGetSolutionsHistoricalRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -423,7 +375,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
- (empty response body)
+[**[]DexSolutionDTO**](DexSolutionDTO.md)
 
 ### Authorization
 
@@ -432,16 +384,18 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
 
-## DappsDexTradesHistoricalGet
+## DexGetStatsHistorical
 
-> DappsDexTradesHistoricalGet(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Execute()
+> []DexStatsDTO DexGetStatsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Execute()
+
+GetStats (historical)
 
 
 
@@ -466,11 +420,13 @@ func main() {
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.DexApi.DappsDexTradesHistoricalGet(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Execute()
+    resp, r, err := apiClient.DexApi.DexGetStatsHistorical(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `DexApi.DappsDexTradesHistoricalGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `DexApi.DexGetStatsHistorical``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
+    // response from `DexGetStatsHistorical`: []DexStatsDTO
+    fmt.Fprintf(os.Stdout, "Response from `DexApi.DexGetStatsHistorical`: %v\n", resp)
 }
 ```
 
@@ -480,7 +436,7 @@ func main() {
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiDappsDexTradesHistoricalGetRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiDexGetStatsHistoricalRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -492,7 +448,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
- (empty response body)
+[**[]DexStatsDTO**](DexStatsDTO.md)
 
 ### Authorization
 
@@ -501,85 +457,18 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
 
-## DappsDexUsersHistoricalGet
+## DexGetTokensHistorical
 
-> DappsDexUsersHistoricalGet(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Execute()
+> []DexTokenDTO DexGetTokensHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).TokenId(tokenId).Execute()
 
-
-
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    "time"
-    openapiclient "./openapi"
-)
-
-func main() {
-    startBlock := int64(789) // int64 |  (optional)
-    endBlock := int64(789) // int64 |  (optional)
-    startDate := time.Now() // time.Time |  (optional)
-    endDate := time.Now() // time.Time |  (optional)
-
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.DexApi.DappsDexUsersHistoricalGet(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `DexApi.DappsDexUsersHistoricalGet``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-}
-```
-
-### Path Parameters
-
-
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiDappsDexUsersHistoricalGetRequest struct via the builder pattern
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **int64** |  | 
- **endBlock** | **int64** |  | 
- **startDate** | **time.Time** |  | 
- **endDate** | **time.Time** |  | 
-
-### Return type
-
- (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## DappsDexWithdrawHistoricalGet
-
-> DappsDexWithdrawHistoricalGet(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).TokenId(tokenId).Execute()
+GetTokens (historical) 🔥
 
 
 
@@ -605,11 +494,13 @@ func main() {
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.DexApi.DappsDexWithdrawHistoricalGet(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).TokenId(tokenId).Execute()
+    resp, r, err := apiClient.DexApi.DexGetTokensHistorical(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).TokenId(tokenId).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `DexApi.DappsDexWithdrawHistoricalGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `DexApi.DexGetTokensHistorical``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
+    // response from `DexGetTokensHistorical`: []DexTokenDTO
+    fmt.Fprintf(os.Stdout, "Response from `DexApi.DexGetTokensHistorical`: %v\n", resp)
 }
 ```
 
@@ -619,7 +510,7 @@ func main() {
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiDappsDexWithdrawHistoricalGetRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiDexGetTokensHistoricalRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -632,7 +523,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
- (empty response body)
+[**[]DexTokenDTO**](DexTokenDTO.md)
 
 ### Authorization
 
@@ -641,16 +532,164 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
 
 
-## DappsDexWithdrawRequestHistoricalGet
+## DexGetTradesHistorical
 
-> DappsDexWithdrawRequestHistoricalGet(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).TokenId(tokenId).Execute()
+> []DexTradeDTO DexGetTradesHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Execute()
+
+GetTrades (historical) 🔥
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    "time"
+    openapiclient "./openapi"
+)
+
+func main() {
+    startBlock := int64(789) // int64 |  (optional)
+    endBlock := int64(789) // int64 |  (optional)
+    startDate := time.Now() // time.Time |  (optional)
+    endDate := time.Now() // time.Time |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DexApi.DexGetTradesHistorical(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DexApi.DexGetTradesHistorical``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `DexGetTradesHistorical`: []DexTradeDTO
+    fmt.Fprintf(os.Stdout, "Response from `DexApi.DexGetTradesHistorical`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDexGetTradesHistoricalRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int64** |  | 
+ **endBlock** | **int64** |  | 
+ **startDate** | **time.Time** |  | 
+ **endDate** | **time.Time** |  | 
+
+### Return type
+
+[**[]DexTradeDTO**](DexTradeDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DexGetUsersHistorical
+
+> []DexUserDTO DexGetUsersHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Execute()
+
+GetUsers (historical)
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    "time"
+    openapiclient "./openapi"
+)
+
+func main() {
+    startBlock := int64(789) // int64 |  (optional)
+    endBlock := int64(789) // int64 |  (optional)
+    startDate := time.Now() // time.Time |  (optional)
+    endDate := time.Now() // time.Time |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DexApi.DexGetUsersHistorical(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DexApi.DexGetUsersHistorical``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `DexGetUsersHistorical`: []DexUserDTO
+    fmt.Fprintf(os.Stdout, "Response from `DexApi.DexGetUsersHistorical`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDexGetUsersHistoricalRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int64** |  | 
+ **endBlock** | **int64** |  | 
+ **startDate** | **time.Time** |  | 
+ **endDate** | **time.Time** |  | 
+
+### Return type
+
+[**[]DexUserDTO**](DexUserDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DexGetWithdrawsHistorical
+
+> []DexWithdrawDTO DexGetWithdrawsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).TokenId(tokenId).Execute()
+
+GetWithdraws (historical)
 
 
 
@@ -676,11 +715,13 @@ func main() {
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.DexApi.DappsDexWithdrawRequestHistoricalGet(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).TokenId(tokenId).Execute()
+    resp, r, err := apiClient.DexApi.DexGetWithdrawsHistorical(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).TokenId(tokenId).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `DexApi.DappsDexWithdrawRequestHistoricalGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `DexApi.DexGetWithdrawsHistorical``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
+    // response from `DexGetWithdrawsHistorical`: []DexWithdrawDTO
+    fmt.Fprintf(os.Stdout, "Response from `DexApi.DexGetWithdrawsHistorical`: %v\n", resp)
 }
 ```
 
@@ -690,7 +731,7 @@ func main() {
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiDappsDexWithdrawRequestHistoricalGetRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiDexGetWithdrawsHistoricalRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -703,7 +744,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
- (empty response body)
+[**[]DexWithdrawDTO**](DexWithdrawDTO.md)
 
 ### Authorization
 
@@ -712,7 +753,82 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DexGetWithdrawsRequestsHistorical
+
+> []DexWithdrawRequestDTO DexGetWithdrawsRequestsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).TokenId(tokenId).Execute()
+
+GetWithdrawsRequests (historical)
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    "time"
+    openapiclient "./openapi"
+)
+
+func main() {
+    startBlock := int64(789) // int64 |  (optional)
+    endBlock := int64(789) // int64 |  (optional)
+    startDate := time.Now() // time.Time |  (optional)
+    endDate := time.Now() // time.Time |  (optional)
+    tokenId := "tokenId_example" // string |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DexApi.DexGetWithdrawsRequestsHistorical(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).TokenId(tokenId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DexApi.DexGetWithdrawsRequestsHistorical``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `DexGetWithdrawsRequestsHistorical`: []DexWithdrawRequestDTO
+    fmt.Fprintf(os.Stdout, "Response from `DexApi.DexGetWithdrawsRequestsHistorical`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDexGetWithdrawsRequestsHistoricalRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int64** |  | 
+ **endBlock** | **int64** |  | 
+ **startDate** | **time.Time** |  | 
+ **endDate** | **time.Time** |  | 
+ **tokenId** | **string** |  | 
+
+### Return type
+
+[**[]DexWithdrawRequestDTO**](DexWithdrawRequestDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)

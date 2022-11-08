@@ -16,19 +16,28 @@ class DexApi {
 
   final ApiClient apiClient;
 
-  /// Performs an HTTP 'GET /dapps/dex/batch/historical' operation and returns the [Response].
+  /// GetBatches (historical)
+  ///
+  /// Gets batches.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
-  Future<Response> dappsDexBatchHistoricalGetWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
+  ///   
+  Future<Response> dexGetBatchesHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/dex/batch/historical';
+    final path = r'/dapps/dex/batches/historical';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -64,35 +73,165 @@ class DexApi {
     );
   }
 
+  /// GetBatches (historical)
+  ///
+  /// Gets batches.
+  ///
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
-  Future<void> dappsDexBatchHistoricalGet({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
-    final response = await dappsDexBatchHistoricalGetWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, );
+  ///   
+  Future<List<DexBatchDTO>?> dexGetBatchesHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
+    final response = await dexGetBatchesHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<DexBatchDTO>') as List)
+        .cast<DexBatchDTO>()
+        .toList();
+
+    }
+    return null;
   }
 
-  /// Performs an HTTP 'GET /dapps/dex/orders/historical' operation and returns the [Response].
+  /// GetDeposits (historical)
+  ///
+  /// Gets deposits.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
+  ///   
   ///
   /// * [String] tokenId:
-  Future<Response> dappsDexOrdersHistoricalGetWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? tokenId, }) async {
+  ///   
+  Future<Response> dexGetDepositsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? tokenId, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/dex/deposits/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (tokenId != null) {
+      queryParams.addAll(_queryParams('', 'tokenId', tokenId));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// GetDeposits (historical)
+  ///
+  /// Gets deposits.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] tokenId:
+  ///   
+  Future<List<DexDepositDTO>?> dexGetDepositsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? tokenId, }) async {
+    final response = await dexGetDepositsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, tokenId: tokenId, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<DexDepositDTO>') as List)
+        .cast<DexDepositDTO>()
+        .toList();
+
+    }
+    return null;
+  }
+
+  /// GetOrders (historical)
+  ///
+  /// Gets orders.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] tokenId:
+  ///   
+  Future<Response> dexGetOrdersHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? tokenId, }) async {
     // ignore: prefer_const_declarations
     final path = r'/dapps/dex/orders/historical';
 
@@ -133,37 +272,67 @@ class DexApi {
     );
   }
 
+  /// GetOrders (historical)
+  ///
+  /// Gets orders.
+  ///
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
+  ///   
   ///
   /// * [String] tokenId:
-  Future<void> dappsDexOrdersHistoricalGet({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? tokenId, }) async {
-    final response = await dappsDexOrdersHistoricalGetWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, tokenId: tokenId, );
+  ///   
+  Future<List<DexOrderDTO>?> dexGetOrdersHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? tokenId, }) async {
+    final response = await dexGetOrdersHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, tokenId: tokenId, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<DexOrderDTO>') as List)
+        .cast<DexOrderDTO>()
+        .toList();
+
+    }
+    return null;
   }
 
-  /// Performs an HTTP 'GET /dapps/dex/prices/historical' operation and returns the [Response].
+  /// GetPrices (historical)
+  ///
+  /// Gets prices.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
+  ///   
   ///
   /// * [String] tokenId:
-  Future<Response> dappsDexPricesHistoricalGetWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? tokenId, }) async {
+  ///   
+  Future<Response> dexGetPricesHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? tokenId, }) async {
     // ignore: prefer_const_declarations
     final path = r'/dapps/dex/prices/historical';
 
@@ -204,39 +373,69 @@ class DexApi {
     );
   }
 
+  /// GetPrices (historical)
+  ///
+  /// Gets prices.
+  ///
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
+  ///   
   ///
   /// * [String] tokenId:
-  Future<void> dappsDexPricesHistoricalGet({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? tokenId, }) async {
-    final response = await dappsDexPricesHistoricalGetWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, tokenId: tokenId, );
+  ///   
+  Future<List<DexPriceDTO>?> dexGetPricesHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? tokenId, }) async {
+    final response = await dexGetPricesHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, tokenId: tokenId, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<DexPriceDTO>') as List)
+        .cast<DexPriceDTO>()
+        .toList();
+
+    }
+    return null;
   }
 
-  /// Performs an HTTP 'GET /dapps/dex/solution/historical' operation and returns the [Response].
+  /// GetSolutions (historical)
+  ///
+  /// Gets solutions.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
+  ///   
   ///
   /// * [String] tokenId:
-  Future<Response> dappsDexSolutionHistoricalGetWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? tokenId, }) async {
+  ///   
+  Future<Response> dexGetSolutionsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? tokenId, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/dex/solution/historical';
+    final path = r'/dapps/dex/solutions/historical';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -275,35 +474,64 @@ class DexApi {
     );
   }
 
+  /// GetSolutions (historical)
+  ///
+  /// Gets solutions.
+  ///
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
+  ///   
   ///
   /// * [String] tokenId:
-  Future<void> dappsDexSolutionHistoricalGet({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? tokenId, }) async {
-    final response = await dappsDexSolutionHistoricalGetWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, tokenId: tokenId, );
+  ///   
+  Future<List<DexSolutionDTO>?> dexGetSolutionsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? tokenId, }) async {
+    final response = await dexGetSolutionsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, tokenId: tokenId, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<DexSolutionDTO>') as List)
+        .cast<DexSolutionDTO>()
+        .toList();
+
+    }
+    return null;
   }
 
-  /// Performs an HTTP 'GET /dapps/dex/stats/historical' operation and returns the [Response].
+  /// GetStats (historical)
+  ///
+  /// Gets stats.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
-  Future<Response> dappsDexStatsHistoricalGetWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
+  ///   
+  Future<Response> dexGetStatsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
     // ignore: prefer_const_declarations
     final path = r'/dapps/dex/stats/historical';
 
@@ -341,35 +569,64 @@ class DexApi {
     );
   }
 
+  /// GetStats (historical)
+  ///
+  /// Gets stats.
+  ///
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
-  Future<void> dappsDexStatsHistoricalGet({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
-    final response = await dappsDexStatsHistoricalGetWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, );
+  ///   
+  Future<List<DexStatsDTO>?> dexGetStatsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
+    final response = await dexGetStatsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<DexStatsDTO>') as List)
+        .cast<DexStatsDTO>()
+        .toList();
+
+    }
+    return null;
   }
 
-  /// Performs an HTTP 'GET /dapps/dex/tokens/historical' operation and returns the [Response].
+  /// GetTokens (historical) 🔥
+  ///
+  /// Gets tokens.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
+  ///   
   ///
   /// * [String] tokenId:
-  Future<Response> dappsDexTokensHistoricalGetWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? tokenId, }) async {
+  ///   
+  Future<Response> dexGetTokensHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? tokenId, }) async {
     // ignore: prefer_const_declarations
     final path = r'/dapps/dex/tokens/historical';
 
@@ -410,35 +667,64 @@ class DexApi {
     );
   }
 
+  /// GetTokens (historical) 🔥
+  ///
+  /// Gets tokens.
+  ///
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
+  ///   
   ///
   /// * [String] tokenId:
-  Future<void> dappsDexTokensHistoricalGet({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? tokenId, }) async {
-    final response = await dappsDexTokensHistoricalGetWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, tokenId: tokenId, );
+  ///   
+  Future<List<DexTokenDTO>?> dexGetTokensHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? tokenId, }) async {
+    final response = await dexGetTokensHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, tokenId: tokenId, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<DexTokenDTO>') as List)
+        .cast<DexTokenDTO>()
+        .toList();
+
+    }
+    return null;
   }
 
-  /// Performs an HTTP 'GET /dapps/dex/trades/historical' operation and returns the [Response].
+  /// GetTrades (historical) 🔥
+  ///
+  /// Gets trades.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
-  Future<Response> dappsDexTradesHistoricalGetWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
+  ///   
+  Future<Response> dexGetTradesHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
     // ignore: prefer_const_declarations
     final path = r'/dapps/dex/trades/historical';
 
@@ -476,33 +762,61 @@ class DexApi {
     );
   }
 
+  /// GetTrades (historical) 🔥
+  ///
+  /// Gets trades.
+  ///
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
-  Future<void> dappsDexTradesHistoricalGet({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
-    final response = await dappsDexTradesHistoricalGetWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, );
+  ///   
+  Future<List<DexTradeDTO>?> dexGetTradesHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
+    final response = await dexGetTradesHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<DexTradeDTO>') as List)
+        .cast<DexTradeDTO>()
+        .toList();
+
+    }
+    return null;
   }
 
-  /// Performs an HTTP 'GET /dapps/dex/users/historical' operation and returns the [Response].
+  /// GetUsers (historical)
+  ///
+  /// Gets users.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
-  Future<Response> dappsDexUsersHistoricalGetWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
+  ///   
+  Future<Response> dexGetUsersHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
     // ignore: prefer_const_declarations
     final path = r'/dapps/dex/users/historical';
 
@@ -540,37 +854,66 @@ class DexApi {
     );
   }
 
+  /// GetUsers (historical)
+  ///
+  /// Gets users.
+  ///
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
-  Future<void> dappsDexUsersHistoricalGet({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
-    final response = await dappsDexUsersHistoricalGetWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, );
+  ///   
+  Future<List<DexUserDTO>?> dexGetUsersHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
+    final response = await dexGetUsersHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<DexUserDTO>') as List)
+        .cast<DexUserDTO>()
+        .toList();
+
+    }
+    return null;
   }
 
-  /// Performs an HTTP 'GET /dapps/dex/withdraw/historical' operation and returns the [Response].
+  /// GetWithdraws (historical)
+  ///
+  /// Gets withdraws.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
+  ///   
   ///
   /// * [String] tokenId:
-  Future<Response> dappsDexWithdrawHistoricalGetWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? tokenId, }) async {
+  ///   
+  Future<Response> dexGetWithdrawsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? tokenId, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/dex/withdraw/historical';
+    final path = r'/dapps/dex/withdraws/historical';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -609,39 +952,69 @@ class DexApi {
     );
   }
 
+  /// GetWithdraws (historical)
+  ///
+  /// Gets withdraws.
+  ///
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
+  ///   
   ///
   /// * [String] tokenId:
-  Future<void> dappsDexWithdrawHistoricalGet({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? tokenId, }) async {
-    final response = await dappsDexWithdrawHistoricalGetWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, tokenId: tokenId, );
+  ///   
+  Future<List<DexWithdrawDTO>?> dexGetWithdrawsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? tokenId, }) async {
+    final response = await dexGetWithdrawsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, tokenId: tokenId, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<DexWithdrawDTO>') as List)
+        .cast<DexWithdrawDTO>()
+        .toList();
+
+    }
+    return null;
   }
 
-  /// Performs an HTTP 'GET /dapps/dex/withdrawRequest/historical' operation and returns the [Response].
+  /// GetWithdrawsRequests (historical)
+  ///
+  /// Gets withdraws requests.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
+  ///   
   ///
   /// * [String] tokenId:
-  Future<Response> dappsDexWithdrawRequestHistoricalGetWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? tokenId, }) async {
+  ///   
+  Future<Response> dexGetWithdrawsRequestsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? tokenId, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/dex/withdrawRequest/historical';
+    final path = r'/dapps/dex/withdrawsRequests/historical';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -680,21 +1053,41 @@ class DexApi {
     );
   }
 
+  /// GetWithdrawsRequests (historical)
+  ///
+  /// Gets withdraws requests.
+  ///
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
+  ///   
   ///
   /// * [String] tokenId:
-  Future<void> dappsDexWithdrawRequestHistoricalGet({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? tokenId, }) async {
-    final response = await dappsDexWithdrawRequestHistoricalGetWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, tokenId: tokenId, );
+  ///   
+  Future<List<DexWithdrawRequestDTO>?> dexGetWithdrawsRequestsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? tokenId, }) async {
+    final response = await dexGetWithdrawsRequestsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, tokenId: tokenId, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<DexWithdrawRequestDTO>') as List)
+        .cast<DexWithdrawRequestDTO>()
+        .toList();
+
+    }
+    return null;
   }
 }

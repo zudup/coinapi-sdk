@@ -4,20 +4,22 @@ All URIs are relative to https://onchain.coinapi.io, except if the operation def
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**dappsCowOrdersHistoricalGet()**](CowApi.md#dappsCowOrdersHistoricalGet) | **GET** /dapps/cow/orders/historical |  |
-| [**dappsCowSettlementHistoricalGet()**](CowApi.md#dappsCowSettlementHistoricalGet) | **GET** /dapps/cow/settlement/historical |  |
-| [**dappsCowTokensHistoricalGet()**](CowApi.md#dappsCowTokensHistoricalGet) | **GET** /dapps/cow/tokens/historical |  |
-| [**dappsCowTradesHistoricalGet()**](CowApi.md#dappsCowTradesHistoricalGet) | **GET** /dapps/cow/trades/historical |  |
-| [**dappsCowUsersHistoricalGet()**](CowApi.md#dappsCowUsersHistoricalGet) | **GET** /dapps/cow/users/historical |  |
+| [**cowGetOrdersHistorical()**](CowApi.md#cowGetOrdersHistorical) | **GET** /dapps/cow/orders/historical | GetOrders (historical) |
+| [**cowGetSettlementsHistorical()**](CowApi.md#cowGetSettlementsHistorical) | **GET** /dapps/cow/settlements/historical | GetSettlements (historical) |
+| [**cowGetTokensHistorical()**](CowApi.md#cowGetTokensHistorical) | **GET** /dapps/cow/tokens/historical | GetTokens (historical) 🔥 |
+| [**cowGetTradesHistorical()**](CowApi.md#cowGetTradesHistorical) | **GET** /dapps/cow/trades/historical | GetTrades (historical) 🔥 |
+| [**cowGetUsersHistorical()**](CowApi.md#cowGetUsersHistorical) | **GET** /dapps/cow/users/historical | GetUsers (historical) |
 
 
-## `dappsCowOrdersHistoricalGet()`
+## `cowGetOrdersHistorical()`
 
 ```php
-dappsCowOrdersHistoricalGet($start_block, $end_block, $start_date, $end_date)
+cowGetOrdersHistorical($start_block, $end_block, $start_date, $end_date): \OpenAPI\Client\Model\CowOrderDTO[]
 ```
 
+GetOrders (historical)
 
+Gets orders.
 
 ### Example
 
@@ -32,15 +34,16 @@ $apiInstance = new OpenAPI\Client\Api\CowApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
 $end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
 
 try {
-    $apiInstance->dappsCowOrdersHistoricalGet($start_block, $end_block, $start_date, $end_date);
+    $result = $apiInstance->cowGetOrdersHistorical($start_block, $end_block, $start_date, $end_date);
+    print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CowApi->dappsCowOrdersHistoricalGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CowApi->cowGetOrdersHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -55,7 +58,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\CowOrderDTO[]**](../Model/CowOrderDTO.md)
 
 ### Authorization
 
@@ -64,19 +67,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `dappsCowSettlementHistoricalGet()`
+## `cowGetSettlementsHistorical()`
 
 ```php
-dappsCowSettlementHistoricalGet($start_block, $end_block, $start_date, $end_date)
+cowGetSettlementsHistorical($start_block, $end_block, $start_date, $end_date): \OpenAPI\Client\Model\CowSettlementDTO[]
 ```
 
+GetSettlements (historical)
 
+Gets settlements.
 
 ### Example
 
@@ -91,15 +96,16 @@ $apiInstance = new OpenAPI\Client\Api\CowApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
 $end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
 
 try {
-    $apiInstance->dappsCowSettlementHistoricalGet($start_block, $end_block, $start_date, $end_date);
+    $result = $apiInstance->cowGetSettlementsHistorical($start_block, $end_block, $start_date, $end_date);
+    print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CowApi->dappsCowSettlementHistoricalGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CowApi->cowGetSettlementsHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -114,7 +120,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\CowSettlementDTO[]**](../Model/CowSettlementDTO.md)
 
 ### Authorization
 
@@ -123,19 +129,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `dappsCowTokensHistoricalGet()`
+## `cowGetTokensHistorical()`
 
 ```php
-dappsCowTokensHistoricalGet($start_block, $end_block, $start_date, $end_date, $token_id)
+cowGetTokensHistorical($start_block, $end_block, $start_date, $end_date, $token_id): \OpenAPI\Client\Model\CowTokenDTO[]
 ```
 
+GetTokens (historical) 🔥
 
+Gets tokens.
 
 ### Example
 
@@ -150,16 +158,17 @@ $apiInstance = new OpenAPI\Client\Api\CowApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$token_id = 'token_id_example'; // string
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$token_id = 'token_id_example'; // string | 
 
 try {
-    $apiInstance->dappsCowTokensHistoricalGet($start_block, $end_block, $start_date, $end_date, $token_id);
+    $result = $apiInstance->cowGetTokensHistorical($start_block, $end_block, $start_date, $end_date, $token_id);
+    print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CowApi->dappsCowTokensHistoricalGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CowApi->cowGetTokensHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -175,7 +184,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\CowTokenDTO[]**](../Model/CowTokenDTO.md)
 
 ### Authorization
 
@@ -184,19 +193,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `dappsCowTradesHistoricalGet()`
+## `cowGetTradesHistorical()`
 
 ```php
-dappsCowTradesHistoricalGet($start_block, $end_block, $start_date, $end_date)
+cowGetTradesHistorical($start_block, $end_block, $start_date, $end_date): \OpenAPI\Client\Model\CowTradeDTO[]
 ```
 
+GetTrades (historical) 🔥
 
+Gets trades.
 
 ### Example
 
@@ -211,15 +222,16 @@ $apiInstance = new OpenAPI\Client\Api\CowApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
 
 try {
-    $apiInstance->dappsCowTradesHistoricalGet($start_block, $end_block, $start_date, $end_date);
+    $result = $apiInstance->cowGetTradesHistorical($start_block, $end_block, $start_date, $end_date);
+    print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CowApi->dappsCowTradesHistoricalGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CowApi->cowGetTradesHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -234,7 +246,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\CowTradeDTO[]**](../Model/CowTradeDTO.md)
 
 ### Authorization
 
@@ -243,19 +255,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `dappsCowUsersHistoricalGet()`
+## `cowGetUsersHistorical()`
 
 ```php
-dappsCowUsersHistoricalGet($start_block, $end_block, $start_date, $end_date)
+cowGetUsersHistorical($start_block, $end_block, $start_date, $end_date): \OpenAPI\Client\Model\CowUserDTO[]
 ```
 
+GetUsers (historical)
 
+Gets users.
 
 ### Example
 
@@ -270,15 +284,16 @@ $apiInstance = new OpenAPI\Client\Api\CowApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
 
 try {
-    $apiInstance->dappsCowUsersHistoricalGet($start_block, $end_block, $start_date, $end_date);
+    $result = $apiInstance->cowGetUsersHistorical($start_block, $end_block, $start_date, $end_date);
+    print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CowApi->dappsCowUsersHistoricalGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CowApi->cowGetUsersHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -293,7 +308,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\CowUserDTO[]**](../Model/CowUserDTO.md)
 
 ### Authorization
 
@@ -302,7 +317,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)

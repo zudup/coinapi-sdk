@@ -13,7 +13,7 @@
 
 import type { Observable } from 'rxjs';
 import type { AjaxResponse } from 'rxjs/ajax';
-import { BaseAPI, throwIfNullOrUndefined, encodeURI } from '../runtime';
+import { BaseAPI } from '../runtime';
 import type { OperationOpts, HttpQuery } from '../runtime';
 import type {
     UniswapV3BundleV3DTO,
@@ -31,21 +31,22 @@ import type {
     UniswapV3TokenHourDataV3DTO,
     UniswapV3TokenV3DTO,
     UniswapV3TokenV3DayDataDTO,
+    UniswapV3TransactionV3DTO,
     UniswapV3UniswapDayDataV3DTO,
 } from '../models';
 
-export interface DappsUniswapv3BundlesHistoricalGetRequest {
+export interface UniswapV3GetBundlesHistoricalRequest {
     startBlock?: number;
     endBlock?: number;
     startDate?: string;
     endDate?: string;
 }
 
-export interface DappsUniswapv3BurnsCurrentGetRequest {
+export interface UniswapV3GetBurnsCurrentRequest {
     filterPoolId?: string;
 }
 
-export interface DappsUniswapv3BurnsHistoricalGetRequest {
+export interface UniswapV3GetBurnsHistoricalRequest {
     startBlock?: number;
     endBlock?: number;
     startDate?: string;
@@ -53,29 +54,25 @@ export interface DappsUniswapv3BurnsHistoricalGetRequest {
     poolId?: string;
 }
 
-export interface DappsUniswapv3DayDataHistoricalGetRequest {
+export interface UniswapV3GetDayDataHistoricalRequest {
     startBlock?: number;
     endBlock?: number;
     startDate?: string;
     endDate?: string;
 }
 
-export interface DappsUniswapv3FactoryCurrentGetRequest {
-    chainId: string;
-}
-
-export interface DappsUniswapv3FactoryHistoricalGetRequest {
+export interface UniswapV3GetFactoryHistoricalRequest {
     startBlock?: number;
     endBlock?: number;
     startDate?: string;
     endDate?: string;
 }
 
-export interface DappsUniswapv3MintsCurrentGetRequest {
+export interface UniswapV3GetMintsCurrentRequest {
     filterPoolId?: string;
 }
 
-export interface DappsUniswapv3MintsHistoricalGetRequest {
+export interface UniswapV3GetMintsHistoricalRequest {
     startBlock?: number;
     endBlock?: number;
     startDate?: string;
@@ -83,7 +80,15 @@ export interface DappsUniswapv3MintsHistoricalGetRequest {
     poolId?: string;
 }
 
-export interface DappsUniswapv3PoolDayDataHistoricalGetRequest {
+export interface UniswapV3GetPoolsCurrentRequest {
+    filterPoolId?: string;
+}
+
+export interface UniswapV3GetPoolsDayDataCurrentRequest {
+    filterPoolId?: string;
+}
+
+export interface UniswapV3GetPoolsDayDataHistoricalRequest {
     startBlock?: number;
     endBlock?: number;
     startDate?: string;
@@ -91,7 +96,7 @@ export interface DappsUniswapv3PoolDayDataHistoricalGetRequest {
     poolId?: string;
 }
 
-export interface DappsUniswapv3PoolHourDataHistoricalGetRequest {
+export interface UniswapV3GetPoolsHistoricalRequest {
     startBlock?: number;
     endBlock?: number;
     startDate?: string;
@@ -99,15 +104,11 @@ export interface DappsUniswapv3PoolHourDataHistoricalGetRequest {
     poolId?: string;
 }
 
-export interface DappsUniswapv3PoolsCurrentGetRequest {
+export interface UniswapV3GetPoolsHourDataCurrentRequest {
     filterPoolId?: string;
 }
 
-export interface DappsUniswapv3PoolsDayDataCurrentGetRequest {
-    filterPoolId?: string;
-}
-
-export interface DappsUniswapv3PoolsHistoricalGetRequest {
+export interface UniswapV3GetPoolsHourDataHistoricalRequest {
     startBlock?: number;
     endBlock?: number;
     startDate?: string;
@@ -115,11 +116,11 @@ export interface DappsUniswapv3PoolsHistoricalGetRequest {
     poolId?: string;
 }
 
-export interface DappsUniswapv3PoolsHourDataCurrentGetRequest {
+export interface UniswapV3GetPositionsCurrentRequest {
     filterPoolId?: string;
 }
 
-export interface DappsUniswapv3PositionSnapshotHistoricalGetRequest {
+export interface UniswapV3GetPositionsHistoricalRequest {
     startBlock?: number;
     endBlock?: number;
     startDate?: string;
@@ -127,15 +128,7 @@ export interface DappsUniswapv3PositionSnapshotHistoricalGetRequest {
     poolId?: string;
 }
 
-export interface DappsUniswapv3PositionSnapshotsCurrentGetRequest {
-    filterPoolId?: string;
-}
-
-export interface DappsUniswapv3PositionsCurrentGetRequest {
-    filterPoolId?: string;
-}
-
-export interface DappsUniswapv3PositionsHistoricalGetRequest {
+export interface UniswapV3GetPositionsSnaphotsHistoricalRequest {
     startBlock?: number;
     endBlock?: number;
     startDate?: string;
@@ -143,11 +136,15 @@ export interface DappsUniswapv3PositionsHistoricalGetRequest {
     poolId?: string;
 }
 
-export interface DappsUniswapv3SwapsCurrentGetRequest {
+export interface UniswapV3GetPositionsSnapshotsCurrentRequest {
     filterPoolId?: string;
 }
 
-export interface DappsUniswapv3SwapsHistoricalGetRequest {
+export interface UniswapV3GetSwapsCurrentRequest {
+    filterPoolId?: string;
+}
+
+export interface UniswapV3GetSwapsHistoricalRequest {
     startBlock?: number;
     endBlock?: number;
     startDate?: string;
@@ -155,7 +152,15 @@ export interface DappsUniswapv3SwapsHistoricalGetRequest {
     poolId?: string;
 }
 
-export interface DappsUniswapv3TickDayDataHistoricalGetRequest {
+export interface UniswapV3GetTicksCurrentRequest {
+    filterPoolId?: string;
+}
+
+export interface UniswapV3GetTicksDayDataCurrentRequest {
+    filterPoolId?: string;
+}
+
+export interface UniswapV3GetTicksDayDataHistoricalRequest {
     startBlock?: number;
     endBlock?: number;
     startDate?: string;
@@ -163,15 +168,7 @@ export interface DappsUniswapv3TickDayDataHistoricalGetRequest {
     poolId?: string;
 }
 
-export interface DappsUniswapv3TicksCurrentGetRequest {
-    filterPoolId?: string;
-}
-
-export interface DappsUniswapv3TicksDayDataCurrentGetRequest {
-    filterPoolId?: string;
-}
-
-export interface DappsUniswapv3TicksHistoricalGetRequest {
+export interface UniswapV3GetTicksHistoricalRequest {
     startBlock?: number;
     endBlock?: number;
     startDate?: string;
@@ -179,7 +176,15 @@ export interface DappsUniswapv3TicksHistoricalGetRequest {
     poolId?: string;
 }
 
-export interface DappsUniswapv3TokenDayDataHistoricalGetRequest {
+export interface UniswapV3GetTokensCurrentRequest {
+    filterTokenId?: string;
+}
+
+export interface UniswapV3GetTokensDayDataCurrentRequest {
+    filterTokenId?: string;
+}
+
+export interface UniswapV3GetTokensDayDataHistoricalRequest {
     startBlock?: number;
     endBlock?: number;
     startDate?: string;
@@ -187,7 +192,7 @@ export interface DappsUniswapv3TokenDayDataHistoricalGetRequest {
     tokenId?: string;
 }
 
-export interface DappsUniswapv3TokenHourDataHistoricalGetRequest {
+export interface UniswapV3GetTokensHistoricalRequest {
     startBlock?: number;
     endBlock?: number;
     startDate?: string;
@@ -195,15 +200,11 @@ export interface DappsUniswapv3TokenHourDataHistoricalGetRequest {
     tokenId?: string;
 }
 
-export interface DappsUniswapv3TokensCurrentGetRequest {
+export interface UniswapV3GetTokensHourDataCurrentRequest {
     filterTokenId?: string;
 }
 
-export interface DappsUniswapv3TokensDayDataCurrentGetRequest {
-    filterTokenId?: string;
-}
-
-export interface DappsUniswapv3TokensHistoricalGetRequest {
+export interface UniswapV3GetTokensHourDataHistoricalRequest {
     startBlock?: number;
     endBlock?: number;
     startDate?: string;
@@ -211,11 +212,7 @@ export interface DappsUniswapv3TokensHistoricalGetRequest {
     tokenId?: string;
 }
 
-export interface DappsUniswapv3TokensHourDataCurrentGetRequest {
-    filterTokenId?: string;
-}
-
-export interface DappsUniswapv3TransactionsHistoricalGetRequest {
+export interface UniswapV3GetTransactionsHistoricalRequest {
     startBlock?: number;
     endBlock?: number;
     startDate?: string;
@@ -228,22 +225,25 @@ export interface DappsUniswapv3TransactionsHistoricalGetRequest {
 export class UniswapV3Api extends BaseAPI {
 
     /**
-     * GetBundles
+     * Gets bundles.
+     * GetBundles (current)
      */
-    dappsUniswapv3BundleCurrentGet(): Observable<Array<UniswapV3BundleV3DTO>>
-    dappsUniswapv3BundleCurrentGet(opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3BundleV3DTO>>>
-    dappsUniswapv3BundleCurrentGet(opts?: OperationOpts): Observable<Array<UniswapV3BundleV3DTO> | AjaxResponse<Array<UniswapV3BundleV3DTO>>> {
+    uniswapV3GetBundlesCurrent(): Observable<Array<UniswapV3BundleV3DTO>>
+    uniswapV3GetBundlesCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3BundleV3DTO>>>
+    uniswapV3GetBundlesCurrent(opts?: OperationOpts): Observable<Array<UniswapV3BundleV3DTO> | AjaxResponse<Array<UniswapV3BundleV3DTO>>> {
         return this.request<Array<UniswapV3BundleV3DTO>>({
-            url: '/dapps/uniswapv3/bundle/current',
+            url: '/dapps/uniswapv3/bundles/current',
             method: 'GET',
         }, opts?.responseOpts);
     };
 
     /**
+     * Gets bundles.
+     * GetBundles (historical)
      */
-    dappsUniswapv3BundlesHistoricalGet({ startBlock, endBlock, startDate, endDate }: DappsUniswapv3BundlesHistoricalGetRequest): Observable<void>
-    dappsUniswapv3BundlesHistoricalGet({ startBlock, endBlock, startDate, endDate }: DappsUniswapv3BundlesHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
-    dappsUniswapv3BundlesHistoricalGet({ startBlock, endBlock, startDate, endDate }: DappsUniswapv3BundlesHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
+    uniswapV3GetBundlesHistorical({ startBlock, endBlock, startDate, endDate }: UniswapV3GetBundlesHistoricalRequest): Observable<Array<UniswapV3BundleV3DTO>>
+    uniswapV3GetBundlesHistorical({ startBlock, endBlock, startDate, endDate }: UniswapV3GetBundlesHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3BundleV3DTO>>>
+    uniswapV3GetBundlesHistorical({ startBlock, endBlock, startDate, endDate }: UniswapV3GetBundlesHistoricalRequest, opts?: OperationOpts): Observable<Array<UniswapV3BundleV3DTO> | AjaxResponse<Array<UniswapV3BundleV3DTO>>> {
 
         const query: HttpQuery = {};
 
@@ -252,7 +252,7 @@ export class UniswapV3Api extends BaseAPI {
         if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
         if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
 
-        return this.request<void>({
+        return this.request<Array<UniswapV3BundleV3DTO>>({
             url: '/dapps/uniswapv3/bundles/historical',
             method: 'GET',
             query,
@@ -260,11 +260,12 @@ export class UniswapV3Api extends BaseAPI {
     };
 
     /**
-     * GetBurns
+     * Gets burns.
+     * GetBurns (current)
      */
-    dappsUniswapv3BurnsCurrentGet({ filterPoolId }: DappsUniswapv3BurnsCurrentGetRequest): Observable<Array<UniswapV3BurnV3DTO>>
-    dappsUniswapv3BurnsCurrentGet({ filterPoolId }: DappsUniswapv3BurnsCurrentGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3BurnV3DTO>>>
-    dappsUniswapv3BurnsCurrentGet({ filterPoolId }: DappsUniswapv3BurnsCurrentGetRequest, opts?: OperationOpts): Observable<Array<UniswapV3BurnV3DTO> | AjaxResponse<Array<UniswapV3BurnV3DTO>>> {
+    uniswapV3GetBurnsCurrent({ filterPoolId }: UniswapV3GetBurnsCurrentRequest): Observable<Array<UniswapV3BurnV3DTO>>
+    uniswapV3GetBurnsCurrent({ filterPoolId }: UniswapV3GetBurnsCurrentRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3BurnV3DTO>>>
+    uniswapV3GetBurnsCurrent({ filterPoolId }: UniswapV3GetBurnsCurrentRequest, opts?: OperationOpts): Observable<Array<UniswapV3BurnV3DTO> | AjaxResponse<Array<UniswapV3BurnV3DTO>>> {
 
         const query: HttpQuery = {};
 
@@ -278,10 +279,12 @@ export class UniswapV3Api extends BaseAPI {
     };
 
     /**
+     * Gets burns.
+     * GetBurns (historical)
      */
-    dappsUniswapv3BurnsHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsUniswapv3BurnsHistoricalGetRequest): Observable<void>
-    dappsUniswapv3BurnsHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsUniswapv3BurnsHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
-    dappsUniswapv3BurnsHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsUniswapv3BurnsHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
+    uniswapV3GetBurnsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: UniswapV3GetBurnsHistoricalRequest): Observable<Array<UniswapV3BurnV3DTO>>
+    uniswapV3GetBurnsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: UniswapV3GetBurnsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3BurnV3DTO>>>
+    uniswapV3GetBurnsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: UniswapV3GetBurnsHistoricalRequest, opts?: OperationOpts): Observable<Array<UniswapV3BurnV3DTO> | AjaxResponse<Array<UniswapV3BurnV3DTO>>> {
 
         const query: HttpQuery = {};
 
@@ -291,7 +294,7 @@ export class UniswapV3Api extends BaseAPI {
         if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
         if (poolId != null) { query['poolId'] = poolId; }
 
-        return this.request<void>({
+        return this.request<Array<UniswapV3BurnV3DTO>>({
             url: '/dapps/uniswapv3/burns/historical',
             method: 'GET',
             query,
@@ -299,10 +302,25 @@ export class UniswapV3Api extends BaseAPI {
     };
 
     /**
+     * Gets uniswapv3 day data.
+     * GetDayData (current)
      */
-    dappsUniswapv3DayDataHistoricalGet({ startBlock, endBlock, startDate, endDate }: DappsUniswapv3DayDataHistoricalGetRequest): Observable<void>
-    dappsUniswapv3DayDataHistoricalGet({ startBlock, endBlock, startDate, endDate }: DappsUniswapv3DayDataHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
-    dappsUniswapv3DayDataHistoricalGet({ startBlock, endBlock, startDate, endDate }: DappsUniswapv3DayDataHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
+    uniswapV3GetDayDataCurrent(): Observable<Array<UniswapV3UniswapDayDataV3DTO>>
+    uniswapV3GetDayDataCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3UniswapDayDataV3DTO>>>
+    uniswapV3GetDayDataCurrent(opts?: OperationOpts): Observable<Array<UniswapV3UniswapDayDataV3DTO> | AjaxResponse<Array<UniswapV3UniswapDayDataV3DTO>>> {
+        return this.request<Array<UniswapV3UniswapDayDataV3DTO>>({
+            url: '/dapps/uniswapv3/dayData/current',
+            method: 'GET',
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets uniswapv3 day data.
+     * GetDayData (historical)
+     */
+    uniswapV3GetDayDataHistorical({ startBlock, endBlock, startDate, endDate }: UniswapV3GetDayDataHistoricalRequest): Observable<Array<UniswapV3UniswapDayDataV3DTO>>
+    uniswapV3GetDayDataHistorical({ startBlock, endBlock, startDate, endDate }: UniswapV3GetDayDataHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3UniswapDayDataV3DTO>>>
+    uniswapV3GetDayDataHistorical({ startBlock, endBlock, startDate, endDate }: UniswapV3GetDayDataHistoricalRequest, opts?: OperationOpts): Observable<Array<UniswapV3UniswapDayDataV3DTO> | AjaxResponse<Array<UniswapV3UniswapDayDataV3DTO>>> {
 
         const query: HttpQuery = {};
 
@@ -311,7 +329,7 @@ export class UniswapV3Api extends BaseAPI {
         if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
         if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
 
-        return this.request<void>({
+        return this.request<Array<UniswapV3UniswapDayDataV3DTO>>({
             url: '/dapps/uniswapv3/dayData/historical',
             method: 'GET',
             query,
@@ -319,24 +337,25 @@ export class UniswapV3Api extends BaseAPI {
     };
 
     /**
-     * GetFactory
+     * Gets factory.
+     * GetFactory (current)
      */
-    dappsUniswapv3FactoryCurrentGet({ chainId }: DappsUniswapv3FactoryCurrentGetRequest): Observable<Array<UniswapV3FactoryV3DTO>>
-    dappsUniswapv3FactoryCurrentGet({ chainId }: DappsUniswapv3FactoryCurrentGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3FactoryV3DTO>>>
-    dappsUniswapv3FactoryCurrentGet({ chainId }: DappsUniswapv3FactoryCurrentGetRequest, opts?: OperationOpts): Observable<Array<UniswapV3FactoryV3DTO> | AjaxResponse<Array<UniswapV3FactoryV3DTO>>> {
-        throwIfNullOrUndefined(chainId, 'chainId', 'dappsUniswapv3FactoryCurrentGet');
-
+    uniswapV3GetFactoryCurrent(): Observable<Array<UniswapV3FactoryV3DTO>>
+    uniswapV3GetFactoryCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3FactoryV3DTO>>>
+    uniswapV3GetFactoryCurrent(opts?: OperationOpts): Observable<Array<UniswapV3FactoryV3DTO> | AjaxResponse<Array<UniswapV3FactoryV3DTO>>> {
         return this.request<Array<UniswapV3FactoryV3DTO>>({
-            url: '/dapps/uniswapv3/factory/current'.replace('{chain_id}', encodeURI(chainId)),
+            url: '/dapps/uniswapv3/factory/current',
             method: 'GET',
         }, opts?.responseOpts);
     };
 
     /**
+     * Gets factory.
+     * GetFactory (historical)
      */
-    dappsUniswapv3FactoryHistoricalGet({ startBlock, endBlock, startDate, endDate }: DappsUniswapv3FactoryHistoricalGetRequest): Observable<void>
-    dappsUniswapv3FactoryHistoricalGet({ startBlock, endBlock, startDate, endDate }: DappsUniswapv3FactoryHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
-    dappsUniswapv3FactoryHistoricalGet({ startBlock, endBlock, startDate, endDate }: DappsUniswapv3FactoryHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
+    uniswapV3GetFactoryHistorical({ startBlock, endBlock, startDate, endDate }: UniswapV3GetFactoryHistoricalRequest): Observable<Array<UniswapV3FactoryV3DTO>>
+    uniswapV3GetFactoryHistorical({ startBlock, endBlock, startDate, endDate }: UniswapV3GetFactoryHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3FactoryV3DTO>>>
+    uniswapV3GetFactoryHistorical({ startBlock, endBlock, startDate, endDate }: UniswapV3GetFactoryHistoricalRequest, opts?: OperationOpts): Observable<Array<UniswapV3FactoryV3DTO> | AjaxResponse<Array<UniswapV3FactoryV3DTO>>> {
 
         const query: HttpQuery = {};
 
@@ -345,7 +364,7 @@ export class UniswapV3Api extends BaseAPI {
         if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
         if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
 
-        return this.request<void>({
+        return this.request<Array<UniswapV3FactoryV3DTO>>({
             url: '/dapps/uniswapv3/factory/historical',
             method: 'GET',
             query,
@@ -353,11 +372,12 @@ export class UniswapV3Api extends BaseAPI {
     };
 
     /**
-     * GetMints
+     * Gets mints.
+     * GetMints (current)
      */
-    dappsUniswapv3MintsCurrentGet({ filterPoolId }: DappsUniswapv3MintsCurrentGetRequest): Observable<Array<UniswapV3MintV3DTO>>
-    dappsUniswapv3MintsCurrentGet({ filterPoolId }: DappsUniswapv3MintsCurrentGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3MintV3DTO>>>
-    dappsUniswapv3MintsCurrentGet({ filterPoolId }: DappsUniswapv3MintsCurrentGetRequest, opts?: OperationOpts): Observable<Array<UniswapV3MintV3DTO> | AjaxResponse<Array<UniswapV3MintV3DTO>>> {
+    uniswapV3GetMintsCurrent({ filterPoolId }: UniswapV3GetMintsCurrentRequest): Observable<Array<UniswapV3MintV3DTO>>
+    uniswapV3GetMintsCurrent({ filterPoolId }: UniswapV3GetMintsCurrentRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3MintV3DTO>>>
+    uniswapV3GetMintsCurrent({ filterPoolId }: UniswapV3GetMintsCurrentRequest, opts?: OperationOpts): Observable<Array<UniswapV3MintV3DTO> | AjaxResponse<Array<UniswapV3MintV3DTO>>> {
 
         const query: HttpQuery = {};
 
@@ -371,10 +391,12 @@ export class UniswapV3Api extends BaseAPI {
     };
 
     /**
+     * Gets mints.
+     * GetMints (historical)
      */
-    dappsUniswapv3MintsHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsUniswapv3MintsHistoricalGetRequest): Observable<void>
-    dappsUniswapv3MintsHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsUniswapv3MintsHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
-    dappsUniswapv3MintsHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsUniswapv3MintsHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
+    uniswapV3GetMintsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: UniswapV3GetMintsHistoricalRequest): Observable<Array<UniswapV3MintV3DTO>>
+    uniswapV3GetMintsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: UniswapV3GetMintsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3MintV3DTO>>>
+    uniswapV3GetMintsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: UniswapV3GetMintsHistoricalRequest, opts?: OperationOpts): Observable<Array<UniswapV3MintV3DTO> | AjaxResponse<Array<UniswapV3MintV3DTO>>> {
 
         const query: HttpQuery = {};
 
@@ -384,7 +406,7 @@ export class UniswapV3Api extends BaseAPI {
         if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
         if (poolId != null) { query['poolId'] = poolId; }
 
-        return this.request<void>({
+        return this.request<Array<UniswapV3MintV3DTO>>({
             url: '/dapps/uniswapv3/mints/historical',
             method: 'GET',
             query,
@@ -392,53 +414,12 @@ export class UniswapV3Api extends BaseAPI {
     };
 
     /**
+     * Gets pools.
+     * GetPools (current) 🔥
      */
-    dappsUniswapv3PoolDayDataHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsUniswapv3PoolDayDataHistoricalGetRequest): Observable<void>
-    dappsUniswapv3PoolDayDataHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsUniswapv3PoolDayDataHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
-    dappsUniswapv3PoolDayDataHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsUniswapv3PoolDayDataHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
-
-        const query: HttpQuery = {};
-
-        if (startBlock != null) { query['startBlock'] = startBlock; }
-        if (endBlock != null) { query['endBlock'] = endBlock; }
-        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
-        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
-        if (poolId != null) { query['poolId'] = poolId; }
-
-        return this.request<void>({
-            url: '/dapps/uniswapv3/poolDayData/historical',
-            method: 'GET',
-            query,
-        }, opts?.responseOpts);
-    };
-
-    /**
-     */
-    dappsUniswapv3PoolHourDataHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsUniswapv3PoolHourDataHistoricalGetRequest): Observable<void>
-    dappsUniswapv3PoolHourDataHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsUniswapv3PoolHourDataHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
-    dappsUniswapv3PoolHourDataHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsUniswapv3PoolHourDataHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
-
-        const query: HttpQuery = {};
-
-        if (startBlock != null) { query['startBlock'] = startBlock; }
-        if (endBlock != null) { query['endBlock'] = endBlock; }
-        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
-        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
-        if (poolId != null) { query['poolId'] = poolId; }
-
-        return this.request<void>({
-            url: '/dapps/uniswapv3/poolHourData/historical',
-            method: 'GET',
-            query,
-        }, opts?.responseOpts);
-    };
-
-    /**
-     * GetPools
-     */
-    dappsUniswapv3PoolsCurrentGet({ filterPoolId }: DappsUniswapv3PoolsCurrentGetRequest): Observable<Array<UniswapV3PoolV3DTO>>
-    dappsUniswapv3PoolsCurrentGet({ filterPoolId }: DappsUniswapv3PoolsCurrentGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3PoolV3DTO>>>
-    dappsUniswapv3PoolsCurrentGet({ filterPoolId }: DappsUniswapv3PoolsCurrentGetRequest, opts?: OperationOpts): Observable<Array<UniswapV3PoolV3DTO> | AjaxResponse<Array<UniswapV3PoolV3DTO>>> {
+    uniswapV3GetPoolsCurrent({ filterPoolId }: UniswapV3GetPoolsCurrentRequest): Observable<Array<UniswapV3PoolV3DTO>>
+    uniswapV3GetPoolsCurrent({ filterPoolId }: UniswapV3GetPoolsCurrentRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3PoolV3DTO>>>
+    uniswapV3GetPoolsCurrent({ filterPoolId }: UniswapV3GetPoolsCurrentRequest, opts?: OperationOpts): Observable<Array<UniswapV3PoolV3DTO> | AjaxResponse<Array<UniswapV3PoolV3DTO>>> {
 
         const query: HttpQuery = {};
 
@@ -452,11 +433,12 @@ export class UniswapV3Api extends BaseAPI {
     };
 
     /**
-     * GetPoolsDayData
+     * Gets pools day data.
+     * GetPoolsDayData (current)
      */
-    dappsUniswapv3PoolsDayDataCurrentGet({ filterPoolId }: DappsUniswapv3PoolsDayDataCurrentGetRequest): Observable<Array<UniswapV3PoolDayDataV3DTO>>
-    dappsUniswapv3PoolsDayDataCurrentGet({ filterPoolId }: DappsUniswapv3PoolsDayDataCurrentGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3PoolDayDataV3DTO>>>
-    dappsUniswapv3PoolsDayDataCurrentGet({ filterPoolId }: DappsUniswapv3PoolsDayDataCurrentGetRequest, opts?: OperationOpts): Observable<Array<UniswapV3PoolDayDataV3DTO> | AjaxResponse<Array<UniswapV3PoolDayDataV3DTO>>> {
+    uniswapV3GetPoolsDayDataCurrent({ filterPoolId }: UniswapV3GetPoolsDayDataCurrentRequest): Observable<Array<UniswapV3PoolDayDataV3DTO>>
+    uniswapV3GetPoolsDayDataCurrent({ filterPoolId }: UniswapV3GetPoolsDayDataCurrentRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3PoolDayDataV3DTO>>>
+    uniswapV3GetPoolsDayDataCurrent({ filterPoolId }: UniswapV3GetPoolsDayDataCurrentRequest, opts?: OperationOpts): Observable<Array<UniswapV3PoolDayDataV3DTO> | AjaxResponse<Array<UniswapV3PoolDayDataV3DTO>>> {
 
         const query: HttpQuery = {};
 
@@ -470,10 +452,12 @@ export class UniswapV3Api extends BaseAPI {
     };
 
     /**
+     * Gets pools day data.
+     * GetPoolsDayData (historical)
      */
-    dappsUniswapv3PoolsHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsUniswapv3PoolsHistoricalGetRequest): Observable<void>
-    dappsUniswapv3PoolsHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsUniswapv3PoolsHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
-    dappsUniswapv3PoolsHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsUniswapv3PoolsHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
+    uniswapV3GetPoolsDayDataHistorical({ startBlock, endBlock, startDate, endDate, poolId }: UniswapV3GetPoolsDayDataHistoricalRequest): Observable<Array<UniswapV3PoolDayDataV3DTO>>
+    uniswapV3GetPoolsDayDataHistorical({ startBlock, endBlock, startDate, endDate, poolId }: UniswapV3GetPoolsDayDataHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3PoolDayDataV3DTO>>>
+    uniswapV3GetPoolsDayDataHistorical({ startBlock, endBlock, startDate, endDate, poolId }: UniswapV3GetPoolsDayDataHistoricalRequest, opts?: OperationOpts): Observable<Array<UniswapV3PoolDayDataV3DTO> | AjaxResponse<Array<UniswapV3PoolDayDataV3DTO>>> {
 
         const query: HttpQuery = {};
 
@@ -483,7 +467,30 @@ export class UniswapV3Api extends BaseAPI {
         if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
         if (poolId != null) { query['poolId'] = poolId; }
 
-        return this.request<void>({
+        return this.request<Array<UniswapV3PoolDayDataV3DTO>>({
+            url: '/dapps/uniswapv3/poolsDayData/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets pools.
+     * GetPools (historical) 🔥
+     */
+    uniswapV3GetPoolsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: UniswapV3GetPoolsHistoricalRequest): Observable<Array<UniswapV3PoolV3DTO>>
+    uniswapV3GetPoolsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: UniswapV3GetPoolsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3PoolV3DTO>>>
+    uniswapV3GetPoolsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: UniswapV3GetPoolsHistoricalRequest, opts?: OperationOpts): Observable<Array<UniswapV3PoolV3DTO> | AjaxResponse<Array<UniswapV3PoolV3DTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<Array<UniswapV3PoolV3DTO>>({
             url: '/dapps/uniswapv3/pools/historical',
             method: 'GET',
             query,
@@ -491,11 +498,12 @@ export class UniswapV3Api extends BaseAPI {
     };
 
     /**
-     * GetPoolsHourData
+     * Gets pools hour data.
+     * GetPoolsHourData (current)
      */
-    dappsUniswapv3PoolsHourDataCurrentGet({ filterPoolId }: DappsUniswapv3PoolsHourDataCurrentGetRequest): Observable<Array<UniswapV3PoolHourDataV3DTO>>
-    dappsUniswapv3PoolsHourDataCurrentGet({ filterPoolId }: DappsUniswapv3PoolsHourDataCurrentGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3PoolHourDataV3DTO>>>
-    dappsUniswapv3PoolsHourDataCurrentGet({ filterPoolId }: DappsUniswapv3PoolsHourDataCurrentGetRequest, opts?: OperationOpts): Observable<Array<UniswapV3PoolHourDataV3DTO> | AjaxResponse<Array<UniswapV3PoolHourDataV3DTO>>> {
+    uniswapV3GetPoolsHourDataCurrent({ filterPoolId }: UniswapV3GetPoolsHourDataCurrentRequest): Observable<Array<UniswapV3PoolHourDataV3DTO>>
+    uniswapV3GetPoolsHourDataCurrent({ filterPoolId }: UniswapV3GetPoolsHourDataCurrentRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3PoolHourDataV3DTO>>>
+    uniswapV3GetPoolsHourDataCurrent({ filterPoolId }: UniswapV3GetPoolsHourDataCurrentRequest, opts?: OperationOpts): Observable<Array<UniswapV3PoolHourDataV3DTO> | AjaxResponse<Array<UniswapV3PoolHourDataV3DTO>>> {
 
         const query: HttpQuery = {};
 
@@ -509,10 +517,12 @@ export class UniswapV3Api extends BaseAPI {
     };
 
     /**
+     * Gets pools hour data.
+     * GetPoolsHourData (historical)
      */
-    dappsUniswapv3PositionSnapshotHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsUniswapv3PositionSnapshotHistoricalGetRequest): Observable<void>
-    dappsUniswapv3PositionSnapshotHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsUniswapv3PositionSnapshotHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
-    dappsUniswapv3PositionSnapshotHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsUniswapv3PositionSnapshotHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
+    uniswapV3GetPoolsHourDataHistorical({ startBlock, endBlock, startDate, endDate, poolId }: UniswapV3GetPoolsHourDataHistoricalRequest): Observable<Array<UniswapV3PoolHourDataV3DTO>>
+    uniswapV3GetPoolsHourDataHistorical({ startBlock, endBlock, startDate, endDate, poolId }: UniswapV3GetPoolsHourDataHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3PoolHourDataV3DTO>>>
+    uniswapV3GetPoolsHourDataHistorical({ startBlock, endBlock, startDate, endDate, poolId }: UniswapV3GetPoolsHourDataHistoricalRequest, opts?: OperationOpts): Observable<Array<UniswapV3PoolHourDataV3DTO> | AjaxResponse<Array<UniswapV3PoolHourDataV3DTO>>> {
 
         const query: HttpQuery = {};
 
@@ -522,37 +532,20 @@ export class UniswapV3Api extends BaseAPI {
         if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
         if (poolId != null) { query['poolId'] = poolId; }
 
-        return this.request<void>({
-            url: '/dapps/uniswapv3/positionSnapshot/historical',
+        return this.request<Array<UniswapV3PoolHourDataV3DTO>>({
+            url: '/dapps/uniswapv3/poolsHourData/historical',
             method: 'GET',
             query,
         }, opts?.responseOpts);
     };
 
     /**
-     * GetPositionSnapshot
+     * Gets positions.
+     * GetPositions (current)
      */
-    dappsUniswapv3PositionSnapshotsCurrentGet({ filterPoolId }: DappsUniswapv3PositionSnapshotsCurrentGetRequest): Observable<Array<UniswapV3PositionSnapshotV3DTO>>
-    dappsUniswapv3PositionSnapshotsCurrentGet({ filterPoolId }: DappsUniswapv3PositionSnapshotsCurrentGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3PositionSnapshotV3DTO>>>
-    dappsUniswapv3PositionSnapshotsCurrentGet({ filterPoolId }: DappsUniswapv3PositionSnapshotsCurrentGetRequest, opts?: OperationOpts): Observable<Array<UniswapV3PositionSnapshotV3DTO> | AjaxResponse<Array<UniswapV3PositionSnapshotV3DTO>>> {
-
-        const query: HttpQuery = {};
-
-        if (filterPoolId != null) { query['filter_pool_id'] = filterPoolId; }
-
-        return this.request<Array<UniswapV3PositionSnapshotV3DTO>>({
-            url: '/dapps/uniswapv3/positionSnapshots/current',
-            method: 'GET',
-            query,
-        }, opts?.responseOpts);
-    };
-
-    /**
-     * GetPositions
-     */
-    dappsUniswapv3PositionsCurrentGet({ filterPoolId }: DappsUniswapv3PositionsCurrentGetRequest): Observable<Array<UniswapV3PositionV3DTO>>
-    dappsUniswapv3PositionsCurrentGet({ filterPoolId }: DappsUniswapv3PositionsCurrentGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3PositionV3DTO>>>
-    dappsUniswapv3PositionsCurrentGet({ filterPoolId }: DappsUniswapv3PositionsCurrentGetRequest, opts?: OperationOpts): Observable<Array<UniswapV3PositionV3DTO> | AjaxResponse<Array<UniswapV3PositionV3DTO>>> {
+    uniswapV3GetPositionsCurrent({ filterPoolId }: UniswapV3GetPositionsCurrentRequest): Observable<Array<UniswapV3PositionV3DTO>>
+    uniswapV3GetPositionsCurrent({ filterPoolId }: UniswapV3GetPositionsCurrentRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3PositionV3DTO>>>
+    uniswapV3GetPositionsCurrent({ filterPoolId }: UniswapV3GetPositionsCurrentRequest, opts?: OperationOpts): Observable<Array<UniswapV3PositionV3DTO> | AjaxResponse<Array<UniswapV3PositionV3DTO>>> {
 
         const query: HttpQuery = {};
 
@@ -566,10 +559,12 @@ export class UniswapV3Api extends BaseAPI {
     };
 
     /**
+     * Gets positions.
+     * GetPositions (historical)
      */
-    dappsUniswapv3PositionsHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsUniswapv3PositionsHistoricalGetRequest): Observable<void>
-    dappsUniswapv3PositionsHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsUniswapv3PositionsHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
-    dappsUniswapv3PositionsHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsUniswapv3PositionsHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
+    uniswapV3GetPositionsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: UniswapV3GetPositionsHistoricalRequest): Observable<Array<UniswapV3PositionV3DTO>>
+    uniswapV3GetPositionsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: UniswapV3GetPositionsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3PositionV3DTO>>>
+    uniswapV3GetPositionsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: UniswapV3GetPositionsHistoricalRequest, opts?: OperationOpts): Observable<Array<UniswapV3PositionV3DTO> | AjaxResponse<Array<UniswapV3PositionV3DTO>>> {
 
         const query: HttpQuery = {};
 
@@ -579,7 +574,7 @@ export class UniswapV3Api extends BaseAPI {
         if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
         if (poolId != null) { query['poolId'] = poolId; }
 
-        return this.request<void>({
+        return this.request<Array<UniswapV3PositionV3DTO>>({
             url: '/dapps/uniswapv3/positions/historical',
             method: 'GET',
             query,
@@ -587,11 +582,54 @@ export class UniswapV3Api extends BaseAPI {
     };
 
     /**
-     * GetSwaps
+     * Gets positions snapshots.
+     * GetPositionsSnaphots (historical)
      */
-    dappsUniswapv3SwapsCurrentGet({ filterPoolId }: DappsUniswapv3SwapsCurrentGetRequest): Observable<Array<UniswapV3SwapV3DTO>>
-    dappsUniswapv3SwapsCurrentGet({ filterPoolId }: DappsUniswapv3SwapsCurrentGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3SwapV3DTO>>>
-    dappsUniswapv3SwapsCurrentGet({ filterPoolId }: DappsUniswapv3SwapsCurrentGetRequest, opts?: OperationOpts): Observable<Array<UniswapV3SwapV3DTO> | AjaxResponse<Array<UniswapV3SwapV3DTO>>> {
+    uniswapV3GetPositionsSnaphotsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: UniswapV3GetPositionsSnaphotsHistoricalRequest): Observable<Array<UniswapV3PositionSnapshotV3DTO>>
+    uniswapV3GetPositionsSnaphotsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: UniswapV3GetPositionsSnaphotsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3PositionSnapshotV3DTO>>>
+    uniswapV3GetPositionsSnaphotsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: UniswapV3GetPositionsSnaphotsHistoricalRequest, opts?: OperationOpts): Observable<Array<UniswapV3PositionSnapshotV3DTO> | AjaxResponse<Array<UniswapV3PositionSnapshotV3DTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<Array<UniswapV3PositionSnapshotV3DTO>>({
+            url: '/dapps/uniswapv3/positionsSnapshots/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets positions snapshots.
+     * GetPositionsSnapshots (current)
+     */
+    uniswapV3GetPositionsSnapshotsCurrent({ filterPoolId }: UniswapV3GetPositionsSnapshotsCurrentRequest): Observable<Array<UniswapV3PositionSnapshotV3DTO>>
+    uniswapV3GetPositionsSnapshotsCurrent({ filterPoolId }: UniswapV3GetPositionsSnapshotsCurrentRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3PositionSnapshotV3DTO>>>
+    uniswapV3GetPositionsSnapshotsCurrent({ filterPoolId }: UniswapV3GetPositionsSnapshotsCurrentRequest, opts?: OperationOpts): Observable<Array<UniswapV3PositionSnapshotV3DTO> | AjaxResponse<Array<UniswapV3PositionSnapshotV3DTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (filterPoolId != null) { query['filter_pool_id'] = filterPoolId; }
+
+        return this.request<Array<UniswapV3PositionSnapshotV3DTO>>({
+            url: '/dapps/uniswapv3/positionSnapshots/current',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets swaps.
+     * GetSwaps (current) 🔥
+     */
+    uniswapV3GetSwapsCurrent({ filterPoolId }: UniswapV3GetSwapsCurrentRequest): Observable<Array<UniswapV3SwapV3DTO>>
+    uniswapV3GetSwapsCurrent({ filterPoolId }: UniswapV3GetSwapsCurrentRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3SwapV3DTO>>>
+    uniswapV3GetSwapsCurrent({ filterPoolId }: UniswapV3GetSwapsCurrentRequest, opts?: OperationOpts): Observable<Array<UniswapV3SwapV3DTO> | AjaxResponse<Array<UniswapV3SwapV3DTO>>> {
 
         const query: HttpQuery = {};
 
@@ -605,10 +643,12 @@ export class UniswapV3Api extends BaseAPI {
     };
 
     /**
+     * Gets swaps.
+     * GetSwaps (historical) 🔥
      */
-    dappsUniswapv3SwapsHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsUniswapv3SwapsHistoricalGetRequest): Observable<void>
-    dappsUniswapv3SwapsHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsUniswapv3SwapsHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
-    dappsUniswapv3SwapsHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsUniswapv3SwapsHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
+    uniswapV3GetSwapsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: UniswapV3GetSwapsHistoricalRequest): Observable<Array<UniswapV3SwapV3DTO>>
+    uniswapV3GetSwapsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: UniswapV3GetSwapsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3SwapV3DTO>>>
+    uniswapV3GetSwapsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: UniswapV3GetSwapsHistoricalRequest, opts?: OperationOpts): Observable<Array<UniswapV3SwapV3DTO> | AjaxResponse<Array<UniswapV3SwapV3DTO>>> {
 
         const query: HttpQuery = {};
 
@@ -618,7 +658,7 @@ export class UniswapV3Api extends BaseAPI {
         if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
         if (poolId != null) { query['poolId'] = poolId; }
 
-        return this.request<void>({
+        return this.request<Array<UniswapV3SwapV3DTO>>({
             url: '/dapps/uniswapv3/swaps/historical',
             method: 'GET',
             query,
@@ -626,32 +666,12 @@ export class UniswapV3Api extends BaseAPI {
     };
 
     /**
+     * Gets ticks.
+     * GetTicks (current)
      */
-    dappsUniswapv3TickDayDataHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsUniswapv3TickDayDataHistoricalGetRequest): Observable<void>
-    dappsUniswapv3TickDayDataHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsUniswapv3TickDayDataHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
-    dappsUniswapv3TickDayDataHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsUniswapv3TickDayDataHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
-
-        const query: HttpQuery = {};
-
-        if (startBlock != null) { query['startBlock'] = startBlock; }
-        if (endBlock != null) { query['endBlock'] = endBlock; }
-        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
-        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
-        if (poolId != null) { query['poolId'] = poolId; }
-
-        return this.request<void>({
-            url: '/dapps/uniswapv3/tickDayData/historical',
-            method: 'GET',
-            query,
-        }, opts?.responseOpts);
-    };
-
-    /**
-     * GetTicks
-     */
-    dappsUniswapv3TicksCurrentGet({ filterPoolId }: DappsUniswapv3TicksCurrentGetRequest): Observable<Array<UniswapV3TickV3DTO>>
-    dappsUniswapv3TicksCurrentGet({ filterPoolId }: DappsUniswapv3TicksCurrentGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3TickV3DTO>>>
-    dappsUniswapv3TicksCurrentGet({ filterPoolId }: DappsUniswapv3TicksCurrentGetRequest, opts?: OperationOpts): Observable<Array<UniswapV3TickV3DTO> | AjaxResponse<Array<UniswapV3TickV3DTO>>> {
+    uniswapV3GetTicksCurrent({ filterPoolId }: UniswapV3GetTicksCurrentRequest): Observable<Array<UniswapV3TickV3DTO>>
+    uniswapV3GetTicksCurrent({ filterPoolId }: UniswapV3GetTicksCurrentRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3TickV3DTO>>>
+    uniswapV3GetTicksCurrent({ filterPoolId }: UniswapV3GetTicksCurrentRequest, opts?: OperationOpts): Observable<Array<UniswapV3TickV3DTO> | AjaxResponse<Array<UniswapV3TickV3DTO>>> {
 
         const query: HttpQuery = {};
 
@@ -665,11 +685,12 @@ export class UniswapV3Api extends BaseAPI {
     };
 
     /**
-     * GetTicksDayData
+     * Gets ticks day data.
+     * GetTicksDayData (current)
      */
-    dappsUniswapv3TicksDayDataCurrentGet({ filterPoolId }: DappsUniswapv3TicksDayDataCurrentGetRequest): Observable<Array<UniswapV3TickDayDataV3DTO>>
-    dappsUniswapv3TicksDayDataCurrentGet({ filterPoolId }: DappsUniswapv3TicksDayDataCurrentGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3TickDayDataV3DTO>>>
-    dappsUniswapv3TicksDayDataCurrentGet({ filterPoolId }: DappsUniswapv3TicksDayDataCurrentGetRequest, opts?: OperationOpts): Observable<Array<UniswapV3TickDayDataV3DTO> | AjaxResponse<Array<UniswapV3TickDayDataV3DTO>>> {
+    uniswapV3GetTicksDayDataCurrent({ filterPoolId }: UniswapV3GetTicksDayDataCurrentRequest): Observable<Array<UniswapV3TickDayDataV3DTO>>
+    uniswapV3GetTicksDayDataCurrent({ filterPoolId }: UniswapV3GetTicksDayDataCurrentRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3TickDayDataV3DTO>>>
+    uniswapV3GetTicksDayDataCurrent({ filterPoolId }: UniswapV3GetTicksDayDataCurrentRequest, opts?: OperationOpts): Observable<Array<UniswapV3TickDayDataV3DTO> | AjaxResponse<Array<UniswapV3TickDayDataV3DTO>>> {
 
         const query: HttpQuery = {};
 
@@ -683,10 +704,12 @@ export class UniswapV3Api extends BaseAPI {
     };
 
     /**
+     * Gets ticks day data.
+     * GetTicksDayData (historical)
      */
-    dappsUniswapv3TicksHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsUniswapv3TicksHistoricalGetRequest): Observable<void>
-    dappsUniswapv3TicksHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsUniswapv3TicksHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
-    dappsUniswapv3TicksHistoricalGet({ startBlock, endBlock, startDate, endDate, poolId }: DappsUniswapv3TicksHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
+    uniswapV3GetTicksDayDataHistorical({ startBlock, endBlock, startDate, endDate, poolId }: UniswapV3GetTicksDayDataHistoricalRequest): Observable<Array<UniswapV3TickDayDataV3DTO>>
+    uniswapV3GetTicksDayDataHistorical({ startBlock, endBlock, startDate, endDate, poolId }: UniswapV3GetTicksDayDataHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3TickDayDataV3DTO>>>
+    uniswapV3GetTicksDayDataHistorical({ startBlock, endBlock, startDate, endDate, poolId }: UniswapV3GetTicksDayDataHistoricalRequest, opts?: OperationOpts): Observable<Array<UniswapV3TickDayDataV3DTO> | AjaxResponse<Array<UniswapV3TickDayDataV3DTO>>> {
 
         const query: HttpQuery = {};
 
@@ -696,7 +719,30 @@ export class UniswapV3Api extends BaseAPI {
         if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
         if (poolId != null) { query['poolId'] = poolId; }
 
-        return this.request<void>({
+        return this.request<Array<UniswapV3TickDayDataV3DTO>>({
+            url: '/dapps/uniswapv3/ticksDayData/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets ticks.
+     * GetTicks (historical)
+     */
+    uniswapV3GetTicksHistorical({ startBlock, endBlock, startDate, endDate, poolId }: UniswapV3GetTicksHistoricalRequest): Observable<Array<UniswapV3TickV3DTO>>
+    uniswapV3GetTicksHistorical({ startBlock, endBlock, startDate, endDate, poolId }: UniswapV3GetTicksHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3TickV3DTO>>>
+    uniswapV3GetTicksHistorical({ startBlock, endBlock, startDate, endDate, poolId }: UniswapV3GetTicksHistoricalRequest, opts?: OperationOpts): Observable<Array<UniswapV3TickV3DTO> | AjaxResponse<Array<UniswapV3TickV3DTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<Array<UniswapV3TickV3DTO>>({
             url: '/dapps/uniswapv3/ticks/historical',
             method: 'GET',
             query,
@@ -704,53 +750,12 @@ export class UniswapV3Api extends BaseAPI {
     };
 
     /**
+     * Gets tokens.
+     * GetTokens (current) 🔥
      */
-    dappsUniswapv3TokenDayDataHistoricalGet({ startBlock, endBlock, startDate, endDate, tokenId }: DappsUniswapv3TokenDayDataHistoricalGetRequest): Observable<void>
-    dappsUniswapv3TokenDayDataHistoricalGet({ startBlock, endBlock, startDate, endDate, tokenId }: DappsUniswapv3TokenDayDataHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
-    dappsUniswapv3TokenDayDataHistoricalGet({ startBlock, endBlock, startDate, endDate, tokenId }: DappsUniswapv3TokenDayDataHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
-
-        const query: HttpQuery = {};
-
-        if (startBlock != null) { query['startBlock'] = startBlock; }
-        if (endBlock != null) { query['endBlock'] = endBlock; }
-        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
-        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
-        if (tokenId != null) { query['tokenId'] = tokenId; }
-
-        return this.request<void>({
-            url: '/dapps/uniswapv3/tokenDayData/historical',
-            method: 'GET',
-            query,
-        }, opts?.responseOpts);
-    };
-
-    /**
-     */
-    dappsUniswapv3TokenHourDataHistoricalGet({ startBlock, endBlock, startDate, endDate, tokenId }: DappsUniswapv3TokenHourDataHistoricalGetRequest): Observable<void>
-    dappsUniswapv3TokenHourDataHistoricalGet({ startBlock, endBlock, startDate, endDate, tokenId }: DappsUniswapv3TokenHourDataHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
-    dappsUniswapv3TokenHourDataHistoricalGet({ startBlock, endBlock, startDate, endDate, tokenId }: DappsUniswapv3TokenHourDataHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
-
-        const query: HttpQuery = {};
-
-        if (startBlock != null) { query['startBlock'] = startBlock; }
-        if (endBlock != null) { query['endBlock'] = endBlock; }
-        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
-        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
-        if (tokenId != null) { query['tokenId'] = tokenId; }
-
-        return this.request<void>({
-            url: '/dapps/uniswapv3/tokenHourData/historical',
-            method: 'GET',
-            query,
-        }, opts?.responseOpts);
-    };
-
-    /**
-     * GetTokens
-     */
-    dappsUniswapv3TokensCurrentGet({ filterTokenId }: DappsUniswapv3TokensCurrentGetRequest): Observable<Array<UniswapV3TokenV3DTO>>
-    dappsUniswapv3TokensCurrentGet({ filterTokenId }: DappsUniswapv3TokensCurrentGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3TokenV3DTO>>>
-    dappsUniswapv3TokensCurrentGet({ filterTokenId }: DappsUniswapv3TokensCurrentGetRequest, opts?: OperationOpts): Observable<Array<UniswapV3TokenV3DTO> | AjaxResponse<Array<UniswapV3TokenV3DTO>>> {
+    uniswapV3GetTokensCurrent({ filterTokenId }: UniswapV3GetTokensCurrentRequest): Observable<Array<UniswapV3TokenV3DTO>>
+    uniswapV3GetTokensCurrent({ filterTokenId }: UniswapV3GetTokensCurrentRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3TokenV3DTO>>>
+    uniswapV3GetTokensCurrent({ filterTokenId }: UniswapV3GetTokensCurrentRequest, opts?: OperationOpts): Observable<Array<UniswapV3TokenV3DTO> | AjaxResponse<Array<UniswapV3TokenV3DTO>>> {
 
         const query: HttpQuery = {};
 
@@ -764,11 +769,12 @@ export class UniswapV3Api extends BaseAPI {
     };
 
     /**
-     * GetTokensDayData
+     * Gets tokens day data.
+     * GetTokensDayData (current)
      */
-    dappsUniswapv3TokensDayDataCurrentGet({ filterTokenId }: DappsUniswapv3TokensDayDataCurrentGetRequest): Observable<Array<UniswapV3TokenV3DayDataDTO>>
-    dappsUniswapv3TokensDayDataCurrentGet({ filterTokenId }: DappsUniswapv3TokensDayDataCurrentGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3TokenV3DayDataDTO>>>
-    dappsUniswapv3TokensDayDataCurrentGet({ filterTokenId }: DappsUniswapv3TokensDayDataCurrentGetRequest, opts?: OperationOpts): Observable<Array<UniswapV3TokenV3DayDataDTO> | AjaxResponse<Array<UniswapV3TokenV3DayDataDTO>>> {
+    uniswapV3GetTokensDayDataCurrent({ filterTokenId }: UniswapV3GetTokensDayDataCurrentRequest): Observable<Array<UniswapV3TokenV3DayDataDTO>>
+    uniswapV3GetTokensDayDataCurrent({ filterTokenId }: UniswapV3GetTokensDayDataCurrentRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3TokenV3DayDataDTO>>>
+    uniswapV3GetTokensDayDataCurrent({ filterTokenId }: UniswapV3GetTokensDayDataCurrentRequest, opts?: OperationOpts): Observable<Array<UniswapV3TokenV3DayDataDTO> | AjaxResponse<Array<UniswapV3TokenV3DayDataDTO>>> {
 
         const query: HttpQuery = {};
 
@@ -782,10 +788,12 @@ export class UniswapV3Api extends BaseAPI {
     };
 
     /**
+     * Gets tokens day data.
+     * GetTokensDayData (historical)
      */
-    dappsUniswapv3TokensHistoricalGet({ startBlock, endBlock, startDate, endDate, tokenId }: DappsUniswapv3TokensHistoricalGetRequest): Observable<void>
-    dappsUniswapv3TokensHistoricalGet({ startBlock, endBlock, startDate, endDate, tokenId }: DappsUniswapv3TokensHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
-    dappsUniswapv3TokensHistoricalGet({ startBlock, endBlock, startDate, endDate, tokenId }: DappsUniswapv3TokensHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
+    uniswapV3GetTokensDayDataHistorical({ startBlock, endBlock, startDate, endDate, tokenId }: UniswapV3GetTokensDayDataHistoricalRequest): Observable<Array<UniswapV3TokenV3DayDataDTO>>
+    uniswapV3GetTokensDayDataHistorical({ startBlock, endBlock, startDate, endDate, tokenId }: UniswapV3GetTokensDayDataHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3TokenV3DayDataDTO>>>
+    uniswapV3GetTokensDayDataHistorical({ startBlock, endBlock, startDate, endDate, tokenId }: UniswapV3GetTokensDayDataHistoricalRequest, opts?: OperationOpts): Observable<Array<UniswapV3TokenV3DayDataDTO> | AjaxResponse<Array<UniswapV3TokenV3DayDataDTO>>> {
 
         const query: HttpQuery = {};
 
@@ -795,7 +803,30 @@ export class UniswapV3Api extends BaseAPI {
         if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
         if (tokenId != null) { query['tokenId'] = tokenId; }
 
-        return this.request<void>({
+        return this.request<Array<UniswapV3TokenV3DayDataDTO>>({
+            url: '/dapps/uniswapv3/tokensDayData/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets tokens.
+     * GetTokens (historical) 🔥
+     */
+    uniswapV3GetTokensHistorical({ startBlock, endBlock, startDate, endDate, tokenId }: UniswapV3GetTokensHistoricalRequest): Observable<Array<UniswapV3TokenV3DTO>>
+    uniswapV3GetTokensHistorical({ startBlock, endBlock, startDate, endDate, tokenId }: UniswapV3GetTokensHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3TokenV3DTO>>>
+    uniswapV3GetTokensHistorical({ startBlock, endBlock, startDate, endDate, tokenId }: UniswapV3GetTokensHistoricalRequest, opts?: OperationOpts): Observable<Array<UniswapV3TokenV3DTO> | AjaxResponse<Array<UniswapV3TokenV3DTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (tokenId != null) { query['tokenId'] = tokenId; }
+
+        return this.request<Array<UniswapV3TokenV3DTO>>({
             url: '/dapps/uniswapv3/tokens/historical',
             method: 'GET',
             query,
@@ -803,11 +834,12 @@ export class UniswapV3Api extends BaseAPI {
     };
 
     /**
-     * GetTokensHourData
+     * Gets tokens hour data.
+     * GetTokensHourData (current)
      */
-    dappsUniswapv3TokensHourDataCurrentGet({ filterTokenId }: DappsUniswapv3TokensHourDataCurrentGetRequest): Observable<Array<UniswapV3TokenHourDataV3DTO>>
-    dappsUniswapv3TokensHourDataCurrentGet({ filterTokenId }: DappsUniswapv3TokensHourDataCurrentGetRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3TokenHourDataV3DTO>>>
-    dappsUniswapv3TokensHourDataCurrentGet({ filterTokenId }: DappsUniswapv3TokensHourDataCurrentGetRequest, opts?: OperationOpts): Observable<Array<UniswapV3TokenHourDataV3DTO> | AjaxResponse<Array<UniswapV3TokenHourDataV3DTO>>> {
+    uniswapV3GetTokensHourDataCurrent({ filterTokenId }: UniswapV3GetTokensHourDataCurrentRequest): Observable<Array<UniswapV3TokenHourDataV3DTO>>
+    uniswapV3GetTokensHourDataCurrent({ filterTokenId }: UniswapV3GetTokensHourDataCurrentRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3TokenHourDataV3DTO>>>
+    uniswapV3GetTokensHourDataCurrent({ filterTokenId }: UniswapV3GetTokensHourDataCurrentRequest, opts?: OperationOpts): Observable<Array<UniswapV3TokenHourDataV3DTO> | AjaxResponse<Array<UniswapV3TokenHourDataV3DTO>>> {
 
         const query: HttpQuery = {};
 
@@ -821,10 +853,35 @@ export class UniswapV3Api extends BaseAPI {
     };
 
     /**
+     * Gets tokens hour data.
+     * GetTokensHourData (historical)
      */
-    dappsUniswapv3TransactionsHistoricalGet({ startBlock, endBlock, startDate, endDate }: DappsUniswapv3TransactionsHistoricalGetRequest): Observable<void>
-    dappsUniswapv3TransactionsHistoricalGet({ startBlock, endBlock, startDate, endDate }: DappsUniswapv3TransactionsHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
-    dappsUniswapv3TransactionsHistoricalGet({ startBlock, endBlock, startDate, endDate }: DappsUniswapv3TransactionsHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
+    uniswapV3GetTokensHourDataHistorical({ startBlock, endBlock, startDate, endDate, tokenId }: UniswapV3GetTokensHourDataHistoricalRequest): Observable<Array<UniswapV3TokenHourDataV3DTO>>
+    uniswapV3GetTokensHourDataHistorical({ startBlock, endBlock, startDate, endDate, tokenId }: UniswapV3GetTokensHourDataHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3TokenHourDataV3DTO>>>
+    uniswapV3GetTokensHourDataHistorical({ startBlock, endBlock, startDate, endDate, tokenId }: UniswapV3GetTokensHourDataHistoricalRequest, opts?: OperationOpts): Observable<Array<UniswapV3TokenHourDataV3DTO> | AjaxResponse<Array<UniswapV3TokenHourDataV3DTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (tokenId != null) { query['tokenId'] = tokenId; }
+
+        return this.request<Array<UniswapV3TokenHourDataV3DTO>>({
+            url: '/dapps/uniswapv3/tokensHourData/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets transactions.
+     * GetTransactions (historical)
+     */
+    uniswapV3GetTransactionsHistorical({ startBlock, endBlock, startDate, endDate }: UniswapV3GetTransactionsHistoricalRequest): Observable<Array<UniswapV3TransactionV3DTO>>
+    uniswapV3GetTransactionsHistorical({ startBlock, endBlock, startDate, endDate }: UniswapV3GetTransactionsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3TransactionV3DTO>>>
+    uniswapV3GetTransactionsHistorical({ startBlock, endBlock, startDate, endDate }: UniswapV3GetTransactionsHistoricalRequest, opts?: OperationOpts): Observable<Array<UniswapV3TransactionV3DTO> | AjaxResponse<Array<UniswapV3TransactionV3DTO>>> {
 
         const query: HttpQuery = {};
 
@@ -833,22 +890,10 @@ export class UniswapV3Api extends BaseAPI {
         if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
         if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
 
-        return this.request<void>({
+        return this.request<Array<UniswapV3TransactionV3DTO>>({
             url: '/dapps/uniswapv3/transactions/historical',
             method: 'GET',
             query,
-        }, opts?.responseOpts);
-    };
-
-    /**
-     * GetUniswapDayData
-     */
-    dappsUniswapv3UniswapDayDataCurrentGet(): Observable<Array<UniswapV3UniswapDayDataV3DTO>>
-    dappsUniswapv3UniswapDayDataCurrentGet(opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3UniswapDayDataV3DTO>>>
-    dappsUniswapv3UniswapDayDataCurrentGet(opts?: OperationOpts): Observable<Array<UniswapV3UniswapDayDataV3DTO> | AjaxResponse<Array<UniswapV3UniswapDayDataV3DTO>>> {
-        return this.request<Array<UniswapV3UniswapDayDataV3DTO>>({
-            url: '/dapps/uniswapv3/uniswapDayData/current',
-            method: 'GET',
         }, opts?.responseOpts);
     };
 

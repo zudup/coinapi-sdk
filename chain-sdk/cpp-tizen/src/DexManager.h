@@ -5,6 +5,17 @@
 #include <cstring>
 #include <list>
 #include <glib.h>
+#include "Dex.BatchDTO.h"
+#include "Dex.DepositDTO.h"
+#include "Dex.OrderDTO.h"
+#include "Dex.PriceDTO.h"
+#include "Dex.SolutionDTO.h"
+#include "Dex.StatsDTO.h"
+#include "Dex.TokenDTO.h"
+#include "Dex.TradeDTO.h"
+#include "Dex.UserDTO.h"
+#include "Dex.WithdrawDTO.h"
+#include "Dex.WithdrawRequestDTO.h"
 #include "Error.h"
 
 /** \defgroup Operations API Endpoints
@@ -23,9 +34,9 @@ public:
 	DexManager();
 	virtual ~DexManager();
 
-/*! \brief . *Synchronous*
+/*! \brief GetBatches (historical). *Synchronous*
  *
- * 
+ * Gets batches.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -34,14 +45,14 @@ public:
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsDexBatchHistoricalGetSync(char * accessToken,
+bool dexGetBatches (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Dex.BatchDTO>, Error, void* )
+	, void* userData);
 
-/*! \brief . *Asynchronous*
+/*! \brief GetBatches (historical). *Asynchronous*
  *
- * 
+ * Gets batches.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -50,15 +61,15 @@ bool dappsDexBatchHistoricalGetSync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsDexBatchHistoricalGetAsync(char * accessToken,
+bool dexGetBatches (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Dex.BatchDTO>, Error, void* )
+	, void* userData);
 
 
-/*! \brief . *Synchronous*
+/*! \brief GetDeposits (historical). *Synchronous*
  *
- * 
+ * Gets deposits.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -68,14 +79,14 @@ bool dappsDexBatchHistoricalGetAsync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsDexOrdersHistoricalGetSync(char * accessToken,
+bool dexGetDeposits (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Dex.DepositDTO>, Error, void* )
+	, void* userData);
 
-/*! \brief . *Asynchronous*
+/*! \brief GetDeposits (historical). *Asynchronous*
  *
- * 
+ * Gets deposits.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -85,15 +96,15 @@ bool dappsDexOrdersHistoricalGetSync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsDexOrdersHistoricalGetAsync(char * accessToken,
+bool dexGetDeposits (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Dex.DepositDTO>, Error, void* )
+	, void* userData);
 
 
-/*! \brief . *Synchronous*
+/*! \brief GetOrders (historical). *Synchronous*
  *
- * 
+ * Gets orders.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -103,14 +114,14 @@ bool dappsDexOrdersHistoricalGetAsync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsDexPricesHistoricalGetSync(char * accessToken,
+bool dexGetOrders (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Dex.OrderDTO>, Error, void* )
+	, void* userData);
 
-/*! \brief . *Asynchronous*
+/*! \brief GetOrders (historical). *Asynchronous*
  *
- * 
+ * Gets orders.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -120,15 +131,15 @@ bool dappsDexPricesHistoricalGetSync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsDexPricesHistoricalGetAsync(char * accessToken,
+bool dexGetOrders (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Dex.OrderDTO>, Error, void* )
+	, void* userData);
 
 
-/*! \brief . *Synchronous*
+/*! \brief GetPrices (historical). *Synchronous*
  *
- * 
+ * Gets prices.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -138,14 +149,14 @@ bool dappsDexPricesHistoricalGetAsync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsDexSolutionHistoricalGetSync(char * accessToken,
+bool dexGetPrices (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Dex.PriceDTO>, Error, void* )
+	, void* userData);
 
-/*! \brief . *Asynchronous*
+/*! \brief GetPrices (historical). *Asynchronous*
  *
- * 
+ * Gets prices.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -155,15 +166,50 @@ bool dappsDexSolutionHistoricalGetSync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsDexSolutionHistoricalGetAsync(char * accessToken,
+bool dexGetPrices (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Dex.PriceDTO>, Error, void* )
+	, void* userData);
 
 
-/*! \brief . *Synchronous*
+/*! \brief GetSolutions (historical). *Synchronous*
  *
- * 
+ * Gets solutions.
+ * \param startBlock 
+ * \param endBlock 
+ * \param startDate 
+ * \param endDate 
+ * \param tokenId 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool dexGetSolutions (historical)Sync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
+	void(* handler)(std::list<Dex.SolutionDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief GetSolutions (historical). *Asynchronous*
+ *
+ * Gets solutions.
+ * \param startBlock 
+ * \param endBlock 
+ * \param startDate 
+ * \param endDate 
+ * \param tokenId 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool dexGetSolutions (historical)Async(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
+	void(* handler)(std::list<Dex.SolutionDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief GetStats (historical). *Synchronous*
+ *
+ * Gets stats.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -172,14 +218,14 @@ bool dappsDexSolutionHistoricalGetAsync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsDexStatsHistoricalGetSync(char * accessToken,
+bool dexGetStats (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Dex.StatsDTO>, Error, void* )
+	, void* userData);
 
-/*! \brief . *Asynchronous*
+/*! \brief GetStats (historical). *Asynchronous*
  *
- * 
+ * Gets stats.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -188,15 +234,15 @@ bool dappsDexStatsHistoricalGetSync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsDexStatsHistoricalGetAsync(char * accessToken,
+bool dexGetStats (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Dex.StatsDTO>, Error, void* )
+	, void* userData);
 
 
-/*! \brief . *Synchronous*
+/*! \brief GetTokens (historical) 🔥. *Synchronous*
  *
- * 
+ * Gets tokens.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -206,14 +252,14 @@ bool dappsDexStatsHistoricalGetAsync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsDexTokensHistoricalGetSync(char * accessToken,
+bool dexGetTokens (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Dex.TokenDTO>, Error, void* )
+	, void* userData);
 
-/*! \brief . *Asynchronous*
+/*! \brief GetTokens (historical) 🔥. *Asynchronous*
  *
- * 
+ * Gets tokens.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -223,15 +269,15 @@ bool dappsDexTokensHistoricalGetSync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsDexTokensHistoricalGetAsync(char * accessToken,
+bool dexGetTokens (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Dex.TokenDTO>, Error, void* )
+	, void* userData);
 
 
-/*! \brief . *Synchronous*
+/*! \brief GetTrades (historical) 🔥. *Synchronous*
  *
- * 
+ * Gets trades.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -240,14 +286,14 @@ bool dappsDexTokensHistoricalGetAsync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsDexTradesHistoricalGetSync(char * accessToken,
+bool dexGetTrades (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Dex.TradeDTO>, Error, void* )
+	, void* userData);
 
-/*! \brief . *Asynchronous*
+/*! \brief GetTrades (historical) 🔥. *Asynchronous*
  *
- * 
+ * Gets trades.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -256,15 +302,15 @@ bool dappsDexTradesHistoricalGetSync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsDexTradesHistoricalGetAsync(char * accessToken,
+bool dexGetTrades (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Dex.TradeDTO>, Error, void* )
+	, void* userData);
 
 
-/*! \brief . *Synchronous*
+/*! \brief GetUsers (historical). *Synchronous*
  *
- * 
+ * Gets users.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -273,14 +319,14 @@ bool dappsDexTradesHistoricalGetAsync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsDexUsersHistoricalGetSync(char * accessToken,
+bool dexGetUsers (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Dex.UserDTO>, Error, void* )
+	, void* userData);
 
-/*! \brief . *Asynchronous*
+/*! \brief GetUsers (historical). *Asynchronous*
  *
- * 
+ * Gets users.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -289,15 +335,15 @@ bool dappsDexUsersHistoricalGetSync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsDexUsersHistoricalGetAsync(char * accessToken,
+bool dexGetUsers (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Dex.UserDTO>, Error, void* )
+	, void* userData);
 
 
-/*! \brief . *Synchronous*
+/*! \brief GetWithdraws (historical). *Synchronous*
  *
- * 
+ * Gets withdraws.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -307,14 +353,14 @@ bool dappsDexUsersHistoricalGetAsync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsDexWithdrawHistoricalGetSync(char * accessToken,
+bool dexGetWithdraws (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Dex.WithdrawDTO>, Error, void* )
+	, void* userData);
 
-/*! \brief . *Asynchronous*
+/*! \brief GetWithdraws (historical). *Asynchronous*
  *
- * 
+ * Gets withdraws.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -324,15 +370,15 @@ bool dappsDexWithdrawHistoricalGetSync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsDexWithdrawHistoricalGetAsync(char * accessToken,
+bool dexGetWithdraws (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Dex.WithdrawDTO>, Error, void* )
+	, void* userData);
 
 
-/*! \brief . *Synchronous*
+/*! \brief GetWithdrawsRequests (historical). *Synchronous*
  *
- * 
+ * Gets withdraws requests.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -342,14 +388,14 @@ bool dappsDexWithdrawHistoricalGetAsync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsDexWithdrawRequestHistoricalGetSync(char * accessToken,
+bool dexGetWithdrawsRequests (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Dex.WithdrawRequestDTO>, Error, void* )
+	, void* userData);
 
-/*! \brief . *Asynchronous*
+/*! \brief GetWithdrawsRequests (historical). *Asynchronous*
  *
- * 
+ * Gets withdraws requests.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -359,10 +405,10 @@ bool dappsDexWithdrawRequestHistoricalGetSync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsDexWithdrawRequestHistoricalGetAsync(char * accessToken,
+bool dexGetWithdrawsRequests (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Dex.WithdrawRequestDTO>, Error, void* )
+	, void* userData);
 
 
 

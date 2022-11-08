@@ -21,6 +21,7 @@ from .. import ApiTestMixin
 class TestDappsCowOrdersHistorical(ApiTestMixin, unittest.TestCase):
     """
     DappsCowOrdersHistorical unit test stubs
+        GetOrders (historical)  # noqa: E501
     """
     _configuration = configuration.Configuration()
 
@@ -32,7 +33,12 @@ class TestDappsCowOrdersHistorical(ApiTestMixin, unittest.TestCase):
         pass
 
     response_status = 200
-    response_body = ''
+
+
+
+
+
+
 
 
 if __name__ == '__main__':

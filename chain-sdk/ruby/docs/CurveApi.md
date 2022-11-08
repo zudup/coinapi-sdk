@@ -4,45 +4,47 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
-| [**dapps_curve_accounts_historical_get**](CurveApi.md#dapps_curve_accounts_historical_get) | **GET** /dapps/curve/accounts/historical |  |
-| [**dapps_curve_add_liquidity_event_historical_get**](CurveApi.md#dapps_curve_add_liquidity_event_historical_get) | **GET** /dapps/curve/addLiquidityEvent/historical |  |
-| [**dapps_curve_admin_fee_change_log_historical_get**](CurveApi.md#dapps_curve_admin_fee_change_log_historical_get) | **GET** /dapps/curve/adminFeeChangeLog/historical |  |
-| [**dapps_curve_amplification_coeff_change_log_historical_get**](CurveApi.md#dapps_curve_amplification_coeff_change_log_historical_get) | **GET** /dapps/curve/amplificationCoeffChangeLog/historical |  |
-| [**dapps_curve_coins_historical_get**](CurveApi.md#dapps_curve_coins_historical_get) | **GET** /dapps/curve/coins/historical |  |
-| [**dapps_curve_contracts_historical_get**](CurveApi.md#dapps_curve_contracts_historical_get) | **GET** /dapps/curve/contracts/historical |  |
-| [**dapps_curve_contracts_version_historical_get**](CurveApi.md#dapps_curve_contracts_version_historical_get) | **GET** /dapps/curve/contractsVersion/historical |  |
-| [**dapps_curve_daily_volume_historical_get**](CurveApi.md#dapps_curve_daily_volume_historical_get) | **GET** /dapps/curve/dailyVolume/historical |  |
-| [**dapps_curve_fee_change_log_historical_get**](CurveApi.md#dapps_curve_fee_change_log_historical_get) | **GET** /dapps/curve/feeChangeLog/historical |  |
-| [**dapps_curve_gauge_deposit_historical_get**](CurveApi.md#dapps_curve_gauge_deposit_historical_get) | **GET** /dapps/curve/gaugeDeposit/historical |  |
-| [**dapps_curve_gauge_historical_get**](CurveApi.md#dapps_curve_gauge_historical_get) | **GET** /dapps/curve/gauge/historical |  |
-| [**dapps_curve_gauge_liquidity_historical_get**](CurveApi.md#dapps_curve_gauge_liquidity_historical_get) | **GET** /dapps/curve/gaugeLiquidity/historical |  |
-| [**dapps_curve_gauge_total_weight_historical_get**](CurveApi.md#dapps_curve_gauge_total_weight_historical_get) | **GET** /dapps/curve/gaugeTotalWeight/historical |  |
-| [**dapps_curve_gauge_type_historical_get**](CurveApi.md#dapps_curve_gauge_type_historical_get) | **GET** /dapps/curve/gaugeType/historical |  |
-| [**dapps_curve_gauge_type_weight_historical_get**](CurveApi.md#dapps_curve_gauge_type_weight_historical_get) | **GET** /dapps/curve/gaugeTypeWeight/historical |  |
-| [**dapps_curve_gauge_weight_historical_get**](CurveApi.md#dapps_curve_gauge_weight_historical_get) | **GET** /dapps/curve/gaugeWeight/historical |  |
-| [**dapps_curve_gauge_weight_vote_historical_get**](CurveApi.md#dapps_curve_gauge_weight_vote_historical_get) | **GET** /dapps/curve/gaugeWeightVote/historical |  |
-| [**dapps_curve_gauge_withdraw_historical_get**](CurveApi.md#dapps_curve_gauge_withdraw_historical_get) | **GET** /dapps/curve/gaugeWithdraw/historical |  |
-| [**dapps_curve_hourly_volume_historical_get**](CurveApi.md#dapps_curve_hourly_volume_historical_get) | **GET** /dapps/curve/hourlyVolume/historical |  |
-| [**dapps_curve_lp_token_historical_get**](CurveApi.md#dapps_curve_lp_token_historical_get) | **GET** /dapps/curve/lpToken/historical |  |
-| [**dapps_curve_pools_historical_get**](CurveApi.md#dapps_curve_pools_historical_get) | **GET** /dapps/curve/pools/historical |  |
-| [**dapps_curve_proposals_historical_get**](CurveApi.md#dapps_curve_proposals_historical_get) | **GET** /dapps/curve/proposals/historical |  |
-| [**dapps_curve_proposals_vote_historical_get**](CurveApi.md#dapps_curve_proposals_vote_historical_get) | **GET** /dapps/curve/proposalsVote/historical |  |
-| [**dapps_curve_remove_liquidity_event_historical_get**](CurveApi.md#dapps_curve_remove_liquidity_event_historical_get) | **GET** /dapps/curve/removeLiquidityEvent/historical |  |
-| [**dapps_curve_remove_liquidity_one_event_historical_get**](CurveApi.md#dapps_curve_remove_liquidity_one_event_historical_get) | **GET** /dapps/curve/removeLiquidityOneEvent/historical |  |
-| [**dapps_curve_swaps_historical_get**](CurveApi.md#dapps_curve_swaps_historical_get) | **GET** /dapps/curve/swaps/historical |  |
-| [**dapps_curve_system_state_historical_get**](CurveApi.md#dapps_curve_system_state_historical_get) | **GET** /dapps/curve/systemState/historical |  |
-| [**dapps_curve_tokens_historical_get**](CurveApi.md#dapps_curve_tokens_historical_get) | **GET** /dapps/curve/tokens/historical |  |
-| [**dapps_curve_transfer_ownership_event_historical_get**](CurveApi.md#dapps_curve_transfer_ownership_event_historical_get) | **GET** /dapps/curve/transferOwnershipEvent/historical |  |
-| [**dapps_curve_underlying_coin_historical_get**](CurveApi.md#dapps_curve_underlying_coin_historical_get) | **GET** /dapps/curve/underlyingCoin/historical |  |
-| [**dapps_curve_voting_app_historical_get**](CurveApi.md#dapps_curve_voting_app_historical_get) | **GET** /dapps/curve/votingApp/historical |  |
-| [**dapps_curve_weekly_volume_historical_get**](CurveApi.md#dapps_curve_weekly_volume_historical_get) | **GET** /dapps/curve/weeklyVolume/historical |  |
+| [**curve_get_accounts__historical**](CurveApi.md#curve_get_accounts__historical) | **GET** /dapps/curve/accounts/historical | GetAccounts (historical) |
+| [**curve_get_add_liquidity_events__historical**](CurveApi.md#curve_get_add_liquidity_events__historical) | **GET** /dapps/curve/addLiquidityEvents/historical | GetAddLiquidityEvents (historical) |
+| [**curve_get_admin_fee_change_logs__historical**](CurveApi.md#curve_get_admin_fee_change_logs__historical) | **GET** /dapps/curve/adminFeeChangeLogs/historical | GetAdminFeeChangeLogs (historical) |
+| [**curve_get_amplification_coeff_change_logs__historical**](CurveApi.md#curve_get_amplification_coeff_change_logs__historical) | **GET** /dapps/curve/amplificationCoeffChangeLogs/historical | GetAmplificationCoeffChangeLogs (historical) |
+| [**curve_get_coins__historical**](CurveApi.md#curve_get_coins__historical) | **GET** /dapps/curve/coins/historical | GetCoins (historical) |
+| [**curve_get_contracts__historical**](CurveApi.md#curve_get_contracts__historical) | **GET** /dapps/curve/contracts/historical | GetContracts (historical) |
+| [**curve_get_contracts_versions__historical**](CurveApi.md#curve_get_contracts_versions__historical) | **GET** /dapps/curve/contractsVersions/historical | GetContractsVersions (historical) |
+| [**curve_get_daily_volumes__historical**](CurveApi.md#curve_get_daily_volumes__historical) | **GET** /dapps/curve/dailyVolumes/historical | GetDailyVolumes (historical) |
+| [**curve_get_exchanges__historical**](CurveApi.md#curve_get_exchanges__historical) | **GET** /dapps/curve/exchanges/historical | GetExchanges (historical) 🔥 |
+| [**curve_get_fee_change_logs__historical**](CurveApi.md#curve_get_fee_change_logs__historical) | **GET** /dapps/curve/feeChangeLogs/historical | GetFeeChangeLogs (historical) |
+| [**curve_get_gauges__historical**](CurveApi.md#curve_get_gauges__historical) | **GET** /dapps/curve/gauges/historical | GetGauges (historical) |
+| [**curve_get_gauges_deposits__historical**](CurveApi.md#curve_get_gauges_deposits__historical) | **GET** /dapps/curve/gaugesDeposits/historical | GetGaugesDeposits (historical) |
+| [**curve_get_gauges_liquidity__historical**](CurveApi.md#curve_get_gauges_liquidity__historical) | **GET** /dapps/curve/gaugesLiquidity/historical | GetGaugesLiquidity (historical) |
+| [**curve_get_gauges_total_weights__historical**](CurveApi.md#curve_get_gauges_total_weights__historical) | **GET** /dapps/curve/gaugesTotalWeights/historical | GetGaugesTotalWeights (historical) |
+| [**curve_get_gauges_types__historical**](CurveApi.md#curve_get_gauges_types__historical) | **GET** /dapps/curve/gaugesTypes/historical | GetGaugesTypes (historical) |
+| [**curve_get_gauges_types_weights__historical**](CurveApi.md#curve_get_gauges_types_weights__historical) | **GET** /dapps/curve/gaugesTypesWeights/historical | GetGaugesTypesWeights (historical) |
+| [**curve_get_gauges_weights__historical**](CurveApi.md#curve_get_gauges_weights__historical) | **GET** /dapps/curve/gaugesWeights/historical | GetGaugesWeights (historical) |
+| [**curve_get_gauges_weights_votes__historical**](CurveApi.md#curve_get_gauges_weights_votes__historical) | **GET** /dapps/curve/gaugesWeightsVotes/historical | GetGaugesWeightsVotes (historical) |
+| [**curve_get_gauges_withdraw__historical**](CurveApi.md#curve_get_gauges_withdraw__historical) | **GET** /dapps/curve/gaugesWithdraws/historical | GetGaugesWithdraw (historical) |
+| [**curve_get_hourly_volumes__historical**](CurveApi.md#curve_get_hourly_volumes__historical) | **GET** /dapps/curve/hourlyVolumes/historical | GetHourlyVolumes (historical) |
+| [**curve_get_lp_tokens__historical**](CurveApi.md#curve_get_lp_tokens__historical) | **GET** /dapps/curve/lpTokens/historical | GetLpTokens (historical) |
+| [**curve_get_pools__historical**](CurveApi.md#curve_get_pools__historical) | **GET** /dapps/curve/pools/historical | GetPools (historical) 🔥 |
+| [**curve_get_proposals__historical**](CurveApi.md#curve_get_proposals__historical) | **GET** /dapps/curve/proposals/historical | GetProposals (historical) |
+| [**curve_get_proposals_votes__historical**](CurveApi.md#curve_get_proposals_votes__historical) | **GET** /dapps/curve/proposalsVotes/historical | GetProposalsVotes (historical) |
+| [**curve_get_remove_liquidity_events__historical**](CurveApi.md#curve_get_remove_liquidity_events__historical) | **GET** /dapps/curve/removeLiquidityEvents/historical | GetRemoveLiquidityEvents (historical) |
+| [**curve_get_remove_liquidity_one_events__historical**](CurveApi.md#curve_get_remove_liquidity_one_events__historical) | **GET** /dapps/curve/removeLiquidityOneEvents/historical | GetRemoveLiquidityOneEvents (historical) |
+| [**curve_get_system_states__historical**](CurveApi.md#curve_get_system_states__historical) | **GET** /dapps/curve/systemStates/historical | GetSystemStates (historical) |
+| [**curve_get_tokens__historical**](CurveApi.md#curve_get_tokens__historical) | **GET** /dapps/curve/tokens/historical | GetTokens (historical) 🔥 |
+| [**curve_get_transfer_ownership_events__historical**](CurveApi.md#curve_get_transfer_ownership_events__historical) | **GET** /dapps/curve/transferOwnershipEvents/historical | GetTransferOwnershipEvents (historical) |
+| [**curve_get_underlying_coins__historical**](CurveApi.md#curve_get_underlying_coins__historical) | **GET** /dapps/curve/underlyingCoins/historical | GetUnderlyingCoins (historical) |
+| [**curve_get_voting_apps__historical**](CurveApi.md#curve_get_voting_apps__historical) | **GET** /dapps/curve/votingApps/historical | GetVotingApps (historical) |
+| [**curve_get_weekly_volumes__historical**](CurveApi.md#curve_get_weekly_volumes__historical) | **GET** /dapps/curve/weeklyVolumes/historical | GetWeeklyVolumes (historical) |
 
 
-## dapps_curve_accounts_historical_get
+## curve_get_accounts__historical
 
-> dapps_curve_accounts_historical_get(opts)
+> <Array<CurveAccountDTO>> curve_get_accounts__historical(opts)
 
+GetAccounts (historical)
 
+Gets accounts.
 
 ### Examples
 
@@ -59,28 +61,29 @@ opts = {
 }
 
 begin
-  
-  api_instance.dapps_curve_accounts_historical_get(opts)
+  # GetAccounts (historical)
+  result = api_instance.curve_get_accounts__historical(opts)
+  p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->dapps_curve_accounts_historical_get: #{e}"
+  puts "Error when calling CurveApi->curve_get_accounts__historical: #{e}"
 end
 ```
 
-#### Using the dapps_curve_accounts_historical_get_with_http_info variant
+#### Using the curve_get_accounts__historical_with_http_info variant
 
-This returns an Array which contains the response data (`nil` in this case), status code and headers.
+This returns an Array which contains the response data, status code and headers.
 
-> <Array(nil, Integer, Hash)> dapps_curve_accounts_historical_get_with_http_info(opts)
+> <Array(<Array<CurveAccountDTO>>, Integer, Hash)> curve_get_accounts__historical_with_http_info(opts)
 
 ```ruby
 begin
-  
-  data, status_code, headers = api_instance.dapps_curve_accounts_historical_get_with_http_info(opts)
+  # GetAccounts (historical)
+  data, status_code, headers = api_instance.curve_get_accounts__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => nil
+  p data # => <Array<CurveAccountDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->dapps_curve_accounts_historical_get_with_http_info: #{e}"
+  puts "Error when calling CurveApi->curve_get_accounts__historical_with_http_info: #{e}"
 end
 ```
 
@@ -95,7 +98,7 @@ end
 
 ### Return type
 
-nil (empty response body)
+[**Array&lt;CurveAccountDTO&gt;**](CurveAccountDTO.md)
 
 ### Authorization
 
@@ -104,14 +107,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dapps_curve_add_liquidity_event_historical_get
+## curve_get_add_liquidity_events__historical
 
-> dapps_curve_add_liquidity_event_historical_get(opts)
+> <Array<CurveAddLiquidityEventDTO>> curve_get_add_liquidity_events__historical(opts)
 
+GetAddLiquidityEvents (historical)
 
+Gets add liquidity events.
 
 ### Examples
 
@@ -129,28 +134,29 @@ opts = {
 }
 
 begin
-  
-  api_instance.dapps_curve_add_liquidity_event_historical_get(opts)
+  # GetAddLiquidityEvents (historical)
+  result = api_instance.curve_get_add_liquidity_events__historical(opts)
+  p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->dapps_curve_add_liquidity_event_historical_get: #{e}"
+  puts "Error when calling CurveApi->curve_get_add_liquidity_events__historical: #{e}"
 end
 ```
 
-#### Using the dapps_curve_add_liquidity_event_historical_get_with_http_info variant
+#### Using the curve_get_add_liquidity_events__historical_with_http_info variant
 
-This returns an Array which contains the response data (`nil` in this case), status code and headers.
+This returns an Array which contains the response data, status code and headers.
 
-> <Array(nil, Integer, Hash)> dapps_curve_add_liquidity_event_historical_get_with_http_info(opts)
+> <Array(<Array<CurveAddLiquidityEventDTO>>, Integer, Hash)> curve_get_add_liquidity_events__historical_with_http_info(opts)
 
 ```ruby
 begin
-  
-  data, status_code, headers = api_instance.dapps_curve_add_liquidity_event_historical_get_with_http_info(opts)
+  # GetAddLiquidityEvents (historical)
+  data, status_code, headers = api_instance.curve_get_add_liquidity_events__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => nil
+  p data # => <Array<CurveAddLiquidityEventDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->dapps_curve_add_liquidity_event_historical_get_with_http_info: #{e}"
+  puts "Error when calling CurveApi->curve_get_add_liquidity_events__historical_with_http_info: #{e}"
 end
 ```
 
@@ -166,7 +172,7 @@ end
 
 ### Return type
 
-nil (empty response body)
+[**Array&lt;CurveAddLiquidityEventDTO&gt;**](CurveAddLiquidityEventDTO.md)
 
 ### Authorization
 
@@ -175,14 +181,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dapps_curve_admin_fee_change_log_historical_get
+## curve_get_admin_fee_change_logs__historical
 
-> dapps_curve_admin_fee_change_log_historical_get(opts)
+> <Array<CurveAdminFeeChangeLogDTO>> curve_get_admin_fee_change_logs__historical(opts)
 
+GetAdminFeeChangeLogs (historical)
 
+Gets admin fee change logs.
 
 ### Examples
 
@@ -200,28 +208,29 @@ opts = {
 }
 
 begin
-  
-  api_instance.dapps_curve_admin_fee_change_log_historical_get(opts)
+  # GetAdminFeeChangeLogs (historical)
+  result = api_instance.curve_get_admin_fee_change_logs__historical(opts)
+  p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->dapps_curve_admin_fee_change_log_historical_get: #{e}"
+  puts "Error when calling CurveApi->curve_get_admin_fee_change_logs__historical: #{e}"
 end
 ```
 
-#### Using the dapps_curve_admin_fee_change_log_historical_get_with_http_info variant
+#### Using the curve_get_admin_fee_change_logs__historical_with_http_info variant
 
-This returns an Array which contains the response data (`nil` in this case), status code and headers.
+This returns an Array which contains the response data, status code and headers.
 
-> <Array(nil, Integer, Hash)> dapps_curve_admin_fee_change_log_historical_get_with_http_info(opts)
+> <Array(<Array<CurveAdminFeeChangeLogDTO>>, Integer, Hash)> curve_get_admin_fee_change_logs__historical_with_http_info(opts)
 
 ```ruby
 begin
-  
-  data, status_code, headers = api_instance.dapps_curve_admin_fee_change_log_historical_get_with_http_info(opts)
+  # GetAdminFeeChangeLogs (historical)
+  data, status_code, headers = api_instance.curve_get_admin_fee_change_logs__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => nil
+  p data # => <Array<CurveAdminFeeChangeLogDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->dapps_curve_admin_fee_change_log_historical_get_with_http_info: #{e}"
+  puts "Error when calling CurveApi->curve_get_admin_fee_change_logs__historical_with_http_info: #{e}"
 end
 ```
 
@@ -237,7 +246,7 @@ end
 
 ### Return type
 
-nil (empty response body)
+[**Array&lt;CurveAdminFeeChangeLogDTO&gt;**](CurveAdminFeeChangeLogDTO.md)
 
 ### Authorization
 
@@ -246,14 +255,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dapps_curve_amplification_coeff_change_log_historical_get
+## curve_get_amplification_coeff_change_logs__historical
 
-> dapps_curve_amplification_coeff_change_log_historical_get(opts)
+> <Array<CurveAmplificationCoeffChangeLogDTO>> curve_get_amplification_coeff_change_logs__historical(opts)
 
+GetAmplificationCoeffChangeLogs (historical)
 
+Gets amplification coeff change logs.
 
 ### Examples
 
@@ -271,28 +282,29 @@ opts = {
 }
 
 begin
-  
-  api_instance.dapps_curve_amplification_coeff_change_log_historical_get(opts)
+  # GetAmplificationCoeffChangeLogs (historical)
+  result = api_instance.curve_get_amplification_coeff_change_logs__historical(opts)
+  p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->dapps_curve_amplification_coeff_change_log_historical_get: #{e}"
+  puts "Error when calling CurveApi->curve_get_amplification_coeff_change_logs__historical: #{e}"
 end
 ```
 
-#### Using the dapps_curve_amplification_coeff_change_log_historical_get_with_http_info variant
+#### Using the curve_get_amplification_coeff_change_logs__historical_with_http_info variant
 
-This returns an Array which contains the response data (`nil` in this case), status code and headers.
+This returns an Array which contains the response data, status code and headers.
 
-> <Array(nil, Integer, Hash)> dapps_curve_amplification_coeff_change_log_historical_get_with_http_info(opts)
+> <Array(<Array<CurveAmplificationCoeffChangeLogDTO>>, Integer, Hash)> curve_get_amplification_coeff_change_logs__historical_with_http_info(opts)
 
 ```ruby
 begin
-  
-  data, status_code, headers = api_instance.dapps_curve_amplification_coeff_change_log_historical_get_with_http_info(opts)
+  # GetAmplificationCoeffChangeLogs (historical)
+  data, status_code, headers = api_instance.curve_get_amplification_coeff_change_logs__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => nil
+  p data # => <Array<CurveAmplificationCoeffChangeLogDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->dapps_curve_amplification_coeff_change_log_historical_get_with_http_info: #{e}"
+  puts "Error when calling CurveApi->curve_get_amplification_coeff_change_logs__historical_with_http_info: #{e}"
 end
 ```
 
@@ -308,7 +320,7 @@ end
 
 ### Return type
 
-nil (empty response body)
+[**Array&lt;CurveAmplificationCoeffChangeLogDTO&gt;**](CurveAmplificationCoeffChangeLogDTO.md)
 
 ### Authorization
 
@@ -317,14 +329,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dapps_curve_coins_historical_get
+## curve_get_coins__historical
 
-> dapps_curve_coins_historical_get(opts)
+> <Array<CurveCoinDTO>> curve_get_coins__historical(opts)
 
+GetCoins (historical)
 
+Gets coins.
 
 ### Examples
 
@@ -342,28 +356,29 @@ opts = {
 }
 
 begin
-  
-  api_instance.dapps_curve_coins_historical_get(opts)
+  # GetCoins (historical)
+  result = api_instance.curve_get_coins__historical(opts)
+  p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->dapps_curve_coins_historical_get: #{e}"
+  puts "Error when calling CurveApi->curve_get_coins__historical: #{e}"
 end
 ```
 
-#### Using the dapps_curve_coins_historical_get_with_http_info variant
+#### Using the curve_get_coins__historical_with_http_info variant
 
-This returns an Array which contains the response data (`nil` in this case), status code and headers.
+This returns an Array which contains the response data, status code and headers.
 
-> <Array(nil, Integer, Hash)> dapps_curve_coins_historical_get_with_http_info(opts)
+> <Array(<Array<CurveCoinDTO>>, Integer, Hash)> curve_get_coins__historical_with_http_info(opts)
 
 ```ruby
 begin
-  
-  data, status_code, headers = api_instance.dapps_curve_coins_historical_get_with_http_info(opts)
+  # GetCoins (historical)
+  data, status_code, headers = api_instance.curve_get_coins__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => nil
+  p data # => <Array<CurveCoinDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->dapps_curve_coins_historical_get_with_http_info: #{e}"
+  puts "Error when calling CurveApi->curve_get_coins__historical_with_http_info: #{e}"
 end
 ```
 
@@ -379,7 +394,7 @@ end
 
 ### Return type
 
-nil (empty response body)
+[**Array&lt;CurveCoinDTO&gt;**](CurveCoinDTO.md)
 
 ### Authorization
 
@@ -388,14 +403,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dapps_curve_contracts_historical_get
+## curve_get_contracts__historical
 
-> dapps_curve_contracts_historical_get(opts)
+> <Array<CurveContractDTO>> curve_get_contracts__historical(opts)
 
+GetContracts (historical)
 
+Gets contracts.
 
 ### Examples
 
@@ -413,28 +430,29 @@ opts = {
 }
 
 begin
-  
-  api_instance.dapps_curve_contracts_historical_get(opts)
+  # GetContracts (historical)
+  result = api_instance.curve_get_contracts__historical(opts)
+  p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->dapps_curve_contracts_historical_get: #{e}"
+  puts "Error when calling CurveApi->curve_get_contracts__historical: #{e}"
 end
 ```
 
-#### Using the dapps_curve_contracts_historical_get_with_http_info variant
+#### Using the curve_get_contracts__historical_with_http_info variant
 
-This returns an Array which contains the response data (`nil` in this case), status code and headers.
+This returns an Array which contains the response data, status code and headers.
 
-> <Array(nil, Integer, Hash)> dapps_curve_contracts_historical_get_with_http_info(opts)
+> <Array(<Array<CurveContractDTO>>, Integer, Hash)> curve_get_contracts__historical_with_http_info(opts)
 
 ```ruby
 begin
-  
-  data, status_code, headers = api_instance.dapps_curve_contracts_historical_get_with_http_info(opts)
+  # GetContracts (historical)
+  data, status_code, headers = api_instance.curve_get_contracts__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => nil
+  p data # => <Array<CurveContractDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->dapps_curve_contracts_historical_get_with_http_info: #{e}"
+  puts "Error when calling CurveApi->curve_get_contracts__historical_with_http_info: #{e}"
 end
 ```
 
@@ -450,7 +468,7 @@ end
 
 ### Return type
 
-nil (empty response body)
+[**Array&lt;CurveContractDTO&gt;**](CurveContractDTO.md)
 
 ### Authorization
 
@@ -459,14 +477,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dapps_curve_contracts_version_historical_get
+## curve_get_contracts_versions__historical
 
-> dapps_curve_contracts_version_historical_get(opts)
+> <Array<CurveContractVersionDTO>> curve_get_contracts_versions__historical(opts)
 
+GetContractsVersions (historical)
 
+Gets contracts versions.
 
 ### Examples
 
@@ -484,28 +504,29 @@ opts = {
 }
 
 begin
-  
-  api_instance.dapps_curve_contracts_version_historical_get(opts)
+  # GetContractsVersions (historical)
+  result = api_instance.curve_get_contracts_versions__historical(opts)
+  p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->dapps_curve_contracts_version_historical_get: #{e}"
+  puts "Error when calling CurveApi->curve_get_contracts_versions__historical: #{e}"
 end
 ```
 
-#### Using the dapps_curve_contracts_version_historical_get_with_http_info variant
+#### Using the curve_get_contracts_versions__historical_with_http_info variant
 
-This returns an Array which contains the response data (`nil` in this case), status code and headers.
+This returns an Array which contains the response data, status code and headers.
 
-> <Array(nil, Integer, Hash)> dapps_curve_contracts_version_historical_get_with_http_info(opts)
+> <Array(<Array<CurveContractVersionDTO>>, Integer, Hash)> curve_get_contracts_versions__historical_with_http_info(opts)
 
 ```ruby
 begin
-  
-  data, status_code, headers = api_instance.dapps_curve_contracts_version_historical_get_with_http_info(opts)
+  # GetContractsVersions (historical)
+  data, status_code, headers = api_instance.curve_get_contracts_versions__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => nil
+  p data # => <Array<CurveContractVersionDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->dapps_curve_contracts_version_historical_get_with_http_info: #{e}"
+  puts "Error when calling CurveApi->curve_get_contracts_versions__historical_with_http_info: #{e}"
 end
 ```
 
@@ -521,7 +542,7 @@ end
 
 ### Return type
 
-nil (empty response body)
+[**Array&lt;CurveContractVersionDTO&gt;**](CurveContractVersionDTO.md)
 
 ### Authorization
 
@@ -530,14 +551,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dapps_curve_daily_volume_historical_get
+## curve_get_daily_volumes__historical
 
-> dapps_curve_daily_volume_historical_get(opts)
+> <Array<CurveDailyVolumeDTO>> curve_get_daily_volumes__historical(opts)
 
+GetDailyVolumes (historical)
 
+Gets daily volumes.
 
 ### Examples
 
@@ -555,28 +578,29 @@ opts = {
 }
 
 begin
-  
-  api_instance.dapps_curve_daily_volume_historical_get(opts)
+  # GetDailyVolumes (historical)
+  result = api_instance.curve_get_daily_volumes__historical(opts)
+  p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->dapps_curve_daily_volume_historical_get: #{e}"
+  puts "Error when calling CurveApi->curve_get_daily_volumes__historical: #{e}"
 end
 ```
 
-#### Using the dapps_curve_daily_volume_historical_get_with_http_info variant
+#### Using the curve_get_daily_volumes__historical_with_http_info variant
 
-This returns an Array which contains the response data (`nil` in this case), status code and headers.
+This returns an Array which contains the response data, status code and headers.
 
-> <Array(nil, Integer, Hash)> dapps_curve_daily_volume_historical_get_with_http_info(opts)
+> <Array(<Array<CurveDailyVolumeDTO>>, Integer, Hash)> curve_get_daily_volumes__historical_with_http_info(opts)
 
 ```ruby
 begin
-  
-  data, status_code, headers = api_instance.dapps_curve_daily_volume_historical_get_with_http_info(opts)
+  # GetDailyVolumes (historical)
+  data, status_code, headers = api_instance.curve_get_daily_volumes__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => nil
+  p data # => <Array<CurveDailyVolumeDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->dapps_curve_daily_volume_historical_get_with_http_info: #{e}"
+  puts "Error when calling CurveApi->curve_get_daily_volumes__historical_with_http_info: #{e}"
 end
 ```
 
@@ -592,7 +616,7 @@ end
 
 ### Return type
 
-nil (empty response body)
+[**Array&lt;CurveDailyVolumeDTO&gt;**](CurveDailyVolumeDTO.md)
 
 ### Authorization
 
@@ -601,14 +625,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dapps_curve_fee_change_log_historical_get
+## curve_get_exchanges__historical
 
-> dapps_curve_fee_change_log_historical_get(opts)
+> <Array<CurveExchangeDTO>> curve_get_exchanges__historical(opts)
 
+GetExchanges (historical) 🔥
 
+Gets exchanges.
 
 ### Examples
 
@@ -626,28 +652,29 @@ opts = {
 }
 
 begin
-  
-  api_instance.dapps_curve_fee_change_log_historical_get(opts)
+  # GetExchanges (historical) 🔥
+  result = api_instance.curve_get_exchanges__historical(opts)
+  p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->dapps_curve_fee_change_log_historical_get: #{e}"
+  puts "Error when calling CurveApi->curve_get_exchanges__historical: #{e}"
 end
 ```
 
-#### Using the dapps_curve_fee_change_log_historical_get_with_http_info variant
+#### Using the curve_get_exchanges__historical_with_http_info variant
 
-This returns an Array which contains the response data (`nil` in this case), status code and headers.
+This returns an Array which contains the response data, status code and headers.
 
-> <Array(nil, Integer, Hash)> dapps_curve_fee_change_log_historical_get_with_http_info(opts)
+> <Array(<Array<CurveExchangeDTO>>, Integer, Hash)> curve_get_exchanges__historical_with_http_info(opts)
 
 ```ruby
 begin
-  
-  data, status_code, headers = api_instance.dapps_curve_fee_change_log_historical_get_with_http_info(opts)
+  # GetExchanges (historical) 🔥
+  data, status_code, headers = api_instance.curve_get_exchanges__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => nil
+  p data # => <Array<CurveExchangeDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->dapps_curve_fee_change_log_historical_get_with_http_info: #{e}"
+  puts "Error when calling CurveApi->curve_get_exchanges__historical_with_http_info: #{e}"
 end
 ```
 
@@ -663,7 +690,7 @@ end
 
 ### Return type
 
-nil (empty response body)
+[**Array&lt;CurveExchangeDTO&gt;**](CurveExchangeDTO.md)
 
 ### Authorization
 
@@ -672,14 +699,164 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dapps_curve_gauge_deposit_historical_get
+## curve_get_fee_change_logs__historical
 
-> dapps_curve_gauge_deposit_historical_get(opts)
+> <Array<CurveFeeChangeLogDTO>> curve_get_fee_change_logs__historical(opts)
+
+GetFeeChangeLogs (historical)
+
+Gets fee change logs.
+
+### Examples
+
+```ruby
+require 'time'
+require 'openapi_client'
+
+api_instance = OpenapiClient::CurveApi.new
+opts = {
+  start_block: 789, # Integer | 
+  end_block: 789, # Integer | 
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  pool_id: 'pool_id_example' # String | 
+}
+
+begin
+  # GetFeeChangeLogs (historical)
+  result = api_instance.curve_get_fee_change_logs__historical(opts)
+  p result
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling CurveApi->curve_get_fee_change_logs__historical: #{e}"
+end
+```
+
+#### Using the curve_get_fee_change_logs__historical_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<Array<CurveFeeChangeLogDTO>>, Integer, Hash)> curve_get_fee_change_logs__historical_with_http_info(opts)
+
+```ruby
+begin
+  # GetFeeChangeLogs (historical)
+  data, status_code, headers = api_instance.curve_get_fee_change_logs__historical_with_http_info(opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <Array<CurveFeeChangeLogDTO>>
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling CurveApi->curve_get_fee_change_logs__historical_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **start_block** | **Integer** |  | [optional] |
+| **end_block** | **Integer** |  | [optional] |
+| **start_date** | **Time** |  | [optional] |
+| **end_date** | **Time** |  | [optional] |
+| **pool_id** | **String** |  | [optional] |
+
+### Return type
+
+[**Array&lt;CurveFeeChangeLogDTO&gt;**](CurveFeeChangeLogDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
+## curve_get_gauges__historical
+
+> <Array<CurveGaugeDTO>> curve_get_gauges__historical(opts)
+
+GetGauges (historical)
+
+Gets gauges.
+
+### Examples
+
+```ruby
+require 'time'
+require 'openapi_client'
+
+api_instance = OpenapiClient::CurveApi.new
+opts = {
+  start_block: 789, # Integer | 
+  end_block: 789, # Integer | 
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  pool_id: 'pool_id_example' # String | 
+}
+
+begin
+  # GetGauges (historical)
+  result = api_instance.curve_get_gauges__historical(opts)
+  p result
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling CurveApi->curve_get_gauges__historical: #{e}"
+end
+```
+
+#### Using the curve_get_gauges__historical_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<Array<CurveGaugeDTO>>, Integer, Hash)> curve_get_gauges__historical_with_http_info(opts)
+
+```ruby
+begin
+  # GetGauges (historical)
+  data, status_code, headers = api_instance.curve_get_gauges__historical_with_http_info(opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <Array<CurveGaugeDTO>>
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling CurveApi->curve_get_gauges__historical_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **start_block** | **Integer** |  | [optional] |
+| **end_block** | **Integer** |  | [optional] |
+| **start_date** | **Time** |  | [optional] |
+| **end_date** | **Time** |  | [optional] |
+| **pool_id** | **String** |  | [optional] |
+
+### Return type
+
+[**Array&lt;CurveGaugeDTO&gt;**](CurveGaugeDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## curve_get_gauges_deposits__historical
+
+> <Array<CurveGaugeDepositDTO>> curve_get_gauges_deposits__historical(opts)
+
+GetGaugesDeposits (historical)
+
+Gets gauges deposits.
 
 ### Examples
 
@@ -696,28 +873,29 @@ opts = {
 }
 
 begin
-  
-  api_instance.dapps_curve_gauge_deposit_historical_get(opts)
+  # GetGaugesDeposits (historical)
+  result = api_instance.curve_get_gauges_deposits__historical(opts)
+  p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->dapps_curve_gauge_deposit_historical_get: #{e}"
+  puts "Error when calling CurveApi->curve_get_gauges_deposits__historical: #{e}"
 end
 ```
 
-#### Using the dapps_curve_gauge_deposit_historical_get_with_http_info variant
+#### Using the curve_get_gauges_deposits__historical_with_http_info variant
 
-This returns an Array which contains the response data (`nil` in this case), status code and headers.
+This returns an Array which contains the response data, status code and headers.
 
-> <Array(nil, Integer, Hash)> dapps_curve_gauge_deposit_historical_get_with_http_info(opts)
+> <Array(<Array<CurveGaugeDepositDTO>>, Integer, Hash)> curve_get_gauges_deposits__historical_with_http_info(opts)
 
 ```ruby
 begin
-  
-  data, status_code, headers = api_instance.dapps_curve_gauge_deposit_historical_get_with_http_info(opts)
+  # GetGaugesDeposits (historical)
+  data, status_code, headers = api_instance.curve_get_gauges_deposits__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => nil
+  p data # => <Array<CurveGaugeDepositDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->dapps_curve_gauge_deposit_historical_get_with_http_info: #{e}"
+  puts "Error when calling CurveApi->curve_get_gauges_deposits__historical_with_http_info: #{e}"
 end
 ```
 
@@ -732,7 +910,7 @@ end
 
 ### Return type
 
-nil (empty response body)
+[**Array&lt;CurveGaugeDepositDTO&gt;**](CurveGaugeDepositDTO.md)
 
 ### Authorization
 
@@ -741,14 +919,520 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dapps_curve_gauge_historical_get
+## curve_get_gauges_liquidity__historical
 
-> dapps_curve_gauge_historical_get(opts)
+> <Array<CurveGaugeLiquidityDTO>> curve_get_gauges_liquidity__historical(opts)
+
+GetGaugesLiquidity (historical)
+
+Gets gauges liquidity.
+
+### Examples
+
+```ruby
+require 'time'
+require 'openapi_client'
+
+api_instance = OpenapiClient::CurveApi.new
+opts = {
+  start_block: 789, # Integer | 
+  end_block: 789, # Integer | 
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  end_date: Time.parse('2013-10-20T19:20:30+01:00') # Time | 
+}
+
+begin
+  # GetGaugesLiquidity (historical)
+  result = api_instance.curve_get_gauges_liquidity__historical(opts)
+  p result
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling CurveApi->curve_get_gauges_liquidity__historical: #{e}"
+end
+```
+
+#### Using the curve_get_gauges_liquidity__historical_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<Array<CurveGaugeLiquidityDTO>>, Integer, Hash)> curve_get_gauges_liquidity__historical_with_http_info(opts)
+
+```ruby
+begin
+  # GetGaugesLiquidity (historical)
+  data, status_code, headers = api_instance.curve_get_gauges_liquidity__historical_with_http_info(opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <Array<CurveGaugeLiquidityDTO>>
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling CurveApi->curve_get_gauges_liquidity__historical_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **start_block** | **Integer** |  | [optional] |
+| **end_block** | **Integer** |  | [optional] |
+| **start_date** | **Time** |  | [optional] |
+| **end_date** | **Time** |  | [optional] |
+
+### Return type
+
+[**Array&lt;CurveGaugeLiquidityDTO&gt;**](CurveGaugeLiquidityDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
+## curve_get_gauges_total_weights__historical
+
+> <Array<CurveGaugeTotalWeightDTO>> curve_get_gauges_total_weights__historical(opts)
+
+GetGaugesTotalWeights (historical)
+
+Gets gauges total weights.
+
+### Examples
+
+```ruby
+require 'time'
+require 'openapi_client'
+
+api_instance = OpenapiClient::CurveApi.new
+opts = {
+  start_block: 789, # Integer | 
+  end_block: 789, # Integer | 
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  end_date: Time.parse('2013-10-20T19:20:30+01:00') # Time | 
+}
+
+begin
+  # GetGaugesTotalWeights (historical)
+  result = api_instance.curve_get_gauges_total_weights__historical(opts)
+  p result
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling CurveApi->curve_get_gauges_total_weights__historical: #{e}"
+end
+```
+
+#### Using the curve_get_gauges_total_weights__historical_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<Array<CurveGaugeTotalWeightDTO>>, Integer, Hash)> curve_get_gauges_total_weights__historical_with_http_info(opts)
+
+```ruby
+begin
+  # GetGaugesTotalWeights (historical)
+  data, status_code, headers = api_instance.curve_get_gauges_total_weights__historical_with_http_info(opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <Array<CurveGaugeTotalWeightDTO>>
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling CurveApi->curve_get_gauges_total_weights__historical_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **start_block** | **Integer** |  | [optional] |
+| **end_block** | **Integer** |  | [optional] |
+| **start_date** | **Time** |  | [optional] |
+| **end_date** | **Time** |  | [optional] |
+
+### Return type
+
+[**Array&lt;CurveGaugeTotalWeightDTO&gt;**](CurveGaugeTotalWeightDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## curve_get_gauges_types__historical
+
+> <Array<CurveGaugeTypeDTO>> curve_get_gauges_types__historical(opts)
+
+GetGaugesTypes (historical)
+
+Gets gauges types.
+
+### Examples
+
+```ruby
+require 'time'
+require 'openapi_client'
+
+api_instance = OpenapiClient::CurveApi.new
+opts = {
+  start_block: 789, # Integer | 
+  end_block: 789, # Integer | 
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  end_date: Time.parse('2013-10-20T19:20:30+01:00') # Time | 
+}
+
+begin
+  # GetGaugesTypes (historical)
+  result = api_instance.curve_get_gauges_types__historical(opts)
+  p result
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling CurveApi->curve_get_gauges_types__historical: #{e}"
+end
+```
+
+#### Using the curve_get_gauges_types__historical_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<Array<CurveGaugeTypeDTO>>, Integer, Hash)> curve_get_gauges_types__historical_with_http_info(opts)
+
+```ruby
+begin
+  # GetGaugesTypes (historical)
+  data, status_code, headers = api_instance.curve_get_gauges_types__historical_with_http_info(opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <Array<CurveGaugeTypeDTO>>
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling CurveApi->curve_get_gauges_types__historical_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **start_block** | **Integer** |  | [optional] |
+| **end_block** | **Integer** |  | [optional] |
+| **start_date** | **Time** |  | [optional] |
+| **end_date** | **Time** |  | [optional] |
+
+### Return type
+
+[**Array&lt;CurveGaugeTypeDTO&gt;**](CurveGaugeTypeDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## curve_get_gauges_types_weights__historical
+
+> <Array<CurveGaugeTypeWeightDTO>> curve_get_gauges_types_weights__historical(opts)
+
+GetGaugesTypesWeights (historical)
+
+Gets gauges types weights.
+
+### Examples
+
+```ruby
+require 'time'
+require 'openapi_client'
+
+api_instance = OpenapiClient::CurveApi.new
+opts = {
+  start_block: 789, # Integer | 
+  end_block: 789, # Integer | 
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  end_date: Time.parse('2013-10-20T19:20:30+01:00') # Time | 
+}
+
+begin
+  # GetGaugesTypesWeights (historical)
+  result = api_instance.curve_get_gauges_types_weights__historical(opts)
+  p result
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling CurveApi->curve_get_gauges_types_weights__historical: #{e}"
+end
+```
+
+#### Using the curve_get_gauges_types_weights__historical_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<Array<CurveGaugeTypeWeightDTO>>, Integer, Hash)> curve_get_gauges_types_weights__historical_with_http_info(opts)
+
+```ruby
+begin
+  # GetGaugesTypesWeights (historical)
+  data, status_code, headers = api_instance.curve_get_gauges_types_weights__historical_with_http_info(opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <Array<CurveGaugeTypeWeightDTO>>
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling CurveApi->curve_get_gauges_types_weights__historical_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **start_block** | **Integer** |  | [optional] |
+| **end_block** | **Integer** |  | [optional] |
+| **start_date** | **Time** |  | [optional] |
+| **end_date** | **Time** |  | [optional] |
+
+### Return type
+
+[**Array&lt;CurveGaugeTypeWeightDTO&gt;**](CurveGaugeTypeWeightDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## curve_get_gauges_weights__historical
+
+> <Array<CurveGaugeWeightDTO>> curve_get_gauges_weights__historical(opts)
+
+GetGaugesWeights (historical)
+
+Gets gauges weights.
+
+### Examples
+
+```ruby
+require 'time'
+require 'openapi_client'
+
+api_instance = OpenapiClient::CurveApi.new
+opts = {
+  start_block: 789, # Integer | 
+  end_block: 789, # Integer | 
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  end_date: Time.parse('2013-10-20T19:20:30+01:00') # Time | 
+}
+
+begin
+  # GetGaugesWeights (historical)
+  result = api_instance.curve_get_gauges_weights__historical(opts)
+  p result
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling CurveApi->curve_get_gauges_weights__historical: #{e}"
+end
+```
+
+#### Using the curve_get_gauges_weights__historical_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<Array<CurveGaugeWeightDTO>>, Integer, Hash)> curve_get_gauges_weights__historical_with_http_info(opts)
+
+```ruby
+begin
+  # GetGaugesWeights (historical)
+  data, status_code, headers = api_instance.curve_get_gauges_weights__historical_with_http_info(opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <Array<CurveGaugeWeightDTO>>
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling CurveApi->curve_get_gauges_weights__historical_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **start_block** | **Integer** |  | [optional] |
+| **end_block** | **Integer** |  | [optional] |
+| **start_date** | **Time** |  | [optional] |
+| **end_date** | **Time** |  | [optional] |
+
+### Return type
+
+[**Array&lt;CurveGaugeWeightDTO&gt;**](CurveGaugeWeightDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## curve_get_gauges_weights_votes__historical
+
+> <Array<CurveGaugeWeightVoteDTO>> curve_get_gauges_weights_votes__historical(opts)
+
+GetGaugesWeightsVotes (historical)
+
+Gets gauges weights votes.
+
+### Examples
+
+```ruby
+require 'time'
+require 'openapi_client'
+
+api_instance = OpenapiClient::CurveApi.new
+opts = {
+  start_block: 789, # Integer | 
+  end_block: 789, # Integer | 
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  end_date: Time.parse('2013-10-20T19:20:30+01:00') # Time | 
+}
+
+begin
+  # GetGaugesWeightsVotes (historical)
+  result = api_instance.curve_get_gauges_weights_votes__historical(opts)
+  p result
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling CurveApi->curve_get_gauges_weights_votes__historical: #{e}"
+end
+```
+
+#### Using the curve_get_gauges_weights_votes__historical_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<Array<CurveGaugeWeightVoteDTO>>, Integer, Hash)> curve_get_gauges_weights_votes__historical_with_http_info(opts)
+
+```ruby
+begin
+  # GetGaugesWeightsVotes (historical)
+  data, status_code, headers = api_instance.curve_get_gauges_weights_votes__historical_with_http_info(opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <Array<CurveGaugeWeightVoteDTO>>
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling CurveApi->curve_get_gauges_weights_votes__historical_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **start_block** | **Integer** |  | [optional] |
+| **end_block** | **Integer** |  | [optional] |
+| **start_date** | **Time** |  | [optional] |
+| **end_date** | **Time** |  | [optional] |
+
+### Return type
+
+[**Array&lt;CurveGaugeWeightVoteDTO&gt;**](CurveGaugeWeightVoteDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## curve_get_gauges_withdraw__historical
+
+> <Array<CurveGaugeWithdrawDTO>> curve_get_gauges_withdraw__historical(opts)
+
+GetGaugesWithdraw (historical)
+
+Gets gauges withdraws.
+
+### Examples
+
+```ruby
+require 'time'
+require 'openapi_client'
+
+api_instance = OpenapiClient::CurveApi.new
+opts = {
+  start_block: 789, # Integer | 
+  end_block: 789, # Integer | 
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  end_date: Time.parse('2013-10-20T19:20:30+01:00') # Time | 
+}
+
+begin
+  # GetGaugesWithdraw (historical)
+  result = api_instance.curve_get_gauges_withdraw__historical(opts)
+  p result
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling CurveApi->curve_get_gauges_withdraw__historical: #{e}"
+end
+```
+
+#### Using the curve_get_gauges_withdraw__historical_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<Array<CurveGaugeWithdrawDTO>>, Integer, Hash)> curve_get_gauges_withdraw__historical_with_http_info(opts)
+
+```ruby
+begin
+  # GetGaugesWithdraw (historical)
+  data, status_code, headers = api_instance.curve_get_gauges_withdraw__historical_with_http_info(opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <Array<CurveGaugeWithdrawDTO>>
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling CurveApi->curve_get_gauges_withdraw__historical_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **start_block** | **Integer** |  | [optional] |
+| **end_block** | **Integer** |  | [optional] |
+| **start_date** | **Time** |  | [optional] |
+| **end_date** | **Time** |  | [optional] |
+
+### Return type
+
+[**Array&lt;CurveGaugeWithdrawDTO&gt;**](CurveGaugeWithdrawDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## curve_get_hourly_volumes__historical
+
+> <Array<CurveHourlyVolumeDTO>> curve_get_hourly_volumes__historical(opts)
+
+GetHourlyVolumes (historical)
+
+Gets hourly volumes.
 
 ### Examples
 
@@ -766,28 +1450,29 @@ opts = {
 }
 
 begin
-  
-  api_instance.dapps_curve_gauge_historical_get(opts)
+  # GetHourlyVolumes (historical)
+  result = api_instance.curve_get_hourly_volumes__historical(opts)
+  p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->dapps_curve_gauge_historical_get: #{e}"
+  puts "Error when calling CurveApi->curve_get_hourly_volumes__historical: #{e}"
 end
 ```
 
-#### Using the dapps_curve_gauge_historical_get_with_http_info variant
+#### Using the curve_get_hourly_volumes__historical_with_http_info variant
 
-This returns an Array which contains the response data (`nil` in this case), status code and headers.
+This returns an Array which contains the response data, status code and headers.
 
-> <Array(nil, Integer, Hash)> dapps_curve_gauge_historical_get_with_http_info(opts)
+> <Array(<Array<CurveHourlyVolumeDTO>>, Integer, Hash)> curve_get_hourly_volumes__historical_with_http_info(opts)
 
 ```ruby
 begin
-  
-  data, status_code, headers = api_instance.dapps_curve_gauge_historical_get_with_http_info(opts)
+  # GetHourlyVolumes (historical)
+  data, status_code, headers = api_instance.curve_get_hourly_volumes__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => nil
+  p data # => <Array<CurveHourlyVolumeDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->dapps_curve_gauge_historical_get_with_http_info: #{e}"
+  puts "Error when calling CurveApi->curve_get_hourly_volumes__historical_with_http_info: #{e}"
 end
 ```
 
@@ -803,7 +1488,7 @@ end
 
 ### Return type
 
-nil (empty response body)
+[**Array&lt;CurveHourlyVolumeDTO&gt;**](CurveHourlyVolumeDTO.md)
 
 ### Authorization
 
@@ -812,497 +1497,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dapps_curve_gauge_liquidity_historical_get
+## curve_get_lp_tokens__historical
 
-> dapps_curve_gauge_liquidity_historical_get(opts)
+> <Array<CurveLpTokenDTO>> curve_get_lp_tokens__historical(opts)
 
+GetLpTokens (historical)
 
-
-### Examples
-
-```ruby
-require 'time'
-require 'openapi_client'
-
-api_instance = OpenapiClient::CurveApi.new
-opts = {
-  start_block: 789, # Integer | 
-  end_block: 789, # Integer | 
-  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
-  end_date: Time.parse('2013-10-20T19:20:30+01:00') # Time | 
-}
-
-begin
-  
-  api_instance.dapps_curve_gauge_liquidity_historical_get(opts)
-rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->dapps_curve_gauge_liquidity_historical_get: #{e}"
-end
-```
-
-#### Using the dapps_curve_gauge_liquidity_historical_get_with_http_info variant
-
-This returns an Array which contains the response data (`nil` in this case), status code and headers.
-
-> <Array(nil, Integer, Hash)> dapps_curve_gauge_liquidity_historical_get_with_http_info(opts)
-
-```ruby
-begin
-  
-  data, status_code, headers = api_instance.dapps_curve_gauge_liquidity_historical_get_with_http_info(opts)
-  p status_code # => 2xx
-  p headers # => { ... }
-  p data # => nil
-rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->dapps_curve_gauge_liquidity_historical_get_with_http_info: #{e}"
-end
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-| ---- | ---- | ----------- | ----- |
-| **start_block** | **Integer** |  | [optional] |
-| **end_block** | **Integer** |  | [optional] |
-| **start_date** | **Time** |  | [optional] |
-| **end_date** | **Time** |  | [optional] |
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-
-## dapps_curve_gauge_total_weight_historical_get
-
-> dapps_curve_gauge_total_weight_historical_get(opts)
-
-
-
-### Examples
-
-```ruby
-require 'time'
-require 'openapi_client'
-
-api_instance = OpenapiClient::CurveApi.new
-opts = {
-  start_block: 789, # Integer | 
-  end_block: 789, # Integer | 
-  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
-  end_date: Time.parse('2013-10-20T19:20:30+01:00') # Time | 
-}
-
-begin
-  
-  api_instance.dapps_curve_gauge_total_weight_historical_get(opts)
-rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->dapps_curve_gauge_total_weight_historical_get: #{e}"
-end
-```
-
-#### Using the dapps_curve_gauge_total_weight_historical_get_with_http_info variant
-
-This returns an Array which contains the response data (`nil` in this case), status code and headers.
-
-> <Array(nil, Integer, Hash)> dapps_curve_gauge_total_weight_historical_get_with_http_info(opts)
-
-```ruby
-begin
-  
-  data, status_code, headers = api_instance.dapps_curve_gauge_total_weight_historical_get_with_http_info(opts)
-  p status_code # => 2xx
-  p headers # => { ... }
-  p data # => nil
-rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->dapps_curve_gauge_total_weight_historical_get_with_http_info: #{e}"
-end
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-| ---- | ---- | ----------- | ----- |
-| **start_block** | **Integer** |  | [optional] |
-| **end_block** | **Integer** |  | [optional] |
-| **start_date** | **Time** |  | [optional] |
-| **end_date** | **Time** |  | [optional] |
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-
-## dapps_curve_gauge_type_historical_get
-
-> dapps_curve_gauge_type_historical_get(opts)
-
-
-
-### Examples
-
-```ruby
-require 'time'
-require 'openapi_client'
-
-api_instance = OpenapiClient::CurveApi.new
-opts = {
-  start_block: 789, # Integer | 
-  end_block: 789, # Integer | 
-  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
-  end_date: Time.parse('2013-10-20T19:20:30+01:00') # Time | 
-}
-
-begin
-  
-  api_instance.dapps_curve_gauge_type_historical_get(opts)
-rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->dapps_curve_gauge_type_historical_get: #{e}"
-end
-```
-
-#### Using the dapps_curve_gauge_type_historical_get_with_http_info variant
-
-This returns an Array which contains the response data (`nil` in this case), status code and headers.
-
-> <Array(nil, Integer, Hash)> dapps_curve_gauge_type_historical_get_with_http_info(opts)
-
-```ruby
-begin
-  
-  data, status_code, headers = api_instance.dapps_curve_gauge_type_historical_get_with_http_info(opts)
-  p status_code # => 2xx
-  p headers # => { ... }
-  p data # => nil
-rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->dapps_curve_gauge_type_historical_get_with_http_info: #{e}"
-end
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-| ---- | ---- | ----------- | ----- |
-| **start_block** | **Integer** |  | [optional] |
-| **end_block** | **Integer** |  | [optional] |
-| **start_date** | **Time** |  | [optional] |
-| **end_date** | **Time** |  | [optional] |
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-
-## dapps_curve_gauge_type_weight_historical_get
-
-> dapps_curve_gauge_type_weight_historical_get(opts)
-
-
-
-### Examples
-
-```ruby
-require 'time'
-require 'openapi_client'
-
-api_instance = OpenapiClient::CurveApi.new
-opts = {
-  start_block: 789, # Integer | 
-  end_block: 789, # Integer | 
-  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
-  end_date: Time.parse('2013-10-20T19:20:30+01:00') # Time | 
-}
-
-begin
-  
-  api_instance.dapps_curve_gauge_type_weight_historical_get(opts)
-rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->dapps_curve_gauge_type_weight_historical_get: #{e}"
-end
-```
-
-#### Using the dapps_curve_gauge_type_weight_historical_get_with_http_info variant
-
-This returns an Array which contains the response data (`nil` in this case), status code and headers.
-
-> <Array(nil, Integer, Hash)> dapps_curve_gauge_type_weight_historical_get_with_http_info(opts)
-
-```ruby
-begin
-  
-  data, status_code, headers = api_instance.dapps_curve_gauge_type_weight_historical_get_with_http_info(opts)
-  p status_code # => 2xx
-  p headers # => { ... }
-  p data # => nil
-rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->dapps_curve_gauge_type_weight_historical_get_with_http_info: #{e}"
-end
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-| ---- | ---- | ----------- | ----- |
-| **start_block** | **Integer** |  | [optional] |
-| **end_block** | **Integer** |  | [optional] |
-| **start_date** | **Time** |  | [optional] |
-| **end_date** | **Time** |  | [optional] |
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-
-## dapps_curve_gauge_weight_historical_get
-
-> dapps_curve_gauge_weight_historical_get(opts)
-
-
-
-### Examples
-
-```ruby
-require 'time'
-require 'openapi_client'
-
-api_instance = OpenapiClient::CurveApi.new
-opts = {
-  start_block: 789, # Integer | 
-  end_block: 789, # Integer | 
-  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
-  end_date: Time.parse('2013-10-20T19:20:30+01:00') # Time | 
-}
-
-begin
-  
-  api_instance.dapps_curve_gauge_weight_historical_get(opts)
-rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->dapps_curve_gauge_weight_historical_get: #{e}"
-end
-```
-
-#### Using the dapps_curve_gauge_weight_historical_get_with_http_info variant
-
-This returns an Array which contains the response data (`nil` in this case), status code and headers.
-
-> <Array(nil, Integer, Hash)> dapps_curve_gauge_weight_historical_get_with_http_info(opts)
-
-```ruby
-begin
-  
-  data, status_code, headers = api_instance.dapps_curve_gauge_weight_historical_get_with_http_info(opts)
-  p status_code # => 2xx
-  p headers # => { ... }
-  p data # => nil
-rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->dapps_curve_gauge_weight_historical_get_with_http_info: #{e}"
-end
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-| ---- | ---- | ----------- | ----- |
-| **start_block** | **Integer** |  | [optional] |
-| **end_block** | **Integer** |  | [optional] |
-| **start_date** | **Time** |  | [optional] |
-| **end_date** | **Time** |  | [optional] |
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-
-## dapps_curve_gauge_weight_vote_historical_get
-
-> dapps_curve_gauge_weight_vote_historical_get(opts)
-
-
-
-### Examples
-
-```ruby
-require 'time'
-require 'openapi_client'
-
-api_instance = OpenapiClient::CurveApi.new
-opts = {
-  start_block: 789, # Integer | 
-  end_block: 789, # Integer | 
-  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
-  end_date: Time.parse('2013-10-20T19:20:30+01:00') # Time | 
-}
-
-begin
-  
-  api_instance.dapps_curve_gauge_weight_vote_historical_get(opts)
-rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->dapps_curve_gauge_weight_vote_historical_get: #{e}"
-end
-```
-
-#### Using the dapps_curve_gauge_weight_vote_historical_get_with_http_info variant
-
-This returns an Array which contains the response data (`nil` in this case), status code and headers.
-
-> <Array(nil, Integer, Hash)> dapps_curve_gauge_weight_vote_historical_get_with_http_info(opts)
-
-```ruby
-begin
-  
-  data, status_code, headers = api_instance.dapps_curve_gauge_weight_vote_historical_get_with_http_info(opts)
-  p status_code # => 2xx
-  p headers # => { ... }
-  p data # => nil
-rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->dapps_curve_gauge_weight_vote_historical_get_with_http_info: #{e}"
-end
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-| ---- | ---- | ----------- | ----- |
-| **start_block** | **Integer** |  | [optional] |
-| **end_block** | **Integer** |  | [optional] |
-| **start_date** | **Time** |  | [optional] |
-| **end_date** | **Time** |  | [optional] |
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-
-## dapps_curve_gauge_withdraw_historical_get
-
-> dapps_curve_gauge_withdraw_historical_get(opts)
-
-
-
-### Examples
-
-```ruby
-require 'time'
-require 'openapi_client'
-
-api_instance = OpenapiClient::CurveApi.new
-opts = {
-  start_block: 789, # Integer | 
-  end_block: 789, # Integer | 
-  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
-  end_date: Time.parse('2013-10-20T19:20:30+01:00') # Time | 
-}
-
-begin
-  
-  api_instance.dapps_curve_gauge_withdraw_historical_get(opts)
-rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->dapps_curve_gauge_withdraw_historical_get: #{e}"
-end
-```
-
-#### Using the dapps_curve_gauge_withdraw_historical_get_with_http_info variant
-
-This returns an Array which contains the response data (`nil` in this case), status code and headers.
-
-> <Array(nil, Integer, Hash)> dapps_curve_gauge_withdraw_historical_get_with_http_info(opts)
-
-```ruby
-begin
-  
-  data, status_code, headers = api_instance.dapps_curve_gauge_withdraw_historical_get_with_http_info(opts)
-  p status_code # => 2xx
-  p headers # => { ... }
-  p data # => nil
-rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->dapps_curve_gauge_withdraw_historical_get_with_http_info: #{e}"
-end
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-| ---- | ---- | ----------- | ----- |
-| **start_block** | **Integer** |  | [optional] |
-| **end_block** | **Integer** |  | [optional] |
-| **start_date** | **Time** |  | [optional] |
-| **end_date** | **Time** |  | [optional] |
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-
-## dapps_curve_hourly_volume_historical_get
-
-> dapps_curve_hourly_volume_historical_get(opts)
-
-
+Gets lp tokens.
 
 ### Examples
 
@@ -1320,28 +1524,29 @@ opts = {
 }
 
 begin
-  
-  api_instance.dapps_curve_hourly_volume_historical_get(opts)
+  # GetLpTokens (historical)
+  result = api_instance.curve_get_lp_tokens__historical(opts)
+  p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->dapps_curve_hourly_volume_historical_get: #{e}"
+  puts "Error when calling CurveApi->curve_get_lp_tokens__historical: #{e}"
 end
 ```
 
-#### Using the dapps_curve_hourly_volume_historical_get_with_http_info variant
+#### Using the curve_get_lp_tokens__historical_with_http_info variant
 
-This returns an Array which contains the response data (`nil` in this case), status code and headers.
+This returns an Array which contains the response data, status code and headers.
 
-> <Array(nil, Integer, Hash)> dapps_curve_hourly_volume_historical_get_with_http_info(opts)
+> <Array(<Array<CurveLpTokenDTO>>, Integer, Hash)> curve_get_lp_tokens__historical_with_http_info(opts)
 
 ```ruby
 begin
-  
-  data, status_code, headers = api_instance.dapps_curve_hourly_volume_historical_get_with_http_info(opts)
+  # GetLpTokens (historical)
+  data, status_code, headers = api_instance.curve_get_lp_tokens__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => nil
+  p data # => <Array<CurveLpTokenDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->dapps_curve_hourly_volume_historical_get_with_http_info: #{e}"
+  puts "Error when calling CurveApi->curve_get_lp_tokens__historical_with_http_info: #{e}"
 end
 ```
 
@@ -1357,7 +1562,7 @@ end
 
 ### Return type
 
-nil (empty response body)
+[**Array&lt;CurveLpTokenDTO&gt;**](CurveLpTokenDTO.md)
 
 ### Authorization
 
@@ -1366,14 +1571,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dapps_curve_lp_token_historical_get
+## curve_get_pools__historical
 
-> dapps_curve_lp_token_historical_get(opts)
+> <Array<CurvePoolDTO>> curve_get_pools__historical(opts)
 
+GetPools (historical) 🔥
 
+Gets pools.
 
 ### Examples
 
@@ -1391,28 +1598,29 @@ opts = {
 }
 
 begin
-  
-  api_instance.dapps_curve_lp_token_historical_get(opts)
+  # GetPools (historical) 🔥
+  result = api_instance.curve_get_pools__historical(opts)
+  p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->dapps_curve_lp_token_historical_get: #{e}"
+  puts "Error when calling CurveApi->curve_get_pools__historical: #{e}"
 end
 ```
 
-#### Using the dapps_curve_lp_token_historical_get_with_http_info variant
+#### Using the curve_get_pools__historical_with_http_info variant
 
-This returns an Array which contains the response data (`nil` in this case), status code and headers.
+This returns an Array which contains the response data, status code and headers.
 
-> <Array(nil, Integer, Hash)> dapps_curve_lp_token_historical_get_with_http_info(opts)
+> <Array(<Array<CurvePoolDTO>>, Integer, Hash)> curve_get_pools__historical_with_http_info(opts)
 
 ```ruby
 begin
-  
-  data, status_code, headers = api_instance.dapps_curve_lp_token_historical_get_with_http_info(opts)
+  # GetPools (historical) 🔥
+  data, status_code, headers = api_instance.curve_get_pools__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => nil
+  p data # => <Array<CurvePoolDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->dapps_curve_lp_token_historical_get_with_http_info: #{e}"
+  puts "Error when calling CurveApi->curve_get_pools__historical_with_http_info: #{e}"
 end
 ```
 
@@ -1428,7 +1636,7 @@ end
 
 ### Return type
 
-nil (empty response body)
+[**Array&lt;CurvePoolDTO&gt;**](CurvePoolDTO.md)
 
 ### Authorization
 
@@ -1437,85 +1645,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dapps_curve_pools_historical_get
+## curve_get_proposals__historical
 
-> dapps_curve_pools_historical_get(opts)
+> <Array<CurveProposalDTO>> curve_get_proposals__historical(opts)
 
+GetProposals (historical)
 
-
-### Examples
-
-```ruby
-require 'time'
-require 'openapi_client'
-
-api_instance = OpenapiClient::CurveApi.new
-opts = {
-  start_block: 789, # Integer | 
-  end_block: 789, # Integer | 
-  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
-  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
-  pool_id: 'pool_id_example' # String | 
-}
-
-begin
-  
-  api_instance.dapps_curve_pools_historical_get(opts)
-rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->dapps_curve_pools_historical_get: #{e}"
-end
-```
-
-#### Using the dapps_curve_pools_historical_get_with_http_info variant
-
-This returns an Array which contains the response data (`nil` in this case), status code and headers.
-
-> <Array(nil, Integer, Hash)> dapps_curve_pools_historical_get_with_http_info(opts)
-
-```ruby
-begin
-  
-  data, status_code, headers = api_instance.dapps_curve_pools_historical_get_with_http_info(opts)
-  p status_code # => 2xx
-  p headers # => { ... }
-  p data # => nil
-rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->dapps_curve_pools_historical_get_with_http_info: #{e}"
-end
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-| ---- | ---- | ----------- | ----- |
-| **start_block** | **Integer** |  | [optional] |
-| **end_block** | **Integer** |  | [optional] |
-| **start_date** | **Time** |  | [optional] |
-| **end_date** | **Time** |  | [optional] |
-| **pool_id** | **String** |  | [optional] |
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-
-## dapps_curve_proposals_historical_get
-
-> dapps_curve_proposals_historical_get(opts)
-
-
+Gets proposals.
 
 ### Examples
 
@@ -1532,28 +1671,29 @@ opts = {
 }
 
 begin
-  
-  api_instance.dapps_curve_proposals_historical_get(opts)
+  # GetProposals (historical)
+  result = api_instance.curve_get_proposals__historical(opts)
+  p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->dapps_curve_proposals_historical_get: #{e}"
+  puts "Error when calling CurveApi->curve_get_proposals__historical: #{e}"
 end
 ```
 
-#### Using the dapps_curve_proposals_historical_get_with_http_info variant
+#### Using the curve_get_proposals__historical_with_http_info variant
 
-This returns an Array which contains the response data (`nil` in this case), status code and headers.
+This returns an Array which contains the response data, status code and headers.
 
-> <Array(nil, Integer, Hash)> dapps_curve_proposals_historical_get_with_http_info(opts)
+> <Array(<Array<CurveProposalDTO>>, Integer, Hash)> curve_get_proposals__historical_with_http_info(opts)
 
 ```ruby
 begin
-  
-  data, status_code, headers = api_instance.dapps_curve_proposals_historical_get_with_http_info(opts)
+  # GetProposals (historical)
+  data, status_code, headers = api_instance.curve_get_proposals__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => nil
+  p data # => <Array<CurveProposalDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->dapps_curve_proposals_historical_get_with_http_info: #{e}"
+  puts "Error when calling CurveApi->curve_get_proposals__historical_with_http_info: #{e}"
 end
 ```
 
@@ -1568,7 +1708,7 @@ end
 
 ### Return type
 
-nil (empty response body)
+[**Array&lt;CurveProposalDTO&gt;**](CurveProposalDTO.md)
 
 ### Authorization
 
@@ -1577,14 +1717,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dapps_curve_proposals_vote_historical_get
+## curve_get_proposals_votes__historical
 
-> dapps_curve_proposals_vote_historical_get(opts)
+> <Array<CurveProposalVoteDTO>> curve_get_proposals_votes__historical(opts)
 
+GetProposalsVotes (historical)
 
+Gets proposals votes.
 
 ### Examples
 
@@ -1601,28 +1743,29 @@ opts = {
 }
 
 begin
-  
-  api_instance.dapps_curve_proposals_vote_historical_get(opts)
+  # GetProposalsVotes (historical)
+  result = api_instance.curve_get_proposals_votes__historical(opts)
+  p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->dapps_curve_proposals_vote_historical_get: #{e}"
+  puts "Error when calling CurveApi->curve_get_proposals_votes__historical: #{e}"
 end
 ```
 
-#### Using the dapps_curve_proposals_vote_historical_get_with_http_info variant
+#### Using the curve_get_proposals_votes__historical_with_http_info variant
 
-This returns an Array which contains the response data (`nil` in this case), status code and headers.
+This returns an Array which contains the response data, status code and headers.
 
-> <Array(nil, Integer, Hash)> dapps_curve_proposals_vote_historical_get_with_http_info(opts)
+> <Array(<Array<CurveProposalVoteDTO>>, Integer, Hash)> curve_get_proposals_votes__historical_with_http_info(opts)
 
 ```ruby
 begin
-  
-  data, status_code, headers = api_instance.dapps_curve_proposals_vote_historical_get_with_http_info(opts)
+  # GetProposalsVotes (historical)
+  data, status_code, headers = api_instance.curve_get_proposals_votes__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => nil
+  p data # => <Array<CurveProposalVoteDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->dapps_curve_proposals_vote_historical_get_with_http_info: #{e}"
+  puts "Error when calling CurveApi->curve_get_proposals_votes__historical_with_http_info: #{e}"
 end
 ```
 
@@ -1637,7 +1780,7 @@ end
 
 ### Return type
 
-nil (empty response body)
+[**Array&lt;CurveProposalVoteDTO&gt;**](CurveProposalVoteDTO.md)
 
 ### Authorization
 
@@ -1646,14 +1789,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dapps_curve_remove_liquidity_event_historical_get
+## curve_get_remove_liquidity_events__historical
 
-> dapps_curve_remove_liquidity_event_historical_get(opts)
+> <Array<CurveRemoveLiquidityEventDTO>> curve_get_remove_liquidity_events__historical(opts)
 
+GetRemoveLiquidityEvents (historical)
 
+Gets remove liquidity events.
 
 ### Examples
 
@@ -1671,28 +1816,29 @@ opts = {
 }
 
 begin
-  
-  api_instance.dapps_curve_remove_liquidity_event_historical_get(opts)
+  # GetRemoveLiquidityEvents (historical)
+  result = api_instance.curve_get_remove_liquidity_events__historical(opts)
+  p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->dapps_curve_remove_liquidity_event_historical_get: #{e}"
+  puts "Error when calling CurveApi->curve_get_remove_liquidity_events__historical: #{e}"
 end
 ```
 
-#### Using the dapps_curve_remove_liquidity_event_historical_get_with_http_info variant
+#### Using the curve_get_remove_liquidity_events__historical_with_http_info variant
 
-This returns an Array which contains the response data (`nil` in this case), status code and headers.
+This returns an Array which contains the response data, status code and headers.
 
-> <Array(nil, Integer, Hash)> dapps_curve_remove_liquidity_event_historical_get_with_http_info(opts)
+> <Array(<Array<CurveRemoveLiquidityEventDTO>>, Integer, Hash)> curve_get_remove_liquidity_events__historical_with_http_info(opts)
 
 ```ruby
 begin
-  
-  data, status_code, headers = api_instance.dapps_curve_remove_liquidity_event_historical_get_with_http_info(opts)
+  # GetRemoveLiquidityEvents (historical)
+  data, status_code, headers = api_instance.curve_get_remove_liquidity_events__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => nil
+  p data # => <Array<CurveRemoveLiquidityEventDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->dapps_curve_remove_liquidity_event_historical_get_with_http_info: #{e}"
+  puts "Error when calling CurveApi->curve_get_remove_liquidity_events__historical_with_http_info: #{e}"
 end
 ```
 
@@ -1708,7 +1854,7 @@ end
 
 ### Return type
 
-nil (empty response body)
+[**Array&lt;CurveRemoveLiquidityEventDTO&gt;**](CurveRemoveLiquidityEventDTO.md)
 
 ### Authorization
 
@@ -1717,14 +1863,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dapps_curve_remove_liquidity_one_event_historical_get
+## curve_get_remove_liquidity_one_events__historical
 
-> dapps_curve_remove_liquidity_one_event_historical_get(opts)
+> <Array<CurveRemoveLiquidityOneEventDTO>> curve_get_remove_liquidity_one_events__historical(opts)
 
+GetRemoveLiquidityOneEvents (historical)
 
+Gets remove liquidity one events.
 
 ### Examples
 
@@ -1742,28 +1890,29 @@ opts = {
 }
 
 begin
-  
-  api_instance.dapps_curve_remove_liquidity_one_event_historical_get(opts)
+  # GetRemoveLiquidityOneEvents (historical)
+  result = api_instance.curve_get_remove_liquidity_one_events__historical(opts)
+  p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->dapps_curve_remove_liquidity_one_event_historical_get: #{e}"
+  puts "Error when calling CurveApi->curve_get_remove_liquidity_one_events__historical: #{e}"
 end
 ```
 
-#### Using the dapps_curve_remove_liquidity_one_event_historical_get_with_http_info variant
+#### Using the curve_get_remove_liquidity_one_events__historical_with_http_info variant
 
-This returns an Array which contains the response data (`nil` in this case), status code and headers.
+This returns an Array which contains the response data, status code and headers.
 
-> <Array(nil, Integer, Hash)> dapps_curve_remove_liquidity_one_event_historical_get_with_http_info(opts)
+> <Array(<Array<CurveRemoveLiquidityOneEventDTO>>, Integer, Hash)> curve_get_remove_liquidity_one_events__historical_with_http_info(opts)
 
 ```ruby
 begin
-  
-  data, status_code, headers = api_instance.dapps_curve_remove_liquidity_one_event_historical_get_with_http_info(opts)
+  # GetRemoveLiquidityOneEvents (historical)
+  data, status_code, headers = api_instance.curve_get_remove_liquidity_one_events__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => nil
+  p data # => <Array<CurveRemoveLiquidityOneEventDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->dapps_curve_remove_liquidity_one_event_historical_get_with_http_info: #{e}"
+  puts "Error when calling CurveApi->curve_get_remove_liquidity_one_events__historical_with_http_info: #{e}"
 end
 ```
 
@@ -1779,7 +1928,7 @@ end
 
 ### Return type
 
-nil (empty response body)
+[**Array&lt;CurveRemoveLiquidityOneEventDTO&gt;**](CurveRemoveLiquidityOneEventDTO.md)
 
 ### Authorization
 
@@ -1788,85 +1937,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dapps_curve_swaps_historical_get
+## curve_get_system_states__historical
 
-> dapps_curve_swaps_historical_get(opts)
+> <Array<CurveSystemStateDTO>> curve_get_system_states__historical(opts)
 
+GetSystemStates (historical)
 
-
-### Examples
-
-```ruby
-require 'time'
-require 'openapi_client'
-
-api_instance = OpenapiClient::CurveApi.new
-opts = {
-  start_block: 789, # Integer | 
-  end_block: 789, # Integer | 
-  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
-  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
-  pool_id: 'pool_id_example' # String | 
-}
-
-begin
-  
-  api_instance.dapps_curve_swaps_historical_get(opts)
-rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->dapps_curve_swaps_historical_get: #{e}"
-end
-```
-
-#### Using the dapps_curve_swaps_historical_get_with_http_info variant
-
-This returns an Array which contains the response data (`nil` in this case), status code and headers.
-
-> <Array(nil, Integer, Hash)> dapps_curve_swaps_historical_get_with_http_info(opts)
-
-```ruby
-begin
-  
-  data, status_code, headers = api_instance.dapps_curve_swaps_historical_get_with_http_info(opts)
-  p status_code # => 2xx
-  p headers # => { ... }
-  p data # => nil
-rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->dapps_curve_swaps_historical_get_with_http_info: #{e}"
-end
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-| ---- | ---- | ----------- | ----- |
-| **start_block** | **Integer** |  | [optional] |
-| **end_block** | **Integer** |  | [optional] |
-| **start_date** | **Time** |  | [optional] |
-| **end_date** | **Time** |  | [optional] |
-| **pool_id** | **String** |  | [optional] |
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-
-## dapps_curve_system_state_historical_get
-
-> dapps_curve_system_state_historical_get(opts)
-
-
+Gets system states.
 
 ### Examples
 
@@ -1883,28 +1963,29 @@ opts = {
 }
 
 begin
-  
-  api_instance.dapps_curve_system_state_historical_get(opts)
+  # GetSystemStates (historical)
+  result = api_instance.curve_get_system_states__historical(opts)
+  p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->dapps_curve_system_state_historical_get: #{e}"
+  puts "Error when calling CurveApi->curve_get_system_states__historical: #{e}"
 end
 ```
 
-#### Using the dapps_curve_system_state_historical_get_with_http_info variant
+#### Using the curve_get_system_states__historical_with_http_info variant
 
-This returns an Array which contains the response data (`nil` in this case), status code and headers.
+This returns an Array which contains the response data, status code and headers.
 
-> <Array(nil, Integer, Hash)> dapps_curve_system_state_historical_get_with_http_info(opts)
+> <Array(<Array<CurveSystemStateDTO>>, Integer, Hash)> curve_get_system_states__historical_with_http_info(opts)
 
 ```ruby
 begin
-  
-  data, status_code, headers = api_instance.dapps_curve_system_state_historical_get_with_http_info(opts)
+  # GetSystemStates (historical)
+  data, status_code, headers = api_instance.curve_get_system_states__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => nil
+  p data # => <Array<CurveSystemStateDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->dapps_curve_system_state_historical_get_with_http_info: #{e}"
+  puts "Error when calling CurveApi->curve_get_system_states__historical_with_http_info: #{e}"
 end
 ```
 
@@ -1919,7 +2000,7 @@ end
 
 ### Return type
 
-nil (empty response body)
+[**Array&lt;CurveSystemStateDTO&gt;**](CurveSystemStateDTO.md)
 
 ### Authorization
 
@@ -1928,14 +2009,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dapps_curve_tokens_historical_get
+## curve_get_tokens__historical
 
-> dapps_curve_tokens_historical_get(opts)
+> <Array<CurveTokenDTO>> curve_get_tokens__historical(opts)
 
+GetTokens (historical) 🔥
 
+Gets tokens.
 
 ### Examples
 
@@ -1953,28 +2036,29 @@ opts = {
 }
 
 begin
-  
-  api_instance.dapps_curve_tokens_historical_get(opts)
+  # GetTokens (historical) 🔥
+  result = api_instance.curve_get_tokens__historical(opts)
+  p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->dapps_curve_tokens_historical_get: #{e}"
+  puts "Error when calling CurveApi->curve_get_tokens__historical: #{e}"
 end
 ```
 
-#### Using the dapps_curve_tokens_historical_get_with_http_info variant
+#### Using the curve_get_tokens__historical_with_http_info variant
 
-This returns an Array which contains the response data (`nil` in this case), status code and headers.
+This returns an Array which contains the response data, status code and headers.
 
-> <Array(nil, Integer, Hash)> dapps_curve_tokens_historical_get_with_http_info(opts)
+> <Array(<Array<CurveTokenDTO>>, Integer, Hash)> curve_get_tokens__historical_with_http_info(opts)
 
 ```ruby
 begin
-  
-  data, status_code, headers = api_instance.dapps_curve_tokens_historical_get_with_http_info(opts)
+  # GetTokens (historical) 🔥
+  data, status_code, headers = api_instance.curve_get_tokens__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => nil
+  p data # => <Array<CurveTokenDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->dapps_curve_tokens_historical_get_with_http_info: #{e}"
+  puts "Error when calling CurveApi->curve_get_tokens__historical_with_http_info: #{e}"
 end
 ```
 
@@ -1990,7 +2074,7 @@ end
 
 ### Return type
 
-nil (empty response body)
+[**Array&lt;CurveTokenDTO&gt;**](CurveTokenDTO.md)
 
 ### Authorization
 
@@ -1999,14 +2083,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dapps_curve_transfer_ownership_event_historical_get
+## curve_get_transfer_ownership_events__historical
 
-> dapps_curve_transfer_ownership_event_historical_get(opts)
+> <Array<CurveTransferOwnershipEventDTO>> curve_get_transfer_ownership_events__historical(opts)
 
+GetTransferOwnershipEvents (historical)
 
+Gets transfer ownership events.
 
 ### Examples
 
@@ -2024,28 +2110,29 @@ opts = {
 }
 
 begin
-  
-  api_instance.dapps_curve_transfer_ownership_event_historical_get(opts)
+  # GetTransferOwnershipEvents (historical)
+  result = api_instance.curve_get_transfer_ownership_events__historical(opts)
+  p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->dapps_curve_transfer_ownership_event_historical_get: #{e}"
+  puts "Error when calling CurveApi->curve_get_transfer_ownership_events__historical: #{e}"
 end
 ```
 
-#### Using the dapps_curve_transfer_ownership_event_historical_get_with_http_info variant
+#### Using the curve_get_transfer_ownership_events__historical_with_http_info variant
 
-This returns an Array which contains the response data (`nil` in this case), status code and headers.
+This returns an Array which contains the response data, status code and headers.
 
-> <Array(nil, Integer, Hash)> dapps_curve_transfer_ownership_event_historical_get_with_http_info(opts)
+> <Array(<Array<CurveTransferOwnershipEventDTO>>, Integer, Hash)> curve_get_transfer_ownership_events__historical_with_http_info(opts)
 
 ```ruby
 begin
-  
-  data, status_code, headers = api_instance.dapps_curve_transfer_ownership_event_historical_get_with_http_info(opts)
+  # GetTransferOwnershipEvents (historical)
+  data, status_code, headers = api_instance.curve_get_transfer_ownership_events__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => nil
+  p data # => <Array<CurveTransferOwnershipEventDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->dapps_curve_transfer_ownership_event_historical_get_with_http_info: #{e}"
+  puts "Error when calling CurveApi->curve_get_transfer_ownership_events__historical_with_http_info: #{e}"
 end
 ```
 
@@ -2061,7 +2148,7 @@ end
 
 ### Return type
 
-nil (empty response body)
+[**Array&lt;CurveTransferOwnershipEventDTO&gt;**](CurveTransferOwnershipEventDTO.md)
 
 ### Authorization
 
@@ -2070,14 +2157,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dapps_curve_underlying_coin_historical_get
+## curve_get_underlying_coins__historical
 
-> dapps_curve_underlying_coin_historical_get(opts)
+> <Array<CurveUnderlyingCoinDTO>> curve_get_underlying_coins__historical(opts)
 
+GetUnderlyingCoins (historical)
 
+Gets underlying coins.
 
 ### Examples
 
@@ -2095,28 +2184,29 @@ opts = {
 }
 
 begin
-  
-  api_instance.dapps_curve_underlying_coin_historical_get(opts)
+  # GetUnderlyingCoins (historical)
+  result = api_instance.curve_get_underlying_coins__historical(opts)
+  p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->dapps_curve_underlying_coin_historical_get: #{e}"
+  puts "Error when calling CurveApi->curve_get_underlying_coins__historical: #{e}"
 end
 ```
 
-#### Using the dapps_curve_underlying_coin_historical_get_with_http_info variant
+#### Using the curve_get_underlying_coins__historical_with_http_info variant
 
-This returns an Array which contains the response data (`nil` in this case), status code and headers.
+This returns an Array which contains the response data, status code and headers.
 
-> <Array(nil, Integer, Hash)> dapps_curve_underlying_coin_historical_get_with_http_info(opts)
+> <Array(<Array<CurveUnderlyingCoinDTO>>, Integer, Hash)> curve_get_underlying_coins__historical_with_http_info(opts)
 
 ```ruby
 begin
-  
-  data, status_code, headers = api_instance.dapps_curve_underlying_coin_historical_get_with_http_info(opts)
+  # GetUnderlyingCoins (historical)
+  data, status_code, headers = api_instance.curve_get_underlying_coins__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => nil
+  p data # => <Array<CurveUnderlyingCoinDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->dapps_curve_underlying_coin_historical_get_with_http_info: #{e}"
+  puts "Error when calling CurveApi->curve_get_underlying_coins__historical_with_http_info: #{e}"
 end
 ```
 
@@ -2132,7 +2222,7 @@ end
 
 ### Return type
 
-nil (empty response body)
+[**Array&lt;CurveUnderlyingCoinDTO&gt;**](CurveUnderlyingCoinDTO.md)
 
 ### Authorization
 
@@ -2141,14 +2231,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dapps_curve_voting_app_historical_get
+## curve_get_voting_apps__historical
 
-> dapps_curve_voting_app_historical_get(opts)
+> <Array<CurveVotingAppDTO>> curve_get_voting_apps__historical(opts)
 
+GetVotingApps (historical)
 
+Gets voting apps.
 
 ### Examples
 
@@ -2165,28 +2257,29 @@ opts = {
 }
 
 begin
-  
-  api_instance.dapps_curve_voting_app_historical_get(opts)
+  # GetVotingApps (historical)
+  result = api_instance.curve_get_voting_apps__historical(opts)
+  p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->dapps_curve_voting_app_historical_get: #{e}"
+  puts "Error when calling CurveApi->curve_get_voting_apps__historical: #{e}"
 end
 ```
 
-#### Using the dapps_curve_voting_app_historical_get_with_http_info variant
+#### Using the curve_get_voting_apps__historical_with_http_info variant
 
-This returns an Array which contains the response data (`nil` in this case), status code and headers.
+This returns an Array which contains the response data, status code and headers.
 
-> <Array(nil, Integer, Hash)> dapps_curve_voting_app_historical_get_with_http_info(opts)
+> <Array(<Array<CurveVotingAppDTO>>, Integer, Hash)> curve_get_voting_apps__historical_with_http_info(opts)
 
 ```ruby
 begin
-  
-  data, status_code, headers = api_instance.dapps_curve_voting_app_historical_get_with_http_info(opts)
+  # GetVotingApps (historical)
+  data, status_code, headers = api_instance.curve_get_voting_apps__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => nil
+  p data # => <Array<CurveVotingAppDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->dapps_curve_voting_app_historical_get_with_http_info: #{e}"
+  puts "Error when calling CurveApi->curve_get_voting_apps__historical_with_http_info: #{e}"
 end
 ```
 
@@ -2201,7 +2294,7 @@ end
 
 ### Return type
 
-nil (empty response body)
+[**Array&lt;CurveVotingAppDTO&gt;**](CurveVotingAppDTO.md)
 
 ### Authorization
 
@@ -2210,14 +2303,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dapps_curve_weekly_volume_historical_get
+## curve_get_weekly_volumes__historical
 
-> dapps_curve_weekly_volume_historical_get(opts)
+> <Array<CurveWeeklyVolumeDTO>> curve_get_weekly_volumes__historical(opts)
 
+GetWeeklyVolumes (historical)
 
+Gets weekly volumes.
 
 ### Examples
 
@@ -2235,28 +2330,29 @@ opts = {
 }
 
 begin
-  
-  api_instance.dapps_curve_weekly_volume_historical_get(opts)
+  # GetWeeklyVolumes (historical)
+  result = api_instance.curve_get_weekly_volumes__historical(opts)
+  p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->dapps_curve_weekly_volume_historical_get: #{e}"
+  puts "Error when calling CurveApi->curve_get_weekly_volumes__historical: #{e}"
 end
 ```
 
-#### Using the dapps_curve_weekly_volume_historical_get_with_http_info variant
+#### Using the curve_get_weekly_volumes__historical_with_http_info variant
 
-This returns an Array which contains the response data (`nil` in this case), status code and headers.
+This returns an Array which contains the response data, status code and headers.
 
-> <Array(nil, Integer, Hash)> dapps_curve_weekly_volume_historical_get_with_http_info(opts)
+> <Array(<Array<CurveWeeklyVolumeDTO>>, Integer, Hash)> curve_get_weekly_volumes__historical_with_http_info(opts)
 
 ```ruby
 begin
-  
-  data, status_code, headers = api_instance.dapps_curve_weekly_volume_historical_get_with_http_info(opts)
+  # GetWeeklyVolumes (historical)
+  data, status_code, headers = api_instance.curve_get_weekly_volumes__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => nil
+  p data # => <Array<CurveWeeklyVolumeDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->dapps_curve_weekly_volume_historical_get_with_http_info: #{e}"
+  puts "Error when calling CurveApi->curve_get_weekly_volumes__historical_with_http_info: #{e}"
 end
 ```
 
@@ -2272,7 +2368,7 @@ end
 
 ### Return type
 
-nil (empty response body)
+[**Array&lt;CurveWeeklyVolumeDTO&gt;**](CurveWeeklyVolumeDTO.md)
 
 ### Authorization
 
@@ -2281,5 +2377,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 

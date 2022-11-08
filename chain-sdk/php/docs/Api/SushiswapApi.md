@@ -4,6 +4,8 @@ All URIs are relative to https://onchain.coinapi.io, except if the operation def
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
+| [**curveGetExchangesCurrent()**](SushiswapApi.md#curveGetExchangesCurrent) | **GET** /dapps/sushiswap/exchanges/current | GetExchanges (current) 🔥 |
+| [**dexGetTradesCurrent()**](SushiswapApi.md#dexGetTradesCurrent) | **GET** /dapps/sushiswap/trades/current | GetTrades (current) 🔥 |
 | [**sushiswapGetBundlesHistorical()**](SushiswapApi.md#sushiswapGetBundlesHistorical) | **GET** /dapps/sushiswap/bundles/historical | GetBundles (historical) |
 | [**sushiswapGetBurnsHistorical()**](SushiswapApi.md#sushiswapGetBurnsHistorical) | **GET** /dapps/sushiswap/burns/historical | GetBurns (historical) |
 | [**sushiswapGetDayDataHistorical()**](SushiswapApi.md#sushiswapGetDayDataHistorical) | **GET** /dapps/sushiswap/dayData/historical | GetDayData (historical) |
@@ -12,18 +14,124 @@ All URIs are relative to https://onchain.coinapi.io, except if the operation def
 | [**sushiswapGetLiquidityPositionHistorical()**](SushiswapApi.md#sushiswapGetLiquidityPositionHistorical) | **GET** /dapps/sushiswap/liquidityPosition/historical | GetLiquidityPosition (historical) |
 | [**sushiswapGetLiquidityPositionSnapshotHistorical()**](SushiswapApi.md#sushiswapGetLiquidityPositionSnapshotHistorical) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/historical | GetLiquidityPositionSnapshot (historical) |
 | [**sushiswapGetMintsHistorical()**](SushiswapApi.md#sushiswapGetMintsHistorical) | **GET** /dapps/sushiswap/mints/historical | GetMints (historical) |
-| [**sushiswapGetPoolsCurrent()**](SushiswapApi.md#sushiswapGetPoolsCurrent) | **GET** /dapps/sushiswap/pools/current | GetPools (current) |
+| [**sushiswapGetPoolsCurrent()**](SushiswapApi.md#sushiswapGetPoolsCurrent) | **GET** /dapps/sushiswap/pools/current | GetPools (current) 🔥 |
 | [**sushiswapGetPoolsDayDataHistorical()**](SushiswapApi.md#sushiswapGetPoolsDayDataHistorical) | **GET** /dapps/sushiswap/poolsDayData/historical | GetPoolsDayData (historical) |
-| [**sushiswapGetPoolsHistorical()**](SushiswapApi.md#sushiswapGetPoolsHistorical) | **GET** /dapps/sushiswap/pools/historical | GetPools (historical) |
+| [**sushiswapGetPoolsHistorical()**](SushiswapApi.md#sushiswapGetPoolsHistorical) | **GET** /dapps/sushiswap/pools/historical | GetPools (historical) 🔥 |
 | [**sushiswapGetPoolsHourDataHistorical()**](SushiswapApi.md#sushiswapGetPoolsHourDataHistorical) | **GET** /dapps/sushiswap/poolsHourData/historical | GetPoolsHourData (historical) |
-| [**sushiswapGetSwapsCurrent()**](SushiswapApi.md#sushiswapGetSwapsCurrent) | **GET** /dapps/sushiswap/swaps/current | GetSwaps (current) |
-| [**sushiswapGetSwapsHistorical()**](SushiswapApi.md#sushiswapGetSwapsHistorical) | **GET** /dapps/sushiswap/swaps/historical | GetSwaps (historical) |
-| [**sushiswapGetTokensCurrent()**](SushiswapApi.md#sushiswapGetTokensCurrent) | **GET** /dapps/sushiswap/tokens/current | GetTokens (current) |
+| [**sushiswapGetSwapsCurrent()**](SushiswapApi.md#sushiswapGetSwapsCurrent) | **GET** /dapps/sushiswap/swaps/current | GetSwaps (current) 🔥 |
+| [**sushiswapGetSwapsHistorical()**](SushiswapApi.md#sushiswapGetSwapsHistorical) | **GET** /dapps/sushiswap/swaps/historical | GetSwaps (historical) 🔥 |
+| [**sushiswapGetTokensCurrent()**](SushiswapApi.md#sushiswapGetTokensCurrent) | **GET** /dapps/sushiswap/tokens/current | GetTokens (current) 🔥 |
 | [**sushiswapGetTokensDayDataHistorical()**](SushiswapApi.md#sushiswapGetTokensDayDataHistorical) | **GET** /dapps/sushiswap/tokensDayData/historical | GetTokensDayData (historical) |
-| [**sushiswapGetTokensHistorical()**](SushiswapApi.md#sushiswapGetTokensHistorical) | **GET** /dapps/sushiswap/tokens/historical | GetTokens (historical) |
+| [**sushiswapGetTokensHistorical()**](SushiswapApi.md#sushiswapGetTokensHistorical) | **GET** /dapps/sushiswap/tokens/historical | GetTokens (historical) 🔥 |
 | [**sushiswapGetTransactionsHistorical()**](SushiswapApi.md#sushiswapGetTransactionsHistorical) | **GET** /dapps/sushiswap/transactions/historical | GetTransactions (historical) |
 | [**sushiswapGetUsersHistorical()**](SushiswapApi.md#sushiswapGetUsersHistorical) | **GET** /dapps/sushiswap/users/historical | GetUsers (historical) |
 
+
+## `curveGetExchangesCurrent()`
+
+```php
+curveGetExchangesCurrent(): \OpenAPI\Client\Model\CurveExchangeDTO[]
+```
+
+GetExchanges (current) 🔥
+
+Gets exchanges.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new OpenAPI\Client\Api\SushiswapApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+
+try {
+    $result = $apiInstance->curveGetExchangesCurrent();
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling SushiswapApi->curveGetExchangesCurrent: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**\OpenAPI\Client\Model\CurveExchangeDTO[]**](../Model/CurveExchangeDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `dexGetTradesCurrent()`
+
+```php
+dexGetTradesCurrent(): \OpenAPI\Client\Model\DexTradeDTO[]
+```
+
+GetTrades (current) 🔥
+
+Gets trades.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new OpenAPI\Client\Api\SushiswapApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+
+try {
+    $result = $apiInstance->dexGetTradesCurrent();
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling SushiswapApi->dexGetTradesCurrent: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**\OpenAPI\Client\Model\DexTradeDTO[]**](../Model/DexTradeDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
 ## `sushiswapGetBundlesHistorical()`
 
@@ -48,10 +156,10 @@ $apiInstance = new OpenAPI\Client\Api\SushiswapApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
+$start_block = 56; // int | AAAAAAAAAA
+$end_block = 56; // int | BBBBBBBBBBBB
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | CCCCCCCCC
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | DDDDDDDDDDD
 
 try {
     $result = $apiInstance->sushiswapGetBundlesHistorical($start_block, $end_block, $start_date, $end_date);
@@ -65,10 +173,10 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **start_block** | **int**|  | [optional] |
-| **end_block** | **int**|  | [optional] |
-| **start_date** | **\DateTime**|  | [optional] |
-| **end_date** | **\DateTime**|  | [optional] |
+| **start_block** | **int**| AAAAAAAAAA | [optional] |
+| **end_block** | **int**| BBBBBBBBBBBB | [optional] |
+| **start_date** | **\DateTime**| CCCCCCCCC | [optional] |
+| **end_date** | **\DateTime**| DDDDDDDDDDD | [optional] |
 
 ### Return type
 
@@ -110,11 +218,11 @@ $apiInstance = new OpenAPI\Client\Api\SushiswapApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$pool_id = 'pool_id_example'; // string
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$pool_id = 'pool_id_example'; // string | 
 
 try {
     $result = $apiInstance->sushiswapGetBurnsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id);
@@ -174,10 +282,10 @@ $apiInstance = new OpenAPI\Client\Api\SushiswapApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
 
 try {
     $result = $apiInstance->sushiswapGetDayDataHistorical($start_block, $end_block, $start_date, $end_date);
@@ -236,10 +344,10 @@ $apiInstance = new OpenAPI\Client\Api\SushiswapApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
 
 try {
     $result = $apiInstance->sushiswapGetFactoryHistorical($start_block, $end_block, $start_date, $end_date);
@@ -298,10 +406,10 @@ $apiInstance = new OpenAPI\Client\Api\SushiswapApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
 
 try {
     $result = $apiInstance->sushiswapGetHourDataHistorical($start_block, $end_block, $start_date, $end_date);
@@ -360,11 +468,11 @@ $apiInstance = new OpenAPI\Client\Api\SushiswapApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$pool_id = 'pool_id_example'; // string
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$pool_id = 'pool_id_example'; // string | 
 
 try {
     $result = $apiInstance->sushiswapGetLiquidityPositionHistorical($start_block, $end_block, $start_date, $end_date, $pool_id);
@@ -424,11 +532,11 @@ $apiInstance = new OpenAPI\Client\Api\SushiswapApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$pool_id = 'pool_id_example'; // string
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$pool_id = 'pool_id_example'; // string | 
 
 try {
     $result = $apiInstance->sushiswapGetLiquidityPositionSnapshotHistorical($start_block, $end_block, $start_date, $end_date, $pool_id);
@@ -488,11 +596,11 @@ $apiInstance = new OpenAPI\Client\Api\SushiswapApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$pool_id = 'pool_id_example'; // string
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$pool_id = 'pool_id_example'; // string | 
 
 try {
     $result = $apiInstance->sushiswapGetMintsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id);
@@ -535,7 +643,7 @@ No authorization required
 sushiswapGetPoolsCurrent(): \OpenAPI\Client\Model\SushiswapPairDTO[]
 ```
 
-GetPools (current)
+GetPools (current) 🔥
 
 Gets pools.
 
@@ -605,11 +713,11 @@ $apiInstance = new OpenAPI\Client\Api\SushiswapApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$pool_id = 'pool_id_example'; // string
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$pool_id = 'pool_id_example'; // string | 
 
 try {
     $result = $apiInstance->sushiswapGetPoolsDayDataHistorical($start_block, $end_block, $start_date, $end_date, $pool_id);
@@ -652,7 +760,7 @@ No authorization required
 sushiswapGetPoolsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id): \OpenAPI\Client\Model\SushiswapPairDTO[]
 ```
 
-GetPools (historical)
+GetPools (historical) 🔥
 
 Gets list of pools for given filters.
 
@@ -669,11 +777,11 @@ $apiInstance = new OpenAPI\Client\Api\SushiswapApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$pool_id = 'pool_id_example'; // string
+$start_block = 56; // int | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+$end_block = 56; // int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The end date of timeframe
+$pool_id = 'pool_id_example'; // string | The pool address.
 
 try {
     $result = $apiInstance->sushiswapGetPoolsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id);
@@ -687,11 +795,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **start_block** | **int**|  | [optional] |
-| **end_block** | **int**|  | [optional] |
-| **start_date** | **\DateTime**|  | [optional] |
-| **end_date** | **\DateTime**|  | [optional] |
-| **pool_id** | **string**|  | [optional] |
+| **start_block** | **int**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] |
+| **end_block** | **int**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] |
+| **start_date** | **\DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] |
+| **end_date** | **\DateTime**| The end date of timeframe | [optional] |
+| **pool_id** | **string**| The pool address. | [optional] |
 
 ### Return type
 
@@ -733,11 +841,11 @@ $apiInstance = new OpenAPI\Client\Api\SushiswapApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$pool_id = 'pool_id_example'; // string
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$pool_id = 'pool_id_example'; // string | 
 
 try {
     $result = $apiInstance->sushiswapGetPoolsHourDataHistorical($start_block, $end_block, $start_date, $end_date, $pool_id);
@@ -780,7 +888,7 @@ No authorization required
 sushiswapGetSwapsCurrent(): \OpenAPI\Client\Model\SushiswapSwapDTO[]
 ```
 
-GetSwaps (current)
+GetSwaps (current) 🔥
 
 Gets swaps.
 
@@ -833,7 +941,7 @@ No authorization required
 sushiswapGetSwapsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id): \OpenAPI\Client\Model\SushiswapSwapDTO[]
 ```
 
-GetSwaps (historical)
+GetSwaps (historical) 🔥
 
 Gets list of swaps for given filters.
 
@@ -850,11 +958,11 @@ $apiInstance = new OpenAPI\Client\Api\SushiswapApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$pool_id = 'pool_id_example'; // string
+$start_block = 56; // int | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+$end_block = 56; // int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The end date of timeframe
+$pool_id = 'pool_id_example'; // string | The pool address.
 
 try {
     $result = $apiInstance->sushiswapGetSwapsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id);
@@ -868,11 +976,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **start_block** | **int**|  | [optional] |
-| **end_block** | **int**|  | [optional] |
-| **start_date** | **\DateTime**|  | [optional] |
-| **end_date** | **\DateTime**|  | [optional] |
-| **pool_id** | **string**|  | [optional] |
+| **start_block** | **int**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] |
+| **end_block** | **int**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] |
+| **start_date** | **\DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] |
+| **end_date** | **\DateTime**| The end date of timeframe | [optional] |
+| **pool_id** | **string**| The pool address. | [optional] |
 
 ### Return type
 
@@ -897,7 +1005,7 @@ No authorization required
 sushiswapGetTokensCurrent(): \OpenAPI\Client\Model\SushiswapTokenDTO[]
 ```
 
-GetTokens (current)
+GetTokens (current) 🔥
 
 Gets tokens.
 
@@ -967,11 +1075,11 @@ $apiInstance = new OpenAPI\Client\Api\SushiswapApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$token_id = 'token_id_example'; // string
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$token_id = 'token_id_example'; // string | 
 
 try {
     $result = $apiInstance->sushiswapGetTokensDayDataHistorical($start_block, $end_block, $start_date, $end_date, $token_id);
@@ -1014,7 +1122,7 @@ No authorization required
 sushiswapGetTokensHistorical($start_block, $end_block, $start_date, $end_date, $token_id): \OpenAPI\Client\Model\SushiswapTokenDTO[]
 ```
 
-GetTokens (historical)
+GetTokens (historical) 🔥
 
 Gets list of tokens for given filters.
 
@@ -1031,11 +1139,11 @@ $apiInstance = new OpenAPI\Client\Api\SushiswapApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$token_id = 'token_id_example'; // string
+$start_block = 56; // int | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+$end_block = 56; // int | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The end date of timeframe
+$token_id = 'token_id_example'; // string | The token address.
 
 try {
     $result = $apiInstance->sushiswapGetTokensHistorical($start_block, $end_block, $start_date, $end_date, $token_id);
@@ -1049,11 +1157,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **start_block** | **int**|  | [optional] |
-| **end_block** | **int**|  | [optional] |
-| **start_date** | **\DateTime**|  | [optional] |
-| **end_date** | **\DateTime**|  | [optional] |
-| **token_id** | **string**|  | [optional] |
+| **start_block** | **int**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] |
+| **end_block** | **int**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] |
+| **start_date** | **\DateTime**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] |
+| **end_date** | **\DateTime**| The end date of timeframe | [optional] |
+| **token_id** | **string**| The token address. | [optional] |
 
 ### Return type
 
@@ -1095,10 +1203,10 @@ $apiInstance = new OpenAPI\Client\Api\SushiswapApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
 
 try {
     $result = $apiInstance->sushiswapGetTransactionsHistorical($start_block, $end_block, $start_date, $end_date);
@@ -1157,10 +1265,10 @@ $apiInstance = new OpenAPI\Client\Api\SushiswapApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
 
 try {
     $result = $apiInstance->sushiswapGetUsersHistorical($start_block, $end_block, $start_date, $end_date);

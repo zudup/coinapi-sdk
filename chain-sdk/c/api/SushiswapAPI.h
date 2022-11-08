@@ -5,6 +5,8 @@
 #include "../external/cJSON.h"
 #include "../include/keyValuePair.h"
 #include "../include/binary.h"
+#include "../model/curve_exchange_dto.h"
+#include "../model/dex_trade_dto.h"
 #include "../model/sushiswap_bundle_dto.h"
 #include "../model/sushiswap_burn_dto.h"
 #include "../model/sushiswap_day_data_dto.h"
@@ -21,6 +23,22 @@
 #include "../model/sushiswap_token_dto.h"
 #include "../model/sushiswap_transaction_dto.h"
 #include "../model/sushiswap_user_dto.h"
+
+
+// GetExchanges (current) 🔥
+//
+// Gets exchanges.
+//
+list_t*
+SushiswapAPI_curveGetExchangesCurrent(apiClient_t *apiClient);
+
+
+// GetTrades (current) 🔥
+//
+// Gets trades.
+//
+list_t*
+SushiswapAPI_dexGetTradesCurrent(apiClient_t *apiClient);
 
 
 // GetBundles (historical)
@@ -87,7 +105,7 @@ list_t*
 SushiswapAPI_sushiswapGetMintsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
 
 
-// GetPools (current)
+// GetPools (current) 🔥
 //
 // Gets pools.
 //
@@ -103,7 +121,7 @@ list_t*
 SushiswapAPI_sushiswapGetPoolsDayDataHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
 
 
-// GetPools (historical)
+// GetPools (historical) 🔥
 //
 // Gets list of pools for given filters.
 //
@@ -119,7 +137,7 @@ list_t*
 SushiswapAPI_sushiswapGetPoolsHourDataHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
 
 
-// GetSwaps (current)
+// GetSwaps (current) 🔥
 //
 // Gets swaps.
 //
@@ -127,7 +145,7 @@ list_t*
 SushiswapAPI_sushiswapGetSwapsCurrent(apiClient_t *apiClient);
 
 
-// GetSwaps (historical)
+// GetSwaps (historical) 🔥
 //
 // Gets list of swaps for given filters.
 //
@@ -135,7 +153,7 @@ list_t*
 SushiswapAPI_sushiswapGetSwapsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
 
 
-// GetTokens (current)
+// GetTokens (current) 🔥
 //
 // Gets tokens.
 //
@@ -151,7 +169,7 @@ list_t*
 SushiswapAPI_sushiswapGetTokensDayDataHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * tokenId );
 
 
-// GetTokens (historical)
+// GetTokens (historical) 🔥
 //
 // Gets list of tokens for given filters.
 //

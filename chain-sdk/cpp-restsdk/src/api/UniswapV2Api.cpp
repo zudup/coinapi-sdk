@@ -36,7 +36,7 @@ UniswapV2Api::~UniswapV2Api()
 {
 }
 
-pplx::task<void> UniswapV2Api::dappsUniswapv2BundlesHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate) const
+pplx::task<std::vector<std::shared_ptr<UniswapV2_BundleV2DTO>>> UniswapV2Api::uniswapV2_GetBundles__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate) const
 {
 
 
@@ -49,6 +49,9 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2BundlesHistoricalGet(boost::optiona
     std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
 
     std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -69,7 +72,7 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2BundlesHistoricalGet(boost::optiona
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("UniswapV2Api->dappsUniswapv2BundlesHistoricalGet does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("UniswapV2Api->uniswapV2_GetBundles__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -112,7 +115,7 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2BundlesHistoricalGet(boost::optiona
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("UniswapV2Api->dappsUniswapv2BundlesHistoricalGet does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("UniswapV2Api->uniswapV2_GetBundles__historical does not consume any supported media type"));
     }
 
 
@@ -132,7 +135,7 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2BundlesHistoricalGet(boost::optiona
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsUniswapv2BundlesHistoricalGet: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling uniswapV2_GetBundles__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -143,7 +146,7 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2BundlesHistoricalGet(boost::optiona
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsUniswapv2BundlesHistoricalGet: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling uniswapV2_GetBundles__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -152,10 +155,32 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2BundlesHistoricalGet(boost::optiona
     })
     .then([=](utility::string_t localVarResponse)
     {
-        return void();
+        std::vector<std::shared_ptr<UniswapV2_BundleV2DTO>> localVarResult;
+
+        if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
+        {
+            web::json::value localVarJson = web::json::value::parse(localVarResponse);
+            for( auto& localVarItem : localVarJson.as_array() )
+            {
+                std::shared_ptr<UniswapV2_BundleV2DTO> localVarItemObj;
+                ModelBase::fromJson(localVarItem, localVarItemObj);
+                localVarResult.push_back(localVarItemObj);
+            }
+        }
+        // else if(localVarResponseHttpContentType == utility::conversions::to_string_t("multipart/form-data"))
+        // {
+        // TODO multipart response parsing
+        // }
+        else
+        {
+            throw ApiException(500
+                , utility::conversions::to_string_t("error calling uniswapV2_GetBundles__historical: unsupported response type"));
+        }
+
+        return localVarResult;
     });
 }
-pplx::task<void> UniswapV2Api::dappsUniswapv2BurnsHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> poolId) const
+pplx::task<std::vector<std::shared_ptr<UniswapV2_BurnV2DTO>>> UniswapV2Api::uniswapV2_GetBurns__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> poolId) const
 {
 
 
@@ -168,6 +193,9 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2BurnsHistoricalGet(boost::optional<
     std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
 
     std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -188,7 +216,7 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2BurnsHistoricalGet(boost::optional<
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("UniswapV2Api->dappsUniswapv2BurnsHistoricalGet does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("UniswapV2Api->uniswapV2_GetBurns__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -235,7 +263,7 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2BurnsHistoricalGet(boost::optional<
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("UniswapV2Api->dappsUniswapv2BurnsHistoricalGet does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("UniswapV2Api->uniswapV2_GetBurns__historical does not consume any supported media type"));
     }
 
 
@@ -255,7 +283,7 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2BurnsHistoricalGet(boost::optional<
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsUniswapv2BurnsHistoricalGet: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling uniswapV2_GetBurns__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -266,7 +294,7 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2BurnsHistoricalGet(boost::optional<
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsUniswapv2BurnsHistoricalGet: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling uniswapV2_GetBurns__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -275,10 +303,32 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2BurnsHistoricalGet(boost::optional<
     })
     .then([=](utility::string_t localVarResponse)
     {
-        return void();
+        std::vector<std::shared_ptr<UniswapV2_BurnV2DTO>> localVarResult;
+
+        if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
+        {
+            web::json::value localVarJson = web::json::value::parse(localVarResponse);
+            for( auto& localVarItem : localVarJson.as_array() )
+            {
+                std::shared_ptr<UniswapV2_BurnV2DTO> localVarItemObj;
+                ModelBase::fromJson(localVarItem, localVarItemObj);
+                localVarResult.push_back(localVarItemObj);
+            }
+        }
+        // else if(localVarResponseHttpContentType == utility::conversions::to_string_t("multipart/form-data"))
+        // {
+        // TODO multipart response parsing
+        // }
+        else
+        {
+            throw ApiException(500
+                , utility::conversions::to_string_t("error calling uniswapV2_GetBurns__historical: unsupported response type"));
+        }
+
+        return localVarResult;
     });
 }
-pplx::task<void> UniswapV2Api::dappsUniswapv2DayDataHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate) const
+pplx::task<std::vector<std::shared_ptr<UniswapV2_UniswapDayDataV2DTO>>> UniswapV2Api::uniswapV2_GetDayData__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate) const
 {
 
 
@@ -291,6 +341,9 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2DayDataHistoricalGet(boost::optiona
     std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
 
     std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -311,7 +364,7 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2DayDataHistoricalGet(boost::optiona
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("UniswapV2Api->dappsUniswapv2DayDataHistoricalGet does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("UniswapV2Api->uniswapV2_GetDayData__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -354,7 +407,7 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2DayDataHistoricalGet(boost::optiona
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("UniswapV2Api->dappsUniswapv2DayDataHistoricalGet does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("UniswapV2Api->uniswapV2_GetDayData__historical does not consume any supported media type"));
     }
 
 
@@ -374,7 +427,7 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2DayDataHistoricalGet(boost::optiona
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsUniswapv2DayDataHistoricalGet: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling uniswapV2_GetDayData__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -385,7 +438,7 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2DayDataHistoricalGet(boost::optiona
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsUniswapv2DayDataHistoricalGet: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling uniswapV2_GetDayData__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -394,10 +447,32 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2DayDataHistoricalGet(boost::optiona
     })
     .then([=](utility::string_t localVarResponse)
     {
-        return void();
+        std::vector<std::shared_ptr<UniswapV2_UniswapDayDataV2DTO>> localVarResult;
+
+        if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
+        {
+            web::json::value localVarJson = web::json::value::parse(localVarResponse);
+            for( auto& localVarItem : localVarJson.as_array() )
+            {
+                std::shared_ptr<UniswapV2_UniswapDayDataV2DTO> localVarItemObj;
+                ModelBase::fromJson(localVarItem, localVarItemObj);
+                localVarResult.push_back(localVarItemObj);
+            }
+        }
+        // else if(localVarResponseHttpContentType == utility::conversions::to_string_t("multipart/form-data"))
+        // {
+        // TODO multipart response parsing
+        // }
+        else
+        {
+            throw ApiException(500
+                , utility::conversions::to_string_t("error calling uniswapV2_GetDayData__historical: unsupported response type"));
+        }
+
+        return localVarResult;
     });
 }
-pplx::task<void> UniswapV2Api::dappsUniswapv2FactoryHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate) const
+pplx::task<std::vector<std::shared_ptr<UniswapV2_UniswapFactoryV2DTO>>> UniswapV2Api::uniswapV2_GetFactory__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate) const
 {
 
 
@@ -410,6 +485,9 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2FactoryHistoricalGet(boost::optiona
     std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
 
     std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -430,7 +508,7 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2FactoryHistoricalGet(boost::optiona
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("UniswapV2Api->dappsUniswapv2FactoryHistoricalGet does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("UniswapV2Api->uniswapV2_GetFactory__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -473,7 +551,7 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2FactoryHistoricalGet(boost::optiona
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("UniswapV2Api->dappsUniswapv2FactoryHistoricalGet does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("UniswapV2Api->uniswapV2_GetFactory__historical does not consume any supported media type"));
     }
 
 
@@ -493,7 +571,7 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2FactoryHistoricalGet(boost::optiona
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsUniswapv2FactoryHistoricalGet: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling uniswapV2_GetFactory__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -504,7 +582,7 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2FactoryHistoricalGet(boost::optiona
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsUniswapv2FactoryHistoricalGet: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling uniswapV2_GetFactory__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -513,15 +591,37 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2FactoryHistoricalGet(boost::optiona
     })
     .then([=](utility::string_t localVarResponse)
     {
-        return void();
+        std::vector<std::shared_ptr<UniswapV2_UniswapFactoryV2DTO>> localVarResult;
+
+        if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
+        {
+            web::json::value localVarJson = web::json::value::parse(localVarResponse);
+            for( auto& localVarItem : localVarJson.as_array() )
+            {
+                std::shared_ptr<UniswapV2_UniswapFactoryV2DTO> localVarItemObj;
+                ModelBase::fromJson(localVarItem, localVarItemObj);
+                localVarResult.push_back(localVarItemObj);
+            }
+        }
+        // else if(localVarResponseHttpContentType == utility::conversions::to_string_t("multipart/form-data"))
+        // {
+        // TODO multipart response parsing
+        // }
+        else
+        {
+            throw ApiException(500
+                , utility::conversions::to_string_t("error calling uniswapV2_GetFactory__historical: unsupported response type"));
+        }
+
+        return localVarResult;
     });
 }
-pplx::task<void> UniswapV2Api::dappsUniswapv2LiquidityPositionHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> poolId) const
+pplx::task<std::vector<std::shared_ptr<UniswapV2_LiquidityPositionSnapshotV2DTO>>> UniswapV2Api::uniswapV2_GetLiquidityPositionsSnapshots__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> poolId) const
 {
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/uniswapv2/liquidityPosition/historical");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/uniswapv2/liquidityPositionsSnapshots/historical");
     
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -529,6 +629,9 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2LiquidityPositionHistoricalGet(boos
     std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
 
     std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -549,7 +652,7 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2LiquidityPositionHistoricalGet(boos
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("UniswapV2Api->dappsUniswapv2LiquidityPositionHistoricalGet does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("UniswapV2Api->uniswapV2_GetLiquidityPositionsSnapshots__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -596,7 +699,7 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2LiquidityPositionHistoricalGet(boos
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("UniswapV2Api->dappsUniswapv2LiquidityPositionHistoricalGet does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("UniswapV2Api->uniswapV2_GetLiquidityPositionsSnapshots__historical does not consume any supported media type"));
     }
 
 
@@ -616,7 +719,7 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2LiquidityPositionHistoricalGet(boos
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsUniswapv2LiquidityPositionHistoricalGet: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling uniswapV2_GetLiquidityPositionsSnapshots__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -627,7 +730,7 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2LiquidityPositionHistoricalGet(boos
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsUniswapv2LiquidityPositionHistoricalGet: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling uniswapV2_GetLiquidityPositionsSnapshots__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -636,15 +739,37 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2LiquidityPositionHistoricalGet(boos
     })
     .then([=](utility::string_t localVarResponse)
     {
-        return void();
+        std::vector<std::shared_ptr<UniswapV2_LiquidityPositionSnapshotV2DTO>> localVarResult;
+
+        if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
+        {
+            web::json::value localVarJson = web::json::value::parse(localVarResponse);
+            for( auto& localVarItem : localVarJson.as_array() )
+            {
+                std::shared_ptr<UniswapV2_LiquidityPositionSnapshotV2DTO> localVarItemObj;
+                ModelBase::fromJson(localVarItem, localVarItemObj);
+                localVarResult.push_back(localVarItemObj);
+            }
+        }
+        // else if(localVarResponseHttpContentType == utility::conversions::to_string_t("multipart/form-data"))
+        // {
+        // TODO multipart response parsing
+        // }
+        else
+        {
+            throw ApiException(500
+                , utility::conversions::to_string_t("error calling uniswapV2_GetLiquidityPositionsSnapshots__historical: unsupported response type"));
+        }
+
+        return localVarResult;
     });
 }
-pplx::task<void> UniswapV2Api::dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> poolId) const
+pplx::task<std::vector<std::shared_ptr<UniswapV2_LiquidityPositionV2DTO>>> UniswapV2Api::uniswapV2_GetLiquidityPositions__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> poolId) const
 {
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/uniswapv2/liquidityPositionSnapshots/historical");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/uniswapv2/liquidityPositions/historical");
     
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -652,6 +777,9 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2LiquidityPositionSnapshotsHistorica
     std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
 
     std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -672,7 +800,7 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2LiquidityPositionSnapshotsHistorica
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("UniswapV2Api->dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("UniswapV2Api->uniswapV2_GetLiquidityPositions__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -719,7 +847,7 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2LiquidityPositionSnapshotsHistorica
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("UniswapV2Api->dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("UniswapV2Api->uniswapV2_GetLiquidityPositions__historical does not consume any supported media type"));
     }
 
 
@@ -739,7 +867,7 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2LiquidityPositionSnapshotsHistorica
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling uniswapV2_GetLiquidityPositions__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -750,7 +878,7 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2LiquidityPositionSnapshotsHistorica
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling uniswapV2_GetLiquidityPositions__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -759,10 +887,32 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2LiquidityPositionSnapshotsHistorica
     })
     .then([=](utility::string_t localVarResponse)
     {
-        return void();
+        std::vector<std::shared_ptr<UniswapV2_LiquidityPositionV2DTO>> localVarResult;
+
+        if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
+        {
+            web::json::value localVarJson = web::json::value::parse(localVarResponse);
+            for( auto& localVarItem : localVarJson.as_array() )
+            {
+                std::shared_ptr<UniswapV2_LiquidityPositionV2DTO> localVarItemObj;
+                ModelBase::fromJson(localVarItem, localVarItemObj);
+                localVarResult.push_back(localVarItemObj);
+            }
+        }
+        // else if(localVarResponseHttpContentType == utility::conversions::to_string_t("multipart/form-data"))
+        // {
+        // TODO multipart response parsing
+        // }
+        else
+        {
+            throw ApiException(500
+                , utility::conversions::to_string_t("error calling uniswapV2_GetLiquidityPositions__historical: unsupported response type"));
+        }
+
+        return localVarResult;
     });
 }
-pplx::task<void> UniswapV2Api::dappsUniswapv2MintsHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> poolId) const
+pplx::task<std::vector<std::shared_ptr<UniswapV2_MintV2DTO>>> UniswapV2Api::uniswapV2_GetMints__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> poolId) const
 {
 
 
@@ -775,6 +925,9 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2MintsHistoricalGet(boost::optional<
     std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
 
     std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -795,7 +948,7 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2MintsHistoricalGet(boost::optional<
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("UniswapV2Api->dappsUniswapv2MintsHistoricalGet does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("UniswapV2Api->uniswapV2_GetMints__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -842,7 +995,7 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2MintsHistoricalGet(boost::optional<
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("UniswapV2Api->dappsUniswapv2MintsHistoricalGet does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("UniswapV2Api->uniswapV2_GetMints__historical does not consume any supported media type"));
     }
 
 
@@ -862,7 +1015,7 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2MintsHistoricalGet(boost::optional<
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsUniswapv2MintsHistoricalGet: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling uniswapV2_GetMints__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -873,7 +1026,7 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2MintsHistoricalGet(boost::optional<
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsUniswapv2MintsHistoricalGet: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling uniswapV2_GetMints__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -882,15 +1035,37 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2MintsHistoricalGet(boost::optional<
     })
     .then([=](utility::string_t localVarResponse)
     {
-        return void();
+        std::vector<std::shared_ptr<UniswapV2_MintV2DTO>> localVarResult;
+
+        if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
+        {
+            web::json::value localVarJson = web::json::value::parse(localVarResponse);
+            for( auto& localVarItem : localVarJson.as_array() )
+            {
+                std::shared_ptr<UniswapV2_MintV2DTO> localVarItemObj;
+                ModelBase::fromJson(localVarItem, localVarItemObj);
+                localVarResult.push_back(localVarItemObj);
+            }
+        }
+        // else if(localVarResponseHttpContentType == utility::conversions::to_string_t("multipart/form-data"))
+        // {
+        // TODO multipart response parsing
+        // }
+        else
+        {
+            throw ApiException(500
+                , utility::conversions::to_string_t("error calling uniswapV2_GetMints__historical: unsupported response type"));
+        }
+
+        return localVarResult;
     });
 }
-pplx::task<void> UniswapV2Api::dappsUniswapv2PoolDayDataHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> poolId) const
+pplx::task<std::vector<std::shared_ptr<UniswapV2_PairDayDataV2DTO>>> UniswapV2Api::uniswapV2_GetPoolsDayData__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> poolId) const
 {
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/uniswapv2/poolDayData/historical");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/uniswapv2/poolsDayData/historical");
     
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -898,6 +1073,9 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2PoolDayDataHistoricalGet(boost::opt
     std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
 
     std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -918,7 +1096,7 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2PoolDayDataHistoricalGet(boost::opt
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("UniswapV2Api->dappsUniswapv2PoolDayDataHistoricalGet does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("UniswapV2Api->uniswapV2_GetPoolsDayData__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -965,7 +1143,7 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2PoolDayDataHistoricalGet(boost::opt
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("UniswapV2Api->dappsUniswapv2PoolDayDataHistoricalGet does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("UniswapV2Api->uniswapV2_GetPoolsDayData__historical does not consume any supported media type"));
     }
 
 
@@ -985,7 +1163,7 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2PoolDayDataHistoricalGet(boost::opt
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsUniswapv2PoolDayDataHistoricalGet: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling uniswapV2_GetPoolsDayData__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -996,7 +1174,7 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2PoolDayDataHistoricalGet(boost::opt
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsUniswapv2PoolDayDataHistoricalGet: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling uniswapV2_GetPoolsDayData__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -1005,15 +1183,37 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2PoolDayDataHistoricalGet(boost::opt
     })
     .then([=](utility::string_t localVarResponse)
     {
-        return void();
+        std::vector<std::shared_ptr<UniswapV2_PairDayDataV2DTO>> localVarResult;
+
+        if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
+        {
+            web::json::value localVarJson = web::json::value::parse(localVarResponse);
+            for( auto& localVarItem : localVarJson.as_array() )
+            {
+                std::shared_ptr<UniswapV2_PairDayDataV2DTO> localVarItemObj;
+                ModelBase::fromJson(localVarItem, localVarItemObj);
+                localVarResult.push_back(localVarItemObj);
+            }
+        }
+        // else if(localVarResponseHttpContentType == utility::conversions::to_string_t("multipart/form-data"))
+        // {
+        // TODO multipart response parsing
+        // }
+        else
+        {
+            throw ApiException(500
+                , utility::conversions::to_string_t("error calling uniswapV2_GetPoolsDayData__historical: unsupported response type"));
+        }
+
+        return localVarResult;
     });
 }
-pplx::task<void> UniswapV2Api::dappsUniswapv2PoolHourDataHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> poolId) const
+pplx::task<std::vector<std::shared_ptr<UniswapV2_PairHourDataV2DTO>>> UniswapV2Api::uniswapV2_GetPoolsHourData__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> poolId) const
 {
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/uniswapv2/poolHourData/historical");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/uniswapv2/poolsHourData/historical");
     
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -1021,6 +1221,9 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2PoolHourDataHistoricalGet(boost::op
     std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
 
     std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -1041,7 +1244,7 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2PoolHourDataHistoricalGet(boost::op
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("UniswapV2Api->dappsUniswapv2PoolHourDataHistoricalGet does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("UniswapV2Api->uniswapV2_GetPoolsHourData__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -1088,7 +1291,7 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2PoolHourDataHistoricalGet(boost::op
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("UniswapV2Api->dappsUniswapv2PoolHourDataHistoricalGet does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("UniswapV2Api->uniswapV2_GetPoolsHourData__historical does not consume any supported media type"));
     }
 
 
@@ -1108,7 +1311,7 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2PoolHourDataHistoricalGet(boost::op
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsUniswapv2PoolHourDataHistoricalGet: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling uniswapV2_GetPoolsHourData__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -1119,7 +1322,7 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2PoolHourDataHistoricalGet(boost::op
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsUniswapv2PoolHourDataHistoricalGet: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling uniswapV2_GetPoolsHourData__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -1128,10 +1331,32 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2PoolHourDataHistoricalGet(boost::op
     })
     .then([=](utility::string_t localVarResponse)
     {
-        return void();
+        std::vector<std::shared_ptr<UniswapV2_PairHourDataV2DTO>> localVarResult;
+
+        if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
+        {
+            web::json::value localVarJson = web::json::value::parse(localVarResponse);
+            for( auto& localVarItem : localVarJson.as_array() )
+            {
+                std::shared_ptr<UniswapV2_PairHourDataV2DTO> localVarItemObj;
+                ModelBase::fromJson(localVarItem, localVarItemObj);
+                localVarResult.push_back(localVarItemObj);
+            }
+        }
+        // else if(localVarResponseHttpContentType == utility::conversions::to_string_t("multipart/form-data"))
+        // {
+        // TODO multipart response parsing
+        // }
+        else
+        {
+            throw ApiException(500
+                , utility::conversions::to_string_t("error calling uniswapV2_GetPoolsHourData__historical: unsupported response type"));
+        }
+
+        return localVarResult;
     });
 }
-pplx::task<std::vector<std::shared_ptr<UniswapV2_PairV2DTO>>> UniswapV2Api::dappsUniswapv2PoolsCurrentGet(boost::optional<utility::string_t> filterPoolId) const
+pplx::task<std::vector<std::shared_ptr<UniswapV2_PairV2DTO>>> UniswapV2Api::uniswapV2_GetPools__current(boost::optional<utility::string_t> filterPoolId) const
 {
 
 
@@ -1167,7 +1392,7 @@ pplx::task<std::vector<std::shared_ptr<UniswapV2_PairV2DTO>>> UniswapV2Api::dapp
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("UniswapV2Api->dappsUniswapv2PoolsCurrentGet does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("UniswapV2Api->uniswapV2_GetPools__current does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -1198,7 +1423,7 @@ pplx::task<std::vector<std::shared_ptr<UniswapV2_PairV2DTO>>> UniswapV2Api::dapp
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("UniswapV2Api->dappsUniswapv2PoolsCurrentGet does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("UniswapV2Api->uniswapV2_GetPools__current does not consume any supported media type"));
     }
 
 
@@ -1218,7 +1443,7 @@ pplx::task<std::vector<std::shared_ptr<UniswapV2_PairV2DTO>>> UniswapV2Api::dapp
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsUniswapv2PoolsCurrentGet: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling uniswapV2_GetPools__current: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -1229,7 +1454,7 @@ pplx::task<std::vector<std::shared_ptr<UniswapV2_PairV2DTO>>> UniswapV2Api::dapp
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsUniswapv2PoolsCurrentGet: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling uniswapV2_GetPools__current: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -1257,13 +1482,13 @@ pplx::task<std::vector<std::shared_ptr<UniswapV2_PairV2DTO>>> UniswapV2Api::dapp
         else
         {
             throw ApiException(500
-                , utility::conversions::to_string_t("error calling dappsUniswapv2PoolsCurrentGet: unsupported response type"));
+                , utility::conversions::to_string_t("error calling uniswapV2_GetPools__current: unsupported response type"));
         }
 
         return localVarResult;
     });
 }
-pplx::task<void> UniswapV2Api::dappsUniswapv2PoolsHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> poolId) const
+pplx::task<std::vector<std::shared_ptr<UniswapV2_PairV2DTO>>> UniswapV2Api::uniswapV2_GetPools__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> poolId) const
 {
 
 
@@ -1276,6 +1501,9 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2PoolsHistoricalGet(boost::optional<
     std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
 
     std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -1296,7 +1524,7 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2PoolsHistoricalGet(boost::optional<
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("UniswapV2Api->dappsUniswapv2PoolsHistoricalGet does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("UniswapV2Api->uniswapV2_GetPools__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -1343,7 +1571,7 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2PoolsHistoricalGet(boost::optional<
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("UniswapV2Api->dappsUniswapv2PoolsHistoricalGet does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("UniswapV2Api->uniswapV2_GetPools__historical does not consume any supported media type"));
     }
 
 
@@ -1363,7 +1591,7 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2PoolsHistoricalGet(boost::optional<
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsUniswapv2PoolsHistoricalGet: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling uniswapV2_GetPools__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -1374,7 +1602,7 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2PoolsHistoricalGet(boost::optional<
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsUniswapv2PoolsHistoricalGet: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling uniswapV2_GetPools__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -1383,10 +1611,32 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2PoolsHistoricalGet(boost::optional<
     })
     .then([=](utility::string_t localVarResponse)
     {
-        return void();
+        std::vector<std::shared_ptr<UniswapV2_PairV2DTO>> localVarResult;
+
+        if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
+        {
+            web::json::value localVarJson = web::json::value::parse(localVarResponse);
+            for( auto& localVarItem : localVarJson.as_array() )
+            {
+                std::shared_ptr<UniswapV2_PairV2DTO> localVarItemObj;
+                ModelBase::fromJson(localVarItem, localVarItemObj);
+                localVarResult.push_back(localVarItemObj);
+            }
+        }
+        // else if(localVarResponseHttpContentType == utility::conversions::to_string_t("multipart/form-data"))
+        // {
+        // TODO multipart response parsing
+        // }
+        else
+        {
+            throw ApiException(500
+                , utility::conversions::to_string_t("error calling uniswapV2_GetPools__historical: unsupported response type"));
+        }
+
+        return localVarResult;
     });
 }
-pplx::task<std::vector<std::shared_ptr<UniswapV2_SwapV2DTO>>> UniswapV2Api::dappsUniswapv2SwapsCurrentGet() const
+pplx::task<std::vector<std::shared_ptr<UniswapV2_SwapV2DTO>>> UniswapV2Api::uniswapV2_GetSwaps__current() const
 {
 
 
@@ -1422,7 +1672,7 @@ pplx::task<std::vector<std::shared_ptr<UniswapV2_SwapV2DTO>>> UniswapV2Api::dapp
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("UniswapV2Api->dappsUniswapv2SwapsCurrentGet does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("UniswapV2Api->uniswapV2_GetSwaps__current does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -1449,7 +1699,7 @@ pplx::task<std::vector<std::shared_ptr<UniswapV2_SwapV2DTO>>> UniswapV2Api::dapp
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("UniswapV2Api->dappsUniswapv2SwapsCurrentGet does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("UniswapV2Api->uniswapV2_GetSwaps__current does not consume any supported media type"));
     }
 
 
@@ -1469,7 +1719,7 @@ pplx::task<std::vector<std::shared_ptr<UniswapV2_SwapV2DTO>>> UniswapV2Api::dapp
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsUniswapv2SwapsCurrentGet: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling uniswapV2_GetSwaps__current: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -1480,7 +1730,7 @@ pplx::task<std::vector<std::shared_ptr<UniswapV2_SwapV2DTO>>> UniswapV2Api::dapp
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsUniswapv2SwapsCurrentGet: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling uniswapV2_GetSwaps__current: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -1508,13 +1758,13 @@ pplx::task<std::vector<std::shared_ptr<UniswapV2_SwapV2DTO>>> UniswapV2Api::dapp
         else
         {
             throw ApiException(500
-                , utility::conversions::to_string_t("error calling dappsUniswapv2SwapsCurrentGet: unsupported response type"));
+                , utility::conversions::to_string_t("error calling uniswapV2_GetSwaps__current: unsupported response type"));
         }
 
         return localVarResult;
     });
 }
-pplx::task<void> UniswapV2Api::dappsUniswapv2SwapsHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> poolId) const
+pplx::task<std::vector<std::shared_ptr<UniswapV2_SwapV2DTO>>> UniswapV2Api::uniswapV2_GetSwaps__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> poolId) const
 {
 
 
@@ -1527,6 +1777,9 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2SwapsHistoricalGet(boost::optional<
     std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
 
     std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -1547,7 +1800,7 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2SwapsHistoricalGet(boost::optional<
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("UniswapV2Api->dappsUniswapv2SwapsHistoricalGet does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("UniswapV2Api->uniswapV2_GetSwaps__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -1594,7 +1847,7 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2SwapsHistoricalGet(boost::optional<
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("UniswapV2Api->dappsUniswapv2SwapsHistoricalGet does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("UniswapV2Api->uniswapV2_GetSwaps__historical does not consume any supported media type"));
     }
 
 
@@ -1614,7 +1867,7 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2SwapsHistoricalGet(boost::optional<
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsUniswapv2SwapsHistoricalGet: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling uniswapV2_GetSwaps__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -1625,7 +1878,7 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2SwapsHistoricalGet(boost::optional<
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsUniswapv2SwapsHistoricalGet: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling uniswapV2_GetSwaps__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -1634,15 +1887,37 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2SwapsHistoricalGet(boost::optional<
     })
     .then([=](utility::string_t localVarResponse)
     {
-        return void();
+        std::vector<std::shared_ptr<UniswapV2_SwapV2DTO>> localVarResult;
+
+        if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
+        {
+            web::json::value localVarJson = web::json::value::parse(localVarResponse);
+            for( auto& localVarItem : localVarJson.as_array() )
+            {
+                std::shared_ptr<UniswapV2_SwapV2DTO> localVarItemObj;
+                ModelBase::fromJson(localVarItem, localVarItemObj);
+                localVarResult.push_back(localVarItemObj);
+            }
+        }
+        // else if(localVarResponseHttpContentType == utility::conversions::to_string_t("multipart/form-data"))
+        // {
+        // TODO multipart response parsing
+        // }
+        else
+        {
+            throw ApiException(500
+                , utility::conversions::to_string_t("error calling uniswapV2_GetSwaps__historical: unsupported response type"));
+        }
+
+        return localVarResult;
     });
 }
-pplx::task<void> UniswapV2Api::dappsUniswapv2TokenDayDataHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> tokenId) const
+pplx::task<std::vector<std::shared_ptr<UniswapV2_TokenDayDataV2DTO>>> UniswapV2Api::uniswapV2_GetTokensDayData__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> tokenId) const
 {
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/uniswapv2/tokenDayData/historical");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/uniswapv2/tokensDayData/historical");
     
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -1650,6 +1925,9 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2TokenDayDataHistoricalGet(boost::op
     std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
 
     std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -1670,7 +1948,7 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2TokenDayDataHistoricalGet(boost::op
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("UniswapV2Api->dappsUniswapv2TokenDayDataHistoricalGet does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("UniswapV2Api->uniswapV2_GetTokensDayData__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -1717,7 +1995,7 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2TokenDayDataHistoricalGet(boost::op
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("UniswapV2Api->dappsUniswapv2TokenDayDataHistoricalGet does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("UniswapV2Api->uniswapV2_GetTokensDayData__historical does not consume any supported media type"));
     }
 
 
@@ -1737,7 +2015,7 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2TokenDayDataHistoricalGet(boost::op
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsUniswapv2TokenDayDataHistoricalGet: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling uniswapV2_GetTokensDayData__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -1748,7 +2026,7 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2TokenDayDataHistoricalGet(boost::op
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsUniswapv2TokenDayDataHistoricalGet: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling uniswapV2_GetTokensDayData__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -1757,10 +2035,32 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2TokenDayDataHistoricalGet(boost::op
     })
     .then([=](utility::string_t localVarResponse)
     {
-        return void();
+        std::vector<std::shared_ptr<UniswapV2_TokenDayDataV2DTO>> localVarResult;
+
+        if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
+        {
+            web::json::value localVarJson = web::json::value::parse(localVarResponse);
+            for( auto& localVarItem : localVarJson.as_array() )
+            {
+                std::shared_ptr<UniswapV2_TokenDayDataV2DTO> localVarItemObj;
+                ModelBase::fromJson(localVarItem, localVarItemObj);
+                localVarResult.push_back(localVarItemObj);
+            }
+        }
+        // else if(localVarResponseHttpContentType == utility::conversions::to_string_t("multipart/form-data"))
+        // {
+        // TODO multipart response parsing
+        // }
+        else
+        {
+            throw ApiException(500
+                , utility::conversions::to_string_t("error calling uniswapV2_GetTokensDayData__historical: unsupported response type"));
+        }
+
+        return localVarResult;
     });
 }
-pplx::task<std::vector<std::shared_ptr<UniswapV2_TokenV2DTO>>> UniswapV2Api::dappsUniswapv2TokensCurrentGet() const
+pplx::task<std::vector<std::shared_ptr<UniswapV2_TokenV2DTO>>> UniswapV2Api::uniswapV2_GetTokens__current() const
 {
 
 
@@ -1796,7 +2096,7 @@ pplx::task<std::vector<std::shared_ptr<UniswapV2_TokenV2DTO>>> UniswapV2Api::dap
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("UniswapV2Api->dappsUniswapv2TokensCurrentGet does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("UniswapV2Api->uniswapV2_GetTokens__current does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -1823,7 +2123,7 @@ pplx::task<std::vector<std::shared_ptr<UniswapV2_TokenV2DTO>>> UniswapV2Api::dap
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("UniswapV2Api->dappsUniswapv2TokensCurrentGet does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("UniswapV2Api->uniswapV2_GetTokens__current does not consume any supported media type"));
     }
 
 
@@ -1843,7 +2143,7 @@ pplx::task<std::vector<std::shared_ptr<UniswapV2_TokenV2DTO>>> UniswapV2Api::dap
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsUniswapv2TokensCurrentGet: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling uniswapV2_GetTokens__current: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -1854,7 +2154,7 @@ pplx::task<std::vector<std::shared_ptr<UniswapV2_TokenV2DTO>>> UniswapV2Api::dap
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsUniswapv2TokensCurrentGet: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling uniswapV2_GetTokens__current: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -1882,13 +2182,13 @@ pplx::task<std::vector<std::shared_ptr<UniswapV2_TokenV2DTO>>> UniswapV2Api::dap
         else
         {
             throw ApiException(500
-                , utility::conversions::to_string_t("error calling dappsUniswapv2TokensCurrentGet: unsupported response type"));
+                , utility::conversions::to_string_t("error calling uniswapV2_GetTokens__current: unsupported response type"));
         }
 
         return localVarResult;
     });
 }
-pplx::task<void> UniswapV2Api::dappsUniswapv2TokensHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> tokenId) const
+pplx::task<std::vector<std::shared_ptr<UniswapV2_TokenV2DTO>>> UniswapV2Api::uniswapV2_GetTokens__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> tokenId) const
 {
 
 
@@ -1901,6 +2201,9 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2TokensHistoricalGet(boost::optional
     std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
 
     std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -1921,7 +2224,7 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2TokensHistoricalGet(boost::optional
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("UniswapV2Api->dappsUniswapv2TokensHistoricalGet does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("UniswapV2Api->uniswapV2_GetTokens__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -1968,7 +2271,7 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2TokensHistoricalGet(boost::optional
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("UniswapV2Api->dappsUniswapv2TokensHistoricalGet does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("UniswapV2Api->uniswapV2_GetTokens__historical does not consume any supported media type"));
     }
 
 
@@ -1988,7 +2291,7 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2TokensHistoricalGet(boost::optional
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsUniswapv2TokensHistoricalGet: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling uniswapV2_GetTokens__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -1999,7 +2302,7 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2TokensHistoricalGet(boost::optional
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsUniswapv2TokensHistoricalGet: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling uniswapV2_GetTokens__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -2008,10 +2311,32 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2TokensHistoricalGet(boost::optional
     })
     .then([=](utility::string_t localVarResponse)
     {
-        return void();
+        std::vector<std::shared_ptr<UniswapV2_TokenV2DTO>> localVarResult;
+
+        if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
+        {
+            web::json::value localVarJson = web::json::value::parse(localVarResponse);
+            for( auto& localVarItem : localVarJson.as_array() )
+            {
+                std::shared_ptr<UniswapV2_TokenV2DTO> localVarItemObj;
+                ModelBase::fromJson(localVarItem, localVarItemObj);
+                localVarResult.push_back(localVarItemObj);
+            }
+        }
+        // else if(localVarResponseHttpContentType == utility::conversions::to_string_t("multipart/form-data"))
+        // {
+        // TODO multipart response parsing
+        // }
+        else
+        {
+            throw ApiException(500
+                , utility::conversions::to_string_t("error calling uniswapV2_GetTokens__historical: unsupported response type"));
+        }
+
+        return localVarResult;
     });
 }
-pplx::task<void> UniswapV2Api::dappsUniswapv2TransactionsHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate) const
+pplx::task<std::vector<std::shared_ptr<UniswapV2_TransactionV2DTO>>> UniswapV2Api::uniswapV2_GetTransactions__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate) const
 {
 
 
@@ -2024,6 +2349,9 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2TransactionsHistoricalGet(boost::op
     std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
 
     std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -2044,7 +2372,7 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2TransactionsHistoricalGet(boost::op
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("UniswapV2Api->dappsUniswapv2TransactionsHistoricalGet does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("UniswapV2Api->uniswapV2_GetTransactions__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -2087,7 +2415,7 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2TransactionsHistoricalGet(boost::op
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("UniswapV2Api->dappsUniswapv2TransactionsHistoricalGet does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("UniswapV2Api->uniswapV2_GetTransactions__historical does not consume any supported media type"));
     }
 
 
@@ -2107,7 +2435,7 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2TransactionsHistoricalGet(boost::op
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsUniswapv2TransactionsHistoricalGet: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling uniswapV2_GetTransactions__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -2118,7 +2446,7 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2TransactionsHistoricalGet(boost::op
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsUniswapv2TransactionsHistoricalGet: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling uniswapV2_GetTransactions__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -2127,10 +2455,32 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2TransactionsHistoricalGet(boost::op
     })
     .then([=](utility::string_t localVarResponse)
     {
-        return void();
+        std::vector<std::shared_ptr<UniswapV2_TransactionV2DTO>> localVarResult;
+
+        if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
+        {
+            web::json::value localVarJson = web::json::value::parse(localVarResponse);
+            for( auto& localVarItem : localVarJson.as_array() )
+            {
+                std::shared_ptr<UniswapV2_TransactionV2DTO> localVarItemObj;
+                ModelBase::fromJson(localVarItem, localVarItemObj);
+                localVarResult.push_back(localVarItemObj);
+            }
+        }
+        // else if(localVarResponseHttpContentType == utility::conversions::to_string_t("multipart/form-data"))
+        // {
+        // TODO multipart response parsing
+        // }
+        else
+        {
+            throw ApiException(500
+                , utility::conversions::to_string_t("error calling uniswapV2_GetTransactions__historical: unsupported response type"));
+        }
+
+        return localVarResult;
     });
 }
-pplx::task<void> UniswapV2Api::dappsUniswapv2UsersHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate) const
+pplx::task<std::vector<std::shared_ptr<UniswapV2_UserV2DTO>>> UniswapV2Api::uniswapV2_GetUsers__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate) const
 {
 
 
@@ -2143,6 +2493,9 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2UsersHistoricalGet(boost::optional<
     std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
 
     std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -2163,7 +2516,7 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2UsersHistoricalGet(boost::optional<
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("UniswapV2Api->dappsUniswapv2UsersHistoricalGet does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("UniswapV2Api->uniswapV2_GetUsers__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -2206,7 +2559,7 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2UsersHistoricalGet(boost::optional<
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("UniswapV2Api->dappsUniswapv2UsersHistoricalGet does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("UniswapV2Api->uniswapV2_GetUsers__historical does not consume any supported media type"));
     }
 
 
@@ -2226,7 +2579,7 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2UsersHistoricalGet(boost::optional<
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsUniswapv2UsersHistoricalGet: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling uniswapV2_GetUsers__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -2237,7 +2590,7 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2UsersHistoricalGet(boost::optional<
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsUniswapv2UsersHistoricalGet: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling uniswapV2_GetUsers__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -2246,7 +2599,29 @@ pplx::task<void> UniswapV2Api::dappsUniswapv2UsersHistoricalGet(boost::optional<
     })
     .then([=](utility::string_t localVarResponse)
     {
-        return void();
+        std::vector<std::shared_ptr<UniswapV2_UserV2DTO>> localVarResult;
+
+        if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
+        {
+            web::json::value localVarJson = web::json::value::parse(localVarResponse);
+            for( auto& localVarItem : localVarJson.as_array() )
+            {
+                std::shared_ptr<UniswapV2_UserV2DTO> localVarItemObj;
+                ModelBase::fromJson(localVarItem, localVarItemObj);
+                localVarResult.push_back(localVarItemObj);
+            }
+        }
+        // else if(localVarResponseHttpContentType == utility::conversions::to_string_t("multipart/form-data"))
+        // {
+        // TODO multipart response parsing
+        // }
+        else
+        {
+            throw ApiException(500
+                , utility::conversions::to_string_t("error calling uniswapV2_GetUsers__historical: unsupported response type"));
+        }
+
+        return localVarResult;
     });
 }
 

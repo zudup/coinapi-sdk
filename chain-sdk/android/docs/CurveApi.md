@@ -4,46 +4,48 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**dappsCurveAccountsHistoricalGet**](CurveApi.md#dappsCurveAccountsHistoricalGet) | **GET** /dapps/curve/accounts/historical | 
-[**dappsCurveAddLiquidityEventHistoricalGet**](CurveApi.md#dappsCurveAddLiquidityEventHistoricalGet) | **GET** /dapps/curve/addLiquidityEvent/historical | 
-[**dappsCurveAdminFeeChangeLogHistoricalGet**](CurveApi.md#dappsCurveAdminFeeChangeLogHistoricalGet) | **GET** /dapps/curve/adminFeeChangeLog/historical | 
-[**dappsCurveAmplificationCoeffChangeLogHistoricalGet**](CurveApi.md#dappsCurveAmplificationCoeffChangeLogHistoricalGet) | **GET** /dapps/curve/amplificationCoeffChangeLog/historical | 
-[**dappsCurveCoinsHistoricalGet**](CurveApi.md#dappsCurveCoinsHistoricalGet) | **GET** /dapps/curve/coins/historical | 
-[**dappsCurveContractsHistoricalGet**](CurveApi.md#dappsCurveContractsHistoricalGet) | **GET** /dapps/curve/contracts/historical | 
-[**dappsCurveContractsVersionHistoricalGet**](CurveApi.md#dappsCurveContractsVersionHistoricalGet) | **GET** /dapps/curve/contractsVersion/historical | 
-[**dappsCurveDailyVolumeHistoricalGet**](CurveApi.md#dappsCurveDailyVolumeHistoricalGet) | **GET** /dapps/curve/dailyVolume/historical | 
-[**dappsCurveFeeChangeLogHistoricalGet**](CurveApi.md#dappsCurveFeeChangeLogHistoricalGet) | **GET** /dapps/curve/feeChangeLog/historical | 
-[**dappsCurveGaugeDepositHistoricalGet**](CurveApi.md#dappsCurveGaugeDepositHistoricalGet) | **GET** /dapps/curve/gaugeDeposit/historical | 
-[**dappsCurveGaugeHistoricalGet**](CurveApi.md#dappsCurveGaugeHistoricalGet) | **GET** /dapps/curve/gauge/historical | 
-[**dappsCurveGaugeLiquidityHistoricalGet**](CurveApi.md#dappsCurveGaugeLiquidityHistoricalGet) | **GET** /dapps/curve/gaugeLiquidity/historical | 
-[**dappsCurveGaugeTotalWeightHistoricalGet**](CurveApi.md#dappsCurveGaugeTotalWeightHistoricalGet) | **GET** /dapps/curve/gaugeTotalWeight/historical | 
-[**dappsCurveGaugeTypeHistoricalGet**](CurveApi.md#dappsCurveGaugeTypeHistoricalGet) | **GET** /dapps/curve/gaugeType/historical | 
-[**dappsCurveGaugeTypeWeightHistoricalGet**](CurveApi.md#dappsCurveGaugeTypeWeightHistoricalGet) | **GET** /dapps/curve/gaugeTypeWeight/historical | 
-[**dappsCurveGaugeWeightHistoricalGet**](CurveApi.md#dappsCurveGaugeWeightHistoricalGet) | **GET** /dapps/curve/gaugeWeight/historical | 
-[**dappsCurveGaugeWeightVoteHistoricalGet**](CurveApi.md#dappsCurveGaugeWeightVoteHistoricalGet) | **GET** /dapps/curve/gaugeWeightVote/historical | 
-[**dappsCurveGaugeWithdrawHistoricalGet**](CurveApi.md#dappsCurveGaugeWithdrawHistoricalGet) | **GET** /dapps/curve/gaugeWithdraw/historical | 
-[**dappsCurveHourlyVolumeHistoricalGet**](CurveApi.md#dappsCurveHourlyVolumeHistoricalGet) | **GET** /dapps/curve/hourlyVolume/historical | 
-[**dappsCurveLpTokenHistoricalGet**](CurveApi.md#dappsCurveLpTokenHistoricalGet) | **GET** /dapps/curve/lpToken/historical | 
-[**dappsCurvePoolsHistoricalGet**](CurveApi.md#dappsCurvePoolsHistoricalGet) | **GET** /dapps/curve/pools/historical | 
-[**dappsCurveProposalsHistoricalGet**](CurveApi.md#dappsCurveProposalsHistoricalGet) | **GET** /dapps/curve/proposals/historical | 
-[**dappsCurveProposalsVoteHistoricalGet**](CurveApi.md#dappsCurveProposalsVoteHistoricalGet) | **GET** /dapps/curve/proposalsVote/historical | 
-[**dappsCurveRemoveLiquidityEventHistoricalGet**](CurveApi.md#dappsCurveRemoveLiquidityEventHistoricalGet) | **GET** /dapps/curve/removeLiquidityEvent/historical | 
-[**dappsCurveRemoveLiquidityOneEventHistoricalGet**](CurveApi.md#dappsCurveRemoveLiquidityOneEventHistoricalGet) | **GET** /dapps/curve/removeLiquidityOneEvent/historical | 
-[**dappsCurveSwapsHistoricalGet**](CurveApi.md#dappsCurveSwapsHistoricalGet) | **GET** /dapps/curve/swaps/historical | 
-[**dappsCurveSystemStateHistoricalGet**](CurveApi.md#dappsCurveSystemStateHistoricalGet) | **GET** /dapps/curve/systemState/historical | 
-[**dappsCurveTokensHistoricalGet**](CurveApi.md#dappsCurveTokensHistoricalGet) | **GET** /dapps/curve/tokens/historical | 
-[**dappsCurveTransferOwnershipEventHistoricalGet**](CurveApi.md#dappsCurveTransferOwnershipEventHistoricalGet) | **GET** /dapps/curve/transferOwnershipEvent/historical | 
-[**dappsCurveUnderlyingCoinHistoricalGet**](CurveApi.md#dappsCurveUnderlyingCoinHistoricalGet) | **GET** /dapps/curve/underlyingCoin/historical | 
-[**dappsCurveVotingAppHistoricalGet**](CurveApi.md#dappsCurveVotingAppHistoricalGet) | **GET** /dapps/curve/votingApp/historical | 
-[**dappsCurveWeeklyVolumeHistoricalGet**](CurveApi.md#dappsCurveWeeklyVolumeHistoricalGet) | **GET** /dapps/curve/weeklyVolume/historical | 
+[**curveGetAccountsHistorical**](CurveApi.md#curveGetAccountsHistorical) | **GET** /dapps/curve/accounts/historical | GetAccounts (historical)
+[**curveGetAddLiquidityEventsHistorical**](CurveApi.md#curveGetAddLiquidityEventsHistorical) | **GET** /dapps/curve/addLiquidityEvents/historical | GetAddLiquidityEvents (historical)
+[**curveGetAdminFeeChangeLogsHistorical**](CurveApi.md#curveGetAdminFeeChangeLogsHistorical) | **GET** /dapps/curve/adminFeeChangeLogs/historical | GetAdminFeeChangeLogs (historical)
+[**curveGetAmplificationCoeffChangeLogsHistorical**](CurveApi.md#curveGetAmplificationCoeffChangeLogsHistorical) | **GET** /dapps/curve/amplificationCoeffChangeLogs/historical | GetAmplificationCoeffChangeLogs (historical)
+[**curveGetCoinsHistorical**](CurveApi.md#curveGetCoinsHistorical) | **GET** /dapps/curve/coins/historical | GetCoins (historical)
+[**curveGetContractsHistorical**](CurveApi.md#curveGetContractsHistorical) | **GET** /dapps/curve/contracts/historical | GetContracts (historical)
+[**curveGetContractsVersionsHistorical**](CurveApi.md#curveGetContractsVersionsHistorical) | **GET** /dapps/curve/contractsVersions/historical | GetContractsVersions (historical)
+[**curveGetDailyVolumesHistorical**](CurveApi.md#curveGetDailyVolumesHistorical) | **GET** /dapps/curve/dailyVolumes/historical | GetDailyVolumes (historical)
+[**curveGetExchangesHistorical**](CurveApi.md#curveGetExchangesHistorical) | **GET** /dapps/curve/exchanges/historical | GetExchanges (historical) 🔥
+[**curveGetFeeChangeLogsHistorical**](CurveApi.md#curveGetFeeChangeLogsHistorical) | **GET** /dapps/curve/feeChangeLogs/historical | GetFeeChangeLogs (historical)
+[**curveGetGaugesDepositsHistorical**](CurveApi.md#curveGetGaugesDepositsHistorical) | **GET** /dapps/curve/gaugesDeposits/historical | GetGaugesDeposits (historical)
+[**curveGetGaugesHistorical**](CurveApi.md#curveGetGaugesHistorical) | **GET** /dapps/curve/gauges/historical | GetGauges (historical)
+[**curveGetGaugesLiquidityHistorical**](CurveApi.md#curveGetGaugesLiquidityHistorical) | **GET** /dapps/curve/gaugesLiquidity/historical | GetGaugesLiquidity (historical)
+[**curveGetGaugesTotalWeightsHistorical**](CurveApi.md#curveGetGaugesTotalWeightsHistorical) | **GET** /dapps/curve/gaugesTotalWeights/historical | GetGaugesTotalWeights (historical)
+[**curveGetGaugesTypesHistorical**](CurveApi.md#curveGetGaugesTypesHistorical) | **GET** /dapps/curve/gaugesTypes/historical | GetGaugesTypes (historical)
+[**curveGetGaugesTypesWeightsHistorical**](CurveApi.md#curveGetGaugesTypesWeightsHistorical) | **GET** /dapps/curve/gaugesTypesWeights/historical | GetGaugesTypesWeights (historical)
+[**curveGetGaugesWeightsHistorical**](CurveApi.md#curveGetGaugesWeightsHistorical) | **GET** /dapps/curve/gaugesWeights/historical | GetGaugesWeights (historical)
+[**curveGetGaugesWeightsVotesHistorical**](CurveApi.md#curveGetGaugesWeightsVotesHistorical) | **GET** /dapps/curve/gaugesWeightsVotes/historical | GetGaugesWeightsVotes (historical)
+[**curveGetGaugesWithdrawHistorical**](CurveApi.md#curveGetGaugesWithdrawHistorical) | **GET** /dapps/curve/gaugesWithdraws/historical | GetGaugesWithdraw (historical)
+[**curveGetHourlyVolumesHistorical**](CurveApi.md#curveGetHourlyVolumesHistorical) | **GET** /dapps/curve/hourlyVolumes/historical | GetHourlyVolumes (historical)
+[**curveGetLpTokensHistorical**](CurveApi.md#curveGetLpTokensHistorical) | **GET** /dapps/curve/lpTokens/historical | GetLpTokens (historical)
+[**curveGetPoolsHistorical**](CurveApi.md#curveGetPoolsHistorical) | **GET** /dapps/curve/pools/historical | GetPools (historical) 🔥
+[**curveGetProposalsHistorical**](CurveApi.md#curveGetProposalsHistorical) | **GET** /dapps/curve/proposals/historical | GetProposals (historical)
+[**curveGetProposalsVotesHistorical**](CurveApi.md#curveGetProposalsVotesHistorical) | **GET** /dapps/curve/proposalsVotes/historical | GetProposalsVotes (historical)
+[**curveGetRemoveLiquidityEventsHistorical**](CurveApi.md#curveGetRemoveLiquidityEventsHistorical) | **GET** /dapps/curve/removeLiquidityEvents/historical | GetRemoveLiquidityEvents (historical)
+[**curveGetRemoveLiquidityOneEventsHistorical**](CurveApi.md#curveGetRemoveLiquidityOneEventsHistorical) | **GET** /dapps/curve/removeLiquidityOneEvents/historical | GetRemoveLiquidityOneEvents (historical)
+[**curveGetSystemStatesHistorical**](CurveApi.md#curveGetSystemStatesHistorical) | **GET** /dapps/curve/systemStates/historical | GetSystemStates (historical)
+[**curveGetTokensHistorical**](CurveApi.md#curveGetTokensHistorical) | **GET** /dapps/curve/tokens/historical | GetTokens (historical) 🔥
+[**curveGetTransferOwnershipEventsHistorical**](CurveApi.md#curveGetTransferOwnershipEventsHistorical) | **GET** /dapps/curve/transferOwnershipEvents/historical | GetTransferOwnershipEvents (historical)
+[**curveGetUnderlyingCoinsHistorical**](CurveApi.md#curveGetUnderlyingCoinsHistorical) | **GET** /dapps/curve/underlyingCoins/historical | GetUnderlyingCoins (historical)
+[**curveGetVotingAppsHistorical**](CurveApi.md#curveGetVotingAppsHistorical) | **GET** /dapps/curve/votingApps/historical | GetVotingApps (historical)
+[**curveGetWeeklyVolumesHistorical**](CurveApi.md#curveGetWeeklyVolumesHistorical) | **GET** /dapps/curve/weeklyVolumes/historical | GetWeeklyVolumes (historical)
 
 
 
-## dappsCurveAccountsHistoricalGet
+## curveGetAccountsHistorical
 
-> dappsCurveAccountsHistoricalGet(startBlock, endBlock, startDate, endDate)
+> List&lt;CurveAccountDTO&gt; curveGetAccountsHistorical(startBlock, endBlock, startDate, endDate)
 
+GetAccounts (historical)
 
+Gets accounts.
 
 ### Example
 
@@ -57,9 +59,10 @@ Long endBlock = null; // Long |
 Date startDate = null; // Date | 
 Date endDate = null; // Date | 
 try {
-    apiInstance.dappsCurveAccountsHistoricalGet(startBlock, endBlock, startDate, endDate);
+    List<CurveAccountDTO> result = apiInstance.curveGetAccountsHistorical(startBlock, endBlock, startDate, endDate);
+    System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling CurveApi#dappsCurveAccountsHistoricalGet");
+    System.err.println("Exception when calling CurveApi#curveGetAccountsHistorical");
     e.printStackTrace();
 }
 ```
@@ -76,7 +79,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**List&lt;CurveAccountDTO&gt;**](CurveAccountDTO.md)
 
 ### Authorization
 
@@ -85,14 +88,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsCurveAddLiquidityEventHistoricalGet
+## curveGetAddLiquidityEventsHistorical
 
-> dappsCurveAddLiquidityEventHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+> List&lt;CurveAddLiquidityEventDTO&gt; curveGetAddLiquidityEventsHistorical(startBlock, endBlock, startDate, endDate, poolId)
 
+GetAddLiquidityEvents (historical)
 
+Gets add liquidity events.
 
 ### Example
 
@@ -107,9 +112,10 @@ Date startDate = null; // Date |
 Date endDate = null; // Date | 
 String poolId = null; // String | 
 try {
-    apiInstance.dappsCurveAddLiquidityEventHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+    List<CurveAddLiquidityEventDTO> result = apiInstance.curveGetAddLiquidityEventsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+    System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling CurveApi#dappsCurveAddLiquidityEventHistoricalGet");
+    System.err.println("Exception when calling CurveApi#curveGetAddLiquidityEventsHistorical");
     e.printStackTrace();
 }
 ```
@@ -127,7 +133,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**List&lt;CurveAddLiquidityEventDTO&gt;**](CurveAddLiquidityEventDTO.md)
 
 ### Authorization
 
@@ -136,14 +142,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsCurveAdminFeeChangeLogHistoricalGet
+## curveGetAdminFeeChangeLogsHistorical
 
-> dappsCurveAdminFeeChangeLogHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+> List&lt;CurveAdminFeeChangeLogDTO&gt; curveGetAdminFeeChangeLogsHistorical(startBlock, endBlock, startDate, endDate, poolId)
 
+GetAdminFeeChangeLogs (historical)
 
+Gets admin fee change logs.
 
 ### Example
 
@@ -158,9 +166,10 @@ Date startDate = null; // Date |
 Date endDate = null; // Date | 
 String poolId = null; // String | 
 try {
-    apiInstance.dappsCurveAdminFeeChangeLogHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+    List<CurveAdminFeeChangeLogDTO> result = apiInstance.curveGetAdminFeeChangeLogsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+    System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling CurveApi#dappsCurveAdminFeeChangeLogHistoricalGet");
+    System.err.println("Exception when calling CurveApi#curveGetAdminFeeChangeLogsHistorical");
     e.printStackTrace();
 }
 ```
@@ -178,7 +187,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**List&lt;CurveAdminFeeChangeLogDTO&gt;**](CurveAdminFeeChangeLogDTO.md)
 
 ### Authorization
 
@@ -187,14 +196,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsCurveAmplificationCoeffChangeLogHistoricalGet
+## curveGetAmplificationCoeffChangeLogsHistorical
 
-> dappsCurveAmplificationCoeffChangeLogHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+> List&lt;CurveAmplificationCoeffChangeLogDTO&gt; curveGetAmplificationCoeffChangeLogsHistorical(startBlock, endBlock, startDate, endDate, poolId)
 
+GetAmplificationCoeffChangeLogs (historical)
 
+Gets amplification coeff change logs.
 
 ### Example
 
@@ -209,9 +220,10 @@ Date startDate = null; // Date |
 Date endDate = null; // Date | 
 String poolId = null; // String | 
 try {
-    apiInstance.dappsCurveAmplificationCoeffChangeLogHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+    List<CurveAmplificationCoeffChangeLogDTO> result = apiInstance.curveGetAmplificationCoeffChangeLogsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+    System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling CurveApi#dappsCurveAmplificationCoeffChangeLogHistoricalGet");
+    System.err.println("Exception when calling CurveApi#curveGetAmplificationCoeffChangeLogsHistorical");
     e.printStackTrace();
 }
 ```
@@ -229,7 +241,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**List&lt;CurveAmplificationCoeffChangeLogDTO&gt;**](CurveAmplificationCoeffChangeLogDTO.md)
 
 ### Authorization
 
@@ -238,14 +250,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsCurveCoinsHistoricalGet
+## curveGetCoinsHistorical
 
-> dappsCurveCoinsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+> List&lt;CurveCoinDTO&gt; curveGetCoinsHistorical(startBlock, endBlock, startDate, endDate, poolId)
 
+GetCoins (historical)
 
+Gets coins.
 
 ### Example
 
@@ -260,9 +274,10 @@ Date startDate = null; // Date |
 Date endDate = null; // Date | 
 String poolId = null; // String | 
 try {
-    apiInstance.dappsCurveCoinsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+    List<CurveCoinDTO> result = apiInstance.curveGetCoinsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+    System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling CurveApi#dappsCurveCoinsHistoricalGet");
+    System.err.println("Exception when calling CurveApi#curveGetCoinsHistorical");
     e.printStackTrace();
 }
 ```
@@ -280,7 +295,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**List&lt;CurveCoinDTO&gt;**](CurveCoinDTO.md)
 
 ### Authorization
 
@@ -289,14 +304,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsCurveContractsHistoricalGet
+## curveGetContractsHistorical
 
-> dappsCurveContractsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+> List&lt;CurveContractDTO&gt; curveGetContractsHistorical(startBlock, endBlock, startDate, endDate, poolId)
 
+GetContracts (historical)
 
+Gets contracts.
 
 ### Example
 
@@ -311,9 +328,10 @@ Date startDate = null; // Date |
 Date endDate = null; // Date | 
 String poolId = null; // String | 
 try {
-    apiInstance.dappsCurveContractsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+    List<CurveContractDTO> result = apiInstance.curveGetContractsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+    System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling CurveApi#dappsCurveContractsHistoricalGet");
+    System.err.println("Exception when calling CurveApi#curveGetContractsHistorical");
     e.printStackTrace();
 }
 ```
@@ -331,7 +349,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**List&lt;CurveContractDTO&gt;**](CurveContractDTO.md)
 
 ### Authorization
 
@@ -340,14 +358,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsCurveContractsVersionHistoricalGet
+## curveGetContractsVersionsHistorical
 
-> dappsCurveContractsVersionHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+> List&lt;CurveContractVersionDTO&gt; curveGetContractsVersionsHistorical(startBlock, endBlock, startDate, endDate, poolId)
 
+GetContractsVersions (historical)
 
+Gets contracts versions.
 
 ### Example
 
@@ -362,9 +382,10 @@ Date startDate = null; // Date |
 Date endDate = null; // Date | 
 String poolId = null; // String | 
 try {
-    apiInstance.dappsCurveContractsVersionHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+    List<CurveContractVersionDTO> result = apiInstance.curveGetContractsVersionsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+    System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling CurveApi#dappsCurveContractsVersionHistoricalGet");
+    System.err.println("Exception when calling CurveApi#curveGetContractsVersionsHistorical");
     e.printStackTrace();
 }
 ```
@@ -382,7 +403,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**List&lt;CurveContractVersionDTO&gt;**](CurveContractVersionDTO.md)
 
 ### Authorization
 
@@ -391,14 +412,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsCurveDailyVolumeHistoricalGet
+## curveGetDailyVolumesHistorical
 
-> dappsCurveDailyVolumeHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+> List&lt;CurveDailyVolumeDTO&gt; curveGetDailyVolumesHistorical(startBlock, endBlock, startDate, endDate, poolId)
 
+GetDailyVolumes (historical)
 
+Gets daily volumes.
 
 ### Example
 
@@ -413,9 +436,10 @@ Date startDate = null; // Date |
 Date endDate = null; // Date | 
 String poolId = null; // String | 
 try {
-    apiInstance.dappsCurveDailyVolumeHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+    List<CurveDailyVolumeDTO> result = apiInstance.curveGetDailyVolumesHistorical(startBlock, endBlock, startDate, endDate, poolId);
+    System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling CurveApi#dappsCurveDailyVolumeHistoricalGet");
+    System.err.println("Exception when calling CurveApi#curveGetDailyVolumesHistorical");
     e.printStackTrace();
 }
 ```
@@ -433,7 +457,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**List&lt;CurveDailyVolumeDTO&gt;**](CurveDailyVolumeDTO.md)
 
 ### Authorization
 
@@ -442,14 +466,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsCurveFeeChangeLogHistoricalGet
+## curveGetExchangesHistorical
 
-> dappsCurveFeeChangeLogHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+> List&lt;CurveExchangeDTO&gt; curveGetExchangesHistorical(startBlock, endBlock, startDate, endDate, poolId)
 
+GetExchanges (historical) 🔥
 
+Gets exchanges.
 
 ### Example
 
@@ -464,9 +490,10 @@ Date startDate = null; // Date |
 Date endDate = null; // Date | 
 String poolId = null; // String | 
 try {
-    apiInstance.dappsCurveFeeChangeLogHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+    List<CurveExchangeDTO> result = apiInstance.curveGetExchangesHistorical(startBlock, endBlock, startDate, endDate, poolId);
+    System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling CurveApi#dappsCurveFeeChangeLogHistoricalGet");
+    System.err.println("Exception when calling CurveApi#curveGetExchangesHistorical");
     e.printStackTrace();
 }
 ```
@@ -484,7 +511,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**List&lt;CurveExchangeDTO&gt;**](CurveExchangeDTO.md)
 
 ### Authorization
 
@@ -493,63 +520,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsCurveGaugeDepositHistoricalGet
+## curveGetFeeChangeLogsHistorical
 
-> dappsCurveGaugeDepositHistoricalGet(startBlock, endBlock, startDate, endDate)
+> List&lt;CurveFeeChangeLogDTO&gt; curveGetFeeChangeLogsHistorical(startBlock, endBlock, startDate, endDate, poolId)
 
+GetFeeChangeLogs (historical)
 
-
-### Example
-
-```java
-// Import classes:
-//import org.openapitools.client.api.CurveApi;
-
-CurveApi apiInstance = new CurveApi();
-Long startBlock = null; // Long | 
-Long endBlock = null; // Long | 
-Date startDate = null; // Date | 
-Date endDate = null; // Date | 
-try {
-    apiInstance.dappsCurveGaugeDepositHistoricalGet(startBlock, endBlock, startDate, endDate);
-} catch (ApiException e) {
-    System.err.println("Exception when calling CurveApi#dappsCurveGaugeDepositHistoricalGet");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional] [default to null]
- **endBlock** | **Long**|  | [optional] [default to null]
- **startDate** | **Date**|  | [optional] [default to null]
- **endDate** | **Date**|  | [optional] [default to null]
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-
-## dappsCurveGaugeHistoricalGet
-
-> dappsCurveGaugeHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
-
-
+Gets fee change logs.
 
 ### Example
 
@@ -564,9 +544,10 @@ Date startDate = null; // Date |
 Date endDate = null; // Date | 
 String poolId = null; // String | 
 try {
-    apiInstance.dappsCurveGaugeHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+    List<CurveFeeChangeLogDTO> result = apiInstance.curveGetFeeChangeLogsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+    System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling CurveApi#dappsCurveGaugeHistoricalGet");
+    System.err.println("Exception when calling CurveApi#curveGetFeeChangeLogsHistorical");
     e.printStackTrace();
 }
 ```
@@ -584,7 +565,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**List&lt;CurveFeeChangeLogDTO&gt;**](CurveFeeChangeLogDTO.md)
 
 ### Authorization
 
@@ -593,14 +574,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsCurveGaugeLiquidityHistoricalGet
+## curveGetGaugesDepositsHistorical
 
-> dappsCurveGaugeLiquidityHistoricalGet(startBlock, endBlock, startDate, endDate)
+> List&lt;CurveGaugeDepositDTO&gt; curveGetGaugesDepositsHistorical(startBlock, endBlock, startDate, endDate)
 
+GetGaugesDeposits (historical)
 
+Gets gauges deposits.
 
 ### Example
 
@@ -614,9 +597,10 @@ Long endBlock = null; // Long |
 Date startDate = null; // Date | 
 Date endDate = null; // Date | 
 try {
-    apiInstance.dappsCurveGaugeLiquidityHistoricalGet(startBlock, endBlock, startDate, endDate);
+    List<CurveGaugeDepositDTO> result = apiInstance.curveGetGaugesDepositsHistorical(startBlock, endBlock, startDate, endDate);
+    System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling CurveApi#dappsCurveGaugeLiquidityHistoricalGet");
+    System.err.println("Exception when calling CurveApi#curveGetGaugesDepositsHistorical");
     e.printStackTrace();
 }
 ```
@@ -633,7 +617,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**List&lt;CurveGaugeDepositDTO&gt;**](CurveGaugeDepositDTO.md)
 
 ### Authorization
 
@@ -642,308 +626,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsCurveGaugeTotalWeightHistoricalGet
+## curveGetGaugesHistorical
 
-> dappsCurveGaugeTotalWeightHistoricalGet(startBlock, endBlock, startDate, endDate)
+> List&lt;CurveGaugeDTO&gt; curveGetGaugesHistorical(startBlock, endBlock, startDate, endDate, poolId)
 
+GetGauges (historical)
 
-
-### Example
-
-```java
-// Import classes:
-//import org.openapitools.client.api.CurveApi;
-
-CurveApi apiInstance = new CurveApi();
-Long startBlock = null; // Long | 
-Long endBlock = null; // Long | 
-Date startDate = null; // Date | 
-Date endDate = null; // Date | 
-try {
-    apiInstance.dappsCurveGaugeTotalWeightHistoricalGet(startBlock, endBlock, startDate, endDate);
-} catch (ApiException e) {
-    System.err.println("Exception when calling CurveApi#dappsCurveGaugeTotalWeightHistoricalGet");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional] [default to null]
- **endBlock** | **Long**|  | [optional] [default to null]
- **startDate** | **Date**|  | [optional] [default to null]
- **endDate** | **Date**|  | [optional] [default to null]
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-
-## dappsCurveGaugeTypeHistoricalGet
-
-> dappsCurveGaugeTypeHistoricalGet(startBlock, endBlock, startDate, endDate)
-
-
-
-### Example
-
-```java
-// Import classes:
-//import org.openapitools.client.api.CurveApi;
-
-CurveApi apiInstance = new CurveApi();
-Long startBlock = null; // Long | 
-Long endBlock = null; // Long | 
-Date startDate = null; // Date | 
-Date endDate = null; // Date | 
-try {
-    apiInstance.dappsCurveGaugeTypeHistoricalGet(startBlock, endBlock, startDate, endDate);
-} catch (ApiException e) {
-    System.err.println("Exception when calling CurveApi#dappsCurveGaugeTypeHistoricalGet");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional] [default to null]
- **endBlock** | **Long**|  | [optional] [default to null]
- **startDate** | **Date**|  | [optional] [default to null]
- **endDate** | **Date**|  | [optional] [default to null]
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-
-## dappsCurveGaugeTypeWeightHistoricalGet
-
-> dappsCurveGaugeTypeWeightHistoricalGet(startBlock, endBlock, startDate, endDate)
-
-
-
-### Example
-
-```java
-// Import classes:
-//import org.openapitools.client.api.CurveApi;
-
-CurveApi apiInstance = new CurveApi();
-Long startBlock = null; // Long | 
-Long endBlock = null; // Long | 
-Date startDate = null; // Date | 
-Date endDate = null; // Date | 
-try {
-    apiInstance.dappsCurveGaugeTypeWeightHistoricalGet(startBlock, endBlock, startDate, endDate);
-} catch (ApiException e) {
-    System.err.println("Exception when calling CurveApi#dappsCurveGaugeTypeWeightHistoricalGet");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional] [default to null]
- **endBlock** | **Long**|  | [optional] [default to null]
- **startDate** | **Date**|  | [optional] [default to null]
- **endDate** | **Date**|  | [optional] [default to null]
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-
-## dappsCurveGaugeWeightHistoricalGet
-
-> dappsCurveGaugeWeightHistoricalGet(startBlock, endBlock, startDate, endDate)
-
-
-
-### Example
-
-```java
-// Import classes:
-//import org.openapitools.client.api.CurveApi;
-
-CurveApi apiInstance = new CurveApi();
-Long startBlock = null; // Long | 
-Long endBlock = null; // Long | 
-Date startDate = null; // Date | 
-Date endDate = null; // Date | 
-try {
-    apiInstance.dappsCurveGaugeWeightHistoricalGet(startBlock, endBlock, startDate, endDate);
-} catch (ApiException e) {
-    System.err.println("Exception when calling CurveApi#dappsCurveGaugeWeightHistoricalGet");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional] [default to null]
- **endBlock** | **Long**|  | [optional] [default to null]
- **startDate** | **Date**|  | [optional] [default to null]
- **endDate** | **Date**|  | [optional] [default to null]
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-
-## dappsCurveGaugeWeightVoteHistoricalGet
-
-> dappsCurveGaugeWeightVoteHistoricalGet(startBlock, endBlock, startDate, endDate)
-
-
-
-### Example
-
-```java
-// Import classes:
-//import org.openapitools.client.api.CurveApi;
-
-CurveApi apiInstance = new CurveApi();
-Long startBlock = null; // Long | 
-Long endBlock = null; // Long | 
-Date startDate = null; // Date | 
-Date endDate = null; // Date | 
-try {
-    apiInstance.dappsCurveGaugeWeightVoteHistoricalGet(startBlock, endBlock, startDate, endDate);
-} catch (ApiException e) {
-    System.err.println("Exception when calling CurveApi#dappsCurveGaugeWeightVoteHistoricalGet");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional] [default to null]
- **endBlock** | **Long**|  | [optional] [default to null]
- **startDate** | **Date**|  | [optional] [default to null]
- **endDate** | **Date**|  | [optional] [default to null]
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-
-## dappsCurveGaugeWithdrawHistoricalGet
-
-> dappsCurveGaugeWithdrawHistoricalGet(startBlock, endBlock, startDate, endDate)
-
-
-
-### Example
-
-```java
-// Import classes:
-//import org.openapitools.client.api.CurveApi;
-
-CurveApi apiInstance = new CurveApi();
-Long startBlock = null; // Long | 
-Long endBlock = null; // Long | 
-Date startDate = null; // Date | 
-Date endDate = null; // Date | 
-try {
-    apiInstance.dappsCurveGaugeWithdrawHistoricalGet(startBlock, endBlock, startDate, endDate);
-} catch (ApiException e) {
-    System.err.println("Exception when calling CurveApi#dappsCurveGaugeWithdrawHistoricalGet");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional] [default to null]
- **endBlock** | **Long**|  | [optional] [default to null]
- **startDate** | **Date**|  | [optional] [default to null]
- **endDate** | **Date**|  | [optional] [default to null]
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-
-## dappsCurveHourlyVolumeHistoricalGet
-
-> dappsCurveHourlyVolumeHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
-
-
+Gets gauges.
 
 ### Example
 
@@ -958,9 +650,10 @@ Date startDate = null; // Date |
 Date endDate = null; // Date | 
 String poolId = null; // String | 
 try {
-    apiInstance.dappsCurveHourlyVolumeHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+    List<CurveGaugeDTO> result = apiInstance.curveGetGaugesHistorical(startBlock, endBlock, startDate, endDate, poolId);
+    System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling CurveApi#dappsCurveHourlyVolumeHistoricalGet");
+    System.err.println("Exception when calling CurveApi#curveGetGaugesHistorical");
     e.printStackTrace();
 }
 ```
@@ -978,7 +671,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**List&lt;CurveGaugeDTO&gt;**](CurveGaugeDTO.md)
 
 ### Authorization
 
@@ -987,14 +680,380 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsCurveLpTokenHistoricalGet
+## curveGetGaugesLiquidityHistorical
 
-> dappsCurveLpTokenHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+> List&lt;CurveGaugeLiquidityDTO&gt; curveGetGaugesLiquidityHistorical(startBlock, endBlock, startDate, endDate)
+
+GetGaugesLiquidity (historical)
+
+Gets gauges liquidity.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.CurveApi;
+
+CurveApi apiInstance = new CurveApi();
+Long startBlock = null; // Long | 
+Long endBlock = null; // Long | 
+Date startDate = null; // Date | 
+Date endDate = null; // Date | 
+try {
+    List<CurveGaugeLiquidityDTO> result = apiInstance.curveGetGaugesLiquidityHistorical(startBlock, endBlock, startDate, endDate);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling CurveApi#curveGetGaugesLiquidityHistorical");
+    e.printStackTrace();
+}
+```
+
+### Parameters
 
 
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Long**|  | [optional] [default to null]
+ **endBlock** | **Long**|  | [optional] [default to null]
+ **startDate** | **Date**|  | [optional] [default to null]
+ **endDate** | **Date**|  | [optional] [default to null]
+
+### Return type
+
+[**List&lt;CurveGaugeLiquidityDTO&gt;**](CurveGaugeLiquidityDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## curveGetGaugesTotalWeightsHistorical
+
+> List&lt;CurveGaugeTotalWeightDTO&gt; curveGetGaugesTotalWeightsHistorical(startBlock, endBlock, startDate, endDate)
+
+GetGaugesTotalWeights (historical)
+
+Gets gauges total weights.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.CurveApi;
+
+CurveApi apiInstance = new CurveApi();
+Long startBlock = null; // Long | 
+Long endBlock = null; // Long | 
+Date startDate = null; // Date | 
+Date endDate = null; // Date | 
+try {
+    List<CurveGaugeTotalWeightDTO> result = apiInstance.curveGetGaugesTotalWeightsHistorical(startBlock, endBlock, startDate, endDate);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling CurveApi#curveGetGaugesTotalWeightsHistorical");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Long**|  | [optional] [default to null]
+ **endBlock** | **Long**|  | [optional] [default to null]
+ **startDate** | **Date**|  | [optional] [default to null]
+ **endDate** | **Date**|  | [optional] [default to null]
+
+### Return type
+
+[**List&lt;CurveGaugeTotalWeightDTO&gt;**](CurveGaugeTotalWeightDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## curveGetGaugesTypesHistorical
+
+> List&lt;CurveGaugeTypeDTO&gt; curveGetGaugesTypesHistorical(startBlock, endBlock, startDate, endDate)
+
+GetGaugesTypes (historical)
+
+Gets gauges types.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.CurveApi;
+
+CurveApi apiInstance = new CurveApi();
+Long startBlock = null; // Long | 
+Long endBlock = null; // Long | 
+Date startDate = null; // Date | 
+Date endDate = null; // Date | 
+try {
+    List<CurveGaugeTypeDTO> result = apiInstance.curveGetGaugesTypesHistorical(startBlock, endBlock, startDate, endDate);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling CurveApi#curveGetGaugesTypesHistorical");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Long**|  | [optional] [default to null]
+ **endBlock** | **Long**|  | [optional] [default to null]
+ **startDate** | **Date**|  | [optional] [default to null]
+ **endDate** | **Date**|  | [optional] [default to null]
+
+### Return type
+
+[**List&lt;CurveGaugeTypeDTO&gt;**](CurveGaugeTypeDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## curveGetGaugesTypesWeightsHistorical
+
+> List&lt;CurveGaugeTypeWeightDTO&gt; curveGetGaugesTypesWeightsHistorical(startBlock, endBlock, startDate, endDate)
+
+GetGaugesTypesWeights (historical)
+
+Gets gauges types weights.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.CurveApi;
+
+CurveApi apiInstance = new CurveApi();
+Long startBlock = null; // Long | 
+Long endBlock = null; // Long | 
+Date startDate = null; // Date | 
+Date endDate = null; // Date | 
+try {
+    List<CurveGaugeTypeWeightDTO> result = apiInstance.curveGetGaugesTypesWeightsHistorical(startBlock, endBlock, startDate, endDate);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling CurveApi#curveGetGaugesTypesWeightsHistorical");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Long**|  | [optional] [default to null]
+ **endBlock** | **Long**|  | [optional] [default to null]
+ **startDate** | **Date**|  | [optional] [default to null]
+ **endDate** | **Date**|  | [optional] [default to null]
+
+### Return type
+
+[**List&lt;CurveGaugeTypeWeightDTO&gt;**](CurveGaugeTypeWeightDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## curveGetGaugesWeightsHistorical
+
+> List&lt;CurveGaugeWeightDTO&gt; curveGetGaugesWeightsHistorical(startBlock, endBlock, startDate, endDate)
+
+GetGaugesWeights (historical)
+
+Gets gauges weights.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.CurveApi;
+
+CurveApi apiInstance = new CurveApi();
+Long startBlock = null; // Long | 
+Long endBlock = null; // Long | 
+Date startDate = null; // Date | 
+Date endDate = null; // Date | 
+try {
+    List<CurveGaugeWeightDTO> result = apiInstance.curveGetGaugesWeightsHistorical(startBlock, endBlock, startDate, endDate);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling CurveApi#curveGetGaugesWeightsHistorical");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Long**|  | [optional] [default to null]
+ **endBlock** | **Long**|  | [optional] [default to null]
+ **startDate** | **Date**|  | [optional] [default to null]
+ **endDate** | **Date**|  | [optional] [default to null]
+
+### Return type
+
+[**List&lt;CurveGaugeWeightDTO&gt;**](CurveGaugeWeightDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## curveGetGaugesWeightsVotesHistorical
+
+> List&lt;CurveGaugeWeightVoteDTO&gt; curveGetGaugesWeightsVotesHistorical(startBlock, endBlock, startDate, endDate)
+
+GetGaugesWeightsVotes (historical)
+
+Gets gauges weights votes.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.CurveApi;
+
+CurveApi apiInstance = new CurveApi();
+Long startBlock = null; // Long | 
+Long endBlock = null; // Long | 
+Date startDate = null; // Date | 
+Date endDate = null; // Date | 
+try {
+    List<CurveGaugeWeightVoteDTO> result = apiInstance.curveGetGaugesWeightsVotesHistorical(startBlock, endBlock, startDate, endDate);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling CurveApi#curveGetGaugesWeightsVotesHistorical");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Long**|  | [optional] [default to null]
+ **endBlock** | **Long**|  | [optional] [default to null]
+ **startDate** | **Date**|  | [optional] [default to null]
+ **endDate** | **Date**|  | [optional] [default to null]
+
+### Return type
+
+[**List&lt;CurveGaugeWeightVoteDTO&gt;**](CurveGaugeWeightVoteDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## curveGetGaugesWithdrawHistorical
+
+> List&lt;CurveGaugeWithdrawDTO&gt; curveGetGaugesWithdrawHistorical(startBlock, endBlock, startDate, endDate)
+
+GetGaugesWithdraw (historical)
+
+Gets gauges withdraws.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.CurveApi;
+
+CurveApi apiInstance = new CurveApi();
+Long startBlock = null; // Long | 
+Long endBlock = null; // Long | 
+Date startDate = null; // Date | 
+Date endDate = null; // Date | 
+try {
+    List<CurveGaugeWithdrawDTO> result = apiInstance.curveGetGaugesWithdrawHistorical(startBlock, endBlock, startDate, endDate);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling CurveApi#curveGetGaugesWithdrawHistorical");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Long**|  | [optional] [default to null]
+ **endBlock** | **Long**|  | [optional] [default to null]
+ **startDate** | **Date**|  | [optional] [default to null]
+ **endDate** | **Date**|  | [optional] [default to null]
+
+### Return type
+
+[**List&lt;CurveGaugeWithdrawDTO&gt;**](CurveGaugeWithdrawDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## curveGetHourlyVolumesHistorical
+
+> List&lt;CurveHourlyVolumeDTO&gt; curveGetHourlyVolumesHistorical(startBlock, endBlock, startDate, endDate, poolId)
+
+GetHourlyVolumes (historical)
+
+Gets hourly volumes.
 
 ### Example
 
@@ -1009,9 +1068,10 @@ Date startDate = null; // Date |
 Date endDate = null; // Date | 
 String poolId = null; // String | 
 try {
-    apiInstance.dappsCurveLpTokenHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+    List<CurveHourlyVolumeDTO> result = apiInstance.curveGetHourlyVolumesHistorical(startBlock, endBlock, startDate, endDate, poolId);
+    System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling CurveApi#dappsCurveLpTokenHistoricalGet");
+    System.err.println("Exception when calling CurveApi#curveGetHourlyVolumesHistorical");
     e.printStackTrace();
 }
 ```
@@ -1029,7 +1089,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**List&lt;CurveHourlyVolumeDTO&gt;**](CurveHourlyVolumeDTO.md)
 
 ### Authorization
 
@@ -1038,14 +1098,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsCurvePoolsHistoricalGet
+## curveGetLpTokensHistorical
 
-> dappsCurvePoolsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+> List&lt;CurveLpTokenDTO&gt; curveGetLpTokensHistorical(startBlock, endBlock, startDate, endDate, poolId)
 
+GetLpTokens (historical)
 
+Gets lp tokens.
 
 ### Example
 
@@ -1060,9 +1122,10 @@ Date startDate = null; // Date |
 Date endDate = null; // Date | 
 String poolId = null; // String | 
 try {
-    apiInstance.dappsCurvePoolsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+    List<CurveLpTokenDTO> result = apiInstance.curveGetLpTokensHistorical(startBlock, endBlock, startDate, endDate, poolId);
+    System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling CurveApi#dappsCurvePoolsHistoricalGet");
+    System.err.println("Exception when calling CurveApi#curveGetLpTokensHistorical");
     e.printStackTrace();
 }
 ```
@@ -1080,7 +1143,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**List&lt;CurveLpTokenDTO&gt;**](CurveLpTokenDTO.md)
 
 ### Authorization
 
@@ -1089,112 +1152,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsCurveProposalsHistoricalGet
+## curveGetPoolsHistorical
 
-> dappsCurveProposalsHistoricalGet(startBlock, endBlock, startDate, endDate)
+> List&lt;CurvePoolDTO&gt; curveGetPoolsHistorical(startBlock, endBlock, startDate, endDate, poolId)
 
+GetPools (historical) 🔥
 
-
-### Example
-
-```java
-// Import classes:
-//import org.openapitools.client.api.CurveApi;
-
-CurveApi apiInstance = new CurveApi();
-Long startBlock = null; // Long | 
-Long endBlock = null; // Long | 
-Date startDate = null; // Date | 
-Date endDate = null; // Date | 
-try {
-    apiInstance.dappsCurveProposalsHistoricalGet(startBlock, endBlock, startDate, endDate);
-} catch (ApiException e) {
-    System.err.println("Exception when calling CurveApi#dappsCurveProposalsHistoricalGet");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional] [default to null]
- **endBlock** | **Long**|  | [optional] [default to null]
- **startDate** | **Date**|  | [optional] [default to null]
- **endDate** | **Date**|  | [optional] [default to null]
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-
-## dappsCurveProposalsVoteHistoricalGet
-
-> dappsCurveProposalsVoteHistoricalGet(startBlock, endBlock, startDate, endDate)
-
-
-
-### Example
-
-```java
-// Import classes:
-//import org.openapitools.client.api.CurveApi;
-
-CurveApi apiInstance = new CurveApi();
-Long startBlock = null; // Long | 
-Long endBlock = null; // Long | 
-Date startDate = null; // Date | 
-Date endDate = null; // Date | 
-try {
-    apiInstance.dappsCurveProposalsVoteHistoricalGet(startBlock, endBlock, startDate, endDate);
-} catch (ApiException e) {
-    System.err.println("Exception when calling CurveApi#dappsCurveProposalsVoteHistoricalGet");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional] [default to null]
- **endBlock** | **Long**|  | [optional] [default to null]
- **startDate** | **Date**|  | [optional] [default to null]
- **endDate** | **Date**|  | [optional] [default to null]
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-
-## dappsCurveRemoveLiquidityEventHistoricalGet
-
-> dappsCurveRemoveLiquidityEventHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
-
-
+Gets pools.
 
 ### Example
 
@@ -1209,9 +1176,10 @@ Date startDate = null; // Date |
 Date endDate = null; // Date | 
 String poolId = null; // String | 
 try {
-    apiInstance.dappsCurveRemoveLiquidityEventHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+    List<CurvePoolDTO> result = apiInstance.curveGetPoolsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+    System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling CurveApi#dappsCurveRemoveLiquidityEventHistoricalGet");
+    System.err.println("Exception when calling CurveApi#curveGetPoolsHistorical");
     e.printStackTrace();
 }
 ```
@@ -1229,7 +1197,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**List&lt;CurvePoolDTO&gt;**](CurvePoolDTO.md)
 
 ### Authorization
 
@@ -1238,14 +1206,120 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsCurveRemoveLiquidityOneEventHistoricalGet
+## curveGetProposalsHistorical
 
-> dappsCurveRemoveLiquidityOneEventHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+> List&lt;CurveProposalDTO&gt; curveGetProposalsHistorical(startBlock, endBlock, startDate, endDate)
+
+GetProposals (historical)
+
+Gets proposals.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.CurveApi;
+
+CurveApi apiInstance = new CurveApi();
+Long startBlock = null; // Long | 
+Long endBlock = null; // Long | 
+Date startDate = null; // Date | 
+Date endDate = null; // Date | 
+try {
+    List<CurveProposalDTO> result = apiInstance.curveGetProposalsHistorical(startBlock, endBlock, startDate, endDate);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling CurveApi#curveGetProposalsHistorical");
+    e.printStackTrace();
+}
+```
+
+### Parameters
 
 
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Long**|  | [optional] [default to null]
+ **endBlock** | **Long**|  | [optional] [default to null]
+ **startDate** | **Date**|  | [optional] [default to null]
+ **endDate** | **Date**|  | [optional] [default to null]
+
+### Return type
+
+[**List&lt;CurveProposalDTO&gt;**](CurveProposalDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## curveGetProposalsVotesHistorical
+
+> List&lt;CurveProposalVoteDTO&gt; curveGetProposalsVotesHistorical(startBlock, endBlock, startDate, endDate)
+
+GetProposalsVotes (historical)
+
+Gets proposals votes.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.CurveApi;
+
+CurveApi apiInstance = new CurveApi();
+Long startBlock = null; // Long | 
+Long endBlock = null; // Long | 
+Date startDate = null; // Date | 
+Date endDate = null; // Date | 
+try {
+    List<CurveProposalVoteDTO> result = apiInstance.curveGetProposalsVotesHistorical(startBlock, endBlock, startDate, endDate);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling CurveApi#curveGetProposalsVotesHistorical");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Long**|  | [optional] [default to null]
+ **endBlock** | **Long**|  | [optional] [default to null]
+ **startDate** | **Date**|  | [optional] [default to null]
+ **endDate** | **Date**|  | [optional] [default to null]
+
+### Return type
+
+[**List&lt;CurveProposalVoteDTO&gt;**](CurveProposalVoteDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## curveGetRemoveLiquidityEventsHistorical
+
+> List&lt;CurveRemoveLiquidityEventDTO&gt; curveGetRemoveLiquidityEventsHistorical(startBlock, endBlock, startDate, endDate, poolId)
+
+GetRemoveLiquidityEvents (historical)
+
+Gets remove liquidity events.
 
 ### Example
 
@@ -1260,9 +1334,10 @@ Date startDate = null; // Date |
 Date endDate = null; // Date | 
 String poolId = null; // String | 
 try {
-    apiInstance.dappsCurveRemoveLiquidityOneEventHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+    List<CurveRemoveLiquidityEventDTO> result = apiInstance.curveGetRemoveLiquidityEventsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+    System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling CurveApi#dappsCurveRemoveLiquidityOneEventHistoricalGet");
+    System.err.println("Exception when calling CurveApi#curveGetRemoveLiquidityEventsHistorical");
     e.printStackTrace();
 }
 ```
@@ -1280,7 +1355,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**List&lt;CurveRemoveLiquidityEventDTO&gt;**](CurveRemoveLiquidityEventDTO.md)
 
 ### Authorization
 
@@ -1289,14 +1364,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsCurveSwapsHistoricalGet
+## curveGetRemoveLiquidityOneEventsHistorical
 
-> dappsCurveSwapsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+> List&lt;CurveRemoveLiquidityOneEventDTO&gt; curveGetRemoveLiquidityOneEventsHistorical(startBlock, endBlock, startDate, endDate, poolId)
 
+GetRemoveLiquidityOneEvents (historical)
 
+Gets remove liquidity one events.
 
 ### Example
 
@@ -1311,9 +1388,10 @@ Date startDate = null; // Date |
 Date endDate = null; // Date | 
 String poolId = null; // String | 
 try {
-    apiInstance.dappsCurveSwapsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+    List<CurveRemoveLiquidityOneEventDTO> result = apiInstance.curveGetRemoveLiquidityOneEventsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+    System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling CurveApi#dappsCurveSwapsHistoricalGet");
+    System.err.println("Exception when calling CurveApi#curveGetRemoveLiquidityOneEventsHistorical");
     e.printStackTrace();
 }
 ```
@@ -1331,7 +1409,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**List&lt;CurveRemoveLiquidityOneEventDTO&gt;**](CurveRemoveLiquidityOneEventDTO.md)
 
 ### Authorization
 
@@ -1340,14 +1418,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsCurveSystemStateHistoricalGet
+## curveGetSystemStatesHistorical
 
-> dappsCurveSystemStateHistoricalGet(startBlock, endBlock, startDate, endDate)
+> List&lt;CurveSystemStateDTO&gt; curveGetSystemStatesHistorical(startBlock, endBlock, startDate, endDate)
 
+GetSystemStates (historical)
 
+Gets system states.
 
 ### Example
 
@@ -1361,9 +1441,10 @@ Long endBlock = null; // Long |
 Date startDate = null; // Date | 
 Date endDate = null; // Date | 
 try {
-    apiInstance.dappsCurveSystemStateHistoricalGet(startBlock, endBlock, startDate, endDate);
+    List<CurveSystemStateDTO> result = apiInstance.curveGetSystemStatesHistorical(startBlock, endBlock, startDate, endDate);
+    System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling CurveApi#dappsCurveSystemStateHistoricalGet");
+    System.err.println("Exception when calling CurveApi#curveGetSystemStatesHistorical");
     e.printStackTrace();
 }
 ```
@@ -1380,7 +1461,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**List&lt;CurveSystemStateDTO&gt;**](CurveSystemStateDTO.md)
 
 ### Authorization
 
@@ -1389,14 +1470,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsCurveTokensHistoricalGet
+## curveGetTokensHistorical
 
-> dappsCurveTokensHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId)
+> List&lt;CurveTokenDTO&gt; curveGetTokensHistorical(startBlock, endBlock, startDate, endDate, tokenId)
 
+GetTokens (historical) 🔥
 
+Gets tokens.
 
 ### Example
 
@@ -1411,9 +1494,10 @@ Date startDate = null; // Date |
 Date endDate = null; // Date | 
 String tokenId = null; // String | 
 try {
-    apiInstance.dappsCurveTokensHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId);
+    List<CurveTokenDTO> result = apiInstance.curveGetTokensHistorical(startBlock, endBlock, startDate, endDate, tokenId);
+    System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling CurveApi#dappsCurveTokensHistoricalGet");
+    System.err.println("Exception when calling CurveApi#curveGetTokensHistorical");
     e.printStackTrace();
 }
 ```
@@ -1431,7 +1515,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**List&lt;CurveTokenDTO&gt;**](CurveTokenDTO.md)
 
 ### Authorization
 
@@ -1440,14 +1524,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsCurveTransferOwnershipEventHistoricalGet
+## curveGetTransferOwnershipEventsHistorical
 
-> dappsCurveTransferOwnershipEventHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+> List&lt;CurveTransferOwnershipEventDTO&gt; curveGetTransferOwnershipEventsHistorical(startBlock, endBlock, startDate, endDate, poolId)
 
+GetTransferOwnershipEvents (historical)
 
+Gets transfer ownership events.
 
 ### Example
 
@@ -1462,9 +1548,10 @@ Date startDate = null; // Date |
 Date endDate = null; // Date | 
 String poolId = null; // String | 
 try {
-    apiInstance.dappsCurveTransferOwnershipEventHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+    List<CurveTransferOwnershipEventDTO> result = apiInstance.curveGetTransferOwnershipEventsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+    System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling CurveApi#dappsCurveTransferOwnershipEventHistoricalGet");
+    System.err.println("Exception when calling CurveApi#curveGetTransferOwnershipEventsHistorical");
     e.printStackTrace();
 }
 ```
@@ -1482,7 +1569,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**List&lt;CurveTransferOwnershipEventDTO&gt;**](CurveTransferOwnershipEventDTO.md)
 
 ### Authorization
 
@@ -1491,14 +1578,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsCurveUnderlyingCoinHistoricalGet
+## curveGetUnderlyingCoinsHistorical
 
-> dappsCurveUnderlyingCoinHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+> List&lt;CurveUnderlyingCoinDTO&gt; curveGetUnderlyingCoinsHistorical(startBlock, endBlock, startDate, endDate, poolId)
 
+GetUnderlyingCoins (historical)
 
+Gets underlying coins.
 
 ### Example
 
@@ -1513,9 +1602,10 @@ Date startDate = null; // Date |
 Date endDate = null; // Date | 
 String poolId = null; // String | 
 try {
-    apiInstance.dappsCurveUnderlyingCoinHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+    List<CurveUnderlyingCoinDTO> result = apiInstance.curveGetUnderlyingCoinsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+    System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling CurveApi#dappsCurveUnderlyingCoinHistoricalGet");
+    System.err.println("Exception when calling CurveApi#curveGetUnderlyingCoinsHistorical");
     e.printStackTrace();
 }
 ```
@@ -1533,7 +1623,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**List&lt;CurveUnderlyingCoinDTO&gt;**](CurveUnderlyingCoinDTO.md)
 
 ### Authorization
 
@@ -1542,14 +1632,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsCurveVotingAppHistoricalGet
+## curveGetVotingAppsHistorical
 
-> dappsCurveVotingAppHistoricalGet(startBlock, endBlock, startDate, endDate)
+> List&lt;CurveVotingAppDTO&gt; curveGetVotingAppsHistorical(startBlock, endBlock, startDate, endDate)
 
+GetVotingApps (historical)
 
+Gets voting apps.
 
 ### Example
 
@@ -1563,9 +1655,10 @@ Long endBlock = null; // Long |
 Date startDate = null; // Date | 
 Date endDate = null; // Date | 
 try {
-    apiInstance.dappsCurveVotingAppHistoricalGet(startBlock, endBlock, startDate, endDate);
+    List<CurveVotingAppDTO> result = apiInstance.curveGetVotingAppsHistorical(startBlock, endBlock, startDate, endDate);
+    System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling CurveApi#dappsCurveVotingAppHistoricalGet");
+    System.err.println("Exception when calling CurveApi#curveGetVotingAppsHistorical");
     e.printStackTrace();
 }
 ```
@@ -1582,7 +1675,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**List&lt;CurveVotingAppDTO&gt;**](CurveVotingAppDTO.md)
 
 ### Authorization
 
@@ -1591,14 +1684,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsCurveWeeklyVolumeHistoricalGet
+## curveGetWeeklyVolumesHistorical
 
-> dappsCurveWeeklyVolumeHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+> List&lt;CurveWeeklyVolumeDTO&gt; curveGetWeeklyVolumesHistorical(startBlock, endBlock, startDate, endDate, poolId)
 
+GetWeeklyVolumes (historical)
 
+Gets weekly volumes.
 
 ### Example
 
@@ -1613,9 +1708,10 @@ Date startDate = null; // Date |
 Date endDate = null; // Date | 
 String poolId = null; // String | 
 try {
-    apiInstance.dappsCurveWeeklyVolumeHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+    List<CurveWeeklyVolumeDTO> result = apiInstance.curveGetWeeklyVolumesHistorical(startBlock, endBlock, startDate, endDate, poolId);
+    System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling CurveApi#dappsCurveWeeklyVolumeHistoricalGet");
+    System.err.println("Exception when calling CurveApi#curveGetWeeklyVolumesHistorical");
     e.printStackTrace();
 }
 ```
@@ -1633,7 +1729,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**List&lt;CurveWeeklyVolumeDTO&gt;**](CurveWeeklyVolumeDTO.md)
 
 ### Authorization
 
@@ -1642,5 +1738,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 

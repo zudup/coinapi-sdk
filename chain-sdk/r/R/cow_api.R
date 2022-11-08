@@ -14,43 +14,48 @@
 #'
 #' @section Methods:
 #' \describe{
-#' \strong{ DappsCowOrdersHistoricalGet } \emph{  }
+#' \strong{ CowGetOrdersHistorical } \emph{ GetOrders (historical) }
+#' Gets orders.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
 #' \item \emph{ @param } end_block integer
 #' \item \emph{ @param } start_date character
 #' \item \emph{ @param } end_date character
+#' \item \emph{ @returnType } list( \link{Cow.OrderDTO} ) \cr
 #'
 #'
-#' \item status code : 200 | Success
+#' \item status code : 200 | successful operation
 #'
-#'
+#' \item return type : array[CowOrderDTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
 #' }
 #' }
 #'
-#' \strong{ DappsCowSettlementHistoricalGet } \emph{  }
+#' \strong{ CowGetSettlementsHistorical } \emph{ GetSettlements (historical) }
+#' Gets settlements.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
 #' \item \emph{ @param } end_block integer
 #' \item \emph{ @param } start_date character
 #' \item \emph{ @param } end_date character
+#' \item \emph{ @returnType } list( \link{Cow.SettlementDTO} ) \cr
 #'
 #'
-#' \item status code : 200 | Success
+#' \item status code : 200 | successful operation
 #'
-#'
+#' \item return type : array[CowSettlementDTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
 #' }
 #' }
 #'
-#' \strong{ DappsCowTokensHistoricalGet } \emph{  }
+#' \strong{ CowGetTokensHistorical } \emph{ GetTokens (historical) 🔥 }
+#' Gets tokens.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
@@ -58,47 +63,52 @@
 #' \item \emph{ @param } start_date character
 #' \item \emph{ @param } end_date character
 #' \item \emph{ @param } token_id character
+#' \item \emph{ @returnType } list( \link{Cow.TokenDTO} ) \cr
 #'
 #'
-#' \item status code : 200 | Success
+#' \item status code : 200 | successful operation
 #'
-#'
+#' \item return type : array[CowTokenDTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
 #' }
 #' }
 #'
-#' \strong{ DappsCowTradesHistoricalGet } \emph{  }
+#' \strong{ CowGetTradesHistorical } \emph{ GetTrades (historical) 🔥 }
+#' Gets trades.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
 #' \item \emph{ @param } end_block integer
 #' \item \emph{ @param } start_date character
 #' \item \emph{ @param } end_date character
+#' \item \emph{ @returnType } list( \link{Cow.TradeDTO} ) \cr
 #'
 #'
-#' \item status code : 200 | Success
+#' \item status code : 200 | successful operation
 #'
-#'
+#' \item return type : array[CowTradeDTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
 #' }
 #' }
 #'
-#' \strong{ DappsCowUsersHistoricalGet } \emph{  }
+#' \strong{ CowGetUsersHistorical } \emph{ GetUsers (historical) }
+#' Gets users.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
 #' \item \emph{ @param } end_block integer
 #' \item \emph{ @param } start_date character
 #' \item \emph{ @param } end_date character
+#' \item \emph{ @returnType } list( \link{Cow.UserDTO} ) \cr
 #'
 #'
-#' \item status code : 200 | Success
+#' \item status code : 200 | successful operation
 #'
-#'
+#' \item return type : array[CowUserDTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -110,7 +120,7 @@
 #'
 #' @examples
 #' \dontrun{
-#' ####################  DappsCowOrdersHistoricalGet  ####################
+#' ####################  CowGetOrdersHistorical  ####################
 #'
 #' library(openapi)
 #' var_start_block <- 56 # integer |  (Optional)
@@ -118,12 +128,16 @@
 #' var_start_date <- "start_date_example" # character |  (Optional)
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #'
+#' #GetOrders (historical)
 #' api_instance <- CowApi$new()
 #'
-#' api_instance$DappsCowOrdersHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$CowGetOrdersHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_datedata_file = "result.txt")
+#' result <- api_instance$CowGetOrdersHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
+#' dput(result)
 #'
 #'
-#' ####################  DappsCowSettlementHistoricalGet  ####################
+#' ####################  CowGetSettlementsHistorical  ####################
 #'
 #' library(openapi)
 #' var_start_block <- 56 # integer |  (Optional)
@@ -131,12 +145,16 @@
 #' var_start_date <- "start_date_example" # character |  (Optional)
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #'
+#' #GetSettlements (historical)
 #' api_instance <- CowApi$new()
 #'
-#' api_instance$DappsCowSettlementHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$CowGetSettlementsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_datedata_file = "result.txt")
+#' result <- api_instance$CowGetSettlementsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
+#' dput(result)
 #'
 #'
-#' ####################  DappsCowTokensHistoricalGet  ####################
+#' ####################  CowGetTokensHistorical  ####################
 #'
 #' library(openapi)
 #' var_start_block <- 56 # integer |  (Optional)
@@ -145,12 +163,16 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_token_id <- "token_id_example" # character |  (Optional)
 #'
+#' #GetTokens (historical) 🔥
 #' api_instance <- CowApi$new()
 #'
-#' api_instance$DappsCowTokensHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, token_id = var_token_id)
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$CowGetTokensHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, token_id = var_token_iddata_file = "result.txt")
+#' result <- api_instance$CowGetTokensHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, token_id = var_token_id)
+#' dput(result)
 #'
 #'
-#' ####################  DappsCowTradesHistoricalGet  ####################
+#' ####################  CowGetTradesHistorical  ####################
 #'
 #' library(openapi)
 #' var_start_block <- 56 # integer |  (Optional)
@@ -158,12 +180,16 @@
 #' var_start_date <- "start_date_example" # character |  (Optional)
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #'
+#' #GetTrades (historical) 🔥
 #' api_instance <- CowApi$new()
 #'
-#' api_instance$DappsCowTradesHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$CowGetTradesHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_datedata_file = "result.txt")
+#' result <- api_instance$CowGetTradesHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
+#' dput(result)
 #'
 #'
-#' ####################  DappsCowUsersHistoricalGet  ####################
+#' ####################  CowGetUsersHistorical  ####################
 #'
 #' library(openapi)
 #' var_start_block <- 56 # integer |  (Optional)
@@ -171,9 +197,13 @@
 #' var_start_date <- "start_date_example" # character |  (Optional)
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #'
+#' #GetUsers (historical)
 #' api_instance <- CowApi$new()
 #'
-#' api_instance$DappsCowUsersHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$CowGetUsersHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_datedata_file = "result.txt")
+#' result <- api_instance$CowGetUsersHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
+#' dput(result)
 #'
 #'
 #' }
@@ -198,20 +228,21 @@ CowApi <- R6::R6Class(
         self$api_client <- ApiClient$new()
       }
     },
-    #' 
+    #' GetOrders (historical)
     #'
     #' @description
-    #' 
+    #' GetOrders (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
     #' @param end_date (optional) No description
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return void
+    #' @return array[CowOrderDTO]
     #' @export
-    DappsCowOrdersHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
-      local_var_response <- self$DappsCowOrdersHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, ...)
+    CowGetOrdersHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, data_file = NULL, ...) {
+      local_var_response <- self$CowGetOrdersHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -222,19 +253,20 @@ CowApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' 
+    #' GetOrders (historical)
     #'
     #' @description
-    #' 
+    #' GetOrders (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
     #' @param end_date (optional) No description
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
+    #' @return API response (array[CowOrderDTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsCowOrdersHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
+    CowGetOrdersHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -259,7 +291,7 @@ CowApi <- R6::R6Class(
       local_var_url_path <- "/dapps/cow/orders/historical"
 
       # The Accept request HTTP header
-      local_var_accepts <- list()
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -278,7 +310,18 @@ CowApi <- R6::R6Class(
                                  ...)
 
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[CowOrderDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
         local_var_resp
       } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
         ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
@@ -291,20 +334,21 @@ CowApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' 
+    #' GetSettlements (historical)
     #'
     #' @description
-    #' 
+    #' GetSettlements (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
     #' @param end_date (optional) No description
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return void
+    #' @return array[CowSettlementDTO]
     #' @export
-    DappsCowSettlementHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
-      local_var_response <- self$DappsCowSettlementHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, ...)
+    CowGetSettlementsHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, data_file = NULL, ...) {
+      local_var_response <- self$CowGetSettlementsHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -315,19 +359,20 @@ CowApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' 
+    #' GetSettlements (historical)
     #'
     #' @description
-    #' 
+    #' GetSettlements (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
     #' @param end_date (optional) No description
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
+    #' @return API response (array[CowSettlementDTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsCowSettlementHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
+    CowGetSettlementsHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -349,10 +394,10 @@ CowApi <- R6::R6Class(
 
       query_params[["endDate"]] <- `end_date`
 
-      local_var_url_path <- "/dapps/cow/settlement/historical"
+      local_var_url_path <- "/dapps/cow/settlements/historical"
 
       # The Accept request HTTP header
-      local_var_accepts <- list()
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -371,7 +416,18 @@ CowApi <- R6::R6Class(
                                  ...)
 
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[CowSettlementDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
         local_var_resp
       } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
         ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
@@ -384,21 +440,22 @@ CowApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' 
+    #' GetTokens (historical) 🔥
     #'
     #' @description
-    #' 
+    #' GetTokens (historical) 🔥
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param token_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param token_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return void
+    #' @return array[CowTokenDTO]
     #' @export
-    DappsCowTokensHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, token_id = NULL, ...) {
-      local_var_response <- self$DappsCowTokensHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, token_id, ...)
+    CowGetTokensHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, token_id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$CowGetTokensHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, token_id, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -409,20 +466,21 @@ CowApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' 
+    #' GetTokens (historical) 🔥
     #'
     #' @description
-    #' 
+    #' GetTokens (historical) 🔥
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param token_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param token_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
+    #' @return API response (array[CowTokenDTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsCowTokensHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, token_id = NULL, ...) {
+    CowGetTokensHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, token_id = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -450,7 +508,7 @@ CowApi <- R6::R6Class(
       local_var_url_path <- "/dapps/cow/tokens/historical"
 
       # The Accept request HTTP header
-      local_var_accepts <- list()
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -469,7 +527,18 @@ CowApi <- R6::R6Class(
                                  ...)
 
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[CowTokenDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
         local_var_resp
       } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
         ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
@@ -482,20 +551,21 @@ CowApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' 
+    #' GetTrades (historical) 🔥
     #'
     #' @description
-    #' 
+    #' GetTrades (historical) 🔥
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return void
+    #' @return array[CowTradeDTO]
     #' @export
-    DappsCowTradesHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
-      local_var_response <- self$DappsCowTradesHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, ...)
+    CowGetTradesHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, data_file = NULL, ...) {
+      local_var_response <- self$CowGetTradesHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -506,19 +576,20 @@ CowApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' 
+    #' GetTrades (historical) 🔥
     #'
     #' @description
-    #' 
+    #' GetTrades (historical) 🔥
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
+    #' @return API response (array[CowTradeDTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsCowTradesHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
+    CowGetTradesHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -543,7 +614,7 @@ CowApi <- R6::R6Class(
       local_var_url_path <- "/dapps/cow/trades/historical"
 
       # The Accept request HTTP header
-      local_var_accepts <- list()
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -562,7 +633,18 @@ CowApi <- R6::R6Class(
                                  ...)
 
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[CowTradeDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
         local_var_resp
       } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
         ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
@@ -575,20 +657,21 @@ CowApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' 
+    #' GetUsers (historical)
     #'
     #' @description
-    #' 
+    #' GetUsers (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return void
+    #' @return array[CowUserDTO]
     #' @export
-    DappsCowUsersHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
-      local_var_response <- self$DappsCowUsersHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, ...)
+    CowGetUsersHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, data_file = NULL, ...) {
+      local_var_response <- self$CowGetUsersHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -599,19 +682,20 @@ CowApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' 
+    #' GetUsers (historical)
     #'
     #' @description
-    #' 
+    #' GetUsers (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
+    #' @return API response (array[CowUserDTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsCowUsersHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
+    CowGetUsersHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -636,7 +720,7 @@ CowApi <- R6::R6Class(
       local_var_url_path <- "/dapps/cow/users/historical"
 
       # The Accept request HTTP header
-      local_var_accepts <- list()
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -655,7 +739,18 @@ CowApi <- R6::R6Class(
                                  ...)
 
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[CowUserDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
         local_var_resp
       } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
         ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)

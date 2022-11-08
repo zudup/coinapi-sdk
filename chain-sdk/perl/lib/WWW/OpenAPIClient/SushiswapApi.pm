@@ -49,34 +49,132 @@ sub new {
 
 
 #
+# curve_get_exchanges__current
+#
+# GetExchanges (current) 🔥
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'curve_get_exchanges__current' } = {
+        summary => 'GetExchanges (current) 🔥',
+        params => $params,
+        returns => 'ARRAY[CurveExchangeDTO]',
+        };
+}
+# @return ARRAY[CurveExchangeDTO]
+#
+sub curve_get_exchanges__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/sushiswap/exchanges/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveExchangeDTO]', $response);
+    return $_response_object;
+}
+
+#
+# dex_get_trades__current
+#
+# GetTrades (current) 🔥
+#
+{
+    my $params = {
+    };
+    __PACKAGE__->method_documentation->{ 'dex_get_trades__current' } = {
+        summary => 'GetTrades (current) 🔥',
+        params => $params,
+        returns => 'ARRAY[DexTradeDTO]',
+        };
+}
+# @return ARRAY[DexTradeDTO]
+#
+sub dex_get_trades__current {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/sushiswap/trades/current';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[DexTradeDTO]', $response);
+    return $_response_object;
+}
+
+#
 # sushiswap_get_bundles__historical
 #
 # GetBundles (historical)
 #
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
+# @param int $start_block AAAAAAAAAA (optional)
+# @param int $end_block BBBBBBBBBBBB (optional)
+# @param DATE_TIME $start_date CCCCCCCCC (optional)
+# @param DATE_TIME $end_date DDDDDDDDDDD (optional)
 {
     my $params = {
     'start_block' => {
         data_type => 'int',
-        description => '',
+        description => 'AAAAAAAAAA',
         required => '0',
     },
     'end_block' => {
         data_type => 'int',
-        description => '',
+        description => 'BBBBBBBBBBBB',
         required => '0',
     },
     'start_date' => {
         data_type => 'DATE_TIME',
-        description => '',
+        description => 'CCCCCCCCC',
         required => '0',
     },
     'end_date' => {
         data_type => 'DATE_TIME',
-        description => '',
+        description => 'DDDDDDDDDDD',
         required => '0',
     },
     };
@@ -839,13 +937,13 @@ sub sushiswap_get_mints__historical {
 #
 # sushiswap_get_pools__current
 #
-# GetPools (current)
+# GetPools (current) 🔥
 #
 {
     my $params = {
     };
     __PACKAGE__->method_documentation->{ 'sushiswap_get_pools__current' } = {
-        summary => 'GetPools (current)',
+        summary => 'GetPools (current) 🔥',
         params => $params,
         returns => 'ARRAY[SushiswapPairDTO]',
         };
@@ -888,43 +986,43 @@ sub sushiswap_get_pools__current {
 #
 # sushiswap_get_pools__historical
 #
-# GetPools (historical)
+# GetPools (historical) 🔥
 #
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $pool_id  (optional)
+# @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+# @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+# @param DATE_TIME $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+# @param DATE_TIME $end_date The end date of timeframe (optional)
+# @param string $pool_id The pool address. (optional)
 {
     my $params = {
     'start_block' => {
         data_type => 'int',
-        description => '',
+        description => 'The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.',
         required => '0',
     },
     'end_block' => {
         data_type => 'int',
-        description => '',
+        description => 'The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).',
         required => '0',
     },
     'start_date' => {
         data_type => 'DATE_TIME',
-        description => '',
+        description => 'The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.',
         required => '0',
     },
     'end_date' => {
         data_type => 'DATE_TIME',
-        description => '',
+        description => 'The end date of timeframe',
         required => '0',
     },
     'pool_id' => {
         data_type => 'string',
-        description => '',
+        description => 'The pool address.',
         required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'sushiswap_get_pools__historical' } = {
-        summary => 'GetPools (historical)',
+        summary => 'GetPools (historical) 🔥',
         params => $params,
         returns => 'ARRAY[SushiswapPairDTO]',
         };
@@ -1200,13 +1298,13 @@ sub sushiswap_get_pools_hour_data__historical {
 #
 # sushiswap_get_swaps__current
 #
-# GetSwaps (current)
+# GetSwaps (current) 🔥
 #
 {
     my $params = {
     };
     __PACKAGE__->method_documentation->{ 'sushiswap_get_swaps__current' } = {
-        summary => 'GetSwaps (current)',
+        summary => 'GetSwaps (current) 🔥',
         params => $params,
         returns => 'ARRAY[SushiswapSwapDTO]',
         };
@@ -1249,43 +1347,43 @@ sub sushiswap_get_swaps__current {
 #
 # sushiswap_get_swaps__historical
 #
-# GetSwaps (historical)
+# GetSwaps (historical) 🔥
 #
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $pool_id  (optional)
+# @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+# @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+# @param DATE_TIME $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+# @param DATE_TIME $end_date The end date of timeframe (optional)
+# @param string $pool_id The pool address. (optional)
 {
     my $params = {
     'start_block' => {
         data_type => 'int',
-        description => '',
+        description => 'The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.',
         required => '0',
     },
     'end_block' => {
         data_type => 'int',
-        description => '',
+        description => 'The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).',
         required => '0',
     },
     'start_date' => {
         data_type => 'DATE_TIME',
-        description => '',
+        description => 'The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.',
         required => '0',
     },
     'end_date' => {
         data_type => 'DATE_TIME',
-        description => '',
+        description => 'The end date of timeframe',
         required => '0',
     },
     'pool_id' => {
         data_type => 'string',
-        description => '',
+        description => 'The pool address.',
         required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'sushiswap_get_swaps__historical' } = {
-        summary => 'GetSwaps (historical)',
+        summary => 'GetSwaps (historical) 🔥',
         params => $params,
         returns => 'ARRAY[SushiswapSwapDTO]',
         };
@@ -1353,13 +1451,13 @@ sub sushiswap_get_swaps__historical {
 #
 # sushiswap_get_tokens__current
 #
-# GetTokens (current)
+# GetTokens (current) 🔥
 #
 {
     my $params = {
     };
     __PACKAGE__->method_documentation->{ 'sushiswap_get_tokens__current' } = {
-        summary => 'GetTokens (current)',
+        summary => 'GetTokens (current) 🔥',
         params => $params,
         returns => 'ARRAY[SushiswapTokenDTO]',
         };
@@ -1402,43 +1500,43 @@ sub sushiswap_get_tokens__current {
 #
 # sushiswap_get_tokens__historical
 #
-# GetTokens (historical)
+# GetTokens (historical) 🔥
 #
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $token_id  (optional)
+# @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+# @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+# @param DATE_TIME $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+# @param DATE_TIME $end_date The end date of timeframe (optional)
+# @param string $token_id The token address. (optional)
 {
     my $params = {
     'start_block' => {
         data_type => 'int',
-        description => '',
+        description => 'The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.',
         required => '0',
     },
     'end_block' => {
         data_type => 'int',
-        description => '',
+        description => 'The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).',
         required => '0',
     },
     'start_date' => {
         data_type => 'DATE_TIME',
-        description => '',
+        description => 'The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.',
         required => '0',
     },
     'end_date' => {
         data_type => 'DATE_TIME',
-        description => '',
+        description => 'The end date of timeframe',
         required => '0',
     },
     'token_id' => {
         data_type => 'string',
-        description => '',
+        description => 'The token address.',
         required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'sushiswap_get_tokens__historical' } = {
-        summary => 'GetTokens (historical)',
+        summary => 'GetTokens (historical) 🔥',
         params => $params,
         returns => 'ARRAY[SushiswapTokenDTO]',
         };

@@ -4,49 +4,51 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Invoke-DappsCurveAccountsHistoricalGet**](CurveApi.md#Invoke-DappsCurveAccountsHistoricalGet) | **GET** /dapps/curve/accounts/historical | 
-[**Invoke-DappsCurveAddLiquidityEventHistoricalGet**](CurveApi.md#Invoke-DappsCurveAddLiquidityEventHistoricalGet) | **GET** /dapps/curve/addLiquidityEvent/historical | 
-[**Invoke-DappsCurveAdminFeeChangeLogHistoricalGet**](CurveApi.md#Invoke-DappsCurveAdminFeeChangeLogHistoricalGet) | **GET** /dapps/curve/adminFeeChangeLog/historical | 
-[**Invoke-DappsCurveAmplificationCoeffChangeLogHistoricalGet**](CurveApi.md#Invoke-DappsCurveAmplificationCoeffChangeLogHistoricalGet) | **GET** /dapps/curve/amplificationCoeffChangeLog/historical | 
-[**Invoke-DappsCurveCoinsHistoricalGet**](CurveApi.md#Invoke-DappsCurveCoinsHistoricalGet) | **GET** /dapps/curve/coins/historical | 
-[**Invoke-DappsCurveContractsHistoricalGet**](CurveApi.md#Invoke-DappsCurveContractsHistoricalGet) | **GET** /dapps/curve/contracts/historical | 
-[**Invoke-DappsCurveContractsVersionHistoricalGet**](CurveApi.md#Invoke-DappsCurveContractsVersionHistoricalGet) | **GET** /dapps/curve/contractsVersion/historical | 
-[**Invoke-DappsCurveDailyVolumeHistoricalGet**](CurveApi.md#Invoke-DappsCurveDailyVolumeHistoricalGet) | **GET** /dapps/curve/dailyVolume/historical | 
-[**Invoke-DappsCurveFeeChangeLogHistoricalGet**](CurveApi.md#Invoke-DappsCurveFeeChangeLogHistoricalGet) | **GET** /dapps/curve/feeChangeLog/historical | 
-[**Invoke-DappsCurveGaugeDepositHistoricalGet**](CurveApi.md#Invoke-DappsCurveGaugeDepositHistoricalGet) | **GET** /dapps/curve/gaugeDeposit/historical | 
-[**Invoke-DappsCurveGaugeHistoricalGet**](CurveApi.md#Invoke-DappsCurveGaugeHistoricalGet) | **GET** /dapps/curve/gauge/historical | 
-[**Invoke-DappsCurveGaugeLiquidityHistoricalGet**](CurveApi.md#Invoke-DappsCurveGaugeLiquidityHistoricalGet) | **GET** /dapps/curve/gaugeLiquidity/historical | 
-[**Invoke-DappsCurveGaugeTotalWeightHistoricalGet**](CurveApi.md#Invoke-DappsCurveGaugeTotalWeightHistoricalGet) | **GET** /dapps/curve/gaugeTotalWeight/historical | 
-[**Invoke-DappsCurveGaugeTypeHistoricalGet**](CurveApi.md#Invoke-DappsCurveGaugeTypeHistoricalGet) | **GET** /dapps/curve/gaugeType/historical | 
-[**Invoke-DappsCurveGaugeTypeWeightHistoricalGet**](CurveApi.md#Invoke-DappsCurveGaugeTypeWeightHistoricalGet) | **GET** /dapps/curve/gaugeTypeWeight/historical | 
-[**Invoke-DappsCurveGaugeWeightHistoricalGet**](CurveApi.md#Invoke-DappsCurveGaugeWeightHistoricalGet) | **GET** /dapps/curve/gaugeWeight/historical | 
-[**Invoke-DappsCurveGaugeWeightVoteHistoricalGet**](CurveApi.md#Invoke-DappsCurveGaugeWeightVoteHistoricalGet) | **GET** /dapps/curve/gaugeWeightVote/historical | 
-[**Invoke-DappsCurveGaugeWithdrawHistoricalGet**](CurveApi.md#Invoke-DappsCurveGaugeWithdrawHistoricalGet) | **GET** /dapps/curve/gaugeWithdraw/historical | 
-[**Invoke-DappsCurveHourlyVolumeHistoricalGet**](CurveApi.md#Invoke-DappsCurveHourlyVolumeHistoricalGet) | **GET** /dapps/curve/hourlyVolume/historical | 
-[**Invoke-DappsCurveLpTokenHistoricalGet**](CurveApi.md#Invoke-DappsCurveLpTokenHistoricalGet) | **GET** /dapps/curve/lpToken/historical | 
-[**Invoke-DappsCurvePoolsHistoricalGet**](CurveApi.md#Invoke-DappsCurvePoolsHistoricalGet) | **GET** /dapps/curve/pools/historical | 
-[**Invoke-DappsCurveProposalsHistoricalGet**](CurveApi.md#Invoke-DappsCurveProposalsHistoricalGet) | **GET** /dapps/curve/proposals/historical | 
-[**Invoke-DappsCurveProposalsVoteHistoricalGet**](CurveApi.md#Invoke-DappsCurveProposalsVoteHistoricalGet) | **GET** /dapps/curve/proposalsVote/historical | 
-[**Invoke-DappsCurveRemoveLiquidityEventHistoricalGet**](CurveApi.md#Invoke-DappsCurveRemoveLiquidityEventHistoricalGet) | **GET** /dapps/curve/removeLiquidityEvent/historical | 
-[**Invoke-DappsCurveRemoveLiquidityOneEventHistoricalGet**](CurveApi.md#Invoke-DappsCurveRemoveLiquidityOneEventHistoricalGet) | **GET** /dapps/curve/removeLiquidityOneEvent/historical | 
-[**Invoke-DappsCurveSwapsHistoricalGet**](CurveApi.md#Invoke-DappsCurveSwapsHistoricalGet) | **GET** /dapps/curve/swaps/historical | 
-[**Invoke-DappsCurveSystemStateHistoricalGet**](CurveApi.md#Invoke-DappsCurveSystemStateHistoricalGet) | **GET** /dapps/curve/systemState/historical | 
-[**Invoke-DappsCurveTokensHistoricalGet**](CurveApi.md#Invoke-DappsCurveTokensHistoricalGet) | **GET** /dapps/curve/tokens/historical | 
-[**Invoke-DappsCurveTransferOwnershipEventHistoricalGet**](CurveApi.md#Invoke-DappsCurveTransferOwnershipEventHistoricalGet) | **GET** /dapps/curve/transferOwnershipEvent/historical | 
-[**Invoke-DappsCurveUnderlyingCoinHistoricalGet**](CurveApi.md#Invoke-DappsCurveUnderlyingCoinHistoricalGet) | **GET** /dapps/curve/underlyingCoin/historical | 
-[**Invoke-DappsCurveVotingAppHistoricalGet**](CurveApi.md#Invoke-DappsCurveVotingAppHistoricalGet) | **GET** /dapps/curve/votingApp/historical | 
-[**Invoke-DappsCurveWeeklyVolumeHistoricalGet**](CurveApi.md#Invoke-DappsCurveWeeklyVolumeHistoricalGet) | **GET** /dapps/curve/weeklyVolume/historical | 
+[**Invoke-CurveGetAccountsHistorical**](CurveApi.md#Invoke-CurveGetAccountsHistorical) | **GET** /dapps/curve/accounts/historical | GetAccounts (historical)
+[**Invoke-CurveGetAddLiquidityEventsHistorical**](CurveApi.md#Invoke-CurveGetAddLiquidityEventsHistorical) | **GET** /dapps/curve/addLiquidityEvents/historical | GetAddLiquidityEvents (historical)
+[**Invoke-CurveGetAdminFeeChangeLogsHistorical**](CurveApi.md#Invoke-CurveGetAdminFeeChangeLogsHistorical) | **GET** /dapps/curve/adminFeeChangeLogs/historical | GetAdminFeeChangeLogs (historical)
+[**Invoke-CurveGetAmplificationCoeffChangeLogsHistorical**](CurveApi.md#Invoke-CurveGetAmplificationCoeffChangeLogsHistorical) | **GET** /dapps/curve/amplificationCoeffChangeLogs/historical | GetAmplificationCoeffChangeLogs (historical)
+[**Invoke-CurveGetCoinsHistorical**](CurveApi.md#Invoke-CurveGetCoinsHistorical) | **GET** /dapps/curve/coins/historical | GetCoins (historical)
+[**Invoke-CurveGetContractsVersionsHistorical**](CurveApi.md#Invoke-CurveGetContractsVersionsHistorical) | **GET** /dapps/curve/contractsVersions/historical | GetContractsVersions (historical)
+[**Invoke-CurveGetContractsHistorical**](CurveApi.md#Invoke-CurveGetContractsHistorical) | **GET** /dapps/curve/contracts/historical | GetContracts (historical)
+[**Invoke-CurveGetDailyVolumesHistorical**](CurveApi.md#Invoke-CurveGetDailyVolumesHistorical) | **GET** /dapps/curve/dailyVolumes/historical | GetDailyVolumes (historical)
+[**Invoke-CurveGetExchangesHistorical**](CurveApi.md#Invoke-CurveGetExchangesHistorical) | **GET** /dapps/curve/exchanges/historical | GetExchanges (historical) 🔥
+[**Invoke-CurveGetFeeChangeLogsHistorical**](CurveApi.md#Invoke-CurveGetFeeChangeLogsHistorical) | **GET** /dapps/curve/feeChangeLogs/historical | GetFeeChangeLogs (historical)
+[**Invoke-CurveGetGaugesDepositsHistorical**](CurveApi.md#Invoke-CurveGetGaugesDepositsHistorical) | **GET** /dapps/curve/gaugesDeposits/historical | GetGaugesDeposits (historical)
+[**Invoke-CurveGetGaugesLiquidityHistorical**](CurveApi.md#Invoke-CurveGetGaugesLiquidityHistorical) | **GET** /dapps/curve/gaugesLiquidity/historical | GetGaugesLiquidity (historical)
+[**Invoke-CurveGetGaugesTotalWeightsHistorical**](CurveApi.md#Invoke-CurveGetGaugesTotalWeightsHistorical) | **GET** /dapps/curve/gaugesTotalWeights/historical | GetGaugesTotalWeights (historical)
+[**Invoke-CurveGetGaugesTypesWeightsHistorical**](CurveApi.md#Invoke-CurveGetGaugesTypesWeightsHistorical) | **GET** /dapps/curve/gaugesTypesWeights/historical | GetGaugesTypesWeights (historical)
+[**Invoke-CurveGetGaugesTypesHistorical**](CurveApi.md#Invoke-CurveGetGaugesTypesHistorical) | **GET** /dapps/curve/gaugesTypes/historical | GetGaugesTypes (historical)
+[**Invoke-CurveGetGaugesWeightsVotesHistorical**](CurveApi.md#Invoke-CurveGetGaugesWeightsVotesHistorical) | **GET** /dapps/curve/gaugesWeightsVotes/historical | GetGaugesWeightsVotes (historical)
+[**Invoke-CurveGetGaugesWeightsHistorical**](CurveApi.md#Invoke-CurveGetGaugesWeightsHistorical) | **GET** /dapps/curve/gaugesWeights/historical | GetGaugesWeights (historical)
+[**Invoke-CurveGetGaugesWithdrawHistorical**](CurveApi.md#Invoke-CurveGetGaugesWithdrawHistorical) | **GET** /dapps/curve/gaugesWithdraws/historical | GetGaugesWithdraw (historical)
+[**Invoke-CurveGetGaugesHistorical**](CurveApi.md#Invoke-CurveGetGaugesHistorical) | **GET** /dapps/curve/gauges/historical | GetGauges (historical)
+[**Invoke-CurveGetHourlyVolumesHistorical**](CurveApi.md#Invoke-CurveGetHourlyVolumesHistorical) | **GET** /dapps/curve/hourlyVolumes/historical | GetHourlyVolumes (historical)
+[**Invoke-CurveGetLpTokensHistorical**](CurveApi.md#Invoke-CurveGetLpTokensHistorical) | **GET** /dapps/curve/lpTokens/historical | GetLpTokens (historical)
+[**Invoke-CurveGetPoolsHistorical**](CurveApi.md#Invoke-CurveGetPoolsHistorical) | **GET** /dapps/curve/pools/historical | GetPools (historical) 🔥
+[**Invoke-CurveGetProposalsVotesHistorical**](CurveApi.md#Invoke-CurveGetProposalsVotesHistorical) | **GET** /dapps/curve/proposalsVotes/historical | GetProposalsVotes (historical)
+[**Invoke-CurveGetProposalsHistorical**](CurveApi.md#Invoke-CurveGetProposalsHistorical) | **GET** /dapps/curve/proposals/historical | GetProposals (historical)
+[**Invoke-CurveGetRemoveLiquidityEventsHistorical**](CurveApi.md#Invoke-CurveGetRemoveLiquidityEventsHistorical) | **GET** /dapps/curve/removeLiquidityEvents/historical | GetRemoveLiquidityEvents (historical)
+[**Invoke-CurveGetRemoveLiquidityOneEventsHistorical**](CurveApi.md#Invoke-CurveGetRemoveLiquidityOneEventsHistorical) | **GET** /dapps/curve/removeLiquidityOneEvents/historical | GetRemoveLiquidityOneEvents (historical)
+[**Invoke-CurveGetSystemStatesHistorical**](CurveApi.md#Invoke-CurveGetSystemStatesHistorical) | **GET** /dapps/curve/systemStates/historical | GetSystemStates (historical)
+[**Invoke-CurveGetTokensHistorical**](CurveApi.md#Invoke-CurveGetTokensHistorical) | **GET** /dapps/curve/tokens/historical | GetTokens (historical) 🔥
+[**Invoke-CurveGetTransferOwnershipEventsHistorical**](CurveApi.md#Invoke-CurveGetTransferOwnershipEventsHistorical) | **GET** /dapps/curve/transferOwnershipEvents/historical | GetTransferOwnershipEvents (historical)
+[**Invoke-CurveGetUnderlyingCoinsHistorical**](CurveApi.md#Invoke-CurveGetUnderlyingCoinsHistorical) | **GET** /dapps/curve/underlyingCoins/historical | GetUnderlyingCoins (historical)
+[**Invoke-CurveGetVotingAppsHistorical**](CurveApi.md#Invoke-CurveGetVotingAppsHistorical) | **GET** /dapps/curve/votingApps/historical | GetVotingApps (historical)
+[**Invoke-CurveGetWeeklyVolumesHistorical**](CurveApi.md#Invoke-CurveGetWeeklyVolumesHistorical) | **GET** /dapps/curve/weeklyVolumes/historical | GetWeeklyVolumes (historical)
 
 
-<a name="Invoke-DappsCurveAccountsHistoricalGet"></a>
-# **Invoke-DappsCurveAccountsHistoricalGet**
-> void Invoke-DappsCurveAccountsHistoricalGet<br>
+<a name="Invoke-CurveGetAccountsHistorical"></a>
+# **Invoke-CurveGetAccountsHistorical**
+> CurveAccountDTO[] Invoke-CurveGetAccountsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 
+GetAccounts (historical)
 
+Gets accounts.
 
 ### Example
 ```powershell
@@ -55,10 +57,11 @@ $EndBlock = 789 # Int64 |  (optional)
 $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 
+# GetAccounts (historical)
 try {
-    $Result = Invoke-DappsCurveAccountsHistoricalGet -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
+    $Result = Invoke-CurveGetAccountsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsCurveAccountsHistoricalGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-CurveGetAccountsHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -74,7 +77,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**CurveAccountDTO[]**](CurveAccountDTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -83,20 +86,22 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DappsCurveAddLiquidityEventHistoricalGet"></a>
-# **Invoke-DappsCurveAddLiquidityEventHistoricalGet**
-> void Invoke-DappsCurveAddLiquidityEventHistoricalGet<br>
+<a name="Invoke-CurveGetAddLiquidityEventsHistorical"></a>
+# **Invoke-CurveGetAddLiquidityEventsHistorical**
+> CurveAddLiquidityEventDTO[] Invoke-CurveGetAddLiquidityEventsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
 
+GetAddLiquidityEvents (historical)
 
+Gets add liquidity events.
 
 ### Example
 ```powershell
@@ -106,10 +111,11 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $PoolId = "MyPoolId" # String |  (optional)
 
+# GetAddLiquidityEvents (historical)
 try {
-    $Result = Invoke-DappsCurveAddLiquidityEventHistoricalGet -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
+    $Result = Invoke-CurveGetAddLiquidityEventsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsCurveAddLiquidityEventHistoricalGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-CurveGetAddLiquidityEventsHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -126,7 +132,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**CurveAddLiquidityEventDTO[]**](CurveAddLiquidityEventDTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -135,20 +141,22 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DappsCurveAdminFeeChangeLogHistoricalGet"></a>
-# **Invoke-DappsCurveAdminFeeChangeLogHistoricalGet**
-> void Invoke-DappsCurveAdminFeeChangeLogHistoricalGet<br>
+<a name="Invoke-CurveGetAdminFeeChangeLogsHistorical"></a>
+# **Invoke-CurveGetAdminFeeChangeLogsHistorical**
+> CurveAdminFeeChangeLogDTO[] Invoke-CurveGetAdminFeeChangeLogsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
 
+GetAdminFeeChangeLogs (historical)
 
+Gets admin fee change logs.
 
 ### Example
 ```powershell
@@ -158,10 +166,11 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $PoolId = "MyPoolId" # String |  (optional)
 
+# GetAdminFeeChangeLogs (historical)
 try {
-    $Result = Invoke-DappsCurveAdminFeeChangeLogHistoricalGet -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
+    $Result = Invoke-CurveGetAdminFeeChangeLogsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsCurveAdminFeeChangeLogHistoricalGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-CurveGetAdminFeeChangeLogsHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -178,7 +187,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**CurveAdminFeeChangeLogDTO[]**](CurveAdminFeeChangeLogDTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -187,20 +196,22 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DappsCurveAmplificationCoeffChangeLogHistoricalGet"></a>
-# **Invoke-DappsCurveAmplificationCoeffChangeLogHistoricalGet**
-> void Invoke-DappsCurveAmplificationCoeffChangeLogHistoricalGet<br>
+<a name="Invoke-CurveGetAmplificationCoeffChangeLogsHistorical"></a>
+# **Invoke-CurveGetAmplificationCoeffChangeLogsHistorical**
+> CurveAmplificationCoeffChangeLogDTO[] Invoke-CurveGetAmplificationCoeffChangeLogsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
 
+GetAmplificationCoeffChangeLogs (historical)
 
+Gets amplification coeff change logs.
 
 ### Example
 ```powershell
@@ -210,10 +221,11 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $PoolId = "MyPoolId" # String |  (optional)
 
+# GetAmplificationCoeffChangeLogs (historical)
 try {
-    $Result = Invoke-DappsCurveAmplificationCoeffChangeLogHistoricalGet -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
+    $Result = Invoke-CurveGetAmplificationCoeffChangeLogsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsCurveAmplificationCoeffChangeLogHistoricalGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-CurveGetAmplificationCoeffChangeLogsHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -230,7 +242,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**CurveAmplificationCoeffChangeLogDTO[]**](CurveAmplificationCoeffChangeLogDTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -239,20 +251,22 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DappsCurveCoinsHistoricalGet"></a>
-# **Invoke-DappsCurveCoinsHistoricalGet**
-> void Invoke-DappsCurveCoinsHistoricalGet<br>
+<a name="Invoke-CurveGetCoinsHistorical"></a>
+# **Invoke-CurveGetCoinsHistorical**
+> CurveCoinDTO[] Invoke-CurveGetCoinsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
 
+GetCoins (historical)
 
+Gets coins.
 
 ### Example
 ```powershell
@@ -262,10 +276,11 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $PoolId = "MyPoolId" # String |  (optional)
 
+# GetCoins (historical)
 try {
-    $Result = Invoke-DappsCurveCoinsHistoricalGet -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
+    $Result = Invoke-CurveGetCoinsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsCurveCoinsHistoricalGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-CurveGetCoinsHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -282,7 +297,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**CurveCoinDTO[]**](CurveCoinDTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -291,20 +306,22 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DappsCurveContractsHistoricalGet"></a>
-# **Invoke-DappsCurveContractsHistoricalGet**
-> void Invoke-DappsCurveContractsHistoricalGet<br>
+<a name="Invoke-CurveGetContractsVersionsHistorical"></a>
+# **Invoke-CurveGetContractsVersionsHistorical**
+> CurveContractVersionDTO[] Invoke-CurveGetContractsVersionsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
 
+GetContractsVersions (historical)
 
+Gets contracts versions.
 
 ### Example
 ```powershell
@@ -314,10 +331,11 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $PoolId = "MyPoolId" # String |  (optional)
 
+# GetContractsVersions (historical)
 try {
-    $Result = Invoke-DappsCurveContractsHistoricalGet -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
+    $Result = Invoke-CurveGetContractsVersionsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsCurveContractsHistoricalGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-CurveGetContractsVersionsHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -334,7 +352,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**CurveContractVersionDTO[]**](CurveContractVersionDTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -343,20 +361,22 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DappsCurveContractsVersionHistoricalGet"></a>
-# **Invoke-DappsCurveContractsVersionHistoricalGet**
-> void Invoke-DappsCurveContractsVersionHistoricalGet<br>
+<a name="Invoke-CurveGetContractsHistorical"></a>
+# **Invoke-CurveGetContractsHistorical**
+> CurveContractDTO[] Invoke-CurveGetContractsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
 
+GetContracts (historical)
 
+Gets contracts.
 
 ### Example
 ```powershell
@@ -366,10 +386,11 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $PoolId = "MyPoolId" # String |  (optional)
 
+# GetContracts (historical)
 try {
-    $Result = Invoke-DappsCurveContractsVersionHistoricalGet -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
+    $Result = Invoke-CurveGetContractsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsCurveContractsVersionHistoricalGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-CurveGetContractsHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -386,7 +407,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**CurveContractDTO[]**](CurveContractDTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -395,20 +416,22 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DappsCurveDailyVolumeHistoricalGet"></a>
-# **Invoke-DappsCurveDailyVolumeHistoricalGet**
-> void Invoke-DappsCurveDailyVolumeHistoricalGet<br>
+<a name="Invoke-CurveGetDailyVolumesHistorical"></a>
+# **Invoke-CurveGetDailyVolumesHistorical**
+> CurveDailyVolumeDTO[] Invoke-CurveGetDailyVolumesHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
 
+GetDailyVolumes (historical)
 
+Gets daily volumes.
 
 ### Example
 ```powershell
@@ -418,10 +441,11 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $PoolId = "MyPoolId" # String |  (optional)
 
+# GetDailyVolumes (historical)
 try {
-    $Result = Invoke-DappsCurveDailyVolumeHistoricalGet -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
+    $Result = Invoke-CurveGetDailyVolumesHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsCurveDailyVolumeHistoricalGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-CurveGetDailyVolumesHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -438,7 +462,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**CurveDailyVolumeDTO[]**](CurveDailyVolumeDTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -447,20 +471,22 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DappsCurveFeeChangeLogHistoricalGet"></a>
-# **Invoke-DappsCurveFeeChangeLogHistoricalGet**
-> void Invoke-DappsCurveFeeChangeLogHistoricalGet<br>
+<a name="Invoke-CurveGetExchangesHistorical"></a>
+# **Invoke-CurveGetExchangesHistorical**
+> CurveExchangeDTO[] Invoke-CurveGetExchangesHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
 
+GetExchanges (historical) 🔥
 
+Gets exchanges.
 
 ### Example
 ```powershell
@@ -470,10 +496,11 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $PoolId = "MyPoolId" # String |  (optional)
 
+# GetExchanges (historical) 🔥
 try {
-    $Result = Invoke-DappsCurveFeeChangeLogHistoricalGet -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
+    $Result = Invoke-CurveGetExchangesHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsCurveFeeChangeLogHistoricalGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-CurveGetExchangesHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -490,7 +517,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**CurveExchangeDTO[]**](CurveExchangeDTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -499,69 +526,22 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DappsCurveGaugeDepositHistoricalGet"></a>
-# **Invoke-DappsCurveGaugeDepositHistoricalGet**
-> void Invoke-DappsCurveGaugeDepositHistoricalGet<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
-
-
-
-### Example
-```powershell
-$StartBlock = 789 # Int64 |  (optional)
-$EndBlock = 789 # Int64 |  (optional)
-$StartDate = (Get-Date) # System.DateTime |  (optional)
-$EndDate = (Get-Date) # System.DateTime |  (optional)
-
-try {
-    $Result = Invoke-DappsCurveGaugeDepositHistoricalGet -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
-} catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsCurveGaugeDepositHistoricalGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
-    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **StartBlock** | **Int64**|  | [optional] 
- **EndBlock** | **Int64**|  | [optional] 
- **StartDate** | **System.DateTime**|  | [optional] 
- **EndDate** | **System.DateTime**|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="Invoke-DappsCurveGaugeHistoricalGet"></a>
-# **Invoke-DappsCurveGaugeHistoricalGet**
-> void Invoke-DappsCurveGaugeHistoricalGet<br>
+<a name="Invoke-CurveGetFeeChangeLogsHistorical"></a>
+# **Invoke-CurveGetFeeChangeLogsHistorical**
+> CurveFeeChangeLogDTO[] Invoke-CurveGetFeeChangeLogsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
 
+GetFeeChangeLogs (historical)
 
+Gets fee change logs.
 
 ### Example
 ```powershell
@@ -571,10 +551,11 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $PoolId = "MyPoolId" # String |  (optional)
 
+# GetFeeChangeLogs (historical)
 try {
-    $Result = Invoke-DappsCurveGaugeHistoricalGet -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
+    $Result = Invoke-CurveGetFeeChangeLogsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsCurveGaugeHistoricalGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-CurveGetFeeChangeLogsHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -591,7 +572,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**CurveFeeChangeLogDTO[]**](CurveFeeChangeLogDTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -600,19 +581,21 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DappsCurveGaugeLiquidityHistoricalGet"></a>
-# **Invoke-DappsCurveGaugeLiquidityHistoricalGet**
-> void Invoke-DappsCurveGaugeLiquidityHistoricalGet<br>
+<a name="Invoke-CurveGetGaugesDepositsHistorical"></a>
+# **Invoke-CurveGetGaugesDepositsHistorical**
+> CurveGaugeDepositDTO[] Invoke-CurveGetGaugesDepositsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 
+GetGaugesDeposits (historical)
 
+Gets gauges deposits.
 
 ### Example
 ```powershell
@@ -621,10 +604,11 @@ $EndBlock = 789 # Int64 |  (optional)
 $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 
+# GetGaugesDeposits (historical)
 try {
-    $Result = Invoke-DappsCurveGaugeLiquidityHistoricalGet -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
+    $Result = Invoke-CurveGetGaugesDepositsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsCurveGaugeLiquidityHistoricalGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-CurveGetGaugesDepositsHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -640,7 +624,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**CurveGaugeDepositDTO[]**](CurveGaugeDepositDTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -649,19 +633,21 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DappsCurveGaugeTotalWeightHistoricalGet"></a>
-# **Invoke-DappsCurveGaugeTotalWeightHistoricalGet**
-> void Invoke-DappsCurveGaugeTotalWeightHistoricalGet<br>
+<a name="Invoke-CurveGetGaugesLiquidityHistorical"></a>
+# **Invoke-CurveGetGaugesLiquidityHistorical**
+> CurveGaugeLiquidityDTO[] Invoke-CurveGetGaugesLiquidityHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 
+GetGaugesLiquidity (historical)
 
+Gets gauges liquidity.
 
 ### Example
 ```powershell
@@ -670,10 +656,11 @@ $EndBlock = 789 # Int64 |  (optional)
 $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 
+# GetGaugesLiquidity (historical)
 try {
-    $Result = Invoke-DappsCurveGaugeTotalWeightHistoricalGet -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
+    $Result = Invoke-CurveGetGaugesLiquidityHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsCurveGaugeTotalWeightHistoricalGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-CurveGetGaugesLiquidityHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -689,7 +676,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**CurveGaugeLiquidityDTO[]**](CurveGaugeLiquidityDTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -698,19 +685,21 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DappsCurveGaugeTypeHistoricalGet"></a>
-# **Invoke-DappsCurveGaugeTypeHistoricalGet**
-> void Invoke-DappsCurveGaugeTypeHistoricalGet<br>
+<a name="Invoke-CurveGetGaugesTotalWeightsHistorical"></a>
+# **Invoke-CurveGetGaugesTotalWeightsHistorical**
+> CurveGaugeTotalWeightDTO[] Invoke-CurveGetGaugesTotalWeightsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 
+GetGaugesTotalWeights (historical)
 
+Gets gauges total weights.
 
 ### Example
 ```powershell
@@ -719,10 +708,11 @@ $EndBlock = 789 # Int64 |  (optional)
 $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 
+# GetGaugesTotalWeights (historical)
 try {
-    $Result = Invoke-DappsCurveGaugeTypeHistoricalGet -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
+    $Result = Invoke-CurveGetGaugesTotalWeightsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsCurveGaugeTypeHistoricalGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-CurveGetGaugesTotalWeightsHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -738,7 +728,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**CurveGaugeTotalWeightDTO[]**](CurveGaugeTotalWeightDTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -747,19 +737,21 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DappsCurveGaugeTypeWeightHistoricalGet"></a>
-# **Invoke-DappsCurveGaugeTypeWeightHistoricalGet**
-> void Invoke-DappsCurveGaugeTypeWeightHistoricalGet<br>
+<a name="Invoke-CurveGetGaugesTypesWeightsHistorical"></a>
+# **Invoke-CurveGetGaugesTypesWeightsHistorical**
+> CurveGaugeTypeWeightDTO[] Invoke-CurveGetGaugesTypesWeightsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 
+GetGaugesTypesWeights (historical)
 
+Gets gauges types weights.
 
 ### Example
 ```powershell
@@ -768,10 +760,11 @@ $EndBlock = 789 # Int64 |  (optional)
 $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 
+# GetGaugesTypesWeights (historical)
 try {
-    $Result = Invoke-DappsCurveGaugeTypeWeightHistoricalGet -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
+    $Result = Invoke-CurveGetGaugesTypesWeightsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsCurveGaugeTypeWeightHistoricalGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-CurveGetGaugesTypesWeightsHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -787,7 +780,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**CurveGaugeTypeWeightDTO[]**](CurveGaugeTypeWeightDTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -796,19 +789,21 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DappsCurveGaugeWeightHistoricalGet"></a>
-# **Invoke-DappsCurveGaugeWeightHistoricalGet**
-> void Invoke-DappsCurveGaugeWeightHistoricalGet<br>
+<a name="Invoke-CurveGetGaugesTypesHistorical"></a>
+# **Invoke-CurveGetGaugesTypesHistorical**
+> CurveGaugeTypeDTO[] Invoke-CurveGetGaugesTypesHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 
+GetGaugesTypes (historical)
 
+Gets gauges types.
 
 ### Example
 ```powershell
@@ -817,10 +812,11 @@ $EndBlock = 789 # Int64 |  (optional)
 $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 
+# GetGaugesTypes (historical)
 try {
-    $Result = Invoke-DappsCurveGaugeWeightHistoricalGet -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
+    $Result = Invoke-CurveGetGaugesTypesHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsCurveGaugeWeightHistoricalGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-CurveGetGaugesTypesHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -836,7 +832,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**CurveGaugeTypeDTO[]**](CurveGaugeTypeDTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -845,19 +841,21 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DappsCurveGaugeWeightVoteHistoricalGet"></a>
-# **Invoke-DappsCurveGaugeWeightVoteHistoricalGet**
-> void Invoke-DappsCurveGaugeWeightVoteHistoricalGet<br>
+<a name="Invoke-CurveGetGaugesWeightsVotesHistorical"></a>
+# **Invoke-CurveGetGaugesWeightsVotesHistorical**
+> CurveGaugeWeightVoteDTO[] Invoke-CurveGetGaugesWeightsVotesHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 
+GetGaugesWeightsVotes (historical)
 
+Gets gauges weights votes.
 
 ### Example
 ```powershell
@@ -866,10 +864,11 @@ $EndBlock = 789 # Int64 |  (optional)
 $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 
+# GetGaugesWeightsVotes (historical)
 try {
-    $Result = Invoke-DappsCurveGaugeWeightVoteHistoricalGet -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
+    $Result = Invoke-CurveGetGaugesWeightsVotesHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsCurveGaugeWeightVoteHistoricalGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-CurveGetGaugesWeightsVotesHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -885,7 +884,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**CurveGaugeWeightVoteDTO[]**](CurveGaugeWeightVoteDTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -894,19 +893,21 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DappsCurveGaugeWithdrawHistoricalGet"></a>
-# **Invoke-DappsCurveGaugeWithdrawHistoricalGet**
-> void Invoke-DappsCurveGaugeWithdrawHistoricalGet<br>
+<a name="Invoke-CurveGetGaugesWeightsHistorical"></a>
+# **Invoke-CurveGetGaugesWeightsHistorical**
+> CurveGaugeWeightDTO[] Invoke-CurveGetGaugesWeightsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 
+GetGaugesWeights (historical)
 
+Gets gauges weights.
 
 ### Example
 ```powershell
@@ -915,10 +916,11 @@ $EndBlock = 789 # Int64 |  (optional)
 $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 
+# GetGaugesWeights (historical)
 try {
-    $Result = Invoke-DappsCurveGaugeWithdrawHistoricalGet -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
+    $Result = Invoke-CurveGetGaugesWeightsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsCurveGaugeWithdrawHistoricalGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-CurveGetGaugesWeightsHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -934,7 +936,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**CurveGaugeWeightDTO[]**](CurveGaugeWeightDTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -943,20 +945,74 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DappsCurveHourlyVolumeHistoricalGet"></a>
-# **Invoke-DappsCurveHourlyVolumeHistoricalGet**
-> void Invoke-DappsCurveHourlyVolumeHistoricalGet<br>
+<a name="Invoke-CurveGetGaugesWithdrawHistorical"></a>
+# **Invoke-CurveGetGaugesWithdrawHistorical**
+> CurveGaugeWithdrawDTO[] Invoke-CurveGetGaugesWithdrawHistorical<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
+
+GetGaugesWithdraw (historical)
+
+Gets gauges withdraws.
+
+### Example
+```powershell
+$StartBlock = 789 # Int64 |  (optional)
+$EndBlock = 789 # Int64 |  (optional)
+$StartDate = (Get-Date) # System.DateTime |  (optional)
+$EndDate = (Get-Date) # System.DateTime |  (optional)
+
+# GetGaugesWithdraw (historical)
+try {
+    $Result = Invoke-CurveGetGaugesWithdrawHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-CurveGetGaugesWithdrawHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **StartBlock** | **Int64**|  | [optional] 
+ **EndBlock** | **Int64**|  | [optional] 
+ **StartDate** | **System.DateTime**|  | [optional] 
+ **EndDate** | **System.DateTime**|  | [optional] 
+
+### Return type
+
+[**CurveGaugeWithdrawDTO[]**](CurveGaugeWithdrawDTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Invoke-CurveGetGaugesHistorical"></a>
+# **Invoke-CurveGetGaugesHistorical**
+> CurveGaugeDTO[] Invoke-CurveGetGaugesHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
 
+GetGauges (historical)
 
+Gets gauges.
 
 ### Example
 ```powershell
@@ -966,10 +1022,11 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $PoolId = "MyPoolId" # String |  (optional)
 
+# GetGauges (historical)
 try {
-    $Result = Invoke-DappsCurveHourlyVolumeHistoricalGet -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
+    $Result = Invoke-CurveGetGaugesHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsCurveHourlyVolumeHistoricalGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-CurveGetGaugesHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -986,7 +1043,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**CurveGaugeDTO[]**](CurveGaugeDTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -995,20 +1052,22 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DappsCurveLpTokenHistoricalGet"></a>
-# **Invoke-DappsCurveLpTokenHistoricalGet**
-> void Invoke-DappsCurveLpTokenHistoricalGet<br>
+<a name="Invoke-CurveGetHourlyVolumesHistorical"></a>
+# **Invoke-CurveGetHourlyVolumesHistorical**
+> CurveHourlyVolumeDTO[] Invoke-CurveGetHourlyVolumesHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
 
+GetHourlyVolumes (historical)
 
+Gets hourly volumes.
 
 ### Example
 ```powershell
@@ -1018,10 +1077,11 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $PoolId = "MyPoolId" # String |  (optional)
 
+# GetHourlyVolumes (historical)
 try {
-    $Result = Invoke-DappsCurveLpTokenHistoricalGet -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
+    $Result = Invoke-CurveGetHourlyVolumesHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsCurveLpTokenHistoricalGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-CurveGetHourlyVolumesHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -1038,7 +1098,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**CurveHourlyVolumeDTO[]**](CurveHourlyVolumeDTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -1047,20 +1107,22 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DappsCurvePoolsHistoricalGet"></a>
-# **Invoke-DappsCurvePoolsHistoricalGet**
-> void Invoke-DappsCurvePoolsHistoricalGet<br>
+<a name="Invoke-CurveGetLpTokensHistorical"></a>
+# **Invoke-CurveGetLpTokensHistorical**
+> CurveLpTokenDTO[] Invoke-CurveGetLpTokensHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
 
+GetLpTokens (historical)
 
+Gets lp tokens.
 
 ### Example
 ```powershell
@@ -1070,10 +1132,11 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $PoolId = "MyPoolId" # String |  (optional)
 
+# GetLpTokens (historical)
 try {
-    $Result = Invoke-DappsCurvePoolsHistoricalGet -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
+    $Result = Invoke-CurveGetLpTokensHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsCurvePoolsHistoricalGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-CurveGetLpTokensHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -1090,7 +1153,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**CurveLpTokenDTO[]**](CurveLpTokenDTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -1099,118 +1162,22 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DappsCurveProposalsHistoricalGet"></a>
-# **Invoke-DappsCurveProposalsHistoricalGet**
-> void Invoke-DappsCurveProposalsHistoricalGet<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
-
-
-
-### Example
-```powershell
-$StartBlock = 789 # Int64 |  (optional)
-$EndBlock = 789 # Int64 |  (optional)
-$StartDate = (Get-Date) # System.DateTime |  (optional)
-$EndDate = (Get-Date) # System.DateTime |  (optional)
-
-try {
-    $Result = Invoke-DappsCurveProposalsHistoricalGet -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
-} catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsCurveProposalsHistoricalGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
-    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **StartBlock** | **Int64**|  | [optional] 
- **EndBlock** | **Int64**|  | [optional] 
- **StartDate** | **System.DateTime**|  | [optional] 
- **EndDate** | **System.DateTime**|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="Invoke-DappsCurveProposalsVoteHistoricalGet"></a>
-# **Invoke-DappsCurveProposalsVoteHistoricalGet**
-> void Invoke-DappsCurveProposalsVoteHistoricalGet<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
-
-
-
-### Example
-```powershell
-$StartBlock = 789 # Int64 |  (optional)
-$EndBlock = 789 # Int64 |  (optional)
-$StartDate = (Get-Date) # System.DateTime |  (optional)
-$EndDate = (Get-Date) # System.DateTime |  (optional)
-
-try {
-    $Result = Invoke-DappsCurveProposalsVoteHistoricalGet -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
-} catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsCurveProposalsVoteHistoricalGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
-    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **StartBlock** | **Int64**|  | [optional] 
- **EndBlock** | **Int64**|  | [optional] 
- **StartDate** | **System.DateTime**|  | [optional] 
- **EndDate** | **System.DateTime**|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="Invoke-DappsCurveRemoveLiquidityEventHistoricalGet"></a>
-# **Invoke-DappsCurveRemoveLiquidityEventHistoricalGet**
-> void Invoke-DappsCurveRemoveLiquidityEventHistoricalGet<br>
+<a name="Invoke-CurveGetPoolsHistorical"></a>
+# **Invoke-CurveGetPoolsHistorical**
+> CurvePoolDTO[] Invoke-CurveGetPoolsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
 
+GetPools (historical) 🔥
 
+Gets pools.
 
 ### Example
 ```powershell
@@ -1220,10 +1187,11 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $PoolId = "MyPoolId" # String |  (optional)
 
+# GetPools (historical) 🔥
 try {
-    $Result = Invoke-DappsCurveRemoveLiquidityEventHistoricalGet -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
+    $Result = Invoke-CurveGetPoolsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsCurveRemoveLiquidityEventHistoricalGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-CurveGetPoolsHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -1240,7 +1208,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**CurvePoolDTO[]**](CurvePoolDTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -1249,20 +1217,126 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DappsCurveRemoveLiquidityOneEventHistoricalGet"></a>
-# **Invoke-DappsCurveRemoveLiquidityOneEventHistoricalGet**
-> void Invoke-DappsCurveRemoveLiquidityOneEventHistoricalGet<br>
+<a name="Invoke-CurveGetProposalsVotesHistorical"></a>
+# **Invoke-CurveGetProposalsVotesHistorical**
+> CurveProposalVoteDTO[] Invoke-CurveGetProposalsVotesHistorical<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
+
+GetProposalsVotes (historical)
+
+Gets proposals votes.
+
+### Example
+```powershell
+$StartBlock = 789 # Int64 |  (optional)
+$EndBlock = 789 # Int64 |  (optional)
+$StartDate = (Get-Date) # System.DateTime |  (optional)
+$EndDate = (Get-Date) # System.DateTime |  (optional)
+
+# GetProposalsVotes (historical)
+try {
+    $Result = Invoke-CurveGetProposalsVotesHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-CurveGetProposalsVotesHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **StartBlock** | **Int64**|  | [optional] 
+ **EndBlock** | **Int64**|  | [optional] 
+ **StartDate** | **System.DateTime**|  | [optional] 
+ **EndDate** | **System.DateTime**|  | [optional] 
+
+### Return type
+
+[**CurveProposalVoteDTO[]**](CurveProposalVoteDTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Invoke-CurveGetProposalsHistorical"></a>
+# **Invoke-CurveGetProposalsHistorical**
+> CurveProposalDTO[] Invoke-CurveGetProposalsHistorical<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
+
+GetProposals (historical)
+
+Gets proposals.
+
+### Example
+```powershell
+$StartBlock = 789 # Int64 |  (optional)
+$EndBlock = 789 # Int64 |  (optional)
+$StartDate = (Get-Date) # System.DateTime |  (optional)
+$EndDate = (Get-Date) # System.DateTime |  (optional)
+
+# GetProposals (historical)
+try {
+    $Result = Invoke-CurveGetProposalsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-CurveGetProposalsHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **StartBlock** | **Int64**|  | [optional] 
+ **EndBlock** | **Int64**|  | [optional] 
+ **StartDate** | **System.DateTime**|  | [optional] 
+ **EndDate** | **System.DateTime**|  | [optional] 
+
+### Return type
+
+[**CurveProposalDTO[]**](CurveProposalDTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Invoke-CurveGetRemoveLiquidityEventsHistorical"></a>
+# **Invoke-CurveGetRemoveLiquidityEventsHistorical**
+> CurveRemoveLiquidityEventDTO[] Invoke-CurveGetRemoveLiquidityEventsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
 
+GetRemoveLiquidityEvents (historical)
 
+Gets remove liquidity events.
 
 ### Example
 ```powershell
@@ -1272,10 +1346,11 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $PoolId = "MyPoolId" # String |  (optional)
 
+# GetRemoveLiquidityEvents (historical)
 try {
-    $Result = Invoke-DappsCurveRemoveLiquidityOneEventHistoricalGet -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
+    $Result = Invoke-CurveGetRemoveLiquidityEventsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsCurveRemoveLiquidityOneEventHistoricalGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-CurveGetRemoveLiquidityEventsHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -1292,7 +1367,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**CurveRemoveLiquidityEventDTO[]**](CurveRemoveLiquidityEventDTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -1301,20 +1376,22 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DappsCurveSwapsHistoricalGet"></a>
-# **Invoke-DappsCurveSwapsHistoricalGet**
-> void Invoke-DappsCurveSwapsHistoricalGet<br>
+<a name="Invoke-CurveGetRemoveLiquidityOneEventsHistorical"></a>
+# **Invoke-CurveGetRemoveLiquidityOneEventsHistorical**
+> CurveRemoveLiquidityOneEventDTO[] Invoke-CurveGetRemoveLiquidityOneEventsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
 
+GetRemoveLiquidityOneEvents (historical)
 
+Gets remove liquidity one events.
 
 ### Example
 ```powershell
@@ -1324,10 +1401,11 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $PoolId = "MyPoolId" # String |  (optional)
 
+# GetRemoveLiquidityOneEvents (historical)
 try {
-    $Result = Invoke-DappsCurveSwapsHistoricalGet -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
+    $Result = Invoke-CurveGetRemoveLiquidityOneEventsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsCurveSwapsHistoricalGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-CurveGetRemoveLiquidityOneEventsHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -1344,7 +1422,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**CurveRemoveLiquidityOneEventDTO[]**](CurveRemoveLiquidityOneEventDTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -1353,19 +1431,21 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DappsCurveSystemStateHistoricalGet"></a>
-# **Invoke-DappsCurveSystemStateHistoricalGet**
-> void Invoke-DappsCurveSystemStateHistoricalGet<br>
+<a name="Invoke-CurveGetSystemStatesHistorical"></a>
+# **Invoke-CurveGetSystemStatesHistorical**
+> CurveSystemStateDTO[] Invoke-CurveGetSystemStatesHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 
+GetSystemStates (historical)
 
+Gets system states.
 
 ### Example
 ```powershell
@@ -1374,10 +1454,11 @@ $EndBlock = 789 # Int64 |  (optional)
 $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 
+# GetSystemStates (historical)
 try {
-    $Result = Invoke-DappsCurveSystemStateHistoricalGet -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
+    $Result = Invoke-CurveGetSystemStatesHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsCurveSystemStateHistoricalGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-CurveGetSystemStatesHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -1393,7 +1474,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**CurveSystemStateDTO[]**](CurveSystemStateDTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -1402,20 +1483,22 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DappsCurveTokensHistoricalGet"></a>
-# **Invoke-DappsCurveTokensHistoricalGet**
-> void Invoke-DappsCurveTokensHistoricalGet<br>
+<a name="Invoke-CurveGetTokensHistorical"></a>
+# **Invoke-CurveGetTokensHistorical**
+> CurveTokenDTO[] Invoke-CurveGetTokensHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-TokenId] <String><br>
 
+GetTokens (historical) 🔥
 
+Gets tokens.
 
 ### Example
 ```powershell
@@ -1425,10 +1508,11 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $TokenId = "MyTokenId" # String |  (optional)
 
+# GetTokens (historical) 🔥
 try {
-    $Result = Invoke-DappsCurveTokensHistoricalGet -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -TokenId $TokenId
+    $Result = Invoke-CurveGetTokensHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -TokenId $TokenId
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsCurveTokensHistoricalGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-CurveGetTokensHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -1445,7 +1529,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**CurveTokenDTO[]**](CurveTokenDTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -1454,20 +1538,22 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DappsCurveTransferOwnershipEventHistoricalGet"></a>
-# **Invoke-DappsCurveTransferOwnershipEventHistoricalGet**
-> void Invoke-DappsCurveTransferOwnershipEventHistoricalGet<br>
+<a name="Invoke-CurveGetTransferOwnershipEventsHistorical"></a>
+# **Invoke-CurveGetTransferOwnershipEventsHistorical**
+> CurveTransferOwnershipEventDTO[] Invoke-CurveGetTransferOwnershipEventsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
 
+GetTransferOwnershipEvents (historical)
 
+Gets transfer ownership events.
 
 ### Example
 ```powershell
@@ -1477,10 +1563,11 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $PoolId = "MyPoolId" # String |  (optional)
 
+# GetTransferOwnershipEvents (historical)
 try {
-    $Result = Invoke-DappsCurveTransferOwnershipEventHistoricalGet -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
+    $Result = Invoke-CurveGetTransferOwnershipEventsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsCurveTransferOwnershipEventHistoricalGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-CurveGetTransferOwnershipEventsHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -1497,7 +1584,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**CurveTransferOwnershipEventDTO[]**](CurveTransferOwnershipEventDTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -1506,20 +1593,22 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DappsCurveUnderlyingCoinHistoricalGet"></a>
-# **Invoke-DappsCurveUnderlyingCoinHistoricalGet**
-> void Invoke-DappsCurveUnderlyingCoinHistoricalGet<br>
+<a name="Invoke-CurveGetUnderlyingCoinsHistorical"></a>
+# **Invoke-CurveGetUnderlyingCoinsHistorical**
+> CurveUnderlyingCoinDTO[] Invoke-CurveGetUnderlyingCoinsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
 
+GetUnderlyingCoins (historical)
 
+Gets underlying coins.
 
 ### Example
 ```powershell
@@ -1529,10 +1618,11 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $PoolId = "MyPoolId" # String |  (optional)
 
+# GetUnderlyingCoins (historical)
 try {
-    $Result = Invoke-DappsCurveUnderlyingCoinHistoricalGet -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
+    $Result = Invoke-CurveGetUnderlyingCoinsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsCurveUnderlyingCoinHistoricalGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-CurveGetUnderlyingCoinsHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -1549,7 +1639,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**CurveUnderlyingCoinDTO[]**](CurveUnderlyingCoinDTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -1558,19 +1648,21 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DappsCurveVotingAppHistoricalGet"></a>
-# **Invoke-DappsCurveVotingAppHistoricalGet**
-> void Invoke-DappsCurveVotingAppHistoricalGet<br>
+<a name="Invoke-CurveGetVotingAppsHistorical"></a>
+# **Invoke-CurveGetVotingAppsHistorical**
+> CurveVotingAppDTO[] Invoke-CurveGetVotingAppsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 
+GetVotingApps (historical)
 
+Gets voting apps.
 
 ### Example
 ```powershell
@@ -1579,10 +1671,11 @@ $EndBlock = 789 # Int64 |  (optional)
 $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 
+# GetVotingApps (historical)
 try {
-    $Result = Invoke-DappsCurveVotingAppHistoricalGet -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
+    $Result = Invoke-CurveGetVotingAppsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsCurveVotingAppHistoricalGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-CurveGetVotingAppsHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -1598,7 +1691,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**CurveVotingAppDTO[]**](CurveVotingAppDTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -1607,20 +1700,22 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DappsCurveWeeklyVolumeHistoricalGet"></a>
-# **Invoke-DappsCurveWeeklyVolumeHistoricalGet**
-> void Invoke-DappsCurveWeeklyVolumeHistoricalGet<br>
+<a name="Invoke-CurveGetWeeklyVolumesHistorical"></a>
+# **Invoke-CurveGetWeeklyVolumesHistorical**
+> CurveWeeklyVolumeDTO[] Invoke-CurveGetWeeklyVolumesHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
 
+GetWeeklyVolumes (historical)
 
+Gets weekly volumes.
 
 ### Example
 ```powershell
@@ -1630,10 +1725,11 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $PoolId = "MyPoolId" # String |  (optional)
 
+# GetWeeklyVolumes (historical)
 try {
-    $Result = Invoke-DappsCurveWeeklyVolumeHistoricalGet -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
+    $Result = Invoke-CurveGetWeeklyVolumesHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsCurveWeeklyVolumeHistoricalGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-CurveGetWeeklyVolumesHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -1650,7 +1746,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**CurveWeeklyVolumeDTO[]**](CurveWeeklyVolumeDTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -1659,7 +1755,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

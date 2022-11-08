@@ -21,7 +21,7 @@ from .. import ApiTestMixin
 class TestDappsUniswapv3TicksCurrent(ApiTestMixin, unittest.TestCase):
     """
     DappsUniswapv3TicksCurrent unit test stubs
-        GetTicks  # noqa: E501
+        GetTicks (current)  # noqa: E501
     """
     _configuration = configuration.Configuration()
 

@@ -14,6 +14,8 @@
 package org.openapitools.client.api;
 
 import org.openapitools.client.ApiException;
+import org.openapitools.client.model.CurveExchangeDTO;
+import org.openapitools.client.model.DexTradeDTO;
 import java.time.OffsetDateTime;
 import org.openapitools.client.model.SushiswapBundleDTO;
 import org.openapitools.client.model.SushiswapBurnDTO;
@@ -46,6 +48,32 @@ import java.util.Map;
 public class SushiswapApiTest {
 
     private final SushiswapApi api = new SushiswapApi();
+
+    /**
+     * GetExchanges (current) 🔥
+     *
+     * Gets exchanges.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void curveGetExchangesCurrentTest() throws ApiException {
+        List<CurveExchangeDTO> response = api.curveGetExchangesCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * GetTrades (current) 🔥
+     *
+     * Gets trades.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void dexGetTradesCurrentTest() throws ApiException {
+        List<DexTradeDTO> response = api.dexGetTradesCurrent();
+        // TODO: test validations
+    }
 
     /**
      * GetBundles (historical)
@@ -188,7 +216,7 @@ public class SushiswapApiTest {
     }
 
     /**
-     * GetPools (current)
+     * GetPools (current) 🔥
      *
      * Gets pools.
      *
@@ -219,7 +247,7 @@ public class SushiswapApiTest {
     }
 
     /**
-     * GetPools (historical)
+     * GetPools (historical) 🔥
      *
      * Gets list of pools for given filters.
      *
@@ -255,7 +283,7 @@ public class SushiswapApiTest {
     }
 
     /**
-     * GetSwaps (current)
+     * GetSwaps (current) 🔥
      *
      * Gets swaps.
      *
@@ -268,7 +296,7 @@ public class SushiswapApiTest {
     }
 
     /**
-     * GetSwaps (historical)
+     * GetSwaps (historical) 🔥
      *
      * Gets list of swaps for given filters.
      *
@@ -286,7 +314,7 @@ public class SushiswapApiTest {
     }
 
     /**
-     * GetTokens (current)
+     * GetTokens (current) 🔥
      *
      * Gets tokens.
      *
@@ -317,7 +345,7 @@ public class SushiswapApiTest {
     }
 
     /**
-     * GetTokens (historical)
+     * GetTokens (historical) 🔥
      *
      * Gets list of tokens for given filters.
      *

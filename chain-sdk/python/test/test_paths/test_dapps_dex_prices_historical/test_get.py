@@ -21,6 +21,7 @@ from .. import ApiTestMixin
 class TestDappsDexPricesHistorical(ApiTestMixin, unittest.TestCase):
     """
     DappsDexPricesHistorical unit test stubs
+        GetPrices (historical)  # noqa: E501
     """
     _configuration = configuration.Configuration()
 
@@ -32,7 +33,12 @@ class TestDappsDexPricesHistorical(ApiTestMixin, unittest.TestCase):
         pass
 
     response_status = 200
-    response_body = ''
+
+
+
+
+
+
 
 
 if __name__ == '__main__':

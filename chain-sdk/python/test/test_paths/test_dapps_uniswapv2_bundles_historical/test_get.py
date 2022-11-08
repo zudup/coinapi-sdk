@@ -21,6 +21,7 @@ from .. import ApiTestMixin
 class TestDappsUniswapv2BundlesHistorical(ApiTestMixin, unittest.TestCase):
     """
     DappsUniswapv2BundlesHistorical unit test stubs
+        GetBundles (historical)  # noqa: E501
     """
     _configuration = configuration.Configuration()
 
@@ -32,7 +33,12 @@ class TestDappsUniswapv2BundlesHistorical(ApiTestMixin, unittest.TestCase):
         pass
 
     response_status = 200
-    response_body = ''
+
+
+
+
+
+
 
 
 if __name__ == '__main__':

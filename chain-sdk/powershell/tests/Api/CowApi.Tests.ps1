@@ -7,41 +7,41 @@
 #
 
 Describe -tag 'PSOpenAPITools' -name 'CowApi' {
-    Context 'Invoke-DappsCowOrdersHistoricalGet' {
-        It 'Test Invoke-DappsCowOrdersHistoricalGet' {
-            #$TestResult = Invoke-DappsCowOrdersHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
+    Context 'Invoke-CowGetOrdersHistorical' {
+        It 'Test Invoke-CowGetOrdersHistorical' {
+            #$TestResult = Invoke-CowGetOrdersHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsCowSettlementHistoricalGet' {
-        It 'Test Invoke-DappsCowSettlementHistoricalGet' {
-            #$TestResult = Invoke-DappsCowSettlementHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
+    Context 'Invoke-CowGetSettlementsHistorical' {
+        It 'Test Invoke-CowGetSettlementsHistorical' {
+            #$TestResult = Invoke-CowGetSettlementsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsCowTokensHistoricalGet' {
-        It 'Test Invoke-DappsCowTokensHistoricalGet' {
-            #$TestResult = Invoke-DappsCowTokensHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -TokenId "TEST_VALUE"
+    Context 'Invoke-CowGetTokensHistorical' {
+        It 'Test Invoke-CowGetTokensHistorical' {
+            #$TestResult = Invoke-CowGetTokensHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -TokenId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsCowTradesHistoricalGet' {
-        It 'Test Invoke-DappsCowTradesHistoricalGet' {
-            #$TestResult = Invoke-DappsCowTradesHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
+    Context 'Invoke-CowGetTradesHistorical' {
+        It 'Test Invoke-CowGetTradesHistorical' {
+            #$TestResult = Invoke-CowGetTradesHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsCowUsersHistoricalGet' {
-        It 'Test Invoke-DappsCowUsersHistoricalGet' {
-            #$TestResult = Invoke-DappsCowUsersHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
+    Context 'Invoke-CowGetUsersHistorical' {
+        It 'Test Invoke-CowGetUsersHistorical' {
+            #$TestResult = Invoke-CowGetUsersHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }

@@ -95,220 +95,225 @@ declare -a result_color_table=( "$WHITE" "$WHITE" "$GREEN" "$YELLOW" "$WHITE" "$
 # 0 - optional
 # 1 - required
 declare -A operation_parameters_minimum_occurrences
-operation_parameters_minimum_occurrences["dappsCowOrdersHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsCowOrdersHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsCowOrdersHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsCowOrdersHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsCowSettlementHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsCowSettlementHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsCowSettlementHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsCowSettlementHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsCowTokensHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsCowTokensHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsCowTokensHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsCowTokensHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsCowTokensHistoricalGet:::tokenId"]=0
-operation_parameters_minimum_occurrences["dappsCowTradesHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsCowTradesHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsCowTradesHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsCowTradesHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsCowUsersHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsCowUsersHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsCowUsersHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsCowUsersHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsCurveAccountsHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurveAccountsHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurveAccountsHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsCurveAccountsHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsCurveAddLiquidityEventHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurveAddLiquidityEventHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurveAddLiquidityEventHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsCurveAddLiquidityEventHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsCurveAddLiquidityEventHistoricalGet:::poolId"]=0
-operation_parameters_minimum_occurrences["dappsCurveAdminFeeChangeLogHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurveAdminFeeChangeLogHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurveAdminFeeChangeLogHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsCurveAdminFeeChangeLogHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsCurveAdminFeeChangeLogHistoricalGet:::poolId"]=0
-operation_parameters_minimum_occurrences["dappsCurveAmplificationCoeffChangeLogHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurveAmplificationCoeffChangeLogHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurveAmplificationCoeffChangeLogHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsCurveAmplificationCoeffChangeLogHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsCurveAmplificationCoeffChangeLogHistoricalGet:::poolId"]=0
-operation_parameters_minimum_occurrences["dappsCurveCoinsHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurveCoinsHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurveCoinsHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsCurveCoinsHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsCurveCoinsHistoricalGet:::poolId"]=0
-operation_parameters_minimum_occurrences["dappsCurveContractsHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurveContractsHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurveContractsHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsCurveContractsHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsCurveContractsHistoricalGet:::poolId"]=0
-operation_parameters_minimum_occurrences["dappsCurveContractsVersionHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurveContractsVersionHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurveContractsVersionHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsCurveContractsVersionHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsCurveContractsVersionHistoricalGet:::poolId"]=0
-operation_parameters_minimum_occurrences["dappsCurveDailyVolumeHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurveDailyVolumeHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurveDailyVolumeHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsCurveDailyVolumeHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsCurveDailyVolumeHistoricalGet:::poolId"]=0
-operation_parameters_minimum_occurrences["dappsCurveFeeChangeLogHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurveFeeChangeLogHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurveFeeChangeLogHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsCurveFeeChangeLogHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsCurveFeeChangeLogHistoricalGet:::poolId"]=0
-operation_parameters_minimum_occurrences["dappsCurveGaugeDepositHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurveGaugeDepositHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurveGaugeDepositHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsCurveGaugeDepositHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsCurveGaugeHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurveGaugeHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurveGaugeHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsCurveGaugeHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsCurveGaugeHistoricalGet:::poolId"]=0
-operation_parameters_minimum_occurrences["dappsCurveGaugeLiquidityHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurveGaugeLiquidityHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurveGaugeLiquidityHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsCurveGaugeLiquidityHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsCurveGaugeTotalWeightHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurveGaugeTotalWeightHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurveGaugeTotalWeightHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsCurveGaugeTotalWeightHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsCurveGaugeTypeHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurveGaugeTypeHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurveGaugeTypeHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsCurveGaugeTypeHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsCurveGaugeTypeWeightHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurveGaugeTypeWeightHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurveGaugeTypeWeightHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsCurveGaugeTypeWeightHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsCurveGaugeWeightHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurveGaugeWeightHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurveGaugeWeightHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsCurveGaugeWeightHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsCurveGaugeWeightVoteHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurveGaugeWeightVoteHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurveGaugeWeightVoteHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsCurveGaugeWeightVoteHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsCurveGaugeWithdrawHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurveGaugeWithdrawHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurveGaugeWithdrawHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsCurveGaugeWithdrawHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsCurveHourlyVolumeHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurveHourlyVolumeHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurveHourlyVolumeHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsCurveHourlyVolumeHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsCurveHourlyVolumeHistoricalGet:::poolId"]=0
-operation_parameters_minimum_occurrences["dappsCurveLpTokenHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurveLpTokenHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurveLpTokenHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsCurveLpTokenHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsCurveLpTokenHistoricalGet:::poolId"]=0
-operation_parameters_minimum_occurrences["dappsCurvePoolsHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurvePoolsHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurvePoolsHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsCurvePoolsHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsCurvePoolsHistoricalGet:::poolId"]=0
-operation_parameters_minimum_occurrences["dappsCurveProposalsHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurveProposalsHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurveProposalsHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsCurveProposalsHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsCurveProposalsVoteHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurveProposalsVoteHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurveProposalsVoteHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsCurveProposalsVoteHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsCurveRemoveLiquidityEventHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurveRemoveLiquidityEventHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurveRemoveLiquidityEventHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsCurveRemoveLiquidityEventHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsCurveRemoveLiquidityEventHistoricalGet:::poolId"]=0
-operation_parameters_minimum_occurrences["dappsCurveRemoveLiquidityOneEventHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurveRemoveLiquidityOneEventHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurveRemoveLiquidityOneEventHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsCurveRemoveLiquidityOneEventHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsCurveRemoveLiquidityOneEventHistoricalGet:::poolId"]=0
-operation_parameters_minimum_occurrences["dappsCurveSwapsHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurveSwapsHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurveSwapsHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsCurveSwapsHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsCurveSwapsHistoricalGet:::poolId"]=0
-operation_parameters_minimum_occurrences["dappsCurveSystemStateHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurveSystemStateHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurveSystemStateHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsCurveSystemStateHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsCurveTokensHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurveTokensHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurveTokensHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsCurveTokensHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsCurveTokensHistoricalGet:::tokenId"]=0
-operation_parameters_minimum_occurrences["dappsCurveTransferOwnershipEventHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurveTransferOwnershipEventHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurveTransferOwnershipEventHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsCurveTransferOwnershipEventHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsCurveTransferOwnershipEventHistoricalGet:::poolId"]=0
-operation_parameters_minimum_occurrences["dappsCurveUnderlyingCoinHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurveUnderlyingCoinHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurveUnderlyingCoinHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsCurveUnderlyingCoinHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsCurveUnderlyingCoinHistoricalGet:::poolId"]=0
-operation_parameters_minimum_occurrences["dappsCurveVotingAppHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurveVotingAppHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurveVotingAppHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsCurveVotingAppHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsCurveWeeklyVolumeHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurveWeeklyVolumeHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsCurveWeeklyVolumeHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsCurveWeeklyVolumeHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsCurveWeeklyVolumeHistoricalGet:::poolId"]=0
-operation_parameters_minimum_occurrences["dappsDexBatchHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsDexBatchHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsDexBatchHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsDexBatchHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsDexOrdersHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsDexOrdersHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsDexOrdersHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsDexOrdersHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsDexOrdersHistoricalGet:::tokenId"]=0
-operation_parameters_minimum_occurrences["dappsDexPricesHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsDexPricesHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsDexPricesHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsDexPricesHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsDexPricesHistoricalGet:::tokenId"]=0
-operation_parameters_minimum_occurrences["dappsDexSolutionHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsDexSolutionHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsDexSolutionHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsDexSolutionHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsDexSolutionHistoricalGet:::tokenId"]=0
-operation_parameters_minimum_occurrences["dappsDexStatsHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsDexStatsHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsDexStatsHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsDexStatsHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsDexTokensHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsDexTokensHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsDexTokensHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsDexTokensHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsDexTokensHistoricalGet:::tokenId"]=0
-operation_parameters_minimum_occurrences["dappsDexTradesHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsDexTradesHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsDexTradesHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsDexTradesHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsDexUsersHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsDexUsersHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsDexUsersHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsDexUsersHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsDexWithdrawHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsDexWithdrawHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsDexWithdrawHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsDexWithdrawHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsDexWithdrawHistoricalGet:::tokenId"]=0
-operation_parameters_minimum_occurrences["dappsDexWithdrawRequestHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsDexWithdrawRequestHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsDexWithdrawRequestHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsDexWithdrawRequestHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsDexWithdrawRequestHistoricalGet:::tokenId"]=0
+operation_parameters_minimum_occurrences["cowGetOrdersHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["cowGetOrdersHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["cowGetOrdersHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["cowGetOrdersHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["cowGetSettlementsHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["cowGetSettlementsHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["cowGetSettlementsHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["cowGetSettlementsHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["cowGetTokensHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["cowGetTokensHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["cowGetTokensHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["cowGetTokensHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["cowGetTokensHistorical:::tokenId"]=0
+operation_parameters_minimum_occurrences["cowGetTradesHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["cowGetTradesHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["cowGetTradesHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["cowGetTradesHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["cowGetUsersHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["cowGetUsersHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["cowGetUsersHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["cowGetUsersHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["curveGetAccountsHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["curveGetAccountsHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["curveGetAccountsHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["curveGetAccountsHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["curveGetAddLiquidityEventsHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["curveGetAddLiquidityEventsHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["curveGetAddLiquidityEventsHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["curveGetAddLiquidityEventsHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["curveGetAddLiquidityEventsHistorical:::poolId"]=0
+operation_parameters_minimum_occurrences["curveGetAdminFeeChangeLogsHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["curveGetAdminFeeChangeLogsHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["curveGetAdminFeeChangeLogsHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["curveGetAdminFeeChangeLogsHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["curveGetAdminFeeChangeLogsHistorical:::poolId"]=0
+operation_parameters_minimum_occurrences["curveGetAmplificationCoeffChangeLogsHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["curveGetAmplificationCoeffChangeLogsHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["curveGetAmplificationCoeffChangeLogsHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["curveGetAmplificationCoeffChangeLogsHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["curveGetAmplificationCoeffChangeLogsHistorical:::poolId"]=0
+operation_parameters_minimum_occurrences["curveGetCoinsHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["curveGetCoinsHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["curveGetCoinsHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["curveGetCoinsHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["curveGetCoinsHistorical:::poolId"]=0
+operation_parameters_minimum_occurrences["curveGetContractsHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["curveGetContractsHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["curveGetContractsHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["curveGetContractsHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["curveGetContractsHistorical:::poolId"]=0
+operation_parameters_minimum_occurrences["curveGetContractsVersionsHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["curveGetContractsVersionsHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["curveGetContractsVersionsHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["curveGetContractsVersionsHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["curveGetContractsVersionsHistorical:::poolId"]=0
+operation_parameters_minimum_occurrences["curveGetDailyVolumesHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["curveGetDailyVolumesHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["curveGetDailyVolumesHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["curveGetDailyVolumesHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["curveGetDailyVolumesHistorical:::poolId"]=0
+operation_parameters_minimum_occurrences["curveGetExchangesHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["curveGetExchangesHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["curveGetExchangesHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["curveGetExchangesHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["curveGetExchangesHistorical:::poolId"]=0
+operation_parameters_minimum_occurrences["curveGetFeeChangeLogsHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["curveGetFeeChangeLogsHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["curveGetFeeChangeLogsHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["curveGetFeeChangeLogsHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["curveGetFeeChangeLogsHistorical:::poolId"]=0
+operation_parameters_minimum_occurrences["curveGetGaugesDepositsHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["curveGetGaugesDepositsHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["curveGetGaugesDepositsHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["curveGetGaugesDepositsHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["curveGetGaugesHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["curveGetGaugesHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["curveGetGaugesHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["curveGetGaugesHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["curveGetGaugesHistorical:::poolId"]=0
+operation_parameters_minimum_occurrences["curveGetGaugesLiquidityHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["curveGetGaugesLiquidityHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["curveGetGaugesLiquidityHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["curveGetGaugesLiquidityHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["curveGetGaugesTotalWeightsHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["curveGetGaugesTotalWeightsHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["curveGetGaugesTotalWeightsHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["curveGetGaugesTotalWeightsHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["curveGetGaugesTypesHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["curveGetGaugesTypesHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["curveGetGaugesTypesHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["curveGetGaugesTypesHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["curveGetGaugesTypesWeightsHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["curveGetGaugesTypesWeightsHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["curveGetGaugesTypesWeightsHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["curveGetGaugesTypesWeightsHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["curveGetGaugesWeightsHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["curveGetGaugesWeightsHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["curveGetGaugesWeightsHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["curveGetGaugesWeightsHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["curveGetGaugesWeightsVotesHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["curveGetGaugesWeightsVotesHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["curveGetGaugesWeightsVotesHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["curveGetGaugesWeightsVotesHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["curveGetGaugesWithdrawHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["curveGetGaugesWithdrawHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["curveGetGaugesWithdrawHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["curveGetGaugesWithdrawHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["curveGetHourlyVolumesHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["curveGetHourlyVolumesHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["curveGetHourlyVolumesHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["curveGetHourlyVolumesHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["curveGetHourlyVolumesHistorical:::poolId"]=0
+operation_parameters_minimum_occurrences["curveGetLpTokensHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["curveGetLpTokensHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["curveGetLpTokensHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["curveGetLpTokensHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["curveGetLpTokensHistorical:::poolId"]=0
+operation_parameters_minimum_occurrences["curveGetPoolsHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["curveGetPoolsHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["curveGetPoolsHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["curveGetPoolsHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["curveGetPoolsHistorical:::poolId"]=0
+operation_parameters_minimum_occurrences["curveGetProposalsHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["curveGetProposalsHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["curveGetProposalsHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["curveGetProposalsHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["curveGetProposalsVotesHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["curveGetProposalsVotesHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["curveGetProposalsVotesHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["curveGetProposalsVotesHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["curveGetRemoveLiquidityEventsHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["curveGetRemoveLiquidityEventsHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["curveGetRemoveLiquidityEventsHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["curveGetRemoveLiquidityEventsHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["curveGetRemoveLiquidityEventsHistorical:::poolId"]=0
+operation_parameters_minimum_occurrences["curveGetRemoveLiquidityOneEventsHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["curveGetRemoveLiquidityOneEventsHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["curveGetRemoveLiquidityOneEventsHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["curveGetRemoveLiquidityOneEventsHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["curveGetRemoveLiquidityOneEventsHistorical:::poolId"]=0
+operation_parameters_minimum_occurrences["curveGetSystemStatesHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["curveGetSystemStatesHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["curveGetSystemStatesHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["curveGetSystemStatesHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["curveGetTokensHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["curveGetTokensHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["curveGetTokensHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["curveGetTokensHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["curveGetTokensHistorical:::tokenId"]=0
+operation_parameters_minimum_occurrences["curveGetTransferOwnershipEventsHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["curveGetTransferOwnershipEventsHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["curveGetTransferOwnershipEventsHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["curveGetTransferOwnershipEventsHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["curveGetTransferOwnershipEventsHistorical:::poolId"]=0
+operation_parameters_minimum_occurrences["curveGetUnderlyingCoinsHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["curveGetUnderlyingCoinsHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["curveGetUnderlyingCoinsHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["curveGetUnderlyingCoinsHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["curveGetUnderlyingCoinsHistorical:::poolId"]=0
+operation_parameters_minimum_occurrences["curveGetVotingAppsHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["curveGetVotingAppsHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["curveGetVotingAppsHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["curveGetVotingAppsHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["curveGetWeeklyVolumesHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["curveGetWeeklyVolumesHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["curveGetWeeklyVolumesHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["curveGetWeeklyVolumesHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["curveGetWeeklyVolumesHistorical:::poolId"]=0
+operation_parameters_minimum_occurrences["dexGetBatchesHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["dexGetBatchesHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["dexGetBatchesHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["dexGetBatchesHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["dexGetDepositsHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["dexGetDepositsHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["dexGetDepositsHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["dexGetDepositsHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["dexGetDepositsHistorical:::tokenId"]=0
+operation_parameters_minimum_occurrences["dexGetOrdersHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["dexGetOrdersHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["dexGetOrdersHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["dexGetOrdersHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["dexGetOrdersHistorical:::tokenId"]=0
+operation_parameters_minimum_occurrences["dexGetPricesHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["dexGetPricesHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["dexGetPricesHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["dexGetPricesHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["dexGetPricesHistorical:::tokenId"]=0
+operation_parameters_minimum_occurrences["dexGetSolutionsHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["dexGetSolutionsHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["dexGetSolutionsHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["dexGetSolutionsHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["dexGetSolutionsHistorical:::tokenId"]=0
+operation_parameters_minimum_occurrences["dexGetStatsHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["dexGetStatsHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["dexGetStatsHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["dexGetStatsHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["dexGetTokensHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["dexGetTokensHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["dexGetTokensHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["dexGetTokensHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["dexGetTokensHistorical:::tokenId"]=0
+operation_parameters_minimum_occurrences["dexGetTradesHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["dexGetTradesHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["dexGetTradesHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["dexGetTradesHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["dexGetUsersHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["dexGetUsersHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["dexGetUsersHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["dexGetUsersHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["dexGetWithdrawsHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["dexGetWithdrawsHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["dexGetWithdrawsHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["dexGetWithdrawsHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["dexGetWithdrawsHistorical:::tokenId"]=0
+operation_parameters_minimum_occurrences["dexGetWithdrawsRequestsHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["dexGetWithdrawsRequestsHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["dexGetWithdrawsRequestsHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["dexGetWithdrawsRequestsHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["dexGetWithdrawsRequestsHistorical:::tokenId"]=0
 operation_parameters_minimum_occurrences["sushiswapGetBundlesHistorical:::startBlock"]=0
 operation_parameters_minimum_occurrences["sushiswapGetBundlesHistorical:::endBlock"]=0
 operation_parameters_minimum_occurrences["sushiswapGetBundlesHistorical:::startDate"]=0
@@ -383,172 +388,171 @@ operation_parameters_minimum_occurrences["sushiswapGetUsersHistorical:::startBlo
 operation_parameters_minimum_occurrences["sushiswapGetUsersHistorical:::endBlock"]=0
 operation_parameters_minimum_occurrences["sushiswapGetUsersHistorical:::startDate"]=0
 operation_parameters_minimum_occurrences["sushiswapGetUsersHistorical:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2BundlesHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2BundlesHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2BundlesHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2BundlesHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2BurnsHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2BurnsHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2BurnsHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2BurnsHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2BurnsHistoricalGet:::poolId"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2DayDataHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2DayDataHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2DayDataHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2DayDataHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2FactoryHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2FactoryHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2FactoryHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2FactoryHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2LiquidityPositionHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2LiquidityPositionHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2LiquidityPositionHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2LiquidityPositionHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2LiquidityPositionHistoricalGet:::poolId"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet:::poolId"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2MintsHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2MintsHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2MintsHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2MintsHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2MintsHistoricalGet:::poolId"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2PoolDayDataHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2PoolDayDataHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2PoolDayDataHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2PoolDayDataHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2PoolDayDataHistoricalGet:::poolId"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2PoolHourDataHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2PoolHourDataHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2PoolHourDataHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2PoolHourDataHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2PoolHourDataHistoricalGet:::poolId"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2PoolsCurrentGet:::filter_pool_id"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2PoolsHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2PoolsHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2PoolsHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2PoolsHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2PoolsHistoricalGet:::poolId"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2SwapsHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2SwapsHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2SwapsHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2SwapsHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2SwapsHistoricalGet:::poolId"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2TokenDayDataHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2TokenDayDataHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2TokenDayDataHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2TokenDayDataHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2TokenDayDataHistoricalGet:::tokenId"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2TokensHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2TokensHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2TokensHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2TokensHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2TokensHistoricalGet:::tokenId"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2TransactionsHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2TransactionsHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2TransactionsHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2TransactionsHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2UsersHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2UsersHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2UsersHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv2UsersHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3BundlesHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3BundlesHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3BundlesHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3BundlesHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3BurnsCurrentGet:::filter_pool_id"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3BurnsHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3BurnsHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3BurnsHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3BurnsHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3BurnsHistoricalGet:::poolId"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3DayDataHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3DayDataHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3DayDataHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3DayDataHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3FactoryCurrentGet:::chain_id"]=1
-operation_parameters_minimum_occurrences["dappsUniswapv3FactoryHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3FactoryHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3FactoryHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3FactoryHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3MintsCurrentGet:::filter_pool_id"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3MintsHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3MintsHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3MintsHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3MintsHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3MintsHistoricalGet:::poolId"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3PoolDayDataHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3PoolDayDataHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3PoolDayDataHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3PoolDayDataHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3PoolDayDataHistoricalGet:::poolId"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3PoolHourDataHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3PoolHourDataHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3PoolHourDataHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3PoolHourDataHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3PoolHourDataHistoricalGet:::poolId"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3PoolsCurrentGet:::filter_pool_id"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3PoolsDayDataCurrentGet:::filter_pool_id"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3PoolsHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3PoolsHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3PoolsHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3PoolsHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3PoolsHistoricalGet:::poolId"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3PoolsHourDataCurrentGet:::filter_pool_id"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3PositionSnapshotHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3PositionSnapshotHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3PositionSnapshotHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3PositionSnapshotHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3PositionSnapshotHistoricalGet:::poolId"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3PositionSnapshotsCurrentGet:::filter_pool_id"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3PositionsCurrentGet:::filter_pool_id"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3PositionsHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3PositionsHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3PositionsHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3PositionsHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3PositionsHistoricalGet:::poolId"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3SwapsCurrentGet:::filter_pool_id"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3SwapsHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3SwapsHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3SwapsHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3SwapsHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3SwapsHistoricalGet:::poolId"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3TickDayDataHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3TickDayDataHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3TickDayDataHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3TickDayDataHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3TickDayDataHistoricalGet:::poolId"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3TicksCurrentGet:::filter_pool_id"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3TicksDayDataCurrentGet:::filter_pool_id"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3TicksHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3TicksHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3TicksHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3TicksHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3TicksHistoricalGet:::poolId"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3TokenDayDataHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3TokenDayDataHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3TokenDayDataHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3TokenDayDataHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3TokenDayDataHistoricalGet:::tokenId"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3TokenHourDataHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3TokenHourDataHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3TokenHourDataHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3TokenHourDataHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3TokenHourDataHistoricalGet:::tokenId"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3TokensCurrentGet:::filter_token_id"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3TokensDayDataCurrentGet:::filter_token_id"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3TokensHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3TokensHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3TokensHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3TokensHistoricalGet:::endDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3TokensHistoricalGet:::tokenId"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3TokensHourDataCurrentGet:::filter_token_id"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3TransactionsHistoricalGet:::startBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3TransactionsHistoricalGet:::endBlock"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3TransactionsHistoricalGet:::startDate"]=0
-operation_parameters_minimum_occurrences["dappsUniswapv3TransactionsHistoricalGet:::endDate"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetBundlesHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetBundlesHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetBundlesHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetBundlesHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetBurnsHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetBurnsHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetBurnsHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetBurnsHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetBurnsHistorical:::poolId"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetDayDataHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetDayDataHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetDayDataHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetDayDataHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetFactoryHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetFactoryHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetFactoryHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetFactoryHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetLiquidityPositionsHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetLiquidityPositionsHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetLiquidityPositionsHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetLiquidityPositionsHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetLiquidityPositionsHistorical:::poolId"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetLiquidityPositionsSnapshotsHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetLiquidityPositionsSnapshotsHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetLiquidityPositionsSnapshotsHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetLiquidityPositionsSnapshotsHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetLiquidityPositionsSnapshotsHistorical:::poolId"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetMintsHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetMintsHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetMintsHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetMintsHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetMintsHistorical:::poolId"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetPoolsCurrent:::filter_pool_id"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetPoolsDayDataHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetPoolsDayDataHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetPoolsDayDataHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetPoolsDayDataHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetPoolsDayDataHistorical:::poolId"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetPoolsHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetPoolsHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetPoolsHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetPoolsHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetPoolsHistorical:::poolId"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetPoolsHourDataHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetPoolsHourDataHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetPoolsHourDataHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetPoolsHourDataHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetPoolsHourDataHistorical:::poolId"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetSwapsHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetSwapsHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetSwapsHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetSwapsHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetSwapsHistorical:::poolId"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetTokensDayDataHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetTokensDayDataHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetTokensDayDataHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetTokensDayDataHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetTokensDayDataHistorical:::tokenId"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetTokensHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetTokensHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetTokensHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetTokensHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetTokensHistorical:::tokenId"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetTransactionsHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetTransactionsHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetTransactionsHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetTransactionsHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetUsersHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetUsersHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetUsersHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetUsersHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetBundlesHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetBundlesHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetBundlesHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetBundlesHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetBurnsCurrent:::filter_pool_id"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetBurnsHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetBurnsHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetBurnsHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetBurnsHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetBurnsHistorical:::poolId"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetDayDataHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetDayDataHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetDayDataHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetDayDataHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetFactoryHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetFactoryHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetFactoryHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetFactoryHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetMintsCurrent:::filter_pool_id"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetMintsHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetMintsHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetMintsHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetMintsHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetMintsHistorical:::poolId"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetPoolsCurrent:::filter_pool_id"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetPoolsDayDataCurrent:::filter_pool_id"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetPoolsDayDataHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetPoolsDayDataHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetPoolsDayDataHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetPoolsDayDataHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetPoolsDayDataHistorical:::poolId"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetPoolsHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetPoolsHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetPoolsHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetPoolsHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetPoolsHistorical:::poolId"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetPoolsHourDataCurrent:::filter_pool_id"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetPoolsHourDataHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetPoolsHourDataHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetPoolsHourDataHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetPoolsHourDataHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetPoolsHourDataHistorical:::poolId"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetPositionsCurrent:::filter_pool_id"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetPositionsHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetPositionsHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetPositionsHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetPositionsHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetPositionsHistorical:::poolId"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetPositionsSnaphotsHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetPositionsSnaphotsHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetPositionsSnaphotsHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetPositionsSnaphotsHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetPositionsSnaphotsHistorical:::poolId"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetPositionsSnapshotsCurrent:::filter_pool_id"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetSwapsCurrent:::filter_pool_id"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetSwapsHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetSwapsHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetSwapsHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetSwapsHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetSwapsHistorical:::poolId"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetTicksCurrent:::filter_pool_id"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetTicksDayDataCurrent:::filter_pool_id"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetTicksDayDataHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetTicksDayDataHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetTicksDayDataHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetTicksDayDataHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetTicksDayDataHistorical:::poolId"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetTicksHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetTicksHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetTicksHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetTicksHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetTicksHistorical:::poolId"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetTokensCurrent:::filter_token_id"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetTokensDayDataCurrent:::filter_token_id"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetTokensDayDataHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetTokensDayDataHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetTokensDayDataHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetTokensDayDataHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetTokensDayDataHistorical:::tokenId"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetTokensHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetTokensHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetTokensHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetTokensHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetTokensHistorical:::tokenId"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetTokensHourDataCurrent:::filter_token_id"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetTokensHourDataHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetTokensHourDataHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetTokensHourDataHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetTokensHourDataHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetTokensHourDataHistorical:::tokenId"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetTransactionsHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetTransactionsHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetTransactionsHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetTransactionsHistorical:::endDate"]=0
 
 ##
 # This array stores the maximum number of allowed occurrences for parameter
@@ -557,220 +561,225 @@ operation_parameters_minimum_occurrences["dappsUniswapv3TransactionsHistoricalGe
 # N - N values
 # 0 - unlimited
 declare -A operation_parameters_maximum_occurrences
-operation_parameters_maximum_occurrences["dappsCowOrdersHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsCowOrdersHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsCowOrdersHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsCowOrdersHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsCowSettlementHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsCowSettlementHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsCowSettlementHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsCowSettlementHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsCowTokensHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsCowTokensHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsCowTokensHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsCowTokensHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsCowTokensHistoricalGet:::tokenId"]=0
-operation_parameters_maximum_occurrences["dappsCowTradesHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsCowTradesHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsCowTradesHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsCowTradesHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsCowUsersHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsCowUsersHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsCowUsersHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsCowUsersHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsCurveAccountsHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurveAccountsHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurveAccountsHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsCurveAccountsHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsCurveAddLiquidityEventHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurveAddLiquidityEventHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurveAddLiquidityEventHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsCurveAddLiquidityEventHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsCurveAddLiquidityEventHistoricalGet:::poolId"]=0
-operation_parameters_maximum_occurrences["dappsCurveAdminFeeChangeLogHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurveAdminFeeChangeLogHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurveAdminFeeChangeLogHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsCurveAdminFeeChangeLogHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsCurveAdminFeeChangeLogHistoricalGet:::poolId"]=0
-operation_parameters_maximum_occurrences["dappsCurveAmplificationCoeffChangeLogHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurveAmplificationCoeffChangeLogHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurveAmplificationCoeffChangeLogHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsCurveAmplificationCoeffChangeLogHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsCurveAmplificationCoeffChangeLogHistoricalGet:::poolId"]=0
-operation_parameters_maximum_occurrences["dappsCurveCoinsHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurveCoinsHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurveCoinsHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsCurveCoinsHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsCurveCoinsHistoricalGet:::poolId"]=0
-operation_parameters_maximum_occurrences["dappsCurveContractsHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurveContractsHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurveContractsHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsCurveContractsHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsCurveContractsHistoricalGet:::poolId"]=0
-operation_parameters_maximum_occurrences["dappsCurveContractsVersionHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurveContractsVersionHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurveContractsVersionHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsCurveContractsVersionHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsCurveContractsVersionHistoricalGet:::poolId"]=0
-operation_parameters_maximum_occurrences["dappsCurveDailyVolumeHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurveDailyVolumeHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurveDailyVolumeHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsCurveDailyVolumeHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsCurveDailyVolumeHistoricalGet:::poolId"]=0
-operation_parameters_maximum_occurrences["dappsCurveFeeChangeLogHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurveFeeChangeLogHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurveFeeChangeLogHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsCurveFeeChangeLogHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsCurveFeeChangeLogHistoricalGet:::poolId"]=0
-operation_parameters_maximum_occurrences["dappsCurveGaugeDepositHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurveGaugeDepositHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurveGaugeDepositHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsCurveGaugeDepositHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsCurveGaugeHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurveGaugeHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurveGaugeHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsCurveGaugeHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsCurveGaugeHistoricalGet:::poolId"]=0
-operation_parameters_maximum_occurrences["dappsCurveGaugeLiquidityHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurveGaugeLiquidityHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurveGaugeLiquidityHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsCurveGaugeLiquidityHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsCurveGaugeTotalWeightHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurveGaugeTotalWeightHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurveGaugeTotalWeightHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsCurveGaugeTotalWeightHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsCurveGaugeTypeHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurveGaugeTypeHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurveGaugeTypeHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsCurveGaugeTypeHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsCurveGaugeTypeWeightHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurveGaugeTypeWeightHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurveGaugeTypeWeightHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsCurveGaugeTypeWeightHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsCurveGaugeWeightHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurveGaugeWeightHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurveGaugeWeightHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsCurveGaugeWeightHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsCurveGaugeWeightVoteHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurveGaugeWeightVoteHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurveGaugeWeightVoteHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsCurveGaugeWeightVoteHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsCurveGaugeWithdrawHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurveGaugeWithdrawHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurveGaugeWithdrawHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsCurveGaugeWithdrawHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsCurveHourlyVolumeHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurveHourlyVolumeHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurveHourlyVolumeHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsCurveHourlyVolumeHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsCurveHourlyVolumeHistoricalGet:::poolId"]=0
-operation_parameters_maximum_occurrences["dappsCurveLpTokenHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurveLpTokenHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurveLpTokenHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsCurveLpTokenHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsCurveLpTokenHistoricalGet:::poolId"]=0
-operation_parameters_maximum_occurrences["dappsCurvePoolsHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurvePoolsHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurvePoolsHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsCurvePoolsHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsCurvePoolsHistoricalGet:::poolId"]=0
-operation_parameters_maximum_occurrences["dappsCurveProposalsHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurveProposalsHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurveProposalsHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsCurveProposalsHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsCurveProposalsVoteHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurveProposalsVoteHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurveProposalsVoteHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsCurveProposalsVoteHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsCurveRemoveLiquidityEventHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurveRemoveLiquidityEventHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurveRemoveLiquidityEventHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsCurveRemoveLiquidityEventHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsCurveRemoveLiquidityEventHistoricalGet:::poolId"]=0
-operation_parameters_maximum_occurrences["dappsCurveRemoveLiquidityOneEventHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurveRemoveLiquidityOneEventHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurveRemoveLiquidityOneEventHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsCurveRemoveLiquidityOneEventHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsCurveRemoveLiquidityOneEventHistoricalGet:::poolId"]=0
-operation_parameters_maximum_occurrences["dappsCurveSwapsHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurveSwapsHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurveSwapsHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsCurveSwapsHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsCurveSwapsHistoricalGet:::poolId"]=0
-operation_parameters_maximum_occurrences["dappsCurveSystemStateHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurveSystemStateHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurveSystemStateHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsCurveSystemStateHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsCurveTokensHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurveTokensHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurveTokensHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsCurveTokensHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsCurveTokensHistoricalGet:::tokenId"]=0
-operation_parameters_maximum_occurrences["dappsCurveTransferOwnershipEventHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurveTransferOwnershipEventHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurveTransferOwnershipEventHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsCurveTransferOwnershipEventHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsCurveTransferOwnershipEventHistoricalGet:::poolId"]=0
-operation_parameters_maximum_occurrences["dappsCurveUnderlyingCoinHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurveUnderlyingCoinHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurveUnderlyingCoinHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsCurveUnderlyingCoinHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsCurveUnderlyingCoinHistoricalGet:::poolId"]=0
-operation_parameters_maximum_occurrences["dappsCurveVotingAppHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurveVotingAppHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurveVotingAppHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsCurveVotingAppHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsCurveWeeklyVolumeHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurveWeeklyVolumeHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsCurveWeeklyVolumeHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsCurveWeeklyVolumeHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsCurveWeeklyVolumeHistoricalGet:::poolId"]=0
-operation_parameters_maximum_occurrences["dappsDexBatchHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsDexBatchHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsDexBatchHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsDexBatchHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsDexOrdersHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsDexOrdersHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsDexOrdersHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsDexOrdersHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsDexOrdersHistoricalGet:::tokenId"]=0
-operation_parameters_maximum_occurrences["dappsDexPricesHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsDexPricesHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsDexPricesHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsDexPricesHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsDexPricesHistoricalGet:::tokenId"]=0
-operation_parameters_maximum_occurrences["dappsDexSolutionHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsDexSolutionHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsDexSolutionHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsDexSolutionHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsDexSolutionHistoricalGet:::tokenId"]=0
-operation_parameters_maximum_occurrences["dappsDexStatsHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsDexStatsHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsDexStatsHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsDexStatsHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsDexTokensHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsDexTokensHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsDexTokensHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsDexTokensHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsDexTokensHistoricalGet:::tokenId"]=0
-operation_parameters_maximum_occurrences["dappsDexTradesHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsDexTradesHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsDexTradesHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsDexTradesHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsDexUsersHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsDexUsersHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsDexUsersHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsDexUsersHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsDexWithdrawHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsDexWithdrawHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsDexWithdrawHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsDexWithdrawHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsDexWithdrawHistoricalGet:::tokenId"]=0
-operation_parameters_maximum_occurrences["dappsDexWithdrawRequestHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsDexWithdrawRequestHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsDexWithdrawRequestHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsDexWithdrawRequestHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsDexWithdrawRequestHistoricalGet:::tokenId"]=0
+operation_parameters_maximum_occurrences["cowGetOrdersHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["cowGetOrdersHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["cowGetOrdersHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["cowGetOrdersHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["cowGetSettlementsHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["cowGetSettlementsHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["cowGetSettlementsHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["cowGetSettlementsHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["cowGetTokensHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["cowGetTokensHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["cowGetTokensHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["cowGetTokensHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["cowGetTokensHistorical:::tokenId"]=0
+operation_parameters_maximum_occurrences["cowGetTradesHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["cowGetTradesHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["cowGetTradesHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["cowGetTradesHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["cowGetUsersHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["cowGetUsersHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["cowGetUsersHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["cowGetUsersHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["curveGetAccountsHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["curveGetAccountsHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["curveGetAccountsHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["curveGetAccountsHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["curveGetAddLiquidityEventsHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["curveGetAddLiquidityEventsHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["curveGetAddLiquidityEventsHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["curveGetAddLiquidityEventsHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["curveGetAddLiquidityEventsHistorical:::poolId"]=0
+operation_parameters_maximum_occurrences["curveGetAdminFeeChangeLogsHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["curveGetAdminFeeChangeLogsHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["curveGetAdminFeeChangeLogsHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["curveGetAdminFeeChangeLogsHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["curveGetAdminFeeChangeLogsHistorical:::poolId"]=0
+operation_parameters_maximum_occurrences["curveGetAmplificationCoeffChangeLogsHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["curveGetAmplificationCoeffChangeLogsHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["curveGetAmplificationCoeffChangeLogsHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["curveGetAmplificationCoeffChangeLogsHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["curveGetAmplificationCoeffChangeLogsHistorical:::poolId"]=0
+operation_parameters_maximum_occurrences["curveGetCoinsHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["curveGetCoinsHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["curveGetCoinsHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["curveGetCoinsHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["curveGetCoinsHistorical:::poolId"]=0
+operation_parameters_maximum_occurrences["curveGetContractsHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["curveGetContractsHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["curveGetContractsHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["curveGetContractsHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["curveGetContractsHistorical:::poolId"]=0
+operation_parameters_maximum_occurrences["curveGetContractsVersionsHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["curveGetContractsVersionsHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["curveGetContractsVersionsHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["curveGetContractsVersionsHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["curveGetContractsVersionsHistorical:::poolId"]=0
+operation_parameters_maximum_occurrences["curveGetDailyVolumesHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["curveGetDailyVolumesHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["curveGetDailyVolumesHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["curveGetDailyVolumesHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["curveGetDailyVolumesHistorical:::poolId"]=0
+operation_parameters_maximum_occurrences["curveGetExchangesHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["curveGetExchangesHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["curveGetExchangesHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["curveGetExchangesHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["curveGetExchangesHistorical:::poolId"]=0
+operation_parameters_maximum_occurrences["curveGetFeeChangeLogsHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["curveGetFeeChangeLogsHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["curveGetFeeChangeLogsHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["curveGetFeeChangeLogsHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["curveGetFeeChangeLogsHistorical:::poolId"]=0
+operation_parameters_maximum_occurrences["curveGetGaugesDepositsHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["curveGetGaugesDepositsHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["curveGetGaugesDepositsHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["curveGetGaugesDepositsHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["curveGetGaugesHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["curveGetGaugesHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["curveGetGaugesHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["curveGetGaugesHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["curveGetGaugesHistorical:::poolId"]=0
+operation_parameters_maximum_occurrences["curveGetGaugesLiquidityHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["curveGetGaugesLiquidityHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["curveGetGaugesLiquidityHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["curveGetGaugesLiquidityHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["curveGetGaugesTotalWeightsHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["curveGetGaugesTotalWeightsHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["curveGetGaugesTotalWeightsHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["curveGetGaugesTotalWeightsHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["curveGetGaugesTypesHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["curveGetGaugesTypesHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["curveGetGaugesTypesHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["curveGetGaugesTypesHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["curveGetGaugesTypesWeightsHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["curveGetGaugesTypesWeightsHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["curveGetGaugesTypesWeightsHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["curveGetGaugesTypesWeightsHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["curveGetGaugesWeightsHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["curveGetGaugesWeightsHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["curveGetGaugesWeightsHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["curveGetGaugesWeightsHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["curveGetGaugesWeightsVotesHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["curveGetGaugesWeightsVotesHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["curveGetGaugesWeightsVotesHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["curveGetGaugesWeightsVotesHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["curveGetGaugesWithdrawHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["curveGetGaugesWithdrawHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["curveGetGaugesWithdrawHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["curveGetGaugesWithdrawHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["curveGetHourlyVolumesHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["curveGetHourlyVolumesHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["curveGetHourlyVolumesHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["curveGetHourlyVolumesHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["curveGetHourlyVolumesHistorical:::poolId"]=0
+operation_parameters_maximum_occurrences["curveGetLpTokensHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["curveGetLpTokensHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["curveGetLpTokensHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["curveGetLpTokensHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["curveGetLpTokensHistorical:::poolId"]=0
+operation_parameters_maximum_occurrences["curveGetPoolsHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["curveGetPoolsHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["curveGetPoolsHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["curveGetPoolsHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["curveGetPoolsHistorical:::poolId"]=0
+operation_parameters_maximum_occurrences["curveGetProposalsHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["curveGetProposalsHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["curveGetProposalsHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["curveGetProposalsHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["curveGetProposalsVotesHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["curveGetProposalsVotesHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["curveGetProposalsVotesHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["curveGetProposalsVotesHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["curveGetRemoveLiquidityEventsHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["curveGetRemoveLiquidityEventsHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["curveGetRemoveLiquidityEventsHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["curveGetRemoveLiquidityEventsHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["curveGetRemoveLiquidityEventsHistorical:::poolId"]=0
+operation_parameters_maximum_occurrences["curveGetRemoveLiquidityOneEventsHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["curveGetRemoveLiquidityOneEventsHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["curveGetRemoveLiquidityOneEventsHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["curveGetRemoveLiquidityOneEventsHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["curveGetRemoveLiquidityOneEventsHistorical:::poolId"]=0
+operation_parameters_maximum_occurrences["curveGetSystemStatesHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["curveGetSystemStatesHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["curveGetSystemStatesHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["curveGetSystemStatesHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["curveGetTokensHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["curveGetTokensHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["curveGetTokensHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["curveGetTokensHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["curveGetTokensHistorical:::tokenId"]=0
+operation_parameters_maximum_occurrences["curveGetTransferOwnershipEventsHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["curveGetTransferOwnershipEventsHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["curveGetTransferOwnershipEventsHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["curveGetTransferOwnershipEventsHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["curveGetTransferOwnershipEventsHistorical:::poolId"]=0
+operation_parameters_maximum_occurrences["curveGetUnderlyingCoinsHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["curveGetUnderlyingCoinsHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["curveGetUnderlyingCoinsHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["curveGetUnderlyingCoinsHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["curveGetUnderlyingCoinsHistorical:::poolId"]=0
+operation_parameters_maximum_occurrences["curveGetVotingAppsHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["curveGetVotingAppsHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["curveGetVotingAppsHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["curveGetVotingAppsHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["curveGetWeeklyVolumesHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["curveGetWeeklyVolumesHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["curveGetWeeklyVolumesHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["curveGetWeeklyVolumesHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["curveGetWeeklyVolumesHistorical:::poolId"]=0
+operation_parameters_maximum_occurrences["dexGetBatchesHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["dexGetBatchesHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["dexGetBatchesHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["dexGetBatchesHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["dexGetDepositsHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["dexGetDepositsHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["dexGetDepositsHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["dexGetDepositsHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["dexGetDepositsHistorical:::tokenId"]=0
+operation_parameters_maximum_occurrences["dexGetOrdersHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["dexGetOrdersHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["dexGetOrdersHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["dexGetOrdersHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["dexGetOrdersHistorical:::tokenId"]=0
+operation_parameters_maximum_occurrences["dexGetPricesHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["dexGetPricesHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["dexGetPricesHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["dexGetPricesHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["dexGetPricesHistorical:::tokenId"]=0
+operation_parameters_maximum_occurrences["dexGetSolutionsHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["dexGetSolutionsHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["dexGetSolutionsHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["dexGetSolutionsHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["dexGetSolutionsHistorical:::tokenId"]=0
+operation_parameters_maximum_occurrences["dexGetStatsHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["dexGetStatsHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["dexGetStatsHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["dexGetStatsHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["dexGetTokensHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["dexGetTokensHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["dexGetTokensHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["dexGetTokensHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["dexGetTokensHistorical:::tokenId"]=0
+operation_parameters_maximum_occurrences["dexGetTradesHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["dexGetTradesHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["dexGetTradesHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["dexGetTradesHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["dexGetUsersHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["dexGetUsersHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["dexGetUsersHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["dexGetUsersHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["dexGetWithdrawsHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["dexGetWithdrawsHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["dexGetWithdrawsHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["dexGetWithdrawsHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["dexGetWithdrawsHistorical:::tokenId"]=0
+operation_parameters_maximum_occurrences["dexGetWithdrawsRequestsHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["dexGetWithdrawsRequestsHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["dexGetWithdrawsRequestsHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["dexGetWithdrawsRequestsHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["dexGetWithdrawsRequestsHistorical:::tokenId"]=0
 operation_parameters_maximum_occurrences["sushiswapGetBundlesHistorical:::startBlock"]=0
 operation_parameters_maximum_occurrences["sushiswapGetBundlesHistorical:::endBlock"]=0
 operation_parameters_maximum_occurrences["sushiswapGetBundlesHistorical:::startDate"]=0
@@ -845,391 +854,395 @@ operation_parameters_maximum_occurrences["sushiswapGetUsersHistorical:::startBlo
 operation_parameters_maximum_occurrences["sushiswapGetUsersHistorical:::endBlock"]=0
 operation_parameters_maximum_occurrences["sushiswapGetUsersHistorical:::startDate"]=0
 operation_parameters_maximum_occurrences["sushiswapGetUsersHistorical:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2BundlesHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2BundlesHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2BundlesHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2BundlesHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2BurnsHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2BurnsHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2BurnsHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2BurnsHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2BurnsHistoricalGet:::poolId"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2DayDataHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2DayDataHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2DayDataHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2DayDataHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2FactoryHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2FactoryHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2FactoryHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2FactoryHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2LiquidityPositionHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2LiquidityPositionHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2LiquidityPositionHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2LiquidityPositionHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2LiquidityPositionHistoricalGet:::poolId"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet:::poolId"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2MintsHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2MintsHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2MintsHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2MintsHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2MintsHistoricalGet:::poolId"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2PoolDayDataHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2PoolDayDataHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2PoolDayDataHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2PoolDayDataHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2PoolDayDataHistoricalGet:::poolId"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2PoolHourDataHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2PoolHourDataHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2PoolHourDataHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2PoolHourDataHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2PoolHourDataHistoricalGet:::poolId"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2PoolsCurrentGet:::filter_pool_id"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2PoolsHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2PoolsHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2PoolsHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2PoolsHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2PoolsHistoricalGet:::poolId"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2SwapsHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2SwapsHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2SwapsHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2SwapsHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2SwapsHistoricalGet:::poolId"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2TokenDayDataHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2TokenDayDataHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2TokenDayDataHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2TokenDayDataHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2TokenDayDataHistoricalGet:::tokenId"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2TokensHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2TokensHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2TokensHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2TokensHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2TokensHistoricalGet:::tokenId"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2TransactionsHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2TransactionsHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2TransactionsHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2TransactionsHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2UsersHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2UsersHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2UsersHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv2UsersHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3BundlesHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3BundlesHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3BundlesHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3BundlesHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3BurnsCurrentGet:::filter_pool_id"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3BurnsHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3BurnsHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3BurnsHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3BurnsHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3BurnsHistoricalGet:::poolId"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3DayDataHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3DayDataHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3DayDataHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3DayDataHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3FactoryCurrentGet:::chain_id"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3FactoryHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3FactoryHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3FactoryHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3FactoryHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3MintsCurrentGet:::filter_pool_id"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3MintsHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3MintsHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3MintsHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3MintsHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3MintsHistoricalGet:::poolId"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3PoolDayDataHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3PoolDayDataHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3PoolDayDataHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3PoolDayDataHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3PoolDayDataHistoricalGet:::poolId"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3PoolHourDataHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3PoolHourDataHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3PoolHourDataHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3PoolHourDataHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3PoolHourDataHistoricalGet:::poolId"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3PoolsCurrentGet:::filter_pool_id"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3PoolsDayDataCurrentGet:::filter_pool_id"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3PoolsHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3PoolsHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3PoolsHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3PoolsHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3PoolsHistoricalGet:::poolId"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3PoolsHourDataCurrentGet:::filter_pool_id"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3PositionSnapshotHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3PositionSnapshotHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3PositionSnapshotHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3PositionSnapshotHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3PositionSnapshotHistoricalGet:::poolId"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3PositionSnapshotsCurrentGet:::filter_pool_id"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3PositionsCurrentGet:::filter_pool_id"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3PositionsHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3PositionsHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3PositionsHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3PositionsHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3PositionsHistoricalGet:::poolId"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3SwapsCurrentGet:::filter_pool_id"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3SwapsHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3SwapsHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3SwapsHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3SwapsHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3SwapsHistoricalGet:::poolId"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3TickDayDataHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3TickDayDataHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3TickDayDataHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3TickDayDataHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3TickDayDataHistoricalGet:::poolId"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3TicksCurrentGet:::filter_pool_id"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3TicksDayDataCurrentGet:::filter_pool_id"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3TicksHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3TicksHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3TicksHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3TicksHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3TicksHistoricalGet:::poolId"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3TokenDayDataHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3TokenDayDataHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3TokenDayDataHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3TokenDayDataHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3TokenDayDataHistoricalGet:::tokenId"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3TokenHourDataHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3TokenHourDataHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3TokenHourDataHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3TokenHourDataHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3TokenHourDataHistoricalGet:::tokenId"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3TokensCurrentGet:::filter_token_id"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3TokensDayDataCurrentGet:::filter_token_id"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3TokensHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3TokensHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3TokensHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3TokensHistoricalGet:::endDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3TokensHistoricalGet:::tokenId"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3TokensHourDataCurrentGet:::filter_token_id"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3TransactionsHistoricalGet:::startBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3TransactionsHistoricalGet:::endBlock"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3TransactionsHistoricalGet:::startDate"]=0
-operation_parameters_maximum_occurrences["dappsUniswapv3TransactionsHistoricalGet:::endDate"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetBundlesHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetBundlesHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetBundlesHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetBundlesHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetBurnsHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetBurnsHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetBurnsHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetBurnsHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetBurnsHistorical:::poolId"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetDayDataHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetDayDataHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetDayDataHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetDayDataHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetFactoryHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetFactoryHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetFactoryHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetFactoryHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetLiquidityPositionsHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetLiquidityPositionsHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetLiquidityPositionsHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetLiquidityPositionsHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetLiquidityPositionsHistorical:::poolId"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetLiquidityPositionsSnapshotsHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetLiquidityPositionsSnapshotsHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetLiquidityPositionsSnapshotsHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetLiquidityPositionsSnapshotsHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetLiquidityPositionsSnapshotsHistorical:::poolId"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetMintsHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetMintsHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetMintsHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetMintsHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetMintsHistorical:::poolId"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetPoolsCurrent:::filter_pool_id"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetPoolsDayDataHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetPoolsDayDataHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetPoolsDayDataHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetPoolsDayDataHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetPoolsDayDataHistorical:::poolId"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetPoolsHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetPoolsHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetPoolsHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetPoolsHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetPoolsHistorical:::poolId"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetPoolsHourDataHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetPoolsHourDataHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetPoolsHourDataHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetPoolsHourDataHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetPoolsHourDataHistorical:::poolId"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetSwapsHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetSwapsHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetSwapsHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetSwapsHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetSwapsHistorical:::poolId"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetTokensDayDataHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetTokensDayDataHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetTokensDayDataHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetTokensDayDataHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetTokensDayDataHistorical:::tokenId"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetTokensHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetTokensHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetTokensHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetTokensHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetTokensHistorical:::tokenId"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetTransactionsHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetTransactionsHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetTransactionsHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetTransactionsHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetUsersHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetUsersHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetUsersHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetUsersHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetBundlesHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetBundlesHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetBundlesHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetBundlesHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetBurnsCurrent:::filter_pool_id"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetBurnsHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetBurnsHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetBurnsHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetBurnsHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetBurnsHistorical:::poolId"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetDayDataHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetDayDataHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetDayDataHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetDayDataHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetFactoryHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetFactoryHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetFactoryHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetFactoryHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetMintsCurrent:::filter_pool_id"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetMintsHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetMintsHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetMintsHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetMintsHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetMintsHistorical:::poolId"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetPoolsCurrent:::filter_pool_id"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetPoolsDayDataCurrent:::filter_pool_id"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetPoolsDayDataHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetPoolsDayDataHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetPoolsDayDataHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetPoolsDayDataHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetPoolsDayDataHistorical:::poolId"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetPoolsHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetPoolsHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetPoolsHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetPoolsHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetPoolsHistorical:::poolId"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetPoolsHourDataCurrent:::filter_pool_id"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetPoolsHourDataHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetPoolsHourDataHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetPoolsHourDataHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetPoolsHourDataHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetPoolsHourDataHistorical:::poolId"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetPositionsCurrent:::filter_pool_id"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetPositionsHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetPositionsHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetPositionsHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetPositionsHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetPositionsHistorical:::poolId"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetPositionsSnaphotsHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetPositionsSnaphotsHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetPositionsSnaphotsHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetPositionsSnaphotsHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetPositionsSnaphotsHistorical:::poolId"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetPositionsSnapshotsCurrent:::filter_pool_id"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetSwapsCurrent:::filter_pool_id"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetSwapsHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetSwapsHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetSwapsHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetSwapsHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetSwapsHistorical:::poolId"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetTicksCurrent:::filter_pool_id"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetTicksDayDataCurrent:::filter_pool_id"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetTicksDayDataHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetTicksDayDataHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetTicksDayDataHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetTicksDayDataHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetTicksDayDataHistorical:::poolId"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetTicksHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetTicksHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetTicksHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetTicksHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetTicksHistorical:::poolId"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetTokensCurrent:::filter_token_id"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetTokensDayDataCurrent:::filter_token_id"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetTokensDayDataHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetTokensDayDataHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetTokensDayDataHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetTokensDayDataHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetTokensDayDataHistorical:::tokenId"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetTokensHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetTokensHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetTokensHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetTokensHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetTokensHistorical:::tokenId"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetTokensHourDataCurrent:::filter_token_id"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetTokensHourDataHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetTokensHourDataHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetTokensHourDataHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetTokensHourDataHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetTokensHourDataHistorical:::tokenId"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetTransactionsHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetTransactionsHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetTransactionsHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetTransactionsHistorical:::endDate"]=0
 
 ##
 # The type of collection for specifying multiple values for parameter:
 # - multi, csv, ssv, tsv
 declare -A operation_parameters_collection_type
-operation_parameters_collection_type["dappsCowOrdersHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsCowOrdersHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsCowOrdersHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsCowOrdersHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsCowSettlementHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsCowSettlementHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsCowSettlementHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsCowSettlementHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsCowTokensHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsCowTokensHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsCowTokensHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsCowTokensHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsCowTokensHistoricalGet:::tokenId"]=""
-operation_parameters_collection_type["dappsCowTradesHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsCowTradesHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsCowTradesHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsCowTradesHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsCowUsersHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsCowUsersHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsCowUsersHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsCowUsersHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsCurveAccountsHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsCurveAccountsHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsCurveAccountsHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsCurveAccountsHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsCurveAddLiquidityEventHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsCurveAddLiquidityEventHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsCurveAddLiquidityEventHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsCurveAddLiquidityEventHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsCurveAddLiquidityEventHistoricalGet:::poolId"]=""
-operation_parameters_collection_type["dappsCurveAdminFeeChangeLogHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsCurveAdminFeeChangeLogHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsCurveAdminFeeChangeLogHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsCurveAdminFeeChangeLogHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsCurveAdminFeeChangeLogHistoricalGet:::poolId"]=""
-operation_parameters_collection_type["dappsCurveAmplificationCoeffChangeLogHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsCurveAmplificationCoeffChangeLogHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsCurveAmplificationCoeffChangeLogHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsCurveAmplificationCoeffChangeLogHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsCurveAmplificationCoeffChangeLogHistoricalGet:::poolId"]=""
-operation_parameters_collection_type["dappsCurveCoinsHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsCurveCoinsHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsCurveCoinsHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsCurveCoinsHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsCurveCoinsHistoricalGet:::poolId"]=""
-operation_parameters_collection_type["dappsCurveContractsHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsCurveContractsHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsCurveContractsHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsCurveContractsHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsCurveContractsHistoricalGet:::poolId"]=""
-operation_parameters_collection_type["dappsCurveContractsVersionHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsCurveContractsVersionHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsCurveContractsVersionHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsCurveContractsVersionHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsCurveContractsVersionHistoricalGet:::poolId"]=""
-operation_parameters_collection_type["dappsCurveDailyVolumeHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsCurveDailyVolumeHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsCurveDailyVolumeHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsCurveDailyVolumeHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsCurveDailyVolumeHistoricalGet:::poolId"]=""
-operation_parameters_collection_type["dappsCurveFeeChangeLogHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsCurveFeeChangeLogHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsCurveFeeChangeLogHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsCurveFeeChangeLogHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsCurveFeeChangeLogHistoricalGet:::poolId"]=""
-operation_parameters_collection_type["dappsCurveGaugeDepositHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsCurveGaugeDepositHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsCurveGaugeDepositHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsCurveGaugeDepositHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsCurveGaugeHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsCurveGaugeHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsCurveGaugeHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsCurveGaugeHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsCurveGaugeHistoricalGet:::poolId"]=""
-operation_parameters_collection_type["dappsCurveGaugeLiquidityHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsCurveGaugeLiquidityHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsCurveGaugeLiquidityHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsCurveGaugeLiquidityHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsCurveGaugeTotalWeightHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsCurveGaugeTotalWeightHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsCurveGaugeTotalWeightHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsCurveGaugeTotalWeightHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsCurveGaugeTypeHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsCurveGaugeTypeHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsCurveGaugeTypeHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsCurveGaugeTypeHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsCurveGaugeTypeWeightHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsCurveGaugeTypeWeightHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsCurveGaugeTypeWeightHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsCurveGaugeTypeWeightHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsCurveGaugeWeightHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsCurveGaugeWeightHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsCurveGaugeWeightHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsCurveGaugeWeightHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsCurveGaugeWeightVoteHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsCurveGaugeWeightVoteHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsCurveGaugeWeightVoteHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsCurveGaugeWeightVoteHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsCurveGaugeWithdrawHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsCurveGaugeWithdrawHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsCurveGaugeWithdrawHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsCurveGaugeWithdrawHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsCurveHourlyVolumeHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsCurveHourlyVolumeHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsCurveHourlyVolumeHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsCurveHourlyVolumeHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsCurveHourlyVolumeHistoricalGet:::poolId"]=""
-operation_parameters_collection_type["dappsCurveLpTokenHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsCurveLpTokenHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsCurveLpTokenHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsCurveLpTokenHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsCurveLpTokenHistoricalGet:::poolId"]=""
-operation_parameters_collection_type["dappsCurvePoolsHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsCurvePoolsHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsCurvePoolsHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsCurvePoolsHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsCurvePoolsHistoricalGet:::poolId"]=""
-operation_parameters_collection_type["dappsCurveProposalsHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsCurveProposalsHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsCurveProposalsHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsCurveProposalsHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsCurveProposalsVoteHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsCurveProposalsVoteHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsCurveProposalsVoteHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsCurveProposalsVoteHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsCurveRemoveLiquidityEventHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsCurveRemoveLiquidityEventHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsCurveRemoveLiquidityEventHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsCurveRemoveLiquidityEventHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsCurveRemoveLiquidityEventHistoricalGet:::poolId"]=""
-operation_parameters_collection_type["dappsCurveRemoveLiquidityOneEventHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsCurveRemoveLiquidityOneEventHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsCurveRemoveLiquidityOneEventHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsCurveRemoveLiquidityOneEventHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsCurveRemoveLiquidityOneEventHistoricalGet:::poolId"]=""
-operation_parameters_collection_type["dappsCurveSwapsHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsCurveSwapsHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsCurveSwapsHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsCurveSwapsHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsCurveSwapsHistoricalGet:::poolId"]=""
-operation_parameters_collection_type["dappsCurveSystemStateHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsCurveSystemStateHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsCurveSystemStateHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsCurveSystemStateHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsCurveTokensHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsCurveTokensHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsCurveTokensHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsCurveTokensHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsCurveTokensHistoricalGet:::tokenId"]=""
-operation_parameters_collection_type["dappsCurveTransferOwnershipEventHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsCurveTransferOwnershipEventHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsCurveTransferOwnershipEventHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsCurveTransferOwnershipEventHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsCurveTransferOwnershipEventHistoricalGet:::poolId"]=""
-operation_parameters_collection_type["dappsCurveUnderlyingCoinHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsCurveUnderlyingCoinHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsCurveUnderlyingCoinHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsCurveUnderlyingCoinHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsCurveUnderlyingCoinHistoricalGet:::poolId"]=""
-operation_parameters_collection_type["dappsCurveVotingAppHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsCurveVotingAppHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsCurveVotingAppHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsCurveVotingAppHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsCurveWeeklyVolumeHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsCurveWeeklyVolumeHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsCurveWeeklyVolumeHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsCurveWeeklyVolumeHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsCurveWeeklyVolumeHistoricalGet:::poolId"]=""
-operation_parameters_collection_type["dappsDexBatchHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsDexBatchHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsDexBatchHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsDexBatchHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsDexOrdersHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsDexOrdersHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsDexOrdersHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsDexOrdersHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsDexOrdersHistoricalGet:::tokenId"]=""
-operation_parameters_collection_type["dappsDexPricesHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsDexPricesHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsDexPricesHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsDexPricesHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsDexPricesHistoricalGet:::tokenId"]=""
-operation_parameters_collection_type["dappsDexSolutionHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsDexSolutionHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsDexSolutionHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsDexSolutionHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsDexSolutionHistoricalGet:::tokenId"]=""
-operation_parameters_collection_type["dappsDexStatsHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsDexStatsHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsDexStatsHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsDexStatsHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsDexTokensHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsDexTokensHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsDexTokensHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsDexTokensHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsDexTokensHistoricalGet:::tokenId"]=""
-operation_parameters_collection_type["dappsDexTradesHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsDexTradesHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsDexTradesHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsDexTradesHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsDexUsersHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsDexUsersHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsDexUsersHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsDexUsersHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsDexWithdrawHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsDexWithdrawHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsDexWithdrawHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsDexWithdrawHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsDexWithdrawHistoricalGet:::tokenId"]=""
-operation_parameters_collection_type["dappsDexWithdrawRequestHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsDexWithdrawRequestHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsDexWithdrawRequestHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsDexWithdrawRequestHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsDexWithdrawRequestHistoricalGet:::tokenId"]=""
+operation_parameters_collection_type["cowGetOrdersHistorical:::startBlock"]=""
+operation_parameters_collection_type["cowGetOrdersHistorical:::endBlock"]=""
+operation_parameters_collection_type["cowGetOrdersHistorical:::startDate"]=""
+operation_parameters_collection_type["cowGetOrdersHistorical:::endDate"]=""
+operation_parameters_collection_type["cowGetSettlementsHistorical:::startBlock"]=""
+operation_parameters_collection_type["cowGetSettlementsHistorical:::endBlock"]=""
+operation_parameters_collection_type["cowGetSettlementsHistorical:::startDate"]=""
+operation_parameters_collection_type["cowGetSettlementsHistorical:::endDate"]=""
+operation_parameters_collection_type["cowGetTokensHistorical:::startBlock"]=""
+operation_parameters_collection_type["cowGetTokensHistorical:::endBlock"]=""
+operation_parameters_collection_type["cowGetTokensHistorical:::startDate"]=""
+operation_parameters_collection_type["cowGetTokensHistorical:::endDate"]=""
+operation_parameters_collection_type["cowGetTokensHistorical:::tokenId"]=""
+operation_parameters_collection_type["cowGetTradesHistorical:::startBlock"]=""
+operation_parameters_collection_type["cowGetTradesHistorical:::endBlock"]=""
+operation_parameters_collection_type["cowGetTradesHistorical:::startDate"]=""
+operation_parameters_collection_type["cowGetTradesHistorical:::endDate"]=""
+operation_parameters_collection_type["cowGetUsersHistorical:::startBlock"]=""
+operation_parameters_collection_type["cowGetUsersHistorical:::endBlock"]=""
+operation_parameters_collection_type["cowGetUsersHistorical:::startDate"]=""
+operation_parameters_collection_type["cowGetUsersHistorical:::endDate"]=""
+operation_parameters_collection_type["curveGetAccountsHistorical:::startBlock"]=""
+operation_parameters_collection_type["curveGetAccountsHistorical:::endBlock"]=""
+operation_parameters_collection_type["curveGetAccountsHistorical:::startDate"]=""
+operation_parameters_collection_type["curveGetAccountsHistorical:::endDate"]=""
+operation_parameters_collection_type["curveGetAddLiquidityEventsHistorical:::startBlock"]=""
+operation_parameters_collection_type["curveGetAddLiquidityEventsHistorical:::endBlock"]=""
+operation_parameters_collection_type["curveGetAddLiquidityEventsHistorical:::startDate"]=""
+operation_parameters_collection_type["curveGetAddLiquidityEventsHistorical:::endDate"]=""
+operation_parameters_collection_type["curveGetAddLiquidityEventsHistorical:::poolId"]=""
+operation_parameters_collection_type["curveGetAdminFeeChangeLogsHistorical:::startBlock"]=""
+operation_parameters_collection_type["curveGetAdminFeeChangeLogsHistorical:::endBlock"]=""
+operation_parameters_collection_type["curveGetAdminFeeChangeLogsHistorical:::startDate"]=""
+operation_parameters_collection_type["curveGetAdminFeeChangeLogsHistorical:::endDate"]=""
+operation_parameters_collection_type["curveGetAdminFeeChangeLogsHistorical:::poolId"]=""
+operation_parameters_collection_type["curveGetAmplificationCoeffChangeLogsHistorical:::startBlock"]=""
+operation_parameters_collection_type["curveGetAmplificationCoeffChangeLogsHistorical:::endBlock"]=""
+operation_parameters_collection_type["curveGetAmplificationCoeffChangeLogsHistorical:::startDate"]=""
+operation_parameters_collection_type["curveGetAmplificationCoeffChangeLogsHistorical:::endDate"]=""
+operation_parameters_collection_type["curveGetAmplificationCoeffChangeLogsHistorical:::poolId"]=""
+operation_parameters_collection_type["curveGetCoinsHistorical:::startBlock"]=""
+operation_parameters_collection_type["curveGetCoinsHistorical:::endBlock"]=""
+operation_parameters_collection_type["curveGetCoinsHistorical:::startDate"]=""
+operation_parameters_collection_type["curveGetCoinsHistorical:::endDate"]=""
+operation_parameters_collection_type["curveGetCoinsHistorical:::poolId"]=""
+operation_parameters_collection_type["curveGetContractsHistorical:::startBlock"]=""
+operation_parameters_collection_type["curveGetContractsHistorical:::endBlock"]=""
+operation_parameters_collection_type["curveGetContractsHistorical:::startDate"]=""
+operation_parameters_collection_type["curveGetContractsHistorical:::endDate"]=""
+operation_parameters_collection_type["curveGetContractsHistorical:::poolId"]=""
+operation_parameters_collection_type["curveGetContractsVersionsHistorical:::startBlock"]=""
+operation_parameters_collection_type["curveGetContractsVersionsHistorical:::endBlock"]=""
+operation_parameters_collection_type["curveGetContractsVersionsHistorical:::startDate"]=""
+operation_parameters_collection_type["curveGetContractsVersionsHistorical:::endDate"]=""
+operation_parameters_collection_type["curveGetContractsVersionsHistorical:::poolId"]=""
+operation_parameters_collection_type["curveGetDailyVolumesHistorical:::startBlock"]=""
+operation_parameters_collection_type["curveGetDailyVolumesHistorical:::endBlock"]=""
+operation_parameters_collection_type["curveGetDailyVolumesHistorical:::startDate"]=""
+operation_parameters_collection_type["curveGetDailyVolumesHistorical:::endDate"]=""
+operation_parameters_collection_type["curveGetDailyVolumesHistorical:::poolId"]=""
+operation_parameters_collection_type["curveGetExchangesHistorical:::startBlock"]=""
+operation_parameters_collection_type["curveGetExchangesHistorical:::endBlock"]=""
+operation_parameters_collection_type["curveGetExchangesHistorical:::startDate"]=""
+operation_parameters_collection_type["curveGetExchangesHistorical:::endDate"]=""
+operation_parameters_collection_type["curveGetExchangesHistorical:::poolId"]=""
+operation_parameters_collection_type["curveGetFeeChangeLogsHistorical:::startBlock"]=""
+operation_parameters_collection_type["curveGetFeeChangeLogsHistorical:::endBlock"]=""
+operation_parameters_collection_type["curveGetFeeChangeLogsHistorical:::startDate"]=""
+operation_parameters_collection_type["curveGetFeeChangeLogsHistorical:::endDate"]=""
+operation_parameters_collection_type["curveGetFeeChangeLogsHistorical:::poolId"]=""
+operation_parameters_collection_type["curveGetGaugesDepositsHistorical:::startBlock"]=""
+operation_parameters_collection_type["curveGetGaugesDepositsHistorical:::endBlock"]=""
+operation_parameters_collection_type["curveGetGaugesDepositsHistorical:::startDate"]=""
+operation_parameters_collection_type["curveGetGaugesDepositsHistorical:::endDate"]=""
+operation_parameters_collection_type["curveGetGaugesHistorical:::startBlock"]=""
+operation_parameters_collection_type["curveGetGaugesHistorical:::endBlock"]=""
+operation_parameters_collection_type["curveGetGaugesHistorical:::startDate"]=""
+operation_parameters_collection_type["curveGetGaugesHistorical:::endDate"]=""
+operation_parameters_collection_type["curveGetGaugesHistorical:::poolId"]=""
+operation_parameters_collection_type["curveGetGaugesLiquidityHistorical:::startBlock"]=""
+operation_parameters_collection_type["curveGetGaugesLiquidityHistorical:::endBlock"]=""
+operation_parameters_collection_type["curveGetGaugesLiquidityHistorical:::startDate"]=""
+operation_parameters_collection_type["curveGetGaugesLiquidityHistorical:::endDate"]=""
+operation_parameters_collection_type["curveGetGaugesTotalWeightsHistorical:::startBlock"]=""
+operation_parameters_collection_type["curveGetGaugesTotalWeightsHistorical:::endBlock"]=""
+operation_parameters_collection_type["curveGetGaugesTotalWeightsHistorical:::startDate"]=""
+operation_parameters_collection_type["curveGetGaugesTotalWeightsHistorical:::endDate"]=""
+operation_parameters_collection_type["curveGetGaugesTypesHistorical:::startBlock"]=""
+operation_parameters_collection_type["curveGetGaugesTypesHistorical:::endBlock"]=""
+operation_parameters_collection_type["curveGetGaugesTypesHistorical:::startDate"]=""
+operation_parameters_collection_type["curveGetGaugesTypesHistorical:::endDate"]=""
+operation_parameters_collection_type["curveGetGaugesTypesWeightsHistorical:::startBlock"]=""
+operation_parameters_collection_type["curveGetGaugesTypesWeightsHistorical:::endBlock"]=""
+operation_parameters_collection_type["curveGetGaugesTypesWeightsHistorical:::startDate"]=""
+operation_parameters_collection_type["curveGetGaugesTypesWeightsHistorical:::endDate"]=""
+operation_parameters_collection_type["curveGetGaugesWeightsHistorical:::startBlock"]=""
+operation_parameters_collection_type["curveGetGaugesWeightsHistorical:::endBlock"]=""
+operation_parameters_collection_type["curveGetGaugesWeightsHistorical:::startDate"]=""
+operation_parameters_collection_type["curveGetGaugesWeightsHistorical:::endDate"]=""
+operation_parameters_collection_type["curveGetGaugesWeightsVotesHistorical:::startBlock"]=""
+operation_parameters_collection_type["curveGetGaugesWeightsVotesHistorical:::endBlock"]=""
+operation_parameters_collection_type["curveGetGaugesWeightsVotesHistorical:::startDate"]=""
+operation_parameters_collection_type["curveGetGaugesWeightsVotesHistorical:::endDate"]=""
+operation_parameters_collection_type["curveGetGaugesWithdrawHistorical:::startBlock"]=""
+operation_parameters_collection_type["curveGetGaugesWithdrawHistorical:::endBlock"]=""
+operation_parameters_collection_type["curveGetGaugesWithdrawHistorical:::startDate"]=""
+operation_parameters_collection_type["curveGetGaugesWithdrawHistorical:::endDate"]=""
+operation_parameters_collection_type["curveGetHourlyVolumesHistorical:::startBlock"]=""
+operation_parameters_collection_type["curveGetHourlyVolumesHistorical:::endBlock"]=""
+operation_parameters_collection_type["curveGetHourlyVolumesHistorical:::startDate"]=""
+operation_parameters_collection_type["curveGetHourlyVolumesHistorical:::endDate"]=""
+operation_parameters_collection_type["curveGetHourlyVolumesHistorical:::poolId"]=""
+operation_parameters_collection_type["curveGetLpTokensHistorical:::startBlock"]=""
+operation_parameters_collection_type["curveGetLpTokensHistorical:::endBlock"]=""
+operation_parameters_collection_type["curveGetLpTokensHistorical:::startDate"]=""
+operation_parameters_collection_type["curveGetLpTokensHistorical:::endDate"]=""
+operation_parameters_collection_type["curveGetLpTokensHistorical:::poolId"]=""
+operation_parameters_collection_type["curveGetPoolsHistorical:::startBlock"]=""
+operation_parameters_collection_type["curveGetPoolsHistorical:::endBlock"]=""
+operation_parameters_collection_type["curveGetPoolsHistorical:::startDate"]=""
+operation_parameters_collection_type["curveGetPoolsHistorical:::endDate"]=""
+operation_parameters_collection_type["curveGetPoolsHistorical:::poolId"]=""
+operation_parameters_collection_type["curveGetProposalsHistorical:::startBlock"]=""
+operation_parameters_collection_type["curveGetProposalsHistorical:::endBlock"]=""
+operation_parameters_collection_type["curveGetProposalsHistorical:::startDate"]=""
+operation_parameters_collection_type["curveGetProposalsHistorical:::endDate"]=""
+operation_parameters_collection_type["curveGetProposalsVotesHistorical:::startBlock"]=""
+operation_parameters_collection_type["curveGetProposalsVotesHistorical:::endBlock"]=""
+operation_parameters_collection_type["curveGetProposalsVotesHistorical:::startDate"]=""
+operation_parameters_collection_type["curveGetProposalsVotesHistorical:::endDate"]=""
+operation_parameters_collection_type["curveGetRemoveLiquidityEventsHistorical:::startBlock"]=""
+operation_parameters_collection_type["curveGetRemoveLiquidityEventsHistorical:::endBlock"]=""
+operation_parameters_collection_type["curveGetRemoveLiquidityEventsHistorical:::startDate"]=""
+operation_parameters_collection_type["curveGetRemoveLiquidityEventsHistorical:::endDate"]=""
+operation_parameters_collection_type["curveGetRemoveLiquidityEventsHistorical:::poolId"]=""
+operation_parameters_collection_type["curveGetRemoveLiquidityOneEventsHistorical:::startBlock"]=""
+operation_parameters_collection_type["curveGetRemoveLiquidityOneEventsHistorical:::endBlock"]=""
+operation_parameters_collection_type["curveGetRemoveLiquidityOneEventsHistorical:::startDate"]=""
+operation_parameters_collection_type["curveGetRemoveLiquidityOneEventsHistorical:::endDate"]=""
+operation_parameters_collection_type["curveGetRemoveLiquidityOneEventsHistorical:::poolId"]=""
+operation_parameters_collection_type["curveGetSystemStatesHistorical:::startBlock"]=""
+operation_parameters_collection_type["curveGetSystemStatesHistorical:::endBlock"]=""
+operation_parameters_collection_type["curveGetSystemStatesHistorical:::startDate"]=""
+operation_parameters_collection_type["curveGetSystemStatesHistorical:::endDate"]=""
+operation_parameters_collection_type["curveGetTokensHistorical:::startBlock"]=""
+operation_parameters_collection_type["curveGetTokensHistorical:::endBlock"]=""
+operation_parameters_collection_type["curveGetTokensHistorical:::startDate"]=""
+operation_parameters_collection_type["curveGetTokensHistorical:::endDate"]=""
+operation_parameters_collection_type["curveGetTokensHistorical:::tokenId"]=""
+operation_parameters_collection_type["curveGetTransferOwnershipEventsHistorical:::startBlock"]=""
+operation_parameters_collection_type["curveGetTransferOwnershipEventsHistorical:::endBlock"]=""
+operation_parameters_collection_type["curveGetTransferOwnershipEventsHistorical:::startDate"]=""
+operation_parameters_collection_type["curveGetTransferOwnershipEventsHistorical:::endDate"]=""
+operation_parameters_collection_type["curveGetTransferOwnershipEventsHistorical:::poolId"]=""
+operation_parameters_collection_type["curveGetUnderlyingCoinsHistorical:::startBlock"]=""
+operation_parameters_collection_type["curveGetUnderlyingCoinsHistorical:::endBlock"]=""
+operation_parameters_collection_type["curveGetUnderlyingCoinsHistorical:::startDate"]=""
+operation_parameters_collection_type["curveGetUnderlyingCoinsHistorical:::endDate"]=""
+operation_parameters_collection_type["curveGetUnderlyingCoinsHistorical:::poolId"]=""
+operation_parameters_collection_type["curveGetVotingAppsHistorical:::startBlock"]=""
+operation_parameters_collection_type["curveGetVotingAppsHistorical:::endBlock"]=""
+operation_parameters_collection_type["curveGetVotingAppsHistorical:::startDate"]=""
+operation_parameters_collection_type["curveGetVotingAppsHistorical:::endDate"]=""
+operation_parameters_collection_type["curveGetWeeklyVolumesHistorical:::startBlock"]=""
+operation_parameters_collection_type["curveGetWeeklyVolumesHistorical:::endBlock"]=""
+operation_parameters_collection_type["curveGetWeeklyVolumesHistorical:::startDate"]=""
+operation_parameters_collection_type["curveGetWeeklyVolumesHistorical:::endDate"]=""
+operation_parameters_collection_type["curveGetWeeklyVolumesHistorical:::poolId"]=""
+operation_parameters_collection_type["dexGetBatchesHistorical:::startBlock"]=""
+operation_parameters_collection_type["dexGetBatchesHistorical:::endBlock"]=""
+operation_parameters_collection_type["dexGetBatchesHistorical:::startDate"]=""
+operation_parameters_collection_type["dexGetBatchesHistorical:::endDate"]=""
+operation_parameters_collection_type["dexGetDepositsHistorical:::startBlock"]=""
+operation_parameters_collection_type["dexGetDepositsHistorical:::endBlock"]=""
+operation_parameters_collection_type["dexGetDepositsHistorical:::startDate"]=""
+operation_parameters_collection_type["dexGetDepositsHistorical:::endDate"]=""
+operation_parameters_collection_type["dexGetDepositsHistorical:::tokenId"]=""
+operation_parameters_collection_type["dexGetOrdersHistorical:::startBlock"]=""
+operation_parameters_collection_type["dexGetOrdersHistorical:::endBlock"]=""
+operation_parameters_collection_type["dexGetOrdersHistorical:::startDate"]=""
+operation_parameters_collection_type["dexGetOrdersHistorical:::endDate"]=""
+operation_parameters_collection_type["dexGetOrdersHistorical:::tokenId"]=""
+operation_parameters_collection_type["dexGetPricesHistorical:::startBlock"]=""
+operation_parameters_collection_type["dexGetPricesHistorical:::endBlock"]=""
+operation_parameters_collection_type["dexGetPricesHistorical:::startDate"]=""
+operation_parameters_collection_type["dexGetPricesHistorical:::endDate"]=""
+operation_parameters_collection_type["dexGetPricesHistorical:::tokenId"]=""
+operation_parameters_collection_type["dexGetSolutionsHistorical:::startBlock"]=""
+operation_parameters_collection_type["dexGetSolutionsHistorical:::endBlock"]=""
+operation_parameters_collection_type["dexGetSolutionsHistorical:::startDate"]=""
+operation_parameters_collection_type["dexGetSolutionsHistorical:::endDate"]=""
+operation_parameters_collection_type["dexGetSolutionsHistorical:::tokenId"]=""
+operation_parameters_collection_type["dexGetStatsHistorical:::startBlock"]=""
+operation_parameters_collection_type["dexGetStatsHistorical:::endBlock"]=""
+operation_parameters_collection_type["dexGetStatsHistorical:::startDate"]=""
+operation_parameters_collection_type["dexGetStatsHistorical:::endDate"]=""
+operation_parameters_collection_type["dexGetTokensHistorical:::startBlock"]=""
+operation_parameters_collection_type["dexGetTokensHistorical:::endBlock"]=""
+operation_parameters_collection_type["dexGetTokensHistorical:::startDate"]=""
+operation_parameters_collection_type["dexGetTokensHistorical:::endDate"]=""
+operation_parameters_collection_type["dexGetTokensHistorical:::tokenId"]=""
+operation_parameters_collection_type["dexGetTradesHistorical:::startBlock"]=""
+operation_parameters_collection_type["dexGetTradesHistorical:::endBlock"]=""
+operation_parameters_collection_type["dexGetTradesHistorical:::startDate"]=""
+operation_parameters_collection_type["dexGetTradesHistorical:::endDate"]=""
+operation_parameters_collection_type["dexGetUsersHistorical:::startBlock"]=""
+operation_parameters_collection_type["dexGetUsersHistorical:::endBlock"]=""
+operation_parameters_collection_type["dexGetUsersHistorical:::startDate"]=""
+operation_parameters_collection_type["dexGetUsersHistorical:::endDate"]=""
+operation_parameters_collection_type["dexGetWithdrawsHistorical:::startBlock"]=""
+operation_parameters_collection_type["dexGetWithdrawsHistorical:::endBlock"]=""
+operation_parameters_collection_type["dexGetWithdrawsHistorical:::startDate"]=""
+operation_parameters_collection_type["dexGetWithdrawsHistorical:::endDate"]=""
+operation_parameters_collection_type["dexGetWithdrawsHistorical:::tokenId"]=""
+operation_parameters_collection_type["dexGetWithdrawsRequestsHistorical:::startBlock"]=""
+operation_parameters_collection_type["dexGetWithdrawsRequestsHistorical:::endBlock"]=""
+operation_parameters_collection_type["dexGetWithdrawsRequestsHistorical:::startDate"]=""
+operation_parameters_collection_type["dexGetWithdrawsRequestsHistorical:::endDate"]=""
+operation_parameters_collection_type["dexGetWithdrawsRequestsHistorical:::tokenId"]=""
 operation_parameters_collection_type["sushiswapGetBundlesHistorical:::startBlock"]=""
 operation_parameters_collection_type["sushiswapGetBundlesHistorical:::endBlock"]=""
 operation_parameters_collection_type["sushiswapGetBundlesHistorical:::startDate"]=""
@@ -1304,172 +1317,171 @@ operation_parameters_collection_type["sushiswapGetUsersHistorical:::startBlock"]
 operation_parameters_collection_type["sushiswapGetUsersHistorical:::endBlock"]=""
 operation_parameters_collection_type["sushiswapGetUsersHistorical:::startDate"]=""
 operation_parameters_collection_type["sushiswapGetUsersHistorical:::endDate"]=""
-operation_parameters_collection_type["dappsUniswapv2BundlesHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsUniswapv2BundlesHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsUniswapv2BundlesHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsUniswapv2BundlesHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsUniswapv2BurnsHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsUniswapv2BurnsHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsUniswapv2BurnsHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsUniswapv2BurnsHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsUniswapv2BurnsHistoricalGet:::poolId"]=""
-operation_parameters_collection_type["dappsUniswapv2DayDataHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsUniswapv2DayDataHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsUniswapv2DayDataHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsUniswapv2DayDataHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsUniswapv2FactoryHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsUniswapv2FactoryHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsUniswapv2FactoryHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsUniswapv2FactoryHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsUniswapv2LiquidityPositionHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsUniswapv2LiquidityPositionHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsUniswapv2LiquidityPositionHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsUniswapv2LiquidityPositionHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsUniswapv2LiquidityPositionHistoricalGet:::poolId"]=""
-operation_parameters_collection_type["dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet:::poolId"]=""
-operation_parameters_collection_type["dappsUniswapv2MintsHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsUniswapv2MintsHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsUniswapv2MintsHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsUniswapv2MintsHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsUniswapv2MintsHistoricalGet:::poolId"]=""
-operation_parameters_collection_type["dappsUniswapv2PoolDayDataHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsUniswapv2PoolDayDataHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsUniswapv2PoolDayDataHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsUniswapv2PoolDayDataHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsUniswapv2PoolDayDataHistoricalGet:::poolId"]=""
-operation_parameters_collection_type["dappsUniswapv2PoolHourDataHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsUniswapv2PoolHourDataHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsUniswapv2PoolHourDataHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsUniswapv2PoolHourDataHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsUniswapv2PoolHourDataHistoricalGet:::poolId"]=""
-operation_parameters_collection_type["dappsUniswapv2PoolsCurrentGet:::filter_pool_id"]=""
-operation_parameters_collection_type["dappsUniswapv2PoolsHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsUniswapv2PoolsHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsUniswapv2PoolsHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsUniswapv2PoolsHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsUniswapv2PoolsHistoricalGet:::poolId"]=""
-operation_parameters_collection_type["dappsUniswapv2SwapsHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsUniswapv2SwapsHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsUniswapv2SwapsHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsUniswapv2SwapsHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsUniswapv2SwapsHistoricalGet:::poolId"]=""
-operation_parameters_collection_type["dappsUniswapv2TokenDayDataHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsUniswapv2TokenDayDataHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsUniswapv2TokenDayDataHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsUniswapv2TokenDayDataHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsUniswapv2TokenDayDataHistoricalGet:::tokenId"]=""
-operation_parameters_collection_type["dappsUniswapv2TokensHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsUniswapv2TokensHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsUniswapv2TokensHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsUniswapv2TokensHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsUniswapv2TokensHistoricalGet:::tokenId"]=""
-operation_parameters_collection_type["dappsUniswapv2TransactionsHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsUniswapv2TransactionsHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsUniswapv2TransactionsHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsUniswapv2TransactionsHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsUniswapv2UsersHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsUniswapv2UsersHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsUniswapv2UsersHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsUniswapv2UsersHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsUniswapv3BundlesHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsUniswapv3BundlesHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsUniswapv3BundlesHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsUniswapv3BundlesHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsUniswapv3BurnsCurrentGet:::filter_pool_id"]=""
-operation_parameters_collection_type["dappsUniswapv3BurnsHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsUniswapv3BurnsHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsUniswapv3BurnsHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsUniswapv3BurnsHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsUniswapv3BurnsHistoricalGet:::poolId"]=""
-operation_parameters_collection_type["dappsUniswapv3DayDataHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsUniswapv3DayDataHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsUniswapv3DayDataHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsUniswapv3DayDataHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsUniswapv3FactoryCurrentGet:::chain_id"]=""
-operation_parameters_collection_type["dappsUniswapv3FactoryHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsUniswapv3FactoryHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsUniswapv3FactoryHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsUniswapv3FactoryHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsUniswapv3MintsCurrentGet:::filter_pool_id"]=""
-operation_parameters_collection_type["dappsUniswapv3MintsHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsUniswapv3MintsHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsUniswapv3MintsHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsUniswapv3MintsHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsUniswapv3MintsHistoricalGet:::poolId"]=""
-operation_parameters_collection_type["dappsUniswapv3PoolDayDataHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsUniswapv3PoolDayDataHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsUniswapv3PoolDayDataHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsUniswapv3PoolDayDataHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsUniswapv3PoolDayDataHistoricalGet:::poolId"]=""
-operation_parameters_collection_type["dappsUniswapv3PoolHourDataHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsUniswapv3PoolHourDataHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsUniswapv3PoolHourDataHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsUniswapv3PoolHourDataHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsUniswapv3PoolHourDataHistoricalGet:::poolId"]=""
-operation_parameters_collection_type["dappsUniswapv3PoolsCurrentGet:::filter_pool_id"]=""
-operation_parameters_collection_type["dappsUniswapv3PoolsDayDataCurrentGet:::filter_pool_id"]=""
-operation_parameters_collection_type["dappsUniswapv3PoolsHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsUniswapv3PoolsHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsUniswapv3PoolsHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsUniswapv3PoolsHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsUniswapv3PoolsHistoricalGet:::poolId"]=""
-operation_parameters_collection_type["dappsUniswapv3PoolsHourDataCurrentGet:::filter_pool_id"]=""
-operation_parameters_collection_type["dappsUniswapv3PositionSnapshotHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsUniswapv3PositionSnapshotHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsUniswapv3PositionSnapshotHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsUniswapv3PositionSnapshotHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsUniswapv3PositionSnapshotHistoricalGet:::poolId"]=""
-operation_parameters_collection_type["dappsUniswapv3PositionSnapshotsCurrentGet:::filter_pool_id"]=""
-operation_parameters_collection_type["dappsUniswapv3PositionsCurrentGet:::filter_pool_id"]=""
-operation_parameters_collection_type["dappsUniswapv3PositionsHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsUniswapv3PositionsHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsUniswapv3PositionsHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsUniswapv3PositionsHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsUniswapv3PositionsHistoricalGet:::poolId"]=""
-operation_parameters_collection_type["dappsUniswapv3SwapsCurrentGet:::filter_pool_id"]=""
-operation_parameters_collection_type["dappsUniswapv3SwapsHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsUniswapv3SwapsHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsUniswapv3SwapsHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsUniswapv3SwapsHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsUniswapv3SwapsHistoricalGet:::poolId"]=""
-operation_parameters_collection_type["dappsUniswapv3TickDayDataHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsUniswapv3TickDayDataHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsUniswapv3TickDayDataHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsUniswapv3TickDayDataHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsUniswapv3TickDayDataHistoricalGet:::poolId"]=""
-operation_parameters_collection_type["dappsUniswapv3TicksCurrentGet:::filter_pool_id"]=""
-operation_parameters_collection_type["dappsUniswapv3TicksDayDataCurrentGet:::filter_pool_id"]=""
-operation_parameters_collection_type["dappsUniswapv3TicksHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsUniswapv3TicksHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsUniswapv3TicksHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsUniswapv3TicksHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsUniswapv3TicksHistoricalGet:::poolId"]=""
-operation_parameters_collection_type["dappsUniswapv3TokenDayDataHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsUniswapv3TokenDayDataHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsUniswapv3TokenDayDataHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsUniswapv3TokenDayDataHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsUniswapv3TokenDayDataHistoricalGet:::tokenId"]=""
-operation_parameters_collection_type["dappsUniswapv3TokenHourDataHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsUniswapv3TokenHourDataHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsUniswapv3TokenHourDataHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsUniswapv3TokenHourDataHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsUniswapv3TokenHourDataHistoricalGet:::tokenId"]=""
-operation_parameters_collection_type["dappsUniswapv3TokensCurrentGet:::filter_token_id"]=""
-operation_parameters_collection_type["dappsUniswapv3TokensDayDataCurrentGet:::filter_token_id"]=""
-operation_parameters_collection_type["dappsUniswapv3TokensHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsUniswapv3TokensHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsUniswapv3TokensHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsUniswapv3TokensHistoricalGet:::endDate"]=""
-operation_parameters_collection_type["dappsUniswapv3TokensHistoricalGet:::tokenId"]=""
-operation_parameters_collection_type["dappsUniswapv3TokensHourDataCurrentGet:::filter_token_id"]=""
-operation_parameters_collection_type["dappsUniswapv3TransactionsHistoricalGet:::startBlock"]=""
-operation_parameters_collection_type["dappsUniswapv3TransactionsHistoricalGet:::endBlock"]=""
-operation_parameters_collection_type["dappsUniswapv3TransactionsHistoricalGet:::startDate"]=""
-operation_parameters_collection_type["dappsUniswapv3TransactionsHistoricalGet:::endDate"]=""
+operation_parameters_collection_type["uniswapV2GetBundlesHistorical:::startBlock"]=""
+operation_parameters_collection_type["uniswapV2GetBundlesHistorical:::endBlock"]=""
+operation_parameters_collection_type["uniswapV2GetBundlesHistorical:::startDate"]=""
+operation_parameters_collection_type["uniswapV2GetBundlesHistorical:::endDate"]=""
+operation_parameters_collection_type["uniswapV2GetBurnsHistorical:::startBlock"]=""
+operation_parameters_collection_type["uniswapV2GetBurnsHistorical:::endBlock"]=""
+operation_parameters_collection_type["uniswapV2GetBurnsHistorical:::startDate"]=""
+operation_parameters_collection_type["uniswapV2GetBurnsHistorical:::endDate"]=""
+operation_parameters_collection_type["uniswapV2GetBurnsHistorical:::poolId"]=""
+operation_parameters_collection_type["uniswapV2GetDayDataHistorical:::startBlock"]=""
+operation_parameters_collection_type["uniswapV2GetDayDataHistorical:::endBlock"]=""
+operation_parameters_collection_type["uniswapV2GetDayDataHistorical:::startDate"]=""
+operation_parameters_collection_type["uniswapV2GetDayDataHistorical:::endDate"]=""
+operation_parameters_collection_type["uniswapV2GetFactoryHistorical:::startBlock"]=""
+operation_parameters_collection_type["uniswapV2GetFactoryHistorical:::endBlock"]=""
+operation_parameters_collection_type["uniswapV2GetFactoryHistorical:::startDate"]=""
+operation_parameters_collection_type["uniswapV2GetFactoryHistorical:::endDate"]=""
+operation_parameters_collection_type["uniswapV2GetLiquidityPositionsHistorical:::startBlock"]=""
+operation_parameters_collection_type["uniswapV2GetLiquidityPositionsHistorical:::endBlock"]=""
+operation_parameters_collection_type["uniswapV2GetLiquidityPositionsHistorical:::startDate"]=""
+operation_parameters_collection_type["uniswapV2GetLiquidityPositionsHistorical:::endDate"]=""
+operation_parameters_collection_type["uniswapV2GetLiquidityPositionsHistorical:::poolId"]=""
+operation_parameters_collection_type["uniswapV2GetLiquidityPositionsSnapshotsHistorical:::startBlock"]=""
+operation_parameters_collection_type["uniswapV2GetLiquidityPositionsSnapshotsHistorical:::endBlock"]=""
+operation_parameters_collection_type["uniswapV2GetLiquidityPositionsSnapshotsHistorical:::startDate"]=""
+operation_parameters_collection_type["uniswapV2GetLiquidityPositionsSnapshotsHistorical:::endDate"]=""
+operation_parameters_collection_type["uniswapV2GetLiquidityPositionsSnapshotsHistorical:::poolId"]=""
+operation_parameters_collection_type["uniswapV2GetMintsHistorical:::startBlock"]=""
+operation_parameters_collection_type["uniswapV2GetMintsHistorical:::endBlock"]=""
+operation_parameters_collection_type["uniswapV2GetMintsHistorical:::startDate"]=""
+operation_parameters_collection_type["uniswapV2GetMintsHistorical:::endDate"]=""
+operation_parameters_collection_type["uniswapV2GetMintsHistorical:::poolId"]=""
+operation_parameters_collection_type["uniswapV2GetPoolsCurrent:::filter_pool_id"]=""
+operation_parameters_collection_type["uniswapV2GetPoolsDayDataHistorical:::startBlock"]=""
+operation_parameters_collection_type["uniswapV2GetPoolsDayDataHistorical:::endBlock"]=""
+operation_parameters_collection_type["uniswapV2GetPoolsDayDataHistorical:::startDate"]=""
+operation_parameters_collection_type["uniswapV2GetPoolsDayDataHistorical:::endDate"]=""
+operation_parameters_collection_type["uniswapV2GetPoolsDayDataHistorical:::poolId"]=""
+operation_parameters_collection_type["uniswapV2GetPoolsHistorical:::startBlock"]=""
+operation_parameters_collection_type["uniswapV2GetPoolsHistorical:::endBlock"]=""
+operation_parameters_collection_type["uniswapV2GetPoolsHistorical:::startDate"]=""
+operation_parameters_collection_type["uniswapV2GetPoolsHistorical:::endDate"]=""
+operation_parameters_collection_type["uniswapV2GetPoolsHistorical:::poolId"]=""
+operation_parameters_collection_type["uniswapV2GetPoolsHourDataHistorical:::startBlock"]=""
+operation_parameters_collection_type["uniswapV2GetPoolsHourDataHistorical:::endBlock"]=""
+operation_parameters_collection_type["uniswapV2GetPoolsHourDataHistorical:::startDate"]=""
+operation_parameters_collection_type["uniswapV2GetPoolsHourDataHistorical:::endDate"]=""
+operation_parameters_collection_type["uniswapV2GetPoolsHourDataHistorical:::poolId"]=""
+operation_parameters_collection_type["uniswapV2GetSwapsHistorical:::startBlock"]=""
+operation_parameters_collection_type["uniswapV2GetSwapsHistorical:::endBlock"]=""
+operation_parameters_collection_type["uniswapV2GetSwapsHistorical:::startDate"]=""
+operation_parameters_collection_type["uniswapV2GetSwapsHistorical:::endDate"]=""
+operation_parameters_collection_type["uniswapV2GetSwapsHistorical:::poolId"]=""
+operation_parameters_collection_type["uniswapV2GetTokensDayDataHistorical:::startBlock"]=""
+operation_parameters_collection_type["uniswapV2GetTokensDayDataHistorical:::endBlock"]=""
+operation_parameters_collection_type["uniswapV2GetTokensDayDataHistorical:::startDate"]=""
+operation_parameters_collection_type["uniswapV2GetTokensDayDataHistorical:::endDate"]=""
+operation_parameters_collection_type["uniswapV2GetTokensDayDataHistorical:::tokenId"]=""
+operation_parameters_collection_type["uniswapV2GetTokensHistorical:::startBlock"]=""
+operation_parameters_collection_type["uniswapV2GetTokensHistorical:::endBlock"]=""
+operation_parameters_collection_type["uniswapV2GetTokensHistorical:::startDate"]=""
+operation_parameters_collection_type["uniswapV2GetTokensHistorical:::endDate"]=""
+operation_parameters_collection_type["uniswapV2GetTokensHistorical:::tokenId"]=""
+operation_parameters_collection_type["uniswapV2GetTransactionsHistorical:::startBlock"]=""
+operation_parameters_collection_type["uniswapV2GetTransactionsHistorical:::endBlock"]=""
+operation_parameters_collection_type["uniswapV2GetTransactionsHistorical:::startDate"]=""
+operation_parameters_collection_type["uniswapV2GetTransactionsHistorical:::endDate"]=""
+operation_parameters_collection_type["uniswapV2GetUsersHistorical:::startBlock"]=""
+operation_parameters_collection_type["uniswapV2GetUsersHistorical:::endBlock"]=""
+operation_parameters_collection_type["uniswapV2GetUsersHistorical:::startDate"]=""
+operation_parameters_collection_type["uniswapV2GetUsersHistorical:::endDate"]=""
+operation_parameters_collection_type["uniswapV3GetBundlesHistorical:::startBlock"]=""
+operation_parameters_collection_type["uniswapV3GetBundlesHistorical:::endBlock"]=""
+operation_parameters_collection_type["uniswapV3GetBundlesHistorical:::startDate"]=""
+operation_parameters_collection_type["uniswapV3GetBundlesHistorical:::endDate"]=""
+operation_parameters_collection_type["uniswapV3GetBurnsCurrent:::filter_pool_id"]=""
+operation_parameters_collection_type["uniswapV3GetBurnsHistorical:::startBlock"]=""
+operation_parameters_collection_type["uniswapV3GetBurnsHistorical:::endBlock"]=""
+operation_parameters_collection_type["uniswapV3GetBurnsHistorical:::startDate"]=""
+operation_parameters_collection_type["uniswapV3GetBurnsHistorical:::endDate"]=""
+operation_parameters_collection_type["uniswapV3GetBurnsHistorical:::poolId"]=""
+operation_parameters_collection_type["uniswapV3GetDayDataHistorical:::startBlock"]=""
+operation_parameters_collection_type["uniswapV3GetDayDataHistorical:::endBlock"]=""
+operation_parameters_collection_type["uniswapV3GetDayDataHistorical:::startDate"]=""
+operation_parameters_collection_type["uniswapV3GetDayDataHistorical:::endDate"]=""
+operation_parameters_collection_type["uniswapV3GetFactoryHistorical:::startBlock"]=""
+operation_parameters_collection_type["uniswapV3GetFactoryHistorical:::endBlock"]=""
+operation_parameters_collection_type["uniswapV3GetFactoryHistorical:::startDate"]=""
+operation_parameters_collection_type["uniswapV3GetFactoryHistorical:::endDate"]=""
+operation_parameters_collection_type["uniswapV3GetMintsCurrent:::filter_pool_id"]=""
+operation_parameters_collection_type["uniswapV3GetMintsHistorical:::startBlock"]=""
+operation_parameters_collection_type["uniswapV3GetMintsHistorical:::endBlock"]=""
+operation_parameters_collection_type["uniswapV3GetMintsHistorical:::startDate"]=""
+operation_parameters_collection_type["uniswapV3GetMintsHistorical:::endDate"]=""
+operation_parameters_collection_type["uniswapV3GetMintsHistorical:::poolId"]=""
+operation_parameters_collection_type["uniswapV3GetPoolsCurrent:::filter_pool_id"]=""
+operation_parameters_collection_type["uniswapV3GetPoolsDayDataCurrent:::filter_pool_id"]=""
+operation_parameters_collection_type["uniswapV3GetPoolsDayDataHistorical:::startBlock"]=""
+operation_parameters_collection_type["uniswapV3GetPoolsDayDataHistorical:::endBlock"]=""
+operation_parameters_collection_type["uniswapV3GetPoolsDayDataHistorical:::startDate"]=""
+operation_parameters_collection_type["uniswapV3GetPoolsDayDataHistorical:::endDate"]=""
+operation_parameters_collection_type["uniswapV3GetPoolsDayDataHistorical:::poolId"]=""
+operation_parameters_collection_type["uniswapV3GetPoolsHistorical:::startBlock"]=""
+operation_parameters_collection_type["uniswapV3GetPoolsHistorical:::endBlock"]=""
+operation_parameters_collection_type["uniswapV3GetPoolsHistorical:::startDate"]=""
+operation_parameters_collection_type["uniswapV3GetPoolsHistorical:::endDate"]=""
+operation_parameters_collection_type["uniswapV3GetPoolsHistorical:::poolId"]=""
+operation_parameters_collection_type["uniswapV3GetPoolsHourDataCurrent:::filter_pool_id"]=""
+operation_parameters_collection_type["uniswapV3GetPoolsHourDataHistorical:::startBlock"]=""
+operation_parameters_collection_type["uniswapV3GetPoolsHourDataHistorical:::endBlock"]=""
+operation_parameters_collection_type["uniswapV3GetPoolsHourDataHistorical:::startDate"]=""
+operation_parameters_collection_type["uniswapV3GetPoolsHourDataHistorical:::endDate"]=""
+operation_parameters_collection_type["uniswapV3GetPoolsHourDataHistorical:::poolId"]=""
+operation_parameters_collection_type["uniswapV3GetPositionsCurrent:::filter_pool_id"]=""
+operation_parameters_collection_type["uniswapV3GetPositionsHistorical:::startBlock"]=""
+operation_parameters_collection_type["uniswapV3GetPositionsHistorical:::endBlock"]=""
+operation_parameters_collection_type["uniswapV3GetPositionsHistorical:::startDate"]=""
+operation_parameters_collection_type["uniswapV3GetPositionsHistorical:::endDate"]=""
+operation_parameters_collection_type["uniswapV3GetPositionsHistorical:::poolId"]=""
+operation_parameters_collection_type["uniswapV3GetPositionsSnaphotsHistorical:::startBlock"]=""
+operation_parameters_collection_type["uniswapV3GetPositionsSnaphotsHistorical:::endBlock"]=""
+operation_parameters_collection_type["uniswapV3GetPositionsSnaphotsHistorical:::startDate"]=""
+operation_parameters_collection_type["uniswapV3GetPositionsSnaphotsHistorical:::endDate"]=""
+operation_parameters_collection_type["uniswapV3GetPositionsSnaphotsHistorical:::poolId"]=""
+operation_parameters_collection_type["uniswapV3GetPositionsSnapshotsCurrent:::filter_pool_id"]=""
+operation_parameters_collection_type["uniswapV3GetSwapsCurrent:::filter_pool_id"]=""
+operation_parameters_collection_type["uniswapV3GetSwapsHistorical:::startBlock"]=""
+operation_parameters_collection_type["uniswapV3GetSwapsHistorical:::endBlock"]=""
+operation_parameters_collection_type["uniswapV3GetSwapsHistorical:::startDate"]=""
+operation_parameters_collection_type["uniswapV3GetSwapsHistorical:::endDate"]=""
+operation_parameters_collection_type["uniswapV3GetSwapsHistorical:::poolId"]=""
+operation_parameters_collection_type["uniswapV3GetTicksCurrent:::filter_pool_id"]=""
+operation_parameters_collection_type["uniswapV3GetTicksDayDataCurrent:::filter_pool_id"]=""
+operation_parameters_collection_type["uniswapV3GetTicksDayDataHistorical:::startBlock"]=""
+operation_parameters_collection_type["uniswapV3GetTicksDayDataHistorical:::endBlock"]=""
+operation_parameters_collection_type["uniswapV3GetTicksDayDataHistorical:::startDate"]=""
+operation_parameters_collection_type["uniswapV3GetTicksDayDataHistorical:::endDate"]=""
+operation_parameters_collection_type["uniswapV3GetTicksDayDataHistorical:::poolId"]=""
+operation_parameters_collection_type["uniswapV3GetTicksHistorical:::startBlock"]=""
+operation_parameters_collection_type["uniswapV3GetTicksHistorical:::endBlock"]=""
+operation_parameters_collection_type["uniswapV3GetTicksHistorical:::startDate"]=""
+operation_parameters_collection_type["uniswapV3GetTicksHistorical:::endDate"]=""
+operation_parameters_collection_type["uniswapV3GetTicksHistorical:::poolId"]=""
+operation_parameters_collection_type["uniswapV3GetTokensCurrent:::filter_token_id"]=""
+operation_parameters_collection_type["uniswapV3GetTokensDayDataCurrent:::filter_token_id"]=""
+operation_parameters_collection_type["uniswapV3GetTokensDayDataHistorical:::startBlock"]=""
+operation_parameters_collection_type["uniswapV3GetTokensDayDataHistorical:::endBlock"]=""
+operation_parameters_collection_type["uniswapV3GetTokensDayDataHistorical:::startDate"]=""
+operation_parameters_collection_type["uniswapV3GetTokensDayDataHistorical:::endDate"]=""
+operation_parameters_collection_type["uniswapV3GetTokensDayDataHistorical:::tokenId"]=""
+operation_parameters_collection_type["uniswapV3GetTokensHistorical:::startBlock"]=""
+operation_parameters_collection_type["uniswapV3GetTokensHistorical:::endBlock"]=""
+operation_parameters_collection_type["uniswapV3GetTokensHistorical:::startDate"]=""
+operation_parameters_collection_type["uniswapV3GetTokensHistorical:::endDate"]=""
+operation_parameters_collection_type["uniswapV3GetTokensHistorical:::tokenId"]=""
+operation_parameters_collection_type["uniswapV3GetTokensHourDataCurrent:::filter_token_id"]=""
+operation_parameters_collection_type["uniswapV3GetTokensHourDataHistorical:::startBlock"]=""
+operation_parameters_collection_type["uniswapV3GetTokensHourDataHistorical:::endBlock"]=""
+operation_parameters_collection_type["uniswapV3GetTokensHourDataHistorical:::startDate"]=""
+operation_parameters_collection_type["uniswapV3GetTokensHourDataHistorical:::endDate"]=""
+operation_parameters_collection_type["uniswapV3GetTokensHourDataHistorical:::tokenId"]=""
+operation_parameters_collection_type["uniswapV3GetTransactionsHistorical:::startBlock"]=""
+operation_parameters_collection_type["uniswapV3GetTransactionsHistorical:::endBlock"]=""
+operation_parameters_collection_type["uniswapV3GetTransactionsHistorical:::startDate"]=""
+operation_parameters_collection_type["uniswapV3GetTransactionsHistorical:::endDate"]=""
 
 
 ##
@@ -1854,68 +1866,71 @@ EOF
     echo ""
     echo -e "${BOLD}${WHITE}[cow]${OFF}"
 read -r -d '' ops <<EOF
-  ${CYAN}dappsCowOrdersHistoricalGet${OFF};
-  ${CYAN}dappsCowSettlementHistoricalGet${OFF};
-  ${CYAN}dappsCowTokensHistoricalGet${OFF};
-  ${CYAN}dappsCowTradesHistoricalGet${OFF};
-  ${CYAN}dappsCowUsersHistoricalGet${OFF};
+  ${CYAN}cowGetOrdersHistorical${OFF};GetOrders (historical)
+  ${CYAN}cowGetSettlementsHistorical${OFF};GetSettlements (historical)
+  ${CYAN}cowGetTokensHistorical${OFF};GetTokens (historical) 🔥
+  ${CYAN}cowGetTradesHistorical${OFF};GetTrades (historical) 🔥
+  ${CYAN}cowGetUsersHistorical${OFF};GetUsers (historical)
 EOF
 echo "  $ops" | column -t -s ';'
     echo ""
     echo -e "${BOLD}${WHITE}[curve]${OFF}"
 read -r -d '' ops <<EOF
-  ${CYAN}dappsCurveAccountsHistoricalGet${OFF};
-  ${CYAN}dappsCurveAddLiquidityEventHistoricalGet${OFF};
-  ${CYAN}dappsCurveAdminFeeChangeLogHistoricalGet${OFF};
-  ${CYAN}dappsCurveAmplificationCoeffChangeLogHistoricalGet${OFF};
-  ${CYAN}dappsCurveCoinsHistoricalGet${OFF};
-  ${CYAN}dappsCurveContractsHistoricalGet${OFF};
-  ${CYAN}dappsCurveContractsVersionHistoricalGet${OFF};
-  ${CYAN}dappsCurveDailyVolumeHistoricalGet${OFF};
-  ${CYAN}dappsCurveFeeChangeLogHistoricalGet${OFF};
-  ${CYAN}dappsCurveGaugeDepositHistoricalGet${OFF};
-  ${CYAN}dappsCurveGaugeHistoricalGet${OFF};
-  ${CYAN}dappsCurveGaugeLiquidityHistoricalGet${OFF};
-  ${CYAN}dappsCurveGaugeTotalWeightHistoricalGet${OFF};
-  ${CYAN}dappsCurveGaugeTypeHistoricalGet${OFF};
-  ${CYAN}dappsCurveGaugeTypeWeightHistoricalGet${OFF};
-  ${CYAN}dappsCurveGaugeWeightHistoricalGet${OFF};
-  ${CYAN}dappsCurveGaugeWeightVoteHistoricalGet${OFF};
-  ${CYAN}dappsCurveGaugeWithdrawHistoricalGet${OFF};
-  ${CYAN}dappsCurveHourlyVolumeHistoricalGet${OFF};
-  ${CYAN}dappsCurveLpTokenHistoricalGet${OFF};
-  ${CYAN}dappsCurvePoolsHistoricalGet${OFF};
-  ${CYAN}dappsCurveProposalsHistoricalGet${OFF};
-  ${CYAN}dappsCurveProposalsVoteHistoricalGet${OFF};
-  ${CYAN}dappsCurveRemoveLiquidityEventHistoricalGet${OFF};
-  ${CYAN}dappsCurveRemoveLiquidityOneEventHistoricalGet${OFF};
-  ${CYAN}dappsCurveSwapsHistoricalGet${OFF};
-  ${CYAN}dappsCurveSystemStateHistoricalGet${OFF};
-  ${CYAN}dappsCurveTokensHistoricalGet${OFF};
-  ${CYAN}dappsCurveTransferOwnershipEventHistoricalGet${OFF};
-  ${CYAN}dappsCurveUnderlyingCoinHistoricalGet${OFF};
-  ${CYAN}dappsCurveVotingAppHistoricalGet${OFF};
-  ${CYAN}dappsCurveWeeklyVolumeHistoricalGet${OFF};
+  ${CYAN}curveGetAccountsHistorical${OFF};GetAccounts (historical)
+  ${CYAN}curveGetAddLiquidityEventsHistorical${OFF};GetAddLiquidityEvents (historical)
+  ${CYAN}curveGetAdminFeeChangeLogsHistorical${OFF};GetAdminFeeChangeLogs (historical)
+  ${CYAN}curveGetAmplificationCoeffChangeLogsHistorical${OFF};GetAmplificationCoeffChangeLogs (historical)
+  ${CYAN}curveGetCoinsHistorical${OFF};GetCoins (historical)
+  ${CYAN}curveGetContractsHistorical${OFF};GetContracts (historical)
+  ${CYAN}curveGetContractsVersionsHistorical${OFF};GetContractsVersions (historical)
+  ${CYAN}curveGetDailyVolumesHistorical${OFF};GetDailyVolumes (historical)
+  ${CYAN}curveGetExchangesHistorical${OFF};GetExchanges (historical) 🔥
+  ${CYAN}curveGetFeeChangeLogsHistorical${OFF};GetFeeChangeLogs (historical)
+  ${CYAN}curveGetGaugesDepositsHistorical${OFF};GetGaugesDeposits (historical)
+  ${CYAN}curveGetGaugesHistorical${OFF};GetGauges (historical)
+  ${CYAN}curveGetGaugesLiquidityHistorical${OFF};GetGaugesLiquidity (historical)
+  ${CYAN}curveGetGaugesTotalWeightsHistorical${OFF};GetGaugesTotalWeights (historical)
+  ${CYAN}curveGetGaugesTypesHistorical${OFF};GetGaugesTypes (historical)
+  ${CYAN}curveGetGaugesTypesWeightsHistorical${OFF};GetGaugesTypesWeights (historical)
+  ${CYAN}curveGetGaugesWeightsHistorical${OFF};GetGaugesWeights (historical)
+  ${CYAN}curveGetGaugesWeightsVotesHistorical${OFF};GetGaugesWeightsVotes (historical)
+  ${CYAN}curveGetGaugesWithdrawHistorical${OFF};GetGaugesWithdraw (historical)
+  ${CYAN}curveGetHourlyVolumesHistorical${OFF};GetHourlyVolumes (historical)
+  ${CYAN}curveGetLpTokensHistorical${OFF};GetLpTokens (historical)
+  ${CYAN}curveGetPoolsHistorical${OFF};GetPools (historical) 🔥
+  ${CYAN}curveGetProposalsHistorical${OFF};GetProposals (historical)
+  ${CYAN}curveGetProposalsVotesHistorical${OFF};GetProposalsVotes (historical)
+  ${CYAN}curveGetRemoveLiquidityEventsHistorical${OFF};GetRemoveLiquidityEvents (historical)
+  ${CYAN}curveGetRemoveLiquidityOneEventsHistorical${OFF};GetRemoveLiquidityOneEvents (historical)
+  ${CYAN}curveGetSystemStatesHistorical${OFF};GetSystemStates (historical)
+  ${CYAN}curveGetTokensHistorical${OFF};GetTokens (historical) 🔥
+  ${CYAN}curveGetTransferOwnershipEventsHistorical${OFF};GetTransferOwnershipEvents (historical)
+  ${CYAN}curveGetUnderlyingCoinsHistorical${OFF};GetUnderlyingCoins (historical)
+  ${CYAN}curveGetVotingAppsHistorical${OFF};GetVotingApps (historical)
+  ${CYAN}curveGetWeeklyVolumesHistorical${OFF};GetWeeklyVolumes (historical)
 EOF
 echo "  $ops" | column -t -s ';'
     echo ""
     echo -e "${BOLD}${WHITE}[dex]${OFF}"
 read -r -d '' ops <<EOF
-  ${CYAN}dappsDexBatchHistoricalGet${OFF};
-  ${CYAN}dappsDexOrdersHistoricalGet${OFF};
-  ${CYAN}dappsDexPricesHistoricalGet${OFF};
-  ${CYAN}dappsDexSolutionHistoricalGet${OFF};
-  ${CYAN}dappsDexStatsHistoricalGet${OFF};
-  ${CYAN}dappsDexTokensHistoricalGet${OFF};
-  ${CYAN}dappsDexTradesHistoricalGet${OFF};
-  ${CYAN}dappsDexUsersHistoricalGet${OFF};
-  ${CYAN}dappsDexWithdrawHistoricalGet${OFF};
-  ${CYAN}dappsDexWithdrawRequestHistoricalGet${OFF};
+  ${CYAN}dexGetBatchesHistorical${OFF};GetBatches (historical)
+  ${CYAN}dexGetDepositsHistorical${OFF};GetDeposits (historical)
+  ${CYAN}dexGetOrdersHistorical${OFF};GetOrders (historical)
+  ${CYAN}dexGetPricesHistorical${OFF};GetPrices (historical)
+  ${CYAN}dexGetSolutionsHistorical${OFF};GetSolutions (historical)
+  ${CYAN}dexGetStatsHistorical${OFF};GetStats (historical)
+  ${CYAN}dexGetTokensHistorical${OFF};GetTokens (historical) 🔥
+  ${CYAN}dexGetTradesHistorical${OFF};GetTrades (historical) 🔥
+  ${CYAN}dexGetUsersHistorical${OFF};GetUsers (historical)
+  ${CYAN}dexGetWithdrawsHistorical${OFF};GetWithdraws (historical)
+  ${CYAN}dexGetWithdrawsRequestsHistorical${OFF};GetWithdrawsRequests (historical)
 EOF
 echo "  $ops" | column -t -s ';'
     echo ""
     echo -e "${BOLD}${WHITE}[sushiswap]${OFF}"
 read -r -d '' ops <<EOF
+  ${CYAN}curveGetExchangesCurrent${OFF};GetExchanges (current) 🔥
+  ${CYAN}dexGetTradesCurrent${OFF};GetTrades (current) 🔥
   ${CYAN}sushiswapGetBundlesHistorical${OFF};GetBundles (historical)
   ${CYAN}sushiswapGetBurnsHistorical${OFF};GetBurns (historical)
   ${CYAN}sushiswapGetDayDataHistorical${OFF};GetDayData (historical)
@@ -1924,15 +1939,15 @@ read -r -d '' ops <<EOF
   ${CYAN}sushiswapGetLiquidityPositionHistorical${OFF};GetLiquidityPosition (historical)
   ${CYAN}sushiswapGetLiquidityPositionSnapshotHistorical${OFF};GetLiquidityPositionSnapshot (historical)
   ${CYAN}sushiswapGetMintsHistorical${OFF};GetMints (historical)
-  ${CYAN}sushiswapGetPoolsCurrent${OFF};GetPools (current)
+  ${CYAN}sushiswapGetPoolsCurrent${OFF};GetPools (current) 🔥
   ${CYAN}sushiswapGetPoolsDayDataHistorical${OFF};GetPoolsDayData (historical)
-  ${CYAN}sushiswapGetPoolsHistorical${OFF};GetPools (historical)
+  ${CYAN}sushiswapGetPoolsHistorical${OFF};GetPools (historical) 🔥
   ${CYAN}sushiswapGetPoolsHourDataHistorical${OFF};GetPoolsHourData (historical)
-  ${CYAN}sushiswapGetSwapsCurrent${OFF};GetSwaps (current)
-  ${CYAN}sushiswapGetSwapsHistorical${OFF};GetSwaps (historical)
-  ${CYAN}sushiswapGetTokensCurrent${OFF};GetTokens (current)
+  ${CYAN}sushiswapGetSwapsCurrent${OFF};GetSwaps (current) 🔥
+  ${CYAN}sushiswapGetSwapsHistorical${OFF};GetSwaps (historical) 🔥
+  ${CYAN}sushiswapGetTokensCurrent${OFF};GetTokens (current) 🔥
   ${CYAN}sushiswapGetTokensDayDataHistorical${OFF};GetTokensDayData (historical)
-  ${CYAN}sushiswapGetTokensHistorical${OFF};GetTokens (historical)
+  ${CYAN}sushiswapGetTokensHistorical${OFF};GetTokens (historical) 🔥
   ${CYAN}sushiswapGetTransactionsHistorical${OFF};GetTransactions (historical)
   ${CYAN}sushiswapGetUsersHistorical${OFF};GetUsers (historical)
 EOF
@@ -1940,62 +1955,62 @@ echo "  $ops" | column -t -s ';'
     echo ""
     echo -e "${BOLD}${WHITE}[uniswapV2]${OFF}"
 read -r -d '' ops <<EOF
-  ${CYAN}dappsUniswapv2BundlesHistoricalGet${OFF};
-  ${CYAN}dappsUniswapv2BurnsHistoricalGet${OFF};
-  ${CYAN}dappsUniswapv2DayDataHistoricalGet${OFF};
-  ${CYAN}dappsUniswapv2FactoryHistoricalGet${OFF};
-  ${CYAN}dappsUniswapv2LiquidityPositionHistoricalGet${OFF};
-  ${CYAN}dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet${OFF};
-  ${CYAN}dappsUniswapv2MintsHistoricalGet${OFF};
-  ${CYAN}dappsUniswapv2PoolDayDataHistoricalGet${OFF};
-  ${CYAN}dappsUniswapv2PoolHourDataHistoricalGet${OFF};
-  ${CYAN}dappsUniswapv2PoolsCurrentGet${OFF};GetPools
-  ${CYAN}dappsUniswapv2PoolsHistoricalGet${OFF};
-  ${CYAN}dappsUniswapv2SwapsCurrentGet${OFF};GetSwaps
-  ${CYAN}dappsUniswapv2SwapsHistoricalGet${OFF};
-  ${CYAN}dappsUniswapv2TokenDayDataHistoricalGet${OFF};
-  ${CYAN}dappsUniswapv2TokensCurrentGet${OFF};GetTokens
-  ${CYAN}dappsUniswapv2TokensHistoricalGet${OFF};
-  ${CYAN}dappsUniswapv2TransactionsHistoricalGet${OFF};
-  ${CYAN}dappsUniswapv2UsersHistoricalGet${OFF};
+  ${CYAN}uniswapV2GetBundlesHistorical${OFF};GetBundles (historical)
+  ${CYAN}uniswapV2GetBurnsHistorical${OFF};GetBurns (historical)
+  ${CYAN}uniswapV2GetDayDataHistorical${OFF};GetDayData (historical)
+  ${CYAN}uniswapV2GetFactoryHistorical${OFF};GetFactory (historical)
+  ${CYAN}uniswapV2GetLiquidityPositionsHistorical${OFF};GetLiquidityPositions (historical)
+  ${CYAN}uniswapV2GetLiquidityPositionsSnapshotsHistorical${OFF};GetLiquidityPositionsSnapshots (historical)
+  ${CYAN}uniswapV2GetMintsHistorical${OFF};GetMints (historical)
+  ${CYAN}uniswapV2GetPoolsCurrent${OFF};GetPools (current) 🔥
+  ${CYAN}uniswapV2GetPoolsDayDataHistorical${OFF};GetPoolsDayData (historical)
+  ${CYAN}uniswapV2GetPoolsHistorical${OFF};GetPools (historical) 🔥
+  ${CYAN}uniswapV2GetPoolsHourDataHistorical${OFF};GetPoolsHourData (historical)
+  ${CYAN}uniswapV2GetSwapsCurrent${OFF};GetSwaps (current) 🔥
+  ${CYAN}uniswapV2GetSwapsHistorical${OFF};GetSwaps (historical) 🔥
+  ${CYAN}uniswapV2GetTokensCurrent${OFF};GetTokens (current) 🔥
+  ${CYAN}uniswapV2GetTokensDayDataHistorical${OFF};GetTokensDayData (historical)
+  ${CYAN}uniswapV2GetTokensHistorical${OFF};GetTokens (historical) 🔥
+  ${CYAN}uniswapV2GetTransactionsHistorical${OFF};GetTransactions (historical)
+  ${CYAN}uniswapV2GetUsersHistorical${OFF};GetUsers (historical)
 EOF
 echo "  $ops" | column -t -s ';'
     echo ""
     echo -e "${BOLD}${WHITE}[uniswapV3]${OFF}"
 read -r -d '' ops <<EOF
-  ${CYAN}dappsUniswapv3BundleCurrentGet${OFF};GetBundles
-  ${CYAN}dappsUniswapv3BundlesHistoricalGet${OFF};
-  ${CYAN}dappsUniswapv3BurnsCurrentGet${OFF};GetBurns
-  ${CYAN}dappsUniswapv3BurnsHistoricalGet${OFF};
-  ${CYAN}dappsUniswapv3DayDataHistoricalGet${OFF};
-  ${CYAN}dappsUniswapv3FactoryCurrentGet${OFF};GetFactory
-  ${CYAN}dappsUniswapv3FactoryHistoricalGet${OFF};
-  ${CYAN}dappsUniswapv3MintsCurrentGet${OFF};GetMints
-  ${CYAN}dappsUniswapv3MintsHistoricalGet${OFF};
-  ${CYAN}dappsUniswapv3PoolDayDataHistoricalGet${OFF};
-  ${CYAN}dappsUniswapv3PoolHourDataHistoricalGet${OFF};
-  ${CYAN}dappsUniswapv3PoolsCurrentGet${OFF};GetPools
-  ${CYAN}dappsUniswapv3PoolsDayDataCurrentGet${OFF};GetPoolsDayData
-  ${CYAN}dappsUniswapv3PoolsHistoricalGet${OFF};
-  ${CYAN}dappsUniswapv3PoolsHourDataCurrentGet${OFF};GetPoolsHourData
-  ${CYAN}dappsUniswapv3PositionSnapshotHistoricalGet${OFF};
-  ${CYAN}dappsUniswapv3PositionSnapshotsCurrentGet${OFF};GetPositionSnapshot
-  ${CYAN}dappsUniswapv3PositionsCurrentGet${OFF};GetPositions
-  ${CYAN}dappsUniswapv3PositionsHistoricalGet${OFF};
-  ${CYAN}dappsUniswapv3SwapsCurrentGet${OFF};GetSwaps
-  ${CYAN}dappsUniswapv3SwapsHistoricalGet${OFF};
-  ${CYAN}dappsUniswapv3TickDayDataHistoricalGet${OFF};
-  ${CYAN}dappsUniswapv3TicksCurrentGet${OFF};GetTicks
-  ${CYAN}dappsUniswapv3TicksDayDataCurrentGet${OFF};GetTicksDayData
-  ${CYAN}dappsUniswapv3TicksHistoricalGet${OFF};
-  ${CYAN}dappsUniswapv3TokenDayDataHistoricalGet${OFF};
-  ${CYAN}dappsUniswapv3TokenHourDataHistoricalGet${OFF};
-  ${CYAN}dappsUniswapv3TokensCurrentGet${OFF};GetTokens
-  ${CYAN}dappsUniswapv3TokensDayDataCurrentGet${OFF};GetTokensDayData
-  ${CYAN}dappsUniswapv3TokensHistoricalGet${OFF};
-  ${CYAN}dappsUniswapv3TokensHourDataCurrentGet${OFF};GetTokensHourData
-  ${CYAN}dappsUniswapv3TransactionsHistoricalGet${OFF};
-  ${CYAN}dappsUniswapv3UniswapDayDataCurrentGet${OFF};GetUniswapDayData
+  ${CYAN}uniswapV3GetBundlesCurrent${OFF};GetBundles (current)
+  ${CYAN}uniswapV3GetBundlesHistorical${OFF};GetBundles (historical)
+  ${CYAN}uniswapV3GetBurnsCurrent${OFF};GetBurns (current)
+  ${CYAN}uniswapV3GetBurnsHistorical${OFF};GetBurns (historical)
+  ${CYAN}uniswapV3GetDayDataCurrent${OFF};GetDayData (current)
+  ${CYAN}uniswapV3GetDayDataHistorical${OFF};GetDayData (historical)
+  ${CYAN}uniswapV3GetFactoryCurrent${OFF};GetFactory (current)
+  ${CYAN}uniswapV3GetFactoryHistorical${OFF};GetFactory (historical)
+  ${CYAN}uniswapV3GetMintsCurrent${OFF};GetMints (current)
+  ${CYAN}uniswapV3GetMintsHistorical${OFF};GetMints (historical)
+  ${CYAN}uniswapV3GetPoolsCurrent${OFF};GetPools (current) 🔥
+  ${CYAN}uniswapV3GetPoolsDayDataCurrent${OFF};GetPoolsDayData (current)
+  ${CYAN}uniswapV3GetPoolsDayDataHistorical${OFF};GetPoolsDayData (historical)
+  ${CYAN}uniswapV3GetPoolsHistorical${OFF};GetPools (historical) 🔥
+  ${CYAN}uniswapV3GetPoolsHourDataCurrent${OFF};GetPoolsHourData (current)
+  ${CYAN}uniswapV3GetPoolsHourDataHistorical${OFF};GetPoolsHourData (historical)
+  ${CYAN}uniswapV3GetPositionsCurrent${OFF};GetPositions (current)
+  ${CYAN}uniswapV3GetPositionsHistorical${OFF};GetPositions (historical)
+  ${CYAN}uniswapV3GetPositionsSnaphotsHistorical${OFF};GetPositionsSnaphots (historical)
+  ${CYAN}uniswapV3GetPositionsSnapshotsCurrent${OFF};GetPositionsSnapshots (current)
+  ${CYAN}uniswapV3GetSwapsCurrent${OFF};GetSwaps (current) 🔥
+  ${CYAN}uniswapV3GetSwapsHistorical${OFF};GetSwaps (historical) 🔥
+  ${CYAN}uniswapV3GetTicksCurrent${OFF};GetTicks (current)
+  ${CYAN}uniswapV3GetTicksDayDataCurrent${OFF};GetTicksDayData (current)
+  ${CYAN}uniswapV3GetTicksDayDataHistorical${OFF};GetTicksDayData (historical)
+  ${CYAN}uniswapV3GetTicksHistorical${OFF};GetTicks (historical)
+  ${CYAN}uniswapV3GetTokensCurrent${OFF};GetTokens (current) 🔥
+  ${CYAN}uniswapV3GetTokensDayDataCurrent${OFF};GetTokensDayData (current)
+  ${CYAN}uniswapV3GetTokensDayDataHistorical${OFF};GetTokensDayData (historical)
+  ${CYAN}uniswapV3GetTokensHistorical${OFF};GetTokens (historical) 🔥
+  ${CYAN}uniswapV3GetTokensHourDataCurrent${OFF};GetTokensHourData (current)
+  ${CYAN}uniswapV3GetTokensHourDataHistorical${OFF};GetTokensHourData (historical)
+  ${CYAN}uniswapV3GetTransactionsHistorical${OFF};GetTransactions (historical)
 EOF
 echo "  $ops" | column -t -s ';'
     echo ""
@@ -2053,12 +2068,14 @@ print_version() {
 
 ##############################################################################
 #
-# Print help for dappsCowOrdersHistoricalGet operation
+# Print help for cowGetOrdersHistorical operation
 #
 ##############################################################################
-print_dappsCowOrdersHistoricalGet_help() {
+print_cowGetOrdersHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsCowOrdersHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}cowGetOrdersHistorical - GetOrders (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets orders." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -2072,16 +2089,18 @@ print_dappsCowOrdersHistoricalGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
-# Print help for dappsCowSettlementHistoricalGet operation
+# Print help for cowGetSettlementsHistorical operation
 #
 ##############################################################################
-print_dappsCowSettlementHistoricalGet_help() {
+print_cowGetSettlementsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsCowSettlementHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}cowGetSettlementsHistorical - GetSettlements (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets settlements." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -2095,16 +2114,18 @@ print_dappsCowSettlementHistoricalGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
-# Print help for dappsCowTokensHistoricalGet operation
+# Print help for cowGetTokensHistorical operation
 #
 ##############################################################################
-print_dappsCowTokensHistoricalGet_help() {
+print_cowGetTokensHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsCowTokensHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}cowGetTokensHistorical - GetTokens (historical) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets tokens." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -2120,16 +2141,18 @@ print_dappsCowTokensHistoricalGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
-# Print help for dappsCowTradesHistoricalGet operation
+# Print help for cowGetTradesHistorical operation
 #
 ##############################################################################
-print_dappsCowTradesHistoricalGet_help() {
+print_cowGetTradesHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsCowTradesHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}cowGetTradesHistorical - GetTrades (historical) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets trades." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -2143,16 +2166,18 @@ print_dappsCowTradesHistoricalGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
-# Print help for dappsCowUsersHistoricalGet operation
+# Print help for cowGetUsersHistorical operation
 #
 ##############################################################################
-print_dappsCowUsersHistoricalGet_help() {
+print_cowGetUsersHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsCowUsersHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}cowGetUsersHistorical - GetUsers (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets users." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -2166,16 +2191,18 @@ print_dappsCowUsersHistoricalGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
-# Print help for dappsCurveAccountsHistoricalGet operation
+# Print help for curveGetAccountsHistorical operation
 #
 ##############################################################################
-print_dappsCurveAccountsHistoricalGet_help() {
+print_curveGetAccountsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsCurveAccountsHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}curveGetAccountsHistorical - GetAccounts (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets accounts." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -2189,41 +2216,18 @@ print_dappsCurveAccountsHistoricalGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
-# Print help for dappsCurveAddLiquidityEventHistoricalGet operation
+# Print help for curveGetAddLiquidityEventsHistorical operation
 #
 ##############################################################################
-print_dappsCurveAddLiquidityEventHistoricalGet_help() {
+print_curveGetAddLiquidityEventsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsCurveAddLiquidityEventHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}curveGetAddLiquidityEventsHistorical - GetAddLiquidityEvents (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}poolId${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: poolId=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for dappsCurveAdminFeeChangeLogHistoricalGet operation
-#
-##############################################################################
-print_dappsCurveAdminFeeChangeLogHistoricalGet_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}dappsCurveAdminFeeChangeLogHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "Gets add liquidity events." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -2239,16 +2243,18 @@ print_dappsCurveAdminFeeChangeLogHistoricalGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
-# Print help for dappsCurveAmplificationCoeffChangeLogHistoricalGet operation
+# Print help for curveGetAdminFeeChangeLogsHistorical operation
 #
 ##############################################################################
-print_dappsCurveAmplificationCoeffChangeLogHistoricalGet_help() {
+print_curveGetAdminFeeChangeLogsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsCurveAmplificationCoeffChangeLogHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}curveGetAdminFeeChangeLogsHistorical - GetAdminFeeChangeLogs (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets admin fee change logs." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -2264,16 +2270,18 @@ print_dappsCurveAmplificationCoeffChangeLogHistoricalGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
-# Print help for dappsCurveCoinsHistoricalGet operation
+# Print help for curveGetAmplificationCoeffChangeLogsHistorical operation
 #
 ##############################################################################
-print_dappsCurveCoinsHistoricalGet_help() {
+print_curveGetAmplificationCoeffChangeLogsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsCurveCoinsHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}curveGetAmplificationCoeffChangeLogsHistorical - GetAmplificationCoeffChangeLogs (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets amplification coeff change logs." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -2289,16 +2297,18 @@ print_dappsCurveCoinsHistoricalGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
-# Print help for dappsCurveContractsHistoricalGet operation
+# Print help for curveGetCoinsHistorical operation
 #
 ##############################################################################
-print_dappsCurveContractsHistoricalGet_help() {
+print_curveGetCoinsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsCurveContractsHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}curveGetCoinsHistorical - GetCoins (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets coins." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -2314,16 +2324,18 @@ print_dappsCurveContractsHistoricalGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
-# Print help for dappsCurveContractsVersionHistoricalGet operation
+# Print help for curveGetContractsHistorical operation
 #
 ##############################################################################
-print_dappsCurveContractsVersionHistoricalGet_help() {
+print_curveGetContractsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsCurveContractsVersionHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}curveGetContractsHistorical - GetContracts (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets contracts." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -2339,16 +2351,18 @@ print_dappsCurveContractsVersionHistoricalGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
-# Print help for dappsCurveDailyVolumeHistoricalGet operation
+# Print help for curveGetContractsVersionsHistorical operation
 #
 ##############################################################################
-print_dappsCurveDailyVolumeHistoricalGet_help() {
+print_curveGetContractsVersionsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsCurveDailyVolumeHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}curveGetContractsVersionsHistorical - GetContractsVersions (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets contracts versions." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -2364,16 +2378,18 @@ print_dappsCurveDailyVolumeHistoricalGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
-# Print help for dappsCurveFeeChangeLogHistoricalGet operation
+# Print help for curveGetDailyVolumesHistorical operation
 #
 ##############################################################################
-print_dappsCurveFeeChangeLogHistoricalGet_help() {
+print_curveGetDailyVolumesHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsCurveFeeChangeLogHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}curveGetDailyVolumesHistorical - GetDailyVolumes (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets daily volumes." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -2389,39 +2405,18 @@ print_dappsCurveFeeChangeLogHistoricalGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
-# Print help for dappsCurveGaugeDepositHistoricalGet operation
+# Print help for curveGetExchangesHistorical operation
 #
 ##############################################################################
-print_dappsCurveGaugeDepositHistoricalGet_help() {
+print_curveGetExchangesHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsCurveGaugeDepositHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}curveGetExchangesHistorical - GetExchanges (historical) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for dappsCurveGaugeHistoricalGet operation
-#
-##############################################################################
-print_dappsCurveGaugeHistoricalGet_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}dappsCurveGaugeHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "Gets exchanges." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -2437,177 +2432,18 @@ print_dappsCurveGaugeHistoricalGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
-# Print help for dappsCurveGaugeLiquidityHistoricalGet operation
+# Print help for curveGetFeeChangeLogsHistorical operation
 #
 ##############################################################################
-print_dappsCurveGaugeLiquidityHistoricalGet_help() {
+print_curveGetFeeChangeLogsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsCurveGaugeLiquidityHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}curveGetFeeChangeLogsHistorical - GetFeeChangeLogs (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for dappsCurveGaugeTotalWeightHistoricalGet operation
-#
-##############################################################################
-print_dappsCurveGaugeTotalWeightHistoricalGet_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}dappsCurveGaugeTotalWeightHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for dappsCurveGaugeTypeHistoricalGet operation
-#
-##############################################################################
-print_dappsCurveGaugeTypeHistoricalGet_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}dappsCurveGaugeTypeHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for dappsCurveGaugeTypeWeightHistoricalGet operation
-#
-##############################################################################
-print_dappsCurveGaugeTypeWeightHistoricalGet_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}dappsCurveGaugeTypeWeightHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for dappsCurveGaugeWeightHistoricalGet operation
-#
-##############################################################################
-print_dappsCurveGaugeWeightHistoricalGet_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}dappsCurveGaugeWeightHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for dappsCurveGaugeWeightVoteHistoricalGet operation
-#
-##############################################################################
-print_dappsCurveGaugeWeightVoteHistoricalGet_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}dappsCurveGaugeWeightVoteHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for dappsCurveGaugeWithdrawHistoricalGet operation
-#
-##############################################################################
-print_dappsCurveGaugeWithdrawHistoricalGet_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}dappsCurveGaugeWithdrawHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for dappsCurveHourlyVolumeHistoricalGet operation
-#
-##############################################################################
-print_dappsCurveHourlyVolumeHistoricalGet_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}dappsCurveHourlyVolumeHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "Gets fee change logs." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -2623,16 +2459,43 @@ print_dappsCurveHourlyVolumeHistoricalGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
-# Print help for dappsCurveLpTokenHistoricalGet operation
+# Print help for curveGetGaugesDepositsHistorical operation
 #
 ##############################################################################
-print_dappsCurveLpTokenHistoricalGet_help() {
+print_curveGetGaugesDepositsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsCurveLpTokenHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}curveGetGaugesDepositsHistorical - GetGaugesDeposits (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets gauges deposits." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for curveGetGaugesHistorical operation
+#
+##############################################################################
+print_curveGetGaugesHistorical_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}curveGetGaugesHistorical - GetGauges (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets gauges." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -2648,16 +2511,193 @@ print_dappsCurveLpTokenHistoricalGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
-# Print help for dappsCurvePoolsHistoricalGet operation
+# Print help for curveGetGaugesLiquidityHistorical operation
 #
 ##############################################################################
-print_dappsCurvePoolsHistoricalGet_help() {
+print_curveGetGaugesLiquidityHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsCurvePoolsHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}curveGetGaugesLiquidityHistorical - GetGaugesLiquidity (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets gauges liquidity." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for curveGetGaugesTotalWeightsHistorical operation
+#
+##############################################################################
+print_curveGetGaugesTotalWeightsHistorical_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}curveGetGaugesTotalWeightsHistorical - GetGaugesTotalWeights (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets gauges total weights." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for curveGetGaugesTypesHistorical operation
+#
+##############################################################################
+print_curveGetGaugesTypesHistorical_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}curveGetGaugesTypesHistorical - GetGaugesTypes (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets gauges types." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for curveGetGaugesTypesWeightsHistorical operation
+#
+##############################################################################
+print_curveGetGaugesTypesWeightsHistorical_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}curveGetGaugesTypesWeightsHistorical - GetGaugesTypesWeights (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets gauges types weights." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for curveGetGaugesWeightsHistorical operation
+#
+##############################################################################
+print_curveGetGaugesWeightsHistorical_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}curveGetGaugesWeightsHistorical - GetGaugesWeights (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets gauges weights." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for curveGetGaugesWeightsVotesHistorical operation
+#
+##############################################################################
+print_curveGetGaugesWeightsVotesHistorical_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}curveGetGaugesWeightsVotesHistorical - GetGaugesWeightsVotes (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets gauges weights votes." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for curveGetGaugesWithdrawHistorical operation
+#
+##############################################################################
+print_curveGetGaugesWithdrawHistorical_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}curveGetGaugesWithdrawHistorical - GetGaugesWithdraw (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets gauges withdraws." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for curveGetHourlyVolumesHistorical operation
+#
+##############################################################################
+print_curveGetHourlyVolumesHistorical_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}curveGetHourlyVolumesHistorical - GetHourlyVolumes (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets hourly volumes." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -2673,62 +2713,18 @@ print_dappsCurvePoolsHistoricalGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
-# Print help for dappsCurveProposalsHistoricalGet operation
+# Print help for curveGetLpTokensHistorical operation
 #
 ##############################################################################
-print_dappsCurveProposalsHistoricalGet_help() {
+print_curveGetLpTokensHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsCurveProposalsHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}curveGetLpTokensHistorical - GetLpTokens (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for dappsCurveProposalsVoteHistoricalGet operation
-#
-##############################################################################
-print_dappsCurveProposalsVoteHistoricalGet_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}dappsCurveProposalsVoteHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for dappsCurveRemoveLiquidityEventHistoricalGet operation
-#
-##############################################################################
-print_dappsCurveRemoveLiquidityEventHistoricalGet_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}dappsCurveRemoveLiquidityEventHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "Gets lp tokens." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -2744,16 +2740,18 @@ print_dappsCurveRemoveLiquidityEventHistoricalGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
-# Print help for dappsCurveRemoveLiquidityOneEventHistoricalGet operation
+# Print help for curveGetPoolsHistorical operation
 #
 ##############################################################################
-print_dappsCurveRemoveLiquidityOneEventHistoricalGet_help() {
+print_curveGetPoolsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsCurveRemoveLiquidityOneEventHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}curveGetPoolsHistorical - GetPools (historical) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets pools." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -2769,16 +2767,68 @@ print_dappsCurveRemoveLiquidityOneEventHistoricalGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
-# Print help for dappsCurveSwapsHistoricalGet operation
+# Print help for curveGetProposalsHistorical operation
 #
 ##############################################################################
-print_dappsCurveSwapsHistoricalGet_help() {
+print_curveGetProposalsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsCurveSwapsHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}curveGetProposalsHistorical - GetProposals (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets proposals." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for curveGetProposalsVotesHistorical operation
+#
+##############################################################################
+print_curveGetProposalsVotesHistorical_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}curveGetProposalsVotesHistorical - GetProposalsVotes (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets proposals votes." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for curveGetRemoveLiquidityEventsHistorical operation
+#
+##############################################################################
+print_curveGetRemoveLiquidityEventsHistorical_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}curveGetRemoveLiquidityEventsHistorical - GetRemoveLiquidityEvents (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets remove liquidity events." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -2794,16 +2844,45 @@ print_dappsCurveSwapsHistoricalGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
-# Print help for dappsCurveSystemStateHistoricalGet operation
+# Print help for curveGetRemoveLiquidityOneEventsHistorical operation
 #
 ##############################################################################
-print_dappsCurveSystemStateHistoricalGet_help() {
+print_curveGetRemoveLiquidityOneEventsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsCurveSystemStateHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}curveGetRemoveLiquidityOneEventsHistorical - GetRemoveLiquidityOneEvents (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets remove liquidity one events." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}poolId${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: poolId=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for curveGetSystemStatesHistorical operation
+#
+##############################################################################
+print_curveGetSystemStatesHistorical_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}curveGetSystemStatesHistorical - GetSystemStates (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets system states." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -2817,16 +2896,18 @@ print_dappsCurveSystemStateHistoricalGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
-# Print help for dappsCurveTokensHistoricalGet operation
+# Print help for curveGetTokensHistorical operation
 #
 ##############################################################################
-print_dappsCurveTokensHistoricalGet_help() {
+print_curveGetTokensHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsCurveTokensHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}curveGetTokensHistorical - GetTokens (historical) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets tokens." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -2842,16 +2923,18 @@ print_dappsCurveTokensHistoricalGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
-# Print help for dappsCurveTransferOwnershipEventHistoricalGet operation
+# Print help for curveGetTransferOwnershipEventsHistorical operation
 #
 ##############################################################################
-print_dappsCurveTransferOwnershipEventHistoricalGet_help() {
+print_curveGetTransferOwnershipEventsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsCurveTransferOwnershipEventHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}curveGetTransferOwnershipEventsHistorical - GetTransferOwnershipEvents (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets transfer ownership events." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -2867,16 +2950,18 @@ print_dappsCurveTransferOwnershipEventHistoricalGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
-# Print help for dappsCurveUnderlyingCoinHistoricalGet operation
+# Print help for curveGetUnderlyingCoinsHistorical operation
 #
 ##############################################################################
-print_dappsCurveUnderlyingCoinHistoricalGet_help() {
+print_curveGetUnderlyingCoinsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsCurveUnderlyingCoinHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}curveGetUnderlyingCoinsHistorical - GetUnderlyingCoins (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets underlying coins." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -2892,16 +2977,18 @@ print_dappsCurveUnderlyingCoinHistoricalGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
-# Print help for dappsCurveVotingAppHistoricalGet operation
+# Print help for curveGetVotingAppsHistorical operation
 #
 ##############################################################################
-print_dappsCurveVotingAppHistoricalGet_help() {
+print_curveGetVotingAppsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsCurveVotingAppHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}curveGetVotingAppsHistorical - GetVotingApps (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets voting apps." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -2915,16 +3002,18 @@ print_dappsCurveVotingAppHistoricalGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
-# Print help for dappsCurveWeeklyVolumeHistoricalGet operation
+# Print help for curveGetWeeklyVolumesHistorical operation
 #
 ##############################################################################
-print_dappsCurveWeeklyVolumeHistoricalGet_help() {
+print_curveGetWeeklyVolumesHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsCurveWeeklyVolumeHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}curveGetWeeklyVolumesHistorical - GetWeeklyVolumes (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets weekly volumes." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -2940,16 +3029,18 @@ print_dappsCurveWeeklyVolumeHistoricalGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
-# Print help for dappsDexBatchHistoricalGet operation
+# Print help for dexGetBatchesHistorical operation
 #
 ##############################################################################
-print_dappsDexBatchHistoricalGet_help() {
+print_dexGetBatchesHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsDexBatchHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}dexGetBatchesHistorical - GetBatches (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets batches." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -2963,41 +3054,18 @@ print_dappsDexBatchHistoricalGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
-# Print help for dappsDexOrdersHistoricalGet operation
+# Print help for dexGetDepositsHistorical operation
 #
 ##############################################################################
-print_dappsDexOrdersHistoricalGet_help() {
+print_dexGetDepositsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsDexOrdersHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}dexGetDepositsHistorical - GetDeposits (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}tokenId${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: tokenId=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for dappsDexPricesHistoricalGet operation
-#
-##############################################################################
-print_dappsDexPricesHistoricalGet_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}dappsDexPricesHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "Gets deposits." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -3013,16 +3081,18 @@ print_dappsDexPricesHistoricalGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
-# Print help for dappsDexSolutionHistoricalGet operation
+# Print help for dexGetOrdersHistorical operation
 #
 ##############################################################################
-print_dappsDexSolutionHistoricalGet_help() {
+print_dexGetOrdersHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsDexSolutionHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}dexGetOrdersHistorical - GetOrders (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets orders." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -3038,39 +3108,18 @@ print_dappsDexSolutionHistoricalGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
-# Print help for dappsDexStatsHistoricalGet operation
+# Print help for dexGetPricesHistorical operation
 #
 ##############################################################################
-print_dappsDexStatsHistoricalGet_help() {
+print_dexGetPricesHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsDexStatsHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}dexGetPricesHistorical - GetPrices (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for dappsDexTokensHistoricalGet operation
-#
-##############################################################################
-print_dappsDexTokensHistoricalGet_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}dappsDexTokensHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "Gets prices." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -3086,62 +3135,18 @@ print_dappsDexTokensHistoricalGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
-# Print help for dappsDexTradesHistoricalGet operation
+# Print help for dexGetSolutionsHistorical operation
 #
 ##############################################################################
-print_dappsDexTradesHistoricalGet_help() {
+print_dexGetSolutionsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsDexTradesHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}dexGetSolutionsHistorical - GetSolutions (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for dappsDexUsersHistoricalGet operation
-#
-##############################################################################
-print_dappsDexUsersHistoricalGet_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}dappsDexUsersHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for dappsDexWithdrawHistoricalGet operation
-#
-##############################################################################
-print_dappsDexWithdrawHistoricalGet_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}dappsDexWithdrawHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "Gets solutions." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -3157,16 +3162,43 @@ print_dappsDexWithdrawHistoricalGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
-# Print help for dappsDexWithdrawRequestHistoricalGet operation
+# Print help for dexGetStatsHistorical operation
 #
 ##############################################################################
-print_dappsDexWithdrawRequestHistoricalGet_help() {
+print_dexGetStatsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsDexWithdrawRequestHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}dexGetStatsHistorical - GetStats (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets stats." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for dexGetTokensHistorical operation
+#
+##############################################################################
+print_dexGetTokensHistorical_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}dexGetTokensHistorical - GetTokens (historical) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets tokens." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -3182,7 +3214,143 @@ print_dappsDexWithdrawRequestHistoricalGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for dexGetTradesHistorical operation
+#
+##############################################################################
+print_dexGetTradesHistorical_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}dexGetTradesHistorical - GetTrades (historical) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets trades." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for dexGetUsersHistorical operation
+#
+##############################################################################
+print_dexGetUsersHistorical_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}dexGetUsersHistorical - GetUsers (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets users." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for dexGetWithdrawsHistorical operation
+#
+##############################################################################
+print_dexGetWithdrawsHistorical_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}dexGetWithdrawsHistorical - GetWithdraws (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets withdraws." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}tokenId${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: tokenId=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for dexGetWithdrawsRequestsHistorical operation
+#
+##############################################################################
+print_dexGetWithdrawsRequestsHistorical_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}dexGetWithdrawsRequestsHistorical - GetWithdrawsRequests (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets withdraws requests." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}tokenId${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: tokenId=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for curveGetExchangesCurrent operation
+#
+##############################################################################
+print_curveGetExchangesCurrent_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}curveGetExchangesCurrent - GetExchanges (current) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets exchanges." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for dexGetTradesCurrent operation
+#
+##############################################################################
+print_dexGetTradesCurrent_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}dexGetTradesCurrent - GetTrades (current) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets trades." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
@@ -3196,13 +3364,13 @@ print_sushiswapGetBundlesHistorical_help() {
     echo -e "Gets bundles." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - AAAAAAAAAA${YELLOW} Specify as: startBlock=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - BBBBBBBBBBBB${YELLOW} Specify as: endBlock=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - CCCCCCCCC${YELLOW} Specify as: startDate=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - DDDDDDDDDDD${YELLOW} Specify as: endDate=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -3399,7 +3567,7 @@ print_sushiswapGetMintsHistorical_help() {
 ##############################################################################
 print_sushiswapGetPoolsCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}sushiswapGetPoolsCurrent - GetPools (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}sushiswapGetPoolsCurrent - GetPools (current) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets pools." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -3442,20 +3610,20 @@ print_sushiswapGetPoolsDayDataHistorical_help() {
 ##############################################################################
 print_sushiswapGetPoolsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}sushiswapGetPoolsHistorical - GetPools (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}sushiswapGetPoolsHistorical - GetPools (historical) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets list of pools for given filters." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.${YELLOW} Specify as: startBlock=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).${YELLOW} Specify as: endBlock=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.${YELLOW} Specify as: startDate=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - The end date of timeframe${YELLOW} Specify as: endDate=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}poolId${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: poolId=value${OFF}" \
+    echo -e "  * ${GREEN}poolId${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - The pool address.${YELLOW} Specify as: poolId=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -3496,7 +3664,7 @@ print_sushiswapGetPoolsHourDataHistorical_help() {
 ##############################################################################
 print_sushiswapGetSwapsCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}sushiswapGetSwapsCurrent - GetSwaps (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}sushiswapGetSwapsCurrent - GetSwaps (current) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets swaps." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -3512,20 +3680,20 @@ print_sushiswapGetSwapsCurrent_help() {
 ##############################################################################
 print_sushiswapGetSwapsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}sushiswapGetSwapsHistorical - GetSwaps (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}sushiswapGetSwapsHistorical - GetSwaps (historical) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets list of swaps for given filters." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.${YELLOW} Specify as: startBlock=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).${YELLOW} Specify as: endBlock=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.${YELLOW} Specify as: startDate=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - The end date of timeframe${YELLOW} Specify as: endDate=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}poolId${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: poolId=value${OFF}" \
+    echo -e "  * ${GREEN}poolId${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - The pool address.${YELLOW} Specify as: poolId=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -3539,7 +3707,7 @@ print_sushiswapGetSwapsHistorical_help() {
 ##############################################################################
 print_sushiswapGetTokensCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}sushiswapGetTokensCurrent - GetTokens (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}sushiswapGetTokensCurrent - GetTokens (current) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets tokens." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -3582,20 +3750,20 @@ print_sushiswapGetTokensDayDataHistorical_help() {
 ##############################################################################
 print_sushiswapGetTokensHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}sushiswapGetTokensHistorical - GetTokens (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}sushiswapGetTokensHistorical - GetTokens (historical) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets list of tokens for given filters." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.${YELLOW} Specify as: startBlock=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).${YELLOW} Specify as: endBlock=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.${YELLOW} Specify as: startDate=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - The end date of timeframe${YELLOW} Specify as: endDate=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}tokenId${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: tokenId=value${OFF}" \
+    echo -e "  * ${GREEN}tokenId${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - The token address.${YELLOW} Specify as: tokenId=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -3654,12 +3822,14 @@ print_sushiswapGetUsersHistorical_help() {
 }
 ##############################################################################
 #
-# Print help for dappsUniswapv2BundlesHistoricalGet operation
+# Print help for uniswapV2GetBundlesHistorical operation
 #
 ##############################################################################
-print_dappsUniswapv2BundlesHistoricalGet_help() {
+print_uniswapV2GetBundlesHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsUniswapv2BundlesHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV2GetBundlesHistorical - GetBundles (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets bundles." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -3669,219 +3839,6 @@ print_dappsUniswapv2BundlesHistoricalGet_help() {
     echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for dappsUniswapv2BurnsHistoricalGet operation
-#
-##############################################################################
-print_dappsUniswapv2BurnsHistoricalGet_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}dappsUniswapv2BurnsHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}poolId${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: poolId=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for dappsUniswapv2DayDataHistoricalGet operation
-#
-##############################################################################
-print_dappsUniswapv2DayDataHistoricalGet_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}dappsUniswapv2DayDataHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for dappsUniswapv2FactoryHistoricalGet operation
-#
-##############################################################################
-print_dappsUniswapv2FactoryHistoricalGet_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}dappsUniswapv2FactoryHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for dappsUniswapv2LiquidityPositionHistoricalGet operation
-#
-##############################################################################
-print_dappsUniswapv2LiquidityPositionHistoricalGet_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}dappsUniswapv2LiquidityPositionHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}poolId${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: poolId=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet operation
-#
-##############################################################################
-print_dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}poolId${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: poolId=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for dappsUniswapv2MintsHistoricalGet operation
-#
-##############################################################################
-print_dappsUniswapv2MintsHistoricalGet_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}dappsUniswapv2MintsHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}poolId${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: poolId=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for dappsUniswapv2PoolDayDataHistoricalGet operation
-#
-##############################################################################
-print_dappsUniswapv2PoolDayDataHistoricalGet_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}dappsUniswapv2PoolDayDataHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}poolId${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: poolId=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for dappsUniswapv2PoolHourDataHistoricalGet operation
-#
-##############################################################################
-print_dappsUniswapv2PoolHourDataHistoricalGet_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}dappsUniswapv2PoolHourDataHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}poolId${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: poolId=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for dappsUniswapv2PoolsCurrentGet operation
-#
-##############################################################################
-print_dappsUniswapv2PoolsCurrentGet_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}dappsUniswapv2PoolsCurrentGet - GetPools${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}filter_pool_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Filter pool id${YELLOW} Specify as: filter_pool_id=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -3890,12 +3847,14 @@ print_dappsUniswapv2PoolsCurrentGet_help() {
 }
 ##############################################################################
 #
-# Print help for dappsUniswapv2PoolsHistoricalGet operation
+# Print help for uniswapV2GetBurnsHistorical operation
 #
 ##############################################################################
-print_dappsUniswapv2PoolsHistoricalGet_help() {
+print_uniswapV2GetBurnsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsUniswapv2PoolsHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV2GetBurnsHistorical - GetBurns (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets burns." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -3911,16 +3870,249 @@ print_dappsUniswapv2PoolsHistoricalGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
-# Print help for dappsUniswapv2SwapsCurrentGet operation
+# Print help for uniswapV2GetDayDataHistorical operation
 #
 ##############################################################################
-print_dappsUniswapv2SwapsCurrentGet_help() {
+print_uniswapV2GetDayDataHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsUniswapv2SwapsCurrentGet - GetSwaps${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV2GetDayDataHistorical - GetDayData (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets uniswapv2 day data." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for uniswapV2GetFactoryHistorical operation
+#
+##############################################################################
+print_uniswapV2GetFactoryHistorical_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}uniswapV2GetFactoryHistorical - GetFactory (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets factory." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for uniswapV2GetLiquidityPositionsHistorical operation
+#
+##############################################################################
+print_uniswapV2GetLiquidityPositionsHistorical_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}uniswapV2GetLiquidityPositionsHistorical - GetLiquidityPositions (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets liquidity positions." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}poolId${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: poolId=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for uniswapV2GetLiquidityPositionsSnapshotsHistorical operation
+#
+##############################################################################
+print_uniswapV2GetLiquidityPositionsSnapshotsHistorical_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}uniswapV2GetLiquidityPositionsSnapshotsHistorical - GetLiquidityPositionsSnapshots (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets liquidity positions snapshots." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}poolId${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: poolId=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for uniswapV2GetMintsHistorical operation
+#
+##############################################################################
+print_uniswapV2GetMintsHistorical_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}uniswapV2GetMintsHistorical - GetMints (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets mints." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}poolId${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: poolId=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for uniswapV2GetPoolsCurrent operation
+#
+##############################################################################
+print_uniswapV2GetPoolsCurrent_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}uniswapV2GetPoolsCurrent - GetPools (current) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets pools." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}filter_pool_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: filter_pool_id=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for uniswapV2GetPoolsDayDataHistorical operation
+#
+##############################################################################
+print_uniswapV2GetPoolsDayDataHistorical_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}uniswapV2GetPoolsDayDataHistorical - GetPoolsDayData (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets pools day data." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}poolId${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: poolId=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for uniswapV2GetPoolsHistorical operation
+#
+##############################################################################
+print_uniswapV2GetPoolsHistorical_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}uniswapV2GetPoolsHistorical - GetPools (historical) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets pools." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}poolId${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: poolId=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for uniswapV2GetPoolsHourDataHistorical operation
+#
+##############################################################################
+print_uniswapV2GetPoolsHourDataHistorical_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}uniswapV2GetPoolsHourDataHistorical - GetPoolsHourData (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets pools tracked each our." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}poolId${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: poolId=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for uniswapV2GetSwapsCurrent operation
+#
+##############################################################################
+print_uniswapV2GetSwapsCurrent_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}uniswapV2GetSwapsCurrent - GetSwaps (current) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets swaps." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -3929,12 +4121,14 @@ print_dappsUniswapv2SwapsCurrentGet_help() {
 }
 ##############################################################################
 #
-# Print help for dappsUniswapv2SwapsHistoricalGet operation
+# Print help for uniswapV2GetSwapsHistorical operation
 #
 ##############################################################################
-print_dappsUniswapv2SwapsHistoricalGet_help() {
+print_uniswapV2GetSwapsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsUniswapv2SwapsHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV2GetSwapsHistorical - GetSwaps (historical) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets swaps." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -3950,16 +4144,34 @@ print_dappsUniswapv2SwapsHistoricalGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
-# Print help for dappsUniswapv2TokenDayDataHistoricalGet operation
+# Print help for uniswapV2GetTokensCurrent operation
 #
 ##############################################################################
-print_dappsUniswapv2TokenDayDataHistoricalGet_help() {
+print_uniswapV2GetTokensCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsUniswapv2TokenDayDataHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV2GetTokensCurrent - GetTokens (current) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets tokens." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for uniswapV2GetTokensDayDataHistorical operation
+#
+##############################################################################
+print_uniswapV2GetTokensDayDataHistorical_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}uniswapV2GetTokensDayDataHistorical - GetTokensDayData (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets tokens day data." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -3975,30 +4187,18 @@ print_dappsUniswapv2TokenDayDataHistoricalGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for dappsUniswapv2TokensCurrentGet operation
-#
-##############################################################################
-print_dappsUniswapv2TokensCurrentGet_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}dappsUniswapv2TokensCurrentGet - GetTokens${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
     echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
-# Print help for dappsUniswapv2TokensHistoricalGet operation
+# Print help for uniswapV2GetTokensHistorical operation
 #
 ##############################################################################
-print_dappsUniswapv2TokensHistoricalGet_help() {
+print_uniswapV2GetTokensHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsUniswapv2TokensHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV2GetTokensHistorical - GetTokens (historical) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets tokens." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -4014,76 +4214,18 @@ print_dappsUniswapv2TokensHistoricalGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for dappsUniswapv2TransactionsHistoricalGet operation
-#
-##############################################################################
-print_dappsUniswapv2TransactionsHistoricalGet_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}dappsUniswapv2TransactionsHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for dappsUniswapv2UsersHistoricalGet operation
-#
-##############################################################################
-print_dappsUniswapv2UsersHistoricalGet_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}dappsUniswapv2UsersHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for dappsUniswapv3BundleCurrentGet operation
-#
-##############################################################################
-print_dappsUniswapv3BundleCurrentGet_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}dappsUniswapv3BundleCurrentGet - GetBundles${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
     echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
-# Print help for dappsUniswapv3BundlesHistoricalGet operation
+# Print help for uniswapV2GetTransactionsHistorical operation
 #
 ##############################################################################
-print_dappsUniswapv3BundlesHistoricalGet_help() {
+print_uniswapV2GetTransactionsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsUniswapv3BundlesHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV2GetTransactionsHistorical - GetTransactions (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets transactions." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -4093,23 +4235,6 @@ print_dappsUniswapv3BundlesHistoricalGet_help() {
     echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for dappsUniswapv3BurnsCurrentGet operation
-#
-##############################################################################
-print_dappsUniswapv3BurnsCurrentGet_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}dappsUniswapv3BurnsCurrentGet - GetBurns${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}filter_pool_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Filter pool id${YELLOW} Specify as: filter_pool_id=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -4118,12 +4243,99 @@ print_dappsUniswapv3BurnsCurrentGet_help() {
 }
 ##############################################################################
 #
-# Print help for dappsUniswapv3BurnsHistoricalGet operation
+# Print help for uniswapV2GetUsersHistorical operation
 #
 ##############################################################################
-print_dappsUniswapv3BurnsHistoricalGet_help() {
+print_uniswapV2GetUsersHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsUniswapv3BurnsHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV2GetUsersHistorical - GetUsers (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets users." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for uniswapV3GetBundlesCurrent operation
+#
+##############################################################################
+print_uniswapV3GetBundlesCurrent_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}uniswapV3GetBundlesCurrent - GetBundles (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets bundles." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for uniswapV3GetBundlesHistorical operation
+#
+##############################################################################
+print_uniswapV3GetBundlesHistorical_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}uniswapV3GetBundlesHistorical - GetBundles (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets bundles." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for uniswapV3GetBurnsCurrent operation
+#
+##############################################################################
+print_uniswapV3GetBurnsCurrent_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}uniswapV3GetBurnsCurrent - GetBurns (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets burns." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}filter_pool_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: filter_pool_id=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for uniswapV3GetBurnsHistorical operation
+#
+##############################################################################
+print_uniswapV3GetBurnsHistorical_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}uniswapV3GetBurnsHistorical - GetBurns (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets burns." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -4139,16 +4351,34 @@ print_dappsUniswapv3BurnsHistoricalGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
-# Print help for dappsUniswapv3DayDataHistoricalGet operation
+# Print help for uniswapV3GetDayDataCurrent operation
 #
 ##############################################################################
-print_dappsUniswapv3DayDataHistoricalGet_help() {
+print_uniswapV3GetDayDataCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsUniswapv3DayDataHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3GetDayDataCurrent - GetDayData (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets uniswapv3 day data." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for uniswapV3GetDayDataHistorical operation
+#
+##############################################################################
+print_uniswapV3GetDayDataHistorical_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}uniswapV3GetDayDataHistorical - GetDayData (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets uniswapv3 day data." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -4162,19 +4392,19 @@ print_dappsUniswapv3DayDataHistoricalGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
-# Print help for dappsUniswapv3FactoryCurrentGet operation
+# Print help for uniswapV3GetFactoryCurrent operation
 #
 ##############################################################################
-print_dappsUniswapv3FactoryCurrentGet_help() {
+print_uniswapV3GetFactoryCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsUniswapv3FactoryCurrentGet - GetFactory${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3GetFactoryCurrent - GetFactory (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}chain_id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: chain_id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "Gets factory." | paste -sd' ' | fold -sw 80
+    echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
@@ -4182,12 +4412,14 @@ print_dappsUniswapv3FactoryCurrentGet_help() {
 }
 ##############################################################################
 #
-# Print help for dappsUniswapv3FactoryHistoricalGet operation
+# Print help for uniswapV3GetFactoryHistorical operation
 #
 ##############################################################################
-print_dappsUniswapv3FactoryHistoricalGet_help() {
+print_uniswapV3GetFactoryHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsUniswapv3FactoryHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3GetFactoryHistorical - GetFactory (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets factory." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -4201,19 +4433,21 @@ print_dappsUniswapv3FactoryHistoricalGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
-# Print help for dappsUniswapv3MintsCurrentGet operation
+# Print help for uniswapV3GetMintsCurrent operation
 #
 ##############################################################################
-print_dappsUniswapv3MintsCurrentGet_help() {
+print_uniswapV3GetMintsCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsUniswapv3MintsCurrentGet - GetMints${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3GetMintsCurrent - GetMints (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets mints." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}filter_pool_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Filter pool id${YELLOW} Specify as: filter_pool_id=value${OFF}" \
+    echo -e "  * ${GREEN}filter_pool_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: filter_pool_id=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -4222,12 +4456,14 @@ print_dappsUniswapv3MintsCurrentGet_help() {
 }
 ##############################################################################
 #
-# Print help for dappsUniswapv3MintsHistoricalGet operation
+# Print help for uniswapV3GetMintsHistorical operation
 #
 ##############################################################################
-print_dappsUniswapv3MintsHistoricalGet_help() {
+print_uniswapV3GetMintsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsUniswapv3MintsHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3GetMintsHistorical - GetMints (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets mints." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -4243,16 +4479,56 @@ print_dappsUniswapv3MintsHistoricalGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
-# Print help for dappsUniswapv3PoolDayDataHistoricalGet operation
+# Print help for uniswapV3GetPoolsCurrent operation
 #
 ##############################################################################
-print_dappsUniswapv3PoolDayDataHistoricalGet_help() {
+print_uniswapV3GetPoolsCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsUniswapv3PoolDayDataHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3GetPoolsCurrent - GetPools (current) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets pools." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}filter_pool_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: filter_pool_id=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for uniswapV3GetPoolsDayDataCurrent operation
+#
+##############################################################################
+print_uniswapV3GetPoolsDayDataCurrent_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}uniswapV3GetPoolsDayDataCurrent - GetPoolsDayData (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets pools day data." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}filter_pool_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: filter_pool_id=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for uniswapV3GetPoolsDayDataHistorical operation
+#
+##############################################################################
+print_uniswapV3GetPoolsDayDataHistorical_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}uniswapV3GetPoolsDayDataHistorical - GetPoolsDayData (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets pools day data." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -4268,16 +4544,18 @@ print_dappsUniswapv3PoolDayDataHistoricalGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
-# Print help for dappsUniswapv3PoolHourDataHistoricalGet operation
+# Print help for uniswapV3GetPoolsHistorical operation
 #
 ##############################################################################
-print_dappsUniswapv3PoolHourDataHistoricalGet_help() {
+print_uniswapV3GetPoolsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsUniswapv3PoolHourDataHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3GetPoolsHistorical - GetPools (historical) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets pools." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -4293,19 +4571,21 @@ print_dappsUniswapv3PoolHourDataHistoricalGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
-# Print help for dappsUniswapv3PoolsCurrentGet operation
+# Print help for uniswapV3GetPoolsHourDataCurrent operation
 #
 ##############################################################################
-print_dappsUniswapv3PoolsCurrentGet_help() {
+print_uniswapV3GetPoolsHourDataCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsUniswapv3PoolsCurrentGet - GetPools${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3GetPoolsHourDataCurrent - GetPoolsHourData (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets pools hour data." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}filter_pool_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Filter pool id${YELLOW} Specify as: filter_pool_id=value${OFF}" \
+    echo -e "  * ${GREEN}filter_pool_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: filter_pool_id=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -4314,29 +4594,14 @@ print_dappsUniswapv3PoolsCurrentGet_help() {
 }
 ##############################################################################
 #
-# Print help for dappsUniswapv3PoolsDayDataCurrentGet operation
+# Print help for uniswapV3GetPoolsHourDataHistorical operation
 #
 ##############################################################################
-print_dappsUniswapv3PoolsDayDataCurrentGet_help() {
+print_uniswapV3GetPoolsHourDataHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsUniswapv3PoolsDayDataCurrentGet - GetPoolsDayData${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3GetPoolsHourDataHistorical - GetPoolsHourData (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}filter_pool_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Filter pool id${YELLOW} Specify as: filter_pool_id=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for dappsUniswapv3PoolsHistoricalGet operation
-#
-##############################################################################
-print_dappsUniswapv3PoolsHistoricalGet_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}dappsUniswapv3PoolsHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "Gets pools hour data." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -4352,19 +4617,21 @@ print_dappsUniswapv3PoolsHistoricalGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
-# Print help for dappsUniswapv3PoolsHourDataCurrentGet operation
+# Print help for uniswapV3GetPositionsCurrent operation
 #
 ##############################################################################
-print_dappsUniswapv3PoolsHourDataCurrentGet_help() {
+print_uniswapV3GetPositionsCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsUniswapv3PoolsHourDataCurrentGet - GetPoolsHourData${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3GetPositionsCurrent - GetPositions (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets positions." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}filter_pool_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Filter pool id${YELLOW} Specify as: filter_pool_id=value${OFF}" \
+    echo -e "  * ${GREEN}filter_pool_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: filter_pool_id=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -4373,12 +4640,14 @@ print_dappsUniswapv3PoolsHourDataCurrentGet_help() {
 }
 ##############################################################################
 #
-# Print help for dappsUniswapv3PositionSnapshotHistoricalGet operation
+# Print help for uniswapV3GetPositionsHistorical operation
 #
 ##############################################################################
-print_dappsUniswapv3PositionSnapshotHistoricalGet_help() {
+print_uniswapV3GetPositionsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsUniswapv3PositionSnapshotHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3GetPositionsHistorical - GetPositions (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets positions." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -4394,50 +4663,18 @@ print_dappsUniswapv3PositionSnapshotHistoricalGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for dappsUniswapv3PositionSnapshotsCurrentGet operation
-#
-##############################################################################
-print_dappsUniswapv3PositionSnapshotsCurrentGet_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}dappsUniswapv3PositionSnapshotsCurrentGet - GetPositionSnapshot${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}filter_pool_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Filter pool id${YELLOW} Specify as: filter_pool_id=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
     echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
-# Print help for dappsUniswapv3PositionsCurrentGet operation
+# Print help for uniswapV3GetPositionsSnaphotsHistorical operation
 #
 ##############################################################################
-print_dappsUniswapv3PositionsCurrentGet_help() {
+print_uniswapV3GetPositionsSnaphotsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsUniswapv3PositionsCurrentGet - GetPositions${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3GetPositionsSnaphotsHistorical - GetPositionsSnaphots (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}filter_pool_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Filter pool id${YELLOW} Specify as: filter_pool_id=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for dappsUniswapv3PositionsHistoricalGet operation
-#
-##############################################################################
-print_dappsUniswapv3PositionsHistoricalGet_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}dappsUniswapv3PositionsHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "Gets positions snapshots." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -4453,19 +4690,21 @@ print_dappsUniswapv3PositionsHistoricalGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
-# Print help for dappsUniswapv3SwapsCurrentGet operation
+# Print help for uniswapV3GetPositionsSnapshotsCurrent operation
 #
 ##############################################################################
-print_dappsUniswapv3SwapsCurrentGet_help() {
+print_uniswapV3GetPositionsSnapshotsCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsUniswapv3SwapsCurrentGet - GetSwaps${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3GetPositionsSnapshotsCurrent - GetPositionsSnapshots (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets positions snapshots." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}filter_pool_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Filter pool id${YELLOW} Specify as: filter_pool_id=value${OFF}" \
+    echo -e "  * ${GREEN}filter_pool_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: filter_pool_id=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -4474,12 +4713,33 @@ print_dappsUniswapv3SwapsCurrentGet_help() {
 }
 ##############################################################################
 #
-# Print help for dappsUniswapv3SwapsHistoricalGet operation
+# Print help for uniswapV3GetSwapsCurrent operation
 #
 ##############################################################################
-print_dappsUniswapv3SwapsHistoricalGet_help() {
+print_uniswapV3GetSwapsCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsUniswapv3SwapsHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3GetSwapsCurrent - GetSwaps (current) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets swaps." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}filter_pool_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: filter_pool_id=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for uniswapV3GetSwapsHistorical operation
+#
+##############################################################################
+print_uniswapV3GetSwapsHistorical_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}uniswapV3GetSwapsHistorical - GetSwaps (historical) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets swaps." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -4495,16 +4755,56 @@ print_dappsUniswapv3SwapsHistoricalGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
-# Print help for dappsUniswapv3TickDayDataHistoricalGet operation
+# Print help for uniswapV3GetTicksCurrent operation
 #
 ##############################################################################
-print_dappsUniswapv3TickDayDataHistoricalGet_help() {
+print_uniswapV3GetTicksCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsUniswapv3TickDayDataHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3GetTicksCurrent - GetTicks (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets ticks." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}filter_pool_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: filter_pool_id=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for uniswapV3GetTicksDayDataCurrent operation
+#
+##############################################################################
+print_uniswapV3GetTicksDayDataCurrent_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}uniswapV3GetTicksDayDataCurrent - GetTicksDayData (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets ticks day data." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}filter_pool_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: filter_pool_id=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for uniswapV3GetTicksDayDataHistorical operation
+#
+##############################################################################
+print_uniswapV3GetTicksDayDataHistorical_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}uniswapV3GetTicksDayDataHistorical - GetTicksDayData (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets ticks day data." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -4520,50 +4820,18 @@ print_dappsUniswapv3TickDayDataHistoricalGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for dappsUniswapv3TicksCurrentGet operation
-#
-##############################################################################
-print_dappsUniswapv3TicksCurrentGet_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}dappsUniswapv3TicksCurrentGet - GetTicks${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}filter_pool_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Filter pool id${YELLOW} Specify as: filter_pool_id=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
     echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
-# Print help for dappsUniswapv3TicksDayDataCurrentGet operation
+# Print help for uniswapV3GetTicksHistorical operation
 #
 ##############################################################################
-print_dappsUniswapv3TicksDayDataCurrentGet_help() {
+print_uniswapV3GetTicksHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsUniswapv3TicksDayDataCurrentGet - GetTicksDayData${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3GetTicksHistorical - GetTicks (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}filter_pool_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Filter pool id${YELLOW} Specify as: filter_pool_id=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for dappsUniswapv3TicksHistoricalGet operation
-#
-##############################################################################
-print_dappsUniswapv3TicksHistoricalGet_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}dappsUniswapv3TicksHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "Gets ticks." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -4579,66 +4847,18 @@ print_dappsUniswapv3TicksHistoricalGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
-# Print help for dappsUniswapv3TokenDayDataHistoricalGet operation
+# Print help for uniswapV3GetTokensCurrent operation
 #
 ##############################################################################
-print_dappsUniswapv3TokenDayDataHistoricalGet_help() {
+print_uniswapV3GetTokensCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsUniswapv3TokenDayDataHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3GetTokensCurrent - GetTokens (current) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}tokenId${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: tokenId=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for dappsUniswapv3TokenHourDataHistoricalGet operation
-#
-##############################################################################
-print_dappsUniswapv3TokenHourDataHistoricalGet_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}dappsUniswapv3TokenHourDataHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}tokenId${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: tokenId=value${OFF}" \
-        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for dappsUniswapv3TokensCurrentGet operation
-#
-##############################################################################
-print_dappsUniswapv3TokensCurrentGet_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}dappsUniswapv3TokensCurrentGet - GetTokens${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "Gets tokens." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}filter_token_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: filter_token_id=value${OFF}" \
@@ -4650,12 +4870,14 @@ print_dappsUniswapv3TokensCurrentGet_help() {
 }
 ##############################################################################
 #
-# Print help for dappsUniswapv3TokensDayDataCurrentGet operation
+# Print help for uniswapV3GetTokensDayDataCurrent operation
 #
 ##############################################################################
-print_dappsUniswapv3TokensDayDataCurrentGet_help() {
+print_uniswapV3GetTokensDayDataCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsUniswapv3TokensDayDataCurrentGet - GetTokensDayData${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3GetTokensDayDataCurrent - GetTokensDayData (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets tokens day data." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}filter_token_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: filter_token_id=value${OFF}" \
@@ -4667,12 +4889,14 @@ print_dappsUniswapv3TokensDayDataCurrentGet_help() {
 }
 ##############################################################################
 #
-# Print help for dappsUniswapv3TokensHistoricalGet operation
+# Print help for uniswapV3GetTokensDayDataHistorical operation
 #
 ##############################################################################
-print_dappsUniswapv3TokensHistoricalGet_help() {
+print_uniswapV3GetTokensDayDataHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsUniswapv3TokensHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3GetTokensDayDataHistorical - GetTokensDayData (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets tokens day data." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -4688,16 +4912,45 @@ print_dappsUniswapv3TokensHistoricalGet_help() {
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
-# Print help for dappsUniswapv3TokensHourDataCurrentGet operation
+# Print help for uniswapV3GetTokensHistorical operation
 #
 ##############################################################################
-print_dappsUniswapv3TokensHourDataCurrentGet_help() {
+print_uniswapV3GetTokensHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsUniswapv3TokensHourDataCurrentGet - GetTokensHourData${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3GetTokensHistorical - GetTokens (historical) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets tokens." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}tokenId${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: tokenId=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for uniswapV3GetTokensHourDataCurrent operation
+#
+##############################################################################
+print_uniswapV3GetTokensHourDataCurrent_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}uniswapV3GetTokensHourDataCurrent - GetTokensHourData (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets tokens hour data." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}filter_token_id${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: filter_token_id=value${OFF}" \
@@ -4709,12 +4962,14 @@ print_dappsUniswapv3TokensHourDataCurrentGet_help() {
 }
 ##############################################################################
 #
-# Print help for dappsUniswapv3TransactionsHistoricalGet operation
+# Print help for uniswapV3GetTokensHourDataHistorical operation
 #
 ##############################################################################
-print_dappsUniswapv3TransactionsHistoricalGet_help() {
+print_uniswapV3GetTokensHourDataHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsUniswapv3TransactionsHistoricalGet - ${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3GetTokensHourDataHistorical - GetTokensHourData (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Gets tokens hour data." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -4725,20 +4980,33 @@ print_dappsUniswapv3TransactionsHistoricalGet_help() {
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}tokenId${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: tokenId=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Success${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  200;successful operation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
-# Print help for dappsUniswapv3UniswapDayDataCurrentGet operation
+# Print help for uniswapV3GetTransactionsHistorical operation
 #
 ##############################################################################
-print_dappsUniswapv3UniswapDayDataCurrentGet_help() {
+print_uniswapV3GetTransactionsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dappsUniswapv3UniswapDayDataCurrentGet - GetUniswapDayData${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3GetTransactionsHistorical - GetTransactions (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
+    echo -e "Gets transactions." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endBlock=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}startDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}endDate${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: endDate=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
@@ -4748,10 +5016,10 @@ print_dappsUniswapv3UniswapDayDataCurrentGet_help() {
 
 ##############################################################################
 #
-# Call dappsCowOrdersHistoricalGet operation
+# Call cowGetOrdersHistorical operation
 #
 ##############################################################################
-call_dappsCowOrdersHistoricalGet() {
+call_cowGetOrdersHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -4784,10 +5052,10 @@ call_dappsCowOrdersHistoricalGet() {
 
 ##############################################################################
 #
-# Call dappsCowSettlementHistoricalGet operation
+# Call cowGetSettlementsHistorical operation
 #
 ##############################################################################
-call_dappsCowSettlementHistoricalGet() {
+call_cowGetSettlementsHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -4796,7 +5064,7 @@ call_dappsCowSettlementHistoricalGet() {
     local query_parameter_names=(startBlock endBlock startDate endDate)
     local path
 
-    if ! path=$(build_request_path "/dapps/cow/settlement/historical" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/cow/settlements/historical" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -4820,10 +5088,10 @@ call_dappsCowSettlementHistoricalGet() {
 
 ##############################################################################
 #
-# Call dappsCowTokensHistoricalGet operation
+# Call cowGetTokensHistorical operation
 #
 ##############################################################################
-call_dappsCowTokensHistoricalGet() {
+call_cowGetTokensHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -4856,10 +5124,10 @@ call_dappsCowTokensHistoricalGet() {
 
 ##############################################################################
 #
-# Call dappsCowTradesHistoricalGet operation
+# Call cowGetTradesHistorical operation
 #
 ##############################################################################
-call_dappsCowTradesHistoricalGet() {
+call_cowGetTradesHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -4892,10 +5160,10 @@ call_dappsCowTradesHistoricalGet() {
 
 ##############################################################################
 #
-# Call dappsCowUsersHistoricalGet operation
+# Call cowGetUsersHistorical operation
 #
 ##############################################################################
-call_dappsCowUsersHistoricalGet() {
+call_cowGetUsersHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -4928,10 +5196,10 @@ call_dappsCowUsersHistoricalGet() {
 
 ##############################################################################
 #
-# Call dappsCurveAccountsHistoricalGet operation
+# Call curveGetAccountsHistorical operation
 #
 ##############################################################################
-call_dappsCurveAccountsHistoricalGet() {
+call_curveGetAccountsHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -4964,10 +5232,10 @@ call_dappsCurveAccountsHistoricalGet() {
 
 ##############################################################################
 #
-# Call dappsCurveAddLiquidityEventHistoricalGet operation
+# Call curveGetAddLiquidityEventsHistorical operation
 #
 ##############################################################################
-call_dappsCurveAddLiquidityEventHistoricalGet() {
+call_curveGetAddLiquidityEventsHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -4976,7 +5244,7 @@ call_dappsCurveAddLiquidityEventHistoricalGet() {
     local query_parameter_names=(startBlock endBlock startDate endDate poolId)
     local path
 
-    if ! path=$(build_request_path "/dapps/curve/addLiquidityEvent/historical" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/curve/addLiquidityEvents/historical" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -5000,10 +5268,10 @@ call_dappsCurveAddLiquidityEventHistoricalGet() {
 
 ##############################################################################
 #
-# Call dappsCurveAdminFeeChangeLogHistoricalGet operation
+# Call curveGetAdminFeeChangeLogsHistorical operation
 #
 ##############################################################################
-call_dappsCurveAdminFeeChangeLogHistoricalGet() {
+call_curveGetAdminFeeChangeLogsHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -5012,7 +5280,7 @@ call_dappsCurveAdminFeeChangeLogHistoricalGet() {
     local query_parameter_names=(startBlock endBlock startDate endDate poolId)
     local path
 
-    if ! path=$(build_request_path "/dapps/curve/adminFeeChangeLog/historical" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/curve/adminFeeChangeLogs/historical" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -5036,10 +5304,10 @@ call_dappsCurveAdminFeeChangeLogHistoricalGet() {
 
 ##############################################################################
 #
-# Call dappsCurveAmplificationCoeffChangeLogHistoricalGet operation
+# Call curveGetAmplificationCoeffChangeLogsHistorical operation
 #
 ##############################################################################
-call_dappsCurveAmplificationCoeffChangeLogHistoricalGet() {
+call_curveGetAmplificationCoeffChangeLogsHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -5048,7 +5316,7 @@ call_dappsCurveAmplificationCoeffChangeLogHistoricalGet() {
     local query_parameter_names=(startBlock endBlock startDate endDate poolId)
     local path
 
-    if ! path=$(build_request_path "/dapps/curve/amplificationCoeffChangeLog/historical" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/curve/amplificationCoeffChangeLogs/historical" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -5072,10 +5340,10 @@ call_dappsCurveAmplificationCoeffChangeLogHistoricalGet() {
 
 ##############################################################################
 #
-# Call dappsCurveCoinsHistoricalGet operation
+# Call curveGetCoinsHistorical operation
 #
 ##############################################################################
-call_dappsCurveCoinsHistoricalGet() {
+call_curveGetCoinsHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -5108,10 +5376,10 @@ call_dappsCurveCoinsHistoricalGet() {
 
 ##############################################################################
 #
-# Call dappsCurveContractsHistoricalGet operation
+# Call curveGetContractsHistorical operation
 #
 ##############################################################################
-call_dappsCurveContractsHistoricalGet() {
+call_curveGetContractsHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -5144,10 +5412,10 @@ call_dappsCurveContractsHistoricalGet() {
 
 ##############################################################################
 #
-# Call dappsCurveContractsVersionHistoricalGet operation
+# Call curveGetContractsVersionsHistorical operation
 #
 ##############################################################################
-call_dappsCurveContractsVersionHistoricalGet() {
+call_curveGetContractsVersionsHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -5156,7 +5424,7 @@ call_dappsCurveContractsVersionHistoricalGet() {
     local query_parameter_names=(startBlock endBlock startDate endDate poolId)
     local path
 
-    if ! path=$(build_request_path "/dapps/curve/contractsVersion/historical" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/curve/contractsVersions/historical" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -5180,10 +5448,10 @@ call_dappsCurveContractsVersionHistoricalGet() {
 
 ##############################################################################
 #
-# Call dappsCurveDailyVolumeHistoricalGet operation
+# Call curveGetDailyVolumesHistorical operation
 #
 ##############################################################################
-call_dappsCurveDailyVolumeHistoricalGet() {
+call_curveGetDailyVolumesHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -5192,7 +5460,7 @@ call_dappsCurveDailyVolumeHistoricalGet() {
     local query_parameter_names=(startBlock endBlock startDate endDate poolId)
     local path
 
-    if ! path=$(build_request_path "/dapps/curve/dailyVolume/historical" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/curve/dailyVolumes/historical" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -5216,10 +5484,10 @@ call_dappsCurveDailyVolumeHistoricalGet() {
 
 ##############################################################################
 #
-# Call dappsCurveFeeChangeLogHistoricalGet operation
+# Call curveGetExchangesHistorical operation
 #
 ##############################################################################
-call_dappsCurveFeeChangeLogHistoricalGet() {
+call_curveGetExchangesHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -5228,7 +5496,7 @@ call_dappsCurveFeeChangeLogHistoricalGet() {
     local query_parameter_names=(startBlock endBlock startDate endDate poolId)
     local path
 
-    if ! path=$(build_request_path "/dapps/curve/feeChangeLog/historical" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/curve/exchanges/historical" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -5252,46 +5520,10 @@ call_dappsCurveFeeChangeLogHistoricalGet() {
 
 ##############################################################################
 #
-# Call dappsCurveGaugeDepositHistoricalGet operation
+# Call curveGetFeeChangeLogsHistorical operation
 #
 ##############################################################################
-call_dappsCurveGaugeDepositHistoricalGet() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(startBlock endBlock startDate endDate)
-    local path
-
-    if ! path=$(build_request_path "/dapps/curve/gaugeDeposit/historical" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call dappsCurveGaugeHistoricalGet operation
-#
-##############################################################################
-call_dappsCurveGaugeHistoricalGet() {
+call_curveGetFeeChangeLogsHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -5300,7 +5532,7 @@ call_dappsCurveGaugeHistoricalGet() {
     local query_parameter_names=(startBlock endBlock startDate endDate poolId)
     local path
 
-    if ! path=$(build_request_path "/dapps/curve/gauge/historical" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/curve/feeChangeLogs/historical" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -5324,10 +5556,10 @@ call_dappsCurveGaugeHistoricalGet() {
 
 ##############################################################################
 #
-# Call dappsCurveGaugeLiquidityHistoricalGet operation
+# Call curveGetGaugesDepositsHistorical operation
 #
 ##############################################################################
-call_dappsCurveGaugeLiquidityHistoricalGet() {
+call_curveGetGaugesDepositsHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -5336,7 +5568,7 @@ call_dappsCurveGaugeLiquidityHistoricalGet() {
     local query_parameter_names=(startBlock endBlock startDate endDate)
     local path
 
-    if ! path=$(build_request_path "/dapps/curve/gaugeLiquidity/historical" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/curve/gaugesDeposits/historical" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -5360,226 +5592,10 @@ call_dappsCurveGaugeLiquidityHistoricalGet() {
 
 ##############################################################################
 #
-# Call dappsCurveGaugeTotalWeightHistoricalGet operation
+# Call curveGetGaugesHistorical operation
 #
 ##############################################################################
-call_dappsCurveGaugeTotalWeightHistoricalGet() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(startBlock endBlock startDate endDate)
-    local path
-
-    if ! path=$(build_request_path "/dapps/curve/gaugeTotalWeight/historical" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call dappsCurveGaugeTypeHistoricalGet operation
-#
-##############################################################################
-call_dappsCurveGaugeTypeHistoricalGet() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(startBlock endBlock startDate endDate)
-    local path
-
-    if ! path=$(build_request_path "/dapps/curve/gaugeType/historical" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call dappsCurveGaugeTypeWeightHistoricalGet operation
-#
-##############################################################################
-call_dappsCurveGaugeTypeWeightHistoricalGet() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(startBlock endBlock startDate endDate)
-    local path
-
-    if ! path=$(build_request_path "/dapps/curve/gaugeTypeWeight/historical" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call dappsCurveGaugeWeightHistoricalGet operation
-#
-##############################################################################
-call_dappsCurveGaugeWeightHistoricalGet() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(startBlock endBlock startDate endDate)
-    local path
-
-    if ! path=$(build_request_path "/dapps/curve/gaugeWeight/historical" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call dappsCurveGaugeWeightVoteHistoricalGet operation
-#
-##############################################################################
-call_dappsCurveGaugeWeightVoteHistoricalGet() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(startBlock endBlock startDate endDate)
-    local path
-
-    if ! path=$(build_request_path "/dapps/curve/gaugeWeightVote/historical" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call dappsCurveGaugeWithdrawHistoricalGet operation
-#
-##############################################################################
-call_dappsCurveGaugeWithdrawHistoricalGet() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(startBlock endBlock startDate endDate)
-    local path
-
-    if ! path=$(build_request_path "/dapps/curve/gaugeWithdraw/historical" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call dappsCurveHourlyVolumeHistoricalGet operation
-#
-##############################################################################
-call_dappsCurveHourlyVolumeHistoricalGet() {
+call_curveGetGaugesHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -5588,7 +5604,7 @@ call_dappsCurveHourlyVolumeHistoricalGet() {
     local query_parameter_names=(startBlock endBlock startDate endDate poolId)
     local path
 
-    if ! path=$(build_request_path "/dapps/curve/hourlyVolume/historical" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/curve/gauges/historical" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -5612,10 +5628,262 @@ call_dappsCurveHourlyVolumeHistoricalGet() {
 
 ##############################################################################
 #
-# Call dappsCurveLpTokenHistoricalGet operation
+# Call curveGetGaugesLiquidityHistorical operation
 #
 ##############################################################################
-call_dappsCurveLpTokenHistoricalGet() {
+call_curveGetGaugesLiquidityHistorical() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(startBlock endBlock startDate endDate)
+    local path
+
+    if ! path=$(build_request_path "/dapps/curve/gaugesLiquidity/historical" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call curveGetGaugesTotalWeightsHistorical operation
+#
+##############################################################################
+call_curveGetGaugesTotalWeightsHistorical() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(startBlock endBlock startDate endDate)
+    local path
+
+    if ! path=$(build_request_path "/dapps/curve/gaugesTotalWeights/historical" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call curveGetGaugesTypesHistorical operation
+#
+##############################################################################
+call_curveGetGaugesTypesHistorical() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(startBlock endBlock startDate endDate)
+    local path
+
+    if ! path=$(build_request_path "/dapps/curve/gaugesTypes/historical" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call curveGetGaugesTypesWeightsHistorical operation
+#
+##############################################################################
+call_curveGetGaugesTypesWeightsHistorical() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(startBlock endBlock startDate endDate)
+    local path
+
+    if ! path=$(build_request_path "/dapps/curve/gaugesTypesWeights/historical" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call curveGetGaugesWeightsHistorical operation
+#
+##############################################################################
+call_curveGetGaugesWeightsHistorical() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(startBlock endBlock startDate endDate)
+    local path
+
+    if ! path=$(build_request_path "/dapps/curve/gaugesWeights/historical" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call curveGetGaugesWeightsVotesHistorical operation
+#
+##############################################################################
+call_curveGetGaugesWeightsVotesHistorical() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(startBlock endBlock startDate endDate)
+    local path
+
+    if ! path=$(build_request_path "/dapps/curve/gaugesWeightsVotes/historical" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call curveGetGaugesWithdrawHistorical operation
+#
+##############################################################################
+call_curveGetGaugesWithdrawHistorical() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(startBlock endBlock startDate endDate)
+    local path
+
+    if ! path=$(build_request_path "/dapps/curve/gaugesWithdraws/historical" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call curveGetHourlyVolumesHistorical operation
+#
+##############################################################################
+call_curveGetHourlyVolumesHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -5624,7 +5892,7 @@ call_dappsCurveLpTokenHistoricalGet() {
     local query_parameter_names=(startBlock endBlock startDate endDate poolId)
     local path
 
-    if ! path=$(build_request_path "/dapps/curve/lpToken/historical" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/curve/hourlyVolumes/historical" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -5648,10 +5916,46 @@ call_dappsCurveLpTokenHistoricalGet() {
 
 ##############################################################################
 #
-# Call dappsCurvePoolsHistoricalGet operation
+# Call curveGetLpTokensHistorical operation
 #
 ##############################################################################
-call_dappsCurvePoolsHistoricalGet() {
+call_curveGetLpTokensHistorical() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(startBlock endBlock startDate endDate poolId)
+    local path
+
+    if ! path=$(build_request_path "/dapps/curve/lpTokens/historical" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call curveGetPoolsHistorical operation
+#
+##############################################################################
+call_curveGetPoolsHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -5684,10 +5988,10 @@ call_dappsCurvePoolsHistoricalGet() {
 
 ##############################################################################
 #
-# Call dappsCurveProposalsHistoricalGet operation
+# Call curveGetProposalsHistorical operation
 #
 ##############################################################################
-call_dappsCurveProposalsHistoricalGet() {
+call_curveGetProposalsHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -5720,10 +6024,10 @@ call_dappsCurveProposalsHistoricalGet() {
 
 ##############################################################################
 #
-# Call dappsCurveProposalsVoteHistoricalGet operation
+# Call curveGetProposalsVotesHistorical operation
 #
 ##############################################################################
-call_dappsCurveProposalsVoteHistoricalGet() {
+call_curveGetProposalsVotesHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -5732,7 +6036,7 @@ call_dappsCurveProposalsVoteHistoricalGet() {
     local query_parameter_names=(startBlock endBlock startDate endDate)
     local path
 
-    if ! path=$(build_request_path "/dapps/curve/proposalsVote/historical" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/curve/proposalsVotes/historical" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -5756,10 +6060,10 @@ call_dappsCurveProposalsVoteHistoricalGet() {
 
 ##############################################################################
 #
-# Call dappsCurveRemoveLiquidityEventHistoricalGet operation
+# Call curveGetRemoveLiquidityEventsHistorical operation
 #
 ##############################################################################
-call_dappsCurveRemoveLiquidityEventHistoricalGet() {
+call_curveGetRemoveLiquidityEventsHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -5768,7 +6072,7 @@ call_dappsCurveRemoveLiquidityEventHistoricalGet() {
     local query_parameter_names=(startBlock endBlock startDate endDate poolId)
     local path
 
-    if ! path=$(build_request_path "/dapps/curve/removeLiquidityEvent/historical" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/curve/removeLiquidityEvents/historical" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -5792,10 +6096,10 @@ call_dappsCurveRemoveLiquidityEventHistoricalGet() {
 
 ##############################################################################
 #
-# Call dappsCurveRemoveLiquidityOneEventHistoricalGet operation
+# Call curveGetRemoveLiquidityOneEventsHistorical operation
 #
 ##############################################################################
-call_dappsCurveRemoveLiquidityOneEventHistoricalGet() {
+call_curveGetRemoveLiquidityOneEventsHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -5804,7 +6108,7 @@ call_dappsCurveRemoveLiquidityOneEventHistoricalGet() {
     local query_parameter_names=(startBlock endBlock startDate endDate poolId)
     local path
 
-    if ! path=$(build_request_path "/dapps/curve/removeLiquidityOneEvent/historical" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/curve/removeLiquidityOneEvents/historical" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -5828,46 +6132,10 @@ call_dappsCurveRemoveLiquidityOneEventHistoricalGet() {
 
 ##############################################################################
 #
-# Call dappsCurveSwapsHistoricalGet operation
+# Call curveGetSystemStatesHistorical operation
 #
 ##############################################################################
-call_dappsCurveSwapsHistoricalGet() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(startBlock endBlock startDate endDate poolId)
-    local path
-
-    if ! path=$(build_request_path "/dapps/curve/swaps/historical" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call dappsCurveSystemStateHistoricalGet operation
-#
-##############################################################################
-call_dappsCurveSystemStateHistoricalGet() {
+call_curveGetSystemStatesHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -5876,7 +6144,7 @@ call_dappsCurveSystemStateHistoricalGet() {
     local query_parameter_names=(startBlock endBlock startDate endDate)
     local path
 
-    if ! path=$(build_request_path "/dapps/curve/systemState/historical" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/curve/systemStates/historical" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -5900,10 +6168,10 @@ call_dappsCurveSystemStateHistoricalGet() {
 
 ##############################################################################
 #
-# Call dappsCurveTokensHistoricalGet operation
+# Call curveGetTokensHistorical operation
 #
 ##############################################################################
-call_dappsCurveTokensHistoricalGet() {
+call_curveGetTokensHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -5936,10 +6204,10 @@ call_dappsCurveTokensHistoricalGet() {
 
 ##############################################################################
 #
-# Call dappsCurveTransferOwnershipEventHistoricalGet operation
+# Call curveGetTransferOwnershipEventsHistorical operation
 #
 ##############################################################################
-call_dappsCurveTransferOwnershipEventHistoricalGet() {
+call_curveGetTransferOwnershipEventsHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -5948,7 +6216,7 @@ call_dappsCurveTransferOwnershipEventHistoricalGet() {
     local query_parameter_names=(startBlock endBlock startDate endDate poolId)
     local path
 
-    if ! path=$(build_request_path "/dapps/curve/transferOwnershipEvent/historical" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/curve/transferOwnershipEvents/historical" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -5972,10 +6240,10 @@ call_dappsCurveTransferOwnershipEventHistoricalGet() {
 
 ##############################################################################
 #
-# Call dappsCurveUnderlyingCoinHistoricalGet operation
+# Call curveGetUnderlyingCoinsHistorical operation
 #
 ##############################################################################
-call_dappsCurveUnderlyingCoinHistoricalGet() {
+call_curveGetUnderlyingCoinsHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -5984,7 +6252,7 @@ call_dappsCurveUnderlyingCoinHistoricalGet() {
     local query_parameter_names=(startBlock endBlock startDate endDate poolId)
     local path
 
-    if ! path=$(build_request_path "/dapps/curve/underlyingCoin/historical" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/curve/underlyingCoins/historical" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -6008,10 +6276,10 @@ call_dappsCurveUnderlyingCoinHistoricalGet() {
 
 ##############################################################################
 #
-# Call dappsCurveVotingAppHistoricalGet operation
+# Call curveGetVotingAppsHistorical operation
 #
 ##############################################################################
-call_dappsCurveVotingAppHistoricalGet() {
+call_curveGetVotingAppsHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -6020,7 +6288,7 @@ call_dappsCurveVotingAppHistoricalGet() {
     local query_parameter_names=(startBlock endBlock startDate endDate)
     local path
 
-    if ! path=$(build_request_path "/dapps/curve/votingApp/historical" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/curve/votingApps/historical" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -6044,10 +6312,10 @@ call_dappsCurveVotingAppHistoricalGet() {
 
 ##############################################################################
 #
-# Call dappsCurveWeeklyVolumeHistoricalGet operation
+# Call curveGetWeeklyVolumesHistorical operation
 #
 ##############################################################################
-call_dappsCurveWeeklyVolumeHistoricalGet() {
+call_curveGetWeeklyVolumesHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -6056,7 +6324,7 @@ call_dappsCurveWeeklyVolumeHistoricalGet() {
     local query_parameter_names=(startBlock endBlock startDate endDate poolId)
     local path
 
-    if ! path=$(build_request_path "/dapps/curve/weeklyVolume/historical" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/curve/weeklyVolumes/historical" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -6080,10 +6348,10 @@ call_dappsCurveWeeklyVolumeHistoricalGet() {
 
 ##############################################################################
 #
-# Call dappsDexBatchHistoricalGet operation
+# Call dexGetBatchesHistorical operation
 #
 ##############################################################################
-call_dappsDexBatchHistoricalGet() {
+call_dexGetBatchesHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -6092,7 +6360,7 @@ call_dappsDexBatchHistoricalGet() {
     local query_parameter_names=(startBlock endBlock startDate endDate)
     local path
 
-    if ! path=$(build_request_path "/dapps/dex/batch/historical" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/dex/batches/historical" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -6116,10 +6384,46 @@ call_dappsDexBatchHistoricalGet() {
 
 ##############################################################################
 #
-# Call dappsDexOrdersHistoricalGet operation
+# Call dexGetDepositsHistorical operation
 #
 ##############################################################################
-call_dappsDexOrdersHistoricalGet() {
+call_dexGetDepositsHistorical() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(startBlock endBlock startDate endDate tokenId)
+    local path
+
+    if ! path=$(build_request_path "/dapps/dex/deposits/historical" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call dexGetOrdersHistorical operation
+#
+##############################################################################
+call_dexGetOrdersHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -6152,10 +6456,10 @@ call_dappsDexOrdersHistoricalGet() {
 
 ##############################################################################
 #
-# Call dappsDexPricesHistoricalGet operation
+# Call dexGetPricesHistorical operation
 #
 ##############################################################################
-call_dappsDexPricesHistoricalGet() {
+call_dexGetPricesHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -6188,10 +6492,10 @@ call_dappsDexPricesHistoricalGet() {
 
 ##############################################################################
 #
-# Call dappsDexSolutionHistoricalGet operation
+# Call dexGetSolutionsHistorical operation
 #
 ##############################################################################
-call_dappsDexSolutionHistoricalGet() {
+call_dexGetSolutionsHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -6200,7 +6504,7 @@ call_dappsDexSolutionHistoricalGet() {
     local query_parameter_names=(startBlock endBlock startDate endDate tokenId)
     local path
 
-    if ! path=$(build_request_path "/dapps/dex/solution/historical" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/dex/solutions/historical" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -6224,10 +6528,10 @@ call_dappsDexSolutionHistoricalGet() {
 
 ##############################################################################
 #
-# Call dappsDexStatsHistoricalGet operation
+# Call dexGetStatsHistorical operation
 #
 ##############################################################################
-call_dappsDexStatsHistoricalGet() {
+call_dexGetStatsHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -6260,10 +6564,10 @@ call_dappsDexStatsHistoricalGet() {
 
 ##############################################################################
 #
-# Call dappsDexTokensHistoricalGet operation
+# Call dexGetTokensHistorical operation
 #
 ##############################################################################
-call_dappsDexTokensHistoricalGet() {
+call_dexGetTokensHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -6296,10 +6600,10 @@ call_dappsDexTokensHistoricalGet() {
 
 ##############################################################################
 #
-# Call dappsDexTradesHistoricalGet operation
+# Call dexGetTradesHistorical operation
 #
 ##############################################################################
-call_dappsDexTradesHistoricalGet() {
+call_dexGetTradesHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -6332,10 +6636,10 @@ call_dappsDexTradesHistoricalGet() {
 
 ##############################################################################
 #
-# Call dappsDexUsersHistoricalGet operation
+# Call dexGetUsersHistorical operation
 #
 ##############################################################################
-call_dappsDexUsersHistoricalGet() {
+call_dexGetUsersHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -6368,10 +6672,10 @@ call_dappsDexUsersHistoricalGet() {
 
 ##############################################################################
 #
-# Call dappsDexWithdrawHistoricalGet operation
+# Call dexGetWithdrawsHistorical operation
 #
 ##############################################################################
-call_dappsDexWithdrawHistoricalGet() {
+call_dexGetWithdrawsHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -6380,7 +6684,7 @@ call_dappsDexWithdrawHistoricalGet() {
     local query_parameter_names=(startBlock endBlock startDate endDate tokenId)
     local path
 
-    if ! path=$(build_request_path "/dapps/dex/withdraw/historical" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/dex/withdraws/historical" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -6404,10 +6708,10 @@ call_dappsDexWithdrawHistoricalGet() {
 
 ##############################################################################
 #
-# Call dappsDexWithdrawRequestHistoricalGet operation
+# Call dexGetWithdrawsRequestsHistorical operation
 #
 ##############################################################################
-call_dappsDexWithdrawRequestHistoricalGet() {
+call_dexGetWithdrawsRequestsHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -6416,7 +6720,79 @@ call_dappsDexWithdrawRequestHistoricalGet() {
     local query_parameter_names=(startBlock endBlock startDate endDate tokenId)
     local path
 
-    if ! path=$(build_request_path "/dapps/dex/withdrawRequest/historical" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/dex/withdrawsRequests/historical" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call curveGetExchangesCurrent operation
+#
+##############################################################################
+call_curveGetExchangesCurrent() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=()
+    local path
+
+    if ! path=$(build_request_path "/dapps/sushiswap/exchanges/current" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call dexGetTradesCurrent operation
+#
+##############################################################################
+call_dexGetTradesCurrent() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=()
+    local path
+
+    if ! path=$(build_request_path "/dapps/sushiswap/trades/current" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -7124,10 +7500,10 @@ call_sushiswapGetUsersHistorical() {
 
 ##############################################################################
 #
-# Call dappsUniswapv2BundlesHistoricalGet operation
+# Call uniswapV2GetBundlesHistorical operation
 #
 ##############################################################################
-call_dappsUniswapv2BundlesHistoricalGet() {
+call_uniswapV2GetBundlesHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -7160,10 +7536,10 @@ call_dappsUniswapv2BundlesHistoricalGet() {
 
 ##############################################################################
 #
-# Call dappsUniswapv2BurnsHistoricalGet operation
+# Call uniswapV2GetBurnsHistorical operation
 #
 ##############################################################################
-call_dappsUniswapv2BurnsHistoricalGet() {
+call_uniswapV2GetBurnsHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -7196,10 +7572,10 @@ call_dappsUniswapv2BurnsHistoricalGet() {
 
 ##############################################################################
 #
-# Call dappsUniswapv2DayDataHistoricalGet operation
+# Call uniswapV2GetDayDataHistorical operation
 #
 ##############################################################################
-call_dappsUniswapv2DayDataHistoricalGet() {
+call_uniswapV2GetDayDataHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -7232,10 +7608,10 @@ call_dappsUniswapv2DayDataHistoricalGet() {
 
 ##############################################################################
 #
-# Call dappsUniswapv2FactoryHistoricalGet operation
+# Call uniswapV2GetFactoryHistorical operation
 #
 ##############################################################################
-call_dappsUniswapv2FactoryHistoricalGet() {
+call_uniswapV2GetFactoryHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -7268,10 +7644,10 @@ call_dappsUniswapv2FactoryHistoricalGet() {
 
 ##############################################################################
 #
-# Call dappsUniswapv2LiquidityPositionHistoricalGet operation
+# Call uniswapV2GetLiquidityPositionsHistorical operation
 #
 ##############################################################################
-call_dappsUniswapv2LiquidityPositionHistoricalGet() {
+call_uniswapV2GetLiquidityPositionsHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -7280,7 +7656,7 @@ call_dappsUniswapv2LiquidityPositionHistoricalGet() {
     local query_parameter_names=(startBlock endBlock startDate endDate poolId)
     local path
 
-    if ! path=$(build_request_path "/dapps/uniswapv2/liquidityPosition/historical" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/uniswapv2/liquidityPositions/historical" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -7304,10 +7680,10 @@ call_dappsUniswapv2LiquidityPositionHistoricalGet() {
 
 ##############################################################################
 #
-# Call dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet operation
+# Call uniswapV2GetLiquidityPositionsSnapshotsHistorical operation
 #
 ##############################################################################
-call_dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet() {
+call_uniswapV2GetLiquidityPositionsSnapshotsHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -7316,7 +7692,7 @@ call_dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet() {
     local query_parameter_names=(startBlock endBlock startDate endDate poolId)
     local path
 
-    if ! path=$(build_request_path "/dapps/uniswapv2/liquidityPositionSnapshots/historical" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/uniswapv2/liquidityPositionsSnapshots/historical" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -7340,10 +7716,10 @@ call_dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet() {
 
 ##############################################################################
 #
-# Call dappsUniswapv2MintsHistoricalGet operation
+# Call uniswapV2GetMintsHistorical operation
 #
 ##############################################################################
-call_dappsUniswapv2MintsHistoricalGet() {
+call_uniswapV2GetMintsHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -7376,82 +7752,10 @@ call_dappsUniswapv2MintsHistoricalGet() {
 
 ##############################################################################
 #
-# Call dappsUniswapv2PoolDayDataHistoricalGet operation
+# Call uniswapV2GetPoolsCurrent operation
 #
 ##############################################################################
-call_dappsUniswapv2PoolDayDataHistoricalGet() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(startBlock endBlock startDate endDate poolId)
-    local path
-
-    if ! path=$(build_request_path "/dapps/uniswapv2/poolDayData/historical" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call dappsUniswapv2PoolHourDataHistoricalGet operation
-#
-##############################################################################
-call_dappsUniswapv2PoolHourDataHistoricalGet() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(startBlock endBlock startDate endDate poolId)
-    local path
-
-    if ! path=$(build_request_path "/dapps/uniswapv2/poolHourData/historical" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call dappsUniswapv2PoolsCurrentGet operation
-#
-##############################################################################
-call_dappsUniswapv2PoolsCurrentGet() {
+call_uniswapV2GetPoolsCurrent() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -7484,10 +7788,46 @@ call_dappsUniswapv2PoolsCurrentGet() {
 
 ##############################################################################
 #
-# Call dappsUniswapv2PoolsHistoricalGet operation
+# Call uniswapV2GetPoolsDayDataHistorical operation
 #
 ##############################################################################
-call_dappsUniswapv2PoolsHistoricalGet() {
+call_uniswapV2GetPoolsDayDataHistorical() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(startBlock endBlock startDate endDate poolId)
+    local path
+
+    if ! path=$(build_request_path "/dapps/uniswapv2/poolsDayData/historical" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call uniswapV2GetPoolsHistorical operation
+#
+##############################################################################
+call_uniswapV2GetPoolsHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -7520,10 +7860,46 @@ call_dappsUniswapv2PoolsHistoricalGet() {
 
 ##############################################################################
 #
-# Call dappsUniswapv2SwapsCurrentGet operation
+# Call uniswapV2GetPoolsHourDataHistorical operation
 #
 ##############################################################################
-call_dappsUniswapv2SwapsCurrentGet() {
+call_uniswapV2GetPoolsHourDataHistorical() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(startBlock endBlock startDate endDate poolId)
+    local path
+
+    if ! path=$(build_request_path "/dapps/uniswapv2/poolsHourData/historical" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call uniswapV2GetSwapsCurrent operation
+#
+##############################################################################
+call_uniswapV2GetSwapsCurrent() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -7556,10 +7932,10 @@ call_dappsUniswapv2SwapsCurrentGet() {
 
 ##############################################################################
 #
-# Call dappsUniswapv2SwapsHistoricalGet operation
+# Call uniswapV2GetSwapsHistorical operation
 #
 ##############################################################################
-call_dappsUniswapv2SwapsHistoricalGet() {
+call_uniswapV2GetSwapsHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -7592,46 +7968,10 @@ call_dappsUniswapv2SwapsHistoricalGet() {
 
 ##############################################################################
 #
-# Call dappsUniswapv2TokenDayDataHistoricalGet operation
+# Call uniswapV2GetTokensCurrent operation
 #
 ##############################################################################
-call_dappsUniswapv2TokenDayDataHistoricalGet() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(startBlock endBlock startDate endDate tokenId)
-    local path
-
-    if ! path=$(build_request_path "/dapps/uniswapv2/tokenDayData/historical" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call dappsUniswapv2TokensCurrentGet operation
-#
-##############################################################################
-call_dappsUniswapv2TokensCurrentGet() {
+call_uniswapV2GetTokensCurrent() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -7664,10 +8004,46 @@ call_dappsUniswapv2TokensCurrentGet() {
 
 ##############################################################################
 #
-# Call dappsUniswapv2TokensHistoricalGet operation
+# Call uniswapV2GetTokensDayDataHistorical operation
 #
 ##############################################################################
-call_dappsUniswapv2TokensHistoricalGet() {
+call_uniswapV2GetTokensDayDataHistorical() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(startBlock endBlock startDate endDate tokenId)
+    local path
+
+    if ! path=$(build_request_path "/dapps/uniswapv2/tokensDayData/historical" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call uniswapV2GetTokensHistorical operation
+#
+##############################################################################
+call_uniswapV2GetTokensHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -7700,10 +8076,10 @@ call_dappsUniswapv2TokensHistoricalGet() {
 
 ##############################################################################
 #
-# Call dappsUniswapv2TransactionsHistoricalGet operation
+# Call uniswapV2GetTransactionsHistorical operation
 #
 ##############################################################################
-call_dappsUniswapv2TransactionsHistoricalGet() {
+call_uniswapV2GetTransactionsHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -7736,10 +8112,10 @@ call_dappsUniswapv2TransactionsHistoricalGet() {
 
 ##############################################################################
 #
-# Call dappsUniswapv2UsersHistoricalGet operation
+# Call uniswapV2GetUsersHistorical operation
 #
 ##############################################################################
-call_dappsUniswapv2UsersHistoricalGet() {
+call_uniswapV2GetUsersHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -7772,10 +8148,10 @@ call_dappsUniswapv2UsersHistoricalGet() {
 
 ##############################################################################
 #
-# Call dappsUniswapv3BundleCurrentGet operation
+# Call uniswapV3GetBundlesCurrent operation
 #
 ##############################################################################
-call_dappsUniswapv3BundleCurrentGet() {
+call_uniswapV3GetBundlesCurrent() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -7784,7 +8160,7 @@ call_dappsUniswapv3BundleCurrentGet() {
     local query_parameter_names=()
     local path
 
-    if ! path=$(build_request_path "/dapps/uniswapv3/bundle/current" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/uniswapv3/bundles/current" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -7808,10 +8184,10 @@ call_dappsUniswapv3BundleCurrentGet() {
 
 ##############################################################################
 #
-# Call dappsUniswapv3BundlesHistoricalGet operation
+# Call uniswapV3GetBundlesHistorical operation
 #
 ##############################################################################
-call_dappsUniswapv3BundlesHistoricalGet() {
+call_uniswapV3GetBundlesHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -7844,10 +8220,10 @@ call_dappsUniswapv3BundlesHistoricalGet() {
 
 ##############################################################################
 #
-# Call dappsUniswapv3BurnsCurrentGet operation
+# Call uniswapV3GetBurnsCurrent operation
 #
 ##############################################################################
-call_dappsUniswapv3BurnsCurrentGet() {
+call_uniswapV3GetBurnsCurrent() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -7880,10 +8256,10 @@ call_dappsUniswapv3BurnsCurrentGet() {
 
 ##############################################################################
 #
-# Call dappsUniswapv3BurnsHistoricalGet operation
+# Call uniswapV3GetBurnsHistorical operation
 #
 ##############################################################################
-call_dappsUniswapv3BurnsHistoricalGet() {
+call_uniswapV3GetBurnsHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -7916,10 +8292,46 @@ call_dappsUniswapv3BurnsHistoricalGet() {
 
 ##############################################################################
 #
-# Call dappsUniswapv3DayDataHistoricalGet operation
+# Call uniswapV3GetDayDataCurrent operation
 #
 ##############################################################################
-call_dappsUniswapv3DayDataHistoricalGet() {
+call_uniswapV3GetDayDataCurrent() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=()
+    local path
+
+    if ! path=$(build_request_path "/dapps/uniswapv3/dayData/current" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call uniswapV3GetDayDataHistorical operation
+#
+##############################################################################
+call_uniswapV3GetDayDataHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -7952,13 +8364,13 @@ call_dappsUniswapv3DayDataHistoricalGet() {
 
 ##############################################################################
 #
-# Call dappsUniswapv3FactoryCurrentGet operation
+# Call uniswapV3GetFactoryCurrent operation
 #
 ##############################################################################
-call_dappsUniswapv3FactoryCurrentGet() {
+call_uniswapV3GetFactoryCurrent() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
-    local path_parameter_names=(chain_id)
+    local path_parameter_names=()
     # ignore error about 'query_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local query_parameter_names=()
@@ -7988,10 +8400,10 @@ call_dappsUniswapv3FactoryCurrentGet() {
 
 ##############################################################################
 #
-# Call dappsUniswapv3FactoryHistoricalGet operation
+# Call uniswapV3GetFactoryHistorical operation
 #
 ##############################################################################
-call_dappsUniswapv3FactoryHistoricalGet() {
+call_uniswapV3GetFactoryHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -8024,10 +8436,10 @@ call_dappsUniswapv3FactoryHistoricalGet() {
 
 ##############################################################################
 #
-# Call dappsUniswapv3MintsCurrentGet operation
+# Call uniswapV3GetMintsCurrent operation
 #
 ##############################################################################
-call_dappsUniswapv3MintsCurrentGet() {
+call_uniswapV3GetMintsCurrent() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -8060,10 +8472,10 @@ call_dappsUniswapv3MintsCurrentGet() {
 
 ##############################################################################
 #
-# Call dappsUniswapv3MintsHistoricalGet operation
+# Call uniswapV3GetMintsHistorical operation
 #
 ##############################################################################
-call_dappsUniswapv3MintsHistoricalGet() {
+call_uniswapV3GetMintsHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -8096,82 +8508,10 @@ call_dappsUniswapv3MintsHistoricalGet() {
 
 ##############################################################################
 #
-# Call dappsUniswapv3PoolDayDataHistoricalGet operation
+# Call uniswapV3GetPoolsCurrent operation
 #
 ##############################################################################
-call_dappsUniswapv3PoolDayDataHistoricalGet() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(startBlock endBlock startDate endDate poolId)
-    local path
-
-    if ! path=$(build_request_path "/dapps/uniswapv3/poolDayData/historical" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call dappsUniswapv3PoolHourDataHistoricalGet operation
-#
-##############################################################################
-call_dappsUniswapv3PoolHourDataHistoricalGet() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(startBlock endBlock startDate endDate poolId)
-    local path
-
-    if ! path=$(build_request_path "/dapps/uniswapv3/poolHourData/historical" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call dappsUniswapv3PoolsCurrentGet operation
-#
-##############################################################################
-call_dappsUniswapv3PoolsCurrentGet() {
+call_uniswapV3GetPoolsCurrent() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -8204,10 +8544,10 @@ call_dappsUniswapv3PoolsCurrentGet() {
 
 ##############################################################################
 #
-# Call dappsUniswapv3PoolsDayDataCurrentGet operation
+# Call uniswapV3GetPoolsDayDataCurrent operation
 #
 ##############################################################################
-call_dappsUniswapv3PoolsDayDataCurrentGet() {
+call_uniswapV3GetPoolsDayDataCurrent() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -8240,10 +8580,46 @@ call_dappsUniswapv3PoolsDayDataCurrentGet() {
 
 ##############################################################################
 #
-# Call dappsUniswapv3PoolsHistoricalGet operation
+# Call uniswapV3GetPoolsDayDataHistorical operation
 #
 ##############################################################################
-call_dappsUniswapv3PoolsHistoricalGet() {
+call_uniswapV3GetPoolsDayDataHistorical() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(startBlock endBlock startDate endDate poolId)
+    local path
+
+    if ! path=$(build_request_path "/dapps/uniswapv3/poolsDayData/historical" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call uniswapV3GetPoolsHistorical operation
+#
+##############################################################################
+call_uniswapV3GetPoolsHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -8276,10 +8652,10 @@ call_dappsUniswapv3PoolsHistoricalGet() {
 
 ##############################################################################
 #
-# Call dappsUniswapv3PoolsHourDataCurrentGet operation
+# Call uniswapV3GetPoolsHourDataCurrent operation
 #
 ##############################################################################
-call_dappsUniswapv3PoolsHourDataCurrentGet() {
+call_uniswapV3GetPoolsHourDataCurrent() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -8312,10 +8688,10 @@ call_dappsUniswapv3PoolsHourDataCurrentGet() {
 
 ##############################################################################
 #
-# Call dappsUniswapv3PositionSnapshotHistoricalGet operation
+# Call uniswapV3GetPoolsHourDataHistorical operation
 #
 ##############################################################################
-call_dappsUniswapv3PositionSnapshotHistoricalGet() {
+call_uniswapV3GetPoolsHourDataHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -8324,7 +8700,7 @@ call_dappsUniswapv3PositionSnapshotHistoricalGet() {
     local query_parameter_names=(startBlock endBlock startDate endDate poolId)
     local path
 
-    if ! path=$(build_request_path "/dapps/uniswapv3/positionSnapshot/historical" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/uniswapv3/poolsHourData/historical" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -8348,46 +8724,10 @@ call_dappsUniswapv3PositionSnapshotHistoricalGet() {
 
 ##############################################################################
 #
-# Call dappsUniswapv3PositionSnapshotsCurrentGet operation
+# Call uniswapV3GetPositionsCurrent operation
 #
 ##############################################################################
-call_dappsUniswapv3PositionSnapshotsCurrentGet() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(filter_pool_id)
-    local path
-
-    if ! path=$(build_request_path "/dapps/uniswapv3/positionSnapshots/current" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call dappsUniswapv3PositionsCurrentGet operation
-#
-##############################################################################
-call_dappsUniswapv3PositionsCurrentGet() {
+call_uniswapV3GetPositionsCurrent() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -8420,10 +8760,10 @@ call_dappsUniswapv3PositionsCurrentGet() {
 
 ##############################################################################
 #
-# Call dappsUniswapv3PositionsHistoricalGet operation
+# Call uniswapV3GetPositionsHistorical operation
 #
 ##############################################################################
-call_dappsUniswapv3PositionsHistoricalGet() {
+call_uniswapV3GetPositionsHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -8456,10 +8796,82 @@ call_dappsUniswapv3PositionsHistoricalGet() {
 
 ##############################################################################
 #
-# Call dappsUniswapv3SwapsCurrentGet operation
+# Call uniswapV3GetPositionsSnaphotsHistorical operation
 #
 ##############################################################################
-call_dappsUniswapv3SwapsCurrentGet() {
+call_uniswapV3GetPositionsSnaphotsHistorical() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(startBlock endBlock startDate endDate poolId)
+    local path
+
+    if ! path=$(build_request_path "/dapps/uniswapv3/positionsSnapshots/historical" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call uniswapV3GetPositionsSnapshotsCurrent operation
+#
+##############################################################################
+call_uniswapV3GetPositionsSnapshotsCurrent() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(filter_pool_id)
+    local path
+
+    if ! path=$(build_request_path "/dapps/uniswapv3/positionSnapshots/current" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call uniswapV3GetSwapsCurrent operation
+#
+##############################################################################
+call_uniswapV3GetSwapsCurrent() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -8492,10 +8904,10 @@ call_dappsUniswapv3SwapsCurrentGet() {
 
 ##############################################################################
 #
-# Call dappsUniswapv3SwapsHistoricalGet operation
+# Call uniswapV3GetSwapsHistorical operation
 #
 ##############################################################################
-call_dappsUniswapv3SwapsHistoricalGet() {
+call_uniswapV3GetSwapsHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -8528,46 +8940,10 @@ call_dappsUniswapv3SwapsHistoricalGet() {
 
 ##############################################################################
 #
-# Call dappsUniswapv3TickDayDataHistoricalGet operation
+# Call uniswapV3GetTicksCurrent operation
 #
 ##############################################################################
-call_dappsUniswapv3TickDayDataHistoricalGet() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(startBlock endBlock startDate endDate poolId)
-    local path
-
-    if ! path=$(build_request_path "/dapps/uniswapv3/tickDayData/historical" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call dappsUniswapv3TicksCurrentGet operation
-#
-##############################################################################
-call_dappsUniswapv3TicksCurrentGet() {
+call_uniswapV3GetTicksCurrent() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -8600,10 +8976,10 @@ call_dappsUniswapv3TicksCurrentGet() {
 
 ##############################################################################
 #
-# Call dappsUniswapv3TicksDayDataCurrentGet operation
+# Call uniswapV3GetTicksDayDataCurrent operation
 #
 ##############################################################################
-call_dappsUniswapv3TicksDayDataCurrentGet() {
+call_uniswapV3GetTicksDayDataCurrent() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -8636,10 +9012,46 @@ call_dappsUniswapv3TicksDayDataCurrentGet() {
 
 ##############################################################################
 #
-# Call dappsUniswapv3TicksHistoricalGet operation
+# Call uniswapV3GetTicksDayDataHistorical operation
 #
 ##############################################################################
-call_dappsUniswapv3TicksHistoricalGet() {
+call_uniswapV3GetTicksDayDataHistorical() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(startBlock endBlock startDate endDate poolId)
+    local path
+
+    if ! path=$(build_request_path "/dapps/uniswapv3/ticksDayData/historical" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call uniswapV3GetTicksHistorical operation
+#
+##############################################################################
+call_uniswapV3GetTicksHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -8672,82 +9084,10 @@ call_dappsUniswapv3TicksHistoricalGet() {
 
 ##############################################################################
 #
-# Call dappsUniswapv3TokenDayDataHistoricalGet operation
+# Call uniswapV3GetTokensCurrent operation
 #
 ##############################################################################
-call_dappsUniswapv3TokenDayDataHistoricalGet() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(startBlock endBlock startDate endDate tokenId)
-    local path
-
-    if ! path=$(build_request_path "/dapps/uniswapv3/tokenDayData/historical" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call dappsUniswapv3TokenHourDataHistoricalGet operation
-#
-##############################################################################
-call_dappsUniswapv3TokenHourDataHistoricalGet() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(startBlock endBlock startDate endDate tokenId)
-    local path
-
-    if ! path=$(build_request_path "/dapps/uniswapv3/tokenHourData/historical" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call dappsUniswapv3TokensCurrentGet operation
-#
-##############################################################################
-call_dappsUniswapv3TokensCurrentGet() {
+call_uniswapV3GetTokensCurrent() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -8780,10 +9120,10 @@ call_dappsUniswapv3TokensCurrentGet() {
 
 ##############################################################################
 #
-# Call dappsUniswapv3TokensDayDataCurrentGet operation
+# Call uniswapV3GetTokensDayDataCurrent operation
 #
 ##############################################################################
-call_dappsUniswapv3TokensDayDataCurrentGet() {
+call_uniswapV3GetTokensDayDataCurrent() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -8816,10 +9156,46 @@ call_dappsUniswapv3TokensDayDataCurrentGet() {
 
 ##############################################################################
 #
-# Call dappsUniswapv3TokensHistoricalGet operation
+# Call uniswapV3GetTokensDayDataHistorical operation
 #
 ##############################################################################
-call_dappsUniswapv3TokensHistoricalGet() {
+call_uniswapV3GetTokensDayDataHistorical() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(startBlock endBlock startDate endDate tokenId)
+    local path
+
+    if ! path=$(build_request_path "/dapps/uniswapv3/tokensDayData/historical" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call uniswapV3GetTokensHistorical operation
+#
+##############################################################################
+call_uniswapV3GetTokensHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -8852,10 +9228,10 @@ call_dappsUniswapv3TokensHistoricalGet() {
 
 ##############################################################################
 #
-# Call dappsUniswapv3TokensHourDataCurrentGet operation
+# Call uniswapV3GetTokensHourDataCurrent operation
 #
 ##############################################################################
-call_dappsUniswapv3TokensHourDataCurrentGet() {
+call_uniswapV3GetTokensHourDataCurrent() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -8888,19 +9264,19 @@ call_dappsUniswapv3TokensHourDataCurrentGet() {
 
 ##############################################################################
 #
-# Call dappsUniswapv3TransactionsHistoricalGet operation
+# Call uniswapV3GetTokensHourDataHistorical operation
 #
 ##############################################################################
-call_dappsUniswapv3TransactionsHistoricalGet() {
+call_uniswapV3GetTokensHourDataHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
     # ignore error about 'query_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
-    local query_parameter_names=(startBlock endBlock startDate endDate)
+    local query_parameter_names=(startBlock endBlock startDate endDate tokenId)
     local path
 
-    if ! path=$(build_request_path "/dapps/uniswapv3/transactions/historical" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/uniswapv3/tokensHourData/historical" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -8924,19 +9300,19 @@ call_dappsUniswapv3TransactionsHistoricalGet() {
 
 ##############################################################################
 #
-# Call dappsUniswapv3UniswapDayDataCurrentGet operation
+# Call uniswapV3GetTransactionsHistorical operation
 #
 ##############################################################################
-call_dappsUniswapv3UniswapDayDataCurrentGet() {
+call_uniswapV3GetTransactionsHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
     # ignore error about 'query_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
-    local query_parameter_names=()
+    local query_parameter_names=(startBlock endBlock startDate endDate)
     local path
 
-    if ! path=$(build_request_path "/dapps/uniswapv3/uniswapDayData/current" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/uniswapv3/transactions/historical" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -9055,146 +9431,155 @@ case $key in
         OFF=""
         result_color_table=( "" "" "" "" "" "" "" )
     ;;
-    dappsCowOrdersHistoricalGet)
-    operation="dappsCowOrdersHistoricalGet"
+    cowGetOrdersHistorical)
+    operation="cowGetOrdersHistorical"
     ;;
-    dappsCowSettlementHistoricalGet)
-    operation="dappsCowSettlementHistoricalGet"
+    cowGetSettlementsHistorical)
+    operation="cowGetSettlementsHistorical"
     ;;
-    dappsCowTokensHistoricalGet)
-    operation="dappsCowTokensHistoricalGet"
+    cowGetTokensHistorical)
+    operation="cowGetTokensHistorical"
     ;;
-    dappsCowTradesHistoricalGet)
-    operation="dappsCowTradesHistoricalGet"
+    cowGetTradesHistorical)
+    operation="cowGetTradesHistorical"
     ;;
-    dappsCowUsersHistoricalGet)
-    operation="dappsCowUsersHistoricalGet"
+    cowGetUsersHistorical)
+    operation="cowGetUsersHistorical"
     ;;
-    dappsCurveAccountsHistoricalGet)
-    operation="dappsCurveAccountsHistoricalGet"
+    curveGetAccountsHistorical)
+    operation="curveGetAccountsHistorical"
     ;;
-    dappsCurveAddLiquidityEventHistoricalGet)
-    operation="dappsCurveAddLiquidityEventHistoricalGet"
+    curveGetAddLiquidityEventsHistorical)
+    operation="curveGetAddLiquidityEventsHistorical"
     ;;
-    dappsCurveAdminFeeChangeLogHistoricalGet)
-    operation="dappsCurveAdminFeeChangeLogHistoricalGet"
+    curveGetAdminFeeChangeLogsHistorical)
+    operation="curveGetAdminFeeChangeLogsHistorical"
     ;;
-    dappsCurveAmplificationCoeffChangeLogHistoricalGet)
-    operation="dappsCurveAmplificationCoeffChangeLogHistoricalGet"
+    curveGetAmplificationCoeffChangeLogsHistorical)
+    operation="curveGetAmplificationCoeffChangeLogsHistorical"
     ;;
-    dappsCurveCoinsHistoricalGet)
-    operation="dappsCurveCoinsHistoricalGet"
+    curveGetCoinsHistorical)
+    operation="curveGetCoinsHistorical"
     ;;
-    dappsCurveContractsHistoricalGet)
-    operation="dappsCurveContractsHistoricalGet"
+    curveGetContractsHistorical)
+    operation="curveGetContractsHistorical"
     ;;
-    dappsCurveContractsVersionHistoricalGet)
-    operation="dappsCurveContractsVersionHistoricalGet"
+    curveGetContractsVersionsHistorical)
+    operation="curveGetContractsVersionsHistorical"
     ;;
-    dappsCurveDailyVolumeHistoricalGet)
-    operation="dappsCurveDailyVolumeHistoricalGet"
+    curveGetDailyVolumesHistorical)
+    operation="curveGetDailyVolumesHistorical"
     ;;
-    dappsCurveFeeChangeLogHistoricalGet)
-    operation="dappsCurveFeeChangeLogHistoricalGet"
+    curveGetExchangesHistorical)
+    operation="curveGetExchangesHistorical"
     ;;
-    dappsCurveGaugeDepositHistoricalGet)
-    operation="dappsCurveGaugeDepositHistoricalGet"
+    curveGetFeeChangeLogsHistorical)
+    operation="curveGetFeeChangeLogsHistorical"
     ;;
-    dappsCurveGaugeHistoricalGet)
-    operation="dappsCurveGaugeHistoricalGet"
+    curveGetGaugesDepositsHistorical)
+    operation="curveGetGaugesDepositsHistorical"
     ;;
-    dappsCurveGaugeLiquidityHistoricalGet)
-    operation="dappsCurveGaugeLiquidityHistoricalGet"
+    curveGetGaugesHistorical)
+    operation="curveGetGaugesHistorical"
     ;;
-    dappsCurveGaugeTotalWeightHistoricalGet)
-    operation="dappsCurveGaugeTotalWeightHistoricalGet"
+    curveGetGaugesLiquidityHistorical)
+    operation="curveGetGaugesLiquidityHistorical"
     ;;
-    dappsCurveGaugeTypeHistoricalGet)
-    operation="dappsCurveGaugeTypeHistoricalGet"
+    curveGetGaugesTotalWeightsHistorical)
+    operation="curveGetGaugesTotalWeightsHistorical"
     ;;
-    dappsCurveGaugeTypeWeightHistoricalGet)
-    operation="dappsCurveGaugeTypeWeightHistoricalGet"
+    curveGetGaugesTypesHistorical)
+    operation="curveGetGaugesTypesHistorical"
     ;;
-    dappsCurveGaugeWeightHistoricalGet)
-    operation="dappsCurveGaugeWeightHistoricalGet"
+    curveGetGaugesTypesWeightsHistorical)
+    operation="curveGetGaugesTypesWeightsHistorical"
     ;;
-    dappsCurveGaugeWeightVoteHistoricalGet)
-    operation="dappsCurveGaugeWeightVoteHistoricalGet"
+    curveGetGaugesWeightsHistorical)
+    operation="curveGetGaugesWeightsHistorical"
     ;;
-    dappsCurveGaugeWithdrawHistoricalGet)
-    operation="dappsCurveGaugeWithdrawHistoricalGet"
+    curveGetGaugesWeightsVotesHistorical)
+    operation="curveGetGaugesWeightsVotesHistorical"
     ;;
-    dappsCurveHourlyVolumeHistoricalGet)
-    operation="dappsCurveHourlyVolumeHistoricalGet"
+    curveGetGaugesWithdrawHistorical)
+    operation="curveGetGaugesWithdrawHistorical"
     ;;
-    dappsCurveLpTokenHistoricalGet)
-    operation="dappsCurveLpTokenHistoricalGet"
+    curveGetHourlyVolumesHistorical)
+    operation="curveGetHourlyVolumesHistorical"
     ;;
-    dappsCurvePoolsHistoricalGet)
-    operation="dappsCurvePoolsHistoricalGet"
+    curveGetLpTokensHistorical)
+    operation="curveGetLpTokensHistorical"
     ;;
-    dappsCurveProposalsHistoricalGet)
-    operation="dappsCurveProposalsHistoricalGet"
+    curveGetPoolsHistorical)
+    operation="curveGetPoolsHistorical"
     ;;
-    dappsCurveProposalsVoteHistoricalGet)
-    operation="dappsCurveProposalsVoteHistoricalGet"
+    curveGetProposalsHistorical)
+    operation="curveGetProposalsHistorical"
     ;;
-    dappsCurveRemoveLiquidityEventHistoricalGet)
-    operation="dappsCurveRemoveLiquidityEventHistoricalGet"
+    curveGetProposalsVotesHistorical)
+    operation="curveGetProposalsVotesHistorical"
     ;;
-    dappsCurveRemoveLiquidityOneEventHistoricalGet)
-    operation="dappsCurveRemoveLiquidityOneEventHistoricalGet"
+    curveGetRemoveLiquidityEventsHistorical)
+    operation="curveGetRemoveLiquidityEventsHistorical"
     ;;
-    dappsCurveSwapsHistoricalGet)
-    operation="dappsCurveSwapsHistoricalGet"
+    curveGetRemoveLiquidityOneEventsHistorical)
+    operation="curveGetRemoveLiquidityOneEventsHistorical"
     ;;
-    dappsCurveSystemStateHistoricalGet)
-    operation="dappsCurveSystemStateHistoricalGet"
+    curveGetSystemStatesHistorical)
+    operation="curveGetSystemStatesHistorical"
     ;;
-    dappsCurveTokensHistoricalGet)
-    operation="dappsCurveTokensHistoricalGet"
+    curveGetTokensHistorical)
+    operation="curveGetTokensHistorical"
     ;;
-    dappsCurveTransferOwnershipEventHistoricalGet)
-    operation="dappsCurveTransferOwnershipEventHistoricalGet"
+    curveGetTransferOwnershipEventsHistorical)
+    operation="curveGetTransferOwnershipEventsHistorical"
     ;;
-    dappsCurveUnderlyingCoinHistoricalGet)
-    operation="dappsCurveUnderlyingCoinHistoricalGet"
+    curveGetUnderlyingCoinsHistorical)
+    operation="curveGetUnderlyingCoinsHistorical"
     ;;
-    dappsCurveVotingAppHistoricalGet)
-    operation="dappsCurveVotingAppHistoricalGet"
+    curveGetVotingAppsHistorical)
+    operation="curveGetVotingAppsHistorical"
     ;;
-    dappsCurveWeeklyVolumeHistoricalGet)
-    operation="dappsCurveWeeklyVolumeHistoricalGet"
+    curveGetWeeklyVolumesHistorical)
+    operation="curveGetWeeklyVolumesHistorical"
     ;;
-    dappsDexBatchHistoricalGet)
-    operation="dappsDexBatchHistoricalGet"
+    dexGetBatchesHistorical)
+    operation="dexGetBatchesHistorical"
     ;;
-    dappsDexOrdersHistoricalGet)
-    operation="dappsDexOrdersHistoricalGet"
+    dexGetDepositsHistorical)
+    operation="dexGetDepositsHistorical"
     ;;
-    dappsDexPricesHistoricalGet)
-    operation="dappsDexPricesHistoricalGet"
+    dexGetOrdersHistorical)
+    operation="dexGetOrdersHistorical"
     ;;
-    dappsDexSolutionHistoricalGet)
-    operation="dappsDexSolutionHistoricalGet"
+    dexGetPricesHistorical)
+    operation="dexGetPricesHistorical"
     ;;
-    dappsDexStatsHistoricalGet)
-    operation="dappsDexStatsHistoricalGet"
+    dexGetSolutionsHistorical)
+    operation="dexGetSolutionsHistorical"
     ;;
-    dappsDexTokensHistoricalGet)
-    operation="dappsDexTokensHistoricalGet"
+    dexGetStatsHistorical)
+    operation="dexGetStatsHistorical"
     ;;
-    dappsDexTradesHistoricalGet)
-    operation="dappsDexTradesHistoricalGet"
+    dexGetTokensHistorical)
+    operation="dexGetTokensHistorical"
     ;;
-    dappsDexUsersHistoricalGet)
-    operation="dappsDexUsersHistoricalGet"
+    dexGetTradesHistorical)
+    operation="dexGetTradesHistorical"
     ;;
-    dappsDexWithdrawHistoricalGet)
-    operation="dappsDexWithdrawHistoricalGet"
+    dexGetUsersHistorical)
+    operation="dexGetUsersHistorical"
     ;;
-    dappsDexWithdrawRequestHistoricalGet)
-    operation="dappsDexWithdrawRequestHistoricalGet"
+    dexGetWithdrawsHistorical)
+    operation="dexGetWithdrawsHistorical"
+    ;;
+    dexGetWithdrawsRequestsHistorical)
+    operation="dexGetWithdrawsRequestsHistorical"
+    ;;
+    curveGetExchangesCurrent)
+    operation="curveGetExchangesCurrent"
+    ;;
+    dexGetTradesCurrent)
+    operation="dexGetTradesCurrent"
     ;;
     sushiswapGetBundlesHistorical)
     operation="sushiswapGetBundlesHistorical"
@@ -9253,158 +9638,158 @@ case $key in
     sushiswapGetUsersHistorical)
     operation="sushiswapGetUsersHistorical"
     ;;
-    dappsUniswapv2BundlesHistoricalGet)
-    operation="dappsUniswapv2BundlesHistoricalGet"
+    uniswapV2GetBundlesHistorical)
+    operation="uniswapV2GetBundlesHistorical"
     ;;
-    dappsUniswapv2BurnsHistoricalGet)
-    operation="dappsUniswapv2BurnsHistoricalGet"
+    uniswapV2GetBurnsHistorical)
+    operation="uniswapV2GetBurnsHistorical"
     ;;
-    dappsUniswapv2DayDataHistoricalGet)
-    operation="dappsUniswapv2DayDataHistoricalGet"
+    uniswapV2GetDayDataHistorical)
+    operation="uniswapV2GetDayDataHistorical"
     ;;
-    dappsUniswapv2FactoryHistoricalGet)
-    operation="dappsUniswapv2FactoryHistoricalGet"
+    uniswapV2GetFactoryHistorical)
+    operation="uniswapV2GetFactoryHistorical"
     ;;
-    dappsUniswapv2LiquidityPositionHistoricalGet)
-    operation="dappsUniswapv2LiquidityPositionHistoricalGet"
+    uniswapV2GetLiquidityPositionsHistorical)
+    operation="uniswapV2GetLiquidityPositionsHistorical"
     ;;
-    dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet)
-    operation="dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet"
+    uniswapV2GetLiquidityPositionsSnapshotsHistorical)
+    operation="uniswapV2GetLiquidityPositionsSnapshotsHistorical"
     ;;
-    dappsUniswapv2MintsHistoricalGet)
-    operation="dappsUniswapv2MintsHistoricalGet"
+    uniswapV2GetMintsHistorical)
+    operation="uniswapV2GetMintsHistorical"
     ;;
-    dappsUniswapv2PoolDayDataHistoricalGet)
-    operation="dappsUniswapv2PoolDayDataHistoricalGet"
+    uniswapV2GetPoolsCurrent)
+    operation="uniswapV2GetPoolsCurrent"
     ;;
-    dappsUniswapv2PoolHourDataHistoricalGet)
-    operation="dappsUniswapv2PoolHourDataHistoricalGet"
+    uniswapV2GetPoolsDayDataHistorical)
+    operation="uniswapV2GetPoolsDayDataHistorical"
     ;;
-    dappsUniswapv2PoolsCurrentGet)
-    operation="dappsUniswapv2PoolsCurrentGet"
+    uniswapV2GetPoolsHistorical)
+    operation="uniswapV2GetPoolsHistorical"
     ;;
-    dappsUniswapv2PoolsHistoricalGet)
-    operation="dappsUniswapv2PoolsHistoricalGet"
+    uniswapV2GetPoolsHourDataHistorical)
+    operation="uniswapV2GetPoolsHourDataHistorical"
     ;;
-    dappsUniswapv2SwapsCurrentGet)
-    operation="dappsUniswapv2SwapsCurrentGet"
+    uniswapV2GetSwapsCurrent)
+    operation="uniswapV2GetSwapsCurrent"
     ;;
-    dappsUniswapv2SwapsHistoricalGet)
-    operation="dappsUniswapv2SwapsHistoricalGet"
+    uniswapV2GetSwapsHistorical)
+    operation="uniswapV2GetSwapsHistorical"
     ;;
-    dappsUniswapv2TokenDayDataHistoricalGet)
-    operation="dappsUniswapv2TokenDayDataHistoricalGet"
+    uniswapV2GetTokensCurrent)
+    operation="uniswapV2GetTokensCurrent"
     ;;
-    dappsUniswapv2TokensCurrentGet)
-    operation="dappsUniswapv2TokensCurrentGet"
+    uniswapV2GetTokensDayDataHistorical)
+    operation="uniswapV2GetTokensDayDataHistorical"
     ;;
-    dappsUniswapv2TokensHistoricalGet)
-    operation="dappsUniswapv2TokensHistoricalGet"
+    uniswapV2GetTokensHistorical)
+    operation="uniswapV2GetTokensHistorical"
     ;;
-    dappsUniswapv2TransactionsHistoricalGet)
-    operation="dappsUniswapv2TransactionsHistoricalGet"
+    uniswapV2GetTransactionsHistorical)
+    operation="uniswapV2GetTransactionsHistorical"
     ;;
-    dappsUniswapv2UsersHistoricalGet)
-    operation="dappsUniswapv2UsersHistoricalGet"
+    uniswapV2GetUsersHistorical)
+    operation="uniswapV2GetUsersHistorical"
     ;;
-    dappsUniswapv3BundleCurrentGet)
-    operation="dappsUniswapv3BundleCurrentGet"
+    uniswapV3GetBundlesCurrent)
+    operation="uniswapV3GetBundlesCurrent"
     ;;
-    dappsUniswapv3BundlesHistoricalGet)
-    operation="dappsUniswapv3BundlesHistoricalGet"
+    uniswapV3GetBundlesHistorical)
+    operation="uniswapV3GetBundlesHistorical"
     ;;
-    dappsUniswapv3BurnsCurrentGet)
-    operation="dappsUniswapv3BurnsCurrentGet"
+    uniswapV3GetBurnsCurrent)
+    operation="uniswapV3GetBurnsCurrent"
     ;;
-    dappsUniswapv3BurnsHistoricalGet)
-    operation="dappsUniswapv3BurnsHistoricalGet"
+    uniswapV3GetBurnsHistorical)
+    operation="uniswapV3GetBurnsHistorical"
     ;;
-    dappsUniswapv3DayDataHistoricalGet)
-    operation="dappsUniswapv3DayDataHistoricalGet"
+    uniswapV3GetDayDataCurrent)
+    operation="uniswapV3GetDayDataCurrent"
     ;;
-    dappsUniswapv3FactoryCurrentGet)
-    operation="dappsUniswapv3FactoryCurrentGet"
+    uniswapV3GetDayDataHistorical)
+    operation="uniswapV3GetDayDataHistorical"
     ;;
-    dappsUniswapv3FactoryHistoricalGet)
-    operation="dappsUniswapv3FactoryHistoricalGet"
+    uniswapV3GetFactoryCurrent)
+    operation="uniswapV3GetFactoryCurrent"
     ;;
-    dappsUniswapv3MintsCurrentGet)
-    operation="dappsUniswapv3MintsCurrentGet"
+    uniswapV3GetFactoryHistorical)
+    operation="uniswapV3GetFactoryHistorical"
     ;;
-    dappsUniswapv3MintsHistoricalGet)
-    operation="dappsUniswapv3MintsHistoricalGet"
+    uniswapV3GetMintsCurrent)
+    operation="uniswapV3GetMintsCurrent"
     ;;
-    dappsUniswapv3PoolDayDataHistoricalGet)
-    operation="dappsUniswapv3PoolDayDataHistoricalGet"
+    uniswapV3GetMintsHistorical)
+    operation="uniswapV3GetMintsHistorical"
     ;;
-    dappsUniswapv3PoolHourDataHistoricalGet)
-    operation="dappsUniswapv3PoolHourDataHistoricalGet"
+    uniswapV3GetPoolsCurrent)
+    operation="uniswapV3GetPoolsCurrent"
     ;;
-    dappsUniswapv3PoolsCurrentGet)
-    operation="dappsUniswapv3PoolsCurrentGet"
+    uniswapV3GetPoolsDayDataCurrent)
+    operation="uniswapV3GetPoolsDayDataCurrent"
     ;;
-    dappsUniswapv3PoolsDayDataCurrentGet)
-    operation="dappsUniswapv3PoolsDayDataCurrentGet"
+    uniswapV3GetPoolsDayDataHistorical)
+    operation="uniswapV3GetPoolsDayDataHistorical"
     ;;
-    dappsUniswapv3PoolsHistoricalGet)
-    operation="dappsUniswapv3PoolsHistoricalGet"
+    uniswapV3GetPoolsHistorical)
+    operation="uniswapV3GetPoolsHistorical"
     ;;
-    dappsUniswapv3PoolsHourDataCurrentGet)
-    operation="dappsUniswapv3PoolsHourDataCurrentGet"
+    uniswapV3GetPoolsHourDataCurrent)
+    operation="uniswapV3GetPoolsHourDataCurrent"
     ;;
-    dappsUniswapv3PositionSnapshotHistoricalGet)
-    operation="dappsUniswapv3PositionSnapshotHistoricalGet"
+    uniswapV3GetPoolsHourDataHistorical)
+    operation="uniswapV3GetPoolsHourDataHistorical"
     ;;
-    dappsUniswapv3PositionSnapshotsCurrentGet)
-    operation="dappsUniswapv3PositionSnapshotsCurrentGet"
+    uniswapV3GetPositionsCurrent)
+    operation="uniswapV3GetPositionsCurrent"
     ;;
-    dappsUniswapv3PositionsCurrentGet)
-    operation="dappsUniswapv3PositionsCurrentGet"
+    uniswapV3GetPositionsHistorical)
+    operation="uniswapV3GetPositionsHistorical"
     ;;
-    dappsUniswapv3PositionsHistoricalGet)
-    operation="dappsUniswapv3PositionsHistoricalGet"
+    uniswapV3GetPositionsSnaphotsHistorical)
+    operation="uniswapV3GetPositionsSnaphotsHistorical"
     ;;
-    dappsUniswapv3SwapsCurrentGet)
-    operation="dappsUniswapv3SwapsCurrentGet"
+    uniswapV3GetPositionsSnapshotsCurrent)
+    operation="uniswapV3GetPositionsSnapshotsCurrent"
     ;;
-    dappsUniswapv3SwapsHistoricalGet)
-    operation="dappsUniswapv3SwapsHistoricalGet"
+    uniswapV3GetSwapsCurrent)
+    operation="uniswapV3GetSwapsCurrent"
     ;;
-    dappsUniswapv3TickDayDataHistoricalGet)
-    operation="dappsUniswapv3TickDayDataHistoricalGet"
+    uniswapV3GetSwapsHistorical)
+    operation="uniswapV3GetSwapsHistorical"
     ;;
-    dappsUniswapv3TicksCurrentGet)
-    operation="dappsUniswapv3TicksCurrentGet"
+    uniswapV3GetTicksCurrent)
+    operation="uniswapV3GetTicksCurrent"
     ;;
-    dappsUniswapv3TicksDayDataCurrentGet)
-    operation="dappsUniswapv3TicksDayDataCurrentGet"
+    uniswapV3GetTicksDayDataCurrent)
+    operation="uniswapV3GetTicksDayDataCurrent"
     ;;
-    dappsUniswapv3TicksHistoricalGet)
-    operation="dappsUniswapv3TicksHistoricalGet"
+    uniswapV3GetTicksDayDataHistorical)
+    operation="uniswapV3GetTicksDayDataHistorical"
     ;;
-    dappsUniswapv3TokenDayDataHistoricalGet)
-    operation="dappsUniswapv3TokenDayDataHistoricalGet"
+    uniswapV3GetTicksHistorical)
+    operation="uniswapV3GetTicksHistorical"
     ;;
-    dappsUniswapv3TokenHourDataHistoricalGet)
-    operation="dappsUniswapv3TokenHourDataHistoricalGet"
+    uniswapV3GetTokensCurrent)
+    operation="uniswapV3GetTokensCurrent"
     ;;
-    dappsUniswapv3TokensCurrentGet)
-    operation="dappsUniswapv3TokensCurrentGet"
+    uniswapV3GetTokensDayDataCurrent)
+    operation="uniswapV3GetTokensDayDataCurrent"
     ;;
-    dappsUniswapv3TokensDayDataCurrentGet)
-    operation="dappsUniswapv3TokensDayDataCurrentGet"
+    uniswapV3GetTokensDayDataHistorical)
+    operation="uniswapV3GetTokensDayDataHistorical"
     ;;
-    dappsUniswapv3TokensHistoricalGet)
-    operation="dappsUniswapv3TokensHistoricalGet"
+    uniswapV3GetTokensHistorical)
+    operation="uniswapV3GetTokensHistorical"
     ;;
-    dappsUniswapv3TokensHourDataCurrentGet)
-    operation="dappsUniswapv3TokensHourDataCurrentGet"
+    uniswapV3GetTokensHourDataCurrent)
+    operation="uniswapV3GetTokensHourDataCurrent"
     ;;
-    dappsUniswapv3TransactionsHistoricalGet)
-    operation="dappsUniswapv3TransactionsHistoricalGet"
+    uniswapV3GetTokensHourDataHistorical)
+    operation="uniswapV3GetTokensHourDataHistorical"
     ;;
-    dappsUniswapv3UniswapDayDataCurrentGet)
-    operation="dappsUniswapv3UniswapDayDataCurrentGet"
+    uniswapV3GetTransactionsHistorical)
+    operation="uniswapV3GetTransactionsHistorical"
     ;;
     *==*)
     # Parse body arguments and convert them into top level
@@ -9483,146 +9868,155 @@ fi
 
 # Run cURL command based on the operation ID
 case $operation in
-    dappsCowOrdersHistoricalGet)
-    call_dappsCowOrdersHistoricalGet
+    cowGetOrdersHistorical)
+    call_cowGetOrdersHistorical
     ;;
-    dappsCowSettlementHistoricalGet)
-    call_dappsCowSettlementHistoricalGet
+    cowGetSettlementsHistorical)
+    call_cowGetSettlementsHistorical
     ;;
-    dappsCowTokensHistoricalGet)
-    call_dappsCowTokensHistoricalGet
+    cowGetTokensHistorical)
+    call_cowGetTokensHistorical
     ;;
-    dappsCowTradesHistoricalGet)
-    call_dappsCowTradesHistoricalGet
+    cowGetTradesHistorical)
+    call_cowGetTradesHistorical
     ;;
-    dappsCowUsersHistoricalGet)
-    call_dappsCowUsersHistoricalGet
+    cowGetUsersHistorical)
+    call_cowGetUsersHistorical
     ;;
-    dappsCurveAccountsHistoricalGet)
-    call_dappsCurveAccountsHistoricalGet
+    curveGetAccountsHistorical)
+    call_curveGetAccountsHistorical
     ;;
-    dappsCurveAddLiquidityEventHistoricalGet)
-    call_dappsCurveAddLiquidityEventHistoricalGet
+    curveGetAddLiquidityEventsHistorical)
+    call_curveGetAddLiquidityEventsHistorical
     ;;
-    dappsCurveAdminFeeChangeLogHistoricalGet)
-    call_dappsCurveAdminFeeChangeLogHistoricalGet
+    curveGetAdminFeeChangeLogsHistorical)
+    call_curveGetAdminFeeChangeLogsHistorical
     ;;
-    dappsCurveAmplificationCoeffChangeLogHistoricalGet)
-    call_dappsCurveAmplificationCoeffChangeLogHistoricalGet
+    curveGetAmplificationCoeffChangeLogsHistorical)
+    call_curveGetAmplificationCoeffChangeLogsHistorical
     ;;
-    dappsCurveCoinsHistoricalGet)
-    call_dappsCurveCoinsHistoricalGet
+    curveGetCoinsHistorical)
+    call_curveGetCoinsHistorical
     ;;
-    dappsCurveContractsHistoricalGet)
-    call_dappsCurveContractsHistoricalGet
+    curveGetContractsHistorical)
+    call_curveGetContractsHistorical
     ;;
-    dappsCurveContractsVersionHistoricalGet)
-    call_dappsCurveContractsVersionHistoricalGet
+    curveGetContractsVersionsHistorical)
+    call_curveGetContractsVersionsHistorical
     ;;
-    dappsCurveDailyVolumeHistoricalGet)
-    call_dappsCurveDailyVolumeHistoricalGet
+    curveGetDailyVolumesHistorical)
+    call_curveGetDailyVolumesHistorical
     ;;
-    dappsCurveFeeChangeLogHistoricalGet)
-    call_dappsCurveFeeChangeLogHistoricalGet
+    curveGetExchangesHistorical)
+    call_curveGetExchangesHistorical
     ;;
-    dappsCurveGaugeDepositHistoricalGet)
-    call_dappsCurveGaugeDepositHistoricalGet
+    curveGetFeeChangeLogsHistorical)
+    call_curveGetFeeChangeLogsHistorical
     ;;
-    dappsCurveGaugeHistoricalGet)
-    call_dappsCurveGaugeHistoricalGet
+    curveGetGaugesDepositsHistorical)
+    call_curveGetGaugesDepositsHistorical
     ;;
-    dappsCurveGaugeLiquidityHistoricalGet)
-    call_dappsCurveGaugeLiquidityHistoricalGet
+    curveGetGaugesHistorical)
+    call_curveGetGaugesHistorical
     ;;
-    dappsCurveGaugeTotalWeightHistoricalGet)
-    call_dappsCurveGaugeTotalWeightHistoricalGet
+    curveGetGaugesLiquidityHistorical)
+    call_curveGetGaugesLiquidityHistorical
     ;;
-    dappsCurveGaugeTypeHistoricalGet)
-    call_dappsCurveGaugeTypeHistoricalGet
+    curveGetGaugesTotalWeightsHistorical)
+    call_curveGetGaugesTotalWeightsHistorical
     ;;
-    dappsCurveGaugeTypeWeightHistoricalGet)
-    call_dappsCurveGaugeTypeWeightHistoricalGet
+    curveGetGaugesTypesHistorical)
+    call_curveGetGaugesTypesHistorical
     ;;
-    dappsCurveGaugeWeightHistoricalGet)
-    call_dappsCurveGaugeWeightHistoricalGet
+    curveGetGaugesTypesWeightsHistorical)
+    call_curveGetGaugesTypesWeightsHistorical
     ;;
-    dappsCurveGaugeWeightVoteHistoricalGet)
-    call_dappsCurveGaugeWeightVoteHistoricalGet
+    curveGetGaugesWeightsHistorical)
+    call_curveGetGaugesWeightsHistorical
     ;;
-    dappsCurveGaugeWithdrawHistoricalGet)
-    call_dappsCurveGaugeWithdrawHistoricalGet
+    curveGetGaugesWeightsVotesHistorical)
+    call_curveGetGaugesWeightsVotesHistorical
     ;;
-    dappsCurveHourlyVolumeHistoricalGet)
-    call_dappsCurveHourlyVolumeHistoricalGet
+    curveGetGaugesWithdrawHistorical)
+    call_curveGetGaugesWithdrawHistorical
     ;;
-    dappsCurveLpTokenHistoricalGet)
-    call_dappsCurveLpTokenHistoricalGet
+    curveGetHourlyVolumesHistorical)
+    call_curveGetHourlyVolumesHistorical
     ;;
-    dappsCurvePoolsHistoricalGet)
-    call_dappsCurvePoolsHistoricalGet
+    curveGetLpTokensHistorical)
+    call_curveGetLpTokensHistorical
     ;;
-    dappsCurveProposalsHistoricalGet)
-    call_dappsCurveProposalsHistoricalGet
+    curveGetPoolsHistorical)
+    call_curveGetPoolsHistorical
     ;;
-    dappsCurveProposalsVoteHistoricalGet)
-    call_dappsCurveProposalsVoteHistoricalGet
+    curveGetProposalsHistorical)
+    call_curveGetProposalsHistorical
     ;;
-    dappsCurveRemoveLiquidityEventHistoricalGet)
-    call_dappsCurveRemoveLiquidityEventHistoricalGet
+    curveGetProposalsVotesHistorical)
+    call_curveGetProposalsVotesHistorical
     ;;
-    dappsCurveRemoveLiquidityOneEventHistoricalGet)
-    call_dappsCurveRemoveLiquidityOneEventHistoricalGet
+    curveGetRemoveLiquidityEventsHistorical)
+    call_curveGetRemoveLiquidityEventsHistorical
     ;;
-    dappsCurveSwapsHistoricalGet)
-    call_dappsCurveSwapsHistoricalGet
+    curveGetRemoveLiquidityOneEventsHistorical)
+    call_curveGetRemoveLiquidityOneEventsHistorical
     ;;
-    dappsCurveSystemStateHistoricalGet)
-    call_dappsCurveSystemStateHistoricalGet
+    curveGetSystemStatesHistorical)
+    call_curveGetSystemStatesHistorical
     ;;
-    dappsCurveTokensHistoricalGet)
-    call_dappsCurveTokensHistoricalGet
+    curveGetTokensHistorical)
+    call_curveGetTokensHistorical
     ;;
-    dappsCurveTransferOwnershipEventHistoricalGet)
-    call_dappsCurveTransferOwnershipEventHistoricalGet
+    curveGetTransferOwnershipEventsHistorical)
+    call_curveGetTransferOwnershipEventsHistorical
     ;;
-    dappsCurveUnderlyingCoinHistoricalGet)
-    call_dappsCurveUnderlyingCoinHistoricalGet
+    curveGetUnderlyingCoinsHistorical)
+    call_curveGetUnderlyingCoinsHistorical
     ;;
-    dappsCurveVotingAppHistoricalGet)
-    call_dappsCurveVotingAppHistoricalGet
+    curveGetVotingAppsHistorical)
+    call_curveGetVotingAppsHistorical
     ;;
-    dappsCurveWeeklyVolumeHistoricalGet)
-    call_dappsCurveWeeklyVolumeHistoricalGet
+    curveGetWeeklyVolumesHistorical)
+    call_curveGetWeeklyVolumesHistorical
     ;;
-    dappsDexBatchHistoricalGet)
-    call_dappsDexBatchHistoricalGet
+    dexGetBatchesHistorical)
+    call_dexGetBatchesHistorical
     ;;
-    dappsDexOrdersHistoricalGet)
-    call_dappsDexOrdersHistoricalGet
+    dexGetDepositsHistorical)
+    call_dexGetDepositsHistorical
     ;;
-    dappsDexPricesHistoricalGet)
-    call_dappsDexPricesHistoricalGet
+    dexGetOrdersHistorical)
+    call_dexGetOrdersHistorical
     ;;
-    dappsDexSolutionHistoricalGet)
-    call_dappsDexSolutionHistoricalGet
+    dexGetPricesHistorical)
+    call_dexGetPricesHistorical
     ;;
-    dappsDexStatsHistoricalGet)
-    call_dappsDexStatsHistoricalGet
+    dexGetSolutionsHistorical)
+    call_dexGetSolutionsHistorical
     ;;
-    dappsDexTokensHistoricalGet)
-    call_dappsDexTokensHistoricalGet
+    dexGetStatsHistorical)
+    call_dexGetStatsHistorical
     ;;
-    dappsDexTradesHistoricalGet)
-    call_dappsDexTradesHistoricalGet
+    dexGetTokensHistorical)
+    call_dexGetTokensHistorical
     ;;
-    dappsDexUsersHistoricalGet)
-    call_dappsDexUsersHistoricalGet
+    dexGetTradesHistorical)
+    call_dexGetTradesHistorical
     ;;
-    dappsDexWithdrawHistoricalGet)
-    call_dappsDexWithdrawHistoricalGet
+    dexGetUsersHistorical)
+    call_dexGetUsersHistorical
     ;;
-    dappsDexWithdrawRequestHistoricalGet)
-    call_dappsDexWithdrawRequestHistoricalGet
+    dexGetWithdrawsHistorical)
+    call_dexGetWithdrawsHistorical
+    ;;
+    dexGetWithdrawsRequestsHistorical)
+    call_dexGetWithdrawsRequestsHistorical
+    ;;
+    curveGetExchangesCurrent)
+    call_curveGetExchangesCurrent
+    ;;
+    dexGetTradesCurrent)
+    call_dexGetTradesCurrent
     ;;
     sushiswapGetBundlesHistorical)
     call_sushiswapGetBundlesHistorical
@@ -9681,158 +10075,158 @@ case $operation in
     sushiswapGetUsersHistorical)
     call_sushiswapGetUsersHistorical
     ;;
-    dappsUniswapv2BundlesHistoricalGet)
-    call_dappsUniswapv2BundlesHistoricalGet
+    uniswapV2GetBundlesHistorical)
+    call_uniswapV2GetBundlesHistorical
     ;;
-    dappsUniswapv2BurnsHistoricalGet)
-    call_dappsUniswapv2BurnsHistoricalGet
+    uniswapV2GetBurnsHistorical)
+    call_uniswapV2GetBurnsHistorical
     ;;
-    dappsUniswapv2DayDataHistoricalGet)
-    call_dappsUniswapv2DayDataHistoricalGet
+    uniswapV2GetDayDataHistorical)
+    call_uniswapV2GetDayDataHistorical
     ;;
-    dappsUniswapv2FactoryHistoricalGet)
-    call_dappsUniswapv2FactoryHistoricalGet
+    uniswapV2GetFactoryHistorical)
+    call_uniswapV2GetFactoryHistorical
     ;;
-    dappsUniswapv2LiquidityPositionHistoricalGet)
-    call_dappsUniswapv2LiquidityPositionHistoricalGet
+    uniswapV2GetLiquidityPositionsHistorical)
+    call_uniswapV2GetLiquidityPositionsHistorical
     ;;
-    dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet)
-    call_dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet
+    uniswapV2GetLiquidityPositionsSnapshotsHistorical)
+    call_uniswapV2GetLiquidityPositionsSnapshotsHistorical
     ;;
-    dappsUniswapv2MintsHistoricalGet)
-    call_dappsUniswapv2MintsHistoricalGet
+    uniswapV2GetMintsHistorical)
+    call_uniswapV2GetMintsHistorical
     ;;
-    dappsUniswapv2PoolDayDataHistoricalGet)
-    call_dappsUniswapv2PoolDayDataHistoricalGet
+    uniswapV2GetPoolsCurrent)
+    call_uniswapV2GetPoolsCurrent
     ;;
-    dappsUniswapv2PoolHourDataHistoricalGet)
-    call_dappsUniswapv2PoolHourDataHistoricalGet
+    uniswapV2GetPoolsDayDataHistorical)
+    call_uniswapV2GetPoolsDayDataHistorical
     ;;
-    dappsUniswapv2PoolsCurrentGet)
-    call_dappsUniswapv2PoolsCurrentGet
+    uniswapV2GetPoolsHistorical)
+    call_uniswapV2GetPoolsHistorical
     ;;
-    dappsUniswapv2PoolsHistoricalGet)
-    call_dappsUniswapv2PoolsHistoricalGet
+    uniswapV2GetPoolsHourDataHistorical)
+    call_uniswapV2GetPoolsHourDataHistorical
     ;;
-    dappsUniswapv2SwapsCurrentGet)
-    call_dappsUniswapv2SwapsCurrentGet
+    uniswapV2GetSwapsCurrent)
+    call_uniswapV2GetSwapsCurrent
     ;;
-    dappsUniswapv2SwapsHistoricalGet)
-    call_dappsUniswapv2SwapsHistoricalGet
+    uniswapV2GetSwapsHistorical)
+    call_uniswapV2GetSwapsHistorical
     ;;
-    dappsUniswapv2TokenDayDataHistoricalGet)
-    call_dappsUniswapv2TokenDayDataHistoricalGet
+    uniswapV2GetTokensCurrent)
+    call_uniswapV2GetTokensCurrent
     ;;
-    dappsUniswapv2TokensCurrentGet)
-    call_dappsUniswapv2TokensCurrentGet
+    uniswapV2GetTokensDayDataHistorical)
+    call_uniswapV2GetTokensDayDataHistorical
     ;;
-    dappsUniswapv2TokensHistoricalGet)
-    call_dappsUniswapv2TokensHistoricalGet
+    uniswapV2GetTokensHistorical)
+    call_uniswapV2GetTokensHistorical
     ;;
-    dappsUniswapv2TransactionsHistoricalGet)
-    call_dappsUniswapv2TransactionsHistoricalGet
+    uniswapV2GetTransactionsHistorical)
+    call_uniswapV2GetTransactionsHistorical
     ;;
-    dappsUniswapv2UsersHistoricalGet)
-    call_dappsUniswapv2UsersHistoricalGet
+    uniswapV2GetUsersHistorical)
+    call_uniswapV2GetUsersHistorical
     ;;
-    dappsUniswapv3BundleCurrentGet)
-    call_dappsUniswapv3BundleCurrentGet
+    uniswapV3GetBundlesCurrent)
+    call_uniswapV3GetBundlesCurrent
     ;;
-    dappsUniswapv3BundlesHistoricalGet)
-    call_dappsUniswapv3BundlesHistoricalGet
+    uniswapV3GetBundlesHistorical)
+    call_uniswapV3GetBundlesHistorical
     ;;
-    dappsUniswapv3BurnsCurrentGet)
-    call_dappsUniswapv3BurnsCurrentGet
+    uniswapV3GetBurnsCurrent)
+    call_uniswapV3GetBurnsCurrent
     ;;
-    dappsUniswapv3BurnsHistoricalGet)
-    call_dappsUniswapv3BurnsHistoricalGet
+    uniswapV3GetBurnsHistorical)
+    call_uniswapV3GetBurnsHistorical
     ;;
-    dappsUniswapv3DayDataHistoricalGet)
-    call_dappsUniswapv3DayDataHistoricalGet
+    uniswapV3GetDayDataCurrent)
+    call_uniswapV3GetDayDataCurrent
     ;;
-    dappsUniswapv3FactoryCurrentGet)
-    call_dappsUniswapv3FactoryCurrentGet
+    uniswapV3GetDayDataHistorical)
+    call_uniswapV3GetDayDataHistorical
     ;;
-    dappsUniswapv3FactoryHistoricalGet)
-    call_dappsUniswapv3FactoryHistoricalGet
+    uniswapV3GetFactoryCurrent)
+    call_uniswapV3GetFactoryCurrent
     ;;
-    dappsUniswapv3MintsCurrentGet)
-    call_dappsUniswapv3MintsCurrentGet
+    uniswapV3GetFactoryHistorical)
+    call_uniswapV3GetFactoryHistorical
     ;;
-    dappsUniswapv3MintsHistoricalGet)
-    call_dappsUniswapv3MintsHistoricalGet
+    uniswapV3GetMintsCurrent)
+    call_uniswapV3GetMintsCurrent
     ;;
-    dappsUniswapv3PoolDayDataHistoricalGet)
-    call_dappsUniswapv3PoolDayDataHistoricalGet
+    uniswapV3GetMintsHistorical)
+    call_uniswapV3GetMintsHistorical
     ;;
-    dappsUniswapv3PoolHourDataHistoricalGet)
-    call_dappsUniswapv3PoolHourDataHistoricalGet
+    uniswapV3GetPoolsCurrent)
+    call_uniswapV3GetPoolsCurrent
     ;;
-    dappsUniswapv3PoolsCurrentGet)
-    call_dappsUniswapv3PoolsCurrentGet
+    uniswapV3GetPoolsDayDataCurrent)
+    call_uniswapV3GetPoolsDayDataCurrent
     ;;
-    dappsUniswapv3PoolsDayDataCurrentGet)
-    call_dappsUniswapv3PoolsDayDataCurrentGet
+    uniswapV3GetPoolsDayDataHistorical)
+    call_uniswapV3GetPoolsDayDataHistorical
     ;;
-    dappsUniswapv3PoolsHistoricalGet)
-    call_dappsUniswapv3PoolsHistoricalGet
+    uniswapV3GetPoolsHistorical)
+    call_uniswapV3GetPoolsHistorical
     ;;
-    dappsUniswapv3PoolsHourDataCurrentGet)
-    call_dappsUniswapv3PoolsHourDataCurrentGet
+    uniswapV3GetPoolsHourDataCurrent)
+    call_uniswapV3GetPoolsHourDataCurrent
     ;;
-    dappsUniswapv3PositionSnapshotHistoricalGet)
-    call_dappsUniswapv3PositionSnapshotHistoricalGet
+    uniswapV3GetPoolsHourDataHistorical)
+    call_uniswapV3GetPoolsHourDataHistorical
     ;;
-    dappsUniswapv3PositionSnapshotsCurrentGet)
-    call_dappsUniswapv3PositionSnapshotsCurrentGet
+    uniswapV3GetPositionsCurrent)
+    call_uniswapV3GetPositionsCurrent
     ;;
-    dappsUniswapv3PositionsCurrentGet)
-    call_dappsUniswapv3PositionsCurrentGet
+    uniswapV3GetPositionsHistorical)
+    call_uniswapV3GetPositionsHistorical
     ;;
-    dappsUniswapv3PositionsHistoricalGet)
-    call_dappsUniswapv3PositionsHistoricalGet
+    uniswapV3GetPositionsSnaphotsHistorical)
+    call_uniswapV3GetPositionsSnaphotsHistorical
     ;;
-    dappsUniswapv3SwapsCurrentGet)
-    call_dappsUniswapv3SwapsCurrentGet
+    uniswapV3GetPositionsSnapshotsCurrent)
+    call_uniswapV3GetPositionsSnapshotsCurrent
     ;;
-    dappsUniswapv3SwapsHistoricalGet)
-    call_dappsUniswapv3SwapsHistoricalGet
+    uniswapV3GetSwapsCurrent)
+    call_uniswapV3GetSwapsCurrent
     ;;
-    dappsUniswapv3TickDayDataHistoricalGet)
-    call_dappsUniswapv3TickDayDataHistoricalGet
+    uniswapV3GetSwapsHistorical)
+    call_uniswapV3GetSwapsHistorical
     ;;
-    dappsUniswapv3TicksCurrentGet)
-    call_dappsUniswapv3TicksCurrentGet
+    uniswapV3GetTicksCurrent)
+    call_uniswapV3GetTicksCurrent
     ;;
-    dappsUniswapv3TicksDayDataCurrentGet)
-    call_dappsUniswapv3TicksDayDataCurrentGet
+    uniswapV3GetTicksDayDataCurrent)
+    call_uniswapV3GetTicksDayDataCurrent
     ;;
-    dappsUniswapv3TicksHistoricalGet)
-    call_dappsUniswapv3TicksHistoricalGet
+    uniswapV3GetTicksDayDataHistorical)
+    call_uniswapV3GetTicksDayDataHistorical
     ;;
-    dappsUniswapv3TokenDayDataHistoricalGet)
-    call_dappsUniswapv3TokenDayDataHistoricalGet
+    uniswapV3GetTicksHistorical)
+    call_uniswapV3GetTicksHistorical
     ;;
-    dappsUniswapv3TokenHourDataHistoricalGet)
-    call_dappsUniswapv3TokenHourDataHistoricalGet
+    uniswapV3GetTokensCurrent)
+    call_uniswapV3GetTokensCurrent
     ;;
-    dappsUniswapv3TokensCurrentGet)
-    call_dappsUniswapv3TokensCurrentGet
+    uniswapV3GetTokensDayDataCurrent)
+    call_uniswapV3GetTokensDayDataCurrent
     ;;
-    dappsUniswapv3TokensDayDataCurrentGet)
-    call_dappsUniswapv3TokensDayDataCurrentGet
+    uniswapV3GetTokensDayDataHistorical)
+    call_uniswapV3GetTokensDayDataHistorical
     ;;
-    dappsUniswapv3TokensHistoricalGet)
-    call_dappsUniswapv3TokensHistoricalGet
+    uniswapV3GetTokensHistorical)
+    call_uniswapV3GetTokensHistorical
     ;;
-    dappsUniswapv3TokensHourDataCurrentGet)
-    call_dappsUniswapv3TokensHourDataCurrentGet
+    uniswapV3GetTokensHourDataCurrent)
+    call_uniswapV3GetTokensHourDataCurrent
     ;;
-    dappsUniswapv3TransactionsHistoricalGet)
-    call_dappsUniswapv3TransactionsHistoricalGet
+    uniswapV3GetTokensHourDataHistorical)
+    call_uniswapV3GetTokensHourDataHistorical
     ;;
-    dappsUniswapv3UniswapDayDataCurrentGet)
-    call_dappsUniswapv3UniswapDayDataCurrentGet
+    uniswapV3GetTransactionsHistorical)
+    call_uniswapV3GetTransactionsHistorical
     ;;
     *)
     ERROR_MSG="ERROR: Unknown operation: $operation"

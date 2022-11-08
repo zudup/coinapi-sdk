@@ -4,83 +4,86 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**dappsCurveAccountsHistoricalGet**](CurveApi.md#dappsCurveAccountsHistoricalGet) | **GET** /dapps/curve/accounts/historical | 
-[**dappsCurveAccountsHistoricalGetWithHttpInfo**](CurveApi.md#dappsCurveAccountsHistoricalGetWithHttpInfo) | **GET** /dapps/curve/accounts/historical | 
-[**dappsCurveAddLiquidityEventHistoricalGet**](CurveApi.md#dappsCurveAddLiquidityEventHistoricalGet) | **GET** /dapps/curve/addLiquidityEvent/historical | 
-[**dappsCurveAddLiquidityEventHistoricalGetWithHttpInfo**](CurveApi.md#dappsCurveAddLiquidityEventHistoricalGetWithHttpInfo) | **GET** /dapps/curve/addLiquidityEvent/historical | 
-[**dappsCurveAdminFeeChangeLogHistoricalGet**](CurveApi.md#dappsCurveAdminFeeChangeLogHistoricalGet) | **GET** /dapps/curve/adminFeeChangeLog/historical | 
-[**dappsCurveAdminFeeChangeLogHistoricalGetWithHttpInfo**](CurveApi.md#dappsCurveAdminFeeChangeLogHistoricalGetWithHttpInfo) | **GET** /dapps/curve/adminFeeChangeLog/historical | 
-[**dappsCurveAmplificationCoeffChangeLogHistoricalGet**](CurveApi.md#dappsCurveAmplificationCoeffChangeLogHistoricalGet) | **GET** /dapps/curve/amplificationCoeffChangeLog/historical | 
-[**dappsCurveAmplificationCoeffChangeLogHistoricalGetWithHttpInfo**](CurveApi.md#dappsCurveAmplificationCoeffChangeLogHistoricalGetWithHttpInfo) | **GET** /dapps/curve/amplificationCoeffChangeLog/historical | 
-[**dappsCurveCoinsHistoricalGet**](CurveApi.md#dappsCurveCoinsHistoricalGet) | **GET** /dapps/curve/coins/historical | 
-[**dappsCurveCoinsHistoricalGetWithHttpInfo**](CurveApi.md#dappsCurveCoinsHistoricalGetWithHttpInfo) | **GET** /dapps/curve/coins/historical | 
-[**dappsCurveContractsHistoricalGet**](CurveApi.md#dappsCurveContractsHistoricalGet) | **GET** /dapps/curve/contracts/historical | 
-[**dappsCurveContractsHistoricalGetWithHttpInfo**](CurveApi.md#dappsCurveContractsHistoricalGetWithHttpInfo) | **GET** /dapps/curve/contracts/historical | 
-[**dappsCurveContractsVersionHistoricalGet**](CurveApi.md#dappsCurveContractsVersionHistoricalGet) | **GET** /dapps/curve/contractsVersion/historical | 
-[**dappsCurveContractsVersionHistoricalGetWithHttpInfo**](CurveApi.md#dappsCurveContractsVersionHistoricalGetWithHttpInfo) | **GET** /dapps/curve/contractsVersion/historical | 
-[**dappsCurveDailyVolumeHistoricalGet**](CurveApi.md#dappsCurveDailyVolumeHistoricalGet) | **GET** /dapps/curve/dailyVolume/historical | 
-[**dappsCurveDailyVolumeHistoricalGetWithHttpInfo**](CurveApi.md#dappsCurveDailyVolumeHistoricalGetWithHttpInfo) | **GET** /dapps/curve/dailyVolume/historical | 
-[**dappsCurveFeeChangeLogHistoricalGet**](CurveApi.md#dappsCurveFeeChangeLogHistoricalGet) | **GET** /dapps/curve/feeChangeLog/historical | 
-[**dappsCurveFeeChangeLogHistoricalGetWithHttpInfo**](CurveApi.md#dappsCurveFeeChangeLogHistoricalGetWithHttpInfo) | **GET** /dapps/curve/feeChangeLog/historical | 
-[**dappsCurveGaugeDepositHistoricalGet**](CurveApi.md#dappsCurveGaugeDepositHistoricalGet) | **GET** /dapps/curve/gaugeDeposit/historical | 
-[**dappsCurveGaugeDepositHistoricalGetWithHttpInfo**](CurveApi.md#dappsCurveGaugeDepositHistoricalGetWithHttpInfo) | **GET** /dapps/curve/gaugeDeposit/historical | 
-[**dappsCurveGaugeHistoricalGet**](CurveApi.md#dappsCurveGaugeHistoricalGet) | **GET** /dapps/curve/gauge/historical | 
-[**dappsCurveGaugeHistoricalGetWithHttpInfo**](CurveApi.md#dappsCurveGaugeHistoricalGetWithHttpInfo) | **GET** /dapps/curve/gauge/historical | 
-[**dappsCurveGaugeLiquidityHistoricalGet**](CurveApi.md#dappsCurveGaugeLiquidityHistoricalGet) | **GET** /dapps/curve/gaugeLiquidity/historical | 
-[**dappsCurveGaugeLiquidityHistoricalGetWithHttpInfo**](CurveApi.md#dappsCurveGaugeLiquidityHistoricalGetWithHttpInfo) | **GET** /dapps/curve/gaugeLiquidity/historical | 
-[**dappsCurveGaugeTotalWeightHistoricalGet**](CurveApi.md#dappsCurveGaugeTotalWeightHistoricalGet) | **GET** /dapps/curve/gaugeTotalWeight/historical | 
-[**dappsCurveGaugeTotalWeightHistoricalGetWithHttpInfo**](CurveApi.md#dappsCurveGaugeTotalWeightHistoricalGetWithHttpInfo) | **GET** /dapps/curve/gaugeTotalWeight/historical | 
-[**dappsCurveGaugeTypeHistoricalGet**](CurveApi.md#dappsCurveGaugeTypeHistoricalGet) | **GET** /dapps/curve/gaugeType/historical | 
-[**dappsCurveGaugeTypeHistoricalGetWithHttpInfo**](CurveApi.md#dappsCurveGaugeTypeHistoricalGetWithHttpInfo) | **GET** /dapps/curve/gaugeType/historical | 
-[**dappsCurveGaugeTypeWeightHistoricalGet**](CurveApi.md#dappsCurveGaugeTypeWeightHistoricalGet) | **GET** /dapps/curve/gaugeTypeWeight/historical | 
-[**dappsCurveGaugeTypeWeightHistoricalGetWithHttpInfo**](CurveApi.md#dappsCurveGaugeTypeWeightHistoricalGetWithHttpInfo) | **GET** /dapps/curve/gaugeTypeWeight/historical | 
-[**dappsCurveGaugeWeightHistoricalGet**](CurveApi.md#dappsCurveGaugeWeightHistoricalGet) | **GET** /dapps/curve/gaugeWeight/historical | 
-[**dappsCurveGaugeWeightHistoricalGetWithHttpInfo**](CurveApi.md#dappsCurveGaugeWeightHistoricalGetWithHttpInfo) | **GET** /dapps/curve/gaugeWeight/historical | 
-[**dappsCurveGaugeWeightVoteHistoricalGet**](CurveApi.md#dappsCurveGaugeWeightVoteHistoricalGet) | **GET** /dapps/curve/gaugeWeightVote/historical | 
-[**dappsCurveGaugeWeightVoteHistoricalGetWithHttpInfo**](CurveApi.md#dappsCurveGaugeWeightVoteHistoricalGetWithHttpInfo) | **GET** /dapps/curve/gaugeWeightVote/historical | 
-[**dappsCurveGaugeWithdrawHistoricalGet**](CurveApi.md#dappsCurveGaugeWithdrawHistoricalGet) | **GET** /dapps/curve/gaugeWithdraw/historical | 
-[**dappsCurveGaugeWithdrawHistoricalGetWithHttpInfo**](CurveApi.md#dappsCurveGaugeWithdrawHistoricalGetWithHttpInfo) | **GET** /dapps/curve/gaugeWithdraw/historical | 
-[**dappsCurveHourlyVolumeHistoricalGet**](CurveApi.md#dappsCurveHourlyVolumeHistoricalGet) | **GET** /dapps/curve/hourlyVolume/historical | 
-[**dappsCurveHourlyVolumeHistoricalGetWithHttpInfo**](CurveApi.md#dappsCurveHourlyVolumeHistoricalGetWithHttpInfo) | **GET** /dapps/curve/hourlyVolume/historical | 
-[**dappsCurveLpTokenHistoricalGet**](CurveApi.md#dappsCurveLpTokenHistoricalGet) | **GET** /dapps/curve/lpToken/historical | 
-[**dappsCurveLpTokenHistoricalGetWithHttpInfo**](CurveApi.md#dappsCurveLpTokenHistoricalGetWithHttpInfo) | **GET** /dapps/curve/lpToken/historical | 
-[**dappsCurvePoolsHistoricalGet**](CurveApi.md#dappsCurvePoolsHistoricalGet) | **GET** /dapps/curve/pools/historical | 
-[**dappsCurvePoolsHistoricalGetWithHttpInfo**](CurveApi.md#dappsCurvePoolsHistoricalGetWithHttpInfo) | **GET** /dapps/curve/pools/historical | 
-[**dappsCurveProposalsHistoricalGet**](CurveApi.md#dappsCurveProposalsHistoricalGet) | **GET** /dapps/curve/proposals/historical | 
-[**dappsCurveProposalsHistoricalGetWithHttpInfo**](CurveApi.md#dappsCurveProposalsHistoricalGetWithHttpInfo) | **GET** /dapps/curve/proposals/historical | 
-[**dappsCurveProposalsVoteHistoricalGet**](CurveApi.md#dappsCurveProposalsVoteHistoricalGet) | **GET** /dapps/curve/proposalsVote/historical | 
-[**dappsCurveProposalsVoteHistoricalGetWithHttpInfo**](CurveApi.md#dappsCurveProposalsVoteHistoricalGetWithHttpInfo) | **GET** /dapps/curve/proposalsVote/historical | 
-[**dappsCurveRemoveLiquidityEventHistoricalGet**](CurveApi.md#dappsCurveRemoveLiquidityEventHistoricalGet) | **GET** /dapps/curve/removeLiquidityEvent/historical | 
-[**dappsCurveRemoveLiquidityEventHistoricalGetWithHttpInfo**](CurveApi.md#dappsCurveRemoveLiquidityEventHistoricalGetWithHttpInfo) | **GET** /dapps/curve/removeLiquidityEvent/historical | 
-[**dappsCurveRemoveLiquidityOneEventHistoricalGet**](CurveApi.md#dappsCurveRemoveLiquidityOneEventHistoricalGet) | **GET** /dapps/curve/removeLiquidityOneEvent/historical | 
-[**dappsCurveRemoveLiquidityOneEventHistoricalGetWithHttpInfo**](CurveApi.md#dappsCurveRemoveLiquidityOneEventHistoricalGetWithHttpInfo) | **GET** /dapps/curve/removeLiquidityOneEvent/historical | 
-[**dappsCurveSwapsHistoricalGet**](CurveApi.md#dappsCurveSwapsHistoricalGet) | **GET** /dapps/curve/swaps/historical | 
-[**dappsCurveSwapsHistoricalGetWithHttpInfo**](CurveApi.md#dappsCurveSwapsHistoricalGetWithHttpInfo) | **GET** /dapps/curve/swaps/historical | 
-[**dappsCurveSystemStateHistoricalGet**](CurveApi.md#dappsCurveSystemStateHistoricalGet) | **GET** /dapps/curve/systemState/historical | 
-[**dappsCurveSystemStateHistoricalGetWithHttpInfo**](CurveApi.md#dappsCurveSystemStateHistoricalGetWithHttpInfo) | **GET** /dapps/curve/systemState/historical | 
-[**dappsCurveTokensHistoricalGet**](CurveApi.md#dappsCurveTokensHistoricalGet) | **GET** /dapps/curve/tokens/historical | 
-[**dappsCurveTokensHistoricalGetWithHttpInfo**](CurveApi.md#dappsCurveTokensHistoricalGetWithHttpInfo) | **GET** /dapps/curve/tokens/historical | 
-[**dappsCurveTransferOwnershipEventHistoricalGet**](CurveApi.md#dappsCurveTransferOwnershipEventHistoricalGet) | **GET** /dapps/curve/transferOwnershipEvent/historical | 
-[**dappsCurveTransferOwnershipEventHistoricalGetWithHttpInfo**](CurveApi.md#dappsCurveTransferOwnershipEventHistoricalGetWithHttpInfo) | **GET** /dapps/curve/transferOwnershipEvent/historical | 
-[**dappsCurveUnderlyingCoinHistoricalGet**](CurveApi.md#dappsCurveUnderlyingCoinHistoricalGet) | **GET** /dapps/curve/underlyingCoin/historical | 
-[**dappsCurveUnderlyingCoinHistoricalGetWithHttpInfo**](CurveApi.md#dappsCurveUnderlyingCoinHistoricalGetWithHttpInfo) | **GET** /dapps/curve/underlyingCoin/historical | 
-[**dappsCurveVotingAppHistoricalGet**](CurveApi.md#dappsCurveVotingAppHistoricalGet) | **GET** /dapps/curve/votingApp/historical | 
-[**dappsCurveVotingAppHistoricalGetWithHttpInfo**](CurveApi.md#dappsCurveVotingAppHistoricalGetWithHttpInfo) | **GET** /dapps/curve/votingApp/historical | 
-[**dappsCurveWeeklyVolumeHistoricalGet**](CurveApi.md#dappsCurveWeeklyVolumeHistoricalGet) | **GET** /dapps/curve/weeklyVolume/historical | 
-[**dappsCurveWeeklyVolumeHistoricalGetWithHttpInfo**](CurveApi.md#dappsCurveWeeklyVolumeHistoricalGetWithHttpInfo) | **GET** /dapps/curve/weeklyVolume/historical | 
+[**curveGetAccountsHistorical**](CurveApi.md#curveGetAccountsHistorical) | **GET** /dapps/curve/accounts/historical | GetAccounts (historical)
+[**curveGetAccountsHistoricalWithHttpInfo**](CurveApi.md#curveGetAccountsHistoricalWithHttpInfo) | **GET** /dapps/curve/accounts/historical | GetAccounts (historical)
+[**curveGetAddLiquidityEventsHistorical**](CurveApi.md#curveGetAddLiquidityEventsHistorical) | **GET** /dapps/curve/addLiquidityEvents/historical | GetAddLiquidityEvents (historical)
+[**curveGetAddLiquidityEventsHistoricalWithHttpInfo**](CurveApi.md#curveGetAddLiquidityEventsHistoricalWithHttpInfo) | **GET** /dapps/curve/addLiquidityEvents/historical | GetAddLiquidityEvents (historical)
+[**curveGetAdminFeeChangeLogsHistorical**](CurveApi.md#curveGetAdminFeeChangeLogsHistorical) | **GET** /dapps/curve/adminFeeChangeLogs/historical | GetAdminFeeChangeLogs (historical)
+[**curveGetAdminFeeChangeLogsHistoricalWithHttpInfo**](CurveApi.md#curveGetAdminFeeChangeLogsHistoricalWithHttpInfo) | **GET** /dapps/curve/adminFeeChangeLogs/historical | GetAdminFeeChangeLogs (historical)
+[**curveGetAmplificationCoeffChangeLogsHistorical**](CurveApi.md#curveGetAmplificationCoeffChangeLogsHistorical) | **GET** /dapps/curve/amplificationCoeffChangeLogs/historical | GetAmplificationCoeffChangeLogs (historical)
+[**curveGetAmplificationCoeffChangeLogsHistoricalWithHttpInfo**](CurveApi.md#curveGetAmplificationCoeffChangeLogsHistoricalWithHttpInfo) | **GET** /dapps/curve/amplificationCoeffChangeLogs/historical | GetAmplificationCoeffChangeLogs (historical)
+[**curveGetCoinsHistorical**](CurveApi.md#curveGetCoinsHistorical) | **GET** /dapps/curve/coins/historical | GetCoins (historical)
+[**curveGetCoinsHistoricalWithHttpInfo**](CurveApi.md#curveGetCoinsHistoricalWithHttpInfo) | **GET** /dapps/curve/coins/historical | GetCoins (historical)
+[**curveGetContractsHistorical**](CurveApi.md#curveGetContractsHistorical) | **GET** /dapps/curve/contracts/historical | GetContracts (historical)
+[**curveGetContractsHistoricalWithHttpInfo**](CurveApi.md#curveGetContractsHistoricalWithHttpInfo) | **GET** /dapps/curve/contracts/historical | GetContracts (historical)
+[**curveGetContractsVersionsHistorical**](CurveApi.md#curveGetContractsVersionsHistorical) | **GET** /dapps/curve/contractsVersions/historical | GetContractsVersions (historical)
+[**curveGetContractsVersionsHistoricalWithHttpInfo**](CurveApi.md#curveGetContractsVersionsHistoricalWithHttpInfo) | **GET** /dapps/curve/contractsVersions/historical | GetContractsVersions (historical)
+[**curveGetDailyVolumesHistorical**](CurveApi.md#curveGetDailyVolumesHistorical) | **GET** /dapps/curve/dailyVolumes/historical | GetDailyVolumes (historical)
+[**curveGetDailyVolumesHistoricalWithHttpInfo**](CurveApi.md#curveGetDailyVolumesHistoricalWithHttpInfo) | **GET** /dapps/curve/dailyVolumes/historical | GetDailyVolumes (historical)
+[**curveGetExchangesHistorical**](CurveApi.md#curveGetExchangesHistorical) | **GET** /dapps/curve/exchanges/historical | GetExchanges (historical) 🔥
+[**curveGetExchangesHistoricalWithHttpInfo**](CurveApi.md#curveGetExchangesHistoricalWithHttpInfo) | **GET** /dapps/curve/exchanges/historical | GetExchanges (historical) 🔥
+[**curveGetFeeChangeLogsHistorical**](CurveApi.md#curveGetFeeChangeLogsHistorical) | **GET** /dapps/curve/feeChangeLogs/historical | GetFeeChangeLogs (historical)
+[**curveGetFeeChangeLogsHistoricalWithHttpInfo**](CurveApi.md#curveGetFeeChangeLogsHistoricalWithHttpInfo) | **GET** /dapps/curve/feeChangeLogs/historical | GetFeeChangeLogs (historical)
+[**curveGetGaugesDepositsHistorical**](CurveApi.md#curveGetGaugesDepositsHistorical) | **GET** /dapps/curve/gaugesDeposits/historical | GetGaugesDeposits (historical)
+[**curveGetGaugesDepositsHistoricalWithHttpInfo**](CurveApi.md#curveGetGaugesDepositsHistoricalWithHttpInfo) | **GET** /dapps/curve/gaugesDeposits/historical | GetGaugesDeposits (historical)
+[**curveGetGaugesHistorical**](CurveApi.md#curveGetGaugesHistorical) | **GET** /dapps/curve/gauges/historical | GetGauges (historical)
+[**curveGetGaugesHistoricalWithHttpInfo**](CurveApi.md#curveGetGaugesHistoricalWithHttpInfo) | **GET** /dapps/curve/gauges/historical | GetGauges (historical)
+[**curveGetGaugesLiquidityHistorical**](CurveApi.md#curveGetGaugesLiquidityHistorical) | **GET** /dapps/curve/gaugesLiquidity/historical | GetGaugesLiquidity (historical)
+[**curveGetGaugesLiquidityHistoricalWithHttpInfo**](CurveApi.md#curveGetGaugesLiquidityHistoricalWithHttpInfo) | **GET** /dapps/curve/gaugesLiquidity/historical | GetGaugesLiquidity (historical)
+[**curveGetGaugesTotalWeightsHistorical**](CurveApi.md#curveGetGaugesTotalWeightsHistorical) | **GET** /dapps/curve/gaugesTotalWeights/historical | GetGaugesTotalWeights (historical)
+[**curveGetGaugesTotalWeightsHistoricalWithHttpInfo**](CurveApi.md#curveGetGaugesTotalWeightsHistoricalWithHttpInfo) | **GET** /dapps/curve/gaugesTotalWeights/historical | GetGaugesTotalWeights (historical)
+[**curveGetGaugesTypesHistorical**](CurveApi.md#curveGetGaugesTypesHistorical) | **GET** /dapps/curve/gaugesTypes/historical | GetGaugesTypes (historical)
+[**curveGetGaugesTypesHistoricalWithHttpInfo**](CurveApi.md#curveGetGaugesTypesHistoricalWithHttpInfo) | **GET** /dapps/curve/gaugesTypes/historical | GetGaugesTypes (historical)
+[**curveGetGaugesTypesWeightsHistorical**](CurveApi.md#curveGetGaugesTypesWeightsHistorical) | **GET** /dapps/curve/gaugesTypesWeights/historical | GetGaugesTypesWeights (historical)
+[**curveGetGaugesTypesWeightsHistoricalWithHttpInfo**](CurveApi.md#curveGetGaugesTypesWeightsHistoricalWithHttpInfo) | **GET** /dapps/curve/gaugesTypesWeights/historical | GetGaugesTypesWeights (historical)
+[**curveGetGaugesWeightsHistorical**](CurveApi.md#curveGetGaugesWeightsHistorical) | **GET** /dapps/curve/gaugesWeights/historical | GetGaugesWeights (historical)
+[**curveGetGaugesWeightsHistoricalWithHttpInfo**](CurveApi.md#curveGetGaugesWeightsHistoricalWithHttpInfo) | **GET** /dapps/curve/gaugesWeights/historical | GetGaugesWeights (historical)
+[**curveGetGaugesWeightsVotesHistorical**](CurveApi.md#curveGetGaugesWeightsVotesHistorical) | **GET** /dapps/curve/gaugesWeightsVotes/historical | GetGaugesWeightsVotes (historical)
+[**curveGetGaugesWeightsVotesHistoricalWithHttpInfo**](CurveApi.md#curveGetGaugesWeightsVotesHistoricalWithHttpInfo) | **GET** /dapps/curve/gaugesWeightsVotes/historical | GetGaugesWeightsVotes (historical)
+[**curveGetGaugesWithdrawHistorical**](CurveApi.md#curveGetGaugesWithdrawHistorical) | **GET** /dapps/curve/gaugesWithdraws/historical | GetGaugesWithdraw (historical)
+[**curveGetGaugesWithdrawHistoricalWithHttpInfo**](CurveApi.md#curveGetGaugesWithdrawHistoricalWithHttpInfo) | **GET** /dapps/curve/gaugesWithdraws/historical | GetGaugesWithdraw (historical)
+[**curveGetHourlyVolumesHistorical**](CurveApi.md#curveGetHourlyVolumesHistorical) | **GET** /dapps/curve/hourlyVolumes/historical | GetHourlyVolumes (historical)
+[**curveGetHourlyVolumesHistoricalWithHttpInfo**](CurveApi.md#curveGetHourlyVolumesHistoricalWithHttpInfo) | **GET** /dapps/curve/hourlyVolumes/historical | GetHourlyVolumes (historical)
+[**curveGetLpTokensHistorical**](CurveApi.md#curveGetLpTokensHistorical) | **GET** /dapps/curve/lpTokens/historical | GetLpTokens (historical)
+[**curveGetLpTokensHistoricalWithHttpInfo**](CurveApi.md#curveGetLpTokensHistoricalWithHttpInfo) | **GET** /dapps/curve/lpTokens/historical | GetLpTokens (historical)
+[**curveGetPoolsHistorical**](CurveApi.md#curveGetPoolsHistorical) | **GET** /dapps/curve/pools/historical | GetPools (historical) 🔥
+[**curveGetPoolsHistoricalWithHttpInfo**](CurveApi.md#curveGetPoolsHistoricalWithHttpInfo) | **GET** /dapps/curve/pools/historical | GetPools (historical) 🔥
+[**curveGetProposalsHistorical**](CurveApi.md#curveGetProposalsHistorical) | **GET** /dapps/curve/proposals/historical | GetProposals (historical)
+[**curveGetProposalsHistoricalWithHttpInfo**](CurveApi.md#curveGetProposalsHistoricalWithHttpInfo) | **GET** /dapps/curve/proposals/historical | GetProposals (historical)
+[**curveGetProposalsVotesHistorical**](CurveApi.md#curveGetProposalsVotesHistorical) | **GET** /dapps/curve/proposalsVotes/historical | GetProposalsVotes (historical)
+[**curveGetProposalsVotesHistoricalWithHttpInfo**](CurveApi.md#curveGetProposalsVotesHistoricalWithHttpInfo) | **GET** /dapps/curve/proposalsVotes/historical | GetProposalsVotes (historical)
+[**curveGetRemoveLiquidityEventsHistorical**](CurveApi.md#curveGetRemoveLiquidityEventsHistorical) | **GET** /dapps/curve/removeLiquidityEvents/historical | GetRemoveLiquidityEvents (historical)
+[**curveGetRemoveLiquidityEventsHistoricalWithHttpInfo**](CurveApi.md#curveGetRemoveLiquidityEventsHistoricalWithHttpInfo) | **GET** /dapps/curve/removeLiquidityEvents/historical | GetRemoveLiquidityEvents (historical)
+[**curveGetRemoveLiquidityOneEventsHistorical**](CurveApi.md#curveGetRemoveLiquidityOneEventsHistorical) | **GET** /dapps/curve/removeLiquidityOneEvents/historical | GetRemoveLiquidityOneEvents (historical)
+[**curveGetRemoveLiquidityOneEventsHistoricalWithHttpInfo**](CurveApi.md#curveGetRemoveLiquidityOneEventsHistoricalWithHttpInfo) | **GET** /dapps/curve/removeLiquidityOneEvents/historical | GetRemoveLiquidityOneEvents (historical)
+[**curveGetSystemStatesHistorical**](CurveApi.md#curveGetSystemStatesHistorical) | **GET** /dapps/curve/systemStates/historical | GetSystemStates (historical)
+[**curveGetSystemStatesHistoricalWithHttpInfo**](CurveApi.md#curveGetSystemStatesHistoricalWithHttpInfo) | **GET** /dapps/curve/systemStates/historical | GetSystemStates (historical)
+[**curveGetTokensHistorical**](CurveApi.md#curveGetTokensHistorical) | **GET** /dapps/curve/tokens/historical | GetTokens (historical) 🔥
+[**curveGetTokensHistoricalWithHttpInfo**](CurveApi.md#curveGetTokensHistoricalWithHttpInfo) | **GET** /dapps/curve/tokens/historical | GetTokens (historical) 🔥
+[**curveGetTransferOwnershipEventsHistorical**](CurveApi.md#curveGetTransferOwnershipEventsHistorical) | **GET** /dapps/curve/transferOwnershipEvents/historical | GetTransferOwnershipEvents (historical)
+[**curveGetTransferOwnershipEventsHistoricalWithHttpInfo**](CurveApi.md#curveGetTransferOwnershipEventsHistoricalWithHttpInfo) | **GET** /dapps/curve/transferOwnershipEvents/historical | GetTransferOwnershipEvents (historical)
+[**curveGetUnderlyingCoinsHistorical**](CurveApi.md#curveGetUnderlyingCoinsHistorical) | **GET** /dapps/curve/underlyingCoins/historical | GetUnderlyingCoins (historical)
+[**curveGetUnderlyingCoinsHistoricalWithHttpInfo**](CurveApi.md#curveGetUnderlyingCoinsHistoricalWithHttpInfo) | **GET** /dapps/curve/underlyingCoins/historical | GetUnderlyingCoins (historical)
+[**curveGetVotingAppsHistorical**](CurveApi.md#curveGetVotingAppsHistorical) | **GET** /dapps/curve/votingApps/historical | GetVotingApps (historical)
+[**curveGetVotingAppsHistoricalWithHttpInfo**](CurveApi.md#curveGetVotingAppsHistoricalWithHttpInfo) | **GET** /dapps/curve/votingApps/historical | GetVotingApps (historical)
+[**curveGetWeeklyVolumesHistorical**](CurveApi.md#curveGetWeeklyVolumesHistorical) | **GET** /dapps/curve/weeklyVolumes/historical | GetWeeklyVolumes (historical)
+[**curveGetWeeklyVolumesHistoricalWithHttpInfo**](CurveApi.md#curveGetWeeklyVolumesHistoricalWithHttpInfo) | **GET** /dapps/curve/weeklyVolumes/historical | GetWeeklyVolumes (historical)
 
 
 
-## dappsCurveAccountsHistoricalGet
+## curveGetAccountsHistorical
 
-> dappsCurveAccountsHistoricalGet(dappsCurveAccountsHistoricalGetRequest): ApiRequest[Unit]
+> curveGetAccountsHistorical(curveGetAccountsHistoricalRequest): ApiRequest[Seq[AccountDTO]]
 
+GetAccounts (historical)
 
+Gets accounts.
 
 ### Example
 
 ```scala
 // Import classes:
+import 
 import 
 import org.openapitools.client.core._
 import org.openapitools.client.core.CollectionFormats._
@@ -105,23 +108,24 @@ object Example extends App {
 
     val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
     
-    val request = apiInstance.dappsCurveAccountsHistoricalGet(startBlock, endBlock, startDate, endDate)
+    val request = apiInstance.curveGetAccountsHistorical(startBlock, endBlock, startDate, endDate)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
         case Success(ApiResponse(code, content, headers)) =>
             System.out.println(s"Status code: $code}")
             System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling CurveApi#dappsCurveAccountsHistoricalGet")
+            System.err.println("Exception when calling CurveApi#curveGetAccountsHistorical")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling CurveApi#dappsCurveAccountsHistoricalGet")
+            System.err.println("Exception when calling CurveApi#curveGetAccountsHistorical")
             exception.printStackTrace();
     }
 }
@@ -139,8 +143,8 @@ Name | Type | Description  | Notes
 
 ### Return type
 
+ApiRequest[[**Seq[AccountDTO]**](AccountDTO.md)]
 
-ApiRequest[Unit] (empty response body)
 
 ### Authorization
 
@@ -149,113 +153,27 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
 
-## dappsCurveAddLiquidityEventHistoricalGet
+## curveGetAddLiquidityEventsHistorical
 
-> dappsCurveAddLiquidityEventHistoricalGet(dappsCurveAddLiquidityEventHistoricalGetRequest): ApiRequest[Unit]
+> curveGetAddLiquidityEventsHistorical(curveGetAddLiquidityEventsHistoricalRequest): ApiRequest[Seq[AddLiquidityEventDTO]]
 
+GetAddLiquidityEvents (historical)
 
+Gets add liquidity events.
 
 ### Example
 
 ```scala
 // Import classes:
 import 
-import org.openapitools.client.core._
-import org.openapitools.client.core.CollectionFormats._
-import org.openapitools.client.core.ApiKeyLocations._
-
-import akka.actor.ActorSystem
-import scala.concurrent.Future
-import scala.util.{Failure, Success}
-
-object Example extends App {
-    
-    implicit val system: ActorSystem = ActorSystem()
-    import system.dispatcher
-
-    val apiInvoker = ApiInvoker()
-    val apiInstance = CurveApi("https://onchain.coinapi.io")
-    val startBlock: Long = 789 // Long | 
-
-    val endBlock: Long = 789 // Long | 
-
-    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
-
-    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
-
-    val poolId: String = poolId_example // String | 
-    
-    val request = apiInstance.dappsCurveAddLiquidityEventHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
-    val response = apiInvoker.execute(request)
-
-    response.onComplete {
-        case Success(ApiResponse(code, content, headers)) =>
-            System.out.println(s"Status code: $code}")
-            System.out.println(s"Response headers: ${headers.mkString(", ")}")
-        
-        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling CurveApi#dappsCurveAddLiquidityEventHistoricalGet")
-            System.err.println(s"Status code: $code}")
-            System.err.println(s"Reason: $responseContent")
-            System.err.println(s"Response headers: ${headers.mkString(", ")}")
-            error.printStackTrace();
-
-        case Failure(exception) => 
-            System.err.println("Exception when calling CurveApi#dappsCurveAddLiquidityEventHistoricalGet")
-            exception.printStackTrace();
-    }
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional]
- **endBlock** | **Long**|  | [optional]
- **startDate** | **OffsetDateTime**|  | [optional]
- **endDate** | **OffsetDateTime**|  | [optional]
- **poolId** | **String**|  | [optional]
-
-### Return type
-
-
-ApiRequest[Unit] (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-
-
-## dappsCurveAdminFeeChangeLogHistoricalGet
-
-> dappsCurveAdminFeeChangeLogHistoricalGet(dappsCurveAdminFeeChangeLogHistoricalGetRequest): ApiRequest[Unit]
-
-
-
-### Example
-
-```scala
-// Import classes:
 import 
 import org.openapitools.client.core._
 import org.openapitools.client.core.CollectionFormats._
@@ -282,23 +200,24 @@ object Example extends App {
 
     val poolId: String = poolId_example // String | 
     
-    val request = apiInstance.dappsCurveAdminFeeChangeLogHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+    val request = apiInstance.curveGetAddLiquidityEventsHistorical(startBlock, endBlock, startDate, endDate, poolId)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
         case Success(ApiResponse(code, content, headers)) =>
             System.out.println(s"Status code: $code}")
             System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling CurveApi#dappsCurveAdminFeeChangeLogHistoricalGet")
+            System.err.println("Exception when calling CurveApi#curveGetAddLiquidityEventsHistorical")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling CurveApi#dappsCurveAdminFeeChangeLogHistoricalGet")
+            System.err.println("Exception when calling CurveApi#curveGetAddLiquidityEventsHistorical")
             exception.printStackTrace();
     }
 }
@@ -317,8 +236,8 @@ Name | Type | Description  | Notes
 
 ### Return type
 
+ApiRequest[[**Seq[AddLiquidityEventDTO]**](AddLiquidityEventDTO.md)]
 
-ApiRequest[Unit] (empty response body)
 
 ### Authorization
 
@@ -327,24 +246,27 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
 
-## dappsCurveAmplificationCoeffChangeLogHistoricalGet
+## curveGetAdminFeeChangeLogsHistorical
 
-> dappsCurveAmplificationCoeffChangeLogHistoricalGet(dappsCurveAmplificationCoeffChangeLogHistoricalGetRequest): ApiRequest[Unit]
+> curveGetAdminFeeChangeLogsHistorical(curveGetAdminFeeChangeLogsHistoricalRequest): ApiRequest[Seq[AdminFeeChangeLogDTO]]
 
+GetAdminFeeChangeLogs (historical)
 
+Gets admin fee change logs.
 
 ### Example
 
 ```scala
 // Import classes:
+import 
 import 
 import org.openapitools.client.core._
 import org.openapitools.client.core.CollectionFormats._
@@ -371,23 +293,24 @@ object Example extends App {
 
     val poolId: String = poolId_example // String | 
     
-    val request = apiInstance.dappsCurveAmplificationCoeffChangeLogHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+    val request = apiInstance.curveGetAdminFeeChangeLogsHistorical(startBlock, endBlock, startDate, endDate, poolId)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
         case Success(ApiResponse(code, content, headers)) =>
             System.out.println(s"Status code: $code}")
             System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling CurveApi#dappsCurveAmplificationCoeffChangeLogHistoricalGet")
+            System.err.println("Exception when calling CurveApi#curveGetAdminFeeChangeLogsHistorical")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling CurveApi#dappsCurveAmplificationCoeffChangeLogHistoricalGet")
+            System.err.println("Exception when calling CurveApi#curveGetAdminFeeChangeLogsHistorical")
             exception.printStackTrace();
     }
 }
@@ -406,8 +329,8 @@ Name | Type | Description  | Notes
 
 ### Return type
 
+ApiRequest[[**Seq[AdminFeeChangeLogDTO]**](AdminFeeChangeLogDTO.md)]
 
-ApiRequest[Unit] (empty response body)
 
 ### Authorization
 
@@ -416,24 +339,27 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
 
-## dappsCurveCoinsHistoricalGet
+## curveGetAmplificationCoeffChangeLogsHistorical
 
-> dappsCurveCoinsHistoricalGet(dappsCurveCoinsHistoricalGetRequest): ApiRequest[Unit]
+> curveGetAmplificationCoeffChangeLogsHistorical(curveGetAmplificationCoeffChangeLogsHistoricalRequest): ApiRequest[Seq[AmplificationCoeffChangeLogDTO]]
 
+GetAmplificationCoeffChangeLogs (historical)
 
+Gets amplification coeff change logs.
 
 ### Example
 
 ```scala
 // Import classes:
+import 
 import 
 import org.openapitools.client.core._
 import org.openapitools.client.core.CollectionFormats._
@@ -460,23 +386,24 @@ object Example extends App {
 
     val poolId: String = poolId_example // String | 
     
-    val request = apiInstance.dappsCurveCoinsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+    val request = apiInstance.curveGetAmplificationCoeffChangeLogsHistorical(startBlock, endBlock, startDate, endDate, poolId)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
         case Success(ApiResponse(code, content, headers)) =>
             System.out.println(s"Status code: $code}")
             System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling CurveApi#dappsCurveCoinsHistoricalGet")
+            System.err.println("Exception when calling CurveApi#curveGetAmplificationCoeffChangeLogsHistorical")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling CurveApi#dappsCurveCoinsHistoricalGet")
+            System.err.println("Exception when calling CurveApi#curveGetAmplificationCoeffChangeLogsHistorical")
             exception.printStackTrace();
     }
 }
@@ -495,8 +422,8 @@ Name | Type | Description  | Notes
 
 ### Return type
 
+ApiRequest[[**Seq[AmplificationCoeffChangeLogDTO]**](AmplificationCoeffChangeLogDTO.md)]
 
-ApiRequest[Unit] (empty response body)
 
 ### Authorization
 
@@ -505,24 +432,27 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
 
-## dappsCurveContractsHistoricalGet
+## curveGetCoinsHistorical
 
-> dappsCurveContractsHistoricalGet(dappsCurveContractsHistoricalGetRequest): ApiRequest[Unit]
+> curveGetCoinsHistorical(curveGetCoinsHistoricalRequest): ApiRequest[Seq[CoinDTO]]
 
+GetCoins (historical)
 
+Gets coins.
 
 ### Example
 
 ```scala
 // Import classes:
+import 
 import 
 import org.openapitools.client.core._
 import org.openapitools.client.core.CollectionFormats._
@@ -549,23 +479,24 @@ object Example extends App {
 
     val poolId: String = poolId_example // String | 
     
-    val request = apiInstance.dappsCurveContractsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+    val request = apiInstance.curveGetCoinsHistorical(startBlock, endBlock, startDate, endDate, poolId)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
         case Success(ApiResponse(code, content, headers)) =>
             System.out.println(s"Status code: $code}")
             System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling CurveApi#dappsCurveContractsHistoricalGet")
+            System.err.println("Exception when calling CurveApi#curveGetCoinsHistorical")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling CurveApi#dappsCurveContractsHistoricalGet")
+            System.err.println("Exception when calling CurveApi#curveGetCoinsHistorical")
             exception.printStackTrace();
     }
 }
@@ -584,8 +515,8 @@ Name | Type | Description  | Notes
 
 ### Return type
 
+ApiRequest[[**Seq[CoinDTO]**](CoinDTO.md)]
 
-ApiRequest[Unit] (empty response body)
 
 ### Authorization
 
@@ -594,24 +525,27 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
 
-## dappsCurveContractsVersionHistoricalGet
+## curveGetContractsHistorical
 
-> dappsCurveContractsVersionHistoricalGet(dappsCurveContractsVersionHistoricalGetRequest): ApiRequest[Unit]
+> curveGetContractsHistorical(curveGetContractsHistoricalRequest): ApiRequest[Seq[ContractDTO]]
 
+GetContracts (historical)
 
+Gets contracts.
 
 ### Example
 
 ```scala
 // Import classes:
+import 
 import 
 import org.openapitools.client.core._
 import org.openapitools.client.core.CollectionFormats._
@@ -638,23 +572,24 @@ object Example extends App {
 
     val poolId: String = poolId_example // String | 
     
-    val request = apiInstance.dappsCurveContractsVersionHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+    val request = apiInstance.curveGetContractsHistorical(startBlock, endBlock, startDate, endDate, poolId)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
         case Success(ApiResponse(code, content, headers)) =>
             System.out.println(s"Status code: $code}")
             System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling CurveApi#dappsCurveContractsVersionHistoricalGet")
+            System.err.println("Exception when calling CurveApi#curveGetContractsHistorical")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling CurveApi#dappsCurveContractsVersionHistoricalGet")
+            System.err.println("Exception when calling CurveApi#curveGetContractsHistorical")
             exception.printStackTrace();
     }
 }
@@ -673,8 +608,8 @@ Name | Type | Description  | Notes
 
 ### Return type
 
+ApiRequest[[**Seq[ContractDTO]**](ContractDTO.md)]
 
-ApiRequest[Unit] (empty response body)
 
 ### Authorization
 
@@ -683,24 +618,27 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
 
-## dappsCurveDailyVolumeHistoricalGet
+## curveGetContractsVersionsHistorical
 
-> dappsCurveDailyVolumeHistoricalGet(dappsCurveDailyVolumeHistoricalGetRequest): ApiRequest[Unit]
+> curveGetContractsVersionsHistorical(curveGetContractsVersionsHistoricalRequest): ApiRequest[Seq[ContractVersionDTO]]
 
+GetContractsVersions (historical)
 
+Gets contracts versions.
 
 ### Example
 
 ```scala
 // Import classes:
+import 
 import 
 import org.openapitools.client.core._
 import org.openapitools.client.core.CollectionFormats._
@@ -727,23 +665,24 @@ object Example extends App {
 
     val poolId: String = poolId_example // String | 
     
-    val request = apiInstance.dappsCurveDailyVolumeHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+    val request = apiInstance.curveGetContractsVersionsHistorical(startBlock, endBlock, startDate, endDate, poolId)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
         case Success(ApiResponse(code, content, headers)) =>
             System.out.println(s"Status code: $code}")
             System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling CurveApi#dappsCurveDailyVolumeHistoricalGet")
+            System.err.println("Exception when calling CurveApi#curveGetContractsVersionsHistorical")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling CurveApi#dappsCurveDailyVolumeHistoricalGet")
+            System.err.println("Exception when calling CurveApi#curveGetContractsVersionsHistorical")
             exception.printStackTrace();
     }
 }
@@ -762,8 +701,8 @@ Name | Type | Description  | Notes
 
 ### Return type
 
+ApiRequest[[**Seq[ContractVersionDTO]**](ContractVersionDTO.md)]
 
-ApiRequest[Unit] (empty response body)
 
 ### Authorization
 
@@ -772,24 +711,27 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
 
-## dappsCurveFeeChangeLogHistoricalGet
+## curveGetDailyVolumesHistorical
 
-> dappsCurveFeeChangeLogHistoricalGet(dappsCurveFeeChangeLogHistoricalGetRequest): ApiRequest[Unit]
+> curveGetDailyVolumesHistorical(curveGetDailyVolumesHistoricalRequest): ApiRequest[Seq[DailyVolumeDTO]]
 
+GetDailyVolumes (historical)
 
+Gets daily volumes.
 
 ### Example
 
 ```scala
 // Import classes:
+import 
 import 
 import org.openapitools.client.core._
 import org.openapitools.client.core.CollectionFormats._
@@ -816,23 +758,24 @@ object Example extends App {
 
     val poolId: String = poolId_example // String | 
     
-    val request = apiInstance.dappsCurveFeeChangeLogHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+    val request = apiInstance.curveGetDailyVolumesHistorical(startBlock, endBlock, startDate, endDate, poolId)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
         case Success(ApiResponse(code, content, headers)) =>
             System.out.println(s"Status code: $code}")
             System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling CurveApi#dappsCurveFeeChangeLogHistoricalGet")
+            System.err.println("Exception when calling CurveApi#curveGetDailyVolumesHistorical")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling CurveApi#dappsCurveFeeChangeLogHistoricalGet")
+            System.err.println("Exception when calling CurveApi#curveGetDailyVolumesHistorical")
             exception.printStackTrace();
     }
 }
@@ -851,8 +794,8 @@ Name | Type | Description  | Notes
 
 ### Return type
 
+ApiRequest[[**Seq[DailyVolumeDTO]**](DailyVolumeDTO.md)]
 
-ApiRequest[Unit] (empty response body)
 
 ### Authorization
 
@@ -861,110 +804,27 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
 
-## dappsCurveGaugeDepositHistoricalGet
+## curveGetExchangesHistorical
 
-> dappsCurveGaugeDepositHistoricalGet(dappsCurveGaugeDepositHistoricalGetRequest): ApiRequest[Unit]
+> curveGetExchangesHistorical(curveGetExchangesHistoricalRequest): ApiRequest[Seq[ExchangeDTO]]
 
+GetExchanges (historical) 🔥
 
+Gets exchanges.
 
 ### Example
 
 ```scala
 // Import classes:
 import 
-import org.openapitools.client.core._
-import org.openapitools.client.core.CollectionFormats._
-import org.openapitools.client.core.ApiKeyLocations._
-
-import akka.actor.ActorSystem
-import scala.concurrent.Future
-import scala.util.{Failure, Success}
-
-object Example extends App {
-    
-    implicit val system: ActorSystem = ActorSystem()
-    import system.dispatcher
-
-    val apiInvoker = ApiInvoker()
-    val apiInstance = CurveApi("https://onchain.coinapi.io")
-    val startBlock: Long = 789 // Long | 
-
-    val endBlock: Long = 789 // Long | 
-
-    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
-
-    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
-    
-    val request = apiInstance.dappsCurveGaugeDepositHistoricalGet(startBlock, endBlock, startDate, endDate)
-    val response = apiInvoker.execute(request)
-
-    response.onComplete {
-        case Success(ApiResponse(code, content, headers)) =>
-            System.out.println(s"Status code: $code}")
-            System.out.println(s"Response headers: ${headers.mkString(", ")}")
-        
-        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling CurveApi#dappsCurveGaugeDepositHistoricalGet")
-            System.err.println(s"Status code: $code}")
-            System.err.println(s"Reason: $responseContent")
-            System.err.println(s"Response headers: ${headers.mkString(", ")}")
-            error.printStackTrace();
-
-        case Failure(exception) => 
-            System.err.println("Exception when calling CurveApi#dappsCurveGaugeDepositHistoricalGet")
-            exception.printStackTrace();
-    }
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional]
- **endBlock** | **Long**|  | [optional]
- **startDate** | **OffsetDateTime**|  | [optional]
- **endDate** | **OffsetDateTime**|  | [optional]
-
-### Return type
-
-
-ApiRequest[Unit] (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-
-
-## dappsCurveGaugeHistoricalGet
-
-> dappsCurveGaugeHistoricalGet(dappsCurveGaugeHistoricalGetRequest): ApiRequest[Unit]
-
-
-
-### Example
-
-```scala
-// Import classes:
 import 
 import org.openapitools.client.core._
 import org.openapitools.client.core.CollectionFormats._
@@ -991,23 +851,24 @@ object Example extends App {
 
     val poolId: String = poolId_example // String | 
     
-    val request = apiInstance.dappsCurveGaugeHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+    val request = apiInstance.curveGetExchangesHistorical(startBlock, endBlock, startDate, endDate, poolId)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
         case Success(ApiResponse(code, content, headers)) =>
             System.out.println(s"Status code: $code}")
             System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling CurveApi#dappsCurveGaugeHistoricalGet")
+            System.err.println("Exception when calling CurveApi#curveGetExchangesHistorical")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling CurveApi#dappsCurveGaugeHistoricalGet")
+            System.err.println("Exception when calling CurveApi#curveGetExchangesHistorical")
             exception.printStackTrace();
     }
 }
@@ -1026,8 +887,8 @@ Name | Type | Description  | Notes
 
 ### Return type
 
+ApiRequest[[**Seq[ExchangeDTO]**](ExchangeDTO.md)]
 
-ApiRequest[Unit] (empty response body)
 
 ### Authorization
 
@@ -1036,626 +897,27 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
 
-## dappsCurveGaugeLiquidityHistoricalGet
+## curveGetFeeChangeLogsHistorical
 
-> dappsCurveGaugeLiquidityHistoricalGet(dappsCurveGaugeLiquidityHistoricalGetRequest): ApiRequest[Unit]
+> curveGetFeeChangeLogsHistorical(curveGetFeeChangeLogsHistoricalRequest): ApiRequest[Seq[FeeChangeLogDTO]]
 
+GetFeeChangeLogs (historical)
 
+Gets fee change logs.
 
 ### Example
 
 ```scala
 // Import classes:
 import 
-import org.openapitools.client.core._
-import org.openapitools.client.core.CollectionFormats._
-import org.openapitools.client.core.ApiKeyLocations._
-
-import akka.actor.ActorSystem
-import scala.concurrent.Future
-import scala.util.{Failure, Success}
-
-object Example extends App {
-    
-    implicit val system: ActorSystem = ActorSystem()
-    import system.dispatcher
-
-    val apiInvoker = ApiInvoker()
-    val apiInstance = CurveApi("https://onchain.coinapi.io")
-    val startBlock: Long = 789 // Long | 
-
-    val endBlock: Long = 789 // Long | 
-
-    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
-
-    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
-    
-    val request = apiInstance.dappsCurveGaugeLiquidityHistoricalGet(startBlock, endBlock, startDate, endDate)
-    val response = apiInvoker.execute(request)
-
-    response.onComplete {
-        case Success(ApiResponse(code, content, headers)) =>
-            System.out.println(s"Status code: $code}")
-            System.out.println(s"Response headers: ${headers.mkString(", ")}")
-        
-        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling CurveApi#dappsCurveGaugeLiquidityHistoricalGet")
-            System.err.println(s"Status code: $code}")
-            System.err.println(s"Reason: $responseContent")
-            System.err.println(s"Response headers: ${headers.mkString(", ")}")
-            error.printStackTrace();
-
-        case Failure(exception) => 
-            System.err.println("Exception when calling CurveApi#dappsCurveGaugeLiquidityHistoricalGet")
-            exception.printStackTrace();
-    }
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional]
- **endBlock** | **Long**|  | [optional]
- **startDate** | **OffsetDateTime**|  | [optional]
- **endDate** | **OffsetDateTime**|  | [optional]
-
-### Return type
-
-
-ApiRequest[Unit] (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-
-
-## dappsCurveGaugeTotalWeightHistoricalGet
-
-> dappsCurveGaugeTotalWeightHistoricalGet(dappsCurveGaugeTotalWeightHistoricalGetRequest): ApiRequest[Unit]
-
-
-
-### Example
-
-```scala
-// Import classes:
-import 
-import org.openapitools.client.core._
-import org.openapitools.client.core.CollectionFormats._
-import org.openapitools.client.core.ApiKeyLocations._
-
-import akka.actor.ActorSystem
-import scala.concurrent.Future
-import scala.util.{Failure, Success}
-
-object Example extends App {
-    
-    implicit val system: ActorSystem = ActorSystem()
-    import system.dispatcher
-
-    val apiInvoker = ApiInvoker()
-    val apiInstance = CurveApi("https://onchain.coinapi.io")
-    val startBlock: Long = 789 // Long | 
-
-    val endBlock: Long = 789 // Long | 
-
-    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
-
-    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
-    
-    val request = apiInstance.dappsCurveGaugeTotalWeightHistoricalGet(startBlock, endBlock, startDate, endDate)
-    val response = apiInvoker.execute(request)
-
-    response.onComplete {
-        case Success(ApiResponse(code, content, headers)) =>
-            System.out.println(s"Status code: $code}")
-            System.out.println(s"Response headers: ${headers.mkString(", ")}")
-        
-        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling CurveApi#dappsCurveGaugeTotalWeightHistoricalGet")
-            System.err.println(s"Status code: $code}")
-            System.err.println(s"Reason: $responseContent")
-            System.err.println(s"Response headers: ${headers.mkString(", ")}")
-            error.printStackTrace();
-
-        case Failure(exception) => 
-            System.err.println("Exception when calling CurveApi#dappsCurveGaugeTotalWeightHistoricalGet")
-            exception.printStackTrace();
-    }
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional]
- **endBlock** | **Long**|  | [optional]
- **startDate** | **OffsetDateTime**|  | [optional]
- **endDate** | **OffsetDateTime**|  | [optional]
-
-### Return type
-
-
-ApiRequest[Unit] (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-
-
-## dappsCurveGaugeTypeHistoricalGet
-
-> dappsCurveGaugeTypeHistoricalGet(dappsCurveGaugeTypeHistoricalGetRequest): ApiRequest[Unit]
-
-
-
-### Example
-
-```scala
-// Import classes:
-import 
-import org.openapitools.client.core._
-import org.openapitools.client.core.CollectionFormats._
-import org.openapitools.client.core.ApiKeyLocations._
-
-import akka.actor.ActorSystem
-import scala.concurrent.Future
-import scala.util.{Failure, Success}
-
-object Example extends App {
-    
-    implicit val system: ActorSystem = ActorSystem()
-    import system.dispatcher
-
-    val apiInvoker = ApiInvoker()
-    val apiInstance = CurveApi("https://onchain.coinapi.io")
-    val startBlock: Long = 789 // Long | 
-
-    val endBlock: Long = 789 // Long | 
-
-    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
-
-    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
-    
-    val request = apiInstance.dappsCurveGaugeTypeHistoricalGet(startBlock, endBlock, startDate, endDate)
-    val response = apiInvoker.execute(request)
-
-    response.onComplete {
-        case Success(ApiResponse(code, content, headers)) =>
-            System.out.println(s"Status code: $code}")
-            System.out.println(s"Response headers: ${headers.mkString(", ")}")
-        
-        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling CurveApi#dappsCurveGaugeTypeHistoricalGet")
-            System.err.println(s"Status code: $code}")
-            System.err.println(s"Reason: $responseContent")
-            System.err.println(s"Response headers: ${headers.mkString(", ")}")
-            error.printStackTrace();
-
-        case Failure(exception) => 
-            System.err.println("Exception when calling CurveApi#dappsCurveGaugeTypeHistoricalGet")
-            exception.printStackTrace();
-    }
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional]
- **endBlock** | **Long**|  | [optional]
- **startDate** | **OffsetDateTime**|  | [optional]
- **endDate** | **OffsetDateTime**|  | [optional]
-
-### Return type
-
-
-ApiRequest[Unit] (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-
-
-## dappsCurveGaugeTypeWeightHistoricalGet
-
-> dappsCurveGaugeTypeWeightHistoricalGet(dappsCurveGaugeTypeWeightHistoricalGetRequest): ApiRequest[Unit]
-
-
-
-### Example
-
-```scala
-// Import classes:
-import 
-import org.openapitools.client.core._
-import org.openapitools.client.core.CollectionFormats._
-import org.openapitools.client.core.ApiKeyLocations._
-
-import akka.actor.ActorSystem
-import scala.concurrent.Future
-import scala.util.{Failure, Success}
-
-object Example extends App {
-    
-    implicit val system: ActorSystem = ActorSystem()
-    import system.dispatcher
-
-    val apiInvoker = ApiInvoker()
-    val apiInstance = CurveApi("https://onchain.coinapi.io")
-    val startBlock: Long = 789 // Long | 
-
-    val endBlock: Long = 789 // Long | 
-
-    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
-
-    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
-    
-    val request = apiInstance.dappsCurveGaugeTypeWeightHistoricalGet(startBlock, endBlock, startDate, endDate)
-    val response = apiInvoker.execute(request)
-
-    response.onComplete {
-        case Success(ApiResponse(code, content, headers)) =>
-            System.out.println(s"Status code: $code}")
-            System.out.println(s"Response headers: ${headers.mkString(", ")}")
-        
-        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling CurveApi#dappsCurveGaugeTypeWeightHistoricalGet")
-            System.err.println(s"Status code: $code}")
-            System.err.println(s"Reason: $responseContent")
-            System.err.println(s"Response headers: ${headers.mkString(", ")}")
-            error.printStackTrace();
-
-        case Failure(exception) => 
-            System.err.println("Exception when calling CurveApi#dappsCurveGaugeTypeWeightHistoricalGet")
-            exception.printStackTrace();
-    }
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional]
- **endBlock** | **Long**|  | [optional]
- **startDate** | **OffsetDateTime**|  | [optional]
- **endDate** | **OffsetDateTime**|  | [optional]
-
-### Return type
-
-
-ApiRequest[Unit] (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-
-
-## dappsCurveGaugeWeightHistoricalGet
-
-> dappsCurveGaugeWeightHistoricalGet(dappsCurveGaugeWeightHistoricalGetRequest): ApiRequest[Unit]
-
-
-
-### Example
-
-```scala
-// Import classes:
-import 
-import org.openapitools.client.core._
-import org.openapitools.client.core.CollectionFormats._
-import org.openapitools.client.core.ApiKeyLocations._
-
-import akka.actor.ActorSystem
-import scala.concurrent.Future
-import scala.util.{Failure, Success}
-
-object Example extends App {
-    
-    implicit val system: ActorSystem = ActorSystem()
-    import system.dispatcher
-
-    val apiInvoker = ApiInvoker()
-    val apiInstance = CurveApi("https://onchain.coinapi.io")
-    val startBlock: Long = 789 // Long | 
-
-    val endBlock: Long = 789 // Long | 
-
-    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
-
-    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
-    
-    val request = apiInstance.dappsCurveGaugeWeightHistoricalGet(startBlock, endBlock, startDate, endDate)
-    val response = apiInvoker.execute(request)
-
-    response.onComplete {
-        case Success(ApiResponse(code, content, headers)) =>
-            System.out.println(s"Status code: $code}")
-            System.out.println(s"Response headers: ${headers.mkString(", ")}")
-        
-        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling CurveApi#dappsCurveGaugeWeightHistoricalGet")
-            System.err.println(s"Status code: $code}")
-            System.err.println(s"Reason: $responseContent")
-            System.err.println(s"Response headers: ${headers.mkString(", ")}")
-            error.printStackTrace();
-
-        case Failure(exception) => 
-            System.err.println("Exception when calling CurveApi#dappsCurveGaugeWeightHistoricalGet")
-            exception.printStackTrace();
-    }
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional]
- **endBlock** | **Long**|  | [optional]
- **startDate** | **OffsetDateTime**|  | [optional]
- **endDate** | **OffsetDateTime**|  | [optional]
-
-### Return type
-
-
-ApiRequest[Unit] (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-
-
-## dappsCurveGaugeWeightVoteHistoricalGet
-
-> dappsCurveGaugeWeightVoteHistoricalGet(dappsCurveGaugeWeightVoteHistoricalGetRequest): ApiRequest[Unit]
-
-
-
-### Example
-
-```scala
-// Import classes:
-import 
-import org.openapitools.client.core._
-import org.openapitools.client.core.CollectionFormats._
-import org.openapitools.client.core.ApiKeyLocations._
-
-import akka.actor.ActorSystem
-import scala.concurrent.Future
-import scala.util.{Failure, Success}
-
-object Example extends App {
-    
-    implicit val system: ActorSystem = ActorSystem()
-    import system.dispatcher
-
-    val apiInvoker = ApiInvoker()
-    val apiInstance = CurveApi("https://onchain.coinapi.io")
-    val startBlock: Long = 789 // Long | 
-
-    val endBlock: Long = 789 // Long | 
-
-    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
-
-    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
-    
-    val request = apiInstance.dappsCurveGaugeWeightVoteHistoricalGet(startBlock, endBlock, startDate, endDate)
-    val response = apiInvoker.execute(request)
-
-    response.onComplete {
-        case Success(ApiResponse(code, content, headers)) =>
-            System.out.println(s"Status code: $code}")
-            System.out.println(s"Response headers: ${headers.mkString(", ")}")
-        
-        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling CurveApi#dappsCurveGaugeWeightVoteHistoricalGet")
-            System.err.println(s"Status code: $code}")
-            System.err.println(s"Reason: $responseContent")
-            System.err.println(s"Response headers: ${headers.mkString(", ")}")
-            error.printStackTrace();
-
-        case Failure(exception) => 
-            System.err.println("Exception when calling CurveApi#dappsCurveGaugeWeightVoteHistoricalGet")
-            exception.printStackTrace();
-    }
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional]
- **endBlock** | **Long**|  | [optional]
- **startDate** | **OffsetDateTime**|  | [optional]
- **endDate** | **OffsetDateTime**|  | [optional]
-
-### Return type
-
-
-ApiRequest[Unit] (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-
-
-## dappsCurveGaugeWithdrawHistoricalGet
-
-> dappsCurveGaugeWithdrawHistoricalGet(dappsCurveGaugeWithdrawHistoricalGetRequest): ApiRequest[Unit]
-
-
-
-### Example
-
-```scala
-// Import classes:
-import 
-import org.openapitools.client.core._
-import org.openapitools.client.core.CollectionFormats._
-import org.openapitools.client.core.ApiKeyLocations._
-
-import akka.actor.ActorSystem
-import scala.concurrent.Future
-import scala.util.{Failure, Success}
-
-object Example extends App {
-    
-    implicit val system: ActorSystem = ActorSystem()
-    import system.dispatcher
-
-    val apiInvoker = ApiInvoker()
-    val apiInstance = CurveApi("https://onchain.coinapi.io")
-    val startBlock: Long = 789 // Long | 
-
-    val endBlock: Long = 789 // Long | 
-
-    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
-
-    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
-    
-    val request = apiInstance.dappsCurveGaugeWithdrawHistoricalGet(startBlock, endBlock, startDate, endDate)
-    val response = apiInvoker.execute(request)
-
-    response.onComplete {
-        case Success(ApiResponse(code, content, headers)) =>
-            System.out.println(s"Status code: $code}")
-            System.out.println(s"Response headers: ${headers.mkString(", ")}")
-        
-        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling CurveApi#dappsCurveGaugeWithdrawHistoricalGet")
-            System.err.println(s"Status code: $code}")
-            System.err.println(s"Reason: $responseContent")
-            System.err.println(s"Response headers: ${headers.mkString(", ")}")
-            error.printStackTrace();
-
-        case Failure(exception) => 
-            System.err.println("Exception when calling CurveApi#dappsCurveGaugeWithdrawHistoricalGet")
-            exception.printStackTrace();
-    }
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional]
- **endBlock** | **Long**|  | [optional]
- **startDate** | **OffsetDateTime**|  | [optional]
- **endDate** | **OffsetDateTime**|  | [optional]
-
-### Return type
-
-
-ApiRequest[Unit] (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-
-
-## dappsCurveHourlyVolumeHistoricalGet
-
-> dappsCurveHourlyVolumeHistoricalGet(dappsCurveHourlyVolumeHistoricalGetRequest): ApiRequest[Unit]
-
-
-
-### Example
-
-```scala
-// Import classes:
 import 
 import org.openapitools.client.core._
 import org.openapitools.client.core.CollectionFormats._
@@ -1682,23 +944,24 @@ object Example extends App {
 
     val poolId: String = poolId_example // String | 
     
-    val request = apiInstance.dappsCurveHourlyVolumeHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+    val request = apiInstance.curveGetFeeChangeLogsHistorical(startBlock, endBlock, startDate, endDate, poolId)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
         case Success(ApiResponse(code, content, headers)) =>
             System.out.println(s"Status code: $code}")
             System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling CurveApi#dappsCurveHourlyVolumeHistoricalGet")
+            System.err.println("Exception when calling CurveApi#curveGetFeeChangeLogsHistorical")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling CurveApi#dappsCurveHourlyVolumeHistoricalGet")
+            System.err.println("Exception when calling CurveApi#curveGetFeeChangeLogsHistorical")
             exception.printStackTrace();
     }
 }
@@ -1717,8 +980,8 @@ Name | Type | Description  | Notes
 
 ### Return type
 
+ApiRequest[[**Seq[FeeChangeLogDTO]**](FeeChangeLogDTO.md)]
 
-ApiRequest[Unit] (empty response body)
 
 ### Authorization
 
@@ -1727,24 +990,117 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
 
-## dappsCurveLpTokenHistoricalGet
+## curveGetGaugesDepositsHistorical
 
-> dappsCurveLpTokenHistoricalGet(dappsCurveLpTokenHistoricalGetRequest): ApiRequest[Unit]
+> curveGetGaugesDepositsHistorical(curveGetGaugesDepositsHistoricalRequest): ApiRequest[Seq[GaugeDepositDTO]]
 
+GetGaugesDeposits (historical)
 
+Gets gauges deposits.
 
 ### Example
 
 ```scala
 // Import classes:
+import 
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = CurveApi("https://onchain.coinapi.io")
+    val startBlock: Long = 789 // Long | 
+
+    val endBlock: Long = 789 // Long | 
+
+    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+
+    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+    
+    val request = apiInstance.curveGetGaugesDepositsHistorical(startBlock, endBlock, startDate, endDate)
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling CurveApi#curveGetGaugesDepositsHistorical")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling CurveApi#curveGetGaugesDepositsHistorical")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Long**|  | [optional]
+ **endBlock** | **Long**|  | [optional]
+ **startDate** | **OffsetDateTime**|  | [optional]
+ **endDate** | **OffsetDateTime**|  | [optional]
+
+### Return type
+
+ApiRequest[[**Seq[GaugeDepositDTO]**](GaugeDepositDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## curveGetGaugesHistorical
+
+> curveGetGaugesHistorical(curveGetGaugesHistoricalRequest): ApiRequest[Seq[GaugeDTO]]
+
+GetGauges (historical)
+
+Gets gauges.
+
+### Example
+
+```scala
+// Import classes:
+import 
 import 
 import org.openapitools.client.core._
 import org.openapitools.client.core.CollectionFormats._
@@ -1771,23 +1127,24 @@ object Example extends App {
 
     val poolId: String = poolId_example // String | 
     
-    val request = apiInstance.dappsCurveLpTokenHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+    val request = apiInstance.curveGetGaugesHistorical(startBlock, endBlock, startDate, endDate, poolId)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
         case Success(ApiResponse(code, content, headers)) =>
             System.out.println(s"Status code: $code}")
             System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling CurveApi#dappsCurveLpTokenHistoricalGet")
+            System.err.println("Exception when calling CurveApi#curveGetGaugesHistorical")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling CurveApi#dappsCurveLpTokenHistoricalGet")
+            System.err.println("Exception when calling CurveApi#curveGetGaugesHistorical")
             exception.printStackTrace();
     }
 }
@@ -1806,8 +1163,8 @@ Name | Type | Description  | Notes
 
 ### Return type
 
+ApiRequest[[**Seq[GaugeDTO]**](GaugeDTO.md)]
 
-ApiRequest[Unit] (empty response body)
 
 ### Authorization
 
@@ -1816,24 +1173,657 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
 
-## dappsCurvePoolsHistoricalGet
+## curveGetGaugesLiquidityHistorical
 
-> dappsCurvePoolsHistoricalGet(dappsCurvePoolsHistoricalGetRequest): ApiRequest[Unit]
+> curveGetGaugesLiquidityHistorical(curveGetGaugesLiquidityHistoricalRequest): ApiRequest[Seq[GaugeLiquidityDTO]]
 
+GetGaugesLiquidity (historical)
 
+Gets gauges liquidity.
 
 ### Example
 
 ```scala
 // Import classes:
+import 
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = CurveApi("https://onchain.coinapi.io")
+    val startBlock: Long = 789 // Long | 
+
+    val endBlock: Long = 789 // Long | 
+
+    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+
+    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+    
+    val request = apiInstance.curveGetGaugesLiquidityHistorical(startBlock, endBlock, startDate, endDate)
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling CurveApi#curveGetGaugesLiquidityHistorical")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling CurveApi#curveGetGaugesLiquidityHistorical")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Long**|  | [optional]
+ **endBlock** | **Long**|  | [optional]
+ **startDate** | **OffsetDateTime**|  | [optional]
+ **endDate** | **OffsetDateTime**|  | [optional]
+
+### Return type
+
+ApiRequest[[**Seq[GaugeLiquidityDTO]**](GaugeLiquidityDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## curveGetGaugesTotalWeightsHistorical
+
+> curveGetGaugesTotalWeightsHistorical(curveGetGaugesTotalWeightsHistoricalRequest): ApiRequest[Seq[GaugeTotalWeightDTO]]
+
+GetGaugesTotalWeights (historical)
+
+Gets gauges total weights.
+
+### Example
+
+```scala
+// Import classes:
+import 
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = CurveApi("https://onchain.coinapi.io")
+    val startBlock: Long = 789 // Long | 
+
+    val endBlock: Long = 789 // Long | 
+
+    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+
+    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+    
+    val request = apiInstance.curveGetGaugesTotalWeightsHistorical(startBlock, endBlock, startDate, endDate)
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling CurveApi#curveGetGaugesTotalWeightsHistorical")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling CurveApi#curveGetGaugesTotalWeightsHistorical")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Long**|  | [optional]
+ **endBlock** | **Long**|  | [optional]
+ **startDate** | **OffsetDateTime**|  | [optional]
+ **endDate** | **OffsetDateTime**|  | [optional]
+
+### Return type
+
+ApiRequest[[**Seq[GaugeTotalWeightDTO]**](GaugeTotalWeightDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## curveGetGaugesTypesHistorical
+
+> curveGetGaugesTypesHistorical(curveGetGaugesTypesHistoricalRequest): ApiRequest[Seq[GaugeTypeDTO]]
+
+GetGaugesTypes (historical)
+
+Gets gauges types.
+
+### Example
+
+```scala
+// Import classes:
+import 
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = CurveApi("https://onchain.coinapi.io")
+    val startBlock: Long = 789 // Long | 
+
+    val endBlock: Long = 789 // Long | 
+
+    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+
+    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+    
+    val request = apiInstance.curveGetGaugesTypesHistorical(startBlock, endBlock, startDate, endDate)
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling CurveApi#curveGetGaugesTypesHistorical")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling CurveApi#curveGetGaugesTypesHistorical")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Long**|  | [optional]
+ **endBlock** | **Long**|  | [optional]
+ **startDate** | **OffsetDateTime**|  | [optional]
+ **endDate** | **OffsetDateTime**|  | [optional]
+
+### Return type
+
+ApiRequest[[**Seq[GaugeTypeDTO]**](GaugeTypeDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## curveGetGaugesTypesWeightsHistorical
+
+> curveGetGaugesTypesWeightsHistorical(curveGetGaugesTypesWeightsHistoricalRequest): ApiRequest[Seq[GaugeTypeWeightDTO]]
+
+GetGaugesTypesWeights (historical)
+
+Gets gauges types weights.
+
+### Example
+
+```scala
+// Import classes:
+import 
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = CurveApi("https://onchain.coinapi.io")
+    val startBlock: Long = 789 // Long | 
+
+    val endBlock: Long = 789 // Long | 
+
+    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+
+    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+    
+    val request = apiInstance.curveGetGaugesTypesWeightsHistorical(startBlock, endBlock, startDate, endDate)
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling CurveApi#curveGetGaugesTypesWeightsHistorical")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling CurveApi#curveGetGaugesTypesWeightsHistorical")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Long**|  | [optional]
+ **endBlock** | **Long**|  | [optional]
+ **startDate** | **OffsetDateTime**|  | [optional]
+ **endDate** | **OffsetDateTime**|  | [optional]
+
+### Return type
+
+ApiRequest[[**Seq[GaugeTypeWeightDTO]**](GaugeTypeWeightDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## curveGetGaugesWeightsHistorical
+
+> curveGetGaugesWeightsHistorical(curveGetGaugesWeightsHistoricalRequest): ApiRequest[Seq[GaugeWeightDTO]]
+
+GetGaugesWeights (historical)
+
+Gets gauges weights.
+
+### Example
+
+```scala
+// Import classes:
+import 
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = CurveApi("https://onchain.coinapi.io")
+    val startBlock: Long = 789 // Long | 
+
+    val endBlock: Long = 789 // Long | 
+
+    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+
+    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+    
+    val request = apiInstance.curveGetGaugesWeightsHistorical(startBlock, endBlock, startDate, endDate)
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling CurveApi#curveGetGaugesWeightsHistorical")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling CurveApi#curveGetGaugesWeightsHistorical")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Long**|  | [optional]
+ **endBlock** | **Long**|  | [optional]
+ **startDate** | **OffsetDateTime**|  | [optional]
+ **endDate** | **OffsetDateTime**|  | [optional]
+
+### Return type
+
+ApiRequest[[**Seq[GaugeWeightDTO]**](GaugeWeightDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## curveGetGaugesWeightsVotesHistorical
+
+> curveGetGaugesWeightsVotesHistorical(curveGetGaugesWeightsVotesHistoricalRequest): ApiRequest[Seq[GaugeWeightVoteDTO]]
+
+GetGaugesWeightsVotes (historical)
+
+Gets gauges weights votes.
+
+### Example
+
+```scala
+// Import classes:
+import 
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = CurveApi("https://onchain.coinapi.io")
+    val startBlock: Long = 789 // Long | 
+
+    val endBlock: Long = 789 // Long | 
+
+    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+
+    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+    
+    val request = apiInstance.curveGetGaugesWeightsVotesHistorical(startBlock, endBlock, startDate, endDate)
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling CurveApi#curveGetGaugesWeightsVotesHistorical")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling CurveApi#curveGetGaugesWeightsVotesHistorical")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Long**|  | [optional]
+ **endBlock** | **Long**|  | [optional]
+ **startDate** | **OffsetDateTime**|  | [optional]
+ **endDate** | **OffsetDateTime**|  | [optional]
+
+### Return type
+
+ApiRequest[[**Seq[GaugeWeightVoteDTO]**](GaugeWeightVoteDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## curveGetGaugesWithdrawHistorical
+
+> curveGetGaugesWithdrawHistorical(curveGetGaugesWithdrawHistoricalRequest): ApiRequest[Seq[GaugeWithdrawDTO]]
+
+GetGaugesWithdraw (historical)
+
+Gets gauges withdraws.
+
+### Example
+
+```scala
+// Import classes:
+import 
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = CurveApi("https://onchain.coinapi.io")
+    val startBlock: Long = 789 // Long | 
+
+    val endBlock: Long = 789 // Long | 
+
+    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+
+    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+    
+    val request = apiInstance.curveGetGaugesWithdrawHistorical(startBlock, endBlock, startDate, endDate)
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling CurveApi#curveGetGaugesWithdrawHistorical")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling CurveApi#curveGetGaugesWithdrawHistorical")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Long**|  | [optional]
+ **endBlock** | **Long**|  | [optional]
+ **startDate** | **OffsetDateTime**|  | [optional]
+ **endDate** | **OffsetDateTime**|  | [optional]
+
+### Return type
+
+ApiRequest[[**Seq[GaugeWithdrawDTO]**](GaugeWithdrawDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## curveGetHourlyVolumesHistorical
+
+> curveGetHourlyVolumesHistorical(curveGetHourlyVolumesHistoricalRequest): ApiRequest[Seq[HourlyVolumeDTO]]
+
+GetHourlyVolumes (historical)
+
+Gets hourly volumes.
+
+### Example
+
+```scala
+// Import classes:
+import 
 import 
 import org.openapitools.client.core._
 import org.openapitools.client.core.CollectionFormats._
@@ -1860,23 +1850,24 @@ object Example extends App {
 
     val poolId: String = poolId_example // String | 
     
-    val request = apiInstance.dappsCurvePoolsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+    val request = apiInstance.curveGetHourlyVolumesHistorical(startBlock, endBlock, startDate, endDate, poolId)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
         case Success(ApiResponse(code, content, headers)) =>
             System.out.println(s"Status code: $code}")
             System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling CurveApi#dappsCurvePoolsHistoricalGet")
+            System.err.println("Exception when calling CurveApi#curveGetHourlyVolumesHistorical")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling CurveApi#dappsCurvePoolsHistoricalGet")
+            System.err.println("Exception when calling CurveApi#curveGetHourlyVolumesHistorical")
             exception.printStackTrace();
     }
 }
@@ -1895,8 +1886,8 @@ Name | Type | Description  | Notes
 
 ### Return type
 
+ApiRequest[[**Seq[HourlyVolumeDTO]**](HourlyVolumeDTO.md)]
 
-ApiRequest[Unit] (empty response body)
 
 ### Authorization
 
@@ -1905,196 +1896,27 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
 
-## dappsCurveProposalsHistoricalGet
+## curveGetLpTokensHistorical
 
-> dappsCurveProposalsHistoricalGet(dappsCurveProposalsHistoricalGetRequest): ApiRequest[Unit]
+> curveGetLpTokensHistorical(curveGetLpTokensHistoricalRequest): ApiRequest[Seq[LpTokenDTO]]
 
+GetLpTokens (historical)
 
+Gets lp tokens.
 
 ### Example
 
 ```scala
 // Import classes:
 import 
-import org.openapitools.client.core._
-import org.openapitools.client.core.CollectionFormats._
-import org.openapitools.client.core.ApiKeyLocations._
-
-import akka.actor.ActorSystem
-import scala.concurrent.Future
-import scala.util.{Failure, Success}
-
-object Example extends App {
-    
-    implicit val system: ActorSystem = ActorSystem()
-    import system.dispatcher
-
-    val apiInvoker = ApiInvoker()
-    val apiInstance = CurveApi("https://onchain.coinapi.io")
-    val startBlock: Long = 789 // Long | 
-
-    val endBlock: Long = 789 // Long | 
-
-    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
-
-    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
-    
-    val request = apiInstance.dappsCurveProposalsHistoricalGet(startBlock, endBlock, startDate, endDate)
-    val response = apiInvoker.execute(request)
-
-    response.onComplete {
-        case Success(ApiResponse(code, content, headers)) =>
-            System.out.println(s"Status code: $code}")
-            System.out.println(s"Response headers: ${headers.mkString(", ")}")
-        
-        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling CurveApi#dappsCurveProposalsHistoricalGet")
-            System.err.println(s"Status code: $code}")
-            System.err.println(s"Reason: $responseContent")
-            System.err.println(s"Response headers: ${headers.mkString(", ")}")
-            error.printStackTrace();
-
-        case Failure(exception) => 
-            System.err.println("Exception when calling CurveApi#dappsCurveProposalsHistoricalGet")
-            exception.printStackTrace();
-    }
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional]
- **endBlock** | **Long**|  | [optional]
- **startDate** | **OffsetDateTime**|  | [optional]
- **endDate** | **OffsetDateTime**|  | [optional]
-
-### Return type
-
-
-ApiRequest[Unit] (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-
-
-## dappsCurveProposalsVoteHistoricalGet
-
-> dappsCurveProposalsVoteHistoricalGet(dappsCurveProposalsVoteHistoricalGetRequest): ApiRequest[Unit]
-
-
-
-### Example
-
-```scala
-// Import classes:
-import 
-import org.openapitools.client.core._
-import org.openapitools.client.core.CollectionFormats._
-import org.openapitools.client.core.ApiKeyLocations._
-
-import akka.actor.ActorSystem
-import scala.concurrent.Future
-import scala.util.{Failure, Success}
-
-object Example extends App {
-    
-    implicit val system: ActorSystem = ActorSystem()
-    import system.dispatcher
-
-    val apiInvoker = ApiInvoker()
-    val apiInstance = CurveApi("https://onchain.coinapi.io")
-    val startBlock: Long = 789 // Long | 
-
-    val endBlock: Long = 789 // Long | 
-
-    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
-
-    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
-    
-    val request = apiInstance.dappsCurveProposalsVoteHistoricalGet(startBlock, endBlock, startDate, endDate)
-    val response = apiInvoker.execute(request)
-
-    response.onComplete {
-        case Success(ApiResponse(code, content, headers)) =>
-            System.out.println(s"Status code: $code}")
-            System.out.println(s"Response headers: ${headers.mkString(", ")}")
-        
-        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling CurveApi#dappsCurveProposalsVoteHistoricalGet")
-            System.err.println(s"Status code: $code}")
-            System.err.println(s"Reason: $responseContent")
-            System.err.println(s"Response headers: ${headers.mkString(", ")}")
-            error.printStackTrace();
-
-        case Failure(exception) => 
-            System.err.println("Exception when calling CurveApi#dappsCurveProposalsVoteHistoricalGet")
-            exception.printStackTrace();
-    }
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **Long**|  | [optional]
- **endBlock** | **Long**|  | [optional]
- **startDate** | **OffsetDateTime**|  | [optional]
- **endDate** | **OffsetDateTime**|  | [optional]
-
-### Return type
-
-
-ApiRequest[Unit] (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-
-
-## dappsCurveRemoveLiquidityEventHistoricalGet
-
-> dappsCurveRemoveLiquidityEventHistoricalGet(dappsCurveRemoveLiquidityEventHistoricalGetRequest): ApiRequest[Unit]
-
-
-
-### Example
-
-```scala
-// Import classes:
 import 
 import org.openapitools.client.core._
 import org.openapitools.client.core.CollectionFormats._
@@ -2121,23 +1943,24 @@ object Example extends App {
 
     val poolId: String = poolId_example // String | 
     
-    val request = apiInstance.dappsCurveRemoveLiquidityEventHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+    val request = apiInstance.curveGetLpTokensHistorical(startBlock, endBlock, startDate, endDate, poolId)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
         case Success(ApiResponse(code, content, headers)) =>
             System.out.println(s"Status code: $code}")
             System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling CurveApi#dappsCurveRemoveLiquidityEventHistoricalGet")
+            System.err.println("Exception when calling CurveApi#curveGetLpTokensHistorical")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling CurveApi#dappsCurveRemoveLiquidityEventHistoricalGet")
+            System.err.println("Exception when calling CurveApi#curveGetLpTokensHistorical")
             exception.printStackTrace();
     }
 }
@@ -2156,8 +1979,8 @@ Name | Type | Description  | Notes
 
 ### Return type
 
+ApiRequest[[**Seq[LpTokenDTO]**](LpTokenDTO.md)]
 
-ApiRequest[Unit] (empty response body)
 
 ### Authorization
 
@@ -2166,24 +1989,27 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
 
-## dappsCurveRemoveLiquidityOneEventHistoricalGet
+## curveGetPoolsHistorical
 
-> dappsCurveRemoveLiquidityOneEventHistoricalGet(dappsCurveRemoveLiquidityOneEventHistoricalGetRequest): ApiRequest[Unit]
+> curveGetPoolsHistorical(curveGetPoolsHistoricalRequest): ApiRequest[Seq[PoolDTO]]
 
+GetPools (historical) 🔥
 
+Gets pools.
 
 ### Example
 
 ```scala
 // Import classes:
+import 
 import 
 import org.openapitools.client.core._
 import org.openapitools.client.core.CollectionFormats._
@@ -2210,23 +2036,24 @@ object Example extends App {
 
     val poolId: String = poolId_example // String | 
     
-    val request = apiInstance.dappsCurveRemoveLiquidityOneEventHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+    val request = apiInstance.curveGetPoolsHistorical(startBlock, endBlock, startDate, endDate, poolId)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
         case Success(ApiResponse(code, content, headers)) =>
             System.out.println(s"Status code: $code}")
             System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling CurveApi#dappsCurveRemoveLiquidityOneEventHistoricalGet")
+            System.err.println("Exception when calling CurveApi#curveGetPoolsHistorical")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling CurveApi#dappsCurveRemoveLiquidityOneEventHistoricalGet")
+            System.err.println("Exception when calling CurveApi#curveGetPoolsHistorical")
             exception.printStackTrace();
     }
 }
@@ -2245,8 +2072,8 @@ Name | Type | Description  | Notes
 
 ### Return type
 
+ApiRequest[[**Seq[PoolDTO]**](PoolDTO.md)]
 
-ApiRequest[Unit] (empty response body)
 
 ### Authorization
 
@@ -2255,24 +2082,207 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
 
-## dappsCurveSwapsHistoricalGet
+## curveGetProposalsHistorical
 
-> dappsCurveSwapsHistoricalGet(dappsCurveSwapsHistoricalGetRequest): ApiRequest[Unit]
+> curveGetProposalsHistorical(curveGetProposalsHistoricalRequest): ApiRequest[Seq[ProposalDTO]]
 
+GetProposals (historical)
 
+Gets proposals.
 
 ### Example
 
 ```scala
 // Import classes:
+import 
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = CurveApi("https://onchain.coinapi.io")
+    val startBlock: Long = 789 // Long | 
+
+    val endBlock: Long = 789 // Long | 
+
+    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+
+    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+    
+    val request = apiInstance.curveGetProposalsHistorical(startBlock, endBlock, startDate, endDate)
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling CurveApi#curveGetProposalsHistorical")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling CurveApi#curveGetProposalsHistorical")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Long**|  | [optional]
+ **endBlock** | **Long**|  | [optional]
+ **startDate** | **OffsetDateTime**|  | [optional]
+ **endDate** | **OffsetDateTime**|  | [optional]
+
+### Return type
+
+ApiRequest[[**Seq[ProposalDTO]**](ProposalDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## curveGetProposalsVotesHistorical
+
+> curveGetProposalsVotesHistorical(curveGetProposalsVotesHistoricalRequest): ApiRequest[Seq[ProposalVoteDTO]]
+
+GetProposalsVotes (historical)
+
+Gets proposals votes.
+
+### Example
+
+```scala
+// Import classes:
+import 
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = CurveApi("https://onchain.coinapi.io")
+    val startBlock: Long = 789 // Long | 
+
+    val endBlock: Long = 789 // Long | 
+
+    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+
+    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+    
+    val request = apiInstance.curveGetProposalsVotesHistorical(startBlock, endBlock, startDate, endDate)
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling CurveApi#curveGetProposalsVotesHistorical")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling CurveApi#curveGetProposalsVotesHistorical")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Long**|  | [optional]
+ **endBlock** | **Long**|  | [optional]
+ **startDate** | **OffsetDateTime**|  | [optional]
+ **endDate** | **OffsetDateTime**|  | [optional]
+
+### Return type
+
+ApiRequest[[**Seq[ProposalVoteDTO]**](ProposalVoteDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## curveGetRemoveLiquidityEventsHistorical
+
+> curveGetRemoveLiquidityEventsHistorical(curveGetRemoveLiquidityEventsHistoricalRequest): ApiRequest[Seq[RemoveLiquidityEventDTO]]
+
+GetRemoveLiquidityEvents (historical)
+
+Gets remove liquidity events.
+
+### Example
+
+```scala
+// Import classes:
+import 
 import 
 import org.openapitools.client.core._
 import org.openapitools.client.core.CollectionFormats._
@@ -2299,23 +2309,24 @@ object Example extends App {
 
     val poolId: String = poolId_example // String | 
     
-    val request = apiInstance.dappsCurveSwapsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+    val request = apiInstance.curveGetRemoveLiquidityEventsHistorical(startBlock, endBlock, startDate, endDate, poolId)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
         case Success(ApiResponse(code, content, headers)) =>
             System.out.println(s"Status code: $code}")
             System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling CurveApi#dappsCurveSwapsHistoricalGet")
+            System.err.println("Exception when calling CurveApi#curveGetRemoveLiquidityEventsHistorical")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling CurveApi#dappsCurveSwapsHistoricalGet")
+            System.err.println("Exception when calling CurveApi#curveGetRemoveLiquidityEventsHistorical")
             exception.printStackTrace();
     }
 }
@@ -2334,8 +2345,8 @@ Name | Type | Description  | Notes
 
 ### Return type
 
+ApiRequest[[**Seq[RemoveLiquidityEventDTO]**](RemoveLiquidityEventDTO.md)]
 
-ApiRequest[Unit] (empty response body)
 
 ### Authorization
 
@@ -2344,24 +2355,120 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
 
-## dappsCurveSystemStateHistoricalGet
+## curveGetRemoveLiquidityOneEventsHistorical
 
-> dappsCurveSystemStateHistoricalGet(dappsCurveSystemStateHistoricalGetRequest): ApiRequest[Unit]
+> curveGetRemoveLiquidityOneEventsHistorical(curveGetRemoveLiquidityOneEventsHistoricalRequest): ApiRequest[Seq[RemoveLiquidityOneEventDTO]]
 
+GetRemoveLiquidityOneEvents (historical)
 
+Gets remove liquidity one events.
 
 ### Example
 
 ```scala
 // Import classes:
+import 
+import 
+import org.openapitools.client.core._
+import org.openapitools.client.core.CollectionFormats._
+import org.openapitools.client.core.ApiKeyLocations._
+
+import akka.actor.ActorSystem
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+object Example extends App {
+    
+    implicit val system: ActorSystem = ActorSystem()
+    import system.dispatcher
+
+    val apiInvoker = ApiInvoker()
+    val apiInstance = CurveApi("https://onchain.coinapi.io")
+    val startBlock: Long = 789 // Long | 
+
+    val endBlock: Long = 789 // Long | 
+
+    val startDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+
+    val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
+
+    val poolId: String = poolId_example // String | 
+    
+    val request = apiInstance.curveGetRemoveLiquidityOneEventsHistorical(startBlock, endBlock, startDate, endDate, poolId)
+    val response = apiInvoker.execute(request)
+
+    response.onComplete {
+        case Success(ApiResponse(code, content, headers)) =>
+            System.out.println(s"Status code: $code}")
+            System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
+        
+        case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
+            System.err.println("Exception when calling CurveApi#curveGetRemoveLiquidityOneEventsHistorical")
+            System.err.println(s"Status code: $code}")
+            System.err.println(s"Reason: $responseContent")
+            System.err.println(s"Response headers: ${headers.mkString(", ")}")
+            error.printStackTrace();
+
+        case Failure(exception) => 
+            System.err.println("Exception when calling CurveApi#curveGetRemoveLiquidityOneEventsHistorical")
+            exception.printStackTrace();
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Long**|  | [optional]
+ **endBlock** | **Long**|  | [optional]
+ **startDate** | **OffsetDateTime**|  | [optional]
+ **endDate** | **OffsetDateTime**|  | [optional]
+ **poolId** | **String**|  | [optional]
+
+### Return type
+
+ApiRequest[[**Seq[RemoveLiquidityOneEventDTO]**](RemoveLiquidityOneEventDTO.md)]
+
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+
+## curveGetSystemStatesHistorical
+
+> curveGetSystemStatesHistorical(curveGetSystemStatesHistoricalRequest): ApiRequest[Seq[SystemStateDTO]]
+
+GetSystemStates (historical)
+
+Gets system states.
+
+### Example
+
+```scala
+// Import classes:
+import 
 import 
 import org.openapitools.client.core._
 import org.openapitools.client.core.CollectionFormats._
@@ -2386,23 +2493,24 @@ object Example extends App {
 
     val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
     
-    val request = apiInstance.dappsCurveSystemStateHistoricalGet(startBlock, endBlock, startDate, endDate)
+    val request = apiInstance.curveGetSystemStatesHistorical(startBlock, endBlock, startDate, endDate)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
         case Success(ApiResponse(code, content, headers)) =>
             System.out.println(s"Status code: $code}")
             System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling CurveApi#dappsCurveSystemStateHistoricalGet")
+            System.err.println("Exception when calling CurveApi#curveGetSystemStatesHistorical")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling CurveApi#dappsCurveSystemStateHistoricalGet")
+            System.err.println("Exception when calling CurveApi#curveGetSystemStatesHistorical")
             exception.printStackTrace();
     }
 }
@@ -2420,8 +2528,8 @@ Name | Type | Description  | Notes
 
 ### Return type
 
+ApiRequest[[**Seq[SystemStateDTO]**](SystemStateDTO.md)]
 
-ApiRequest[Unit] (empty response body)
 
 ### Authorization
 
@@ -2430,24 +2538,27 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
 
-## dappsCurveTokensHistoricalGet
+## curveGetTokensHistorical
 
-> dappsCurveTokensHistoricalGet(dappsCurveTokensHistoricalGetRequest): ApiRequest[Unit]
+> curveGetTokensHistorical(curveGetTokensHistoricalRequest): ApiRequest[Seq[TokenDTO]]
 
+GetTokens (historical) 🔥
 
+Gets tokens.
 
 ### Example
 
 ```scala
 // Import classes:
+import 
 import 
 import org.openapitools.client.core._
 import org.openapitools.client.core.CollectionFormats._
@@ -2474,23 +2585,24 @@ object Example extends App {
 
     val tokenId: String = tokenId_example // String | 
     
-    val request = apiInstance.dappsCurveTokensHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId)
+    val request = apiInstance.curveGetTokensHistorical(startBlock, endBlock, startDate, endDate, tokenId)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
         case Success(ApiResponse(code, content, headers)) =>
             System.out.println(s"Status code: $code}")
             System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling CurveApi#dappsCurveTokensHistoricalGet")
+            System.err.println("Exception when calling CurveApi#curveGetTokensHistorical")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling CurveApi#dappsCurveTokensHistoricalGet")
+            System.err.println("Exception when calling CurveApi#curveGetTokensHistorical")
             exception.printStackTrace();
     }
 }
@@ -2509,8 +2621,8 @@ Name | Type | Description  | Notes
 
 ### Return type
 
+ApiRequest[[**Seq[TokenDTO]**](TokenDTO.md)]
 
-ApiRequest[Unit] (empty response body)
 
 ### Authorization
 
@@ -2519,24 +2631,27 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
 
-## dappsCurveTransferOwnershipEventHistoricalGet
+## curveGetTransferOwnershipEventsHistorical
 
-> dappsCurveTransferOwnershipEventHistoricalGet(dappsCurveTransferOwnershipEventHistoricalGetRequest): ApiRequest[Unit]
+> curveGetTransferOwnershipEventsHistorical(curveGetTransferOwnershipEventsHistoricalRequest): ApiRequest[Seq[TransferOwnershipEventDTO]]
 
+GetTransferOwnershipEvents (historical)
 
+Gets transfer ownership events.
 
 ### Example
 
 ```scala
 // Import classes:
+import 
 import 
 import org.openapitools.client.core._
 import org.openapitools.client.core.CollectionFormats._
@@ -2563,23 +2678,24 @@ object Example extends App {
 
     val poolId: String = poolId_example // String | 
     
-    val request = apiInstance.dappsCurveTransferOwnershipEventHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+    val request = apiInstance.curveGetTransferOwnershipEventsHistorical(startBlock, endBlock, startDate, endDate, poolId)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
         case Success(ApiResponse(code, content, headers)) =>
             System.out.println(s"Status code: $code}")
             System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling CurveApi#dappsCurveTransferOwnershipEventHistoricalGet")
+            System.err.println("Exception when calling CurveApi#curveGetTransferOwnershipEventsHistorical")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling CurveApi#dappsCurveTransferOwnershipEventHistoricalGet")
+            System.err.println("Exception when calling CurveApi#curveGetTransferOwnershipEventsHistorical")
             exception.printStackTrace();
     }
 }
@@ -2598,8 +2714,8 @@ Name | Type | Description  | Notes
 
 ### Return type
 
+ApiRequest[[**Seq[TransferOwnershipEventDTO]**](TransferOwnershipEventDTO.md)]
 
-ApiRequest[Unit] (empty response body)
 
 ### Authorization
 
@@ -2608,24 +2724,27 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
 
-## dappsCurveUnderlyingCoinHistoricalGet
+## curveGetUnderlyingCoinsHistorical
 
-> dappsCurveUnderlyingCoinHistoricalGet(dappsCurveUnderlyingCoinHistoricalGetRequest): ApiRequest[Unit]
+> curveGetUnderlyingCoinsHistorical(curveGetUnderlyingCoinsHistoricalRequest): ApiRequest[Seq[UnderlyingCoinDTO]]
 
+GetUnderlyingCoins (historical)
 
+Gets underlying coins.
 
 ### Example
 
 ```scala
 // Import classes:
+import 
 import 
 import org.openapitools.client.core._
 import org.openapitools.client.core.CollectionFormats._
@@ -2652,23 +2771,24 @@ object Example extends App {
 
     val poolId: String = poolId_example // String | 
     
-    val request = apiInstance.dappsCurveUnderlyingCoinHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+    val request = apiInstance.curveGetUnderlyingCoinsHistorical(startBlock, endBlock, startDate, endDate, poolId)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
         case Success(ApiResponse(code, content, headers)) =>
             System.out.println(s"Status code: $code}")
             System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling CurveApi#dappsCurveUnderlyingCoinHistoricalGet")
+            System.err.println("Exception when calling CurveApi#curveGetUnderlyingCoinsHistorical")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling CurveApi#dappsCurveUnderlyingCoinHistoricalGet")
+            System.err.println("Exception when calling CurveApi#curveGetUnderlyingCoinsHistorical")
             exception.printStackTrace();
     }
 }
@@ -2687,8 +2807,8 @@ Name | Type | Description  | Notes
 
 ### Return type
 
+ApiRequest[[**Seq[UnderlyingCoinDTO]**](UnderlyingCoinDTO.md)]
 
-ApiRequest[Unit] (empty response body)
 
 ### Authorization
 
@@ -2697,24 +2817,27 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
 
-## dappsCurveVotingAppHistoricalGet
+## curveGetVotingAppsHistorical
 
-> dappsCurveVotingAppHistoricalGet(dappsCurveVotingAppHistoricalGetRequest): ApiRequest[Unit]
+> curveGetVotingAppsHistorical(curveGetVotingAppsHistoricalRequest): ApiRequest[Seq[VotingAppDTO]]
 
+GetVotingApps (historical)
 
+Gets voting apps.
 
 ### Example
 
 ```scala
 // Import classes:
+import 
 import 
 import org.openapitools.client.core._
 import org.openapitools.client.core.CollectionFormats._
@@ -2739,23 +2862,24 @@ object Example extends App {
 
     val endDate: OffsetDateTime = 2013-10-20T19:20:30+01:00 // OffsetDateTime | 
     
-    val request = apiInstance.dappsCurveVotingAppHistoricalGet(startBlock, endBlock, startDate, endDate)
+    val request = apiInstance.curveGetVotingAppsHistorical(startBlock, endBlock, startDate, endDate)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
         case Success(ApiResponse(code, content, headers)) =>
             System.out.println(s"Status code: $code}")
             System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling CurveApi#dappsCurveVotingAppHistoricalGet")
+            System.err.println("Exception when calling CurveApi#curveGetVotingAppsHistorical")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling CurveApi#dappsCurveVotingAppHistoricalGet")
+            System.err.println("Exception when calling CurveApi#curveGetVotingAppsHistorical")
             exception.printStackTrace();
     }
 }
@@ -2773,8 +2897,8 @@ Name | Type | Description  | Notes
 
 ### Return type
 
+ApiRequest[[**Seq[VotingAppDTO]**](VotingAppDTO.md)]
 
-ApiRequest[Unit] (empty response body)
 
 ### Authorization
 
@@ -2783,24 +2907,27 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
 
-## dappsCurveWeeklyVolumeHistoricalGet
+## curveGetWeeklyVolumesHistorical
 
-> dappsCurveWeeklyVolumeHistoricalGet(dappsCurveWeeklyVolumeHistoricalGetRequest): ApiRequest[Unit]
+> curveGetWeeklyVolumesHistorical(curveGetWeeklyVolumesHistoricalRequest): ApiRequest[Seq[WeeklyVolumeDTO]]
 
+GetWeeklyVolumes (historical)
 
+Gets weekly volumes.
 
 ### Example
 
 ```scala
 // Import classes:
+import 
 import 
 import org.openapitools.client.core._
 import org.openapitools.client.core.CollectionFormats._
@@ -2827,23 +2954,24 @@ object Example extends App {
 
     val poolId: String = poolId_example // String | 
     
-    val request = apiInstance.dappsCurveWeeklyVolumeHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+    val request = apiInstance.curveGetWeeklyVolumesHistorical(startBlock, endBlock, startDate, endDate, poolId)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
         case Success(ApiResponse(code, content, headers)) =>
             System.out.println(s"Status code: $code}")
             System.out.println(s"Response headers: ${headers.mkString(", ")}")
+            System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling CurveApi#dappsCurveWeeklyVolumeHistoricalGet")
+            System.err.println("Exception when calling CurveApi#curveGetWeeklyVolumesHistorical")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling CurveApi#dappsCurveWeeklyVolumeHistoricalGet")
+            System.err.println("Exception when calling CurveApi#curveGetWeeklyVolumesHistorical")
             exception.printStackTrace();
     }
 }
@@ -2862,8 +2990,8 @@ Name | Type | Description  | Notes
 
 ### Return type
 
+ApiRequest[[**Seq[WeeklyVolumeDTO]**](WeeklyVolumeDTO.md)]
 
-ApiRequest[Unit] (empty response body)
 
 ### Authorization
 
@@ -2872,10 +3000,10 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 

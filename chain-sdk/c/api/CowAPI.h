@@ -5,25 +5,50 @@
 #include "../external/cJSON.h"
 #include "../include/keyValuePair.h"
 #include "../include/binary.h"
+#include "../model/cow_order_dto.h"
+#include "../model/cow_settlement_dto.h"
+#include "../model/cow_token_dto.h"
+#include "../model/cow_trade_dto.h"
+#include "../model/cow_user_dto.h"
 
 
-void
-CowAPI_dappsCowOrdersHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate );
+// GetOrders (historical)
+//
+// Gets orders.
+//
+list_t*
+CowAPI_cowGetOrdersHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate );
 
 
-void
-CowAPI_dappsCowSettlementHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate );
+// GetSettlements (historical)
+//
+// Gets settlements.
+//
+list_t*
+CowAPI_cowGetSettlementsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate );
 
 
-void
-CowAPI_dappsCowTokensHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * tokenId );
+// GetTokens (historical) 🔥
+//
+// Gets tokens.
+//
+list_t*
+CowAPI_cowGetTokensHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * tokenId );
 
 
-void
-CowAPI_dappsCowTradesHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate );
+// GetTrades (historical) 🔥
+//
+// Gets trades.
+//
+list_t*
+CowAPI_cowGetTradesHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate );
 
 
-void
-CowAPI_dappsCowUsersHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate );
+// GetUsers (historical)
+//
+// Gets users.
+//
+list_t*
+CowAPI_cowGetUsersHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate );
 
 

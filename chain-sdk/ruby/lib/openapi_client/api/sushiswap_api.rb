@@ -19,13 +19,127 @@ module OpenapiClient
     def initialize(api_client = ApiClient.default)
       @api_client = api_client
     end
+    # GetExchanges (current) 🔥
+    # Gets exchanges.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<CurveExchangeDTO>]
+    def curve_get_exchanges__current(opts = {})
+      data, _status_code, _headers = curve_get_exchanges__current_with_http_info(opts)
+      data
+    end
+
+    # GetExchanges (current) 🔥
+    # Gets exchanges.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<CurveExchangeDTO>, Integer, Hash)>] Array<CurveExchangeDTO> data, response status code and response headers
+    def curve_get_exchanges__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: SushiswapApi.curve_get_exchanges__current ...'
+      end
+      # resource path
+      local_var_path = '/dapps/sushiswap/exchanges/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<CurveExchangeDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"SushiswapApi.curve_get_exchanges__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: SushiswapApi#curve_get_exchanges__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # GetTrades (current) 🔥
+    # Gets trades.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<DexTradeDTO>]
+    def dex_get_trades__current(opts = {})
+      data, _status_code, _headers = dex_get_trades__current_with_http_info(opts)
+      data
+    end
+
+    # GetTrades (current) 🔥
+    # Gets trades.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(Array<DexTradeDTO>, Integer, Hash)>] Array<DexTradeDTO> data, response status code and response headers
+    def dex_get_trades__current_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: SushiswapApi.dex_get_trades__current ...'
+      end
+      # resource path
+      local_var_path = '/dapps/sushiswap/trades/current'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<DexTradeDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"SushiswapApi.dex_get_trades__current",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: SushiswapApi#dex_get_trades__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # GetBundles (historical)
     # Gets bundles.
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :start_block 
-    # @option opts [Integer] :end_block 
-    # @option opts [Time] :start_date 
-    # @option opts [Time] :end_date 
+    # @option opts [Integer] :start_block AAAAAAAAAA
+    # @option opts [Integer] :end_block BBBBBBBBBBBB
+    # @option opts [Time] :start_date CCCCCCCCC
+    # @option opts [Time] :end_date DDDDDDDDDDD
     # @return [Array<SushiswapBundleDTO>]
     def sushiswap_get_bundles__historical(opts = {})
       data, _status_code, _headers = sushiswap_get_bundles__historical_with_http_info(opts)
@@ -35,10 +149,10 @@ module OpenapiClient
     # GetBundles (historical)
     # Gets bundles.
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :start_block 
-    # @option opts [Integer] :end_block 
-    # @option opts [Time] :start_date 
-    # @option opts [Time] :end_date 
+    # @option opts [Integer] :start_block AAAAAAAAAA
+    # @option opts [Integer] :end_block BBBBBBBBBBBB
+    # @option opts [Time] :start_date CCCCCCCCC
+    # @option opts [Time] :end_date DDDDDDDDDDD
     # @return [Array<(Array<SushiswapBundleDTO>, Integer, Hash)>] Array<SushiswapBundleDTO> data, response status code and response headers
     def sushiswap_get_bundles__historical_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -583,7 +697,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetPools (current)
+    # GetPools (current) 🔥
     # Gets pools.
     # @param [Hash] opts the optional parameters
     # @return [Array<SushiswapPairDTO>]
@@ -592,7 +706,7 @@ module OpenapiClient
       data
     end
 
-    # GetPools (current)
+    # GetPools (current) 🔥
     # Gets pools.
     # @param [Hash] opts the optional parameters
     # @return [Array<(Array<SushiswapPairDTO>, Integer, Hash)>] Array<SushiswapPairDTO> data, response status code and response headers
@@ -640,28 +754,28 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetPools (historical)
+    # GetPools (historical) 🔥
     # Gets list of pools for given filters.
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :start_block 
-    # @option opts [Integer] :end_block 
-    # @option opts [Time] :start_date 
-    # @option opts [Time] :end_date 
-    # @option opts [String] :pool_id 
+    # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    # @option opts [Time] :start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    # @option opts [Time] :end_date The end date of timeframe
+    # @option opts [String] :pool_id The pool address.
     # @return [Array<SushiswapPairDTO>]
     def sushiswap_get_pools__historical(opts = {})
       data, _status_code, _headers = sushiswap_get_pools__historical_with_http_info(opts)
       data
     end
 
-    # GetPools (historical)
+    # GetPools (historical) 🔥
     # Gets list of pools for given filters.
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :start_block 
-    # @option opts [Integer] :end_block 
-    # @option opts [Time] :start_date 
-    # @option opts [Time] :end_date 
-    # @option opts [String] :pool_id 
+    # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    # @option opts [Time] :start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    # @option opts [Time] :end_date The end date of timeframe
+    # @option opts [String] :pool_id The pool address.
     # @return [Array<(Array<SushiswapPairDTO>, Integer, Hash)>] Array<SushiswapPairDTO> data, response status code and response headers
     def sushiswap_get_pools__historical_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -856,7 +970,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetSwaps (current)
+    # GetSwaps (current) 🔥
     # Gets swaps.
     # @param [Hash] opts the optional parameters
     # @return [Array<SushiswapSwapDTO>]
@@ -865,7 +979,7 @@ module OpenapiClient
       data
     end
 
-    # GetSwaps (current)
+    # GetSwaps (current) 🔥
     # Gets swaps.
     # @param [Hash] opts the optional parameters
     # @return [Array<(Array<SushiswapSwapDTO>, Integer, Hash)>] Array<SushiswapSwapDTO> data, response status code and response headers
@@ -913,28 +1027,28 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetSwaps (historical)
+    # GetSwaps (historical) 🔥
     # Gets list of swaps for given filters.
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :start_block 
-    # @option opts [Integer] :end_block 
-    # @option opts [Time] :start_date 
-    # @option opts [Time] :end_date 
-    # @option opts [String] :pool_id 
+    # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    # @option opts [Time] :start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    # @option opts [Time] :end_date The end date of timeframe
+    # @option opts [String] :pool_id The pool address.
     # @return [Array<SushiswapSwapDTO>]
     def sushiswap_get_swaps__historical(opts = {})
       data, _status_code, _headers = sushiswap_get_swaps__historical_with_http_info(opts)
       data
     end
 
-    # GetSwaps (historical)
+    # GetSwaps (historical) 🔥
     # Gets list of swaps for given filters.
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :start_block 
-    # @option opts [Integer] :end_block 
-    # @option opts [Time] :start_date 
-    # @option opts [Time] :end_date 
-    # @option opts [String] :pool_id 
+    # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    # @option opts [Time] :start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    # @option opts [Time] :end_date The end date of timeframe
+    # @option opts [String] :pool_id The pool address.
     # @return [Array<(Array<SushiswapSwapDTO>, Integer, Hash)>] Array<SushiswapSwapDTO> data, response status code and response headers
     def sushiswap_get_swaps__historical_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -985,7 +1099,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetTokens (current)
+    # GetTokens (current) 🔥
     # Gets tokens.
     # @param [Hash] opts the optional parameters
     # @return [Array<SushiswapTokenDTO>]
@@ -994,7 +1108,7 @@ module OpenapiClient
       data
     end
 
-    # GetTokens (current)
+    # GetTokens (current) 🔥
     # Gets tokens.
     # @param [Hash] opts the optional parameters
     # @return [Array<(Array<SushiswapTokenDTO>, Integer, Hash)>] Array<SushiswapTokenDTO> data, response status code and response headers
@@ -1042,28 +1156,28 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetTokens (historical)
+    # GetTokens (historical) 🔥
     # Gets list of tokens for given filters.
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :start_block 
-    # @option opts [Integer] :end_block 
-    # @option opts [Time] :start_date 
-    # @option opts [Time] :end_date 
-    # @option opts [String] :token_id 
+    # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    # @option opts [Time] :start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    # @option opts [Time] :end_date The end date of timeframe
+    # @option opts [String] :token_id The token address.
     # @return [Array<SushiswapTokenDTO>]
     def sushiswap_get_tokens__historical(opts = {})
       data, _status_code, _headers = sushiswap_get_tokens__historical_with_http_info(opts)
       data
     end
 
-    # GetTokens (historical)
+    # GetTokens (historical) 🔥
     # Gets list of tokens for given filters.
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :start_block 
-    # @option opts [Integer] :end_block 
-    # @option opts [Time] :start_date 
-    # @option opts [Time] :end_date 
-    # @option opts [String] :token_id 
+    # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    # @option opts [Time] :start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    # @option opts [Time] :end_date The end date of timeframe
+    # @option opts [String] :token_id The token address.
     # @return [Array<(Array<SushiswapTokenDTO>, Integer, Hash)>] Array<SushiswapTokenDTO> data, response status code and response headers
     def sushiswap_get_tokens__historical_with_http_info(opts = {})
       if @api_client.config.debugging

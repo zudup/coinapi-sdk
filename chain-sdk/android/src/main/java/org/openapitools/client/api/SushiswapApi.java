@@ -23,7 +23,9 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
+import org.openapitools.client.model.CurveExchangeDTO;
 import java.util.Date;
+import org.openapitools.client.model.DexTradeDTO;
 import org.openapitools.client.model.SushiswapBundleDTO;
 import org.openapitools.client.model.SushiswapBurnDTO;
 import org.openapitools.client.model.SushiswapDayDataDTO;
@@ -72,12 +74,244 @@ public class SushiswapApi {
   }
 
   /**
+  * GetExchanges (current) 🔥
+  * Gets exchanges.
+   * @return List<CurveExchangeDTO>
+  */
+  public List<CurveExchangeDTO> curveGetExchangesCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/sushiswap/exchanges/current";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (List<CurveExchangeDTO>) ApiInvoker.deserialize(localVarResponse, "array", CurveExchangeDTO.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * GetExchanges (current) 🔥
+   * Gets exchanges.
+
+  */
+  public void curveGetExchangesCurrent (final Response.Listener<List<CurveExchangeDTO>> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/sushiswap/exchanges/current".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((List<CurveExchangeDTO>) ApiInvoker.deserialize(localVarResponse,  "array", CurveExchangeDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * GetTrades (current) 🔥
+  * Gets trades.
+   * @return List<DexTradeDTO>
+  */
+  public List<DexTradeDTO> dexGetTradesCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/sushiswap/trades/current";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (List<DexTradeDTO>) ApiInvoker.deserialize(localVarResponse, "array", DexTradeDTO.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * GetTrades (current) 🔥
+   * Gets trades.
+
+  */
+  public void dexGetTradesCurrent (final Response.Listener<List<DexTradeDTO>> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/sushiswap/trades/current".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((List<DexTradeDTO>) ApiInvoker.deserialize(localVarResponse,  "array", DexTradeDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
   * GetBundles (historical)
   * Gets bundles.
-   * @param startBlock 
-   * @param endBlock 
-   * @param startDate 
-   * @param endDate 
+   * @param startBlock AAAAAAAAAA
+   * @param endBlock BBBBBBBBBBBB
+   * @param startDate CCCCCCCCC
+   * @param endDate DDDDDDDDDDD
    * @return List<SushiswapBundleDTO>
   */
   public List<SushiswapBundleDTO> sushiswapGetBundlesHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
@@ -138,7 +372,7 @@ public class SushiswapApi {
       /**
    * GetBundles (historical)
    * Gets bundles.
-   * @param startBlock    * @param endBlock    * @param startDate    * @param endDate 
+   * @param startBlock AAAAAAAAAA   * @param endBlock BBBBBBBBBBBB   * @param startDate CCCCCCCCC   * @param endDate DDDDDDDDDDD
   */
   public void sushiswapGetBundlesHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, final Response.Listener<List<SushiswapBundleDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
@@ -1108,7 +1342,7 @@ public class SushiswapApi {
     }
   }
   /**
-  * GetPools (current)
+  * GetPools (current) 🔥
   * Gets pools.
    * @return List<SushiswapPairDTO>
   */
@@ -1164,7 +1398,7 @@ public class SushiswapApi {
   }
 
       /**
-   * GetPools (current)
+   * GetPools (current) 🔥
    * Gets pools.
 
   */
@@ -1355,13 +1589,13 @@ public class SushiswapApi {
     }
   }
   /**
-  * GetPools (historical)
+  * GetPools (historical) 🔥
   * Gets list of pools for given filters.
-   * @param startBlock 
-   * @param endBlock 
-   * @param startDate 
-   * @param endDate 
-   * @param poolId 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+   * @param endDate The end date of timeframe
+   * @param poolId The pool address.
    * @return List<SushiswapPairDTO>
   */
   public List<SushiswapPairDTO> sushiswapGetPoolsHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
@@ -1421,9 +1655,9 @@ public class SushiswapApi {
   }
 
       /**
-   * GetPools (historical)
+   * GetPools (historical) 🔥
    * Gets list of pools for given filters.
-   * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param poolId 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe   * @param poolId The pool address.
   */
   public void sushiswapGetPoolsHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, final Response.Listener<List<SushiswapPairDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
@@ -1617,7 +1851,7 @@ public class SushiswapApi {
     }
   }
   /**
-  * GetSwaps (current)
+  * GetSwaps (current) 🔥
   * Gets swaps.
    * @return List<SushiswapSwapDTO>
   */
@@ -1673,7 +1907,7 @@ public class SushiswapApi {
   }
 
       /**
-   * GetSwaps (current)
+   * GetSwaps (current) 🔥
    * Gets swaps.
 
   */
@@ -1733,13 +1967,13 @@ public class SushiswapApi {
     }
   }
   /**
-  * GetSwaps (historical)
+  * GetSwaps (historical) 🔥
   * Gets list of swaps for given filters.
-   * @param startBlock 
-   * @param endBlock 
-   * @param startDate 
-   * @param endDate 
-   * @param poolId 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+   * @param endDate The end date of timeframe
+   * @param poolId The pool address.
    * @return List<SushiswapSwapDTO>
   */
   public List<SushiswapSwapDTO> sushiswapGetSwapsHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
@@ -1799,9 +2033,9 @@ public class SushiswapApi {
   }
 
       /**
-   * GetSwaps (historical)
+   * GetSwaps (historical) 🔥
    * Gets list of swaps for given filters.
-   * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param poolId 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe   * @param poolId The pool address.
   */
   public void sushiswapGetSwapsHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, final Response.Listener<List<SushiswapSwapDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
@@ -1864,7 +2098,7 @@ public class SushiswapApi {
     }
   }
   /**
-  * GetTokens (current)
+  * GetTokens (current) 🔥
   * Gets tokens.
    * @return List<SushiswapTokenDTO>
   */
@@ -1920,7 +2154,7 @@ public class SushiswapApi {
   }
 
       /**
-   * GetTokens (current)
+   * GetTokens (current) 🔥
    * Gets tokens.
 
   */
@@ -2111,13 +2345,13 @@ public class SushiswapApi {
     }
   }
   /**
-  * GetTokens (historical)
+  * GetTokens (historical) 🔥
   * Gets list of tokens for given filters.
-   * @param startBlock 
-   * @param endBlock 
-   * @param startDate 
-   * @param endDate 
-   * @param tokenId 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+   * @param endDate The end date of timeframe
+   * @param tokenId The token address.
    * @return List<SushiswapTokenDTO>
   */
   public List<SushiswapTokenDTO> sushiswapGetTokensHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
@@ -2177,9 +2411,9 @@ public class SushiswapApi {
   }
 
       /**
-   * GetTokens (historical)
+   * GetTokens (historical) 🔥
    * Gets list of tokens for given filters.
-   * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param tokenId 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe   * @param tokenId The token address.
   */
   public void sushiswapGetTokensHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId, final Response.Listener<List<SushiswapTokenDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;

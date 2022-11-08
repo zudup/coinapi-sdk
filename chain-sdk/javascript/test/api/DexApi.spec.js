@@ -48,100 +48,110 @@
   }
 
   describe('DexApi', function() {
-    describe('dappsDexBatchHistoricalGet', function() {
-      it('should call dappsDexBatchHistoricalGet successfully', function(done) {
-        //uncomment below and update the code to test dappsDexBatchHistoricalGet
-        //instance.dappsDexBatchHistoricalGet(function(error) {
+    describe('dexGetBatchesHistorical', function() {
+      it('should call dexGetBatchesHistorical successfully', function(done) {
+        //uncomment below and update the code to test dexGetBatchesHistorical
+        //instance.dexGetBatchesHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('dappsDexOrdersHistoricalGet', function() {
-      it('should call dappsDexOrdersHistoricalGet successfully', function(done) {
-        //uncomment below and update the code to test dappsDexOrdersHistoricalGet
-        //instance.dappsDexOrdersHistoricalGet(function(error) {
+    describe('dexGetDepositsHistorical', function() {
+      it('should call dexGetDepositsHistorical successfully', function(done) {
+        //uncomment below and update the code to test dexGetDepositsHistorical
+        //instance.dexGetDepositsHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('dappsDexPricesHistoricalGet', function() {
-      it('should call dappsDexPricesHistoricalGet successfully', function(done) {
-        //uncomment below and update the code to test dappsDexPricesHistoricalGet
-        //instance.dappsDexPricesHistoricalGet(function(error) {
+    describe('dexGetOrdersHistorical', function() {
+      it('should call dexGetOrdersHistorical successfully', function(done) {
+        //uncomment below and update the code to test dexGetOrdersHistorical
+        //instance.dexGetOrdersHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('dappsDexSolutionHistoricalGet', function() {
-      it('should call dappsDexSolutionHistoricalGet successfully', function(done) {
-        //uncomment below and update the code to test dappsDexSolutionHistoricalGet
-        //instance.dappsDexSolutionHistoricalGet(function(error) {
+    describe('dexGetPricesHistorical', function() {
+      it('should call dexGetPricesHistorical successfully', function(done) {
+        //uncomment below and update the code to test dexGetPricesHistorical
+        //instance.dexGetPricesHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('dappsDexStatsHistoricalGet', function() {
-      it('should call dappsDexStatsHistoricalGet successfully', function(done) {
-        //uncomment below and update the code to test dappsDexStatsHistoricalGet
-        //instance.dappsDexStatsHistoricalGet(function(error) {
+    describe('dexGetSolutionsHistorical', function() {
+      it('should call dexGetSolutionsHistorical successfully', function(done) {
+        //uncomment below and update the code to test dexGetSolutionsHistorical
+        //instance.dexGetSolutionsHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('dappsDexTokensHistoricalGet', function() {
-      it('should call dappsDexTokensHistoricalGet successfully', function(done) {
-        //uncomment below and update the code to test dappsDexTokensHistoricalGet
-        //instance.dappsDexTokensHistoricalGet(function(error) {
+    describe('dexGetStatsHistorical', function() {
+      it('should call dexGetStatsHistorical successfully', function(done) {
+        //uncomment below and update the code to test dexGetStatsHistorical
+        //instance.dexGetStatsHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('dappsDexTradesHistoricalGet', function() {
-      it('should call dappsDexTradesHistoricalGet successfully', function(done) {
-        //uncomment below and update the code to test dappsDexTradesHistoricalGet
-        //instance.dappsDexTradesHistoricalGet(function(error) {
+    describe('dexGetTokensHistorical', function() {
+      it('should call dexGetTokensHistorical successfully', function(done) {
+        //uncomment below and update the code to test dexGetTokensHistorical
+        //instance.dexGetTokensHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('dappsDexUsersHistoricalGet', function() {
-      it('should call dappsDexUsersHistoricalGet successfully', function(done) {
-        //uncomment below and update the code to test dappsDexUsersHistoricalGet
-        //instance.dappsDexUsersHistoricalGet(function(error) {
+    describe('dexGetTradesHistorical', function() {
+      it('should call dexGetTradesHistorical successfully', function(done) {
+        //uncomment below and update the code to test dexGetTradesHistorical
+        //instance.dexGetTradesHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('dappsDexWithdrawHistoricalGet', function() {
-      it('should call dappsDexWithdrawHistoricalGet successfully', function(done) {
-        //uncomment below and update the code to test dappsDexWithdrawHistoricalGet
-        //instance.dappsDexWithdrawHistoricalGet(function(error) {
+    describe('dexGetUsersHistorical', function() {
+      it('should call dexGetUsersHistorical successfully', function(done) {
+        //uncomment below and update the code to test dexGetUsersHistorical
+        //instance.dexGetUsersHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('dappsDexWithdrawRequestHistoricalGet', function() {
-      it('should call dappsDexWithdrawRequestHistoricalGet successfully', function(done) {
-        //uncomment below and update the code to test dappsDexWithdrawRequestHistoricalGet
-        //instance.dappsDexWithdrawRequestHistoricalGet(function(error) {
+    describe('dexGetWithdrawsHistorical', function() {
+      it('should call dexGetWithdrawsHistorical successfully', function(done) {
+        //uncomment below and update the code to test dexGetWithdrawsHistorical
+        //instance.dexGetWithdrawsHistorical(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('dexGetWithdrawsRequestsHistorical', function() {
+      it('should call dexGetWithdrawsRequestsHistorical successfully', function(done) {
+        //uncomment below and update the code to test dexGetWithdrawsRequestsHistorical
+        //instance.dexGetWithdrawsRequestsHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

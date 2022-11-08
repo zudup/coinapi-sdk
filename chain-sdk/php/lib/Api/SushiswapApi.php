@@ -72,6 +72,12 @@ class SushiswapApi
 
     /** @var string[] $contentTypes **/
     public const contentTypes = [
+        'curveGetExchangesCurrent' => [
+            'application/json',
+        ],
+        'dexGetTradesCurrent' => [
+            'application/json',
+        ],
         'sushiswapGetBundlesHistorical' => [
             'application/json',
         ],
@@ -178,14 +184,540 @@ class SushiswapApi
     }
 
     /**
+     * Operation curveGetExchangesCurrent
+     *
+     * GetExchanges (current) 🔥
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetExchangesCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\CurveExchangeDTO[]
+     */
+    public function curveGetExchangesCurrent(string $contentType = self::contentTypes['curveGetExchangesCurrent'][0])
+    {
+        list($response) = $this->curveGetExchangesCurrentWithHttpInfo($contentType);
+        return $response;
+    }
+
+    /**
+     * Operation curveGetExchangesCurrentWithHttpInfo
+     *
+     * GetExchanges (current) 🔥
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetExchangesCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\CurveExchangeDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function curveGetExchangesCurrentWithHttpInfo(string $contentType = self::contentTypes['curveGetExchangesCurrent'][0])
+    {
+        $request = $this->curveGetExchangesCurrentRequest($contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\CurveExchangeDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\CurveExchangeDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CurveExchangeDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\CurveExchangeDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\CurveExchangeDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation curveGetExchangesCurrentAsync
+     *
+     * GetExchanges (current) 🔥
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetExchangesCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetExchangesCurrentAsync(string $contentType = self::contentTypes['curveGetExchangesCurrent'][0])
+    {
+        return $this->curveGetExchangesCurrentAsyncWithHttpInfo($contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation curveGetExchangesCurrentAsyncWithHttpInfo
+     *
+     * GetExchanges (current) 🔥
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetExchangesCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetExchangesCurrentAsyncWithHttpInfo(string $contentType = self::contentTypes['curveGetExchangesCurrent'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\CurveExchangeDTO[]';
+        $request = $this->curveGetExchangesCurrentRequest($contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'curveGetExchangesCurrent'
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetExchangesCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function curveGetExchangesCurrentRequest(string $contentType = self::contentTypes['curveGetExchangesCurrent'][0])
+    {
+
+
+        $resourcePath = '/dapps/sushiswap/exchanges/current';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation dexGetTradesCurrent
+     *
+     * GetTrades (current) 🔥
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetTradesCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\DexTradeDTO[]
+     */
+    public function dexGetTradesCurrent(string $contentType = self::contentTypes['dexGetTradesCurrent'][0])
+    {
+        list($response) = $this->dexGetTradesCurrentWithHttpInfo($contentType);
+        return $response;
+    }
+
+    /**
+     * Operation dexGetTradesCurrentWithHttpInfo
+     *
+     * GetTrades (current) 🔥
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetTradesCurrent'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\DexTradeDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function dexGetTradesCurrentWithHttpInfo(string $contentType = self::contentTypes['dexGetTradesCurrent'][0])
+    {
+        $request = $this->dexGetTradesCurrentRequest($contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\DexTradeDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\DexTradeDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\DexTradeDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\DexTradeDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\DexTradeDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation dexGetTradesCurrentAsync
+     *
+     * GetTrades (current) 🔥
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetTradesCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dexGetTradesCurrentAsync(string $contentType = self::contentTypes['dexGetTradesCurrent'][0])
+    {
+        return $this->dexGetTradesCurrentAsyncWithHttpInfo($contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation dexGetTradesCurrentAsyncWithHttpInfo
+     *
+     * GetTrades (current) 🔥
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetTradesCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dexGetTradesCurrentAsyncWithHttpInfo(string $contentType = self::contentTypes['dexGetTradesCurrent'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\DexTradeDTO[]';
+        $request = $this->dexGetTradesCurrentRequest($contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'dexGetTradesCurrent'
+     *
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetTradesCurrent'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function dexGetTradesCurrentRequest(string $contentType = self::contentTypes['dexGetTradesCurrent'][0])
+    {
+
+
+        $resourcePath = '/dapps/sushiswap/trades/current';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
      * Operation sushiswapGetBundlesHistorical
      *
      * GetBundles (historical)
      *
-     * @param  int $start_block start_block (optional)
-     * @param  int $end_block end_block (optional)
-     * @param  \DateTime $start_date start_date (optional)
-     * @param  \DateTime $end_date end_date (optional)
+     * @param  int $start_block AAAAAAAAAA (optional)
+     * @param  int $end_block BBBBBBBBBBBB (optional)
+     * @param  \DateTime $start_date CCCCCCCCC (optional)
+     * @param  \DateTime $end_date DDDDDDDDDDD (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetBundlesHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
@@ -203,10 +735,10 @@ class SushiswapApi
      *
      * GetBundles (historical)
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
+     * @param  int $start_block AAAAAAAAAA (optional)
+     * @param  int $end_block BBBBBBBBBBBB (optional)
+     * @param  \DateTime $start_date CCCCCCCCC (optional)
+     * @param  \DateTime $end_date DDDDDDDDDDD (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetBundlesHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
@@ -306,10 +838,10 @@ class SushiswapApi
      *
      * GetBundles (historical)
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
+     * @param  int $start_block AAAAAAAAAA (optional)
+     * @param  int $end_block BBBBBBBBBBBB (optional)
+     * @param  \DateTime $start_date CCCCCCCCC (optional)
+     * @param  \DateTime $end_date DDDDDDDDDDD (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetBundlesHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -330,10 +862,10 @@ class SushiswapApi
      *
      * GetBundles (historical)
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
+     * @param  int $start_block AAAAAAAAAA (optional)
+     * @param  int $end_block BBBBBBBBBBBB (optional)
+     * @param  \DateTime $start_date CCCCCCCCC (optional)
+     * @param  \DateTime $end_date DDDDDDDDDDD (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetBundlesHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -383,10 +915,10 @@ class SushiswapApi
     /**
      * Create request for operation 'sushiswapGetBundlesHistorical'
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
+     * @param  int $start_block AAAAAAAAAA (optional)
+     * @param  int $end_block BBBBBBBBBBBB (optional)
+     * @param  \DateTime $start_date CCCCCCCCC (optional)
+     * @param  \DateTime $end_date DDDDDDDDDDD (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetBundlesHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -505,11 +1037,11 @@ class SushiswapApi
      *
      * GetBurns (historical)
      *
-     * @param  int $start_block start_block (optional)
-     * @param  int $end_block end_block (optional)
-     * @param  \DateTime $start_date start_date (optional)
-     * @param  \DateTime $end_date end_date (optional)
-     * @param  string $pool_id pool_id (optional)
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetBurnsHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
@@ -527,11 +1059,11 @@ class SushiswapApi
      *
      * GetBurns (historical)
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $pool_id (optional)
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetBurnsHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
@@ -631,11 +1163,11 @@ class SushiswapApi
      *
      * GetBurns (historical)
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $pool_id (optional)
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetBurnsHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -656,11 +1188,11 @@ class SushiswapApi
      *
      * GetBurns (historical)
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $pool_id (optional)
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetBurnsHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -710,11 +1242,11 @@ class SushiswapApi
     /**
      * Create request for operation 'sushiswapGetBurnsHistorical'
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $pool_id (optional)
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetBurnsHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -843,10 +1375,10 @@ class SushiswapApi
      *
      * GetDayData (historical)
      *
-     * @param  int $start_block start_block (optional)
-     * @param  int $end_block end_block (optional)
-     * @param  \DateTime $start_date start_date (optional)
-     * @param  \DateTime $end_date end_date (optional)
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetDayDataHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
@@ -864,10 +1396,10 @@ class SushiswapApi
      *
      * GetDayData (historical)
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetDayDataHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
@@ -967,10 +1499,10 @@ class SushiswapApi
      *
      * GetDayData (historical)
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetDayDataHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -991,10 +1523,10 @@ class SushiswapApi
      *
      * GetDayData (historical)
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetDayDataHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1044,10 +1576,10 @@ class SushiswapApi
     /**
      * Create request for operation 'sushiswapGetDayDataHistorical'
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetDayDataHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1166,10 +1698,10 @@ class SushiswapApi
      *
      * GetFactory (historical)
      *
-     * @param  int $start_block start_block (optional)
-     * @param  int $end_block end_block (optional)
-     * @param  \DateTime $start_date start_date (optional)
-     * @param  \DateTime $end_date end_date (optional)
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetFactoryHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
@@ -1187,10 +1719,10 @@ class SushiswapApi
      *
      * GetFactory (historical)
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetFactoryHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
@@ -1290,10 +1822,10 @@ class SushiswapApi
      *
      * GetFactory (historical)
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetFactoryHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1314,10 +1846,10 @@ class SushiswapApi
      *
      * GetFactory (historical)
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetFactoryHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1367,10 +1899,10 @@ class SushiswapApi
     /**
      * Create request for operation 'sushiswapGetFactoryHistorical'
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetFactoryHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1489,10 +2021,10 @@ class SushiswapApi
      *
      * GetHourData (historical)
      *
-     * @param  int $start_block start_block (optional)
-     * @param  int $end_block end_block (optional)
-     * @param  \DateTime $start_date start_date (optional)
-     * @param  \DateTime $end_date end_date (optional)
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetHourDataHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
@@ -1510,10 +2042,10 @@ class SushiswapApi
      *
      * GetHourData (historical)
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetHourDataHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
@@ -1613,10 +2145,10 @@ class SushiswapApi
      *
      * GetHourData (historical)
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetHourDataHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1637,10 +2169,10 @@ class SushiswapApi
      *
      * GetHourData (historical)
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetHourDataHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1690,10 +2222,10 @@ class SushiswapApi
     /**
      * Create request for operation 'sushiswapGetHourDataHistorical'
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetHourDataHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1812,11 +2344,11 @@ class SushiswapApi
      *
      * GetLiquidityPosition (historical)
      *
-     * @param  int $start_block start_block (optional)
-     * @param  int $end_block end_block (optional)
-     * @param  \DateTime $start_date start_date (optional)
-     * @param  \DateTime $end_date end_date (optional)
-     * @param  string $pool_id pool_id (optional)
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetLiquidityPositionHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
@@ -1834,11 +2366,11 @@ class SushiswapApi
      *
      * GetLiquidityPosition (historical)
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $pool_id (optional)
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetLiquidityPositionHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
@@ -1938,11 +2470,11 @@ class SushiswapApi
      *
      * GetLiquidityPosition (historical)
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $pool_id (optional)
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetLiquidityPositionHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1963,11 +2495,11 @@ class SushiswapApi
      *
      * GetLiquidityPosition (historical)
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $pool_id (optional)
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetLiquidityPositionHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2017,11 +2549,11 @@ class SushiswapApi
     /**
      * Create request for operation 'sushiswapGetLiquidityPositionHistorical'
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $pool_id (optional)
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetLiquidityPositionHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2150,11 +2682,11 @@ class SushiswapApi
      *
      * GetLiquidityPositionSnapshot (historical)
      *
-     * @param  int $start_block start_block (optional)
-     * @param  int $end_block end_block (optional)
-     * @param  \DateTime $start_date start_date (optional)
-     * @param  \DateTime $end_date end_date (optional)
-     * @param  string $pool_id pool_id (optional)
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetLiquidityPositionSnapshotHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
@@ -2172,11 +2704,11 @@ class SushiswapApi
      *
      * GetLiquidityPositionSnapshot (historical)
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $pool_id (optional)
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetLiquidityPositionSnapshotHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
@@ -2276,11 +2808,11 @@ class SushiswapApi
      *
      * GetLiquidityPositionSnapshot (historical)
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $pool_id (optional)
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetLiquidityPositionSnapshotHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2301,11 +2833,11 @@ class SushiswapApi
      *
      * GetLiquidityPositionSnapshot (historical)
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $pool_id (optional)
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetLiquidityPositionSnapshotHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2355,11 +2887,11 @@ class SushiswapApi
     /**
      * Create request for operation 'sushiswapGetLiquidityPositionSnapshotHistorical'
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $pool_id (optional)
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetLiquidityPositionSnapshotHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2488,11 +3020,11 @@ class SushiswapApi
      *
      * GetMints (historical)
      *
-     * @param  int $start_block start_block (optional)
-     * @param  int $end_block end_block (optional)
-     * @param  \DateTime $start_date start_date (optional)
-     * @param  \DateTime $end_date end_date (optional)
-     * @param  string $pool_id pool_id (optional)
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetMintsHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
@@ -2510,11 +3042,11 @@ class SushiswapApi
      *
      * GetMints (historical)
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $pool_id (optional)
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetMintsHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
@@ -2614,11 +3146,11 @@ class SushiswapApi
      *
      * GetMints (historical)
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $pool_id (optional)
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetMintsHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2639,11 +3171,11 @@ class SushiswapApi
      *
      * GetMints (historical)
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $pool_id (optional)
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetMintsHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2693,11 +3225,11 @@ class SushiswapApi
     /**
      * Create request for operation 'sushiswapGetMintsHistorical'
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $pool_id (optional)
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetMintsHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2824,7 +3356,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetPoolsCurrent
      *
-     * GetPools (current)
+     * GetPools (current) 🔥
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetPoolsCurrent'] to see the possible values for this operation
      *
@@ -2841,7 +3373,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetPoolsCurrentWithHttpInfo
      *
-     * GetPools (current)
+     * GetPools (current) 🔥
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetPoolsCurrent'] to see the possible values for this operation
      *
@@ -2940,7 +3472,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetPoolsCurrentAsync
      *
-     * GetPools (current)
+     * GetPools (current) 🔥
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetPoolsCurrent'] to see the possible values for this operation
      *
@@ -2960,7 +3492,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetPoolsCurrentAsyncWithHttpInfo
      *
-     * GetPools (current)
+     * GetPools (current) 🔥
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetPoolsCurrent'] to see the possible values for this operation
      *
@@ -3089,11 +3621,11 @@ class SushiswapApi
      *
      * GetPoolsDayData (historical)
      *
-     * @param  int $start_block start_block (optional)
-     * @param  int $end_block end_block (optional)
-     * @param  \DateTime $start_date start_date (optional)
-     * @param  \DateTime $end_date end_date (optional)
-     * @param  string $pool_id pool_id (optional)
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetPoolsDayDataHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
@@ -3111,11 +3643,11 @@ class SushiswapApi
      *
      * GetPoolsDayData (historical)
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $pool_id (optional)
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetPoolsDayDataHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
@@ -3215,11 +3747,11 @@ class SushiswapApi
      *
      * GetPoolsDayData (historical)
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $pool_id (optional)
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetPoolsDayDataHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -3240,11 +3772,11 @@ class SushiswapApi
      *
      * GetPoolsDayData (historical)
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $pool_id (optional)
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetPoolsDayDataHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -3294,11 +3826,11 @@ class SushiswapApi
     /**
      * Create request for operation 'sushiswapGetPoolsDayDataHistorical'
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $pool_id (optional)
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetPoolsDayDataHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -3425,13 +3957,13 @@ class SushiswapApi
     /**
      * Operation sushiswapGetPoolsHistorical
      *
-     * GetPools (historical)
+     * GetPools (historical) 🔥
      *
-     * @param  int $start_block start_block (optional)
-     * @param  int $end_block end_block (optional)
-     * @param  \DateTime $start_date start_date (optional)
-     * @param  \DateTime $end_date end_date (optional)
-     * @param  string $pool_id pool_id (optional)
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe (optional)
+     * @param  string $pool_id The pool address. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetPoolsHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
@@ -3447,13 +3979,13 @@ class SushiswapApi
     /**
      * Operation sushiswapGetPoolsHistoricalWithHttpInfo
      *
-     * GetPools (historical)
+     * GetPools (historical) 🔥
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $pool_id (optional)
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe (optional)
+     * @param  string $pool_id The pool address. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetPoolsHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
@@ -3551,13 +4083,13 @@ class SushiswapApi
     /**
      * Operation sushiswapGetPoolsHistoricalAsync
      *
-     * GetPools (historical)
+     * GetPools (historical) 🔥
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $pool_id (optional)
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe (optional)
+     * @param  string $pool_id The pool address. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetPoolsHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -3576,13 +4108,13 @@ class SushiswapApi
     /**
      * Operation sushiswapGetPoolsHistoricalAsyncWithHttpInfo
      *
-     * GetPools (historical)
+     * GetPools (historical) 🔥
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $pool_id (optional)
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe (optional)
+     * @param  string $pool_id The pool address. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetPoolsHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -3632,11 +4164,11 @@ class SushiswapApi
     /**
      * Create request for operation 'sushiswapGetPoolsHistorical'
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $pool_id (optional)
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe (optional)
+     * @param  string $pool_id The pool address. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetPoolsHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -3765,11 +4297,11 @@ class SushiswapApi
      *
      * GetPoolsHourData (historical)
      *
-     * @param  int $start_block start_block (optional)
-     * @param  int $end_block end_block (optional)
-     * @param  \DateTime $start_date start_date (optional)
-     * @param  \DateTime $end_date end_date (optional)
-     * @param  string $pool_id pool_id (optional)
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetPoolsHourDataHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
@@ -3787,11 +4319,11 @@ class SushiswapApi
      *
      * GetPoolsHourData (historical)
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $pool_id (optional)
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetPoolsHourDataHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
@@ -3891,11 +4423,11 @@ class SushiswapApi
      *
      * GetPoolsHourData (historical)
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $pool_id (optional)
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetPoolsHourDataHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -3916,11 +4448,11 @@ class SushiswapApi
      *
      * GetPoolsHourData (historical)
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $pool_id (optional)
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetPoolsHourDataHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -3970,11 +4502,11 @@ class SushiswapApi
     /**
      * Create request for operation 'sushiswapGetPoolsHourDataHistorical'
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $pool_id (optional)
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetPoolsHourDataHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -4101,7 +4633,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetSwapsCurrent
      *
-     * GetSwaps (current)
+     * GetSwaps (current) 🔥
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetSwapsCurrent'] to see the possible values for this operation
      *
@@ -4118,7 +4650,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetSwapsCurrentWithHttpInfo
      *
-     * GetSwaps (current)
+     * GetSwaps (current) 🔥
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetSwapsCurrent'] to see the possible values for this operation
      *
@@ -4217,7 +4749,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetSwapsCurrentAsync
      *
-     * GetSwaps (current)
+     * GetSwaps (current) 🔥
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetSwapsCurrent'] to see the possible values for this operation
      *
@@ -4237,7 +4769,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetSwapsCurrentAsyncWithHttpInfo
      *
-     * GetSwaps (current)
+     * GetSwaps (current) 🔥
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetSwapsCurrent'] to see the possible values for this operation
      *
@@ -4364,13 +4896,13 @@ class SushiswapApi
     /**
      * Operation sushiswapGetSwapsHistorical
      *
-     * GetSwaps (historical)
+     * GetSwaps (historical) 🔥
      *
-     * @param  int $start_block start_block (optional)
-     * @param  int $end_block end_block (optional)
-     * @param  \DateTime $start_date start_date (optional)
-     * @param  \DateTime $end_date end_date (optional)
-     * @param  string $pool_id pool_id (optional)
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe (optional)
+     * @param  string $pool_id The pool address. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetSwapsHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
@@ -4386,13 +4918,13 @@ class SushiswapApi
     /**
      * Operation sushiswapGetSwapsHistoricalWithHttpInfo
      *
-     * GetSwaps (historical)
+     * GetSwaps (historical) 🔥
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $pool_id (optional)
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe (optional)
+     * @param  string $pool_id The pool address. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetSwapsHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
@@ -4490,13 +5022,13 @@ class SushiswapApi
     /**
      * Operation sushiswapGetSwapsHistoricalAsync
      *
-     * GetSwaps (historical)
+     * GetSwaps (historical) 🔥
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $pool_id (optional)
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe (optional)
+     * @param  string $pool_id The pool address. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetSwapsHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -4515,13 +5047,13 @@ class SushiswapApi
     /**
      * Operation sushiswapGetSwapsHistoricalAsyncWithHttpInfo
      *
-     * GetSwaps (historical)
+     * GetSwaps (historical) 🔥
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $pool_id (optional)
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe (optional)
+     * @param  string $pool_id The pool address. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetSwapsHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -4571,11 +5103,11 @@ class SushiswapApi
     /**
      * Create request for operation 'sushiswapGetSwapsHistorical'
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $pool_id (optional)
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe (optional)
+     * @param  string $pool_id The pool address. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetSwapsHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -4702,7 +5234,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetTokensCurrent
      *
-     * GetTokens (current)
+     * GetTokens (current) 🔥
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetTokensCurrent'] to see the possible values for this operation
      *
@@ -4719,7 +5251,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetTokensCurrentWithHttpInfo
      *
-     * GetTokens (current)
+     * GetTokens (current) 🔥
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetTokensCurrent'] to see the possible values for this operation
      *
@@ -4818,7 +5350,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetTokensCurrentAsync
      *
-     * GetTokens (current)
+     * GetTokens (current) 🔥
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetTokensCurrent'] to see the possible values for this operation
      *
@@ -4838,7 +5370,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetTokensCurrentAsyncWithHttpInfo
      *
-     * GetTokens (current)
+     * GetTokens (current) 🔥
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetTokensCurrent'] to see the possible values for this operation
      *
@@ -4967,11 +5499,11 @@ class SushiswapApi
      *
      * GetTokensDayData (historical)
      *
-     * @param  int $start_block start_block (optional)
-     * @param  int $end_block end_block (optional)
-     * @param  \DateTime $start_date start_date (optional)
-     * @param  \DateTime $end_date end_date (optional)
-     * @param  string $token_id token_id (optional)
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $token_id  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetTokensDayDataHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
@@ -4989,11 +5521,11 @@ class SushiswapApi
      *
      * GetTokensDayData (historical)
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $token_id (optional)
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $token_id  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetTokensDayDataHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
@@ -5093,11 +5625,11 @@ class SushiswapApi
      *
      * GetTokensDayData (historical)
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $token_id (optional)
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $token_id  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetTokensDayDataHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -5118,11 +5650,11 @@ class SushiswapApi
      *
      * GetTokensDayData (historical)
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $token_id (optional)
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $token_id  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetTokensDayDataHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -5172,11 +5704,11 @@ class SushiswapApi
     /**
      * Create request for operation 'sushiswapGetTokensDayDataHistorical'
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $token_id (optional)
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $token_id  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetTokensDayDataHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -5303,13 +5835,13 @@ class SushiswapApi
     /**
      * Operation sushiswapGetTokensHistorical
      *
-     * GetTokens (historical)
+     * GetTokens (historical) 🔥
      *
-     * @param  int $start_block start_block (optional)
-     * @param  int $end_block end_block (optional)
-     * @param  \DateTime $start_date start_date (optional)
-     * @param  \DateTime $end_date end_date (optional)
-     * @param  string $token_id token_id (optional)
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe (optional)
+     * @param  string $token_id The token address. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetTokensHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
@@ -5325,13 +5857,13 @@ class SushiswapApi
     /**
      * Operation sushiswapGetTokensHistoricalWithHttpInfo
      *
-     * GetTokens (historical)
+     * GetTokens (historical) 🔥
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $token_id (optional)
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe (optional)
+     * @param  string $token_id The token address. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetTokensHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
@@ -5429,13 +5961,13 @@ class SushiswapApi
     /**
      * Operation sushiswapGetTokensHistoricalAsync
      *
-     * GetTokens (historical)
+     * GetTokens (historical) 🔥
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $token_id (optional)
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe (optional)
+     * @param  string $token_id The token address. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetTokensHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -5454,13 +5986,13 @@ class SushiswapApi
     /**
      * Operation sushiswapGetTokensHistoricalAsyncWithHttpInfo
      *
-     * GetTokens (historical)
+     * GetTokens (historical) 🔥
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $token_id (optional)
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe (optional)
+     * @param  string $token_id The token address. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetTokensHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -5510,11 +6042,11 @@ class SushiswapApi
     /**
      * Create request for operation 'sushiswapGetTokensHistorical'
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $token_id (optional)
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe (optional)
+     * @param  string $token_id The token address. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetTokensHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -5643,10 +6175,10 @@ class SushiswapApi
      *
      * GetTransactions (historical)
      *
-     * @param  int $start_block start_block (optional)
-     * @param  int $end_block end_block (optional)
-     * @param  \DateTime $start_date start_date (optional)
-     * @param  \DateTime $end_date end_date (optional)
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetTransactionsHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
@@ -5664,10 +6196,10 @@ class SushiswapApi
      *
      * GetTransactions (historical)
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetTransactionsHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
@@ -5767,10 +6299,10 @@ class SushiswapApi
      *
      * GetTransactions (historical)
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetTransactionsHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -5791,10 +6323,10 @@ class SushiswapApi
      *
      * GetTransactions (historical)
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetTransactionsHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -5844,10 +6376,10 @@ class SushiswapApi
     /**
      * Create request for operation 'sushiswapGetTransactionsHistorical'
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetTransactionsHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -5966,10 +6498,10 @@ class SushiswapApi
      *
      * GetUsers (historical)
      *
-     * @param  int $start_block start_block (optional)
-     * @param  int $end_block end_block (optional)
-     * @param  \DateTime $start_date start_date (optional)
-     * @param  \DateTime $end_date end_date (optional)
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetUsersHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
@@ -5987,10 +6519,10 @@ class SushiswapApi
      *
      * GetUsers (historical)
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetUsersHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
@@ -6090,10 +6622,10 @@ class SushiswapApi
      *
      * GetUsers (historical)
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetUsersHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -6114,10 +6646,10 @@ class SushiswapApi
      *
      * GetUsers (historical)
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetUsersHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -6167,10 +6699,10 @@ class SushiswapApi
     /**
      * Create request for operation 'sushiswapGetUsersHistorical'
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetUsersHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

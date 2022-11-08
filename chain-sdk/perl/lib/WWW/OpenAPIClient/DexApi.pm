@@ -49,9 +49,9 @@ sub new {
 
 
 #
-# dapps_dex_batch_historical_get
+# dex_get_batches__historical
 #
-# 
+# GetBatches (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -80,19 +80,19 @@ sub new {
         required => '0',
     },
     };
-    __PACKAGE__->method_documentation->{ 'dapps_dex_batch_historical_get' } = {
-        summary => '',
+    __PACKAGE__->method_documentation->{ 'dex_get_batches__historical' } = {
+        summary => 'GetBatches (historical)',
         params => $params,
-        returns => undef,
+        returns => 'ARRAY[DexBatchDTO]',
         };
 }
-# @return void
+# @return ARRAY[DexBatchDTO]
 #
-sub dapps_dex_batch_historical_get {
+sub dex_get_batches__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/dex/batch/historical';
+    my $_resource_path = '/dapps/dex/batches/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -100,7 +100,7 @@ sub dapps_dex_batch_historical_get {
     my $form_params = {};
 
     # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept();
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
     if ($_header_accept) {
         $header_params->{'Accept'} = $_header_accept;
     }
@@ -131,16 +131,20 @@ sub dapps_dex_batch_historical_get {
     my $auth_settings = [qw()];
 
     # make the API Call
-    $self->{api_client}->call_api($_resource_path, $_method,
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
                                            $query_params, $form_params,
                                            $header_params, $_body_data, $auth_settings);
-    return;
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[DexBatchDTO]', $response);
+    return $_response_object;
 }
 
 #
-# dapps_dex_orders_historical_get
+# dex_get_deposits__historical
 #
-# 
+# GetDeposits (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -175,15 +179,119 @@ sub dapps_dex_batch_historical_get {
         required => '0',
     },
     };
-    __PACKAGE__->method_documentation->{ 'dapps_dex_orders_historical_get' } = {
-        summary => '',
+    __PACKAGE__->method_documentation->{ 'dex_get_deposits__historical' } = {
+        summary => 'GetDeposits (historical)',
         params => $params,
-        returns => undef,
+        returns => 'ARRAY[DexDepositDTO]',
         };
 }
-# @return void
+# @return ARRAY[DexDepositDTO]
 #
-sub dapps_dex_orders_historical_get {
+sub dex_get_deposits__historical {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/dex/deposits/historical';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # query params
+    if ( exists $args{'start_block'}) {
+        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
+    }
+
+    # query params
+    if ( exists $args{'end_block'}) {
+        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
+    }
+
+    # query params
+    if ( exists $args{'start_date'}) {
+        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
+    }
+
+    # query params
+    if ( exists $args{'end_date'}) {
+        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
+    }
+
+    # query params
+    if ( exists $args{'token_id'}) {
+        $query_params->{'tokenId'} = $self->{api_client}->to_query_value($args{'token_id'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[DexDepositDTO]', $response);
+    return $_response_object;
+}
+
+#
+# dex_get_orders__historical
+#
+# GetOrders (historical)
+#
+# @param int $start_block  (optional)
+# @param int $end_block  (optional)
+# @param DATE_TIME $start_date  (optional)
+# @param DATE_TIME $end_date  (optional)
+# @param string $token_id  (optional)
+{
+    my $params = {
+    'start_block' => {
+        data_type => 'int',
+        description => '',
+        required => '0',
+    },
+    'end_block' => {
+        data_type => 'int',
+        description => '',
+        required => '0',
+    },
+    'start_date' => {
+        data_type => 'DATE_TIME',
+        description => '',
+        required => '0',
+    },
+    'end_date' => {
+        data_type => 'DATE_TIME',
+        description => '',
+        required => '0',
+    },
+    'token_id' => {
+        data_type => 'string',
+        description => '',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'dex_get_orders__historical' } = {
+        summary => 'GetOrders (historical)',
+        params => $params,
+        returns => 'ARRAY[DexOrderDTO]',
+        };
+}
+# @return ARRAY[DexOrderDTO]
+#
+sub dex_get_orders__historical {
     my ($self, %args) = @_;
 
     # parse inputs
@@ -195,7 +303,7 @@ sub dapps_dex_orders_historical_get {
     my $form_params = {};
 
     # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept();
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
     if ($_header_accept) {
         $header_params->{'Accept'} = $_header_accept;
     }
@@ -231,16 +339,20 @@ sub dapps_dex_orders_historical_get {
     my $auth_settings = [qw()];
 
     # make the API Call
-    $self->{api_client}->call_api($_resource_path, $_method,
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
                                            $query_params, $form_params,
                                            $header_params, $_body_data, $auth_settings);
-    return;
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[DexOrderDTO]', $response);
+    return $_response_object;
 }
 
 #
-# dapps_dex_prices_historical_get
+# dex_get_prices__historical
 #
-# 
+# GetPrices (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -275,15 +387,15 @@ sub dapps_dex_orders_historical_get {
         required => '0',
     },
     };
-    __PACKAGE__->method_documentation->{ 'dapps_dex_prices_historical_get' } = {
-        summary => '',
+    __PACKAGE__->method_documentation->{ 'dex_get_prices__historical' } = {
+        summary => 'GetPrices (historical)',
         params => $params,
-        returns => undef,
+        returns => 'ARRAY[DexPriceDTO]',
         };
 }
-# @return void
+# @return ARRAY[DexPriceDTO]
 #
-sub dapps_dex_prices_historical_get {
+sub dex_get_prices__historical {
     my ($self, %args) = @_;
 
     # parse inputs
@@ -295,7 +407,7 @@ sub dapps_dex_prices_historical_get {
     my $form_params = {};
 
     # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept();
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
     if ($_header_accept) {
         $header_params->{'Accept'} = $_header_accept;
     }
@@ -331,16 +443,20 @@ sub dapps_dex_prices_historical_get {
     my $auth_settings = [qw()];
 
     # make the API Call
-    $self->{api_client}->call_api($_resource_path, $_method,
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
                                            $query_params, $form_params,
                                            $header_params, $_body_data, $auth_settings);
-    return;
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[DexPriceDTO]', $response);
+    return $_response_object;
 }
 
 #
-# dapps_dex_solution_historical_get
+# dex_get_solutions__historical
 #
-# 
+# GetSolutions (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -375,19 +491,19 @@ sub dapps_dex_prices_historical_get {
         required => '0',
     },
     };
-    __PACKAGE__->method_documentation->{ 'dapps_dex_solution_historical_get' } = {
-        summary => '',
+    __PACKAGE__->method_documentation->{ 'dex_get_solutions__historical' } = {
+        summary => 'GetSolutions (historical)',
         params => $params,
-        returns => undef,
+        returns => 'ARRAY[DexSolutionDTO]',
         };
 }
-# @return void
+# @return ARRAY[DexSolutionDTO]
 #
-sub dapps_dex_solution_historical_get {
+sub dex_get_solutions__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/dex/solution/historical';
+    my $_resource_path = '/dapps/dex/solutions/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -395,7 +511,7 @@ sub dapps_dex_solution_historical_get {
     my $form_params = {};
 
     # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept();
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
     if ($_header_accept) {
         $header_params->{'Accept'} = $_header_accept;
     }
@@ -431,16 +547,20 @@ sub dapps_dex_solution_historical_get {
     my $auth_settings = [qw()];
 
     # make the API Call
-    $self->{api_client}->call_api($_resource_path, $_method,
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
                                            $query_params, $form_params,
                                            $header_params, $_body_data, $auth_settings);
-    return;
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[DexSolutionDTO]', $response);
+    return $_response_object;
 }
 
 #
-# dapps_dex_stats_historical_get
+# dex_get_stats__historical
 #
-# 
+# GetStats (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -469,15 +589,15 @@ sub dapps_dex_solution_historical_get {
         required => '0',
     },
     };
-    __PACKAGE__->method_documentation->{ 'dapps_dex_stats_historical_get' } = {
-        summary => '',
+    __PACKAGE__->method_documentation->{ 'dex_get_stats__historical' } = {
+        summary => 'GetStats (historical)',
         params => $params,
-        returns => undef,
+        returns => 'ARRAY[DexStatsDTO]',
         };
 }
-# @return void
+# @return ARRAY[DexStatsDTO]
 #
-sub dapps_dex_stats_historical_get {
+sub dex_get_stats__historical {
     my ($self, %args) = @_;
 
     # parse inputs
@@ -489,7 +609,7 @@ sub dapps_dex_stats_historical_get {
     my $form_params = {};
 
     # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept();
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
     if ($_header_accept) {
         $header_params->{'Accept'} = $_header_accept;
     }
@@ -520,16 +640,20 @@ sub dapps_dex_stats_historical_get {
     my $auth_settings = [qw()];
 
     # make the API Call
-    $self->{api_client}->call_api($_resource_path, $_method,
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
                                            $query_params, $form_params,
                                            $header_params, $_body_data, $auth_settings);
-    return;
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[DexStatsDTO]', $response);
+    return $_response_object;
 }
 
 #
-# dapps_dex_tokens_historical_get
+# dex_get_tokens__historical
 #
-# 
+# GetTokens (historical) 🔥
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -564,15 +688,15 @@ sub dapps_dex_stats_historical_get {
         required => '0',
     },
     };
-    __PACKAGE__->method_documentation->{ 'dapps_dex_tokens_historical_get' } = {
-        summary => '',
+    __PACKAGE__->method_documentation->{ 'dex_get_tokens__historical' } = {
+        summary => 'GetTokens (historical) 🔥',
         params => $params,
-        returns => undef,
+        returns => 'ARRAY[DexTokenDTO]',
         };
 }
-# @return void
+# @return ARRAY[DexTokenDTO]
 #
-sub dapps_dex_tokens_historical_get {
+sub dex_get_tokens__historical {
     my ($self, %args) = @_;
 
     # parse inputs
@@ -584,7 +708,7 @@ sub dapps_dex_tokens_historical_get {
     my $form_params = {};
 
     # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept();
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
     if ($_header_accept) {
         $header_params->{'Accept'} = $_header_accept;
     }
@@ -620,16 +744,20 @@ sub dapps_dex_tokens_historical_get {
     my $auth_settings = [qw()];
 
     # make the API Call
-    $self->{api_client}->call_api($_resource_path, $_method,
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
                                            $query_params, $form_params,
                                            $header_params, $_body_data, $auth_settings);
-    return;
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[DexTokenDTO]', $response);
+    return $_response_object;
 }
 
 #
-# dapps_dex_trades_historical_get
+# dex_get_trades__historical
 #
-# 
+# GetTrades (historical) 🔥
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -658,15 +786,15 @@ sub dapps_dex_tokens_historical_get {
         required => '0',
     },
     };
-    __PACKAGE__->method_documentation->{ 'dapps_dex_trades_historical_get' } = {
-        summary => '',
+    __PACKAGE__->method_documentation->{ 'dex_get_trades__historical' } = {
+        summary => 'GetTrades (historical) 🔥',
         params => $params,
-        returns => undef,
+        returns => 'ARRAY[DexTradeDTO]',
         };
 }
-# @return void
+# @return ARRAY[DexTradeDTO]
 #
-sub dapps_dex_trades_historical_get {
+sub dex_get_trades__historical {
     my ($self, %args) = @_;
 
     # parse inputs
@@ -678,7 +806,7 @@ sub dapps_dex_trades_historical_get {
     my $form_params = {};
 
     # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept();
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
     if ($_header_accept) {
         $header_params->{'Accept'} = $_header_accept;
     }
@@ -709,16 +837,20 @@ sub dapps_dex_trades_historical_get {
     my $auth_settings = [qw()];
 
     # make the API Call
-    $self->{api_client}->call_api($_resource_path, $_method,
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
                                            $query_params, $form_params,
                                            $header_params, $_body_data, $auth_settings);
-    return;
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[DexTradeDTO]', $response);
+    return $_response_object;
 }
 
 #
-# dapps_dex_users_historical_get
+# dex_get_users__historical
 #
-# 
+# GetUsers (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -747,15 +879,15 @@ sub dapps_dex_trades_historical_get {
         required => '0',
     },
     };
-    __PACKAGE__->method_documentation->{ 'dapps_dex_users_historical_get' } = {
-        summary => '',
+    __PACKAGE__->method_documentation->{ 'dex_get_users__historical' } = {
+        summary => 'GetUsers (historical)',
         params => $params,
-        returns => undef,
+        returns => 'ARRAY[DexUserDTO]',
         };
 }
-# @return void
+# @return ARRAY[DexUserDTO]
 #
-sub dapps_dex_users_historical_get {
+sub dex_get_users__historical {
     my ($self, %args) = @_;
 
     # parse inputs
@@ -767,7 +899,7 @@ sub dapps_dex_users_historical_get {
     my $form_params = {};
 
     # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept();
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
     if ($_header_accept) {
         $header_params->{'Accept'} = $_header_accept;
     }
@@ -798,16 +930,20 @@ sub dapps_dex_users_historical_get {
     my $auth_settings = [qw()];
 
     # make the API Call
-    $self->{api_client}->call_api($_resource_path, $_method,
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
                                            $query_params, $form_params,
                                            $header_params, $_body_data, $auth_settings);
-    return;
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[DexUserDTO]', $response);
+    return $_response_object;
 }
 
 #
-# dapps_dex_withdraw_historical_get
+# dex_get_withdraws__historical
 #
-# 
+# GetWithdraws (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -842,19 +978,19 @@ sub dapps_dex_users_historical_get {
         required => '0',
     },
     };
-    __PACKAGE__->method_documentation->{ 'dapps_dex_withdraw_historical_get' } = {
-        summary => '',
+    __PACKAGE__->method_documentation->{ 'dex_get_withdraws__historical' } = {
+        summary => 'GetWithdraws (historical)',
         params => $params,
-        returns => undef,
+        returns => 'ARRAY[DexWithdrawDTO]',
         };
 }
-# @return void
+# @return ARRAY[DexWithdrawDTO]
 #
-sub dapps_dex_withdraw_historical_get {
+sub dex_get_withdraws__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/dex/withdraw/historical';
+    my $_resource_path = '/dapps/dex/withdraws/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -862,7 +998,7 @@ sub dapps_dex_withdraw_historical_get {
     my $form_params = {};
 
     # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept();
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
     if ($_header_accept) {
         $header_params->{'Accept'} = $_header_accept;
     }
@@ -898,16 +1034,20 @@ sub dapps_dex_withdraw_historical_get {
     my $auth_settings = [qw()];
 
     # make the API Call
-    $self->{api_client}->call_api($_resource_path, $_method,
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
                                            $query_params, $form_params,
                                            $header_params, $_body_data, $auth_settings);
-    return;
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[DexWithdrawDTO]', $response);
+    return $_response_object;
 }
 
 #
-# dapps_dex_withdraw_request_historical_get
+# dex_get_withdraws_requests__historical
 #
-# 
+# GetWithdrawsRequests (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -942,19 +1082,19 @@ sub dapps_dex_withdraw_historical_get {
         required => '0',
     },
     };
-    __PACKAGE__->method_documentation->{ 'dapps_dex_withdraw_request_historical_get' } = {
-        summary => '',
+    __PACKAGE__->method_documentation->{ 'dex_get_withdraws_requests__historical' } = {
+        summary => 'GetWithdrawsRequests (historical)',
         params => $params,
-        returns => undef,
+        returns => 'ARRAY[DexWithdrawRequestDTO]',
         };
 }
-# @return void
+# @return ARRAY[DexWithdrawRequestDTO]
 #
-sub dapps_dex_withdraw_request_historical_get {
+sub dex_get_withdraws_requests__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/dex/withdrawRequest/historical';
+    my $_resource_path = '/dapps/dex/withdrawsRequests/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -962,7 +1102,7 @@ sub dapps_dex_withdraw_request_historical_get {
     my $form_params = {};
 
     # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept();
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
     if ($_header_accept) {
         $header_params->{'Accept'} = $_header_accept;
     }
@@ -998,10 +1138,14 @@ sub dapps_dex_withdraw_request_historical_get {
     my $auth_settings = [qw()];
 
     # make the API Call
-    $self->{api_client}->call_api($_resource_path, $_method,
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
                                            $query_params, $form_params,
                                            $header_params, $_body_data, $auth_settings);
-    return;
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[DexWithdrawRequestDTO]', $response);
+    return $_response_object;
 }
 
 1;

@@ -4,25 +4,28 @@ All URIs are relative to https://onchain.coinapi.io, except if the operation def
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**dappsDexBatchHistoricalGet()**](DexApi.md#dappsDexBatchHistoricalGet) | **GET** /dapps/dex/batch/historical |  |
-| [**dappsDexOrdersHistoricalGet()**](DexApi.md#dappsDexOrdersHistoricalGet) | **GET** /dapps/dex/orders/historical |  |
-| [**dappsDexPricesHistoricalGet()**](DexApi.md#dappsDexPricesHistoricalGet) | **GET** /dapps/dex/prices/historical |  |
-| [**dappsDexSolutionHistoricalGet()**](DexApi.md#dappsDexSolutionHistoricalGet) | **GET** /dapps/dex/solution/historical |  |
-| [**dappsDexStatsHistoricalGet()**](DexApi.md#dappsDexStatsHistoricalGet) | **GET** /dapps/dex/stats/historical |  |
-| [**dappsDexTokensHistoricalGet()**](DexApi.md#dappsDexTokensHistoricalGet) | **GET** /dapps/dex/tokens/historical |  |
-| [**dappsDexTradesHistoricalGet()**](DexApi.md#dappsDexTradesHistoricalGet) | **GET** /dapps/dex/trades/historical |  |
-| [**dappsDexUsersHistoricalGet()**](DexApi.md#dappsDexUsersHistoricalGet) | **GET** /dapps/dex/users/historical |  |
-| [**dappsDexWithdrawHistoricalGet()**](DexApi.md#dappsDexWithdrawHistoricalGet) | **GET** /dapps/dex/withdraw/historical |  |
-| [**dappsDexWithdrawRequestHistoricalGet()**](DexApi.md#dappsDexWithdrawRequestHistoricalGet) | **GET** /dapps/dex/withdrawRequest/historical |  |
+| [**dexGetBatchesHistorical()**](DexApi.md#dexGetBatchesHistorical) | **GET** /dapps/dex/batches/historical | GetBatches (historical) |
+| [**dexGetDepositsHistorical()**](DexApi.md#dexGetDepositsHistorical) | **GET** /dapps/dex/deposits/historical | GetDeposits (historical) |
+| [**dexGetOrdersHistorical()**](DexApi.md#dexGetOrdersHistorical) | **GET** /dapps/dex/orders/historical | GetOrders (historical) |
+| [**dexGetPricesHistorical()**](DexApi.md#dexGetPricesHistorical) | **GET** /dapps/dex/prices/historical | GetPrices (historical) |
+| [**dexGetSolutionsHistorical()**](DexApi.md#dexGetSolutionsHistorical) | **GET** /dapps/dex/solutions/historical | GetSolutions (historical) |
+| [**dexGetStatsHistorical()**](DexApi.md#dexGetStatsHistorical) | **GET** /dapps/dex/stats/historical | GetStats (historical) |
+| [**dexGetTokensHistorical()**](DexApi.md#dexGetTokensHistorical) | **GET** /dapps/dex/tokens/historical | GetTokens (historical) 🔥 |
+| [**dexGetTradesHistorical()**](DexApi.md#dexGetTradesHistorical) | **GET** /dapps/dex/trades/historical | GetTrades (historical) 🔥 |
+| [**dexGetUsersHistorical()**](DexApi.md#dexGetUsersHistorical) | **GET** /dapps/dex/users/historical | GetUsers (historical) |
+| [**dexGetWithdrawsHistorical()**](DexApi.md#dexGetWithdrawsHistorical) | **GET** /dapps/dex/withdraws/historical | GetWithdraws (historical) |
+| [**dexGetWithdrawsRequestsHistorical()**](DexApi.md#dexGetWithdrawsRequestsHistorical) | **GET** /dapps/dex/withdrawsRequests/historical | GetWithdrawsRequests (historical) |
 
 
-## `dappsDexBatchHistoricalGet()`
+## `dexGetBatchesHistorical()`
 
 ```php
-dappsDexBatchHistoricalGet($start_block, $end_block, $start_date, $end_date)
+dexGetBatchesHistorical($start_block, $end_block, $start_date, $end_date): \OpenAPI\Client\Model\DexBatchDTO[]
 ```
 
+GetBatches (historical)
 
+Gets batches.
 
 ### Example
 
@@ -37,15 +40,16 @@ $apiInstance = new OpenAPI\Client\Api\DexApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
 
 try {
-    $apiInstance->dappsDexBatchHistoricalGet($start_block, $end_block, $start_date, $end_date);
+    $result = $apiInstance->dexGetBatchesHistorical($start_block, $end_block, $start_date, $end_date);
+    print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DexApi->dappsDexBatchHistoricalGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling DexApi->dexGetBatchesHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -60,7 +64,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\DexBatchDTO[]**](../Model/DexBatchDTO.md)
 
 ### Authorization
 
@@ -69,19 +73,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `dappsDexOrdersHistoricalGet()`
+## `dexGetDepositsHistorical()`
 
 ```php
-dappsDexOrdersHistoricalGet($start_block, $end_block, $start_date, $end_date, $token_id)
+dexGetDepositsHistorical($start_block, $end_block, $start_date, $end_date, $token_id): \OpenAPI\Client\Model\DexDepositDTO[]
 ```
 
+GetDeposits (historical)
 
+Gets deposits.
 
 ### Example
 
@@ -96,16 +102,17 @@ $apiInstance = new OpenAPI\Client\Api\DexApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$token_id = 'token_id_example'; // string
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$token_id = 'token_id_example'; // string | 
 
 try {
-    $apiInstance->dappsDexOrdersHistoricalGet($start_block, $end_block, $start_date, $end_date, $token_id);
+    $result = $apiInstance->dexGetDepositsHistorical($start_block, $end_block, $start_date, $end_date, $token_id);
+    print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DexApi->dappsDexOrdersHistoricalGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling DexApi->dexGetDepositsHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -121,7 +128,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\DexDepositDTO[]**](../Model/DexDepositDTO.md)
 
 ### Authorization
 
@@ -130,19 +137,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `dappsDexPricesHistoricalGet()`
+## `dexGetOrdersHistorical()`
 
 ```php
-dappsDexPricesHistoricalGet($start_block, $end_block, $start_date, $end_date, $token_id)
+dexGetOrdersHistorical($start_block, $end_block, $start_date, $end_date, $token_id): \OpenAPI\Client\Model\DexOrderDTO[]
 ```
 
+GetOrders (historical)
 
+Gets orders.
 
 ### Example
 
@@ -157,16 +166,17 @@ $apiInstance = new OpenAPI\Client\Api\DexApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$token_id = 'token_id_example'; // string
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$token_id = 'token_id_example'; // string | 
 
 try {
-    $apiInstance->dappsDexPricesHistoricalGet($start_block, $end_block, $start_date, $end_date, $token_id);
+    $result = $apiInstance->dexGetOrdersHistorical($start_block, $end_block, $start_date, $end_date, $token_id);
+    print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DexApi->dappsDexPricesHistoricalGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling DexApi->dexGetOrdersHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -182,7 +192,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\DexOrderDTO[]**](../Model/DexOrderDTO.md)
 
 ### Authorization
 
@@ -191,19 +201,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `dappsDexSolutionHistoricalGet()`
+## `dexGetPricesHistorical()`
 
 ```php
-dappsDexSolutionHistoricalGet($start_block, $end_block, $start_date, $end_date, $token_id)
+dexGetPricesHistorical($start_block, $end_block, $start_date, $end_date, $token_id): \OpenAPI\Client\Model\DexPriceDTO[]
 ```
 
+GetPrices (historical)
 
+Gets prices.
 
 ### Example
 
@@ -218,16 +230,17 @@ $apiInstance = new OpenAPI\Client\Api\DexApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$token_id = 'token_id_example'; // string
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$token_id = 'token_id_example'; // string | 
 
 try {
-    $apiInstance->dappsDexSolutionHistoricalGet($start_block, $end_block, $start_date, $end_date, $token_id);
+    $result = $apiInstance->dexGetPricesHistorical($start_block, $end_block, $start_date, $end_date, $token_id);
+    print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DexApi->dappsDexSolutionHistoricalGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling DexApi->dexGetPricesHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -243,7 +256,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\DexPriceDTO[]**](../Model/DexPriceDTO.md)
 
 ### Authorization
 
@@ -252,19 +265,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `dappsDexStatsHistoricalGet()`
+## `dexGetSolutionsHistorical()`
 
 ```php
-dappsDexStatsHistoricalGet($start_block, $end_block, $start_date, $end_date)
+dexGetSolutionsHistorical($start_block, $end_block, $start_date, $end_date, $token_id): \OpenAPI\Client\Model\DexSolutionDTO[]
 ```
 
+GetSolutions (historical)
 
+Gets solutions.
 
 ### Example
 
@@ -279,75 +294,17 @@ $apiInstance = new OpenAPI\Client\Api\DexApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$token_id = 'token_id_example'; // string | 
 
 try {
-    $apiInstance->dappsDexStatsHistoricalGet($start_block, $end_block, $start_date, $end_date);
+    $result = $apiInstance->dexGetSolutionsHistorical($start_block, $end_block, $start_date, $end_date, $token_id);
+    print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DexApi->dappsDexStatsHistoricalGet: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **start_block** | **int**|  | [optional] |
-| **end_block** | **int**|  | [optional] |
-| **start_date** | **\DateTime**|  | [optional] |
-| **end_date** | **\DateTime**|  | [optional] |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `dappsDexTokensHistoricalGet()`
-
-```php
-dappsDexTokensHistoricalGet($start_block, $end_block, $start_date, $end_date, $token_id)
-```
-
-
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-
-$apiInstance = new OpenAPI\Client\Api\DexApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
-);
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$token_id = 'token_id_example'; // string
-
-try {
-    $apiInstance->dappsDexTokensHistoricalGet($start_block, $end_block, $start_date, $end_date, $token_id);
-} catch (Exception $e) {
-    echo 'Exception when calling DexApi->dappsDexTokensHistoricalGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling DexApi->dexGetSolutionsHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -363,7 +320,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\DexSolutionDTO[]**](../Model/DexSolutionDTO.md)
 
 ### Authorization
 
@@ -372,19 +329,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `dappsDexTradesHistoricalGet()`
+## `dexGetStatsHistorical()`
 
 ```php
-dappsDexTradesHistoricalGet($start_block, $end_block, $start_date, $end_date)
+dexGetStatsHistorical($start_block, $end_block, $start_date, $end_date): \OpenAPI\Client\Model\DexStatsDTO[]
 ```
 
+GetStats (historical)
 
+Gets stats.
 
 ### Example
 
@@ -399,15 +358,16 @@ $apiInstance = new OpenAPI\Client\Api\DexApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
 
 try {
-    $apiInstance->dappsDexTradesHistoricalGet($start_block, $end_block, $start_date, $end_date);
+    $result = $apiInstance->dexGetStatsHistorical($start_block, $end_block, $start_date, $end_date);
+    print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DexApi->dappsDexTradesHistoricalGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling DexApi->dexGetStatsHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -422,7 +382,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\DexStatsDTO[]**](../Model/DexStatsDTO.md)
 
 ### Authorization
 
@@ -431,19 +391,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `dappsDexUsersHistoricalGet()`
+## `dexGetTokensHistorical()`
 
 ```php
-dappsDexUsersHistoricalGet($start_block, $end_block, $start_date, $end_date)
+dexGetTokensHistorical($start_block, $end_block, $start_date, $end_date, $token_id): \OpenAPI\Client\Model\DexTokenDTO[]
 ```
 
+GetTokens (historical) 🔥
 
+Gets tokens.
 
 ### Example
 
@@ -458,75 +420,17 @@ $apiInstance = new OpenAPI\Client\Api\DexApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$token_id = 'token_id_example'; // string | 
 
 try {
-    $apiInstance->dappsDexUsersHistoricalGet($start_block, $end_block, $start_date, $end_date);
+    $result = $apiInstance->dexGetTokensHistorical($start_block, $end_block, $start_date, $end_date, $token_id);
+    print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DexApi->dappsDexUsersHistoricalGet: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **start_block** | **int**|  | [optional] |
-| **end_block** | **int**|  | [optional] |
-| **start_date** | **\DateTime**|  | [optional] |
-| **end_date** | **\DateTime**|  | [optional] |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `dappsDexWithdrawHistoricalGet()`
-
-```php
-dappsDexWithdrawHistoricalGet($start_block, $end_block, $start_date, $end_date, $token_id)
-```
-
-
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-
-$apiInstance = new OpenAPI\Client\Api\DexApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
-);
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$token_id = 'token_id_example'; // string
-
-try {
-    $apiInstance->dappsDexWithdrawHistoricalGet($start_block, $end_block, $start_date, $end_date, $token_id);
-} catch (Exception $e) {
-    echo 'Exception when calling DexApi->dappsDexWithdrawHistoricalGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling DexApi->dexGetTokensHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -542,7 +446,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\DexTokenDTO[]**](../Model/DexTokenDTO.md)
 
 ### Authorization
 
@@ -551,19 +455,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `dappsDexWithdrawRequestHistoricalGet()`
+## `dexGetTradesHistorical()`
 
 ```php
-dappsDexWithdrawRequestHistoricalGet($start_block, $end_block, $start_date, $end_date, $token_id)
+dexGetTradesHistorical($start_block, $end_block, $start_date, $end_date): \OpenAPI\Client\Model\DexTradeDTO[]
 ```
 
+GetTrades (historical) 🔥
 
+Gets trades.
 
 ### Example
 
@@ -578,16 +484,141 @@ $apiInstance = new OpenAPI\Client\Api\DexApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$token_id = 'token_id_example'; // string
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
 
 try {
-    $apiInstance->dappsDexWithdrawRequestHistoricalGet($start_block, $end_block, $start_date, $end_date, $token_id);
+    $result = $apiInstance->dexGetTradesHistorical($start_block, $end_block, $start_date, $end_date);
+    print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DexApi->dappsDexWithdrawRequestHistoricalGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling DexApi->dexGetTradesHistorical: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **start_block** | **int**|  | [optional] |
+| **end_block** | **int**|  | [optional] |
+| **start_date** | **\DateTime**|  | [optional] |
+| **end_date** | **\DateTime**|  | [optional] |
+
+### Return type
+
+[**\OpenAPI\Client\Model\DexTradeDTO[]**](../Model/DexTradeDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `dexGetUsersHistorical()`
+
+```php
+dexGetUsersHistorical($start_block, $end_block, $start_date, $end_date): \OpenAPI\Client\Model\DexUserDTO[]
+```
+
+GetUsers (historical)
+
+Gets users.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new OpenAPI\Client\Api\DexApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+
+try {
+    $result = $apiInstance->dexGetUsersHistorical($start_block, $end_block, $start_date, $end_date);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DexApi->dexGetUsersHistorical: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **start_block** | **int**|  | [optional] |
+| **end_block** | **int**|  | [optional] |
+| **start_date** | **\DateTime**|  | [optional] |
+| **end_date** | **\DateTime**|  | [optional] |
+
+### Return type
+
+[**\OpenAPI\Client\Model\DexUserDTO[]**](../Model/DexUserDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `dexGetWithdrawsHistorical()`
+
+```php
+dexGetWithdrawsHistorical($start_block, $end_block, $start_date, $end_date, $token_id): \OpenAPI\Client\Model\DexWithdrawDTO[]
+```
+
+GetWithdraws (historical)
+
+Gets withdraws.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new OpenAPI\Client\Api\DexApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$token_id = 'token_id_example'; // string | 
+
+try {
+    $result = $apiInstance->dexGetWithdrawsHistorical($start_block, $end_block, $start_date, $end_date, $token_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DexApi->dexGetWithdrawsHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -603,7 +634,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\DexWithdrawDTO[]**](../Model/DexWithdrawDTO.md)
 
 ### Authorization
 
@@ -612,7 +643,71 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `dexGetWithdrawsRequestsHistorical()`
+
+```php
+dexGetWithdrawsRequestsHistorical($start_block, $end_block, $start_date, $end_date, $token_id): \OpenAPI\Client\Model\DexWithdrawRequestDTO[]
+```
+
+GetWithdrawsRequests (historical)
+
+Gets withdraws requests.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new OpenAPI\Client\Api\DexApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$token_id = 'token_id_example'; // string | 
+
+try {
+    $result = $apiInstance->dexGetWithdrawsRequestsHistorical($start_block, $end_block, $start_date, $end_date, $token_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DexApi->dexGetWithdrawsRequestsHistorical: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **start_block** | **int**|  | [optional] |
+| **end_block** | **int**|  | [optional] |
+| **start_date** | **\DateTime**|  | [optional] |
+| **end_date** | **\DateTime**|  | [optional] |
+| **token_id** | **string**|  | [optional] |
+
+### Return type
+
+[**\OpenAPI\Client\Model\DexWithdrawRequestDTO[]**](../Model/DexWithdrawRequestDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)

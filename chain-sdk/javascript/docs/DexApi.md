@@ -4,24 +4,27 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**dappsDexBatchHistoricalGet**](DexApi.md#dappsDexBatchHistoricalGet) | **GET** /dapps/dex/batch/historical | 
-[**dappsDexOrdersHistoricalGet**](DexApi.md#dappsDexOrdersHistoricalGet) | **GET** /dapps/dex/orders/historical | 
-[**dappsDexPricesHistoricalGet**](DexApi.md#dappsDexPricesHistoricalGet) | **GET** /dapps/dex/prices/historical | 
-[**dappsDexSolutionHistoricalGet**](DexApi.md#dappsDexSolutionHistoricalGet) | **GET** /dapps/dex/solution/historical | 
-[**dappsDexStatsHistoricalGet**](DexApi.md#dappsDexStatsHistoricalGet) | **GET** /dapps/dex/stats/historical | 
-[**dappsDexTokensHistoricalGet**](DexApi.md#dappsDexTokensHistoricalGet) | **GET** /dapps/dex/tokens/historical | 
-[**dappsDexTradesHistoricalGet**](DexApi.md#dappsDexTradesHistoricalGet) | **GET** /dapps/dex/trades/historical | 
-[**dappsDexUsersHistoricalGet**](DexApi.md#dappsDexUsersHistoricalGet) | **GET** /dapps/dex/users/historical | 
-[**dappsDexWithdrawHistoricalGet**](DexApi.md#dappsDexWithdrawHistoricalGet) | **GET** /dapps/dex/withdraw/historical | 
-[**dappsDexWithdrawRequestHistoricalGet**](DexApi.md#dappsDexWithdrawRequestHistoricalGet) | **GET** /dapps/dex/withdrawRequest/historical | 
+[**dexGetBatchesHistorical**](DexApi.md#dexGetBatchesHistorical) | **GET** /dapps/dex/batches/historical | GetBatches (historical)
+[**dexGetDepositsHistorical**](DexApi.md#dexGetDepositsHistorical) | **GET** /dapps/dex/deposits/historical | GetDeposits (historical)
+[**dexGetOrdersHistorical**](DexApi.md#dexGetOrdersHistorical) | **GET** /dapps/dex/orders/historical | GetOrders (historical)
+[**dexGetPricesHistorical**](DexApi.md#dexGetPricesHistorical) | **GET** /dapps/dex/prices/historical | GetPrices (historical)
+[**dexGetSolutionsHistorical**](DexApi.md#dexGetSolutionsHistorical) | **GET** /dapps/dex/solutions/historical | GetSolutions (historical)
+[**dexGetStatsHistorical**](DexApi.md#dexGetStatsHistorical) | **GET** /dapps/dex/stats/historical | GetStats (historical)
+[**dexGetTokensHistorical**](DexApi.md#dexGetTokensHistorical) | **GET** /dapps/dex/tokens/historical | GetTokens (historical) 🔥
+[**dexGetTradesHistorical**](DexApi.md#dexGetTradesHistorical) | **GET** /dapps/dex/trades/historical | GetTrades (historical) 🔥
+[**dexGetUsersHistorical**](DexApi.md#dexGetUsersHistorical) | **GET** /dapps/dex/users/historical | GetUsers (historical)
+[**dexGetWithdrawsHistorical**](DexApi.md#dexGetWithdrawsHistorical) | **GET** /dapps/dex/withdraws/historical | GetWithdraws (historical)
+[**dexGetWithdrawsRequestsHistorical**](DexApi.md#dexGetWithdrawsRequestsHistorical) | **GET** /dapps/dex/withdrawsRequests/historical | GetWithdrawsRequests (historical)
 
 
 
-## dappsDexBatchHistoricalGet
+## dexGetBatchesHistorical
 
-> dappsDexBatchHistoricalGet(opts)
+> [DexBatchDTO] dexGetBatchesHistorical(opts)
 
+GetBatches (historical)
 
+Gets batches.
 
 ### Example
 
@@ -35,11 +38,11 @@ let opts = {
   'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'endDate': new Date("2013-10-20T19:20:30+01:00") // Date | 
 };
-apiInstance.dappsDexBatchHistoricalGet(opts, (error, data, response) => {
+apiInstance.dexGetBatchesHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -56,7 +59,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**[DexBatchDTO]**](DexBatchDTO.md)
 
 ### Authorization
 
@@ -65,14 +68,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsDexOrdersHistoricalGet
+## dexGetDepositsHistorical
 
-> dappsDexOrdersHistoricalGet(opts)
+> [DexDepositDTO] dexGetDepositsHistorical(opts)
 
+GetDeposits (historical)
 
+Gets deposits.
 
 ### Example
 
@@ -87,11 +92,11 @@ let opts = {
   'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'tokenId': "tokenId_example" // String | 
 };
-apiInstance.dappsDexOrdersHistoricalGet(opts, (error, data, response) => {
+apiInstance.dexGetDepositsHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -109,7 +114,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**[DexDepositDTO]**](DexDepositDTO.md)
 
 ### Authorization
 
@@ -118,14 +123,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsDexPricesHistoricalGet
+## dexGetOrdersHistorical
 
-> dappsDexPricesHistoricalGet(opts)
+> [DexOrderDTO] dexGetOrdersHistorical(opts)
 
+GetOrders (historical)
 
+Gets orders.
 
 ### Example
 
@@ -140,11 +147,11 @@ let opts = {
   'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'tokenId': "tokenId_example" // String | 
 };
-apiInstance.dappsDexPricesHistoricalGet(opts, (error, data, response) => {
+apiInstance.dexGetOrdersHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -162,7 +169,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**[DexOrderDTO]**](DexOrderDTO.md)
 
 ### Authorization
 
@@ -171,14 +178,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsDexSolutionHistoricalGet
+## dexGetPricesHistorical
 
-> dappsDexSolutionHistoricalGet(opts)
+> [DexPriceDTO] dexGetPricesHistorical(opts)
 
+GetPrices (historical)
 
+Gets prices.
 
 ### Example
 
@@ -193,11 +202,11 @@ let opts = {
   'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'tokenId': "tokenId_example" // String | 
 };
-apiInstance.dappsDexSolutionHistoricalGet(opts, (error, data, response) => {
+apiInstance.dexGetPricesHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -215,7 +224,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**[DexPriceDTO]**](DexPriceDTO.md)
 
 ### Authorization
 
@@ -224,14 +233,71 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsDexStatsHistoricalGet
+## dexGetSolutionsHistorical
 
-> dappsDexStatsHistoricalGet(opts)
+> [DexSolutionDTO] dexGetSolutionsHistorical(opts)
+
+GetSolutions (historical)
+
+Gets solutions.
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.DexApi();
+let opts = {
+  'startBlock': 789, // Number | 
+  'endBlock': 789, // Number | 
+  'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'tokenId': "tokenId_example" // String | 
+};
+apiInstance.dexGetSolutionsHistorical(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
 
 
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Number**|  | [optional] 
+ **endBlock** | **Number**|  | [optional] 
+ **startDate** | **Date**|  | [optional] 
+ **endDate** | **Date**|  | [optional] 
+ **tokenId** | **String**|  | [optional] 
+
+### Return type
+
+[**[DexSolutionDTO]**](DexSolutionDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## dexGetStatsHistorical
+
+> [DexStatsDTO] dexGetStatsHistorical(opts)
+
+GetStats (historical)
+
+Gets stats.
 
 ### Example
 
@@ -245,11 +311,11 @@ let opts = {
   'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'endDate': new Date("2013-10-20T19:20:30+01:00") // Date | 
 };
-apiInstance.dappsDexStatsHistoricalGet(opts, (error, data, response) => {
+apiInstance.dexGetStatsHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -266,7 +332,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**[DexStatsDTO]**](DexStatsDTO.md)
 
 ### Authorization
 
@@ -275,14 +341,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsDexTokensHistoricalGet
+## dexGetTokensHistorical
 
-> dappsDexTokensHistoricalGet(opts)
+> [DexTokenDTO] dexGetTokensHistorical(opts)
 
+GetTokens (historical) 🔥
 
+Gets tokens.
 
 ### Example
 
@@ -297,11 +365,11 @@ let opts = {
   'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'tokenId': "tokenId_example" // String | 
 };
-apiInstance.dappsDexTokensHistoricalGet(opts, (error, data, response) => {
+apiInstance.dexGetTokensHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -319,7 +387,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**[DexTokenDTO]**](DexTokenDTO.md)
 
 ### Authorization
 
@@ -328,14 +396,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsDexTradesHistoricalGet
+## dexGetTradesHistorical
 
-> dappsDexTradesHistoricalGet(opts)
+> [DexTradeDTO] dexGetTradesHistorical(opts)
 
+GetTrades (historical) 🔥
 
+Gets trades.
 
 ### Example
 
@@ -349,11 +419,11 @@ let opts = {
   'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'endDate': new Date("2013-10-20T19:20:30+01:00") // Date | 
 };
-apiInstance.dappsDexTradesHistoricalGet(opts, (error, data, response) => {
+apiInstance.dexGetTradesHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -370,7 +440,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**[DexTradeDTO]**](DexTradeDTO.md)
 
 ### Authorization
 
@@ -379,14 +449,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsDexUsersHistoricalGet
+## dexGetUsersHistorical
 
-> dappsDexUsersHistoricalGet(opts)
+> [DexUserDTO] dexGetUsersHistorical(opts)
 
+GetUsers (historical)
 
+Gets users.
 
 ### Example
 
@@ -400,11 +472,11 @@ let opts = {
   'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'endDate': new Date("2013-10-20T19:20:30+01:00") // Date | 
 };
-apiInstance.dappsDexUsersHistoricalGet(opts, (error, data, response) => {
+apiInstance.dexGetUsersHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -421,7 +493,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**[DexUserDTO]**](DexUserDTO.md)
 
 ### Authorization
 
@@ -430,14 +502,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsDexWithdrawHistoricalGet
+## dexGetWithdrawsHistorical
 
-> dappsDexWithdrawHistoricalGet(opts)
+> [DexWithdrawDTO] dexGetWithdrawsHistorical(opts)
 
+GetWithdraws (historical)
 
+Gets withdraws.
 
 ### Example
 
@@ -452,11 +526,11 @@ let opts = {
   'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'tokenId': "tokenId_example" // String | 
 };
-apiInstance.dappsDexWithdrawHistoricalGet(opts, (error, data, response) => {
+apiInstance.dexGetWithdrawsHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -474,7 +548,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**[DexWithdrawDTO]**](DexWithdrawDTO.md)
 
 ### Authorization
 
@@ -483,14 +557,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsDexWithdrawRequestHistoricalGet
+## dexGetWithdrawsRequestsHistorical
 
-> dappsDexWithdrawRequestHistoricalGet(opts)
+> [DexWithdrawRequestDTO] dexGetWithdrawsRequestsHistorical(opts)
 
+GetWithdrawsRequests (historical)
 
+Gets withdraws requests.
 
 ### Example
 
@@ -505,11 +581,11 @@ let opts = {
   'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'tokenId': "tokenId_example" // String | 
 };
-apiInstance.dappsDexWithdrawRequestHistoricalGet(opts, (error, data, response) => {
+apiInstance.dexGetWithdrawsRequestsHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -527,7 +603,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**[DexWithdrawRequestDTO]**](DexWithdrawRequestDTO.md)
 
 ### Authorization
 
@@ -536,5 +612,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 

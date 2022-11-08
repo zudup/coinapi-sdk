@@ -4,44 +4,46 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**DappsCurveAccountsHistoricalGet**](CurveApi.md#dappscurveaccountshistoricalget) | **GET** /dapps/curve/accounts/historical |  |
-| [**DappsCurveAddLiquidityEventHistoricalGet**](CurveApi.md#dappscurveaddliquidityeventhistoricalget) | **GET** /dapps/curve/addLiquidityEvent/historical |  |
-| [**DappsCurveAdminFeeChangeLogHistoricalGet**](CurveApi.md#dappscurveadminfeechangeloghistoricalget) | **GET** /dapps/curve/adminFeeChangeLog/historical |  |
-| [**DappsCurveAmplificationCoeffChangeLogHistoricalGet**](CurveApi.md#dappscurveamplificationcoeffchangeloghistoricalget) | **GET** /dapps/curve/amplificationCoeffChangeLog/historical |  |
-| [**DappsCurveCoinsHistoricalGet**](CurveApi.md#dappscurvecoinshistoricalget) | **GET** /dapps/curve/coins/historical |  |
-| [**DappsCurveContractsHistoricalGet**](CurveApi.md#dappscurvecontractshistoricalget) | **GET** /dapps/curve/contracts/historical |  |
-| [**DappsCurveContractsVersionHistoricalGet**](CurveApi.md#dappscurvecontractsversionhistoricalget) | **GET** /dapps/curve/contractsVersion/historical |  |
-| [**DappsCurveDailyVolumeHistoricalGet**](CurveApi.md#dappscurvedailyvolumehistoricalget) | **GET** /dapps/curve/dailyVolume/historical |  |
-| [**DappsCurveFeeChangeLogHistoricalGet**](CurveApi.md#dappscurvefeechangeloghistoricalget) | **GET** /dapps/curve/feeChangeLog/historical |  |
-| [**DappsCurveGaugeDepositHistoricalGet**](CurveApi.md#dappscurvegaugedeposithistoricalget) | **GET** /dapps/curve/gaugeDeposit/historical |  |
-| [**DappsCurveGaugeHistoricalGet**](CurveApi.md#dappscurvegaugehistoricalget) | **GET** /dapps/curve/gauge/historical |  |
-| [**DappsCurveGaugeLiquidityHistoricalGet**](CurveApi.md#dappscurvegaugeliquidityhistoricalget) | **GET** /dapps/curve/gaugeLiquidity/historical |  |
-| [**DappsCurveGaugeTotalWeightHistoricalGet**](CurveApi.md#dappscurvegaugetotalweighthistoricalget) | **GET** /dapps/curve/gaugeTotalWeight/historical |  |
-| [**DappsCurveGaugeTypeHistoricalGet**](CurveApi.md#dappscurvegaugetypehistoricalget) | **GET** /dapps/curve/gaugeType/historical |  |
-| [**DappsCurveGaugeTypeWeightHistoricalGet**](CurveApi.md#dappscurvegaugetypeweighthistoricalget) | **GET** /dapps/curve/gaugeTypeWeight/historical |  |
-| [**DappsCurveGaugeWeightHistoricalGet**](CurveApi.md#dappscurvegaugeweighthistoricalget) | **GET** /dapps/curve/gaugeWeight/historical |  |
-| [**DappsCurveGaugeWeightVoteHistoricalGet**](CurveApi.md#dappscurvegaugeweightvotehistoricalget) | **GET** /dapps/curve/gaugeWeightVote/historical |  |
-| [**DappsCurveGaugeWithdrawHistoricalGet**](CurveApi.md#dappscurvegaugewithdrawhistoricalget) | **GET** /dapps/curve/gaugeWithdraw/historical |  |
-| [**DappsCurveHourlyVolumeHistoricalGet**](CurveApi.md#dappscurvehourlyvolumehistoricalget) | **GET** /dapps/curve/hourlyVolume/historical |  |
-| [**DappsCurveLpTokenHistoricalGet**](CurveApi.md#dappscurvelptokenhistoricalget) | **GET** /dapps/curve/lpToken/historical |  |
-| [**DappsCurvePoolsHistoricalGet**](CurveApi.md#dappscurvepoolshistoricalget) | **GET** /dapps/curve/pools/historical |  |
-| [**DappsCurveProposalsHistoricalGet**](CurveApi.md#dappscurveproposalshistoricalget) | **GET** /dapps/curve/proposals/historical |  |
-| [**DappsCurveProposalsVoteHistoricalGet**](CurveApi.md#dappscurveproposalsvotehistoricalget) | **GET** /dapps/curve/proposalsVote/historical |  |
-| [**DappsCurveRemoveLiquidityEventHistoricalGet**](CurveApi.md#dappscurveremoveliquidityeventhistoricalget) | **GET** /dapps/curve/removeLiquidityEvent/historical |  |
-| [**DappsCurveRemoveLiquidityOneEventHistoricalGet**](CurveApi.md#dappscurveremoveliquidityoneeventhistoricalget) | **GET** /dapps/curve/removeLiquidityOneEvent/historical |  |
-| [**DappsCurveSwapsHistoricalGet**](CurveApi.md#dappscurveswapshistoricalget) | **GET** /dapps/curve/swaps/historical |  |
-| [**DappsCurveSystemStateHistoricalGet**](CurveApi.md#dappscurvesystemstatehistoricalget) | **GET** /dapps/curve/systemState/historical |  |
-| [**DappsCurveTokensHistoricalGet**](CurveApi.md#dappscurvetokenshistoricalget) | **GET** /dapps/curve/tokens/historical |  |
-| [**DappsCurveTransferOwnershipEventHistoricalGet**](CurveApi.md#dappscurvetransferownershipeventhistoricalget) | **GET** /dapps/curve/transferOwnershipEvent/historical |  |
-| [**DappsCurveUnderlyingCoinHistoricalGet**](CurveApi.md#dappscurveunderlyingcoinhistoricalget) | **GET** /dapps/curve/underlyingCoin/historical |  |
-| [**DappsCurveVotingAppHistoricalGet**](CurveApi.md#dappscurvevotingapphistoricalget) | **GET** /dapps/curve/votingApp/historical |  |
-| [**DappsCurveWeeklyVolumeHistoricalGet**](CurveApi.md#dappscurveweeklyvolumehistoricalget) | **GET** /dapps/curve/weeklyVolume/historical |  |
+| [**CurveGetAccountsHistorical**](CurveApi.md#curvegetaccountshistorical) | **GET** /dapps/curve/accounts/historical | GetAccounts (historical) |
+| [**CurveGetAddLiquidityEventsHistorical**](CurveApi.md#curvegetaddliquidityeventshistorical) | **GET** /dapps/curve/addLiquidityEvents/historical | GetAddLiquidityEvents (historical) |
+| [**CurveGetAdminFeeChangeLogsHistorical**](CurveApi.md#curvegetadminfeechangelogshistorical) | **GET** /dapps/curve/adminFeeChangeLogs/historical | GetAdminFeeChangeLogs (historical) |
+| [**CurveGetAmplificationCoeffChangeLogsHistorical**](CurveApi.md#curvegetamplificationcoeffchangelogshistorical) | **GET** /dapps/curve/amplificationCoeffChangeLogs/historical | GetAmplificationCoeffChangeLogs (historical) |
+| [**CurveGetCoinsHistorical**](CurveApi.md#curvegetcoinshistorical) | **GET** /dapps/curve/coins/historical | GetCoins (historical) |
+| [**CurveGetContractsHistorical**](CurveApi.md#curvegetcontractshistorical) | **GET** /dapps/curve/contracts/historical | GetContracts (historical) |
+| [**CurveGetContractsVersionsHistorical**](CurveApi.md#curvegetcontractsversionshistorical) | **GET** /dapps/curve/contractsVersions/historical | GetContractsVersions (historical) |
+| [**CurveGetDailyVolumesHistorical**](CurveApi.md#curvegetdailyvolumeshistorical) | **GET** /dapps/curve/dailyVolumes/historical | GetDailyVolumes (historical) |
+| [**CurveGetExchangesHistorical**](CurveApi.md#curvegetexchangeshistorical) | **GET** /dapps/curve/exchanges/historical | GetExchanges (historical) 🔥 |
+| [**CurveGetFeeChangeLogsHistorical**](CurveApi.md#curvegetfeechangelogshistorical) | **GET** /dapps/curve/feeChangeLogs/historical | GetFeeChangeLogs (historical) |
+| [**CurveGetGaugesDepositsHistorical**](CurveApi.md#curvegetgaugesdepositshistorical) | **GET** /dapps/curve/gaugesDeposits/historical | GetGaugesDeposits (historical) |
+| [**CurveGetGaugesHistorical**](CurveApi.md#curvegetgaugeshistorical) | **GET** /dapps/curve/gauges/historical | GetGauges (historical) |
+| [**CurveGetGaugesLiquidityHistorical**](CurveApi.md#curvegetgaugesliquidityhistorical) | **GET** /dapps/curve/gaugesLiquidity/historical | GetGaugesLiquidity (historical) |
+| [**CurveGetGaugesTotalWeightsHistorical**](CurveApi.md#curvegetgaugestotalweightshistorical) | **GET** /dapps/curve/gaugesTotalWeights/historical | GetGaugesTotalWeights (historical) |
+| [**CurveGetGaugesTypesHistorical**](CurveApi.md#curvegetgaugestypeshistorical) | **GET** /dapps/curve/gaugesTypes/historical | GetGaugesTypes (historical) |
+| [**CurveGetGaugesTypesWeightsHistorical**](CurveApi.md#curvegetgaugestypesweightshistorical) | **GET** /dapps/curve/gaugesTypesWeights/historical | GetGaugesTypesWeights (historical) |
+| [**CurveGetGaugesWeightsHistorical**](CurveApi.md#curvegetgaugesweightshistorical) | **GET** /dapps/curve/gaugesWeights/historical | GetGaugesWeights (historical) |
+| [**CurveGetGaugesWeightsVotesHistorical**](CurveApi.md#curvegetgaugesweightsvoteshistorical) | **GET** /dapps/curve/gaugesWeightsVotes/historical | GetGaugesWeightsVotes (historical) |
+| [**CurveGetGaugesWithdrawHistorical**](CurveApi.md#curvegetgaugeswithdrawhistorical) | **GET** /dapps/curve/gaugesWithdraws/historical | GetGaugesWithdraw (historical) |
+| [**CurveGetHourlyVolumesHistorical**](CurveApi.md#curvegethourlyvolumeshistorical) | **GET** /dapps/curve/hourlyVolumes/historical | GetHourlyVolumes (historical) |
+| [**CurveGetLpTokensHistorical**](CurveApi.md#curvegetlptokenshistorical) | **GET** /dapps/curve/lpTokens/historical | GetLpTokens (historical) |
+| [**CurveGetPoolsHistorical**](CurveApi.md#curvegetpoolshistorical) | **GET** /dapps/curve/pools/historical | GetPools (historical) 🔥 |
+| [**CurveGetProposalsHistorical**](CurveApi.md#curvegetproposalshistorical) | **GET** /dapps/curve/proposals/historical | GetProposals (historical) |
+| [**CurveGetProposalsVotesHistorical**](CurveApi.md#curvegetproposalsvoteshistorical) | **GET** /dapps/curve/proposalsVotes/historical | GetProposalsVotes (historical) |
+| [**CurveGetRemoveLiquidityEventsHistorical**](CurveApi.md#curvegetremoveliquidityeventshistorical) | **GET** /dapps/curve/removeLiquidityEvents/historical | GetRemoveLiquidityEvents (historical) |
+| [**CurveGetRemoveLiquidityOneEventsHistorical**](CurveApi.md#curvegetremoveliquidityoneeventshistorical) | **GET** /dapps/curve/removeLiquidityOneEvents/historical | GetRemoveLiquidityOneEvents (historical) |
+| [**CurveGetSystemStatesHistorical**](CurveApi.md#curvegetsystemstateshistorical) | **GET** /dapps/curve/systemStates/historical | GetSystemStates (historical) |
+| [**CurveGetTokensHistorical**](CurveApi.md#curvegettokenshistorical) | **GET** /dapps/curve/tokens/historical | GetTokens (historical) 🔥 |
+| [**CurveGetTransferOwnershipEventsHistorical**](CurveApi.md#curvegettransferownershipeventshistorical) | **GET** /dapps/curve/transferOwnershipEvents/historical | GetTransferOwnershipEvents (historical) |
+| [**CurveGetUnderlyingCoinsHistorical**](CurveApi.md#curvegetunderlyingcoinshistorical) | **GET** /dapps/curve/underlyingCoins/historical | GetUnderlyingCoins (historical) |
+| [**CurveGetVotingAppsHistorical**](CurveApi.md#curvegetvotingappshistorical) | **GET** /dapps/curve/votingApps/historical | GetVotingApps (historical) |
+| [**CurveGetWeeklyVolumesHistorical**](CurveApi.md#curvegetweeklyvolumeshistorical) | **GET** /dapps/curve/weeklyVolumes/historical | GetWeeklyVolumes (historical) |
 
-<a name="dappscurveaccountshistoricalget"></a>
-# **DappsCurveAccountsHistoricalGet**
-> void DappsCurveAccountsHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
+<a name="curvegetaccountshistorical"></a>
+# **CurveGetAccountsHistorical**
+> List&lt;CurveAccountDTO&gt; CurveGetAccountsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
 
+GetAccounts (historical)
 
+Gets accounts.
 
 ### Example
 ```csharp
@@ -53,7 +55,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class DappsCurveAccountsHistoricalGetExample
+    public class CurveGetAccountsHistoricalExample
     {
         public static void Main()
         {
@@ -67,11 +69,13 @@ namespace Example
 
             try
             {
-                apiInstance.DappsCurveAccountsHistoricalGet(startBlock, endBlock, startDate, endDate);
+                // GetAccounts (historical)
+                List<CurveAccountDTO> result = apiInstance.CurveGetAccountsHistorical(startBlock, endBlock, startDate, endDate);
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling CurveApi.DappsCurveAccountsHistoricalGet: " + e.Message);
+                Debug.Print("Exception when calling CurveApi.CurveGetAccountsHistorical: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -80,17 +84,21 @@ namespace Example
 }
 ```
 
-#### Using the DappsCurveAccountsHistoricalGetWithHttpInfo variant
+#### Using the CurveGetAccountsHistoricalWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    apiInstance.DappsCurveAccountsHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate);
+    // GetAccounts (historical)
+    ApiResponse<List<CurveAccountDTO>> response = apiInstance.CurveGetAccountsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling CurveApi.DappsCurveAccountsHistoricalGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling CurveApi.CurveGetAccountsHistoricalWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -107,7 +115,7 @@ catch (ApiException e)
 
 ### Return type
 
-void (empty response body)
+[**List&lt;CurveAccountDTO&gt;**](CurveAccountDTO.md)
 
 ### Authorization
 
@@ -116,21 +124,23 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="dappscurveaddliquidityeventhistoricalget"></a>
-# **DappsCurveAddLiquidityEventHistoricalGet**
-> void DappsCurveAddLiquidityEventHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
+<a name="curvegetaddliquidityeventshistorical"></a>
+# **CurveGetAddLiquidityEventsHistorical**
+> List&lt;CurveAddLiquidityEventDTO&gt; CurveGetAddLiquidityEventsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
 
+GetAddLiquidityEvents (historical)
 
+Gets add liquidity events.
 
 ### Example
 ```csharp
@@ -142,7 +152,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class DappsCurveAddLiquidityEventHistoricalGetExample
+    public class CurveGetAddLiquidityEventsHistoricalExample
     {
         public static void Main()
         {
@@ -157,11 +167,13 @@ namespace Example
 
             try
             {
-                apiInstance.DappsCurveAddLiquidityEventHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+                // GetAddLiquidityEvents (historical)
+                List<CurveAddLiquidityEventDTO> result = apiInstance.CurveGetAddLiquidityEventsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling CurveApi.DappsCurveAddLiquidityEventHistoricalGet: " + e.Message);
+                Debug.Print("Exception when calling CurveApi.CurveGetAddLiquidityEventsHistorical: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -170,17 +182,21 @@ namespace Example
 }
 ```
 
-#### Using the DappsCurveAddLiquidityEventHistoricalGetWithHttpInfo variant
+#### Using the CurveGetAddLiquidityEventsHistoricalWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    apiInstance.DappsCurveAddLiquidityEventHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    // GetAddLiquidityEvents (historical)
+    ApiResponse<List<CurveAddLiquidityEventDTO>> response = apiInstance.CurveGetAddLiquidityEventsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling CurveApi.DappsCurveAddLiquidityEventHistoricalGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling CurveApi.CurveGetAddLiquidityEventsHistoricalWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -198,7 +214,7 @@ catch (ApiException e)
 
 ### Return type
 
-void (empty response body)
+[**List&lt;CurveAddLiquidityEventDTO&gt;**](CurveAddLiquidityEventDTO.md)
 
 ### Authorization
 
@@ -207,21 +223,23 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="dappscurveadminfeechangeloghistoricalget"></a>
-# **DappsCurveAdminFeeChangeLogHistoricalGet**
-> void DappsCurveAdminFeeChangeLogHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
+<a name="curvegetadminfeechangelogshistorical"></a>
+# **CurveGetAdminFeeChangeLogsHistorical**
+> List&lt;CurveAdminFeeChangeLogDTO&gt; CurveGetAdminFeeChangeLogsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
 
+GetAdminFeeChangeLogs (historical)
 
+Gets admin fee change logs.
 
 ### Example
 ```csharp
@@ -233,7 +251,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class DappsCurveAdminFeeChangeLogHistoricalGetExample
+    public class CurveGetAdminFeeChangeLogsHistoricalExample
     {
         public static void Main()
         {
@@ -248,11 +266,13 @@ namespace Example
 
             try
             {
-                apiInstance.DappsCurveAdminFeeChangeLogHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+                // GetAdminFeeChangeLogs (historical)
+                List<CurveAdminFeeChangeLogDTO> result = apiInstance.CurveGetAdminFeeChangeLogsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling CurveApi.DappsCurveAdminFeeChangeLogHistoricalGet: " + e.Message);
+                Debug.Print("Exception when calling CurveApi.CurveGetAdminFeeChangeLogsHistorical: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -261,17 +281,21 @@ namespace Example
 }
 ```
 
-#### Using the DappsCurveAdminFeeChangeLogHistoricalGetWithHttpInfo variant
+#### Using the CurveGetAdminFeeChangeLogsHistoricalWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    apiInstance.DappsCurveAdminFeeChangeLogHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    // GetAdminFeeChangeLogs (historical)
+    ApiResponse<List<CurveAdminFeeChangeLogDTO>> response = apiInstance.CurveGetAdminFeeChangeLogsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling CurveApi.DappsCurveAdminFeeChangeLogHistoricalGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling CurveApi.CurveGetAdminFeeChangeLogsHistoricalWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -289,7 +313,7 @@ catch (ApiException e)
 
 ### Return type
 
-void (empty response body)
+[**List&lt;CurveAdminFeeChangeLogDTO&gt;**](CurveAdminFeeChangeLogDTO.md)
 
 ### Authorization
 
@@ -298,21 +322,23 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="dappscurveamplificationcoeffchangeloghistoricalget"></a>
-# **DappsCurveAmplificationCoeffChangeLogHistoricalGet**
-> void DappsCurveAmplificationCoeffChangeLogHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
+<a name="curvegetamplificationcoeffchangelogshistorical"></a>
+# **CurveGetAmplificationCoeffChangeLogsHistorical**
+> List&lt;CurveAmplificationCoeffChangeLogDTO&gt; CurveGetAmplificationCoeffChangeLogsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
 
+GetAmplificationCoeffChangeLogs (historical)
 
+Gets amplification coeff change logs.
 
 ### Example
 ```csharp
@@ -324,7 +350,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class DappsCurveAmplificationCoeffChangeLogHistoricalGetExample
+    public class CurveGetAmplificationCoeffChangeLogsHistoricalExample
     {
         public static void Main()
         {
@@ -339,11 +365,13 @@ namespace Example
 
             try
             {
-                apiInstance.DappsCurveAmplificationCoeffChangeLogHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+                // GetAmplificationCoeffChangeLogs (historical)
+                List<CurveAmplificationCoeffChangeLogDTO> result = apiInstance.CurveGetAmplificationCoeffChangeLogsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling CurveApi.DappsCurveAmplificationCoeffChangeLogHistoricalGet: " + e.Message);
+                Debug.Print("Exception when calling CurveApi.CurveGetAmplificationCoeffChangeLogsHistorical: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -352,17 +380,21 @@ namespace Example
 }
 ```
 
-#### Using the DappsCurveAmplificationCoeffChangeLogHistoricalGetWithHttpInfo variant
+#### Using the CurveGetAmplificationCoeffChangeLogsHistoricalWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    apiInstance.DappsCurveAmplificationCoeffChangeLogHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    // GetAmplificationCoeffChangeLogs (historical)
+    ApiResponse<List<CurveAmplificationCoeffChangeLogDTO>> response = apiInstance.CurveGetAmplificationCoeffChangeLogsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling CurveApi.DappsCurveAmplificationCoeffChangeLogHistoricalGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling CurveApi.CurveGetAmplificationCoeffChangeLogsHistoricalWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -380,7 +412,7 @@ catch (ApiException e)
 
 ### Return type
 
-void (empty response body)
+[**List&lt;CurveAmplificationCoeffChangeLogDTO&gt;**](CurveAmplificationCoeffChangeLogDTO.md)
 
 ### Authorization
 
@@ -389,21 +421,23 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="dappscurvecoinshistoricalget"></a>
-# **DappsCurveCoinsHistoricalGet**
-> void DappsCurveCoinsHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
+<a name="curvegetcoinshistorical"></a>
+# **CurveGetCoinsHistorical**
+> List&lt;CurveCoinDTO&gt; CurveGetCoinsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
 
+GetCoins (historical)
 
+Gets coins.
 
 ### Example
 ```csharp
@@ -415,7 +449,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class DappsCurveCoinsHistoricalGetExample
+    public class CurveGetCoinsHistoricalExample
     {
         public static void Main()
         {
@@ -430,11 +464,13 @@ namespace Example
 
             try
             {
-                apiInstance.DappsCurveCoinsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+                // GetCoins (historical)
+                List<CurveCoinDTO> result = apiInstance.CurveGetCoinsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling CurveApi.DappsCurveCoinsHistoricalGet: " + e.Message);
+                Debug.Print("Exception when calling CurveApi.CurveGetCoinsHistorical: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -443,17 +479,21 @@ namespace Example
 }
 ```
 
-#### Using the DappsCurveCoinsHistoricalGetWithHttpInfo variant
+#### Using the CurveGetCoinsHistoricalWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    apiInstance.DappsCurveCoinsHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    // GetCoins (historical)
+    ApiResponse<List<CurveCoinDTO>> response = apiInstance.CurveGetCoinsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling CurveApi.DappsCurveCoinsHistoricalGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling CurveApi.CurveGetCoinsHistoricalWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -471,7 +511,7 @@ catch (ApiException e)
 
 ### Return type
 
-void (empty response body)
+[**List&lt;CurveCoinDTO&gt;**](CurveCoinDTO.md)
 
 ### Authorization
 
@@ -480,21 +520,23 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="dappscurvecontractshistoricalget"></a>
-# **DappsCurveContractsHistoricalGet**
-> void DappsCurveContractsHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
+<a name="curvegetcontractshistorical"></a>
+# **CurveGetContractsHistorical**
+> List&lt;CurveContractDTO&gt; CurveGetContractsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
 
+GetContracts (historical)
 
+Gets contracts.
 
 ### Example
 ```csharp
@@ -506,7 +548,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class DappsCurveContractsHistoricalGetExample
+    public class CurveGetContractsHistoricalExample
     {
         public static void Main()
         {
@@ -521,11 +563,13 @@ namespace Example
 
             try
             {
-                apiInstance.DappsCurveContractsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+                // GetContracts (historical)
+                List<CurveContractDTO> result = apiInstance.CurveGetContractsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling CurveApi.DappsCurveContractsHistoricalGet: " + e.Message);
+                Debug.Print("Exception when calling CurveApi.CurveGetContractsHistorical: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -534,17 +578,21 @@ namespace Example
 }
 ```
 
-#### Using the DappsCurveContractsHistoricalGetWithHttpInfo variant
+#### Using the CurveGetContractsHistoricalWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    apiInstance.DappsCurveContractsHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    // GetContracts (historical)
+    ApiResponse<List<CurveContractDTO>> response = apiInstance.CurveGetContractsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling CurveApi.DappsCurveContractsHistoricalGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling CurveApi.CurveGetContractsHistoricalWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -562,7 +610,7 @@ catch (ApiException e)
 
 ### Return type
 
-void (empty response body)
+[**List&lt;CurveContractDTO&gt;**](CurveContractDTO.md)
 
 ### Authorization
 
@@ -571,21 +619,23 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="dappscurvecontractsversionhistoricalget"></a>
-# **DappsCurveContractsVersionHistoricalGet**
-> void DappsCurveContractsVersionHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
+<a name="curvegetcontractsversionshistorical"></a>
+# **CurveGetContractsVersionsHistorical**
+> List&lt;CurveContractVersionDTO&gt; CurveGetContractsVersionsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
 
+GetContractsVersions (historical)
 
+Gets contracts versions.
 
 ### Example
 ```csharp
@@ -597,7 +647,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class DappsCurveContractsVersionHistoricalGetExample
+    public class CurveGetContractsVersionsHistoricalExample
     {
         public static void Main()
         {
@@ -612,11 +662,13 @@ namespace Example
 
             try
             {
-                apiInstance.DappsCurveContractsVersionHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+                // GetContractsVersions (historical)
+                List<CurveContractVersionDTO> result = apiInstance.CurveGetContractsVersionsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling CurveApi.DappsCurveContractsVersionHistoricalGet: " + e.Message);
+                Debug.Print("Exception when calling CurveApi.CurveGetContractsVersionsHistorical: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -625,17 +677,21 @@ namespace Example
 }
 ```
 
-#### Using the DappsCurveContractsVersionHistoricalGetWithHttpInfo variant
+#### Using the CurveGetContractsVersionsHistoricalWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    apiInstance.DappsCurveContractsVersionHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    // GetContractsVersions (historical)
+    ApiResponse<List<CurveContractVersionDTO>> response = apiInstance.CurveGetContractsVersionsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling CurveApi.DappsCurveContractsVersionHistoricalGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling CurveApi.CurveGetContractsVersionsHistoricalWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -653,7 +709,7 @@ catch (ApiException e)
 
 ### Return type
 
-void (empty response body)
+[**List&lt;CurveContractVersionDTO&gt;**](CurveContractVersionDTO.md)
 
 ### Authorization
 
@@ -662,21 +718,23 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="dappscurvedailyvolumehistoricalget"></a>
-# **DappsCurveDailyVolumeHistoricalGet**
-> void DappsCurveDailyVolumeHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
+<a name="curvegetdailyvolumeshistorical"></a>
+# **CurveGetDailyVolumesHistorical**
+> List&lt;CurveDailyVolumeDTO&gt; CurveGetDailyVolumesHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
 
+GetDailyVolumes (historical)
 
+Gets daily volumes.
 
 ### Example
 ```csharp
@@ -688,7 +746,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class DappsCurveDailyVolumeHistoricalGetExample
+    public class CurveGetDailyVolumesHistoricalExample
     {
         public static void Main()
         {
@@ -703,11 +761,13 @@ namespace Example
 
             try
             {
-                apiInstance.DappsCurveDailyVolumeHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+                // GetDailyVolumes (historical)
+                List<CurveDailyVolumeDTO> result = apiInstance.CurveGetDailyVolumesHistorical(startBlock, endBlock, startDate, endDate, poolId);
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling CurveApi.DappsCurveDailyVolumeHistoricalGet: " + e.Message);
+                Debug.Print("Exception when calling CurveApi.CurveGetDailyVolumesHistorical: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -716,17 +776,21 @@ namespace Example
 }
 ```
 
-#### Using the DappsCurveDailyVolumeHistoricalGetWithHttpInfo variant
+#### Using the CurveGetDailyVolumesHistoricalWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    apiInstance.DappsCurveDailyVolumeHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    // GetDailyVolumes (historical)
+    ApiResponse<List<CurveDailyVolumeDTO>> response = apiInstance.CurveGetDailyVolumesHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling CurveApi.DappsCurveDailyVolumeHistoricalGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling CurveApi.CurveGetDailyVolumesHistoricalWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -744,7 +808,7 @@ catch (ApiException e)
 
 ### Return type
 
-void (empty response body)
+[**List&lt;CurveDailyVolumeDTO&gt;**](CurveDailyVolumeDTO.md)
 
 ### Authorization
 
@@ -753,21 +817,23 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="dappscurvefeechangeloghistoricalget"></a>
-# **DappsCurveFeeChangeLogHistoricalGet**
-> void DappsCurveFeeChangeLogHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
+<a name="curvegetexchangeshistorical"></a>
+# **CurveGetExchangesHistorical**
+> List&lt;CurveExchangeDTO&gt; CurveGetExchangesHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
 
+GetExchanges (historical) 🔥
 
+Gets exchanges.
 
 ### Example
 ```csharp
@@ -779,7 +845,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class DappsCurveFeeChangeLogHistoricalGetExample
+    public class CurveGetExchangesHistoricalExample
     {
         public static void Main()
         {
@@ -794,11 +860,13 @@ namespace Example
 
             try
             {
-                apiInstance.DappsCurveFeeChangeLogHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+                // GetExchanges (historical) 🔥
+                List<CurveExchangeDTO> result = apiInstance.CurveGetExchangesHistorical(startBlock, endBlock, startDate, endDate, poolId);
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling CurveApi.DappsCurveFeeChangeLogHistoricalGet: " + e.Message);
+                Debug.Print("Exception when calling CurveApi.CurveGetExchangesHistorical: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -807,17 +875,21 @@ namespace Example
 }
 ```
 
-#### Using the DappsCurveFeeChangeLogHistoricalGetWithHttpInfo variant
+#### Using the CurveGetExchangesHistoricalWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    apiInstance.DappsCurveFeeChangeLogHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    // GetExchanges (historical) 🔥
+    ApiResponse<List<CurveExchangeDTO>> response = apiInstance.CurveGetExchangesHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling CurveApi.DappsCurveFeeChangeLogHistoricalGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling CurveApi.CurveGetExchangesHistoricalWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -835,7 +907,7 @@ catch (ApiException e)
 
 ### Return type
 
-void (empty response body)
+[**List&lt;CurveExchangeDTO&gt;**](CurveExchangeDTO.md)
 
 ### Authorization
 
@@ -844,21 +916,23 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="dappscurvegaugedeposithistoricalget"></a>
-# **DappsCurveGaugeDepositHistoricalGet**
-> void DappsCurveGaugeDepositHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
+<a name="curvegetfeechangelogshistorical"></a>
+# **CurveGetFeeChangeLogsHistorical**
+> List&lt;CurveFeeChangeLogDTO&gt; CurveGetFeeChangeLogsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
 
+GetFeeChangeLogs (historical)
 
+Gets fee change logs.
 
 ### Example
 ```csharp
@@ -870,96 +944,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class DappsCurveGaugeDepositHistoricalGetExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "https://onchain.coinapi.io";
-            var apiInstance = new CurveApi(config);
-            var startBlock = 789L;  // long? |  (optional) 
-            var endBlock = 789L;  // long? |  (optional) 
-            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
-            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
-
-            try
-            {
-                apiInstance.DappsCurveGaugeDepositHistoricalGet(startBlock, endBlock, startDate, endDate);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling CurveApi.DappsCurveGaugeDepositHistoricalGet: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-#### Using the DappsCurveGaugeDepositHistoricalGetWithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    apiInstance.DappsCurveGaugeDepositHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling CurveApi.DappsCurveGaugeDepositHistoricalGetWithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **startBlock** | **long?** |  | [optional]  |
-| **endBlock** | **long?** |  | [optional]  |
-| **startDate** | **DateTime?** |  | [optional]  |
-| **endDate** | **DateTime?** |  | [optional]  |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="dappscurvegaugehistoricalget"></a>
-# **DappsCurveGaugeHistoricalGet**
-> void DappsCurveGaugeHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
-
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using CoinAPI.EMS.REST.V1.Api;
-using CoinAPI.EMS.REST.V1.Client;
-using CoinAPI.EMS.REST.V1.Model;
-
-namespace Example
-{
-    public class DappsCurveGaugeHistoricalGetExample
+    public class CurveGetFeeChangeLogsHistoricalExample
     {
         public static void Main()
         {
@@ -974,11 +959,13 @@ namespace Example
 
             try
             {
-                apiInstance.DappsCurveGaugeHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+                // GetFeeChangeLogs (historical)
+                List<CurveFeeChangeLogDTO> result = apiInstance.CurveGetFeeChangeLogsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling CurveApi.DappsCurveGaugeHistoricalGet: " + e.Message);
+                Debug.Print("Exception when calling CurveApi.CurveGetFeeChangeLogsHistorical: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -987,17 +974,21 @@ namespace Example
 }
 ```
 
-#### Using the DappsCurveGaugeHistoricalGetWithHttpInfo variant
+#### Using the CurveGetFeeChangeLogsHistoricalWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    apiInstance.DappsCurveGaugeHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    // GetFeeChangeLogs (historical)
+    ApiResponse<List<CurveFeeChangeLogDTO>> response = apiInstance.CurveGetFeeChangeLogsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling CurveApi.DappsCurveGaugeHistoricalGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling CurveApi.CurveGetFeeChangeLogsHistoricalWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -1015,7 +1006,7 @@ catch (ApiException e)
 
 ### Return type
 
-void (empty response body)
+[**List&lt;CurveFeeChangeLogDTO&gt;**](CurveFeeChangeLogDTO.md)
 
 ### Authorization
 
@@ -1024,21 +1015,23 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="dappscurvegaugeliquidityhistoricalget"></a>
-# **DappsCurveGaugeLiquidityHistoricalGet**
-> void DappsCurveGaugeLiquidityHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
+<a name="curvegetgaugesdepositshistorical"></a>
+# **CurveGetGaugesDepositsHistorical**
+> List&lt;CurveGaugeDepositDTO&gt; CurveGetGaugesDepositsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
 
+GetGaugesDeposits (historical)
 
+Gets gauges deposits.
 
 ### Example
 ```csharp
@@ -1050,7 +1043,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class DappsCurveGaugeLiquidityHistoricalGetExample
+    public class CurveGetGaugesDepositsHistoricalExample
     {
         public static void Main()
         {
@@ -1064,11 +1057,13 @@ namespace Example
 
             try
             {
-                apiInstance.DappsCurveGaugeLiquidityHistoricalGet(startBlock, endBlock, startDate, endDate);
+                // GetGaugesDeposits (historical)
+                List<CurveGaugeDepositDTO> result = apiInstance.CurveGetGaugesDepositsHistorical(startBlock, endBlock, startDate, endDate);
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling CurveApi.DappsCurveGaugeLiquidityHistoricalGet: " + e.Message);
+                Debug.Print("Exception when calling CurveApi.CurveGetGaugesDepositsHistorical: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1077,17 +1072,21 @@ namespace Example
 }
 ```
 
-#### Using the DappsCurveGaugeLiquidityHistoricalGetWithHttpInfo variant
+#### Using the CurveGetGaugesDepositsHistoricalWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    apiInstance.DappsCurveGaugeLiquidityHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate);
+    // GetGaugesDeposits (historical)
+    ApiResponse<List<CurveGaugeDepositDTO>> response = apiInstance.CurveGetGaugesDepositsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling CurveApi.DappsCurveGaugeLiquidityHistoricalGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling CurveApi.CurveGetGaugesDepositsHistoricalWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -1104,7 +1103,7 @@ catch (ApiException e)
 
 ### Return type
 
-void (empty response body)
+[**List&lt;CurveGaugeDepositDTO&gt;**](CurveGaugeDepositDTO.md)
 
 ### Authorization
 
@@ -1113,21 +1112,23 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="dappscurvegaugetotalweighthistoricalget"></a>
-# **DappsCurveGaugeTotalWeightHistoricalGet**
-> void DappsCurveGaugeTotalWeightHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
+<a name="curvegetgaugeshistorical"></a>
+# **CurveGetGaugesHistorical**
+> List&lt;CurveGaugeDTO&gt; CurveGetGaugesHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
 
+GetGauges (historical)
 
+Gets gauges.
 
 ### Example
 ```csharp
@@ -1139,541 +1140,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class DappsCurveGaugeTotalWeightHistoricalGetExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "https://onchain.coinapi.io";
-            var apiInstance = new CurveApi(config);
-            var startBlock = 789L;  // long? |  (optional) 
-            var endBlock = 789L;  // long? |  (optional) 
-            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
-            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
-
-            try
-            {
-                apiInstance.DappsCurveGaugeTotalWeightHistoricalGet(startBlock, endBlock, startDate, endDate);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling CurveApi.DappsCurveGaugeTotalWeightHistoricalGet: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-#### Using the DappsCurveGaugeTotalWeightHistoricalGetWithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    apiInstance.DappsCurveGaugeTotalWeightHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling CurveApi.DappsCurveGaugeTotalWeightHistoricalGetWithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **startBlock** | **long?** |  | [optional]  |
-| **endBlock** | **long?** |  | [optional]  |
-| **startDate** | **DateTime?** |  | [optional]  |
-| **endDate** | **DateTime?** |  | [optional]  |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="dappscurvegaugetypehistoricalget"></a>
-# **DappsCurveGaugeTypeHistoricalGet**
-> void DappsCurveGaugeTypeHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
-
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using CoinAPI.EMS.REST.V1.Api;
-using CoinAPI.EMS.REST.V1.Client;
-using CoinAPI.EMS.REST.V1.Model;
-
-namespace Example
-{
-    public class DappsCurveGaugeTypeHistoricalGetExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "https://onchain.coinapi.io";
-            var apiInstance = new CurveApi(config);
-            var startBlock = 789L;  // long? |  (optional) 
-            var endBlock = 789L;  // long? |  (optional) 
-            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
-            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
-
-            try
-            {
-                apiInstance.DappsCurveGaugeTypeHistoricalGet(startBlock, endBlock, startDate, endDate);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling CurveApi.DappsCurveGaugeTypeHistoricalGet: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-#### Using the DappsCurveGaugeTypeHistoricalGetWithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    apiInstance.DappsCurveGaugeTypeHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling CurveApi.DappsCurveGaugeTypeHistoricalGetWithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **startBlock** | **long?** |  | [optional]  |
-| **endBlock** | **long?** |  | [optional]  |
-| **startDate** | **DateTime?** |  | [optional]  |
-| **endDate** | **DateTime?** |  | [optional]  |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="dappscurvegaugetypeweighthistoricalget"></a>
-# **DappsCurveGaugeTypeWeightHistoricalGet**
-> void DappsCurveGaugeTypeWeightHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
-
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using CoinAPI.EMS.REST.V1.Api;
-using CoinAPI.EMS.REST.V1.Client;
-using CoinAPI.EMS.REST.V1.Model;
-
-namespace Example
-{
-    public class DappsCurveGaugeTypeWeightHistoricalGetExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "https://onchain.coinapi.io";
-            var apiInstance = new CurveApi(config);
-            var startBlock = 789L;  // long? |  (optional) 
-            var endBlock = 789L;  // long? |  (optional) 
-            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
-            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
-
-            try
-            {
-                apiInstance.DappsCurveGaugeTypeWeightHistoricalGet(startBlock, endBlock, startDate, endDate);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling CurveApi.DappsCurveGaugeTypeWeightHistoricalGet: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-#### Using the DappsCurveGaugeTypeWeightHistoricalGetWithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    apiInstance.DappsCurveGaugeTypeWeightHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling CurveApi.DappsCurveGaugeTypeWeightHistoricalGetWithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **startBlock** | **long?** |  | [optional]  |
-| **endBlock** | **long?** |  | [optional]  |
-| **startDate** | **DateTime?** |  | [optional]  |
-| **endDate** | **DateTime?** |  | [optional]  |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="dappscurvegaugeweighthistoricalget"></a>
-# **DappsCurveGaugeWeightHistoricalGet**
-> void DappsCurveGaugeWeightHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
-
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using CoinAPI.EMS.REST.V1.Api;
-using CoinAPI.EMS.REST.V1.Client;
-using CoinAPI.EMS.REST.V1.Model;
-
-namespace Example
-{
-    public class DappsCurveGaugeWeightHistoricalGetExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "https://onchain.coinapi.io";
-            var apiInstance = new CurveApi(config);
-            var startBlock = 789L;  // long? |  (optional) 
-            var endBlock = 789L;  // long? |  (optional) 
-            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
-            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
-
-            try
-            {
-                apiInstance.DappsCurveGaugeWeightHistoricalGet(startBlock, endBlock, startDate, endDate);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling CurveApi.DappsCurveGaugeWeightHistoricalGet: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-#### Using the DappsCurveGaugeWeightHistoricalGetWithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    apiInstance.DappsCurveGaugeWeightHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling CurveApi.DappsCurveGaugeWeightHistoricalGetWithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **startBlock** | **long?** |  | [optional]  |
-| **endBlock** | **long?** |  | [optional]  |
-| **startDate** | **DateTime?** |  | [optional]  |
-| **endDate** | **DateTime?** |  | [optional]  |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="dappscurvegaugeweightvotehistoricalget"></a>
-# **DappsCurveGaugeWeightVoteHistoricalGet**
-> void DappsCurveGaugeWeightVoteHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
-
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using CoinAPI.EMS.REST.V1.Api;
-using CoinAPI.EMS.REST.V1.Client;
-using CoinAPI.EMS.REST.V1.Model;
-
-namespace Example
-{
-    public class DappsCurveGaugeWeightVoteHistoricalGetExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "https://onchain.coinapi.io";
-            var apiInstance = new CurveApi(config);
-            var startBlock = 789L;  // long? |  (optional) 
-            var endBlock = 789L;  // long? |  (optional) 
-            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
-            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
-
-            try
-            {
-                apiInstance.DappsCurveGaugeWeightVoteHistoricalGet(startBlock, endBlock, startDate, endDate);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling CurveApi.DappsCurveGaugeWeightVoteHistoricalGet: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-#### Using the DappsCurveGaugeWeightVoteHistoricalGetWithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    apiInstance.DappsCurveGaugeWeightVoteHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling CurveApi.DappsCurveGaugeWeightVoteHistoricalGetWithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **startBlock** | **long?** |  | [optional]  |
-| **endBlock** | **long?** |  | [optional]  |
-| **startDate** | **DateTime?** |  | [optional]  |
-| **endDate** | **DateTime?** |  | [optional]  |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="dappscurvegaugewithdrawhistoricalget"></a>
-# **DappsCurveGaugeWithdrawHistoricalGet**
-> void DappsCurveGaugeWithdrawHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
-
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using CoinAPI.EMS.REST.V1.Api;
-using CoinAPI.EMS.REST.V1.Client;
-using CoinAPI.EMS.REST.V1.Model;
-
-namespace Example
-{
-    public class DappsCurveGaugeWithdrawHistoricalGetExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "https://onchain.coinapi.io";
-            var apiInstance = new CurveApi(config);
-            var startBlock = 789L;  // long? |  (optional) 
-            var endBlock = 789L;  // long? |  (optional) 
-            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
-            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
-
-            try
-            {
-                apiInstance.DappsCurveGaugeWithdrawHistoricalGet(startBlock, endBlock, startDate, endDate);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling CurveApi.DappsCurveGaugeWithdrawHistoricalGet: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-#### Using the DappsCurveGaugeWithdrawHistoricalGetWithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    apiInstance.DappsCurveGaugeWithdrawHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling CurveApi.DappsCurveGaugeWithdrawHistoricalGetWithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **startBlock** | **long?** |  | [optional]  |
-| **endBlock** | **long?** |  | [optional]  |
-| **startDate** | **DateTime?** |  | [optional]  |
-| **endDate** | **DateTime?** |  | [optional]  |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="dappscurvehourlyvolumehistoricalget"></a>
-# **DappsCurveHourlyVolumeHistoricalGet**
-> void DappsCurveHourlyVolumeHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
-
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using CoinAPI.EMS.REST.V1.Api;
-using CoinAPI.EMS.REST.V1.Client;
-using CoinAPI.EMS.REST.V1.Model;
-
-namespace Example
-{
-    public class DappsCurveHourlyVolumeHistoricalGetExample
+    public class CurveGetGaugesHistoricalExample
     {
         public static void Main()
         {
@@ -1688,11 +1155,13 @@ namespace Example
 
             try
             {
-                apiInstance.DappsCurveHourlyVolumeHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+                // GetGauges (historical)
+                List<CurveGaugeDTO> result = apiInstance.CurveGetGaugesHistorical(startBlock, endBlock, startDate, endDate, poolId);
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling CurveApi.DappsCurveHourlyVolumeHistoricalGet: " + e.Message);
+                Debug.Print("Exception when calling CurveApi.CurveGetGaugesHistorical: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1701,17 +1170,21 @@ namespace Example
 }
 ```
 
-#### Using the DappsCurveHourlyVolumeHistoricalGetWithHttpInfo variant
+#### Using the CurveGetGaugesHistoricalWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    apiInstance.DappsCurveHourlyVolumeHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    // GetGauges (historical)
+    ApiResponse<List<CurveGaugeDTO>> response = apiInstance.CurveGetGaugesHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling CurveApi.DappsCurveHourlyVolumeHistoricalGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling CurveApi.CurveGetGaugesHistoricalWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -1729,7 +1202,7 @@ catch (ApiException e)
 
 ### Return type
 
-void (empty response body)
+[**List&lt;CurveGaugeDTO&gt;**](CurveGaugeDTO.md)
 
 ### Authorization
 
@@ -1738,21 +1211,23 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="dappscurvelptokenhistoricalget"></a>
-# **DappsCurveLpTokenHistoricalGet**
-> void DappsCurveLpTokenHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
+<a name="curvegetgaugesliquidityhistorical"></a>
+# **CurveGetGaugesLiquidityHistorical**
+> List&lt;CurveGaugeLiquidityDTO&gt; CurveGetGaugesLiquidityHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
 
+GetGaugesLiquidity (historical)
 
+Gets gauges liquidity.
 
 ### Example
 ```csharp
@@ -1764,7 +1239,686 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class DappsCurveLpTokenHistoricalGetExample
+    public class CurveGetGaugesLiquidityHistoricalExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new CurveApi(config);
+            var startBlock = 789L;  // long? |  (optional) 
+            var endBlock = 789L;  // long? |  (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+
+            try
+            {
+                // GetGaugesLiquidity (historical)
+                List<CurveGaugeLiquidityDTO> result = apiInstance.CurveGetGaugesLiquidityHistorical(startBlock, endBlock, startDate, endDate);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling CurveApi.CurveGetGaugesLiquidityHistorical: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the CurveGetGaugesLiquidityHistoricalWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // GetGaugesLiquidity (historical)
+    ApiResponse<List<CurveGaugeLiquidityDTO>> response = apiInstance.CurveGetGaugesLiquidityHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling CurveApi.CurveGetGaugesLiquidityHistoricalWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **startBlock** | **long?** |  | [optional]  |
+| **endBlock** | **long?** |  | [optional]  |
+| **startDate** | **DateTime?** |  | [optional]  |
+| **endDate** | **DateTime?** |  | [optional]  |
+
+### Return type
+
+[**List&lt;CurveGaugeLiquidityDTO&gt;**](CurveGaugeLiquidityDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="curvegetgaugestotalweightshistorical"></a>
+# **CurveGetGaugesTotalWeightsHistorical**
+> List&lt;CurveGaugeTotalWeightDTO&gt; CurveGetGaugesTotalWeightsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
+
+GetGaugesTotalWeights (historical)
+
+Gets gauges total weights.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class CurveGetGaugesTotalWeightsHistoricalExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new CurveApi(config);
+            var startBlock = 789L;  // long? |  (optional) 
+            var endBlock = 789L;  // long? |  (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+
+            try
+            {
+                // GetGaugesTotalWeights (historical)
+                List<CurveGaugeTotalWeightDTO> result = apiInstance.CurveGetGaugesTotalWeightsHistorical(startBlock, endBlock, startDate, endDate);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling CurveApi.CurveGetGaugesTotalWeightsHistorical: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the CurveGetGaugesTotalWeightsHistoricalWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // GetGaugesTotalWeights (historical)
+    ApiResponse<List<CurveGaugeTotalWeightDTO>> response = apiInstance.CurveGetGaugesTotalWeightsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling CurveApi.CurveGetGaugesTotalWeightsHistoricalWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **startBlock** | **long?** |  | [optional]  |
+| **endBlock** | **long?** |  | [optional]  |
+| **startDate** | **DateTime?** |  | [optional]  |
+| **endDate** | **DateTime?** |  | [optional]  |
+
+### Return type
+
+[**List&lt;CurveGaugeTotalWeightDTO&gt;**](CurveGaugeTotalWeightDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="curvegetgaugestypeshistorical"></a>
+# **CurveGetGaugesTypesHistorical**
+> List&lt;CurveGaugeTypeDTO&gt; CurveGetGaugesTypesHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
+
+GetGaugesTypes (historical)
+
+Gets gauges types.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class CurveGetGaugesTypesHistoricalExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new CurveApi(config);
+            var startBlock = 789L;  // long? |  (optional) 
+            var endBlock = 789L;  // long? |  (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+
+            try
+            {
+                // GetGaugesTypes (historical)
+                List<CurveGaugeTypeDTO> result = apiInstance.CurveGetGaugesTypesHistorical(startBlock, endBlock, startDate, endDate);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling CurveApi.CurveGetGaugesTypesHistorical: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the CurveGetGaugesTypesHistoricalWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // GetGaugesTypes (historical)
+    ApiResponse<List<CurveGaugeTypeDTO>> response = apiInstance.CurveGetGaugesTypesHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling CurveApi.CurveGetGaugesTypesHistoricalWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **startBlock** | **long?** |  | [optional]  |
+| **endBlock** | **long?** |  | [optional]  |
+| **startDate** | **DateTime?** |  | [optional]  |
+| **endDate** | **DateTime?** |  | [optional]  |
+
+### Return type
+
+[**List&lt;CurveGaugeTypeDTO&gt;**](CurveGaugeTypeDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="curvegetgaugestypesweightshistorical"></a>
+# **CurveGetGaugesTypesWeightsHistorical**
+> List&lt;CurveGaugeTypeWeightDTO&gt; CurveGetGaugesTypesWeightsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
+
+GetGaugesTypesWeights (historical)
+
+Gets gauges types weights.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class CurveGetGaugesTypesWeightsHistoricalExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new CurveApi(config);
+            var startBlock = 789L;  // long? |  (optional) 
+            var endBlock = 789L;  // long? |  (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+
+            try
+            {
+                // GetGaugesTypesWeights (historical)
+                List<CurveGaugeTypeWeightDTO> result = apiInstance.CurveGetGaugesTypesWeightsHistorical(startBlock, endBlock, startDate, endDate);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling CurveApi.CurveGetGaugesTypesWeightsHistorical: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the CurveGetGaugesTypesWeightsHistoricalWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // GetGaugesTypesWeights (historical)
+    ApiResponse<List<CurveGaugeTypeWeightDTO>> response = apiInstance.CurveGetGaugesTypesWeightsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling CurveApi.CurveGetGaugesTypesWeightsHistoricalWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **startBlock** | **long?** |  | [optional]  |
+| **endBlock** | **long?** |  | [optional]  |
+| **startDate** | **DateTime?** |  | [optional]  |
+| **endDate** | **DateTime?** |  | [optional]  |
+
+### Return type
+
+[**List&lt;CurveGaugeTypeWeightDTO&gt;**](CurveGaugeTypeWeightDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="curvegetgaugesweightshistorical"></a>
+# **CurveGetGaugesWeightsHistorical**
+> List&lt;CurveGaugeWeightDTO&gt; CurveGetGaugesWeightsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
+
+GetGaugesWeights (historical)
+
+Gets gauges weights.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class CurveGetGaugesWeightsHistoricalExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new CurveApi(config);
+            var startBlock = 789L;  // long? |  (optional) 
+            var endBlock = 789L;  // long? |  (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+
+            try
+            {
+                // GetGaugesWeights (historical)
+                List<CurveGaugeWeightDTO> result = apiInstance.CurveGetGaugesWeightsHistorical(startBlock, endBlock, startDate, endDate);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling CurveApi.CurveGetGaugesWeightsHistorical: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the CurveGetGaugesWeightsHistoricalWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // GetGaugesWeights (historical)
+    ApiResponse<List<CurveGaugeWeightDTO>> response = apiInstance.CurveGetGaugesWeightsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling CurveApi.CurveGetGaugesWeightsHistoricalWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **startBlock** | **long?** |  | [optional]  |
+| **endBlock** | **long?** |  | [optional]  |
+| **startDate** | **DateTime?** |  | [optional]  |
+| **endDate** | **DateTime?** |  | [optional]  |
+
+### Return type
+
+[**List&lt;CurveGaugeWeightDTO&gt;**](CurveGaugeWeightDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="curvegetgaugesweightsvoteshistorical"></a>
+# **CurveGetGaugesWeightsVotesHistorical**
+> List&lt;CurveGaugeWeightVoteDTO&gt; CurveGetGaugesWeightsVotesHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
+
+GetGaugesWeightsVotes (historical)
+
+Gets gauges weights votes.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class CurveGetGaugesWeightsVotesHistoricalExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new CurveApi(config);
+            var startBlock = 789L;  // long? |  (optional) 
+            var endBlock = 789L;  // long? |  (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+
+            try
+            {
+                // GetGaugesWeightsVotes (historical)
+                List<CurveGaugeWeightVoteDTO> result = apiInstance.CurveGetGaugesWeightsVotesHistorical(startBlock, endBlock, startDate, endDate);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling CurveApi.CurveGetGaugesWeightsVotesHistorical: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the CurveGetGaugesWeightsVotesHistoricalWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // GetGaugesWeightsVotes (historical)
+    ApiResponse<List<CurveGaugeWeightVoteDTO>> response = apiInstance.CurveGetGaugesWeightsVotesHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling CurveApi.CurveGetGaugesWeightsVotesHistoricalWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **startBlock** | **long?** |  | [optional]  |
+| **endBlock** | **long?** |  | [optional]  |
+| **startDate** | **DateTime?** |  | [optional]  |
+| **endDate** | **DateTime?** |  | [optional]  |
+
+### Return type
+
+[**List&lt;CurveGaugeWeightVoteDTO&gt;**](CurveGaugeWeightVoteDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="curvegetgaugeswithdrawhistorical"></a>
+# **CurveGetGaugesWithdrawHistorical**
+> List&lt;CurveGaugeWithdrawDTO&gt; CurveGetGaugesWithdrawHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
+
+GetGaugesWithdraw (historical)
+
+Gets gauges withdraws.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class CurveGetGaugesWithdrawHistoricalExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new CurveApi(config);
+            var startBlock = 789L;  // long? |  (optional) 
+            var endBlock = 789L;  // long? |  (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+
+            try
+            {
+                // GetGaugesWithdraw (historical)
+                List<CurveGaugeWithdrawDTO> result = apiInstance.CurveGetGaugesWithdrawHistorical(startBlock, endBlock, startDate, endDate);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling CurveApi.CurveGetGaugesWithdrawHistorical: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the CurveGetGaugesWithdrawHistoricalWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // GetGaugesWithdraw (historical)
+    ApiResponse<List<CurveGaugeWithdrawDTO>> response = apiInstance.CurveGetGaugesWithdrawHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling CurveApi.CurveGetGaugesWithdrawHistoricalWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **startBlock** | **long?** |  | [optional]  |
+| **endBlock** | **long?** |  | [optional]  |
+| **startDate** | **DateTime?** |  | [optional]  |
+| **endDate** | **DateTime?** |  | [optional]  |
+
+### Return type
+
+[**List&lt;CurveGaugeWithdrawDTO&gt;**](CurveGaugeWithdrawDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="curvegethourlyvolumeshistorical"></a>
+# **CurveGetHourlyVolumesHistorical**
+> List&lt;CurveHourlyVolumeDTO&gt; CurveGetHourlyVolumesHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
+
+GetHourlyVolumes (historical)
+
+Gets hourly volumes.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class CurveGetHourlyVolumesHistoricalExample
     {
         public static void Main()
         {
@@ -1779,11 +1933,13 @@ namespace Example
 
             try
             {
-                apiInstance.DappsCurveLpTokenHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+                // GetHourlyVolumes (historical)
+                List<CurveHourlyVolumeDTO> result = apiInstance.CurveGetHourlyVolumesHistorical(startBlock, endBlock, startDate, endDate, poolId);
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling CurveApi.DappsCurveLpTokenHistoricalGet: " + e.Message);
+                Debug.Print("Exception when calling CurveApi.CurveGetHourlyVolumesHistorical: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1792,17 +1948,21 @@ namespace Example
 }
 ```
 
-#### Using the DappsCurveLpTokenHistoricalGetWithHttpInfo variant
+#### Using the CurveGetHourlyVolumesHistoricalWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    apiInstance.DappsCurveLpTokenHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    // GetHourlyVolumes (historical)
+    ApiResponse<List<CurveHourlyVolumeDTO>> response = apiInstance.CurveGetHourlyVolumesHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling CurveApi.DappsCurveLpTokenHistoricalGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling CurveApi.CurveGetHourlyVolumesHistoricalWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -1820,7 +1980,7 @@ catch (ApiException e)
 
 ### Return type
 
-void (empty response body)
+[**List&lt;CurveHourlyVolumeDTO&gt;**](CurveHourlyVolumeDTO.md)
 
 ### Authorization
 
@@ -1829,21 +1989,23 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="dappscurvepoolshistoricalget"></a>
-# **DappsCurvePoolsHistoricalGet**
-> void DappsCurvePoolsHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
+<a name="curvegetlptokenshistorical"></a>
+# **CurveGetLpTokensHistorical**
+> List&lt;CurveLpTokenDTO&gt; CurveGetLpTokensHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
 
+GetLpTokens (historical)
 
+Gets lp tokens.
 
 ### Example
 ```csharp
@@ -1855,7 +2017,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class DappsCurvePoolsHistoricalGetExample
+    public class CurveGetLpTokensHistoricalExample
     {
         public static void Main()
         {
@@ -1870,11 +2032,13 @@ namespace Example
 
             try
             {
-                apiInstance.DappsCurvePoolsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+                // GetLpTokens (historical)
+                List<CurveLpTokenDTO> result = apiInstance.CurveGetLpTokensHistorical(startBlock, endBlock, startDate, endDate, poolId);
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling CurveApi.DappsCurvePoolsHistoricalGet: " + e.Message);
+                Debug.Print("Exception when calling CurveApi.CurveGetLpTokensHistorical: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1883,17 +2047,21 @@ namespace Example
 }
 ```
 
-#### Using the DappsCurvePoolsHistoricalGetWithHttpInfo variant
+#### Using the CurveGetLpTokensHistoricalWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    apiInstance.DappsCurvePoolsHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    // GetLpTokens (historical)
+    ApiResponse<List<CurveLpTokenDTO>> response = apiInstance.CurveGetLpTokensHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling CurveApi.DappsCurvePoolsHistoricalGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling CurveApi.CurveGetLpTokensHistoricalWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -1911,7 +2079,7 @@ catch (ApiException e)
 
 ### Return type
 
-void (empty response body)
+[**List&lt;CurveLpTokenDTO&gt;**](CurveLpTokenDTO.md)
 
 ### Authorization
 
@@ -1920,21 +2088,23 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="dappscurveproposalshistoricalget"></a>
-# **DappsCurveProposalsHistoricalGet**
-> void DappsCurveProposalsHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
+<a name="curvegetpoolshistorical"></a>
+# **CurveGetPoolsHistorical**
+> List&lt;CurvePoolDTO&gt; CurveGetPoolsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
 
+GetPools (historical) 🔥
 
+Gets pools.
 
 ### Example
 ```csharp
@@ -1946,185 +2116,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class DappsCurveProposalsHistoricalGetExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "https://onchain.coinapi.io";
-            var apiInstance = new CurveApi(config);
-            var startBlock = 789L;  // long? |  (optional) 
-            var endBlock = 789L;  // long? |  (optional) 
-            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
-            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
-
-            try
-            {
-                apiInstance.DappsCurveProposalsHistoricalGet(startBlock, endBlock, startDate, endDate);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling CurveApi.DappsCurveProposalsHistoricalGet: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-#### Using the DappsCurveProposalsHistoricalGetWithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    apiInstance.DappsCurveProposalsHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling CurveApi.DappsCurveProposalsHistoricalGetWithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **startBlock** | **long?** |  | [optional]  |
-| **endBlock** | **long?** |  | [optional]  |
-| **startDate** | **DateTime?** |  | [optional]  |
-| **endDate** | **DateTime?** |  | [optional]  |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="dappscurveproposalsvotehistoricalget"></a>
-# **DappsCurveProposalsVoteHistoricalGet**
-> void DappsCurveProposalsVoteHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
-
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using CoinAPI.EMS.REST.V1.Api;
-using CoinAPI.EMS.REST.V1.Client;
-using CoinAPI.EMS.REST.V1.Model;
-
-namespace Example
-{
-    public class DappsCurveProposalsVoteHistoricalGetExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "https://onchain.coinapi.io";
-            var apiInstance = new CurveApi(config);
-            var startBlock = 789L;  // long? |  (optional) 
-            var endBlock = 789L;  // long? |  (optional) 
-            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
-            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
-
-            try
-            {
-                apiInstance.DappsCurveProposalsVoteHistoricalGet(startBlock, endBlock, startDate, endDate);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling CurveApi.DappsCurveProposalsVoteHistoricalGet: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-#### Using the DappsCurveProposalsVoteHistoricalGetWithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    apiInstance.DappsCurveProposalsVoteHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling CurveApi.DappsCurveProposalsVoteHistoricalGetWithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **startBlock** | **long?** |  | [optional]  |
-| **endBlock** | **long?** |  | [optional]  |
-| **startDate** | **DateTime?** |  | [optional]  |
-| **endDate** | **DateTime?** |  | [optional]  |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="dappscurveremoveliquidityeventhistoricalget"></a>
-# **DappsCurveRemoveLiquidityEventHistoricalGet**
-> void DappsCurveRemoveLiquidityEventHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
-
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using CoinAPI.EMS.REST.V1.Api;
-using CoinAPI.EMS.REST.V1.Client;
-using CoinAPI.EMS.REST.V1.Model;
-
-namespace Example
-{
-    public class DappsCurveRemoveLiquidityEventHistoricalGetExample
+    public class CurveGetPoolsHistoricalExample
     {
         public static void Main()
         {
@@ -2139,11 +2131,13 @@ namespace Example
 
             try
             {
-                apiInstance.DappsCurveRemoveLiquidityEventHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+                // GetPools (historical) 🔥
+                List<CurvePoolDTO> result = apiInstance.CurveGetPoolsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling CurveApi.DappsCurveRemoveLiquidityEventHistoricalGet: " + e.Message);
+                Debug.Print("Exception when calling CurveApi.CurveGetPoolsHistorical: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2152,17 +2146,21 @@ namespace Example
 }
 ```
 
-#### Using the DappsCurveRemoveLiquidityEventHistoricalGetWithHttpInfo variant
+#### Using the CurveGetPoolsHistoricalWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    apiInstance.DappsCurveRemoveLiquidityEventHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    // GetPools (historical) 🔥
+    ApiResponse<List<CurvePoolDTO>> response = apiInstance.CurveGetPoolsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling CurveApi.DappsCurveRemoveLiquidityEventHistoricalGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling CurveApi.CurveGetPoolsHistoricalWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -2180,7 +2178,7 @@ catch (ApiException e)
 
 ### Return type
 
-void (empty response body)
+[**List&lt;CurvePoolDTO&gt;**](CurvePoolDTO.md)
 
 ### Authorization
 
@@ -2189,21 +2187,23 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="dappscurveremoveliquidityoneeventhistoricalget"></a>
-# **DappsCurveRemoveLiquidityOneEventHistoricalGet**
-> void DappsCurveRemoveLiquidityOneEventHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
+<a name="curvegetproposalshistorical"></a>
+# **CurveGetProposalsHistorical**
+> List&lt;CurveProposalDTO&gt; CurveGetProposalsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
 
+GetProposals (historical)
 
+Gets proposals.
 
 ### Example
 ```csharp
@@ -2215,7 +2215,201 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class DappsCurveRemoveLiquidityOneEventHistoricalGetExample
+    public class CurveGetProposalsHistoricalExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new CurveApi(config);
+            var startBlock = 789L;  // long? |  (optional) 
+            var endBlock = 789L;  // long? |  (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+
+            try
+            {
+                // GetProposals (historical)
+                List<CurveProposalDTO> result = apiInstance.CurveGetProposalsHistorical(startBlock, endBlock, startDate, endDate);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling CurveApi.CurveGetProposalsHistorical: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the CurveGetProposalsHistoricalWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // GetProposals (historical)
+    ApiResponse<List<CurveProposalDTO>> response = apiInstance.CurveGetProposalsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling CurveApi.CurveGetProposalsHistoricalWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **startBlock** | **long?** |  | [optional]  |
+| **endBlock** | **long?** |  | [optional]  |
+| **startDate** | **DateTime?** |  | [optional]  |
+| **endDate** | **DateTime?** |  | [optional]  |
+
+### Return type
+
+[**List&lt;CurveProposalDTO&gt;**](CurveProposalDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="curvegetproposalsvoteshistorical"></a>
+# **CurveGetProposalsVotesHistorical**
+> List&lt;CurveProposalVoteDTO&gt; CurveGetProposalsVotesHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
+
+GetProposalsVotes (historical)
+
+Gets proposals votes.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class CurveGetProposalsVotesHistoricalExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new CurveApi(config);
+            var startBlock = 789L;  // long? |  (optional) 
+            var endBlock = 789L;  // long? |  (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+
+            try
+            {
+                // GetProposalsVotes (historical)
+                List<CurveProposalVoteDTO> result = apiInstance.CurveGetProposalsVotesHistorical(startBlock, endBlock, startDate, endDate);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling CurveApi.CurveGetProposalsVotesHistorical: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the CurveGetProposalsVotesHistoricalWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // GetProposalsVotes (historical)
+    ApiResponse<List<CurveProposalVoteDTO>> response = apiInstance.CurveGetProposalsVotesHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling CurveApi.CurveGetProposalsVotesHistoricalWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **startBlock** | **long?** |  | [optional]  |
+| **endBlock** | **long?** |  | [optional]  |
+| **startDate** | **DateTime?** |  | [optional]  |
+| **endDate** | **DateTime?** |  | [optional]  |
+
+### Return type
+
+[**List&lt;CurveProposalVoteDTO&gt;**](CurveProposalVoteDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="curvegetremoveliquidityeventshistorical"></a>
+# **CurveGetRemoveLiquidityEventsHistorical**
+> List&lt;CurveRemoveLiquidityEventDTO&gt; CurveGetRemoveLiquidityEventsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
+
+GetRemoveLiquidityEvents (historical)
+
+Gets remove liquidity events.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class CurveGetRemoveLiquidityEventsHistoricalExample
     {
         public static void Main()
         {
@@ -2230,11 +2424,13 @@ namespace Example
 
             try
             {
-                apiInstance.DappsCurveRemoveLiquidityOneEventHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+                // GetRemoveLiquidityEvents (historical)
+                List<CurveRemoveLiquidityEventDTO> result = apiInstance.CurveGetRemoveLiquidityEventsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling CurveApi.DappsCurveRemoveLiquidityOneEventHistoricalGet: " + e.Message);
+                Debug.Print("Exception when calling CurveApi.CurveGetRemoveLiquidityEventsHistorical: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2243,17 +2439,21 @@ namespace Example
 }
 ```
 
-#### Using the DappsCurveRemoveLiquidityOneEventHistoricalGetWithHttpInfo variant
+#### Using the CurveGetRemoveLiquidityEventsHistoricalWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    apiInstance.DappsCurveRemoveLiquidityOneEventHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    // GetRemoveLiquidityEvents (historical)
+    ApiResponse<List<CurveRemoveLiquidityEventDTO>> response = apiInstance.CurveGetRemoveLiquidityEventsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling CurveApi.DappsCurveRemoveLiquidityOneEventHistoricalGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling CurveApi.CurveGetRemoveLiquidityEventsHistoricalWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -2271,7 +2471,7 @@ catch (ApiException e)
 
 ### Return type
 
-void (empty response body)
+[**List&lt;CurveRemoveLiquidityEventDTO&gt;**](CurveRemoveLiquidityEventDTO.md)
 
 ### Authorization
 
@@ -2280,21 +2480,23 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="dappscurveswapshistoricalget"></a>
-# **DappsCurveSwapsHistoricalGet**
-> void DappsCurveSwapsHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
+<a name="curvegetremoveliquidityoneeventshistorical"></a>
+# **CurveGetRemoveLiquidityOneEventsHistorical**
+> List&lt;CurveRemoveLiquidityOneEventDTO&gt; CurveGetRemoveLiquidityOneEventsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
 
+GetRemoveLiquidityOneEvents (historical)
 
+Gets remove liquidity one events.
 
 ### Example
 ```csharp
@@ -2306,7 +2508,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class DappsCurveSwapsHistoricalGetExample
+    public class CurveGetRemoveLiquidityOneEventsHistoricalExample
     {
         public static void Main()
         {
@@ -2321,11 +2523,13 @@ namespace Example
 
             try
             {
-                apiInstance.DappsCurveSwapsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+                // GetRemoveLiquidityOneEvents (historical)
+                List<CurveRemoveLiquidityOneEventDTO> result = apiInstance.CurveGetRemoveLiquidityOneEventsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling CurveApi.DappsCurveSwapsHistoricalGet: " + e.Message);
+                Debug.Print("Exception when calling CurveApi.CurveGetRemoveLiquidityOneEventsHistorical: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2334,17 +2538,21 @@ namespace Example
 }
 ```
 
-#### Using the DappsCurveSwapsHistoricalGetWithHttpInfo variant
+#### Using the CurveGetRemoveLiquidityOneEventsHistoricalWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    apiInstance.DappsCurveSwapsHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    // GetRemoveLiquidityOneEvents (historical)
+    ApiResponse<List<CurveRemoveLiquidityOneEventDTO>> response = apiInstance.CurveGetRemoveLiquidityOneEventsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling CurveApi.DappsCurveSwapsHistoricalGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling CurveApi.CurveGetRemoveLiquidityOneEventsHistoricalWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -2362,7 +2570,7 @@ catch (ApiException e)
 
 ### Return type
 
-void (empty response body)
+[**List&lt;CurveRemoveLiquidityOneEventDTO&gt;**](CurveRemoveLiquidityOneEventDTO.md)
 
 ### Authorization
 
@@ -2371,21 +2579,23 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="dappscurvesystemstatehistoricalget"></a>
-# **DappsCurveSystemStateHistoricalGet**
-> void DappsCurveSystemStateHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
+<a name="curvegetsystemstateshistorical"></a>
+# **CurveGetSystemStatesHistorical**
+> List&lt;CurveSystemStateDTO&gt; CurveGetSystemStatesHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
 
+GetSystemStates (historical)
 
+Gets system states.
 
 ### Example
 ```csharp
@@ -2397,7 +2607,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class DappsCurveSystemStateHistoricalGetExample
+    public class CurveGetSystemStatesHistoricalExample
     {
         public static void Main()
         {
@@ -2411,11 +2621,13 @@ namespace Example
 
             try
             {
-                apiInstance.DappsCurveSystemStateHistoricalGet(startBlock, endBlock, startDate, endDate);
+                // GetSystemStates (historical)
+                List<CurveSystemStateDTO> result = apiInstance.CurveGetSystemStatesHistorical(startBlock, endBlock, startDate, endDate);
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling CurveApi.DappsCurveSystemStateHistoricalGet: " + e.Message);
+                Debug.Print("Exception when calling CurveApi.CurveGetSystemStatesHistorical: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2424,17 +2636,21 @@ namespace Example
 }
 ```
 
-#### Using the DappsCurveSystemStateHistoricalGetWithHttpInfo variant
+#### Using the CurveGetSystemStatesHistoricalWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    apiInstance.DappsCurveSystemStateHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate);
+    // GetSystemStates (historical)
+    ApiResponse<List<CurveSystemStateDTO>> response = apiInstance.CurveGetSystemStatesHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling CurveApi.DappsCurveSystemStateHistoricalGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling CurveApi.CurveGetSystemStatesHistoricalWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -2451,7 +2667,7 @@ catch (ApiException e)
 
 ### Return type
 
-void (empty response body)
+[**List&lt;CurveSystemStateDTO&gt;**](CurveSystemStateDTO.md)
 
 ### Authorization
 
@@ -2460,21 +2676,23 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="dappscurvetokenshistoricalget"></a>
-# **DappsCurveTokensHistoricalGet**
-> void DappsCurveTokensHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string tokenId = null)
+<a name="curvegettokenshistorical"></a>
+# **CurveGetTokensHistorical**
+> List&lt;CurveTokenDTO&gt; CurveGetTokensHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string tokenId = null)
 
+GetTokens (historical) 🔥
 
+Gets tokens.
 
 ### Example
 ```csharp
@@ -2486,7 +2704,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class DappsCurveTokensHistoricalGetExample
+    public class CurveGetTokensHistoricalExample
     {
         public static void Main()
         {
@@ -2501,11 +2719,13 @@ namespace Example
 
             try
             {
-                apiInstance.DappsCurveTokensHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId);
+                // GetTokens (historical) 🔥
+                List<CurveTokenDTO> result = apiInstance.CurveGetTokensHistorical(startBlock, endBlock, startDate, endDate, tokenId);
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling CurveApi.DappsCurveTokensHistoricalGet: " + e.Message);
+                Debug.Print("Exception when calling CurveApi.CurveGetTokensHistorical: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2514,17 +2734,21 @@ namespace Example
 }
 ```
 
-#### Using the DappsCurveTokensHistoricalGetWithHttpInfo variant
+#### Using the CurveGetTokensHistoricalWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    apiInstance.DappsCurveTokensHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate, tokenId);
+    // GetTokens (historical) 🔥
+    ApiResponse<List<CurveTokenDTO>> response = apiInstance.CurveGetTokensHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, tokenId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling CurveApi.DappsCurveTokensHistoricalGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling CurveApi.CurveGetTokensHistoricalWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -2542,7 +2766,7 @@ catch (ApiException e)
 
 ### Return type
 
-void (empty response body)
+[**List&lt;CurveTokenDTO&gt;**](CurveTokenDTO.md)
 
 ### Authorization
 
@@ -2551,21 +2775,23 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="dappscurvetransferownershipeventhistoricalget"></a>
-# **DappsCurveTransferOwnershipEventHistoricalGet**
-> void DappsCurveTransferOwnershipEventHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
+<a name="curvegettransferownershipeventshistorical"></a>
+# **CurveGetTransferOwnershipEventsHistorical**
+> List&lt;CurveTransferOwnershipEventDTO&gt; CurveGetTransferOwnershipEventsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
 
+GetTransferOwnershipEvents (historical)
 
+Gets transfer ownership events.
 
 ### Example
 ```csharp
@@ -2577,7 +2803,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class DappsCurveTransferOwnershipEventHistoricalGetExample
+    public class CurveGetTransferOwnershipEventsHistoricalExample
     {
         public static void Main()
         {
@@ -2592,11 +2818,13 @@ namespace Example
 
             try
             {
-                apiInstance.DappsCurveTransferOwnershipEventHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+                // GetTransferOwnershipEvents (historical)
+                List<CurveTransferOwnershipEventDTO> result = apiInstance.CurveGetTransferOwnershipEventsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling CurveApi.DappsCurveTransferOwnershipEventHistoricalGet: " + e.Message);
+                Debug.Print("Exception when calling CurveApi.CurveGetTransferOwnershipEventsHistorical: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2605,17 +2833,21 @@ namespace Example
 }
 ```
 
-#### Using the DappsCurveTransferOwnershipEventHistoricalGetWithHttpInfo variant
+#### Using the CurveGetTransferOwnershipEventsHistoricalWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    apiInstance.DappsCurveTransferOwnershipEventHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    // GetTransferOwnershipEvents (historical)
+    ApiResponse<List<CurveTransferOwnershipEventDTO>> response = apiInstance.CurveGetTransferOwnershipEventsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling CurveApi.DappsCurveTransferOwnershipEventHistoricalGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling CurveApi.CurveGetTransferOwnershipEventsHistoricalWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -2633,7 +2865,7 @@ catch (ApiException e)
 
 ### Return type
 
-void (empty response body)
+[**List&lt;CurveTransferOwnershipEventDTO&gt;**](CurveTransferOwnershipEventDTO.md)
 
 ### Authorization
 
@@ -2642,21 +2874,23 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="dappscurveunderlyingcoinhistoricalget"></a>
-# **DappsCurveUnderlyingCoinHistoricalGet**
-> void DappsCurveUnderlyingCoinHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
+<a name="curvegetunderlyingcoinshistorical"></a>
+# **CurveGetUnderlyingCoinsHistorical**
+> List&lt;CurveUnderlyingCoinDTO&gt; CurveGetUnderlyingCoinsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
 
+GetUnderlyingCoins (historical)
 
+Gets underlying coins.
 
 ### Example
 ```csharp
@@ -2668,7 +2902,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class DappsCurveUnderlyingCoinHistoricalGetExample
+    public class CurveGetUnderlyingCoinsHistoricalExample
     {
         public static void Main()
         {
@@ -2683,11 +2917,13 @@ namespace Example
 
             try
             {
-                apiInstance.DappsCurveUnderlyingCoinHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+                // GetUnderlyingCoins (historical)
+                List<CurveUnderlyingCoinDTO> result = apiInstance.CurveGetUnderlyingCoinsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling CurveApi.DappsCurveUnderlyingCoinHistoricalGet: " + e.Message);
+                Debug.Print("Exception when calling CurveApi.CurveGetUnderlyingCoinsHistorical: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2696,17 +2932,21 @@ namespace Example
 }
 ```
 
-#### Using the DappsCurveUnderlyingCoinHistoricalGetWithHttpInfo variant
+#### Using the CurveGetUnderlyingCoinsHistoricalWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    apiInstance.DappsCurveUnderlyingCoinHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    // GetUnderlyingCoins (historical)
+    ApiResponse<List<CurveUnderlyingCoinDTO>> response = apiInstance.CurveGetUnderlyingCoinsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling CurveApi.DappsCurveUnderlyingCoinHistoricalGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling CurveApi.CurveGetUnderlyingCoinsHistoricalWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -2724,7 +2964,7 @@ catch (ApiException e)
 
 ### Return type
 
-void (empty response body)
+[**List&lt;CurveUnderlyingCoinDTO&gt;**](CurveUnderlyingCoinDTO.md)
 
 ### Authorization
 
@@ -2733,21 +2973,23 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="dappscurvevotingapphistoricalget"></a>
-# **DappsCurveVotingAppHistoricalGet**
-> void DappsCurveVotingAppHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
+<a name="curvegetvotingappshistorical"></a>
+# **CurveGetVotingAppsHistorical**
+> List&lt;CurveVotingAppDTO&gt; CurveGetVotingAppsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
 
+GetVotingApps (historical)
 
+Gets voting apps.
 
 ### Example
 ```csharp
@@ -2759,7 +3001,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class DappsCurveVotingAppHistoricalGetExample
+    public class CurveGetVotingAppsHistoricalExample
     {
         public static void Main()
         {
@@ -2773,11 +3015,13 @@ namespace Example
 
             try
             {
-                apiInstance.DappsCurveVotingAppHistoricalGet(startBlock, endBlock, startDate, endDate);
+                // GetVotingApps (historical)
+                List<CurveVotingAppDTO> result = apiInstance.CurveGetVotingAppsHistorical(startBlock, endBlock, startDate, endDate);
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling CurveApi.DappsCurveVotingAppHistoricalGet: " + e.Message);
+                Debug.Print("Exception when calling CurveApi.CurveGetVotingAppsHistorical: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2786,17 +3030,21 @@ namespace Example
 }
 ```
 
-#### Using the DappsCurveVotingAppHistoricalGetWithHttpInfo variant
+#### Using the CurveGetVotingAppsHistoricalWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    apiInstance.DappsCurveVotingAppHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate);
+    // GetVotingApps (historical)
+    ApiResponse<List<CurveVotingAppDTO>> response = apiInstance.CurveGetVotingAppsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling CurveApi.DappsCurveVotingAppHistoricalGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling CurveApi.CurveGetVotingAppsHistoricalWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -2813,7 +3061,7 @@ catch (ApiException e)
 
 ### Return type
 
-void (empty response body)
+[**List&lt;CurveVotingAppDTO&gt;**](CurveVotingAppDTO.md)
 
 ### Authorization
 
@@ -2822,21 +3070,23 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="dappscurveweeklyvolumehistoricalget"></a>
-# **DappsCurveWeeklyVolumeHistoricalGet**
-> void DappsCurveWeeklyVolumeHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
+<a name="curvegetweeklyvolumeshistorical"></a>
+# **CurveGetWeeklyVolumesHistorical**
+> List&lt;CurveWeeklyVolumeDTO&gt; CurveGetWeeklyVolumesHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
 
+GetWeeklyVolumes (historical)
 
+Gets weekly volumes.
 
 ### Example
 ```csharp
@@ -2848,7 +3098,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class DappsCurveWeeklyVolumeHistoricalGetExample
+    public class CurveGetWeeklyVolumesHistoricalExample
     {
         public static void Main()
         {
@@ -2863,11 +3113,13 @@ namespace Example
 
             try
             {
-                apiInstance.DappsCurveWeeklyVolumeHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+                // GetWeeklyVolumes (historical)
+                List<CurveWeeklyVolumeDTO> result = apiInstance.CurveGetWeeklyVolumesHistorical(startBlock, endBlock, startDate, endDate, poolId);
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling CurveApi.DappsCurveWeeklyVolumeHistoricalGet: " + e.Message);
+                Debug.Print("Exception when calling CurveApi.CurveGetWeeklyVolumesHistorical: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2876,17 +3128,21 @@ namespace Example
 }
 ```
 
-#### Using the DappsCurveWeeklyVolumeHistoricalGetWithHttpInfo variant
+#### Using the CurveGetWeeklyVolumesHistoricalWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    apiInstance.DappsCurveWeeklyVolumeHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    // GetWeeklyVolumes (historical)
+    ApiResponse<List<CurveWeeklyVolumeDTO>> response = apiInstance.CurveGetWeeklyVolumesHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling CurveApi.DappsCurveWeeklyVolumeHistoricalGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling CurveApi.CurveGetWeeklyVolumesHistoricalWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -2904,7 +3160,7 @@ catch (ApiException e)
 
 ### Return type
 
-void (empty response body)
+[**List&lt;CurveWeeklyVolumeDTO&gt;**](CurveWeeklyVolumeDTO.md)
 
 ### Authorization
 
@@ -2913,13 +3169,13 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

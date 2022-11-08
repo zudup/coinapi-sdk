@@ -36,12 +36,12 @@ DexApi::~DexApi()
 {
 }
 
-pplx::task<void> DexApi::dappsDexBatchHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate) const
+pplx::task<std::vector<std::shared_ptr<Dex_BatchDTO>>> DexApi::dex_GetBatches__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate) const
 {
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/dex/batch/historical");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/dex/batches/historical");
     
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -49,6 +49,9 @@ pplx::task<void> DexApi::dappsDexBatchHistoricalGet(boost::optional<int64_t> sta
     std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
 
     std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -69,7 +72,7 @@ pplx::task<void> DexApi::dappsDexBatchHistoricalGet(boost::optional<int64_t> sta
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("DexApi->dappsDexBatchHistoricalGet does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("DexApi->dex_GetBatches__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -112,7 +115,7 @@ pplx::task<void> DexApi::dappsDexBatchHistoricalGet(boost::optional<int64_t> sta
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("DexApi->dappsDexBatchHistoricalGet does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("DexApi->dex_GetBatches__historical does not consume any supported media type"));
     }
 
 
@@ -132,7 +135,7 @@ pplx::task<void> DexApi::dappsDexBatchHistoricalGet(boost::optional<int64_t> sta
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsDexBatchHistoricalGet: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling dex_GetBatches__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -143,7 +146,7 @@ pplx::task<void> DexApi::dappsDexBatchHistoricalGet(boost::optional<int64_t> sta
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsDexBatchHistoricalGet: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling dex_GetBatches__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -152,10 +155,180 @@ pplx::task<void> DexApi::dappsDexBatchHistoricalGet(boost::optional<int64_t> sta
     })
     .then([=](utility::string_t localVarResponse)
     {
-        return void();
+        std::vector<std::shared_ptr<Dex_BatchDTO>> localVarResult;
+
+        if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
+        {
+            web::json::value localVarJson = web::json::value::parse(localVarResponse);
+            for( auto& localVarItem : localVarJson.as_array() )
+            {
+                std::shared_ptr<Dex_BatchDTO> localVarItemObj;
+                ModelBase::fromJson(localVarItem, localVarItemObj);
+                localVarResult.push_back(localVarItemObj);
+            }
+        }
+        // else if(localVarResponseHttpContentType == utility::conversions::to_string_t("multipart/form-data"))
+        // {
+        // TODO multipart response parsing
+        // }
+        else
+        {
+            throw ApiException(500
+                , utility::conversions::to_string_t("error calling dex_GetBatches__historical: unsupported response type"));
+        }
+
+        return localVarResult;
     });
 }
-pplx::task<void> DexApi::dappsDexOrdersHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> tokenId) const
+pplx::task<std::vector<std::shared_ptr<Dex_DepositDTO>>> DexApi::dex_GetDeposits__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> tokenId) const
+{
+
+
+    std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
+    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/dex/deposits/historical");
+    
+    std::map<utility::string_t, utility::string_t> localVarQueryParams;
+    std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
+    std::map<utility::string_t, utility::string_t> localVarFormParams;
+    std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
+
+    std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
+
+    utility::string_t localVarResponseHttpContentType;
+
+    // use JSON if possible
+    if ( localVarResponseHttpContentTypes.size() == 0 )
+    {
+        localVarResponseHttpContentType = utility::conversions::to_string_t("application/json");
+    }
+    // JSON
+    else if ( localVarResponseHttpContentTypes.find(utility::conversions::to_string_t("application/json")) != localVarResponseHttpContentTypes.end() )
+    {
+        localVarResponseHttpContentType = utility::conversions::to_string_t("application/json");
+    }
+    // multipart formdata
+    else if( localVarResponseHttpContentTypes.find(utility::conversions::to_string_t("multipart/form-data")) != localVarResponseHttpContentTypes.end() )
+    {
+        localVarResponseHttpContentType = utility::conversions::to_string_t("multipart/form-data");
+    }
+    else
+    {
+        throw ApiException(400, utility::conversions::to_string_t("DexApi->dex_GetDeposits__historical does not produce any supported media type"));
+    }
+
+    localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
+
+    std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
+
+    if (startBlock)
+    {
+        localVarQueryParams[utility::conversions::to_string_t("startBlock")] = ApiClient::parameterToString(*startBlock);
+    }
+    if (endBlock)
+    {
+        localVarQueryParams[utility::conversions::to_string_t("endBlock")] = ApiClient::parameterToString(*endBlock);
+    }
+    if (startDate)
+    {
+        localVarQueryParams[utility::conversions::to_string_t("startDate")] = ApiClient::parameterToString(*startDate);
+    }
+    if (endDate)
+    {
+        localVarQueryParams[utility::conversions::to_string_t("endDate")] = ApiClient::parameterToString(*endDate);
+    }
+    if (tokenId)
+    {
+        localVarQueryParams[utility::conversions::to_string_t("tokenId")] = ApiClient::parameterToString(*tokenId);
+    }
+
+    std::shared_ptr<IHttpBody> localVarHttpBody;
+    utility::string_t localVarRequestHttpContentType;
+
+    // use JSON if possible
+    if ( localVarConsumeHttpContentTypes.size() == 0 || localVarConsumeHttpContentTypes.find(utility::conversions::to_string_t("application/json")) != localVarConsumeHttpContentTypes.end() )
+    {
+        localVarRequestHttpContentType = utility::conversions::to_string_t("application/json");
+    }
+    // multipart formdata
+    else if( localVarConsumeHttpContentTypes.find(utility::conversions::to_string_t("multipart/form-data")) != localVarConsumeHttpContentTypes.end() )
+    {
+        localVarRequestHttpContentType = utility::conversions::to_string_t("multipart/form-data");
+    }
+    else if (localVarConsumeHttpContentTypes.find(utility::conversions::to_string_t("application/x-www-form-urlencoded")) != localVarConsumeHttpContentTypes.end())
+    {
+        localVarRequestHttpContentType = utility::conversions::to_string_t("application/x-www-form-urlencoded");
+    }
+    else
+    {
+        throw ApiException(415, utility::conversions::to_string_t("DexApi->dex_GetDeposits__historical does not consume any supported media type"));
+    }
+
+
+    return m_ApiClient->callApi(localVarPath, utility::conversions::to_string_t("GET"), localVarQueryParams, localVarHttpBody, localVarHeaderParams, localVarFormParams, localVarFileParams, localVarRequestHttpContentType)
+    .then([=](web::http::http_response localVarResponse)
+    {
+        if (m_ApiClient->getResponseHandler())
+        {
+            m_ApiClient->getResponseHandler()(localVarResponse.status_code(), localVarResponse.headers());
+        }
+
+        // 1xx - informational : OK
+        // 2xx - successful       : OK
+        // 3xx - redirection   : OK
+        // 4xx - client error  : not OK
+        // 5xx - client error  : not OK
+        if (localVarResponse.status_code() >= 400)
+        {
+            throw ApiException(localVarResponse.status_code()
+                , utility::conversions::to_string_t("error calling dex_GetDeposits__historical: ") + localVarResponse.reason_phrase()
+                , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
+        }
+
+        // check response content type
+        if(localVarResponse.headers().has(utility::conversions::to_string_t("Content-Type")))
+        {
+            utility::string_t localVarContentType = localVarResponse.headers()[utility::conversions::to_string_t("Content-Type")];
+            if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
+            {
+                throw ApiException(500
+                    , utility::conversions::to_string_t("error calling dex_GetDeposits__historical: unexpected response type: ") + localVarContentType
+                    , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
+            }
+        }
+
+        return localVarResponse.extract_string();
+    })
+    .then([=](utility::string_t localVarResponse)
+    {
+        std::vector<std::shared_ptr<Dex_DepositDTO>> localVarResult;
+
+        if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
+        {
+            web::json::value localVarJson = web::json::value::parse(localVarResponse);
+            for( auto& localVarItem : localVarJson.as_array() )
+            {
+                std::shared_ptr<Dex_DepositDTO> localVarItemObj;
+                ModelBase::fromJson(localVarItem, localVarItemObj);
+                localVarResult.push_back(localVarItemObj);
+            }
+        }
+        // else if(localVarResponseHttpContentType == utility::conversions::to_string_t("multipart/form-data"))
+        // {
+        // TODO multipart response parsing
+        // }
+        else
+        {
+            throw ApiException(500
+                , utility::conversions::to_string_t("error calling dex_GetDeposits__historical: unsupported response type"));
+        }
+
+        return localVarResult;
+    });
+}
+pplx::task<std::vector<std::shared_ptr<Dex_OrderDTO>>> DexApi::dex_GetOrders__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> tokenId) const
 {
 
 
@@ -168,6 +341,9 @@ pplx::task<void> DexApi::dappsDexOrdersHistoricalGet(boost::optional<int64_t> st
     std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
 
     std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -188,7 +364,7 @@ pplx::task<void> DexApi::dappsDexOrdersHistoricalGet(boost::optional<int64_t> st
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("DexApi->dappsDexOrdersHistoricalGet does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("DexApi->dex_GetOrders__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -235,7 +411,7 @@ pplx::task<void> DexApi::dappsDexOrdersHistoricalGet(boost::optional<int64_t> st
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("DexApi->dappsDexOrdersHistoricalGet does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("DexApi->dex_GetOrders__historical does not consume any supported media type"));
     }
 
 
@@ -255,7 +431,7 @@ pplx::task<void> DexApi::dappsDexOrdersHistoricalGet(boost::optional<int64_t> st
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsDexOrdersHistoricalGet: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling dex_GetOrders__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -266,7 +442,7 @@ pplx::task<void> DexApi::dappsDexOrdersHistoricalGet(boost::optional<int64_t> st
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsDexOrdersHistoricalGet: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling dex_GetOrders__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -275,10 +451,32 @@ pplx::task<void> DexApi::dappsDexOrdersHistoricalGet(boost::optional<int64_t> st
     })
     .then([=](utility::string_t localVarResponse)
     {
-        return void();
+        std::vector<std::shared_ptr<Dex_OrderDTO>> localVarResult;
+
+        if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
+        {
+            web::json::value localVarJson = web::json::value::parse(localVarResponse);
+            for( auto& localVarItem : localVarJson.as_array() )
+            {
+                std::shared_ptr<Dex_OrderDTO> localVarItemObj;
+                ModelBase::fromJson(localVarItem, localVarItemObj);
+                localVarResult.push_back(localVarItemObj);
+            }
+        }
+        // else if(localVarResponseHttpContentType == utility::conversions::to_string_t("multipart/form-data"))
+        // {
+        // TODO multipart response parsing
+        // }
+        else
+        {
+            throw ApiException(500
+                , utility::conversions::to_string_t("error calling dex_GetOrders__historical: unsupported response type"));
+        }
+
+        return localVarResult;
     });
 }
-pplx::task<void> DexApi::dappsDexPricesHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> tokenId) const
+pplx::task<std::vector<std::shared_ptr<Dex_PriceDTO>>> DexApi::dex_GetPrices__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> tokenId) const
 {
 
 
@@ -291,6 +489,9 @@ pplx::task<void> DexApi::dappsDexPricesHistoricalGet(boost::optional<int64_t> st
     std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
 
     std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -311,7 +512,7 @@ pplx::task<void> DexApi::dappsDexPricesHistoricalGet(boost::optional<int64_t> st
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("DexApi->dappsDexPricesHistoricalGet does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("DexApi->dex_GetPrices__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -358,7 +559,7 @@ pplx::task<void> DexApi::dappsDexPricesHistoricalGet(boost::optional<int64_t> st
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("DexApi->dappsDexPricesHistoricalGet does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("DexApi->dex_GetPrices__historical does not consume any supported media type"));
     }
 
 
@@ -378,7 +579,7 @@ pplx::task<void> DexApi::dappsDexPricesHistoricalGet(boost::optional<int64_t> st
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsDexPricesHistoricalGet: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling dex_GetPrices__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -389,7 +590,7 @@ pplx::task<void> DexApi::dappsDexPricesHistoricalGet(boost::optional<int64_t> st
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsDexPricesHistoricalGet: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling dex_GetPrices__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -398,15 +599,37 @@ pplx::task<void> DexApi::dappsDexPricesHistoricalGet(boost::optional<int64_t> st
     })
     .then([=](utility::string_t localVarResponse)
     {
-        return void();
+        std::vector<std::shared_ptr<Dex_PriceDTO>> localVarResult;
+
+        if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
+        {
+            web::json::value localVarJson = web::json::value::parse(localVarResponse);
+            for( auto& localVarItem : localVarJson.as_array() )
+            {
+                std::shared_ptr<Dex_PriceDTO> localVarItemObj;
+                ModelBase::fromJson(localVarItem, localVarItemObj);
+                localVarResult.push_back(localVarItemObj);
+            }
+        }
+        // else if(localVarResponseHttpContentType == utility::conversions::to_string_t("multipart/form-data"))
+        // {
+        // TODO multipart response parsing
+        // }
+        else
+        {
+            throw ApiException(500
+                , utility::conversions::to_string_t("error calling dex_GetPrices__historical: unsupported response type"));
+        }
+
+        return localVarResult;
     });
 }
-pplx::task<void> DexApi::dappsDexSolutionHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> tokenId) const
+pplx::task<std::vector<std::shared_ptr<Dex_SolutionDTO>>> DexApi::dex_GetSolutions__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> tokenId) const
 {
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/dex/solution/historical");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/dex/solutions/historical");
     
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -414,6 +637,9 @@ pplx::task<void> DexApi::dappsDexSolutionHistoricalGet(boost::optional<int64_t> 
     std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
 
     std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -434,7 +660,7 @@ pplx::task<void> DexApi::dappsDexSolutionHistoricalGet(boost::optional<int64_t> 
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("DexApi->dappsDexSolutionHistoricalGet does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("DexApi->dex_GetSolutions__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -481,7 +707,7 @@ pplx::task<void> DexApi::dappsDexSolutionHistoricalGet(boost::optional<int64_t> 
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("DexApi->dappsDexSolutionHistoricalGet does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("DexApi->dex_GetSolutions__historical does not consume any supported media type"));
     }
 
 
@@ -501,7 +727,7 @@ pplx::task<void> DexApi::dappsDexSolutionHistoricalGet(boost::optional<int64_t> 
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsDexSolutionHistoricalGet: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling dex_GetSolutions__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -512,7 +738,7 @@ pplx::task<void> DexApi::dappsDexSolutionHistoricalGet(boost::optional<int64_t> 
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsDexSolutionHistoricalGet: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling dex_GetSolutions__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -521,10 +747,32 @@ pplx::task<void> DexApi::dappsDexSolutionHistoricalGet(boost::optional<int64_t> 
     })
     .then([=](utility::string_t localVarResponse)
     {
-        return void();
+        std::vector<std::shared_ptr<Dex_SolutionDTO>> localVarResult;
+
+        if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
+        {
+            web::json::value localVarJson = web::json::value::parse(localVarResponse);
+            for( auto& localVarItem : localVarJson.as_array() )
+            {
+                std::shared_ptr<Dex_SolutionDTO> localVarItemObj;
+                ModelBase::fromJson(localVarItem, localVarItemObj);
+                localVarResult.push_back(localVarItemObj);
+            }
+        }
+        // else if(localVarResponseHttpContentType == utility::conversions::to_string_t("multipart/form-data"))
+        // {
+        // TODO multipart response parsing
+        // }
+        else
+        {
+            throw ApiException(500
+                , utility::conversions::to_string_t("error calling dex_GetSolutions__historical: unsupported response type"));
+        }
+
+        return localVarResult;
     });
 }
-pplx::task<void> DexApi::dappsDexStatsHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate) const
+pplx::task<std::vector<std::shared_ptr<Dex_StatsDTO>>> DexApi::dex_GetStats__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate) const
 {
 
 
@@ -537,6 +785,9 @@ pplx::task<void> DexApi::dappsDexStatsHistoricalGet(boost::optional<int64_t> sta
     std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
 
     std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -557,7 +808,7 @@ pplx::task<void> DexApi::dappsDexStatsHistoricalGet(boost::optional<int64_t> sta
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("DexApi->dappsDexStatsHistoricalGet does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("DexApi->dex_GetStats__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -600,7 +851,7 @@ pplx::task<void> DexApi::dappsDexStatsHistoricalGet(boost::optional<int64_t> sta
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("DexApi->dappsDexStatsHistoricalGet does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("DexApi->dex_GetStats__historical does not consume any supported media type"));
     }
 
 
@@ -620,7 +871,7 @@ pplx::task<void> DexApi::dappsDexStatsHistoricalGet(boost::optional<int64_t> sta
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsDexStatsHistoricalGet: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling dex_GetStats__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -631,7 +882,7 @@ pplx::task<void> DexApi::dappsDexStatsHistoricalGet(boost::optional<int64_t> sta
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsDexStatsHistoricalGet: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling dex_GetStats__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -640,10 +891,32 @@ pplx::task<void> DexApi::dappsDexStatsHistoricalGet(boost::optional<int64_t> sta
     })
     .then([=](utility::string_t localVarResponse)
     {
-        return void();
+        std::vector<std::shared_ptr<Dex_StatsDTO>> localVarResult;
+
+        if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
+        {
+            web::json::value localVarJson = web::json::value::parse(localVarResponse);
+            for( auto& localVarItem : localVarJson.as_array() )
+            {
+                std::shared_ptr<Dex_StatsDTO> localVarItemObj;
+                ModelBase::fromJson(localVarItem, localVarItemObj);
+                localVarResult.push_back(localVarItemObj);
+            }
+        }
+        // else if(localVarResponseHttpContentType == utility::conversions::to_string_t("multipart/form-data"))
+        // {
+        // TODO multipart response parsing
+        // }
+        else
+        {
+            throw ApiException(500
+                , utility::conversions::to_string_t("error calling dex_GetStats__historical: unsupported response type"));
+        }
+
+        return localVarResult;
     });
 }
-pplx::task<void> DexApi::dappsDexTokensHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> tokenId) const
+pplx::task<std::vector<std::shared_ptr<Dex_TokenDTO>>> DexApi::dex_GetTokens__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> tokenId) const
 {
 
 
@@ -656,6 +929,9 @@ pplx::task<void> DexApi::dappsDexTokensHistoricalGet(boost::optional<int64_t> st
     std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
 
     std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -676,7 +952,7 @@ pplx::task<void> DexApi::dappsDexTokensHistoricalGet(boost::optional<int64_t> st
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("DexApi->dappsDexTokensHistoricalGet does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("DexApi->dex_GetTokens__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -723,7 +999,7 @@ pplx::task<void> DexApi::dappsDexTokensHistoricalGet(boost::optional<int64_t> st
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("DexApi->dappsDexTokensHistoricalGet does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("DexApi->dex_GetTokens__historical does not consume any supported media type"));
     }
 
 
@@ -743,7 +1019,7 @@ pplx::task<void> DexApi::dappsDexTokensHistoricalGet(boost::optional<int64_t> st
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsDexTokensHistoricalGet: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling dex_GetTokens__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -754,7 +1030,7 @@ pplx::task<void> DexApi::dappsDexTokensHistoricalGet(boost::optional<int64_t> st
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsDexTokensHistoricalGet: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling dex_GetTokens__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -763,10 +1039,32 @@ pplx::task<void> DexApi::dappsDexTokensHistoricalGet(boost::optional<int64_t> st
     })
     .then([=](utility::string_t localVarResponse)
     {
-        return void();
+        std::vector<std::shared_ptr<Dex_TokenDTO>> localVarResult;
+
+        if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
+        {
+            web::json::value localVarJson = web::json::value::parse(localVarResponse);
+            for( auto& localVarItem : localVarJson.as_array() )
+            {
+                std::shared_ptr<Dex_TokenDTO> localVarItemObj;
+                ModelBase::fromJson(localVarItem, localVarItemObj);
+                localVarResult.push_back(localVarItemObj);
+            }
+        }
+        // else if(localVarResponseHttpContentType == utility::conversions::to_string_t("multipart/form-data"))
+        // {
+        // TODO multipart response parsing
+        // }
+        else
+        {
+            throw ApiException(500
+                , utility::conversions::to_string_t("error calling dex_GetTokens__historical: unsupported response type"));
+        }
+
+        return localVarResult;
     });
 }
-pplx::task<void> DexApi::dappsDexTradesHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate) const
+pplx::task<std::vector<std::shared_ptr<Dex_TradeDTO>>> DexApi::dex_GetTrades__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate) const
 {
 
 
@@ -779,6 +1077,9 @@ pplx::task<void> DexApi::dappsDexTradesHistoricalGet(boost::optional<int64_t> st
     std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
 
     std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -799,7 +1100,7 @@ pplx::task<void> DexApi::dappsDexTradesHistoricalGet(boost::optional<int64_t> st
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("DexApi->dappsDexTradesHistoricalGet does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("DexApi->dex_GetTrades__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -842,7 +1143,7 @@ pplx::task<void> DexApi::dappsDexTradesHistoricalGet(boost::optional<int64_t> st
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("DexApi->dappsDexTradesHistoricalGet does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("DexApi->dex_GetTrades__historical does not consume any supported media type"));
     }
 
 
@@ -862,7 +1163,7 @@ pplx::task<void> DexApi::dappsDexTradesHistoricalGet(boost::optional<int64_t> st
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsDexTradesHistoricalGet: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling dex_GetTrades__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -873,7 +1174,7 @@ pplx::task<void> DexApi::dappsDexTradesHistoricalGet(boost::optional<int64_t> st
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsDexTradesHistoricalGet: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling dex_GetTrades__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -882,10 +1183,32 @@ pplx::task<void> DexApi::dappsDexTradesHistoricalGet(boost::optional<int64_t> st
     })
     .then([=](utility::string_t localVarResponse)
     {
-        return void();
+        std::vector<std::shared_ptr<Dex_TradeDTO>> localVarResult;
+
+        if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
+        {
+            web::json::value localVarJson = web::json::value::parse(localVarResponse);
+            for( auto& localVarItem : localVarJson.as_array() )
+            {
+                std::shared_ptr<Dex_TradeDTO> localVarItemObj;
+                ModelBase::fromJson(localVarItem, localVarItemObj);
+                localVarResult.push_back(localVarItemObj);
+            }
+        }
+        // else if(localVarResponseHttpContentType == utility::conversions::to_string_t("multipart/form-data"))
+        // {
+        // TODO multipart response parsing
+        // }
+        else
+        {
+            throw ApiException(500
+                , utility::conversions::to_string_t("error calling dex_GetTrades__historical: unsupported response type"));
+        }
+
+        return localVarResult;
     });
 }
-pplx::task<void> DexApi::dappsDexUsersHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate) const
+pplx::task<std::vector<std::shared_ptr<Dex_UserDTO>>> DexApi::dex_GetUsers__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate) const
 {
 
 
@@ -898,6 +1221,9 @@ pplx::task<void> DexApi::dappsDexUsersHistoricalGet(boost::optional<int64_t> sta
     std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
 
     std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -918,7 +1244,7 @@ pplx::task<void> DexApi::dappsDexUsersHistoricalGet(boost::optional<int64_t> sta
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("DexApi->dappsDexUsersHistoricalGet does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("DexApi->dex_GetUsers__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -961,7 +1287,7 @@ pplx::task<void> DexApi::dappsDexUsersHistoricalGet(boost::optional<int64_t> sta
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("DexApi->dappsDexUsersHistoricalGet does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("DexApi->dex_GetUsers__historical does not consume any supported media type"));
     }
 
 
@@ -981,7 +1307,7 @@ pplx::task<void> DexApi::dappsDexUsersHistoricalGet(boost::optional<int64_t> sta
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsDexUsersHistoricalGet: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling dex_GetUsers__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -992,7 +1318,7 @@ pplx::task<void> DexApi::dappsDexUsersHistoricalGet(boost::optional<int64_t> sta
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsDexUsersHistoricalGet: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling dex_GetUsers__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -1001,15 +1327,37 @@ pplx::task<void> DexApi::dappsDexUsersHistoricalGet(boost::optional<int64_t> sta
     })
     .then([=](utility::string_t localVarResponse)
     {
-        return void();
+        std::vector<std::shared_ptr<Dex_UserDTO>> localVarResult;
+
+        if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
+        {
+            web::json::value localVarJson = web::json::value::parse(localVarResponse);
+            for( auto& localVarItem : localVarJson.as_array() )
+            {
+                std::shared_ptr<Dex_UserDTO> localVarItemObj;
+                ModelBase::fromJson(localVarItem, localVarItemObj);
+                localVarResult.push_back(localVarItemObj);
+            }
+        }
+        // else if(localVarResponseHttpContentType == utility::conversions::to_string_t("multipart/form-data"))
+        // {
+        // TODO multipart response parsing
+        // }
+        else
+        {
+            throw ApiException(500
+                , utility::conversions::to_string_t("error calling dex_GetUsers__historical: unsupported response type"));
+        }
+
+        return localVarResult;
     });
 }
-pplx::task<void> DexApi::dappsDexWithdrawHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> tokenId) const
+pplx::task<std::vector<std::shared_ptr<Dex_WithdrawRequestDTO>>> DexApi::dex_GetWithdrawsRequests__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> tokenId) const
 {
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/dex/withdraw/historical");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/dex/withdrawsRequests/historical");
     
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -1017,6 +1365,9 @@ pplx::task<void> DexApi::dappsDexWithdrawHistoricalGet(boost::optional<int64_t> 
     std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
 
     std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -1037,7 +1388,7 @@ pplx::task<void> DexApi::dappsDexWithdrawHistoricalGet(boost::optional<int64_t> 
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("DexApi->dappsDexWithdrawHistoricalGet does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("DexApi->dex_GetWithdrawsRequests__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -1084,7 +1435,7 @@ pplx::task<void> DexApi::dappsDexWithdrawHistoricalGet(boost::optional<int64_t> 
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("DexApi->dappsDexWithdrawHistoricalGet does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("DexApi->dex_GetWithdrawsRequests__historical does not consume any supported media type"));
     }
 
 
@@ -1104,7 +1455,7 @@ pplx::task<void> DexApi::dappsDexWithdrawHistoricalGet(boost::optional<int64_t> 
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsDexWithdrawHistoricalGet: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling dex_GetWithdrawsRequests__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -1115,7 +1466,7 @@ pplx::task<void> DexApi::dappsDexWithdrawHistoricalGet(boost::optional<int64_t> 
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsDexWithdrawHistoricalGet: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling dex_GetWithdrawsRequests__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -1124,15 +1475,37 @@ pplx::task<void> DexApi::dappsDexWithdrawHistoricalGet(boost::optional<int64_t> 
     })
     .then([=](utility::string_t localVarResponse)
     {
-        return void();
+        std::vector<std::shared_ptr<Dex_WithdrawRequestDTO>> localVarResult;
+
+        if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
+        {
+            web::json::value localVarJson = web::json::value::parse(localVarResponse);
+            for( auto& localVarItem : localVarJson.as_array() )
+            {
+                std::shared_ptr<Dex_WithdrawRequestDTO> localVarItemObj;
+                ModelBase::fromJson(localVarItem, localVarItemObj);
+                localVarResult.push_back(localVarItemObj);
+            }
+        }
+        // else if(localVarResponseHttpContentType == utility::conversions::to_string_t("multipart/form-data"))
+        // {
+        // TODO multipart response parsing
+        // }
+        else
+        {
+            throw ApiException(500
+                , utility::conversions::to_string_t("error calling dex_GetWithdrawsRequests__historical: unsupported response type"));
+        }
+
+        return localVarResult;
     });
 }
-pplx::task<void> DexApi::dappsDexWithdrawRequestHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> tokenId) const
+pplx::task<std::vector<std::shared_ptr<Dex_WithdrawDTO>>> DexApi::dex_GetWithdraws__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> tokenId) const
 {
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/dex/withdrawRequest/historical");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/dex/withdraws/historical");
     
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -1140,6 +1513,9 @@ pplx::task<void> DexApi::dappsDexWithdrawRequestHistoricalGet(boost::optional<in
     std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
 
     std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -1160,7 +1536,7 @@ pplx::task<void> DexApi::dappsDexWithdrawRequestHistoricalGet(boost::optional<in
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("DexApi->dappsDexWithdrawRequestHistoricalGet does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("DexApi->dex_GetWithdraws__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -1207,7 +1583,7 @@ pplx::task<void> DexApi::dappsDexWithdrawRequestHistoricalGet(boost::optional<in
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("DexApi->dappsDexWithdrawRequestHistoricalGet does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("DexApi->dex_GetWithdraws__historical does not consume any supported media type"));
     }
 
 
@@ -1227,7 +1603,7 @@ pplx::task<void> DexApi::dappsDexWithdrawRequestHistoricalGet(boost::optional<in
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsDexWithdrawRequestHistoricalGet: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling dex_GetWithdraws__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -1238,7 +1614,7 @@ pplx::task<void> DexApi::dappsDexWithdrawRequestHistoricalGet(boost::optional<in
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsDexWithdrawRequestHistoricalGet: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling dex_GetWithdraws__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -1247,7 +1623,29 @@ pplx::task<void> DexApi::dappsDexWithdrawRequestHistoricalGet(boost::optional<in
     })
     .then([=](utility::string_t localVarResponse)
     {
-        return void();
+        std::vector<std::shared_ptr<Dex_WithdrawDTO>> localVarResult;
+
+        if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
+        {
+            web::json::value localVarJson = web::json::value::parse(localVarResponse);
+            for( auto& localVarItem : localVarJson.as_array() )
+            {
+                std::shared_ptr<Dex_WithdrawDTO> localVarItemObj;
+                ModelBase::fromJson(localVarItem, localVarItemObj);
+                localVarResult.push_back(localVarItemObj);
+            }
+        }
+        // else if(localVarResponseHttpContentType == utility::conversions::to_string_t("multipart/form-data"))
+        // {
+        // TODO multipart response parsing
+        // }
+        else
+        {
+            throw ApiException(500
+                , utility::conversions::to_string_t("error calling dex_GetWithdraws__historical: unsupported response type"));
+        }
+
+        return localVarResult;
     });
 }
 

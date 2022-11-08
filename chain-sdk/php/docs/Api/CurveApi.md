@@ -4,47 +4,49 @@ All URIs are relative to https://onchain.coinapi.io, except if the operation def
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**dappsCurveAccountsHistoricalGet()**](CurveApi.md#dappsCurveAccountsHistoricalGet) | **GET** /dapps/curve/accounts/historical |  |
-| [**dappsCurveAddLiquidityEventHistoricalGet()**](CurveApi.md#dappsCurveAddLiquidityEventHistoricalGet) | **GET** /dapps/curve/addLiquidityEvent/historical |  |
-| [**dappsCurveAdminFeeChangeLogHistoricalGet()**](CurveApi.md#dappsCurveAdminFeeChangeLogHistoricalGet) | **GET** /dapps/curve/adminFeeChangeLog/historical |  |
-| [**dappsCurveAmplificationCoeffChangeLogHistoricalGet()**](CurveApi.md#dappsCurveAmplificationCoeffChangeLogHistoricalGet) | **GET** /dapps/curve/amplificationCoeffChangeLog/historical |  |
-| [**dappsCurveCoinsHistoricalGet()**](CurveApi.md#dappsCurveCoinsHistoricalGet) | **GET** /dapps/curve/coins/historical |  |
-| [**dappsCurveContractsHistoricalGet()**](CurveApi.md#dappsCurveContractsHistoricalGet) | **GET** /dapps/curve/contracts/historical |  |
-| [**dappsCurveContractsVersionHistoricalGet()**](CurveApi.md#dappsCurveContractsVersionHistoricalGet) | **GET** /dapps/curve/contractsVersion/historical |  |
-| [**dappsCurveDailyVolumeHistoricalGet()**](CurveApi.md#dappsCurveDailyVolumeHistoricalGet) | **GET** /dapps/curve/dailyVolume/historical |  |
-| [**dappsCurveFeeChangeLogHistoricalGet()**](CurveApi.md#dappsCurveFeeChangeLogHistoricalGet) | **GET** /dapps/curve/feeChangeLog/historical |  |
-| [**dappsCurveGaugeDepositHistoricalGet()**](CurveApi.md#dappsCurveGaugeDepositHistoricalGet) | **GET** /dapps/curve/gaugeDeposit/historical |  |
-| [**dappsCurveGaugeHistoricalGet()**](CurveApi.md#dappsCurveGaugeHistoricalGet) | **GET** /dapps/curve/gauge/historical |  |
-| [**dappsCurveGaugeLiquidityHistoricalGet()**](CurveApi.md#dappsCurveGaugeLiquidityHistoricalGet) | **GET** /dapps/curve/gaugeLiquidity/historical |  |
-| [**dappsCurveGaugeTotalWeightHistoricalGet()**](CurveApi.md#dappsCurveGaugeTotalWeightHistoricalGet) | **GET** /dapps/curve/gaugeTotalWeight/historical |  |
-| [**dappsCurveGaugeTypeHistoricalGet()**](CurveApi.md#dappsCurveGaugeTypeHistoricalGet) | **GET** /dapps/curve/gaugeType/historical |  |
-| [**dappsCurveGaugeTypeWeightHistoricalGet()**](CurveApi.md#dappsCurveGaugeTypeWeightHistoricalGet) | **GET** /dapps/curve/gaugeTypeWeight/historical |  |
-| [**dappsCurveGaugeWeightHistoricalGet()**](CurveApi.md#dappsCurveGaugeWeightHistoricalGet) | **GET** /dapps/curve/gaugeWeight/historical |  |
-| [**dappsCurveGaugeWeightVoteHistoricalGet()**](CurveApi.md#dappsCurveGaugeWeightVoteHistoricalGet) | **GET** /dapps/curve/gaugeWeightVote/historical |  |
-| [**dappsCurveGaugeWithdrawHistoricalGet()**](CurveApi.md#dappsCurveGaugeWithdrawHistoricalGet) | **GET** /dapps/curve/gaugeWithdraw/historical |  |
-| [**dappsCurveHourlyVolumeHistoricalGet()**](CurveApi.md#dappsCurveHourlyVolumeHistoricalGet) | **GET** /dapps/curve/hourlyVolume/historical |  |
-| [**dappsCurveLpTokenHistoricalGet()**](CurveApi.md#dappsCurveLpTokenHistoricalGet) | **GET** /dapps/curve/lpToken/historical |  |
-| [**dappsCurvePoolsHistoricalGet()**](CurveApi.md#dappsCurvePoolsHistoricalGet) | **GET** /dapps/curve/pools/historical |  |
-| [**dappsCurveProposalsHistoricalGet()**](CurveApi.md#dappsCurveProposalsHistoricalGet) | **GET** /dapps/curve/proposals/historical |  |
-| [**dappsCurveProposalsVoteHistoricalGet()**](CurveApi.md#dappsCurveProposalsVoteHistoricalGet) | **GET** /dapps/curve/proposalsVote/historical |  |
-| [**dappsCurveRemoveLiquidityEventHistoricalGet()**](CurveApi.md#dappsCurveRemoveLiquidityEventHistoricalGet) | **GET** /dapps/curve/removeLiquidityEvent/historical |  |
-| [**dappsCurveRemoveLiquidityOneEventHistoricalGet()**](CurveApi.md#dappsCurveRemoveLiquidityOneEventHistoricalGet) | **GET** /dapps/curve/removeLiquidityOneEvent/historical |  |
-| [**dappsCurveSwapsHistoricalGet()**](CurveApi.md#dappsCurveSwapsHistoricalGet) | **GET** /dapps/curve/swaps/historical |  |
-| [**dappsCurveSystemStateHistoricalGet()**](CurveApi.md#dappsCurveSystemStateHistoricalGet) | **GET** /dapps/curve/systemState/historical |  |
-| [**dappsCurveTokensHistoricalGet()**](CurveApi.md#dappsCurveTokensHistoricalGet) | **GET** /dapps/curve/tokens/historical |  |
-| [**dappsCurveTransferOwnershipEventHistoricalGet()**](CurveApi.md#dappsCurveTransferOwnershipEventHistoricalGet) | **GET** /dapps/curve/transferOwnershipEvent/historical |  |
-| [**dappsCurveUnderlyingCoinHistoricalGet()**](CurveApi.md#dappsCurveUnderlyingCoinHistoricalGet) | **GET** /dapps/curve/underlyingCoin/historical |  |
-| [**dappsCurveVotingAppHistoricalGet()**](CurveApi.md#dappsCurveVotingAppHistoricalGet) | **GET** /dapps/curve/votingApp/historical |  |
-| [**dappsCurveWeeklyVolumeHistoricalGet()**](CurveApi.md#dappsCurveWeeklyVolumeHistoricalGet) | **GET** /dapps/curve/weeklyVolume/historical |  |
+| [**curveGetAccountsHistorical()**](CurveApi.md#curveGetAccountsHistorical) | **GET** /dapps/curve/accounts/historical | GetAccounts (historical) |
+| [**curveGetAddLiquidityEventsHistorical()**](CurveApi.md#curveGetAddLiquidityEventsHistorical) | **GET** /dapps/curve/addLiquidityEvents/historical | GetAddLiquidityEvents (historical) |
+| [**curveGetAdminFeeChangeLogsHistorical()**](CurveApi.md#curveGetAdminFeeChangeLogsHistorical) | **GET** /dapps/curve/adminFeeChangeLogs/historical | GetAdminFeeChangeLogs (historical) |
+| [**curveGetAmplificationCoeffChangeLogsHistorical()**](CurveApi.md#curveGetAmplificationCoeffChangeLogsHistorical) | **GET** /dapps/curve/amplificationCoeffChangeLogs/historical | GetAmplificationCoeffChangeLogs (historical) |
+| [**curveGetCoinsHistorical()**](CurveApi.md#curveGetCoinsHistorical) | **GET** /dapps/curve/coins/historical | GetCoins (historical) |
+| [**curveGetContractsHistorical()**](CurveApi.md#curveGetContractsHistorical) | **GET** /dapps/curve/contracts/historical | GetContracts (historical) |
+| [**curveGetContractsVersionsHistorical()**](CurveApi.md#curveGetContractsVersionsHistorical) | **GET** /dapps/curve/contractsVersions/historical | GetContractsVersions (historical) |
+| [**curveGetDailyVolumesHistorical()**](CurveApi.md#curveGetDailyVolumesHistorical) | **GET** /dapps/curve/dailyVolumes/historical | GetDailyVolumes (historical) |
+| [**curveGetExchangesHistorical()**](CurveApi.md#curveGetExchangesHistorical) | **GET** /dapps/curve/exchanges/historical | GetExchanges (historical) 🔥 |
+| [**curveGetFeeChangeLogsHistorical()**](CurveApi.md#curveGetFeeChangeLogsHistorical) | **GET** /dapps/curve/feeChangeLogs/historical | GetFeeChangeLogs (historical) |
+| [**curveGetGaugesDepositsHistorical()**](CurveApi.md#curveGetGaugesDepositsHistorical) | **GET** /dapps/curve/gaugesDeposits/historical | GetGaugesDeposits (historical) |
+| [**curveGetGaugesHistorical()**](CurveApi.md#curveGetGaugesHistorical) | **GET** /dapps/curve/gauges/historical | GetGauges (historical) |
+| [**curveGetGaugesLiquidityHistorical()**](CurveApi.md#curveGetGaugesLiquidityHistorical) | **GET** /dapps/curve/gaugesLiquidity/historical | GetGaugesLiquidity (historical) |
+| [**curveGetGaugesTotalWeightsHistorical()**](CurveApi.md#curveGetGaugesTotalWeightsHistorical) | **GET** /dapps/curve/gaugesTotalWeights/historical | GetGaugesTotalWeights (historical) |
+| [**curveGetGaugesTypesHistorical()**](CurveApi.md#curveGetGaugesTypesHistorical) | **GET** /dapps/curve/gaugesTypes/historical | GetGaugesTypes (historical) |
+| [**curveGetGaugesTypesWeightsHistorical()**](CurveApi.md#curveGetGaugesTypesWeightsHistorical) | **GET** /dapps/curve/gaugesTypesWeights/historical | GetGaugesTypesWeights (historical) |
+| [**curveGetGaugesWeightsHistorical()**](CurveApi.md#curveGetGaugesWeightsHistorical) | **GET** /dapps/curve/gaugesWeights/historical | GetGaugesWeights (historical) |
+| [**curveGetGaugesWeightsVotesHistorical()**](CurveApi.md#curveGetGaugesWeightsVotesHistorical) | **GET** /dapps/curve/gaugesWeightsVotes/historical | GetGaugesWeightsVotes (historical) |
+| [**curveGetGaugesWithdrawHistorical()**](CurveApi.md#curveGetGaugesWithdrawHistorical) | **GET** /dapps/curve/gaugesWithdraws/historical | GetGaugesWithdraw (historical) |
+| [**curveGetHourlyVolumesHistorical()**](CurveApi.md#curveGetHourlyVolumesHistorical) | **GET** /dapps/curve/hourlyVolumes/historical | GetHourlyVolumes (historical) |
+| [**curveGetLpTokensHistorical()**](CurveApi.md#curveGetLpTokensHistorical) | **GET** /dapps/curve/lpTokens/historical | GetLpTokens (historical) |
+| [**curveGetPoolsHistorical()**](CurveApi.md#curveGetPoolsHistorical) | **GET** /dapps/curve/pools/historical | GetPools (historical) 🔥 |
+| [**curveGetProposalsHistorical()**](CurveApi.md#curveGetProposalsHistorical) | **GET** /dapps/curve/proposals/historical | GetProposals (historical) |
+| [**curveGetProposalsVotesHistorical()**](CurveApi.md#curveGetProposalsVotesHistorical) | **GET** /dapps/curve/proposalsVotes/historical | GetProposalsVotes (historical) |
+| [**curveGetRemoveLiquidityEventsHistorical()**](CurveApi.md#curveGetRemoveLiquidityEventsHistorical) | **GET** /dapps/curve/removeLiquidityEvents/historical | GetRemoveLiquidityEvents (historical) |
+| [**curveGetRemoveLiquidityOneEventsHistorical()**](CurveApi.md#curveGetRemoveLiquidityOneEventsHistorical) | **GET** /dapps/curve/removeLiquidityOneEvents/historical | GetRemoveLiquidityOneEvents (historical) |
+| [**curveGetSystemStatesHistorical()**](CurveApi.md#curveGetSystemStatesHistorical) | **GET** /dapps/curve/systemStates/historical | GetSystemStates (historical) |
+| [**curveGetTokensHistorical()**](CurveApi.md#curveGetTokensHistorical) | **GET** /dapps/curve/tokens/historical | GetTokens (historical) 🔥 |
+| [**curveGetTransferOwnershipEventsHistorical()**](CurveApi.md#curveGetTransferOwnershipEventsHistorical) | **GET** /dapps/curve/transferOwnershipEvents/historical | GetTransferOwnershipEvents (historical) |
+| [**curveGetUnderlyingCoinsHistorical()**](CurveApi.md#curveGetUnderlyingCoinsHistorical) | **GET** /dapps/curve/underlyingCoins/historical | GetUnderlyingCoins (historical) |
+| [**curveGetVotingAppsHistorical()**](CurveApi.md#curveGetVotingAppsHistorical) | **GET** /dapps/curve/votingApps/historical | GetVotingApps (historical) |
+| [**curveGetWeeklyVolumesHistorical()**](CurveApi.md#curveGetWeeklyVolumesHistorical) | **GET** /dapps/curve/weeklyVolumes/historical | GetWeeklyVolumes (historical) |
 
 
-## `dappsCurveAccountsHistoricalGet()`
+## `curveGetAccountsHistorical()`
 
 ```php
-dappsCurveAccountsHistoricalGet($start_block, $end_block, $start_date, $end_date)
+curveGetAccountsHistorical($start_block, $end_block, $start_date, $end_date): \OpenAPI\Client\Model\CurveAccountDTO[]
 ```
 
+GetAccounts (historical)
 
+Gets accounts.
 
 ### Example
 
@@ -59,15 +61,16 @@ $apiInstance = new OpenAPI\Client\Api\CurveApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
 
 try {
-    $apiInstance->dappsCurveAccountsHistoricalGet($start_block, $end_block, $start_date, $end_date);
+    $result = $apiInstance->curveGetAccountsHistorical($start_block, $end_block, $start_date, $end_date);
+    print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CurveApi->dappsCurveAccountsHistoricalGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CurveApi->curveGetAccountsHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -82,7 +85,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\CurveAccountDTO[]**](../Model/CurveAccountDTO.md)
 
 ### Authorization
 
@@ -91,19 +94,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `dappsCurveAddLiquidityEventHistoricalGet()`
+## `curveGetAddLiquidityEventsHistorical()`
 
 ```php
-dappsCurveAddLiquidityEventHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id)
+curveGetAddLiquidityEventsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id): \OpenAPI\Client\Model\CurveAddLiquidityEventDTO[]
 ```
 
+GetAddLiquidityEvents (historical)
 
+Gets add liquidity events.
 
 ### Example
 
@@ -118,16 +123,17 @@ $apiInstance = new OpenAPI\Client\Api\CurveApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
 $pool_id = 'pool_id_example'; // string
 
 try {
-    $apiInstance->dappsCurveAddLiquidityEventHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id);
+    $result = $apiInstance->curveGetAddLiquidityEventsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id);
+    print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CurveApi->dappsCurveAddLiquidityEventHistoricalGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CurveApi->curveGetAddLiquidityEventsHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -143,7 +149,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\CurveAddLiquidityEventDTO[]**](../Model/CurveAddLiquidityEventDTO.md)
 
 ### Authorization
 
@@ -152,19 +158,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `dappsCurveAdminFeeChangeLogHistoricalGet()`
+## `curveGetAdminFeeChangeLogsHistorical()`
 
 ```php
-dappsCurveAdminFeeChangeLogHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id)
+curveGetAdminFeeChangeLogsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id): \OpenAPI\Client\Model\CurveAdminFeeChangeLogDTO[]
 ```
 
+GetAdminFeeChangeLogs (historical)
 
+Gets admin fee change logs.
 
 ### Example
 
@@ -179,16 +187,17 @@ $apiInstance = new OpenAPI\Client\Api\CurveApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$pool_id = 'pool_id_example'; // string
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$pool_id = 'pool_id_example'; // string | 
 
 try {
-    $apiInstance->dappsCurveAdminFeeChangeLogHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id);
+    $result = $apiInstance->curveGetAdminFeeChangeLogsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id);
+    print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CurveApi->dappsCurveAdminFeeChangeLogHistoricalGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CurveApi->curveGetAdminFeeChangeLogsHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -204,7 +213,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\CurveAdminFeeChangeLogDTO[]**](../Model/CurveAdminFeeChangeLogDTO.md)
 
 ### Authorization
 
@@ -213,19 +222,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `dappsCurveAmplificationCoeffChangeLogHistoricalGet()`
+## `curveGetAmplificationCoeffChangeLogsHistorical()`
 
 ```php
-dappsCurveAmplificationCoeffChangeLogHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id)
+curveGetAmplificationCoeffChangeLogsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id): \OpenAPI\Client\Model\CurveAmplificationCoeffChangeLogDTO[]
 ```
 
+GetAmplificationCoeffChangeLogs (historical)
 
+Gets amplification coeff change logs.
 
 ### Example
 
@@ -240,16 +251,17 @@ $apiInstance = new OpenAPI\Client\Api\CurveApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$pool_id = 'pool_id_example'; // string
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$pool_id = 'pool_id_example'; // string | 
 
 try {
-    $apiInstance->dappsCurveAmplificationCoeffChangeLogHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id);
+    $result = $apiInstance->curveGetAmplificationCoeffChangeLogsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id);
+    print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CurveApi->dappsCurveAmplificationCoeffChangeLogHistoricalGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CurveApi->curveGetAmplificationCoeffChangeLogsHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -265,7 +277,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\CurveAmplificationCoeffChangeLogDTO[]**](../Model/CurveAmplificationCoeffChangeLogDTO.md)
 
 ### Authorization
 
@@ -274,19 +286,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `dappsCurveCoinsHistoricalGet()`
+## `curveGetCoinsHistorical()`
 
 ```php
-dappsCurveCoinsHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id)
+curveGetCoinsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id): \OpenAPI\Client\Model\CurveCoinDTO[]
 ```
 
+GetCoins (historical)
 
+Gets coins.
 
 ### Example
 
@@ -301,16 +315,17 @@ $apiInstance = new OpenAPI\Client\Api\CurveApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$pool_id = 'pool_id_example'; // string
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$pool_id = 'pool_id_example'; // string | 
 
 try {
-    $apiInstance->dappsCurveCoinsHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id);
+    $result = $apiInstance->curveGetCoinsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id);
+    print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CurveApi->dappsCurveCoinsHistoricalGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CurveApi->curveGetCoinsHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -326,7 +341,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\CurveCoinDTO[]**](../Model/CurveCoinDTO.md)
 
 ### Authorization
 
@@ -335,19 +350,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `dappsCurveContractsHistoricalGet()`
+## `curveGetContractsHistorical()`
 
 ```php
-dappsCurveContractsHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id)
+curveGetContractsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id): \OpenAPI\Client\Model\CurveContractDTO[]
 ```
 
+GetContracts (historical)
 
+Gets contracts.
 
 ### Example
 
@@ -362,16 +379,17 @@ $apiInstance = new OpenAPI\Client\Api\CurveApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$pool_id = 'pool_id_example'; // string
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$pool_id = 'pool_id_example'; // string | 
 
 try {
-    $apiInstance->dappsCurveContractsHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id);
+    $result = $apiInstance->curveGetContractsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id);
+    print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CurveApi->dappsCurveContractsHistoricalGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CurveApi->curveGetContractsHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -387,7 +405,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\CurveContractDTO[]**](../Model/CurveContractDTO.md)
 
 ### Authorization
 
@@ -396,19 +414,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `dappsCurveContractsVersionHistoricalGet()`
+## `curveGetContractsVersionsHistorical()`
 
 ```php
-dappsCurveContractsVersionHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id)
+curveGetContractsVersionsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id): \OpenAPI\Client\Model\CurveContractVersionDTO[]
 ```
 
+GetContractsVersions (historical)
 
+Gets contracts versions.
 
 ### Example
 
@@ -423,16 +443,17 @@ $apiInstance = new OpenAPI\Client\Api\CurveApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$pool_id = 'pool_id_example'; // string
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$pool_id = 'pool_id_example'; // string | 
 
 try {
-    $apiInstance->dappsCurveContractsVersionHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id);
+    $result = $apiInstance->curveGetContractsVersionsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id);
+    print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CurveApi->dappsCurveContractsVersionHistoricalGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CurveApi->curveGetContractsVersionsHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -448,7 +469,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\CurveContractVersionDTO[]**](../Model/CurveContractVersionDTO.md)
 
 ### Authorization
 
@@ -457,19 +478,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `dappsCurveDailyVolumeHistoricalGet()`
+## `curveGetDailyVolumesHistorical()`
 
 ```php
-dappsCurveDailyVolumeHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id)
+curveGetDailyVolumesHistorical($start_block, $end_block, $start_date, $end_date, $pool_id): \OpenAPI\Client\Model\CurveDailyVolumeDTO[]
 ```
 
+GetDailyVolumes (historical)
 
+Gets daily volumes.
 
 ### Example
 
@@ -484,16 +507,17 @@ $apiInstance = new OpenAPI\Client\Api\CurveApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$pool_id = 'pool_id_example'; // string
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$pool_id = 'pool_id_example'; // string | 
 
 try {
-    $apiInstance->dappsCurveDailyVolumeHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id);
+    $result = $apiInstance->curveGetDailyVolumesHistorical($start_block, $end_block, $start_date, $end_date, $pool_id);
+    print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CurveApi->dappsCurveDailyVolumeHistoricalGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CurveApi->curveGetDailyVolumesHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -509,7 +533,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\CurveDailyVolumeDTO[]**](../Model/CurveDailyVolumeDTO.md)
 
 ### Authorization
 
@@ -518,19 +542,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `dappsCurveFeeChangeLogHistoricalGet()`
+## `curveGetExchangesHistorical()`
 
 ```php
-dappsCurveFeeChangeLogHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id)
+curveGetExchangesHistorical($start_block, $end_block, $start_date, $end_date, $pool_id): \OpenAPI\Client\Model\CurveExchangeDTO[]
 ```
 
+GetExchanges (historical) 🔥
 
+Gets exchanges.
 
 ### Example
 
@@ -545,16 +571,17 @@ $apiInstance = new OpenAPI\Client\Api\CurveApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$pool_id = 'pool_id_example'; // string
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$pool_id = 'pool_id_example'; // string | 
 
 try {
-    $apiInstance->dappsCurveFeeChangeLogHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id);
+    $result = $apiInstance->curveGetExchangesHistorical($start_block, $end_block, $start_date, $end_date, $pool_id);
+    print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CurveApi->dappsCurveFeeChangeLogHistoricalGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CurveApi->curveGetExchangesHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -570,7 +597,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\CurveExchangeDTO[]**](../Model/CurveExchangeDTO.md)
 
 ### Authorization
 
@@ -579,19 +606,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `dappsCurveGaugeDepositHistoricalGet()`
+## `curveGetFeeChangeLogsHistorical()`
 
 ```php
-dappsCurveGaugeDepositHistoricalGet($start_block, $end_block, $start_date, $end_date)
+curveGetFeeChangeLogsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id): \OpenAPI\Client\Model\CurveFeeChangeLogDTO[]
 ```
 
+GetFeeChangeLogs (historical)
 
+Gets fee change logs.
 
 ### Example
 
@@ -606,75 +635,17 @@ $apiInstance = new OpenAPI\Client\Api\CurveApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$pool_id = 'pool_id_example'; // string | 
 
 try {
-    $apiInstance->dappsCurveGaugeDepositHistoricalGet($start_block, $end_block, $start_date, $end_date);
+    $result = $apiInstance->curveGetFeeChangeLogsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id);
+    print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CurveApi->dappsCurveGaugeDepositHistoricalGet: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **start_block** | **int**|  | [optional] |
-| **end_block** | **int**|  | [optional] |
-| **start_date** | **\DateTime**|  | [optional] |
-| **end_date** | **\DateTime**|  | [optional] |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `dappsCurveGaugeHistoricalGet()`
-
-```php
-dappsCurveGaugeHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id)
-```
-
-
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-
-$apiInstance = new OpenAPI\Client\Api\CurveApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
-);
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$pool_id = 'pool_id_example'; // string
-
-try {
-    $apiInstance->dappsCurveGaugeHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id);
-} catch (Exception $e) {
-    echo 'Exception when calling CurveApi->dappsCurveGaugeHistoricalGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CurveApi->curveGetFeeChangeLogsHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -690,7 +661,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\CurveFeeChangeLogDTO[]**](../Model/CurveFeeChangeLogDTO.md)
 
 ### Authorization
 
@@ -699,19 +670,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `dappsCurveGaugeLiquidityHistoricalGet()`
+## `curveGetGaugesDepositsHistorical()`
 
 ```php
-dappsCurveGaugeLiquidityHistoricalGet($start_block, $end_block, $start_date, $end_date)
+curveGetGaugesDepositsHistorical($start_block, $end_block, $start_date, $end_date): \OpenAPI\Client\Model\CurveGaugeDepositDTO[]
 ```
 
+GetGaugesDeposits (historical)
 
+Gets gauges deposits.
 
 ### Example
 
@@ -726,15 +699,16 @@ $apiInstance = new OpenAPI\Client\Api\CurveApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
 
 try {
-    $apiInstance->dappsCurveGaugeLiquidityHistoricalGet($start_block, $end_block, $start_date, $end_date);
+    $result = $apiInstance->curveGetGaugesDepositsHistorical($start_block, $end_block, $start_date, $end_date);
+    print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CurveApi->dappsCurveGaugeLiquidityHistoricalGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CurveApi->curveGetGaugesDepositsHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -749,7 +723,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\CurveGaugeDepositDTO[]**](../Model/CurveGaugeDepositDTO.md)
 
 ### Authorization
 
@@ -758,19 +732,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `dappsCurveGaugeTotalWeightHistoricalGet()`
+## `curveGetGaugesHistorical()`
 
 ```php
-dappsCurveGaugeTotalWeightHistoricalGet($start_block, $end_block, $start_date, $end_date)
+curveGetGaugesHistorical($start_block, $end_block, $start_date, $end_date, $pool_id): \OpenAPI\Client\Model\CurveGaugeDTO[]
 ```
 
+GetGauges (historical)
 
+Gets gauges.
 
 ### Example
 
@@ -785,370 +761,17 @@ $apiInstance = new OpenAPI\Client\Api\CurveApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$pool_id = 'pool_id_example'; // string | 
 
 try {
-    $apiInstance->dappsCurveGaugeTotalWeightHistoricalGet($start_block, $end_block, $start_date, $end_date);
+    $result = $apiInstance->curveGetGaugesHistorical($start_block, $end_block, $start_date, $end_date, $pool_id);
+    print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CurveApi->dappsCurveGaugeTotalWeightHistoricalGet: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **start_block** | **int**|  | [optional] |
-| **end_block** | **int**|  | [optional] |
-| **start_date** | **\DateTime**|  | [optional] |
-| **end_date** | **\DateTime**|  | [optional] |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `dappsCurveGaugeTypeHistoricalGet()`
-
-```php
-dappsCurveGaugeTypeHistoricalGet($start_block, $end_block, $start_date, $end_date)
-```
-
-
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-
-$apiInstance = new OpenAPI\Client\Api\CurveApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
-);
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-
-try {
-    $apiInstance->dappsCurveGaugeTypeHistoricalGet($start_block, $end_block, $start_date, $end_date);
-} catch (Exception $e) {
-    echo 'Exception when calling CurveApi->dappsCurveGaugeTypeHistoricalGet: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **start_block** | **int**|  | [optional] |
-| **end_block** | **int**|  | [optional] |
-| **start_date** | **\DateTime**|  | [optional] |
-| **end_date** | **\DateTime**|  | [optional] |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `dappsCurveGaugeTypeWeightHistoricalGet()`
-
-```php
-dappsCurveGaugeTypeWeightHistoricalGet($start_block, $end_block, $start_date, $end_date)
-```
-
-
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-
-$apiInstance = new OpenAPI\Client\Api\CurveApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
-);
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-
-try {
-    $apiInstance->dappsCurveGaugeTypeWeightHistoricalGet($start_block, $end_block, $start_date, $end_date);
-} catch (Exception $e) {
-    echo 'Exception when calling CurveApi->dappsCurveGaugeTypeWeightHistoricalGet: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **start_block** | **int**|  | [optional] |
-| **end_block** | **int**|  | [optional] |
-| **start_date** | **\DateTime**|  | [optional] |
-| **end_date** | **\DateTime**|  | [optional] |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `dappsCurveGaugeWeightHistoricalGet()`
-
-```php
-dappsCurveGaugeWeightHistoricalGet($start_block, $end_block, $start_date, $end_date)
-```
-
-
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-
-$apiInstance = new OpenAPI\Client\Api\CurveApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
-);
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-
-try {
-    $apiInstance->dappsCurveGaugeWeightHistoricalGet($start_block, $end_block, $start_date, $end_date);
-} catch (Exception $e) {
-    echo 'Exception when calling CurveApi->dappsCurveGaugeWeightHistoricalGet: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **start_block** | **int**|  | [optional] |
-| **end_block** | **int**|  | [optional] |
-| **start_date** | **\DateTime**|  | [optional] |
-| **end_date** | **\DateTime**|  | [optional] |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `dappsCurveGaugeWeightVoteHistoricalGet()`
-
-```php
-dappsCurveGaugeWeightVoteHistoricalGet($start_block, $end_block, $start_date, $end_date)
-```
-
-
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-
-$apiInstance = new OpenAPI\Client\Api\CurveApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
-);
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-
-try {
-    $apiInstance->dappsCurveGaugeWeightVoteHistoricalGet($start_block, $end_block, $start_date, $end_date);
-} catch (Exception $e) {
-    echo 'Exception when calling CurveApi->dappsCurveGaugeWeightVoteHistoricalGet: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **start_block** | **int**|  | [optional] |
-| **end_block** | **int**|  | [optional] |
-| **start_date** | **\DateTime**|  | [optional] |
-| **end_date** | **\DateTime**|  | [optional] |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `dappsCurveGaugeWithdrawHistoricalGet()`
-
-```php
-dappsCurveGaugeWithdrawHistoricalGet($start_block, $end_block, $start_date, $end_date)
-```
-
-
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-
-$apiInstance = new OpenAPI\Client\Api\CurveApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
-);
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-
-try {
-    $apiInstance->dappsCurveGaugeWithdrawHistoricalGet($start_block, $end_block, $start_date, $end_date);
-} catch (Exception $e) {
-    echo 'Exception when calling CurveApi->dappsCurveGaugeWithdrawHistoricalGet: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **start_block** | **int**|  | [optional] |
-| **end_block** | **int**|  | [optional] |
-| **start_date** | **\DateTime**|  | [optional] |
-| **end_date** | **\DateTime**|  | [optional] |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `dappsCurveHourlyVolumeHistoricalGet()`
-
-```php
-dappsCurveHourlyVolumeHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id)
-```
-
-
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-
-$apiInstance = new OpenAPI\Client\Api\CurveApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
-);
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$pool_id = 'pool_id_example'; // string
-
-try {
-    $apiInstance->dappsCurveHourlyVolumeHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id);
-} catch (Exception $e) {
-    echo 'Exception when calling CurveApi->dappsCurveHourlyVolumeHistoricalGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CurveApi->curveGetGaugesHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -1164,7 +787,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\CurveGaugeDTO[]**](../Model/CurveGaugeDTO.md)
 
 ### Authorization
 
@@ -1173,19 +796,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `dappsCurveLpTokenHistoricalGet()`
+## `curveGetGaugesLiquidityHistorical()`
 
 ```php
-dappsCurveLpTokenHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id)
+curveGetGaugesLiquidityHistorical($start_block, $end_block, $start_date, $end_date): \OpenAPI\Client\Model\CurveGaugeLiquidityDTO[]
 ```
 
+GetGaugesLiquidity (historical)
 
+Gets gauges liquidity.
 
 ### Example
 
@@ -1200,16 +825,451 @@ $apiInstance = new OpenAPI\Client\Api\CurveApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$pool_id = 'pool_id_example'; // string
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
 
 try {
-    $apiInstance->dappsCurveLpTokenHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id);
+    $result = $apiInstance->curveGetGaugesLiquidityHistorical($start_block, $end_block, $start_date, $end_date);
+    print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CurveApi->dappsCurveLpTokenHistoricalGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CurveApi->curveGetGaugesLiquidityHistorical: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **start_block** | **int**|  | [optional] |
+| **end_block** | **int**|  | [optional] |
+| **start_date** | **\DateTime**|  | [optional] |
+| **end_date** | **\DateTime**|  | [optional] |
+
+### Return type
+
+[**\OpenAPI\Client\Model\CurveGaugeLiquidityDTO[]**](../Model/CurveGaugeLiquidityDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `curveGetGaugesTotalWeightsHistorical()`
+
+```php
+curveGetGaugesTotalWeightsHistorical($start_block, $end_block, $start_date, $end_date): \OpenAPI\Client\Model\CurveGaugeTotalWeightDTO[]
+```
+
+GetGaugesTotalWeights (historical)
+
+Gets gauges total weights.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new OpenAPI\Client\Api\CurveApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+
+try {
+    $result = $apiInstance->curveGetGaugesTotalWeightsHistorical($start_block, $end_block, $start_date, $end_date);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CurveApi->curveGetGaugesTotalWeightsHistorical: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **start_block** | **int**|  | [optional] |
+| **end_block** | **int**|  | [optional] |
+| **start_date** | **\DateTime**|  | [optional] |
+| **end_date** | **\DateTime**|  | [optional] |
+
+### Return type
+
+[**\OpenAPI\Client\Model\CurveGaugeTotalWeightDTO[]**](../Model/CurveGaugeTotalWeightDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `curveGetGaugesTypesHistorical()`
+
+```php
+curveGetGaugesTypesHistorical($start_block, $end_block, $start_date, $end_date): \OpenAPI\Client\Model\CurveGaugeTypeDTO[]
+```
+
+GetGaugesTypes (historical)
+
+Gets gauges types.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new OpenAPI\Client\Api\CurveApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+
+try {
+    $result = $apiInstance->curveGetGaugesTypesHistorical($start_block, $end_block, $start_date, $end_date);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CurveApi->curveGetGaugesTypesHistorical: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **start_block** | **int**|  | [optional] |
+| **end_block** | **int**|  | [optional] |
+| **start_date** | **\DateTime**|  | [optional] |
+| **end_date** | **\DateTime**|  | [optional] |
+
+### Return type
+
+[**\OpenAPI\Client\Model\CurveGaugeTypeDTO[]**](../Model/CurveGaugeTypeDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `curveGetGaugesTypesWeightsHistorical()`
+
+```php
+curveGetGaugesTypesWeightsHistorical($start_block, $end_block, $start_date, $end_date): \OpenAPI\Client\Model\CurveGaugeTypeWeightDTO[]
+```
+
+GetGaugesTypesWeights (historical)
+
+Gets gauges types weights.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new OpenAPI\Client\Api\CurveApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+
+try {
+    $result = $apiInstance->curveGetGaugesTypesWeightsHistorical($start_block, $end_block, $start_date, $end_date);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CurveApi->curveGetGaugesTypesWeightsHistorical: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **start_block** | **int**|  | [optional] |
+| **end_block** | **int**|  | [optional] |
+| **start_date** | **\DateTime**|  | [optional] |
+| **end_date** | **\DateTime**|  | [optional] |
+
+### Return type
+
+[**\OpenAPI\Client\Model\CurveGaugeTypeWeightDTO[]**](../Model/CurveGaugeTypeWeightDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `curveGetGaugesWeightsHistorical()`
+
+```php
+curveGetGaugesWeightsHistorical($start_block, $end_block, $start_date, $end_date): \OpenAPI\Client\Model\CurveGaugeWeightDTO[]
+```
+
+GetGaugesWeights (historical)
+
+Gets gauges weights.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new OpenAPI\Client\Api\CurveApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+
+try {
+    $result = $apiInstance->curveGetGaugesWeightsHistorical($start_block, $end_block, $start_date, $end_date);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CurveApi->curveGetGaugesWeightsHistorical: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **start_block** | **int**|  | [optional] |
+| **end_block** | **int**|  | [optional] |
+| **start_date** | **\DateTime**|  | [optional] |
+| **end_date** | **\DateTime**|  | [optional] |
+
+### Return type
+
+[**\OpenAPI\Client\Model\CurveGaugeWeightDTO[]**](../Model/CurveGaugeWeightDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `curveGetGaugesWeightsVotesHistorical()`
+
+```php
+curveGetGaugesWeightsVotesHistorical($start_block, $end_block, $start_date, $end_date): \OpenAPI\Client\Model\CurveGaugeWeightVoteDTO[]
+```
+
+GetGaugesWeightsVotes (historical)
+
+Gets gauges weights votes.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new OpenAPI\Client\Api\CurveApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+
+try {
+    $result = $apiInstance->curveGetGaugesWeightsVotesHistorical($start_block, $end_block, $start_date, $end_date);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CurveApi->curveGetGaugesWeightsVotesHistorical: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **start_block** | **int**|  | [optional] |
+| **end_block** | **int**|  | [optional] |
+| **start_date** | **\DateTime**|  | [optional] |
+| **end_date** | **\DateTime**|  | [optional] |
+
+### Return type
+
+[**\OpenAPI\Client\Model\CurveGaugeWeightVoteDTO[]**](../Model/CurveGaugeWeightVoteDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `curveGetGaugesWithdrawHistorical()`
+
+```php
+curveGetGaugesWithdrawHistorical($start_block, $end_block, $start_date, $end_date): \OpenAPI\Client\Model\CurveGaugeWithdrawDTO[]
+```
+
+GetGaugesWithdraw (historical)
+
+Gets gauges withdraws.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new OpenAPI\Client\Api\CurveApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+
+try {
+    $result = $apiInstance->curveGetGaugesWithdrawHistorical($start_block, $end_block, $start_date, $end_date);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CurveApi->curveGetGaugesWithdrawHistorical: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **start_block** | **int**|  | [optional] |
+| **end_block** | **int**|  | [optional] |
+| **start_date** | **\DateTime**|  | [optional] |
+| **end_date** | **\DateTime**|  | [optional] |
+
+### Return type
+
+[**\OpenAPI\Client\Model\CurveGaugeWithdrawDTO[]**](../Model/CurveGaugeWithdrawDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `curveGetHourlyVolumesHistorical()`
+
+```php
+curveGetHourlyVolumesHistorical($start_block, $end_block, $start_date, $end_date, $pool_id): \OpenAPI\Client\Model\CurveHourlyVolumeDTO[]
+```
+
+GetHourlyVolumes (historical)
+
+Gets hourly volumes.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new OpenAPI\Client\Api\CurveApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$pool_id = 'pool_id_example'; // string | 
+
+try {
+    $result = $apiInstance->curveGetHourlyVolumesHistorical($start_block, $end_block, $start_date, $end_date, $pool_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CurveApi->curveGetHourlyVolumesHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -1225,7 +1285,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\CurveHourlyVolumeDTO[]**](../Model/CurveHourlyVolumeDTO.md)
 
 ### Authorization
 
@@ -1234,19 +1294,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `dappsCurvePoolsHistoricalGet()`
+## `curveGetLpTokensHistorical()`
 
 ```php
-dappsCurvePoolsHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id)
+curveGetLpTokensHistorical($start_block, $end_block, $start_date, $end_date, $pool_id): \OpenAPI\Client\Model\CurveLpTokenDTO[]
 ```
 
+GetLpTokens (historical)
 
+Gets lp tokens.
 
 ### Example
 
@@ -1261,16 +1323,17 @@ $apiInstance = new OpenAPI\Client\Api\CurveApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$pool_id = 'pool_id_example'; // string
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$pool_id = 'pool_id_example'; // string | 
 
 try {
-    $apiInstance->dappsCurvePoolsHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id);
+    $result = $apiInstance->curveGetLpTokensHistorical($start_block, $end_block, $start_date, $end_date, $pool_id);
+    print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CurveApi->dappsCurvePoolsHistoricalGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CurveApi->curveGetLpTokensHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -1286,7 +1349,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\CurveLpTokenDTO[]**](../Model/CurveLpTokenDTO.md)
 
 ### Authorization
 
@@ -1295,19 +1358,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `dappsCurveProposalsHistoricalGet()`
+## `curveGetPoolsHistorical()`
 
 ```php
-dappsCurveProposalsHistoricalGet($start_block, $end_block, $start_date, $end_date)
+curveGetPoolsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id): \OpenAPI\Client\Model\CurvePoolDTO[]
 ```
 
+GetPools (historical) 🔥
 
+Gets pools.
 
 ### Example
 
@@ -1322,134 +1387,17 @@ $apiInstance = new OpenAPI\Client\Api\CurveApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$pool_id = 'pool_id_example'; // string | 
 
 try {
-    $apiInstance->dappsCurveProposalsHistoricalGet($start_block, $end_block, $start_date, $end_date);
+    $result = $apiInstance->curveGetPoolsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id);
+    print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CurveApi->dappsCurveProposalsHistoricalGet: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **start_block** | **int**|  | [optional] |
-| **end_block** | **int**|  | [optional] |
-| **start_date** | **\DateTime**|  | [optional] |
-| **end_date** | **\DateTime**|  | [optional] |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `dappsCurveProposalsVoteHistoricalGet()`
-
-```php
-dappsCurveProposalsVoteHistoricalGet($start_block, $end_block, $start_date, $end_date)
-```
-
-
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-
-$apiInstance = new OpenAPI\Client\Api\CurveApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
-);
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-
-try {
-    $apiInstance->dappsCurveProposalsVoteHistoricalGet($start_block, $end_block, $start_date, $end_date);
-} catch (Exception $e) {
-    echo 'Exception when calling CurveApi->dappsCurveProposalsVoteHistoricalGet: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **start_block** | **int**|  | [optional] |
-| **end_block** | **int**|  | [optional] |
-| **start_date** | **\DateTime**|  | [optional] |
-| **end_date** | **\DateTime**|  | [optional] |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `dappsCurveRemoveLiquidityEventHistoricalGet()`
-
-```php
-dappsCurveRemoveLiquidityEventHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id)
-```
-
-
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-
-$apiInstance = new OpenAPI\Client\Api\CurveApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
-);
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$pool_id = 'pool_id_example'; // string
-
-try {
-    $apiInstance->dappsCurveRemoveLiquidityEventHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id);
-} catch (Exception $e) {
-    echo 'Exception when calling CurveApi->dappsCurveRemoveLiquidityEventHistoricalGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CurveApi->curveGetPoolsHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -1465,7 +1413,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\CurvePoolDTO[]**](../Model/CurvePoolDTO.md)
 
 ### Authorization
 
@@ -1474,19 +1422,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `dappsCurveRemoveLiquidityOneEventHistoricalGet()`
+## `curveGetProposalsHistorical()`
 
 ```php
-dappsCurveRemoveLiquidityOneEventHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id)
+curveGetProposalsHistorical($start_block, $end_block, $start_date, $end_date): \OpenAPI\Client\Model\CurveProposalDTO[]
 ```
 
+GetProposals (historical)
 
+Gets proposals.
 
 ### Example
 
@@ -1501,16 +1451,141 @@ $apiInstance = new OpenAPI\Client\Api\CurveApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$pool_id = 'pool_id_example'; // string
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
 
 try {
-    $apiInstance->dappsCurveRemoveLiquidityOneEventHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id);
+    $result = $apiInstance->curveGetProposalsHistorical($start_block, $end_block, $start_date, $end_date);
+    print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CurveApi->dappsCurveRemoveLiquidityOneEventHistoricalGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CurveApi->curveGetProposalsHistorical: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **start_block** | **int**|  | [optional] |
+| **end_block** | **int**|  | [optional] |
+| **start_date** | **\DateTime**|  | [optional] |
+| **end_date** | **\DateTime**|  | [optional] |
+
+### Return type
+
+[**\OpenAPI\Client\Model\CurveProposalDTO[]**](../Model/CurveProposalDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `curveGetProposalsVotesHistorical()`
+
+```php
+curveGetProposalsVotesHistorical($start_block, $end_block, $start_date, $end_date): \OpenAPI\Client\Model\CurveProposalVoteDTO[]
+```
+
+GetProposalsVotes (historical)
+
+Gets proposals votes.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new OpenAPI\Client\Api\CurveApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+
+try {
+    $result = $apiInstance->curveGetProposalsVotesHistorical($start_block, $end_block, $start_date, $end_date);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CurveApi->curveGetProposalsVotesHistorical: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **start_block** | **int**|  | [optional] |
+| **end_block** | **int**|  | [optional] |
+| **start_date** | **\DateTime**|  | [optional] |
+| **end_date** | **\DateTime**|  | [optional] |
+
+### Return type
+
+[**\OpenAPI\Client\Model\CurveProposalVoteDTO[]**](../Model/CurveProposalVoteDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `curveGetRemoveLiquidityEventsHistorical()`
+
+```php
+curveGetRemoveLiquidityEventsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id): \OpenAPI\Client\Model\CurveRemoveLiquidityEventDTO[]
+```
+
+GetRemoveLiquidityEvents (historical)
+
+Gets remove liquidity events.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new OpenAPI\Client\Api\CurveApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$pool_id = 'pool_id_example'; // string | 
+
+try {
+    $result = $apiInstance->curveGetRemoveLiquidityEventsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CurveApi->curveGetRemoveLiquidityEventsHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -1526,7 +1601,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\CurveRemoveLiquidityEventDTO[]**](../Model/CurveRemoveLiquidityEventDTO.md)
 
 ### Authorization
 
@@ -1535,19 +1610,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `dappsCurveSwapsHistoricalGet()`
+## `curveGetRemoveLiquidityOneEventsHistorical()`
 
 ```php
-dappsCurveSwapsHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id)
+curveGetRemoveLiquidityOneEventsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id): \OpenAPI\Client\Model\CurveRemoveLiquidityOneEventDTO[]
 ```
 
+GetRemoveLiquidityOneEvents (historical)
 
+Gets remove liquidity one events.
 
 ### Example
 
@@ -1562,16 +1639,17 @@ $apiInstance = new OpenAPI\Client\Api\CurveApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$pool_id = 'pool_id_example'; // string
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$pool_id = 'pool_id_example'; // string | 
 
 try {
-    $apiInstance->dappsCurveSwapsHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id);
+    $result = $apiInstance->curveGetRemoveLiquidityOneEventsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id);
+    print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CurveApi->dappsCurveSwapsHistoricalGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CurveApi->curveGetRemoveLiquidityOneEventsHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -1587,7 +1665,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\CurveRemoveLiquidityOneEventDTO[]**](../Model/CurveRemoveLiquidityOneEventDTO.md)
 
 ### Authorization
 
@@ -1596,19 +1674,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `dappsCurveSystemStateHistoricalGet()`
+## `curveGetSystemStatesHistorical()`
 
 ```php
-dappsCurveSystemStateHistoricalGet($start_block, $end_block, $start_date, $end_date)
+curveGetSystemStatesHistorical($start_block, $end_block, $start_date, $end_date): \OpenAPI\Client\Model\CurveSystemStateDTO[]
 ```
 
+GetSystemStates (historical)
 
+Gets system states.
 
 ### Example
 
@@ -1623,15 +1703,16 @@ $apiInstance = new OpenAPI\Client\Api\CurveApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
 
 try {
-    $apiInstance->dappsCurveSystemStateHistoricalGet($start_block, $end_block, $start_date, $end_date);
+    $result = $apiInstance->curveGetSystemStatesHistorical($start_block, $end_block, $start_date, $end_date);
+    print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CurveApi->dappsCurveSystemStateHistoricalGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CurveApi->curveGetSystemStatesHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -1646,7 +1727,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\CurveSystemStateDTO[]**](../Model/CurveSystemStateDTO.md)
 
 ### Authorization
 
@@ -1655,19 +1736,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `dappsCurveTokensHistoricalGet()`
+## `curveGetTokensHistorical()`
 
 ```php
-dappsCurveTokensHistoricalGet($start_block, $end_block, $start_date, $end_date, $token_id)
+curveGetTokensHistorical($start_block, $end_block, $start_date, $end_date, $token_id): \OpenAPI\Client\Model\CurveTokenDTO[]
 ```
 
+GetTokens (historical) 🔥
 
+Gets tokens.
 
 ### Example
 
@@ -1682,16 +1765,17 @@ $apiInstance = new OpenAPI\Client\Api\CurveApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$token_id = 'token_id_example'; // string
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$token_id = 'token_id_example'; // string | 
 
 try {
-    $apiInstance->dappsCurveTokensHistoricalGet($start_block, $end_block, $start_date, $end_date, $token_id);
+    $result = $apiInstance->curveGetTokensHistorical($start_block, $end_block, $start_date, $end_date, $token_id);
+    print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CurveApi->dappsCurveTokensHistoricalGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CurveApi->curveGetTokensHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -1707,7 +1791,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\CurveTokenDTO[]**](../Model/CurveTokenDTO.md)
 
 ### Authorization
 
@@ -1716,19 +1800,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `dappsCurveTransferOwnershipEventHistoricalGet()`
+## `curveGetTransferOwnershipEventsHistorical()`
 
 ```php
-dappsCurveTransferOwnershipEventHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id)
+curveGetTransferOwnershipEventsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id): \OpenAPI\Client\Model\CurveTransferOwnershipEventDTO[]
 ```
 
+GetTransferOwnershipEvents (historical)
 
+Gets transfer ownership events.
 
 ### Example
 
@@ -1743,16 +1829,17 @@ $apiInstance = new OpenAPI\Client\Api\CurveApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$pool_id = 'pool_id_example'; // string
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$pool_id = 'pool_id_example'; // string | 
 
 try {
-    $apiInstance->dappsCurveTransferOwnershipEventHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id);
+    $result = $apiInstance->curveGetTransferOwnershipEventsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id);
+    print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CurveApi->dappsCurveTransferOwnershipEventHistoricalGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CurveApi->curveGetTransferOwnershipEventsHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -1768,7 +1855,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\CurveTransferOwnershipEventDTO[]**](../Model/CurveTransferOwnershipEventDTO.md)
 
 ### Authorization
 
@@ -1777,19 +1864,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `dappsCurveUnderlyingCoinHistoricalGet()`
+## `curveGetUnderlyingCoinsHistorical()`
 
 ```php
-dappsCurveUnderlyingCoinHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id)
+curveGetUnderlyingCoinsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id): \OpenAPI\Client\Model\CurveUnderlyingCoinDTO[]
 ```
 
+GetUnderlyingCoins (historical)
 
+Gets underlying coins.
 
 ### Example
 
@@ -1804,16 +1893,17 @@ $apiInstance = new OpenAPI\Client\Api\CurveApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$pool_id = 'pool_id_example'; // string
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$pool_id = 'pool_id_example'; // string | 
 
 try {
-    $apiInstance->dappsCurveUnderlyingCoinHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id);
+    $result = $apiInstance->curveGetUnderlyingCoinsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id);
+    print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CurveApi->dappsCurveUnderlyingCoinHistoricalGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CurveApi->curveGetUnderlyingCoinsHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -1829,7 +1919,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\CurveUnderlyingCoinDTO[]**](../Model/CurveUnderlyingCoinDTO.md)
 
 ### Authorization
 
@@ -1838,19 +1928,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `dappsCurveVotingAppHistoricalGet()`
+## `curveGetVotingAppsHistorical()`
 
 ```php
-dappsCurveVotingAppHistoricalGet($start_block, $end_block, $start_date, $end_date)
+curveGetVotingAppsHistorical($start_block, $end_block, $start_date, $end_date): \OpenAPI\Client\Model\CurveVotingAppDTO[]
 ```
 
+GetVotingApps (historical)
 
+Gets voting apps.
 
 ### Example
 
@@ -1865,15 +1957,16 @@ $apiInstance = new OpenAPI\Client\Api\CurveApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
 
 try {
-    $apiInstance->dappsCurveVotingAppHistoricalGet($start_block, $end_block, $start_date, $end_date);
+    $result = $apiInstance->curveGetVotingAppsHistorical($start_block, $end_block, $start_date, $end_date);
+    print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CurveApi->dappsCurveVotingAppHistoricalGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CurveApi->curveGetVotingAppsHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -1888,7 +1981,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\CurveVotingAppDTO[]**](../Model/CurveVotingAppDTO.md)
 
 ### Authorization
 
@@ -1897,19 +1990,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `dappsCurveWeeklyVolumeHistoricalGet()`
+## `curveGetWeeklyVolumesHistorical()`
 
 ```php
-dappsCurveWeeklyVolumeHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id)
+curveGetWeeklyVolumesHistorical($start_block, $end_block, $start_date, $end_date, $pool_id): \OpenAPI\Client\Model\CurveWeeklyVolumeDTO[]
 ```
 
+GetWeeklyVolumes (historical)
 
+Gets weekly volumes.
 
 ### Example
 
@@ -1924,16 +2019,17 @@ $apiInstance = new OpenAPI\Client\Api\CurveApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$pool_id = 'pool_id_example'; // string
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$pool_id = 'pool_id_example'; // string | 
 
 try {
-    $apiInstance->dappsCurveWeeklyVolumeHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id);
+    $result = $apiInstance->curveGetWeeklyVolumesHistorical($start_block, $end_block, $start_date, $end_date, $pool_id);
+    print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CurveApi->dappsCurveWeeklyVolumeHistoricalGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CurveApi->curveGetWeeklyVolumesHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -1949,7 +2045,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\CurveWeeklyVolumeDTO[]**](../Model/CurveWeeklyVolumeDTO.md)
 
 ### Authorization
 
@@ -1958,7 +2054,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)

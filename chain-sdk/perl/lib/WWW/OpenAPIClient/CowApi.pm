@@ -49,9 +49,9 @@ sub new {
 
 
 #
-# dapps_cow_orders_historical_get
+# cow_get_orders__historical
 #
-# 
+# GetOrders (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -80,15 +80,15 @@ sub new {
         required => '0',
     },
     };
-    __PACKAGE__->method_documentation->{ 'dapps_cow_orders_historical_get' } = {
-        summary => '',
+    __PACKAGE__->method_documentation->{ 'cow_get_orders__historical' } = {
+        summary => 'GetOrders (historical)',
         params => $params,
-        returns => undef,
+        returns => 'ARRAY[CowOrderDTO]',
         };
 }
-# @return void
+# @return ARRAY[CowOrderDTO]
 #
-sub dapps_cow_orders_historical_get {
+sub cow_get_orders__historical {
     my ($self, %args) = @_;
 
     # parse inputs
@@ -100,7 +100,7 @@ sub dapps_cow_orders_historical_get {
     my $form_params = {};
 
     # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept();
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
     if ($_header_accept) {
         $header_params->{'Accept'} = $_header_accept;
     }
@@ -131,16 +131,20 @@ sub dapps_cow_orders_historical_get {
     my $auth_settings = [qw()];
 
     # make the API Call
-    $self->{api_client}->call_api($_resource_path, $_method,
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
                                            $query_params, $form_params,
                                            $header_params, $_body_data, $auth_settings);
-    return;
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[CowOrderDTO]', $response);
+    return $_response_object;
 }
 
 #
-# dapps_cow_settlement_historical_get
+# cow_get_settlements__historical
 #
-# 
+# GetSettlements (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -169,19 +173,19 @@ sub dapps_cow_orders_historical_get {
         required => '0',
     },
     };
-    __PACKAGE__->method_documentation->{ 'dapps_cow_settlement_historical_get' } = {
-        summary => '',
+    __PACKAGE__->method_documentation->{ 'cow_get_settlements__historical' } = {
+        summary => 'GetSettlements (historical)',
         params => $params,
-        returns => undef,
+        returns => 'ARRAY[CowSettlementDTO]',
         };
 }
-# @return void
+# @return ARRAY[CowSettlementDTO]
 #
-sub dapps_cow_settlement_historical_get {
+sub cow_get_settlements__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/cow/settlement/historical';
+    my $_resource_path = '/dapps/cow/settlements/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -189,7 +193,7 @@ sub dapps_cow_settlement_historical_get {
     my $form_params = {};
 
     # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept();
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
     if ($_header_accept) {
         $header_params->{'Accept'} = $_header_accept;
     }
@@ -220,16 +224,20 @@ sub dapps_cow_settlement_historical_get {
     my $auth_settings = [qw()];
 
     # make the API Call
-    $self->{api_client}->call_api($_resource_path, $_method,
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
                                            $query_params, $form_params,
                                            $header_params, $_body_data, $auth_settings);
-    return;
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[CowSettlementDTO]', $response);
+    return $_response_object;
 }
 
 #
-# dapps_cow_tokens_historical_get
+# cow_get_tokens__historical
 #
-# 
+# GetTokens (historical) 🔥
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -264,15 +272,15 @@ sub dapps_cow_settlement_historical_get {
         required => '0',
     },
     };
-    __PACKAGE__->method_documentation->{ 'dapps_cow_tokens_historical_get' } = {
-        summary => '',
+    __PACKAGE__->method_documentation->{ 'cow_get_tokens__historical' } = {
+        summary => 'GetTokens (historical) 🔥',
         params => $params,
-        returns => undef,
+        returns => 'ARRAY[CowTokenDTO]',
         };
 }
-# @return void
+# @return ARRAY[CowTokenDTO]
 #
-sub dapps_cow_tokens_historical_get {
+sub cow_get_tokens__historical {
     my ($self, %args) = @_;
 
     # parse inputs
@@ -284,7 +292,7 @@ sub dapps_cow_tokens_historical_get {
     my $form_params = {};
 
     # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept();
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
     if ($_header_accept) {
         $header_params->{'Accept'} = $_header_accept;
     }
@@ -320,16 +328,20 @@ sub dapps_cow_tokens_historical_get {
     my $auth_settings = [qw()];
 
     # make the API Call
-    $self->{api_client}->call_api($_resource_path, $_method,
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
                                            $query_params, $form_params,
                                            $header_params, $_body_data, $auth_settings);
-    return;
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[CowTokenDTO]', $response);
+    return $_response_object;
 }
 
 #
-# dapps_cow_trades_historical_get
+# cow_get_trades__historical
 #
-# 
+# GetTrades (historical) 🔥
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -358,15 +370,15 @@ sub dapps_cow_tokens_historical_get {
         required => '0',
     },
     };
-    __PACKAGE__->method_documentation->{ 'dapps_cow_trades_historical_get' } = {
-        summary => '',
+    __PACKAGE__->method_documentation->{ 'cow_get_trades__historical' } = {
+        summary => 'GetTrades (historical) 🔥',
         params => $params,
-        returns => undef,
+        returns => 'ARRAY[CowTradeDTO]',
         };
 }
-# @return void
+# @return ARRAY[CowTradeDTO]
 #
-sub dapps_cow_trades_historical_get {
+sub cow_get_trades__historical {
     my ($self, %args) = @_;
 
     # parse inputs
@@ -378,7 +390,7 @@ sub dapps_cow_trades_historical_get {
     my $form_params = {};
 
     # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept();
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
     if ($_header_accept) {
         $header_params->{'Accept'} = $_header_accept;
     }
@@ -409,16 +421,20 @@ sub dapps_cow_trades_historical_get {
     my $auth_settings = [qw()];
 
     # make the API Call
-    $self->{api_client}->call_api($_resource_path, $_method,
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
                                            $query_params, $form_params,
                                            $header_params, $_body_data, $auth_settings);
-    return;
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[CowTradeDTO]', $response);
+    return $_response_object;
 }
 
 #
-# dapps_cow_users_historical_get
+# cow_get_users__historical
 #
-# 
+# GetUsers (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -447,15 +463,15 @@ sub dapps_cow_trades_historical_get {
         required => '0',
     },
     };
-    __PACKAGE__->method_documentation->{ 'dapps_cow_users_historical_get' } = {
-        summary => '',
+    __PACKAGE__->method_documentation->{ 'cow_get_users__historical' } = {
+        summary => 'GetUsers (historical)',
         params => $params,
-        returns => undef,
+        returns => 'ARRAY[CowUserDTO]',
         };
 }
-# @return void
+# @return ARRAY[CowUserDTO]
 #
-sub dapps_cow_users_historical_get {
+sub cow_get_users__historical {
     my ($self, %args) = @_;
 
     # parse inputs
@@ -467,7 +483,7 @@ sub dapps_cow_users_historical_get {
     my $form_params = {};
 
     # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept();
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
     if ($_header_accept) {
         $header_params->{'Accept'} = $_header_accept;
     }
@@ -498,10 +514,14 @@ sub dapps_cow_users_historical_get {
     my $auth_settings = [qw()];
 
     # make the API Call
-    $self->{api_client}->call_api($_resource_path, $_method,
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
                                            $query_params, $form_params,
                                            $header_params, $_body_data, $auth_settings);
-    return;
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[CowUserDTO]', $response);
+    return $_response_object;
 }
 
 1;

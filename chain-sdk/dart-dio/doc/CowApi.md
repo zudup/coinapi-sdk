@@ -9,17 +9,19 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**dappsCowOrdersHistoricalGet**](CowApi.md#dappscowordershistoricalget) | **GET** /dapps/cow/orders/historical | 
-[**dappsCowSettlementHistoricalGet**](CowApi.md#dappscowsettlementhistoricalget) | **GET** /dapps/cow/settlement/historical | 
-[**dappsCowTokensHistoricalGet**](CowApi.md#dappscowtokenshistoricalget) | **GET** /dapps/cow/tokens/historical | 
-[**dappsCowTradesHistoricalGet**](CowApi.md#dappscowtradeshistoricalget) | **GET** /dapps/cow/trades/historical | 
-[**dappsCowUsersHistoricalGet**](CowApi.md#dappscowusershistoricalget) | **GET** /dapps/cow/users/historical | 
+[**cowGetOrdersHistorical**](CowApi.md#cowgetordershistorical) | **GET** /dapps/cow/orders/historical | GetOrders (historical)
+[**cowGetSettlementsHistorical**](CowApi.md#cowgetsettlementshistorical) | **GET** /dapps/cow/settlements/historical | GetSettlements (historical)
+[**cowGetTokensHistorical**](CowApi.md#cowgettokenshistorical) | **GET** /dapps/cow/tokens/historical | GetTokens (historical) 🔥
+[**cowGetTradesHistorical**](CowApi.md#cowgettradeshistorical) | **GET** /dapps/cow/trades/historical | GetTrades (historical) 🔥
+[**cowGetUsersHistorical**](CowApi.md#cowgetusershistorical) | **GET** /dapps/cow/users/historical | GetUsers (historical)
 
 
-# **dappsCowOrdersHistoricalGet**
-> dappsCowOrdersHistoricalGet(startBlock, endBlock, startDate, endDate)
+# **cowGetOrdersHistorical**
+> BuiltList<CowOrderDTO> cowGetOrdersHistorical(startBlock, endBlock, startDate, endDate)
 
+GetOrders (historical)
 
+Gets orders.
 
 ### Example
 ```dart
@@ -32,9 +34,10 @@ final DateTime startDate = 2013-10-20T19:20:30+01:00; // DateTime |
 final DateTime endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
 
 try {
-    api.dappsCowOrdersHistoricalGet(startBlock, endBlock, startDate, endDate);
+    final response = api.cowGetOrdersHistorical(startBlock, endBlock, startDate, endDate);
+    print(response);
 } catch on DioError (e) {
-    print('Exception when calling CowApi->dappsCowOrdersHistoricalGet: $e\n');
+    print('Exception when calling CowApi->cowGetOrdersHistorical: $e\n');
 }
 ```
 
@@ -49,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**BuiltList&lt;CowOrderDTO&gt;**](CowOrderDTO.md)
 
 ### Authorization
 
@@ -58,14 +61,16 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dappsCowSettlementHistoricalGet**
-> dappsCowSettlementHistoricalGet(startBlock, endBlock, startDate, endDate)
+# **cowGetSettlementsHistorical**
+> BuiltList<CowSettlementDTO> cowGetSettlementsHistorical(startBlock, endBlock, startDate, endDate)
 
+GetSettlements (historical)
 
+Gets settlements.
 
 ### Example
 ```dart
@@ -78,9 +83,10 @@ final DateTime startDate = 2013-10-20T19:20:30+01:00; // DateTime |
 final DateTime endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
 
 try {
-    api.dappsCowSettlementHistoricalGet(startBlock, endBlock, startDate, endDate);
+    final response = api.cowGetSettlementsHistorical(startBlock, endBlock, startDate, endDate);
+    print(response);
 } catch on DioError (e) {
-    print('Exception when calling CowApi->dappsCowSettlementHistoricalGet: $e\n');
+    print('Exception when calling CowApi->cowGetSettlementsHistorical: $e\n');
 }
 ```
 
@@ -95,7 +101,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**BuiltList&lt;CowSettlementDTO&gt;**](CowSettlementDTO.md)
 
 ### Authorization
 
@@ -104,14 +110,16 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dappsCowTokensHistoricalGet**
-> dappsCowTokensHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId)
+# **cowGetTokensHistorical**
+> BuiltList<CowTokenDTO> cowGetTokensHistorical(startBlock, endBlock, startDate, endDate, tokenId)
 
+GetTokens (historical) 🔥
 
+Gets tokens.
 
 ### Example
 ```dart
@@ -125,9 +133,10 @@ final DateTime endDate = 2013-10-20T19:20:30+01:00; // DateTime |
 final String tokenId = tokenId_example; // String | 
 
 try {
-    api.dappsCowTokensHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId);
+    final response = api.cowGetTokensHistorical(startBlock, endBlock, startDate, endDate, tokenId);
+    print(response);
 } catch on DioError (e) {
-    print('Exception when calling CowApi->dappsCowTokensHistoricalGet: $e\n');
+    print('Exception when calling CowApi->cowGetTokensHistorical: $e\n');
 }
 ```
 
@@ -143,7 +152,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**BuiltList&lt;CowTokenDTO&gt;**](CowTokenDTO.md)
 
 ### Authorization
 
@@ -152,14 +161,16 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dappsCowTradesHistoricalGet**
-> dappsCowTradesHistoricalGet(startBlock, endBlock, startDate, endDate)
+# **cowGetTradesHistorical**
+> BuiltList<CowTradeDTO> cowGetTradesHistorical(startBlock, endBlock, startDate, endDate)
 
+GetTrades (historical) 🔥
 
+Gets trades.
 
 ### Example
 ```dart
@@ -172,9 +183,10 @@ final DateTime startDate = 2013-10-20T19:20:30+01:00; // DateTime |
 final DateTime endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
 
 try {
-    api.dappsCowTradesHistoricalGet(startBlock, endBlock, startDate, endDate);
+    final response = api.cowGetTradesHistorical(startBlock, endBlock, startDate, endDate);
+    print(response);
 } catch on DioError (e) {
-    print('Exception when calling CowApi->dappsCowTradesHistoricalGet: $e\n');
+    print('Exception when calling CowApi->cowGetTradesHistorical: $e\n');
 }
 ```
 
@@ -189,7 +201,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**BuiltList&lt;CowTradeDTO&gt;**](CowTradeDTO.md)
 
 ### Authorization
 
@@ -198,14 +210,16 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dappsCowUsersHistoricalGet**
-> dappsCowUsersHistoricalGet(startBlock, endBlock, startDate, endDate)
+# **cowGetUsersHistorical**
+> BuiltList<CowUserDTO> cowGetUsersHistorical(startBlock, endBlock, startDate, endDate)
 
+GetUsers (historical)
 
+Gets users.
 
 ### Example
 ```dart
@@ -218,9 +232,10 @@ final DateTime startDate = 2013-10-20T19:20:30+01:00; // DateTime |
 final DateTime endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
 
 try {
-    api.dappsCowUsersHistoricalGet(startBlock, endBlock, startDate, endDate);
+    final response = api.cowGetUsersHistorical(startBlock, endBlock, startDate, endDate);
+    print(response);
 } catch on DioError (e) {
-    print('Exception when calling CowApi->dappsCowUsersHistoricalGet: $e\n');
+    print('Exception when calling CowApi->cowGetUsersHistorical: $e\n');
 }
 ```
 
@@ -235,7 +250,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**BuiltList&lt;CowUserDTO&gt;**](CowUserDTO.md)
 
 ### Authorization
 
@@ -244,7 +259,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

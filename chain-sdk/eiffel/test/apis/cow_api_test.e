@@ -13,11 +13,12 @@ inherit
 feature -- Test routines
 
 
-    test_dapps_cow_orders_historical_get
-            -- 
+    test_cow_get_orders_historical
+            -- GetOrders (historical)
             --
-            -- 
+            -- Gets orders.
         local
+            l_response: LIST [COW_ORDER_DTO]
             l_start_block: INTEGER_64
             l_end_block: INTEGER_64
             l_start_date: DATE_TIME
@@ -25,15 +26,16 @@ feature -- Test routines
         do
             -- TODO: Initialize required params.
 
-            -- api.dapps_cow_orders_historical_get(l_start_block, l_end_block, l_start_date, l_end_date)
+            -- l_response := api.cow_get_orders_historical(l_start_block, l_end_block, l_start_date, l_end_date)
             assert ("not_implemented", False)
         end
 
-    test_dapps_cow_settlement_historical_get
-            -- 
+    test_cow_get_settlements_historical
+            -- GetSettlements (historical)
             --
-            -- 
+            -- Gets settlements.
         local
+            l_response: LIST [COW_SETTLEMENT_DTO]
             l_start_block: INTEGER_64
             l_end_block: INTEGER_64
             l_start_date: DATE_TIME
@@ -41,15 +43,16 @@ feature -- Test routines
         do
             -- TODO: Initialize required params.
 
-            -- api.dapps_cow_settlement_historical_get(l_start_block, l_end_block, l_start_date, l_end_date)
+            -- l_response := api.cow_get_settlements_historical(l_start_block, l_end_block, l_start_date, l_end_date)
             assert ("not_implemented", False)
         end
 
-    test_dapps_cow_tokens_historical_get
-            -- 
+    test_cow_get_tokens_historical
+            -- GetTokens (historical) 🔥
             --
-            -- 
+            -- Gets tokens.
         local
+            l_response: LIST [COW_TOKEN_DTO]
             l_start_block: INTEGER_64
             l_end_block: INTEGER_64
             l_start_date: DATE_TIME
@@ -58,15 +61,16 @@ feature -- Test routines
         do
             -- TODO: Initialize required params.
 
-            -- api.dapps_cow_tokens_historical_get(l_start_block, l_end_block, l_start_date, l_end_date, l_token_id)
+            -- l_response := api.cow_get_tokens_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_token_id)
             assert ("not_implemented", False)
         end
 
-    test_dapps_cow_trades_historical_get
-            -- 
+    test_cow_get_trades_historical
+            -- GetTrades (historical) 🔥
             --
-            -- 
+            -- Gets trades.
         local
+            l_response: LIST [COW_TRADE_DTO]
             l_start_block: INTEGER_64
             l_end_block: INTEGER_64
             l_start_date: DATE_TIME
@@ -74,15 +78,16 @@ feature -- Test routines
         do
             -- TODO: Initialize required params.
 
-            -- api.dapps_cow_trades_historical_get(l_start_block, l_end_block, l_start_date, l_end_date)
+            -- l_response := api.cow_get_trades_historical(l_start_block, l_end_block, l_start_date, l_end_date)
             assert ("not_implemented", False)
         end
 
-    test_dapps_cow_users_historical_get
-            -- 
+    test_cow_get_users_historical
+            -- GetUsers (historical)
             --
-            -- 
+            -- Gets users.
         local
+            l_response: LIST [COW_USER_DTO]
             l_start_block: INTEGER_64
             l_end_block: INTEGER_64
             l_start_date: DATE_TIME
@@ -90,7 +95,7 @@ feature -- Test routines
         do
             -- TODO: Initialize required params.
 
-            -- api.dapps_cow_users_historical_get(l_start_block, l_end_block, l_start_date, l_end_date)
+            -- l_response := api.cow_get_users_historical(l_start_block, l_end_block, l_start_date, l_end_date)
             assert ("not_implemented", False)
         end
 

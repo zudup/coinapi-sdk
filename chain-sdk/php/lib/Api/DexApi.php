@@ -72,34 +72,37 @@ class DexApi
 
     /** @var string[] $contentTypes **/
     public const contentTypes = [
-        'dappsDexBatchHistoricalGet' => [
+        'dexGetBatchesHistorical' => [
             'application/json',
         ],
-        'dappsDexOrdersHistoricalGet' => [
+        'dexGetDepositsHistorical' => [
             'application/json',
         ],
-        'dappsDexPricesHistoricalGet' => [
+        'dexGetOrdersHistorical' => [
             'application/json',
         ],
-        'dappsDexSolutionHistoricalGet' => [
+        'dexGetPricesHistorical' => [
             'application/json',
         ],
-        'dappsDexStatsHistoricalGet' => [
+        'dexGetSolutionsHistorical' => [
             'application/json',
         ],
-        'dappsDexTokensHistoricalGet' => [
+        'dexGetStatsHistorical' => [
             'application/json',
         ],
-        'dappsDexTradesHistoricalGet' => [
+        'dexGetTokensHistorical' => [
             'application/json',
         ],
-        'dappsDexUsersHistoricalGet' => [
+        'dexGetTradesHistorical' => [
             'application/json',
         ],
-        'dappsDexWithdrawHistoricalGet' => [
+        'dexGetUsersHistorical' => [
             'application/json',
         ],
-        'dappsDexWithdrawRequestHistoricalGet' => [
+        'dexGetWithdrawsHistorical' => [
+            'application/json',
+        ],
+        'dexGetWithdrawsRequestsHistorical' => [
             'application/json',
         ],
     ];
@@ -151,39 +154,44 @@ class DexApi
     }
 
     /**
-     * Operation dappsDexBatchHistoricalGet
+     * Operation dexGetBatchesHistorical
      *
-     * @param  int $start_block start_block (optional)
-     * @param  int $end_block end_block (optional)
-     * @param  \DateTime $start_date start_date (optional)
-     * @param  \DateTime $end_date end_date (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsDexBatchHistoricalGet'] to see the possible values for this operation
+     * GetBatches (historical)
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetBatchesHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return void
+     * @return \OpenAPI\Client\Model\DexBatchDTO[]
      */
-    public function dappsDexBatchHistoricalGet($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['dappsDexBatchHistoricalGet'][0])
+    public function dexGetBatchesHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['dexGetBatchesHistorical'][0])
     {
-        $this->dappsDexBatchHistoricalGetWithHttpInfo($start_block, $end_block, $start_date, $end_date, $contentType);
+        list($response) = $this->dexGetBatchesHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $contentType);
+        return $response;
     }
 
     /**
-     * Operation dappsDexBatchHistoricalGetWithHttpInfo
+     * Operation dexGetBatchesHistoricalWithHttpInfo
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsDexBatchHistoricalGet'] to see the possible values for this operation
+     * GetBatches (historical)
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetBatchesHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\DexBatchDTO[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function dappsDexBatchHistoricalGetWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['dappsDexBatchHistoricalGet'][0])
+    public function dexGetBatchesHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['dexGetBatchesHistorical'][0])
     {
-        $request = $this->dappsDexBatchHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $contentType);
+        $request = $this->dexGetBatchesHistoricalRequest($start_block, $end_block, $start_date, $end_date, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -220,30 +228,72 @@ class DexApi
                 );
             }
 
-            return [null, $statusCode, $response->getHeaders()];
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\DexBatchDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\DexBatchDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\DexBatchDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\DexBatchDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\DexBatchDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
             }
             throw $e;
         }
     }
 
     /**
-     * Operation dappsDexBatchHistoricalGetAsync
+     * Operation dexGetBatchesHistoricalAsync
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsDexBatchHistoricalGet'] to see the possible values for this operation
+     * GetBatches (historical)
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetBatchesHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function dappsDexBatchHistoricalGetAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['dappsDexBatchHistoricalGet'][0])
+    public function dexGetBatchesHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['dexGetBatchesHistorical'][0])
     {
-        return $this->dappsDexBatchHistoricalGetAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $contentType)
+        return $this->dexGetBatchesHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -252,27 +302,42 @@ class DexApi
     }
 
     /**
-     * Operation dappsDexBatchHistoricalGetAsyncWithHttpInfo
+     * Operation dexGetBatchesHistoricalAsyncWithHttpInfo
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsDexBatchHistoricalGet'] to see the possible values for this operation
+     * GetBatches (historical)
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetBatchesHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function dappsDexBatchHistoricalGetAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['dappsDexBatchHistoricalGet'][0])
+    public function dexGetBatchesHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['dexGetBatchesHistorical'][0])
     {
-        $returnType = '';
-        $request = $this->dappsDexBatchHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $contentType);
+        $returnType = '\OpenAPI\Client\Model\DexBatchDTO[]';
+        $request = $this->dexGetBatchesHistoricalRequest($start_block, $end_block, $start_date, $end_date, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();
@@ -292,18 +357,18 @@ class DexApi
     }
 
     /**
-     * Create request for operation 'dappsDexBatchHistoricalGet'
+     * Create request for operation 'dexGetBatchesHistorical'
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsDexBatchHistoricalGet'] to see the possible values for this operation
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetBatchesHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function dappsDexBatchHistoricalGetRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['dappsDexBatchHistoricalGet'][0])
+    public function dexGetBatchesHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['dexGetBatchesHistorical'][0])
     {
 
 
@@ -311,7 +376,7 @@ class DexApi
 
 
 
-        $resourcePath = '/dapps/dex/batch/historical';
+        $resourcePath = '/dapps/dex/batches/historical';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -359,7 +424,7 @@ class DexApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            [],
+            ['text/plain', 'application/json', 'text/json', ],
             $contentType,
             $multipart
         );
@@ -412,41 +477,46 @@ class DexApi
     }
 
     /**
-     * Operation dappsDexOrdersHistoricalGet
+     * Operation dexGetDepositsHistorical
      *
-     * @param  int $start_block start_block (optional)
-     * @param  int $end_block end_block (optional)
-     * @param  \DateTime $start_date start_date (optional)
-     * @param  \DateTime $end_date end_date (optional)
-     * @param  string $token_id token_id (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsDexOrdersHistoricalGet'] to see the possible values for this operation
+     * GetDeposits (historical)
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $token_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetDepositsHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return void
+     * @return \OpenAPI\Client\Model\DexDepositDTO[]
      */
-    public function dappsDexOrdersHistoricalGet($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dappsDexOrdersHistoricalGet'][0])
+    public function dexGetDepositsHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dexGetDepositsHistorical'][0])
     {
-        $this->dappsDexOrdersHistoricalGetWithHttpInfo($start_block, $end_block, $start_date, $end_date, $token_id, $contentType);
+        list($response) = $this->dexGetDepositsHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $token_id, $contentType);
+        return $response;
     }
 
     /**
-     * Operation dappsDexOrdersHistoricalGetWithHttpInfo
+     * Operation dexGetDepositsHistoricalWithHttpInfo
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $token_id (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsDexOrdersHistoricalGet'] to see the possible values for this operation
+     * GetDeposits (historical)
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $token_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetDepositsHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\DexDepositDTO[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function dappsDexOrdersHistoricalGetWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dappsDexOrdersHistoricalGet'][0])
+    public function dexGetDepositsHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dexGetDepositsHistorical'][0])
     {
-        $request = $this->dappsDexOrdersHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $token_id, $contentType);
+        $request = $this->dexGetDepositsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $token_id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -483,31 +553,73 @@ class DexApi
                 );
             }
 
-            return [null, $statusCode, $response->getHeaders()];
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\DexDepositDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\DexDepositDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\DexDepositDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\DexDepositDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\DexDepositDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
             }
             throw $e;
         }
     }
 
     /**
-     * Operation dappsDexOrdersHistoricalGetAsync
+     * Operation dexGetDepositsHistoricalAsync
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $token_id (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsDexOrdersHistoricalGet'] to see the possible values for this operation
+     * GetDeposits (historical)
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $token_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetDepositsHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function dappsDexOrdersHistoricalGetAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dappsDexOrdersHistoricalGet'][0])
+    public function dexGetDepositsHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dexGetDepositsHistorical'][0])
     {
-        return $this->dappsDexOrdersHistoricalGetAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $token_id, $contentType)
+        return $this->dexGetDepositsHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $token_id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -516,28 +628,43 @@ class DexApi
     }
 
     /**
-     * Operation dappsDexOrdersHistoricalGetAsyncWithHttpInfo
+     * Operation dexGetDepositsHistoricalAsyncWithHttpInfo
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $token_id (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsDexOrdersHistoricalGet'] to see the possible values for this operation
+     * GetDeposits (historical)
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $token_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetDepositsHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function dappsDexOrdersHistoricalGetAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dappsDexOrdersHistoricalGet'][0])
+    public function dexGetDepositsHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dexGetDepositsHistorical'][0])
     {
-        $returnType = '';
-        $request = $this->dappsDexOrdersHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $token_id, $contentType);
+        $returnType = '\OpenAPI\Client\Model\DexDepositDTO[]';
+        $request = $this->dexGetDepositsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $token_id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();
@@ -557,19 +684,357 @@ class DexApi
     }
 
     /**
-     * Create request for operation 'dappsDexOrdersHistoricalGet'
+     * Create request for operation 'dexGetDepositsHistorical'
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $token_id (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsDexOrdersHistoricalGet'] to see the possible values for this operation
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $token_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetDepositsHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function dappsDexOrdersHistoricalGetRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dappsDexOrdersHistoricalGet'][0])
+    public function dexGetDepositsHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dexGetDepositsHistorical'][0])
+    {
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/dex/deposits/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $token_id,
+            'tokenId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation dexGetOrdersHistorical
+     *
+     * GetOrders (historical)
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $token_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetOrdersHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\DexOrderDTO[]
+     */
+    public function dexGetOrdersHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dexGetOrdersHistorical'][0])
+    {
+        list($response) = $this->dexGetOrdersHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $token_id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation dexGetOrdersHistoricalWithHttpInfo
+     *
+     * GetOrders (historical)
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $token_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetOrdersHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\DexOrderDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function dexGetOrdersHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dexGetOrdersHistorical'][0])
+    {
+        $request = $this->dexGetOrdersHistoricalRequest($start_block, $end_block, $start_date, $end_date, $token_id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\DexOrderDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\DexOrderDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\DexOrderDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\DexOrderDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\DexOrderDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation dexGetOrdersHistoricalAsync
+     *
+     * GetOrders (historical)
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $token_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetOrdersHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dexGetOrdersHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dexGetOrdersHistorical'][0])
+    {
+        return $this->dexGetOrdersHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $token_id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation dexGetOrdersHistoricalAsyncWithHttpInfo
+     *
+     * GetOrders (historical)
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $token_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetOrdersHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function dexGetOrdersHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dexGetOrdersHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\DexOrderDTO[]';
+        $request = $this->dexGetOrdersHistoricalRequest($start_block, $end_block, $start_date, $end_date, $token_id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'dexGetOrdersHistorical'
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $token_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetOrdersHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function dexGetOrdersHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dexGetOrdersHistorical'][0])
     {
 
 
@@ -635,7 +1100,7 @@ class DexApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            [],
+            ['text/plain', 'application/json', 'text/json', ],
             $contentType,
             $multipart
         );
@@ -688,41 +1153,46 @@ class DexApi
     }
 
     /**
-     * Operation dappsDexPricesHistoricalGet
+     * Operation dexGetPricesHistorical
      *
-     * @param  int $start_block start_block (optional)
-     * @param  int $end_block end_block (optional)
-     * @param  \DateTime $start_date start_date (optional)
-     * @param  \DateTime $end_date end_date (optional)
-     * @param  string $token_id token_id (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsDexPricesHistoricalGet'] to see the possible values for this operation
+     * GetPrices (historical)
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $token_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetPricesHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return void
+     * @return \OpenAPI\Client\Model\DexPriceDTO[]
      */
-    public function dappsDexPricesHistoricalGet($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dappsDexPricesHistoricalGet'][0])
+    public function dexGetPricesHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dexGetPricesHistorical'][0])
     {
-        $this->dappsDexPricesHistoricalGetWithHttpInfo($start_block, $end_block, $start_date, $end_date, $token_id, $contentType);
+        list($response) = $this->dexGetPricesHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $token_id, $contentType);
+        return $response;
     }
 
     /**
-     * Operation dappsDexPricesHistoricalGetWithHttpInfo
+     * Operation dexGetPricesHistoricalWithHttpInfo
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $token_id (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsDexPricesHistoricalGet'] to see the possible values for this operation
+     * GetPrices (historical)
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $token_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetPricesHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\DexPriceDTO[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function dappsDexPricesHistoricalGetWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dappsDexPricesHistoricalGet'][0])
+    public function dexGetPricesHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dexGetPricesHistorical'][0])
     {
-        $request = $this->dappsDexPricesHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $token_id, $contentType);
+        $request = $this->dexGetPricesHistoricalRequest($start_block, $end_block, $start_date, $end_date, $token_id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -759,31 +1229,73 @@ class DexApi
                 );
             }
 
-            return [null, $statusCode, $response->getHeaders()];
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\DexPriceDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\DexPriceDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\DexPriceDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\DexPriceDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\DexPriceDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
             }
             throw $e;
         }
     }
 
     /**
-     * Operation dappsDexPricesHistoricalGetAsync
+     * Operation dexGetPricesHistoricalAsync
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $token_id (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsDexPricesHistoricalGet'] to see the possible values for this operation
+     * GetPrices (historical)
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $token_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetPricesHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function dappsDexPricesHistoricalGetAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dappsDexPricesHistoricalGet'][0])
+    public function dexGetPricesHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dexGetPricesHistorical'][0])
     {
-        return $this->dappsDexPricesHistoricalGetAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $token_id, $contentType)
+        return $this->dexGetPricesHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $token_id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -792,28 +1304,43 @@ class DexApi
     }
 
     /**
-     * Operation dappsDexPricesHistoricalGetAsyncWithHttpInfo
+     * Operation dexGetPricesHistoricalAsyncWithHttpInfo
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $token_id (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsDexPricesHistoricalGet'] to see the possible values for this operation
+     * GetPrices (historical)
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $token_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetPricesHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function dappsDexPricesHistoricalGetAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dappsDexPricesHistoricalGet'][0])
+    public function dexGetPricesHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dexGetPricesHistorical'][0])
     {
-        $returnType = '';
-        $request = $this->dappsDexPricesHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $token_id, $contentType);
+        $returnType = '\OpenAPI\Client\Model\DexPriceDTO[]';
+        $request = $this->dexGetPricesHistoricalRequest($start_block, $end_block, $start_date, $end_date, $token_id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();
@@ -833,19 +1360,19 @@ class DexApi
     }
 
     /**
-     * Create request for operation 'dappsDexPricesHistoricalGet'
+     * Create request for operation 'dexGetPricesHistorical'
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $token_id (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsDexPricesHistoricalGet'] to see the possible values for this operation
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $token_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetPricesHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function dappsDexPricesHistoricalGetRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dappsDexPricesHistoricalGet'][0])
+    public function dexGetPricesHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dexGetPricesHistorical'][0])
     {
 
 
@@ -911,7 +1438,7 @@ class DexApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            [],
+            ['text/plain', 'application/json', 'text/json', ],
             $contentType,
             $multipart
         );
@@ -964,41 +1491,46 @@ class DexApi
     }
 
     /**
-     * Operation dappsDexSolutionHistoricalGet
+     * Operation dexGetSolutionsHistorical
      *
-     * @param  int $start_block start_block (optional)
-     * @param  int $end_block end_block (optional)
-     * @param  \DateTime $start_date start_date (optional)
-     * @param  \DateTime $end_date end_date (optional)
-     * @param  string $token_id token_id (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsDexSolutionHistoricalGet'] to see the possible values for this operation
+     * GetSolutions (historical)
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $token_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetSolutionsHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return void
+     * @return \OpenAPI\Client\Model\DexSolutionDTO[]
      */
-    public function dappsDexSolutionHistoricalGet($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dappsDexSolutionHistoricalGet'][0])
+    public function dexGetSolutionsHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dexGetSolutionsHistorical'][0])
     {
-        $this->dappsDexSolutionHistoricalGetWithHttpInfo($start_block, $end_block, $start_date, $end_date, $token_id, $contentType);
+        list($response) = $this->dexGetSolutionsHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $token_id, $contentType);
+        return $response;
     }
 
     /**
-     * Operation dappsDexSolutionHistoricalGetWithHttpInfo
+     * Operation dexGetSolutionsHistoricalWithHttpInfo
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $token_id (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsDexSolutionHistoricalGet'] to see the possible values for this operation
+     * GetSolutions (historical)
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $token_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetSolutionsHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\DexSolutionDTO[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function dappsDexSolutionHistoricalGetWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dappsDexSolutionHistoricalGet'][0])
+    public function dexGetSolutionsHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dexGetSolutionsHistorical'][0])
     {
-        $request = $this->dappsDexSolutionHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $token_id, $contentType);
+        $request = $this->dexGetSolutionsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $token_id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1035,31 +1567,73 @@ class DexApi
                 );
             }
 
-            return [null, $statusCode, $response->getHeaders()];
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\DexSolutionDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\DexSolutionDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\DexSolutionDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\DexSolutionDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\DexSolutionDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
             }
             throw $e;
         }
     }
 
     /**
-     * Operation dappsDexSolutionHistoricalGetAsync
+     * Operation dexGetSolutionsHistoricalAsync
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $token_id (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsDexSolutionHistoricalGet'] to see the possible values for this operation
+     * GetSolutions (historical)
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $token_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetSolutionsHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function dappsDexSolutionHistoricalGetAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dappsDexSolutionHistoricalGet'][0])
+    public function dexGetSolutionsHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dexGetSolutionsHistorical'][0])
     {
-        return $this->dappsDexSolutionHistoricalGetAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $token_id, $contentType)
+        return $this->dexGetSolutionsHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $token_id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1068,28 +1642,43 @@ class DexApi
     }
 
     /**
-     * Operation dappsDexSolutionHistoricalGetAsyncWithHttpInfo
+     * Operation dexGetSolutionsHistoricalAsyncWithHttpInfo
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $token_id (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsDexSolutionHistoricalGet'] to see the possible values for this operation
+     * GetSolutions (historical)
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $token_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetSolutionsHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function dappsDexSolutionHistoricalGetAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dappsDexSolutionHistoricalGet'][0])
+    public function dexGetSolutionsHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dexGetSolutionsHistorical'][0])
     {
-        $returnType = '';
-        $request = $this->dappsDexSolutionHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $token_id, $contentType);
+        $returnType = '\OpenAPI\Client\Model\DexSolutionDTO[]';
+        $request = $this->dexGetSolutionsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $token_id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();
@@ -1109,19 +1698,19 @@ class DexApi
     }
 
     /**
-     * Create request for operation 'dappsDexSolutionHistoricalGet'
+     * Create request for operation 'dexGetSolutionsHistorical'
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $token_id (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsDexSolutionHistoricalGet'] to see the possible values for this operation
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $token_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetSolutionsHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function dappsDexSolutionHistoricalGetRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dappsDexSolutionHistoricalGet'][0])
+    public function dexGetSolutionsHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dexGetSolutionsHistorical'][0])
     {
 
 
@@ -1130,7 +1719,7 @@ class DexApi
 
 
 
-        $resourcePath = '/dapps/dex/solution/historical';
+        $resourcePath = '/dapps/dex/solutions/historical';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1187,7 +1776,7 @@ class DexApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            [],
+            ['text/plain', 'application/json', 'text/json', ],
             $contentType,
             $multipart
         );
@@ -1240,39 +1829,44 @@ class DexApi
     }
 
     /**
-     * Operation dappsDexStatsHistoricalGet
+     * Operation dexGetStatsHistorical
      *
-     * @param  int $start_block start_block (optional)
-     * @param  int $end_block end_block (optional)
-     * @param  \DateTime $start_date start_date (optional)
-     * @param  \DateTime $end_date end_date (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsDexStatsHistoricalGet'] to see the possible values for this operation
+     * GetStats (historical)
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetStatsHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return void
+     * @return \OpenAPI\Client\Model\DexStatsDTO[]
      */
-    public function dappsDexStatsHistoricalGet($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['dappsDexStatsHistoricalGet'][0])
+    public function dexGetStatsHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['dexGetStatsHistorical'][0])
     {
-        $this->dappsDexStatsHistoricalGetWithHttpInfo($start_block, $end_block, $start_date, $end_date, $contentType);
+        list($response) = $this->dexGetStatsHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $contentType);
+        return $response;
     }
 
     /**
-     * Operation dappsDexStatsHistoricalGetWithHttpInfo
+     * Operation dexGetStatsHistoricalWithHttpInfo
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsDexStatsHistoricalGet'] to see the possible values for this operation
+     * GetStats (historical)
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetStatsHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\DexStatsDTO[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function dappsDexStatsHistoricalGetWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['dappsDexStatsHistoricalGet'][0])
+    public function dexGetStatsHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['dexGetStatsHistorical'][0])
     {
-        $request = $this->dappsDexStatsHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $contentType);
+        $request = $this->dexGetStatsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1309,30 +1903,72 @@ class DexApi
                 );
             }
 
-            return [null, $statusCode, $response->getHeaders()];
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\DexStatsDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\DexStatsDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\DexStatsDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\DexStatsDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\DexStatsDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
             }
             throw $e;
         }
     }
 
     /**
-     * Operation dappsDexStatsHistoricalGetAsync
+     * Operation dexGetStatsHistoricalAsync
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsDexStatsHistoricalGet'] to see the possible values for this operation
+     * GetStats (historical)
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetStatsHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function dappsDexStatsHistoricalGetAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['dappsDexStatsHistoricalGet'][0])
+    public function dexGetStatsHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['dexGetStatsHistorical'][0])
     {
-        return $this->dappsDexStatsHistoricalGetAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $contentType)
+        return $this->dexGetStatsHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1341,27 +1977,42 @@ class DexApi
     }
 
     /**
-     * Operation dappsDexStatsHistoricalGetAsyncWithHttpInfo
+     * Operation dexGetStatsHistoricalAsyncWithHttpInfo
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsDexStatsHistoricalGet'] to see the possible values for this operation
+     * GetStats (historical)
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetStatsHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function dappsDexStatsHistoricalGetAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['dappsDexStatsHistoricalGet'][0])
+    public function dexGetStatsHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['dexGetStatsHistorical'][0])
     {
-        $returnType = '';
-        $request = $this->dappsDexStatsHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $contentType);
+        $returnType = '\OpenAPI\Client\Model\DexStatsDTO[]';
+        $request = $this->dexGetStatsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();
@@ -1381,18 +2032,18 @@ class DexApi
     }
 
     /**
-     * Create request for operation 'dappsDexStatsHistoricalGet'
+     * Create request for operation 'dexGetStatsHistorical'
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsDexStatsHistoricalGet'] to see the possible values for this operation
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetStatsHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function dappsDexStatsHistoricalGetRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['dappsDexStatsHistoricalGet'][0])
+    public function dexGetStatsHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['dexGetStatsHistorical'][0])
     {
 
 
@@ -1448,7 +2099,7 @@ class DexApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            [],
+            ['text/plain', 'application/json', 'text/json', ],
             $contentType,
             $multipart
         );
@@ -1501,41 +2152,46 @@ class DexApi
     }
 
     /**
-     * Operation dappsDexTokensHistoricalGet
+     * Operation dexGetTokensHistorical
      *
-     * @param  int $start_block start_block (optional)
-     * @param  int $end_block end_block (optional)
-     * @param  \DateTime $start_date start_date (optional)
-     * @param  \DateTime $end_date end_date (optional)
-     * @param  string $token_id token_id (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsDexTokensHistoricalGet'] to see the possible values for this operation
+     * GetTokens (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $token_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetTokensHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return void
+     * @return \OpenAPI\Client\Model\DexTokenDTO[]
      */
-    public function dappsDexTokensHistoricalGet($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dappsDexTokensHistoricalGet'][0])
+    public function dexGetTokensHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dexGetTokensHistorical'][0])
     {
-        $this->dappsDexTokensHistoricalGetWithHttpInfo($start_block, $end_block, $start_date, $end_date, $token_id, $contentType);
+        list($response) = $this->dexGetTokensHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $token_id, $contentType);
+        return $response;
     }
 
     /**
-     * Operation dappsDexTokensHistoricalGetWithHttpInfo
+     * Operation dexGetTokensHistoricalWithHttpInfo
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $token_id (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsDexTokensHistoricalGet'] to see the possible values for this operation
+     * GetTokens (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $token_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetTokensHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\DexTokenDTO[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function dappsDexTokensHistoricalGetWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dappsDexTokensHistoricalGet'][0])
+    public function dexGetTokensHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dexGetTokensHistorical'][0])
     {
-        $request = $this->dappsDexTokensHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $token_id, $contentType);
+        $request = $this->dexGetTokensHistoricalRequest($start_block, $end_block, $start_date, $end_date, $token_id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1572,31 +2228,73 @@ class DexApi
                 );
             }
 
-            return [null, $statusCode, $response->getHeaders()];
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\DexTokenDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\DexTokenDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\DexTokenDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\DexTokenDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\DexTokenDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
             }
             throw $e;
         }
     }
 
     /**
-     * Operation dappsDexTokensHistoricalGetAsync
+     * Operation dexGetTokensHistoricalAsync
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $token_id (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsDexTokensHistoricalGet'] to see the possible values for this operation
+     * GetTokens (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $token_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetTokensHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function dappsDexTokensHistoricalGetAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dappsDexTokensHistoricalGet'][0])
+    public function dexGetTokensHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dexGetTokensHistorical'][0])
     {
-        return $this->dappsDexTokensHistoricalGetAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $token_id, $contentType)
+        return $this->dexGetTokensHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $token_id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1605,28 +2303,43 @@ class DexApi
     }
 
     /**
-     * Operation dappsDexTokensHistoricalGetAsyncWithHttpInfo
+     * Operation dexGetTokensHistoricalAsyncWithHttpInfo
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $token_id (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsDexTokensHistoricalGet'] to see the possible values for this operation
+     * GetTokens (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $token_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetTokensHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function dappsDexTokensHistoricalGetAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dappsDexTokensHistoricalGet'][0])
+    public function dexGetTokensHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dexGetTokensHistorical'][0])
     {
-        $returnType = '';
-        $request = $this->dappsDexTokensHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $token_id, $contentType);
+        $returnType = '\OpenAPI\Client\Model\DexTokenDTO[]';
+        $request = $this->dexGetTokensHistoricalRequest($start_block, $end_block, $start_date, $end_date, $token_id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();
@@ -1646,19 +2359,19 @@ class DexApi
     }
 
     /**
-     * Create request for operation 'dappsDexTokensHistoricalGet'
+     * Create request for operation 'dexGetTokensHistorical'
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $token_id (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsDexTokensHistoricalGet'] to see the possible values for this operation
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $token_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetTokensHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function dappsDexTokensHistoricalGetRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dappsDexTokensHistoricalGet'][0])
+    public function dexGetTokensHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dexGetTokensHistorical'][0])
     {
 
 
@@ -1724,7 +2437,7 @@ class DexApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            [],
+            ['text/plain', 'application/json', 'text/json', ],
             $contentType,
             $multipart
         );
@@ -1777,39 +2490,44 @@ class DexApi
     }
 
     /**
-     * Operation dappsDexTradesHistoricalGet
+     * Operation dexGetTradesHistorical
      *
-     * @param  int $start_block start_block (optional)
-     * @param  int $end_block end_block (optional)
-     * @param  \DateTime $start_date start_date (optional)
-     * @param  \DateTime $end_date end_date (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsDexTradesHistoricalGet'] to see the possible values for this operation
+     * GetTrades (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetTradesHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return void
+     * @return \OpenAPI\Client\Model\DexTradeDTO[]
      */
-    public function dappsDexTradesHistoricalGet($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['dappsDexTradesHistoricalGet'][0])
+    public function dexGetTradesHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['dexGetTradesHistorical'][0])
     {
-        $this->dappsDexTradesHistoricalGetWithHttpInfo($start_block, $end_block, $start_date, $end_date, $contentType);
+        list($response) = $this->dexGetTradesHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $contentType);
+        return $response;
     }
 
     /**
-     * Operation dappsDexTradesHistoricalGetWithHttpInfo
+     * Operation dexGetTradesHistoricalWithHttpInfo
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsDexTradesHistoricalGet'] to see the possible values for this operation
+     * GetTrades (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetTradesHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\DexTradeDTO[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function dappsDexTradesHistoricalGetWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['dappsDexTradesHistoricalGet'][0])
+    public function dexGetTradesHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['dexGetTradesHistorical'][0])
     {
-        $request = $this->dappsDexTradesHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $contentType);
+        $request = $this->dexGetTradesHistoricalRequest($start_block, $end_block, $start_date, $end_date, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1846,30 +2564,72 @@ class DexApi
                 );
             }
 
-            return [null, $statusCode, $response->getHeaders()];
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\DexTradeDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\DexTradeDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\DexTradeDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\DexTradeDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\DexTradeDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
             }
             throw $e;
         }
     }
 
     /**
-     * Operation dappsDexTradesHistoricalGetAsync
+     * Operation dexGetTradesHistoricalAsync
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsDexTradesHistoricalGet'] to see the possible values for this operation
+     * GetTrades (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetTradesHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function dappsDexTradesHistoricalGetAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['dappsDexTradesHistoricalGet'][0])
+    public function dexGetTradesHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['dexGetTradesHistorical'][0])
     {
-        return $this->dappsDexTradesHistoricalGetAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $contentType)
+        return $this->dexGetTradesHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1878,27 +2638,42 @@ class DexApi
     }
 
     /**
-     * Operation dappsDexTradesHistoricalGetAsyncWithHttpInfo
+     * Operation dexGetTradesHistoricalAsyncWithHttpInfo
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsDexTradesHistoricalGet'] to see the possible values for this operation
+     * GetTrades (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetTradesHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function dappsDexTradesHistoricalGetAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['dappsDexTradesHistoricalGet'][0])
+    public function dexGetTradesHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['dexGetTradesHistorical'][0])
     {
-        $returnType = '';
-        $request = $this->dappsDexTradesHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $contentType);
+        $returnType = '\OpenAPI\Client\Model\DexTradeDTO[]';
+        $request = $this->dexGetTradesHistoricalRequest($start_block, $end_block, $start_date, $end_date, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();
@@ -1918,18 +2693,18 @@ class DexApi
     }
 
     /**
-     * Create request for operation 'dappsDexTradesHistoricalGet'
+     * Create request for operation 'dexGetTradesHistorical'
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsDexTradesHistoricalGet'] to see the possible values for this operation
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetTradesHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function dappsDexTradesHistoricalGetRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['dappsDexTradesHistoricalGet'][0])
+    public function dexGetTradesHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['dexGetTradesHistorical'][0])
     {
 
 
@@ -1985,7 +2760,7 @@ class DexApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            [],
+            ['text/plain', 'application/json', 'text/json', ],
             $contentType,
             $multipart
         );
@@ -2038,39 +2813,44 @@ class DexApi
     }
 
     /**
-     * Operation dappsDexUsersHistoricalGet
+     * Operation dexGetUsersHistorical
      *
-     * @param  int $start_block start_block (optional)
-     * @param  int $end_block end_block (optional)
-     * @param  \DateTime $start_date start_date (optional)
-     * @param  \DateTime $end_date end_date (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsDexUsersHistoricalGet'] to see the possible values for this operation
+     * GetUsers (historical)
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetUsersHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return void
+     * @return \OpenAPI\Client\Model\DexUserDTO[]
      */
-    public function dappsDexUsersHistoricalGet($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['dappsDexUsersHistoricalGet'][0])
+    public function dexGetUsersHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['dexGetUsersHistorical'][0])
     {
-        $this->dappsDexUsersHistoricalGetWithHttpInfo($start_block, $end_block, $start_date, $end_date, $contentType);
+        list($response) = $this->dexGetUsersHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $contentType);
+        return $response;
     }
 
     /**
-     * Operation dappsDexUsersHistoricalGetWithHttpInfo
+     * Operation dexGetUsersHistoricalWithHttpInfo
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsDexUsersHistoricalGet'] to see the possible values for this operation
+     * GetUsers (historical)
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetUsersHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\DexUserDTO[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function dappsDexUsersHistoricalGetWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['dappsDexUsersHistoricalGet'][0])
+    public function dexGetUsersHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['dexGetUsersHistorical'][0])
     {
-        $request = $this->dappsDexUsersHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $contentType);
+        $request = $this->dexGetUsersHistoricalRequest($start_block, $end_block, $start_date, $end_date, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2107,30 +2887,72 @@ class DexApi
                 );
             }
 
-            return [null, $statusCode, $response->getHeaders()];
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\DexUserDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\DexUserDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\DexUserDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\DexUserDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\DexUserDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
             }
             throw $e;
         }
     }
 
     /**
-     * Operation dappsDexUsersHistoricalGetAsync
+     * Operation dexGetUsersHistoricalAsync
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsDexUsersHistoricalGet'] to see the possible values for this operation
+     * GetUsers (historical)
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetUsersHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function dappsDexUsersHistoricalGetAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['dappsDexUsersHistoricalGet'][0])
+    public function dexGetUsersHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['dexGetUsersHistorical'][0])
     {
-        return $this->dappsDexUsersHistoricalGetAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $contentType)
+        return $this->dexGetUsersHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2139,27 +2961,42 @@ class DexApi
     }
 
     /**
-     * Operation dappsDexUsersHistoricalGetAsyncWithHttpInfo
+     * Operation dexGetUsersHistoricalAsyncWithHttpInfo
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsDexUsersHistoricalGet'] to see the possible values for this operation
+     * GetUsers (historical)
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetUsersHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function dappsDexUsersHistoricalGetAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['dappsDexUsersHistoricalGet'][0])
+    public function dexGetUsersHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['dexGetUsersHistorical'][0])
     {
-        $returnType = '';
-        $request = $this->dappsDexUsersHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $contentType);
+        $returnType = '\OpenAPI\Client\Model\DexUserDTO[]';
+        $request = $this->dexGetUsersHistoricalRequest($start_block, $end_block, $start_date, $end_date, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();
@@ -2179,18 +3016,18 @@ class DexApi
     }
 
     /**
-     * Create request for operation 'dappsDexUsersHistoricalGet'
+     * Create request for operation 'dexGetUsersHistorical'
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsDexUsersHistoricalGet'] to see the possible values for this operation
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetUsersHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function dappsDexUsersHistoricalGetRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['dappsDexUsersHistoricalGet'][0])
+    public function dexGetUsersHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['dexGetUsersHistorical'][0])
     {
 
 
@@ -2246,7 +3083,7 @@ class DexApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            [],
+            ['text/plain', 'application/json', 'text/json', ],
             $contentType,
             $multipart
         );
@@ -2299,41 +3136,46 @@ class DexApi
     }
 
     /**
-     * Operation dappsDexWithdrawHistoricalGet
+     * Operation dexGetWithdrawsHistorical
      *
-     * @param  int $start_block start_block (optional)
-     * @param  int $end_block end_block (optional)
-     * @param  \DateTime $start_date start_date (optional)
-     * @param  \DateTime $end_date end_date (optional)
-     * @param  string $token_id token_id (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsDexWithdrawHistoricalGet'] to see the possible values for this operation
+     * GetWithdraws (historical)
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $token_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetWithdrawsHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return void
+     * @return \OpenAPI\Client\Model\DexWithdrawDTO[]
      */
-    public function dappsDexWithdrawHistoricalGet($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dappsDexWithdrawHistoricalGet'][0])
+    public function dexGetWithdrawsHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dexGetWithdrawsHistorical'][0])
     {
-        $this->dappsDexWithdrawHistoricalGetWithHttpInfo($start_block, $end_block, $start_date, $end_date, $token_id, $contentType);
+        list($response) = $this->dexGetWithdrawsHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $token_id, $contentType);
+        return $response;
     }
 
     /**
-     * Operation dappsDexWithdrawHistoricalGetWithHttpInfo
+     * Operation dexGetWithdrawsHistoricalWithHttpInfo
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $token_id (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsDexWithdrawHistoricalGet'] to see the possible values for this operation
+     * GetWithdraws (historical)
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $token_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetWithdrawsHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\DexWithdrawDTO[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function dappsDexWithdrawHistoricalGetWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dappsDexWithdrawHistoricalGet'][0])
+    public function dexGetWithdrawsHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dexGetWithdrawsHistorical'][0])
     {
-        $request = $this->dappsDexWithdrawHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $token_id, $contentType);
+        $request = $this->dexGetWithdrawsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $token_id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2370,31 +3212,73 @@ class DexApi
                 );
             }
 
-            return [null, $statusCode, $response->getHeaders()];
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\DexWithdrawDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\DexWithdrawDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\DexWithdrawDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\DexWithdrawDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\DexWithdrawDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
             }
             throw $e;
         }
     }
 
     /**
-     * Operation dappsDexWithdrawHistoricalGetAsync
+     * Operation dexGetWithdrawsHistoricalAsync
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $token_id (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsDexWithdrawHistoricalGet'] to see the possible values for this operation
+     * GetWithdraws (historical)
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $token_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetWithdrawsHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function dappsDexWithdrawHistoricalGetAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dappsDexWithdrawHistoricalGet'][0])
+    public function dexGetWithdrawsHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dexGetWithdrawsHistorical'][0])
     {
-        return $this->dappsDexWithdrawHistoricalGetAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $token_id, $contentType)
+        return $this->dexGetWithdrawsHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $token_id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2403,28 +3287,43 @@ class DexApi
     }
 
     /**
-     * Operation dappsDexWithdrawHistoricalGetAsyncWithHttpInfo
+     * Operation dexGetWithdrawsHistoricalAsyncWithHttpInfo
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $token_id (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsDexWithdrawHistoricalGet'] to see the possible values for this operation
+     * GetWithdraws (historical)
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $token_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetWithdrawsHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function dappsDexWithdrawHistoricalGetAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dappsDexWithdrawHistoricalGet'][0])
+    public function dexGetWithdrawsHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dexGetWithdrawsHistorical'][0])
     {
-        $returnType = '';
-        $request = $this->dappsDexWithdrawHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $token_id, $contentType);
+        $returnType = '\OpenAPI\Client\Model\DexWithdrawDTO[]';
+        $request = $this->dexGetWithdrawsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $token_id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();
@@ -2444,19 +3343,19 @@ class DexApi
     }
 
     /**
-     * Create request for operation 'dappsDexWithdrawHistoricalGet'
+     * Create request for operation 'dexGetWithdrawsHistorical'
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $token_id (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsDexWithdrawHistoricalGet'] to see the possible values for this operation
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $token_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetWithdrawsHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function dappsDexWithdrawHistoricalGetRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dappsDexWithdrawHistoricalGet'][0])
+    public function dexGetWithdrawsHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dexGetWithdrawsHistorical'][0])
     {
 
 
@@ -2465,7 +3364,7 @@ class DexApi
 
 
 
-        $resourcePath = '/dapps/dex/withdraw/historical';
+        $resourcePath = '/dapps/dex/withdraws/historical';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2522,7 +3421,7 @@ class DexApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            [],
+            ['text/plain', 'application/json', 'text/json', ],
             $contentType,
             $multipart
         );
@@ -2575,41 +3474,46 @@ class DexApi
     }
 
     /**
-     * Operation dappsDexWithdrawRequestHistoricalGet
+     * Operation dexGetWithdrawsRequestsHistorical
      *
-     * @param  int $start_block start_block (optional)
-     * @param  int $end_block end_block (optional)
-     * @param  \DateTime $start_date start_date (optional)
-     * @param  \DateTime $end_date end_date (optional)
-     * @param  string $token_id token_id (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsDexWithdrawRequestHistoricalGet'] to see the possible values for this operation
+     * GetWithdrawsRequests (historical)
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $token_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetWithdrawsRequestsHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return void
+     * @return \OpenAPI\Client\Model\DexWithdrawRequestDTO[]
      */
-    public function dappsDexWithdrawRequestHistoricalGet($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dappsDexWithdrawRequestHistoricalGet'][0])
+    public function dexGetWithdrawsRequestsHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dexGetWithdrawsRequestsHistorical'][0])
     {
-        $this->dappsDexWithdrawRequestHistoricalGetWithHttpInfo($start_block, $end_block, $start_date, $end_date, $token_id, $contentType);
+        list($response) = $this->dexGetWithdrawsRequestsHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $token_id, $contentType);
+        return $response;
     }
 
     /**
-     * Operation dappsDexWithdrawRequestHistoricalGetWithHttpInfo
+     * Operation dexGetWithdrawsRequestsHistoricalWithHttpInfo
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $token_id (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsDexWithdrawRequestHistoricalGet'] to see the possible values for this operation
+     * GetWithdrawsRequests (historical)
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $token_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetWithdrawsRequestsHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\DexWithdrawRequestDTO[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function dappsDexWithdrawRequestHistoricalGetWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dappsDexWithdrawRequestHistoricalGet'][0])
+    public function dexGetWithdrawsRequestsHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dexGetWithdrawsRequestsHistorical'][0])
     {
-        $request = $this->dappsDexWithdrawRequestHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $token_id, $contentType);
+        $request = $this->dexGetWithdrawsRequestsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $token_id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2646,31 +3550,73 @@ class DexApi
                 );
             }
 
-            return [null, $statusCode, $response->getHeaders()];
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\DexWithdrawRequestDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\DexWithdrawRequestDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\DexWithdrawRequestDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\DexWithdrawRequestDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\DexWithdrawRequestDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
             }
             throw $e;
         }
     }
 
     /**
-     * Operation dappsDexWithdrawRequestHistoricalGetAsync
+     * Operation dexGetWithdrawsRequestsHistoricalAsync
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $token_id (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsDexWithdrawRequestHistoricalGet'] to see the possible values for this operation
+     * GetWithdrawsRequests (historical)
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $token_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetWithdrawsRequestsHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function dappsDexWithdrawRequestHistoricalGetAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dappsDexWithdrawRequestHistoricalGet'][0])
+    public function dexGetWithdrawsRequestsHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dexGetWithdrawsRequestsHistorical'][0])
     {
-        return $this->dappsDexWithdrawRequestHistoricalGetAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $token_id, $contentType)
+        return $this->dexGetWithdrawsRequestsHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $token_id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2679,28 +3625,43 @@ class DexApi
     }
 
     /**
-     * Operation dappsDexWithdrawRequestHistoricalGetAsyncWithHttpInfo
+     * Operation dexGetWithdrawsRequestsHistoricalAsyncWithHttpInfo
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $token_id (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsDexWithdrawRequestHistoricalGet'] to see the possible values for this operation
+     * GetWithdrawsRequests (historical)
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $token_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetWithdrawsRequestsHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function dappsDexWithdrawRequestHistoricalGetAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dappsDexWithdrawRequestHistoricalGet'][0])
+    public function dexGetWithdrawsRequestsHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dexGetWithdrawsRequestsHistorical'][0])
     {
-        $returnType = '';
-        $request = $this->dappsDexWithdrawRequestHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $token_id, $contentType);
+        $returnType = '\OpenAPI\Client\Model\DexWithdrawRequestDTO[]';
+        $request = $this->dexGetWithdrawsRequestsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $token_id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();
@@ -2720,19 +3681,19 @@ class DexApi
     }
 
     /**
-     * Create request for operation 'dappsDexWithdrawRequestHistoricalGet'
+     * Create request for operation 'dexGetWithdrawsRequestsHistorical'
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $token_id (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsDexWithdrawRequestHistoricalGet'] to see the possible values for this operation
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $token_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetWithdrawsRequestsHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function dappsDexWithdrawRequestHistoricalGetRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dappsDexWithdrawRequestHistoricalGet'][0])
+    public function dexGetWithdrawsRequestsHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dexGetWithdrawsRequestsHistorical'][0])
     {
 
 
@@ -2741,7 +3702,7 @@ class DexApi
 
 
 
-        $resourcePath = '/dapps/dex/withdrawRequest/historical';
+        $resourcePath = '/dapps/dex/withdrawsRequests/historical';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2798,7 +3759,7 @@ class DexApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            [],
+            ['text/plain', 'application/json', 'text/json', ],
             $contentType,
             $multipart
         );

@@ -21,7 +21,7 @@ from .. import ApiTestMixin
 class TestDappsUniswapv3TokensHourDataCurrent(ApiTestMixin, unittest.TestCase):
     """
     DappsUniswapv3TokensHourDataCurrent unit test stubs
-        GetTokensHourData  # noqa: E501
+        GetTokensHourData (current)  # noqa: E501
     """
     _configuration = configuration.Configuration()
 

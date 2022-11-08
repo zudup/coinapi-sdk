@@ -22,11 +22,11 @@ func Test_openapi_CowApiService(t *testing.T) {
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
 
-    t.Run("Test CowApiService DappsCowOrdersHistoricalGet", func(t *testing.T) {
+    t.Run("Test CowApiService CowGetOrdersHistorical", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.CowApi.DappsCowOrdersHistoricalGet(context.Background()).Execute()
+        resp, httpRes, err := apiClient.CowApi.CowGetOrdersHistorical(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)
@@ -34,11 +34,11 @@ func Test_openapi_CowApiService(t *testing.T) {
 
     })
 
-    t.Run("Test CowApiService DappsCowSettlementHistoricalGet", func(t *testing.T) {
+    t.Run("Test CowApiService CowGetSettlementsHistorical", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.CowApi.DappsCowSettlementHistoricalGet(context.Background()).Execute()
+        resp, httpRes, err := apiClient.CowApi.CowGetSettlementsHistorical(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)
@@ -46,11 +46,11 @@ func Test_openapi_CowApiService(t *testing.T) {
 
     })
 
-    t.Run("Test CowApiService DappsCowTokensHistoricalGet", func(t *testing.T) {
+    t.Run("Test CowApiService CowGetTokensHistorical", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.CowApi.DappsCowTokensHistoricalGet(context.Background()).Execute()
+        resp, httpRes, err := apiClient.CowApi.CowGetTokensHistorical(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)
@@ -58,11 +58,11 @@ func Test_openapi_CowApiService(t *testing.T) {
 
     })
 
-    t.Run("Test CowApiService DappsCowTradesHistoricalGet", func(t *testing.T) {
+    t.Run("Test CowApiService CowGetTradesHistorical", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.CowApi.DappsCowTradesHistoricalGet(context.Background()).Execute()
+        resp, httpRes, err := apiClient.CowApi.CowGetTradesHistorical(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)
@@ -70,11 +70,11 @@ func Test_openapi_CowApiService(t *testing.T) {
 
     })
 
-    t.Run("Test CowApiService DappsCowUsersHistoricalGet", func(t *testing.T) {
+    t.Run("Test CowApiService CowGetUsersHistorical", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.CowApi.DappsCowUsersHistoricalGet(context.Background()).Execute()
+        resp, httpRes, err := apiClient.CowApi.CowGetUsersHistorical(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)

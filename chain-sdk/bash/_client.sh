@@ -296,51 +296,54 @@ case $state in
   ops)
     # Operations
     _values "Operations" \
-            "dappsCowOrdersHistoricalGet[]" \
-            "dappsCowSettlementHistoricalGet[]" \
-            "dappsCowTokensHistoricalGet[]" \
-            "dappsCowTradesHistoricalGet[]" \
-            "dappsCowUsersHistoricalGet[]"             "dappsCurveAccountsHistoricalGet[]" \
-            "dappsCurveAddLiquidityEventHistoricalGet[]" \
-            "dappsCurveAdminFeeChangeLogHistoricalGet[]" \
-            "dappsCurveAmplificationCoeffChangeLogHistoricalGet[]" \
-            "dappsCurveCoinsHistoricalGet[]" \
-            "dappsCurveContractsHistoricalGet[]" \
-            "dappsCurveContractsVersionHistoricalGet[]" \
-            "dappsCurveDailyVolumeHistoricalGet[]" \
-            "dappsCurveFeeChangeLogHistoricalGet[]" \
-            "dappsCurveGaugeDepositHistoricalGet[]" \
-            "dappsCurveGaugeHistoricalGet[]" \
-            "dappsCurveGaugeLiquidityHistoricalGet[]" \
-            "dappsCurveGaugeTotalWeightHistoricalGet[]" \
-            "dappsCurveGaugeTypeHistoricalGet[]" \
-            "dappsCurveGaugeTypeWeightHistoricalGet[]" \
-            "dappsCurveGaugeWeightHistoricalGet[]" \
-            "dappsCurveGaugeWeightVoteHistoricalGet[]" \
-            "dappsCurveGaugeWithdrawHistoricalGet[]" \
-            "dappsCurveHourlyVolumeHistoricalGet[]" \
-            "dappsCurveLpTokenHistoricalGet[]" \
-            "dappsCurvePoolsHistoricalGet[]" \
-            "dappsCurveProposalsHistoricalGet[]" \
-            "dappsCurveProposalsVoteHistoricalGet[]" \
-            "dappsCurveRemoveLiquidityEventHistoricalGet[]" \
-            "dappsCurveRemoveLiquidityOneEventHistoricalGet[]" \
-            "dappsCurveSwapsHistoricalGet[]" \
-            "dappsCurveSystemStateHistoricalGet[]" \
-            "dappsCurveTokensHistoricalGet[]" \
-            "dappsCurveTransferOwnershipEventHistoricalGet[]" \
-            "dappsCurveUnderlyingCoinHistoricalGet[]" \
-            "dappsCurveVotingAppHistoricalGet[]" \
-            "dappsCurveWeeklyVolumeHistoricalGet[]"             "dappsDexBatchHistoricalGet[]" \
-            "dappsDexOrdersHistoricalGet[]" \
-            "dappsDexPricesHistoricalGet[]" \
-            "dappsDexSolutionHistoricalGet[]" \
-            "dappsDexStatsHistoricalGet[]" \
-            "dappsDexTokensHistoricalGet[]" \
-            "dappsDexTradesHistoricalGet[]" \
-            "dappsDexUsersHistoricalGet[]" \
-            "dappsDexWithdrawHistoricalGet[]" \
-            "dappsDexWithdrawRequestHistoricalGet[]"             "sushiswapGetBundlesHistorical[GetBundles (historical)]" \
+            "cowGetOrdersHistorical[GetOrders (historical)]" \
+            "cowGetSettlementsHistorical[GetSettlements (historical)]" \
+            "cowGetTokensHistorical[GetTokens (historical) 🔥]" \
+            "cowGetTradesHistorical[GetTrades (historical) 🔥]" \
+            "cowGetUsersHistorical[GetUsers (historical)]"             "curveGetAccountsHistorical[GetAccounts (historical)]" \
+            "curveGetAddLiquidityEventsHistorical[GetAddLiquidityEvents (historical)]" \
+            "curveGetAdminFeeChangeLogsHistorical[GetAdminFeeChangeLogs (historical)]" \
+            "curveGetAmplificationCoeffChangeLogsHistorical[GetAmplificationCoeffChangeLogs (historical)]" \
+            "curveGetCoinsHistorical[GetCoins (historical)]" \
+            "curveGetContractsHistorical[GetContracts (historical)]" \
+            "curveGetContractsVersionsHistorical[GetContractsVersions (historical)]" \
+            "curveGetDailyVolumesHistorical[GetDailyVolumes (historical)]" \
+            "curveGetExchangesHistorical[GetExchanges (historical) 🔥]" \
+            "curveGetFeeChangeLogsHistorical[GetFeeChangeLogs (historical)]" \
+            "curveGetGaugesDepositsHistorical[GetGaugesDeposits (historical)]" \
+            "curveGetGaugesHistorical[GetGauges (historical)]" \
+            "curveGetGaugesLiquidityHistorical[GetGaugesLiquidity (historical)]" \
+            "curveGetGaugesTotalWeightsHistorical[GetGaugesTotalWeights (historical)]" \
+            "curveGetGaugesTypesHistorical[GetGaugesTypes (historical)]" \
+            "curveGetGaugesTypesWeightsHistorical[GetGaugesTypesWeights (historical)]" \
+            "curveGetGaugesWeightsHistorical[GetGaugesWeights (historical)]" \
+            "curveGetGaugesWeightsVotesHistorical[GetGaugesWeightsVotes (historical)]" \
+            "curveGetGaugesWithdrawHistorical[GetGaugesWithdraw (historical)]" \
+            "curveGetHourlyVolumesHistorical[GetHourlyVolumes (historical)]" \
+            "curveGetLpTokensHistorical[GetLpTokens (historical)]" \
+            "curveGetPoolsHistorical[GetPools (historical) 🔥]" \
+            "curveGetProposalsHistorical[GetProposals (historical)]" \
+            "curveGetProposalsVotesHistorical[GetProposalsVotes (historical)]" \
+            "curveGetRemoveLiquidityEventsHistorical[GetRemoveLiquidityEvents (historical)]" \
+            "curveGetRemoveLiquidityOneEventsHistorical[GetRemoveLiquidityOneEvents (historical)]" \
+            "curveGetSystemStatesHistorical[GetSystemStates (historical)]" \
+            "curveGetTokensHistorical[GetTokens (historical) 🔥]" \
+            "curveGetTransferOwnershipEventsHistorical[GetTransferOwnershipEvents (historical)]" \
+            "curveGetUnderlyingCoinsHistorical[GetUnderlyingCoins (historical)]" \
+            "curveGetVotingAppsHistorical[GetVotingApps (historical)]" \
+            "curveGetWeeklyVolumesHistorical[GetWeeklyVolumes (historical)]"             "dexGetBatchesHistorical[GetBatches (historical)]" \
+            "dexGetDepositsHistorical[GetDeposits (historical)]" \
+            "dexGetOrdersHistorical[GetOrders (historical)]" \
+            "dexGetPricesHistorical[GetPrices (historical)]" \
+            "dexGetSolutionsHistorical[GetSolutions (historical)]" \
+            "dexGetStatsHistorical[GetStats (historical)]" \
+            "dexGetTokensHistorical[GetTokens (historical) 🔥]" \
+            "dexGetTradesHistorical[GetTrades (historical) 🔥]" \
+            "dexGetUsersHistorical[GetUsers (historical)]" \
+            "dexGetWithdrawsHistorical[GetWithdraws (historical)]" \
+            "dexGetWithdrawsRequestsHistorical[GetWithdrawsRequests (historical)]"             "curveGetExchangesCurrent[GetExchanges (current) 🔥]" \
+            "dexGetTradesCurrent[GetTrades (current) 🔥]" \
+            "sushiswapGetBundlesHistorical[GetBundles (historical)]" \
             "sushiswapGetBurnsHistorical[GetBurns (historical)]" \
             "sushiswapGetDayDataHistorical[GetDayData (historical)]" \
             "sushiswapGetFactoryHistorical[GetFactory (historical)]" \
@@ -348,66 +351,66 @@ case $state in
             "sushiswapGetLiquidityPositionHistorical[GetLiquidityPosition (historical)]" \
             "sushiswapGetLiquidityPositionSnapshotHistorical[GetLiquidityPositionSnapshot (historical)]" \
             "sushiswapGetMintsHistorical[GetMints (historical)]" \
-            "sushiswapGetPoolsCurrent[GetPools (current)]" \
+            "sushiswapGetPoolsCurrent[GetPools (current) 🔥]" \
             "sushiswapGetPoolsDayDataHistorical[GetPoolsDayData (historical)]" \
-            "sushiswapGetPoolsHistorical[GetPools (historical)]" \
+            "sushiswapGetPoolsHistorical[GetPools (historical) 🔥]" \
             "sushiswapGetPoolsHourDataHistorical[GetPoolsHourData (historical)]" \
-            "sushiswapGetSwapsCurrent[GetSwaps (current)]" \
-            "sushiswapGetSwapsHistorical[GetSwaps (historical)]" \
-            "sushiswapGetTokensCurrent[GetTokens (current)]" \
+            "sushiswapGetSwapsCurrent[GetSwaps (current) 🔥]" \
+            "sushiswapGetSwapsHistorical[GetSwaps (historical) 🔥]" \
+            "sushiswapGetTokensCurrent[GetTokens (current) 🔥]" \
             "sushiswapGetTokensDayDataHistorical[GetTokensDayData (historical)]" \
-            "sushiswapGetTokensHistorical[GetTokens (historical)]" \
+            "sushiswapGetTokensHistorical[GetTokens (historical) 🔥]" \
             "sushiswapGetTransactionsHistorical[GetTransactions (historical)]" \
-            "sushiswapGetUsersHistorical[GetUsers (historical)]"             "dappsUniswapv2BundlesHistoricalGet[]" \
-            "dappsUniswapv2BurnsHistoricalGet[]" \
-            "dappsUniswapv2DayDataHistoricalGet[]" \
-            "dappsUniswapv2FactoryHistoricalGet[]" \
-            "dappsUniswapv2LiquidityPositionHistoricalGet[]" \
-            "dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet[]" \
-            "dappsUniswapv2MintsHistoricalGet[]" \
-            "dappsUniswapv2PoolDayDataHistoricalGet[]" \
-            "dappsUniswapv2PoolHourDataHistoricalGet[]" \
-            "dappsUniswapv2PoolsCurrentGet[GetPools]" \
-            "dappsUniswapv2PoolsHistoricalGet[]" \
-            "dappsUniswapv2SwapsCurrentGet[GetSwaps]" \
-            "dappsUniswapv2SwapsHistoricalGet[]" \
-            "dappsUniswapv2TokenDayDataHistoricalGet[]" \
-            "dappsUniswapv2TokensCurrentGet[GetTokens]" \
-            "dappsUniswapv2TokensHistoricalGet[]" \
-            "dappsUniswapv2TransactionsHistoricalGet[]" \
-            "dappsUniswapv2UsersHistoricalGet[]"             "dappsUniswapv3BundleCurrentGet[GetBundles]" \
-            "dappsUniswapv3BundlesHistoricalGet[]" \
-            "dappsUniswapv3BurnsCurrentGet[GetBurns]" \
-            "dappsUniswapv3BurnsHistoricalGet[]" \
-            "dappsUniswapv3DayDataHistoricalGet[]" \
-            "dappsUniswapv3FactoryCurrentGet[GetFactory]" \
-            "dappsUniswapv3FactoryHistoricalGet[]" \
-            "dappsUniswapv3MintsCurrentGet[GetMints]" \
-            "dappsUniswapv3MintsHistoricalGet[]" \
-            "dappsUniswapv3PoolDayDataHistoricalGet[]" \
-            "dappsUniswapv3PoolHourDataHistoricalGet[]" \
-            "dappsUniswapv3PoolsCurrentGet[GetPools]" \
-            "dappsUniswapv3PoolsDayDataCurrentGet[GetPoolsDayData]" \
-            "dappsUniswapv3PoolsHistoricalGet[]" \
-            "dappsUniswapv3PoolsHourDataCurrentGet[GetPoolsHourData]" \
-            "dappsUniswapv3PositionSnapshotHistoricalGet[]" \
-            "dappsUniswapv3PositionSnapshotsCurrentGet[GetPositionSnapshot]" \
-            "dappsUniswapv3PositionsCurrentGet[GetPositions]" \
-            "dappsUniswapv3PositionsHistoricalGet[]" \
-            "dappsUniswapv3SwapsCurrentGet[GetSwaps]" \
-            "dappsUniswapv3SwapsHistoricalGet[]" \
-            "dappsUniswapv3TickDayDataHistoricalGet[]" \
-            "dappsUniswapv3TicksCurrentGet[GetTicks]" \
-            "dappsUniswapv3TicksDayDataCurrentGet[GetTicksDayData]" \
-            "dappsUniswapv3TicksHistoricalGet[]" \
-            "dappsUniswapv3TokenDayDataHistoricalGet[]" \
-            "dappsUniswapv3TokenHourDataHistoricalGet[]" \
-            "dappsUniswapv3TokensCurrentGet[GetTokens]" \
-            "dappsUniswapv3TokensDayDataCurrentGet[GetTokensDayData]" \
-            "dappsUniswapv3TokensHistoricalGet[]" \
-            "dappsUniswapv3TokensHourDataCurrentGet[GetTokensHourData]" \
-            "dappsUniswapv3TransactionsHistoricalGet[]" \
-            "dappsUniswapv3UniswapDayDataCurrentGet[GetUniswapDayData]" \
+            "sushiswapGetUsersHistorical[GetUsers (historical)]"             "uniswapV2GetBundlesHistorical[GetBundles (historical)]" \
+            "uniswapV2GetBurnsHistorical[GetBurns (historical)]" \
+            "uniswapV2GetDayDataHistorical[GetDayData (historical)]" \
+            "uniswapV2GetFactoryHistorical[GetFactory (historical)]" \
+            "uniswapV2GetLiquidityPositionsHistorical[GetLiquidityPositions (historical)]" \
+            "uniswapV2GetLiquidityPositionsSnapshotsHistorical[GetLiquidityPositionsSnapshots (historical)]" \
+            "uniswapV2GetMintsHistorical[GetMints (historical)]" \
+            "uniswapV2GetPoolsCurrent[GetPools (current) 🔥]" \
+            "uniswapV2GetPoolsDayDataHistorical[GetPoolsDayData (historical)]" \
+            "uniswapV2GetPoolsHistorical[GetPools (historical) 🔥]" \
+            "uniswapV2GetPoolsHourDataHistorical[GetPoolsHourData (historical)]" \
+            "uniswapV2GetSwapsCurrent[GetSwaps (current) 🔥]" \
+            "uniswapV2GetSwapsHistorical[GetSwaps (historical) 🔥]" \
+            "uniswapV2GetTokensCurrent[GetTokens (current) 🔥]" \
+            "uniswapV2GetTokensDayDataHistorical[GetTokensDayData (historical)]" \
+            "uniswapV2GetTokensHistorical[GetTokens (historical) 🔥]" \
+            "uniswapV2GetTransactionsHistorical[GetTransactions (historical)]" \
+            "uniswapV2GetUsersHistorical[GetUsers (historical)]"             "uniswapV3GetBundlesCurrent[GetBundles (current)]" \
+            "uniswapV3GetBundlesHistorical[GetBundles (historical)]" \
+            "uniswapV3GetBurnsCurrent[GetBurns (current)]" \
+            "uniswapV3GetBurnsHistorical[GetBurns (historical)]" \
+            "uniswapV3GetDayDataCurrent[GetDayData (current)]" \
+            "uniswapV3GetDayDataHistorical[GetDayData (historical)]" \
+            "uniswapV3GetFactoryCurrent[GetFactory (current)]" \
+            "uniswapV3GetFactoryHistorical[GetFactory (historical)]" \
+            "uniswapV3GetMintsCurrent[GetMints (current)]" \
+            "uniswapV3GetMintsHistorical[GetMints (historical)]" \
+            "uniswapV3GetPoolsCurrent[GetPools (current) 🔥]" \
+            "uniswapV3GetPoolsDayDataCurrent[GetPoolsDayData (current)]" \
+            "uniswapV3GetPoolsDayDataHistorical[GetPoolsDayData (historical)]" \
+            "uniswapV3GetPoolsHistorical[GetPools (historical) 🔥]" \
+            "uniswapV3GetPoolsHourDataCurrent[GetPoolsHourData (current)]" \
+            "uniswapV3GetPoolsHourDataHistorical[GetPoolsHourData (historical)]" \
+            "uniswapV3GetPositionsCurrent[GetPositions (current)]" \
+            "uniswapV3GetPositionsHistorical[GetPositions (historical)]" \
+            "uniswapV3GetPositionsSnaphotsHistorical[GetPositionsSnaphots (historical)]" \
+            "uniswapV3GetPositionsSnapshotsCurrent[GetPositionsSnapshots (current)]" \
+            "uniswapV3GetSwapsCurrent[GetSwaps (current) 🔥]" \
+            "uniswapV3GetSwapsHistorical[GetSwaps (historical) 🔥]" \
+            "uniswapV3GetTicksCurrent[GetTicks (current)]" \
+            "uniswapV3GetTicksDayDataCurrent[GetTicksDayData (current)]" \
+            "uniswapV3GetTicksDayDataHistorical[GetTicksDayData (historical)]" \
+            "uniswapV3GetTicksHistorical[GetTicks (historical)]" \
+            "uniswapV3GetTokensCurrent[GetTokens (current) 🔥]" \
+            "uniswapV3GetTokensDayDataCurrent[GetTokensDayData (current)]" \
+            "uniswapV3GetTokensDayDataHistorical[GetTokensDayData (historical)]" \
+            "uniswapV3GetTokensHistorical[GetTokens (historical) 🔥]" \
+            "uniswapV3GetTokensHourDataCurrent[GetTokensHourData (current)]" \
+            "uniswapV3GetTokensHourDataHistorical[GetTokensHourData (historical)]" \
+            "uniswapV3GetTransactionsHistorical[GetTransactions (historical)]" \
 
     _arguments "(--help)--help[Print information about operation]"
 
@@ -415,7 +418,7 @@ case $state in
     ;;
   args)
     case $line[1] in
-      dappsCowOrdersHistoricalGet)
+      cowGetOrdersHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] "
@@ -425,7 +428,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsCowSettlementHistoricalGet)
+      cowGetSettlementsHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] "
@@ -435,7 +438,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsCowTokensHistoricalGet)
+      cowGetTokensHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] "
@@ -446,7 +449,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsCowTradesHistoricalGet)
+      cowGetTradesHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] "
@@ -456,7 +459,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsCowUsersHistoricalGet)
+      cowGetUsersHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] "
@@ -466,7 +469,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsCurveAccountsHistoricalGet)
+      curveGetAccountsHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] "
@@ -476,18 +479,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsCurveAddLiquidityEventHistoricalGet)
-        local -a _op_arguments
-        _op_arguments=(
-                    "startBlock=:[QUERY] "
-"endBlock=:[QUERY] "
-"startDate=:[QUERY] "
-"endDate=:[QUERY] "
-"poolId=:[QUERY] "
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      dappsCurveAdminFeeChangeLogHistoricalGet)
+      curveGetAddLiquidityEventsHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] "
@@ -498,7 +490,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsCurveAmplificationCoeffChangeLogHistoricalGet)
+      curveGetAdminFeeChangeLogsHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] "
@@ -509,7 +501,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsCurveCoinsHistoricalGet)
+      curveGetAmplificationCoeffChangeLogsHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] "
@@ -520,7 +512,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsCurveContractsHistoricalGet)
+      curveGetCoinsHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] "
@@ -531,7 +523,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsCurveContractsVersionHistoricalGet)
+      curveGetContractsHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] "
@@ -542,7 +534,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsCurveDailyVolumeHistoricalGet)
+      curveGetContractsVersionsHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] "
@@ -553,7 +545,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsCurveFeeChangeLogHistoricalGet)
+      curveGetDailyVolumesHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] "
@@ -564,17 +556,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsCurveGaugeDepositHistoricalGet)
-        local -a _op_arguments
-        _op_arguments=(
-                    "startBlock=:[QUERY] "
-"endBlock=:[QUERY] "
-"startDate=:[QUERY] "
-"endDate=:[QUERY] "
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      dappsCurveGaugeHistoricalGet)
+      curveGetExchangesHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] "
@@ -585,77 +567,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsCurveGaugeLiquidityHistoricalGet)
-        local -a _op_arguments
-        _op_arguments=(
-                    "startBlock=:[QUERY] "
-"endBlock=:[QUERY] "
-"startDate=:[QUERY] "
-"endDate=:[QUERY] "
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      dappsCurveGaugeTotalWeightHistoricalGet)
-        local -a _op_arguments
-        _op_arguments=(
-                    "startBlock=:[QUERY] "
-"endBlock=:[QUERY] "
-"startDate=:[QUERY] "
-"endDate=:[QUERY] "
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      dappsCurveGaugeTypeHistoricalGet)
-        local -a _op_arguments
-        _op_arguments=(
-                    "startBlock=:[QUERY] "
-"endBlock=:[QUERY] "
-"startDate=:[QUERY] "
-"endDate=:[QUERY] "
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      dappsCurveGaugeTypeWeightHistoricalGet)
-        local -a _op_arguments
-        _op_arguments=(
-                    "startBlock=:[QUERY] "
-"endBlock=:[QUERY] "
-"startDate=:[QUERY] "
-"endDate=:[QUERY] "
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      dappsCurveGaugeWeightHistoricalGet)
-        local -a _op_arguments
-        _op_arguments=(
-                    "startBlock=:[QUERY] "
-"endBlock=:[QUERY] "
-"startDate=:[QUERY] "
-"endDate=:[QUERY] "
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      dappsCurveGaugeWeightVoteHistoricalGet)
-        local -a _op_arguments
-        _op_arguments=(
-                    "startBlock=:[QUERY] "
-"endBlock=:[QUERY] "
-"startDate=:[QUERY] "
-"endDate=:[QUERY] "
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      dappsCurveGaugeWithdrawHistoricalGet)
-        local -a _op_arguments
-        _op_arguments=(
-                    "startBlock=:[QUERY] "
-"endBlock=:[QUERY] "
-"startDate=:[QUERY] "
-"endDate=:[QUERY] "
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      dappsCurveHourlyVolumeHistoricalGet)
+      curveGetFeeChangeLogsHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] "
@@ -666,7 +578,17 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsCurveLpTokenHistoricalGet)
+      curveGetGaugesDepositsHistorical)
+        local -a _op_arguments
+        _op_arguments=(
+                    "startBlock=:[QUERY] "
+"endBlock=:[QUERY] "
+"startDate=:[QUERY] "
+"endDate=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      curveGetGaugesHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] "
@@ -677,7 +599,77 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsCurvePoolsHistoricalGet)
+      curveGetGaugesLiquidityHistorical)
+        local -a _op_arguments
+        _op_arguments=(
+                    "startBlock=:[QUERY] "
+"endBlock=:[QUERY] "
+"startDate=:[QUERY] "
+"endDate=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      curveGetGaugesTotalWeightsHistorical)
+        local -a _op_arguments
+        _op_arguments=(
+                    "startBlock=:[QUERY] "
+"endBlock=:[QUERY] "
+"startDate=:[QUERY] "
+"endDate=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      curveGetGaugesTypesHistorical)
+        local -a _op_arguments
+        _op_arguments=(
+                    "startBlock=:[QUERY] "
+"endBlock=:[QUERY] "
+"startDate=:[QUERY] "
+"endDate=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      curveGetGaugesTypesWeightsHistorical)
+        local -a _op_arguments
+        _op_arguments=(
+                    "startBlock=:[QUERY] "
+"endBlock=:[QUERY] "
+"startDate=:[QUERY] "
+"endDate=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      curveGetGaugesWeightsHistorical)
+        local -a _op_arguments
+        _op_arguments=(
+                    "startBlock=:[QUERY] "
+"endBlock=:[QUERY] "
+"startDate=:[QUERY] "
+"endDate=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      curveGetGaugesWeightsVotesHistorical)
+        local -a _op_arguments
+        _op_arguments=(
+                    "startBlock=:[QUERY] "
+"endBlock=:[QUERY] "
+"startDate=:[QUERY] "
+"endDate=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      curveGetGaugesWithdrawHistorical)
+        local -a _op_arguments
+        _op_arguments=(
+                    "startBlock=:[QUERY] "
+"endBlock=:[QUERY] "
+"startDate=:[QUERY] "
+"endDate=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      curveGetHourlyVolumesHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] "
@@ -688,27 +680,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsCurveProposalsHistoricalGet)
-        local -a _op_arguments
-        _op_arguments=(
-                    "startBlock=:[QUERY] "
-"endBlock=:[QUERY] "
-"startDate=:[QUERY] "
-"endDate=:[QUERY] "
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      dappsCurveProposalsVoteHistoricalGet)
-        local -a _op_arguments
-        _op_arguments=(
-                    "startBlock=:[QUERY] "
-"endBlock=:[QUERY] "
-"startDate=:[QUERY] "
-"endDate=:[QUERY] "
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      dappsCurveRemoveLiquidityEventHistoricalGet)
+      curveGetLpTokensHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] "
@@ -719,7 +691,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsCurveRemoveLiquidityOneEventHistoricalGet)
+      curveGetPoolsHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] "
@@ -730,7 +702,27 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsCurveSwapsHistoricalGet)
+      curveGetProposalsHistorical)
+        local -a _op_arguments
+        _op_arguments=(
+                    "startBlock=:[QUERY] "
+"endBlock=:[QUERY] "
+"startDate=:[QUERY] "
+"endDate=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      curveGetProposalsVotesHistorical)
+        local -a _op_arguments
+        _op_arguments=(
+                    "startBlock=:[QUERY] "
+"endBlock=:[QUERY] "
+"startDate=:[QUERY] "
+"endDate=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      curveGetRemoveLiquidityEventsHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] "
@@ -741,7 +733,18 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsCurveSystemStateHistoricalGet)
+      curveGetRemoveLiquidityOneEventsHistorical)
+        local -a _op_arguments
+        _op_arguments=(
+                    "startBlock=:[QUERY] "
+"endBlock=:[QUERY] "
+"startDate=:[QUERY] "
+"endDate=:[QUERY] "
+"poolId=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      curveGetSystemStatesHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] "
@@ -751,7 +754,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsCurveTokensHistoricalGet)
+      curveGetTokensHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] "
@@ -762,7 +765,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsCurveTransferOwnershipEventHistoricalGet)
+      curveGetTransferOwnershipEventsHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] "
@@ -773,7 +776,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsCurveUnderlyingCoinHistoricalGet)
+      curveGetUnderlyingCoinsHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] "
@@ -784,7 +787,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsCurveVotingAppHistoricalGet)
+      curveGetVotingAppsHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] "
@@ -794,7 +797,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsCurveWeeklyVolumeHistoricalGet)
+      curveGetWeeklyVolumesHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] "
@@ -805,7 +808,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsDexBatchHistoricalGet)
+      dexGetBatchesHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] "
@@ -815,7 +818,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsDexOrdersHistoricalGet)
+      dexGetDepositsHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] "
@@ -826,7 +829,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsDexPricesHistoricalGet)
+      dexGetOrdersHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] "
@@ -837,7 +840,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsDexSolutionHistoricalGet)
+      dexGetPricesHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] "
@@ -848,17 +851,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsDexStatsHistoricalGet)
-        local -a _op_arguments
-        _op_arguments=(
-                    "startBlock=:[QUERY] "
-"endBlock=:[QUERY] "
-"startDate=:[QUERY] "
-"endDate=:[QUERY] "
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      dappsDexTokensHistoricalGet)
+      dexGetSolutionsHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] "
@@ -869,7 +862,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsDexTradesHistoricalGet)
+      dexGetStatsHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] "
@@ -879,17 +872,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsDexUsersHistoricalGet)
-        local -a _op_arguments
-        _op_arguments=(
-                    "startBlock=:[QUERY] "
-"endBlock=:[QUERY] "
-"startDate=:[QUERY] "
-"endDate=:[QUERY] "
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      dappsDexWithdrawHistoricalGet)
+      dexGetTokensHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] "
@@ -900,7 +883,27 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsDexWithdrawRequestHistoricalGet)
+      dexGetTradesHistorical)
+        local -a _op_arguments
+        _op_arguments=(
+                    "startBlock=:[QUERY] "
+"endBlock=:[QUERY] "
+"startDate=:[QUERY] "
+"endDate=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      dexGetUsersHistorical)
+        local -a _op_arguments
+        _op_arguments=(
+                    "startBlock=:[QUERY] "
+"endBlock=:[QUERY] "
+"startDate=:[QUERY] "
+"endDate=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      dexGetWithdrawsHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] "
@@ -909,15 +912,38 @@ case $state in
 "endDate=:[QUERY] "
 "tokenId=:[QUERY] "
           )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      dexGetWithdrawsRequestsHistorical)
+        local -a _op_arguments
+        _op_arguments=(
+                    "startBlock=:[QUERY] "
+"endBlock=:[QUERY] "
+"startDate=:[QUERY] "
+"endDate=:[QUERY] "
+"tokenId=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      curveGetExchangesCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      dexGetTradesCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       sushiswapGetBundlesHistorical)
         local -a _op_arguments
         _op_arguments=(
-                    "startBlock=:[QUERY] "
-"endBlock=:[QUERY] "
-"startDate=:[QUERY] "
-"endDate=:[QUERY] "
+                    "startBlock=:[QUERY] AAAAAAAAAA"
+"endBlock=:[QUERY] BBBBBBBBBBBB"
+"startDate=:[QUERY] CCCCCCCCC"
+"endDate=:[QUERY] DDDDDDDDDDD"
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
@@ -1015,11 +1041,11 @@ case $state in
       sushiswapGetPoolsHistorical)
         local -a _op_arguments
         _op_arguments=(
-                    "startBlock=:[QUERY] "
-"endBlock=:[QUERY] "
-"startDate=:[QUERY] "
-"endDate=:[QUERY] "
-"poolId=:[QUERY] "
+                    "startBlock=:[QUERY] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock."
+"endBlock=:[QUERY] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock)."
+"startDate=:[QUERY] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included."
+"endDate=:[QUERY] The end date of timeframe"
+"poolId=:[QUERY] The pool address."
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
@@ -1043,11 +1069,11 @@ case $state in
       sushiswapGetSwapsHistorical)
         local -a _op_arguments
         _op_arguments=(
-                    "startBlock=:[QUERY] "
-"endBlock=:[QUERY] "
-"startDate=:[QUERY] "
-"endDate=:[QUERY] "
-"poolId=:[QUERY] "
+                    "startBlock=:[QUERY] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock."
+"endBlock=:[QUERY] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock)."
+"startDate=:[QUERY] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included."
+"endDate=:[QUERY] The end date of timeframe"
+"poolId=:[QUERY] The pool address."
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
@@ -1071,11 +1097,11 @@ case $state in
       sushiswapGetTokensHistorical)
         local -a _op_arguments
         _op_arguments=(
-                    "startBlock=:[QUERY] "
-"endBlock=:[QUERY] "
-"startDate=:[QUERY] "
-"endDate=:[QUERY] "
-"tokenId=:[QUERY] "
+                    "startBlock=:[QUERY] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock."
+"endBlock=:[QUERY] The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock)."
+"startDate=:[QUERY] The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included."
+"endDate=:[QUERY] The end date of timeframe"
+"tokenId=:[QUERY] The token address."
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
@@ -1099,7 +1125,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsUniswapv2BundlesHistoricalGet)
+      uniswapV2GetBundlesHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] "
@@ -1109,38 +1135,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsUniswapv2BurnsHistoricalGet)
-        local -a _op_arguments
-        _op_arguments=(
-                    "startBlock=:[QUERY] "
-"endBlock=:[QUERY] "
-"startDate=:[QUERY] "
-"endDate=:[QUERY] "
-"poolId=:[QUERY] "
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      dappsUniswapv2DayDataHistoricalGet)
-        local -a _op_arguments
-        _op_arguments=(
-                    "startBlock=:[QUERY] "
-"endBlock=:[QUERY] "
-"startDate=:[QUERY] "
-"endDate=:[QUERY] "
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      dappsUniswapv2FactoryHistoricalGet)
-        local -a _op_arguments
-        _op_arguments=(
-                    "startBlock=:[QUERY] "
-"endBlock=:[QUERY] "
-"startDate=:[QUERY] "
-"endDate=:[QUERY] "
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      dappsUniswapv2LiquidityPositionHistoricalGet)
+      uniswapV2GetBurnsHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] "
@@ -1151,7 +1146,27 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet)
+      uniswapV2GetDayDataHistorical)
+        local -a _op_arguments
+        _op_arguments=(
+                    "startBlock=:[QUERY] "
+"endBlock=:[QUERY] "
+"startDate=:[QUERY] "
+"endDate=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      uniswapV2GetFactoryHistorical)
+        local -a _op_arguments
+        _op_arguments=(
+                    "startBlock=:[QUERY] "
+"endBlock=:[QUERY] "
+"startDate=:[QUERY] "
+"endDate=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      uniswapV2GetLiquidityPositionsHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] "
@@ -1162,7 +1177,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsUniswapv2MintsHistoricalGet)
+      uniswapV2GetLiquidityPositionsSnapshotsHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] "
@@ -1173,7 +1188,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsUniswapv2PoolDayDataHistoricalGet)
+      uniswapV2GetMintsHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] "
@@ -1184,7 +1199,14 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsUniswapv2PoolHourDataHistoricalGet)
+      uniswapV2GetPoolsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                    "filter_pool_id=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      uniswapV2GetPoolsDayDataHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] "
@@ -1195,14 +1217,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsUniswapv2PoolsCurrentGet)
-        local -a _op_arguments
-        _op_arguments=(
-                    "filter_pool_id=:[QUERY] Filter pool id"
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      dappsUniswapv2PoolsHistoricalGet)
+      uniswapV2GetPoolsHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] "
@@ -1213,13 +1228,24 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsUniswapv2SwapsCurrentGet)
+      uniswapV2GetPoolsHourDataHistorical)
+        local -a _op_arguments
+        _op_arguments=(
+                    "startBlock=:[QUERY] "
+"endBlock=:[QUERY] "
+"startDate=:[QUERY] "
+"endDate=:[QUERY] "
+"poolId=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      uniswapV2GetSwapsCurrent)
         local -a _op_arguments
         _op_arguments=(
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsUniswapv2SwapsHistoricalGet)
+      uniswapV2GetSwapsHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] "
@@ -1230,24 +1256,13 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsUniswapv2TokenDayDataHistoricalGet)
-        local -a _op_arguments
-        _op_arguments=(
-                    "startBlock=:[QUERY] "
-"endBlock=:[QUERY] "
-"startDate=:[QUERY] "
-"endDate=:[QUERY] "
-"tokenId=:[QUERY] "
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      dappsUniswapv2TokensCurrentGet)
+      uniswapV2GetTokensCurrent)
         local -a _op_arguments
         _op_arguments=(
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsUniswapv2TokensHistoricalGet)
+      uniswapV2GetTokensDayDataHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] "
@@ -1258,7 +1273,18 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsUniswapv2TransactionsHistoricalGet)
+      uniswapV2GetTokensHistorical)
+        local -a _op_arguments
+        _op_arguments=(
+                    "startBlock=:[QUERY] "
+"endBlock=:[QUERY] "
+"startDate=:[QUERY] "
+"endDate=:[QUERY] "
+"tokenId=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      uniswapV2GetTransactionsHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] "
@@ -1268,7 +1294,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsUniswapv2UsersHistoricalGet)
+      uniswapV2GetUsersHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] "
@@ -1278,13 +1304,13 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsUniswapv3BundleCurrentGet)
+      uniswapV3GetBundlesCurrent)
         local -a _op_arguments
         _op_arguments=(
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsUniswapv3BundlesHistoricalGet)
+      uniswapV3GetBundlesHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] "
@@ -1294,59 +1320,14 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsUniswapv3BurnsCurrentGet)
+      uniswapV3GetBurnsCurrent)
         local -a _op_arguments
         _op_arguments=(
-                    "filter_pool_id=:[QUERY] Filter pool id"
+                    "filter_pool_id=:[QUERY] "
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsUniswapv3BurnsHistoricalGet)
-        local -a _op_arguments
-        _op_arguments=(
-                    "startBlock=:[QUERY] "
-"endBlock=:[QUERY] "
-"startDate=:[QUERY] "
-"endDate=:[QUERY] "
-"poolId=:[QUERY] "
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      dappsUniswapv3DayDataHistoricalGet)
-        local -a _op_arguments
-        _op_arguments=(
-                    "startBlock=:[QUERY] "
-"endBlock=:[QUERY] "
-"startDate=:[QUERY] "
-"endDate=:[QUERY] "
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      dappsUniswapv3FactoryCurrentGet)
-        local -a _op_arguments
-        _op_arguments=(
-          "chain_id=:[PATH] "
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      dappsUniswapv3FactoryHistoricalGet)
-        local -a _op_arguments
-        _op_arguments=(
-                    "startBlock=:[QUERY] "
-"endBlock=:[QUERY] "
-"startDate=:[QUERY] "
-"endDate=:[QUERY] "
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      dappsUniswapv3MintsCurrentGet)
-        local -a _op_arguments
-        _op_arguments=(
-                    "filter_pool_id=:[QUERY] Filter pool id"
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      dappsUniswapv3MintsHistoricalGet)
+      uniswapV3GetBurnsHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] "
@@ -1357,7 +1338,46 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsUniswapv3PoolDayDataHistoricalGet)
+      uniswapV3GetDayDataCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      uniswapV3GetDayDataHistorical)
+        local -a _op_arguments
+        _op_arguments=(
+                    "startBlock=:[QUERY] "
+"endBlock=:[QUERY] "
+"startDate=:[QUERY] "
+"endDate=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      uniswapV3GetFactoryCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      uniswapV3GetFactoryHistorical)
+        local -a _op_arguments
+        _op_arguments=(
+                    "startBlock=:[QUERY] "
+"endBlock=:[QUERY] "
+"startDate=:[QUERY] "
+"endDate=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      uniswapV3GetMintsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                    "filter_pool_id=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      uniswapV3GetMintsHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] "
@@ -1368,7 +1388,21 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsUniswapv3PoolHourDataHistoricalGet)
+      uniswapV3GetPoolsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                    "filter_pool_id=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      uniswapV3GetPoolsDayDataCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                    "filter_pool_id=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      uniswapV3GetPoolsDayDataHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] "
@@ -1379,21 +1413,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsUniswapv3PoolsCurrentGet)
-        local -a _op_arguments
-        _op_arguments=(
-                    "filter_pool_id=:[QUERY] Filter pool id"
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      dappsUniswapv3PoolsDayDataCurrentGet)
-        local -a _op_arguments
-        _op_arguments=(
-                    "filter_pool_id=:[QUERY] Filter pool id"
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      dappsUniswapv3PoolsHistoricalGet)
+      uniswapV3GetPoolsHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] "
@@ -1404,39 +1424,14 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsUniswapv3PoolsHourDataCurrentGet)
+      uniswapV3GetPoolsHourDataCurrent)
         local -a _op_arguments
         _op_arguments=(
-                    "filter_pool_id=:[QUERY] Filter pool id"
+                    "filter_pool_id=:[QUERY] "
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsUniswapv3PositionSnapshotHistoricalGet)
-        local -a _op_arguments
-        _op_arguments=(
-                    "startBlock=:[QUERY] "
-"endBlock=:[QUERY] "
-"startDate=:[QUERY] "
-"endDate=:[QUERY] "
-"poolId=:[QUERY] "
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      dappsUniswapv3PositionSnapshotsCurrentGet)
-        local -a _op_arguments
-        _op_arguments=(
-                    "filter_pool_id=:[QUERY] Filter pool id"
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      dappsUniswapv3PositionsCurrentGet)
-        local -a _op_arguments
-        _op_arguments=(
-                    "filter_pool_id=:[QUERY] Filter pool id"
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      dappsUniswapv3PositionsHistoricalGet)
+      uniswapV3GetPoolsHourDataHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] "
@@ -1447,25 +1442,14 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsUniswapv3SwapsCurrentGet)
+      uniswapV3GetPositionsCurrent)
         local -a _op_arguments
         _op_arguments=(
-                    "filter_pool_id=:[QUERY] Filter pool id"
+                    "filter_pool_id=:[QUERY] "
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsUniswapv3SwapsHistoricalGet)
-        local -a _op_arguments
-        _op_arguments=(
-                    "startBlock=:[QUERY] "
-"endBlock=:[QUERY] "
-"startDate=:[QUERY] "
-"endDate=:[QUERY] "
-"poolId=:[QUERY] "
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      dappsUniswapv3TickDayDataHistoricalGet)
+      uniswapV3GetPositionsHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] "
@@ -1476,21 +1460,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsUniswapv3TicksCurrentGet)
-        local -a _op_arguments
-        _op_arguments=(
-                    "filter_pool_id=:[QUERY] Filter pool id"
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      dappsUniswapv3TicksDayDataCurrentGet)
-        local -a _op_arguments
-        _op_arguments=(
-                    "filter_pool_id=:[QUERY] Filter pool id"
-          )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      dappsUniswapv3TicksHistoricalGet)
+      uniswapV3GetPositionsSnaphotsHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] "
@@ -1501,43 +1471,82 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsUniswapv3TokenDayDataHistoricalGet)
+      uniswapV3GetPositionsSnapshotsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                    "filter_pool_id=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      uniswapV3GetSwapsCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                    "filter_pool_id=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      uniswapV3GetSwapsHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] "
 "endBlock=:[QUERY] "
 "startDate=:[QUERY] "
 "endDate=:[QUERY] "
-"tokenId=:[QUERY] "
+"poolId=:[QUERY] "
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsUniswapv3TokenHourDataHistoricalGet)
+      uniswapV3GetTicksCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                    "filter_pool_id=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      uniswapV3GetTicksDayDataCurrent)
+        local -a _op_arguments
+        _op_arguments=(
+                    "filter_pool_id=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      uniswapV3GetTicksDayDataHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] "
 "endBlock=:[QUERY] "
 "startDate=:[QUERY] "
 "endDate=:[QUERY] "
-"tokenId=:[QUERY] "
+"poolId=:[QUERY] "
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsUniswapv3TokensCurrentGet)
+      uniswapV3GetTicksHistorical)
+        local -a _op_arguments
+        _op_arguments=(
+                    "startBlock=:[QUERY] "
+"endBlock=:[QUERY] "
+"startDate=:[QUERY] "
+"endDate=:[QUERY] "
+"poolId=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      uniswapV3GetTokensCurrent)
         local -a _op_arguments
         _op_arguments=(
                     "filter_token_id=:[QUERY] "
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsUniswapv3TokensDayDataCurrentGet)
+      uniswapV3GetTokensDayDataCurrent)
         local -a _op_arguments
         _op_arguments=(
                     "filter_token_id=:[QUERY] "
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsUniswapv3TokensHistoricalGet)
+      uniswapV3GetTokensDayDataHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] "
@@ -1548,14 +1557,36 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsUniswapv3TokensHourDataCurrentGet)
+      uniswapV3GetTokensHistorical)
+        local -a _op_arguments
+        _op_arguments=(
+                    "startBlock=:[QUERY] "
+"endBlock=:[QUERY] "
+"startDate=:[QUERY] "
+"endDate=:[QUERY] "
+"tokenId=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      uniswapV3GetTokensHourDataCurrent)
         local -a _op_arguments
         _op_arguments=(
                     "filter_token_id=:[QUERY] "
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dappsUniswapv3TransactionsHistoricalGet)
+      uniswapV3GetTokensHourDataHistorical)
+        local -a _op_arguments
+        _op_arguments=(
+                    "startBlock=:[QUERY] "
+"endBlock=:[QUERY] "
+"startDate=:[QUERY] "
+"endDate=:[QUERY] "
+"tokenId=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      uniswapV3GetTransactionsHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] "
@@ -1563,12 +1594,6 @@ case $state in
 "startDate=:[QUERY] "
 "endDate=:[QUERY] "
           )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      dappsUniswapv3UniswapDayDataCurrentGet)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
     esac

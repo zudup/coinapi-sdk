@@ -7,257 +7,257 @@
 #
 
 Describe -tag 'PSOpenAPITools' -name 'CurveApi' {
-    Context 'Invoke-DappsCurveAccountsHistoricalGet' {
-        It 'Test Invoke-DappsCurveAccountsHistoricalGet' {
-            #$TestResult = Invoke-DappsCurveAccountsHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
+    Context 'Invoke-CurveGetAccountsHistorical' {
+        It 'Test Invoke-CurveGetAccountsHistorical' {
+            #$TestResult = Invoke-CurveGetAccountsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsCurveAddLiquidityEventHistoricalGet' {
-        It 'Test Invoke-DappsCurveAddLiquidityEventHistoricalGet' {
-            #$TestResult = Invoke-DappsCurveAddLiquidityEventHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
+    Context 'Invoke-CurveGetAddLiquidityEventsHistorical' {
+        It 'Test Invoke-CurveGetAddLiquidityEventsHistorical' {
+            #$TestResult = Invoke-CurveGetAddLiquidityEventsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsCurveAdminFeeChangeLogHistoricalGet' {
-        It 'Test Invoke-DappsCurveAdminFeeChangeLogHistoricalGet' {
-            #$TestResult = Invoke-DappsCurveAdminFeeChangeLogHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
+    Context 'Invoke-CurveGetAdminFeeChangeLogsHistorical' {
+        It 'Test Invoke-CurveGetAdminFeeChangeLogsHistorical' {
+            #$TestResult = Invoke-CurveGetAdminFeeChangeLogsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsCurveAmplificationCoeffChangeLogHistoricalGet' {
-        It 'Test Invoke-DappsCurveAmplificationCoeffChangeLogHistoricalGet' {
-            #$TestResult = Invoke-DappsCurveAmplificationCoeffChangeLogHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
+    Context 'Invoke-CurveGetAmplificationCoeffChangeLogsHistorical' {
+        It 'Test Invoke-CurveGetAmplificationCoeffChangeLogsHistorical' {
+            #$TestResult = Invoke-CurveGetAmplificationCoeffChangeLogsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsCurveCoinsHistoricalGet' {
-        It 'Test Invoke-DappsCurveCoinsHistoricalGet' {
-            #$TestResult = Invoke-DappsCurveCoinsHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
+    Context 'Invoke-CurveGetCoinsHistorical' {
+        It 'Test Invoke-CurveGetCoinsHistorical' {
+            #$TestResult = Invoke-CurveGetCoinsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsCurveContractsHistoricalGet' {
-        It 'Test Invoke-DappsCurveContractsHistoricalGet' {
-            #$TestResult = Invoke-DappsCurveContractsHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
+    Context 'Invoke-CurveGetContractsVersionsHistorical' {
+        It 'Test Invoke-CurveGetContractsVersionsHistorical' {
+            #$TestResult = Invoke-CurveGetContractsVersionsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsCurveContractsVersionHistoricalGet' {
-        It 'Test Invoke-DappsCurveContractsVersionHistoricalGet' {
-            #$TestResult = Invoke-DappsCurveContractsVersionHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
+    Context 'Invoke-CurveGetContractsHistorical' {
+        It 'Test Invoke-CurveGetContractsHistorical' {
+            #$TestResult = Invoke-CurveGetContractsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsCurveDailyVolumeHistoricalGet' {
-        It 'Test Invoke-DappsCurveDailyVolumeHistoricalGet' {
-            #$TestResult = Invoke-DappsCurveDailyVolumeHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
+    Context 'Invoke-CurveGetDailyVolumesHistorical' {
+        It 'Test Invoke-CurveGetDailyVolumesHistorical' {
+            #$TestResult = Invoke-CurveGetDailyVolumesHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsCurveFeeChangeLogHistoricalGet' {
-        It 'Test Invoke-DappsCurveFeeChangeLogHistoricalGet' {
-            #$TestResult = Invoke-DappsCurveFeeChangeLogHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
+    Context 'Invoke-CurveGetExchangesHistorical' {
+        It 'Test Invoke-CurveGetExchangesHistorical' {
+            #$TestResult = Invoke-CurveGetExchangesHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsCurveGaugeDepositHistoricalGet' {
-        It 'Test Invoke-DappsCurveGaugeDepositHistoricalGet' {
-            #$TestResult = Invoke-DappsCurveGaugeDepositHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
+    Context 'Invoke-CurveGetFeeChangeLogsHistorical' {
+        It 'Test Invoke-CurveGetFeeChangeLogsHistorical' {
+            #$TestResult = Invoke-CurveGetFeeChangeLogsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsCurveGaugeHistoricalGet' {
-        It 'Test Invoke-DappsCurveGaugeHistoricalGet' {
-            #$TestResult = Invoke-DappsCurveGaugeHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
+    Context 'Invoke-CurveGetGaugesDepositsHistorical' {
+        It 'Test Invoke-CurveGetGaugesDepositsHistorical' {
+            #$TestResult = Invoke-CurveGetGaugesDepositsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsCurveGaugeLiquidityHistoricalGet' {
-        It 'Test Invoke-DappsCurveGaugeLiquidityHistoricalGet' {
-            #$TestResult = Invoke-DappsCurveGaugeLiquidityHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
+    Context 'Invoke-CurveGetGaugesLiquidityHistorical' {
+        It 'Test Invoke-CurveGetGaugesLiquidityHistorical' {
+            #$TestResult = Invoke-CurveGetGaugesLiquidityHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsCurveGaugeTotalWeightHistoricalGet' {
-        It 'Test Invoke-DappsCurveGaugeTotalWeightHistoricalGet' {
-            #$TestResult = Invoke-DappsCurveGaugeTotalWeightHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
+    Context 'Invoke-CurveGetGaugesTotalWeightsHistorical' {
+        It 'Test Invoke-CurveGetGaugesTotalWeightsHistorical' {
+            #$TestResult = Invoke-CurveGetGaugesTotalWeightsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsCurveGaugeTypeHistoricalGet' {
-        It 'Test Invoke-DappsCurveGaugeTypeHistoricalGet' {
-            #$TestResult = Invoke-DappsCurveGaugeTypeHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
+    Context 'Invoke-CurveGetGaugesTypesWeightsHistorical' {
+        It 'Test Invoke-CurveGetGaugesTypesWeightsHistorical' {
+            #$TestResult = Invoke-CurveGetGaugesTypesWeightsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsCurveGaugeTypeWeightHistoricalGet' {
-        It 'Test Invoke-DappsCurveGaugeTypeWeightHistoricalGet' {
-            #$TestResult = Invoke-DappsCurveGaugeTypeWeightHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
+    Context 'Invoke-CurveGetGaugesTypesHistorical' {
+        It 'Test Invoke-CurveGetGaugesTypesHistorical' {
+            #$TestResult = Invoke-CurveGetGaugesTypesHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsCurveGaugeWeightHistoricalGet' {
-        It 'Test Invoke-DappsCurveGaugeWeightHistoricalGet' {
-            #$TestResult = Invoke-DappsCurveGaugeWeightHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
+    Context 'Invoke-CurveGetGaugesWeightsVotesHistorical' {
+        It 'Test Invoke-CurveGetGaugesWeightsVotesHistorical' {
+            #$TestResult = Invoke-CurveGetGaugesWeightsVotesHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsCurveGaugeWeightVoteHistoricalGet' {
-        It 'Test Invoke-DappsCurveGaugeWeightVoteHistoricalGet' {
-            #$TestResult = Invoke-DappsCurveGaugeWeightVoteHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
+    Context 'Invoke-CurveGetGaugesWeightsHistorical' {
+        It 'Test Invoke-CurveGetGaugesWeightsHistorical' {
+            #$TestResult = Invoke-CurveGetGaugesWeightsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsCurveGaugeWithdrawHistoricalGet' {
-        It 'Test Invoke-DappsCurveGaugeWithdrawHistoricalGet' {
-            #$TestResult = Invoke-DappsCurveGaugeWithdrawHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
+    Context 'Invoke-CurveGetGaugesWithdrawHistorical' {
+        It 'Test Invoke-CurveGetGaugesWithdrawHistorical' {
+            #$TestResult = Invoke-CurveGetGaugesWithdrawHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsCurveHourlyVolumeHistoricalGet' {
-        It 'Test Invoke-DappsCurveHourlyVolumeHistoricalGet' {
-            #$TestResult = Invoke-DappsCurveHourlyVolumeHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
+    Context 'Invoke-CurveGetGaugesHistorical' {
+        It 'Test Invoke-CurveGetGaugesHistorical' {
+            #$TestResult = Invoke-CurveGetGaugesHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsCurveLpTokenHistoricalGet' {
-        It 'Test Invoke-DappsCurveLpTokenHistoricalGet' {
-            #$TestResult = Invoke-DappsCurveLpTokenHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
+    Context 'Invoke-CurveGetHourlyVolumesHistorical' {
+        It 'Test Invoke-CurveGetHourlyVolumesHistorical' {
+            #$TestResult = Invoke-CurveGetHourlyVolumesHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsCurvePoolsHistoricalGet' {
-        It 'Test Invoke-DappsCurvePoolsHistoricalGet' {
-            #$TestResult = Invoke-DappsCurvePoolsHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
+    Context 'Invoke-CurveGetLpTokensHistorical' {
+        It 'Test Invoke-CurveGetLpTokensHistorical' {
+            #$TestResult = Invoke-CurveGetLpTokensHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsCurveProposalsHistoricalGet' {
-        It 'Test Invoke-DappsCurveProposalsHistoricalGet' {
-            #$TestResult = Invoke-DappsCurveProposalsHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
+    Context 'Invoke-CurveGetPoolsHistorical' {
+        It 'Test Invoke-CurveGetPoolsHistorical' {
+            #$TestResult = Invoke-CurveGetPoolsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsCurveProposalsVoteHistoricalGet' {
-        It 'Test Invoke-DappsCurveProposalsVoteHistoricalGet' {
-            #$TestResult = Invoke-DappsCurveProposalsVoteHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
+    Context 'Invoke-CurveGetProposalsVotesHistorical' {
+        It 'Test Invoke-CurveGetProposalsVotesHistorical' {
+            #$TestResult = Invoke-CurveGetProposalsVotesHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsCurveRemoveLiquidityEventHistoricalGet' {
-        It 'Test Invoke-DappsCurveRemoveLiquidityEventHistoricalGet' {
-            #$TestResult = Invoke-DappsCurveRemoveLiquidityEventHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
+    Context 'Invoke-CurveGetProposalsHistorical' {
+        It 'Test Invoke-CurveGetProposalsHistorical' {
+            #$TestResult = Invoke-CurveGetProposalsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsCurveRemoveLiquidityOneEventHistoricalGet' {
-        It 'Test Invoke-DappsCurveRemoveLiquidityOneEventHistoricalGet' {
-            #$TestResult = Invoke-DappsCurveRemoveLiquidityOneEventHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
+    Context 'Invoke-CurveGetRemoveLiquidityEventsHistorical' {
+        It 'Test Invoke-CurveGetRemoveLiquidityEventsHistorical' {
+            #$TestResult = Invoke-CurveGetRemoveLiquidityEventsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsCurveSwapsHistoricalGet' {
-        It 'Test Invoke-DappsCurveSwapsHistoricalGet' {
-            #$TestResult = Invoke-DappsCurveSwapsHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
+    Context 'Invoke-CurveGetRemoveLiquidityOneEventsHistorical' {
+        It 'Test Invoke-CurveGetRemoveLiquidityOneEventsHistorical' {
+            #$TestResult = Invoke-CurveGetRemoveLiquidityOneEventsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsCurveSystemStateHistoricalGet' {
-        It 'Test Invoke-DappsCurveSystemStateHistoricalGet' {
-            #$TestResult = Invoke-DappsCurveSystemStateHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
+    Context 'Invoke-CurveGetSystemStatesHistorical' {
+        It 'Test Invoke-CurveGetSystemStatesHistorical' {
+            #$TestResult = Invoke-CurveGetSystemStatesHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsCurveTokensHistoricalGet' {
-        It 'Test Invoke-DappsCurveTokensHistoricalGet' {
-            #$TestResult = Invoke-DappsCurveTokensHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -TokenId "TEST_VALUE"
+    Context 'Invoke-CurveGetTokensHistorical' {
+        It 'Test Invoke-CurveGetTokensHistorical' {
+            #$TestResult = Invoke-CurveGetTokensHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -TokenId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsCurveTransferOwnershipEventHistoricalGet' {
-        It 'Test Invoke-DappsCurveTransferOwnershipEventHistoricalGet' {
-            #$TestResult = Invoke-DappsCurveTransferOwnershipEventHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
+    Context 'Invoke-CurveGetTransferOwnershipEventsHistorical' {
+        It 'Test Invoke-CurveGetTransferOwnershipEventsHistorical' {
+            #$TestResult = Invoke-CurveGetTransferOwnershipEventsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsCurveUnderlyingCoinHistoricalGet' {
-        It 'Test Invoke-DappsCurveUnderlyingCoinHistoricalGet' {
-            #$TestResult = Invoke-DappsCurveUnderlyingCoinHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
+    Context 'Invoke-CurveGetUnderlyingCoinsHistorical' {
+        It 'Test Invoke-CurveGetUnderlyingCoinsHistorical' {
+            #$TestResult = Invoke-CurveGetUnderlyingCoinsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsCurveVotingAppHistoricalGet' {
-        It 'Test Invoke-DappsCurveVotingAppHistoricalGet' {
-            #$TestResult = Invoke-DappsCurveVotingAppHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
+    Context 'Invoke-CurveGetVotingAppsHistorical' {
+        It 'Test Invoke-CurveGetVotingAppsHistorical' {
+            #$TestResult = Invoke-CurveGetVotingAppsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsCurveWeeklyVolumeHistoricalGet' {
-        It 'Test Invoke-DappsCurveWeeklyVolumeHistoricalGet' {
-            #$TestResult = Invoke-DappsCurveWeeklyVolumeHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
+    Context 'Invoke-CurveGetWeeklyVolumesHistorical' {
+        It 'Test Invoke-CurveGetWeeklyVolumesHistorical' {
+            #$TestResult = Invoke-CurveGetWeeklyVolumesHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }

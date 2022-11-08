@@ -1,13 +1,18 @@
 package org.openapitools.api;
 
 import org.openapitools.api.ApiUtils
+import org.openapitools.model.CowOrderDTO
+import org.openapitools.model.CowSettlementDTO
+import org.openapitools.model.CowTokenDTO
+import org.openapitools.model.CowTradeDTO
+import org.openapitools.model.CowUserDTO
 
 class CowApi {
     String basePath = "https://onchain.coinapi.io"
     String versionPath = ""
     ApiUtils apiUtils = new ApiUtils();
 
-    def dappsCowOrdersHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
+    def cowGetOrdersHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
         String resourcePath = "/dapps/cow/orders/historical"
 
         // params
@@ -34,13 +39,13 @@ class CowApi {
 
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "",
-                    null )
+                    "GET", "array",
+                    CowOrderDTO.class )
 
     }
 
-    def dappsCowSettlementHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/cow/settlement/historical"
+    def cowGetSettlementsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/cow/settlements/historical"
 
         // params
         def queryParams = [:]
@@ -66,12 +71,12 @@ class CowApi {
 
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "",
-                    null )
+                    "GET", "array",
+                    CowSettlementDTO.class )
 
     }
 
-    def dappsCowTokensHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId, Closure onSuccess, Closure onFailure)  {
+    def cowGetTokensHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId, Closure onSuccess, Closure onFailure)  {
         String resourcePath = "/dapps/cow/tokens/historical"
 
         // params
@@ -101,12 +106,12 @@ class CowApi {
 
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "",
-                    null )
+                    "GET", "array",
+                    CowTokenDTO.class )
 
     }
 
-    def dappsCowTradesHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
+    def cowGetTradesHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
         String resourcePath = "/dapps/cow/trades/historical"
 
         // params
@@ -133,12 +138,12 @@ class CowApi {
 
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "",
-                    null )
+                    "GET", "array",
+                    CowTradeDTO.class )
 
     }
 
-    def dappsCowUsersHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
+    def cowGetUsersHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
         String resourcePath = "/dapps/cow/users/historical"
 
         // params
@@ -165,8 +170,8 @@ class CowApi {
 
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "",
-                    null )
+                    "GET", "array",
+                    CowUserDTO.class )
 
     }
 

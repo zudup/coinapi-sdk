@@ -22,11 +22,11 @@ func Test_openapi_DexApiService(t *testing.T) {
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
 
-    t.Run("Test DexApiService DappsDexBatchHistoricalGet", func(t *testing.T) {
+    t.Run("Test DexApiService DexGetBatchesHistorical", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.DexApi.DappsDexBatchHistoricalGet(context.Background()).Execute()
+        resp, httpRes, err := apiClient.DexApi.DexGetBatchesHistorical(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)
@@ -34,11 +34,11 @@ func Test_openapi_DexApiService(t *testing.T) {
 
     })
 
-    t.Run("Test DexApiService DappsDexOrdersHistoricalGet", func(t *testing.T) {
+    t.Run("Test DexApiService DexGetDepositsHistorical", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.DexApi.DappsDexOrdersHistoricalGet(context.Background()).Execute()
+        resp, httpRes, err := apiClient.DexApi.DexGetDepositsHistorical(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)
@@ -46,11 +46,11 @@ func Test_openapi_DexApiService(t *testing.T) {
 
     })
 
-    t.Run("Test DexApiService DappsDexPricesHistoricalGet", func(t *testing.T) {
+    t.Run("Test DexApiService DexGetOrdersHistorical", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.DexApi.DappsDexPricesHistoricalGet(context.Background()).Execute()
+        resp, httpRes, err := apiClient.DexApi.DexGetOrdersHistorical(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)
@@ -58,11 +58,11 @@ func Test_openapi_DexApiService(t *testing.T) {
 
     })
 
-    t.Run("Test DexApiService DappsDexSolutionHistoricalGet", func(t *testing.T) {
+    t.Run("Test DexApiService DexGetPricesHistorical", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.DexApi.DappsDexSolutionHistoricalGet(context.Background()).Execute()
+        resp, httpRes, err := apiClient.DexApi.DexGetPricesHistorical(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)
@@ -70,11 +70,11 @@ func Test_openapi_DexApiService(t *testing.T) {
 
     })
 
-    t.Run("Test DexApiService DappsDexStatsHistoricalGet", func(t *testing.T) {
+    t.Run("Test DexApiService DexGetSolutionsHistorical", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.DexApi.DappsDexStatsHistoricalGet(context.Background()).Execute()
+        resp, httpRes, err := apiClient.DexApi.DexGetSolutionsHistorical(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)
@@ -82,11 +82,11 @@ func Test_openapi_DexApiService(t *testing.T) {
 
     })
 
-    t.Run("Test DexApiService DappsDexTokensHistoricalGet", func(t *testing.T) {
+    t.Run("Test DexApiService DexGetStatsHistorical", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.DexApi.DappsDexTokensHistoricalGet(context.Background()).Execute()
+        resp, httpRes, err := apiClient.DexApi.DexGetStatsHistorical(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)
@@ -94,11 +94,11 @@ func Test_openapi_DexApiService(t *testing.T) {
 
     })
 
-    t.Run("Test DexApiService DappsDexTradesHistoricalGet", func(t *testing.T) {
+    t.Run("Test DexApiService DexGetTokensHistorical", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.DexApi.DappsDexTradesHistoricalGet(context.Background()).Execute()
+        resp, httpRes, err := apiClient.DexApi.DexGetTokensHistorical(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)
@@ -106,11 +106,11 @@ func Test_openapi_DexApiService(t *testing.T) {
 
     })
 
-    t.Run("Test DexApiService DappsDexUsersHistoricalGet", func(t *testing.T) {
+    t.Run("Test DexApiService DexGetTradesHistorical", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.DexApi.DappsDexUsersHistoricalGet(context.Background()).Execute()
+        resp, httpRes, err := apiClient.DexApi.DexGetTradesHistorical(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)
@@ -118,11 +118,11 @@ func Test_openapi_DexApiService(t *testing.T) {
 
     })
 
-    t.Run("Test DexApiService DappsDexWithdrawHistoricalGet", func(t *testing.T) {
+    t.Run("Test DexApiService DexGetUsersHistorical", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.DexApi.DappsDexWithdrawHistoricalGet(context.Background()).Execute()
+        resp, httpRes, err := apiClient.DexApi.DexGetUsersHistorical(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)
@@ -130,11 +130,23 @@ func Test_openapi_DexApiService(t *testing.T) {
 
     })
 
-    t.Run("Test DexApiService DappsDexWithdrawRequestHistoricalGet", func(t *testing.T) {
+    t.Run("Test DexApiService DexGetWithdrawsHistorical", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.DexApi.DappsDexWithdrawRequestHistoricalGet(context.Background()).Execute()
+        resp, httpRes, err := apiClient.DexApi.DexGetWithdrawsHistorical(context.Background()).Execute()
+
+        require.Nil(t, err)
+        require.NotNil(t, resp)
+        assert.Equal(t, 200, httpRes.StatusCode)
+
+    })
+
+    t.Run("Test DexApiService DexGetWithdrawsRequestsHistorical", func(t *testing.T) {
+
+        t.Skip("skip test")  // remove to run test
+
+        resp, httpRes, err := apiClient.DexApi.DexGetWithdrawsRequestsHistorical(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)

@@ -24,6 +24,204 @@ import (
 // SushiswapApiService SushiswapApi service
 type SushiswapApiService service
 
+type ApiCurveGetExchangesCurrentRequest struct {
+	ctx context.Context
+	ApiService *SushiswapApiService
+}
+
+func (r ApiCurveGetExchangesCurrentRequest) Execute() ([]CurveExchangeDTO, *http.Response, error) {
+	return r.ApiService.CurveGetExchangesCurrentExecute(r)
+}
+
+/*
+CurveGetExchangesCurrent GetExchanges (current) 🔥
+
+Gets exchanges.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCurveGetExchangesCurrentRequest
+*/
+func (a *SushiswapApiService) CurveGetExchangesCurrent(ctx context.Context) ApiCurveGetExchangesCurrentRequest {
+	return ApiCurveGetExchangesCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []CurveExchangeDTO
+func (a *SushiswapApiService) CurveGetExchangesCurrentExecute(r ApiCurveGetExchangesCurrentRequest) ([]CurveExchangeDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []CurveExchangeDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.CurveGetExchangesCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/sushiswap/exchanges/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiDexGetTradesCurrentRequest struct {
+	ctx context.Context
+	ApiService *SushiswapApiService
+}
+
+func (r ApiDexGetTradesCurrentRequest) Execute() ([]DexTradeDTO, *http.Response, error) {
+	return r.ApiService.DexGetTradesCurrentExecute(r)
+}
+
+/*
+DexGetTradesCurrent GetTrades (current) 🔥
+
+Gets trades.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiDexGetTradesCurrentRequest
+*/
+func (a *SushiswapApiService) DexGetTradesCurrent(ctx context.Context) ApiDexGetTradesCurrentRequest {
+	return ApiDexGetTradesCurrentRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []DexTradeDTO
+func (a *SushiswapApiService) DexGetTradesCurrentExecute(r ApiDexGetTradesCurrentRequest) ([]DexTradeDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []DexTradeDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.DexGetTradesCurrent")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/sushiswap/trades/current"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
 type ApiSushiswapGetBundlesHistoricalRequest struct {
 	ctx context.Context
 	ApiService *SushiswapApiService
@@ -33,21 +231,25 @@ type ApiSushiswapGetBundlesHistoricalRequest struct {
 	endDate *time.Time
 }
 
+// AAAAAAAAAA
 func (r ApiSushiswapGetBundlesHistoricalRequest) StartBlock(startBlock int64) ApiSushiswapGetBundlesHistoricalRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
+// BBBBBBBBBBBB
 func (r ApiSushiswapGetBundlesHistoricalRequest) EndBlock(endBlock int64) ApiSushiswapGetBundlesHistoricalRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
+// CCCCCCCCC
 func (r ApiSushiswapGetBundlesHistoricalRequest) StartDate(startDate time.Time) ApiSushiswapGetBundlesHistoricalRequest {
 	r.startDate = &startDate
 	return r
 }
 
+// DDDDDDDDDDD
 func (r ApiSushiswapGetBundlesHistoricalRequest) EndDate(endDate time.Time) ApiSushiswapGetBundlesHistoricalRequest {
 	r.endDate = &endDate
 	return r
@@ -169,26 +371,31 @@ type ApiSushiswapGetBurnsHistoricalRequest struct {
 	poolId *string
 }
 
+// 
 func (r ApiSushiswapGetBurnsHistoricalRequest) StartBlock(startBlock int64) ApiSushiswapGetBurnsHistoricalRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
+// 
 func (r ApiSushiswapGetBurnsHistoricalRequest) EndBlock(endBlock int64) ApiSushiswapGetBurnsHistoricalRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
+// 
 func (r ApiSushiswapGetBurnsHistoricalRequest) StartDate(startDate time.Time) ApiSushiswapGetBurnsHistoricalRequest {
 	r.startDate = &startDate
 	return r
 }
 
+// 
 func (r ApiSushiswapGetBurnsHistoricalRequest) EndDate(endDate time.Time) ApiSushiswapGetBurnsHistoricalRequest {
 	r.endDate = &endDate
 	return r
 }
 
+// 
 func (r ApiSushiswapGetBurnsHistoricalRequest) PoolId(poolId string) ApiSushiswapGetBurnsHistoricalRequest {
 	r.poolId = &poolId
 	return r
@@ -312,21 +519,25 @@ type ApiSushiswapGetDayDataHistoricalRequest struct {
 	endDate *time.Time
 }
 
+// 
 func (r ApiSushiswapGetDayDataHistoricalRequest) StartBlock(startBlock int64) ApiSushiswapGetDayDataHistoricalRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
+// 
 func (r ApiSushiswapGetDayDataHistoricalRequest) EndBlock(endBlock int64) ApiSushiswapGetDayDataHistoricalRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
+// 
 func (r ApiSushiswapGetDayDataHistoricalRequest) StartDate(startDate time.Time) ApiSushiswapGetDayDataHistoricalRequest {
 	r.startDate = &startDate
 	return r
 }
 
+// 
 func (r ApiSushiswapGetDayDataHistoricalRequest) EndDate(endDate time.Time) ApiSushiswapGetDayDataHistoricalRequest {
 	r.endDate = &endDate
 	return r
@@ -447,21 +658,25 @@ type ApiSushiswapGetFactoryHistoricalRequest struct {
 	endDate *time.Time
 }
 
+// 
 func (r ApiSushiswapGetFactoryHistoricalRequest) StartBlock(startBlock int64) ApiSushiswapGetFactoryHistoricalRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
+// 
 func (r ApiSushiswapGetFactoryHistoricalRequest) EndBlock(endBlock int64) ApiSushiswapGetFactoryHistoricalRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
+// 
 func (r ApiSushiswapGetFactoryHistoricalRequest) StartDate(startDate time.Time) ApiSushiswapGetFactoryHistoricalRequest {
 	r.startDate = &startDate
 	return r
 }
 
+// 
 func (r ApiSushiswapGetFactoryHistoricalRequest) EndDate(endDate time.Time) ApiSushiswapGetFactoryHistoricalRequest {
 	r.endDate = &endDate
 	return r
@@ -582,21 +797,25 @@ type ApiSushiswapGetHourDataHistoricalRequest struct {
 	endDate *time.Time
 }
 
+// 
 func (r ApiSushiswapGetHourDataHistoricalRequest) StartBlock(startBlock int64) ApiSushiswapGetHourDataHistoricalRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
+// 
 func (r ApiSushiswapGetHourDataHistoricalRequest) EndBlock(endBlock int64) ApiSushiswapGetHourDataHistoricalRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
+// 
 func (r ApiSushiswapGetHourDataHistoricalRequest) StartDate(startDate time.Time) ApiSushiswapGetHourDataHistoricalRequest {
 	r.startDate = &startDate
 	return r
 }
 
+// 
 func (r ApiSushiswapGetHourDataHistoricalRequest) EndDate(endDate time.Time) ApiSushiswapGetHourDataHistoricalRequest {
 	r.endDate = &endDate
 	return r
@@ -718,26 +937,31 @@ type ApiSushiswapGetLiquidityPositionHistoricalRequest struct {
 	poolId *string
 }
 
+// 
 func (r ApiSushiswapGetLiquidityPositionHistoricalRequest) StartBlock(startBlock int64) ApiSushiswapGetLiquidityPositionHistoricalRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
+// 
 func (r ApiSushiswapGetLiquidityPositionHistoricalRequest) EndBlock(endBlock int64) ApiSushiswapGetLiquidityPositionHistoricalRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
+// 
 func (r ApiSushiswapGetLiquidityPositionHistoricalRequest) StartDate(startDate time.Time) ApiSushiswapGetLiquidityPositionHistoricalRequest {
 	r.startDate = &startDate
 	return r
 }
 
+// 
 func (r ApiSushiswapGetLiquidityPositionHistoricalRequest) EndDate(endDate time.Time) ApiSushiswapGetLiquidityPositionHistoricalRequest {
 	r.endDate = &endDate
 	return r
 }
 
+// 
 func (r ApiSushiswapGetLiquidityPositionHistoricalRequest) PoolId(poolId string) ApiSushiswapGetLiquidityPositionHistoricalRequest {
 	r.poolId = &poolId
 	return r
@@ -862,26 +1086,31 @@ type ApiSushiswapGetLiquidityPositionSnapshotHistoricalRequest struct {
 	poolId *string
 }
 
+// 
 func (r ApiSushiswapGetLiquidityPositionSnapshotHistoricalRequest) StartBlock(startBlock int64) ApiSushiswapGetLiquidityPositionSnapshotHistoricalRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
+// 
 func (r ApiSushiswapGetLiquidityPositionSnapshotHistoricalRequest) EndBlock(endBlock int64) ApiSushiswapGetLiquidityPositionSnapshotHistoricalRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
+// 
 func (r ApiSushiswapGetLiquidityPositionSnapshotHistoricalRequest) StartDate(startDate time.Time) ApiSushiswapGetLiquidityPositionSnapshotHistoricalRequest {
 	r.startDate = &startDate
 	return r
 }
 
+// 
 func (r ApiSushiswapGetLiquidityPositionSnapshotHistoricalRequest) EndDate(endDate time.Time) ApiSushiswapGetLiquidityPositionSnapshotHistoricalRequest {
 	r.endDate = &endDate
 	return r
 }
 
+// 
 func (r ApiSushiswapGetLiquidityPositionSnapshotHistoricalRequest) PoolId(poolId string) ApiSushiswapGetLiquidityPositionSnapshotHistoricalRequest {
 	r.poolId = &poolId
 	return r
@@ -1006,26 +1235,31 @@ type ApiSushiswapGetMintsHistoricalRequest struct {
 	poolId *string
 }
 
+// 
 func (r ApiSushiswapGetMintsHistoricalRequest) StartBlock(startBlock int64) ApiSushiswapGetMintsHistoricalRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
+// 
 func (r ApiSushiswapGetMintsHistoricalRequest) EndBlock(endBlock int64) ApiSushiswapGetMintsHistoricalRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
+// 
 func (r ApiSushiswapGetMintsHistoricalRequest) StartDate(startDate time.Time) ApiSushiswapGetMintsHistoricalRequest {
 	r.startDate = &startDate
 	return r
 }
 
+// 
 func (r ApiSushiswapGetMintsHistoricalRequest) EndDate(endDate time.Time) ApiSushiswapGetMintsHistoricalRequest {
 	r.endDate = &endDate
 	return r
 }
 
+// 
 func (r ApiSushiswapGetMintsHistoricalRequest) PoolId(poolId string) ApiSushiswapGetMintsHistoricalRequest {
 	r.poolId = &poolId
 	return r
@@ -1150,7 +1384,7 @@ func (r ApiSushiswapGetPoolsCurrentRequest) Execute() ([]SushiswapPairDTO, *http
 }
 
 /*
-SushiswapGetPoolsCurrent GetPools (current)
+SushiswapGetPoolsCurrent GetPools (current) 🔥
 
 Gets pools.
 
@@ -1249,26 +1483,31 @@ type ApiSushiswapGetPoolsDayDataHistoricalRequest struct {
 	poolId *string
 }
 
+// 
 func (r ApiSushiswapGetPoolsDayDataHistoricalRequest) StartBlock(startBlock int64) ApiSushiswapGetPoolsDayDataHistoricalRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
+// 
 func (r ApiSushiswapGetPoolsDayDataHistoricalRequest) EndBlock(endBlock int64) ApiSushiswapGetPoolsDayDataHistoricalRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
+// 
 func (r ApiSushiswapGetPoolsDayDataHistoricalRequest) StartDate(startDate time.Time) ApiSushiswapGetPoolsDayDataHistoricalRequest {
 	r.startDate = &startDate
 	return r
 }
 
+// 
 func (r ApiSushiswapGetPoolsDayDataHistoricalRequest) EndDate(endDate time.Time) ApiSushiswapGetPoolsDayDataHistoricalRequest {
 	r.endDate = &endDate
 	return r
 }
 
+// 
 func (r ApiSushiswapGetPoolsDayDataHistoricalRequest) PoolId(poolId string) ApiSushiswapGetPoolsDayDataHistoricalRequest {
 	r.poolId = &poolId
 	return r
@@ -1393,26 +1632,31 @@ type ApiSushiswapGetPoolsHistoricalRequest struct {
 	poolId *string
 }
 
+// The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 func (r ApiSushiswapGetPoolsHistoricalRequest) StartBlock(startBlock int64) ApiSushiswapGetPoolsHistoricalRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
+// The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 func (r ApiSushiswapGetPoolsHistoricalRequest) EndBlock(endBlock int64) ApiSushiswapGetPoolsHistoricalRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
+// The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 func (r ApiSushiswapGetPoolsHistoricalRequest) StartDate(startDate time.Time) ApiSushiswapGetPoolsHistoricalRequest {
 	r.startDate = &startDate
 	return r
 }
 
+// The end date of timeframe
 func (r ApiSushiswapGetPoolsHistoricalRequest) EndDate(endDate time.Time) ApiSushiswapGetPoolsHistoricalRequest {
 	r.endDate = &endDate
 	return r
 }
 
+// The pool address.
 func (r ApiSushiswapGetPoolsHistoricalRequest) PoolId(poolId string) ApiSushiswapGetPoolsHistoricalRequest {
 	r.poolId = &poolId
 	return r
@@ -1423,7 +1667,7 @@ func (r ApiSushiswapGetPoolsHistoricalRequest) Execute() ([]SushiswapPairDTO, *h
 }
 
 /*
-SushiswapGetPoolsHistorical GetPools (historical)
+SushiswapGetPoolsHistorical GetPools (historical) 🔥
 
 Gets list of pools for given filters.
 
@@ -1537,26 +1781,31 @@ type ApiSushiswapGetPoolsHourDataHistoricalRequest struct {
 	poolId *string
 }
 
+// 
 func (r ApiSushiswapGetPoolsHourDataHistoricalRequest) StartBlock(startBlock int64) ApiSushiswapGetPoolsHourDataHistoricalRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
+// 
 func (r ApiSushiswapGetPoolsHourDataHistoricalRequest) EndBlock(endBlock int64) ApiSushiswapGetPoolsHourDataHistoricalRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
+// 
 func (r ApiSushiswapGetPoolsHourDataHistoricalRequest) StartDate(startDate time.Time) ApiSushiswapGetPoolsHourDataHistoricalRequest {
 	r.startDate = &startDate
 	return r
 }
 
+// 
 func (r ApiSushiswapGetPoolsHourDataHistoricalRequest) EndDate(endDate time.Time) ApiSushiswapGetPoolsHourDataHistoricalRequest {
 	r.endDate = &endDate
 	return r
 }
 
+// 
 func (r ApiSushiswapGetPoolsHourDataHistoricalRequest) PoolId(poolId string) ApiSushiswapGetPoolsHourDataHistoricalRequest {
 	r.poolId = &poolId
 	return r
@@ -1681,7 +1930,7 @@ func (r ApiSushiswapGetSwapsCurrentRequest) Execute() ([]SushiswapSwapDTO, *http
 }
 
 /*
-SushiswapGetSwapsCurrent GetSwaps (current)
+SushiswapGetSwapsCurrent GetSwaps (current) 🔥
 
 Gets swaps.
 
@@ -1780,26 +2029,31 @@ type ApiSushiswapGetSwapsHistoricalRequest struct {
 	poolId *string
 }
 
+// The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 func (r ApiSushiswapGetSwapsHistoricalRequest) StartBlock(startBlock int64) ApiSushiswapGetSwapsHistoricalRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
+// The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 func (r ApiSushiswapGetSwapsHistoricalRequest) EndBlock(endBlock int64) ApiSushiswapGetSwapsHistoricalRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
+// The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 func (r ApiSushiswapGetSwapsHistoricalRequest) StartDate(startDate time.Time) ApiSushiswapGetSwapsHistoricalRequest {
 	r.startDate = &startDate
 	return r
 }
 
+// The end date of timeframe
 func (r ApiSushiswapGetSwapsHistoricalRequest) EndDate(endDate time.Time) ApiSushiswapGetSwapsHistoricalRequest {
 	r.endDate = &endDate
 	return r
 }
 
+// The pool address.
 func (r ApiSushiswapGetSwapsHistoricalRequest) PoolId(poolId string) ApiSushiswapGetSwapsHistoricalRequest {
 	r.poolId = &poolId
 	return r
@@ -1810,7 +2064,7 @@ func (r ApiSushiswapGetSwapsHistoricalRequest) Execute() ([]SushiswapSwapDTO, *h
 }
 
 /*
-SushiswapGetSwapsHistorical GetSwaps (historical)
+SushiswapGetSwapsHistorical GetSwaps (historical) 🔥
 
 Gets list of swaps for given filters.
 
@@ -1924,7 +2178,7 @@ func (r ApiSushiswapGetTokensCurrentRequest) Execute() ([]SushiswapTokenDTO, *ht
 }
 
 /*
-SushiswapGetTokensCurrent GetTokens (current)
+SushiswapGetTokensCurrent GetTokens (current) 🔥
 
 Gets tokens.
 
@@ -2023,26 +2277,31 @@ type ApiSushiswapGetTokensDayDataHistoricalRequest struct {
 	tokenId *string
 }
 
+// 
 func (r ApiSushiswapGetTokensDayDataHistoricalRequest) StartBlock(startBlock int64) ApiSushiswapGetTokensDayDataHistoricalRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
+// 
 func (r ApiSushiswapGetTokensDayDataHistoricalRequest) EndBlock(endBlock int64) ApiSushiswapGetTokensDayDataHistoricalRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
+// 
 func (r ApiSushiswapGetTokensDayDataHistoricalRequest) StartDate(startDate time.Time) ApiSushiswapGetTokensDayDataHistoricalRequest {
 	r.startDate = &startDate
 	return r
 }
 
+// 
 func (r ApiSushiswapGetTokensDayDataHistoricalRequest) EndDate(endDate time.Time) ApiSushiswapGetTokensDayDataHistoricalRequest {
 	r.endDate = &endDate
 	return r
 }
 
+// 
 func (r ApiSushiswapGetTokensDayDataHistoricalRequest) TokenId(tokenId string) ApiSushiswapGetTokensDayDataHistoricalRequest {
 	r.tokenId = &tokenId
 	return r
@@ -2167,26 +2426,31 @@ type ApiSushiswapGetTokensHistoricalRequest struct {
 	tokenId *string
 }
 
+// The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 func (r ApiSushiswapGetTokensHistoricalRequest) StartBlock(startBlock int64) ApiSushiswapGetTokensHistoricalRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
+// The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 func (r ApiSushiswapGetTokensHistoricalRequest) EndBlock(endBlock int64) ApiSushiswapGetTokensHistoricalRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
+// The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 func (r ApiSushiswapGetTokensHistoricalRequest) StartDate(startDate time.Time) ApiSushiswapGetTokensHistoricalRequest {
 	r.startDate = &startDate
 	return r
 }
 
+// The end date of timeframe
 func (r ApiSushiswapGetTokensHistoricalRequest) EndDate(endDate time.Time) ApiSushiswapGetTokensHistoricalRequest {
 	r.endDate = &endDate
 	return r
 }
 
+// The token address.
 func (r ApiSushiswapGetTokensHistoricalRequest) TokenId(tokenId string) ApiSushiswapGetTokensHistoricalRequest {
 	r.tokenId = &tokenId
 	return r
@@ -2197,7 +2461,7 @@ func (r ApiSushiswapGetTokensHistoricalRequest) Execute() ([]SushiswapTokenDTO, 
 }
 
 /*
-SushiswapGetTokensHistorical GetTokens (historical)
+SushiswapGetTokensHistorical GetTokens (historical) 🔥
 
 Gets list of tokens for given filters.
 
@@ -2310,21 +2574,25 @@ type ApiSushiswapGetTransactionsHistoricalRequest struct {
 	endDate *time.Time
 }
 
+// 
 func (r ApiSushiswapGetTransactionsHistoricalRequest) StartBlock(startBlock int64) ApiSushiswapGetTransactionsHistoricalRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
+// 
 func (r ApiSushiswapGetTransactionsHistoricalRequest) EndBlock(endBlock int64) ApiSushiswapGetTransactionsHistoricalRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
+// 
 func (r ApiSushiswapGetTransactionsHistoricalRequest) StartDate(startDate time.Time) ApiSushiswapGetTransactionsHistoricalRequest {
 	r.startDate = &startDate
 	return r
 }
 
+// 
 func (r ApiSushiswapGetTransactionsHistoricalRequest) EndDate(endDate time.Time) ApiSushiswapGetTransactionsHistoricalRequest {
 	r.endDate = &endDate
 	return r
@@ -2445,21 +2713,25 @@ type ApiSushiswapGetUsersHistoricalRequest struct {
 	endDate *time.Time
 }
 
+// 
 func (r ApiSushiswapGetUsersHistoricalRequest) StartBlock(startBlock int64) ApiSushiswapGetUsersHistoricalRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
+// 
 func (r ApiSushiswapGetUsersHistoricalRequest) EndBlock(endBlock int64) ApiSushiswapGetUsersHistoricalRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
+// 
 func (r ApiSushiswapGetUsersHistoricalRequest) StartDate(startDate time.Time) ApiSushiswapGetUsersHistoricalRequest {
 	r.startDate = &startDate
 	return r
 }
 
+// 
 func (r ApiSushiswapGetUsersHistoricalRequest) EndDate(endDate time.Time) ApiSushiswapGetUsersHistoricalRequest {
 	r.endDate = &endDate
 	return r

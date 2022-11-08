@@ -4,48 +4,50 @@ All URIs are relative to https://onchain.coinapi.io, except if the operation def
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**dappsUniswapv3BundleCurrentGet()**](UniswapV3Api.md#dappsUniswapv3BundleCurrentGet) | **GET** /dapps/uniswapv3/bundle/current | GetBundles |
-| [**dappsUniswapv3BundlesHistoricalGet()**](UniswapV3Api.md#dappsUniswapv3BundlesHistoricalGet) | **GET** /dapps/uniswapv3/bundles/historical |  |
-| [**dappsUniswapv3BurnsCurrentGet()**](UniswapV3Api.md#dappsUniswapv3BurnsCurrentGet) | **GET** /dapps/uniswapv3/burns/current | GetBurns |
-| [**dappsUniswapv3BurnsHistoricalGet()**](UniswapV3Api.md#dappsUniswapv3BurnsHistoricalGet) | **GET** /dapps/uniswapv3/burns/historical |  |
-| [**dappsUniswapv3DayDataHistoricalGet()**](UniswapV3Api.md#dappsUniswapv3DayDataHistoricalGet) | **GET** /dapps/uniswapv3/dayData/historical |  |
-| [**dappsUniswapv3FactoryCurrentGet()**](UniswapV3Api.md#dappsUniswapv3FactoryCurrentGet) | **GET** /dapps/uniswapv3/factory/current | GetFactory |
-| [**dappsUniswapv3FactoryHistoricalGet()**](UniswapV3Api.md#dappsUniswapv3FactoryHistoricalGet) | **GET** /dapps/uniswapv3/factory/historical |  |
-| [**dappsUniswapv3MintsCurrentGet()**](UniswapV3Api.md#dappsUniswapv3MintsCurrentGet) | **GET** /dapps/uniswapv3/mints/current | GetMints |
-| [**dappsUniswapv3MintsHistoricalGet()**](UniswapV3Api.md#dappsUniswapv3MintsHistoricalGet) | **GET** /dapps/uniswapv3/mints/historical |  |
-| [**dappsUniswapv3PoolDayDataHistoricalGet()**](UniswapV3Api.md#dappsUniswapv3PoolDayDataHistoricalGet) | **GET** /dapps/uniswapv3/poolDayData/historical |  |
-| [**dappsUniswapv3PoolHourDataHistoricalGet()**](UniswapV3Api.md#dappsUniswapv3PoolHourDataHistoricalGet) | **GET** /dapps/uniswapv3/poolHourData/historical |  |
-| [**dappsUniswapv3PoolsCurrentGet()**](UniswapV3Api.md#dappsUniswapv3PoolsCurrentGet) | **GET** /dapps/uniswapv3/pools/current | GetPools |
-| [**dappsUniswapv3PoolsDayDataCurrentGet()**](UniswapV3Api.md#dappsUniswapv3PoolsDayDataCurrentGet) | **GET** /dapps/uniswapv3/poolsDayData/current | GetPoolsDayData |
-| [**dappsUniswapv3PoolsHistoricalGet()**](UniswapV3Api.md#dappsUniswapv3PoolsHistoricalGet) | **GET** /dapps/uniswapv3/pools/historical |  |
-| [**dappsUniswapv3PoolsHourDataCurrentGet()**](UniswapV3Api.md#dappsUniswapv3PoolsHourDataCurrentGet) | **GET** /dapps/uniswapv3/poolsHourData/current | GetPoolsHourData |
-| [**dappsUniswapv3PositionSnapshotHistoricalGet()**](UniswapV3Api.md#dappsUniswapv3PositionSnapshotHistoricalGet) | **GET** /dapps/uniswapv3/positionSnapshot/historical |  |
-| [**dappsUniswapv3PositionSnapshotsCurrentGet()**](UniswapV3Api.md#dappsUniswapv3PositionSnapshotsCurrentGet) | **GET** /dapps/uniswapv3/positionSnapshots/current | GetPositionSnapshot |
-| [**dappsUniswapv3PositionsCurrentGet()**](UniswapV3Api.md#dappsUniswapv3PositionsCurrentGet) | **GET** /dapps/uniswapv3/positions/current | GetPositions |
-| [**dappsUniswapv3PositionsHistoricalGet()**](UniswapV3Api.md#dappsUniswapv3PositionsHistoricalGet) | **GET** /dapps/uniswapv3/positions/historical |  |
-| [**dappsUniswapv3SwapsCurrentGet()**](UniswapV3Api.md#dappsUniswapv3SwapsCurrentGet) | **GET** /dapps/uniswapv3/swaps/current | GetSwaps |
-| [**dappsUniswapv3SwapsHistoricalGet()**](UniswapV3Api.md#dappsUniswapv3SwapsHistoricalGet) | **GET** /dapps/uniswapv3/swaps/historical |  |
-| [**dappsUniswapv3TickDayDataHistoricalGet()**](UniswapV3Api.md#dappsUniswapv3TickDayDataHistoricalGet) | **GET** /dapps/uniswapv3/tickDayData/historical |  |
-| [**dappsUniswapv3TicksCurrentGet()**](UniswapV3Api.md#dappsUniswapv3TicksCurrentGet) | **GET** /dapps/uniswapv3/ticks/current | GetTicks |
-| [**dappsUniswapv3TicksDayDataCurrentGet()**](UniswapV3Api.md#dappsUniswapv3TicksDayDataCurrentGet) | **GET** /dapps/uniswapv3/ticksDayData/current | GetTicksDayData |
-| [**dappsUniswapv3TicksHistoricalGet()**](UniswapV3Api.md#dappsUniswapv3TicksHistoricalGet) | **GET** /dapps/uniswapv3/ticks/historical |  |
-| [**dappsUniswapv3TokenDayDataHistoricalGet()**](UniswapV3Api.md#dappsUniswapv3TokenDayDataHistoricalGet) | **GET** /dapps/uniswapv3/tokenDayData/historical |  |
-| [**dappsUniswapv3TokenHourDataHistoricalGet()**](UniswapV3Api.md#dappsUniswapv3TokenHourDataHistoricalGet) | **GET** /dapps/uniswapv3/tokenHourData/historical |  |
-| [**dappsUniswapv3TokensCurrentGet()**](UniswapV3Api.md#dappsUniswapv3TokensCurrentGet) | **GET** /dapps/uniswapv3/tokens/current | GetTokens |
-| [**dappsUniswapv3TokensDayDataCurrentGet()**](UniswapV3Api.md#dappsUniswapv3TokensDayDataCurrentGet) | **GET** /dapps/uniswapv3/tokensDayData/current | GetTokensDayData |
-| [**dappsUniswapv3TokensHistoricalGet()**](UniswapV3Api.md#dappsUniswapv3TokensHistoricalGet) | **GET** /dapps/uniswapv3/tokens/historical |  |
-| [**dappsUniswapv3TokensHourDataCurrentGet()**](UniswapV3Api.md#dappsUniswapv3TokensHourDataCurrentGet) | **GET** /dapps/uniswapv3/tokensHourData/current | GetTokensHourData |
-| [**dappsUniswapv3TransactionsHistoricalGet()**](UniswapV3Api.md#dappsUniswapv3TransactionsHistoricalGet) | **GET** /dapps/uniswapv3/transactions/historical |  |
-| [**dappsUniswapv3UniswapDayDataCurrentGet()**](UniswapV3Api.md#dappsUniswapv3UniswapDayDataCurrentGet) | **GET** /dapps/uniswapv3/uniswapDayData/current | GetUniswapDayData |
+| [**uniswapV3GetBundlesCurrent()**](UniswapV3Api.md#uniswapV3GetBundlesCurrent) | **GET** /dapps/uniswapv3/bundles/current | GetBundles (current) |
+| [**uniswapV3GetBundlesHistorical()**](UniswapV3Api.md#uniswapV3GetBundlesHistorical) | **GET** /dapps/uniswapv3/bundles/historical | GetBundles (historical) |
+| [**uniswapV3GetBurnsCurrent()**](UniswapV3Api.md#uniswapV3GetBurnsCurrent) | **GET** /dapps/uniswapv3/burns/current | GetBurns (current) |
+| [**uniswapV3GetBurnsHistorical()**](UniswapV3Api.md#uniswapV3GetBurnsHistorical) | **GET** /dapps/uniswapv3/burns/historical | GetBurns (historical) |
+| [**uniswapV3GetDayDataCurrent()**](UniswapV3Api.md#uniswapV3GetDayDataCurrent) | **GET** /dapps/uniswapv3/dayData/current | GetDayData (current) |
+| [**uniswapV3GetDayDataHistorical()**](UniswapV3Api.md#uniswapV3GetDayDataHistorical) | **GET** /dapps/uniswapv3/dayData/historical | GetDayData (historical) |
+| [**uniswapV3GetFactoryCurrent()**](UniswapV3Api.md#uniswapV3GetFactoryCurrent) | **GET** /dapps/uniswapv3/factory/current | GetFactory (current) |
+| [**uniswapV3GetFactoryHistorical()**](UniswapV3Api.md#uniswapV3GetFactoryHistorical) | **GET** /dapps/uniswapv3/factory/historical | GetFactory (historical) |
+| [**uniswapV3GetMintsCurrent()**](UniswapV3Api.md#uniswapV3GetMintsCurrent) | **GET** /dapps/uniswapv3/mints/current | GetMints (current) |
+| [**uniswapV3GetMintsHistorical()**](UniswapV3Api.md#uniswapV3GetMintsHistorical) | **GET** /dapps/uniswapv3/mints/historical | GetMints (historical) |
+| [**uniswapV3GetPoolsCurrent()**](UniswapV3Api.md#uniswapV3GetPoolsCurrent) | **GET** /dapps/uniswapv3/pools/current | GetPools (current) 🔥 |
+| [**uniswapV3GetPoolsDayDataCurrent()**](UniswapV3Api.md#uniswapV3GetPoolsDayDataCurrent) | **GET** /dapps/uniswapv3/poolsDayData/current | GetPoolsDayData (current) |
+| [**uniswapV3GetPoolsDayDataHistorical()**](UniswapV3Api.md#uniswapV3GetPoolsDayDataHistorical) | **GET** /dapps/uniswapv3/poolsDayData/historical | GetPoolsDayData (historical) |
+| [**uniswapV3GetPoolsHistorical()**](UniswapV3Api.md#uniswapV3GetPoolsHistorical) | **GET** /dapps/uniswapv3/pools/historical | GetPools (historical) 🔥 |
+| [**uniswapV3GetPoolsHourDataCurrent()**](UniswapV3Api.md#uniswapV3GetPoolsHourDataCurrent) | **GET** /dapps/uniswapv3/poolsHourData/current | GetPoolsHourData (current) |
+| [**uniswapV3GetPoolsHourDataHistorical()**](UniswapV3Api.md#uniswapV3GetPoolsHourDataHistorical) | **GET** /dapps/uniswapv3/poolsHourData/historical | GetPoolsHourData (historical) |
+| [**uniswapV3GetPositionsCurrent()**](UniswapV3Api.md#uniswapV3GetPositionsCurrent) | **GET** /dapps/uniswapv3/positions/current | GetPositions (current) |
+| [**uniswapV3GetPositionsHistorical()**](UniswapV3Api.md#uniswapV3GetPositionsHistorical) | **GET** /dapps/uniswapv3/positions/historical | GetPositions (historical) |
+| [**uniswapV3GetPositionsSnaphotsHistorical()**](UniswapV3Api.md#uniswapV3GetPositionsSnaphotsHistorical) | **GET** /dapps/uniswapv3/positionsSnapshots/historical | GetPositionsSnaphots (historical) |
+| [**uniswapV3GetPositionsSnapshotsCurrent()**](UniswapV3Api.md#uniswapV3GetPositionsSnapshotsCurrent) | **GET** /dapps/uniswapv3/positionSnapshots/current | GetPositionsSnapshots (current) |
+| [**uniswapV3GetSwapsCurrent()**](UniswapV3Api.md#uniswapV3GetSwapsCurrent) | **GET** /dapps/uniswapv3/swaps/current | GetSwaps (current) 🔥 |
+| [**uniswapV3GetSwapsHistorical()**](UniswapV3Api.md#uniswapV3GetSwapsHistorical) | **GET** /dapps/uniswapv3/swaps/historical | GetSwaps (historical) 🔥 |
+| [**uniswapV3GetTicksCurrent()**](UniswapV3Api.md#uniswapV3GetTicksCurrent) | **GET** /dapps/uniswapv3/ticks/current | GetTicks (current) |
+| [**uniswapV3GetTicksDayDataCurrent()**](UniswapV3Api.md#uniswapV3GetTicksDayDataCurrent) | **GET** /dapps/uniswapv3/ticksDayData/current | GetTicksDayData (current) |
+| [**uniswapV3GetTicksDayDataHistorical()**](UniswapV3Api.md#uniswapV3GetTicksDayDataHistorical) | **GET** /dapps/uniswapv3/ticksDayData/historical | GetTicksDayData (historical) |
+| [**uniswapV3GetTicksHistorical()**](UniswapV3Api.md#uniswapV3GetTicksHistorical) | **GET** /dapps/uniswapv3/ticks/historical | GetTicks (historical) |
+| [**uniswapV3GetTokensCurrent()**](UniswapV3Api.md#uniswapV3GetTokensCurrent) | **GET** /dapps/uniswapv3/tokens/current | GetTokens (current) 🔥 |
+| [**uniswapV3GetTokensDayDataCurrent()**](UniswapV3Api.md#uniswapV3GetTokensDayDataCurrent) | **GET** /dapps/uniswapv3/tokensDayData/current | GetTokensDayData (current) |
+| [**uniswapV3GetTokensDayDataHistorical()**](UniswapV3Api.md#uniswapV3GetTokensDayDataHistorical) | **GET** /dapps/uniswapv3/tokensDayData/historical | GetTokensDayData (historical) |
+| [**uniswapV3GetTokensHistorical()**](UniswapV3Api.md#uniswapV3GetTokensHistorical) | **GET** /dapps/uniswapv3/tokens/historical | GetTokens (historical) 🔥 |
+| [**uniswapV3GetTokensHourDataCurrent()**](UniswapV3Api.md#uniswapV3GetTokensHourDataCurrent) | **GET** /dapps/uniswapv3/tokensHourData/current | GetTokensHourData (current) |
+| [**uniswapV3GetTokensHourDataHistorical()**](UniswapV3Api.md#uniswapV3GetTokensHourDataHistorical) | **GET** /dapps/uniswapv3/tokensHourData/historical | GetTokensHourData (historical) |
+| [**uniswapV3GetTransactionsHistorical()**](UniswapV3Api.md#uniswapV3GetTransactionsHistorical) | **GET** /dapps/uniswapv3/transactions/historical | GetTransactions (historical) |
 
 
-## `dappsUniswapv3BundleCurrentGet()`
+## `uniswapV3GetBundlesCurrent()`
 
 ```php
-dappsUniswapv3BundleCurrentGet(): \OpenAPI\Client\Model\UniswapV3BundleV3DTO[]
+uniswapV3GetBundlesCurrent(): \OpenAPI\Client\Model\UniswapV3BundleV3DTO[]
 ```
 
-GetBundles
+GetBundles (current)
+
+Gets bundles.
 
 ### Example
 
@@ -62,10 +64,10 @@ $apiInstance = new OpenAPI\Client\Api\UniswapV3Api(
 );
 
 try {
-    $result = $apiInstance->dappsUniswapv3BundleCurrentGet();
+    $result = $apiInstance->uniswapV3GetBundlesCurrent();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UniswapV3Api->dappsUniswapv3BundleCurrentGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UniswapV3Api->uniswapV3GetBundlesCurrent: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -90,13 +92,15 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `dappsUniswapv3BundlesHistoricalGet()`
+## `uniswapV3GetBundlesHistorical()`
 
 ```php
-dappsUniswapv3BundlesHistoricalGet($start_block, $end_block, $start_date, $end_date)
+uniswapV3GetBundlesHistorical($start_block, $end_block, $start_date, $end_date): \OpenAPI\Client\Model\UniswapV3BundleV3DTO[]
 ```
 
+GetBundles (historical)
 
+Gets bundles.
 
 ### Example
 
@@ -111,15 +115,16 @@ $apiInstance = new OpenAPI\Client\Api\UniswapV3Api(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
 
 try {
-    $apiInstance->dappsUniswapv3BundlesHistoricalGet($start_block, $end_block, $start_date, $end_date);
+    $result = $apiInstance->uniswapV3GetBundlesHistorical($start_block, $end_block, $start_date, $end_date);
+    print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UniswapV3Api->dappsUniswapv3BundlesHistoricalGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UniswapV3Api->uniswapV3GetBundlesHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -134,7 +139,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\UniswapV3BundleV3DTO[]**](../Model/UniswapV3BundleV3DTO.md)
 
 ### Authorization
 
@@ -143,19 +148,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `dappsUniswapv3BurnsCurrentGet()`
+## `uniswapV3GetBurnsCurrent()`
 
 ```php
-dappsUniswapv3BurnsCurrentGet($filter_pool_id): \OpenAPI\Client\Model\UniswapV3BurnV3DTO[]
+uniswapV3GetBurnsCurrent($filter_pool_id): \OpenAPI\Client\Model\UniswapV3BurnV3DTO[]
 ```
 
-GetBurns
+GetBurns (current)
+
+Gets burns.
 
 ### Example
 
@@ -170,13 +177,13 @@ $apiInstance = new OpenAPI\Client\Api\UniswapV3Api(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$filter_pool_id = 'filter_pool_id_example'; // string | Filter pool id
+$filter_pool_id = 'filter_pool_id_example'; // string
 
 try {
-    $result = $apiInstance->dappsUniswapv3BurnsCurrentGet($filter_pool_id);
+    $result = $apiInstance->uniswapV3GetBurnsCurrent($filter_pool_id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UniswapV3Api->dappsUniswapv3BurnsCurrentGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UniswapV3Api->uniswapV3GetBurnsCurrent: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -184,7 +191,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **filter_pool_id** | **string**| Filter pool id | [optional] |
+| **filter_pool_id** | **string**|  | [optional] |
 
 ### Return type
 
@@ -203,13 +210,15 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `dappsUniswapv3BurnsHistoricalGet()`
+## `uniswapV3GetBurnsHistorical()`
 
 ```php
-dappsUniswapv3BurnsHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id)
+uniswapV3GetBurnsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id): \OpenAPI\Client\Model\UniswapV3BurnV3DTO[]
 ```
 
+GetBurns (historical)
 
+Gets burns.
 
 ### Example
 
@@ -224,16 +233,17 @@ $apiInstance = new OpenAPI\Client\Api\UniswapV3Api(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$pool_id = 'pool_id_example'; // string
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$pool_id = 'pool_id_example'; // string | 
 
 try {
-    $apiInstance->dappsUniswapv3BurnsHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id);
+    $result = $apiInstance->uniswapV3GetBurnsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id);
+    print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UniswapV3Api->dappsUniswapv3BurnsHistoricalGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UniswapV3Api->uniswapV3GetBurnsHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -249,7 +259,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\UniswapV3BurnV3DTO[]**](../Model/UniswapV3BurnV3DTO.md)
 
 ### Authorization
 
@@ -258,19 +268,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `dappsUniswapv3DayDataHistoricalGet()`
+## `uniswapV3GetDayDataCurrent()`
 
 ```php
-dappsUniswapv3DayDataHistoricalGet($start_block, $end_block, $start_date, $end_date)
+uniswapV3GetDayDataCurrent(): \OpenAPI\Client\Model\UniswapV3UniswapDayDataV3DTO[]
 ```
 
+GetDayData (current)
 
+Gets uniswapv3 day data.
 
 ### Example
 
@@ -285,15 +297,69 @@ $apiInstance = new OpenAPI\Client\Api\UniswapV3Api(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
 
 try {
-    $apiInstance->dappsUniswapv3DayDataHistoricalGet($start_block, $end_block, $start_date, $end_date);
+    $result = $apiInstance->uniswapV3GetDayDataCurrent();
+    print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UniswapV3Api->dappsUniswapv3DayDataHistoricalGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UniswapV3Api->uniswapV3GetDayDataCurrent: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**\OpenAPI\Client\Model\UniswapV3UniswapDayDataV3DTO[]**](../Model/UniswapV3UniswapDayDataV3DTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `uniswapV3GetDayDataHistorical()`
+
+```php
+uniswapV3GetDayDataHistorical($start_block, $end_block, $start_date, $end_date): \OpenAPI\Client\Model\UniswapV3UniswapDayDataV3DTO[]
+```
+
+GetDayData (historical)
+
+Gets uniswapv3 day data.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new OpenAPI\Client\Api\UniswapV3Api(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+
+try {
+    $result = $apiInstance->uniswapV3GetDayDataHistorical($start_block, $end_block, $start_date, $end_date);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling UniswapV3Api->uniswapV3GetDayDataHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -308,7 +374,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\UniswapV3UniswapDayDataV3DTO[]**](../Model/UniswapV3UniswapDayDataV3DTO.md)
 
 ### Authorization
 
@@ -317,19 +383,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `dappsUniswapv3FactoryCurrentGet()`
+## `uniswapV3GetFactoryCurrent()`
 
 ```php
-dappsUniswapv3FactoryCurrentGet($chain_id): \OpenAPI\Client\Model\UniswapV3FactoryV3DTO[]
+uniswapV3GetFactoryCurrent(): \OpenAPI\Client\Model\UniswapV3FactoryV3DTO[]
 ```
 
-GetFactory
+GetFactory (current)
+
+Gets factory.
 
 ### Example
 
@@ -344,21 +412,18 @@ $apiInstance = new OpenAPI\Client\Api\UniswapV3Api(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$chain_id = 'chain_id_example'; // string
 
 try {
-    $result = $apiInstance->dappsUniswapv3FactoryCurrentGet($chain_id);
+    $result = $apiInstance->uniswapV3GetFactoryCurrent();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UniswapV3Api->dappsUniswapv3FactoryCurrentGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UniswapV3Api->uniswapV3GetFactoryCurrent: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **chain_id** | **string**|  | |
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -377,13 +442,15 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `dappsUniswapv3FactoryHistoricalGet()`
+## `uniswapV3GetFactoryHistorical()`
 
 ```php
-dappsUniswapv3FactoryHistoricalGet($start_block, $end_block, $start_date, $end_date)
+uniswapV3GetFactoryHistorical($start_block, $end_block, $start_date, $end_date): \OpenAPI\Client\Model\UniswapV3FactoryV3DTO[]
 ```
 
+GetFactory (historical)
 
+Gets factory.
 
 ### Example
 
@@ -398,15 +465,16 @@ $apiInstance = new OpenAPI\Client\Api\UniswapV3Api(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
 
 try {
-    $apiInstance->dappsUniswapv3FactoryHistoricalGet($start_block, $end_block, $start_date, $end_date);
+    $result = $apiInstance->uniswapV3GetFactoryHistorical($start_block, $end_block, $start_date, $end_date);
+    print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UniswapV3Api->dappsUniswapv3FactoryHistoricalGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UniswapV3Api->uniswapV3GetFactoryHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -421,7 +489,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\UniswapV3FactoryV3DTO[]**](../Model/UniswapV3FactoryV3DTO.md)
 
 ### Authorization
 
@@ -430,19 +498,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `dappsUniswapv3MintsCurrentGet()`
+## `uniswapV3GetMintsCurrent()`
 
 ```php
-dappsUniswapv3MintsCurrentGet($filter_pool_id): \OpenAPI\Client\Model\UniswapV3MintV3DTO[]
+uniswapV3GetMintsCurrent($filter_pool_id): \OpenAPI\Client\Model\UniswapV3MintV3DTO[]
 ```
 
-GetMints
+GetMints (current)
+
+Gets mints.
 
 ### Example
 
@@ -457,13 +527,13 @@ $apiInstance = new OpenAPI\Client\Api\UniswapV3Api(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$filter_pool_id = 'filter_pool_id_example'; // string | Filter pool id
+$filter_pool_id = 'filter_pool_id_example'; // string
 
 try {
-    $result = $apiInstance->dappsUniswapv3MintsCurrentGet($filter_pool_id);
+    $result = $apiInstance->uniswapV3GetMintsCurrent($filter_pool_id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UniswapV3Api->dappsUniswapv3MintsCurrentGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UniswapV3Api->uniswapV3GetMintsCurrent: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -471,7 +541,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **filter_pool_id** | **string**| Filter pool id | [optional] |
+| **filter_pool_id** | **string**|  | [optional] |
 
 ### Return type
 
@@ -490,13 +560,15 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `dappsUniswapv3MintsHistoricalGet()`
+## `uniswapV3GetMintsHistorical()`
 
 ```php
-dappsUniswapv3MintsHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id)
+uniswapV3GetMintsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id): \OpenAPI\Client\Model\UniswapV3MintV3DTO[]
 ```
 
+GetMints (historical)
 
+Gets mints.
 
 ### Example
 
@@ -511,196 +583,17 @@ $apiInstance = new OpenAPI\Client\Api\UniswapV3Api(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$pool_id = 'pool_id_example'; // string
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$pool_id = 'pool_id_example'; // string | 
 
 try {
-    $apiInstance->dappsUniswapv3MintsHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id);
-} catch (Exception $e) {
-    echo 'Exception when calling UniswapV3Api->dappsUniswapv3MintsHistoricalGet: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **start_block** | **int**|  | [optional] |
-| **end_block** | **int**|  | [optional] |
-| **start_date** | **\DateTime**|  | [optional] |
-| **end_date** | **\DateTime**|  | [optional] |
-| **pool_id** | **string**|  | [optional] |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `dappsUniswapv3PoolDayDataHistoricalGet()`
-
-```php
-dappsUniswapv3PoolDayDataHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id)
-```
-
-
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-
-$apiInstance = new OpenAPI\Client\Api\UniswapV3Api(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
-);
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$pool_id = 'pool_id_example'; // string
-
-try {
-    $apiInstance->dappsUniswapv3PoolDayDataHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id);
-} catch (Exception $e) {
-    echo 'Exception when calling UniswapV3Api->dappsUniswapv3PoolDayDataHistoricalGet: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **start_block** | **int**|  | [optional] |
-| **end_block** | **int**|  | [optional] |
-| **start_date** | **\DateTime**|  | [optional] |
-| **end_date** | **\DateTime**|  | [optional] |
-| **pool_id** | **string**|  | [optional] |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `dappsUniswapv3PoolHourDataHistoricalGet()`
-
-```php
-dappsUniswapv3PoolHourDataHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id)
-```
-
-
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-
-$apiInstance = new OpenAPI\Client\Api\UniswapV3Api(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
-);
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$pool_id = 'pool_id_example'; // string
-
-try {
-    $apiInstance->dappsUniswapv3PoolHourDataHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id);
-} catch (Exception $e) {
-    echo 'Exception when calling UniswapV3Api->dappsUniswapv3PoolHourDataHistoricalGet: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **start_block** | **int**|  | [optional] |
-| **end_block** | **int**|  | [optional] |
-| **start_date** | **\DateTime**|  | [optional] |
-| **end_date** | **\DateTime**|  | [optional] |
-| **pool_id** | **string**|  | [optional] |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `dappsUniswapv3PoolsCurrentGet()`
-
-```php
-dappsUniswapv3PoolsCurrentGet($filter_pool_id): \OpenAPI\Client\Model\UniswapV3PoolV3DTO[]
-```
-
-GetPools
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-
-$apiInstance = new OpenAPI\Client\Api\UniswapV3Api(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
-);
-$filter_pool_id = 'filter_pool_id_example'; // string | Filter pool id
-
-try {
-    $result = $apiInstance->dappsUniswapv3PoolsCurrentGet($filter_pool_id);
+    $result = $apiInstance->uniswapV3GetMintsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UniswapV3Api->dappsUniswapv3PoolsCurrentGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UniswapV3Api->uniswapV3GetMintsHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -708,7 +601,67 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **filter_pool_id** | **string**| Filter pool id | [optional] |
+| **start_block** | **int**|  | [optional] |
+| **end_block** | **int**|  | [optional] |
+| **start_date** | **\DateTime**|  | [optional] |
+| **end_date** | **\DateTime**|  | [optional] |
+| **pool_id** | **string**|  | [optional] |
+
+### Return type
+
+[**\OpenAPI\Client\Model\UniswapV3MintV3DTO[]**](../Model/UniswapV3MintV3DTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `uniswapV3GetPoolsCurrent()`
+
+```php
+uniswapV3GetPoolsCurrent($filter_pool_id): \OpenAPI\Client\Model\UniswapV3PoolV3DTO[]
+```
+
+GetPools (current) 🔥
+
+Gets pools.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new OpenAPI\Client\Api\UniswapV3Api(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$filter_pool_id = 'filter_pool_id_example'; // string
+
+try {
+    $result = $apiInstance->uniswapV3GetPoolsCurrent($filter_pool_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling UniswapV3Api->uniswapV3GetPoolsCurrent: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **filter_pool_id** | **string**|  | [optional] |
 
 ### Return type
 
@@ -727,13 +680,15 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `dappsUniswapv3PoolsDayDataCurrentGet()`
+## `uniswapV3GetPoolsDayDataCurrent()`
 
 ```php
-dappsUniswapv3PoolsDayDataCurrentGet($filter_pool_id): \OpenAPI\Client\Model\UniswapV3PoolDayDataV3DTO[]
+uniswapV3GetPoolsDayDataCurrent($filter_pool_id): \OpenAPI\Client\Model\UniswapV3PoolDayDataV3DTO[]
 ```
 
-GetPoolsDayData
+GetPoolsDayData (current)
+
+Gets pools day data.
 
 ### Example
 
@@ -748,13 +703,13 @@ $apiInstance = new OpenAPI\Client\Api\UniswapV3Api(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$filter_pool_id = 'filter_pool_id_example'; // string | Filter pool id
+$filter_pool_id = 'filter_pool_id_example'; // string
 
 try {
-    $result = $apiInstance->dappsUniswapv3PoolsDayDataCurrentGet($filter_pool_id);
+    $result = $apiInstance->uniswapV3GetPoolsDayDataCurrent($filter_pool_id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UniswapV3Api->dappsUniswapv3PoolsDayDataCurrentGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UniswapV3Api->uniswapV3GetPoolsDayDataCurrent: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -762,7 +717,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **filter_pool_id** | **string**| Filter pool id | [optional] |
+| **filter_pool_id** | **string**|  | [optional] |
 
 ### Return type
 
@@ -781,13 +736,15 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `dappsUniswapv3PoolsHistoricalGet()`
+## `uniswapV3GetPoolsDayDataHistorical()`
 
 ```php
-dappsUniswapv3PoolsHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id)
+uniswapV3GetPoolsDayDataHistorical($start_block, $end_block, $start_date, $end_date, $pool_id): \OpenAPI\Client\Model\UniswapV3PoolDayDataV3DTO[]
 ```
 
+GetPoolsDayData (historical)
 
+Gets pools day data.
 
 ### Example
 
@@ -802,16 +759,17 @@ $apiInstance = new OpenAPI\Client\Api\UniswapV3Api(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$pool_id = 'pool_id_example'; // string
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$pool_id = 'pool_id_example'; // string | 
 
 try {
-    $apiInstance->dappsUniswapv3PoolsHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id);
+    $result = $apiInstance->uniswapV3GetPoolsDayDataHistorical($start_block, $end_block, $start_date, $end_date, $pool_id);
+    print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UniswapV3Api->dappsUniswapv3PoolsHistoricalGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UniswapV3Api->uniswapV3GetPoolsDayDataHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -827,7 +785,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\UniswapV3PoolDayDataV3DTO[]**](../Model/UniswapV3PoolDayDataV3DTO.md)
 
 ### Authorization
 
@@ -836,19 +794,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `dappsUniswapv3PoolsHourDataCurrentGet()`
+## `uniswapV3GetPoolsHistorical()`
 
 ```php
-dappsUniswapv3PoolsHourDataCurrentGet($filter_pool_id): \OpenAPI\Client\Model\UniswapV3PoolHourDataV3DTO[]
+uniswapV3GetPoolsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id): \OpenAPI\Client\Model\UniswapV3PoolV3DTO[]
 ```
 
-GetPoolsHourData
+GetPools (historical) 🔥
+
+Gets pools.
 
 ### Example
 
@@ -863,13 +823,17 @@ $apiInstance = new OpenAPI\Client\Api\UniswapV3Api(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$filter_pool_id = 'filter_pool_id_example'; // string | Filter pool id
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$pool_id = 'pool_id_example'; // string | 
 
 try {
-    $result = $apiInstance->dappsUniswapv3PoolsHourDataCurrentGet($filter_pool_id);
+    $result = $apiInstance->uniswapV3GetPoolsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UniswapV3Api->dappsUniswapv3PoolsHourDataCurrentGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UniswapV3Api->uniswapV3GetPoolsHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -877,7 +841,67 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **filter_pool_id** | **string**| Filter pool id | [optional] |
+| **start_block** | **int**|  | [optional] |
+| **end_block** | **int**|  | [optional] |
+| **start_date** | **\DateTime**|  | [optional] |
+| **end_date** | **\DateTime**|  | [optional] |
+| **pool_id** | **string**|  | [optional] |
+
+### Return type
+
+[**\OpenAPI\Client\Model\UniswapV3PoolV3DTO[]**](../Model/UniswapV3PoolV3DTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `uniswapV3GetPoolsHourDataCurrent()`
+
+```php
+uniswapV3GetPoolsHourDataCurrent($filter_pool_id): \OpenAPI\Client\Model\UniswapV3PoolHourDataV3DTO[]
+```
+
+GetPoolsHourData (current)
+
+Gets pools hour data.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new OpenAPI\Client\Api\UniswapV3Api(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$filter_pool_id = 'filter_pool_id_example'; // string
+
+try {
+    $result = $apiInstance->uniswapV3GetPoolsHourDataCurrent($filter_pool_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling UniswapV3Api->uniswapV3GetPoolsHourDataCurrent: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **filter_pool_id** | **string**|  | [optional] |
 
 ### Return type
 
@@ -896,13 +920,15 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `dappsUniswapv3PositionSnapshotHistoricalGet()`
+## `uniswapV3GetPoolsHourDataHistorical()`
 
 ```php
-dappsUniswapv3PositionSnapshotHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id)
+uniswapV3GetPoolsHourDataHistorical($start_block, $end_block, $start_date, $end_date, $pool_id): \OpenAPI\Client\Model\UniswapV3PoolHourDataV3DTO[]
 ```
 
+GetPoolsHourData (historical)
 
+Gets pools hour data.
 
 ### Example
 
@@ -917,16 +943,17 @@ $apiInstance = new OpenAPI\Client\Api\UniswapV3Api(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$pool_id = 'pool_id_example'; // string
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$pool_id = 'pool_id_example'; // string | 
 
 try {
-    $apiInstance->dappsUniswapv3PositionSnapshotHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id);
+    $result = $apiInstance->uniswapV3GetPoolsHourDataHistorical($start_block, $end_block, $start_date, $end_date, $pool_id);
+    print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UniswapV3Api->dappsUniswapv3PositionSnapshotHistoricalGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UniswapV3Api->uniswapV3GetPoolsHourDataHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -942,61 +969,7 @@ try {
 
 ### Return type
 
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `dappsUniswapv3PositionSnapshotsCurrentGet()`
-
-```php
-dappsUniswapv3PositionSnapshotsCurrentGet($filter_pool_id): \OpenAPI\Client\Model\UniswapV3PositionSnapshotV3DTO[]
-```
-
-GetPositionSnapshot
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-
-$apiInstance = new OpenAPI\Client\Api\UniswapV3Api(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
-);
-$filter_pool_id = 'filter_pool_id_example'; // string | Filter pool id
-
-try {
-    $result = $apiInstance->dappsUniswapv3PositionSnapshotsCurrentGet($filter_pool_id);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling UniswapV3Api->dappsUniswapv3PositionSnapshotsCurrentGet: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **filter_pool_id** | **string**| Filter pool id | [optional] |
-
-### Return type
-
-[**\OpenAPI\Client\Model\UniswapV3PositionSnapshotV3DTO[]**](../Model/UniswapV3PositionSnapshotV3DTO.md)
+[**\OpenAPI\Client\Model\UniswapV3PoolHourDataV3DTO[]**](../Model/UniswapV3PoolHourDataV3DTO.md)
 
 ### Authorization
 
@@ -1011,13 +984,15 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `dappsUniswapv3PositionsCurrentGet()`
+## `uniswapV3GetPositionsCurrent()`
 
 ```php
-dappsUniswapv3PositionsCurrentGet($filter_pool_id): \OpenAPI\Client\Model\UniswapV3PositionV3DTO[]
+uniswapV3GetPositionsCurrent($filter_pool_id): \OpenAPI\Client\Model\UniswapV3PositionV3DTO[]
 ```
 
-GetPositions
+GetPositions (current)
+
+Gets positions.
 
 ### Example
 
@@ -1032,13 +1007,13 @@ $apiInstance = new OpenAPI\Client\Api\UniswapV3Api(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$filter_pool_id = 'filter_pool_id_example'; // string | Filter pool id
+$filter_pool_id = 'filter_pool_id_example'; // string
 
 try {
-    $result = $apiInstance->dappsUniswapv3PositionsCurrentGet($filter_pool_id);
+    $result = $apiInstance->uniswapV3GetPositionsCurrent($filter_pool_id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UniswapV3Api->dappsUniswapv3PositionsCurrentGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UniswapV3Api->uniswapV3GetPositionsCurrent: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -1046,7 +1021,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **filter_pool_id** | **string**| Filter pool id | [optional] |
+| **filter_pool_id** | **string**|  | [optional] |
 
 ### Return type
 
@@ -1065,13 +1040,15 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `dappsUniswapv3PositionsHistoricalGet()`
+## `uniswapV3GetPositionsHistorical()`
 
 ```php
-dappsUniswapv3PositionsHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id)
+uniswapV3GetPositionsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id): \OpenAPI\Client\Model\UniswapV3PositionV3DTO[]
 ```
 
+GetPositions (historical)
 
+Gets positions.
 
 ### Example
 
@@ -1086,16 +1063,17 @@ $apiInstance = new OpenAPI\Client\Api\UniswapV3Api(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$pool_id = 'pool_id_example'; // string
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$pool_id = 'pool_id_example'; // string | 
 
 try {
-    $apiInstance->dappsUniswapv3PositionsHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id);
+    $result = $apiInstance->uniswapV3GetPositionsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id);
+    print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UniswapV3Api->dappsUniswapv3PositionsHistoricalGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UniswapV3Api->uniswapV3GetPositionsHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -1111,7 +1089,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\UniswapV3PositionV3DTO[]**](../Model/UniswapV3PositionV3DTO.md)
 
 ### Authorization
 
@@ -1120,19 +1098,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `dappsUniswapv3SwapsCurrentGet()`
+## `uniswapV3GetPositionsSnaphotsHistorical()`
 
 ```php
-dappsUniswapv3SwapsCurrentGet($filter_pool_id): \OpenAPI\Client\Model\UniswapV3SwapV3DTO[]
+uniswapV3GetPositionsSnaphotsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id): \OpenAPI\Client\Model\UniswapV3PositionSnapshotV3DTO[]
 ```
 
-GetSwaps
+GetPositionsSnaphots (historical)
+
+Gets positions snapshots.
 
 ### Example
 
@@ -1147,13 +1127,17 @@ $apiInstance = new OpenAPI\Client\Api\UniswapV3Api(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$filter_pool_id = 'filter_pool_id_example'; // string | Filter pool id
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$pool_id = 'pool_id_example'; // string | 
 
 try {
-    $result = $apiInstance->dappsUniswapv3SwapsCurrentGet($filter_pool_id);
+    $result = $apiInstance->uniswapV3GetPositionsSnaphotsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UniswapV3Api->dappsUniswapv3SwapsCurrentGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UniswapV3Api->uniswapV3GetPositionsSnaphotsHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -1161,7 +1145,123 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **filter_pool_id** | **string**| Filter pool id | [optional] |
+| **start_block** | **int**|  | [optional] |
+| **end_block** | **int**|  | [optional] |
+| **start_date** | **\DateTime**|  | [optional] |
+| **end_date** | **\DateTime**|  | [optional] |
+| **pool_id** | **string**|  | [optional] |
+
+### Return type
+
+[**\OpenAPI\Client\Model\UniswapV3PositionSnapshotV3DTO[]**](../Model/UniswapV3PositionSnapshotV3DTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `uniswapV3GetPositionsSnapshotsCurrent()`
+
+```php
+uniswapV3GetPositionsSnapshotsCurrent($filter_pool_id): \OpenAPI\Client\Model\UniswapV3PositionSnapshotV3DTO[]
+```
+
+GetPositionsSnapshots (current)
+
+Gets positions snapshots.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new OpenAPI\Client\Api\UniswapV3Api(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$filter_pool_id = 'filter_pool_id_example'; // string
+
+try {
+    $result = $apiInstance->uniswapV3GetPositionsSnapshotsCurrent($filter_pool_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling UniswapV3Api->uniswapV3GetPositionsSnapshotsCurrent: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **filter_pool_id** | **string**|  | [optional] |
+
+### Return type
+
+[**\OpenAPI\Client\Model\UniswapV3PositionSnapshotV3DTO[]**](../Model/UniswapV3PositionSnapshotV3DTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `uniswapV3GetSwapsCurrent()`
+
+```php
+uniswapV3GetSwapsCurrent($filter_pool_id): \OpenAPI\Client\Model\UniswapV3SwapV3DTO[]
+```
+
+GetSwaps (current) 🔥
+
+Gets swaps.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new OpenAPI\Client\Api\UniswapV3Api(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$filter_pool_id = 'filter_pool_id_example'; // string
+
+try {
+    $result = $apiInstance->uniswapV3GetSwapsCurrent($filter_pool_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling UniswapV3Api->uniswapV3GetSwapsCurrent: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **filter_pool_id** | **string**|  | [optional] |
 
 ### Return type
 
@@ -1180,13 +1280,15 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `dappsUniswapv3SwapsHistoricalGet()`
+## `uniswapV3GetSwapsHistorical()`
 
 ```php
-dappsUniswapv3SwapsHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id)
+uniswapV3GetSwapsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id): \OpenAPI\Client\Model\UniswapV3SwapV3DTO[]
 ```
 
+GetSwaps (historical) 🔥
 
+Gets swaps.
 
 ### Example
 
@@ -1201,135 +1303,17 @@ $apiInstance = new OpenAPI\Client\Api\UniswapV3Api(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$pool_id = 'pool_id_example'; // string
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$pool_id = 'pool_id_example'; // string | 
 
 try {
-    $apiInstance->dappsUniswapv3SwapsHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id);
-} catch (Exception $e) {
-    echo 'Exception when calling UniswapV3Api->dappsUniswapv3SwapsHistoricalGet: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **start_block** | **int**|  | [optional] |
-| **end_block** | **int**|  | [optional] |
-| **start_date** | **\DateTime**|  | [optional] |
-| **end_date** | **\DateTime**|  | [optional] |
-| **pool_id** | **string**|  | [optional] |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `dappsUniswapv3TickDayDataHistoricalGet()`
-
-```php
-dappsUniswapv3TickDayDataHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id)
-```
-
-
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-
-$apiInstance = new OpenAPI\Client\Api\UniswapV3Api(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
-);
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$pool_id = 'pool_id_example'; // string
-
-try {
-    $apiInstance->dappsUniswapv3TickDayDataHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id);
-} catch (Exception $e) {
-    echo 'Exception when calling UniswapV3Api->dappsUniswapv3TickDayDataHistoricalGet: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **start_block** | **int**|  | [optional] |
-| **end_block** | **int**|  | [optional] |
-| **start_date** | **\DateTime**|  | [optional] |
-| **end_date** | **\DateTime**|  | [optional] |
-| **pool_id** | **string**|  | [optional] |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `dappsUniswapv3TicksCurrentGet()`
-
-```php
-dappsUniswapv3TicksCurrentGet($filter_pool_id): \OpenAPI\Client\Model\UniswapV3TickV3DTO[]
-```
-
-GetTicks
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-
-$apiInstance = new OpenAPI\Client\Api\UniswapV3Api(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
-);
-$filter_pool_id = 'filter_pool_id_example'; // string | Filter pool id
-
-try {
-    $result = $apiInstance->dappsUniswapv3TicksCurrentGet($filter_pool_id);
+    $result = $apiInstance->uniswapV3GetSwapsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UniswapV3Api->dappsUniswapv3TicksCurrentGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UniswapV3Api->uniswapV3GetSwapsHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -1337,7 +1321,67 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **filter_pool_id** | **string**| Filter pool id | [optional] |
+| **start_block** | **int**|  | [optional] |
+| **end_block** | **int**|  | [optional] |
+| **start_date** | **\DateTime**|  | [optional] |
+| **end_date** | **\DateTime**|  | [optional] |
+| **pool_id** | **string**|  | [optional] |
+
+### Return type
+
+[**\OpenAPI\Client\Model\UniswapV3SwapV3DTO[]**](../Model/UniswapV3SwapV3DTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `uniswapV3GetTicksCurrent()`
+
+```php
+uniswapV3GetTicksCurrent($filter_pool_id): \OpenAPI\Client\Model\UniswapV3TickV3DTO[]
+```
+
+GetTicks (current)
+
+Gets ticks.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new OpenAPI\Client\Api\UniswapV3Api(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$filter_pool_id = 'filter_pool_id_example'; // string
+
+try {
+    $result = $apiInstance->uniswapV3GetTicksCurrent($filter_pool_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling UniswapV3Api->uniswapV3GetTicksCurrent: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **filter_pool_id** | **string**|  | [optional] |
 
 ### Return type
 
@@ -1356,13 +1400,15 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `dappsUniswapv3TicksDayDataCurrentGet()`
+## `uniswapV3GetTicksDayDataCurrent()`
 
 ```php
-dappsUniswapv3TicksDayDataCurrentGet($filter_pool_id): \OpenAPI\Client\Model\UniswapV3TickDayDataV3DTO[]
+uniswapV3GetTicksDayDataCurrent($filter_pool_id): \OpenAPI\Client\Model\UniswapV3TickDayDataV3DTO[]
 ```
 
-GetTicksDayData
+GetTicksDayData (current)
+
+Gets ticks day data.
 
 ### Example
 
@@ -1377,13 +1423,13 @@ $apiInstance = new OpenAPI\Client\Api\UniswapV3Api(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$filter_pool_id = 'filter_pool_id_example'; // string | Filter pool id
+$filter_pool_id = 'filter_pool_id_example'; // string
 
 try {
-    $result = $apiInstance->dappsUniswapv3TicksDayDataCurrentGet($filter_pool_id);
+    $result = $apiInstance->uniswapV3GetTicksDayDataCurrent($filter_pool_id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UniswapV3Api->dappsUniswapv3TicksDayDataCurrentGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UniswapV3Api->uniswapV3GetTicksDayDataCurrent: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -1391,7 +1437,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **filter_pool_id** | **string**| Filter pool id | [optional] |
+| **filter_pool_id** | **string**|  | [optional] |
 
 ### Return type
 
@@ -1410,13 +1456,15 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `dappsUniswapv3TicksHistoricalGet()`
+## `uniswapV3GetTicksDayDataHistorical()`
 
 ```php
-dappsUniswapv3TicksHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id)
+uniswapV3GetTicksDayDataHistorical($start_block, $end_block, $start_date, $end_date, $pool_id): \OpenAPI\Client\Model\UniswapV3TickDayDataV3DTO[]
 ```
 
+GetTicksDayData (historical)
 
+Gets ticks day data.
 
 ### Example
 
@@ -1431,16 +1479,17 @@ $apiInstance = new OpenAPI\Client\Api\UniswapV3Api(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$pool_id = 'pool_id_example'; // string
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$pool_id = 'pool_id_example'; // string | 
 
 try {
-    $apiInstance->dappsUniswapv3TicksHistoricalGet($start_block, $end_block, $start_date, $end_date, $pool_id);
+    $result = $apiInstance->uniswapV3GetTicksDayDataHistorical($start_block, $end_block, $start_date, $end_date, $pool_id);
+    print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UniswapV3Api->dappsUniswapv3TicksHistoricalGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UniswapV3Api->uniswapV3GetTicksDayDataHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -1456,7 +1505,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\UniswapV3TickDayDataV3DTO[]**](../Model/UniswapV3TickDayDataV3DTO.md)
 
 ### Authorization
 
@@ -1465,19 +1514,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `dappsUniswapv3TokenDayDataHistoricalGet()`
+## `uniswapV3GetTicksHistorical()`
 
 ```php
-dappsUniswapv3TokenDayDataHistoricalGet($start_block, $end_block, $start_date, $end_date, $token_id)
+uniswapV3GetTicksHistorical($start_block, $end_block, $start_date, $end_date, $pool_id): \OpenAPI\Client\Model\UniswapV3TickV3DTO[]
 ```
 
+GetTicks (historical)
 
+Gets ticks.
 
 ### Example
 
@@ -1492,16 +1543,17 @@ $apiInstance = new OpenAPI\Client\Api\UniswapV3Api(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$token_id = 'token_id_example'; // string
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$pool_id = 'pool_id_example'; // string | 
 
 try {
-    $apiInstance->dappsUniswapv3TokenDayDataHistoricalGet($start_block, $end_block, $start_date, $end_date, $token_id);
+    $result = $apiInstance->uniswapV3GetTicksHistorical($start_block, $end_block, $start_date, $end_date, $pool_id);
+    print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UniswapV3Api->dappsUniswapv3TokenDayDataHistoricalGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UniswapV3Api->uniswapV3GetTicksHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -1513,11 +1565,11 @@ try {
 | **end_block** | **int**|  | [optional] |
 | **start_date** | **\DateTime**|  | [optional] |
 | **end_date** | **\DateTime**|  | [optional] |
-| **token_id** | **string**|  | [optional] |
+| **pool_id** | **string**|  | [optional] |
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\UniswapV3TickV3DTO[]**](../Model/UniswapV3TickV3DTO.md)
 
 ### Authorization
 
@@ -1526,80 +1578,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `dappsUniswapv3TokenHourDataHistoricalGet()`
+## `uniswapV3GetTokensCurrent()`
 
 ```php
-dappsUniswapv3TokenHourDataHistoricalGet($start_block, $end_block, $start_date, $end_date, $token_id)
+uniswapV3GetTokensCurrent($filter_token_id): \OpenAPI\Client\Model\UniswapV3TokenV3DTO[]
 ```
 
+GetTokens (current) 🔥
 
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-
-$apiInstance = new OpenAPI\Client\Api\UniswapV3Api(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
-);
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$token_id = 'token_id_example'; // string
-
-try {
-    $apiInstance->dappsUniswapv3TokenHourDataHistoricalGet($start_block, $end_block, $start_date, $end_date, $token_id);
-} catch (Exception $e) {
-    echo 'Exception when calling UniswapV3Api->dappsUniswapv3TokenHourDataHistoricalGet: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **start_block** | **int**|  | [optional] |
-| **end_block** | **int**|  | [optional] |
-| **start_date** | **\DateTime**|  | [optional] |
-| **end_date** | **\DateTime**|  | [optional] |
-| **token_id** | **string**|  | [optional] |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `dappsUniswapv3TokensCurrentGet()`
-
-```php
-dappsUniswapv3TokensCurrentGet($filter_token_id): \OpenAPI\Client\Model\UniswapV3TokenV3DTO[]
-```
-
-GetTokens
+Gets tokens.
 
 ### Example
 
@@ -1617,10 +1610,10 @@ $apiInstance = new OpenAPI\Client\Api\UniswapV3Api(
 $filter_token_id = 'filter_token_id_example'; // string
 
 try {
-    $result = $apiInstance->dappsUniswapv3TokensCurrentGet($filter_token_id);
+    $result = $apiInstance->uniswapV3GetTokensCurrent($filter_token_id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UniswapV3Api->dappsUniswapv3TokensCurrentGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UniswapV3Api->uniswapV3GetTokensCurrent: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -1647,13 +1640,15 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `dappsUniswapv3TokensDayDataCurrentGet()`
+## `uniswapV3GetTokensDayDataCurrent()`
 
 ```php
-dappsUniswapv3TokensDayDataCurrentGet($filter_token_id): \OpenAPI\Client\Model\UniswapV3TokenV3DayDataDTO[]
+uniswapV3GetTokensDayDataCurrent($filter_token_id): \OpenAPI\Client\Model\UniswapV3TokenV3DayDataDTO[]
 ```
 
-GetTokensDayData
+GetTokensDayData (current)
+
+Gets tokens day data.
 
 ### Example
 
@@ -1671,10 +1666,10 @@ $apiInstance = new OpenAPI\Client\Api\UniswapV3Api(
 $filter_token_id = 'filter_token_id_example'; // string
 
 try {
-    $result = $apiInstance->dappsUniswapv3TokensDayDataCurrentGet($filter_token_id);
+    $result = $apiInstance->uniswapV3GetTokensDayDataCurrent($filter_token_id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UniswapV3Api->dappsUniswapv3TokensDayDataCurrentGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UniswapV3Api->uniswapV3GetTokensDayDataCurrent: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -1701,13 +1696,15 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `dappsUniswapv3TokensHistoricalGet()`
+## `uniswapV3GetTokensDayDataHistorical()`
 
 ```php
-dappsUniswapv3TokensHistoricalGet($start_block, $end_block, $start_date, $end_date, $token_id)
+uniswapV3GetTokensDayDataHistorical($start_block, $end_block, $start_date, $end_date, $token_id): \OpenAPI\Client\Model\UniswapV3TokenV3DayDataDTO[]
 ```
 
+GetTokensDayData (historical)
 
+Gets tokens day data.
 
 ### Example
 
@@ -1722,16 +1719,17 @@ $apiInstance = new OpenAPI\Client\Api\UniswapV3Api(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$token_id = 'token_id_example'; // string
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$token_id = 'token_id_example'; // string | 
 
 try {
-    $apiInstance->dappsUniswapv3TokensHistoricalGet($start_block, $end_block, $start_date, $end_date, $token_id);
+    $result = $apiInstance->uniswapV3GetTokensDayDataHistorical($start_block, $end_block, $start_date, $end_date, $token_id);
+    print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UniswapV3Api->dappsUniswapv3TokensHistoricalGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UniswapV3Api->uniswapV3GetTokensDayDataHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -1747,7 +1745,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\UniswapV3TokenV3DayDataDTO[]**](../Model/UniswapV3TokenV3DayDataDTO.md)
 
 ### Authorization
 
@@ -1756,19 +1754,85 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `dappsUniswapv3TokensHourDataCurrentGet()`
+## `uniswapV3GetTokensHistorical()`
 
 ```php
-dappsUniswapv3TokensHourDataCurrentGet($filter_token_id): \OpenAPI\Client\Model\UniswapV3TokenHourDataV3DTO[]
+uniswapV3GetTokensHistorical($start_block, $end_block, $start_date, $end_date, $token_id): \OpenAPI\Client\Model\UniswapV3TokenV3DTO[]
 ```
 
-GetTokensHourData
+GetTokens (historical) 🔥
+
+Gets tokens.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new OpenAPI\Client\Api\UniswapV3Api(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$token_id = 'token_id_example'; // string | 
+
+try {
+    $result = $apiInstance->uniswapV3GetTokensHistorical($start_block, $end_block, $start_date, $end_date, $token_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling UniswapV3Api->uniswapV3GetTokensHistorical: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **start_block** | **int**|  | [optional] |
+| **end_block** | **int**|  | [optional] |
+| **start_date** | **\DateTime**|  | [optional] |
+| **end_date** | **\DateTime**|  | [optional] |
+| **token_id** | **string**|  | [optional] |
+
+### Return type
+
+[**\OpenAPI\Client\Model\UniswapV3TokenV3DTO[]**](../Model/UniswapV3TokenV3DTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `uniswapV3GetTokensHourDataCurrent()`
+
+```php
+uniswapV3GetTokensHourDataCurrent($filter_token_id): \OpenAPI\Client\Model\UniswapV3TokenHourDataV3DTO[]
+```
+
+GetTokensHourData (current)
+
+Gets tokens hour data.
 
 ### Example
 
@@ -1786,10 +1850,10 @@ $apiInstance = new OpenAPI\Client\Api\UniswapV3Api(
 $filter_token_id = 'filter_token_id_example'; // string
 
 try {
-    $result = $apiInstance->dappsUniswapv3TokensHourDataCurrentGet($filter_token_id);
+    $result = $apiInstance->uniswapV3GetTokensHourDataCurrent($filter_token_id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UniswapV3Api->dappsUniswapv3TokensHourDataCurrentGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UniswapV3Api->uniswapV3GetTokensHourDataCurrent: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -1816,13 +1880,15 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `dappsUniswapv3TransactionsHistoricalGet()`
+## `uniswapV3GetTokensHourDataHistorical()`
 
 ```php
-dappsUniswapv3TransactionsHistoricalGet($start_block, $end_block, $start_date, $end_date)
+uniswapV3GetTokensHourDataHistorical($start_block, $end_block, $start_date, $end_date, $token_id): \OpenAPI\Client\Model\UniswapV3TokenHourDataV3DTO[]
 ```
 
+GetTokensHourData (historical)
 
+Gets tokens hour data.
 
 ### Example
 
@@ -1837,15 +1903,80 @@ $apiInstance = new OpenAPI\Client\Api\UniswapV3Api(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$start_block = 56; // int
-$end_block = 56; // int
-$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
-$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$token_id = 'token_id_example'; // string | 
 
 try {
-    $apiInstance->dappsUniswapv3TransactionsHistoricalGet($start_block, $end_block, $start_date, $end_date);
+    $result = $apiInstance->uniswapV3GetTokensHourDataHistorical($start_block, $end_block, $start_date, $end_date, $token_id);
+    print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UniswapV3Api->dappsUniswapv3TransactionsHistoricalGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UniswapV3Api->uniswapV3GetTokensHourDataHistorical: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **start_block** | **int**|  | [optional] |
+| **end_block** | **int**|  | [optional] |
+| **start_date** | **\DateTime**|  | [optional] |
+| **end_date** | **\DateTime**|  | [optional] |
+| **token_id** | **string**|  | [optional] |
+
+### Return type
+
+[**\OpenAPI\Client\Model\UniswapV3TokenHourDataV3DTO[]**](../Model/UniswapV3TokenHourDataV3DTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `uniswapV3GetTransactionsHistorical()`
+
+```php
+uniswapV3GetTransactionsHistorical($start_block, $end_block, $start_date, $end_date): \OpenAPI\Client\Model\UniswapV3TransactionV3DTO[]
+```
+
+GetTransactions (historical)
+
+Gets transactions.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new OpenAPI\Client\Api\UniswapV3Api(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+
+try {
+    $result = $apiInstance->uniswapV3GetTransactionsHistorical($start_block, $end_block, $start_date, $end_date);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling UniswapV3Api->uniswapV3GetTransactionsHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -1860,58 +1991,7 @@ try {
 
 ### Return type
 
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `dappsUniswapv3UniswapDayDataCurrentGet()`
-
-```php
-dappsUniswapv3UniswapDayDataCurrentGet(): \OpenAPI\Client\Model\UniswapV3UniswapDayDataV3DTO[]
-```
-
-GetUniswapDayData
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-
-$apiInstance = new OpenAPI\Client\Api\UniswapV3Api(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
-);
-
-try {
-    $result = $apiInstance->dappsUniswapv3UniswapDayDataCurrentGet();
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling UniswapV3Api->dappsUniswapv3UniswapDayDataCurrentGet: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-This endpoint does not need any parameter.
-
-### Return type
-
-[**\OpenAPI\Client\Model\UniswapV3UniswapDayDataV3DTO[]**](../Model/UniswapV3UniswapDayDataV3DTO.md)
+[**\OpenAPI\Client\Model\UniswapV3TransactionV3DTO[]**](../Model/UniswapV3TransactionV3DTO.md)
 
 ### Authorization
 

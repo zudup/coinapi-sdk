@@ -4,19 +4,21 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**dappsCowOrdersHistoricalGet**](CowApi.md#dappsCowOrdersHistoricalGet) | **GET** /dapps/cow/orders/historical | 
-[**dappsCowSettlementHistoricalGet**](CowApi.md#dappsCowSettlementHistoricalGet) | **GET** /dapps/cow/settlement/historical | 
-[**dappsCowTokensHistoricalGet**](CowApi.md#dappsCowTokensHistoricalGet) | **GET** /dapps/cow/tokens/historical | 
-[**dappsCowTradesHistoricalGet**](CowApi.md#dappsCowTradesHistoricalGet) | **GET** /dapps/cow/trades/historical | 
-[**dappsCowUsersHistoricalGet**](CowApi.md#dappsCowUsersHistoricalGet) | **GET** /dapps/cow/users/historical | 
+[**cowGetOrdersHistorical**](CowApi.md#cowGetOrdersHistorical) | **GET** /dapps/cow/orders/historical | GetOrders (historical)
+[**cowGetSettlementsHistorical**](CowApi.md#cowGetSettlementsHistorical) | **GET** /dapps/cow/settlements/historical | GetSettlements (historical)
+[**cowGetTokensHistorical**](CowApi.md#cowGetTokensHistorical) | **GET** /dapps/cow/tokens/historical | GetTokens (historical) 🔥
+[**cowGetTradesHistorical**](CowApi.md#cowGetTradesHistorical) | **GET** /dapps/cow/trades/historical | GetTrades (historical) 🔥
+[**cowGetUsersHistorical**](CowApi.md#cowGetUsersHistorical) | **GET** /dapps/cow/users/historical | GetUsers (historical)
 
 
 
-## dappsCowOrdersHistoricalGet
+## cowGetOrdersHistorical
 
-> dappsCowOrdersHistoricalGet(startBlock, endBlock, startDate, endDate)
+> List&lt;CowOrderDTO&gt; cowGetOrdersHistorical(startBlock, endBlock, startDate, endDate)
 
+GetOrders (historical)
 
+Gets orders.
 
 ### Example
 
@@ -30,9 +32,10 @@ Long endBlock = null; // Long |
 Date startDate = null; // Date | 
 Date endDate = null; // Date | 
 try {
-    apiInstance.dappsCowOrdersHistoricalGet(startBlock, endBlock, startDate, endDate);
+    List<CowOrderDTO> result = apiInstance.cowGetOrdersHistorical(startBlock, endBlock, startDate, endDate);
+    System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling CowApi#dappsCowOrdersHistoricalGet");
+    System.err.println("Exception when calling CowApi#cowGetOrdersHistorical");
     e.printStackTrace();
 }
 ```
@@ -49,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**List&lt;CowOrderDTO&gt;**](CowOrderDTO.md)
 
 ### Authorization
 
@@ -58,14 +61,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsCowSettlementHistoricalGet
+## cowGetSettlementsHistorical
 
-> dappsCowSettlementHistoricalGet(startBlock, endBlock, startDate, endDate)
+> List&lt;CowSettlementDTO&gt; cowGetSettlementsHistorical(startBlock, endBlock, startDate, endDate)
 
+GetSettlements (historical)
 
+Gets settlements.
 
 ### Example
 
@@ -79,9 +84,10 @@ Long endBlock = null; // Long |
 Date startDate = null; // Date | 
 Date endDate = null; // Date | 
 try {
-    apiInstance.dappsCowSettlementHistoricalGet(startBlock, endBlock, startDate, endDate);
+    List<CowSettlementDTO> result = apiInstance.cowGetSettlementsHistorical(startBlock, endBlock, startDate, endDate);
+    System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling CowApi#dappsCowSettlementHistoricalGet");
+    System.err.println("Exception when calling CowApi#cowGetSettlementsHistorical");
     e.printStackTrace();
 }
 ```
@@ -98,7 +104,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**List&lt;CowSettlementDTO&gt;**](CowSettlementDTO.md)
 
 ### Authorization
 
@@ -107,14 +113,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsCowTokensHistoricalGet
+## cowGetTokensHistorical
 
-> dappsCowTokensHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId)
+> List&lt;CowTokenDTO&gt; cowGetTokensHistorical(startBlock, endBlock, startDate, endDate, tokenId)
 
+GetTokens (historical) 🔥
 
+Gets tokens.
 
 ### Example
 
@@ -129,9 +137,10 @@ Date startDate = null; // Date |
 Date endDate = null; // Date | 
 String tokenId = null; // String | 
 try {
-    apiInstance.dappsCowTokensHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId);
+    List<CowTokenDTO> result = apiInstance.cowGetTokensHistorical(startBlock, endBlock, startDate, endDate, tokenId);
+    System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling CowApi#dappsCowTokensHistoricalGet");
+    System.err.println("Exception when calling CowApi#cowGetTokensHistorical");
     e.printStackTrace();
 }
 ```
@@ -149,7 +158,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**List&lt;CowTokenDTO&gt;**](CowTokenDTO.md)
 
 ### Authorization
 
@@ -158,14 +167,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsCowTradesHistoricalGet
+## cowGetTradesHistorical
 
-> dappsCowTradesHistoricalGet(startBlock, endBlock, startDate, endDate)
+> List&lt;CowTradeDTO&gt; cowGetTradesHistorical(startBlock, endBlock, startDate, endDate)
 
+GetTrades (historical) 🔥
 
+Gets trades.
 
 ### Example
 
@@ -179,9 +190,10 @@ Long endBlock = null; // Long |
 Date startDate = null; // Date | 
 Date endDate = null; // Date | 
 try {
-    apiInstance.dappsCowTradesHistoricalGet(startBlock, endBlock, startDate, endDate);
+    List<CowTradeDTO> result = apiInstance.cowGetTradesHistorical(startBlock, endBlock, startDate, endDate);
+    System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling CowApi#dappsCowTradesHistoricalGet");
+    System.err.println("Exception when calling CowApi#cowGetTradesHistorical");
     e.printStackTrace();
 }
 ```
@@ -198,7 +210,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**List&lt;CowTradeDTO&gt;**](CowTradeDTO.md)
 
 ### Authorization
 
@@ -207,14 +219,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsCowUsersHistoricalGet
+## cowGetUsersHistorical
 
-> dappsCowUsersHistoricalGet(startBlock, endBlock, startDate, endDate)
+> List&lt;CowUserDTO&gt; cowGetUsersHistorical(startBlock, endBlock, startDate, endDate)
 
+GetUsers (historical)
 
+Gets users.
 
 ### Example
 
@@ -228,9 +242,10 @@ Long endBlock = null; // Long |
 Date startDate = null; // Date | 
 Date endDate = null; // Date | 
 try {
-    apiInstance.dappsCowUsersHistoricalGet(startBlock, endBlock, startDate, endDate);
+    List<CowUserDTO> result = apiInstance.cowGetUsersHistorical(startBlock, endBlock, startDate, endDate);
+    System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling CowApi#dappsCowUsersHistoricalGet");
+    System.err.println("Exception when calling CowApi#cowGetUsersHistorical");
     e.printStackTrace();
 }
 ```
@@ -247,7 +262,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**List&lt;CowUserDTO&gt;**](CowUserDTO.md)
 
 ### Authorization
 
@@ -256,5 +271,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 

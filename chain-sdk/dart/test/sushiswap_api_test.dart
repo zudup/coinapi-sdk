@@ -17,6 +17,24 @@ void main() {
   // final instance = SushiswapApi();
 
   group('tests for SushiswapApi', () {
+    // GetExchanges (current) 🔥
+    //
+    // Gets exchanges.
+    //
+    //Future<List<CurveExchangeDTO>> curveGetExchangesCurrent() async
+    test('test curveGetExchangesCurrent', () async {
+      // TODO
+    });
+
+    // GetTrades (current) 🔥
+    //
+    // Gets trades.
+    //
+    //Future<List<DexTradeDTO>> dexGetTradesCurrent() async
+    test('test dexGetTradesCurrent', () async {
+      // TODO
+    });
+
     // GetBundles (historical)
     //
     // Gets bundles.
@@ -89,7 +107,7 @@ void main() {
       // TODO
     });
 
-    // GetPools (current)
+    // GetPools (current) 🔥
     //
     // Gets pools.
     //
@@ -107,7 +125,7 @@ void main() {
       // TODO
     });
 
-    // GetPools (historical)
+    // GetPools (historical) 🔥
     //
     // Gets list of pools for given filters.
     //
@@ -125,7 +143,7 @@ void main() {
       // TODO
     });
 
-    // GetSwaps (current)
+    // GetSwaps (current) 🔥
     //
     // Gets swaps.
     //
@@ -134,7 +152,7 @@ void main() {
       // TODO
     });
 
-    // GetSwaps (historical)
+    // GetSwaps (historical) 🔥
     //
     // Gets list of swaps for given filters.
     //
@@ -143,7 +161,7 @@ void main() {
       // TODO
     });
 
-    // GetTokens (current)
+    // GetTokens (current) 🔥
     //
     // Gets tokens.
     //
@@ -161,7 +179,7 @@ void main() {
       // TODO
     });
 
-    // GetTokens (historical)
+    // GetTokens (historical) 🔥
     //
     // Gets list of tokens for given filters.
     //

@@ -4,45 +4,47 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**dappsCurveAccountsHistoricalGet**](CurveApi.md#dappsCurveAccountsHistoricalGet) | **GET** /dapps/curve/accounts/historical | 
-[**dappsCurveAddLiquidityEventHistoricalGet**](CurveApi.md#dappsCurveAddLiquidityEventHistoricalGet) | **GET** /dapps/curve/addLiquidityEvent/historical | 
-[**dappsCurveAdminFeeChangeLogHistoricalGet**](CurveApi.md#dappsCurveAdminFeeChangeLogHistoricalGet) | **GET** /dapps/curve/adminFeeChangeLog/historical | 
-[**dappsCurveAmplificationCoeffChangeLogHistoricalGet**](CurveApi.md#dappsCurveAmplificationCoeffChangeLogHistoricalGet) | **GET** /dapps/curve/amplificationCoeffChangeLog/historical | 
-[**dappsCurveCoinsHistoricalGet**](CurveApi.md#dappsCurveCoinsHistoricalGet) | **GET** /dapps/curve/coins/historical | 
-[**dappsCurveContractsHistoricalGet**](CurveApi.md#dappsCurveContractsHistoricalGet) | **GET** /dapps/curve/contracts/historical | 
-[**dappsCurveContractsVersionHistoricalGet**](CurveApi.md#dappsCurveContractsVersionHistoricalGet) | **GET** /dapps/curve/contractsVersion/historical | 
-[**dappsCurveDailyVolumeHistoricalGet**](CurveApi.md#dappsCurveDailyVolumeHistoricalGet) | **GET** /dapps/curve/dailyVolume/historical | 
-[**dappsCurveFeeChangeLogHistoricalGet**](CurveApi.md#dappsCurveFeeChangeLogHistoricalGet) | **GET** /dapps/curve/feeChangeLog/historical | 
-[**dappsCurveGaugeDepositHistoricalGet**](CurveApi.md#dappsCurveGaugeDepositHistoricalGet) | **GET** /dapps/curve/gaugeDeposit/historical | 
-[**dappsCurveGaugeHistoricalGet**](CurveApi.md#dappsCurveGaugeHistoricalGet) | **GET** /dapps/curve/gauge/historical | 
-[**dappsCurveGaugeLiquidityHistoricalGet**](CurveApi.md#dappsCurveGaugeLiquidityHistoricalGet) | **GET** /dapps/curve/gaugeLiquidity/historical | 
-[**dappsCurveGaugeTotalWeightHistoricalGet**](CurveApi.md#dappsCurveGaugeTotalWeightHistoricalGet) | **GET** /dapps/curve/gaugeTotalWeight/historical | 
-[**dappsCurveGaugeTypeHistoricalGet**](CurveApi.md#dappsCurveGaugeTypeHistoricalGet) | **GET** /dapps/curve/gaugeType/historical | 
-[**dappsCurveGaugeTypeWeightHistoricalGet**](CurveApi.md#dappsCurveGaugeTypeWeightHistoricalGet) | **GET** /dapps/curve/gaugeTypeWeight/historical | 
-[**dappsCurveGaugeWeightHistoricalGet**](CurveApi.md#dappsCurveGaugeWeightHistoricalGet) | **GET** /dapps/curve/gaugeWeight/historical | 
-[**dappsCurveGaugeWeightVoteHistoricalGet**](CurveApi.md#dappsCurveGaugeWeightVoteHistoricalGet) | **GET** /dapps/curve/gaugeWeightVote/historical | 
-[**dappsCurveGaugeWithdrawHistoricalGet**](CurveApi.md#dappsCurveGaugeWithdrawHistoricalGet) | **GET** /dapps/curve/gaugeWithdraw/historical | 
-[**dappsCurveHourlyVolumeHistoricalGet**](CurveApi.md#dappsCurveHourlyVolumeHistoricalGet) | **GET** /dapps/curve/hourlyVolume/historical | 
-[**dappsCurveLpTokenHistoricalGet**](CurveApi.md#dappsCurveLpTokenHistoricalGet) | **GET** /dapps/curve/lpToken/historical | 
-[**dappsCurvePoolsHistoricalGet**](CurveApi.md#dappsCurvePoolsHistoricalGet) | **GET** /dapps/curve/pools/historical | 
-[**dappsCurveProposalsHistoricalGet**](CurveApi.md#dappsCurveProposalsHistoricalGet) | **GET** /dapps/curve/proposals/historical | 
-[**dappsCurveProposalsVoteHistoricalGet**](CurveApi.md#dappsCurveProposalsVoteHistoricalGet) | **GET** /dapps/curve/proposalsVote/historical | 
-[**dappsCurveRemoveLiquidityEventHistoricalGet**](CurveApi.md#dappsCurveRemoveLiquidityEventHistoricalGet) | **GET** /dapps/curve/removeLiquidityEvent/historical | 
-[**dappsCurveRemoveLiquidityOneEventHistoricalGet**](CurveApi.md#dappsCurveRemoveLiquidityOneEventHistoricalGet) | **GET** /dapps/curve/removeLiquidityOneEvent/historical | 
-[**dappsCurveSwapsHistoricalGet**](CurveApi.md#dappsCurveSwapsHistoricalGet) | **GET** /dapps/curve/swaps/historical | 
-[**dappsCurveSystemStateHistoricalGet**](CurveApi.md#dappsCurveSystemStateHistoricalGet) | **GET** /dapps/curve/systemState/historical | 
-[**dappsCurveTokensHistoricalGet**](CurveApi.md#dappsCurveTokensHistoricalGet) | **GET** /dapps/curve/tokens/historical | 
-[**dappsCurveTransferOwnershipEventHistoricalGet**](CurveApi.md#dappsCurveTransferOwnershipEventHistoricalGet) | **GET** /dapps/curve/transferOwnershipEvent/historical | 
-[**dappsCurveUnderlyingCoinHistoricalGet**](CurveApi.md#dappsCurveUnderlyingCoinHistoricalGet) | **GET** /dapps/curve/underlyingCoin/historical | 
-[**dappsCurveVotingAppHistoricalGet**](CurveApi.md#dappsCurveVotingAppHistoricalGet) | **GET** /dapps/curve/votingApp/historical | 
-[**dappsCurveWeeklyVolumeHistoricalGet**](CurveApi.md#dappsCurveWeeklyVolumeHistoricalGet) | **GET** /dapps/curve/weeklyVolume/historical | 
+[**curveGetAccountsHistorical**](CurveApi.md#curveGetAccountsHistorical) | **GET** /dapps/curve/accounts/historical | GetAccounts (historical)
+[**curveGetAddLiquidityEventsHistorical**](CurveApi.md#curveGetAddLiquidityEventsHistorical) | **GET** /dapps/curve/addLiquidityEvents/historical | GetAddLiquidityEvents (historical)
+[**curveGetAdminFeeChangeLogsHistorical**](CurveApi.md#curveGetAdminFeeChangeLogsHistorical) | **GET** /dapps/curve/adminFeeChangeLogs/historical | GetAdminFeeChangeLogs (historical)
+[**curveGetAmplificationCoeffChangeLogsHistorical**](CurveApi.md#curveGetAmplificationCoeffChangeLogsHistorical) | **GET** /dapps/curve/amplificationCoeffChangeLogs/historical | GetAmplificationCoeffChangeLogs (historical)
+[**curveGetCoinsHistorical**](CurveApi.md#curveGetCoinsHistorical) | **GET** /dapps/curve/coins/historical | GetCoins (historical)
+[**curveGetContractsHistorical**](CurveApi.md#curveGetContractsHistorical) | **GET** /dapps/curve/contracts/historical | GetContracts (historical)
+[**curveGetContractsVersionsHistorical**](CurveApi.md#curveGetContractsVersionsHistorical) | **GET** /dapps/curve/contractsVersions/historical | GetContractsVersions (historical)
+[**curveGetDailyVolumesHistorical**](CurveApi.md#curveGetDailyVolumesHistorical) | **GET** /dapps/curve/dailyVolumes/historical | GetDailyVolumes (historical)
+[**curveGetExchangesHistorical**](CurveApi.md#curveGetExchangesHistorical) | **GET** /dapps/curve/exchanges/historical | GetExchanges (historical) 🔥
+[**curveGetFeeChangeLogsHistorical**](CurveApi.md#curveGetFeeChangeLogsHistorical) | **GET** /dapps/curve/feeChangeLogs/historical | GetFeeChangeLogs (historical)
+[**curveGetGaugesDepositsHistorical**](CurveApi.md#curveGetGaugesDepositsHistorical) | **GET** /dapps/curve/gaugesDeposits/historical | GetGaugesDeposits (historical)
+[**curveGetGaugesHistorical**](CurveApi.md#curveGetGaugesHistorical) | **GET** /dapps/curve/gauges/historical | GetGauges (historical)
+[**curveGetGaugesLiquidityHistorical**](CurveApi.md#curveGetGaugesLiquidityHistorical) | **GET** /dapps/curve/gaugesLiquidity/historical | GetGaugesLiquidity (historical)
+[**curveGetGaugesTotalWeightsHistorical**](CurveApi.md#curveGetGaugesTotalWeightsHistorical) | **GET** /dapps/curve/gaugesTotalWeights/historical | GetGaugesTotalWeights (historical)
+[**curveGetGaugesTypesHistorical**](CurveApi.md#curveGetGaugesTypesHistorical) | **GET** /dapps/curve/gaugesTypes/historical | GetGaugesTypes (historical)
+[**curveGetGaugesTypesWeightsHistorical**](CurveApi.md#curveGetGaugesTypesWeightsHistorical) | **GET** /dapps/curve/gaugesTypesWeights/historical | GetGaugesTypesWeights (historical)
+[**curveGetGaugesWeightsHistorical**](CurveApi.md#curveGetGaugesWeightsHistorical) | **GET** /dapps/curve/gaugesWeights/historical | GetGaugesWeights (historical)
+[**curveGetGaugesWeightsVotesHistorical**](CurveApi.md#curveGetGaugesWeightsVotesHistorical) | **GET** /dapps/curve/gaugesWeightsVotes/historical | GetGaugesWeightsVotes (historical)
+[**curveGetGaugesWithdrawHistorical**](CurveApi.md#curveGetGaugesWithdrawHistorical) | **GET** /dapps/curve/gaugesWithdraws/historical | GetGaugesWithdraw (historical)
+[**curveGetHourlyVolumesHistorical**](CurveApi.md#curveGetHourlyVolumesHistorical) | **GET** /dapps/curve/hourlyVolumes/historical | GetHourlyVolumes (historical)
+[**curveGetLpTokensHistorical**](CurveApi.md#curveGetLpTokensHistorical) | **GET** /dapps/curve/lpTokens/historical | GetLpTokens (historical)
+[**curveGetPoolsHistorical**](CurveApi.md#curveGetPoolsHistorical) | **GET** /dapps/curve/pools/historical | GetPools (historical) 🔥
+[**curveGetProposalsHistorical**](CurveApi.md#curveGetProposalsHistorical) | **GET** /dapps/curve/proposals/historical | GetProposals (historical)
+[**curveGetProposalsVotesHistorical**](CurveApi.md#curveGetProposalsVotesHistorical) | **GET** /dapps/curve/proposalsVotes/historical | GetProposalsVotes (historical)
+[**curveGetRemoveLiquidityEventsHistorical**](CurveApi.md#curveGetRemoveLiquidityEventsHistorical) | **GET** /dapps/curve/removeLiquidityEvents/historical | GetRemoveLiquidityEvents (historical)
+[**curveGetRemoveLiquidityOneEventsHistorical**](CurveApi.md#curveGetRemoveLiquidityOneEventsHistorical) | **GET** /dapps/curve/removeLiquidityOneEvents/historical | GetRemoveLiquidityOneEvents (historical)
+[**curveGetSystemStatesHistorical**](CurveApi.md#curveGetSystemStatesHistorical) | **GET** /dapps/curve/systemStates/historical | GetSystemStates (historical)
+[**curveGetTokensHistorical**](CurveApi.md#curveGetTokensHistorical) | **GET** /dapps/curve/tokens/historical | GetTokens (historical) 🔥
+[**curveGetTransferOwnershipEventsHistorical**](CurveApi.md#curveGetTransferOwnershipEventsHistorical) | **GET** /dapps/curve/transferOwnershipEvents/historical | GetTransferOwnershipEvents (historical)
+[**curveGetUnderlyingCoinsHistorical**](CurveApi.md#curveGetUnderlyingCoinsHistorical) | **GET** /dapps/curve/underlyingCoins/historical | GetUnderlyingCoins (historical)
+[**curveGetVotingAppsHistorical**](CurveApi.md#curveGetVotingAppsHistorical) | **GET** /dapps/curve/votingApps/historical | GetVotingApps (historical)
+[**curveGetWeeklyVolumesHistorical**](CurveApi.md#curveGetWeeklyVolumesHistorical) | **GET** /dapps/curve/weeklyVolumes/historical | GetWeeklyVolumes (historical)
 
 
-<a name="dappsCurveAccountsHistoricalGet"></a>
-# **dappsCurveAccountsHistoricalGet**
-> dappsCurveAccountsHistoricalGet(startBlock, endBlock, startDate, endDate)
+<a name="curveGetAccountsHistorical"></a>
+# **curveGetAccountsHistorical**
+> kotlin.collections.List&lt;CurveAccountDTO&gt; curveGetAccountsHistorical(startBlock, endBlock, startDate, endDate)
 
+GetAccounts (historical)
 
+Gets accounts.
 
 ### Example
 ```kotlin
@@ -56,12 +58,13 @@ val endBlock : kotlin.Long = 789 // kotlin.Long |
 val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
 val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
 try {
-    apiInstance.dappsCurveAccountsHistoricalGet(startBlock, endBlock, startDate, endDate)
+    val result : kotlin.collections.List<CurveAccountDTO> = apiInstance.curveGetAccountsHistorical(startBlock, endBlock, startDate, endDate)
+    println(result)
 } catch (e: ClientException) {
-    println("4xx response calling CurveApi#dappsCurveAccountsHistoricalGet")
+    println("4xx response calling CurveApi#curveGetAccountsHistorical")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling CurveApi#dappsCurveAccountsHistoricalGet")
+    println("5xx response calling CurveApi#curveGetAccountsHistorical")
     e.printStackTrace()
 }
 ```
@@ -77,7 +80,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**kotlin.collections.List&lt;CurveAccountDTO&gt;**](CurveAccountDTO.md)
 
 ### Authorization
 
@@ -86,13 +89,15 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
-<a name="dappsCurveAddLiquidityEventHistoricalGet"></a>
-# **dappsCurveAddLiquidityEventHistoricalGet**
-> dappsCurveAddLiquidityEventHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+<a name="curveGetAddLiquidityEventsHistorical"></a>
+# **curveGetAddLiquidityEventsHistorical**
+> kotlin.collections.List&lt;CurveAddLiquidityEventDTO&gt; curveGetAddLiquidityEventsHistorical(startBlock, endBlock, startDate, endDate, poolId)
 
+GetAddLiquidityEvents (historical)
 
+Gets add liquidity events.
 
 ### Example
 ```kotlin
@@ -107,12 +112,13 @@ val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.tim
 val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
 val poolId : kotlin.String = poolId_example // kotlin.String | 
 try {
-    apiInstance.dappsCurveAddLiquidityEventHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+    val result : kotlin.collections.List<CurveAddLiquidityEventDTO> = apiInstance.curveGetAddLiquidityEventsHistorical(startBlock, endBlock, startDate, endDate, poolId)
+    println(result)
 } catch (e: ClientException) {
-    println("4xx response calling CurveApi#dappsCurveAddLiquidityEventHistoricalGet")
+    println("4xx response calling CurveApi#curveGetAddLiquidityEventsHistorical")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling CurveApi#dappsCurveAddLiquidityEventHistoricalGet")
+    println("5xx response calling CurveApi#curveGetAddLiquidityEventsHistorical")
     e.printStackTrace()
 }
 ```
@@ -129,7 +135,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**kotlin.collections.List&lt;CurveAddLiquidityEventDTO&gt;**](CurveAddLiquidityEventDTO.md)
 
 ### Authorization
 
@@ -138,13 +144,15 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
-<a name="dappsCurveAdminFeeChangeLogHistoricalGet"></a>
-# **dappsCurveAdminFeeChangeLogHistoricalGet**
-> dappsCurveAdminFeeChangeLogHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+<a name="curveGetAdminFeeChangeLogsHistorical"></a>
+# **curveGetAdminFeeChangeLogsHistorical**
+> kotlin.collections.List&lt;CurveAdminFeeChangeLogDTO&gt; curveGetAdminFeeChangeLogsHistorical(startBlock, endBlock, startDate, endDate, poolId)
 
+GetAdminFeeChangeLogs (historical)
 
+Gets admin fee change logs.
 
 ### Example
 ```kotlin
@@ -159,12 +167,13 @@ val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.tim
 val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
 val poolId : kotlin.String = poolId_example // kotlin.String | 
 try {
-    apiInstance.dappsCurveAdminFeeChangeLogHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+    val result : kotlin.collections.List<CurveAdminFeeChangeLogDTO> = apiInstance.curveGetAdminFeeChangeLogsHistorical(startBlock, endBlock, startDate, endDate, poolId)
+    println(result)
 } catch (e: ClientException) {
-    println("4xx response calling CurveApi#dappsCurveAdminFeeChangeLogHistoricalGet")
+    println("4xx response calling CurveApi#curveGetAdminFeeChangeLogsHistorical")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling CurveApi#dappsCurveAdminFeeChangeLogHistoricalGet")
+    println("5xx response calling CurveApi#curveGetAdminFeeChangeLogsHistorical")
     e.printStackTrace()
 }
 ```
@@ -181,7 +190,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**kotlin.collections.List&lt;CurveAdminFeeChangeLogDTO&gt;**](CurveAdminFeeChangeLogDTO.md)
 
 ### Authorization
 
@@ -190,13 +199,15 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
-<a name="dappsCurveAmplificationCoeffChangeLogHistoricalGet"></a>
-# **dappsCurveAmplificationCoeffChangeLogHistoricalGet**
-> dappsCurveAmplificationCoeffChangeLogHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+<a name="curveGetAmplificationCoeffChangeLogsHistorical"></a>
+# **curveGetAmplificationCoeffChangeLogsHistorical**
+> kotlin.collections.List&lt;CurveAmplificationCoeffChangeLogDTO&gt; curveGetAmplificationCoeffChangeLogsHistorical(startBlock, endBlock, startDate, endDate, poolId)
 
+GetAmplificationCoeffChangeLogs (historical)
 
+Gets amplification coeff change logs.
 
 ### Example
 ```kotlin
@@ -211,12 +222,13 @@ val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.tim
 val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
 val poolId : kotlin.String = poolId_example // kotlin.String | 
 try {
-    apiInstance.dappsCurveAmplificationCoeffChangeLogHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+    val result : kotlin.collections.List<CurveAmplificationCoeffChangeLogDTO> = apiInstance.curveGetAmplificationCoeffChangeLogsHistorical(startBlock, endBlock, startDate, endDate, poolId)
+    println(result)
 } catch (e: ClientException) {
-    println("4xx response calling CurveApi#dappsCurveAmplificationCoeffChangeLogHistoricalGet")
+    println("4xx response calling CurveApi#curveGetAmplificationCoeffChangeLogsHistorical")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling CurveApi#dappsCurveAmplificationCoeffChangeLogHistoricalGet")
+    println("5xx response calling CurveApi#curveGetAmplificationCoeffChangeLogsHistorical")
     e.printStackTrace()
 }
 ```
@@ -233,7 +245,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**kotlin.collections.List&lt;CurveAmplificationCoeffChangeLogDTO&gt;**](CurveAmplificationCoeffChangeLogDTO.md)
 
 ### Authorization
 
@@ -242,13 +254,15 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
-<a name="dappsCurveCoinsHistoricalGet"></a>
-# **dappsCurveCoinsHistoricalGet**
-> dappsCurveCoinsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+<a name="curveGetCoinsHistorical"></a>
+# **curveGetCoinsHistorical**
+> kotlin.collections.List&lt;CurveCoinDTO&gt; curveGetCoinsHistorical(startBlock, endBlock, startDate, endDate, poolId)
 
+GetCoins (historical)
 
+Gets coins.
 
 ### Example
 ```kotlin
@@ -263,12 +277,13 @@ val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.tim
 val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
 val poolId : kotlin.String = poolId_example // kotlin.String | 
 try {
-    apiInstance.dappsCurveCoinsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+    val result : kotlin.collections.List<CurveCoinDTO> = apiInstance.curveGetCoinsHistorical(startBlock, endBlock, startDate, endDate, poolId)
+    println(result)
 } catch (e: ClientException) {
-    println("4xx response calling CurveApi#dappsCurveCoinsHistoricalGet")
+    println("4xx response calling CurveApi#curveGetCoinsHistorical")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling CurveApi#dappsCurveCoinsHistoricalGet")
+    println("5xx response calling CurveApi#curveGetCoinsHistorical")
     e.printStackTrace()
 }
 ```
@@ -285,7 +300,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**kotlin.collections.List&lt;CurveCoinDTO&gt;**](CurveCoinDTO.md)
 
 ### Authorization
 
@@ -294,13 +309,15 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
-<a name="dappsCurveContractsHistoricalGet"></a>
-# **dappsCurveContractsHistoricalGet**
-> dappsCurveContractsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+<a name="curveGetContractsHistorical"></a>
+# **curveGetContractsHistorical**
+> kotlin.collections.List&lt;CurveContractDTO&gt; curveGetContractsHistorical(startBlock, endBlock, startDate, endDate, poolId)
 
+GetContracts (historical)
 
+Gets contracts.
 
 ### Example
 ```kotlin
@@ -315,12 +332,13 @@ val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.tim
 val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
 val poolId : kotlin.String = poolId_example // kotlin.String | 
 try {
-    apiInstance.dappsCurveContractsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+    val result : kotlin.collections.List<CurveContractDTO> = apiInstance.curveGetContractsHistorical(startBlock, endBlock, startDate, endDate, poolId)
+    println(result)
 } catch (e: ClientException) {
-    println("4xx response calling CurveApi#dappsCurveContractsHistoricalGet")
+    println("4xx response calling CurveApi#curveGetContractsHistorical")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling CurveApi#dappsCurveContractsHistoricalGet")
+    println("5xx response calling CurveApi#curveGetContractsHistorical")
     e.printStackTrace()
 }
 ```
@@ -337,7 +355,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**kotlin.collections.List&lt;CurveContractDTO&gt;**](CurveContractDTO.md)
 
 ### Authorization
 
@@ -346,13 +364,15 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
-<a name="dappsCurveContractsVersionHistoricalGet"></a>
-# **dappsCurveContractsVersionHistoricalGet**
-> dappsCurveContractsVersionHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+<a name="curveGetContractsVersionsHistorical"></a>
+# **curveGetContractsVersionsHistorical**
+> kotlin.collections.List&lt;CurveContractVersionDTO&gt; curveGetContractsVersionsHistorical(startBlock, endBlock, startDate, endDate, poolId)
 
+GetContractsVersions (historical)
 
+Gets contracts versions.
 
 ### Example
 ```kotlin
@@ -367,12 +387,13 @@ val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.tim
 val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
 val poolId : kotlin.String = poolId_example // kotlin.String | 
 try {
-    apiInstance.dappsCurveContractsVersionHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+    val result : kotlin.collections.List<CurveContractVersionDTO> = apiInstance.curveGetContractsVersionsHistorical(startBlock, endBlock, startDate, endDate, poolId)
+    println(result)
 } catch (e: ClientException) {
-    println("4xx response calling CurveApi#dappsCurveContractsVersionHistoricalGet")
+    println("4xx response calling CurveApi#curveGetContractsVersionsHistorical")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling CurveApi#dappsCurveContractsVersionHistoricalGet")
+    println("5xx response calling CurveApi#curveGetContractsVersionsHistorical")
     e.printStackTrace()
 }
 ```
@@ -389,7 +410,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**kotlin.collections.List&lt;CurveContractVersionDTO&gt;**](CurveContractVersionDTO.md)
 
 ### Authorization
 
@@ -398,13 +419,15 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
-<a name="dappsCurveDailyVolumeHistoricalGet"></a>
-# **dappsCurveDailyVolumeHistoricalGet**
-> dappsCurveDailyVolumeHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+<a name="curveGetDailyVolumesHistorical"></a>
+# **curveGetDailyVolumesHistorical**
+> kotlin.collections.List&lt;CurveDailyVolumeDTO&gt; curveGetDailyVolumesHistorical(startBlock, endBlock, startDate, endDate, poolId)
 
+GetDailyVolumes (historical)
 
+Gets daily volumes.
 
 ### Example
 ```kotlin
@@ -419,12 +442,13 @@ val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.tim
 val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
 val poolId : kotlin.String = poolId_example // kotlin.String | 
 try {
-    apiInstance.dappsCurveDailyVolumeHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+    val result : kotlin.collections.List<CurveDailyVolumeDTO> = apiInstance.curveGetDailyVolumesHistorical(startBlock, endBlock, startDate, endDate, poolId)
+    println(result)
 } catch (e: ClientException) {
-    println("4xx response calling CurveApi#dappsCurveDailyVolumeHistoricalGet")
+    println("4xx response calling CurveApi#curveGetDailyVolumesHistorical")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling CurveApi#dappsCurveDailyVolumeHistoricalGet")
+    println("5xx response calling CurveApi#curveGetDailyVolumesHistorical")
     e.printStackTrace()
 }
 ```
@@ -441,7 +465,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**kotlin.collections.List&lt;CurveDailyVolumeDTO&gt;**](CurveDailyVolumeDTO.md)
 
 ### Authorization
 
@@ -450,13 +474,15 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
-<a name="dappsCurveFeeChangeLogHistoricalGet"></a>
-# **dappsCurveFeeChangeLogHistoricalGet**
-> dappsCurveFeeChangeLogHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+<a name="curveGetExchangesHistorical"></a>
+# **curveGetExchangesHistorical**
+> kotlin.collections.List&lt;CurveExchangeDTO&gt; curveGetExchangesHistorical(startBlock, endBlock, startDate, endDate, poolId)
 
+GetExchanges (historical) 🔥
 
+Gets exchanges.
 
 ### Example
 ```kotlin
@@ -471,12 +497,13 @@ val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.tim
 val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
 val poolId : kotlin.String = poolId_example // kotlin.String | 
 try {
-    apiInstance.dappsCurveFeeChangeLogHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+    val result : kotlin.collections.List<CurveExchangeDTO> = apiInstance.curveGetExchangesHistorical(startBlock, endBlock, startDate, endDate, poolId)
+    println(result)
 } catch (e: ClientException) {
-    println("4xx response calling CurveApi#dappsCurveFeeChangeLogHistoricalGet")
+    println("4xx response calling CurveApi#curveGetExchangesHistorical")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling CurveApi#dappsCurveFeeChangeLogHistoricalGet")
+    println("5xx response calling CurveApi#curveGetExchangesHistorical")
     e.printStackTrace()
 }
 ```
@@ -493,7 +520,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**kotlin.collections.List&lt;CurveExchangeDTO&gt;**](CurveExchangeDTO.md)
 
 ### Authorization
 
@@ -502,63 +529,15 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
-<a name="dappsCurveGaugeDepositHistoricalGet"></a>
-# **dappsCurveGaugeDepositHistoricalGet**
-> dappsCurveGaugeDepositHistoricalGet(startBlock, endBlock, startDate, endDate)
+<a name="curveGetFeeChangeLogsHistorical"></a>
+# **curveGetFeeChangeLogsHistorical**
+> kotlin.collections.List&lt;CurveFeeChangeLogDTO&gt; curveGetFeeChangeLogsHistorical(startBlock, endBlock, startDate, endDate, poolId)
 
+GetFeeChangeLogs (historical)
 
-
-### Example
-```kotlin
-// Import classes:
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
-
-val apiInstance = CurveApi()
-val startBlock : kotlin.Long = 789 // kotlin.Long | 
-val endBlock : kotlin.Long = 789 // kotlin.Long | 
-val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
-val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
-try {
-    apiInstance.dappsCurveGaugeDepositHistoricalGet(startBlock, endBlock, startDate, endDate)
-} catch (e: ClientException) {
-    println("4xx response calling CurveApi#dappsCurveGaugeDepositHistoricalGet")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling CurveApi#dappsCurveGaugeDepositHistoricalGet")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **kotlin.Long**|  | [optional]
- **endBlock** | **kotlin.Long**|  | [optional]
- **startDate** | **java.time.OffsetDateTime**|  | [optional]
- **endDate** | **java.time.OffsetDateTime**|  | [optional]
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-<a name="dappsCurveGaugeHistoricalGet"></a>
-# **dappsCurveGaugeHistoricalGet**
-> dappsCurveGaugeHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
-
-
+Gets fee change logs.
 
 ### Example
 ```kotlin
@@ -573,12 +552,13 @@ val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.tim
 val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
 val poolId : kotlin.String = poolId_example // kotlin.String | 
 try {
-    apiInstance.dappsCurveGaugeHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+    val result : kotlin.collections.List<CurveFeeChangeLogDTO> = apiInstance.curveGetFeeChangeLogsHistorical(startBlock, endBlock, startDate, endDate, poolId)
+    println(result)
 } catch (e: ClientException) {
-    println("4xx response calling CurveApi#dappsCurveGaugeHistoricalGet")
+    println("4xx response calling CurveApi#curveGetFeeChangeLogsHistorical")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling CurveApi#dappsCurveGaugeHistoricalGet")
+    println("5xx response calling CurveApi#curveGetFeeChangeLogsHistorical")
     e.printStackTrace()
 }
 ```
@@ -595,7 +575,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**kotlin.collections.List&lt;CurveFeeChangeLogDTO&gt;**](CurveFeeChangeLogDTO.md)
 
 ### Authorization
 
@@ -604,13 +584,15 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
-<a name="dappsCurveGaugeLiquidityHistoricalGet"></a>
-# **dappsCurveGaugeLiquidityHistoricalGet**
-> dappsCurveGaugeLiquidityHistoricalGet(startBlock, endBlock, startDate, endDate)
+<a name="curveGetGaugesDepositsHistorical"></a>
+# **curveGetGaugesDepositsHistorical**
+> kotlin.collections.List&lt;CurveGaugeDepositDTO&gt; curveGetGaugesDepositsHistorical(startBlock, endBlock, startDate, endDate)
 
+GetGaugesDeposits (historical)
 
+Gets gauges deposits.
 
 ### Example
 ```kotlin
@@ -624,12 +606,13 @@ val endBlock : kotlin.Long = 789 // kotlin.Long |
 val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
 val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
 try {
-    apiInstance.dappsCurveGaugeLiquidityHistoricalGet(startBlock, endBlock, startDate, endDate)
+    val result : kotlin.collections.List<CurveGaugeDepositDTO> = apiInstance.curveGetGaugesDepositsHistorical(startBlock, endBlock, startDate, endDate)
+    println(result)
 } catch (e: ClientException) {
-    println("4xx response calling CurveApi#dappsCurveGaugeLiquidityHistoricalGet")
+    println("4xx response calling CurveApi#curveGetGaugesDepositsHistorical")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling CurveApi#dappsCurveGaugeLiquidityHistoricalGet")
+    println("5xx response calling CurveApi#curveGetGaugesDepositsHistorical")
     e.printStackTrace()
 }
 ```
@@ -645,7 +628,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**kotlin.collections.List&lt;CurveGaugeDepositDTO&gt;**](CurveGaugeDepositDTO.md)
 
 ### Authorization
 
@@ -654,313 +637,15 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
-<a name="dappsCurveGaugeTotalWeightHistoricalGet"></a>
-# **dappsCurveGaugeTotalWeightHistoricalGet**
-> dappsCurveGaugeTotalWeightHistoricalGet(startBlock, endBlock, startDate, endDate)
+<a name="curveGetGaugesHistorical"></a>
+# **curveGetGaugesHistorical**
+> kotlin.collections.List&lt;CurveGaugeDTO&gt; curveGetGaugesHistorical(startBlock, endBlock, startDate, endDate, poolId)
 
+GetGauges (historical)
 
-
-### Example
-```kotlin
-// Import classes:
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
-
-val apiInstance = CurveApi()
-val startBlock : kotlin.Long = 789 // kotlin.Long | 
-val endBlock : kotlin.Long = 789 // kotlin.Long | 
-val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
-val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
-try {
-    apiInstance.dappsCurveGaugeTotalWeightHistoricalGet(startBlock, endBlock, startDate, endDate)
-} catch (e: ClientException) {
-    println("4xx response calling CurveApi#dappsCurveGaugeTotalWeightHistoricalGet")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling CurveApi#dappsCurveGaugeTotalWeightHistoricalGet")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **kotlin.Long**|  | [optional]
- **endBlock** | **kotlin.Long**|  | [optional]
- **startDate** | **java.time.OffsetDateTime**|  | [optional]
- **endDate** | **java.time.OffsetDateTime**|  | [optional]
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-<a name="dappsCurveGaugeTypeHistoricalGet"></a>
-# **dappsCurveGaugeTypeHistoricalGet**
-> dappsCurveGaugeTypeHistoricalGet(startBlock, endBlock, startDate, endDate)
-
-
-
-### Example
-```kotlin
-// Import classes:
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
-
-val apiInstance = CurveApi()
-val startBlock : kotlin.Long = 789 // kotlin.Long | 
-val endBlock : kotlin.Long = 789 // kotlin.Long | 
-val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
-val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
-try {
-    apiInstance.dappsCurveGaugeTypeHistoricalGet(startBlock, endBlock, startDate, endDate)
-} catch (e: ClientException) {
-    println("4xx response calling CurveApi#dappsCurveGaugeTypeHistoricalGet")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling CurveApi#dappsCurveGaugeTypeHistoricalGet")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **kotlin.Long**|  | [optional]
- **endBlock** | **kotlin.Long**|  | [optional]
- **startDate** | **java.time.OffsetDateTime**|  | [optional]
- **endDate** | **java.time.OffsetDateTime**|  | [optional]
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-<a name="dappsCurveGaugeTypeWeightHistoricalGet"></a>
-# **dappsCurveGaugeTypeWeightHistoricalGet**
-> dappsCurveGaugeTypeWeightHistoricalGet(startBlock, endBlock, startDate, endDate)
-
-
-
-### Example
-```kotlin
-// Import classes:
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
-
-val apiInstance = CurveApi()
-val startBlock : kotlin.Long = 789 // kotlin.Long | 
-val endBlock : kotlin.Long = 789 // kotlin.Long | 
-val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
-val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
-try {
-    apiInstance.dappsCurveGaugeTypeWeightHistoricalGet(startBlock, endBlock, startDate, endDate)
-} catch (e: ClientException) {
-    println("4xx response calling CurveApi#dappsCurveGaugeTypeWeightHistoricalGet")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling CurveApi#dappsCurveGaugeTypeWeightHistoricalGet")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **kotlin.Long**|  | [optional]
- **endBlock** | **kotlin.Long**|  | [optional]
- **startDate** | **java.time.OffsetDateTime**|  | [optional]
- **endDate** | **java.time.OffsetDateTime**|  | [optional]
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-<a name="dappsCurveGaugeWeightHistoricalGet"></a>
-# **dappsCurveGaugeWeightHistoricalGet**
-> dappsCurveGaugeWeightHistoricalGet(startBlock, endBlock, startDate, endDate)
-
-
-
-### Example
-```kotlin
-// Import classes:
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
-
-val apiInstance = CurveApi()
-val startBlock : kotlin.Long = 789 // kotlin.Long | 
-val endBlock : kotlin.Long = 789 // kotlin.Long | 
-val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
-val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
-try {
-    apiInstance.dappsCurveGaugeWeightHistoricalGet(startBlock, endBlock, startDate, endDate)
-} catch (e: ClientException) {
-    println("4xx response calling CurveApi#dappsCurveGaugeWeightHistoricalGet")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling CurveApi#dappsCurveGaugeWeightHistoricalGet")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **kotlin.Long**|  | [optional]
- **endBlock** | **kotlin.Long**|  | [optional]
- **startDate** | **java.time.OffsetDateTime**|  | [optional]
- **endDate** | **java.time.OffsetDateTime**|  | [optional]
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-<a name="dappsCurveGaugeWeightVoteHistoricalGet"></a>
-# **dappsCurveGaugeWeightVoteHistoricalGet**
-> dappsCurveGaugeWeightVoteHistoricalGet(startBlock, endBlock, startDate, endDate)
-
-
-
-### Example
-```kotlin
-// Import classes:
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
-
-val apiInstance = CurveApi()
-val startBlock : kotlin.Long = 789 // kotlin.Long | 
-val endBlock : kotlin.Long = 789 // kotlin.Long | 
-val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
-val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
-try {
-    apiInstance.dappsCurveGaugeWeightVoteHistoricalGet(startBlock, endBlock, startDate, endDate)
-} catch (e: ClientException) {
-    println("4xx response calling CurveApi#dappsCurveGaugeWeightVoteHistoricalGet")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling CurveApi#dappsCurveGaugeWeightVoteHistoricalGet")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **kotlin.Long**|  | [optional]
- **endBlock** | **kotlin.Long**|  | [optional]
- **startDate** | **java.time.OffsetDateTime**|  | [optional]
- **endDate** | **java.time.OffsetDateTime**|  | [optional]
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-<a name="dappsCurveGaugeWithdrawHistoricalGet"></a>
-# **dappsCurveGaugeWithdrawHistoricalGet**
-> dappsCurveGaugeWithdrawHistoricalGet(startBlock, endBlock, startDate, endDate)
-
-
-
-### Example
-```kotlin
-// Import classes:
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
-
-val apiInstance = CurveApi()
-val startBlock : kotlin.Long = 789 // kotlin.Long | 
-val endBlock : kotlin.Long = 789 // kotlin.Long | 
-val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
-val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
-try {
-    apiInstance.dappsCurveGaugeWithdrawHistoricalGet(startBlock, endBlock, startDate, endDate)
-} catch (e: ClientException) {
-    println("4xx response calling CurveApi#dappsCurveGaugeWithdrawHistoricalGet")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling CurveApi#dappsCurveGaugeWithdrawHistoricalGet")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **kotlin.Long**|  | [optional]
- **endBlock** | **kotlin.Long**|  | [optional]
- **startDate** | **java.time.OffsetDateTime**|  | [optional]
- **endDate** | **java.time.OffsetDateTime**|  | [optional]
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-<a name="dappsCurveHourlyVolumeHistoricalGet"></a>
-# **dappsCurveHourlyVolumeHistoricalGet**
-> dappsCurveHourlyVolumeHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
-
-
+Gets gauges.
 
 ### Example
 ```kotlin
@@ -975,12 +660,13 @@ val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.tim
 val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
 val poolId : kotlin.String = poolId_example // kotlin.String | 
 try {
-    apiInstance.dappsCurveHourlyVolumeHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+    val result : kotlin.collections.List<CurveGaugeDTO> = apiInstance.curveGetGaugesHistorical(startBlock, endBlock, startDate, endDate, poolId)
+    println(result)
 } catch (e: ClientException) {
-    println("4xx response calling CurveApi#dappsCurveHourlyVolumeHistoricalGet")
+    println("4xx response calling CurveApi#curveGetGaugesHistorical")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling CurveApi#dappsCurveHourlyVolumeHistoricalGet")
+    println("5xx response calling CurveApi#curveGetGaugesHistorical")
     e.printStackTrace()
 }
 ```
@@ -997,7 +683,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**kotlin.collections.List&lt;CurveGaugeDTO&gt;**](CurveGaugeDTO.md)
 
 ### Authorization
 
@@ -1006,13 +692,386 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
-<a name="dappsCurveLpTokenHistoricalGet"></a>
-# **dappsCurveLpTokenHistoricalGet**
-> dappsCurveLpTokenHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+<a name="curveGetGaugesLiquidityHistorical"></a>
+# **curveGetGaugesLiquidityHistorical**
+> kotlin.collections.List&lt;CurveGaugeLiquidityDTO&gt; curveGetGaugesLiquidityHistorical(startBlock, endBlock, startDate, endDate)
 
+GetGaugesLiquidity (historical)
 
+Gets gauges liquidity.
+
+### Example
+```kotlin
+// Import classes:
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
+
+val apiInstance = CurveApi()
+val startBlock : kotlin.Long = 789 // kotlin.Long | 
+val endBlock : kotlin.Long = 789 // kotlin.Long | 
+val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+try {
+    val result : kotlin.collections.List<CurveGaugeLiquidityDTO> = apiInstance.curveGetGaugesLiquidityHistorical(startBlock, endBlock, startDate, endDate)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling CurveApi#curveGetGaugesLiquidityHistorical")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling CurveApi#curveGetGaugesLiquidityHistorical")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **kotlin.Long**|  | [optional]
+ **endBlock** | **kotlin.Long**|  | [optional]
+ **startDate** | **java.time.OffsetDateTime**|  | [optional]
+ **endDate** | **java.time.OffsetDateTime**|  | [optional]
+
+### Return type
+
+[**kotlin.collections.List&lt;CurveGaugeLiquidityDTO&gt;**](CurveGaugeLiquidityDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="curveGetGaugesTotalWeightsHistorical"></a>
+# **curveGetGaugesTotalWeightsHistorical**
+> kotlin.collections.List&lt;CurveGaugeTotalWeightDTO&gt; curveGetGaugesTotalWeightsHistorical(startBlock, endBlock, startDate, endDate)
+
+GetGaugesTotalWeights (historical)
+
+Gets gauges total weights.
+
+### Example
+```kotlin
+// Import classes:
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
+
+val apiInstance = CurveApi()
+val startBlock : kotlin.Long = 789 // kotlin.Long | 
+val endBlock : kotlin.Long = 789 // kotlin.Long | 
+val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+try {
+    val result : kotlin.collections.List<CurveGaugeTotalWeightDTO> = apiInstance.curveGetGaugesTotalWeightsHistorical(startBlock, endBlock, startDate, endDate)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling CurveApi#curveGetGaugesTotalWeightsHistorical")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling CurveApi#curveGetGaugesTotalWeightsHistorical")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **kotlin.Long**|  | [optional]
+ **endBlock** | **kotlin.Long**|  | [optional]
+ **startDate** | **java.time.OffsetDateTime**|  | [optional]
+ **endDate** | **java.time.OffsetDateTime**|  | [optional]
+
+### Return type
+
+[**kotlin.collections.List&lt;CurveGaugeTotalWeightDTO&gt;**](CurveGaugeTotalWeightDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="curveGetGaugesTypesHistorical"></a>
+# **curveGetGaugesTypesHistorical**
+> kotlin.collections.List&lt;CurveGaugeTypeDTO&gt; curveGetGaugesTypesHistorical(startBlock, endBlock, startDate, endDate)
+
+GetGaugesTypes (historical)
+
+Gets gauges types.
+
+### Example
+```kotlin
+// Import classes:
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
+
+val apiInstance = CurveApi()
+val startBlock : kotlin.Long = 789 // kotlin.Long | 
+val endBlock : kotlin.Long = 789 // kotlin.Long | 
+val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+try {
+    val result : kotlin.collections.List<CurveGaugeTypeDTO> = apiInstance.curveGetGaugesTypesHistorical(startBlock, endBlock, startDate, endDate)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling CurveApi#curveGetGaugesTypesHistorical")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling CurveApi#curveGetGaugesTypesHistorical")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **kotlin.Long**|  | [optional]
+ **endBlock** | **kotlin.Long**|  | [optional]
+ **startDate** | **java.time.OffsetDateTime**|  | [optional]
+ **endDate** | **java.time.OffsetDateTime**|  | [optional]
+
+### Return type
+
+[**kotlin.collections.List&lt;CurveGaugeTypeDTO&gt;**](CurveGaugeTypeDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="curveGetGaugesTypesWeightsHistorical"></a>
+# **curveGetGaugesTypesWeightsHistorical**
+> kotlin.collections.List&lt;CurveGaugeTypeWeightDTO&gt; curveGetGaugesTypesWeightsHistorical(startBlock, endBlock, startDate, endDate)
+
+GetGaugesTypesWeights (historical)
+
+Gets gauges types weights.
+
+### Example
+```kotlin
+// Import classes:
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
+
+val apiInstance = CurveApi()
+val startBlock : kotlin.Long = 789 // kotlin.Long | 
+val endBlock : kotlin.Long = 789 // kotlin.Long | 
+val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+try {
+    val result : kotlin.collections.List<CurveGaugeTypeWeightDTO> = apiInstance.curveGetGaugesTypesWeightsHistorical(startBlock, endBlock, startDate, endDate)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling CurveApi#curveGetGaugesTypesWeightsHistorical")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling CurveApi#curveGetGaugesTypesWeightsHistorical")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **kotlin.Long**|  | [optional]
+ **endBlock** | **kotlin.Long**|  | [optional]
+ **startDate** | **java.time.OffsetDateTime**|  | [optional]
+ **endDate** | **java.time.OffsetDateTime**|  | [optional]
+
+### Return type
+
+[**kotlin.collections.List&lt;CurveGaugeTypeWeightDTO&gt;**](CurveGaugeTypeWeightDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="curveGetGaugesWeightsHistorical"></a>
+# **curveGetGaugesWeightsHistorical**
+> kotlin.collections.List&lt;CurveGaugeWeightDTO&gt; curveGetGaugesWeightsHistorical(startBlock, endBlock, startDate, endDate)
+
+GetGaugesWeights (historical)
+
+Gets gauges weights.
+
+### Example
+```kotlin
+// Import classes:
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
+
+val apiInstance = CurveApi()
+val startBlock : kotlin.Long = 789 // kotlin.Long | 
+val endBlock : kotlin.Long = 789 // kotlin.Long | 
+val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+try {
+    val result : kotlin.collections.List<CurveGaugeWeightDTO> = apiInstance.curveGetGaugesWeightsHistorical(startBlock, endBlock, startDate, endDate)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling CurveApi#curveGetGaugesWeightsHistorical")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling CurveApi#curveGetGaugesWeightsHistorical")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **kotlin.Long**|  | [optional]
+ **endBlock** | **kotlin.Long**|  | [optional]
+ **startDate** | **java.time.OffsetDateTime**|  | [optional]
+ **endDate** | **java.time.OffsetDateTime**|  | [optional]
+
+### Return type
+
+[**kotlin.collections.List&lt;CurveGaugeWeightDTO&gt;**](CurveGaugeWeightDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="curveGetGaugesWeightsVotesHistorical"></a>
+# **curveGetGaugesWeightsVotesHistorical**
+> kotlin.collections.List&lt;CurveGaugeWeightVoteDTO&gt; curveGetGaugesWeightsVotesHistorical(startBlock, endBlock, startDate, endDate)
+
+GetGaugesWeightsVotes (historical)
+
+Gets gauges weights votes.
+
+### Example
+```kotlin
+// Import classes:
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
+
+val apiInstance = CurveApi()
+val startBlock : kotlin.Long = 789 // kotlin.Long | 
+val endBlock : kotlin.Long = 789 // kotlin.Long | 
+val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+try {
+    val result : kotlin.collections.List<CurveGaugeWeightVoteDTO> = apiInstance.curveGetGaugesWeightsVotesHistorical(startBlock, endBlock, startDate, endDate)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling CurveApi#curveGetGaugesWeightsVotesHistorical")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling CurveApi#curveGetGaugesWeightsVotesHistorical")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **kotlin.Long**|  | [optional]
+ **endBlock** | **kotlin.Long**|  | [optional]
+ **startDate** | **java.time.OffsetDateTime**|  | [optional]
+ **endDate** | **java.time.OffsetDateTime**|  | [optional]
+
+### Return type
+
+[**kotlin.collections.List&lt;CurveGaugeWeightVoteDTO&gt;**](CurveGaugeWeightVoteDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="curveGetGaugesWithdrawHistorical"></a>
+# **curveGetGaugesWithdrawHistorical**
+> kotlin.collections.List&lt;CurveGaugeWithdrawDTO&gt; curveGetGaugesWithdrawHistorical(startBlock, endBlock, startDate, endDate)
+
+GetGaugesWithdraw (historical)
+
+Gets gauges withdraws.
+
+### Example
+```kotlin
+// Import classes:
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
+
+val apiInstance = CurveApi()
+val startBlock : kotlin.Long = 789 // kotlin.Long | 
+val endBlock : kotlin.Long = 789 // kotlin.Long | 
+val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+try {
+    val result : kotlin.collections.List<CurveGaugeWithdrawDTO> = apiInstance.curveGetGaugesWithdrawHistorical(startBlock, endBlock, startDate, endDate)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling CurveApi#curveGetGaugesWithdrawHistorical")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling CurveApi#curveGetGaugesWithdrawHistorical")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **kotlin.Long**|  | [optional]
+ **endBlock** | **kotlin.Long**|  | [optional]
+ **startDate** | **java.time.OffsetDateTime**|  | [optional]
+ **endDate** | **java.time.OffsetDateTime**|  | [optional]
+
+### Return type
+
+[**kotlin.collections.List&lt;CurveGaugeWithdrawDTO&gt;**](CurveGaugeWithdrawDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="curveGetHourlyVolumesHistorical"></a>
+# **curveGetHourlyVolumesHistorical**
+> kotlin.collections.List&lt;CurveHourlyVolumeDTO&gt; curveGetHourlyVolumesHistorical(startBlock, endBlock, startDate, endDate, poolId)
+
+GetHourlyVolumes (historical)
+
+Gets hourly volumes.
 
 ### Example
 ```kotlin
@@ -1027,12 +1086,13 @@ val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.tim
 val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
 val poolId : kotlin.String = poolId_example // kotlin.String | 
 try {
-    apiInstance.dappsCurveLpTokenHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+    val result : kotlin.collections.List<CurveHourlyVolumeDTO> = apiInstance.curveGetHourlyVolumesHistorical(startBlock, endBlock, startDate, endDate, poolId)
+    println(result)
 } catch (e: ClientException) {
-    println("4xx response calling CurveApi#dappsCurveLpTokenHistoricalGet")
+    println("4xx response calling CurveApi#curveGetHourlyVolumesHistorical")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling CurveApi#dappsCurveLpTokenHistoricalGet")
+    println("5xx response calling CurveApi#curveGetHourlyVolumesHistorical")
     e.printStackTrace()
 }
 ```
@@ -1049,7 +1109,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**kotlin.collections.List&lt;CurveHourlyVolumeDTO&gt;**](CurveHourlyVolumeDTO.md)
 
 ### Authorization
 
@@ -1058,13 +1118,15 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
-<a name="dappsCurvePoolsHistoricalGet"></a>
-# **dappsCurvePoolsHistoricalGet**
-> dappsCurvePoolsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+<a name="curveGetLpTokensHistorical"></a>
+# **curveGetLpTokensHistorical**
+> kotlin.collections.List&lt;CurveLpTokenDTO&gt; curveGetLpTokensHistorical(startBlock, endBlock, startDate, endDate, poolId)
 
+GetLpTokens (historical)
 
+Gets lp tokens.
 
 ### Example
 ```kotlin
@@ -1079,12 +1141,13 @@ val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.tim
 val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
 val poolId : kotlin.String = poolId_example // kotlin.String | 
 try {
-    apiInstance.dappsCurvePoolsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+    val result : kotlin.collections.List<CurveLpTokenDTO> = apiInstance.curveGetLpTokensHistorical(startBlock, endBlock, startDate, endDate, poolId)
+    println(result)
 } catch (e: ClientException) {
-    println("4xx response calling CurveApi#dappsCurvePoolsHistoricalGet")
+    println("4xx response calling CurveApi#curveGetLpTokensHistorical")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling CurveApi#dappsCurvePoolsHistoricalGet")
+    println("5xx response calling CurveApi#curveGetLpTokensHistorical")
     e.printStackTrace()
 }
 ```
@@ -1101,7 +1164,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**kotlin.collections.List&lt;CurveLpTokenDTO&gt;**](CurveLpTokenDTO.md)
 
 ### Authorization
 
@@ -1110,113 +1173,15 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
-<a name="dappsCurveProposalsHistoricalGet"></a>
-# **dappsCurveProposalsHistoricalGet**
-> dappsCurveProposalsHistoricalGet(startBlock, endBlock, startDate, endDate)
+<a name="curveGetPoolsHistorical"></a>
+# **curveGetPoolsHistorical**
+> kotlin.collections.List&lt;CurvePoolDTO&gt; curveGetPoolsHistorical(startBlock, endBlock, startDate, endDate, poolId)
 
+GetPools (historical) 🔥
 
-
-### Example
-```kotlin
-// Import classes:
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
-
-val apiInstance = CurveApi()
-val startBlock : kotlin.Long = 789 // kotlin.Long | 
-val endBlock : kotlin.Long = 789 // kotlin.Long | 
-val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
-val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
-try {
-    apiInstance.dappsCurveProposalsHistoricalGet(startBlock, endBlock, startDate, endDate)
-} catch (e: ClientException) {
-    println("4xx response calling CurveApi#dappsCurveProposalsHistoricalGet")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling CurveApi#dappsCurveProposalsHistoricalGet")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **kotlin.Long**|  | [optional]
- **endBlock** | **kotlin.Long**|  | [optional]
- **startDate** | **java.time.OffsetDateTime**|  | [optional]
- **endDate** | **java.time.OffsetDateTime**|  | [optional]
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-<a name="dappsCurveProposalsVoteHistoricalGet"></a>
-# **dappsCurveProposalsVoteHistoricalGet**
-> dappsCurveProposalsVoteHistoricalGet(startBlock, endBlock, startDate, endDate)
-
-
-
-### Example
-```kotlin
-// Import classes:
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
-
-val apiInstance = CurveApi()
-val startBlock : kotlin.Long = 789 // kotlin.Long | 
-val endBlock : kotlin.Long = 789 // kotlin.Long | 
-val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
-val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
-try {
-    apiInstance.dappsCurveProposalsVoteHistoricalGet(startBlock, endBlock, startDate, endDate)
-} catch (e: ClientException) {
-    println("4xx response calling CurveApi#dappsCurveProposalsVoteHistoricalGet")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling CurveApi#dappsCurveProposalsVoteHistoricalGet")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **kotlin.Long**|  | [optional]
- **endBlock** | **kotlin.Long**|  | [optional]
- **startDate** | **java.time.OffsetDateTime**|  | [optional]
- **endDate** | **java.time.OffsetDateTime**|  | [optional]
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-<a name="dappsCurveRemoveLiquidityEventHistoricalGet"></a>
-# **dappsCurveRemoveLiquidityEventHistoricalGet**
-> dappsCurveRemoveLiquidityEventHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
-
-
+Gets pools.
 
 ### Example
 ```kotlin
@@ -1231,12 +1196,13 @@ val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.tim
 val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
 val poolId : kotlin.String = poolId_example // kotlin.String | 
 try {
-    apiInstance.dappsCurveRemoveLiquidityEventHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+    val result : kotlin.collections.List<CurvePoolDTO> = apiInstance.curveGetPoolsHistorical(startBlock, endBlock, startDate, endDate, poolId)
+    println(result)
 } catch (e: ClientException) {
-    println("4xx response calling CurveApi#dappsCurveRemoveLiquidityEventHistoricalGet")
+    println("4xx response calling CurveApi#curveGetPoolsHistorical")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling CurveApi#dappsCurveRemoveLiquidityEventHistoricalGet")
+    println("5xx response calling CurveApi#curveGetPoolsHistorical")
     e.printStackTrace()
 }
 ```
@@ -1253,7 +1219,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**kotlin.collections.List&lt;CurvePoolDTO&gt;**](CurvePoolDTO.md)
 
 ### Authorization
 
@@ -1262,13 +1228,121 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
-<a name="dappsCurveRemoveLiquidityOneEventHistoricalGet"></a>
-# **dappsCurveRemoveLiquidityOneEventHistoricalGet**
-> dappsCurveRemoveLiquidityOneEventHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+<a name="curveGetProposalsHistorical"></a>
+# **curveGetProposalsHistorical**
+> kotlin.collections.List&lt;CurveProposalDTO&gt; curveGetProposalsHistorical(startBlock, endBlock, startDate, endDate)
 
+GetProposals (historical)
 
+Gets proposals.
+
+### Example
+```kotlin
+// Import classes:
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
+
+val apiInstance = CurveApi()
+val startBlock : kotlin.Long = 789 // kotlin.Long | 
+val endBlock : kotlin.Long = 789 // kotlin.Long | 
+val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+try {
+    val result : kotlin.collections.List<CurveProposalDTO> = apiInstance.curveGetProposalsHistorical(startBlock, endBlock, startDate, endDate)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling CurveApi#curveGetProposalsHistorical")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling CurveApi#curveGetProposalsHistorical")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **kotlin.Long**|  | [optional]
+ **endBlock** | **kotlin.Long**|  | [optional]
+ **startDate** | **java.time.OffsetDateTime**|  | [optional]
+ **endDate** | **java.time.OffsetDateTime**|  | [optional]
+
+### Return type
+
+[**kotlin.collections.List&lt;CurveProposalDTO&gt;**](CurveProposalDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="curveGetProposalsVotesHistorical"></a>
+# **curveGetProposalsVotesHistorical**
+> kotlin.collections.List&lt;CurveProposalVoteDTO&gt; curveGetProposalsVotesHistorical(startBlock, endBlock, startDate, endDate)
+
+GetProposalsVotes (historical)
+
+Gets proposals votes.
+
+### Example
+```kotlin
+// Import classes:
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
+
+val apiInstance = CurveApi()
+val startBlock : kotlin.Long = 789 // kotlin.Long | 
+val endBlock : kotlin.Long = 789 // kotlin.Long | 
+val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+try {
+    val result : kotlin.collections.List<CurveProposalVoteDTO> = apiInstance.curveGetProposalsVotesHistorical(startBlock, endBlock, startDate, endDate)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling CurveApi#curveGetProposalsVotesHistorical")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling CurveApi#curveGetProposalsVotesHistorical")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **kotlin.Long**|  | [optional]
+ **endBlock** | **kotlin.Long**|  | [optional]
+ **startDate** | **java.time.OffsetDateTime**|  | [optional]
+ **endDate** | **java.time.OffsetDateTime**|  | [optional]
+
+### Return type
+
+[**kotlin.collections.List&lt;CurveProposalVoteDTO&gt;**](CurveProposalVoteDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="curveGetRemoveLiquidityEventsHistorical"></a>
+# **curveGetRemoveLiquidityEventsHistorical**
+> kotlin.collections.List&lt;CurveRemoveLiquidityEventDTO&gt; curveGetRemoveLiquidityEventsHistorical(startBlock, endBlock, startDate, endDate, poolId)
+
+GetRemoveLiquidityEvents (historical)
+
+Gets remove liquidity events.
 
 ### Example
 ```kotlin
@@ -1283,12 +1357,13 @@ val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.tim
 val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
 val poolId : kotlin.String = poolId_example // kotlin.String | 
 try {
-    apiInstance.dappsCurveRemoveLiquidityOneEventHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+    val result : kotlin.collections.List<CurveRemoveLiquidityEventDTO> = apiInstance.curveGetRemoveLiquidityEventsHistorical(startBlock, endBlock, startDate, endDate, poolId)
+    println(result)
 } catch (e: ClientException) {
-    println("4xx response calling CurveApi#dappsCurveRemoveLiquidityOneEventHistoricalGet")
+    println("4xx response calling CurveApi#curveGetRemoveLiquidityEventsHistorical")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling CurveApi#dappsCurveRemoveLiquidityOneEventHistoricalGet")
+    println("5xx response calling CurveApi#curveGetRemoveLiquidityEventsHistorical")
     e.printStackTrace()
 }
 ```
@@ -1305,7 +1380,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**kotlin.collections.List&lt;CurveRemoveLiquidityEventDTO&gt;**](CurveRemoveLiquidityEventDTO.md)
 
 ### Authorization
 
@@ -1314,13 +1389,15 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
-<a name="dappsCurveSwapsHistoricalGet"></a>
-# **dappsCurveSwapsHistoricalGet**
-> dappsCurveSwapsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+<a name="curveGetRemoveLiquidityOneEventsHistorical"></a>
+# **curveGetRemoveLiquidityOneEventsHistorical**
+> kotlin.collections.List&lt;CurveRemoveLiquidityOneEventDTO&gt; curveGetRemoveLiquidityOneEventsHistorical(startBlock, endBlock, startDate, endDate, poolId)
 
+GetRemoveLiquidityOneEvents (historical)
 
+Gets remove liquidity one events.
 
 ### Example
 ```kotlin
@@ -1335,12 +1412,13 @@ val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.tim
 val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
 val poolId : kotlin.String = poolId_example // kotlin.String | 
 try {
-    apiInstance.dappsCurveSwapsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+    val result : kotlin.collections.List<CurveRemoveLiquidityOneEventDTO> = apiInstance.curveGetRemoveLiquidityOneEventsHistorical(startBlock, endBlock, startDate, endDate, poolId)
+    println(result)
 } catch (e: ClientException) {
-    println("4xx response calling CurveApi#dappsCurveSwapsHistoricalGet")
+    println("4xx response calling CurveApi#curveGetRemoveLiquidityOneEventsHistorical")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling CurveApi#dappsCurveSwapsHistoricalGet")
+    println("5xx response calling CurveApi#curveGetRemoveLiquidityOneEventsHistorical")
     e.printStackTrace()
 }
 ```
@@ -1357,7 +1435,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**kotlin.collections.List&lt;CurveRemoveLiquidityOneEventDTO&gt;**](CurveRemoveLiquidityOneEventDTO.md)
 
 ### Authorization
 
@@ -1366,13 +1444,15 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
-<a name="dappsCurveSystemStateHistoricalGet"></a>
-# **dappsCurveSystemStateHistoricalGet**
-> dappsCurveSystemStateHistoricalGet(startBlock, endBlock, startDate, endDate)
+<a name="curveGetSystemStatesHistorical"></a>
+# **curveGetSystemStatesHistorical**
+> kotlin.collections.List&lt;CurveSystemStateDTO&gt; curveGetSystemStatesHistorical(startBlock, endBlock, startDate, endDate)
 
+GetSystemStates (historical)
 
+Gets system states.
 
 ### Example
 ```kotlin
@@ -1386,12 +1466,13 @@ val endBlock : kotlin.Long = 789 // kotlin.Long |
 val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
 val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
 try {
-    apiInstance.dappsCurveSystemStateHistoricalGet(startBlock, endBlock, startDate, endDate)
+    val result : kotlin.collections.List<CurveSystemStateDTO> = apiInstance.curveGetSystemStatesHistorical(startBlock, endBlock, startDate, endDate)
+    println(result)
 } catch (e: ClientException) {
-    println("4xx response calling CurveApi#dappsCurveSystemStateHistoricalGet")
+    println("4xx response calling CurveApi#curveGetSystemStatesHistorical")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling CurveApi#dappsCurveSystemStateHistoricalGet")
+    println("5xx response calling CurveApi#curveGetSystemStatesHistorical")
     e.printStackTrace()
 }
 ```
@@ -1407,7 +1488,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**kotlin.collections.List&lt;CurveSystemStateDTO&gt;**](CurveSystemStateDTO.md)
 
 ### Authorization
 
@@ -1416,13 +1497,15 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
-<a name="dappsCurveTokensHistoricalGet"></a>
-# **dappsCurveTokensHistoricalGet**
-> dappsCurveTokensHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId)
+<a name="curveGetTokensHistorical"></a>
+# **curveGetTokensHistorical**
+> kotlin.collections.List&lt;CurveTokenDTO&gt; curveGetTokensHistorical(startBlock, endBlock, startDate, endDate, tokenId)
 
+GetTokens (historical) 🔥
 
+Gets tokens.
 
 ### Example
 ```kotlin
@@ -1437,12 +1520,13 @@ val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.tim
 val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
 val tokenId : kotlin.String = tokenId_example // kotlin.String | 
 try {
-    apiInstance.dappsCurveTokensHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId)
+    val result : kotlin.collections.List<CurveTokenDTO> = apiInstance.curveGetTokensHistorical(startBlock, endBlock, startDate, endDate, tokenId)
+    println(result)
 } catch (e: ClientException) {
-    println("4xx response calling CurveApi#dappsCurveTokensHistoricalGet")
+    println("4xx response calling CurveApi#curveGetTokensHistorical")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling CurveApi#dappsCurveTokensHistoricalGet")
+    println("5xx response calling CurveApi#curveGetTokensHistorical")
     e.printStackTrace()
 }
 ```
@@ -1459,7 +1543,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**kotlin.collections.List&lt;CurveTokenDTO&gt;**](CurveTokenDTO.md)
 
 ### Authorization
 
@@ -1468,13 +1552,15 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
-<a name="dappsCurveTransferOwnershipEventHistoricalGet"></a>
-# **dappsCurveTransferOwnershipEventHistoricalGet**
-> dappsCurveTransferOwnershipEventHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+<a name="curveGetTransferOwnershipEventsHistorical"></a>
+# **curveGetTransferOwnershipEventsHistorical**
+> kotlin.collections.List&lt;CurveTransferOwnershipEventDTO&gt; curveGetTransferOwnershipEventsHistorical(startBlock, endBlock, startDate, endDate, poolId)
 
+GetTransferOwnershipEvents (historical)
 
+Gets transfer ownership events.
 
 ### Example
 ```kotlin
@@ -1489,12 +1575,13 @@ val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.tim
 val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
 val poolId : kotlin.String = poolId_example // kotlin.String | 
 try {
-    apiInstance.dappsCurveTransferOwnershipEventHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+    val result : kotlin.collections.List<CurveTransferOwnershipEventDTO> = apiInstance.curveGetTransferOwnershipEventsHistorical(startBlock, endBlock, startDate, endDate, poolId)
+    println(result)
 } catch (e: ClientException) {
-    println("4xx response calling CurveApi#dappsCurveTransferOwnershipEventHistoricalGet")
+    println("4xx response calling CurveApi#curveGetTransferOwnershipEventsHistorical")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling CurveApi#dappsCurveTransferOwnershipEventHistoricalGet")
+    println("5xx response calling CurveApi#curveGetTransferOwnershipEventsHistorical")
     e.printStackTrace()
 }
 ```
@@ -1511,7 +1598,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**kotlin.collections.List&lt;CurveTransferOwnershipEventDTO&gt;**](CurveTransferOwnershipEventDTO.md)
 
 ### Authorization
 
@@ -1520,13 +1607,15 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
-<a name="dappsCurveUnderlyingCoinHistoricalGet"></a>
-# **dappsCurveUnderlyingCoinHistoricalGet**
-> dappsCurveUnderlyingCoinHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+<a name="curveGetUnderlyingCoinsHistorical"></a>
+# **curveGetUnderlyingCoinsHistorical**
+> kotlin.collections.List&lt;CurveUnderlyingCoinDTO&gt; curveGetUnderlyingCoinsHistorical(startBlock, endBlock, startDate, endDate, poolId)
 
+GetUnderlyingCoins (historical)
 
+Gets underlying coins.
 
 ### Example
 ```kotlin
@@ -1541,12 +1630,13 @@ val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.tim
 val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
 val poolId : kotlin.String = poolId_example // kotlin.String | 
 try {
-    apiInstance.dappsCurveUnderlyingCoinHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+    val result : kotlin.collections.List<CurveUnderlyingCoinDTO> = apiInstance.curveGetUnderlyingCoinsHistorical(startBlock, endBlock, startDate, endDate, poolId)
+    println(result)
 } catch (e: ClientException) {
-    println("4xx response calling CurveApi#dappsCurveUnderlyingCoinHistoricalGet")
+    println("4xx response calling CurveApi#curveGetUnderlyingCoinsHistorical")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling CurveApi#dappsCurveUnderlyingCoinHistoricalGet")
+    println("5xx response calling CurveApi#curveGetUnderlyingCoinsHistorical")
     e.printStackTrace()
 }
 ```
@@ -1563,7 +1653,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**kotlin.collections.List&lt;CurveUnderlyingCoinDTO&gt;**](CurveUnderlyingCoinDTO.md)
 
 ### Authorization
 
@@ -1572,13 +1662,15 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
-<a name="dappsCurveVotingAppHistoricalGet"></a>
-# **dappsCurveVotingAppHistoricalGet**
-> dappsCurveVotingAppHistoricalGet(startBlock, endBlock, startDate, endDate)
+<a name="curveGetVotingAppsHistorical"></a>
+# **curveGetVotingAppsHistorical**
+> kotlin.collections.List&lt;CurveVotingAppDTO&gt; curveGetVotingAppsHistorical(startBlock, endBlock, startDate, endDate)
 
+GetVotingApps (historical)
 
+Gets voting apps.
 
 ### Example
 ```kotlin
@@ -1592,12 +1684,13 @@ val endBlock : kotlin.Long = 789 // kotlin.Long |
 val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
 val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
 try {
-    apiInstance.dappsCurveVotingAppHistoricalGet(startBlock, endBlock, startDate, endDate)
+    val result : kotlin.collections.List<CurveVotingAppDTO> = apiInstance.curveGetVotingAppsHistorical(startBlock, endBlock, startDate, endDate)
+    println(result)
 } catch (e: ClientException) {
-    println("4xx response calling CurveApi#dappsCurveVotingAppHistoricalGet")
+    println("4xx response calling CurveApi#curveGetVotingAppsHistorical")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling CurveApi#dappsCurveVotingAppHistoricalGet")
+    println("5xx response calling CurveApi#curveGetVotingAppsHistorical")
     e.printStackTrace()
 }
 ```
@@ -1613,7 +1706,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**kotlin.collections.List&lt;CurveVotingAppDTO&gt;**](CurveVotingAppDTO.md)
 
 ### Authorization
 
@@ -1622,13 +1715,15 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
-<a name="dappsCurveWeeklyVolumeHistoricalGet"></a>
-# **dappsCurveWeeklyVolumeHistoricalGet**
-> dappsCurveWeeklyVolumeHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+<a name="curveGetWeeklyVolumesHistorical"></a>
+# **curveGetWeeklyVolumesHistorical**
+> kotlin.collections.List&lt;CurveWeeklyVolumeDTO&gt; curveGetWeeklyVolumesHistorical(startBlock, endBlock, startDate, endDate, poolId)
 
+GetWeeklyVolumes (historical)
 
+Gets weekly volumes.
 
 ### Example
 ```kotlin
@@ -1643,12 +1738,13 @@ val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.tim
 val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
 val poolId : kotlin.String = poolId_example // kotlin.String | 
 try {
-    apiInstance.dappsCurveWeeklyVolumeHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+    val result : kotlin.collections.List<CurveWeeklyVolumeDTO> = apiInstance.curveGetWeeklyVolumesHistorical(startBlock, endBlock, startDate, endDate, poolId)
+    println(result)
 } catch (e: ClientException) {
-    println("4xx response calling CurveApi#dappsCurveWeeklyVolumeHistoricalGet")
+    println("4xx response calling CurveApi#curveGetWeeklyVolumesHistorical")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling CurveApi#dappsCurveWeeklyVolumeHistoricalGet")
+    println("5xx response calling CurveApi#curveGetWeeklyVolumesHistorical")
     e.printStackTrace()
 }
 ```
@@ -1665,7 +1761,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**kotlin.collections.List&lt;CurveWeeklyVolumeDTO&gt;**](CurveWeeklyVolumeDTO.md)
 
 ### Authorization
 
@@ -1674,5 +1770,5 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 

@@ -48,6 +48,26 @@
   }
 
   describe('SushiswapApi', function() {
+    describe('curveGetExchangesCurrent', function() {
+      it('should call curveGetExchangesCurrent successfully', function(done) {
+        //uncomment below and update the code to test curveGetExchangesCurrent
+        //instance.curveGetExchangesCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('dexGetTradesCurrent', function() {
+      it('should call dexGetTradesCurrent successfully', function(done) {
+        //uncomment below and update the code to test dexGetTradesCurrent
+        //instance.dexGetTradesCurrent(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('sushiswapGetBundlesHistorical', function() {
       it('should call sushiswapGetBundlesHistorical successfully', function(done) {
         //uncomment below and update the code to test sushiswapGetBundlesHistorical

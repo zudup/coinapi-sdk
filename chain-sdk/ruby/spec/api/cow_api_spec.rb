@@ -32,67 +32,77 @@ describe 'CowApi' do
     end
   end
 
-  # unit tests for dapps_cow_orders_historical_get
+  # unit tests for cow_get_orders__historical
+  # GetOrders (historical)
+  # Gets orders.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
   # @option opts [Integer] :end_block 
   # @option opts [Time] :start_date 
   # @option opts [Time] :end_date 
-  # @return [nil]
-  describe 'dapps_cow_orders_historical_get test' do
+  # @return [Array<CowOrderDTO>]
+  describe 'cow_get_orders__historical test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for dapps_cow_settlement_historical_get
+  # unit tests for cow_get_settlements__historical
+  # GetSettlements (historical)
+  # Gets settlements.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
   # @option opts [Integer] :end_block 
   # @option opts [Time] :start_date 
   # @option opts [Time] :end_date 
-  # @return [nil]
-  describe 'dapps_cow_settlement_historical_get test' do
+  # @return [Array<CowSettlementDTO>]
+  describe 'cow_get_settlements__historical test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for dapps_cow_tokens_historical_get
+  # unit tests for cow_get_tokens__historical
+  # GetTokens (historical) 🔥
+  # Gets tokens.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
   # @option opts [Integer] :end_block 
   # @option opts [Time] :start_date 
   # @option opts [Time] :end_date 
   # @option opts [String] :token_id 
-  # @return [nil]
-  describe 'dapps_cow_tokens_historical_get test' do
+  # @return [Array<CowTokenDTO>]
+  describe 'cow_get_tokens__historical test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for dapps_cow_trades_historical_get
+  # unit tests for cow_get_trades__historical
+  # GetTrades (historical) 🔥
+  # Gets trades.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
   # @option opts [Integer] :end_block 
   # @option opts [Time] :start_date 
   # @option opts [Time] :end_date 
-  # @return [nil]
-  describe 'dapps_cow_trades_historical_get test' do
+  # @return [Array<CowTradeDTO>]
+  describe 'cow_get_trades__historical test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for dapps_cow_users_historical_get
+  # unit tests for cow_get_users__historical
+  # GetUsers (historical)
+  # Gets users.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
   # @option opts [Integer] :end_block 
   # @option opts [Time] :start_date 
   # @option opts [Time] :end_date 
-  # @return [nil]
-  describe 'dapps_cow_users_historical_get test' do
+  # @return [Array<CowUserDTO>]
+  describe 'cow_get_users__historical test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

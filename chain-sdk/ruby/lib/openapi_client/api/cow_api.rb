@@ -19,26 +19,30 @@ module OpenapiClient
     def initialize(api_client = ApiClient.default)
       @api_client = api_client
     end
+    # GetOrders (historical)
+    # Gets orders.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
     # @option opts [Time] :start_date 
     # @option opts [Time] :end_date 
-    # @return [nil]
-    def dapps_cow_orders_historical_get(opts = {})
-      dapps_cow_orders_historical_get_with_http_info(opts)
-      nil
+    # @return [Array<CowOrderDTO>]
+    def cow_get_orders__historical(opts = {})
+      data, _status_code, _headers = cow_get_orders__historical_with_http_info(opts)
+      data
     end
 
+    # GetOrders (historical)
+    # Gets orders.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
     # @option opts [Time] :start_date 
     # @option opts [Time] :end_date 
-    # @return [Array<(nil, Integer, Hash)>] nil, response status code and response headers
-    def dapps_cow_orders_historical_get_with_http_info(opts = {})
+    # @return [Array<(Array<CowOrderDTO>, Integer, Hash)>] Array<CowOrderDTO> data, response status code and response headers
+    def cow_get_orders__historical_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: CowApi.dapps_cow_orders_historical_get ...'
+        @api_client.config.logger.debug 'Calling API: CowApi.cow_get_orders__historical ...'
       end
       # resource path
       local_var_path = '/dapps/cow/orders/historical'
@@ -52,6 +56,8 @@ module OpenapiClient
 
       # header parameters
       header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
 
       # form parameters
       form_params = opts[:form_params] || {}
@@ -60,13 +66,13 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type]
+      return_type = opts[:debug_return_type] || 'Array<CowOrderDTO>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"CowApi.dapps_cow_orders_historical_get",
+        :operation => :"CowApi.cow_get_orders__historical",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -77,34 +83,38 @@ module OpenapiClient
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CowApi#dapps_cow_orders_historical_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CowApi#cow_get_orders__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
+    # GetSettlements (historical)
+    # Gets settlements.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
     # @option opts [Time] :start_date 
     # @option opts [Time] :end_date 
-    # @return [nil]
-    def dapps_cow_settlement_historical_get(opts = {})
-      dapps_cow_settlement_historical_get_with_http_info(opts)
-      nil
+    # @return [Array<CowSettlementDTO>]
+    def cow_get_settlements__historical(opts = {})
+      data, _status_code, _headers = cow_get_settlements__historical_with_http_info(opts)
+      data
     end
 
+    # GetSettlements (historical)
+    # Gets settlements.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
     # @option opts [Time] :start_date 
     # @option opts [Time] :end_date 
-    # @return [Array<(nil, Integer, Hash)>] nil, response status code and response headers
-    def dapps_cow_settlement_historical_get_with_http_info(opts = {})
+    # @return [Array<(Array<CowSettlementDTO>, Integer, Hash)>] Array<CowSettlementDTO> data, response status code and response headers
+    def cow_get_settlements__historical_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: CowApi.dapps_cow_settlement_historical_get ...'
+        @api_client.config.logger.debug 'Calling API: CowApi.cow_get_settlements__historical ...'
       end
       # resource path
-      local_var_path = '/dapps/cow/settlement/historical'
+      local_var_path = '/dapps/cow/settlements/historical'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -115,6 +125,8 @@ module OpenapiClient
 
       # header parameters
       header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
 
       # form parameters
       form_params = opts[:form_params] || {}
@@ -123,13 +135,13 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type]
+      return_type = opts[:debug_return_type] || 'Array<CowSettlementDTO>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"CowApi.dapps_cow_settlement_historical_get",
+        :operation => :"CowApi.cow_get_settlements__historical",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -140,33 +152,37 @@ module OpenapiClient
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CowApi#dapps_cow_settlement_historical_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CowApi#cow_get_settlements__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
+    # GetTokens (historical) 🔥
+    # Gets tokens.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
     # @option opts [Time] :start_date 
     # @option opts [Time] :end_date 
     # @option opts [String] :token_id 
-    # @return [nil]
-    def dapps_cow_tokens_historical_get(opts = {})
-      dapps_cow_tokens_historical_get_with_http_info(opts)
-      nil
+    # @return [Array<CowTokenDTO>]
+    def cow_get_tokens__historical(opts = {})
+      data, _status_code, _headers = cow_get_tokens__historical_with_http_info(opts)
+      data
     end
 
+    # GetTokens (historical) 🔥
+    # Gets tokens.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
     # @option opts [Time] :start_date 
     # @option opts [Time] :end_date 
     # @option opts [String] :token_id 
-    # @return [Array<(nil, Integer, Hash)>] nil, response status code and response headers
-    def dapps_cow_tokens_historical_get_with_http_info(opts = {})
+    # @return [Array<(Array<CowTokenDTO>, Integer, Hash)>] Array<CowTokenDTO> data, response status code and response headers
+    def cow_get_tokens__historical_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: CowApi.dapps_cow_tokens_historical_get ...'
+        @api_client.config.logger.debug 'Calling API: CowApi.cow_get_tokens__historical ...'
       end
       # resource path
       local_var_path = '/dapps/cow/tokens/historical'
@@ -181,6 +197,8 @@ module OpenapiClient
 
       # header parameters
       header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
 
       # form parameters
       form_params = opts[:form_params] || {}
@@ -189,13 +207,13 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type]
+      return_type = opts[:debug_return_type] || 'Array<CowTokenDTO>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"CowApi.dapps_cow_tokens_historical_get",
+        :operation => :"CowApi.cow_get_tokens__historical",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -206,31 +224,35 @@ module OpenapiClient
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CowApi#dapps_cow_tokens_historical_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CowApi#cow_get_tokens__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
+    # GetTrades (historical) 🔥
+    # Gets trades.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
     # @option opts [Time] :start_date 
     # @option opts [Time] :end_date 
-    # @return [nil]
-    def dapps_cow_trades_historical_get(opts = {})
-      dapps_cow_trades_historical_get_with_http_info(opts)
-      nil
+    # @return [Array<CowTradeDTO>]
+    def cow_get_trades__historical(opts = {})
+      data, _status_code, _headers = cow_get_trades__historical_with_http_info(opts)
+      data
     end
 
+    # GetTrades (historical) 🔥
+    # Gets trades.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
     # @option opts [Time] :start_date 
     # @option opts [Time] :end_date 
-    # @return [Array<(nil, Integer, Hash)>] nil, response status code and response headers
-    def dapps_cow_trades_historical_get_with_http_info(opts = {})
+    # @return [Array<(Array<CowTradeDTO>, Integer, Hash)>] Array<CowTradeDTO> data, response status code and response headers
+    def cow_get_trades__historical_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: CowApi.dapps_cow_trades_historical_get ...'
+        @api_client.config.logger.debug 'Calling API: CowApi.cow_get_trades__historical ...'
       end
       # resource path
       local_var_path = '/dapps/cow/trades/historical'
@@ -244,6 +266,8 @@ module OpenapiClient
 
       # header parameters
       header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
 
       # form parameters
       form_params = opts[:form_params] || {}
@@ -252,13 +276,13 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type]
+      return_type = opts[:debug_return_type] || 'Array<CowTradeDTO>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"CowApi.dapps_cow_trades_historical_get",
+        :operation => :"CowApi.cow_get_trades__historical",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -269,31 +293,35 @@ module OpenapiClient
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CowApi#dapps_cow_trades_historical_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CowApi#cow_get_trades__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
+    # GetUsers (historical)
+    # Gets users.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
     # @option opts [Time] :start_date 
     # @option opts [Time] :end_date 
-    # @return [nil]
-    def dapps_cow_users_historical_get(opts = {})
-      dapps_cow_users_historical_get_with_http_info(opts)
-      nil
+    # @return [Array<CowUserDTO>]
+    def cow_get_users__historical(opts = {})
+      data, _status_code, _headers = cow_get_users__historical_with_http_info(opts)
+      data
     end
 
+    # GetUsers (historical)
+    # Gets users.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
     # @option opts [Time] :start_date 
     # @option opts [Time] :end_date 
-    # @return [Array<(nil, Integer, Hash)>] nil, response status code and response headers
-    def dapps_cow_users_historical_get_with_http_info(opts = {})
+    # @return [Array<(Array<CowUserDTO>, Integer, Hash)>] Array<CowUserDTO> data, response status code and response headers
+    def cow_get_users__historical_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: CowApi.dapps_cow_users_historical_get ...'
+        @api_client.config.logger.debug 'Calling API: CowApi.cow_get_users__historical ...'
       end
       # resource path
       local_var_path = '/dapps/cow/users/historical'
@@ -307,6 +335,8 @@ module OpenapiClient
 
       # header parameters
       header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
 
       # form parameters
       form_params = opts[:form_params] || {}
@@ -315,13 +345,13 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type]
+      return_type = opts[:debug_return_type] || 'Array<CowUserDTO>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"CowApi.dapps_cow_users_historical_get",
+        :operation => :"CowApi.cow_get_users__historical",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -332,7 +362,7 @@ module OpenapiClient
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CowApi#dapps_cow_users_historical_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CowApi#cow_get_users__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

@@ -16,6 +16,11 @@ local dkjson = require "dkjson"
 local basexx = require "basexx"
 
 -- model import
+local openapiclient_cow_order_dto = require "openapiclient.model.cow_order_dto"
+local openapiclient_cow_settlement_dto = require "openapiclient.model.cow_settlement_dto"
+local openapiclient_cow_token_dto = require "openapiclient.model.cow_token_dto"
+local openapiclient_cow_trade_dto = require "openapiclient.model.cow_trade_dto"
+local openapiclient_cow_user_dto = require "openapiclient.model.cow_user_dto"
 
 local cow_api = {}
 local cow_api_mt = {
@@ -43,7 +48,7 @@ local function new_cow_api(authority, basePath, schemes)
 	}, cow_api_mt)
 end
 
-function cow_api:dapps_cow_orders_historical_get(start_block, end_block, start_date, end_date)
+function cow_api:cow_get_orders__historical(start_block, end_block, start_date, end_date)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
@@ -54,6 +59,10 @@ function cow_api:dapps_cow_orders_historical_get(start_block, end_block, start_d
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
 
 	-- make the HTTP call
 	local headers, stream, errno = req:go()
@@ -62,7 +71,21 @@ function cow_api:dapps_cow_orders_historical_get(start_block, end_block, start_d
 	end
 	local http_status = headers:get(":status")
 	if http_status:sub(1,1) == "2" then
-		return nil, headers
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_cow_order_dto.cast(ob)
+		end
+		return result, headers
 	else
 		local body, err, errno2 = stream:get_body_as_string()
 		if not body then
@@ -74,17 +97,21 @@ function cow_api:dapps_cow_orders_historical_get(start_block, end_block, start_d
 	end
 end
 
-function cow_api:dapps_cow_settlement_historical_get(start_block, end_block, start_date, end_date)
+function cow_api:cow_get_settlements__historical(start_block, end_block, start_date, end_date)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/cow/settlement/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s",
+		path = string.format("%s/dapps/cow/settlements/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s",
 			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date));
 	})
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
 
 	-- make the HTTP call
 	local headers, stream, errno = req:go()
@@ -93,7 +120,21 @@ function cow_api:dapps_cow_settlement_historical_get(start_block, end_block, sta
 	end
 	local http_status = headers:get(":status")
 	if http_status:sub(1,1) == "2" then
-		return nil, headers
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_cow_settlement_dto.cast(ob)
+		end
+		return result, headers
 	else
 		local body, err, errno2 = stream:get_body_as_string()
 		if not body then
@@ -105,7 +146,7 @@ function cow_api:dapps_cow_settlement_historical_get(start_block, end_block, sta
 	end
 end
 
-function cow_api:dapps_cow_tokens_historical_get(start_block, end_block, start_date, end_date, token_id)
+function cow_api:cow_get_tokens__historical(start_block, end_block, start_date, end_date, token_id)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
@@ -116,6 +157,10 @@ function cow_api:dapps_cow_tokens_historical_get(start_block, end_block, start_d
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
 
 	-- make the HTTP call
 	local headers, stream, errno = req:go()
@@ -124,7 +169,21 @@ function cow_api:dapps_cow_tokens_historical_get(start_block, end_block, start_d
 	end
 	local http_status = headers:get(":status")
 	if http_status:sub(1,1) == "2" then
-		return nil, headers
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_cow_token_dto.cast(ob)
+		end
+		return result, headers
 	else
 		local body, err, errno2 = stream:get_body_as_string()
 		if not body then
@@ -136,7 +195,7 @@ function cow_api:dapps_cow_tokens_historical_get(start_block, end_block, start_d
 	end
 end
 
-function cow_api:dapps_cow_trades_historical_get(start_block, end_block, start_date, end_date)
+function cow_api:cow_get_trades__historical(start_block, end_block, start_date, end_date)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
@@ -147,6 +206,10 @@ function cow_api:dapps_cow_trades_historical_get(start_block, end_block, start_d
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
 
 	-- make the HTTP call
 	local headers, stream, errno = req:go()
@@ -155,7 +218,21 @@ function cow_api:dapps_cow_trades_historical_get(start_block, end_block, start_d
 	end
 	local http_status = headers:get(":status")
 	if http_status:sub(1,1) == "2" then
-		return nil, headers
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_cow_trade_dto.cast(ob)
+		end
+		return result, headers
 	else
 		local body, err, errno2 = stream:get_body_as_string()
 		if not body then
@@ -167,7 +244,7 @@ function cow_api:dapps_cow_trades_historical_get(start_block, end_block, start_d
 	end
 end
 
-function cow_api:dapps_cow_users_historical_get(start_block, end_block, start_date, end_date)
+function cow_api:cow_get_users__historical(start_block, end_block, start_date, end_date)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
@@ -178,6 +255,10 @@ function cow_api:dapps_cow_users_historical_get(start_block, end_block, start_da
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
 
 	-- make the HTTP call
 	local headers, stream, errno = req:go()
@@ -186,7 +267,21 @@ function cow_api:dapps_cow_users_historical_get(start_block, end_block, start_da
 	end
 	local http_status = headers:get(":status")
 	if http_status:sub(1,1) == "2" then
-		return nil, headers
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_cow_user_dto.cast(ob)
+		end
+		return result, headers
 	else
 		local body, err, errno2 = stream:get_body_as_string()
 		if not body then

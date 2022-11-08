@@ -58,332 +58,332 @@ cleanup() -> ok.
 initial_state() -> #{}.
 
 %%==============================================================================
-%% dapps_uniswapv3_bundle_current_get
+%% uniswap_v3_get_bundles_(current)
 %%==============================================================================
 
-dapps_uniswapv3_bundle_current_get() ->
-  openapi_api:dapps_uniswapv3_bundle_current_get().
+uniswap_v3_get_bundles_(current)() ->
+  openapi_api:uniswap_v3_get_bundles_(current)().
 
-dapps_uniswapv3_bundle_current_get_args(_S) ->
+uniswap_v3_get_bundles_(current)_args(_S) ->
   [].
 
 %%==============================================================================
-%% dapps_uniswapv3_bundles_historical_get
+%% uniswap_v3_get_bundles_(historical)
 %%==============================================================================
 
-dapps_uniswapv3_bundles_historical_get() ->
-  openapi_api:dapps_uniswapv3_bundles_historical_get().
+uniswap_v3_get_bundles_(historical)() ->
+  openapi_api:uniswap_v3_get_bundles_(historical)().
 
-dapps_uniswapv3_bundles_historical_get_args(_S) ->
+uniswap_v3_get_bundles_(historical)_args(_S) ->
   [].
 
 %%==============================================================================
-%% dapps_uniswapv3_burns_current_get
+%% uniswap_v3_get_burns_(current)
 %%==============================================================================
 
-dapps_uniswapv3_burns_current_get() ->
-  openapi_api:dapps_uniswapv3_burns_current_get().
+uniswap_v3_get_burns_(current)() ->
+  openapi_api:uniswap_v3_get_burns_(current)().
 
-dapps_uniswapv3_burns_current_get_args(_S) ->
+uniswap_v3_get_burns_(current)_args(_S) ->
   [].
 
 %%==============================================================================
-%% dapps_uniswapv3_burns_historical_get
+%% uniswap_v3_get_burns_(historical)
 %%==============================================================================
 
-dapps_uniswapv3_burns_historical_get() ->
-  openapi_api:dapps_uniswapv3_burns_historical_get().
+uniswap_v3_get_burns_(historical)() ->
+  openapi_api:uniswap_v3_get_burns_(historical)().
 
-dapps_uniswapv3_burns_historical_get_args(_S) ->
+uniswap_v3_get_burns_(historical)_args(_S) ->
   [].
 
 %%==============================================================================
-%% dapps_uniswapv3_day_data_historical_get
+%% uniswap_v3_get_day_data_(current)
 %%==============================================================================
 
-dapps_uniswapv3_day_data_historical_get() ->
-  openapi_api:dapps_uniswapv3_day_data_historical_get().
+uniswap_v3_get_day_data_(current)() ->
+  openapi_api:uniswap_v3_get_day_data_(current)().
 
-dapps_uniswapv3_day_data_historical_get_args(_S) ->
+uniswap_v3_get_day_data_(current)_args(_S) ->
   [].
 
 %%==============================================================================
-%% dapps_uniswapv3_factory_current_get
+%% uniswap_v3_get_day_data_(historical)
 %%==============================================================================
 
-dapps_uniswapv3_factory_current_get(ChainId) ->
-  openapi_api:dapps_uniswapv3_factory_current_get(ChainId).
+uniswap_v3_get_day_data_(historical)() ->
+  openapi_api:uniswap_v3_get_day_data_(historical)().
 
-dapps_uniswapv3_factory_current_get_args(_S) ->
-  [binary()].
-
-%%==============================================================================
-%% dapps_uniswapv3_factory_historical_get
-%%==============================================================================
-
-dapps_uniswapv3_factory_historical_get() ->
-  openapi_api:dapps_uniswapv3_factory_historical_get().
-
-dapps_uniswapv3_factory_historical_get_args(_S) ->
+uniswap_v3_get_day_data_(historical)_args(_S) ->
   [].
 
 %%==============================================================================
-%% dapps_uniswapv3_mints_current_get
+%% uniswap_v3_get_factory_(current)
 %%==============================================================================
 
-dapps_uniswapv3_mints_current_get() ->
-  openapi_api:dapps_uniswapv3_mints_current_get().
+uniswap_v3_get_factory_(current)() ->
+  openapi_api:uniswap_v3_get_factory_(current)().
 
-dapps_uniswapv3_mints_current_get_args(_S) ->
+uniswap_v3_get_factory_(current)_args(_S) ->
   [].
 
 %%==============================================================================
-%% dapps_uniswapv3_mints_historical_get
+%% uniswap_v3_get_factory_(historical)
 %%==============================================================================
 
-dapps_uniswapv3_mints_historical_get() ->
-  openapi_api:dapps_uniswapv3_mints_historical_get().
+uniswap_v3_get_factory_(historical)() ->
+  openapi_api:uniswap_v3_get_factory_(historical)().
 
-dapps_uniswapv3_mints_historical_get_args(_S) ->
+uniswap_v3_get_factory_(historical)_args(_S) ->
   [].
 
 %%==============================================================================
-%% dapps_uniswapv3_pool_day_data_historical_get
+%% uniswap_v3_get_mints_(current)
 %%==============================================================================
 
-dapps_uniswapv3_pool_day_data_historical_get() ->
-  openapi_api:dapps_uniswapv3_pool_day_data_historical_get().
+uniswap_v3_get_mints_(current)() ->
+  openapi_api:uniswap_v3_get_mints_(current)().
 
-dapps_uniswapv3_pool_day_data_historical_get_args(_S) ->
+uniswap_v3_get_mints_(current)_args(_S) ->
   [].
 
 %%==============================================================================
-%% dapps_uniswapv3_pool_hour_data_historical_get
+%% uniswap_v3_get_mints_(historical)
 %%==============================================================================
 
-dapps_uniswapv3_pool_hour_data_historical_get() ->
-  openapi_api:dapps_uniswapv3_pool_hour_data_historical_get().
+uniswap_v3_get_mints_(historical)() ->
+  openapi_api:uniswap_v3_get_mints_(historical)().
 
-dapps_uniswapv3_pool_hour_data_historical_get_args(_S) ->
+uniswap_v3_get_mints_(historical)_args(_S) ->
   [].
 
 %%==============================================================================
-%% dapps_uniswapv3_pools_current_get
+%% uniswap_v3_get_pools_(current)
 %%==============================================================================
 
-dapps_uniswapv3_pools_current_get() ->
-  openapi_api:dapps_uniswapv3_pools_current_get().
+uniswap_v3_get_pools_(current)() ->
+  openapi_api:uniswap_v3_get_pools_(current)().
 
-dapps_uniswapv3_pools_current_get_args(_S) ->
+uniswap_v3_get_pools_(current)_args(_S) ->
   [].
 
 %%==============================================================================
-%% dapps_uniswapv3_pools_day_data_current_get
+%% uniswap_v3_get_pools_(historical)
 %%==============================================================================
 
-dapps_uniswapv3_pools_day_data_current_get() ->
-  openapi_api:dapps_uniswapv3_pools_day_data_current_get().
+uniswap_v3_get_pools_(historical)() ->
+  openapi_api:uniswap_v3_get_pools_(historical)().
 
-dapps_uniswapv3_pools_day_data_current_get_args(_S) ->
+uniswap_v3_get_pools_(historical)_args(_S) ->
   [].
 
 %%==============================================================================
-%% dapps_uniswapv3_pools_historical_get
+%% uniswap_v3_get_pools_day_data_(current)
 %%==============================================================================
 
-dapps_uniswapv3_pools_historical_get() ->
-  openapi_api:dapps_uniswapv3_pools_historical_get().
+uniswap_v3_get_pools_day_data_(current)() ->
+  openapi_api:uniswap_v3_get_pools_day_data_(current)().
 
-dapps_uniswapv3_pools_historical_get_args(_S) ->
+uniswap_v3_get_pools_day_data_(current)_args(_S) ->
   [].
 
 %%==============================================================================
-%% dapps_uniswapv3_pools_hour_data_current_get
+%% uniswap_v3_get_pools_day_data_(historical)
 %%==============================================================================
 
-dapps_uniswapv3_pools_hour_data_current_get() ->
-  openapi_api:dapps_uniswapv3_pools_hour_data_current_get().
+uniswap_v3_get_pools_day_data_(historical)() ->
+  openapi_api:uniswap_v3_get_pools_day_data_(historical)().
 
-dapps_uniswapv3_pools_hour_data_current_get_args(_S) ->
+uniswap_v3_get_pools_day_data_(historical)_args(_S) ->
   [].
 
 %%==============================================================================
-%% dapps_uniswapv3_position_snapshot_historical_get
+%% uniswap_v3_get_pools_hour_data_(current)
 %%==============================================================================
 
-dapps_uniswapv3_position_snapshot_historical_get() ->
-  openapi_api:dapps_uniswapv3_position_snapshot_historical_get().
+uniswap_v3_get_pools_hour_data_(current)() ->
+  openapi_api:uniswap_v3_get_pools_hour_data_(current)().
 
-dapps_uniswapv3_position_snapshot_historical_get_args(_S) ->
+uniswap_v3_get_pools_hour_data_(current)_args(_S) ->
   [].
 
 %%==============================================================================
-%% dapps_uniswapv3_position_snapshots_current_get
+%% uniswap_v3_get_pools_hour_data_(historical)
 %%==============================================================================
 
-dapps_uniswapv3_position_snapshots_current_get() ->
-  openapi_api:dapps_uniswapv3_position_snapshots_current_get().
+uniswap_v3_get_pools_hour_data_(historical)() ->
+  openapi_api:uniswap_v3_get_pools_hour_data_(historical)().
 
-dapps_uniswapv3_position_snapshots_current_get_args(_S) ->
+uniswap_v3_get_pools_hour_data_(historical)_args(_S) ->
   [].
 
 %%==============================================================================
-%% dapps_uniswapv3_positions_current_get
+%% uniswap_v3_get_positions_(current)
 %%==============================================================================
 
-dapps_uniswapv3_positions_current_get() ->
-  openapi_api:dapps_uniswapv3_positions_current_get().
+uniswap_v3_get_positions_(current)() ->
+  openapi_api:uniswap_v3_get_positions_(current)().
 
-dapps_uniswapv3_positions_current_get_args(_S) ->
+uniswap_v3_get_positions_(current)_args(_S) ->
   [].
 
 %%==============================================================================
-%% dapps_uniswapv3_positions_historical_get
+%% uniswap_v3_get_positions_(historical)
 %%==============================================================================
 
-dapps_uniswapv3_positions_historical_get() ->
-  openapi_api:dapps_uniswapv3_positions_historical_get().
+uniswap_v3_get_positions_(historical)() ->
+  openapi_api:uniswap_v3_get_positions_(historical)().
 
-dapps_uniswapv3_positions_historical_get_args(_S) ->
+uniswap_v3_get_positions_(historical)_args(_S) ->
   [].
 
 %%==============================================================================
-%% dapps_uniswapv3_swaps_current_get
+%% uniswap_v3_get_positions_snaphots_(historical)
 %%==============================================================================
 
-dapps_uniswapv3_swaps_current_get() ->
-  openapi_api:dapps_uniswapv3_swaps_current_get().
+uniswap_v3_get_positions_snaphots_(historical)() ->
+  openapi_api:uniswap_v3_get_positions_snaphots_(historical)().
 
-dapps_uniswapv3_swaps_current_get_args(_S) ->
+uniswap_v3_get_positions_snaphots_(historical)_args(_S) ->
   [].
 
 %%==============================================================================
-%% dapps_uniswapv3_swaps_historical_get
+%% uniswap_v3_get_positions_snapshots_(current)
 %%==============================================================================
 
-dapps_uniswapv3_swaps_historical_get() ->
-  openapi_api:dapps_uniswapv3_swaps_historical_get().
+uniswap_v3_get_positions_snapshots_(current)() ->
+  openapi_api:uniswap_v3_get_positions_snapshots_(current)().
 
-dapps_uniswapv3_swaps_historical_get_args(_S) ->
+uniswap_v3_get_positions_snapshots_(current)_args(_S) ->
   [].
 
 %%==============================================================================
-%% dapps_uniswapv3_tick_day_data_historical_get
+%% uniswap_v3_get_swaps_(current)
 %%==============================================================================
 
-dapps_uniswapv3_tick_day_data_historical_get() ->
-  openapi_api:dapps_uniswapv3_tick_day_data_historical_get().
+uniswap_v3_get_swaps_(current)() ->
+  openapi_api:uniswap_v3_get_swaps_(current)().
 
-dapps_uniswapv3_tick_day_data_historical_get_args(_S) ->
+uniswap_v3_get_swaps_(current)_args(_S) ->
   [].
 
 %%==============================================================================
-%% dapps_uniswapv3_ticks_current_get
+%% uniswap_v3_get_swaps_(historical)
 %%==============================================================================
 
-dapps_uniswapv3_ticks_current_get() ->
-  openapi_api:dapps_uniswapv3_ticks_current_get().
+uniswap_v3_get_swaps_(historical)() ->
+  openapi_api:uniswap_v3_get_swaps_(historical)().
 
-dapps_uniswapv3_ticks_current_get_args(_S) ->
+uniswap_v3_get_swaps_(historical)_args(_S) ->
   [].
 
 %%==============================================================================
-%% dapps_uniswapv3_ticks_day_data_current_get
+%% uniswap_v3_get_ticks_(current)
 %%==============================================================================
 
-dapps_uniswapv3_ticks_day_data_current_get() ->
-  openapi_api:dapps_uniswapv3_ticks_day_data_current_get().
+uniswap_v3_get_ticks_(current)() ->
+  openapi_api:uniswap_v3_get_ticks_(current)().
 
-dapps_uniswapv3_ticks_day_data_current_get_args(_S) ->
+uniswap_v3_get_ticks_(current)_args(_S) ->
   [].
 
 %%==============================================================================
-%% dapps_uniswapv3_ticks_historical_get
+%% uniswap_v3_get_ticks_(historical)
 %%==============================================================================
 
-dapps_uniswapv3_ticks_historical_get() ->
-  openapi_api:dapps_uniswapv3_ticks_historical_get().
+uniswap_v3_get_ticks_(historical)() ->
+  openapi_api:uniswap_v3_get_ticks_(historical)().
 
-dapps_uniswapv3_ticks_historical_get_args(_S) ->
+uniswap_v3_get_ticks_(historical)_args(_S) ->
   [].
 
 %%==============================================================================
-%% dapps_uniswapv3_token_day_data_historical_get
+%% uniswap_v3_get_ticks_day_data_(current)
 %%==============================================================================
 
-dapps_uniswapv3_token_day_data_historical_get() ->
-  openapi_api:dapps_uniswapv3_token_day_data_historical_get().
+uniswap_v3_get_ticks_day_data_(current)() ->
+  openapi_api:uniswap_v3_get_ticks_day_data_(current)().
 
-dapps_uniswapv3_token_day_data_historical_get_args(_S) ->
+uniswap_v3_get_ticks_day_data_(current)_args(_S) ->
   [].
 
 %%==============================================================================
-%% dapps_uniswapv3_token_hour_data_historical_get
+%% uniswap_v3_get_ticks_day_data_(historical)
 %%==============================================================================
 
-dapps_uniswapv3_token_hour_data_historical_get() ->
-  openapi_api:dapps_uniswapv3_token_hour_data_historical_get().
+uniswap_v3_get_ticks_day_data_(historical)() ->
+  openapi_api:uniswap_v3_get_ticks_day_data_(historical)().
 
-dapps_uniswapv3_token_hour_data_historical_get_args(_S) ->
+uniswap_v3_get_ticks_day_data_(historical)_args(_S) ->
   [].
 
 %%==============================================================================
-%% dapps_uniswapv3_tokens_current_get
+%% uniswap_v3_get_tokens_(current)
 %%==============================================================================
 
-dapps_uniswapv3_tokens_current_get() ->
-  openapi_api:dapps_uniswapv3_tokens_current_get().
+uniswap_v3_get_tokens_(current)() ->
+  openapi_api:uniswap_v3_get_tokens_(current)().
 
-dapps_uniswapv3_tokens_current_get_args(_S) ->
+uniswap_v3_get_tokens_(current)_args(_S) ->
   [].
 
 %%==============================================================================
-%% dapps_uniswapv3_tokens_day_data_current_get
+%% uniswap_v3_get_tokens_(historical)
 %%==============================================================================
 
-dapps_uniswapv3_tokens_day_data_current_get() ->
-  openapi_api:dapps_uniswapv3_tokens_day_data_current_get().
+uniswap_v3_get_tokens_(historical)() ->
+  openapi_api:uniswap_v3_get_tokens_(historical)().
 
-dapps_uniswapv3_tokens_day_data_current_get_args(_S) ->
+uniswap_v3_get_tokens_(historical)_args(_S) ->
   [].
 
 %%==============================================================================
-%% dapps_uniswapv3_tokens_historical_get
+%% uniswap_v3_get_tokens_day_data_(current)
 %%==============================================================================
 
-dapps_uniswapv3_tokens_historical_get() ->
-  openapi_api:dapps_uniswapv3_tokens_historical_get().
+uniswap_v3_get_tokens_day_data_(current)() ->
+  openapi_api:uniswap_v3_get_tokens_day_data_(current)().
 
-dapps_uniswapv3_tokens_historical_get_args(_S) ->
+uniswap_v3_get_tokens_day_data_(current)_args(_S) ->
   [].
 
 %%==============================================================================
-%% dapps_uniswapv3_tokens_hour_data_current_get
+%% uniswap_v3_get_tokens_day_data_(historical)
 %%==============================================================================
 
-dapps_uniswapv3_tokens_hour_data_current_get() ->
-  openapi_api:dapps_uniswapv3_tokens_hour_data_current_get().
+uniswap_v3_get_tokens_day_data_(historical)() ->
+  openapi_api:uniswap_v3_get_tokens_day_data_(historical)().
 
-dapps_uniswapv3_tokens_hour_data_current_get_args(_S) ->
+uniswap_v3_get_tokens_day_data_(historical)_args(_S) ->
   [].
 
 %%==============================================================================
-%% dapps_uniswapv3_transactions_historical_get
+%% uniswap_v3_get_tokens_hour_data_(current)
 %%==============================================================================
 
-dapps_uniswapv3_transactions_historical_get() ->
-  openapi_api:dapps_uniswapv3_transactions_historical_get().
+uniswap_v3_get_tokens_hour_data_(current)() ->
+  openapi_api:uniswap_v3_get_tokens_hour_data_(current)().
 
-dapps_uniswapv3_transactions_historical_get_args(_S) ->
+uniswap_v3_get_tokens_hour_data_(current)_args(_S) ->
   [].
 
 %%==============================================================================
-%% dapps_uniswapv3_uniswap_day_data_current_get
+%% uniswap_v3_get_tokens_hour_data_(historical)
 %%==============================================================================
 
-dapps_uniswapv3_uniswap_day_data_current_get() ->
-  openapi_api:dapps_uniswapv3_uniswap_day_data_current_get().
+uniswap_v3_get_tokens_hour_data_(historical)() ->
+  openapi_api:uniswap_v3_get_tokens_hour_data_(historical)().
 
-dapps_uniswapv3_uniswap_day_data_current_get_args(_S) ->
+uniswap_v3_get_tokens_hour_data_(historical)_args(_S) ->
+  [].
+
+%%==============================================================================
+%% uniswap_v3_get_transactions_(historical)
+%%==============================================================================
+
+uniswap_v3_get_transactions_(historical)() ->
+  openapi_api:uniswap_v3_get_transactions_(historical)().
+
+uniswap_v3_get_transactions_(historical)_args(_S) ->
   [].
 

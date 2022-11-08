@@ -4,6 +4,8 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**CurveGetExchangesCurrent**](SushiswapApi.md#CurveGetExchangesCurrent) | **Get** /dapps/sushiswap/exchanges/current | GetExchanges (current) 🔥
+[**DexGetTradesCurrent**](SushiswapApi.md#DexGetTradesCurrent) | **Get** /dapps/sushiswap/trades/current | GetTrades (current) 🔥
 [**SushiswapGetBundlesHistorical**](SushiswapApi.md#SushiswapGetBundlesHistorical) | **Get** /dapps/sushiswap/bundles/historical | GetBundles (historical)
 [**SushiswapGetBurnsHistorical**](SushiswapApi.md#SushiswapGetBurnsHistorical) | **Get** /dapps/sushiswap/burns/historical | GetBurns (historical)
 [**SushiswapGetDayDataHistorical**](SushiswapApi.md#SushiswapGetDayDataHistorical) | **Get** /dapps/sushiswap/dayData/historical | GetDayData (historical)
@@ -12,18 +14,140 @@ Method | HTTP request | Description
 [**SushiswapGetLiquidityPositionHistorical**](SushiswapApi.md#SushiswapGetLiquidityPositionHistorical) | **Get** /dapps/sushiswap/liquidityPosition/historical | GetLiquidityPosition (historical)
 [**SushiswapGetLiquidityPositionSnapshotHistorical**](SushiswapApi.md#SushiswapGetLiquidityPositionSnapshotHistorical) | **Get** /dapps/sushiswap/liquidityPositionSnapshots/historical | GetLiquidityPositionSnapshot (historical)
 [**SushiswapGetMintsHistorical**](SushiswapApi.md#SushiswapGetMintsHistorical) | **Get** /dapps/sushiswap/mints/historical | GetMints (historical)
-[**SushiswapGetPoolsCurrent**](SushiswapApi.md#SushiswapGetPoolsCurrent) | **Get** /dapps/sushiswap/pools/current | GetPools (current)
+[**SushiswapGetPoolsCurrent**](SushiswapApi.md#SushiswapGetPoolsCurrent) | **Get** /dapps/sushiswap/pools/current | GetPools (current) 🔥
 [**SushiswapGetPoolsDayDataHistorical**](SushiswapApi.md#SushiswapGetPoolsDayDataHistorical) | **Get** /dapps/sushiswap/poolsDayData/historical | GetPoolsDayData (historical)
-[**SushiswapGetPoolsHistorical**](SushiswapApi.md#SushiswapGetPoolsHistorical) | **Get** /dapps/sushiswap/pools/historical | GetPools (historical)
+[**SushiswapGetPoolsHistorical**](SushiswapApi.md#SushiswapGetPoolsHistorical) | **Get** /dapps/sushiswap/pools/historical | GetPools (historical) 🔥
 [**SushiswapGetPoolsHourDataHistorical**](SushiswapApi.md#SushiswapGetPoolsHourDataHistorical) | **Get** /dapps/sushiswap/poolsHourData/historical | GetPoolsHourData (historical)
-[**SushiswapGetSwapsCurrent**](SushiswapApi.md#SushiswapGetSwapsCurrent) | **Get** /dapps/sushiswap/swaps/current | GetSwaps (current)
-[**SushiswapGetSwapsHistorical**](SushiswapApi.md#SushiswapGetSwapsHistorical) | **Get** /dapps/sushiswap/swaps/historical | GetSwaps (historical)
-[**SushiswapGetTokensCurrent**](SushiswapApi.md#SushiswapGetTokensCurrent) | **Get** /dapps/sushiswap/tokens/current | GetTokens (current)
+[**SushiswapGetSwapsCurrent**](SushiswapApi.md#SushiswapGetSwapsCurrent) | **Get** /dapps/sushiswap/swaps/current | GetSwaps (current) 🔥
+[**SushiswapGetSwapsHistorical**](SushiswapApi.md#SushiswapGetSwapsHistorical) | **Get** /dapps/sushiswap/swaps/historical | GetSwaps (historical) 🔥
+[**SushiswapGetTokensCurrent**](SushiswapApi.md#SushiswapGetTokensCurrent) | **Get** /dapps/sushiswap/tokens/current | GetTokens (current) 🔥
 [**SushiswapGetTokensDayDataHistorical**](SushiswapApi.md#SushiswapGetTokensDayDataHistorical) | **Get** /dapps/sushiswap/tokensDayData/historical | GetTokensDayData (historical)
-[**SushiswapGetTokensHistorical**](SushiswapApi.md#SushiswapGetTokensHistorical) | **Get** /dapps/sushiswap/tokens/historical | GetTokens (historical)
+[**SushiswapGetTokensHistorical**](SushiswapApi.md#SushiswapGetTokensHistorical) | **Get** /dapps/sushiswap/tokens/historical | GetTokens (historical) 🔥
 [**SushiswapGetTransactionsHistorical**](SushiswapApi.md#SushiswapGetTransactionsHistorical) | **Get** /dapps/sushiswap/transactions/historical | GetTransactions (historical)
 [**SushiswapGetUsersHistorical**](SushiswapApi.md#SushiswapGetUsersHistorical) | **Get** /dapps/sushiswap/users/historical | GetUsers (historical)
 
+
+
+## CurveGetExchangesCurrent
+
+> []CurveExchangeDTO CurveGetExchangesCurrent(ctx).Execute()
+
+GetExchanges (current) 🔥
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.SushiswapApi.CurveGetExchangesCurrent(context.Background()).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `SushiswapApi.CurveGetExchangesCurrent``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CurveGetExchangesCurrent`: []CurveExchangeDTO
+    fmt.Fprintf(os.Stdout, "Response from `SushiswapApi.CurveGetExchangesCurrent`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+This endpoint does not need any parameter.
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCurveGetExchangesCurrentRequest struct via the builder pattern
+
+
+### Return type
+
+[**[]CurveExchangeDTO**](CurveExchangeDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DexGetTradesCurrent
+
+> []DexTradeDTO DexGetTradesCurrent(ctx).Execute()
+
+GetTrades (current) 🔥
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.SushiswapApi.DexGetTradesCurrent(context.Background()).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `SushiswapApi.DexGetTradesCurrent``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `DexGetTradesCurrent`: []DexTradeDTO
+    fmt.Fprintf(os.Stdout, "Response from `SushiswapApi.DexGetTradesCurrent`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+This endpoint does not need any parameter.
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDexGetTradesCurrentRequest struct via the builder pattern
+
+
+### Return type
+
+[**[]DexTradeDTO**](DexTradeDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
 
 
 ## SushiswapGetBundlesHistorical
@@ -48,10 +172,10 @@ import (
 )
 
 func main() {
-    startBlock := int64(789) // int64 |  (optional)
-    endBlock := int64(789) // int64 |  (optional)
-    startDate := time.Now() // time.Time |  (optional)
-    endDate := time.Now() // time.Time |  (optional)
+    startBlock := int64(789) // int64 | AAAAAAAAAA (optional)
+    endBlock := int64(789) // int64 | BBBBBBBBBBBB (optional)
+    startDate := time.Now() // time.Time | CCCCCCCCC (optional)
+    endDate := time.Now() // time.Time | DDDDDDDDDDD (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -76,10 +200,10 @@ Other parameters are passed through a pointer to a apiSushiswapGetBundlesHistori
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **int64** |  | 
- **endBlock** | **int64** |  | 
- **startDate** | **time.Time** |  | 
- **endDate** | **time.Time** |  | 
+ **startBlock** | **int64** | AAAAAAAAAA | 
+ **endBlock** | **int64** | BBBBBBBBBBBB | 
+ **startDate** | **time.Time** | CCCCCCCCC | 
+ **endDate** | **time.Time** | DDDDDDDDDDD | 
 
 ### Return type
 
@@ -622,7 +746,7 @@ No authorization required
 
 > []SushiswapPairDTO SushiswapGetPoolsCurrent(ctx).Execute()
 
-GetPools (current)
+GetPools (current) 🔥
 
 
 
@@ -758,7 +882,7 @@ No authorization required
 
 > []SushiswapPairDTO SushiswapGetPoolsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
 
-GetPools (historical)
+GetPools (historical) 🔥
 
 
 
@@ -776,11 +900,11 @@ import (
 )
 
 func main() {
-    startBlock := int64(789) // int64 |  (optional)
-    endBlock := int64(789) // int64 |  (optional)
-    startDate := time.Now() // time.Time |  (optional)
-    endDate := time.Now() // time.Time |  (optional)
-    poolId := "poolId_example" // string |  (optional)
+    startBlock := int64(789) // int64 | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+    endBlock := int64(789) // int64 | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+    startDate := time.Now() // time.Time | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+    endDate := time.Now() // time.Time | The end date of timeframe (optional)
+    poolId := "poolId_example" // string | The pool address. (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -805,11 +929,11 @@ Other parameters are passed through a pointer to a apiSushiswapGetPoolsHistorica
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **int64** |  | 
- **endBlock** | **int64** |  | 
- **startDate** | **time.Time** |  | 
- **endDate** | **time.Time** |  | 
- **poolId** | **string** |  | 
+ **startBlock** | **int64** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | 
+ **endBlock** | **int64** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | 
+ **startDate** | **time.Time** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | 
+ **endDate** | **time.Time** | The end date of timeframe | 
+ **poolId** | **string** | The pool address. | 
 
 ### Return type
 
@@ -908,7 +1032,7 @@ No authorization required
 
 > []SushiswapSwapDTO SushiswapGetSwapsCurrent(ctx).Execute()
 
-GetSwaps (current)
+GetSwaps (current) 🔥
 
 
 
@@ -969,7 +1093,7 @@ No authorization required
 
 > []SushiswapSwapDTO SushiswapGetSwapsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
 
-GetSwaps (historical)
+GetSwaps (historical) 🔥
 
 
 
@@ -987,11 +1111,11 @@ import (
 )
 
 func main() {
-    startBlock := int64(789) // int64 |  (optional)
-    endBlock := int64(789) // int64 |  (optional)
-    startDate := time.Now() // time.Time |  (optional)
-    endDate := time.Now() // time.Time |  (optional)
-    poolId := "poolId_example" // string |  (optional)
+    startBlock := int64(789) // int64 | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+    endBlock := int64(789) // int64 | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+    startDate := time.Now() // time.Time | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+    endDate := time.Now() // time.Time | The end date of timeframe (optional)
+    poolId := "poolId_example" // string | The pool address. (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1016,11 +1140,11 @@ Other parameters are passed through a pointer to a apiSushiswapGetSwapsHistorica
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **int64** |  | 
- **endBlock** | **int64** |  | 
- **startDate** | **time.Time** |  | 
- **endDate** | **time.Time** |  | 
- **poolId** | **string** |  | 
+ **startBlock** | **int64** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | 
+ **endBlock** | **int64** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | 
+ **startDate** | **time.Time** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | 
+ **endDate** | **time.Time** | The end date of timeframe | 
+ **poolId** | **string** | The pool address. | 
 
 ### Return type
 
@@ -1044,7 +1168,7 @@ No authorization required
 
 > []SushiswapTokenDTO SushiswapGetTokensCurrent(ctx).Execute()
 
-GetTokens (current)
+GetTokens (current) 🔥
 
 
 
@@ -1180,7 +1304,7 @@ No authorization required
 
 > []SushiswapTokenDTO SushiswapGetTokensHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).TokenId(tokenId).Execute()
 
-GetTokens (historical)
+GetTokens (historical) 🔥
 
 
 
@@ -1198,11 +1322,11 @@ import (
 )
 
 func main() {
-    startBlock := int64(789) // int64 |  (optional)
-    endBlock := int64(789) // int64 |  (optional)
-    startDate := time.Now() // time.Time |  (optional)
-    endDate := time.Now() // time.Time |  (optional)
-    tokenId := "tokenId_example" // string |  (optional)
+    startBlock := int64(789) // int64 | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+    endBlock := int64(789) // int64 | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+    startDate := time.Now() // time.Time | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+    endDate := time.Now() // time.Time | The end date of timeframe (optional)
+    tokenId := "tokenId_example" // string | The token address. (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1227,11 +1351,11 @@ Other parameters are passed through a pointer to a apiSushiswapGetTokensHistoric
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **int64** |  | 
- **endBlock** | **int64** |  | 
- **startDate** | **time.Time** |  | 
- **endDate** | **time.Time** |  | 
- **tokenId** | **string** |  | 
+ **startBlock** | **int64** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | 
+ **endBlock** | **int64** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | 
+ **startDate** | **time.Time** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | 
+ **endDate** | **time.Time** | The end date of timeframe | 
+ **tokenId** | **string** | The token address. | 
 
 ### Return type
 

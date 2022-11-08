@@ -4,22 +4,24 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Invoke-DappsCowOrdersHistoricalGet**](CowApi.md#Invoke-DappsCowOrdersHistoricalGet) | **GET** /dapps/cow/orders/historical | 
-[**Invoke-DappsCowSettlementHistoricalGet**](CowApi.md#Invoke-DappsCowSettlementHistoricalGet) | **GET** /dapps/cow/settlement/historical | 
-[**Invoke-DappsCowTokensHistoricalGet**](CowApi.md#Invoke-DappsCowTokensHistoricalGet) | **GET** /dapps/cow/tokens/historical | 
-[**Invoke-DappsCowTradesHistoricalGet**](CowApi.md#Invoke-DappsCowTradesHistoricalGet) | **GET** /dapps/cow/trades/historical | 
-[**Invoke-DappsCowUsersHistoricalGet**](CowApi.md#Invoke-DappsCowUsersHistoricalGet) | **GET** /dapps/cow/users/historical | 
+[**Invoke-CowGetOrdersHistorical**](CowApi.md#Invoke-CowGetOrdersHistorical) | **GET** /dapps/cow/orders/historical | GetOrders (historical)
+[**Invoke-CowGetSettlementsHistorical**](CowApi.md#Invoke-CowGetSettlementsHistorical) | **GET** /dapps/cow/settlements/historical | GetSettlements (historical)
+[**Invoke-CowGetTokensHistorical**](CowApi.md#Invoke-CowGetTokensHistorical) | **GET** /dapps/cow/tokens/historical | GetTokens (historical) 🔥
+[**Invoke-CowGetTradesHistorical**](CowApi.md#Invoke-CowGetTradesHistorical) | **GET** /dapps/cow/trades/historical | GetTrades (historical) 🔥
+[**Invoke-CowGetUsersHistorical**](CowApi.md#Invoke-CowGetUsersHistorical) | **GET** /dapps/cow/users/historical | GetUsers (historical)
 
 
-<a name="Invoke-DappsCowOrdersHistoricalGet"></a>
-# **Invoke-DappsCowOrdersHistoricalGet**
-> void Invoke-DappsCowOrdersHistoricalGet<br>
+<a name="Invoke-CowGetOrdersHistorical"></a>
+# **Invoke-CowGetOrdersHistorical**
+> CowOrderDTO[] Invoke-CowGetOrdersHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 
+GetOrders (historical)
 
+Gets orders.
 
 ### Example
 ```powershell
@@ -28,10 +30,11 @@ $EndBlock = 789 # Int64 |  (optional)
 $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 
+# GetOrders (historical)
 try {
-    $Result = Invoke-DappsCowOrdersHistoricalGet -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
+    $Result = Invoke-CowGetOrdersHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsCowOrdersHistoricalGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-CowGetOrdersHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -47,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**CowOrderDTO[]**](CowOrderDTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -56,19 +59,21 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DappsCowSettlementHistoricalGet"></a>
-# **Invoke-DappsCowSettlementHistoricalGet**
-> void Invoke-DappsCowSettlementHistoricalGet<br>
+<a name="Invoke-CowGetSettlementsHistorical"></a>
+# **Invoke-CowGetSettlementsHistorical**
+> CowSettlementDTO[] Invoke-CowGetSettlementsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 
+GetSettlements (historical)
 
+Gets settlements.
 
 ### Example
 ```powershell
@@ -77,10 +82,11 @@ $EndBlock = 789 # Int64 |  (optional)
 $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 
+# GetSettlements (historical)
 try {
-    $Result = Invoke-DappsCowSettlementHistoricalGet -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
+    $Result = Invoke-CowGetSettlementsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsCowSettlementHistoricalGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-CowGetSettlementsHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -96,7 +102,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**CowSettlementDTO[]**](CowSettlementDTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -105,20 +111,22 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DappsCowTokensHistoricalGet"></a>
-# **Invoke-DappsCowTokensHistoricalGet**
-> void Invoke-DappsCowTokensHistoricalGet<br>
+<a name="Invoke-CowGetTokensHistorical"></a>
+# **Invoke-CowGetTokensHistorical**
+> CowTokenDTO[] Invoke-CowGetTokensHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-TokenId] <String><br>
 
+GetTokens (historical) 🔥
 
+Gets tokens.
 
 ### Example
 ```powershell
@@ -128,10 +136,11 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $TokenId = "MyTokenId" # String |  (optional)
 
+# GetTokens (historical) 🔥
 try {
-    $Result = Invoke-DappsCowTokensHistoricalGet -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -TokenId $TokenId
+    $Result = Invoke-CowGetTokensHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -TokenId $TokenId
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsCowTokensHistoricalGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-CowGetTokensHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -148,7 +157,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**CowTokenDTO[]**](CowTokenDTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -157,19 +166,21 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DappsCowTradesHistoricalGet"></a>
-# **Invoke-DappsCowTradesHistoricalGet**
-> void Invoke-DappsCowTradesHistoricalGet<br>
+<a name="Invoke-CowGetTradesHistorical"></a>
+# **Invoke-CowGetTradesHistorical**
+> CowTradeDTO[] Invoke-CowGetTradesHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 
+GetTrades (historical) 🔥
 
+Gets trades.
 
 ### Example
 ```powershell
@@ -178,10 +189,11 @@ $EndBlock = 789 # Int64 |  (optional)
 $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 
+# GetTrades (historical) 🔥
 try {
-    $Result = Invoke-DappsCowTradesHistoricalGet -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
+    $Result = Invoke-CowGetTradesHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsCowTradesHistoricalGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-CowGetTradesHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -197,7 +209,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**CowTradeDTO[]**](CowTradeDTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -206,19 +218,21 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DappsCowUsersHistoricalGet"></a>
-# **Invoke-DappsCowUsersHistoricalGet**
-> void Invoke-DappsCowUsersHistoricalGet<br>
+<a name="Invoke-CowGetUsersHistorical"></a>
+# **Invoke-CowGetUsersHistorical**
+> CowUserDTO[] Invoke-CowGetUsersHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 
+GetUsers (historical)
 
+Gets users.
 
 ### Example
 ```powershell
@@ -227,10 +241,11 @@ $EndBlock = 789 # Int64 |  (optional)
 $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 
+# GetUsers (historical)
 try {
-    $Result = Invoke-DappsCowUsersHistoricalGet -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
+    $Result = Invoke-CowGetUsersHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsCowUsersHistoricalGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-CowGetUsersHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -246,7 +261,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**CowUserDTO[]**](CowUserDTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -255,7 +270,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

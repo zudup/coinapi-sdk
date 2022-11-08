@@ -4,55 +4,57 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Invoke-DappsUniswapv3BundleCurrentGet**](UniswapV3Api.md#Invoke-DappsUniswapv3BundleCurrentGet) | **GET** /dapps/uniswapv3/bundle/current | GetBundles
-[**Invoke-DappsUniswapv3BundlesHistoricalGet**](UniswapV3Api.md#Invoke-DappsUniswapv3BundlesHistoricalGet) | **GET** /dapps/uniswapv3/bundles/historical | 
-[**Invoke-DappsUniswapv3BurnsCurrentGet**](UniswapV3Api.md#Invoke-DappsUniswapv3BurnsCurrentGet) | **GET** /dapps/uniswapv3/burns/current | GetBurns
-[**Invoke-DappsUniswapv3BurnsHistoricalGet**](UniswapV3Api.md#Invoke-DappsUniswapv3BurnsHistoricalGet) | **GET** /dapps/uniswapv3/burns/historical | 
-[**Invoke-DappsUniswapv3DayDataHistoricalGet**](UniswapV3Api.md#Invoke-DappsUniswapv3DayDataHistoricalGet) | **GET** /dapps/uniswapv3/dayData/historical | 
-[**Invoke-DappsUniswapv3FactoryCurrentGet**](UniswapV3Api.md#Invoke-DappsUniswapv3FactoryCurrentGet) | **GET** /dapps/uniswapv3/factory/current | GetFactory
-[**Invoke-DappsUniswapv3FactoryHistoricalGet**](UniswapV3Api.md#Invoke-DappsUniswapv3FactoryHistoricalGet) | **GET** /dapps/uniswapv3/factory/historical | 
-[**Invoke-DappsUniswapv3MintsCurrentGet**](UniswapV3Api.md#Invoke-DappsUniswapv3MintsCurrentGet) | **GET** /dapps/uniswapv3/mints/current | GetMints
-[**Invoke-DappsUniswapv3MintsHistoricalGet**](UniswapV3Api.md#Invoke-DappsUniswapv3MintsHistoricalGet) | **GET** /dapps/uniswapv3/mints/historical | 
-[**Invoke-DappsUniswapv3PoolDayDataHistoricalGet**](UniswapV3Api.md#Invoke-DappsUniswapv3PoolDayDataHistoricalGet) | **GET** /dapps/uniswapv3/poolDayData/historical | 
-[**Invoke-DappsUniswapv3PoolHourDataHistoricalGet**](UniswapV3Api.md#Invoke-DappsUniswapv3PoolHourDataHistoricalGet) | **GET** /dapps/uniswapv3/poolHourData/historical | 
-[**Invoke-DappsUniswapv3PoolsCurrentGet**](UniswapV3Api.md#Invoke-DappsUniswapv3PoolsCurrentGet) | **GET** /dapps/uniswapv3/pools/current | GetPools
-[**Invoke-DappsUniswapv3PoolsDayDataCurrentGet**](UniswapV3Api.md#Invoke-DappsUniswapv3PoolsDayDataCurrentGet) | **GET** /dapps/uniswapv3/poolsDayData/current | GetPoolsDayData
-[**Invoke-DappsUniswapv3PoolsHistoricalGet**](UniswapV3Api.md#Invoke-DappsUniswapv3PoolsHistoricalGet) | **GET** /dapps/uniswapv3/pools/historical | 
-[**Invoke-DappsUniswapv3PoolsHourDataCurrentGet**](UniswapV3Api.md#Invoke-DappsUniswapv3PoolsHourDataCurrentGet) | **GET** /dapps/uniswapv3/poolsHourData/current | GetPoolsHourData
-[**Invoke-DappsUniswapv3PositionSnapshotHistoricalGet**](UniswapV3Api.md#Invoke-DappsUniswapv3PositionSnapshotHistoricalGet) | **GET** /dapps/uniswapv3/positionSnapshot/historical | 
-[**Invoke-DappsUniswapv3PositionSnapshotsCurrentGet**](UniswapV3Api.md#Invoke-DappsUniswapv3PositionSnapshotsCurrentGet) | **GET** /dapps/uniswapv3/positionSnapshots/current | GetPositionSnapshot
-[**Invoke-DappsUniswapv3PositionsCurrentGet**](UniswapV3Api.md#Invoke-DappsUniswapv3PositionsCurrentGet) | **GET** /dapps/uniswapv3/positions/current | GetPositions
-[**Invoke-DappsUniswapv3PositionsHistoricalGet**](UniswapV3Api.md#Invoke-DappsUniswapv3PositionsHistoricalGet) | **GET** /dapps/uniswapv3/positions/historical | 
-[**Invoke-DappsUniswapv3SwapsCurrentGet**](UniswapV3Api.md#Invoke-DappsUniswapv3SwapsCurrentGet) | **GET** /dapps/uniswapv3/swaps/current | GetSwaps
-[**Invoke-DappsUniswapv3SwapsHistoricalGet**](UniswapV3Api.md#Invoke-DappsUniswapv3SwapsHistoricalGet) | **GET** /dapps/uniswapv3/swaps/historical | 
-[**Invoke-DappsUniswapv3TickDayDataHistoricalGet**](UniswapV3Api.md#Invoke-DappsUniswapv3TickDayDataHistoricalGet) | **GET** /dapps/uniswapv3/tickDayData/historical | 
-[**Invoke-DappsUniswapv3TicksCurrentGet**](UniswapV3Api.md#Invoke-DappsUniswapv3TicksCurrentGet) | **GET** /dapps/uniswapv3/ticks/current | GetTicks
-[**Invoke-DappsUniswapv3TicksDayDataCurrentGet**](UniswapV3Api.md#Invoke-DappsUniswapv3TicksDayDataCurrentGet) | **GET** /dapps/uniswapv3/ticksDayData/current | GetTicksDayData
-[**Invoke-DappsUniswapv3TicksHistoricalGet**](UniswapV3Api.md#Invoke-DappsUniswapv3TicksHistoricalGet) | **GET** /dapps/uniswapv3/ticks/historical | 
-[**Invoke-DappsUniswapv3TokenDayDataHistoricalGet**](UniswapV3Api.md#Invoke-DappsUniswapv3TokenDayDataHistoricalGet) | **GET** /dapps/uniswapv3/tokenDayData/historical | 
-[**Invoke-DappsUniswapv3TokenHourDataHistoricalGet**](UniswapV3Api.md#Invoke-DappsUniswapv3TokenHourDataHistoricalGet) | **GET** /dapps/uniswapv3/tokenHourData/historical | 
-[**Invoke-DappsUniswapv3TokensCurrentGet**](UniswapV3Api.md#Invoke-DappsUniswapv3TokensCurrentGet) | **GET** /dapps/uniswapv3/tokens/current | GetTokens
-[**Invoke-DappsUniswapv3TokensDayDataCurrentGet**](UniswapV3Api.md#Invoke-DappsUniswapv3TokensDayDataCurrentGet) | **GET** /dapps/uniswapv3/tokensDayData/current | GetTokensDayData
-[**Invoke-DappsUniswapv3TokensHistoricalGet**](UniswapV3Api.md#Invoke-DappsUniswapv3TokensHistoricalGet) | **GET** /dapps/uniswapv3/tokens/historical | 
-[**Invoke-DappsUniswapv3TokensHourDataCurrentGet**](UniswapV3Api.md#Invoke-DappsUniswapv3TokensHourDataCurrentGet) | **GET** /dapps/uniswapv3/tokensHourData/current | GetTokensHourData
-[**Invoke-DappsUniswapv3TransactionsHistoricalGet**](UniswapV3Api.md#Invoke-DappsUniswapv3TransactionsHistoricalGet) | **GET** /dapps/uniswapv3/transactions/historical | 
-[**Invoke-DappsUniswapv3UniswapDayDataCurrentGet**](UniswapV3Api.md#Invoke-DappsUniswapv3UniswapDayDataCurrentGet) | **GET** /dapps/uniswapv3/uniswapDayData/current | GetUniswapDayData
+[**Invoke-UniswapV3GetBundlesCurrent**](UniswapV3Api.md#Invoke-UniswapV3GetBundlesCurrent) | **GET** /dapps/uniswapv3/bundles/current | GetBundles (current)
+[**Invoke-UniswapV3GetBundlesHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetBundlesHistorical) | **GET** /dapps/uniswapv3/bundles/historical | GetBundles (historical)
+[**Invoke-UniswapV3GetBurnsCurrent**](UniswapV3Api.md#Invoke-UniswapV3GetBurnsCurrent) | **GET** /dapps/uniswapv3/burns/current | GetBurns (current)
+[**Invoke-UniswapV3GetBurnsHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetBurnsHistorical) | **GET** /dapps/uniswapv3/burns/historical | GetBurns (historical)
+[**Invoke-UniswapV3GetDayDataCurrent**](UniswapV3Api.md#Invoke-UniswapV3GetDayDataCurrent) | **GET** /dapps/uniswapv3/dayData/current | GetDayData (current)
+[**Invoke-UniswapV3GetDayDataHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetDayDataHistorical) | **GET** /dapps/uniswapv3/dayData/historical | GetDayData (historical)
+[**Invoke-UniswapV3GetFactoryCurrent**](UniswapV3Api.md#Invoke-UniswapV3GetFactoryCurrent) | **GET** /dapps/uniswapv3/factory/current | GetFactory (current)
+[**Invoke-UniswapV3GetFactoryHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetFactoryHistorical) | **GET** /dapps/uniswapv3/factory/historical | GetFactory (historical)
+[**Invoke-UniswapV3GetMintsCurrent**](UniswapV3Api.md#Invoke-UniswapV3GetMintsCurrent) | **GET** /dapps/uniswapv3/mints/current | GetMints (current)
+[**Invoke-UniswapV3GetMintsHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetMintsHistorical) | **GET** /dapps/uniswapv3/mints/historical | GetMints (historical)
+[**Invoke-UniswapV3GetPoolsDayDataCurrent**](UniswapV3Api.md#Invoke-UniswapV3GetPoolsDayDataCurrent) | **GET** /dapps/uniswapv3/poolsDayData/current | GetPoolsDayData (current)
+[**Invoke-UniswapV3GetPoolsDayDataHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetPoolsDayDataHistorical) | **GET** /dapps/uniswapv3/poolsDayData/historical | GetPoolsDayData (historical)
+[**Invoke-UniswapV3GetPoolsHourDataCurrent**](UniswapV3Api.md#Invoke-UniswapV3GetPoolsHourDataCurrent) | **GET** /dapps/uniswapv3/poolsHourData/current | GetPoolsHourData (current)
+[**Invoke-UniswapV3GetPoolsHourDataHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetPoolsHourDataHistorical) | **GET** /dapps/uniswapv3/poolsHourData/historical | GetPoolsHourData (historical)
+[**Invoke-UniswapV3GetPoolsCurrent**](UniswapV3Api.md#Invoke-UniswapV3GetPoolsCurrent) | **GET** /dapps/uniswapv3/pools/current | GetPools (current) 🔥
+[**Invoke-UniswapV3GetPoolsHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetPoolsHistorical) | **GET** /dapps/uniswapv3/pools/historical | GetPools (historical) 🔥
+[**Invoke-UniswapV3GetPositionsSnaphotsHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetPositionsSnaphotsHistorical) | **GET** /dapps/uniswapv3/positionsSnapshots/historical | GetPositionsSnaphots (historical)
+[**Invoke-UniswapV3GetPositionsSnapshotsCurrent**](UniswapV3Api.md#Invoke-UniswapV3GetPositionsSnapshotsCurrent) | **GET** /dapps/uniswapv3/positionSnapshots/current | GetPositionsSnapshots (current)
+[**Invoke-UniswapV3GetPositionsCurrent**](UniswapV3Api.md#Invoke-UniswapV3GetPositionsCurrent) | **GET** /dapps/uniswapv3/positions/current | GetPositions (current)
+[**Invoke-UniswapV3GetPositionsHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetPositionsHistorical) | **GET** /dapps/uniswapv3/positions/historical | GetPositions (historical)
+[**Invoke-UniswapV3GetSwapsCurrent**](UniswapV3Api.md#Invoke-UniswapV3GetSwapsCurrent) | **GET** /dapps/uniswapv3/swaps/current | GetSwaps (current) 🔥
+[**Invoke-UniswapV3GetSwapsHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetSwapsHistorical) | **GET** /dapps/uniswapv3/swaps/historical | GetSwaps (historical) 🔥
+[**Invoke-UniswapV3GetTicksDayDataCurrent**](UniswapV3Api.md#Invoke-UniswapV3GetTicksDayDataCurrent) | **GET** /dapps/uniswapv3/ticksDayData/current | GetTicksDayData (current)
+[**Invoke-UniswapV3GetTicksDayDataHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetTicksDayDataHistorical) | **GET** /dapps/uniswapv3/ticksDayData/historical | GetTicksDayData (historical)
+[**Invoke-UniswapV3GetTicksCurrent**](UniswapV3Api.md#Invoke-UniswapV3GetTicksCurrent) | **GET** /dapps/uniswapv3/ticks/current | GetTicks (current)
+[**Invoke-UniswapV3GetTicksHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetTicksHistorical) | **GET** /dapps/uniswapv3/ticks/historical | GetTicks (historical)
+[**Invoke-UniswapV3GetTokensDayDataCurrent**](UniswapV3Api.md#Invoke-UniswapV3GetTokensDayDataCurrent) | **GET** /dapps/uniswapv3/tokensDayData/current | GetTokensDayData (current)
+[**Invoke-UniswapV3GetTokensDayDataHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetTokensDayDataHistorical) | **GET** /dapps/uniswapv3/tokensDayData/historical | GetTokensDayData (historical)
+[**Invoke-UniswapV3GetTokensHourDataCurrent**](UniswapV3Api.md#Invoke-UniswapV3GetTokensHourDataCurrent) | **GET** /dapps/uniswapv3/tokensHourData/current | GetTokensHourData (current)
+[**Invoke-UniswapV3GetTokensHourDataHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetTokensHourDataHistorical) | **GET** /dapps/uniswapv3/tokensHourData/historical | GetTokensHourData (historical)
+[**Invoke-UniswapV3GetTokensCurrent**](UniswapV3Api.md#Invoke-UniswapV3GetTokensCurrent) | **GET** /dapps/uniswapv3/tokens/current | GetTokens (current) 🔥
+[**Invoke-UniswapV3GetTokensHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetTokensHistorical) | **GET** /dapps/uniswapv3/tokens/historical | GetTokens (historical) 🔥
+[**Invoke-UniswapV3GetTransactionsHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetTransactionsHistorical) | **GET** /dapps/uniswapv3/transactions/historical | GetTransactions (historical)
 
 
-<a name="Invoke-DappsUniswapv3BundleCurrentGet"></a>
-# **Invoke-DappsUniswapv3BundleCurrentGet**
-> UniswapV3BundleV3DTO[] Invoke-DappsUniswapv3BundleCurrentGet<br>
+<a name="Invoke-UniswapV3GetBundlesCurrent"></a>
+# **Invoke-UniswapV3GetBundlesCurrent**
+> UniswapV3BundleV3DTO[] Invoke-UniswapV3GetBundlesCurrent<br>
 
-GetBundles
+GetBundles (current)
+
+Gets bundles.
 
 ### Example
 ```powershell
 
-# GetBundles
+# GetBundles (current)
 try {
-    $Result = Invoke-DappsUniswapv3BundleCurrentGet
+    $Result = Invoke-UniswapV3GetBundlesCurrent
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsUniswapv3BundleCurrentGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-UniswapV3GetBundlesCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -75,15 +77,17 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DappsUniswapv3BundlesHistoricalGet"></a>
-# **Invoke-DappsUniswapv3BundlesHistoricalGet**
-> void Invoke-DappsUniswapv3BundlesHistoricalGet<br>
+<a name="Invoke-UniswapV3GetBundlesHistorical"></a>
+# **Invoke-UniswapV3GetBundlesHistorical**
+> UniswapV3BundleV3DTO[] Invoke-UniswapV3GetBundlesHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 
+GetBundles (historical)
 
+Gets bundles.
 
 ### Example
 ```powershell
@@ -92,10 +96,11 @@ $EndBlock = 789 # Int64 |  (optional)
 $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 
+# GetBundles (historical)
 try {
-    $Result = Invoke-DappsUniswapv3BundlesHistoricalGet -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
+    $Result = Invoke-UniswapV3GetBundlesHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsUniswapv3BundlesHistoricalGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-UniswapV3GetBundlesHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -111,7 +116,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**UniswapV3BundleV3DTO[]**](UniswapV3BundleV3DTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -120,26 +125,28 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DappsUniswapv3BurnsCurrentGet"></a>
-# **Invoke-DappsUniswapv3BurnsCurrentGet**
-> UniswapV3BurnV3DTO[] Invoke-DappsUniswapv3BurnsCurrentGet<br>
+<a name="Invoke-UniswapV3GetBurnsCurrent"></a>
+# **Invoke-UniswapV3GetBurnsCurrent**
+> UniswapV3BurnV3DTO[] Invoke-UniswapV3GetBurnsCurrent<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-FilterPoolId] <String><br>
 
-GetBurns
+GetBurns (current)
+
+Gets burns.
 
 ### Example
 ```powershell
-$FilterPoolId = "MyFilterPoolId" # String | Filter pool id (optional)
+$FilterPoolId = "MyFilterPoolId" # String |  (optional)
 
-# GetBurns
+# GetBurns (current)
 try {
-    $Result = Invoke-DappsUniswapv3BurnsCurrentGet -FilterPoolId $FilterPoolId
+    $Result = Invoke-UniswapV3GetBurnsCurrent -FilterPoolId $FilterPoolId
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsUniswapv3BurnsCurrentGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-UniswapV3GetBurnsCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -148,7 +155,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **FilterPoolId** | **String**| Filter pool id | [optional] 
+ **FilterPoolId** | **String**|  | [optional] 
 
 ### Return type
 
@@ -165,16 +172,18 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DappsUniswapv3BurnsHistoricalGet"></a>
-# **Invoke-DappsUniswapv3BurnsHistoricalGet**
-> void Invoke-DappsUniswapv3BurnsHistoricalGet<br>
+<a name="Invoke-UniswapV3GetBurnsHistorical"></a>
+# **Invoke-UniswapV3GetBurnsHistorical**
+> UniswapV3BurnV3DTO[] Invoke-UniswapV3GetBurnsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
 
+GetBurns (historical)
 
+Gets burns.
 
 ### Example
 ```powershell
@@ -184,10 +193,11 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $PoolId = "MyPoolId" # String |  (optional)
 
+# GetBurns (historical)
 try {
-    $Result = Invoke-DappsUniswapv3BurnsHistoricalGet -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
+    $Result = Invoke-UniswapV3GetBurnsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsUniswapv3BurnsHistoricalGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-UniswapV3GetBurnsHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -204,7 +214,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**UniswapV3BurnV3DTO[]**](UniswapV3BurnV3DTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -213,19 +223,59 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DappsUniswapv3DayDataHistoricalGet"></a>
-# **Invoke-DappsUniswapv3DayDataHistoricalGet**
-> void Invoke-DappsUniswapv3DayDataHistoricalGet<br>
+<a name="Invoke-UniswapV3GetDayDataCurrent"></a>
+# **Invoke-UniswapV3GetDayDataCurrent**
+> UniswapV3UniswapDayDataV3DTO[] Invoke-UniswapV3GetDayDataCurrent<br>
+
+GetDayData (current)
+
+Gets uniswapv3 day data.
+
+### Example
+```powershell
+
+# GetDayData (current)
+try {
+    $Result = Invoke-UniswapV3GetDayDataCurrent
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-UniswapV3GetDayDataCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**UniswapV3UniswapDayDataV3DTO[]**](UniswapV3UniswapDayDataV3DTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Invoke-UniswapV3GetDayDataHistorical"></a>
+# **Invoke-UniswapV3GetDayDataHistorical**
+> UniswapV3UniswapDayDataV3DTO[] Invoke-UniswapV3GetDayDataHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 
+GetDayData (historical)
 
+Gets uniswapv3 day data.
 
 ### Example
 ```powershell
@@ -234,10 +284,11 @@ $EndBlock = 789 # Int64 |  (optional)
 $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 
+# GetDayData (historical)
 try {
-    $Result = Invoke-DappsUniswapv3DayDataHistoricalGet -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
+    $Result = Invoke-UniswapV3GetDayDataHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsUniswapv3DayDataHistoricalGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-UniswapV3GetDayDataHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -253,7 +304,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**UniswapV3UniswapDayDataV3DTO[]**](UniswapV3UniswapDayDataV3DTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -262,35 +313,32 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DappsUniswapv3FactoryCurrentGet"></a>
-# **Invoke-DappsUniswapv3FactoryCurrentGet**
-> UniswapV3FactoryV3DTO[] Invoke-DappsUniswapv3FactoryCurrentGet<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-ChainId] <String><br>
+<a name="Invoke-UniswapV3GetFactoryCurrent"></a>
+# **Invoke-UniswapV3GetFactoryCurrent**
+> UniswapV3FactoryV3DTO[] Invoke-UniswapV3GetFactoryCurrent<br>
 
-GetFactory
+GetFactory (current)
+
+Gets factory.
 
 ### Example
 ```powershell
-$ChainId = "MyChainId" # String | 
 
-# GetFactory
+# GetFactory (current)
 try {
-    $Result = Invoke-DappsUniswapv3FactoryCurrentGet -ChainId $ChainId
+    $Result = Invoke-UniswapV3GetFactoryCurrent
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsUniswapv3FactoryCurrentGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-UniswapV3GetFactoryCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ChainId** | **String**|  | 
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -307,15 +355,17 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DappsUniswapv3FactoryHistoricalGet"></a>
-# **Invoke-DappsUniswapv3FactoryHistoricalGet**
-> void Invoke-DappsUniswapv3FactoryHistoricalGet<br>
+<a name="Invoke-UniswapV3GetFactoryHistorical"></a>
+# **Invoke-UniswapV3GetFactoryHistorical**
+> UniswapV3FactoryV3DTO[] Invoke-UniswapV3GetFactoryHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 
+GetFactory (historical)
 
+Gets factory.
 
 ### Example
 ```powershell
@@ -324,10 +374,11 @@ $EndBlock = 789 # Int64 |  (optional)
 $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 
+# GetFactory (historical)
 try {
-    $Result = Invoke-DappsUniswapv3FactoryHistoricalGet -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
+    $Result = Invoke-UniswapV3GetFactoryHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsUniswapv3FactoryHistoricalGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-UniswapV3GetFactoryHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -343,7 +394,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**UniswapV3FactoryV3DTO[]**](UniswapV3FactoryV3DTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -352,26 +403,28 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DappsUniswapv3MintsCurrentGet"></a>
-# **Invoke-DappsUniswapv3MintsCurrentGet**
-> UniswapV3MintV3DTO[] Invoke-DappsUniswapv3MintsCurrentGet<br>
+<a name="Invoke-UniswapV3GetMintsCurrent"></a>
+# **Invoke-UniswapV3GetMintsCurrent**
+> UniswapV3MintV3DTO[] Invoke-UniswapV3GetMintsCurrent<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-FilterPoolId] <String><br>
 
-GetMints
+GetMints (current)
+
+Gets mints.
 
 ### Example
 ```powershell
-$FilterPoolId = "MyFilterPoolId" # String | Filter pool id (optional)
+$FilterPoolId = "MyFilterPoolId" # String |  (optional)
 
-# GetMints
+# GetMints (current)
 try {
-    $Result = Invoke-DappsUniswapv3MintsCurrentGet -FilterPoolId $FilterPoolId
+    $Result = Invoke-UniswapV3GetMintsCurrent -FilterPoolId $FilterPoolId
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsUniswapv3MintsCurrentGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-UniswapV3GetMintsCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -380,7 +433,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **FilterPoolId** | **String**| Filter pool id | [optional] 
+ **FilterPoolId** | **String**|  | [optional] 
 
 ### Return type
 
@@ -397,16 +450,18 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DappsUniswapv3MintsHistoricalGet"></a>
-# **Invoke-DappsUniswapv3MintsHistoricalGet**
-> void Invoke-DappsUniswapv3MintsHistoricalGet<br>
+<a name="Invoke-UniswapV3GetMintsHistorical"></a>
+# **Invoke-UniswapV3GetMintsHistorical**
+> UniswapV3MintV3DTO[] Invoke-UniswapV3GetMintsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
 
+GetMints (historical)
 
+Gets mints.
 
 ### Example
 ```powershell
@@ -416,10 +471,11 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $PoolId = "MyPoolId" # String |  (optional)
 
+# GetMints (historical)
 try {
-    $Result = Invoke-DappsUniswapv3MintsHistoricalGet -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
+    $Result = Invoke-UniswapV3GetMintsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsUniswapv3MintsHistoricalGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-UniswapV3GetMintsHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -436,152 +492,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="Invoke-DappsUniswapv3PoolDayDataHistoricalGet"></a>
-# **Invoke-DappsUniswapv3PoolDayDataHistoricalGet**
-> void Invoke-DappsUniswapv3PoolDayDataHistoricalGet<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
-
-
-
-### Example
-```powershell
-$StartBlock = 789 # Int64 |  (optional)
-$EndBlock = 789 # Int64 |  (optional)
-$StartDate = (Get-Date) # System.DateTime |  (optional)
-$EndDate = (Get-Date) # System.DateTime |  (optional)
-$PoolId = "MyPoolId" # String |  (optional)
-
-try {
-    $Result = Invoke-DappsUniswapv3PoolDayDataHistoricalGet -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
-} catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsUniswapv3PoolDayDataHistoricalGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
-    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **StartBlock** | **Int64**|  | [optional] 
- **EndBlock** | **Int64**|  | [optional] 
- **StartDate** | **System.DateTime**|  | [optional] 
- **EndDate** | **System.DateTime**|  | [optional] 
- **PoolId** | **String**|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="Invoke-DappsUniswapv3PoolHourDataHistoricalGet"></a>
-# **Invoke-DappsUniswapv3PoolHourDataHistoricalGet**
-> void Invoke-DappsUniswapv3PoolHourDataHistoricalGet<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
-
-
-
-### Example
-```powershell
-$StartBlock = 789 # Int64 |  (optional)
-$EndBlock = 789 # Int64 |  (optional)
-$StartDate = (Get-Date) # System.DateTime |  (optional)
-$EndDate = (Get-Date) # System.DateTime |  (optional)
-$PoolId = "MyPoolId" # String |  (optional)
-
-try {
-    $Result = Invoke-DappsUniswapv3PoolHourDataHistoricalGet -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
-} catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsUniswapv3PoolHourDataHistoricalGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
-    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **StartBlock** | **Int64**|  | [optional] 
- **EndBlock** | **Int64**|  | [optional] 
- **StartDate** | **System.DateTime**|  | [optional] 
- **EndDate** | **System.DateTime**|  | [optional] 
- **PoolId** | **String**|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="Invoke-DappsUniswapv3PoolsCurrentGet"></a>
-# **Invoke-DappsUniswapv3PoolsCurrentGet**
-> UniswapV3PoolV3DTO[] Invoke-DappsUniswapv3PoolsCurrentGet<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-FilterPoolId] <String><br>
-
-GetPools
-
-### Example
-```powershell
-$FilterPoolId = "MyFilterPoolId" # String | Filter pool id (optional)
-
-# GetPools
-try {
-    $Result = Invoke-DappsUniswapv3PoolsCurrentGet -FilterPoolId $FilterPoolId
-} catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsUniswapv3PoolsCurrentGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
-    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **FilterPoolId** | **String**| Filter pool id | [optional] 
-
-### Return type
-
-[**UniswapV3PoolV3DTO[]**](UniswapV3PoolV3DTO.md) (PSCustomObject)
+[**UniswapV3MintV3DTO[]**](UniswapV3MintV3DTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -594,22 +505,24 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DappsUniswapv3PoolsDayDataCurrentGet"></a>
-# **Invoke-DappsUniswapv3PoolsDayDataCurrentGet**
-> UniswapV3PoolDayDataV3DTO[] Invoke-DappsUniswapv3PoolsDayDataCurrentGet<br>
+<a name="Invoke-UniswapV3GetPoolsDayDataCurrent"></a>
+# **Invoke-UniswapV3GetPoolsDayDataCurrent**
+> UniswapV3PoolDayDataV3DTO[] Invoke-UniswapV3GetPoolsDayDataCurrent<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-FilterPoolId] <String><br>
 
-GetPoolsDayData
+GetPoolsDayData (current)
+
+Gets pools day data.
 
 ### Example
 ```powershell
-$FilterPoolId = "MyFilterPoolId" # String | Filter pool id (optional)
+$FilterPoolId = "MyFilterPoolId" # String |  (optional)
 
-# GetPoolsDayData
+# GetPoolsDayData (current)
 try {
-    $Result = Invoke-DappsUniswapv3PoolsDayDataCurrentGet -FilterPoolId $FilterPoolId
+    $Result = Invoke-UniswapV3GetPoolsDayDataCurrent -FilterPoolId $FilterPoolId
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsUniswapv3PoolsDayDataCurrentGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-UniswapV3GetPoolsDayDataCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -618,7 +531,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **FilterPoolId** | **String**| Filter pool id | [optional] 
+ **FilterPoolId** | **String**|  | [optional] 
 
 ### Return type
 
@@ -635,16 +548,18 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DappsUniswapv3PoolsHistoricalGet"></a>
-# **Invoke-DappsUniswapv3PoolsHistoricalGet**
-> void Invoke-DappsUniswapv3PoolsHistoricalGet<br>
+<a name="Invoke-UniswapV3GetPoolsDayDataHistorical"></a>
+# **Invoke-UniswapV3GetPoolsDayDataHistorical**
+> UniswapV3PoolDayDataV3DTO[] Invoke-UniswapV3GetPoolsDayDataHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
 
+GetPoolsDayData (historical)
 
+Gets pools day data.
 
 ### Example
 ```powershell
@@ -654,10 +569,11 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $PoolId = "MyPoolId" # String |  (optional)
 
+# GetPoolsDayData (historical)
 try {
-    $Result = Invoke-DappsUniswapv3PoolsHistoricalGet -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
+    $Result = Invoke-UniswapV3GetPoolsDayDataHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsUniswapv3PoolsHistoricalGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-UniswapV3GetPoolsDayDataHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -674,7 +590,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**UniswapV3PoolDayDataV3DTO[]**](UniswapV3PoolDayDataV3DTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -683,26 +599,28 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DappsUniswapv3PoolsHourDataCurrentGet"></a>
-# **Invoke-DappsUniswapv3PoolsHourDataCurrentGet**
-> UniswapV3PoolHourDataV3DTO[] Invoke-DappsUniswapv3PoolsHourDataCurrentGet<br>
+<a name="Invoke-UniswapV3GetPoolsHourDataCurrent"></a>
+# **Invoke-UniswapV3GetPoolsHourDataCurrent**
+> UniswapV3PoolHourDataV3DTO[] Invoke-UniswapV3GetPoolsHourDataCurrent<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-FilterPoolId] <String><br>
 
-GetPoolsHourData
+GetPoolsHourData (current)
+
+Gets pools hour data.
 
 ### Example
 ```powershell
-$FilterPoolId = "MyFilterPoolId" # String | Filter pool id (optional)
+$FilterPoolId = "MyFilterPoolId" # String |  (optional)
 
-# GetPoolsHourData
+# GetPoolsHourData (current)
 try {
-    $Result = Invoke-DappsUniswapv3PoolsHourDataCurrentGet -FilterPoolId $FilterPoolId
+    $Result = Invoke-UniswapV3GetPoolsHourDataCurrent -FilterPoolId $FilterPoolId
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsUniswapv3PoolsHourDataCurrentGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-UniswapV3GetPoolsHourDataCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -711,7 +629,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **FilterPoolId** | **String**| Filter pool id | [optional] 
+ **FilterPoolId** | **String**|  | [optional] 
 
 ### Return type
 
@@ -728,16 +646,18 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DappsUniswapv3PositionSnapshotHistoricalGet"></a>
-# **Invoke-DappsUniswapv3PositionSnapshotHistoricalGet**
-> void Invoke-DappsUniswapv3PositionSnapshotHistoricalGet<br>
+<a name="Invoke-UniswapV3GetPoolsHourDataHistorical"></a>
+# **Invoke-UniswapV3GetPoolsHourDataHistorical**
+> UniswapV3PoolHourDataV3DTO[] Invoke-UniswapV3GetPoolsHourDataHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
 
+GetPoolsHourData (historical)
 
+Gets pools hour data.
 
 ### Example
 ```powershell
@@ -747,10 +667,11 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $PoolId = "MyPoolId" # String |  (optional)
 
+# GetPoolsHourData (historical)
 try {
-    $Result = Invoke-DappsUniswapv3PositionSnapshotHistoricalGet -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
+    $Result = Invoke-UniswapV3GetPoolsHourDataHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsUniswapv3PositionSnapshotHistoricalGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-UniswapV3GetPoolsHourDataHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -767,7 +688,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**UniswapV3PoolHourDataV3DTO[]**](UniswapV3PoolHourDataV3DTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -776,26 +697,28 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DappsUniswapv3PositionSnapshotsCurrentGet"></a>
-# **Invoke-DappsUniswapv3PositionSnapshotsCurrentGet**
-> UniswapV3PositionSnapshotV3DTO[] Invoke-DappsUniswapv3PositionSnapshotsCurrentGet<br>
+<a name="Invoke-UniswapV3GetPoolsCurrent"></a>
+# **Invoke-UniswapV3GetPoolsCurrent**
+> UniswapV3PoolV3DTO[] Invoke-UniswapV3GetPoolsCurrent<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-FilterPoolId] <String><br>
 
-GetPositionSnapshot
+GetPools (current) 🔥
+
+Gets pools.
 
 ### Example
 ```powershell
-$FilterPoolId = "MyFilterPoolId" # String | Filter pool id (optional)
+$FilterPoolId = "MyFilterPoolId" # String |  (optional)
 
-# GetPositionSnapshot
+# GetPools (current) 🔥
 try {
-    $Result = Invoke-DappsUniswapv3PositionSnapshotsCurrentGet -FilterPoolId $FilterPoolId
+    $Result = Invoke-UniswapV3GetPoolsCurrent -FilterPoolId $FilterPoolId
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsUniswapv3PositionSnapshotsCurrentGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-UniswapV3GetPoolsCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -804,7 +727,117 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **FilterPoolId** | **String**| Filter pool id | [optional] 
+ **FilterPoolId** | **String**|  | [optional] 
+
+### Return type
+
+[**UniswapV3PoolV3DTO[]**](UniswapV3PoolV3DTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Invoke-UniswapV3GetPoolsHistorical"></a>
+# **Invoke-UniswapV3GetPoolsHistorical**
+> UniswapV3PoolV3DTO[] Invoke-UniswapV3GetPoolsHistorical<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
+
+GetPools (historical) 🔥
+
+Gets pools.
+
+### Example
+```powershell
+$StartBlock = 789 # Int64 |  (optional)
+$EndBlock = 789 # Int64 |  (optional)
+$StartDate = (Get-Date) # System.DateTime |  (optional)
+$EndDate = (Get-Date) # System.DateTime |  (optional)
+$PoolId = "MyPoolId" # String |  (optional)
+
+# GetPools (historical) 🔥
+try {
+    $Result = Invoke-UniswapV3GetPoolsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-UniswapV3GetPoolsHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **StartBlock** | **Int64**|  | [optional] 
+ **EndBlock** | **Int64**|  | [optional] 
+ **StartDate** | **System.DateTime**|  | [optional] 
+ **EndDate** | **System.DateTime**|  | [optional] 
+ **PoolId** | **String**|  | [optional] 
+
+### Return type
+
+[**UniswapV3PoolV3DTO[]**](UniswapV3PoolV3DTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Invoke-UniswapV3GetPositionsSnaphotsHistorical"></a>
+# **Invoke-UniswapV3GetPositionsSnaphotsHistorical**
+> UniswapV3PositionSnapshotV3DTO[] Invoke-UniswapV3GetPositionsSnaphotsHistorical<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
+
+GetPositionsSnaphots (historical)
+
+Gets positions snapshots.
+
+### Example
+```powershell
+$StartBlock = 789 # Int64 |  (optional)
+$EndBlock = 789 # Int64 |  (optional)
+$StartDate = (Get-Date) # System.DateTime |  (optional)
+$EndDate = (Get-Date) # System.DateTime |  (optional)
+$PoolId = "MyPoolId" # String |  (optional)
+
+# GetPositionsSnaphots (historical)
+try {
+    $Result = Invoke-UniswapV3GetPositionsSnaphotsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-UniswapV3GetPositionsSnaphotsHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **StartBlock** | **Int64**|  | [optional] 
+ **EndBlock** | **Int64**|  | [optional] 
+ **StartDate** | **System.DateTime**|  | [optional] 
+ **EndDate** | **System.DateTime**|  | [optional] 
+ **PoolId** | **String**|  | [optional] 
 
 ### Return type
 
@@ -821,22 +854,24 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DappsUniswapv3PositionsCurrentGet"></a>
-# **Invoke-DappsUniswapv3PositionsCurrentGet**
-> UniswapV3PositionV3DTO[] Invoke-DappsUniswapv3PositionsCurrentGet<br>
+<a name="Invoke-UniswapV3GetPositionsSnapshotsCurrent"></a>
+# **Invoke-UniswapV3GetPositionsSnapshotsCurrent**
+> UniswapV3PositionSnapshotV3DTO[] Invoke-UniswapV3GetPositionsSnapshotsCurrent<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-FilterPoolId] <String><br>
 
-GetPositions
+GetPositionsSnapshots (current)
+
+Gets positions snapshots.
 
 ### Example
 ```powershell
-$FilterPoolId = "MyFilterPoolId" # String | Filter pool id (optional)
+$FilterPoolId = "MyFilterPoolId" # String |  (optional)
 
-# GetPositions
+# GetPositionsSnapshots (current)
 try {
-    $Result = Invoke-DappsUniswapv3PositionsCurrentGet -FilterPoolId $FilterPoolId
+    $Result = Invoke-UniswapV3GetPositionsSnapshotsCurrent -FilterPoolId $FilterPoolId
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsUniswapv3PositionsCurrentGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-UniswapV3GetPositionsSnapshotsCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -845,7 +880,50 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **FilterPoolId** | **String**| Filter pool id | [optional] 
+ **FilterPoolId** | **String**|  | [optional] 
+
+### Return type
+
+[**UniswapV3PositionSnapshotV3DTO[]**](UniswapV3PositionSnapshotV3DTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Invoke-UniswapV3GetPositionsCurrent"></a>
+# **Invoke-UniswapV3GetPositionsCurrent**
+> UniswapV3PositionV3DTO[] Invoke-UniswapV3GetPositionsCurrent<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-FilterPoolId] <String><br>
+
+GetPositions (current)
+
+Gets positions.
+
+### Example
+```powershell
+$FilterPoolId = "MyFilterPoolId" # String |  (optional)
+
+# GetPositions (current)
+try {
+    $Result = Invoke-UniswapV3GetPositionsCurrent -FilterPoolId $FilterPoolId
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-UniswapV3GetPositionsCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **FilterPoolId** | **String**|  | [optional] 
 
 ### Return type
 
@@ -862,16 +940,18 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DappsUniswapv3PositionsHistoricalGet"></a>
-# **Invoke-DappsUniswapv3PositionsHistoricalGet**
-> void Invoke-DappsUniswapv3PositionsHistoricalGet<br>
+<a name="Invoke-UniswapV3GetPositionsHistorical"></a>
+# **Invoke-UniswapV3GetPositionsHistorical**
+> UniswapV3PositionV3DTO[] Invoke-UniswapV3GetPositionsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
 
+GetPositions (historical)
 
+Gets positions.
 
 ### Example
 ```powershell
@@ -881,10 +961,11 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $PoolId = "MyPoolId" # String |  (optional)
 
+# GetPositions (historical)
 try {
-    $Result = Invoke-DappsUniswapv3PositionsHistoricalGet -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
+    $Result = Invoke-UniswapV3GetPositionsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsUniswapv3PositionsHistoricalGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-UniswapV3GetPositionsHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -901,7 +982,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**UniswapV3PositionV3DTO[]**](UniswapV3PositionV3DTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -910,26 +991,28 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DappsUniswapv3SwapsCurrentGet"></a>
-# **Invoke-DappsUniswapv3SwapsCurrentGet**
-> UniswapV3SwapV3DTO[] Invoke-DappsUniswapv3SwapsCurrentGet<br>
+<a name="Invoke-UniswapV3GetSwapsCurrent"></a>
+# **Invoke-UniswapV3GetSwapsCurrent**
+> UniswapV3SwapV3DTO[] Invoke-UniswapV3GetSwapsCurrent<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-FilterPoolId] <String><br>
 
-GetSwaps
+GetSwaps (current) 🔥
+
+Gets swaps.
 
 ### Example
 ```powershell
-$FilterPoolId = "MyFilterPoolId" # String | Filter pool id (optional)
+$FilterPoolId = "MyFilterPoolId" # String |  (optional)
 
-# GetSwaps
+# GetSwaps (current) 🔥
 try {
-    $Result = Invoke-DappsUniswapv3SwapsCurrentGet -FilterPoolId $FilterPoolId
+    $Result = Invoke-UniswapV3GetSwapsCurrent -FilterPoolId $FilterPoolId
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsUniswapv3SwapsCurrentGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-UniswapV3GetSwapsCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -938,7 +1021,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **FilterPoolId** | **String**| Filter pool id | [optional] 
+ **FilterPoolId** | **String**|  | [optional] 
 
 ### Return type
 
@@ -955,16 +1038,18 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DappsUniswapv3SwapsHistoricalGet"></a>
-# **Invoke-DappsUniswapv3SwapsHistoricalGet**
-> void Invoke-DappsUniswapv3SwapsHistoricalGet<br>
+<a name="Invoke-UniswapV3GetSwapsHistorical"></a>
+# **Invoke-UniswapV3GetSwapsHistorical**
+> UniswapV3SwapV3DTO[] Invoke-UniswapV3GetSwapsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
 
+GetSwaps (historical) 🔥
 
+Gets swaps.
 
 ### Example
 ```powershell
@@ -974,10 +1059,11 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $PoolId = "MyPoolId" # String |  (optional)
 
+# GetSwaps (historical) 🔥
 try {
-    $Result = Invoke-DappsUniswapv3SwapsHistoricalGet -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
+    $Result = Invoke-UniswapV3GetSwapsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsUniswapv3SwapsHistoricalGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-UniswapV3GetSwapsHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -994,100 +1080,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="Invoke-DappsUniswapv3TickDayDataHistoricalGet"></a>
-# **Invoke-DappsUniswapv3TickDayDataHistoricalGet**
-> void Invoke-DappsUniswapv3TickDayDataHistoricalGet<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
-
-
-
-### Example
-```powershell
-$StartBlock = 789 # Int64 |  (optional)
-$EndBlock = 789 # Int64 |  (optional)
-$StartDate = (Get-Date) # System.DateTime |  (optional)
-$EndDate = (Get-Date) # System.DateTime |  (optional)
-$PoolId = "MyPoolId" # String |  (optional)
-
-try {
-    $Result = Invoke-DappsUniswapv3TickDayDataHistoricalGet -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
-} catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsUniswapv3TickDayDataHistoricalGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
-    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **StartBlock** | **Int64**|  | [optional] 
- **EndBlock** | **Int64**|  | [optional] 
- **StartDate** | **System.DateTime**|  | [optional] 
- **EndDate** | **System.DateTime**|  | [optional] 
- **PoolId** | **String**|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="Invoke-DappsUniswapv3TicksCurrentGet"></a>
-# **Invoke-DappsUniswapv3TicksCurrentGet**
-> UniswapV3TickV3DTO[] Invoke-DappsUniswapv3TicksCurrentGet<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-FilterPoolId] <String><br>
-
-GetTicks
-
-### Example
-```powershell
-$FilterPoolId = "MyFilterPoolId" # String | Filter pool id (optional)
-
-# GetTicks
-try {
-    $Result = Invoke-DappsUniswapv3TicksCurrentGet -FilterPoolId $FilterPoolId
-} catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsUniswapv3TicksCurrentGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
-    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **FilterPoolId** | **String**| Filter pool id | [optional] 
-
-### Return type
-
-[**UniswapV3TickV3DTO[]**](UniswapV3TickV3DTO.md) (PSCustomObject)
+[**UniswapV3SwapV3DTO[]**](UniswapV3SwapV3DTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -1100,22 +1093,24 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DappsUniswapv3TicksDayDataCurrentGet"></a>
-# **Invoke-DappsUniswapv3TicksDayDataCurrentGet**
-> UniswapV3TickDayDataV3DTO[] Invoke-DappsUniswapv3TicksDayDataCurrentGet<br>
+<a name="Invoke-UniswapV3GetTicksDayDataCurrent"></a>
+# **Invoke-UniswapV3GetTicksDayDataCurrent**
+> UniswapV3TickDayDataV3DTO[] Invoke-UniswapV3GetTicksDayDataCurrent<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-FilterPoolId] <String><br>
 
-GetTicksDayData
+GetTicksDayData (current)
+
+Gets ticks day data.
 
 ### Example
 ```powershell
-$FilterPoolId = "MyFilterPoolId" # String | Filter pool id (optional)
+$FilterPoolId = "MyFilterPoolId" # String |  (optional)
 
-# GetTicksDayData
+# GetTicksDayData (current)
 try {
-    $Result = Invoke-DappsUniswapv3TicksDayDataCurrentGet -FilterPoolId $FilterPoolId
+    $Result = Invoke-UniswapV3GetTicksDayDataCurrent -FilterPoolId $FilterPoolId
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsUniswapv3TicksDayDataCurrentGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-UniswapV3GetTicksDayDataCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -1124,7 +1119,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **FilterPoolId** | **String**| Filter pool id | [optional] 
+ **FilterPoolId** | **String**|  | [optional] 
 
 ### Return type
 
@@ -1141,16 +1136,18 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DappsUniswapv3TicksHistoricalGet"></a>
-# **Invoke-DappsUniswapv3TicksHistoricalGet**
-> void Invoke-DappsUniswapv3TicksHistoricalGet<br>
+<a name="Invoke-UniswapV3GetTicksDayDataHistorical"></a>
+# **Invoke-UniswapV3GetTicksDayDataHistorical**
+> UniswapV3TickDayDataV3DTO[] Invoke-UniswapV3GetTicksDayDataHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
 
+GetTicksDayData (historical)
 
+Gets ticks day data.
 
 ### Example
 ```powershell
@@ -1160,10 +1157,11 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $PoolId = "MyPoolId" # String |  (optional)
 
+# GetTicksDayData (historical)
 try {
-    $Result = Invoke-DappsUniswapv3TicksHistoricalGet -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
+    $Result = Invoke-UniswapV3GetTicksDayDataHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsUniswapv3TicksHistoricalGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-UniswapV3GetTicksDayDataHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -1180,152 +1178,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="Invoke-DappsUniswapv3TokenDayDataHistoricalGet"></a>
-# **Invoke-DappsUniswapv3TokenDayDataHistoricalGet**
-> void Invoke-DappsUniswapv3TokenDayDataHistoricalGet<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-TokenId] <String><br>
-
-
-
-### Example
-```powershell
-$StartBlock = 789 # Int64 |  (optional)
-$EndBlock = 789 # Int64 |  (optional)
-$StartDate = (Get-Date) # System.DateTime |  (optional)
-$EndDate = (Get-Date) # System.DateTime |  (optional)
-$TokenId = "MyTokenId" # String |  (optional)
-
-try {
-    $Result = Invoke-DappsUniswapv3TokenDayDataHistoricalGet -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -TokenId $TokenId
-} catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsUniswapv3TokenDayDataHistoricalGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
-    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **StartBlock** | **Int64**|  | [optional] 
- **EndBlock** | **Int64**|  | [optional] 
- **StartDate** | **System.DateTime**|  | [optional] 
- **EndDate** | **System.DateTime**|  | [optional] 
- **TokenId** | **String**|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="Invoke-DappsUniswapv3TokenHourDataHistoricalGet"></a>
-# **Invoke-DappsUniswapv3TokenHourDataHistoricalGet**
-> void Invoke-DappsUniswapv3TokenHourDataHistoricalGet<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-TokenId] <String><br>
-
-
-
-### Example
-```powershell
-$StartBlock = 789 # Int64 |  (optional)
-$EndBlock = 789 # Int64 |  (optional)
-$StartDate = (Get-Date) # System.DateTime |  (optional)
-$EndDate = (Get-Date) # System.DateTime |  (optional)
-$TokenId = "MyTokenId" # String |  (optional)
-
-try {
-    $Result = Invoke-DappsUniswapv3TokenHourDataHistoricalGet -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -TokenId $TokenId
-} catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsUniswapv3TokenHourDataHistoricalGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
-    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **StartBlock** | **Int64**|  | [optional] 
- **EndBlock** | **Int64**|  | [optional] 
- **StartDate** | **System.DateTime**|  | [optional] 
- **EndDate** | **System.DateTime**|  | [optional] 
- **TokenId** | **String**|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="Invoke-DappsUniswapv3TokensCurrentGet"></a>
-# **Invoke-DappsUniswapv3TokensCurrentGet**
-> UniswapV3TokenV3DTO[] Invoke-DappsUniswapv3TokensCurrentGet<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-FilterTokenId] <String><br>
-
-GetTokens
-
-### Example
-```powershell
-$FilterTokenId = "MyFilterTokenId" # String |  (optional)
-
-# GetTokens
-try {
-    $Result = Invoke-DappsUniswapv3TokensCurrentGet -FilterTokenId $FilterTokenId
-} catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsUniswapv3TokensCurrentGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
-    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **FilterTokenId** | **String**|  | [optional] 
-
-### Return type
-
-[**UniswapV3TokenV3DTO[]**](UniswapV3TokenV3DTO.md) (PSCustomObject)
+[**UniswapV3TickDayDataV3DTO[]**](UniswapV3TickDayDataV3DTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -1338,22 +1191,122 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DappsUniswapv3TokensDayDataCurrentGet"></a>
-# **Invoke-DappsUniswapv3TokensDayDataCurrentGet**
-> UniswapV3TokenV3DayDataDTO[] Invoke-DappsUniswapv3TokensDayDataCurrentGet<br>
+<a name="Invoke-UniswapV3GetTicksCurrent"></a>
+# **Invoke-UniswapV3GetTicksCurrent**
+> UniswapV3TickV3DTO[] Invoke-UniswapV3GetTicksCurrent<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-FilterPoolId] <String><br>
+
+GetTicks (current)
+
+Gets ticks.
+
+### Example
+```powershell
+$FilterPoolId = "MyFilterPoolId" # String |  (optional)
+
+# GetTicks (current)
+try {
+    $Result = Invoke-UniswapV3GetTicksCurrent -FilterPoolId $FilterPoolId
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-UniswapV3GetTicksCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **FilterPoolId** | **String**|  | [optional] 
+
+### Return type
+
+[**UniswapV3TickV3DTO[]**](UniswapV3TickV3DTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Invoke-UniswapV3GetTicksHistorical"></a>
+# **Invoke-UniswapV3GetTicksHistorical**
+> UniswapV3TickV3DTO[] Invoke-UniswapV3GetTicksHistorical<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
+
+GetTicks (historical)
+
+Gets ticks.
+
+### Example
+```powershell
+$StartBlock = 789 # Int64 |  (optional)
+$EndBlock = 789 # Int64 |  (optional)
+$StartDate = (Get-Date) # System.DateTime |  (optional)
+$EndDate = (Get-Date) # System.DateTime |  (optional)
+$PoolId = "MyPoolId" # String |  (optional)
+
+# GetTicks (historical)
+try {
+    $Result = Invoke-UniswapV3GetTicksHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-UniswapV3GetTicksHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **StartBlock** | **Int64**|  | [optional] 
+ **EndBlock** | **Int64**|  | [optional] 
+ **StartDate** | **System.DateTime**|  | [optional] 
+ **EndDate** | **System.DateTime**|  | [optional] 
+ **PoolId** | **String**|  | [optional] 
+
+### Return type
+
+[**UniswapV3TickV3DTO[]**](UniswapV3TickV3DTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Invoke-UniswapV3GetTokensDayDataCurrent"></a>
+# **Invoke-UniswapV3GetTokensDayDataCurrent**
+> UniswapV3TokenV3DayDataDTO[] Invoke-UniswapV3GetTokensDayDataCurrent<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-FilterTokenId] <String><br>
 
-GetTokensDayData
+GetTokensDayData (current)
+
+Gets tokens day data.
 
 ### Example
 ```powershell
 $FilterTokenId = "MyFilterTokenId" # String |  (optional)
 
-# GetTokensDayData
+# GetTokensDayData (current)
 try {
-    $Result = Invoke-DappsUniswapv3TokensDayDataCurrentGet -FilterTokenId $FilterTokenId
+    $Result = Invoke-UniswapV3GetTokensDayDataCurrent -FilterTokenId $FilterTokenId
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsUniswapv3TokensDayDataCurrentGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-UniswapV3GetTokensDayDataCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -1379,16 +1332,18 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DappsUniswapv3TokensHistoricalGet"></a>
-# **Invoke-DappsUniswapv3TokensHistoricalGet**
-> void Invoke-DappsUniswapv3TokensHistoricalGet<br>
+<a name="Invoke-UniswapV3GetTokensDayDataHistorical"></a>
+# **Invoke-UniswapV3GetTokensDayDataHistorical**
+> UniswapV3TokenV3DayDataDTO[] Invoke-UniswapV3GetTokensDayDataHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-TokenId] <String><br>
 
+GetTokensDayData (historical)
 
+Gets tokens day data.
 
 ### Example
 ```powershell
@@ -1398,10 +1353,11 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $TokenId = "MyTokenId" # String |  (optional)
 
+# GetTokensDayData (historical)
 try {
-    $Result = Invoke-DappsUniswapv3TokensHistoricalGet -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -TokenId $TokenId
+    $Result = Invoke-UniswapV3GetTokensDayDataHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -TokenId $TokenId
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsUniswapv3TokensHistoricalGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-UniswapV3GetTokensDayDataHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -1418,7 +1374,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**UniswapV3TokenV3DayDataDTO[]**](UniswapV3TokenV3DayDataDTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -1427,26 +1383,28 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DappsUniswapv3TokensHourDataCurrentGet"></a>
-# **Invoke-DappsUniswapv3TokensHourDataCurrentGet**
-> UniswapV3TokenHourDataV3DTO[] Invoke-DappsUniswapv3TokensHourDataCurrentGet<br>
+<a name="Invoke-UniswapV3GetTokensHourDataCurrent"></a>
+# **Invoke-UniswapV3GetTokensHourDataCurrent**
+> UniswapV3TokenHourDataV3DTO[] Invoke-UniswapV3GetTokensHourDataCurrent<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-FilterTokenId] <String><br>
 
-GetTokensHourData
+GetTokensHourData (current)
+
+Gets tokens hour data.
 
 ### Example
 ```powershell
 $FilterTokenId = "MyFilterTokenId" # String |  (optional)
 
-# GetTokensHourData
+# GetTokensHourData (current)
 try {
-    $Result = Invoke-DappsUniswapv3TokensHourDataCurrentGet -FilterTokenId $FilterTokenId
+    $Result = Invoke-UniswapV3GetTokensHourDataCurrent -FilterTokenId $FilterTokenId
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsUniswapv3TokensHourDataCurrentGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-UniswapV3GetTokensHourDataCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -1472,15 +1430,170 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DappsUniswapv3TransactionsHistoricalGet"></a>
-# **Invoke-DappsUniswapv3TransactionsHistoricalGet**
-> void Invoke-DappsUniswapv3TransactionsHistoricalGet<br>
+<a name="Invoke-UniswapV3GetTokensHourDataHistorical"></a>
+# **Invoke-UniswapV3GetTokensHourDataHistorical**
+> UniswapV3TokenHourDataV3DTO[] Invoke-UniswapV3GetTokensHourDataHistorical<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-TokenId] <String><br>
+
+GetTokensHourData (historical)
+
+Gets tokens hour data.
+
+### Example
+```powershell
+$StartBlock = 789 # Int64 |  (optional)
+$EndBlock = 789 # Int64 |  (optional)
+$StartDate = (Get-Date) # System.DateTime |  (optional)
+$EndDate = (Get-Date) # System.DateTime |  (optional)
+$TokenId = "MyTokenId" # String |  (optional)
+
+# GetTokensHourData (historical)
+try {
+    $Result = Invoke-UniswapV3GetTokensHourDataHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -TokenId $TokenId
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-UniswapV3GetTokensHourDataHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **StartBlock** | **Int64**|  | [optional] 
+ **EndBlock** | **Int64**|  | [optional] 
+ **StartDate** | **System.DateTime**|  | [optional] 
+ **EndDate** | **System.DateTime**|  | [optional] 
+ **TokenId** | **String**|  | [optional] 
+
+### Return type
+
+[**UniswapV3TokenHourDataV3DTO[]**](UniswapV3TokenHourDataV3DTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Invoke-UniswapV3GetTokensCurrent"></a>
+# **Invoke-UniswapV3GetTokensCurrent**
+> UniswapV3TokenV3DTO[] Invoke-UniswapV3GetTokensCurrent<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-FilterTokenId] <String><br>
+
+GetTokens (current) 🔥
+
+Gets tokens.
+
+### Example
+```powershell
+$FilterTokenId = "MyFilterTokenId" # String |  (optional)
+
+# GetTokens (current) 🔥
+try {
+    $Result = Invoke-UniswapV3GetTokensCurrent -FilterTokenId $FilterTokenId
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-UniswapV3GetTokensCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **FilterTokenId** | **String**|  | [optional] 
+
+### Return type
+
+[**UniswapV3TokenV3DTO[]**](UniswapV3TokenV3DTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Invoke-UniswapV3GetTokensHistorical"></a>
+# **Invoke-UniswapV3GetTokensHistorical**
+> UniswapV3TokenV3DTO[] Invoke-UniswapV3GetTokensHistorical<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-TokenId] <String><br>
+
+GetTokens (historical) 🔥
+
+Gets tokens.
+
+### Example
+```powershell
+$StartBlock = 789 # Int64 |  (optional)
+$EndBlock = 789 # Int64 |  (optional)
+$StartDate = (Get-Date) # System.DateTime |  (optional)
+$EndDate = (Get-Date) # System.DateTime |  (optional)
+$TokenId = "MyTokenId" # String |  (optional)
+
+# GetTokens (historical) 🔥
+try {
+    $Result = Invoke-UniswapV3GetTokensHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -TokenId $TokenId
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-UniswapV3GetTokensHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **StartBlock** | **Int64**|  | [optional] 
+ **EndBlock** | **Int64**|  | [optional] 
+ **StartDate** | **System.DateTime**|  | [optional] 
+ **EndDate** | **System.DateTime**|  | [optional] 
+ **TokenId** | **String**|  | [optional] 
+
+### Return type
+
+[**UniswapV3TokenV3DTO[]**](UniswapV3TokenV3DTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Invoke-UniswapV3GetTransactionsHistorical"></a>
+# **Invoke-UniswapV3GetTransactionsHistorical**
+> UniswapV3TransactionV3DTO[] Invoke-UniswapV3GetTransactionsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 
+GetTransactions (historical)
 
+Gets transactions.
 
 ### Example
 ```powershell
@@ -1489,10 +1602,11 @@ $EndBlock = 789 # Int64 |  (optional)
 $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 
+# GetTransactions (historical)
 try {
-    $Result = Invoke-DappsUniswapv3TransactionsHistoricalGet -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
+    $Result = Invoke-UniswapV3GetTransactionsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsUniswapv3TransactionsHistoricalGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-UniswapV3GetTransactionsHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -1508,43 +1622,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="Invoke-DappsUniswapv3UniswapDayDataCurrentGet"></a>
-# **Invoke-DappsUniswapv3UniswapDayDataCurrentGet**
-> UniswapV3UniswapDayDataV3DTO[] Invoke-DappsUniswapv3UniswapDayDataCurrentGet<br>
-
-GetUniswapDayData
-
-### Example
-```powershell
-
-# GetUniswapDayData
-try {
-    $Result = Invoke-DappsUniswapv3UniswapDayDataCurrentGet
-} catch {
-    Write-Host ("Exception occurred when calling Invoke-DappsUniswapv3UniswapDayDataCurrentGet: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
-    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**UniswapV3UniswapDayDataV3DTO[]**](UniswapV3UniswapDayDataV3DTO.md) (PSCustomObject)
+[**UniswapV3TransactionV3DTO[]**](UniswapV3TransactionV3DTO.md) (PSCustomObject)
 
 ### Authorization
 

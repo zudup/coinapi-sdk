@@ -1,34 +1,34 @@
 -module(openapi_uniswap_v2_api).
 
--export([dapps_uniswapv2_bundles_historical_get/1, dapps_uniswapv2_bundles_historical_get/2,
-         dapps_uniswapv2_burns_historical_get/1, dapps_uniswapv2_burns_historical_get/2,
-         dapps_uniswapv2_day_data_historical_get/1, dapps_uniswapv2_day_data_historical_get/2,
-         dapps_uniswapv2_factory_historical_get/1, dapps_uniswapv2_factory_historical_get/2,
-         dapps_uniswapv2_liquidity_position_historical_get/1, dapps_uniswapv2_liquidity_position_historical_get/2,
-         dapps_uniswapv2_liquidity_position_snapshots_historical_get/1, dapps_uniswapv2_liquidity_position_snapshots_historical_get/2,
-         dapps_uniswapv2_mints_historical_get/1, dapps_uniswapv2_mints_historical_get/2,
-         dapps_uniswapv2_pool_day_data_historical_get/1, dapps_uniswapv2_pool_day_data_historical_get/2,
-         dapps_uniswapv2_pool_hour_data_historical_get/1, dapps_uniswapv2_pool_hour_data_historical_get/2,
-         dapps_uniswapv2_pools_current_get/1, dapps_uniswapv2_pools_current_get/2,
-         dapps_uniswapv2_pools_historical_get/1, dapps_uniswapv2_pools_historical_get/2,
-         dapps_uniswapv2_swaps_current_get/1, dapps_uniswapv2_swaps_current_get/2,
-         dapps_uniswapv2_swaps_historical_get/1, dapps_uniswapv2_swaps_historical_get/2,
-         dapps_uniswapv2_token_day_data_historical_get/1, dapps_uniswapv2_token_day_data_historical_get/2,
-         dapps_uniswapv2_tokens_current_get/1, dapps_uniswapv2_tokens_current_get/2,
-         dapps_uniswapv2_tokens_historical_get/1, dapps_uniswapv2_tokens_historical_get/2,
-         dapps_uniswapv2_transactions_historical_get/1, dapps_uniswapv2_transactions_historical_get/2,
-         dapps_uniswapv2_users_historical_get/1, dapps_uniswapv2_users_historical_get/2]).
+-export([uniswap_v2_get_bundles_(historical)/1, uniswap_v2_get_bundles_(historical)/2,
+         uniswap_v2_get_burns_(historical)/1, uniswap_v2_get_burns_(historical)/2,
+         uniswap_v2_get_day_data_(historical)/1, uniswap_v2_get_day_data_(historical)/2,
+         uniswap_v2_get_factory_(historical)/1, uniswap_v2_get_factory_(historical)/2,
+         uniswap_v2_get_liquidity_positions_(historical)/1, uniswap_v2_get_liquidity_positions_(historical)/2,
+         uniswap_v2_get_liquidity_positions_snapshots_(historical)/1, uniswap_v2_get_liquidity_positions_snapshots_(historical)/2,
+         uniswap_v2_get_mints_(historical)/1, uniswap_v2_get_mints_(historical)/2,
+         uniswap_v2_get_pools_(current)/1, uniswap_v2_get_pools_(current)/2,
+         uniswap_v2_get_pools_(historical)/1, uniswap_v2_get_pools_(historical)/2,
+         uniswap_v2_get_pools_day_data_(historical)/1, uniswap_v2_get_pools_day_data_(historical)/2,
+         uniswap_v2_get_pools_hour_data_(historical)/1, uniswap_v2_get_pools_hour_data_(historical)/2,
+         uniswap_v2_get_swaps_(current)/1, uniswap_v2_get_swaps_(current)/2,
+         uniswap_v2_get_swaps_(historical)/1, uniswap_v2_get_swaps_(historical)/2,
+         uniswap_v2_get_tokens_(current)/1, uniswap_v2_get_tokens_(current)/2,
+         uniswap_v2_get_tokens_(historical)/1, uniswap_v2_get_tokens_(historical)/2,
+         uniswap_v2_get_tokens_day_data_(historical)/1, uniswap_v2_get_tokens_day_data_(historical)/2,
+         uniswap_v2_get_transactions_(historical)/1, uniswap_v2_get_transactions_(historical)/2,
+         uniswap_v2_get_users_(historical)/1, uniswap_v2_get_users_(historical)/2]).
 
 -define(BASE_URL, <<"">>).
 
-%% @doc 
-%% 
--spec dapps_uniswapv2_bundles_historical_get(ctx:ctx()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-dapps_uniswapv2_bundles_historical_get(Ctx) ->
-    dapps_uniswapv2_bundles_historical_get(Ctx, #{}).
+%% @doc GetBundles (historical)
+%% Gets bundles.
+-spec uniswap_v2_get_bundles_(historical)(ctx:ctx()) -> {ok, [openapi_uniswap_v2_bundle_v2_dto:openapi_uniswap_v2_bundle_v2_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+uniswap_v2_get_bundles_(historical)(Ctx) ->
+    uniswap_v2_get_bundles_(historical)(Ctx, #{}).
 
--spec dapps_uniswapv2_bundles_historical_get(ctx:ctx(), maps:map()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-dapps_uniswapv2_bundles_historical_get(Ctx, Optional) ->
+-spec uniswap_v2_get_bundles_(historical)(ctx:ctx(), maps:map()) -> {ok, [openapi_uniswap_v2_bundle_v2_dto:openapi_uniswap_v2_bundle_v2_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+uniswap_v2_get_bundles_(historical)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
 
@@ -42,14 +42,14 @@ dapps_uniswapv2_bundles_historical_get(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc 
-%% 
--spec dapps_uniswapv2_burns_historical_get(ctx:ctx()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-dapps_uniswapv2_burns_historical_get(Ctx) ->
-    dapps_uniswapv2_burns_historical_get(Ctx, #{}).
+%% @doc GetBurns (historical)
+%% Gets burns.
+-spec uniswap_v2_get_burns_(historical)(ctx:ctx()) -> {ok, [openapi_uniswap_v2_burn_v2_dto:openapi_uniswap_v2_burn_v2_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+uniswap_v2_get_burns_(historical)(Ctx) ->
+    uniswap_v2_get_burns_(historical)(Ctx, #{}).
 
--spec dapps_uniswapv2_burns_historical_get(ctx:ctx(), maps:map()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-dapps_uniswapv2_burns_historical_get(Ctx, Optional) ->
+-spec uniswap_v2_get_burns_(historical)(ctx:ctx(), maps:map()) -> {ok, [openapi_uniswap_v2_burn_v2_dto:openapi_uniswap_v2_burn_v2_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+uniswap_v2_get_burns_(historical)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
 
@@ -63,14 +63,14 @@ dapps_uniswapv2_burns_historical_get(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc 
-%% 
--spec dapps_uniswapv2_day_data_historical_get(ctx:ctx()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-dapps_uniswapv2_day_data_historical_get(Ctx) ->
-    dapps_uniswapv2_day_data_historical_get(Ctx, #{}).
+%% @doc GetDayData (historical)
+%% Gets uniswapv2 day data.
+-spec uniswap_v2_get_day_data_(historical)(ctx:ctx()) -> {ok, [openapi_uniswap_v2_uniswap_day_data_v2_dto:openapi_uniswap_v2_uniswap_day_data_v2_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+uniswap_v2_get_day_data_(historical)(Ctx) ->
+    uniswap_v2_get_day_data_(historical)(Ctx, #{}).
 
--spec dapps_uniswapv2_day_data_historical_get(ctx:ctx(), maps:map()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-dapps_uniswapv2_day_data_historical_get(Ctx, Optional) ->
+-spec uniswap_v2_get_day_data_(historical)(ctx:ctx(), maps:map()) -> {ok, [openapi_uniswap_v2_uniswap_day_data_v2_dto:openapi_uniswap_v2_uniswap_day_data_v2_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+uniswap_v2_get_day_data_(historical)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
 
@@ -84,14 +84,14 @@ dapps_uniswapv2_day_data_historical_get(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc 
-%% 
--spec dapps_uniswapv2_factory_historical_get(ctx:ctx()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-dapps_uniswapv2_factory_historical_get(Ctx) ->
-    dapps_uniswapv2_factory_historical_get(Ctx, #{}).
+%% @doc GetFactory (historical)
+%% Gets factory.
+-spec uniswap_v2_get_factory_(historical)(ctx:ctx()) -> {ok, [openapi_uniswap_v2_uniswap_factory_v2_dto:openapi_uniswap_v2_uniswap_factory_v2_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+uniswap_v2_get_factory_(historical)(Ctx) ->
+    uniswap_v2_get_factory_(historical)(Ctx, #{}).
 
--spec dapps_uniswapv2_factory_historical_get(ctx:ctx(), maps:map()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-dapps_uniswapv2_factory_historical_get(Ctx, Optional) ->
+-spec uniswap_v2_get_factory_(historical)(ctx:ctx(), maps:map()) -> {ok, [openapi_uniswap_v2_uniswap_factory_v2_dto:openapi_uniswap_v2_uniswap_factory_v2_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+uniswap_v2_get_factory_(historical)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
 
@@ -105,19 +105,19 @@ dapps_uniswapv2_factory_historical_get(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc 
-%% 
--spec dapps_uniswapv2_liquidity_position_historical_get(ctx:ctx()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-dapps_uniswapv2_liquidity_position_historical_get(Ctx) ->
-    dapps_uniswapv2_liquidity_position_historical_get(Ctx, #{}).
+%% @doc GetLiquidityPositions (historical)
+%% Gets liquidity positions.
+-spec uniswap_v2_get_liquidity_positions_(historical)(ctx:ctx()) -> {ok, [openapi_uniswap_v2_liquidity_position_v2_dto:openapi_uniswap_v2_liquidity_position_v2_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+uniswap_v2_get_liquidity_positions_(historical)(Ctx) ->
+    uniswap_v2_get_liquidity_positions_(historical)(Ctx, #{}).
 
--spec dapps_uniswapv2_liquidity_position_historical_get(ctx:ctx(), maps:map()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-dapps_uniswapv2_liquidity_position_historical_get(Ctx, Optional) ->
+-spec uniswap_v2_get_liquidity_positions_(historical)(ctx:ctx(), maps:map()) -> {ok, [openapi_uniswap_v2_liquidity_position_v2_dto:openapi_uniswap_v2_liquidity_position_v2_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+uniswap_v2_get_liquidity_positions_(historical)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
 
     Method = get,
-    Path = [<<"/dapps/uniswapv2/liquidityPosition/historical">>],
+    Path = [<<"/dapps/uniswapv2/liquidityPositions/historical">>],
     QS = lists:flatten([])++openapi_utils:optional_params(['startBlock', 'endBlock', 'startDate', 'endDate', 'poolId'], _OptionalParams),
     Headers = [],
     Body1 = [],
@@ -126,19 +126,19 @@ dapps_uniswapv2_liquidity_position_historical_get(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc 
-%% 
--spec dapps_uniswapv2_liquidity_position_snapshots_historical_get(ctx:ctx()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-dapps_uniswapv2_liquidity_position_snapshots_historical_get(Ctx) ->
-    dapps_uniswapv2_liquidity_position_snapshots_historical_get(Ctx, #{}).
+%% @doc GetLiquidityPositionsSnapshots (historical)
+%% Gets liquidity positions snapshots.
+-spec uniswap_v2_get_liquidity_positions_snapshots_(historical)(ctx:ctx()) -> {ok, [openapi_uniswap_v2_liquidity_position_snapshot_v2_dto:openapi_uniswap_v2_liquidity_position_snapshot_v2_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+uniswap_v2_get_liquidity_positions_snapshots_(historical)(Ctx) ->
+    uniswap_v2_get_liquidity_positions_snapshots_(historical)(Ctx, #{}).
 
--spec dapps_uniswapv2_liquidity_position_snapshots_historical_get(ctx:ctx(), maps:map()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-dapps_uniswapv2_liquidity_position_snapshots_historical_get(Ctx, Optional) ->
+-spec uniswap_v2_get_liquidity_positions_snapshots_(historical)(ctx:ctx(), maps:map()) -> {ok, [openapi_uniswap_v2_liquidity_position_snapshot_v2_dto:openapi_uniswap_v2_liquidity_position_snapshot_v2_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+uniswap_v2_get_liquidity_positions_snapshots_(historical)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
 
     Method = get,
-    Path = [<<"/dapps/uniswapv2/liquidityPositionSnapshots/historical">>],
+    Path = [<<"/dapps/uniswapv2/liquidityPositionsSnapshots/historical">>],
     QS = lists:flatten([])++openapi_utils:optional_params(['startBlock', 'endBlock', 'startDate', 'endDate', 'poolId'], _OptionalParams),
     Headers = [],
     Body1 = [],
@@ -147,14 +147,14 @@ dapps_uniswapv2_liquidity_position_snapshots_historical_get(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc 
-%% 
--spec dapps_uniswapv2_mints_historical_get(ctx:ctx()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-dapps_uniswapv2_mints_historical_get(Ctx) ->
-    dapps_uniswapv2_mints_historical_get(Ctx, #{}).
+%% @doc GetMints (historical)
+%% Gets mints.
+-spec uniswap_v2_get_mints_(historical)(ctx:ctx()) -> {ok, [openapi_uniswap_v2_mint_v2_dto:openapi_uniswap_v2_mint_v2_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+uniswap_v2_get_mints_(historical)(Ctx) ->
+    uniswap_v2_get_mints_(historical)(Ctx, #{}).
 
--spec dapps_uniswapv2_mints_historical_get(ctx:ctx(), maps:map()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-dapps_uniswapv2_mints_historical_get(Ctx, Optional) ->
+-spec uniswap_v2_get_mints_(historical)(ctx:ctx(), maps:map()) -> {ok, [openapi_uniswap_v2_mint_v2_dto:openapi_uniswap_v2_mint_v2_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+uniswap_v2_get_mints_(historical)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
 
@@ -168,56 +168,14 @@ dapps_uniswapv2_mints_historical_get(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc 
-%% 
--spec dapps_uniswapv2_pool_day_data_historical_get(ctx:ctx()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-dapps_uniswapv2_pool_day_data_historical_get(Ctx) ->
-    dapps_uniswapv2_pool_day_data_historical_get(Ctx, #{}).
+%% @doc GetPools (current) 🔥
+%% Gets pools.
+-spec uniswap_v2_get_pools_(current)(ctx:ctx()) -> {ok, [openapi_uniswap_v2_pair_v2_dto:openapi_uniswap_v2_pair_v2_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+uniswap_v2_get_pools_(current)(Ctx) ->
+    uniswap_v2_get_pools_(current)(Ctx, #{}).
 
--spec dapps_uniswapv2_pool_day_data_historical_get(ctx:ctx(), maps:map()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-dapps_uniswapv2_pool_day_data_historical_get(Ctx, Optional) ->
-    _OptionalParams = maps:get(params, Optional, #{}),
-    Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
-
-    Method = get,
-    Path = [<<"/dapps/uniswapv2/poolDayData/historical">>],
-    QS = lists:flatten([])++openapi_utils:optional_params(['startBlock', 'endBlock', 'startDate', 'endDate', 'poolId'], _OptionalParams),
-    Headers = [],
-    Body1 = [],
-    ContentTypeHeader = openapi_utils:select_header_content_type([]),
-    Opts = maps:get(hackney_opts, Optional, []),
-
-    openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
-
-%% @doc 
-%% 
--spec dapps_uniswapv2_pool_hour_data_historical_get(ctx:ctx()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-dapps_uniswapv2_pool_hour_data_historical_get(Ctx) ->
-    dapps_uniswapv2_pool_hour_data_historical_get(Ctx, #{}).
-
--spec dapps_uniswapv2_pool_hour_data_historical_get(ctx:ctx(), maps:map()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-dapps_uniswapv2_pool_hour_data_historical_get(Ctx, Optional) ->
-    _OptionalParams = maps:get(params, Optional, #{}),
-    Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
-
-    Method = get,
-    Path = [<<"/dapps/uniswapv2/poolHourData/historical">>],
-    QS = lists:flatten([])++openapi_utils:optional_params(['startBlock', 'endBlock', 'startDate', 'endDate', 'poolId'], _OptionalParams),
-    Headers = [],
-    Body1 = [],
-    ContentTypeHeader = openapi_utils:select_header_content_type([]),
-    Opts = maps:get(hackney_opts, Optional, []),
-
-    openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
-
-%% @doc GetPools
-%% 
--spec dapps_uniswapv2_pools_current_get(ctx:ctx()) -> {ok, [openapi_uniswap_v2_pair_v2_dto:openapi_uniswap_v2_pair_v2_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-dapps_uniswapv2_pools_current_get(Ctx) ->
-    dapps_uniswapv2_pools_current_get(Ctx, #{}).
-
--spec dapps_uniswapv2_pools_current_get(ctx:ctx(), maps:map()) -> {ok, [openapi_uniswap_v2_pair_v2_dto:openapi_uniswap_v2_pair_v2_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-dapps_uniswapv2_pools_current_get(Ctx, Optional) ->
+-spec uniswap_v2_get_pools_(current)(ctx:ctx(), maps:map()) -> {ok, [openapi_uniswap_v2_pair_v2_dto:openapi_uniswap_v2_pair_v2_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+uniswap_v2_get_pools_(current)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
 
@@ -231,14 +189,14 @@ dapps_uniswapv2_pools_current_get(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc 
-%% 
--spec dapps_uniswapv2_pools_historical_get(ctx:ctx()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-dapps_uniswapv2_pools_historical_get(Ctx) ->
-    dapps_uniswapv2_pools_historical_get(Ctx, #{}).
+%% @doc GetPools (historical) 🔥
+%% Gets pools.
+-spec uniswap_v2_get_pools_(historical)(ctx:ctx()) -> {ok, [openapi_uniswap_v2_pair_v2_dto:openapi_uniswap_v2_pair_v2_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+uniswap_v2_get_pools_(historical)(Ctx) ->
+    uniswap_v2_get_pools_(historical)(Ctx, #{}).
 
--spec dapps_uniswapv2_pools_historical_get(ctx:ctx(), maps:map()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-dapps_uniswapv2_pools_historical_get(Ctx, Optional) ->
+-spec uniswap_v2_get_pools_(historical)(ctx:ctx(), maps:map()) -> {ok, [openapi_uniswap_v2_pair_v2_dto:openapi_uniswap_v2_pair_v2_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+uniswap_v2_get_pools_(historical)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
 
@@ -252,14 +210,56 @@ dapps_uniswapv2_pools_historical_get(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc GetSwaps
-%% 
--spec dapps_uniswapv2_swaps_current_get(ctx:ctx()) -> {ok, [openapi_uniswap_v2_swap_v2_dto:openapi_uniswap_v2_swap_v2_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-dapps_uniswapv2_swaps_current_get(Ctx) ->
-    dapps_uniswapv2_swaps_current_get(Ctx, #{}).
+%% @doc GetPoolsDayData (historical)
+%% Gets pools day data.
+-spec uniswap_v2_get_pools_day_data_(historical)(ctx:ctx()) -> {ok, [openapi_uniswap_v2_pair_day_data_v2_dto:openapi_uniswap_v2_pair_day_data_v2_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+uniswap_v2_get_pools_day_data_(historical)(Ctx) ->
+    uniswap_v2_get_pools_day_data_(historical)(Ctx, #{}).
 
--spec dapps_uniswapv2_swaps_current_get(ctx:ctx(), maps:map()) -> {ok, [openapi_uniswap_v2_swap_v2_dto:openapi_uniswap_v2_swap_v2_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-dapps_uniswapv2_swaps_current_get(Ctx, Optional) ->
+-spec uniswap_v2_get_pools_day_data_(historical)(ctx:ctx(), maps:map()) -> {ok, [openapi_uniswap_v2_pair_day_data_v2_dto:openapi_uniswap_v2_pair_day_data_v2_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+uniswap_v2_get_pools_day_data_(historical)(Ctx, Optional) ->
+    _OptionalParams = maps:get(params, Optional, #{}),
+    Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
+
+    Method = get,
+    Path = [<<"/dapps/uniswapv2/poolsDayData/historical">>],
+    QS = lists:flatten([])++openapi_utils:optional_params(['startBlock', 'endBlock', 'startDate', 'endDate', 'poolId'], _OptionalParams),
+    Headers = [],
+    Body1 = [],
+    ContentTypeHeader = openapi_utils:select_header_content_type([]),
+    Opts = maps:get(hackney_opts, Optional, []),
+
+    openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
+
+%% @doc GetPoolsHourData (historical)
+%% Gets pools tracked each our.
+-spec uniswap_v2_get_pools_hour_data_(historical)(ctx:ctx()) -> {ok, [openapi_uniswap_v2_pair_hour_data_v2_dto:openapi_uniswap_v2_pair_hour_data_v2_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+uniswap_v2_get_pools_hour_data_(historical)(Ctx) ->
+    uniswap_v2_get_pools_hour_data_(historical)(Ctx, #{}).
+
+-spec uniswap_v2_get_pools_hour_data_(historical)(ctx:ctx(), maps:map()) -> {ok, [openapi_uniswap_v2_pair_hour_data_v2_dto:openapi_uniswap_v2_pair_hour_data_v2_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+uniswap_v2_get_pools_hour_data_(historical)(Ctx, Optional) ->
+    _OptionalParams = maps:get(params, Optional, #{}),
+    Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
+
+    Method = get,
+    Path = [<<"/dapps/uniswapv2/poolsHourData/historical">>],
+    QS = lists:flatten([])++openapi_utils:optional_params(['startBlock', 'endBlock', 'startDate', 'endDate', 'poolId'], _OptionalParams),
+    Headers = [],
+    Body1 = [],
+    ContentTypeHeader = openapi_utils:select_header_content_type([]),
+    Opts = maps:get(hackney_opts, Optional, []),
+
+    openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
+
+%% @doc GetSwaps (current) 🔥
+%% Gets swaps.
+-spec uniswap_v2_get_swaps_(current)(ctx:ctx()) -> {ok, [openapi_uniswap_v2_swap_v2_dto:openapi_uniswap_v2_swap_v2_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+uniswap_v2_get_swaps_(current)(Ctx) ->
+    uniswap_v2_get_swaps_(current)(Ctx, #{}).
+
+-spec uniswap_v2_get_swaps_(current)(ctx:ctx(), maps:map()) -> {ok, [openapi_uniswap_v2_swap_v2_dto:openapi_uniswap_v2_swap_v2_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+uniswap_v2_get_swaps_(current)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
 
@@ -273,14 +273,14 @@ dapps_uniswapv2_swaps_current_get(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc 
-%% 
--spec dapps_uniswapv2_swaps_historical_get(ctx:ctx()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-dapps_uniswapv2_swaps_historical_get(Ctx) ->
-    dapps_uniswapv2_swaps_historical_get(Ctx, #{}).
+%% @doc GetSwaps (historical) 🔥
+%% Gets swaps.
+-spec uniswap_v2_get_swaps_(historical)(ctx:ctx()) -> {ok, [openapi_uniswap_v2_swap_v2_dto:openapi_uniswap_v2_swap_v2_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+uniswap_v2_get_swaps_(historical)(Ctx) ->
+    uniswap_v2_get_swaps_(historical)(Ctx, #{}).
 
--spec dapps_uniswapv2_swaps_historical_get(ctx:ctx(), maps:map()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-dapps_uniswapv2_swaps_historical_get(Ctx, Optional) ->
+-spec uniswap_v2_get_swaps_(historical)(ctx:ctx(), maps:map()) -> {ok, [openapi_uniswap_v2_swap_v2_dto:openapi_uniswap_v2_swap_v2_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+uniswap_v2_get_swaps_(historical)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
 
@@ -294,35 +294,14 @@ dapps_uniswapv2_swaps_historical_get(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc 
-%% 
--spec dapps_uniswapv2_token_day_data_historical_get(ctx:ctx()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-dapps_uniswapv2_token_day_data_historical_get(Ctx) ->
-    dapps_uniswapv2_token_day_data_historical_get(Ctx, #{}).
+%% @doc GetTokens (current) 🔥
+%% Gets tokens.
+-spec uniswap_v2_get_tokens_(current)(ctx:ctx()) -> {ok, [openapi_uniswap_v2_token_v2_dto:openapi_uniswap_v2_token_v2_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+uniswap_v2_get_tokens_(current)(Ctx) ->
+    uniswap_v2_get_tokens_(current)(Ctx, #{}).
 
--spec dapps_uniswapv2_token_day_data_historical_get(ctx:ctx(), maps:map()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-dapps_uniswapv2_token_day_data_historical_get(Ctx, Optional) ->
-    _OptionalParams = maps:get(params, Optional, #{}),
-    Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
-
-    Method = get,
-    Path = [<<"/dapps/uniswapv2/tokenDayData/historical">>],
-    QS = lists:flatten([])++openapi_utils:optional_params(['startBlock', 'endBlock', 'startDate', 'endDate', 'tokenId'], _OptionalParams),
-    Headers = [],
-    Body1 = [],
-    ContentTypeHeader = openapi_utils:select_header_content_type([]),
-    Opts = maps:get(hackney_opts, Optional, []),
-
-    openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
-
-%% @doc GetTokens
-%% 
--spec dapps_uniswapv2_tokens_current_get(ctx:ctx()) -> {ok, [openapi_uniswap_v2_token_v2_dto:openapi_uniswap_v2_token_v2_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-dapps_uniswapv2_tokens_current_get(Ctx) ->
-    dapps_uniswapv2_tokens_current_get(Ctx, #{}).
-
--spec dapps_uniswapv2_tokens_current_get(ctx:ctx(), maps:map()) -> {ok, [openapi_uniswap_v2_token_v2_dto:openapi_uniswap_v2_token_v2_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-dapps_uniswapv2_tokens_current_get(Ctx, Optional) ->
+-spec uniswap_v2_get_tokens_(current)(ctx:ctx(), maps:map()) -> {ok, [openapi_uniswap_v2_token_v2_dto:openapi_uniswap_v2_token_v2_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+uniswap_v2_get_tokens_(current)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
 
@@ -336,14 +315,14 @@ dapps_uniswapv2_tokens_current_get(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc 
-%% 
--spec dapps_uniswapv2_tokens_historical_get(ctx:ctx()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-dapps_uniswapv2_tokens_historical_get(Ctx) ->
-    dapps_uniswapv2_tokens_historical_get(Ctx, #{}).
+%% @doc GetTokens (historical) 🔥
+%% Gets tokens.
+-spec uniswap_v2_get_tokens_(historical)(ctx:ctx()) -> {ok, [openapi_uniswap_v2_token_v2_dto:openapi_uniswap_v2_token_v2_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+uniswap_v2_get_tokens_(historical)(Ctx) ->
+    uniswap_v2_get_tokens_(historical)(Ctx, #{}).
 
--spec dapps_uniswapv2_tokens_historical_get(ctx:ctx(), maps:map()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-dapps_uniswapv2_tokens_historical_get(Ctx, Optional) ->
+-spec uniswap_v2_get_tokens_(historical)(ctx:ctx(), maps:map()) -> {ok, [openapi_uniswap_v2_token_v2_dto:openapi_uniswap_v2_token_v2_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+uniswap_v2_get_tokens_(historical)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
 
@@ -357,14 +336,35 @@ dapps_uniswapv2_tokens_historical_get(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc 
-%% 
--spec dapps_uniswapv2_transactions_historical_get(ctx:ctx()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-dapps_uniswapv2_transactions_historical_get(Ctx) ->
-    dapps_uniswapv2_transactions_historical_get(Ctx, #{}).
+%% @doc GetTokensDayData (historical)
+%% Gets tokens day data.
+-spec uniswap_v2_get_tokens_day_data_(historical)(ctx:ctx()) -> {ok, [openapi_uniswap_v2_token_day_data_v2_dto:openapi_uniswap_v2_token_day_data_v2_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+uniswap_v2_get_tokens_day_data_(historical)(Ctx) ->
+    uniswap_v2_get_tokens_day_data_(historical)(Ctx, #{}).
 
--spec dapps_uniswapv2_transactions_historical_get(ctx:ctx(), maps:map()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-dapps_uniswapv2_transactions_historical_get(Ctx, Optional) ->
+-spec uniswap_v2_get_tokens_day_data_(historical)(ctx:ctx(), maps:map()) -> {ok, [openapi_uniswap_v2_token_day_data_v2_dto:openapi_uniswap_v2_token_day_data_v2_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+uniswap_v2_get_tokens_day_data_(historical)(Ctx, Optional) ->
+    _OptionalParams = maps:get(params, Optional, #{}),
+    Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
+
+    Method = get,
+    Path = [<<"/dapps/uniswapv2/tokensDayData/historical">>],
+    QS = lists:flatten([])++openapi_utils:optional_params(['startBlock', 'endBlock', 'startDate', 'endDate', 'tokenId'], _OptionalParams),
+    Headers = [],
+    Body1 = [],
+    ContentTypeHeader = openapi_utils:select_header_content_type([]),
+    Opts = maps:get(hackney_opts, Optional, []),
+
+    openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
+
+%% @doc GetTransactions (historical)
+%% Gets transactions.
+-spec uniswap_v2_get_transactions_(historical)(ctx:ctx()) -> {ok, [openapi_uniswap_v2_transaction_v2_dto:openapi_uniswap_v2_transaction_v2_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+uniswap_v2_get_transactions_(historical)(Ctx) ->
+    uniswap_v2_get_transactions_(historical)(Ctx, #{}).
+
+-spec uniswap_v2_get_transactions_(historical)(ctx:ctx(), maps:map()) -> {ok, [openapi_uniswap_v2_transaction_v2_dto:openapi_uniswap_v2_transaction_v2_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+uniswap_v2_get_transactions_(historical)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
 
@@ -378,14 +378,14 @@ dapps_uniswapv2_transactions_historical_get(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc 
-%% 
--spec dapps_uniswapv2_users_historical_get(ctx:ctx()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-dapps_uniswapv2_users_historical_get(Ctx) ->
-    dapps_uniswapv2_users_historical_get(Ctx, #{}).
+%% @doc GetUsers (historical)
+%% Gets users.
+-spec uniswap_v2_get_users_(historical)(ctx:ctx()) -> {ok, [openapi_uniswap_v2_user_v2_dto:openapi_uniswap_v2_user_v2_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+uniswap_v2_get_users_(historical)(Ctx) ->
+    uniswap_v2_get_users_(historical)(Ctx, #{}).
 
--spec dapps_uniswapv2_users_historical_get(ctx:ctx(), maps:map()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-dapps_uniswapv2_users_historical_get(Ctx, Optional) ->
+-spec uniswap_v2_get_users_(historical)(ctx:ctx(), maps:map()) -> {ok, [openapi_uniswap_v2_user_v2_dto:openapi_uniswap_v2_user_v2_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+uniswap_v2_get_users_(historical)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
 

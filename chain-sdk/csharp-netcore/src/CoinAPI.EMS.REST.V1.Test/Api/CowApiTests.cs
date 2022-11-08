@@ -19,6 +19,8 @@ using Xunit;
 
 using CoinAPI.EMS.REST.V1.Client;
 using CoinAPI.EMS.REST.V1.Api;
+// uncomment below to import models
+//using CoinAPI.EMS.REST.V1.Model;
 
 namespace CoinAPI.EMS.REST.V1.Test.Api
 {
@@ -54,38 +56,40 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
         }
 
         /// <summary>
-        /// Test DappsCowOrdersHistoricalGet
+        /// Test CowGetOrdersHistorical
         /// </summary>
         [Fact]
-        public void DappsCowOrdersHistoricalGetTest()
+        public void CowGetOrdersHistoricalTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //long? startBlock = null;
             //long? endBlock = null;
             //DateTime? startDate = null;
             //DateTime? endDate = null;
-            //instance.DappsCowOrdersHistoricalGet(startBlock, endBlock, startDate, endDate);
+            //var response = instance.CowGetOrdersHistorical(startBlock, endBlock, startDate, endDate);
+            //Assert.IsType<List<CowOrderDTO>>(response);
         }
 
         /// <summary>
-        /// Test DappsCowSettlementHistoricalGet
+        /// Test CowGetSettlementsHistorical
         /// </summary>
         [Fact]
-        public void DappsCowSettlementHistoricalGetTest()
+        public void CowGetSettlementsHistoricalTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //long? startBlock = null;
             //long? endBlock = null;
             //DateTime? startDate = null;
             //DateTime? endDate = null;
-            //instance.DappsCowSettlementHistoricalGet(startBlock, endBlock, startDate, endDate);
+            //var response = instance.CowGetSettlementsHistorical(startBlock, endBlock, startDate, endDate);
+            //Assert.IsType<List<CowSettlementDTO>>(response);
         }
 
         /// <summary>
-        /// Test DappsCowTokensHistoricalGet
+        /// Test CowGetTokensHistorical
         /// </summary>
         [Fact]
-        public void DappsCowTokensHistoricalGetTest()
+        public void CowGetTokensHistoricalTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //long? startBlock = null;
@@ -93,35 +97,38 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
             //DateTime? startDate = null;
             //DateTime? endDate = null;
             //string tokenId = null;
-            //instance.DappsCowTokensHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId);
+            //var response = instance.CowGetTokensHistorical(startBlock, endBlock, startDate, endDate, tokenId);
+            //Assert.IsType<List<CowTokenDTO>>(response);
         }
 
         /// <summary>
-        /// Test DappsCowTradesHistoricalGet
+        /// Test CowGetTradesHistorical
         /// </summary>
         [Fact]
-        public void DappsCowTradesHistoricalGetTest()
+        public void CowGetTradesHistoricalTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //long? startBlock = null;
             //long? endBlock = null;
             //DateTime? startDate = null;
             //DateTime? endDate = null;
-            //instance.DappsCowTradesHistoricalGet(startBlock, endBlock, startDate, endDate);
+            //var response = instance.CowGetTradesHistorical(startBlock, endBlock, startDate, endDate);
+            //Assert.IsType<List<CowTradeDTO>>(response);
         }
 
         /// <summary>
-        /// Test DappsCowUsersHistoricalGet
+        /// Test CowGetUsersHistorical
         /// </summary>
         [Fact]
-        public void DappsCowUsersHistoricalGetTest()
+        public void CowGetUsersHistoricalTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //long? startBlock = null;
             //long? endBlock = null;
             //DateTime? startDate = null;
             //DateTime? endDate = null;
-            //instance.DappsCowUsersHistoricalGet(startBlock, endBlock, startDate, endDate);
+            //var response = instance.CowGetUsersHistorical(startBlock, endBlock, startDate, endDate);
+            //Assert.IsType<List<CowUserDTO>>(response);
         }
     }
 }

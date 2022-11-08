@@ -16,6 +16,17 @@ local dkjson = require "dkjson"
 local basexx = require "basexx"
 
 -- model import
+local openapiclient_dex_batch_dto = require "openapiclient.model.dex_batch_dto"
+local openapiclient_dex_deposit_dto = require "openapiclient.model.dex_deposit_dto"
+local openapiclient_dex_order_dto = require "openapiclient.model.dex_order_dto"
+local openapiclient_dex_price_dto = require "openapiclient.model.dex_price_dto"
+local openapiclient_dex_solution_dto = require "openapiclient.model.dex_solution_dto"
+local openapiclient_dex_stats_dto = require "openapiclient.model.dex_stats_dto"
+local openapiclient_dex_token_dto = require "openapiclient.model.dex_token_dto"
+local openapiclient_dex_trade_dto = require "openapiclient.model.dex_trade_dto"
+local openapiclient_dex_user_dto = require "openapiclient.model.dex_user_dto"
+local openapiclient_dex_withdraw_dto = require "openapiclient.model.dex_withdraw_dto"
+local openapiclient_dex_withdraw_request_dto = require "openapiclient.model.dex_withdraw_request_dto"
 
 local dex_api = {}
 local dex_api_mt = {
@@ -43,17 +54,21 @@ local function new_dex_api(authority, basePath, schemes)
 	}, dex_api_mt)
 end
 
-function dex_api:dapps_dex_batch_historical_get(start_block, end_block, start_date, end_date)
+function dex_api:dex_get_batches__historical(start_block, end_block, start_date, end_date)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/dex/batch/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s",
+		path = string.format("%s/dapps/dex/batches/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s",
 			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date));
 	})
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
 
 	-- make the HTTP call
 	local headers, stream, errno = req:go()
@@ -62,7 +77,21 @@ function dex_api:dapps_dex_batch_historical_get(start_block, end_block, start_da
 	end
 	local http_status = headers:get(":status")
 	if http_status:sub(1,1) == "2" then
-		return nil, headers
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_dex_batch_dto.cast(ob)
+		end
+		return result, headers
 	else
 		local body, err, errno2 = stream:get_body_as_string()
 		if not body then
@@ -74,7 +103,56 @@ function dex_api:dapps_dex_batch_historical_get(start_block, end_block, start_da
 	end
 end
 
-function dex_api:dapps_dex_orders_historical_get(start_block, end_block, start_date, end_date, token_id)
+function dex_api:dex_get_deposits__historical(start_block, end_block, start_date, end_date, token_id)
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/dex/deposits/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&tokenId=%s",
+			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(token_id));
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_dex_deposit_dto.cast(ob)
+		end
+		return result, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function dex_api:dex_get_orders__historical(start_block, end_block, start_date, end_date, token_id)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
@@ -85,6 +163,10 @@ function dex_api:dapps_dex_orders_historical_get(start_block, end_block, start_d
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
 
 	-- make the HTTP call
 	local headers, stream, errno = req:go()
@@ -93,7 +175,21 @@ function dex_api:dapps_dex_orders_historical_get(start_block, end_block, start_d
 	end
 	local http_status = headers:get(":status")
 	if http_status:sub(1,1) == "2" then
-		return nil, headers
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_dex_order_dto.cast(ob)
+		end
+		return result, headers
 	else
 		local body, err, errno2 = stream:get_body_as_string()
 		if not body then
@@ -105,7 +201,7 @@ function dex_api:dapps_dex_orders_historical_get(start_block, end_block, start_d
 	end
 end
 
-function dex_api:dapps_dex_prices_historical_get(start_block, end_block, start_date, end_date, token_id)
+function dex_api:dex_get_prices__historical(start_block, end_block, start_date, end_date, token_id)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
@@ -116,6 +212,10 @@ function dex_api:dapps_dex_prices_historical_get(start_block, end_block, start_d
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
 
 	-- make the HTTP call
 	local headers, stream, errno = req:go()
@@ -124,7 +224,21 @@ function dex_api:dapps_dex_prices_historical_get(start_block, end_block, start_d
 	end
 	local http_status = headers:get(":status")
 	if http_status:sub(1,1) == "2" then
-		return nil, headers
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_dex_price_dto.cast(ob)
+		end
+		return result, headers
 	else
 		local body, err, errno2 = stream:get_body_as_string()
 		if not body then
@@ -136,17 +250,21 @@ function dex_api:dapps_dex_prices_historical_get(start_block, end_block, start_d
 	end
 end
 
-function dex_api:dapps_dex_solution_historical_get(start_block, end_block, start_date, end_date, token_id)
+function dex_api:dex_get_solutions__historical(start_block, end_block, start_date, end_date, token_id)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/dex/solution/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&tokenId=%s",
+		path = string.format("%s/dapps/dex/solutions/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&tokenId=%s",
 			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(token_id));
 	})
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
 
 	-- make the HTTP call
 	local headers, stream, errno = req:go()
@@ -155,7 +273,21 @@ function dex_api:dapps_dex_solution_historical_get(start_block, end_block, start
 	end
 	local http_status = headers:get(":status")
 	if http_status:sub(1,1) == "2" then
-		return nil, headers
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_dex_solution_dto.cast(ob)
+		end
+		return result, headers
 	else
 		local body, err, errno2 = stream:get_body_as_string()
 		if not body then
@@ -167,7 +299,7 @@ function dex_api:dapps_dex_solution_historical_get(start_block, end_block, start
 	end
 end
 
-function dex_api:dapps_dex_stats_historical_get(start_block, end_block, start_date, end_date)
+function dex_api:dex_get_stats__historical(start_block, end_block, start_date, end_date)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
@@ -178,6 +310,10 @@ function dex_api:dapps_dex_stats_historical_get(start_block, end_block, start_da
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
 
 	-- make the HTTP call
 	local headers, stream, errno = req:go()
@@ -186,7 +322,21 @@ function dex_api:dapps_dex_stats_historical_get(start_block, end_block, start_da
 	end
 	local http_status = headers:get(":status")
 	if http_status:sub(1,1) == "2" then
-		return nil, headers
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_dex_stats_dto.cast(ob)
+		end
+		return result, headers
 	else
 		local body, err, errno2 = stream:get_body_as_string()
 		if not body then
@@ -198,7 +348,7 @@ function dex_api:dapps_dex_stats_historical_get(start_block, end_block, start_da
 	end
 end
 
-function dex_api:dapps_dex_tokens_historical_get(start_block, end_block, start_date, end_date, token_id)
+function dex_api:dex_get_tokens__historical(start_block, end_block, start_date, end_date, token_id)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
@@ -209,6 +359,10 @@ function dex_api:dapps_dex_tokens_historical_get(start_block, end_block, start_d
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
 
 	-- make the HTTP call
 	local headers, stream, errno = req:go()
@@ -217,7 +371,21 @@ function dex_api:dapps_dex_tokens_historical_get(start_block, end_block, start_d
 	end
 	local http_status = headers:get(":status")
 	if http_status:sub(1,1) == "2" then
-		return nil, headers
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_dex_token_dto.cast(ob)
+		end
+		return result, headers
 	else
 		local body, err, errno2 = stream:get_body_as_string()
 		if not body then
@@ -229,7 +397,7 @@ function dex_api:dapps_dex_tokens_historical_get(start_block, end_block, start_d
 	end
 end
 
-function dex_api:dapps_dex_trades_historical_get(start_block, end_block, start_date, end_date)
+function dex_api:dex_get_trades__historical(start_block, end_block, start_date, end_date)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
@@ -240,6 +408,10 @@ function dex_api:dapps_dex_trades_historical_get(start_block, end_block, start_d
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
 
 	-- make the HTTP call
 	local headers, stream, errno = req:go()
@@ -248,7 +420,21 @@ function dex_api:dapps_dex_trades_historical_get(start_block, end_block, start_d
 	end
 	local http_status = headers:get(":status")
 	if http_status:sub(1,1) == "2" then
-		return nil, headers
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_dex_trade_dto.cast(ob)
+		end
+		return result, headers
 	else
 		local body, err, errno2 = stream:get_body_as_string()
 		if not body then
@@ -260,7 +446,7 @@ function dex_api:dapps_dex_trades_historical_get(start_block, end_block, start_d
 	end
 end
 
-function dex_api:dapps_dex_users_historical_get(start_block, end_block, start_date, end_date)
+function dex_api:dex_get_users__historical(start_block, end_block, start_date, end_date)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
@@ -271,6 +457,10 @@ function dex_api:dapps_dex_users_historical_get(start_block, end_block, start_da
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
 
 	-- make the HTTP call
 	local headers, stream, errno = req:go()
@@ -279,7 +469,21 @@ function dex_api:dapps_dex_users_historical_get(start_block, end_block, start_da
 	end
 	local http_status = headers:get(":status")
 	if http_status:sub(1,1) == "2" then
-		return nil, headers
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_dex_user_dto.cast(ob)
+		end
+		return result, headers
 	else
 		local body, err, errno2 = stream:get_body_as_string()
 		if not body then
@@ -291,17 +495,21 @@ function dex_api:dapps_dex_users_historical_get(start_block, end_block, start_da
 	end
 end
 
-function dex_api:dapps_dex_withdraw_historical_get(start_block, end_block, start_date, end_date, token_id)
+function dex_api:dex_get_withdraws__historical(start_block, end_block, start_date, end_date, token_id)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/dex/withdraw/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&tokenId=%s",
+		path = string.format("%s/dapps/dex/withdraws/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&tokenId=%s",
 			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(token_id));
 	})
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
 
 	-- make the HTTP call
 	local headers, stream, errno = req:go()
@@ -310,7 +518,21 @@ function dex_api:dapps_dex_withdraw_historical_get(start_block, end_block, start
 	end
 	local http_status = headers:get(":status")
 	if http_status:sub(1,1) == "2" then
-		return nil, headers
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_dex_withdraw_dto.cast(ob)
+		end
+		return result, headers
 	else
 		local body, err, errno2 = stream:get_body_as_string()
 		if not body then
@@ -322,17 +544,21 @@ function dex_api:dapps_dex_withdraw_historical_get(start_block, end_block, start
 	end
 end
 
-function dex_api:dapps_dex_withdraw_request_historical_get(start_block, end_block, start_date, end_date, token_id)
+function dex_api:dex_get_withdraws_requests__historical(start_block, end_block, start_date, end_date, token_id)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/dex/withdrawRequest/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&tokenId=%s",
+		path = string.format("%s/dapps/dex/withdrawsRequests/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&tokenId=%s",
 			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(token_id));
 	})
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
 
 	-- make the HTTP call
 	local headers, stream, errno = req:go()
@@ -341,7 +567,21 @@ function dex_api:dapps_dex_withdraw_request_historical_get(start_block, end_bloc
 	end
 	local http_status = headers:get(":status")
 	if http_status:sub(1,1) == "2" then
-		return nil, headers
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_dex_withdraw_request_dto.cast(ob)
+		end
+		return result, headers
 	else
 		local body, err, errno2 = stream:get_body_as_string()
 		if not body then

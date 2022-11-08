@@ -24,7 +24,7 @@ import (
 // DexApiService DexApi service
 type DexApiService service
 
-type ApiDappsDexBatchHistoricalGetRequest struct {
+type ApiDexGetBatchesHistoricalRequest struct {
 	ctx context.Context
 	ApiService *DexApiService
 	startBlock *int64
@@ -33,57 +33,65 @@ type ApiDappsDexBatchHistoricalGetRequest struct {
 	endDate *time.Time
 }
 
-func (r ApiDappsDexBatchHistoricalGetRequest) StartBlock(startBlock int64) ApiDappsDexBatchHistoricalGetRequest {
+// 
+func (r ApiDexGetBatchesHistoricalRequest) StartBlock(startBlock int64) ApiDexGetBatchesHistoricalRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
-func (r ApiDappsDexBatchHistoricalGetRequest) EndBlock(endBlock int64) ApiDappsDexBatchHistoricalGetRequest {
+// 
+func (r ApiDexGetBatchesHistoricalRequest) EndBlock(endBlock int64) ApiDexGetBatchesHistoricalRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
-func (r ApiDappsDexBatchHistoricalGetRequest) StartDate(startDate time.Time) ApiDappsDexBatchHistoricalGetRequest {
+// 
+func (r ApiDexGetBatchesHistoricalRequest) StartDate(startDate time.Time) ApiDexGetBatchesHistoricalRequest {
 	r.startDate = &startDate
 	return r
 }
 
-func (r ApiDappsDexBatchHistoricalGetRequest) EndDate(endDate time.Time) ApiDappsDexBatchHistoricalGetRequest {
+// 
+func (r ApiDexGetBatchesHistoricalRequest) EndDate(endDate time.Time) ApiDexGetBatchesHistoricalRequest {
 	r.endDate = &endDate
 	return r
 }
 
-func (r ApiDappsDexBatchHistoricalGetRequest) Execute() (*http.Response, error) {
-	return r.ApiService.DappsDexBatchHistoricalGetExecute(r)
+func (r ApiDexGetBatchesHistoricalRequest) Execute() ([]DexBatchDTO, *http.Response, error) {
+	return r.ApiService.DexGetBatchesHistoricalExecute(r)
 }
 
 /*
-DappsDexBatchHistoricalGet Method for DappsDexBatchHistoricalGet
+DexGetBatchesHistorical GetBatches (historical)
+
+Gets batches.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiDappsDexBatchHistoricalGetRequest
+ @return ApiDexGetBatchesHistoricalRequest
 */
-func (a *DexApiService) DappsDexBatchHistoricalGet(ctx context.Context) ApiDappsDexBatchHistoricalGetRequest {
-	return ApiDappsDexBatchHistoricalGetRequest{
+func (a *DexApiService) DexGetBatchesHistorical(ctx context.Context) ApiDexGetBatchesHistoricalRequest {
+	return ApiDexGetBatchesHistoricalRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-func (a *DexApiService) DappsDexBatchHistoricalGetExecute(r ApiDappsDexBatchHistoricalGetRequest) (*http.Response, error) {
+//  @return []DexBatchDTO
+func (a *DexApiService) DexGetBatchesHistoricalExecute(r ApiDexGetBatchesHistoricalRequest) ([]DexBatchDTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
+		localVarReturnValue  []DexBatchDTO
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DexApiService.DappsDexBatchHistoricalGet")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DexApiService.DexGetBatchesHistorical")
 	if err != nil {
-		return nil, &GenericOpenAPIError{error: err.Error()}
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/dapps/dex/batch/historical"
+	localVarPath := localBasePath + "/dapps/dex/batches/historical"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -111,7 +119,7 @@ func (a *DexApiService) DappsDexBatchHistoricalGetExecute(r ApiDappsDexBatchHist
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{}
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -120,19 +128,19 @@ func (a *DexApiService) DappsDexBatchHistoricalGetExecute(r ApiDappsDexBatchHist
 	}
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
-		return nil, err
+		return localVarReturnValue, nil, err
 	}
 
 	localVarHTTPResponse, err := a.client.callAPI(req)
 	if err != nil || localVarHTTPResponse == nil {
-		return localVarHTTPResponse, err
+		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
 	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
 	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
-		return localVarHTTPResponse, err
+		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
 	if localVarHTTPResponse.StatusCode >= 300 {
@@ -140,13 +148,22 @@ func (a *DexApiService) DappsDexBatchHistoricalGetExecute(r ApiDappsDexBatchHist
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		return localVarHTTPResponse, newErr
+		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
 
-	return localVarHTTPResponse, nil
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiDappsDexOrdersHistoricalGetRequest struct {
+type ApiDexGetDepositsHistoricalRequest struct {
 	ctx context.Context
 	ApiService *DexApiService
 	startBlock *int64
@@ -156,59 +173,217 @@ type ApiDappsDexOrdersHistoricalGetRequest struct {
 	tokenId *string
 }
 
-func (r ApiDappsDexOrdersHistoricalGetRequest) StartBlock(startBlock int64) ApiDappsDexOrdersHistoricalGetRequest {
+// 
+func (r ApiDexGetDepositsHistoricalRequest) StartBlock(startBlock int64) ApiDexGetDepositsHistoricalRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
-func (r ApiDappsDexOrdersHistoricalGetRequest) EndBlock(endBlock int64) ApiDappsDexOrdersHistoricalGetRequest {
+// 
+func (r ApiDexGetDepositsHistoricalRequest) EndBlock(endBlock int64) ApiDexGetDepositsHistoricalRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
-func (r ApiDappsDexOrdersHistoricalGetRequest) StartDate(startDate time.Time) ApiDappsDexOrdersHistoricalGetRequest {
+// 
+func (r ApiDexGetDepositsHistoricalRequest) StartDate(startDate time.Time) ApiDexGetDepositsHistoricalRequest {
 	r.startDate = &startDate
 	return r
 }
 
-func (r ApiDappsDexOrdersHistoricalGetRequest) EndDate(endDate time.Time) ApiDappsDexOrdersHistoricalGetRequest {
+// 
+func (r ApiDexGetDepositsHistoricalRequest) EndDate(endDate time.Time) ApiDexGetDepositsHistoricalRequest {
 	r.endDate = &endDate
 	return r
 }
 
-func (r ApiDappsDexOrdersHistoricalGetRequest) TokenId(tokenId string) ApiDappsDexOrdersHistoricalGetRequest {
+// 
+func (r ApiDexGetDepositsHistoricalRequest) TokenId(tokenId string) ApiDexGetDepositsHistoricalRequest {
 	r.tokenId = &tokenId
 	return r
 }
 
-func (r ApiDappsDexOrdersHistoricalGetRequest) Execute() (*http.Response, error) {
-	return r.ApiService.DappsDexOrdersHistoricalGetExecute(r)
+func (r ApiDexGetDepositsHistoricalRequest) Execute() ([]DexDepositDTO, *http.Response, error) {
+	return r.ApiService.DexGetDepositsHistoricalExecute(r)
 }
 
 /*
-DappsDexOrdersHistoricalGet Method for DappsDexOrdersHistoricalGet
+DexGetDepositsHistorical GetDeposits (historical)
+
+Gets deposits.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiDappsDexOrdersHistoricalGetRequest
+ @return ApiDexGetDepositsHistoricalRequest
 */
-func (a *DexApiService) DappsDexOrdersHistoricalGet(ctx context.Context) ApiDappsDexOrdersHistoricalGetRequest {
-	return ApiDappsDexOrdersHistoricalGetRequest{
+func (a *DexApiService) DexGetDepositsHistorical(ctx context.Context) ApiDexGetDepositsHistoricalRequest {
+	return ApiDexGetDepositsHistoricalRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-func (a *DexApiService) DappsDexOrdersHistoricalGetExecute(r ApiDappsDexOrdersHistoricalGetRequest) (*http.Response, error) {
+//  @return []DexDepositDTO
+func (a *DexApiService) DexGetDepositsHistoricalExecute(r ApiDexGetDepositsHistoricalRequest) ([]DexDepositDTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
+		localVarReturnValue  []DexDepositDTO
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DexApiService.DappsDexOrdersHistoricalGet")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DexApiService.DexGetDepositsHistorical")
 	if err != nil {
-		return nil, &GenericOpenAPIError{error: err.Error()}
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/dex/deposits/historical"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.startBlock != nil {
+		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+	}
+	if r.endBlock != nil {
+		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+	}
+	if r.startDate != nil {
+		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+	}
+	if r.endDate != nil {
+		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	if r.tokenId != nil {
+		localVarQueryParams.Add("tokenId", parameterToString(*r.tokenId, ""))
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiDexGetOrdersHistoricalRequest struct {
+	ctx context.Context
+	ApiService *DexApiService
+	startBlock *int64
+	endBlock *int64
+	startDate *time.Time
+	endDate *time.Time
+	tokenId *string
+}
+
+// 
+func (r ApiDexGetOrdersHistoricalRequest) StartBlock(startBlock int64) ApiDexGetOrdersHistoricalRequest {
+	r.startBlock = &startBlock
+	return r
+}
+
+// 
+func (r ApiDexGetOrdersHistoricalRequest) EndBlock(endBlock int64) ApiDexGetOrdersHistoricalRequest {
+	r.endBlock = &endBlock
+	return r
+}
+
+// 
+func (r ApiDexGetOrdersHistoricalRequest) StartDate(startDate time.Time) ApiDexGetOrdersHistoricalRequest {
+	r.startDate = &startDate
+	return r
+}
+
+// 
+func (r ApiDexGetOrdersHistoricalRequest) EndDate(endDate time.Time) ApiDexGetOrdersHistoricalRequest {
+	r.endDate = &endDate
+	return r
+}
+
+// 
+func (r ApiDexGetOrdersHistoricalRequest) TokenId(tokenId string) ApiDexGetOrdersHistoricalRequest {
+	r.tokenId = &tokenId
+	return r
+}
+
+func (r ApiDexGetOrdersHistoricalRequest) Execute() ([]DexOrderDTO, *http.Response, error) {
+	return r.ApiService.DexGetOrdersHistoricalExecute(r)
+}
+
+/*
+DexGetOrdersHistorical GetOrders (historical)
+
+Gets orders.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiDexGetOrdersHistoricalRequest
+*/
+func (a *DexApiService) DexGetOrdersHistorical(ctx context.Context) ApiDexGetOrdersHistoricalRequest {
+	return ApiDexGetOrdersHistoricalRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []DexOrderDTO
+func (a *DexApiService) DexGetOrdersHistoricalExecute(r ApiDexGetOrdersHistoricalRequest) ([]DexOrderDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []DexOrderDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DexApiService.DexGetOrdersHistorical")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
 	localVarPath := localBasePath + "/dapps/dex/orders/historical"
@@ -242,7 +417,7 @@ func (a *DexApiService) DappsDexOrdersHistoricalGetExecute(r ApiDappsDexOrdersHi
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{}
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -251,19 +426,19 @@ func (a *DexApiService) DappsDexOrdersHistoricalGetExecute(r ApiDappsDexOrdersHi
 	}
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
-		return nil, err
+		return localVarReturnValue, nil, err
 	}
 
 	localVarHTTPResponse, err := a.client.callAPI(req)
 	if err != nil || localVarHTTPResponse == nil {
-		return localVarHTTPResponse, err
+		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
 	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
 	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
-		return localVarHTTPResponse, err
+		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
 	if localVarHTTPResponse.StatusCode >= 300 {
@@ -271,13 +446,22 @@ func (a *DexApiService) DappsDexOrdersHistoricalGetExecute(r ApiDappsDexOrdersHi
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		return localVarHTTPResponse, newErr
+		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
 
-	return localVarHTTPResponse, nil
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiDappsDexPricesHistoricalGetRequest struct {
+type ApiDexGetPricesHistoricalRequest struct {
 	ctx context.Context
 	ApiService *DexApiService
 	startBlock *int64
@@ -287,59 +471,68 @@ type ApiDappsDexPricesHistoricalGetRequest struct {
 	tokenId *string
 }
 
-func (r ApiDappsDexPricesHistoricalGetRequest) StartBlock(startBlock int64) ApiDappsDexPricesHistoricalGetRequest {
+// 
+func (r ApiDexGetPricesHistoricalRequest) StartBlock(startBlock int64) ApiDexGetPricesHistoricalRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
-func (r ApiDappsDexPricesHistoricalGetRequest) EndBlock(endBlock int64) ApiDappsDexPricesHistoricalGetRequest {
+// 
+func (r ApiDexGetPricesHistoricalRequest) EndBlock(endBlock int64) ApiDexGetPricesHistoricalRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
-func (r ApiDappsDexPricesHistoricalGetRequest) StartDate(startDate time.Time) ApiDappsDexPricesHistoricalGetRequest {
+// 
+func (r ApiDexGetPricesHistoricalRequest) StartDate(startDate time.Time) ApiDexGetPricesHistoricalRequest {
 	r.startDate = &startDate
 	return r
 }
 
-func (r ApiDappsDexPricesHistoricalGetRequest) EndDate(endDate time.Time) ApiDappsDexPricesHistoricalGetRequest {
+// 
+func (r ApiDexGetPricesHistoricalRequest) EndDate(endDate time.Time) ApiDexGetPricesHistoricalRequest {
 	r.endDate = &endDate
 	return r
 }
 
-func (r ApiDappsDexPricesHistoricalGetRequest) TokenId(tokenId string) ApiDappsDexPricesHistoricalGetRequest {
+// 
+func (r ApiDexGetPricesHistoricalRequest) TokenId(tokenId string) ApiDexGetPricesHistoricalRequest {
 	r.tokenId = &tokenId
 	return r
 }
 
-func (r ApiDappsDexPricesHistoricalGetRequest) Execute() (*http.Response, error) {
-	return r.ApiService.DappsDexPricesHistoricalGetExecute(r)
+func (r ApiDexGetPricesHistoricalRequest) Execute() ([]DexPriceDTO, *http.Response, error) {
+	return r.ApiService.DexGetPricesHistoricalExecute(r)
 }
 
 /*
-DappsDexPricesHistoricalGet Method for DappsDexPricesHistoricalGet
+DexGetPricesHistorical GetPrices (historical)
+
+Gets prices.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiDappsDexPricesHistoricalGetRequest
+ @return ApiDexGetPricesHistoricalRequest
 */
-func (a *DexApiService) DappsDexPricesHistoricalGet(ctx context.Context) ApiDappsDexPricesHistoricalGetRequest {
-	return ApiDappsDexPricesHistoricalGetRequest{
+func (a *DexApiService) DexGetPricesHistorical(ctx context.Context) ApiDexGetPricesHistoricalRequest {
+	return ApiDexGetPricesHistoricalRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-func (a *DexApiService) DappsDexPricesHistoricalGetExecute(r ApiDappsDexPricesHistoricalGetRequest) (*http.Response, error) {
+//  @return []DexPriceDTO
+func (a *DexApiService) DexGetPricesHistoricalExecute(r ApiDexGetPricesHistoricalRequest) ([]DexPriceDTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
+		localVarReturnValue  []DexPriceDTO
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DexApiService.DappsDexPricesHistoricalGet")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DexApiService.DexGetPricesHistorical")
 	if err != nil {
-		return nil, &GenericOpenAPIError{error: err.Error()}
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
 	localVarPath := localBasePath + "/dapps/dex/prices/historical"
@@ -373,7 +566,7 @@ func (a *DexApiService) DappsDexPricesHistoricalGetExecute(r ApiDappsDexPricesHi
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{}
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -382,19 +575,19 @@ func (a *DexApiService) DappsDexPricesHistoricalGetExecute(r ApiDappsDexPricesHi
 	}
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
-		return nil, err
+		return localVarReturnValue, nil, err
 	}
 
 	localVarHTTPResponse, err := a.client.callAPI(req)
 	if err != nil || localVarHTTPResponse == nil {
-		return localVarHTTPResponse, err
+		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
 	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
 	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
-		return localVarHTTPResponse, err
+		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
 	if localVarHTTPResponse.StatusCode >= 300 {
@@ -402,13 +595,22 @@ func (a *DexApiService) DappsDexPricesHistoricalGetExecute(r ApiDappsDexPricesHi
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		return localVarHTTPResponse, newErr
+		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
 
-	return localVarHTTPResponse, nil
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiDappsDexSolutionHistoricalGetRequest struct {
+type ApiDexGetSolutionsHistoricalRequest struct {
 	ctx context.Context
 	ApiService *DexApiService
 	startBlock *int64
@@ -418,62 +620,71 @@ type ApiDappsDexSolutionHistoricalGetRequest struct {
 	tokenId *string
 }
 
-func (r ApiDappsDexSolutionHistoricalGetRequest) StartBlock(startBlock int64) ApiDappsDexSolutionHistoricalGetRequest {
+// 
+func (r ApiDexGetSolutionsHistoricalRequest) StartBlock(startBlock int64) ApiDexGetSolutionsHistoricalRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
-func (r ApiDappsDexSolutionHistoricalGetRequest) EndBlock(endBlock int64) ApiDappsDexSolutionHistoricalGetRequest {
+// 
+func (r ApiDexGetSolutionsHistoricalRequest) EndBlock(endBlock int64) ApiDexGetSolutionsHistoricalRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
-func (r ApiDappsDexSolutionHistoricalGetRequest) StartDate(startDate time.Time) ApiDappsDexSolutionHistoricalGetRequest {
+// 
+func (r ApiDexGetSolutionsHistoricalRequest) StartDate(startDate time.Time) ApiDexGetSolutionsHistoricalRequest {
 	r.startDate = &startDate
 	return r
 }
 
-func (r ApiDappsDexSolutionHistoricalGetRequest) EndDate(endDate time.Time) ApiDappsDexSolutionHistoricalGetRequest {
+// 
+func (r ApiDexGetSolutionsHistoricalRequest) EndDate(endDate time.Time) ApiDexGetSolutionsHistoricalRequest {
 	r.endDate = &endDate
 	return r
 }
 
-func (r ApiDappsDexSolutionHistoricalGetRequest) TokenId(tokenId string) ApiDappsDexSolutionHistoricalGetRequest {
+// 
+func (r ApiDexGetSolutionsHistoricalRequest) TokenId(tokenId string) ApiDexGetSolutionsHistoricalRequest {
 	r.tokenId = &tokenId
 	return r
 }
 
-func (r ApiDappsDexSolutionHistoricalGetRequest) Execute() (*http.Response, error) {
-	return r.ApiService.DappsDexSolutionHistoricalGetExecute(r)
+func (r ApiDexGetSolutionsHistoricalRequest) Execute() ([]DexSolutionDTO, *http.Response, error) {
+	return r.ApiService.DexGetSolutionsHistoricalExecute(r)
 }
 
 /*
-DappsDexSolutionHistoricalGet Method for DappsDexSolutionHistoricalGet
+DexGetSolutionsHistorical GetSolutions (historical)
+
+Gets solutions.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiDappsDexSolutionHistoricalGetRequest
+ @return ApiDexGetSolutionsHistoricalRequest
 */
-func (a *DexApiService) DappsDexSolutionHistoricalGet(ctx context.Context) ApiDappsDexSolutionHistoricalGetRequest {
-	return ApiDappsDexSolutionHistoricalGetRequest{
+func (a *DexApiService) DexGetSolutionsHistorical(ctx context.Context) ApiDexGetSolutionsHistoricalRequest {
+	return ApiDexGetSolutionsHistoricalRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-func (a *DexApiService) DappsDexSolutionHistoricalGetExecute(r ApiDappsDexSolutionHistoricalGetRequest) (*http.Response, error) {
+//  @return []DexSolutionDTO
+func (a *DexApiService) DexGetSolutionsHistoricalExecute(r ApiDexGetSolutionsHistoricalRequest) ([]DexSolutionDTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
+		localVarReturnValue  []DexSolutionDTO
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DexApiService.DappsDexSolutionHistoricalGet")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DexApiService.DexGetSolutionsHistorical")
 	if err != nil {
-		return nil, &GenericOpenAPIError{error: err.Error()}
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/dapps/dex/solution/historical"
+	localVarPath := localBasePath + "/dapps/dex/solutions/historical"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -504,7 +715,7 @@ func (a *DexApiService) DappsDexSolutionHistoricalGetExecute(r ApiDappsDexSoluti
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{}
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -513,19 +724,19 @@ func (a *DexApiService) DappsDexSolutionHistoricalGetExecute(r ApiDappsDexSoluti
 	}
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
-		return nil, err
+		return localVarReturnValue, nil, err
 	}
 
 	localVarHTTPResponse, err := a.client.callAPI(req)
 	if err != nil || localVarHTTPResponse == nil {
-		return localVarHTTPResponse, err
+		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
 	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
 	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
-		return localVarHTTPResponse, err
+		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
 	if localVarHTTPResponse.StatusCode >= 300 {
@@ -533,13 +744,22 @@ func (a *DexApiService) DappsDexSolutionHistoricalGetExecute(r ApiDappsDexSoluti
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		return localVarHTTPResponse, newErr
+		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
 
-	return localVarHTTPResponse, nil
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiDappsDexStatsHistoricalGetRequest struct {
+type ApiDexGetStatsHistoricalRequest struct {
 	ctx context.Context
 	ApiService *DexApiService
 	startBlock *int64
@@ -548,54 +768,62 @@ type ApiDappsDexStatsHistoricalGetRequest struct {
 	endDate *time.Time
 }
 
-func (r ApiDappsDexStatsHistoricalGetRequest) StartBlock(startBlock int64) ApiDappsDexStatsHistoricalGetRequest {
+// 
+func (r ApiDexGetStatsHistoricalRequest) StartBlock(startBlock int64) ApiDexGetStatsHistoricalRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
-func (r ApiDappsDexStatsHistoricalGetRequest) EndBlock(endBlock int64) ApiDappsDexStatsHistoricalGetRequest {
+// 
+func (r ApiDexGetStatsHistoricalRequest) EndBlock(endBlock int64) ApiDexGetStatsHistoricalRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
-func (r ApiDappsDexStatsHistoricalGetRequest) StartDate(startDate time.Time) ApiDappsDexStatsHistoricalGetRequest {
+// 
+func (r ApiDexGetStatsHistoricalRequest) StartDate(startDate time.Time) ApiDexGetStatsHistoricalRequest {
 	r.startDate = &startDate
 	return r
 }
 
-func (r ApiDappsDexStatsHistoricalGetRequest) EndDate(endDate time.Time) ApiDappsDexStatsHistoricalGetRequest {
+// 
+func (r ApiDexGetStatsHistoricalRequest) EndDate(endDate time.Time) ApiDexGetStatsHistoricalRequest {
 	r.endDate = &endDate
 	return r
 }
 
-func (r ApiDappsDexStatsHistoricalGetRequest) Execute() (*http.Response, error) {
-	return r.ApiService.DappsDexStatsHistoricalGetExecute(r)
+func (r ApiDexGetStatsHistoricalRequest) Execute() ([]DexStatsDTO, *http.Response, error) {
+	return r.ApiService.DexGetStatsHistoricalExecute(r)
 }
 
 /*
-DappsDexStatsHistoricalGet Method for DappsDexStatsHistoricalGet
+DexGetStatsHistorical GetStats (historical)
+
+Gets stats.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiDappsDexStatsHistoricalGetRequest
+ @return ApiDexGetStatsHistoricalRequest
 */
-func (a *DexApiService) DappsDexStatsHistoricalGet(ctx context.Context) ApiDappsDexStatsHistoricalGetRequest {
-	return ApiDappsDexStatsHistoricalGetRequest{
+func (a *DexApiService) DexGetStatsHistorical(ctx context.Context) ApiDexGetStatsHistoricalRequest {
+	return ApiDexGetStatsHistoricalRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-func (a *DexApiService) DappsDexStatsHistoricalGetExecute(r ApiDappsDexStatsHistoricalGetRequest) (*http.Response, error) {
+//  @return []DexStatsDTO
+func (a *DexApiService) DexGetStatsHistoricalExecute(r ApiDexGetStatsHistoricalRequest) ([]DexStatsDTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
+		localVarReturnValue  []DexStatsDTO
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DexApiService.DappsDexStatsHistoricalGet")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DexApiService.DexGetStatsHistorical")
 	if err != nil {
-		return nil, &GenericOpenAPIError{error: err.Error()}
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
 	localVarPath := localBasePath + "/dapps/dex/stats/historical"
@@ -626,7 +854,7 @@ func (a *DexApiService) DappsDexStatsHistoricalGetExecute(r ApiDappsDexStatsHist
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{}
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -635,19 +863,19 @@ func (a *DexApiService) DappsDexStatsHistoricalGetExecute(r ApiDappsDexStatsHist
 	}
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
-		return nil, err
+		return localVarReturnValue, nil, err
 	}
 
 	localVarHTTPResponse, err := a.client.callAPI(req)
 	if err != nil || localVarHTTPResponse == nil {
-		return localVarHTTPResponse, err
+		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
 	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
 	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
-		return localVarHTTPResponse, err
+		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
 	if localVarHTTPResponse.StatusCode >= 300 {
@@ -655,13 +883,22 @@ func (a *DexApiService) DappsDexStatsHistoricalGetExecute(r ApiDappsDexStatsHist
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		return localVarHTTPResponse, newErr
+		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
 
-	return localVarHTTPResponse, nil
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiDappsDexTokensHistoricalGetRequest struct {
+type ApiDexGetTokensHistoricalRequest struct {
 	ctx context.Context
 	ApiService *DexApiService
 	startBlock *int64
@@ -671,59 +908,68 @@ type ApiDappsDexTokensHistoricalGetRequest struct {
 	tokenId *string
 }
 
-func (r ApiDappsDexTokensHistoricalGetRequest) StartBlock(startBlock int64) ApiDappsDexTokensHistoricalGetRequest {
+// 
+func (r ApiDexGetTokensHistoricalRequest) StartBlock(startBlock int64) ApiDexGetTokensHistoricalRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
-func (r ApiDappsDexTokensHistoricalGetRequest) EndBlock(endBlock int64) ApiDappsDexTokensHistoricalGetRequest {
+// 
+func (r ApiDexGetTokensHistoricalRequest) EndBlock(endBlock int64) ApiDexGetTokensHistoricalRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
-func (r ApiDappsDexTokensHistoricalGetRequest) StartDate(startDate time.Time) ApiDappsDexTokensHistoricalGetRequest {
+// 
+func (r ApiDexGetTokensHistoricalRequest) StartDate(startDate time.Time) ApiDexGetTokensHistoricalRequest {
 	r.startDate = &startDate
 	return r
 }
 
-func (r ApiDappsDexTokensHistoricalGetRequest) EndDate(endDate time.Time) ApiDappsDexTokensHistoricalGetRequest {
+// 
+func (r ApiDexGetTokensHistoricalRequest) EndDate(endDate time.Time) ApiDexGetTokensHistoricalRequest {
 	r.endDate = &endDate
 	return r
 }
 
-func (r ApiDappsDexTokensHistoricalGetRequest) TokenId(tokenId string) ApiDappsDexTokensHistoricalGetRequest {
+// 
+func (r ApiDexGetTokensHistoricalRequest) TokenId(tokenId string) ApiDexGetTokensHistoricalRequest {
 	r.tokenId = &tokenId
 	return r
 }
 
-func (r ApiDappsDexTokensHistoricalGetRequest) Execute() (*http.Response, error) {
-	return r.ApiService.DappsDexTokensHistoricalGetExecute(r)
+func (r ApiDexGetTokensHistoricalRequest) Execute() ([]DexTokenDTO, *http.Response, error) {
+	return r.ApiService.DexGetTokensHistoricalExecute(r)
 }
 
 /*
-DappsDexTokensHistoricalGet Method for DappsDexTokensHistoricalGet
+DexGetTokensHistorical GetTokens (historical) 🔥
+
+Gets tokens.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiDappsDexTokensHistoricalGetRequest
+ @return ApiDexGetTokensHistoricalRequest
 */
-func (a *DexApiService) DappsDexTokensHistoricalGet(ctx context.Context) ApiDappsDexTokensHistoricalGetRequest {
-	return ApiDappsDexTokensHistoricalGetRequest{
+func (a *DexApiService) DexGetTokensHistorical(ctx context.Context) ApiDexGetTokensHistoricalRequest {
+	return ApiDexGetTokensHistoricalRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-func (a *DexApiService) DappsDexTokensHistoricalGetExecute(r ApiDappsDexTokensHistoricalGetRequest) (*http.Response, error) {
+//  @return []DexTokenDTO
+func (a *DexApiService) DexGetTokensHistoricalExecute(r ApiDexGetTokensHistoricalRequest) ([]DexTokenDTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
+		localVarReturnValue  []DexTokenDTO
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DexApiService.DappsDexTokensHistoricalGet")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DexApiService.DexGetTokensHistorical")
 	if err != nil {
-		return nil, &GenericOpenAPIError{error: err.Error()}
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
 	localVarPath := localBasePath + "/dapps/dex/tokens/historical"
@@ -757,7 +1003,7 @@ func (a *DexApiService) DappsDexTokensHistoricalGetExecute(r ApiDappsDexTokensHi
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{}
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -766,19 +1012,19 @@ func (a *DexApiService) DappsDexTokensHistoricalGetExecute(r ApiDappsDexTokensHi
 	}
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
-		return nil, err
+		return localVarReturnValue, nil, err
 	}
 
 	localVarHTTPResponse, err := a.client.callAPI(req)
 	if err != nil || localVarHTTPResponse == nil {
-		return localVarHTTPResponse, err
+		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
 	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
 	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
-		return localVarHTTPResponse, err
+		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
 	if localVarHTTPResponse.StatusCode >= 300 {
@@ -786,13 +1032,22 @@ func (a *DexApiService) DappsDexTokensHistoricalGetExecute(r ApiDappsDexTokensHi
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		return localVarHTTPResponse, newErr
+		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
 
-	return localVarHTTPResponse, nil
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiDappsDexTradesHistoricalGetRequest struct {
+type ApiDexGetTradesHistoricalRequest struct {
 	ctx context.Context
 	ApiService *DexApiService
 	startBlock *int64
@@ -801,54 +1056,62 @@ type ApiDappsDexTradesHistoricalGetRequest struct {
 	endDate *time.Time
 }
 
-func (r ApiDappsDexTradesHistoricalGetRequest) StartBlock(startBlock int64) ApiDappsDexTradesHistoricalGetRequest {
+// 
+func (r ApiDexGetTradesHistoricalRequest) StartBlock(startBlock int64) ApiDexGetTradesHistoricalRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
-func (r ApiDappsDexTradesHistoricalGetRequest) EndBlock(endBlock int64) ApiDappsDexTradesHistoricalGetRequest {
+// 
+func (r ApiDexGetTradesHistoricalRequest) EndBlock(endBlock int64) ApiDexGetTradesHistoricalRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
-func (r ApiDappsDexTradesHistoricalGetRequest) StartDate(startDate time.Time) ApiDappsDexTradesHistoricalGetRequest {
+// 
+func (r ApiDexGetTradesHistoricalRequest) StartDate(startDate time.Time) ApiDexGetTradesHistoricalRequest {
 	r.startDate = &startDate
 	return r
 }
 
-func (r ApiDappsDexTradesHistoricalGetRequest) EndDate(endDate time.Time) ApiDappsDexTradesHistoricalGetRequest {
+// 
+func (r ApiDexGetTradesHistoricalRequest) EndDate(endDate time.Time) ApiDexGetTradesHistoricalRequest {
 	r.endDate = &endDate
 	return r
 }
 
-func (r ApiDappsDexTradesHistoricalGetRequest) Execute() (*http.Response, error) {
-	return r.ApiService.DappsDexTradesHistoricalGetExecute(r)
+func (r ApiDexGetTradesHistoricalRequest) Execute() ([]DexTradeDTO, *http.Response, error) {
+	return r.ApiService.DexGetTradesHistoricalExecute(r)
 }
 
 /*
-DappsDexTradesHistoricalGet Method for DappsDexTradesHistoricalGet
+DexGetTradesHistorical GetTrades (historical) 🔥
+
+Gets trades.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiDappsDexTradesHistoricalGetRequest
+ @return ApiDexGetTradesHistoricalRequest
 */
-func (a *DexApiService) DappsDexTradesHistoricalGet(ctx context.Context) ApiDappsDexTradesHistoricalGetRequest {
-	return ApiDappsDexTradesHistoricalGetRequest{
+func (a *DexApiService) DexGetTradesHistorical(ctx context.Context) ApiDexGetTradesHistoricalRequest {
+	return ApiDexGetTradesHistoricalRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-func (a *DexApiService) DappsDexTradesHistoricalGetExecute(r ApiDappsDexTradesHistoricalGetRequest) (*http.Response, error) {
+//  @return []DexTradeDTO
+func (a *DexApiService) DexGetTradesHistoricalExecute(r ApiDexGetTradesHistoricalRequest) ([]DexTradeDTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
+		localVarReturnValue  []DexTradeDTO
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DexApiService.DappsDexTradesHistoricalGet")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DexApiService.DexGetTradesHistorical")
 	if err != nil {
-		return nil, &GenericOpenAPIError{error: err.Error()}
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
 	localVarPath := localBasePath + "/dapps/dex/trades/historical"
@@ -879,7 +1142,7 @@ func (a *DexApiService) DappsDexTradesHistoricalGetExecute(r ApiDappsDexTradesHi
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{}
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -888,19 +1151,19 @@ func (a *DexApiService) DappsDexTradesHistoricalGetExecute(r ApiDappsDexTradesHi
 	}
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
-		return nil, err
+		return localVarReturnValue, nil, err
 	}
 
 	localVarHTTPResponse, err := a.client.callAPI(req)
 	if err != nil || localVarHTTPResponse == nil {
-		return localVarHTTPResponse, err
+		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
 	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
 	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
-		return localVarHTTPResponse, err
+		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
 	if localVarHTTPResponse.StatusCode >= 300 {
@@ -908,13 +1171,22 @@ func (a *DexApiService) DappsDexTradesHistoricalGetExecute(r ApiDappsDexTradesHi
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		return localVarHTTPResponse, newErr
+		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
 
-	return localVarHTTPResponse, nil
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiDappsDexUsersHistoricalGetRequest struct {
+type ApiDexGetUsersHistoricalRequest struct {
 	ctx context.Context
 	ApiService *DexApiService
 	startBlock *int64
@@ -923,54 +1195,62 @@ type ApiDappsDexUsersHistoricalGetRequest struct {
 	endDate *time.Time
 }
 
-func (r ApiDappsDexUsersHistoricalGetRequest) StartBlock(startBlock int64) ApiDappsDexUsersHistoricalGetRequest {
+// 
+func (r ApiDexGetUsersHistoricalRequest) StartBlock(startBlock int64) ApiDexGetUsersHistoricalRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
-func (r ApiDappsDexUsersHistoricalGetRequest) EndBlock(endBlock int64) ApiDappsDexUsersHistoricalGetRequest {
+// 
+func (r ApiDexGetUsersHistoricalRequest) EndBlock(endBlock int64) ApiDexGetUsersHistoricalRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
-func (r ApiDappsDexUsersHistoricalGetRequest) StartDate(startDate time.Time) ApiDappsDexUsersHistoricalGetRequest {
+// 
+func (r ApiDexGetUsersHistoricalRequest) StartDate(startDate time.Time) ApiDexGetUsersHistoricalRequest {
 	r.startDate = &startDate
 	return r
 }
 
-func (r ApiDappsDexUsersHistoricalGetRequest) EndDate(endDate time.Time) ApiDappsDexUsersHistoricalGetRequest {
+// 
+func (r ApiDexGetUsersHistoricalRequest) EndDate(endDate time.Time) ApiDexGetUsersHistoricalRequest {
 	r.endDate = &endDate
 	return r
 }
 
-func (r ApiDappsDexUsersHistoricalGetRequest) Execute() (*http.Response, error) {
-	return r.ApiService.DappsDexUsersHistoricalGetExecute(r)
+func (r ApiDexGetUsersHistoricalRequest) Execute() ([]DexUserDTO, *http.Response, error) {
+	return r.ApiService.DexGetUsersHistoricalExecute(r)
 }
 
 /*
-DappsDexUsersHistoricalGet Method for DappsDexUsersHistoricalGet
+DexGetUsersHistorical GetUsers (historical)
+
+Gets users.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiDappsDexUsersHistoricalGetRequest
+ @return ApiDexGetUsersHistoricalRequest
 */
-func (a *DexApiService) DappsDexUsersHistoricalGet(ctx context.Context) ApiDappsDexUsersHistoricalGetRequest {
-	return ApiDappsDexUsersHistoricalGetRequest{
+func (a *DexApiService) DexGetUsersHistorical(ctx context.Context) ApiDexGetUsersHistoricalRequest {
+	return ApiDexGetUsersHistoricalRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-func (a *DexApiService) DappsDexUsersHistoricalGetExecute(r ApiDappsDexUsersHistoricalGetRequest) (*http.Response, error) {
+//  @return []DexUserDTO
+func (a *DexApiService) DexGetUsersHistoricalExecute(r ApiDexGetUsersHistoricalRequest) ([]DexUserDTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
+		localVarReturnValue  []DexUserDTO
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DexApiService.DappsDexUsersHistoricalGet")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DexApiService.DexGetUsersHistorical")
 	if err != nil {
-		return nil, &GenericOpenAPIError{error: err.Error()}
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
 	localVarPath := localBasePath + "/dapps/dex/users/historical"
@@ -1001,7 +1281,7 @@ func (a *DexApiService) DappsDexUsersHistoricalGetExecute(r ApiDappsDexUsersHist
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{}
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -1010,19 +1290,19 @@ func (a *DexApiService) DappsDexUsersHistoricalGetExecute(r ApiDappsDexUsersHist
 	}
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
-		return nil, err
+		return localVarReturnValue, nil, err
 	}
 
 	localVarHTTPResponse, err := a.client.callAPI(req)
 	if err != nil || localVarHTTPResponse == nil {
-		return localVarHTTPResponse, err
+		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
 	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
 	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
-		return localVarHTTPResponse, err
+		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
 	if localVarHTTPResponse.StatusCode >= 300 {
@@ -1030,13 +1310,22 @@ func (a *DexApiService) DappsDexUsersHistoricalGetExecute(r ApiDappsDexUsersHist
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		return localVarHTTPResponse, newErr
+		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
 
-	return localVarHTTPResponse, nil
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiDappsDexWithdrawHistoricalGetRequest struct {
+type ApiDexGetWithdrawsHistoricalRequest struct {
 	ctx context.Context
 	ApiService *DexApiService
 	startBlock *int64
@@ -1046,62 +1335,71 @@ type ApiDappsDexWithdrawHistoricalGetRequest struct {
 	tokenId *string
 }
 
-func (r ApiDappsDexWithdrawHistoricalGetRequest) StartBlock(startBlock int64) ApiDappsDexWithdrawHistoricalGetRequest {
+// 
+func (r ApiDexGetWithdrawsHistoricalRequest) StartBlock(startBlock int64) ApiDexGetWithdrawsHistoricalRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
-func (r ApiDappsDexWithdrawHistoricalGetRequest) EndBlock(endBlock int64) ApiDappsDexWithdrawHistoricalGetRequest {
+// 
+func (r ApiDexGetWithdrawsHistoricalRequest) EndBlock(endBlock int64) ApiDexGetWithdrawsHistoricalRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
-func (r ApiDappsDexWithdrawHistoricalGetRequest) StartDate(startDate time.Time) ApiDappsDexWithdrawHistoricalGetRequest {
+// 
+func (r ApiDexGetWithdrawsHistoricalRequest) StartDate(startDate time.Time) ApiDexGetWithdrawsHistoricalRequest {
 	r.startDate = &startDate
 	return r
 }
 
-func (r ApiDappsDexWithdrawHistoricalGetRequest) EndDate(endDate time.Time) ApiDappsDexWithdrawHistoricalGetRequest {
+// 
+func (r ApiDexGetWithdrawsHistoricalRequest) EndDate(endDate time.Time) ApiDexGetWithdrawsHistoricalRequest {
 	r.endDate = &endDate
 	return r
 }
 
-func (r ApiDappsDexWithdrawHistoricalGetRequest) TokenId(tokenId string) ApiDappsDexWithdrawHistoricalGetRequest {
+// 
+func (r ApiDexGetWithdrawsHistoricalRequest) TokenId(tokenId string) ApiDexGetWithdrawsHistoricalRequest {
 	r.tokenId = &tokenId
 	return r
 }
 
-func (r ApiDappsDexWithdrawHistoricalGetRequest) Execute() (*http.Response, error) {
-	return r.ApiService.DappsDexWithdrawHistoricalGetExecute(r)
+func (r ApiDexGetWithdrawsHistoricalRequest) Execute() ([]DexWithdrawDTO, *http.Response, error) {
+	return r.ApiService.DexGetWithdrawsHistoricalExecute(r)
 }
 
 /*
-DappsDexWithdrawHistoricalGet Method for DappsDexWithdrawHistoricalGet
+DexGetWithdrawsHistorical GetWithdraws (historical)
+
+Gets withdraws.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiDappsDexWithdrawHistoricalGetRequest
+ @return ApiDexGetWithdrawsHistoricalRequest
 */
-func (a *DexApiService) DappsDexWithdrawHistoricalGet(ctx context.Context) ApiDappsDexWithdrawHistoricalGetRequest {
-	return ApiDappsDexWithdrawHistoricalGetRequest{
+func (a *DexApiService) DexGetWithdrawsHistorical(ctx context.Context) ApiDexGetWithdrawsHistoricalRequest {
+	return ApiDexGetWithdrawsHistoricalRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-func (a *DexApiService) DappsDexWithdrawHistoricalGetExecute(r ApiDappsDexWithdrawHistoricalGetRequest) (*http.Response, error) {
+//  @return []DexWithdrawDTO
+func (a *DexApiService) DexGetWithdrawsHistoricalExecute(r ApiDexGetWithdrawsHistoricalRequest) ([]DexWithdrawDTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
+		localVarReturnValue  []DexWithdrawDTO
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DexApiService.DappsDexWithdrawHistoricalGet")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DexApiService.DexGetWithdrawsHistorical")
 	if err != nil {
-		return nil, &GenericOpenAPIError{error: err.Error()}
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/dapps/dex/withdraw/historical"
+	localVarPath := localBasePath + "/dapps/dex/withdraws/historical"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -1132,7 +1430,7 @@ func (a *DexApiService) DappsDexWithdrawHistoricalGetExecute(r ApiDappsDexWithdr
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{}
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -1141,19 +1439,19 @@ func (a *DexApiService) DappsDexWithdrawHistoricalGetExecute(r ApiDappsDexWithdr
 	}
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
-		return nil, err
+		return localVarReturnValue, nil, err
 	}
 
 	localVarHTTPResponse, err := a.client.callAPI(req)
 	if err != nil || localVarHTTPResponse == nil {
-		return localVarHTTPResponse, err
+		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
 	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
 	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
-		return localVarHTTPResponse, err
+		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
 	if localVarHTTPResponse.StatusCode >= 300 {
@@ -1161,13 +1459,22 @@ func (a *DexApiService) DappsDexWithdrawHistoricalGetExecute(r ApiDappsDexWithdr
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		return localVarHTTPResponse, newErr
+		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
 
-	return localVarHTTPResponse, nil
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiDappsDexWithdrawRequestHistoricalGetRequest struct {
+type ApiDexGetWithdrawsRequestsHistoricalRequest struct {
 	ctx context.Context
 	ApiService *DexApiService
 	startBlock *int64
@@ -1177,62 +1484,71 @@ type ApiDappsDexWithdrawRequestHistoricalGetRequest struct {
 	tokenId *string
 }
 
-func (r ApiDappsDexWithdrawRequestHistoricalGetRequest) StartBlock(startBlock int64) ApiDappsDexWithdrawRequestHistoricalGetRequest {
+// 
+func (r ApiDexGetWithdrawsRequestsHistoricalRequest) StartBlock(startBlock int64) ApiDexGetWithdrawsRequestsHistoricalRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
-func (r ApiDappsDexWithdrawRequestHistoricalGetRequest) EndBlock(endBlock int64) ApiDappsDexWithdrawRequestHistoricalGetRequest {
+// 
+func (r ApiDexGetWithdrawsRequestsHistoricalRequest) EndBlock(endBlock int64) ApiDexGetWithdrawsRequestsHistoricalRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
-func (r ApiDappsDexWithdrawRequestHistoricalGetRequest) StartDate(startDate time.Time) ApiDappsDexWithdrawRequestHistoricalGetRequest {
+// 
+func (r ApiDexGetWithdrawsRequestsHistoricalRequest) StartDate(startDate time.Time) ApiDexGetWithdrawsRequestsHistoricalRequest {
 	r.startDate = &startDate
 	return r
 }
 
-func (r ApiDappsDexWithdrawRequestHistoricalGetRequest) EndDate(endDate time.Time) ApiDappsDexWithdrawRequestHistoricalGetRequest {
+// 
+func (r ApiDexGetWithdrawsRequestsHistoricalRequest) EndDate(endDate time.Time) ApiDexGetWithdrawsRequestsHistoricalRequest {
 	r.endDate = &endDate
 	return r
 }
 
-func (r ApiDappsDexWithdrawRequestHistoricalGetRequest) TokenId(tokenId string) ApiDappsDexWithdrawRequestHistoricalGetRequest {
+// 
+func (r ApiDexGetWithdrawsRequestsHistoricalRequest) TokenId(tokenId string) ApiDexGetWithdrawsRequestsHistoricalRequest {
 	r.tokenId = &tokenId
 	return r
 }
 
-func (r ApiDappsDexWithdrawRequestHistoricalGetRequest) Execute() (*http.Response, error) {
-	return r.ApiService.DappsDexWithdrawRequestHistoricalGetExecute(r)
+func (r ApiDexGetWithdrawsRequestsHistoricalRequest) Execute() ([]DexWithdrawRequestDTO, *http.Response, error) {
+	return r.ApiService.DexGetWithdrawsRequestsHistoricalExecute(r)
 }
 
 /*
-DappsDexWithdrawRequestHistoricalGet Method for DappsDexWithdrawRequestHistoricalGet
+DexGetWithdrawsRequestsHistorical GetWithdrawsRequests (historical)
+
+Gets withdraws requests.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiDappsDexWithdrawRequestHistoricalGetRequest
+ @return ApiDexGetWithdrawsRequestsHistoricalRequest
 */
-func (a *DexApiService) DappsDexWithdrawRequestHistoricalGet(ctx context.Context) ApiDappsDexWithdrawRequestHistoricalGetRequest {
-	return ApiDappsDexWithdrawRequestHistoricalGetRequest{
+func (a *DexApiService) DexGetWithdrawsRequestsHistorical(ctx context.Context) ApiDexGetWithdrawsRequestsHistoricalRequest {
+	return ApiDexGetWithdrawsRequestsHistoricalRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-func (a *DexApiService) DappsDexWithdrawRequestHistoricalGetExecute(r ApiDappsDexWithdrawRequestHistoricalGetRequest) (*http.Response, error) {
+//  @return []DexWithdrawRequestDTO
+func (a *DexApiService) DexGetWithdrawsRequestsHistoricalExecute(r ApiDexGetWithdrawsRequestsHistoricalRequest) ([]DexWithdrawRequestDTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
+		localVarReturnValue  []DexWithdrawRequestDTO
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DexApiService.DappsDexWithdrawRequestHistoricalGet")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DexApiService.DexGetWithdrawsRequestsHistorical")
 	if err != nil {
-		return nil, &GenericOpenAPIError{error: err.Error()}
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/dapps/dex/withdrawRequest/historical"
+	localVarPath := localBasePath + "/dapps/dex/withdrawsRequests/historical"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -1263,7 +1579,7 @@ func (a *DexApiService) DappsDexWithdrawRequestHistoricalGetExecute(r ApiDappsDe
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{}
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -1272,19 +1588,19 @@ func (a *DexApiService) DappsDexWithdrawRequestHistoricalGetExecute(r ApiDappsDe
 	}
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
-		return nil, err
+		return localVarReturnValue, nil, err
 	}
 
 	localVarHTTPResponse, err := a.client.callAPI(req)
 	if err != nil || localVarHTTPResponse == nil {
-		return localVarHTTPResponse, err
+		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
 	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
 	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
-		return localVarHTTPResponse, err
+		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
 	if localVarHTTPResponse.StatusCode >= 300 {
@@ -1292,8 +1608,17 @@ func (a *DexApiService) DappsDexWithdrawRequestHistoricalGetExecute(r ApiDappsDe
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		return localVarHTTPResponse, newErr
+		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
 
-	return localVarHTTPResponse, nil
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
 }

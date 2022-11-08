@@ -58,859 +58,1471 @@ import qualified Prelude as P
 
 -- ** Curve
 
--- *** dappsCurveAccountsHistoricalGet
+-- *** curveGetAccountsHistorical
 
 -- | @GET \/dapps\/curve\/accounts\/historical@
 -- 
-dappsCurveAccountsHistoricalGet
-  :: OnChainRequest DappsCurveAccountsHistoricalGet MimeNoContent NoContent MimeNoContent
-dappsCurveAccountsHistoricalGet =
+-- GetAccounts (historical)
+-- 
+-- Gets accounts.
+-- 
+curveGetAccountsHistorical
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CurveGetAccountsHistorical MimeNoContent [CurveAccountDTO] accept
+curveGetAccountsHistorical  _ =
   _mkRequest "GET" ["/dapps/curve/accounts/historical"]
 
-data DappsCurveAccountsHistoricalGet  
-instance HasOptionalParam DappsCurveAccountsHistoricalGet StartBlock where
+data CurveGetAccountsHistorical  
+
+-- | /Optional Param/ "startBlock" - 
+instance HasOptionalParam CurveGetAccountsHistorical StartBlock where
   applyOptionalParam req (StartBlock xs) =
     req `addQuery` toQuery ("startBlock", Just xs)
-instance HasOptionalParam DappsCurveAccountsHistoricalGet EndBlock where
+
+-- | /Optional Param/ "endBlock" - 
+instance HasOptionalParam CurveGetAccountsHistorical EndBlock where
   applyOptionalParam req (EndBlock xs) =
     req `addQuery` toQuery ("endBlock", Just xs)
-instance HasOptionalParam DappsCurveAccountsHistoricalGet StartDate where
+
+-- | /Optional Param/ "startDate" - 
+instance HasOptionalParam CurveGetAccountsHistorical StartDate where
   applyOptionalParam req (StartDate xs) =
     req `addQuery` toQuery ("startDate", Just xs)
-instance HasOptionalParam DappsCurveAccountsHistoricalGet EndDate where
+
+-- | /Optional Param/ "endDate" - 
+instance HasOptionalParam CurveGetAccountsHistorical EndDate where
   applyOptionalParam req (EndDate xs) =
     req `addQuery` toQuery ("endDate", Just xs)
-instance Produces DappsCurveAccountsHistoricalGet MimeNoContent
+-- | @application/json@
+instance Produces CurveGetAccountsHistorical MimeJSON
+-- | @text/json@
+instance Produces CurveGetAccountsHistorical MimeTextJson
+-- | @text/plain@
+instance Produces CurveGetAccountsHistorical MimePlainText
 
 
--- *** dappsCurveAddLiquidityEventHistoricalGet
+-- *** curveGetAddLiquidityEventsHistorical
 
--- | @GET \/dapps\/curve\/addLiquidityEvent\/historical@
+-- | @GET \/dapps\/curve\/addLiquidityEvents\/historical@
 -- 
-dappsCurveAddLiquidityEventHistoricalGet
-  :: OnChainRequest DappsCurveAddLiquidityEventHistoricalGet MimeNoContent NoContent MimeNoContent
-dappsCurveAddLiquidityEventHistoricalGet =
-  _mkRequest "GET" ["/dapps/curve/addLiquidityEvent/historical"]
+-- GetAddLiquidityEvents (historical)
+-- 
+-- Gets add liquidity events.
+-- 
+curveGetAddLiquidityEventsHistorical
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CurveGetAddLiquidityEventsHistorical MimeNoContent [CurveAddLiquidityEventDTO] accept
+curveGetAddLiquidityEventsHistorical  _ =
+  _mkRequest "GET" ["/dapps/curve/addLiquidityEvents/historical"]
 
-data DappsCurveAddLiquidityEventHistoricalGet  
-instance HasOptionalParam DappsCurveAddLiquidityEventHistoricalGet StartBlock where
+data CurveGetAddLiquidityEventsHistorical  
+
+-- | /Optional Param/ "startBlock" - 
+instance HasOptionalParam CurveGetAddLiquidityEventsHistorical StartBlock where
   applyOptionalParam req (StartBlock xs) =
     req `addQuery` toQuery ("startBlock", Just xs)
-instance HasOptionalParam DappsCurveAddLiquidityEventHistoricalGet EndBlock where
+
+-- | /Optional Param/ "endBlock" - 
+instance HasOptionalParam CurveGetAddLiquidityEventsHistorical EndBlock where
   applyOptionalParam req (EndBlock xs) =
     req `addQuery` toQuery ("endBlock", Just xs)
-instance HasOptionalParam DappsCurveAddLiquidityEventHistoricalGet StartDate where
+
+-- | /Optional Param/ "startDate" - 
+instance HasOptionalParam CurveGetAddLiquidityEventsHistorical StartDate where
   applyOptionalParam req (StartDate xs) =
     req `addQuery` toQuery ("startDate", Just xs)
-instance HasOptionalParam DappsCurveAddLiquidityEventHistoricalGet EndDate where
+
+-- | /Optional Param/ "endDate" - 
+instance HasOptionalParam CurveGetAddLiquidityEventsHistorical EndDate where
   applyOptionalParam req (EndDate xs) =
     req `addQuery` toQuery ("endDate", Just xs)
-instance HasOptionalParam DappsCurveAddLiquidityEventHistoricalGet PoolId where
+instance HasOptionalParam CurveGetAddLiquidityEventsHistorical PoolId where
   applyOptionalParam req (PoolId xs) =
     req `addQuery` toQuery ("poolId", Just xs)
-instance Produces DappsCurveAddLiquidityEventHistoricalGet MimeNoContent
+-- | @application/json@
+instance Produces CurveGetAddLiquidityEventsHistorical MimeJSON
+-- | @text/json@
+instance Produces CurveGetAddLiquidityEventsHistorical MimeTextJson
+-- | @text/plain@
+instance Produces CurveGetAddLiquidityEventsHistorical MimePlainText
 
 
--- *** dappsCurveAdminFeeChangeLogHistoricalGet
+-- *** curveGetAdminFeeChangeLogsHistorical
 
--- | @GET \/dapps\/curve\/adminFeeChangeLog\/historical@
+-- | @GET \/dapps\/curve\/adminFeeChangeLogs\/historical@
 -- 
-dappsCurveAdminFeeChangeLogHistoricalGet
-  :: OnChainRequest DappsCurveAdminFeeChangeLogHistoricalGet MimeNoContent NoContent MimeNoContent
-dappsCurveAdminFeeChangeLogHistoricalGet =
-  _mkRequest "GET" ["/dapps/curve/adminFeeChangeLog/historical"]
+-- GetAdminFeeChangeLogs (historical)
+-- 
+-- Gets admin fee change logs.
+-- 
+curveGetAdminFeeChangeLogsHistorical
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CurveGetAdminFeeChangeLogsHistorical MimeNoContent [CurveAdminFeeChangeLogDTO] accept
+curveGetAdminFeeChangeLogsHistorical  _ =
+  _mkRequest "GET" ["/dapps/curve/adminFeeChangeLogs/historical"]
 
-data DappsCurveAdminFeeChangeLogHistoricalGet  
-instance HasOptionalParam DappsCurveAdminFeeChangeLogHistoricalGet StartBlock where
+data CurveGetAdminFeeChangeLogsHistorical  
+
+-- | /Optional Param/ "startBlock" - 
+instance HasOptionalParam CurveGetAdminFeeChangeLogsHistorical StartBlock where
   applyOptionalParam req (StartBlock xs) =
     req `addQuery` toQuery ("startBlock", Just xs)
-instance HasOptionalParam DappsCurveAdminFeeChangeLogHistoricalGet EndBlock where
+
+-- | /Optional Param/ "endBlock" - 
+instance HasOptionalParam CurveGetAdminFeeChangeLogsHistorical EndBlock where
   applyOptionalParam req (EndBlock xs) =
     req `addQuery` toQuery ("endBlock", Just xs)
-instance HasOptionalParam DappsCurveAdminFeeChangeLogHistoricalGet StartDate where
+
+-- | /Optional Param/ "startDate" - 
+instance HasOptionalParam CurveGetAdminFeeChangeLogsHistorical StartDate where
   applyOptionalParam req (StartDate xs) =
     req `addQuery` toQuery ("startDate", Just xs)
-instance HasOptionalParam DappsCurveAdminFeeChangeLogHistoricalGet EndDate where
+
+-- | /Optional Param/ "endDate" - 
+instance HasOptionalParam CurveGetAdminFeeChangeLogsHistorical EndDate where
   applyOptionalParam req (EndDate xs) =
     req `addQuery` toQuery ("endDate", Just xs)
-instance HasOptionalParam DappsCurveAdminFeeChangeLogHistoricalGet PoolId where
+
+-- | /Optional Param/ "poolId" - 
+instance HasOptionalParam CurveGetAdminFeeChangeLogsHistorical PoolId where
   applyOptionalParam req (PoolId xs) =
     req `addQuery` toQuery ("poolId", Just xs)
-instance Produces DappsCurveAdminFeeChangeLogHistoricalGet MimeNoContent
+-- | @application/json@
+instance Produces CurveGetAdminFeeChangeLogsHistorical MimeJSON
+-- | @text/json@
+instance Produces CurveGetAdminFeeChangeLogsHistorical MimeTextJson
+-- | @text/plain@
+instance Produces CurveGetAdminFeeChangeLogsHistorical MimePlainText
 
 
--- *** dappsCurveAmplificationCoeffChangeLogHistoricalGet
+-- *** curveGetAmplificationCoeffChangeLogsHistorical
 
--- | @GET \/dapps\/curve\/amplificationCoeffChangeLog\/historical@
+-- | @GET \/dapps\/curve\/amplificationCoeffChangeLogs\/historical@
 -- 
-dappsCurveAmplificationCoeffChangeLogHistoricalGet
-  :: OnChainRequest DappsCurveAmplificationCoeffChangeLogHistoricalGet MimeNoContent NoContent MimeNoContent
-dappsCurveAmplificationCoeffChangeLogHistoricalGet =
-  _mkRequest "GET" ["/dapps/curve/amplificationCoeffChangeLog/historical"]
+-- GetAmplificationCoeffChangeLogs (historical)
+-- 
+-- Gets amplification coeff change logs.
+-- 
+curveGetAmplificationCoeffChangeLogsHistorical
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CurveGetAmplificationCoeffChangeLogsHistorical MimeNoContent [CurveAmplificationCoeffChangeLogDTO] accept
+curveGetAmplificationCoeffChangeLogsHistorical  _ =
+  _mkRequest "GET" ["/dapps/curve/amplificationCoeffChangeLogs/historical"]
 
-data DappsCurveAmplificationCoeffChangeLogHistoricalGet  
-instance HasOptionalParam DappsCurveAmplificationCoeffChangeLogHistoricalGet StartBlock where
+data CurveGetAmplificationCoeffChangeLogsHistorical  
+
+-- | /Optional Param/ "startBlock" - 
+instance HasOptionalParam CurveGetAmplificationCoeffChangeLogsHistorical StartBlock where
   applyOptionalParam req (StartBlock xs) =
     req `addQuery` toQuery ("startBlock", Just xs)
-instance HasOptionalParam DappsCurveAmplificationCoeffChangeLogHistoricalGet EndBlock where
+
+-- | /Optional Param/ "endBlock" - 
+instance HasOptionalParam CurveGetAmplificationCoeffChangeLogsHistorical EndBlock where
   applyOptionalParam req (EndBlock xs) =
     req `addQuery` toQuery ("endBlock", Just xs)
-instance HasOptionalParam DappsCurveAmplificationCoeffChangeLogHistoricalGet StartDate where
+
+-- | /Optional Param/ "startDate" - 
+instance HasOptionalParam CurveGetAmplificationCoeffChangeLogsHistorical StartDate where
   applyOptionalParam req (StartDate xs) =
     req `addQuery` toQuery ("startDate", Just xs)
-instance HasOptionalParam DappsCurveAmplificationCoeffChangeLogHistoricalGet EndDate where
+
+-- | /Optional Param/ "endDate" - 
+instance HasOptionalParam CurveGetAmplificationCoeffChangeLogsHistorical EndDate where
   applyOptionalParam req (EndDate xs) =
     req `addQuery` toQuery ("endDate", Just xs)
-instance HasOptionalParam DappsCurveAmplificationCoeffChangeLogHistoricalGet PoolId where
+
+-- | /Optional Param/ "poolId" - 
+instance HasOptionalParam CurveGetAmplificationCoeffChangeLogsHistorical PoolId where
   applyOptionalParam req (PoolId xs) =
     req `addQuery` toQuery ("poolId", Just xs)
-instance Produces DappsCurveAmplificationCoeffChangeLogHistoricalGet MimeNoContent
+-- | @application/json@
+instance Produces CurveGetAmplificationCoeffChangeLogsHistorical MimeJSON
+-- | @text/json@
+instance Produces CurveGetAmplificationCoeffChangeLogsHistorical MimeTextJson
+-- | @text/plain@
+instance Produces CurveGetAmplificationCoeffChangeLogsHistorical MimePlainText
 
 
--- *** dappsCurveCoinsHistoricalGet
+-- *** curveGetCoinsHistorical
 
 -- | @GET \/dapps\/curve\/coins\/historical@
 -- 
-dappsCurveCoinsHistoricalGet
-  :: OnChainRequest DappsCurveCoinsHistoricalGet MimeNoContent NoContent MimeNoContent
-dappsCurveCoinsHistoricalGet =
+-- GetCoins (historical)
+-- 
+-- Gets coins.
+-- 
+curveGetCoinsHistorical
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CurveGetCoinsHistorical MimeNoContent [CurveCoinDTO] accept
+curveGetCoinsHistorical  _ =
   _mkRequest "GET" ["/dapps/curve/coins/historical"]
 
-data DappsCurveCoinsHistoricalGet  
-instance HasOptionalParam DappsCurveCoinsHistoricalGet StartBlock where
+data CurveGetCoinsHistorical  
+
+-- | /Optional Param/ "startBlock" - 
+instance HasOptionalParam CurveGetCoinsHistorical StartBlock where
   applyOptionalParam req (StartBlock xs) =
     req `addQuery` toQuery ("startBlock", Just xs)
-instance HasOptionalParam DappsCurveCoinsHistoricalGet EndBlock where
+
+-- | /Optional Param/ "endBlock" - 
+instance HasOptionalParam CurveGetCoinsHistorical EndBlock where
   applyOptionalParam req (EndBlock xs) =
     req `addQuery` toQuery ("endBlock", Just xs)
-instance HasOptionalParam DappsCurveCoinsHistoricalGet StartDate where
+
+-- | /Optional Param/ "startDate" - 
+instance HasOptionalParam CurveGetCoinsHistorical StartDate where
   applyOptionalParam req (StartDate xs) =
     req `addQuery` toQuery ("startDate", Just xs)
-instance HasOptionalParam DappsCurveCoinsHistoricalGet EndDate where
+
+-- | /Optional Param/ "endDate" - 
+instance HasOptionalParam CurveGetCoinsHistorical EndDate where
   applyOptionalParam req (EndDate xs) =
     req `addQuery` toQuery ("endDate", Just xs)
-instance HasOptionalParam DappsCurveCoinsHistoricalGet PoolId where
+
+-- | /Optional Param/ "poolId" - 
+instance HasOptionalParam CurveGetCoinsHistorical PoolId where
   applyOptionalParam req (PoolId xs) =
     req `addQuery` toQuery ("poolId", Just xs)
-instance Produces DappsCurveCoinsHistoricalGet MimeNoContent
+-- | @application/json@
+instance Produces CurveGetCoinsHistorical MimeJSON
+-- | @text/json@
+instance Produces CurveGetCoinsHistorical MimeTextJson
+-- | @text/plain@
+instance Produces CurveGetCoinsHistorical MimePlainText
 
 
--- *** dappsCurveContractsHistoricalGet
+-- *** curveGetContractsHistorical
 
 -- | @GET \/dapps\/curve\/contracts\/historical@
 -- 
-dappsCurveContractsHistoricalGet
-  :: OnChainRequest DappsCurveContractsHistoricalGet MimeNoContent NoContent MimeNoContent
-dappsCurveContractsHistoricalGet =
+-- GetContracts (historical)
+-- 
+-- Gets contracts.
+-- 
+curveGetContractsHistorical
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CurveGetContractsHistorical MimeNoContent [CurveContractDTO] accept
+curveGetContractsHistorical  _ =
   _mkRequest "GET" ["/dapps/curve/contracts/historical"]
 
-data DappsCurveContractsHistoricalGet  
-instance HasOptionalParam DappsCurveContractsHistoricalGet StartBlock where
+data CurveGetContractsHistorical  
+
+-- | /Optional Param/ "startBlock" - 
+instance HasOptionalParam CurveGetContractsHistorical StartBlock where
   applyOptionalParam req (StartBlock xs) =
     req `addQuery` toQuery ("startBlock", Just xs)
-instance HasOptionalParam DappsCurveContractsHistoricalGet EndBlock where
+
+-- | /Optional Param/ "endBlock" - 
+instance HasOptionalParam CurveGetContractsHistorical EndBlock where
   applyOptionalParam req (EndBlock xs) =
     req `addQuery` toQuery ("endBlock", Just xs)
-instance HasOptionalParam DappsCurveContractsHistoricalGet StartDate where
+
+-- | /Optional Param/ "startDate" - 
+instance HasOptionalParam CurveGetContractsHistorical StartDate where
   applyOptionalParam req (StartDate xs) =
     req `addQuery` toQuery ("startDate", Just xs)
-instance HasOptionalParam DappsCurveContractsHistoricalGet EndDate where
+
+-- | /Optional Param/ "endDate" - 
+instance HasOptionalParam CurveGetContractsHistorical EndDate where
   applyOptionalParam req (EndDate xs) =
     req `addQuery` toQuery ("endDate", Just xs)
-instance HasOptionalParam DappsCurveContractsHistoricalGet PoolId where
+
+-- | /Optional Param/ "poolId" - 
+instance HasOptionalParam CurveGetContractsHistorical PoolId where
   applyOptionalParam req (PoolId xs) =
     req `addQuery` toQuery ("poolId", Just xs)
-instance Produces DappsCurveContractsHistoricalGet MimeNoContent
+-- | @application/json@
+instance Produces CurveGetContractsHistorical MimeJSON
+-- | @text/json@
+instance Produces CurveGetContractsHistorical MimeTextJson
+-- | @text/plain@
+instance Produces CurveGetContractsHistorical MimePlainText
 
 
--- *** dappsCurveContractsVersionHistoricalGet
+-- *** curveGetContractsVersionsHistorical
 
--- | @GET \/dapps\/curve\/contractsVersion\/historical@
+-- | @GET \/dapps\/curve\/contractsVersions\/historical@
 -- 
-dappsCurveContractsVersionHistoricalGet
-  :: OnChainRequest DappsCurveContractsVersionHistoricalGet MimeNoContent NoContent MimeNoContent
-dappsCurveContractsVersionHistoricalGet =
-  _mkRequest "GET" ["/dapps/curve/contractsVersion/historical"]
+-- GetContractsVersions (historical)
+-- 
+-- Gets contracts versions.
+-- 
+curveGetContractsVersionsHistorical
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CurveGetContractsVersionsHistorical MimeNoContent [CurveContractVersionDTO] accept
+curveGetContractsVersionsHistorical  _ =
+  _mkRequest "GET" ["/dapps/curve/contractsVersions/historical"]
 
-data DappsCurveContractsVersionHistoricalGet  
-instance HasOptionalParam DappsCurveContractsVersionHistoricalGet StartBlock where
+data CurveGetContractsVersionsHistorical  
+
+-- | /Optional Param/ "startBlock" - 
+instance HasOptionalParam CurveGetContractsVersionsHistorical StartBlock where
   applyOptionalParam req (StartBlock xs) =
     req `addQuery` toQuery ("startBlock", Just xs)
-instance HasOptionalParam DappsCurveContractsVersionHistoricalGet EndBlock where
+
+-- | /Optional Param/ "endBlock" - 
+instance HasOptionalParam CurveGetContractsVersionsHistorical EndBlock where
   applyOptionalParam req (EndBlock xs) =
     req `addQuery` toQuery ("endBlock", Just xs)
-instance HasOptionalParam DappsCurveContractsVersionHistoricalGet StartDate where
+
+-- | /Optional Param/ "startDate" - 
+instance HasOptionalParam CurveGetContractsVersionsHistorical StartDate where
   applyOptionalParam req (StartDate xs) =
     req `addQuery` toQuery ("startDate", Just xs)
-instance HasOptionalParam DappsCurveContractsVersionHistoricalGet EndDate where
+
+-- | /Optional Param/ "endDate" - 
+instance HasOptionalParam CurveGetContractsVersionsHistorical EndDate where
   applyOptionalParam req (EndDate xs) =
     req `addQuery` toQuery ("endDate", Just xs)
-instance HasOptionalParam DappsCurveContractsVersionHistoricalGet PoolId where
+
+-- | /Optional Param/ "poolId" - 
+instance HasOptionalParam CurveGetContractsVersionsHistorical PoolId where
   applyOptionalParam req (PoolId xs) =
     req `addQuery` toQuery ("poolId", Just xs)
-instance Produces DappsCurveContractsVersionHistoricalGet MimeNoContent
+-- | @application/json@
+instance Produces CurveGetContractsVersionsHistorical MimeJSON
+-- | @text/json@
+instance Produces CurveGetContractsVersionsHistorical MimeTextJson
+-- | @text/plain@
+instance Produces CurveGetContractsVersionsHistorical MimePlainText
 
 
--- *** dappsCurveDailyVolumeHistoricalGet
+-- *** curveGetDailyVolumesHistorical
 
--- | @GET \/dapps\/curve\/dailyVolume\/historical@
+-- | @GET \/dapps\/curve\/dailyVolumes\/historical@
 -- 
-dappsCurveDailyVolumeHistoricalGet
-  :: OnChainRequest DappsCurveDailyVolumeHistoricalGet MimeNoContent NoContent MimeNoContent
-dappsCurveDailyVolumeHistoricalGet =
-  _mkRequest "GET" ["/dapps/curve/dailyVolume/historical"]
+-- GetDailyVolumes (historical)
+-- 
+-- Gets daily volumes.
+-- 
+curveGetDailyVolumesHistorical
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CurveGetDailyVolumesHistorical MimeNoContent [CurveDailyVolumeDTO] accept
+curveGetDailyVolumesHistorical  _ =
+  _mkRequest "GET" ["/dapps/curve/dailyVolumes/historical"]
 
-data DappsCurveDailyVolumeHistoricalGet  
-instance HasOptionalParam DappsCurveDailyVolumeHistoricalGet StartBlock where
+data CurveGetDailyVolumesHistorical  
+
+-- | /Optional Param/ "startBlock" - 
+instance HasOptionalParam CurveGetDailyVolumesHistorical StartBlock where
   applyOptionalParam req (StartBlock xs) =
     req `addQuery` toQuery ("startBlock", Just xs)
-instance HasOptionalParam DappsCurveDailyVolumeHistoricalGet EndBlock where
+
+-- | /Optional Param/ "endBlock" - 
+instance HasOptionalParam CurveGetDailyVolumesHistorical EndBlock where
   applyOptionalParam req (EndBlock xs) =
     req `addQuery` toQuery ("endBlock", Just xs)
-instance HasOptionalParam DappsCurveDailyVolumeHistoricalGet StartDate where
+
+-- | /Optional Param/ "startDate" - 
+instance HasOptionalParam CurveGetDailyVolumesHistorical StartDate where
   applyOptionalParam req (StartDate xs) =
     req `addQuery` toQuery ("startDate", Just xs)
-instance HasOptionalParam DappsCurveDailyVolumeHistoricalGet EndDate where
+
+-- | /Optional Param/ "endDate" - 
+instance HasOptionalParam CurveGetDailyVolumesHistorical EndDate where
   applyOptionalParam req (EndDate xs) =
     req `addQuery` toQuery ("endDate", Just xs)
-instance HasOptionalParam DappsCurveDailyVolumeHistoricalGet PoolId where
+
+-- | /Optional Param/ "poolId" - 
+instance HasOptionalParam CurveGetDailyVolumesHistorical PoolId where
   applyOptionalParam req (PoolId xs) =
     req `addQuery` toQuery ("poolId", Just xs)
-instance Produces DappsCurveDailyVolumeHistoricalGet MimeNoContent
+-- | @application/json@
+instance Produces CurveGetDailyVolumesHistorical MimeJSON
+-- | @text/json@
+instance Produces CurveGetDailyVolumesHistorical MimeTextJson
+-- | @text/plain@
+instance Produces CurveGetDailyVolumesHistorical MimePlainText
 
 
--- *** dappsCurveFeeChangeLogHistoricalGet
+-- *** curveGetExchangesHistorical
 
--- | @GET \/dapps\/curve\/feeChangeLog\/historical@
+-- | @GET \/dapps\/curve\/exchanges\/historical@
 -- 
-dappsCurveFeeChangeLogHistoricalGet
-  :: OnChainRequest DappsCurveFeeChangeLogHistoricalGet MimeNoContent NoContent MimeNoContent
-dappsCurveFeeChangeLogHistoricalGet =
-  _mkRequest "GET" ["/dapps/curve/feeChangeLog/historical"]
+-- GetExchanges (historical) 🔥
+-- 
+-- Gets exchanges.
+-- 
+curveGetExchangesHistorical
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CurveGetExchangesHistorical MimeNoContent [CurveExchangeDTO] accept
+curveGetExchangesHistorical  _ =
+  _mkRequest "GET" ["/dapps/curve/exchanges/historical"]
 
-data DappsCurveFeeChangeLogHistoricalGet  
-instance HasOptionalParam DappsCurveFeeChangeLogHistoricalGet StartBlock where
+data CurveGetExchangesHistorical  
+
+-- | /Optional Param/ "startBlock" - 
+instance HasOptionalParam CurveGetExchangesHistorical StartBlock where
   applyOptionalParam req (StartBlock xs) =
     req `addQuery` toQuery ("startBlock", Just xs)
-instance HasOptionalParam DappsCurveFeeChangeLogHistoricalGet EndBlock where
+
+-- | /Optional Param/ "endBlock" - 
+instance HasOptionalParam CurveGetExchangesHistorical EndBlock where
   applyOptionalParam req (EndBlock xs) =
     req `addQuery` toQuery ("endBlock", Just xs)
-instance HasOptionalParam DappsCurveFeeChangeLogHistoricalGet StartDate where
+
+-- | /Optional Param/ "startDate" - 
+instance HasOptionalParam CurveGetExchangesHistorical StartDate where
   applyOptionalParam req (StartDate xs) =
     req `addQuery` toQuery ("startDate", Just xs)
-instance HasOptionalParam DappsCurveFeeChangeLogHistoricalGet EndDate where
+
+-- | /Optional Param/ "endDate" - 
+instance HasOptionalParam CurveGetExchangesHistorical EndDate where
   applyOptionalParam req (EndDate xs) =
     req `addQuery` toQuery ("endDate", Just xs)
-instance HasOptionalParam DappsCurveFeeChangeLogHistoricalGet PoolId where
+
+-- | /Optional Param/ "poolId" - 
+instance HasOptionalParam CurveGetExchangesHistorical PoolId where
   applyOptionalParam req (PoolId xs) =
     req `addQuery` toQuery ("poolId", Just xs)
-instance Produces DappsCurveFeeChangeLogHistoricalGet MimeNoContent
+-- | @application/json@
+instance Produces CurveGetExchangesHistorical MimeJSON
+-- | @text/json@
+instance Produces CurveGetExchangesHistorical MimeTextJson
+-- | @text/plain@
+instance Produces CurveGetExchangesHistorical MimePlainText
 
 
--- *** dappsCurveGaugeDepositHistoricalGet
+-- *** curveGetFeeChangeLogsHistorical
 
--- | @GET \/dapps\/curve\/gaugeDeposit\/historical@
+-- | @GET \/dapps\/curve\/feeChangeLogs\/historical@
 -- 
-dappsCurveGaugeDepositHistoricalGet
-  :: OnChainRequest DappsCurveGaugeDepositHistoricalGet MimeNoContent NoContent MimeNoContent
-dappsCurveGaugeDepositHistoricalGet =
-  _mkRequest "GET" ["/dapps/curve/gaugeDeposit/historical"]
+-- GetFeeChangeLogs (historical)
+-- 
+-- Gets fee change logs.
+-- 
+curveGetFeeChangeLogsHistorical
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CurveGetFeeChangeLogsHistorical MimeNoContent [CurveFeeChangeLogDTO] accept
+curveGetFeeChangeLogsHistorical  _ =
+  _mkRequest "GET" ["/dapps/curve/feeChangeLogs/historical"]
 
-data DappsCurveGaugeDepositHistoricalGet  
-instance HasOptionalParam DappsCurveGaugeDepositHistoricalGet StartBlock where
+data CurveGetFeeChangeLogsHistorical  
+
+-- | /Optional Param/ "startBlock" - 
+instance HasOptionalParam CurveGetFeeChangeLogsHistorical StartBlock where
   applyOptionalParam req (StartBlock xs) =
     req `addQuery` toQuery ("startBlock", Just xs)
-instance HasOptionalParam DappsCurveGaugeDepositHistoricalGet EndBlock where
+
+-- | /Optional Param/ "endBlock" - 
+instance HasOptionalParam CurveGetFeeChangeLogsHistorical EndBlock where
   applyOptionalParam req (EndBlock xs) =
     req `addQuery` toQuery ("endBlock", Just xs)
-instance HasOptionalParam DappsCurveGaugeDepositHistoricalGet StartDate where
+
+-- | /Optional Param/ "startDate" - 
+instance HasOptionalParam CurveGetFeeChangeLogsHistorical StartDate where
   applyOptionalParam req (StartDate xs) =
     req `addQuery` toQuery ("startDate", Just xs)
-instance HasOptionalParam DappsCurveGaugeDepositHistoricalGet EndDate where
+
+-- | /Optional Param/ "endDate" - 
+instance HasOptionalParam CurveGetFeeChangeLogsHistorical EndDate where
   applyOptionalParam req (EndDate xs) =
     req `addQuery` toQuery ("endDate", Just xs)
-instance Produces DappsCurveGaugeDepositHistoricalGet MimeNoContent
 
-
--- *** dappsCurveGaugeHistoricalGet
-
--- | @GET \/dapps\/curve\/gauge\/historical@
--- 
-dappsCurveGaugeHistoricalGet
-  :: OnChainRequest DappsCurveGaugeHistoricalGet MimeNoContent NoContent MimeNoContent
-dappsCurveGaugeHistoricalGet =
-  _mkRequest "GET" ["/dapps/curve/gauge/historical"]
-
-data DappsCurveGaugeHistoricalGet  
-instance HasOptionalParam DappsCurveGaugeHistoricalGet StartBlock where
-  applyOptionalParam req (StartBlock xs) =
-    req `addQuery` toQuery ("startBlock", Just xs)
-instance HasOptionalParam DappsCurveGaugeHistoricalGet EndBlock where
-  applyOptionalParam req (EndBlock xs) =
-    req `addQuery` toQuery ("endBlock", Just xs)
-instance HasOptionalParam DappsCurveGaugeHistoricalGet StartDate where
-  applyOptionalParam req (StartDate xs) =
-    req `addQuery` toQuery ("startDate", Just xs)
-instance HasOptionalParam DappsCurveGaugeHistoricalGet EndDate where
-  applyOptionalParam req (EndDate xs) =
-    req `addQuery` toQuery ("endDate", Just xs)
-instance HasOptionalParam DappsCurveGaugeHistoricalGet PoolId where
+-- | /Optional Param/ "poolId" - 
+instance HasOptionalParam CurveGetFeeChangeLogsHistorical PoolId where
   applyOptionalParam req (PoolId xs) =
     req `addQuery` toQuery ("poolId", Just xs)
-instance Produces DappsCurveGaugeHistoricalGet MimeNoContent
+-- | @application/json@
+instance Produces CurveGetFeeChangeLogsHistorical MimeJSON
+-- | @text/json@
+instance Produces CurveGetFeeChangeLogsHistorical MimeTextJson
+-- | @text/plain@
+instance Produces CurveGetFeeChangeLogsHistorical MimePlainText
 
 
--- *** dappsCurveGaugeLiquidityHistoricalGet
+-- *** curveGetGaugesDepositsHistorical
 
--- | @GET \/dapps\/curve\/gaugeLiquidity\/historical@
+-- | @GET \/dapps\/curve\/gaugesDeposits\/historical@
 -- 
-dappsCurveGaugeLiquidityHistoricalGet
-  :: OnChainRequest DappsCurveGaugeLiquidityHistoricalGet MimeNoContent NoContent MimeNoContent
-dappsCurveGaugeLiquidityHistoricalGet =
-  _mkRequest "GET" ["/dapps/curve/gaugeLiquidity/historical"]
+-- GetGaugesDeposits (historical)
+-- 
+-- Gets gauges deposits.
+-- 
+curveGetGaugesDepositsHistorical
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CurveGetGaugesDepositsHistorical MimeNoContent [CurveGaugeDepositDTO] accept
+curveGetGaugesDepositsHistorical  _ =
+  _mkRequest "GET" ["/dapps/curve/gaugesDeposits/historical"]
 
-data DappsCurveGaugeLiquidityHistoricalGet  
-instance HasOptionalParam DappsCurveGaugeLiquidityHistoricalGet StartBlock where
+data CurveGetGaugesDepositsHistorical  
+
+-- | /Optional Param/ "startBlock" - 
+instance HasOptionalParam CurveGetGaugesDepositsHistorical StartBlock where
   applyOptionalParam req (StartBlock xs) =
     req `addQuery` toQuery ("startBlock", Just xs)
-instance HasOptionalParam DappsCurveGaugeLiquidityHistoricalGet EndBlock where
+
+-- | /Optional Param/ "endBlock" - 
+instance HasOptionalParam CurveGetGaugesDepositsHistorical EndBlock where
   applyOptionalParam req (EndBlock xs) =
     req `addQuery` toQuery ("endBlock", Just xs)
-instance HasOptionalParam DappsCurveGaugeLiquidityHistoricalGet StartDate where
+
+-- | /Optional Param/ "startDate" - 
+instance HasOptionalParam CurveGetGaugesDepositsHistorical StartDate where
   applyOptionalParam req (StartDate xs) =
     req `addQuery` toQuery ("startDate", Just xs)
-instance HasOptionalParam DappsCurveGaugeLiquidityHistoricalGet EndDate where
+
+-- | /Optional Param/ "endDate" - 
+instance HasOptionalParam CurveGetGaugesDepositsHistorical EndDate where
   applyOptionalParam req (EndDate xs) =
     req `addQuery` toQuery ("endDate", Just xs)
-instance Produces DappsCurveGaugeLiquidityHistoricalGet MimeNoContent
+-- | @application/json@
+instance Produces CurveGetGaugesDepositsHistorical MimeJSON
+-- | @text/json@
+instance Produces CurveGetGaugesDepositsHistorical MimeTextJson
+-- | @text/plain@
+instance Produces CurveGetGaugesDepositsHistorical MimePlainText
 
 
--- *** dappsCurveGaugeTotalWeightHistoricalGet
+-- *** curveGetGaugesHistorical
 
--- | @GET \/dapps\/curve\/gaugeTotalWeight\/historical@
+-- | @GET \/dapps\/curve\/gauges\/historical@
 -- 
-dappsCurveGaugeTotalWeightHistoricalGet
-  :: OnChainRequest DappsCurveGaugeTotalWeightHistoricalGet MimeNoContent NoContent MimeNoContent
-dappsCurveGaugeTotalWeightHistoricalGet =
-  _mkRequest "GET" ["/dapps/curve/gaugeTotalWeight/historical"]
+-- GetGauges (historical)
+-- 
+-- Gets gauges.
+-- 
+curveGetGaugesHistorical
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CurveGetGaugesHistorical MimeNoContent [CurveGaugeDTO] accept
+curveGetGaugesHistorical  _ =
+  _mkRequest "GET" ["/dapps/curve/gauges/historical"]
 
-data DappsCurveGaugeTotalWeightHistoricalGet  
-instance HasOptionalParam DappsCurveGaugeTotalWeightHistoricalGet StartBlock where
+data CurveGetGaugesHistorical  
+
+-- | /Optional Param/ "startBlock" - 
+instance HasOptionalParam CurveGetGaugesHistorical StartBlock where
   applyOptionalParam req (StartBlock xs) =
     req `addQuery` toQuery ("startBlock", Just xs)
-instance HasOptionalParam DappsCurveGaugeTotalWeightHistoricalGet EndBlock where
+
+-- | /Optional Param/ "endBlock" - 
+instance HasOptionalParam CurveGetGaugesHistorical EndBlock where
   applyOptionalParam req (EndBlock xs) =
     req `addQuery` toQuery ("endBlock", Just xs)
-instance HasOptionalParam DappsCurveGaugeTotalWeightHistoricalGet StartDate where
+
+-- | /Optional Param/ "startDate" - 
+instance HasOptionalParam CurveGetGaugesHistorical StartDate where
   applyOptionalParam req (StartDate xs) =
     req `addQuery` toQuery ("startDate", Just xs)
-instance HasOptionalParam DappsCurveGaugeTotalWeightHistoricalGet EndDate where
+
+-- | /Optional Param/ "endDate" - 
+instance HasOptionalParam CurveGetGaugesHistorical EndDate where
   applyOptionalParam req (EndDate xs) =
     req `addQuery` toQuery ("endDate", Just xs)
-instance Produces DappsCurveGaugeTotalWeightHistoricalGet MimeNoContent
 
-
--- *** dappsCurveGaugeTypeHistoricalGet
-
--- | @GET \/dapps\/curve\/gaugeType\/historical@
--- 
-dappsCurveGaugeTypeHistoricalGet
-  :: OnChainRequest DappsCurveGaugeTypeHistoricalGet MimeNoContent NoContent MimeNoContent
-dappsCurveGaugeTypeHistoricalGet =
-  _mkRequest "GET" ["/dapps/curve/gaugeType/historical"]
-
-data DappsCurveGaugeTypeHistoricalGet  
-instance HasOptionalParam DappsCurveGaugeTypeHistoricalGet StartBlock where
-  applyOptionalParam req (StartBlock xs) =
-    req `addQuery` toQuery ("startBlock", Just xs)
-instance HasOptionalParam DappsCurveGaugeTypeHistoricalGet EndBlock where
-  applyOptionalParam req (EndBlock xs) =
-    req `addQuery` toQuery ("endBlock", Just xs)
-instance HasOptionalParam DappsCurveGaugeTypeHistoricalGet StartDate where
-  applyOptionalParam req (StartDate xs) =
-    req `addQuery` toQuery ("startDate", Just xs)
-instance HasOptionalParam DappsCurveGaugeTypeHistoricalGet EndDate where
-  applyOptionalParam req (EndDate xs) =
-    req `addQuery` toQuery ("endDate", Just xs)
-instance Produces DappsCurveGaugeTypeHistoricalGet MimeNoContent
-
-
--- *** dappsCurveGaugeTypeWeightHistoricalGet
-
--- | @GET \/dapps\/curve\/gaugeTypeWeight\/historical@
--- 
-dappsCurveGaugeTypeWeightHistoricalGet
-  :: OnChainRequest DappsCurveGaugeTypeWeightHistoricalGet MimeNoContent NoContent MimeNoContent
-dappsCurveGaugeTypeWeightHistoricalGet =
-  _mkRequest "GET" ["/dapps/curve/gaugeTypeWeight/historical"]
-
-data DappsCurveGaugeTypeWeightHistoricalGet  
-instance HasOptionalParam DappsCurveGaugeTypeWeightHistoricalGet StartBlock where
-  applyOptionalParam req (StartBlock xs) =
-    req `addQuery` toQuery ("startBlock", Just xs)
-instance HasOptionalParam DappsCurveGaugeTypeWeightHistoricalGet EndBlock where
-  applyOptionalParam req (EndBlock xs) =
-    req `addQuery` toQuery ("endBlock", Just xs)
-instance HasOptionalParam DappsCurveGaugeTypeWeightHistoricalGet StartDate where
-  applyOptionalParam req (StartDate xs) =
-    req `addQuery` toQuery ("startDate", Just xs)
-instance HasOptionalParam DappsCurveGaugeTypeWeightHistoricalGet EndDate where
-  applyOptionalParam req (EndDate xs) =
-    req `addQuery` toQuery ("endDate", Just xs)
-instance Produces DappsCurveGaugeTypeWeightHistoricalGet MimeNoContent
-
-
--- *** dappsCurveGaugeWeightHistoricalGet
-
--- | @GET \/dapps\/curve\/gaugeWeight\/historical@
--- 
-dappsCurveGaugeWeightHistoricalGet
-  :: OnChainRequest DappsCurveGaugeWeightHistoricalGet MimeNoContent NoContent MimeNoContent
-dappsCurveGaugeWeightHistoricalGet =
-  _mkRequest "GET" ["/dapps/curve/gaugeWeight/historical"]
-
-data DappsCurveGaugeWeightHistoricalGet  
-instance HasOptionalParam DappsCurveGaugeWeightHistoricalGet StartBlock where
-  applyOptionalParam req (StartBlock xs) =
-    req `addQuery` toQuery ("startBlock", Just xs)
-instance HasOptionalParam DappsCurveGaugeWeightHistoricalGet EndBlock where
-  applyOptionalParam req (EndBlock xs) =
-    req `addQuery` toQuery ("endBlock", Just xs)
-instance HasOptionalParam DappsCurveGaugeWeightHistoricalGet StartDate where
-  applyOptionalParam req (StartDate xs) =
-    req `addQuery` toQuery ("startDate", Just xs)
-instance HasOptionalParam DappsCurveGaugeWeightHistoricalGet EndDate where
-  applyOptionalParam req (EndDate xs) =
-    req `addQuery` toQuery ("endDate", Just xs)
-instance Produces DappsCurveGaugeWeightHistoricalGet MimeNoContent
-
-
--- *** dappsCurveGaugeWeightVoteHistoricalGet
-
--- | @GET \/dapps\/curve\/gaugeWeightVote\/historical@
--- 
-dappsCurveGaugeWeightVoteHistoricalGet
-  :: OnChainRequest DappsCurveGaugeWeightVoteHistoricalGet MimeNoContent NoContent MimeNoContent
-dappsCurveGaugeWeightVoteHistoricalGet =
-  _mkRequest "GET" ["/dapps/curve/gaugeWeightVote/historical"]
-
-data DappsCurveGaugeWeightVoteHistoricalGet  
-instance HasOptionalParam DappsCurveGaugeWeightVoteHistoricalGet StartBlock where
-  applyOptionalParam req (StartBlock xs) =
-    req `addQuery` toQuery ("startBlock", Just xs)
-instance HasOptionalParam DappsCurveGaugeWeightVoteHistoricalGet EndBlock where
-  applyOptionalParam req (EndBlock xs) =
-    req `addQuery` toQuery ("endBlock", Just xs)
-instance HasOptionalParam DappsCurveGaugeWeightVoteHistoricalGet StartDate where
-  applyOptionalParam req (StartDate xs) =
-    req `addQuery` toQuery ("startDate", Just xs)
-instance HasOptionalParam DappsCurveGaugeWeightVoteHistoricalGet EndDate where
-  applyOptionalParam req (EndDate xs) =
-    req `addQuery` toQuery ("endDate", Just xs)
-instance Produces DappsCurveGaugeWeightVoteHistoricalGet MimeNoContent
-
-
--- *** dappsCurveGaugeWithdrawHistoricalGet
-
--- | @GET \/dapps\/curve\/gaugeWithdraw\/historical@
--- 
-dappsCurveGaugeWithdrawHistoricalGet
-  :: OnChainRequest DappsCurveGaugeWithdrawHistoricalGet MimeNoContent NoContent MimeNoContent
-dappsCurveGaugeWithdrawHistoricalGet =
-  _mkRequest "GET" ["/dapps/curve/gaugeWithdraw/historical"]
-
-data DappsCurveGaugeWithdrawHistoricalGet  
-instance HasOptionalParam DappsCurveGaugeWithdrawHistoricalGet StartBlock where
-  applyOptionalParam req (StartBlock xs) =
-    req `addQuery` toQuery ("startBlock", Just xs)
-instance HasOptionalParam DappsCurveGaugeWithdrawHistoricalGet EndBlock where
-  applyOptionalParam req (EndBlock xs) =
-    req `addQuery` toQuery ("endBlock", Just xs)
-instance HasOptionalParam DappsCurveGaugeWithdrawHistoricalGet StartDate where
-  applyOptionalParam req (StartDate xs) =
-    req `addQuery` toQuery ("startDate", Just xs)
-instance HasOptionalParam DappsCurveGaugeWithdrawHistoricalGet EndDate where
-  applyOptionalParam req (EndDate xs) =
-    req `addQuery` toQuery ("endDate", Just xs)
-instance Produces DappsCurveGaugeWithdrawHistoricalGet MimeNoContent
-
-
--- *** dappsCurveHourlyVolumeHistoricalGet
-
--- | @GET \/dapps\/curve\/hourlyVolume\/historical@
--- 
-dappsCurveHourlyVolumeHistoricalGet
-  :: OnChainRequest DappsCurveHourlyVolumeHistoricalGet MimeNoContent NoContent MimeNoContent
-dappsCurveHourlyVolumeHistoricalGet =
-  _mkRequest "GET" ["/dapps/curve/hourlyVolume/historical"]
-
-data DappsCurveHourlyVolumeHistoricalGet  
-instance HasOptionalParam DappsCurveHourlyVolumeHistoricalGet StartBlock where
-  applyOptionalParam req (StartBlock xs) =
-    req `addQuery` toQuery ("startBlock", Just xs)
-instance HasOptionalParam DappsCurveHourlyVolumeHistoricalGet EndBlock where
-  applyOptionalParam req (EndBlock xs) =
-    req `addQuery` toQuery ("endBlock", Just xs)
-instance HasOptionalParam DappsCurveHourlyVolumeHistoricalGet StartDate where
-  applyOptionalParam req (StartDate xs) =
-    req `addQuery` toQuery ("startDate", Just xs)
-instance HasOptionalParam DappsCurveHourlyVolumeHistoricalGet EndDate where
-  applyOptionalParam req (EndDate xs) =
-    req `addQuery` toQuery ("endDate", Just xs)
-instance HasOptionalParam DappsCurveHourlyVolumeHistoricalGet PoolId where
+-- | /Optional Param/ "poolId" - 
+instance HasOptionalParam CurveGetGaugesHistorical PoolId where
   applyOptionalParam req (PoolId xs) =
     req `addQuery` toQuery ("poolId", Just xs)
-instance Produces DappsCurveHourlyVolumeHistoricalGet MimeNoContent
+-- | @application/json@
+instance Produces CurveGetGaugesHistorical MimeJSON
+-- | @text/json@
+instance Produces CurveGetGaugesHistorical MimeTextJson
+-- | @text/plain@
+instance Produces CurveGetGaugesHistorical MimePlainText
 
 
--- *** dappsCurveLpTokenHistoricalGet
+-- *** curveGetGaugesLiquidityHistorical
 
--- | @GET \/dapps\/curve\/lpToken\/historical@
+-- | @GET \/dapps\/curve\/gaugesLiquidity\/historical@
 -- 
-dappsCurveLpTokenHistoricalGet
-  :: OnChainRequest DappsCurveLpTokenHistoricalGet MimeNoContent NoContent MimeNoContent
-dappsCurveLpTokenHistoricalGet =
-  _mkRequest "GET" ["/dapps/curve/lpToken/historical"]
+-- GetGaugesLiquidity (historical)
+-- 
+-- Gets gauges liquidity.
+-- 
+curveGetGaugesLiquidityHistorical
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CurveGetGaugesLiquidityHistorical MimeNoContent [CurveGaugeLiquidityDTO] accept
+curveGetGaugesLiquidityHistorical  _ =
+  _mkRequest "GET" ["/dapps/curve/gaugesLiquidity/historical"]
 
-data DappsCurveLpTokenHistoricalGet  
-instance HasOptionalParam DappsCurveLpTokenHistoricalGet StartBlock where
+data CurveGetGaugesLiquidityHistorical  
+
+-- | /Optional Param/ "startBlock" - 
+instance HasOptionalParam CurveGetGaugesLiquidityHistorical StartBlock where
   applyOptionalParam req (StartBlock xs) =
     req `addQuery` toQuery ("startBlock", Just xs)
-instance HasOptionalParam DappsCurveLpTokenHistoricalGet EndBlock where
+
+-- | /Optional Param/ "endBlock" - 
+instance HasOptionalParam CurveGetGaugesLiquidityHistorical EndBlock where
   applyOptionalParam req (EndBlock xs) =
     req `addQuery` toQuery ("endBlock", Just xs)
-instance HasOptionalParam DappsCurveLpTokenHistoricalGet StartDate where
+
+-- | /Optional Param/ "startDate" - 
+instance HasOptionalParam CurveGetGaugesLiquidityHistorical StartDate where
   applyOptionalParam req (StartDate xs) =
     req `addQuery` toQuery ("startDate", Just xs)
-instance HasOptionalParam DappsCurveLpTokenHistoricalGet EndDate where
+
+-- | /Optional Param/ "endDate" - 
+instance HasOptionalParam CurveGetGaugesLiquidityHistorical EndDate where
   applyOptionalParam req (EndDate xs) =
     req `addQuery` toQuery ("endDate", Just xs)
-instance HasOptionalParam DappsCurveLpTokenHistoricalGet PoolId where
+-- | @application/json@
+instance Produces CurveGetGaugesLiquidityHistorical MimeJSON
+-- | @text/json@
+instance Produces CurveGetGaugesLiquidityHistorical MimeTextJson
+-- | @text/plain@
+instance Produces CurveGetGaugesLiquidityHistorical MimePlainText
+
+
+-- *** curveGetGaugesTotalWeightsHistorical
+
+-- | @GET \/dapps\/curve\/gaugesTotalWeights\/historical@
+-- 
+-- GetGaugesTotalWeights (historical)
+-- 
+-- Gets gauges total weights.
+-- 
+curveGetGaugesTotalWeightsHistorical
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CurveGetGaugesTotalWeightsHistorical MimeNoContent [CurveGaugeTotalWeightDTO] accept
+curveGetGaugesTotalWeightsHistorical  _ =
+  _mkRequest "GET" ["/dapps/curve/gaugesTotalWeights/historical"]
+
+data CurveGetGaugesTotalWeightsHistorical  
+
+-- | /Optional Param/ "startBlock" - 
+instance HasOptionalParam CurveGetGaugesTotalWeightsHistorical StartBlock where
+  applyOptionalParam req (StartBlock xs) =
+    req `addQuery` toQuery ("startBlock", Just xs)
+
+-- | /Optional Param/ "endBlock" - 
+instance HasOptionalParam CurveGetGaugesTotalWeightsHistorical EndBlock where
+  applyOptionalParam req (EndBlock xs) =
+    req `addQuery` toQuery ("endBlock", Just xs)
+
+-- | /Optional Param/ "startDate" - 
+instance HasOptionalParam CurveGetGaugesTotalWeightsHistorical StartDate where
+  applyOptionalParam req (StartDate xs) =
+    req `addQuery` toQuery ("startDate", Just xs)
+
+-- | /Optional Param/ "endDate" - 
+instance HasOptionalParam CurveGetGaugesTotalWeightsHistorical EndDate where
+  applyOptionalParam req (EndDate xs) =
+    req `addQuery` toQuery ("endDate", Just xs)
+-- | @application/json@
+instance Produces CurveGetGaugesTotalWeightsHistorical MimeJSON
+-- | @text/json@
+instance Produces CurveGetGaugesTotalWeightsHistorical MimeTextJson
+-- | @text/plain@
+instance Produces CurveGetGaugesTotalWeightsHistorical MimePlainText
+
+
+-- *** curveGetGaugesTypesHistorical
+
+-- | @GET \/dapps\/curve\/gaugesTypes\/historical@
+-- 
+-- GetGaugesTypes (historical)
+-- 
+-- Gets gauges types.
+-- 
+curveGetGaugesTypesHistorical
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CurveGetGaugesTypesHistorical MimeNoContent [CurveGaugeTypeDTO] accept
+curveGetGaugesTypesHistorical  _ =
+  _mkRequest "GET" ["/dapps/curve/gaugesTypes/historical"]
+
+data CurveGetGaugesTypesHistorical  
+
+-- | /Optional Param/ "startBlock" - 
+instance HasOptionalParam CurveGetGaugesTypesHistorical StartBlock where
+  applyOptionalParam req (StartBlock xs) =
+    req `addQuery` toQuery ("startBlock", Just xs)
+
+-- | /Optional Param/ "endBlock" - 
+instance HasOptionalParam CurveGetGaugesTypesHistorical EndBlock where
+  applyOptionalParam req (EndBlock xs) =
+    req `addQuery` toQuery ("endBlock", Just xs)
+
+-- | /Optional Param/ "startDate" - 
+instance HasOptionalParam CurveGetGaugesTypesHistorical StartDate where
+  applyOptionalParam req (StartDate xs) =
+    req `addQuery` toQuery ("startDate", Just xs)
+
+-- | /Optional Param/ "endDate" - 
+instance HasOptionalParam CurveGetGaugesTypesHistorical EndDate where
+  applyOptionalParam req (EndDate xs) =
+    req `addQuery` toQuery ("endDate", Just xs)
+-- | @application/json@
+instance Produces CurveGetGaugesTypesHistorical MimeJSON
+-- | @text/json@
+instance Produces CurveGetGaugesTypesHistorical MimeTextJson
+-- | @text/plain@
+instance Produces CurveGetGaugesTypesHistorical MimePlainText
+
+
+-- *** curveGetGaugesTypesWeightsHistorical
+
+-- | @GET \/dapps\/curve\/gaugesTypesWeights\/historical@
+-- 
+-- GetGaugesTypesWeights (historical)
+-- 
+-- Gets gauges types weights.
+-- 
+curveGetGaugesTypesWeightsHistorical
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CurveGetGaugesTypesWeightsHistorical MimeNoContent [CurveGaugeTypeWeightDTO] accept
+curveGetGaugesTypesWeightsHistorical  _ =
+  _mkRequest "GET" ["/dapps/curve/gaugesTypesWeights/historical"]
+
+data CurveGetGaugesTypesWeightsHistorical  
+
+-- | /Optional Param/ "startBlock" - 
+instance HasOptionalParam CurveGetGaugesTypesWeightsHistorical StartBlock where
+  applyOptionalParam req (StartBlock xs) =
+    req `addQuery` toQuery ("startBlock", Just xs)
+
+-- | /Optional Param/ "endBlock" - 
+instance HasOptionalParam CurveGetGaugesTypesWeightsHistorical EndBlock where
+  applyOptionalParam req (EndBlock xs) =
+    req `addQuery` toQuery ("endBlock", Just xs)
+
+-- | /Optional Param/ "startDate" - 
+instance HasOptionalParam CurveGetGaugesTypesWeightsHistorical StartDate where
+  applyOptionalParam req (StartDate xs) =
+    req `addQuery` toQuery ("startDate", Just xs)
+
+-- | /Optional Param/ "endDate" - 
+instance HasOptionalParam CurveGetGaugesTypesWeightsHistorical EndDate where
+  applyOptionalParam req (EndDate xs) =
+    req `addQuery` toQuery ("endDate", Just xs)
+-- | @application/json@
+instance Produces CurveGetGaugesTypesWeightsHistorical MimeJSON
+-- | @text/json@
+instance Produces CurveGetGaugesTypesWeightsHistorical MimeTextJson
+-- | @text/plain@
+instance Produces CurveGetGaugesTypesWeightsHistorical MimePlainText
+
+
+-- *** curveGetGaugesWeightsHistorical
+
+-- | @GET \/dapps\/curve\/gaugesWeights\/historical@
+-- 
+-- GetGaugesWeights (historical)
+-- 
+-- Gets gauges weights.
+-- 
+curveGetGaugesWeightsHistorical
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CurveGetGaugesWeightsHistorical MimeNoContent [CurveGaugeWeightDTO] accept
+curveGetGaugesWeightsHistorical  _ =
+  _mkRequest "GET" ["/dapps/curve/gaugesWeights/historical"]
+
+data CurveGetGaugesWeightsHistorical  
+
+-- | /Optional Param/ "startBlock" - 
+instance HasOptionalParam CurveGetGaugesWeightsHistorical StartBlock where
+  applyOptionalParam req (StartBlock xs) =
+    req `addQuery` toQuery ("startBlock", Just xs)
+
+-- | /Optional Param/ "endBlock" - 
+instance HasOptionalParam CurveGetGaugesWeightsHistorical EndBlock where
+  applyOptionalParam req (EndBlock xs) =
+    req `addQuery` toQuery ("endBlock", Just xs)
+
+-- | /Optional Param/ "startDate" - 
+instance HasOptionalParam CurveGetGaugesWeightsHistorical StartDate where
+  applyOptionalParam req (StartDate xs) =
+    req `addQuery` toQuery ("startDate", Just xs)
+
+-- | /Optional Param/ "endDate" - 
+instance HasOptionalParam CurveGetGaugesWeightsHistorical EndDate where
+  applyOptionalParam req (EndDate xs) =
+    req `addQuery` toQuery ("endDate", Just xs)
+-- | @application/json@
+instance Produces CurveGetGaugesWeightsHistorical MimeJSON
+-- | @text/json@
+instance Produces CurveGetGaugesWeightsHistorical MimeTextJson
+-- | @text/plain@
+instance Produces CurveGetGaugesWeightsHistorical MimePlainText
+
+
+-- *** curveGetGaugesWeightsVotesHistorical
+
+-- | @GET \/dapps\/curve\/gaugesWeightsVotes\/historical@
+-- 
+-- GetGaugesWeightsVotes (historical)
+-- 
+-- Gets gauges weights votes.
+-- 
+curveGetGaugesWeightsVotesHistorical
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CurveGetGaugesWeightsVotesHistorical MimeNoContent [CurveGaugeWeightVoteDTO] accept
+curveGetGaugesWeightsVotesHistorical  _ =
+  _mkRequest "GET" ["/dapps/curve/gaugesWeightsVotes/historical"]
+
+data CurveGetGaugesWeightsVotesHistorical  
+
+-- | /Optional Param/ "startBlock" - 
+instance HasOptionalParam CurveGetGaugesWeightsVotesHistorical StartBlock where
+  applyOptionalParam req (StartBlock xs) =
+    req `addQuery` toQuery ("startBlock", Just xs)
+
+-- | /Optional Param/ "endBlock" - 
+instance HasOptionalParam CurveGetGaugesWeightsVotesHistorical EndBlock where
+  applyOptionalParam req (EndBlock xs) =
+    req `addQuery` toQuery ("endBlock", Just xs)
+
+-- | /Optional Param/ "startDate" - 
+instance HasOptionalParam CurveGetGaugesWeightsVotesHistorical StartDate where
+  applyOptionalParam req (StartDate xs) =
+    req `addQuery` toQuery ("startDate", Just xs)
+
+-- | /Optional Param/ "endDate" - 
+instance HasOptionalParam CurveGetGaugesWeightsVotesHistorical EndDate where
+  applyOptionalParam req (EndDate xs) =
+    req `addQuery` toQuery ("endDate", Just xs)
+-- | @application/json@
+instance Produces CurveGetGaugesWeightsVotesHistorical MimeJSON
+-- | @text/json@
+instance Produces CurveGetGaugesWeightsVotesHistorical MimeTextJson
+-- | @text/plain@
+instance Produces CurveGetGaugesWeightsVotesHistorical MimePlainText
+
+
+-- *** curveGetGaugesWithdrawHistorical
+
+-- | @GET \/dapps\/curve\/gaugesWithdraws\/historical@
+-- 
+-- GetGaugesWithdraw (historical)
+-- 
+-- Gets gauges withdraws.
+-- 
+curveGetGaugesWithdrawHistorical
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CurveGetGaugesWithdrawHistorical MimeNoContent [CurveGaugeWithdrawDTO] accept
+curveGetGaugesWithdrawHistorical  _ =
+  _mkRequest "GET" ["/dapps/curve/gaugesWithdraws/historical"]
+
+data CurveGetGaugesWithdrawHistorical  
+
+-- | /Optional Param/ "startBlock" - 
+instance HasOptionalParam CurveGetGaugesWithdrawHistorical StartBlock where
+  applyOptionalParam req (StartBlock xs) =
+    req `addQuery` toQuery ("startBlock", Just xs)
+
+-- | /Optional Param/ "endBlock" - 
+instance HasOptionalParam CurveGetGaugesWithdrawHistorical EndBlock where
+  applyOptionalParam req (EndBlock xs) =
+    req `addQuery` toQuery ("endBlock", Just xs)
+
+-- | /Optional Param/ "startDate" - 
+instance HasOptionalParam CurveGetGaugesWithdrawHistorical StartDate where
+  applyOptionalParam req (StartDate xs) =
+    req `addQuery` toQuery ("startDate", Just xs)
+
+-- | /Optional Param/ "endDate" - 
+instance HasOptionalParam CurveGetGaugesWithdrawHistorical EndDate where
+  applyOptionalParam req (EndDate xs) =
+    req `addQuery` toQuery ("endDate", Just xs)
+-- | @application/json@
+instance Produces CurveGetGaugesWithdrawHistorical MimeJSON
+-- | @text/json@
+instance Produces CurveGetGaugesWithdrawHistorical MimeTextJson
+-- | @text/plain@
+instance Produces CurveGetGaugesWithdrawHistorical MimePlainText
+
+
+-- *** curveGetHourlyVolumesHistorical
+
+-- | @GET \/dapps\/curve\/hourlyVolumes\/historical@
+-- 
+-- GetHourlyVolumes (historical)
+-- 
+-- Gets hourly volumes.
+-- 
+curveGetHourlyVolumesHistorical
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CurveGetHourlyVolumesHistorical MimeNoContent [CurveHourlyVolumeDTO] accept
+curveGetHourlyVolumesHistorical  _ =
+  _mkRequest "GET" ["/dapps/curve/hourlyVolumes/historical"]
+
+data CurveGetHourlyVolumesHistorical  
+
+-- | /Optional Param/ "startBlock" - 
+instance HasOptionalParam CurveGetHourlyVolumesHistorical StartBlock where
+  applyOptionalParam req (StartBlock xs) =
+    req `addQuery` toQuery ("startBlock", Just xs)
+
+-- | /Optional Param/ "endBlock" - 
+instance HasOptionalParam CurveGetHourlyVolumesHistorical EndBlock where
+  applyOptionalParam req (EndBlock xs) =
+    req `addQuery` toQuery ("endBlock", Just xs)
+
+-- | /Optional Param/ "startDate" - 
+instance HasOptionalParam CurveGetHourlyVolumesHistorical StartDate where
+  applyOptionalParam req (StartDate xs) =
+    req `addQuery` toQuery ("startDate", Just xs)
+
+-- | /Optional Param/ "endDate" - 
+instance HasOptionalParam CurveGetHourlyVolumesHistorical EndDate where
+  applyOptionalParam req (EndDate xs) =
+    req `addQuery` toQuery ("endDate", Just xs)
+
+-- | /Optional Param/ "poolId" - 
+instance HasOptionalParam CurveGetHourlyVolumesHistorical PoolId where
   applyOptionalParam req (PoolId xs) =
     req `addQuery` toQuery ("poolId", Just xs)
-instance Produces DappsCurveLpTokenHistoricalGet MimeNoContent
+-- | @application/json@
+instance Produces CurveGetHourlyVolumesHistorical MimeJSON
+-- | @text/json@
+instance Produces CurveGetHourlyVolumesHistorical MimeTextJson
+-- | @text/plain@
+instance Produces CurveGetHourlyVolumesHistorical MimePlainText
 
 
--- *** dappsCurvePoolsHistoricalGet
+-- *** curveGetLpTokensHistorical
+
+-- | @GET \/dapps\/curve\/lpTokens\/historical@
+-- 
+-- GetLpTokens (historical)
+-- 
+-- Gets lp tokens.
+-- 
+curveGetLpTokensHistorical
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CurveGetLpTokensHistorical MimeNoContent [CurveLpTokenDTO] accept
+curveGetLpTokensHistorical  _ =
+  _mkRequest "GET" ["/dapps/curve/lpTokens/historical"]
+
+data CurveGetLpTokensHistorical  
+
+-- | /Optional Param/ "startBlock" - 
+instance HasOptionalParam CurveGetLpTokensHistorical StartBlock where
+  applyOptionalParam req (StartBlock xs) =
+    req `addQuery` toQuery ("startBlock", Just xs)
+
+-- | /Optional Param/ "endBlock" - 
+instance HasOptionalParam CurveGetLpTokensHistorical EndBlock where
+  applyOptionalParam req (EndBlock xs) =
+    req `addQuery` toQuery ("endBlock", Just xs)
+
+-- | /Optional Param/ "startDate" - 
+instance HasOptionalParam CurveGetLpTokensHistorical StartDate where
+  applyOptionalParam req (StartDate xs) =
+    req `addQuery` toQuery ("startDate", Just xs)
+
+-- | /Optional Param/ "endDate" - 
+instance HasOptionalParam CurveGetLpTokensHistorical EndDate where
+  applyOptionalParam req (EndDate xs) =
+    req `addQuery` toQuery ("endDate", Just xs)
+
+-- | /Optional Param/ "poolId" - 
+instance HasOptionalParam CurveGetLpTokensHistorical PoolId where
+  applyOptionalParam req (PoolId xs) =
+    req `addQuery` toQuery ("poolId", Just xs)
+-- | @application/json@
+instance Produces CurveGetLpTokensHistorical MimeJSON
+-- | @text/json@
+instance Produces CurveGetLpTokensHistorical MimeTextJson
+-- | @text/plain@
+instance Produces CurveGetLpTokensHistorical MimePlainText
+
+
+-- *** curveGetPoolsHistorical
 
 -- | @GET \/dapps\/curve\/pools\/historical@
 -- 
-dappsCurvePoolsHistoricalGet
-  :: OnChainRequest DappsCurvePoolsHistoricalGet MimeNoContent NoContent MimeNoContent
-dappsCurvePoolsHistoricalGet =
+-- GetPools (historical) 🔥
+-- 
+-- Gets pools.
+-- 
+curveGetPoolsHistorical
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CurveGetPoolsHistorical MimeNoContent [CurvePoolDTO] accept
+curveGetPoolsHistorical  _ =
   _mkRequest "GET" ["/dapps/curve/pools/historical"]
 
-data DappsCurvePoolsHistoricalGet  
-instance HasOptionalParam DappsCurvePoolsHistoricalGet StartBlock where
+data CurveGetPoolsHistorical  
+
+-- | /Optional Param/ "startBlock" - 
+instance HasOptionalParam CurveGetPoolsHistorical StartBlock where
   applyOptionalParam req (StartBlock xs) =
     req `addQuery` toQuery ("startBlock", Just xs)
-instance HasOptionalParam DappsCurvePoolsHistoricalGet EndBlock where
+
+-- | /Optional Param/ "endBlock" - 
+instance HasOptionalParam CurveGetPoolsHistorical EndBlock where
   applyOptionalParam req (EndBlock xs) =
     req `addQuery` toQuery ("endBlock", Just xs)
-instance HasOptionalParam DappsCurvePoolsHistoricalGet StartDate where
+
+-- | /Optional Param/ "startDate" - 
+instance HasOptionalParam CurveGetPoolsHistorical StartDate where
   applyOptionalParam req (StartDate xs) =
     req `addQuery` toQuery ("startDate", Just xs)
-instance HasOptionalParam DappsCurvePoolsHistoricalGet EndDate where
+
+-- | /Optional Param/ "endDate" - 
+instance HasOptionalParam CurveGetPoolsHistorical EndDate where
   applyOptionalParam req (EndDate xs) =
     req `addQuery` toQuery ("endDate", Just xs)
-instance HasOptionalParam DappsCurvePoolsHistoricalGet PoolId where
+
+-- | /Optional Param/ "poolId" - 
+instance HasOptionalParam CurveGetPoolsHistorical PoolId where
   applyOptionalParam req (PoolId xs) =
     req `addQuery` toQuery ("poolId", Just xs)
-instance Produces DappsCurvePoolsHistoricalGet MimeNoContent
+-- | @application/json@
+instance Produces CurveGetPoolsHistorical MimeJSON
+-- | @text/json@
+instance Produces CurveGetPoolsHistorical MimeTextJson
+-- | @text/plain@
+instance Produces CurveGetPoolsHistorical MimePlainText
 
 
--- *** dappsCurveProposalsHistoricalGet
+-- *** curveGetProposalsHistorical
 
 -- | @GET \/dapps\/curve\/proposals\/historical@
 -- 
-dappsCurveProposalsHistoricalGet
-  :: OnChainRequest DappsCurveProposalsHistoricalGet MimeNoContent NoContent MimeNoContent
-dappsCurveProposalsHistoricalGet =
+-- GetProposals (historical)
+-- 
+-- Gets proposals.
+-- 
+curveGetProposalsHistorical
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CurveGetProposalsHistorical MimeNoContent [CurveProposalDTO] accept
+curveGetProposalsHistorical  _ =
   _mkRequest "GET" ["/dapps/curve/proposals/historical"]
 
-data DappsCurveProposalsHistoricalGet  
-instance HasOptionalParam DappsCurveProposalsHistoricalGet StartBlock where
+data CurveGetProposalsHistorical  
+
+-- | /Optional Param/ "startBlock" - 
+instance HasOptionalParam CurveGetProposalsHistorical StartBlock where
   applyOptionalParam req (StartBlock xs) =
     req `addQuery` toQuery ("startBlock", Just xs)
-instance HasOptionalParam DappsCurveProposalsHistoricalGet EndBlock where
+
+-- | /Optional Param/ "endBlock" - 
+instance HasOptionalParam CurveGetProposalsHistorical EndBlock where
   applyOptionalParam req (EndBlock xs) =
     req `addQuery` toQuery ("endBlock", Just xs)
-instance HasOptionalParam DappsCurveProposalsHistoricalGet StartDate where
+
+-- | /Optional Param/ "startDate" - 
+instance HasOptionalParam CurveGetProposalsHistorical StartDate where
   applyOptionalParam req (StartDate xs) =
     req `addQuery` toQuery ("startDate", Just xs)
-instance HasOptionalParam DappsCurveProposalsHistoricalGet EndDate where
+
+-- | /Optional Param/ "endDate" - 
+instance HasOptionalParam CurveGetProposalsHistorical EndDate where
   applyOptionalParam req (EndDate xs) =
     req `addQuery` toQuery ("endDate", Just xs)
-instance Produces DappsCurveProposalsHistoricalGet MimeNoContent
+-- | @application/json@
+instance Produces CurveGetProposalsHistorical MimeJSON
+-- | @text/json@
+instance Produces CurveGetProposalsHistorical MimeTextJson
+-- | @text/plain@
+instance Produces CurveGetProposalsHistorical MimePlainText
 
 
--- *** dappsCurveProposalsVoteHistoricalGet
+-- *** curveGetProposalsVotesHistorical
 
--- | @GET \/dapps\/curve\/proposalsVote\/historical@
+-- | @GET \/dapps\/curve\/proposalsVotes\/historical@
 -- 
-dappsCurveProposalsVoteHistoricalGet
-  :: OnChainRequest DappsCurveProposalsVoteHistoricalGet MimeNoContent NoContent MimeNoContent
-dappsCurveProposalsVoteHistoricalGet =
-  _mkRequest "GET" ["/dapps/curve/proposalsVote/historical"]
-
-data DappsCurveProposalsVoteHistoricalGet  
-instance HasOptionalParam DappsCurveProposalsVoteHistoricalGet StartBlock where
-  applyOptionalParam req (StartBlock xs) =
-    req `addQuery` toQuery ("startBlock", Just xs)
-instance HasOptionalParam DappsCurveProposalsVoteHistoricalGet EndBlock where
-  applyOptionalParam req (EndBlock xs) =
-    req `addQuery` toQuery ("endBlock", Just xs)
-instance HasOptionalParam DappsCurveProposalsVoteHistoricalGet StartDate where
-  applyOptionalParam req (StartDate xs) =
-    req `addQuery` toQuery ("startDate", Just xs)
-instance HasOptionalParam DappsCurveProposalsVoteHistoricalGet EndDate where
-  applyOptionalParam req (EndDate xs) =
-    req `addQuery` toQuery ("endDate", Just xs)
-instance Produces DappsCurveProposalsVoteHistoricalGet MimeNoContent
-
-
--- *** dappsCurveRemoveLiquidityEventHistoricalGet
-
--- | @GET \/dapps\/curve\/removeLiquidityEvent\/historical@
+-- GetProposalsVotes (historical)
 -- 
-dappsCurveRemoveLiquidityEventHistoricalGet
-  :: OnChainRequest DappsCurveRemoveLiquidityEventHistoricalGet MimeNoContent NoContent MimeNoContent
-dappsCurveRemoveLiquidityEventHistoricalGet =
-  _mkRequest "GET" ["/dapps/curve/removeLiquidityEvent/historical"]
+-- Gets proposals votes.
+-- 
+curveGetProposalsVotesHistorical
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CurveGetProposalsVotesHistorical MimeNoContent [CurveProposalVoteDTO] accept
+curveGetProposalsVotesHistorical  _ =
+  _mkRequest "GET" ["/dapps/curve/proposalsVotes/historical"]
 
-data DappsCurveRemoveLiquidityEventHistoricalGet  
-instance HasOptionalParam DappsCurveRemoveLiquidityEventHistoricalGet StartBlock where
+data CurveGetProposalsVotesHistorical  
+
+-- | /Optional Param/ "startBlock" - 
+instance HasOptionalParam CurveGetProposalsVotesHistorical StartBlock where
   applyOptionalParam req (StartBlock xs) =
     req `addQuery` toQuery ("startBlock", Just xs)
-instance HasOptionalParam DappsCurveRemoveLiquidityEventHistoricalGet EndBlock where
+
+-- | /Optional Param/ "endBlock" - 
+instance HasOptionalParam CurveGetProposalsVotesHistorical EndBlock where
   applyOptionalParam req (EndBlock xs) =
     req `addQuery` toQuery ("endBlock", Just xs)
-instance HasOptionalParam DappsCurveRemoveLiquidityEventHistoricalGet StartDate where
+
+-- | /Optional Param/ "startDate" - 
+instance HasOptionalParam CurveGetProposalsVotesHistorical StartDate where
   applyOptionalParam req (StartDate xs) =
     req `addQuery` toQuery ("startDate", Just xs)
-instance HasOptionalParam DappsCurveRemoveLiquidityEventHistoricalGet EndDate where
+
+-- | /Optional Param/ "endDate" - 
+instance HasOptionalParam CurveGetProposalsVotesHistorical EndDate where
   applyOptionalParam req (EndDate xs) =
     req `addQuery` toQuery ("endDate", Just xs)
-instance HasOptionalParam DappsCurveRemoveLiquidityEventHistoricalGet PoolId where
+-- | @application/json@
+instance Produces CurveGetProposalsVotesHistorical MimeJSON
+-- | @text/json@
+instance Produces CurveGetProposalsVotesHistorical MimeTextJson
+-- | @text/plain@
+instance Produces CurveGetProposalsVotesHistorical MimePlainText
+
+
+-- *** curveGetRemoveLiquidityEventsHistorical
+
+-- | @GET \/dapps\/curve\/removeLiquidityEvents\/historical@
+-- 
+-- GetRemoveLiquidityEvents (historical)
+-- 
+-- Gets remove liquidity events.
+-- 
+curveGetRemoveLiquidityEventsHistorical
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CurveGetRemoveLiquidityEventsHistorical MimeNoContent [CurveRemoveLiquidityEventDTO] accept
+curveGetRemoveLiquidityEventsHistorical  _ =
+  _mkRequest "GET" ["/dapps/curve/removeLiquidityEvents/historical"]
+
+data CurveGetRemoveLiquidityEventsHistorical  
+
+-- | /Optional Param/ "startBlock" - 
+instance HasOptionalParam CurveGetRemoveLiquidityEventsHistorical StartBlock where
+  applyOptionalParam req (StartBlock xs) =
+    req `addQuery` toQuery ("startBlock", Just xs)
+
+-- | /Optional Param/ "endBlock" - 
+instance HasOptionalParam CurveGetRemoveLiquidityEventsHistorical EndBlock where
+  applyOptionalParam req (EndBlock xs) =
+    req `addQuery` toQuery ("endBlock", Just xs)
+
+-- | /Optional Param/ "startDate" - 
+instance HasOptionalParam CurveGetRemoveLiquidityEventsHistorical StartDate where
+  applyOptionalParam req (StartDate xs) =
+    req `addQuery` toQuery ("startDate", Just xs)
+
+-- | /Optional Param/ "endDate" - 
+instance HasOptionalParam CurveGetRemoveLiquidityEventsHistorical EndDate where
+  applyOptionalParam req (EndDate xs) =
+    req `addQuery` toQuery ("endDate", Just xs)
+
+-- | /Optional Param/ "poolId" - 
+instance HasOptionalParam CurveGetRemoveLiquidityEventsHistorical PoolId where
   applyOptionalParam req (PoolId xs) =
     req `addQuery` toQuery ("poolId", Just xs)
-instance Produces DappsCurveRemoveLiquidityEventHistoricalGet MimeNoContent
+-- | @application/json@
+instance Produces CurveGetRemoveLiquidityEventsHistorical MimeJSON
+-- | @text/json@
+instance Produces CurveGetRemoveLiquidityEventsHistorical MimeTextJson
+-- | @text/plain@
+instance Produces CurveGetRemoveLiquidityEventsHistorical MimePlainText
 
 
--- *** dappsCurveRemoveLiquidityOneEventHistoricalGet
+-- *** curveGetRemoveLiquidityOneEventsHistorical
 
--- | @GET \/dapps\/curve\/removeLiquidityOneEvent\/historical@
+-- | @GET \/dapps\/curve\/removeLiquidityOneEvents\/historical@
 -- 
-dappsCurveRemoveLiquidityOneEventHistoricalGet
-  :: OnChainRequest DappsCurveRemoveLiquidityOneEventHistoricalGet MimeNoContent NoContent MimeNoContent
-dappsCurveRemoveLiquidityOneEventHistoricalGet =
-  _mkRequest "GET" ["/dapps/curve/removeLiquidityOneEvent/historical"]
+-- GetRemoveLiquidityOneEvents (historical)
+-- 
+-- Gets remove liquidity one events.
+-- 
+curveGetRemoveLiquidityOneEventsHistorical
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CurveGetRemoveLiquidityOneEventsHistorical MimeNoContent [CurveRemoveLiquidityOneEventDTO] accept
+curveGetRemoveLiquidityOneEventsHistorical  _ =
+  _mkRequest "GET" ["/dapps/curve/removeLiquidityOneEvents/historical"]
 
-data DappsCurveRemoveLiquidityOneEventHistoricalGet  
-instance HasOptionalParam DappsCurveRemoveLiquidityOneEventHistoricalGet StartBlock where
+data CurveGetRemoveLiquidityOneEventsHistorical  
+
+-- | /Optional Param/ "startBlock" - 
+instance HasOptionalParam CurveGetRemoveLiquidityOneEventsHistorical StartBlock where
   applyOptionalParam req (StartBlock xs) =
     req `addQuery` toQuery ("startBlock", Just xs)
-instance HasOptionalParam DappsCurveRemoveLiquidityOneEventHistoricalGet EndBlock where
+
+-- | /Optional Param/ "endBlock" - 
+instance HasOptionalParam CurveGetRemoveLiquidityOneEventsHistorical EndBlock where
   applyOptionalParam req (EndBlock xs) =
     req `addQuery` toQuery ("endBlock", Just xs)
-instance HasOptionalParam DappsCurveRemoveLiquidityOneEventHistoricalGet StartDate where
+
+-- | /Optional Param/ "startDate" - 
+instance HasOptionalParam CurveGetRemoveLiquidityOneEventsHistorical StartDate where
   applyOptionalParam req (StartDate xs) =
     req `addQuery` toQuery ("startDate", Just xs)
-instance HasOptionalParam DappsCurveRemoveLiquidityOneEventHistoricalGet EndDate where
+
+-- | /Optional Param/ "endDate" - 
+instance HasOptionalParam CurveGetRemoveLiquidityOneEventsHistorical EndDate where
   applyOptionalParam req (EndDate xs) =
     req `addQuery` toQuery ("endDate", Just xs)
-instance HasOptionalParam DappsCurveRemoveLiquidityOneEventHistoricalGet PoolId where
+
+-- | /Optional Param/ "poolId" - 
+instance HasOptionalParam CurveGetRemoveLiquidityOneEventsHistorical PoolId where
   applyOptionalParam req (PoolId xs) =
     req `addQuery` toQuery ("poolId", Just xs)
-instance Produces DappsCurveRemoveLiquidityOneEventHistoricalGet MimeNoContent
+-- | @application/json@
+instance Produces CurveGetRemoveLiquidityOneEventsHistorical MimeJSON
+-- | @text/json@
+instance Produces CurveGetRemoveLiquidityOneEventsHistorical MimeTextJson
+-- | @text/plain@
+instance Produces CurveGetRemoveLiquidityOneEventsHistorical MimePlainText
 
 
--- *** dappsCurveSwapsHistoricalGet
+-- *** curveGetSystemStatesHistorical
 
--- | @GET \/dapps\/curve\/swaps\/historical@
+-- | @GET \/dapps\/curve\/systemStates\/historical@
 -- 
-dappsCurveSwapsHistoricalGet
-  :: OnChainRequest DappsCurveSwapsHistoricalGet MimeNoContent NoContent MimeNoContent
-dappsCurveSwapsHistoricalGet =
-  _mkRequest "GET" ["/dapps/curve/swaps/historical"]
+-- GetSystemStates (historical)
+-- 
+-- Gets system states.
+-- 
+curveGetSystemStatesHistorical
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CurveGetSystemStatesHistorical MimeNoContent [CurveSystemStateDTO] accept
+curveGetSystemStatesHistorical  _ =
+  _mkRequest "GET" ["/dapps/curve/systemStates/historical"]
 
-data DappsCurveSwapsHistoricalGet  
-instance HasOptionalParam DappsCurveSwapsHistoricalGet StartBlock where
+data CurveGetSystemStatesHistorical  
+
+-- | /Optional Param/ "startBlock" - 
+instance HasOptionalParam CurveGetSystemStatesHistorical StartBlock where
   applyOptionalParam req (StartBlock xs) =
     req `addQuery` toQuery ("startBlock", Just xs)
-instance HasOptionalParam DappsCurveSwapsHistoricalGet EndBlock where
+
+-- | /Optional Param/ "endBlock" - 
+instance HasOptionalParam CurveGetSystemStatesHistorical EndBlock where
   applyOptionalParam req (EndBlock xs) =
     req `addQuery` toQuery ("endBlock", Just xs)
-instance HasOptionalParam DappsCurveSwapsHistoricalGet StartDate where
+
+-- | /Optional Param/ "startDate" - 
+instance HasOptionalParam CurveGetSystemStatesHistorical StartDate where
   applyOptionalParam req (StartDate xs) =
     req `addQuery` toQuery ("startDate", Just xs)
-instance HasOptionalParam DappsCurveSwapsHistoricalGet EndDate where
+
+-- | /Optional Param/ "endDate" - 
+instance HasOptionalParam CurveGetSystemStatesHistorical EndDate where
   applyOptionalParam req (EndDate xs) =
     req `addQuery` toQuery ("endDate", Just xs)
-instance HasOptionalParam DappsCurveSwapsHistoricalGet PoolId where
-  applyOptionalParam req (PoolId xs) =
-    req `addQuery` toQuery ("poolId", Just xs)
-instance Produces DappsCurveSwapsHistoricalGet MimeNoContent
+-- | @application/json@
+instance Produces CurveGetSystemStatesHistorical MimeJSON
+-- | @text/json@
+instance Produces CurveGetSystemStatesHistorical MimeTextJson
+-- | @text/plain@
+instance Produces CurveGetSystemStatesHistorical MimePlainText
 
 
--- *** dappsCurveSystemStateHistoricalGet
-
--- | @GET \/dapps\/curve\/systemState\/historical@
--- 
-dappsCurveSystemStateHistoricalGet
-  :: OnChainRequest DappsCurveSystemStateHistoricalGet MimeNoContent NoContent MimeNoContent
-dappsCurveSystemStateHistoricalGet =
-  _mkRequest "GET" ["/dapps/curve/systemState/historical"]
-
-data DappsCurveSystemStateHistoricalGet  
-instance HasOptionalParam DappsCurveSystemStateHistoricalGet StartBlock where
-  applyOptionalParam req (StartBlock xs) =
-    req `addQuery` toQuery ("startBlock", Just xs)
-instance HasOptionalParam DappsCurveSystemStateHistoricalGet EndBlock where
-  applyOptionalParam req (EndBlock xs) =
-    req `addQuery` toQuery ("endBlock", Just xs)
-instance HasOptionalParam DappsCurveSystemStateHistoricalGet StartDate where
-  applyOptionalParam req (StartDate xs) =
-    req `addQuery` toQuery ("startDate", Just xs)
-instance HasOptionalParam DappsCurveSystemStateHistoricalGet EndDate where
-  applyOptionalParam req (EndDate xs) =
-    req `addQuery` toQuery ("endDate", Just xs)
-instance Produces DappsCurveSystemStateHistoricalGet MimeNoContent
-
-
--- *** dappsCurveTokensHistoricalGet
+-- *** curveGetTokensHistorical
 
 -- | @GET \/dapps\/curve\/tokens\/historical@
 -- 
-dappsCurveTokensHistoricalGet
-  :: OnChainRequest DappsCurveTokensHistoricalGet MimeNoContent NoContent MimeNoContent
-dappsCurveTokensHistoricalGet =
+-- GetTokens (historical) 🔥
+-- 
+-- Gets tokens.
+-- 
+curveGetTokensHistorical
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CurveGetTokensHistorical MimeNoContent [CurveTokenDTO] accept
+curveGetTokensHistorical  _ =
   _mkRequest "GET" ["/dapps/curve/tokens/historical"]
 
-data DappsCurveTokensHistoricalGet  
-instance HasOptionalParam DappsCurveTokensHistoricalGet StartBlock where
+data CurveGetTokensHistorical  
+
+-- | /Optional Param/ "startBlock" - 
+instance HasOptionalParam CurveGetTokensHistorical StartBlock where
   applyOptionalParam req (StartBlock xs) =
     req `addQuery` toQuery ("startBlock", Just xs)
-instance HasOptionalParam DappsCurveTokensHistoricalGet EndBlock where
+
+-- | /Optional Param/ "endBlock" - 
+instance HasOptionalParam CurveGetTokensHistorical EndBlock where
   applyOptionalParam req (EndBlock xs) =
     req `addQuery` toQuery ("endBlock", Just xs)
-instance HasOptionalParam DappsCurveTokensHistoricalGet StartDate where
+
+-- | /Optional Param/ "startDate" - 
+instance HasOptionalParam CurveGetTokensHistorical StartDate where
   applyOptionalParam req (StartDate xs) =
     req `addQuery` toQuery ("startDate", Just xs)
-instance HasOptionalParam DappsCurveTokensHistoricalGet EndDate where
+
+-- | /Optional Param/ "endDate" - 
+instance HasOptionalParam CurveGetTokensHistorical EndDate where
   applyOptionalParam req (EndDate xs) =
     req `addQuery` toQuery ("endDate", Just xs)
-instance HasOptionalParam DappsCurveTokensHistoricalGet TokenId where
+
+-- | /Optional Param/ "tokenId" - 
+instance HasOptionalParam CurveGetTokensHistorical TokenId where
   applyOptionalParam req (TokenId xs) =
     req `addQuery` toQuery ("tokenId", Just xs)
-instance Produces DappsCurveTokensHistoricalGet MimeNoContent
+-- | @application/json@
+instance Produces CurveGetTokensHistorical MimeJSON
+-- | @text/json@
+instance Produces CurveGetTokensHistorical MimeTextJson
+-- | @text/plain@
+instance Produces CurveGetTokensHistorical MimePlainText
 
 
--- *** dappsCurveTransferOwnershipEventHistoricalGet
+-- *** curveGetTransferOwnershipEventsHistorical
 
--- | @GET \/dapps\/curve\/transferOwnershipEvent\/historical@
+-- | @GET \/dapps\/curve\/transferOwnershipEvents\/historical@
 -- 
-dappsCurveTransferOwnershipEventHistoricalGet
-  :: OnChainRequest DappsCurveTransferOwnershipEventHistoricalGet MimeNoContent NoContent MimeNoContent
-dappsCurveTransferOwnershipEventHistoricalGet =
-  _mkRequest "GET" ["/dapps/curve/transferOwnershipEvent/historical"]
+-- GetTransferOwnershipEvents (historical)
+-- 
+-- Gets transfer ownership events.
+-- 
+curveGetTransferOwnershipEventsHistorical
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CurveGetTransferOwnershipEventsHistorical MimeNoContent [CurveTransferOwnershipEventDTO] accept
+curveGetTransferOwnershipEventsHistorical  _ =
+  _mkRequest "GET" ["/dapps/curve/transferOwnershipEvents/historical"]
 
-data DappsCurveTransferOwnershipEventHistoricalGet  
-instance HasOptionalParam DappsCurveTransferOwnershipEventHistoricalGet StartBlock where
+data CurveGetTransferOwnershipEventsHistorical  
+
+-- | /Optional Param/ "startBlock" - 
+instance HasOptionalParam CurveGetTransferOwnershipEventsHistorical StartBlock where
   applyOptionalParam req (StartBlock xs) =
     req `addQuery` toQuery ("startBlock", Just xs)
-instance HasOptionalParam DappsCurveTransferOwnershipEventHistoricalGet EndBlock where
+
+-- | /Optional Param/ "endBlock" - 
+instance HasOptionalParam CurveGetTransferOwnershipEventsHistorical EndBlock where
   applyOptionalParam req (EndBlock xs) =
     req `addQuery` toQuery ("endBlock", Just xs)
-instance HasOptionalParam DappsCurveTransferOwnershipEventHistoricalGet StartDate where
+
+-- | /Optional Param/ "startDate" - 
+instance HasOptionalParam CurveGetTransferOwnershipEventsHistorical StartDate where
   applyOptionalParam req (StartDate xs) =
     req `addQuery` toQuery ("startDate", Just xs)
-instance HasOptionalParam DappsCurveTransferOwnershipEventHistoricalGet EndDate where
+
+-- | /Optional Param/ "endDate" - 
+instance HasOptionalParam CurveGetTransferOwnershipEventsHistorical EndDate where
   applyOptionalParam req (EndDate xs) =
     req `addQuery` toQuery ("endDate", Just xs)
-instance HasOptionalParam DappsCurveTransferOwnershipEventHistoricalGet PoolId where
+
+-- | /Optional Param/ "poolId" - 
+instance HasOptionalParam CurveGetTransferOwnershipEventsHistorical PoolId where
   applyOptionalParam req (PoolId xs) =
     req `addQuery` toQuery ("poolId", Just xs)
-instance Produces DappsCurveTransferOwnershipEventHistoricalGet MimeNoContent
+-- | @application/json@
+instance Produces CurveGetTransferOwnershipEventsHistorical MimeJSON
+-- | @text/json@
+instance Produces CurveGetTransferOwnershipEventsHistorical MimeTextJson
+-- | @text/plain@
+instance Produces CurveGetTransferOwnershipEventsHistorical MimePlainText
 
 
--- *** dappsCurveUnderlyingCoinHistoricalGet
+-- *** curveGetUnderlyingCoinsHistorical
 
--- | @GET \/dapps\/curve\/underlyingCoin\/historical@
+-- | @GET \/dapps\/curve\/underlyingCoins\/historical@
 -- 
-dappsCurveUnderlyingCoinHistoricalGet
-  :: OnChainRequest DappsCurveUnderlyingCoinHistoricalGet MimeNoContent NoContent MimeNoContent
-dappsCurveUnderlyingCoinHistoricalGet =
-  _mkRequest "GET" ["/dapps/curve/underlyingCoin/historical"]
+-- GetUnderlyingCoins (historical)
+-- 
+-- Gets underlying coins.
+-- 
+curveGetUnderlyingCoinsHistorical
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CurveGetUnderlyingCoinsHistorical MimeNoContent [CurveUnderlyingCoinDTO] accept
+curveGetUnderlyingCoinsHistorical  _ =
+  _mkRequest "GET" ["/dapps/curve/underlyingCoins/historical"]
 
-data DappsCurveUnderlyingCoinHistoricalGet  
-instance HasOptionalParam DappsCurveUnderlyingCoinHistoricalGet StartBlock where
+data CurveGetUnderlyingCoinsHistorical  
+
+-- | /Optional Param/ "startBlock" - 
+instance HasOptionalParam CurveGetUnderlyingCoinsHistorical StartBlock where
   applyOptionalParam req (StartBlock xs) =
     req `addQuery` toQuery ("startBlock", Just xs)
-instance HasOptionalParam DappsCurveUnderlyingCoinHistoricalGet EndBlock where
+
+-- | /Optional Param/ "endBlock" - 
+instance HasOptionalParam CurveGetUnderlyingCoinsHistorical EndBlock where
   applyOptionalParam req (EndBlock xs) =
     req `addQuery` toQuery ("endBlock", Just xs)
-instance HasOptionalParam DappsCurveUnderlyingCoinHistoricalGet StartDate where
+
+-- | /Optional Param/ "startDate" - 
+instance HasOptionalParam CurveGetUnderlyingCoinsHistorical StartDate where
   applyOptionalParam req (StartDate xs) =
     req `addQuery` toQuery ("startDate", Just xs)
-instance HasOptionalParam DappsCurveUnderlyingCoinHistoricalGet EndDate where
+
+-- | /Optional Param/ "endDate" - 
+instance HasOptionalParam CurveGetUnderlyingCoinsHistorical EndDate where
   applyOptionalParam req (EndDate xs) =
     req `addQuery` toQuery ("endDate", Just xs)
-instance HasOptionalParam DappsCurveUnderlyingCoinHistoricalGet PoolId where
+
+-- | /Optional Param/ "poolId" - 
+instance HasOptionalParam CurveGetUnderlyingCoinsHistorical PoolId where
   applyOptionalParam req (PoolId xs) =
     req `addQuery` toQuery ("poolId", Just xs)
-instance Produces DappsCurveUnderlyingCoinHistoricalGet MimeNoContent
+-- | @application/json@
+instance Produces CurveGetUnderlyingCoinsHistorical MimeJSON
+-- | @text/json@
+instance Produces CurveGetUnderlyingCoinsHistorical MimeTextJson
+-- | @text/plain@
+instance Produces CurveGetUnderlyingCoinsHistorical MimePlainText
 
 
--- *** dappsCurveVotingAppHistoricalGet
+-- *** curveGetVotingAppsHistorical
 
--- | @GET \/dapps\/curve\/votingApp\/historical@
+-- | @GET \/dapps\/curve\/votingApps\/historical@
 -- 
-dappsCurveVotingAppHistoricalGet
-  :: OnChainRequest DappsCurveVotingAppHistoricalGet MimeNoContent NoContent MimeNoContent
-dappsCurveVotingAppHistoricalGet =
-  _mkRequest "GET" ["/dapps/curve/votingApp/historical"]
+-- GetVotingApps (historical)
+-- 
+-- Gets voting apps.
+-- 
+curveGetVotingAppsHistorical
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CurveGetVotingAppsHistorical MimeNoContent [CurveVotingAppDTO] accept
+curveGetVotingAppsHistorical  _ =
+  _mkRequest "GET" ["/dapps/curve/votingApps/historical"]
 
-data DappsCurveVotingAppHistoricalGet  
-instance HasOptionalParam DappsCurveVotingAppHistoricalGet StartBlock where
+data CurveGetVotingAppsHistorical  
+
+-- | /Optional Param/ "startBlock" - 
+instance HasOptionalParam CurveGetVotingAppsHistorical StartBlock where
   applyOptionalParam req (StartBlock xs) =
     req `addQuery` toQuery ("startBlock", Just xs)
-instance HasOptionalParam DappsCurveVotingAppHistoricalGet EndBlock where
+
+-- | /Optional Param/ "endBlock" - 
+instance HasOptionalParam CurveGetVotingAppsHistorical EndBlock where
   applyOptionalParam req (EndBlock xs) =
     req `addQuery` toQuery ("endBlock", Just xs)
-instance HasOptionalParam DappsCurveVotingAppHistoricalGet StartDate where
+
+-- | /Optional Param/ "startDate" - 
+instance HasOptionalParam CurveGetVotingAppsHistorical StartDate where
   applyOptionalParam req (StartDate xs) =
     req `addQuery` toQuery ("startDate", Just xs)
-instance HasOptionalParam DappsCurveVotingAppHistoricalGet EndDate where
+
+-- | /Optional Param/ "endDate" - 
+instance HasOptionalParam CurveGetVotingAppsHistorical EndDate where
   applyOptionalParam req (EndDate xs) =
     req `addQuery` toQuery ("endDate", Just xs)
-instance Produces DappsCurveVotingAppHistoricalGet MimeNoContent
+-- | @application/json@
+instance Produces CurveGetVotingAppsHistorical MimeJSON
+-- | @text/json@
+instance Produces CurveGetVotingAppsHistorical MimeTextJson
+-- | @text/plain@
+instance Produces CurveGetVotingAppsHistorical MimePlainText
 
 
--- *** dappsCurveWeeklyVolumeHistoricalGet
+-- *** curveGetWeeklyVolumesHistorical
 
--- | @GET \/dapps\/curve\/weeklyVolume\/historical@
+-- | @GET \/dapps\/curve\/weeklyVolumes\/historical@
 -- 
-dappsCurveWeeklyVolumeHistoricalGet
-  :: OnChainRequest DappsCurveWeeklyVolumeHistoricalGet MimeNoContent NoContent MimeNoContent
-dappsCurveWeeklyVolumeHistoricalGet =
-  _mkRequest "GET" ["/dapps/curve/weeklyVolume/historical"]
+-- GetWeeklyVolumes (historical)
+-- 
+-- Gets weekly volumes.
+-- 
+curveGetWeeklyVolumesHistorical
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CurveGetWeeklyVolumesHistorical MimeNoContent [CurveWeeklyVolumeDTO] accept
+curveGetWeeklyVolumesHistorical  _ =
+  _mkRequest "GET" ["/dapps/curve/weeklyVolumes/historical"]
 
-data DappsCurveWeeklyVolumeHistoricalGet  
-instance HasOptionalParam DappsCurveWeeklyVolumeHistoricalGet StartBlock where
+data CurveGetWeeklyVolumesHistorical  
+
+-- | /Optional Param/ "startBlock" - 
+instance HasOptionalParam CurveGetWeeklyVolumesHistorical StartBlock where
   applyOptionalParam req (StartBlock xs) =
     req `addQuery` toQuery ("startBlock", Just xs)
-instance HasOptionalParam DappsCurveWeeklyVolumeHistoricalGet EndBlock where
+
+-- | /Optional Param/ "endBlock" - 
+instance HasOptionalParam CurveGetWeeklyVolumesHistorical EndBlock where
   applyOptionalParam req (EndBlock xs) =
     req `addQuery` toQuery ("endBlock", Just xs)
-instance HasOptionalParam DappsCurveWeeklyVolumeHistoricalGet StartDate where
+
+-- | /Optional Param/ "startDate" - 
+instance HasOptionalParam CurveGetWeeklyVolumesHistorical StartDate where
   applyOptionalParam req (StartDate xs) =
     req `addQuery` toQuery ("startDate", Just xs)
-instance HasOptionalParam DappsCurveWeeklyVolumeHistoricalGet EndDate where
+
+-- | /Optional Param/ "endDate" - 
+instance HasOptionalParam CurveGetWeeklyVolumesHistorical EndDate where
   applyOptionalParam req (EndDate xs) =
     req `addQuery` toQuery ("endDate", Just xs)
-instance HasOptionalParam DappsCurveWeeklyVolumeHistoricalGet PoolId where
+
+-- | /Optional Param/ "poolId" - 
+instance HasOptionalParam CurveGetWeeklyVolumesHistorical PoolId where
   applyOptionalParam req (PoolId xs) =
     req `addQuery` toQuery ("poolId", Just xs)
-instance Produces DappsCurveWeeklyVolumeHistoricalGet MimeNoContent
+-- | @application/json@
+instance Produces CurveGetWeeklyVolumesHistorical MimeJSON
+-- | @text/json@
+instance Produces CurveGetWeeklyVolumesHistorical MimeTextJson
+-- | @text/plain@
+instance Produces CurveGetWeeklyVolumesHistorical MimePlainText
 

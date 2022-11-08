@@ -36,7 +36,7 @@ CurveApi::~CurveApi()
 {
 }
 
-pplx::task<void> CurveApi::dappsCurveAccountsHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate) const
+pplx::task<std::vector<std::shared_ptr<Curve_AccountDTO>>> CurveApi::curve_GetAccounts__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate) const
 {
 
 
@@ -49,6 +49,9 @@ pplx::task<void> CurveApi::dappsCurveAccountsHistoricalGet(boost::optional<int64
     std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
 
     std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -69,7 +72,7 @@ pplx::task<void> CurveApi::dappsCurveAccountsHistoricalGet(boost::optional<int64
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("CurveApi->dappsCurveAccountsHistoricalGet does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("CurveApi->curve_GetAccounts__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -112,7 +115,7 @@ pplx::task<void> CurveApi::dappsCurveAccountsHistoricalGet(boost::optional<int64
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("CurveApi->dappsCurveAccountsHistoricalGet does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("CurveApi->curve_GetAccounts__historical does not consume any supported media type"));
     }
 
 
@@ -132,7 +135,7 @@ pplx::task<void> CurveApi::dappsCurveAccountsHistoricalGet(boost::optional<int64
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsCurveAccountsHistoricalGet: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling curve_GetAccounts__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -143,7 +146,7 @@ pplx::task<void> CurveApi::dappsCurveAccountsHistoricalGet(boost::optional<int64
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsCurveAccountsHistoricalGet: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling curve_GetAccounts__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -152,15 +155,37 @@ pplx::task<void> CurveApi::dappsCurveAccountsHistoricalGet(boost::optional<int64
     })
     .then([=](utility::string_t localVarResponse)
     {
-        return void();
+        std::vector<std::shared_ptr<Curve_AccountDTO>> localVarResult;
+
+        if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
+        {
+            web::json::value localVarJson = web::json::value::parse(localVarResponse);
+            for( auto& localVarItem : localVarJson.as_array() )
+            {
+                std::shared_ptr<Curve_AccountDTO> localVarItemObj;
+                ModelBase::fromJson(localVarItem, localVarItemObj);
+                localVarResult.push_back(localVarItemObj);
+            }
+        }
+        // else if(localVarResponseHttpContentType == utility::conversions::to_string_t("multipart/form-data"))
+        // {
+        // TODO multipart response parsing
+        // }
+        else
+        {
+            throw ApiException(500
+                , utility::conversions::to_string_t("error calling curve_GetAccounts__historical: unsupported response type"));
+        }
+
+        return localVarResult;
     });
 }
-pplx::task<void> CurveApi::dappsCurveAddLiquidityEventHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> poolId) const
+pplx::task<std::vector<std::shared_ptr<Curve_AddLiquidityEventDTO>>> CurveApi::curve_GetAddLiquidityEvents__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> poolId) const
 {
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/curve/addLiquidityEvent/historical");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/curve/addLiquidityEvents/historical");
     
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -168,6 +193,9 @@ pplx::task<void> CurveApi::dappsCurveAddLiquidityEventHistoricalGet(boost::optio
     std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
 
     std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -188,7 +216,7 @@ pplx::task<void> CurveApi::dappsCurveAddLiquidityEventHistoricalGet(boost::optio
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("CurveApi->dappsCurveAddLiquidityEventHistoricalGet does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("CurveApi->curve_GetAddLiquidityEvents__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -235,7 +263,7 @@ pplx::task<void> CurveApi::dappsCurveAddLiquidityEventHistoricalGet(boost::optio
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("CurveApi->dappsCurveAddLiquidityEventHistoricalGet does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("CurveApi->curve_GetAddLiquidityEvents__historical does not consume any supported media type"));
     }
 
 
@@ -255,7 +283,7 @@ pplx::task<void> CurveApi::dappsCurveAddLiquidityEventHistoricalGet(boost::optio
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsCurveAddLiquidityEventHistoricalGet: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling curve_GetAddLiquidityEvents__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -266,7 +294,7 @@ pplx::task<void> CurveApi::dappsCurveAddLiquidityEventHistoricalGet(boost::optio
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsCurveAddLiquidityEventHistoricalGet: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling curve_GetAddLiquidityEvents__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -275,15 +303,37 @@ pplx::task<void> CurveApi::dappsCurveAddLiquidityEventHistoricalGet(boost::optio
     })
     .then([=](utility::string_t localVarResponse)
     {
-        return void();
+        std::vector<std::shared_ptr<Curve_AddLiquidityEventDTO>> localVarResult;
+
+        if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
+        {
+            web::json::value localVarJson = web::json::value::parse(localVarResponse);
+            for( auto& localVarItem : localVarJson.as_array() )
+            {
+                std::shared_ptr<Curve_AddLiquidityEventDTO> localVarItemObj;
+                ModelBase::fromJson(localVarItem, localVarItemObj);
+                localVarResult.push_back(localVarItemObj);
+            }
+        }
+        // else if(localVarResponseHttpContentType == utility::conversions::to_string_t("multipart/form-data"))
+        // {
+        // TODO multipart response parsing
+        // }
+        else
+        {
+            throw ApiException(500
+                , utility::conversions::to_string_t("error calling curve_GetAddLiquidityEvents__historical: unsupported response type"));
+        }
+
+        return localVarResult;
     });
 }
-pplx::task<void> CurveApi::dappsCurveAdminFeeChangeLogHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> poolId) const
+pplx::task<std::vector<std::shared_ptr<Curve_AdminFeeChangeLogDTO>>> CurveApi::curve_GetAdminFeeChangeLogs__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> poolId) const
 {
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/curve/adminFeeChangeLog/historical");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/curve/adminFeeChangeLogs/historical");
     
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -291,6 +341,9 @@ pplx::task<void> CurveApi::dappsCurveAdminFeeChangeLogHistoricalGet(boost::optio
     std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
 
     std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -311,7 +364,7 @@ pplx::task<void> CurveApi::dappsCurveAdminFeeChangeLogHistoricalGet(boost::optio
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("CurveApi->dappsCurveAdminFeeChangeLogHistoricalGet does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("CurveApi->curve_GetAdminFeeChangeLogs__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -358,7 +411,7 @@ pplx::task<void> CurveApi::dappsCurveAdminFeeChangeLogHistoricalGet(boost::optio
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("CurveApi->dappsCurveAdminFeeChangeLogHistoricalGet does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("CurveApi->curve_GetAdminFeeChangeLogs__historical does not consume any supported media type"));
     }
 
 
@@ -378,7 +431,7 @@ pplx::task<void> CurveApi::dappsCurveAdminFeeChangeLogHistoricalGet(boost::optio
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsCurveAdminFeeChangeLogHistoricalGet: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling curve_GetAdminFeeChangeLogs__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -389,7 +442,7 @@ pplx::task<void> CurveApi::dappsCurveAdminFeeChangeLogHistoricalGet(boost::optio
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsCurveAdminFeeChangeLogHistoricalGet: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling curve_GetAdminFeeChangeLogs__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -398,15 +451,37 @@ pplx::task<void> CurveApi::dappsCurveAdminFeeChangeLogHistoricalGet(boost::optio
     })
     .then([=](utility::string_t localVarResponse)
     {
-        return void();
+        std::vector<std::shared_ptr<Curve_AdminFeeChangeLogDTO>> localVarResult;
+
+        if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
+        {
+            web::json::value localVarJson = web::json::value::parse(localVarResponse);
+            for( auto& localVarItem : localVarJson.as_array() )
+            {
+                std::shared_ptr<Curve_AdminFeeChangeLogDTO> localVarItemObj;
+                ModelBase::fromJson(localVarItem, localVarItemObj);
+                localVarResult.push_back(localVarItemObj);
+            }
+        }
+        // else if(localVarResponseHttpContentType == utility::conversions::to_string_t("multipart/form-data"))
+        // {
+        // TODO multipart response parsing
+        // }
+        else
+        {
+            throw ApiException(500
+                , utility::conversions::to_string_t("error calling curve_GetAdminFeeChangeLogs__historical: unsupported response type"));
+        }
+
+        return localVarResult;
     });
 }
-pplx::task<void> CurveApi::dappsCurveAmplificationCoeffChangeLogHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> poolId) const
+pplx::task<std::vector<std::shared_ptr<Curve_AmplificationCoeffChangeLogDTO>>> CurveApi::curve_GetAmplificationCoeffChangeLogs__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> poolId) const
 {
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/curve/amplificationCoeffChangeLog/historical");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/curve/amplificationCoeffChangeLogs/historical");
     
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -414,6 +489,9 @@ pplx::task<void> CurveApi::dappsCurveAmplificationCoeffChangeLogHistoricalGet(bo
     std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
 
     std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -434,7 +512,7 @@ pplx::task<void> CurveApi::dappsCurveAmplificationCoeffChangeLogHistoricalGet(bo
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("CurveApi->dappsCurveAmplificationCoeffChangeLogHistoricalGet does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("CurveApi->curve_GetAmplificationCoeffChangeLogs__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -481,7 +559,7 @@ pplx::task<void> CurveApi::dappsCurveAmplificationCoeffChangeLogHistoricalGet(bo
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("CurveApi->dappsCurveAmplificationCoeffChangeLogHistoricalGet does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("CurveApi->curve_GetAmplificationCoeffChangeLogs__historical does not consume any supported media type"));
     }
 
 
@@ -501,7 +579,7 @@ pplx::task<void> CurveApi::dappsCurveAmplificationCoeffChangeLogHistoricalGet(bo
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsCurveAmplificationCoeffChangeLogHistoricalGet: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling curve_GetAmplificationCoeffChangeLogs__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -512,7 +590,7 @@ pplx::task<void> CurveApi::dappsCurveAmplificationCoeffChangeLogHistoricalGet(bo
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsCurveAmplificationCoeffChangeLogHistoricalGet: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling curve_GetAmplificationCoeffChangeLogs__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -521,10 +599,32 @@ pplx::task<void> CurveApi::dappsCurveAmplificationCoeffChangeLogHistoricalGet(bo
     })
     .then([=](utility::string_t localVarResponse)
     {
-        return void();
+        std::vector<std::shared_ptr<Curve_AmplificationCoeffChangeLogDTO>> localVarResult;
+
+        if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
+        {
+            web::json::value localVarJson = web::json::value::parse(localVarResponse);
+            for( auto& localVarItem : localVarJson.as_array() )
+            {
+                std::shared_ptr<Curve_AmplificationCoeffChangeLogDTO> localVarItemObj;
+                ModelBase::fromJson(localVarItem, localVarItemObj);
+                localVarResult.push_back(localVarItemObj);
+            }
+        }
+        // else if(localVarResponseHttpContentType == utility::conversions::to_string_t("multipart/form-data"))
+        // {
+        // TODO multipart response parsing
+        // }
+        else
+        {
+            throw ApiException(500
+                , utility::conversions::to_string_t("error calling curve_GetAmplificationCoeffChangeLogs__historical: unsupported response type"));
+        }
+
+        return localVarResult;
     });
 }
-pplx::task<void> CurveApi::dappsCurveCoinsHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> poolId) const
+pplx::task<std::vector<std::shared_ptr<Curve_CoinDTO>>> CurveApi::curve_GetCoins__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> poolId) const
 {
 
 
@@ -537,6 +637,9 @@ pplx::task<void> CurveApi::dappsCurveCoinsHistoricalGet(boost::optional<int64_t>
     std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
 
     std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -557,7 +660,7 @@ pplx::task<void> CurveApi::dappsCurveCoinsHistoricalGet(boost::optional<int64_t>
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("CurveApi->dappsCurveCoinsHistoricalGet does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("CurveApi->curve_GetCoins__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -604,7 +707,7 @@ pplx::task<void> CurveApi::dappsCurveCoinsHistoricalGet(boost::optional<int64_t>
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("CurveApi->dappsCurveCoinsHistoricalGet does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("CurveApi->curve_GetCoins__historical does not consume any supported media type"));
     }
 
 
@@ -624,7 +727,7 @@ pplx::task<void> CurveApi::dappsCurveCoinsHistoricalGet(boost::optional<int64_t>
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsCurveCoinsHistoricalGet: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling curve_GetCoins__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -635,7 +738,7 @@ pplx::task<void> CurveApi::dappsCurveCoinsHistoricalGet(boost::optional<int64_t>
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsCurveCoinsHistoricalGet: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling curve_GetCoins__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -644,10 +747,180 @@ pplx::task<void> CurveApi::dappsCurveCoinsHistoricalGet(boost::optional<int64_t>
     })
     .then([=](utility::string_t localVarResponse)
     {
-        return void();
+        std::vector<std::shared_ptr<Curve_CoinDTO>> localVarResult;
+
+        if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
+        {
+            web::json::value localVarJson = web::json::value::parse(localVarResponse);
+            for( auto& localVarItem : localVarJson.as_array() )
+            {
+                std::shared_ptr<Curve_CoinDTO> localVarItemObj;
+                ModelBase::fromJson(localVarItem, localVarItemObj);
+                localVarResult.push_back(localVarItemObj);
+            }
+        }
+        // else if(localVarResponseHttpContentType == utility::conversions::to_string_t("multipart/form-data"))
+        // {
+        // TODO multipart response parsing
+        // }
+        else
+        {
+            throw ApiException(500
+                , utility::conversions::to_string_t("error calling curve_GetCoins__historical: unsupported response type"));
+        }
+
+        return localVarResult;
     });
 }
-pplx::task<void> CurveApi::dappsCurveContractsHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> poolId) const
+pplx::task<std::vector<std::shared_ptr<Curve_ContractVersionDTO>>> CurveApi::curve_GetContractsVersions__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> poolId) const
+{
+
+
+    std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
+    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/curve/contractsVersions/historical");
+    
+    std::map<utility::string_t, utility::string_t> localVarQueryParams;
+    std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
+    std::map<utility::string_t, utility::string_t> localVarFormParams;
+    std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
+
+    std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
+
+    utility::string_t localVarResponseHttpContentType;
+
+    // use JSON if possible
+    if ( localVarResponseHttpContentTypes.size() == 0 )
+    {
+        localVarResponseHttpContentType = utility::conversions::to_string_t("application/json");
+    }
+    // JSON
+    else if ( localVarResponseHttpContentTypes.find(utility::conversions::to_string_t("application/json")) != localVarResponseHttpContentTypes.end() )
+    {
+        localVarResponseHttpContentType = utility::conversions::to_string_t("application/json");
+    }
+    // multipart formdata
+    else if( localVarResponseHttpContentTypes.find(utility::conversions::to_string_t("multipart/form-data")) != localVarResponseHttpContentTypes.end() )
+    {
+        localVarResponseHttpContentType = utility::conversions::to_string_t("multipart/form-data");
+    }
+    else
+    {
+        throw ApiException(400, utility::conversions::to_string_t("CurveApi->curve_GetContractsVersions__historical does not produce any supported media type"));
+    }
+
+    localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
+
+    std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
+
+    if (startBlock)
+    {
+        localVarQueryParams[utility::conversions::to_string_t("startBlock")] = ApiClient::parameterToString(*startBlock);
+    }
+    if (endBlock)
+    {
+        localVarQueryParams[utility::conversions::to_string_t("endBlock")] = ApiClient::parameterToString(*endBlock);
+    }
+    if (startDate)
+    {
+        localVarQueryParams[utility::conversions::to_string_t("startDate")] = ApiClient::parameterToString(*startDate);
+    }
+    if (endDate)
+    {
+        localVarQueryParams[utility::conversions::to_string_t("endDate")] = ApiClient::parameterToString(*endDate);
+    }
+    if (poolId)
+    {
+        localVarQueryParams[utility::conversions::to_string_t("poolId")] = ApiClient::parameterToString(*poolId);
+    }
+
+    std::shared_ptr<IHttpBody> localVarHttpBody;
+    utility::string_t localVarRequestHttpContentType;
+
+    // use JSON if possible
+    if ( localVarConsumeHttpContentTypes.size() == 0 || localVarConsumeHttpContentTypes.find(utility::conversions::to_string_t("application/json")) != localVarConsumeHttpContentTypes.end() )
+    {
+        localVarRequestHttpContentType = utility::conversions::to_string_t("application/json");
+    }
+    // multipart formdata
+    else if( localVarConsumeHttpContentTypes.find(utility::conversions::to_string_t("multipart/form-data")) != localVarConsumeHttpContentTypes.end() )
+    {
+        localVarRequestHttpContentType = utility::conversions::to_string_t("multipart/form-data");
+    }
+    else if (localVarConsumeHttpContentTypes.find(utility::conversions::to_string_t("application/x-www-form-urlencoded")) != localVarConsumeHttpContentTypes.end())
+    {
+        localVarRequestHttpContentType = utility::conversions::to_string_t("application/x-www-form-urlencoded");
+    }
+    else
+    {
+        throw ApiException(415, utility::conversions::to_string_t("CurveApi->curve_GetContractsVersions__historical does not consume any supported media type"));
+    }
+
+
+    return m_ApiClient->callApi(localVarPath, utility::conversions::to_string_t("GET"), localVarQueryParams, localVarHttpBody, localVarHeaderParams, localVarFormParams, localVarFileParams, localVarRequestHttpContentType)
+    .then([=](web::http::http_response localVarResponse)
+    {
+        if (m_ApiClient->getResponseHandler())
+        {
+            m_ApiClient->getResponseHandler()(localVarResponse.status_code(), localVarResponse.headers());
+        }
+
+        // 1xx - informational : OK
+        // 2xx - successful       : OK
+        // 3xx - redirection   : OK
+        // 4xx - client error  : not OK
+        // 5xx - client error  : not OK
+        if (localVarResponse.status_code() >= 400)
+        {
+            throw ApiException(localVarResponse.status_code()
+                , utility::conversions::to_string_t("error calling curve_GetContractsVersions__historical: ") + localVarResponse.reason_phrase()
+                , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
+        }
+
+        // check response content type
+        if(localVarResponse.headers().has(utility::conversions::to_string_t("Content-Type")))
+        {
+            utility::string_t localVarContentType = localVarResponse.headers()[utility::conversions::to_string_t("Content-Type")];
+            if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
+            {
+                throw ApiException(500
+                    , utility::conversions::to_string_t("error calling curve_GetContractsVersions__historical: unexpected response type: ") + localVarContentType
+                    , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
+            }
+        }
+
+        return localVarResponse.extract_string();
+    })
+    .then([=](utility::string_t localVarResponse)
+    {
+        std::vector<std::shared_ptr<Curve_ContractVersionDTO>> localVarResult;
+
+        if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
+        {
+            web::json::value localVarJson = web::json::value::parse(localVarResponse);
+            for( auto& localVarItem : localVarJson.as_array() )
+            {
+                std::shared_ptr<Curve_ContractVersionDTO> localVarItemObj;
+                ModelBase::fromJson(localVarItem, localVarItemObj);
+                localVarResult.push_back(localVarItemObj);
+            }
+        }
+        // else if(localVarResponseHttpContentType == utility::conversions::to_string_t("multipart/form-data"))
+        // {
+        // TODO multipart response parsing
+        // }
+        else
+        {
+            throw ApiException(500
+                , utility::conversions::to_string_t("error calling curve_GetContractsVersions__historical: unsupported response type"));
+        }
+
+        return localVarResult;
+    });
+}
+pplx::task<std::vector<std::shared_ptr<Curve_ContractDTO>>> CurveApi::curve_GetContracts__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> poolId) const
 {
 
 
@@ -660,6 +933,9 @@ pplx::task<void> CurveApi::dappsCurveContractsHistoricalGet(boost::optional<int6
     std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
 
     std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -680,7 +956,7 @@ pplx::task<void> CurveApi::dappsCurveContractsHistoricalGet(boost::optional<int6
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("CurveApi->dappsCurveContractsHistoricalGet does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("CurveApi->curve_GetContracts__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -727,7 +1003,7 @@ pplx::task<void> CurveApi::dappsCurveContractsHistoricalGet(boost::optional<int6
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("CurveApi->dappsCurveContractsHistoricalGet does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("CurveApi->curve_GetContracts__historical does not consume any supported media type"));
     }
 
 
@@ -747,7 +1023,7 @@ pplx::task<void> CurveApi::dappsCurveContractsHistoricalGet(boost::optional<int6
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsCurveContractsHistoricalGet: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling curve_GetContracts__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -758,7 +1034,7 @@ pplx::task<void> CurveApi::dappsCurveContractsHistoricalGet(boost::optional<int6
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsCurveContractsHistoricalGet: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling curve_GetContracts__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -767,15 +1043,37 @@ pplx::task<void> CurveApi::dappsCurveContractsHistoricalGet(boost::optional<int6
     })
     .then([=](utility::string_t localVarResponse)
     {
-        return void();
+        std::vector<std::shared_ptr<Curve_ContractDTO>> localVarResult;
+
+        if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
+        {
+            web::json::value localVarJson = web::json::value::parse(localVarResponse);
+            for( auto& localVarItem : localVarJson.as_array() )
+            {
+                std::shared_ptr<Curve_ContractDTO> localVarItemObj;
+                ModelBase::fromJson(localVarItem, localVarItemObj);
+                localVarResult.push_back(localVarItemObj);
+            }
+        }
+        // else if(localVarResponseHttpContentType == utility::conversions::to_string_t("multipart/form-data"))
+        // {
+        // TODO multipart response parsing
+        // }
+        else
+        {
+            throw ApiException(500
+                , utility::conversions::to_string_t("error calling curve_GetContracts__historical: unsupported response type"));
+        }
+
+        return localVarResult;
     });
 }
-pplx::task<void> CurveApi::dappsCurveContractsVersionHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> poolId) const
+pplx::task<std::vector<std::shared_ptr<Curve_DailyVolumeDTO>>> CurveApi::curve_GetDailyVolumes__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> poolId) const
 {
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/curve/contractsVersion/historical");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/curve/dailyVolumes/historical");
     
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -783,6 +1081,9 @@ pplx::task<void> CurveApi::dappsCurveContractsVersionHistoricalGet(boost::option
     std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
 
     std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -803,7 +1104,7 @@ pplx::task<void> CurveApi::dappsCurveContractsVersionHistoricalGet(boost::option
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("CurveApi->dappsCurveContractsVersionHistoricalGet does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("CurveApi->curve_GetDailyVolumes__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -850,7 +1151,7 @@ pplx::task<void> CurveApi::dappsCurveContractsVersionHistoricalGet(boost::option
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("CurveApi->dappsCurveContractsVersionHistoricalGet does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("CurveApi->curve_GetDailyVolumes__historical does not consume any supported media type"));
     }
 
 
@@ -870,7 +1171,7 @@ pplx::task<void> CurveApi::dappsCurveContractsVersionHistoricalGet(boost::option
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsCurveContractsVersionHistoricalGet: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling curve_GetDailyVolumes__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -881,7 +1182,7 @@ pplx::task<void> CurveApi::dappsCurveContractsVersionHistoricalGet(boost::option
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsCurveContractsVersionHistoricalGet: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling curve_GetDailyVolumes__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -890,15 +1191,37 @@ pplx::task<void> CurveApi::dappsCurveContractsVersionHistoricalGet(boost::option
     })
     .then([=](utility::string_t localVarResponse)
     {
-        return void();
+        std::vector<std::shared_ptr<Curve_DailyVolumeDTO>> localVarResult;
+
+        if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
+        {
+            web::json::value localVarJson = web::json::value::parse(localVarResponse);
+            for( auto& localVarItem : localVarJson.as_array() )
+            {
+                std::shared_ptr<Curve_DailyVolumeDTO> localVarItemObj;
+                ModelBase::fromJson(localVarItem, localVarItemObj);
+                localVarResult.push_back(localVarItemObj);
+            }
+        }
+        // else if(localVarResponseHttpContentType == utility::conversions::to_string_t("multipart/form-data"))
+        // {
+        // TODO multipart response parsing
+        // }
+        else
+        {
+            throw ApiException(500
+                , utility::conversions::to_string_t("error calling curve_GetDailyVolumes__historical: unsupported response type"));
+        }
+
+        return localVarResult;
     });
 }
-pplx::task<void> CurveApi::dappsCurveDailyVolumeHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> poolId) const
+pplx::task<std::vector<std::shared_ptr<Curve_ExchangeDTO>>> CurveApi::curve_GetExchanges__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> poolId) const
 {
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/curve/dailyVolume/historical");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/curve/exchanges/historical");
     
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -906,6 +1229,9 @@ pplx::task<void> CurveApi::dappsCurveDailyVolumeHistoricalGet(boost::optional<in
     std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
 
     std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -926,7 +1252,7 @@ pplx::task<void> CurveApi::dappsCurveDailyVolumeHistoricalGet(boost::optional<in
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("CurveApi->dappsCurveDailyVolumeHistoricalGet does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("CurveApi->curve_GetExchanges__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -973,7 +1299,7 @@ pplx::task<void> CurveApi::dappsCurveDailyVolumeHistoricalGet(boost::optional<in
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("CurveApi->dappsCurveDailyVolumeHistoricalGet does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("CurveApi->curve_GetExchanges__historical does not consume any supported media type"));
     }
 
 
@@ -993,7 +1319,7 @@ pplx::task<void> CurveApi::dappsCurveDailyVolumeHistoricalGet(boost::optional<in
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsCurveDailyVolumeHistoricalGet: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling curve_GetExchanges__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -1004,7 +1330,7 @@ pplx::task<void> CurveApi::dappsCurveDailyVolumeHistoricalGet(boost::optional<in
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsCurveDailyVolumeHistoricalGet: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling curve_GetExchanges__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -1013,15 +1339,37 @@ pplx::task<void> CurveApi::dappsCurveDailyVolumeHistoricalGet(boost::optional<in
     })
     .then([=](utility::string_t localVarResponse)
     {
-        return void();
+        std::vector<std::shared_ptr<Curve_ExchangeDTO>> localVarResult;
+
+        if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
+        {
+            web::json::value localVarJson = web::json::value::parse(localVarResponse);
+            for( auto& localVarItem : localVarJson.as_array() )
+            {
+                std::shared_ptr<Curve_ExchangeDTO> localVarItemObj;
+                ModelBase::fromJson(localVarItem, localVarItemObj);
+                localVarResult.push_back(localVarItemObj);
+            }
+        }
+        // else if(localVarResponseHttpContentType == utility::conversions::to_string_t("multipart/form-data"))
+        // {
+        // TODO multipart response parsing
+        // }
+        else
+        {
+            throw ApiException(500
+                , utility::conversions::to_string_t("error calling curve_GetExchanges__historical: unsupported response type"));
+        }
+
+        return localVarResult;
     });
 }
-pplx::task<void> CurveApi::dappsCurveFeeChangeLogHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> poolId) const
+pplx::task<std::vector<std::shared_ptr<Curve_FeeChangeLogDTO>>> CurveApi::curve_GetFeeChangeLogs__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> poolId) const
 {
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/curve/feeChangeLog/historical");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/curve/feeChangeLogs/historical");
     
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -1029,6 +1377,9 @@ pplx::task<void> CurveApi::dappsCurveFeeChangeLogHistoricalGet(boost::optional<i
     std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
 
     std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -1049,7 +1400,7 @@ pplx::task<void> CurveApi::dappsCurveFeeChangeLogHistoricalGet(boost::optional<i
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("CurveApi->dappsCurveFeeChangeLogHistoricalGet does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("CurveApi->curve_GetFeeChangeLogs__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -1096,7 +1447,7 @@ pplx::task<void> CurveApi::dappsCurveFeeChangeLogHistoricalGet(boost::optional<i
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("CurveApi->dappsCurveFeeChangeLogHistoricalGet does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("CurveApi->curve_GetFeeChangeLogs__historical does not consume any supported media type"));
     }
 
 
@@ -1116,7 +1467,7 @@ pplx::task<void> CurveApi::dappsCurveFeeChangeLogHistoricalGet(boost::optional<i
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsCurveFeeChangeLogHistoricalGet: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling curve_GetFeeChangeLogs__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -1127,7 +1478,7 @@ pplx::task<void> CurveApi::dappsCurveFeeChangeLogHistoricalGet(boost::optional<i
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsCurveFeeChangeLogHistoricalGet: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling curve_GetFeeChangeLogs__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -1136,15 +1487,37 @@ pplx::task<void> CurveApi::dappsCurveFeeChangeLogHistoricalGet(boost::optional<i
     })
     .then([=](utility::string_t localVarResponse)
     {
-        return void();
+        std::vector<std::shared_ptr<Curve_FeeChangeLogDTO>> localVarResult;
+
+        if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
+        {
+            web::json::value localVarJson = web::json::value::parse(localVarResponse);
+            for( auto& localVarItem : localVarJson.as_array() )
+            {
+                std::shared_ptr<Curve_FeeChangeLogDTO> localVarItemObj;
+                ModelBase::fromJson(localVarItem, localVarItemObj);
+                localVarResult.push_back(localVarItemObj);
+            }
+        }
+        // else if(localVarResponseHttpContentType == utility::conversions::to_string_t("multipart/form-data"))
+        // {
+        // TODO multipart response parsing
+        // }
+        else
+        {
+            throw ApiException(500
+                , utility::conversions::to_string_t("error calling curve_GetFeeChangeLogs__historical: unsupported response type"));
+        }
+
+        return localVarResult;
     });
 }
-pplx::task<void> CurveApi::dappsCurveGaugeDepositHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate) const
+pplx::task<std::vector<std::shared_ptr<Curve_GaugeDepositDTO>>> CurveApi::curve_GetGaugesDeposits__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate) const
 {
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/curve/gaugeDeposit/historical");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/curve/gaugesDeposits/historical");
     
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -1152,6 +1525,9 @@ pplx::task<void> CurveApi::dappsCurveGaugeDepositHistoricalGet(boost::optional<i
     std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
 
     std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -1172,7 +1548,7 @@ pplx::task<void> CurveApi::dappsCurveGaugeDepositHistoricalGet(boost::optional<i
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("CurveApi->dappsCurveGaugeDepositHistoricalGet does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("CurveApi->curve_GetGaugesDeposits__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -1215,7 +1591,7 @@ pplx::task<void> CurveApi::dappsCurveGaugeDepositHistoricalGet(boost::optional<i
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("CurveApi->dappsCurveGaugeDepositHistoricalGet does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("CurveApi->curve_GetGaugesDeposits__historical does not consume any supported media type"));
     }
 
 
@@ -1235,7 +1611,7 @@ pplx::task<void> CurveApi::dappsCurveGaugeDepositHistoricalGet(boost::optional<i
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsCurveGaugeDepositHistoricalGet: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling curve_GetGaugesDeposits__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -1246,7 +1622,7 @@ pplx::task<void> CurveApi::dappsCurveGaugeDepositHistoricalGet(boost::optional<i
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsCurveGaugeDepositHistoricalGet: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling curve_GetGaugesDeposits__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -1255,15 +1631,37 @@ pplx::task<void> CurveApi::dappsCurveGaugeDepositHistoricalGet(boost::optional<i
     })
     .then([=](utility::string_t localVarResponse)
     {
-        return void();
+        std::vector<std::shared_ptr<Curve_GaugeDepositDTO>> localVarResult;
+
+        if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
+        {
+            web::json::value localVarJson = web::json::value::parse(localVarResponse);
+            for( auto& localVarItem : localVarJson.as_array() )
+            {
+                std::shared_ptr<Curve_GaugeDepositDTO> localVarItemObj;
+                ModelBase::fromJson(localVarItem, localVarItemObj);
+                localVarResult.push_back(localVarItemObj);
+            }
+        }
+        // else if(localVarResponseHttpContentType == utility::conversions::to_string_t("multipart/form-data"))
+        // {
+        // TODO multipart response parsing
+        // }
+        else
+        {
+            throw ApiException(500
+                , utility::conversions::to_string_t("error calling curve_GetGaugesDeposits__historical: unsupported response type"));
+        }
+
+        return localVarResult;
     });
 }
-pplx::task<void> CurveApi::dappsCurveGaugeHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> poolId) const
+pplx::task<std::vector<std::shared_ptr<Curve_GaugeLiquidityDTO>>> CurveApi::curve_GetGaugesLiquidity__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate) const
 {
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/curve/gauge/historical");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/curve/gaugesLiquidity/historical");
     
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -1271,6 +1669,9 @@ pplx::task<void> CurveApi::dappsCurveGaugeHistoricalGet(boost::optional<int64_t>
     std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
 
     std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -1291,130 +1692,7 @@ pplx::task<void> CurveApi::dappsCurveGaugeHistoricalGet(boost::optional<int64_t>
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("CurveApi->dappsCurveGaugeHistoricalGet does not produce any supported media type"));
-    }
-
-    localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
-
-    std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
-
-    if (startBlock)
-    {
-        localVarQueryParams[utility::conversions::to_string_t("startBlock")] = ApiClient::parameterToString(*startBlock);
-    }
-    if (endBlock)
-    {
-        localVarQueryParams[utility::conversions::to_string_t("endBlock")] = ApiClient::parameterToString(*endBlock);
-    }
-    if (startDate)
-    {
-        localVarQueryParams[utility::conversions::to_string_t("startDate")] = ApiClient::parameterToString(*startDate);
-    }
-    if (endDate)
-    {
-        localVarQueryParams[utility::conversions::to_string_t("endDate")] = ApiClient::parameterToString(*endDate);
-    }
-    if (poolId)
-    {
-        localVarQueryParams[utility::conversions::to_string_t("poolId")] = ApiClient::parameterToString(*poolId);
-    }
-
-    std::shared_ptr<IHttpBody> localVarHttpBody;
-    utility::string_t localVarRequestHttpContentType;
-
-    // use JSON if possible
-    if ( localVarConsumeHttpContentTypes.size() == 0 || localVarConsumeHttpContentTypes.find(utility::conversions::to_string_t("application/json")) != localVarConsumeHttpContentTypes.end() )
-    {
-        localVarRequestHttpContentType = utility::conversions::to_string_t("application/json");
-    }
-    // multipart formdata
-    else if( localVarConsumeHttpContentTypes.find(utility::conversions::to_string_t("multipart/form-data")) != localVarConsumeHttpContentTypes.end() )
-    {
-        localVarRequestHttpContentType = utility::conversions::to_string_t("multipart/form-data");
-    }
-    else if (localVarConsumeHttpContentTypes.find(utility::conversions::to_string_t("application/x-www-form-urlencoded")) != localVarConsumeHttpContentTypes.end())
-    {
-        localVarRequestHttpContentType = utility::conversions::to_string_t("application/x-www-form-urlencoded");
-    }
-    else
-    {
-        throw ApiException(415, utility::conversions::to_string_t("CurveApi->dappsCurveGaugeHistoricalGet does not consume any supported media type"));
-    }
-
-
-    return m_ApiClient->callApi(localVarPath, utility::conversions::to_string_t("GET"), localVarQueryParams, localVarHttpBody, localVarHeaderParams, localVarFormParams, localVarFileParams, localVarRequestHttpContentType)
-    .then([=](web::http::http_response localVarResponse)
-    {
-        if (m_ApiClient->getResponseHandler())
-        {
-            m_ApiClient->getResponseHandler()(localVarResponse.status_code(), localVarResponse.headers());
-        }
-
-        // 1xx - informational : OK
-        // 2xx - successful       : OK
-        // 3xx - redirection   : OK
-        // 4xx - client error  : not OK
-        // 5xx - client error  : not OK
-        if (localVarResponse.status_code() >= 400)
-        {
-            throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsCurveGaugeHistoricalGet: ") + localVarResponse.reason_phrase()
-                , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
-        }
-
-        // check response content type
-        if(localVarResponse.headers().has(utility::conversions::to_string_t("Content-Type")))
-        {
-            utility::string_t localVarContentType = localVarResponse.headers()[utility::conversions::to_string_t("Content-Type")];
-            if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
-            {
-                throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsCurveGaugeHistoricalGet: unexpected response type: ") + localVarContentType
-                    , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
-            }
-        }
-
-        return localVarResponse.extract_string();
-    })
-    .then([=](utility::string_t localVarResponse)
-    {
-        return void();
-    });
-}
-pplx::task<void> CurveApi::dappsCurveGaugeLiquidityHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate) const
-{
-
-
-    std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/curve/gaugeLiquidity/historical");
-    
-    std::map<utility::string_t, utility::string_t> localVarQueryParams;
-    std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
-    std::map<utility::string_t, utility::string_t> localVarFormParams;
-    std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
-
-    std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
-
-    utility::string_t localVarResponseHttpContentType;
-
-    // use JSON if possible
-    if ( localVarResponseHttpContentTypes.size() == 0 )
-    {
-        localVarResponseHttpContentType = utility::conversions::to_string_t("application/json");
-    }
-    // JSON
-    else if ( localVarResponseHttpContentTypes.find(utility::conversions::to_string_t("application/json")) != localVarResponseHttpContentTypes.end() )
-    {
-        localVarResponseHttpContentType = utility::conversions::to_string_t("application/json");
-    }
-    // multipart formdata
-    else if( localVarResponseHttpContentTypes.find(utility::conversions::to_string_t("multipart/form-data")) != localVarResponseHttpContentTypes.end() )
-    {
-        localVarResponseHttpContentType = utility::conversions::to_string_t("multipart/form-data");
-    }
-    else
-    {
-        throw ApiException(400, utility::conversions::to_string_t("CurveApi->dappsCurveGaugeLiquidityHistoricalGet does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("CurveApi->curve_GetGaugesLiquidity__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -1457,7 +1735,7 @@ pplx::task<void> CurveApi::dappsCurveGaugeLiquidityHistoricalGet(boost::optional
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("CurveApi->dappsCurveGaugeLiquidityHistoricalGet does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("CurveApi->curve_GetGaugesLiquidity__historical does not consume any supported media type"));
     }
 
 
@@ -1477,7 +1755,7 @@ pplx::task<void> CurveApi::dappsCurveGaugeLiquidityHistoricalGet(boost::optional
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsCurveGaugeLiquidityHistoricalGet: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling curve_GetGaugesLiquidity__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -1488,7 +1766,7 @@ pplx::task<void> CurveApi::dappsCurveGaugeLiquidityHistoricalGet(boost::optional
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsCurveGaugeLiquidityHistoricalGet: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling curve_GetGaugesLiquidity__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -1497,15 +1775,37 @@ pplx::task<void> CurveApi::dappsCurveGaugeLiquidityHistoricalGet(boost::optional
     })
     .then([=](utility::string_t localVarResponse)
     {
-        return void();
+        std::vector<std::shared_ptr<Curve_GaugeLiquidityDTO>> localVarResult;
+
+        if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
+        {
+            web::json::value localVarJson = web::json::value::parse(localVarResponse);
+            for( auto& localVarItem : localVarJson.as_array() )
+            {
+                std::shared_ptr<Curve_GaugeLiquidityDTO> localVarItemObj;
+                ModelBase::fromJson(localVarItem, localVarItemObj);
+                localVarResult.push_back(localVarItemObj);
+            }
+        }
+        // else if(localVarResponseHttpContentType == utility::conversions::to_string_t("multipart/form-data"))
+        // {
+        // TODO multipart response parsing
+        // }
+        else
+        {
+            throw ApiException(500
+                , utility::conversions::to_string_t("error calling curve_GetGaugesLiquidity__historical: unsupported response type"));
+        }
+
+        return localVarResult;
     });
 }
-pplx::task<void> CurveApi::dappsCurveGaugeTotalWeightHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate) const
+pplx::task<std::vector<std::shared_ptr<Curve_GaugeTotalWeightDTO>>> CurveApi::curve_GetGaugesTotalWeights__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate) const
 {
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/curve/gaugeTotalWeight/historical");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/curve/gaugesTotalWeights/historical");
     
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -1513,6 +1813,9 @@ pplx::task<void> CurveApi::dappsCurveGaugeTotalWeightHistoricalGet(boost::option
     std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
 
     std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -1533,7 +1836,7 @@ pplx::task<void> CurveApi::dappsCurveGaugeTotalWeightHistoricalGet(boost::option
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("CurveApi->dappsCurveGaugeTotalWeightHistoricalGet does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("CurveApi->curve_GetGaugesTotalWeights__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -1576,7 +1879,7 @@ pplx::task<void> CurveApi::dappsCurveGaugeTotalWeightHistoricalGet(boost::option
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("CurveApi->dappsCurveGaugeTotalWeightHistoricalGet does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("CurveApi->curve_GetGaugesTotalWeights__historical does not consume any supported media type"));
     }
 
 
@@ -1596,7 +1899,7 @@ pplx::task<void> CurveApi::dappsCurveGaugeTotalWeightHistoricalGet(boost::option
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsCurveGaugeTotalWeightHistoricalGet: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling curve_GetGaugesTotalWeights__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -1607,7 +1910,7 @@ pplx::task<void> CurveApi::dappsCurveGaugeTotalWeightHistoricalGet(boost::option
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsCurveGaugeTotalWeightHistoricalGet: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling curve_GetGaugesTotalWeights__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -1616,15 +1919,37 @@ pplx::task<void> CurveApi::dappsCurveGaugeTotalWeightHistoricalGet(boost::option
     })
     .then([=](utility::string_t localVarResponse)
     {
-        return void();
+        std::vector<std::shared_ptr<Curve_GaugeTotalWeightDTO>> localVarResult;
+
+        if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
+        {
+            web::json::value localVarJson = web::json::value::parse(localVarResponse);
+            for( auto& localVarItem : localVarJson.as_array() )
+            {
+                std::shared_ptr<Curve_GaugeTotalWeightDTO> localVarItemObj;
+                ModelBase::fromJson(localVarItem, localVarItemObj);
+                localVarResult.push_back(localVarItemObj);
+            }
+        }
+        // else if(localVarResponseHttpContentType == utility::conversions::to_string_t("multipart/form-data"))
+        // {
+        // TODO multipart response parsing
+        // }
+        else
+        {
+            throw ApiException(500
+                , utility::conversions::to_string_t("error calling curve_GetGaugesTotalWeights__historical: unsupported response type"));
+        }
+
+        return localVarResult;
     });
 }
-pplx::task<void> CurveApi::dappsCurveGaugeTypeHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate) const
+pplx::task<std::vector<std::shared_ptr<Curve_GaugeTypeWeightDTO>>> CurveApi::curve_GetGaugesTypesWeights__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate) const
 {
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/curve/gaugeType/historical");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/curve/gaugesTypesWeights/historical");
     
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -1632,6 +1957,9 @@ pplx::task<void> CurveApi::dappsCurveGaugeTypeHistoricalGet(boost::optional<int6
     std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
 
     std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -1652,7 +1980,7 @@ pplx::task<void> CurveApi::dappsCurveGaugeTypeHistoricalGet(boost::optional<int6
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("CurveApi->dappsCurveGaugeTypeHistoricalGet does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("CurveApi->curve_GetGaugesTypesWeights__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -1695,7 +2023,7 @@ pplx::task<void> CurveApi::dappsCurveGaugeTypeHistoricalGet(boost::optional<int6
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("CurveApi->dappsCurveGaugeTypeHistoricalGet does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("CurveApi->curve_GetGaugesTypesWeights__historical does not consume any supported media type"));
     }
 
 
@@ -1715,7 +2043,7 @@ pplx::task<void> CurveApi::dappsCurveGaugeTypeHistoricalGet(boost::optional<int6
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsCurveGaugeTypeHistoricalGet: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling curve_GetGaugesTypesWeights__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -1726,7 +2054,7 @@ pplx::task<void> CurveApi::dappsCurveGaugeTypeHistoricalGet(boost::optional<int6
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsCurveGaugeTypeHistoricalGet: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling curve_GetGaugesTypesWeights__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -1735,15 +2063,37 @@ pplx::task<void> CurveApi::dappsCurveGaugeTypeHistoricalGet(boost::optional<int6
     })
     .then([=](utility::string_t localVarResponse)
     {
-        return void();
+        std::vector<std::shared_ptr<Curve_GaugeTypeWeightDTO>> localVarResult;
+
+        if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
+        {
+            web::json::value localVarJson = web::json::value::parse(localVarResponse);
+            for( auto& localVarItem : localVarJson.as_array() )
+            {
+                std::shared_ptr<Curve_GaugeTypeWeightDTO> localVarItemObj;
+                ModelBase::fromJson(localVarItem, localVarItemObj);
+                localVarResult.push_back(localVarItemObj);
+            }
+        }
+        // else if(localVarResponseHttpContentType == utility::conversions::to_string_t("multipart/form-data"))
+        // {
+        // TODO multipart response parsing
+        // }
+        else
+        {
+            throw ApiException(500
+                , utility::conversions::to_string_t("error calling curve_GetGaugesTypesWeights__historical: unsupported response type"));
+        }
+
+        return localVarResult;
     });
 }
-pplx::task<void> CurveApi::dappsCurveGaugeTypeWeightHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate) const
+pplx::task<std::vector<std::shared_ptr<Curve_GaugeTypeDTO>>> CurveApi::curve_GetGaugesTypes__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate) const
 {
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/curve/gaugeTypeWeight/historical");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/curve/gaugesTypes/historical");
     
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -1751,6 +2101,9 @@ pplx::task<void> CurveApi::dappsCurveGaugeTypeWeightHistoricalGet(boost::optiona
     std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
 
     std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -1771,7 +2124,7 @@ pplx::task<void> CurveApi::dappsCurveGaugeTypeWeightHistoricalGet(boost::optiona
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("CurveApi->dappsCurveGaugeTypeWeightHistoricalGet does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("CurveApi->curve_GetGaugesTypes__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -1814,7 +2167,7 @@ pplx::task<void> CurveApi::dappsCurveGaugeTypeWeightHistoricalGet(boost::optiona
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("CurveApi->dappsCurveGaugeTypeWeightHistoricalGet does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("CurveApi->curve_GetGaugesTypes__historical does not consume any supported media type"));
     }
 
 
@@ -1834,7 +2187,7 @@ pplx::task<void> CurveApi::dappsCurveGaugeTypeWeightHistoricalGet(boost::optiona
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsCurveGaugeTypeWeightHistoricalGet: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling curve_GetGaugesTypes__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -1845,7 +2198,7 @@ pplx::task<void> CurveApi::dappsCurveGaugeTypeWeightHistoricalGet(boost::optiona
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsCurveGaugeTypeWeightHistoricalGet: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling curve_GetGaugesTypes__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -1854,15 +2207,37 @@ pplx::task<void> CurveApi::dappsCurveGaugeTypeWeightHistoricalGet(boost::optiona
     })
     .then([=](utility::string_t localVarResponse)
     {
-        return void();
+        std::vector<std::shared_ptr<Curve_GaugeTypeDTO>> localVarResult;
+
+        if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
+        {
+            web::json::value localVarJson = web::json::value::parse(localVarResponse);
+            for( auto& localVarItem : localVarJson.as_array() )
+            {
+                std::shared_ptr<Curve_GaugeTypeDTO> localVarItemObj;
+                ModelBase::fromJson(localVarItem, localVarItemObj);
+                localVarResult.push_back(localVarItemObj);
+            }
+        }
+        // else if(localVarResponseHttpContentType == utility::conversions::to_string_t("multipart/form-data"))
+        // {
+        // TODO multipart response parsing
+        // }
+        else
+        {
+            throw ApiException(500
+                , utility::conversions::to_string_t("error calling curve_GetGaugesTypes__historical: unsupported response type"));
+        }
+
+        return localVarResult;
     });
 }
-pplx::task<void> CurveApi::dappsCurveGaugeWeightHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate) const
+pplx::task<std::vector<std::shared_ptr<Curve_GaugeWeightVoteDTO>>> CurveApi::curve_GetGaugesWeightsVotes__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate) const
 {
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/curve/gaugeWeight/historical");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/curve/gaugesWeightsVotes/historical");
     
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -1870,6 +2245,9 @@ pplx::task<void> CurveApi::dappsCurveGaugeWeightHistoricalGet(boost::optional<in
     std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
 
     std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -1890,7 +2268,7 @@ pplx::task<void> CurveApi::dappsCurveGaugeWeightHistoricalGet(boost::optional<in
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("CurveApi->dappsCurveGaugeWeightHistoricalGet does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("CurveApi->curve_GetGaugesWeightsVotes__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -1933,7 +2311,7 @@ pplx::task<void> CurveApi::dappsCurveGaugeWeightHistoricalGet(boost::optional<in
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("CurveApi->dappsCurveGaugeWeightHistoricalGet does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("CurveApi->curve_GetGaugesWeightsVotes__historical does not consume any supported media type"));
     }
 
 
@@ -1953,7 +2331,7 @@ pplx::task<void> CurveApi::dappsCurveGaugeWeightHistoricalGet(boost::optional<in
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsCurveGaugeWeightHistoricalGet: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling curve_GetGaugesWeightsVotes__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -1964,7 +2342,7 @@ pplx::task<void> CurveApi::dappsCurveGaugeWeightHistoricalGet(boost::optional<in
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsCurveGaugeWeightHistoricalGet: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling curve_GetGaugesWeightsVotes__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -1973,15 +2351,37 @@ pplx::task<void> CurveApi::dappsCurveGaugeWeightHistoricalGet(boost::optional<in
     })
     .then([=](utility::string_t localVarResponse)
     {
-        return void();
+        std::vector<std::shared_ptr<Curve_GaugeWeightVoteDTO>> localVarResult;
+
+        if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
+        {
+            web::json::value localVarJson = web::json::value::parse(localVarResponse);
+            for( auto& localVarItem : localVarJson.as_array() )
+            {
+                std::shared_ptr<Curve_GaugeWeightVoteDTO> localVarItemObj;
+                ModelBase::fromJson(localVarItem, localVarItemObj);
+                localVarResult.push_back(localVarItemObj);
+            }
+        }
+        // else if(localVarResponseHttpContentType == utility::conversions::to_string_t("multipart/form-data"))
+        // {
+        // TODO multipart response parsing
+        // }
+        else
+        {
+            throw ApiException(500
+                , utility::conversions::to_string_t("error calling curve_GetGaugesWeightsVotes__historical: unsupported response type"));
+        }
+
+        return localVarResult;
     });
 }
-pplx::task<void> CurveApi::dappsCurveGaugeWeightVoteHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate) const
+pplx::task<std::vector<std::shared_ptr<Curve_GaugeWeightDTO>>> CurveApi::curve_GetGaugesWeights__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate) const
 {
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/curve/gaugeWeightVote/historical");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/curve/gaugesWeights/historical");
     
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -1989,6 +2389,9 @@ pplx::task<void> CurveApi::dappsCurveGaugeWeightVoteHistoricalGet(boost::optiona
     std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
 
     std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -2009,7 +2412,7 @@ pplx::task<void> CurveApi::dappsCurveGaugeWeightVoteHistoricalGet(boost::optiona
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("CurveApi->dappsCurveGaugeWeightVoteHistoricalGet does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("CurveApi->curve_GetGaugesWeights__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -2052,7 +2455,7 @@ pplx::task<void> CurveApi::dappsCurveGaugeWeightVoteHistoricalGet(boost::optiona
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("CurveApi->dappsCurveGaugeWeightVoteHistoricalGet does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("CurveApi->curve_GetGaugesWeights__historical does not consume any supported media type"));
     }
 
 
@@ -2072,7 +2475,7 @@ pplx::task<void> CurveApi::dappsCurveGaugeWeightVoteHistoricalGet(boost::optiona
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsCurveGaugeWeightVoteHistoricalGet: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling curve_GetGaugesWeights__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -2083,7 +2486,7 @@ pplx::task<void> CurveApi::dappsCurveGaugeWeightVoteHistoricalGet(boost::optiona
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsCurveGaugeWeightVoteHistoricalGet: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling curve_GetGaugesWeights__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -2092,15 +2495,37 @@ pplx::task<void> CurveApi::dappsCurveGaugeWeightVoteHistoricalGet(boost::optiona
     })
     .then([=](utility::string_t localVarResponse)
     {
-        return void();
+        std::vector<std::shared_ptr<Curve_GaugeWeightDTO>> localVarResult;
+
+        if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
+        {
+            web::json::value localVarJson = web::json::value::parse(localVarResponse);
+            for( auto& localVarItem : localVarJson.as_array() )
+            {
+                std::shared_ptr<Curve_GaugeWeightDTO> localVarItemObj;
+                ModelBase::fromJson(localVarItem, localVarItemObj);
+                localVarResult.push_back(localVarItemObj);
+            }
+        }
+        // else if(localVarResponseHttpContentType == utility::conversions::to_string_t("multipart/form-data"))
+        // {
+        // TODO multipart response parsing
+        // }
+        else
+        {
+            throw ApiException(500
+                , utility::conversions::to_string_t("error calling curve_GetGaugesWeights__historical: unsupported response type"));
+        }
+
+        return localVarResult;
     });
 }
-pplx::task<void> CurveApi::dappsCurveGaugeWithdrawHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate) const
+pplx::task<std::vector<std::shared_ptr<Curve_GaugeWithdrawDTO>>> CurveApi::curve_GetGaugesWithdraw__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate) const
 {
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/curve/gaugeWithdraw/historical");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/curve/gaugesWithdraws/historical");
     
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -2108,6 +2533,9 @@ pplx::task<void> CurveApi::dappsCurveGaugeWithdrawHistoricalGet(boost::optional<
     std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
 
     std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -2128,7 +2556,7 @@ pplx::task<void> CurveApi::dappsCurveGaugeWithdrawHistoricalGet(boost::optional<
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("CurveApi->dappsCurveGaugeWithdrawHistoricalGet does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("CurveApi->curve_GetGaugesWithdraw__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -2171,7 +2599,7 @@ pplx::task<void> CurveApi::dappsCurveGaugeWithdrawHistoricalGet(boost::optional<
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("CurveApi->dappsCurveGaugeWithdrawHistoricalGet does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("CurveApi->curve_GetGaugesWithdraw__historical does not consume any supported media type"));
     }
 
 
@@ -2191,7 +2619,7 @@ pplx::task<void> CurveApi::dappsCurveGaugeWithdrawHistoricalGet(boost::optional<
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsCurveGaugeWithdrawHistoricalGet: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling curve_GetGaugesWithdraw__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -2202,7 +2630,7 @@ pplx::task<void> CurveApi::dappsCurveGaugeWithdrawHistoricalGet(boost::optional<
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsCurveGaugeWithdrawHistoricalGet: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling curve_GetGaugesWithdraw__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -2211,15 +2639,37 @@ pplx::task<void> CurveApi::dappsCurveGaugeWithdrawHistoricalGet(boost::optional<
     })
     .then([=](utility::string_t localVarResponse)
     {
-        return void();
+        std::vector<std::shared_ptr<Curve_GaugeWithdrawDTO>> localVarResult;
+
+        if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
+        {
+            web::json::value localVarJson = web::json::value::parse(localVarResponse);
+            for( auto& localVarItem : localVarJson.as_array() )
+            {
+                std::shared_ptr<Curve_GaugeWithdrawDTO> localVarItemObj;
+                ModelBase::fromJson(localVarItem, localVarItemObj);
+                localVarResult.push_back(localVarItemObj);
+            }
+        }
+        // else if(localVarResponseHttpContentType == utility::conversions::to_string_t("multipart/form-data"))
+        // {
+        // TODO multipart response parsing
+        // }
+        else
+        {
+            throw ApiException(500
+                , utility::conversions::to_string_t("error calling curve_GetGaugesWithdraw__historical: unsupported response type"));
+        }
+
+        return localVarResult;
     });
 }
-pplx::task<void> CurveApi::dappsCurveHourlyVolumeHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> poolId) const
+pplx::task<std::vector<std::shared_ptr<Curve_GaugeDTO>>> CurveApi::curve_GetGauges__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> poolId) const
 {
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/curve/hourlyVolume/historical");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/curve/gauges/historical");
     
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -2227,6 +2677,9 @@ pplx::task<void> CurveApi::dappsCurveHourlyVolumeHistoricalGet(boost::optional<i
     std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
 
     std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -2247,130 +2700,7 @@ pplx::task<void> CurveApi::dappsCurveHourlyVolumeHistoricalGet(boost::optional<i
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("CurveApi->dappsCurveHourlyVolumeHistoricalGet does not produce any supported media type"));
-    }
-
-    localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
-
-    std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
-
-    if (startBlock)
-    {
-        localVarQueryParams[utility::conversions::to_string_t("startBlock")] = ApiClient::parameterToString(*startBlock);
-    }
-    if (endBlock)
-    {
-        localVarQueryParams[utility::conversions::to_string_t("endBlock")] = ApiClient::parameterToString(*endBlock);
-    }
-    if (startDate)
-    {
-        localVarQueryParams[utility::conversions::to_string_t("startDate")] = ApiClient::parameterToString(*startDate);
-    }
-    if (endDate)
-    {
-        localVarQueryParams[utility::conversions::to_string_t("endDate")] = ApiClient::parameterToString(*endDate);
-    }
-    if (poolId)
-    {
-        localVarQueryParams[utility::conversions::to_string_t("poolId")] = ApiClient::parameterToString(*poolId);
-    }
-
-    std::shared_ptr<IHttpBody> localVarHttpBody;
-    utility::string_t localVarRequestHttpContentType;
-
-    // use JSON if possible
-    if ( localVarConsumeHttpContentTypes.size() == 0 || localVarConsumeHttpContentTypes.find(utility::conversions::to_string_t("application/json")) != localVarConsumeHttpContentTypes.end() )
-    {
-        localVarRequestHttpContentType = utility::conversions::to_string_t("application/json");
-    }
-    // multipart formdata
-    else if( localVarConsumeHttpContentTypes.find(utility::conversions::to_string_t("multipart/form-data")) != localVarConsumeHttpContentTypes.end() )
-    {
-        localVarRequestHttpContentType = utility::conversions::to_string_t("multipart/form-data");
-    }
-    else if (localVarConsumeHttpContentTypes.find(utility::conversions::to_string_t("application/x-www-form-urlencoded")) != localVarConsumeHttpContentTypes.end())
-    {
-        localVarRequestHttpContentType = utility::conversions::to_string_t("application/x-www-form-urlencoded");
-    }
-    else
-    {
-        throw ApiException(415, utility::conversions::to_string_t("CurveApi->dappsCurveHourlyVolumeHistoricalGet does not consume any supported media type"));
-    }
-
-
-    return m_ApiClient->callApi(localVarPath, utility::conversions::to_string_t("GET"), localVarQueryParams, localVarHttpBody, localVarHeaderParams, localVarFormParams, localVarFileParams, localVarRequestHttpContentType)
-    .then([=](web::http::http_response localVarResponse)
-    {
-        if (m_ApiClient->getResponseHandler())
-        {
-            m_ApiClient->getResponseHandler()(localVarResponse.status_code(), localVarResponse.headers());
-        }
-
-        // 1xx - informational : OK
-        // 2xx - successful       : OK
-        // 3xx - redirection   : OK
-        // 4xx - client error  : not OK
-        // 5xx - client error  : not OK
-        if (localVarResponse.status_code() >= 400)
-        {
-            throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsCurveHourlyVolumeHistoricalGet: ") + localVarResponse.reason_phrase()
-                , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
-        }
-
-        // check response content type
-        if(localVarResponse.headers().has(utility::conversions::to_string_t("Content-Type")))
-        {
-            utility::string_t localVarContentType = localVarResponse.headers()[utility::conversions::to_string_t("Content-Type")];
-            if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
-            {
-                throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsCurveHourlyVolumeHistoricalGet: unexpected response type: ") + localVarContentType
-                    , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
-            }
-        }
-
-        return localVarResponse.extract_string();
-    })
-    .then([=](utility::string_t localVarResponse)
-    {
-        return void();
-    });
-}
-pplx::task<void> CurveApi::dappsCurveLpTokenHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> poolId) const
-{
-
-
-    std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/curve/lpToken/historical");
-    
-    std::map<utility::string_t, utility::string_t> localVarQueryParams;
-    std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
-    std::map<utility::string_t, utility::string_t> localVarFormParams;
-    std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
-
-    std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
-
-    utility::string_t localVarResponseHttpContentType;
-
-    // use JSON if possible
-    if ( localVarResponseHttpContentTypes.size() == 0 )
-    {
-        localVarResponseHttpContentType = utility::conversions::to_string_t("application/json");
-    }
-    // JSON
-    else if ( localVarResponseHttpContentTypes.find(utility::conversions::to_string_t("application/json")) != localVarResponseHttpContentTypes.end() )
-    {
-        localVarResponseHttpContentType = utility::conversions::to_string_t("application/json");
-    }
-    // multipart formdata
-    else if( localVarResponseHttpContentTypes.find(utility::conversions::to_string_t("multipart/form-data")) != localVarResponseHttpContentTypes.end() )
-    {
-        localVarResponseHttpContentType = utility::conversions::to_string_t("multipart/form-data");
-    }
-    else
-    {
-        throw ApiException(400, utility::conversions::to_string_t("CurveApi->dappsCurveLpTokenHistoricalGet does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("CurveApi->curve_GetGauges__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -2417,7 +2747,7 @@ pplx::task<void> CurveApi::dappsCurveLpTokenHistoricalGet(boost::optional<int64_
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("CurveApi->dappsCurveLpTokenHistoricalGet does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("CurveApi->curve_GetGauges__historical does not consume any supported media type"));
     }
 
 
@@ -2437,7 +2767,7 @@ pplx::task<void> CurveApi::dappsCurveLpTokenHistoricalGet(boost::optional<int64_
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsCurveLpTokenHistoricalGet: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling curve_GetGauges__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -2448,7 +2778,7 @@ pplx::task<void> CurveApi::dappsCurveLpTokenHistoricalGet(boost::optional<int64_
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsCurveLpTokenHistoricalGet: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling curve_GetGauges__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -2457,10 +2787,328 @@ pplx::task<void> CurveApi::dappsCurveLpTokenHistoricalGet(boost::optional<int64_
     })
     .then([=](utility::string_t localVarResponse)
     {
-        return void();
+        std::vector<std::shared_ptr<Curve_GaugeDTO>> localVarResult;
+
+        if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
+        {
+            web::json::value localVarJson = web::json::value::parse(localVarResponse);
+            for( auto& localVarItem : localVarJson.as_array() )
+            {
+                std::shared_ptr<Curve_GaugeDTO> localVarItemObj;
+                ModelBase::fromJson(localVarItem, localVarItemObj);
+                localVarResult.push_back(localVarItemObj);
+            }
+        }
+        // else if(localVarResponseHttpContentType == utility::conversions::to_string_t("multipart/form-data"))
+        // {
+        // TODO multipart response parsing
+        // }
+        else
+        {
+            throw ApiException(500
+                , utility::conversions::to_string_t("error calling curve_GetGauges__historical: unsupported response type"));
+        }
+
+        return localVarResult;
     });
 }
-pplx::task<void> CurveApi::dappsCurvePoolsHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> poolId) const
+pplx::task<std::vector<std::shared_ptr<Curve_HourlyVolumeDTO>>> CurveApi::curve_GetHourlyVolumes__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> poolId) const
+{
+
+
+    std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
+    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/curve/hourlyVolumes/historical");
+    
+    std::map<utility::string_t, utility::string_t> localVarQueryParams;
+    std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
+    std::map<utility::string_t, utility::string_t> localVarFormParams;
+    std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
+
+    std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
+
+    utility::string_t localVarResponseHttpContentType;
+
+    // use JSON if possible
+    if ( localVarResponseHttpContentTypes.size() == 0 )
+    {
+        localVarResponseHttpContentType = utility::conversions::to_string_t("application/json");
+    }
+    // JSON
+    else if ( localVarResponseHttpContentTypes.find(utility::conversions::to_string_t("application/json")) != localVarResponseHttpContentTypes.end() )
+    {
+        localVarResponseHttpContentType = utility::conversions::to_string_t("application/json");
+    }
+    // multipart formdata
+    else if( localVarResponseHttpContentTypes.find(utility::conversions::to_string_t("multipart/form-data")) != localVarResponseHttpContentTypes.end() )
+    {
+        localVarResponseHttpContentType = utility::conversions::to_string_t("multipart/form-data");
+    }
+    else
+    {
+        throw ApiException(400, utility::conversions::to_string_t("CurveApi->curve_GetHourlyVolumes__historical does not produce any supported media type"));
+    }
+
+    localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
+
+    std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
+
+    if (startBlock)
+    {
+        localVarQueryParams[utility::conversions::to_string_t("startBlock")] = ApiClient::parameterToString(*startBlock);
+    }
+    if (endBlock)
+    {
+        localVarQueryParams[utility::conversions::to_string_t("endBlock")] = ApiClient::parameterToString(*endBlock);
+    }
+    if (startDate)
+    {
+        localVarQueryParams[utility::conversions::to_string_t("startDate")] = ApiClient::parameterToString(*startDate);
+    }
+    if (endDate)
+    {
+        localVarQueryParams[utility::conversions::to_string_t("endDate")] = ApiClient::parameterToString(*endDate);
+    }
+    if (poolId)
+    {
+        localVarQueryParams[utility::conversions::to_string_t("poolId")] = ApiClient::parameterToString(*poolId);
+    }
+
+    std::shared_ptr<IHttpBody> localVarHttpBody;
+    utility::string_t localVarRequestHttpContentType;
+
+    // use JSON if possible
+    if ( localVarConsumeHttpContentTypes.size() == 0 || localVarConsumeHttpContentTypes.find(utility::conversions::to_string_t("application/json")) != localVarConsumeHttpContentTypes.end() )
+    {
+        localVarRequestHttpContentType = utility::conversions::to_string_t("application/json");
+    }
+    // multipart formdata
+    else if( localVarConsumeHttpContentTypes.find(utility::conversions::to_string_t("multipart/form-data")) != localVarConsumeHttpContentTypes.end() )
+    {
+        localVarRequestHttpContentType = utility::conversions::to_string_t("multipart/form-data");
+    }
+    else if (localVarConsumeHttpContentTypes.find(utility::conversions::to_string_t("application/x-www-form-urlencoded")) != localVarConsumeHttpContentTypes.end())
+    {
+        localVarRequestHttpContentType = utility::conversions::to_string_t("application/x-www-form-urlencoded");
+    }
+    else
+    {
+        throw ApiException(415, utility::conversions::to_string_t("CurveApi->curve_GetHourlyVolumes__historical does not consume any supported media type"));
+    }
+
+
+    return m_ApiClient->callApi(localVarPath, utility::conversions::to_string_t("GET"), localVarQueryParams, localVarHttpBody, localVarHeaderParams, localVarFormParams, localVarFileParams, localVarRequestHttpContentType)
+    .then([=](web::http::http_response localVarResponse)
+    {
+        if (m_ApiClient->getResponseHandler())
+        {
+            m_ApiClient->getResponseHandler()(localVarResponse.status_code(), localVarResponse.headers());
+        }
+
+        // 1xx - informational : OK
+        // 2xx - successful       : OK
+        // 3xx - redirection   : OK
+        // 4xx - client error  : not OK
+        // 5xx - client error  : not OK
+        if (localVarResponse.status_code() >= 400)
+        {
+            throw ApiException(localVarResponse.status_code()
+                , utility::conversions::to_string_t("error calling curve_GetHourlyVolumes__historical: ") + localVarResponse.reason_phrase()
+                , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
+        }
+
+        // check response content type
+        if(localVarResponse.headers().has(utility::conversions::to_string_t("Content-Type")))
+        {
+            utility::string_t localVarContentType = localVarResponse.headers()[utility::conversions::to_string_t("Content-Type")];
+            if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
+            {
+                throw ApiException(500
+                    , utility::conversions::to_string_t("error calling curve_GetHourlyVolumes__historical: unexpected response type: ") + localVarContentType
+                    , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
+            }
+        }
+
+        return localVarResponse.extract_string();
+    })
+    .then([=](utility::string_t localVarResponse)
+    {
+        std::vector<std::shared_ptr<Curve_HourlyVolumeDTO>> localVarResult;
+
+        if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
+        {
+            web::json::value localVarJson = web::json::value::parse(localVarResponse);
+            for( auto& localVarItem : localVarJson.as_array() )
+            {
+                std::shared_ptr<Curve_HourlyVolumeDTO> localVarItemObj;
+                ModelBase::fromJson(localVarItem, localVarItemObj);
+                localVarResult.push_back(localVarItemObj);
+            }
+        }
+        // else if(localVarResponseHttpContentType == utility::conversions::to_string_t("multipart/form-data"))
+        // {
+        // TODO multipart response parsing
+        // }
+        else
+        {
+            throw ApiException(500
+                , utility::conversions::to_string_t("error calling curve_GetHourlyVolumes__historical: unsupported response type"));
+        }
+
+        return localVarResult;
+    });
+}
+pplx::task<std::vector<std::shared_ptr<Curve_LpTokenDTO>>> CurveApi::curve_GetLpTokens__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> poolId) const
+{
+
+
+    std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
+    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/curve/lpTokens/historical");
+    
+    std::map<utility::string_t, utility::string_t> localVarQueryParams;
+    std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
+    std::map<utility::string_t, utility::string_t> localVarFormParams;
+    std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
+
+    std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
+
+    utility::string_t localVarResponseHttpContentType;
+
+    // use JSON if possible
+    if ( localVarResponseHttpContentTypes.size() == 0 )
+    {
+        localVarResponseHttpContentType = utility::conversions::to_string_t("application/json");
+    }
+    // JSON
+    else if ( localVarResponseHttpContentTypes.find(utility::conversions::to_string_t("application/json")) != localVarResponseHttpContentTypes.end() )
+    {
+        localVarResponseHttpContentType = utility::conversions::to_string_t("application/json");
+    }
+    // multipart formdata
+    else if( localVarResponseHttpContentTypes.find(utility::conversions::to_string_t("multipart/form-data")) != localVarResponseHttpContentTypes.end() )
+    {
+        localVarResponseHttpContentType = utility::conversions::to_string_t("multipart/form-data");
+    }
+    else
+    {
+        throw ApiException(400, utility::conversions::to_string_t("CurveApi->curve_GetLpTokens__historical does not produce any supported media type"));
+    }
+
+    localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
+
+    std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
+
+    if (startBlock)
+    {
+        localVarQueryParams[utility::conversions::to_string_t("startBlock")] = ApiClient::parameterToString(*startBlock);
+    }
+    if (endBlock)
+    {
+        localVarQueryParams[utility::conversions::to_string_t("endBlock")] = ApiClient::parameterToString(*endBlock);
+    }
+    if (startDate)
+    {
+        localVarQueryParams[utility::conversions::to_string_t("startDate")] = ApiClient::parameterToString(*startDate);
+    }
+    if (endDate)
+    {
+        localVarQueryParams[utility::conversions::to_string_t("endDate")] = ApiClient::parameterToString(*endDate);
+    }
+    if (poolId)
+    {
+        localVarQueryParams[utility::conversions::to_string_t("poolId")] = ApiClient::parameterToString(*poolId);
+    }
+
+    std::shared_ptr<IHttpBody> localVarHttpBody;
+    utility::string_t localVarRequestHttpContentType;
+
+    // use JSON if possible
+    if ( localVarConsumeHttpContentTypes.size() == 0 || localVarConsumeHttpContentTypes.find(utility::conversions::to_string_t("application/json")) != localVarConsumeHttpContentTypes.end() )
+    {
+        localVarRequestHttpContentType = utility::conversions::to_string_t("application/json");
+    }
+    // multipart formdata
+    else if( localVarConsumeHttpContentTypes.find(utility::conversions::to_string_t("multipart/form-data")) != localVarConsumeHttpContentTypes.end() )
+    {
+        localVarRequestHttpContentType = utility::conversions::to_string_t("multipart/form-data");
+    }
+    else if (localVarConsumeHttpContentTypes.find(utility::conversions::to_string_t("application/x-www-form-urlencoded")) != localVarConsumeHttpContentTypes.end())
+    {
+        localVarRequestHttpContentType = utility::conversions::to_string_t("application/x-www-form-urlencoded");
+    }
+    else
+    {
+        throw ApiException(415, utility::conversions::to_string_t("CurveApi->curve_GetLpTokens__historical does not consume any supported media type"));
+    }
+
+
+    return m_ApiClient->callApi(localVarPath, utility::conversions::to_string_t("GET"), localVarQueryParams, localVarHttpBody, localVarHeaderParams, localVarFormParams, localVarFileParams, localVarRequestHttpContentType)
+    .then([=](web::http::http_response localVarResponse)
+    {
+        if (m_ApiClient->getResponseHandler())
+        {
+            m_ApiClient->getResponseHandler()(localVarResponse.status_code(), localVarResponse.headers());
+        }
+
+        // 1xx - informational : OK
+        // 2xx - successful       : OK
+        // 3xx - redirection   : OK
+        // 4xx - client error  : not OK
+        // 5xx - client error  : not OK
+        if (localVarResponse.status_code() >= 400)
+        {
+            throw ApiException(localVarResponse.status_code()
+                , utility::conversions::to_string_t("error calling curve_GetLpTokens__historical: ") + localVarResponse.reason_phrase()
+                , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
+        }
+
+        // check response content type
+        if(localVarResponse.headers().has(utility::conversions::to_string_t("Content-Type")))
+        {
+            utility::string_t localVarContentType = localVarResponse.headers()[utility::conversions::to_string_t("Content-Type")];
+            if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
+            {
+                throw ApiException(500
+                    , utility::conversions::to_string_t("error calling curve_GetLpTokens__historical: unexpected response type: ") + localVarContentType
+                    , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
+            }
+        }
+
+        return localVarResponse.extract_string();
+    })
+    .then([=](utility::string_t localVarResponse)
+    {
+        std::vector<std::shared_ptr<Curve_LpTokenDTO>> localVarResult;
+
+        if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
+        {
+            web::json::value localVarJson = web::json::value::parse(localVarResponse);
+            for( auto& localVarItem : localVarJson.as_array() )
+            {
+                std::shared_ptr<Curve_LpTokenDTO> localVarItemObj;
+                ModelBase::fromJson(localVarItem, localVarItemObj);
+                localVarResult.push_back(localVarItemObj);
+            }
+        }
+        // else if(localVarResponseHttpContentType == utility::conversions::to_string_t("multipart/form-data"))
+        // {
+        // TODO multipart response parsing
+        // }
+        else
+        {
+            throw ApiException(500
+                , utility::conversions::to_string_t("error calling curve_GetLpTokens__historical: unsupported response type"));
+        }
+
+        return localVarResult;
+    });
+}
+pplx::task<std::vector<std::shared_ptr<Curve_PoolDTO>>> CurveApi::curve_GetPools__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> poolId) const
 {
 
 
@@ -2473,6 +3121,9 @@ pplx::task<void> CurveApi::dappsCurvePoolsHistoricalGet(boost::optional<int64_t>
     std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
 
     std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -2493,7 +3144,7 @@ pplx::task<void> CurveApi::dappsCurvePoolsHistoricalGet(boost::optional<int64_t>
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("CurveApi->dappsCurvePoolsHistoricalGet does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("CurveApi->curve_GetPools__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -2540,7 +3191,7 @@ pplx::task<void> CurveApi::dappsCurvePoolsHistoricalGet(boost::optional<int64_t>
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("CurveApi->dappsCurvePoolsHistoricalGet does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("CurveApi->curve_GetPools__historical does not consume any supported media type"));
     }
 
 
@@ -2560,7 +3211,7 @@ pplx::task<void> CurveApi::dappsCurvePoolsHistoricalGet(boost::optional<int64_t>
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsCurvePoolsHistoricalGet: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling curve_GetPools__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -2571,7 +3222,7 @@ pplx::task<void> CurveApi::dappsCurvePoolsHistoricalGet(boost::optional<int64_t>
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsCurvePoolsHistoricalGet: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling curve_GetPools__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -2580,10 +3231,176 @@ pplx::task<void> CurveApi::dappsCurvePoolsHistoricalGet(boost::optional<int64_t>
     })
     .then([=](utility::string_t localVarResponse)
     {
-        return void();
+        std::vector<std::shared_ptr<Curve_PoolDTO>> localVarResult;
+
+        if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
+        {
+            web::json::value localVarJson = web::json::value::parse(localVarResponse);
+            for( auto& localVarItem : localVarJson.as_array() )
+            {
+                std::shared_ptr<Curve_PoolDTO> localVarItemObj;
+                ModelBase::fromJson(localVarItem, localVarItemObj);
+                localVarResult.push_back(localVarItemObj);
+            }
+        }
+        // else if(localVarResponseHttpContentType == utility::conversions::to_string_t("multipart/form-data"))
+        // {
+        // TODO multipart response parsing
+        // }
+        else
+        {
+            throw ApiException(500
+                , utility::conversions::to_string_t("error calling curve_GetPools__historical: unsupported response type"));
+        }
+
+        return localVarResult;
     });
 }
-pplx::task<void> CurveApi::dappsCurveProposalsHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate) const
+pplx::task<std::vector<std::shared_ptr<Curve_ProposalVoteDTO>>> CurveApi::curve_GetProposalsVotes__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate) const
+{
+
+
+    std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
+    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/curve/proposalsVotes/historical");
+    
+    std::map<utility::string_t, utility::string_t> localVarQueryParams;
+    std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
+    std::map<utility::string_t, utility::string_t> localVarFormParams;
+    std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
+
+    std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
+
+    utility::string_t localVarResponseHttpContentType;
+
+    // use JSON if possible
+    if ( localVarResponseHttpContentTypes.size() == 0 )
+    {
+        localVarResponseHttpContentType = utility::conversions::to_string_t("application/json");
+    }
+    // JSON
+    else if ( localVarResponseHttpContentTypes.find(utility::conversions::to_string_t("application/json")) != localVarResponseHttpContentTypes.end() )
+    {
+        localVarResponseHttpContentType = utility::conversions::to_string_t("application/json");
+    }
+    // multipart formdata
+    else if( localVarResponseHttpContentTypes.find(utility::conversions::to_string_t("multipart/form-data")) != localVarResponseHttpContentTypes.end() )
+    {
+        localVarResponseHttpContentType = utility::conversions::to_string_t("multipart/form-data");
+    }
+    else
+    {
+        throw ApiException(400, utility::conversions::to_string_t("CurveApi->curve_GetProposalsVotes__historical does not produce any supported media type"));
+    }
+
+    localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
+
+    std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
+
+    if (startBlock)
+    {
+        localVarQueryParams[utility::conversions::to_string_t("startBlock")] = ApiClient::parameterToString(*startBlock);
+    }
+    if (endBlock)
+    {
+        localVarQueryParams[utility::conversions::to_string_t("endBlock")] = ApiClient::parameterToString(*endBlock);
+    }
+    if (startDate)
+    {
+        localVarQueryParams[utility::conversions::to_string_t("startDate")] = ApiClient::parameterToString(*startDate);
+    }
+    if (endDate)
+    {
+        localVarQueryParams[utility::conversions::to_string_t("endDate")] = ApiClient::parameterToString(*endDate);
+    }
+
+    std::shared_ptr<IHttpBody> localVarHttpBody;
+    utility::string_t localVarRequestHttpContentType;
+
+    // use JSON if possible
+    if ( localVarConsumeHttpContentTypes.size() == 0 || localVarConsumeHttpContentTypes.find(utility::conversions::to_string_t("application/json")) != localVarConsumeHttpContentTypes.end() )
+    {
+        localVarRequestHttpContentType = utility::conversions::to_string_t("application/json");
+    }
+    // multipart formdata
+    else if( localVarConsumeHttpContentTypes.find(utility::conversions::to_string_t("multipart/form-data")) != localVarConsumeHttpContentTypes.end() )
+    {
+        localVarRequestHttpContentType = utility::conversions::to_string_t("multipart/form-data");
+    }
+    else if (localVarConsumeHttpContentTypes.find(utility::conversions::to_string_t("application/x-www-form-urlencoded")) != localVarConsumeHttpContentTypes.end())
+    {
+        localVarRequestHttpContentType = utility::conversions::to_string_t("application/x-www-form-urlencoded");
+    }
+    else
+    {
+        throw ApiException(415, utility::conversions::to_string_t("CurveApi->curve_GetProposalsVotes__historical does not consume any supported media type"));
+    }
+
+
+    return m_ApiClient->callApi(localVarPath, utility::conversions::to_string_t("GET"), localVarQueryParams, localVarHttpBody, localVarHeaderParams, localVarFormParams, localVarFileParams, localVarRequestHttpContentType)
+    .then([=](web::http::http_response localVarResponse)
+    {
+        if (m_ApiClient->getResponseHandler())
+        {
+            m_ApiClient->getResponseHandler()(localVarResponse.status_code(), localVarResponse.headers());
+        }
+
+        // 1xx - informational : OK
+        // 2xx - successful       : OK
+        // 3xx - redirection   : OK
+        // 4xx - client error  : not OK
+        // 5xx - client error  : not OK
+        if (localVarResponse.status_code() >= 400)
+        {
+            throw ApiException(localVarResponse.status_code()
+                , utility::conversions::to_string_t("error calling curve_GetProposalsVotes__historical: ") + localVarResponse.reason_phrase()
+                , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
+        }
+
+        // check response content type
+        if(localVarResponse.headers().has(utility::conversions::to_string_t("Content-Type")))
+        {
+            utility::string_t localVarContentType = localVarResponse.headers()[utility::conversions::to_string_t("Content-Type")];
+            if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
+            {
+                throw ApiException(500
+                    , utility::conversions::to_string_t("error calling curve_GetProposalsVotes__historical: unexpected response type: ") + localVarContentType
+                    , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
+            }
+        }
+
+        return localVarResponse.extract_string();
+    })
+    .then([=](utility::string_t localVarResponse)
+    {
+        std::vector<std::shared_ptr<Curve_ProposalVoteDTO>> localVarResult;
+
+        if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
+        {
+            web::json::value localVarJson = web::json::value::parse(localVarResponse);
+            for( auto& localVarItem : localVarJson.as_array() )
+            {
+                std::shared_ptr<Curve_ProposalVoteDTO> localVarItemObj;
+                ModelBase::fromJson(localVarItem, localVarItemObj);
+                localVarResult.push_back(localVarItemObj);
+            }
+        }
+        // else if(localVarResponseHttpContentType == utility::conversions::to_string_t("multipart/form-data"))
+        // {
+        // TODO multipart response parsing
+        // }
+        else
+        {
+            throw ApiException(500
+                , utility::conversions::to_string_t("error calling curve_GetProposalsVotes__historical: unsupported response type"));
+        }
+
+        return localVarResult;
+    });
+}
+pplx::task<std::vector<std::shared_ptr<Curve_ProposalDTO>>> CurveApi::curve_GetProposals__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate) const
 {
 
 
@@ -2596,6 +3413,9 @@ pplx::task<void> CurveApi::dappsCurveProposalsHistoricalGet(boost::optional<int6
     std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
 
     std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -2616,7 +3436,7 @@ pplx::task<void> CurveApi::dappsCurveProposalsHistoricalGet(boost::optional<int6
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("CurveApi->dappsCurveProposalsHistoricalGet does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("CurveApi->curve_GetProposals__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -2659,7 +3479,7 @@ pplx::task<void> CurveApi::dappsCurveProposalsHistoricalGet(boost::optional<int6
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("CurveApi->dappsCurveProposalsHistoricalGet does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("CurveApi->curve_GetProposals__historical does not consume any supported media type"));
     }
 
 
@@ -2679,7 +3499,7 @@ pplx::task<void> CurveApi::dappsCurveProposalsHistoricalGet(boost::optional<int6
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsCurveProposalsHistoricalGet: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling curve_GetProposals__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -2690,7 +3510,7 @@ pplx::task<void> CurveApi::dappsCurveProposalsHistoricalGet(boost::optional<int6
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsCurveProposalsHistoricalGet: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling curve_GetProposals__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -2699,15 +3519,37 @@ pplx::task<void> CurveApi::dappsCurveProposalsHistoricalGet(boost::optional<int6
     })
     .then([=](utility::string_t localVarResponse)
     {
-        return void();
+        std::vector<std::shared_ptr<Curve_ProposalDTO>> localVarResult;
+
+        if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
+        {
+            web::json::value localVarJson = web::json::value::parse(localVarResponse);
+            for( auto& localVarItem : localVarJson.as_array() )
+            {
+                std::shared_ptr<Curve_ProposalDTO> localVarItemObj;
+                ModelBase::fromJson(localVarItem, localVarItemObj);
+                localVarResult.push_back(localVarItemObj);
+            }
+        }
+        // else if(localVarResponseHttpContentType == utility::conversions::to_string_t("multipart/form-data"))
+        // {
+        // TODO multipart response parsing
+        // }
+        else
+        {
+            throw ApiException(500
+                , utility::conversions::to_string_t("error calling curve_GetProposals__historical: unsupported response type"));
+        }
+
+        return localVarResult;
     });
 }
-pplx::task<void> CurveApi::dappsCurveProposalsVoteHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate) const
+pplx::task<std::vector<std::shared_ptr<Curve_RemoveLiquidityEventDTO>>> CurveApi::curve_GetRemoveLiquidityEvents__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> poolId) const
 {
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/curve/proposalsVote/historical");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/curve/removeLiquidityEvents/historical");
     
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -2715,6 +3557,9 @@ pplx::task<void> CurveApi::dappsCurveProposalsVoteHistoricalGet(boost::optional<
     std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
 
     std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -2735,126 +3580,7 @@ pplx::task<void> CurveApi::dappsCurveProposalsVoteHistoricalGet(boost::optional<
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("CurveApi->dappsCurveProposalsVoteHistoricalGet does not produce any supported media type"));
-    }
-
-    localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
-
-    std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
-
-    if (startBlock)
-    {
-        localVarQueryParams[utility::conversions::to_string_t("startBlock")] = ApiClient::parameterToString(*startBlock);
-    }
-    if (endBlock)
-    {
-        localVarQueryParams[utility::conversions::to_string_t("endBlock")] = ApiClient::parameterToString(*endBlock);
-    }
-    if (startDate)
-    {
-        localVarQueryParams[utility::conversions::to_string_t("startDate")] = ApiClient::parameterToString(*startDate);
-    }
-    if (endDate)
-    {
-        localVarQueryParams[utility::conversions::to_string_t("endDate")] = ApiClient::parameterToString(*endDate);
-    }
-
-    std::shared_ptr<IHttpBody> localVarHttpBody;
-    utility::string_t localVarRequestHttpContentType;
-
-    // use JSON if possible
-    if ( localVarConsumeHttpContentTypes.size() == 0 || localVarConsumeHttpContentTypes.find(utility::conversions::to_string_t("application/json")) != localVarConsumeHttpContentTypes.end() )
-    {
-        localVarRequestHttpContentType = utility::conversions::to_string_t("application/json");
-    }
-    // multipart formdata
-    else if( localVarConsumeHttpContentTypes.find(utility::conversions::to_string_t("multipart/form-data")) != localVarConsumeHttpContentTypes.end() )
-    {
-        localVarRequestHttpContentType = utility::conversions::to_string_t("multipart/form-data");
-    }
-    else if (localVarConsumeHttpContentTypes.find(utility::conversions::to_string_t("application/x-www-form-urlencoded")) != localVarConsumeHttpContentTypes.end())
-    {
-        localVarRequestHttpContentType = utility::conversions::to_string_t("application/x-www-form-urlencoded");
-    }
-    else
-    {
-        throw ApiException(415, utility::conversions::to_string_t("CurveApi->dappsCurveProposalsVoteHistoricalGet does not consume any supported media type"));
-    }
-
-
-    return m_ApiClient->callApi(localVarPath, utility::conversions::to_string_t("GET"), localVarQueryParams, localVarHttpBody, localVarHeaderParams, localVarFormParams, localVarFileParams, localVarRequestHttpContentType)
-    .then([=](web::http::http_response localVarResponse)
-    {
-        if (m_ApiClient->getResponseHandler())
-        {
-            m_ApiClient->getResponseHandler()(localVarResponse.status_code(), localVarResponse.headers());
-        }
-
-        // 1xx - informational : OK
-        // 2xx - successful       : OK
-        // 3xx - redirection   : OK
-        // 4xx - client error  : not OK
-        // 5xx - client error  : not OK
-        if (localVarResponse.status_code() >= 400)
-        {
-            throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsCurveProposalsVoteHistoricalGet: ") + localVarResponse.reason_phrase()
-                , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
-        }
-
-        // check response content type
-        if(localVarResponse.headers().has(utility::conversions::to_string_t("Content-Type")))
-        {
-            utility::string_t localVarContentType = localVarResponse.headers()[utility::conversions::to_string_t("Content-Type")];
-            if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
-            {
-                throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsCurveProposalsVoteHistoricalGet: unexpected response type: ") + localVarContentType
-                    , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
-            }
-        }
-
-        return localVarResponse.extract_string();
-    })
-    .then([=](utility::string_t localVarResponse)
-    {
-        return void();
-    });
-}
-pplx::task<void> CurveApi::dappsCurveRemoveLiquidityEventHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> poolId) const
-{
-
-
-    std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/curve/removeLiquidityEvent/historical");
-    
-    std::map<utility::string_t, utility::string_t> localVarQueryParams;
-    std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
-    std::map<utility::string_t, utility::string_t> localVarFormParams;
-    std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
-
-    std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
-
-    utility::string_t localVarResponseHttpContentType;
-
-    // use JSON if possible
-    if ( localVarResponseHttpContentTypes.size() == 0 )
-    {
-        localVarResponseHttpContentType = utility::conversions::to_string_t("application/json");
-    }
-    // JSON
-    else if ( localVarResponseHttpContentTypes.find(utility::conversions::to_string_t("application/json")) != localVarResponseHttpContentTypes.end() )
-    {
-        localVarResponseHttpContentType = utility::conversions::to_string_t("application/json");
-    }
-    // multipart formdata
-    else if( localVarResponseHttpContentTypes.find(utility::conversions::to_string_t("multipart/form-data")) != localVarResponseHttpContentTypes.end() )
-    {
-        localVarResponseHttpContentType = utility::conversions::to_string_t("multipart/form-data");
-    }
-    else
-    {
-        throw ApiException(400, utility::conversions::to_string_t("CurveApi->dappsCurveRemoveLiquidityEventHistoricalGet does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("CurveApi->curve_GetRemoveLiquidityEvents__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -2901,7 +3627,7 @@ pplx::task<void> CurveApi::dappsCurveRemoveLiquidityEventHistoricalGet(boost::op
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("CurveApi->dappsCurveRemoveLiquidityEventHistoricalGet does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("CurveApi->curve_GetRemoveLiquidityEvents__historical does not consume any supported media type"));
     }
 
 
@@ -2921,7 +3647,7 @@ pplx::task<void> CurveApi::dappsCurveRemoveLiquidityEventHistoricalGet(boost::op
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsCurveRemoveLiquidityEventHistoricalGet: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling curve_GetRemoveLiquidityEvents__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -2932,7 +3658,7 @@ pplx::task<void> CurveApi::dappsCurveRemoveLiquidityEventHistoricalGet(boost::op
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsCurveRemoveLiquidityEventHistoricalGet: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling curve_GetRemoveLiquidityEvents__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -2941,15 +3667,37 @@ pplx::task<void> CurveApi::dappsCurveRemoveLiquidityEventHistoricalGet(boost::op
     })
     .then([=](utility::string_t localVarResponse)
     {
-        return void();
+        std::vector<std::shared_ptr<Curve_RemoveLiquidityEventDTO>> localVarResult;
+
+        if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
+        {
+            web::json::value localVarJson = web::json::value::parse(localVarResponse);
+            for( auto& localVarItem : localVarJson.as_array() )
+            {
+                std::shared_ptr<Curve_RemoveLiquidityEventDTO> localVarItemObj;
+                ModelBase::fromJson(localVarItem, localVarItemObj);
+                localVarResult.push_back(localVarItemObj);
+            }
+        }
+        // else if(localVarResponseHttpContentType == utility::conversions::to_string_t("multipart/form-data"))
+        // {
+        // TODO multipart response parsing
+        // }
+        else
+        {
+            throw ApiException(500
+                , utility::conversions::to_string_t("error calling curve_GetRemoveLiquidityEvents__historical: unsupported response type"));
+        }
+
+        return localVarResult;
     });
 }
-pplx::task<void> CurveApi::dappsCurveRemoveLiquidityOneEventHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> poolId) const
+pplx::task<std::vector<std::shared_ptr<Curve_RemoveLiquidityOneEventDTO>>> CurveApi::curve_GetRemoveLiquidityOneEvents__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> poolId) const
 {
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/curve/removeLiquidityOneEvent/historical");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/curve/removeLiquidityOneEvents/historical");
     
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -2957,6 +3705,9 @@ pplx::task<void> CurveApi::dappsCurveRemoveLiquidityOneEventHistoricalGet(boost:
     std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
 
     std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -2977,7 +3728,7 @@ pplx::task<void> CurveApi::dappsCurveRemoveLiquidityOneEventHistoricalGet(boost:
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("CurveApi->dappsCurveRemoveLiquidityOneEventHistoricalGet does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("CurveApi->curve_GetRemoveLiquidityOneEvents__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -3024,7 +3775,7 @@ pplx::task<void> CurveApi::dappsCurveRemoveLiquidityOneEventHistoricalGet(boost:
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("CurveApi->dappsCurveRemoveLiquidityOneEventHistoricalGet does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("CurveApi->curve_GetRemoveLiquidityOneEvents__historical does not consume any supported media type"));
     }
 
 
@@ -3044,7 +3795,7 @@ pplx::task<void> CurveApi::dappsCurveRemoveLiquidityOneEventHistoricalGet(boost:
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsCurveRemoveLiquidityOneEventHistoricalGet: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling curve_GetRemoveLiquidityOneEvents__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -3055,7 +3806,7 @@ pplx::task<void> CurveApi::dappsCurveRemoveLiquidityOneEventHistoricalGet(boost:
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsCurveRemoveLiquidityOneEventHistoricalGet: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling curve_GetRemoveLiquidityOneEvents__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -3064,15 +3815,37 @@ pplx::task<void> CurveApi::dappsCurveRemoveLiquidityOneEventHistoricalGet(boost:
     })
     .then([=](utility::string_t localVarResponse)
     {
-        return void();
+        std::vector<std::shared_ptr<Curve_RemoveLiquidityOneEventDTO>> localVarResult;
+
+        if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
+        {
+            web::json::value localVarJson = web::json::value::parse(localVarResponse);
+            for( auto& localVarItem : localVarJson.as_array() )
+            {
+                std::shared_ptr<Curve_RemoveLiquidityOneEventDTO> localVarItemObj;
+                ModelBase::fromJson(localVarItem, localVarItemObj);
+                localVarResult.push_back(localVarItemObj);
+            }
+        }
+        // else if(localVarResponseHttpContentType == utility::conversions::to_string_t("multipart/form-data"))
+        // {
+        // TODO multipart response parsing
+        // }
+        else
+        {
+            throw ApiException(500
+                , utility::conversions::to_string_t("error calling curve_GetRemoveLiquidityOneEvents__historical: unsupported response type"));
+        }
+
+        return localVarResult;
     });
 }
-pplx::task<void> CurveApi::dappsCurveSwapsHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> poolId) const
+pplx::task<std::vector<std::shared_ptr<Curve_SystemStateDTO>>> CurveApi::curve_GetSystemStates__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate) const
 {
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/curve/swaps/historical");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/curve/systemStates/historical");
     
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -3080,6 +3853,9 @@ pplx::task<void> CurveApi::dappsCurveSwapsHistoricalGet(boost::optional<int64_t>
     std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
 
     std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -3100,130 +3876,7 @@ pplx::task<void> CurveApi::dappsCurveSwapsHistoricalGet(boost::optional<int64_t>
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("CurveApi->dappsCurveSwapsHistoricalGet does not produce any supported media type"));
-    }
-
-    localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
-
-    std::unordered_set<utility::string_t> localVarConsumeHttpContentTypes;
-
-    if (startBlock)
-    {
-        localVarQueryParams[utility::conversions::to_string_t("startBlock")] = ApiClient::parameterToString(*startBlock);
-    }
-    if (endBlock)
-    {
-        localVarQueryParams[utility::conversions::to_string_t("endBlock")] = ApiClient::parameterToString(*endBlock);
-    }
-    if (startDate)
-    {
-        localVarQueryParams[utility::conversions::to_string_t("startDate")] = ApiClient::parameterToString(*startDate);
-    }
-    if (endDate)
-    {
-        localVarQueryParams[utility::conversions::to_string_t("endDate")] = ApiClient::parameterToString(*endDate);
-    }
-    if (poolId)
-    {
-        localVarQueryParams[utility::conversions::to_string_t("poolId")] = ApiClient::parameterToString(*poolId);
-    }
-
-    std::shared_ptr<IHttpBody> localVarHttpBody;
-    utility::string_t localVarRequestHttpContentType;
-
-    // use JSON if possible
-    if ( localVarConsumeHttpContentTypes.size() == 0 || localVarConsumeHttpContentTypes.find(utility::conversions::to_string_t("application/json")) != localVarConsumeHttpContentTypes.end() )
-    {
-        localVarRequestHttpContentType = utility::conversions::to_string_t("application/json");
-    }
-    // multipart formdata
-    else if( localVarConsumeHttpContentTypes.find(utility::conversions::to_string_t("multipart/form-data")) != localVarConsumeHttpContentTypes.end() )
-    {
-        localVarRequestHttpContentType = utility::conversions::to_string_t("multipart/form-data");
-    }
-    else if (localVarConsumeHttpContentTypes.find(utility::conversions::to_string_t("application/x-www-form-urlencoded")) != localVarConsumeHttpContentTypes.end())
-    {
-        localVarRequestHttpContentType = utility::conversions::to_string_t("application/x-www-form-urlencoded");
-    }
-    else
-    {
-        throw ApiException(415, utility::conversions::to_string_t("CurveApi->dappsCurveSwapsHistoricalGet does not consume any supported media type"));
-    }
-
-
-    return m_ApiClient->callApi(localVarPath, utility::conversions::to_string_t("GET"), localVarQueryParams, localVarHttpBody, localVarHeaderParams, localVarFormParams, localVarFileParams, localVarRequestHttpContentType)
-    .then([=](web::http::http_response localVarResponse)
-    {
-        if (m_ApiClient->getResponseHandler())
-        {
-            m_ApiClient->getResponseHandler()(localVarResponse.status_code(), localVarResponse.headers());
-        }
-
-        // 1xx - informational : OK
-        // 2xx - successful       : OK
-        // 3xx - redirection   : OK
-        // 4xx - client error  : not OK
-        // 5xx - client error  : not OK
-        if (localVarResponse.status_code() >= 400)
-        {
-            throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsCurveSwapsHistoricalGet: ") + localVarResponse.reason_phrase()
-                , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
-        }
-
-        // check response content type
-        if(localVarResponse.headers().has(utility::conversions::to_string_t("Content-Type")))
-        {
-            utility::string_t localVarContentType = localVarResponse.headers()[utility::conversions::to_string_t("Content-Type")];
-            if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
-            {
-                throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsCurveSwapsHistoricalGet: unexpected response type: ") + localVarContentType
-                    , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
-            }
-        }
-
-        return localVarResponse.extract_string();
-    })
-    .then([=](utility::string_t localVarResponse)
-    {
-        return void();
-    });
-}
-pplx::task<void> CurveApi::dappsCurveSystemStateHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate) const
-{
-
-
-    std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/curve/systemState/historical");
-    
-    std::map<utility::string_t, utility::string_t> localVarQueryParams;
-    std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
-    std::map<utility::string_t, utility::string_t> localVarFormParams;
-    std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
-
-    std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
-
-    utility::string_t localVarResponseHttpContentType;
-
-    // use JSON if possible
-    if ( localVarResponseHttpContentTypes.size() == 0 )
-    {
-        localVarResponseHttpContentType = utility::conversions::to_string_t("application/json");
-    }
-    // JSON
-    else if ( localVarResponseHttpContentTypes.find(utility::conversions::to_string_t("application/json")) != localVarResponseHttpContentTypes.end() )
-    {
-        localVarResponseHttpContentType = utility::conversions::to_string_t("application/json");
-    }
-    // multipart formdata
-    else if( localVarResponseHttpContentTypes.find(utility::conversions::to_string_t("multipart/form-data")) != localVarResponseHttpContentTypes.end() )
-    {
-        localVarResponseHttpContentType = utility::conversions::to_string_t("multipart/form-data");
-    }
-    else
-    {
-        throw ApiException(400, utility::conversions::to_string_t("CurveApi->dappsCurveSystemStateHistoricalGet does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("CurveApi->curve_GetSystemStates__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -3266,7 +3919,7 @@ pplx::task<void> CurveApi::dappsCurveSystemStateHistoricalGet(boost::optional<in
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("CurveApi->dappsCurveSystemStateHistoricalGet does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("CurveApi->curve_GetSystemStates__historical does not consume any supported media type"));
     }
 
 
@@ -3286,7 +3939,7 @@ pplx::task<void> CurveApi::dappsCurveSystemStateHistoricalGet(boost::optional<in
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsCurveSystemStateHistoricalGet: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling curve_GetSystemStates__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -3297,7 +3950,7 @@ pplx::task<void> CurveApi::dappsCurveSystemStateHistoricalGet(boost::optional<in
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsCurveSystemStateHistoricalGet: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling curve_GetSystemStates__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -3306,10 +3959,32 @@ pplx::task<void> CurveApi::dappsCurveSystemStateHistoricalGet(boost::optional<in
     })
     .then([=](utility::string_t localVarResponse)
     {
-        return void();
+        std::vector<std::shared_ptr<Curve_SystemStateDTO>> localVarResult;
+
+        if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
+        {
+            web::json::value localVarJson = web::json::value::parse(localVarResponse);
+            for( auto& localVarItem : localVarJson.as_array() )
+            {
+                std::shared_ptr<Curve_SystemStateDTO> localVarItemObj;
+                ModelBase::fromJson(localVarItem, localVarItemObj);
+                localVarResult.push_back(localVarItemObj);
+            }
+        }
+        // else if(localVarResponseHttpContentType == utility::conversions::to_string_t("multipart/form-data"))
+        // {
+        // TODO multipart response parsing
+        // }
+        else
+        {
+            throw ApiException(500
+                , utility::conversions::to_string_t("error calling curve_GetSystemStates__historical: unsupported response type"));
+        }
+
+        return localVarResult;
     });
 }
-pplx::task<void> CurveApi::dappsCurveTokensHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> tokenId) const
+pplx::task<std::vector<std::shared_ptr<Curve_TokenDTO>>> CurveApi::curve_GetTokens__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> tokenId) const
 {
 
 
@@ -3322,6 +3997,9 @@ pplx::task<void> CurveApi::dappsCurveTokensHistoricalGet(boost::optional<int64_t
     std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
 
     std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -3342,7 +4020,7 @@ pplx::task<void> CurveApi::dappsCurveTokensHistoricalGet(boost::optional<int64_t
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("CurveApi->dappsCurveTokensHistoricalGet does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("CurveApi->curve_GetTokens__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -3389,7 +4067,7 @@ pplx::task<void> CurveApi::dappsCurveTokensHistoricalGet(boost::optional<int64_t
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("CurveApi->dappsCurveTokensHistoricalGet does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("CurveApi->curve_GetTokens__historical does not consume any supported media type"));
     }
 
 
@@ -3409,7 +4087,7 @@ pplx::task<void> CurveApi::dappsCurveTokensHistoricalGet(boost::optional<int64_t
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsCurveTokensHistoricalGet: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling curve_GetTokens__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -3420,7 +4098,7 @@ pplx::task<void> CurveApi::dappsCurveTokensHistoricalGet(boost::optional<int64_t
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsCurveTokensHistoricalGet: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling curve_GetTokens__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -3429,15 +4107,37 @@ pplx::task<void> CurveApi::dappsCurveTokensHistoricalGet(boost::optional<int64_t
     })
     .then([=](utility::string_t localVarResponse)
     {
-        return void();
+        std::vector<std::shared_ptr<Curve_TokenDTO>> localVarResult;
+
+        if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
+        {
+            web::json::value localVarJson = web::json::value::parse(localVarResponse);
+            for( auto& localVarItem : localVarJson.as_array() )
+            {
+                std::shared_ptr<Curve_TokenDTO> localVarItemObj;
+                ModelBase::fromJson(localVarItem, localVarItemObj);
+                localVarResult.push_back(localVarItemObj);
+            }
+        }
+        // else if(localVarResponseHttpContentType == utility::conversions::to_string_t("multipart/form-data"))
+        // {
+        // TODO multipart response parsing
+        // }
+        else
+        {
+            throw ApiException(500
+                , utility::conversions::to_string_t("error calling curve_GetTokens__historical: unsupported response type"));
+        }
+
+        return localVarResult;
     });
 }
-pplx::task<void> CurveApi::dappsCurveTransferOwnershipEventHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> poolId) const
+pplx::task<std::vector<std::shared_ptr<Curve_TransferOwnershipEventDTO>>> CurveApi::curve_GetTransferOwnershipEvents__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> poolId) const
 {
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/curve/transferOwnershipEvent/historical");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/curve/transferOwnershipEvents/historical");
     
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -3445,6 +4145,9 @@ pplx::task<void> CurveApi::dappsCurveTransferOwnershipEventHistoricalGet(boost::
     std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
 
     std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -3465,7 +4168,7 @@ pplx::task<void> CurveApi::dappsCurveTransferOwnershipEventHistoricalGet(boost::
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("CurveApi->dappsCurveTransferOwnershipEventHistoricalGet does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("CurveApi->curve_GetTransferOwnershipEvents__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -3512,7 +4215,7 @@ pplx::task<void> CurveApi::dappsCurveTransferOwnershipEventHistoricalGet(boost::
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("CurveApi->dappsCurveTransferOwnershipEventHistoricalGet does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("CurveApi->curve_GetTransferOwnershipEvents__historical does not consume any supported media type"));
     }
 
 
@@ -3532,7 +4235,7 @@ pplx::task<void> CurveApi::dappsCurveTransferOwnershipEventHistoricalGet(boost::
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsCurveTransferOwnershipEventHistoricalGet: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling curve_GetTransferOwnershipEvents__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -3543,7 +4246,7 @@ pplx::task<void> CurveApi::dappsCurveTransferOwnershipEventHistoricalGet(boost::
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsCurveTransferOwnershipEventHistoricalGet: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling curve_GetTransferOwnershipEvents__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -3552,15 +4255,37 @@ pplx::task<void> CurveApi::dappsCurveTransferOwnershipEventHistoricalGet(boost::
     })
     .then([=](utility::string_t localVarResponse)
     {
-        return void();
+        std::vector<std::shared_ptr<Curve_TransferOwnershipEventDTO>> localVarResult;
+
+        if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
+        {
+            web::json::value localVarJson = web::json::value::parse(localVarResponse);
+            for( auto& localVarItem : localVarJson.as_array() )
+            {
+                std::shared_ptr<Curve_TransferOwnershipEventDTO> localVarItemObj;
+                ModelBase::fromJson(localVarItem, localVarItemObj);
+                localVarResult.push_back(localVarItemObj);
+            }
+        }
+        // else if(localVarResponseHttpContentType == utility::conversions::to_string_t("multipart/form-data"))
+        // {
+        // TODO multipart response parsing
+        // }
+        else
+        {
+            throw ApiException(500
+                , utility::conversions::to_string_t("error calling curve_GetTransferOwnershipEvents__historical: unsupported response type"));
+        }
+
+        return localVarResult;
     });
 }
-pplx::task<void> CurveApi::dappsCurveUnderlyingCoinHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> poolId) const
+pplx::task<std::vector<std::shared_ptr<Curve_UnderlyingCoinDTO>>> CurveApi::curve_GetUnderlyingCoins__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> poolId) const
 {
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/curve/underlyingCoin/historical");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/curve/underlyingCoins/historical");
     
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -3568,6 +4293,9 @@ pplx::task<void> CurveApi::dappsCurveUnderlyingCoinHistoricalGet(boost::optional
     std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
 
     std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -3588,7 +4316,7 @@ pplx::task<void> CurveApi::dappsCurveUnderlyingCoinHistoricalGet(boost::optional
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("CurveApi->dappsCurveUnderlyingCoinHistoricalGet does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("CurveApi->curve_GetUnderlyingCoins__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -3635,7 +4363,7 @@ pplx::task<void> CurveApi::dappsCurveUnderlyingCoinHistoricalGet(boost::optional
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("CurveApi->dappsCurveUnderlyingCoinHistoricalGet does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("CurveApi->curve_GetUnderlyingCoins__historical does not consume any supported media type"));
     }
 
 
@@ -3655,7 +4383,7 @@ pplx::task<void> CurveApi::dappsCurveUnderlyingCoinHistoricalGet(boost::optional
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsCurveUnderlyingCoinHistoricalGet: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling curve_GetUnderlyingCoins__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -3666,7 +4394,7 @@ pplx::task<void> CurveApi::dappsCurveUnderlyingCoinHistoricalGet(boost::optional
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsCurveUnderlyingCoinHistoricalGet: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling curve_GetUnderlyingCoins__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -3675,15 +4403,37 @@ pplx::task<void> CurveApi::dappsCurveUnderlyingCoinHistoricalGet(boost::optional
     })
     .then([=](utility::string_t localVarResponse)
     {
-        return void();
+        std::vector<std::shared_ptr<Curve_UnderlyingCoinDTO>> localVarResult;
+
+        if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
+        {
+            web::json::value localVarJson = web::json::value::parse(localVarResponse);
+            for( auto& localVarItem : localVarJson.as_array() )
+            {
+                std::shared_ptr<Curve_UnderlyingCoinDTO> localVarItemObj;
+                ModelBase::fromJson(localVarItem, localVarItemObj);
+                localVarResult.push_back(localVarItemObj);
+            }
+        }
+        // else if(localVarResponseHttpContentType == utility::conversions::to_string_t("multipart/form-data"))
+        // {
+        // TODO multipart response parsing
+        // }
+        else
+        {
+            throw ApiException(500
+                , utility::conversions::to_string_t("error calling curve_GetUnderlyingCoins__historical: unsupported response type"));
+        }
+
+        return localVarResult;
     });
 }
-pplx::task<void> CurveApi::dappsCurveVotingAppHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate) const
+pplx::task<std::vector<std::shared_ptr<Curve_VotingAppDTO>>> CurveApi::curve_GetVotingApps__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate) const
 {
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/curve/votingApp/historical");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/curve/votingApps/historical");
     
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -3691,6 +4441,9 @@ pplx::task<void> CurveApi::dappsCurveVotingAppHistoricalGet(boost::optional<int6
     std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
 
     std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -3711,7 +4464,7 @@ pplx::task<void> CurveApi::dappsCurveVotingAppHistoricalGet(boost::optional<int6
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("CurveApi->dappsCurveVotingAppHistoricalGet does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("CurveApi->curve_GetVotingApps__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -3754,7 +4507,7 @@ pplx::task<void> CurveApi::dappsCurveVotingAppHistoricalGet(boost::optional<int6
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("CurveApi->dappsCurveVotingAppHistoricalGet does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("CurveApi->curve_GetVotingApps__historical does not consume any supported media type"));
     }
 
 
@@ -3774,7 +4527,7 @@ pplx::task<void> CurveApi::dappsCurveVotingAppHistoricalGet(boost::optional<int6
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsCurveVotingAppHistoricalGet: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling curve_GetVotingApps__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -3785,7 +4538,7 @@ pplx::task<void> CurveApi::dappsCurveVotingAppHistoricalGet(boost::optional<int6
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsCurveVotingAppHistoricalGet: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling curve_GetVotingApps__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -3794,15 +4547,37 @@ pplx::task<void> CurveApi::dappsCurveVotingAppHistoricalGet(boost::optional<int6
     })
     .then([=](utility::string_t localVarResponse)
     {
-        return void();
+        std::vector<std::shared_ptr<Curve_VotingAppDTO>> localVarResult;
+
+        if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
+        {
+            web::json::value localVarJson = web::json::value::parse(localVarResponse);
+            for( auto& localVarItem : localVarJson.as_array() )
+            {
+                std::shared_ptr<Curve_VotingAppDTO> localVarItemObj;
+                ModelBase::fromJson(localVarItem, localVarItemObj);
+                localVarResult.push_back(localVarItemObj);
+            }
+        }
+        // else if(localVarResponseHttpContentType == utility::conversions::to_string_t("multipart/form-data"))
+        // {
+        // TODO multipart response parsing
+        // }
+        else
+        {
+            throw ApiException(500
+                , utility::conversions::to_string_t("error calling curve_GetVotingApps__historical: unsupported response type"));
+        }
+
+        return localVarResult;
     });
 }
-pplx::task<void> CurveApi::dappsCurveWeeklyVolumeHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> poolId) const
+pplx::task<std::vector<std::shared_ptr<Curve_WeeklyVolumeDTO>>> CurveApi::curve_GetWeeklyVolumes__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> poolId) const
 {
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/curve/weeklyVolume/historical");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/curve/weeklyVolumes/historical");
     
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -3810,6 +4585,9 @@ pplx::task<void> CurveApi::dappsCurveWeeklyVolumeHistoricalGet(boost::optional<i
     std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
 
     std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -3830,7 +4608,7 @@ pplx::task<void> CurveApi::dappsCurveWeeklyVolumeHistoricalGet(boost::optional<i
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("CurveApi->dappsCurveWeeklyVolumeHistoricalGet does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("CurveApi->curve_GetWeeklyVolumes__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -3877,7 +4655,7 @@ pplx::task<void> CurveApi::dappsCurveWeeklyVolumeHistoricalGet(boost::optional<i
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("CurveApi->dappsCurveWeeklyVolumeHistoricalGet does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("CurveApi->curve_GetWeeklyVolumes__historical does not consume any supported media type"));
     }
 
 
@@ -3897,7 +4675,7 @@ pplx::task<void> CurveApi::dappsCurveWeeklyVolumeHistoricalGet(boost::optional<i
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsCurveWeeklyVolumeHistoricalGet: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling curve_GetWeeklyVolumes__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -3908,7 +4686,7 @@ pplx::task<void> CurveApi::dappsCurveWeeklyVolumeHistoricalGet(boost::optional<i
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsCurveWeeklyVolumeHistoricalGet: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling curve_GetWeeklyVolumes__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -3917,7 +4695,29 @@ pplx::task<void> CurveApi::dappsCurveWeeklyVolumeHistoricalGet(boost::optional<i
     })
     .then([=](utility::string_t localVarResponse)
     {
-        return void();
+        std::vector<std::shared_ptr<Curve_WeeklyVolumeDTO>> localVarResult;
+
+        if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
+        {
+            web::json::value localVarJson = web::json::value::parse(localVarResponse);
+            for( auto& localVarItem : localVarJson.as_array() )
+            {
+                std::shared_ptr<Curve_WeeklyVolumeDTO> localVarItemObj;
+                ModelBase::fromJson(localVarItem, localVarItemObj);
+                localVarResult.push_back(localVarItemObj);
+            }
+        }
+        // else if(localVarResponseHttpContentType == utility::conversions::to_string_t("multipart/form-data"))
+        // {
+        // TODO multipart response parsing
+        // }
+        else
+        {
+            throw ApiException(500
+                , utility::conversions::to_string_t("error calling curve_GetWeeklyVolumes__historical: unsupported response type"));
+        }
+
+        return localVarResult;
     });
 }
 

@@ -1,12 +1,12 @@
 @isTest
 private class OASCowApiTest {
     /**
-     * 
+     * GetOrders (historical)
      *
-     * 
+     * Gets orders.
      */
     @isTest
-    private static void dappsCowOrdersHistoricalGetTest() {
+    private static void cowGetOrdersHistoricalTest() {
         HttpResponse res = new HttpResponse();
         res.setStatusCode(200);
         res.setStatus('OK');
@@ -21,20 +21,41 @@ private class OASCowApiTest {
 
         OASClient client;
         OASCowApi api;
+        List<OASCowOrderDTO> response;
+        List<OASCowOrderDTO> expectedResponse;
         String js = '';
 
         api = new OASCowApi(new OASClient());
 
-        api.dappsCowOrdersHistoricalGet(params);
+        js = JSON.serialize(new List<OASCowOrderDTO>{OASCowOrderDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCowOrderDTO>{OASCowOrderDTO.getExample()};
+        response = (List<OASCowOrderDTO>) api.cowGetOrdersHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCowOrderDTO>{OASCowOrderDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCowOrderDTO>{OASCowOrderDTO.getExample()};
+        response = (List<OASCowOrderDTO>) api.cowGetOrdersHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCowOrderDTO>{OASCowOrderDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASCowOrderDTO>{OASCowOrderDTO.getExample()};
+        response = (List<OASCowOrderDTO>) api.cowGetOrdersHistorical(params);
+        System.assertEquals(expectedResponse, response);
     }
 
     /**
-     * 
+     * GetSettlements (historical)
      *
-     * 
+     * Gets settlements.
      */
     @isTest
-    private static void dappsCowSettlementHistoricalGetTest() {
+    private static void cowGetSettlementsHistoricalTest() {
         HttpResponse res = new HttpResponse();
         res.setStatusCode(200);
         res.setStatus('OK');
@@ -49,20 +70,41 @@ private class OASCowApiTest {
 
         OASClient client;
         OASCowApi api;
+        List<OASCowSettlementDTO> response;
+        List<OASCowSettlementDTO> expectedResponse;
         String js = '';
 
         api = new OASCowApi(new OASClient());
 
-        api.dappsCowSettlementHistoricalGet(params);
+        js = JSON.serialize(new List<OASCowSettlementDTO>{OASCowSettlementDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCowSettlementDTO>{OASCowSettlementDTO.getExample()};
+        response = (List<OASCowSettlementDTO>) api.cowGetSettlementsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCowSettlementDTO>{OASCowSettlementDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCowSettlementDTO>{OASCowSettlementDTO.getExample()};
+        response = (List<OASCowSettlementDTO>) api.cowGetSettlementsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCowSettlementDTO>{OASCowSettlementDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASCowSettlementDTO>{OASCowSettlementDTO.getExample()};
+        response = (List<OASCowSettlementDTO>) api.cowGetSettlementsHistorical(params);
+        System.assertEquals(expectedResponse, response);
     }
 
     /**
-     * 
+     * GetTokens (historical) 🔥
      *
-     * 
+     * Gets tokens.
      */
     @isTest
-    private static void dappsCowTokensHistoricalGetTest() {
+    private static void cowGetTokensHistoricalTest() {
         HttpResponse res = new HttpResponse();
         res.setStatusCode(200);
         res.setStatus('OK');
@@ -78,20 +120,41 @@ private class OASCowApiTest {
 
         OASClient client;
         OASCowApi api;
+        List<OASCowTokenDTO> response;
+        List<OASCowTokenDTO> expectedResponse;
         String js = '';
 
         api = new OASCowApi(new OASClient());
 
-        api.dappsCowTokensHistoricalGet(params);
+        js = JSON.serialize(new List<OASCowTokenDTO>{OASCowTokenDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCowTokenDTO>{OASCowTokenDTO.getExample()};
+        response = (List<OASCowTokenDTO>) api.cowGetTokensHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCowTokenDTO>{OASCowTokenDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCowTokenDTO>{OASCowTokenDTO.getExample()};
+        response = (List<OASCowTokenDTO>) api.cowGetTokensHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCowTokenDTO>{OASCowTokenDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASCowTokenDTO>{OASCowTokenDTO.getExample()};
+        response = (List<OASCowTokenDTO>) api.cowGetTokensHistorical(params);
+        System.assertEquals(expectedResponse, response);
     }
 
     /**
-     * 
+     * GetTrades (historical) 🔥
      *
-     * 
+     * Gets trades.
      */
     @isTest
-    private static void dappsCowTradesHistoricalGetTest() {
+    private static void cowGetTradesHistoricalTest() {
         HttpResponse res = new HttpResponse();
         res.setStatusCode(200);
         res.setStatus('OK');
@@ -106,20 +169,41 @@ private class OASCowApiTest {
 
         OASClient client;
         OASCowApi api;
+        List<OASCowTradeDTO> response;
+        List<OASCowTradeDTO> expectedResponse;
         String js = '';
 
         api = new OASCowApi(new OASClient());
 
-        api.dappsCowTradesHistoricalGet(params);
+        js = JSON.serialize(new List<OASCowTradeDTO>{OASCowTradeDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCowTradeDTO>{OASCowTradeDTO.getExample()};
+        response = (List<OASCowTradeDTO>) api.cowGetTradesHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCowTradeDTO>{OASCowTradeDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCowTradeDTO>{OASCowTradeDTO.getExample()};
+        response = (List<OASCowTradeDTO>) api.cowGetTradesHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCowTradeDTO>{OASCowTradeDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASCowTradeDTO>{OASCowTradeDTO.getExample()};
+        response = (List<OASCowTradeDTO>) api.cowGetTradesHistorical(params);
+        System.assertEquals(expectedResponse, response);
     }
 
     /**
-     * 
+     * GetUsers (historical)
      *
-     * 
+     * Gets users.
      */
     @isTest
-    private static void dappsCowUsersHistoricalGetTest() {
+    private static void cowGetUsersHistoricalTest() {
         HttpResponse res = new HttpResponse();
         res.setStatusCode(200);
         res.setStatus('OK');
@@ -134,10 +218,31 @@ private class OASCowApiTest {
 
         OASClient client;
         OASCowApi api;
+        List<OASCowUserDTO> response;
+        List<OASCowUserDTO> expectedResponse;
         String js = '';
 
         api = new OASCowApi(new OASClient());
 
-        api.dappsCowUsersHistoricalGet(params);
+        js = JSON.serialize(new List<OASCowUserDTO>{OASCowUserDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCowUserDTO>{OASCowUserDTO.getExample()};
+        response = (List<OASCowUserDTO>) api.cowGetUsersHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCowUserDTO>{OASCowUserDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCowUserDTO>{OASCowUserDTO.getExample()};
+        response = (List<OASCowUserDTO>) api.cowGetUsersHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCowUserDTO>{OASCowUserDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASCowUserDTO>{OASCowUserDTO.getExample()};
+        response = (List<OASCowUserDTO>) api.cowGetUsersHistorical(params);
+        System.assertEquals(expectedResponse, response);
     }
 }

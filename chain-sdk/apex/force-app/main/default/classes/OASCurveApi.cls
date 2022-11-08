@@ -26,15 +26,16 @@ public class OASCurveApi {
     }
 
     /**
-     * 
-     * 
+     * GetAccounts (historical)
+     * Gets accounts.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
      * @param endDate  (optional)
+     * @return List<OASCurveAccountDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public void dappsCurveAccountsHistoricalGet(Map<String, Object> params) {
+    public List<OASCurveAccountDTO> curveGetAccountsHistorical(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -45,28 +46,29 @@ public class OASCurveApi {
 
         List<OAS.Param> form = new List<OAS.Param>();
 
-        client.invoke(
+        return (List<OASCurveAccountDTO>) client.invoke(
             'GET', '/dapps/curve/accounts/historical', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            new List<String>(),
-            null
+            List<OASCurveAccountDTO>.class
         );
     }
     /**
-     * 
-     * 
+     * GetAddLiquidityEvents (historical)
+     * Gets add liquidity events.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
      * @param endDate  (optional)
      * @param poolId  (optional)
+     * @return List<OASCurveAddLiquidityEventDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public void dappsCurveAddLiquidityEventHistoricalGet(Map<String, Object> params) {
+    public List<OASCurveAddLiquidityEventDTO> curveGetAddLiquidityEventsHistorical(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -78,28 +80,29 @@ public class OASCurveApi {
 
         List<OAS.Param> form = new List<OAS.Param>();
 
-        client.invoke(
-            'GET', '/dapps/curve/addLiquidityEvent/historical', '',
+        return (List<OASCurveAddLiquidityEventDTO>) client.invoke(
+            'GET', '/dapps/curve/addLiquidityEvents/historical', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            new List<String>(),
-            null
+            List<OASCurveAddLiquidityEventDTO>.class
         );
     }
     /**
-     * 
-     * 
+     * GetAdminFeeChangeLogs (historical)
+     * Gets admin fee change logs.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
      * @param endDate  (optional)
      * @param poolId  (optional)
+     * @return List<OASCurveAdminFeeChangeLogDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public void dappsCurveAdminFeeChangeLogHistoricalGet(Map<String, Object> params) {
+    public List<OASCurveAdminFeeChangeLogDTO> curveGetAdminFeeChangeLogsHistorical(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -111,28 +114,29 @@ public class OASCurveApi {
 
         List<OAS.Param> form = new List<OAS.Param>();
 
-        client.invoke(
-            'GET', '/dapps/curve/adminFeeChangeLog/historical', '',
+        return (List<OASCurveAdminFeeChangeLogDTO>) client.invoke(
+            'GET', '/dapps/curve/adminFeeChangeLogs/historical', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            new List<String>(),
-            null
+            List<OASCurveAdminFeeChangeLogDTO>.class
         );
     }
     /**
-     * 
-     * 
+     * GetAmplificationCoeffChangeLogs (historical)
+     * Gets amplification coeff change logs.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
      * @param endDate  (optional)
      * @param poolId  (optional)
+     * @return List<OASCurveAmplificationCoeffChangeLogD>
      * @throws OAS.ApiException if fails to make API call
      */
-    public void dappsCurveAmplificationCoeffChangeLogHistoricalGet(Map<String, Object> params) {
+    public List<OASCurveAmplificationCoeffChangeLogD> curveGetAmplificationCoeffChangeLogsHistorical(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -144,28 +148,29 @@ public class OASCurveApi {
 
         List<OAS.Param> form = new List<OAS.Param>();
 
-        client.invoke(
-            'GET', '/dapps/curve/amplificationCoeffChangeLog/historical', '',
+        return (List<OASCurveAmplificationCoeffChangeLogD>) client.invoke(
+            'GET', '/dapps/curve/amplificationCoeffChangeLogs/historical', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            new List<String>(),
-            null
+            List<OASCurveAmplificationCoeffChangeLogD>.class
         );
     }
     /**
-     * 
-     * 
+     * GetCoins (historical)
+     * Gets coins.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
      * @param endDate  (optional)
      * @param poolId  (optional)
+     * @return List<OASCurveCoinDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public void dappsCurveCoinsHistoricalGet(Map<String, Object> params) {
+    public List<OASCurveCoinDTO> curveGetCoinsHistorical(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -177,28 +182,29 @@ public class OASCurveApi {
 
         List<OAS.Param> form = new List<OAS.Param>();
 
-        client.invoke(
+        return (List<OASCurveCoinDTO>) client.invoke(
             'GET', '/dapps/curve/coins/historical', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            new List<String>(),
-            null
+            List<OASCurveCoinDTO>.class
         );
     }
     /**
-     * 
-     * 
+     * GetContracts (historical)
+     * Gets contracts.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
      * @param endDate  (optional)
      * @param poolId  (optional)
+     * @return List<OASCurveContractDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public void dappsCurveContractsHistoricalGet(Map<String, Object> params) {
+    public List<OASCurveContractDTO> curveGetContractsHistorical(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -210,28 +216,29 @@ public class OASCurveApi {
 
         List<OAS.Param> form = new List<OAS.Param>();
 
-        client.invoke(
+        return (List<OASCurveContractDTO>) client.invoke(
             'GET', '/dapps/curve/contracts/historical', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            new List<String>(),
-            null
+            List<OASCurveContractDTO>.class
         );
     }
     /**
-     * 
-     * 
+     * GetContractsVersions (historical)
+     * Gets contracts versions.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
      * @param endDate  (optional)
      * @param poolId  (optional)
+     * @return List<OASCurveContractVersionDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public void dappsCurveContractsVersionHistoricalGet(Map<String, Object> params) {
+    public List<OASCurveContractVersionDTO> curveGetContractsVersionsHistorical(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -243,28 +250,29 @@ public class OASCurveApi {
 
         List<OAS.Param> form = new List<OAS.Param>();
 
-        client.invoke(
-            'GET', '/dapps/curve/contractsVersion/historical', '',
+        return (List<OASCurveContractVersionDTO>) client.invoke(
+            'GET', '/dapps/curve/contractsVersions/historical', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            new List<String>(),
-            null
+            List<OASCurveContractVersionDTO>.class
         );
     }
     /**
-     * 
-     * 
+     * GetDailyVolumes (historical)
+     * Gets daily volumes.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
      * @param endDate  (optional)
      * @param poolId  (optional)
+     * @return List<OASCurveDailyVolumeDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public void dappsCurveDailyVolumeHistoricalGet(Map<String, Object> params) {
+    public List<OASCurveDailyVolumeDTO> curveGetDailyVolumesHistorical(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -276,28 +284,29 @@ public class OASCurveApi {
 
         List<OAS.Param> form = new List<OAS.Param>();
 
-        client.invoke(
-            'GET', '/dapps/curve/dailyVolume/historical', '',
+        return (List<OASCurveDailyVolumeDTO>) client.invoke(
+            'GET', '/dapps/curve/dailyVolumes/historical', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            new List<String>(),
-            null
+            List<OASCurveDailyVolumeDTO>.class
         );
     }
     /**
-     * 
-     * 
+     * GetExchanges (historical) 🔥
+     * Gets exchanges.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
      * @param endDate  (optional)
      * @param poolId  (optional)
+     * @return List<OASCurveExchangeDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public void dappsCurveFeeChangeLogHistoricalGet(Map<String, Object> params) {
+    public List<OASCurveExchangeDTO> curveGetExchangesHistorical(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -309,59 +318,29 @@ public class OASCurveApi {
 
         List<OAS.Param> form = new List<OAS.Param>();
 
-        client.invoke(
-            'GET', '/dapps/curve/feeChangeLog/historical', '',
+        return (List<OASCurveExchangeDTO>) client.invoke(
+            'GET', '/dapps/curve/exchanges/historical', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            new List<String>(),
-            null
+            List<OASCurveExchangeDTO>.class
         );
     }
     /**
-     * 
-     * 
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @throws OAS.ApiException if fails to make API call
-     */
-    public void dappsCurveGaugeDepositHistoricalGet(Map<String, Object> params) {
-        List<OAS.Param> query = new List<OAS.Param>();
-
-        // cast query params to verify their expected type
-        query.addAll(client.makeParam('startBlock', (Long) params.get('startBlock')));
-        query.addAll(client.makeParam('endBlock', (Long) params.get('endBlock')));
-        query.addAll(client.makeParam('startDate', (Datetime) params.get('startDate')));
-        query.addAll(client.makeParam('endDate', (Datetime) params.get('endDate')));
-
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        client.invoke(
-            'GET', '/dapps/curve/gaugeDeposit/historical', '',
-            query, form,
-            new Map<String, Object>(),
-            new Map<String, Object>(),
-            new List<String>(),
-            new List<String>(),
-            new List<String>(),
-            null
-        );
-    }
-    /**
-     * 
-     * 
+     * GetFeeChangeLogs (historical)
+     * Gets fee change logs.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
      * @param endDate  (optional)
      * @param poolId  (optional)
+     * @return List<OASCurveFeeChangeLogDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public void dappsCurveGaugeHistoricalGet(Map<String, Object> params) {
+    public List<OASCurveFeeChangeLogDTO> curveGetFeeChangeLogsHistorical(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -373,27 +352,28 @@ public class OASCurveApi {
 
         List<OAS.Param> form = new List<OAS.Param>();
 
-        client.invoke(
-            'GET', '/dapps/curve/gauge/historical', '',
+        return (List<OASCurveFeeChangeLogDTO>) client.invoke(
+            'GET', '/dapps/curve/feeChangeLogs/historical', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            new List<String>(),
-            null
+            List<OASCurveFeeChangeLogDTO>.class
         );
     }
     /**
-     * 
-     * 
+     * GetGaugesDeposits (historical)
+     * Gets gauges deposits.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
      * @param endDate  (optional)
+     * @return List<OASCurveGaugeDepositDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public void dappsCurveGaugeLiquidityHistoricalGet(Map<String, Object> params) {
+    public List<OASCurveGaugeDepositDTO> curveGetGaugesDepositsHistorical(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -404,214 +384,29 @@ public class OASCurveApi {
 
         List<OAS.Param> form = new List<OAS.Param>();
 
-        client.invoke(
-            'GET', '/dapps/curve/gaugeLiquidity/historical', '',
+        return (List<OASCurveGaugeDepositDTO>) client.invoke(
+            'GET', '/dapps/curve/gaugesDeposits/historical', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            new List<String>(),
-            null
+            List<OASCurveGaugeDepositDTO>.class
         );
     }
     /**
-     * 
-     * 
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @throws OAS.ApiException if fails to make API call
-     */
-    public void dappsCurveGaugeTotalWeightHistoricalGet(Map<String, Object> params) {
-        List<OAS.Param> query = new List<OAS.Param>();
-
-        // cast query params to verify their expected type
-        query.addAll(client.makeParam('startBlock', (Long) params.get('startBlock')));
-        query.addAll(client.makeParam('endBlock', (Long) params.get('endBlock')));
-        query.addAll(client.makeParam('startDate', (Datetime) params.get('startDate')));
-        query.addAll(client.makeParam('endDate', (Datetime) params.get('endDate')));
-
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        client.invoke(
-            'GET', '/dapps/curve/gaugeTotalWeight/historical', '',
-            query, form,
-            new Map<String, Object>(),
-            new Map<String, Object>(),
-            new List<String>(),
-            new List<String>(),
-            new List<String>(),
-            null
-        );
-    }
-    /**
-     * 
-     * 
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @throws OAS.ApiException if fails to make API call
-     */
-    public void dappsCurveGaugeTypeHistoricalGet(Map<String, Object> params) {
-        List<OAS.Param> query = new List<OAS.Param>();
-
-        // cast query params to verify their expected type
-        query.addAll(client.makeParam('startBlock', (Long) params.get('startBlock')));
-        query.addAll(client.makeParam('endBlock', (Long) params.get('endBlock')));
-        query.addAll(client.makeParam('startDate', (Datetime) params.get('startDate')));
-        query.addAll(client.makeParam('endDate', (Datetime) params.get('endDate')));
-
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        client.invoke(
-            'GET', '/dapps/curve/gaugeType/historical', '',
-            query, form,
-            new Map<String, Object>(),
-            new Map<String, Object>(),
-            new List<String>(),
-            new List<String>(),
-            new List<String>(),
-            null
-        );
-    }
-    /**
-     * 
-     * 
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @throws OAS.ApiException if fails to make API call
-     */
-    public void dappsCurveGaugeTypeWeightHistoricalGet(Map<String, Object> params) {
-        List<OAS.Param> query = new List<OAS.Param>();
-
-        // cast query params to verify their expected type
-        query.addAll(client.makeParam('startBlock', (Long) params.get('startBlock')));
-        query.addAll(client.makeParam('endBlock', (Long) params.get('endBlock')));
-        query.addAll(client.makeParam('startDate', (Datetime) params.get('startDate')));
-        query.addAll(client.makeParam('endDate', (Datetime) params.get('endDate')));
-
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        client.invoke(
-            'GET', '/dapps/curve/gaugeTypeWeight/historical', '',
-            query, form,
-            new Map<String, Object>(),
-            new Map<String, Object>(),
-            new List<String>(),
-            new List<String>(),
-            new List<String>(),
-            null
-        );
-    }
-    /**
-     * 
-     * 
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @throws OAS.ApiException if fails to make API call
-     */
-    public void dappsCurveGaugeWeightHistoricalGet(Map<String, Object> params) {
-        List<OAS.Param> query = new List<OAS.Param>();
-
-        // cast query params to verify their expected type
-        query.addAll(client.makeParam('startBlock', (Long) params.get('startBlock')));
-        query.addAll(client.makeParam('endBlock', (Long) params.get('endBlock')));
-        query.addAll(client.makeParam('startDate', (Datetime) params.get('startDate')));
-        query.addAll(client.makeParam('endDate', (Datetime) params.get('endDate')));
-
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        client.invoke(
-            'GET', '/dapps/curve/gaugeWeight/historical', '',
-            query, form,
-            new Map<String, Object>(),
-            new Map<String, Object>(),
-            new List<String>(),
-            new List<String>(),
-            new List<String>(),
-            null
-        );
-    }
-    /**
-     * 
-     * 
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @throws OAS.ApiException if fails to make API call
-     */
-    public void dappsCurveGaugeWeightVoteHistoricalGet(Map<String, Object> params) {
-        List<OAS.Param> query = new List<OAS.Param>();
-
-        // cast query params to verify their expected type
-        query.addAll(client.makeParam('startBlock', (Long) params.get('startBlock')));
-        query.addAll(client.makeParam('endBlock', (Long) params.get('endBlock')));
-        query.addAll(client.makeParam('startDate', (Datetime) params.get('startDate')));
-        query.addAll(client.makeParam('endDate', (Datetime) params.get('endDate')));
-
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        client.invoke(
-            'GET', '/dapps/curve/gaugeWeightVote/historical', '',
-            query, form,
-            new Map<String, Object>(),
-            new Map<String, Object>(),
-            new List<String>(),
-            new List<String>(),
-            new List<String>(),
-            null
-        );
-    }
-    /**
-     * 
-     * 
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @throws OAS.ApiException if fails to make API call
-     */
-    public void dappsCurveGaugeWithdrawHistoricalGet(Map<String, Object> params) {
-        List<OAS.Param> query = new List<OAS.Param>();
-
-        // cast query params to verify their expected type
-        query.addAll(client.makeParam('startBlock', (Long) params.get('startBlock')));
-        query.addAll(client.makeParam('endBlock', (Long) params.get('endBlock')));
-        query.addAll(client.makeParam('startDate', (Datetime) params.get('startDate')));
-        query.addAll(client.makeParam('endDate', (Datetime) params.get('endDate')));
-
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        client.invoke(
-            'GET', '/dapps/curve/gaugeWithdraw/historical', '',
-            query, form,
-            new Map<String, Object>(),
-            new Map<String, Object>(),
-            new List<String>(),
-            new List<String>(),
-            new List<String>(),
-            null
-        );
-    }
-    /**
-     * 
-     * 
+     * GetGauges (historical)
+     * Gets gauges.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
      * @param endDate  (optional)
      * @param poolId  (optional)
+     * @return List<OASCurveGaugeDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public void dappsCurveHourlyVolumeHistoricalGet(Map<String, Object> params) {
+    public List<OASCurveGaugeDTO> curveGetGaugesHistorical(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -623,28 +418,253 @@ public class OASCurveApi {
 
         List<OAS.Param> form = new List<OAS.Param>();
 
-        client.invoke(
-            'GET', '/dapps/curve/hourlyVolume/historical', '',
+        return (List<OASCurveGaugeDTO>) client.invoke(
+            'GET', '/dapps/curve/gauges/historical', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            new List<String>(),
-            null
+            List<OASCurveGaugeDTO>.class
         );
     }
     /**
-     * 
-     * 
+     * GetGaugesLiquidity (historical)
+     * Gets gauges liquidity.
+     * @param startBlock  (optional)
+     * @param endBlock  (optional)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @return List<OASCurveGaugeLiquidityDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASCurveGaugeLiquidityDTO> curveGetGaugesLiquidityHistorical(Map<String, Object> params) {
+        List<OAS.Param> query = new List<OAS.Param>();
+
+        // cast query params to verify their expected type
+        query.addAll(client.makeParam('startBlock', (Long) params.get('startBlock')));
+        query.addAll(client.makeParam('endBlock', (Long) params.get('endBlock')));
+        query.addAll(client.makeParam('startDate', (Datetime) params.get('startDate')));
+        query.addAll(client.makeParam('endDate', (Datetime) params.get('endDate')));
+
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASCurveGaugeLiquidityDTO>) client.invoke(
+            'GET', '/dapps/curve/gaugesLiquidity/historical', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>(),
+            new List<String>(),
+            List<OASCurveGaugeLiquidityDTO>.class
+        );
+    }
+    /**
+     * GetGaugesTotalWeights (historical)
+     * Gets gauges total weights.
+     * @param startBlock  (optional)
+     * @param endBlock  (optional)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @return List<OASCurveGaugeTotalWeightDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASCurveGaugeTotalWeightDTO> curveGetGaugesTotalWeightsHistorical(Map<String, Object> params) {
+        List<OAS.Param> query = new List<OAS.Param>();
+
+        // cast query params to verify their expected type
+        query.addAll(client.makeParam('startBlock', (Long) params.get('startBlock')));
+        query.addAll(client.makeParam('endBlock', (Long) params.get('endBlock')));
+        query.addAll(client.makeParam('startDate', (Datetime) params.get('startDate')));
+        query.addAll(client.makeParam('endDate', (Datetime) params.get('endDate')));
+
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASCurveGaugeTotalWeightDTO>) client.invoke(
+            'GET', '/dapps/curve/gaugesTotalWeights/historical', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>(),
+            new List<String>(),
+            List<OASCurveGaugeTotalWeightDTO>.class
+        );
+    }
+    /**
+     * GetGaugesTypes (historical)
+     * Gets gauges types.
+     * @param startBlock  (optional)
+     * @param endBlock  (optional)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @return List<OASCurveGaugeTypeDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASCurveGaugeTypeDTO> curveGetGaugesTypesHistorical(Map<String, Object> params) {
+        List<OAS.Param> query = new List<OAS.Param>();
+
+        // cast query params to verify their expected type
+        query.addAll(client.makeParam('startBlock', (Long) params.get('startBlock')));
+        query.addAll(client.makeParam('endBlock', (Long) params.get('endBlock')));
+        query.addAll(client.makeParam('startDate', (Datetime) params.get('startDate')));
+        query.addAll(client.makeParam('endDate', (Datetime) params.get('endDate')));
+
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASCurveGaugeTypeDTO>) client.invoke(
+            'GET', '/dapps/curve/gaugesTypes/historical', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>(),
+            new List<String>(),
+            List<OASCurveGaugeTypeDTO>.class
+        );
+    }
+    /**
+     * GetGaugesTypesWeights (historical)
+     * Gets gauges types weights.
+     * @param startBlock  (optional)
+     * @param endBlock  (optional)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @return List<OASCurveGaugeTypeWeightDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASCurveGaugeTypeWeightDTO> curveGetGaugesTypesWeightsHistorical(Map<String, Object> params) {
+        List<OAS.Param> query = new List<OAS.Param>();
+
+        // cast query params to verify their expected type
+        query.addAll(client.makeParam('startBlock', (Long) params.get('startBlock')));
+        query.addAll(client.makeParam('endBlock', (Long) params.get('endBlock')));
+        query.addAll(client.makeParam('startDate', (Datetime) params.get('startDate')));
+        query.addAll(client.makeParam('endDate', (Datetime) params.get('endDate')));
+
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASCurveGaugeTypeWeightDTO>) client.invoke(
+            'GET', '/dapps/curve/gaugesTypesWeights/historical', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>(),
+            new List<String>(),
+            List<OASCurveGaugeTypeWeightDTO>.class
+        );
+    }
+    /**
+     * GetGaugesWeights (historical)
+     * Gets gauges weights.
+     * @param startBlock  (optional)
+     * @param endBlock  (optional)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @return List<OASCurveGaugeWeightDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASCurveGaugeWeightDTO> curveGetGaugesWeightsHistorical(Map<String, Object> params) {
+        List<OAS.Param> query = new List<OAS.Param>();
+
+        // cast query params to verify their expected type
+        query.addAll(client.makeParam('startBlock', (Long) params.get('startBlock')));
+        query.addAll(client.makeParam('endBlock', (Long) params.get('endBlock')));
+        query.addAll(client.makeParam('startDate', (Datetime) params.get('startDate')));
+        query.addAll(client.makeParam('endDate', (Datetime) params.get('endDate')));
+
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASCurveGaugeWeightDTO>) client.invoke(
+            'GET', '/dapps/curve/gaugesWeights/historical', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>(),
+            new List<String>(),
+            List<OASCurveGaugeWeightDTO>.class
+        );
+    }
+    /**
+     * GetGaugesWeightsVotes (historical)
+     * Gets gauges weights votes.
+     * @param startBlock  (optional)
+     * @param endBlock  (optional)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @return List<OASCurveGaugeWeightVoteDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASCurveGaugeWeightVoteDTO> curveGetGaugesWeightsVotesHistorical(Map<String, Object> params) {
+        List<OAS.Param> query = new List<OAS.Param>();
+
+        // cast query params to verify their expected type
+        query.addAll(client.makeParam('startBlock', (Long) params.get('startBlock')));
+        query.addAll(client.makeParam('endBlock', (Long) params.get('endBlock')));
+        query.addAll(client.makeParam('startDate', (Datetime) params.get('startDate')));
+        query.addAll(client.makeParam('endDate', (Datetime) params.get('endDate')));
+
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASCurveGaugeWeightVoteDTO>) client.invoke(
+            'GET', '/dapps/curve/gaugesWeightsVotes/historical', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>(),
+            new List<String>(),
+            List<OASCurveGaugeWeightVoteDTO>.class
+        );
+    }
+    /**
+     * GetGaugesWithdraw (historical)
+     * Gets gauges withdraws.
+     * @param startBlock  (optional)
+     * @param endBlock  (optional)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @return List<OASCurveGaugeWithdrawDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASCurveGaugeWithdrawDTO> curveGetGaugesWithdrawHistorical(Map<String, Object> params) {
+        List<OAS.Param> query = new List<OAS.Param>();
+
+        // cast query params to verify their expected type
+        query.addAll(client.makeParam('startBlock', (Long) params.get('startBlock')));
+        query.addAll(client.makeParam('endBlock', (Long) params.get('endBlock')));
+        query.addAll(client.makeParam('startDate', (Datetime) params.get('startDate')));
+        query.addAll(client.makeParam('endDate', (Datetime) params.get('endDate')));
+
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASCurveGaugeWithdrawDTO>) client.invoke(
+            'GET', '/dapps/curve/gaugesWithdraws/historical', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>(),
+            new List<String>(),
+            List<OASCurveGaugeWithdrawDTO>.class
+        );
+    }
+    /**
+     * GetHourlyVolumes (historical)
+     * Gets hourly volumes.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
      * @param endDate  (optional)
      * @param poolId  (optional)
+     * @return List<OASCurveHourlyVolumeDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public void dappsCurveLpTokenHistoricalGet(Map<String, Object> params) {
+    public List<OASCurveHourlyVolumeDTO> curveGetHourlyVolumesHistorical(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -656,28 +676,29 @@ public class OASCurveApi {
 
         List<OAS.Param> form = new List<OAS.Param>();
 
-        client.invoke(
-            'GET', '/dapps/curve/lpToken/historical', '',
+        return (List<OASCurveHourlyVolumeDTO>) client.invoke(
+            'GET', '/dapps/curve/hourlyVolumes/historical', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            new List<String>(),
-            null
+            List<OASCurveHourlyVolumeDTO>.class
         );
     }
     /**
-     * 
-     * 
+     * GetLpTokens (historical)
+     * Gets lp tokens.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
      * @param endDate  (optional)
      * @param poolId  (optional)
+     * @return List<OASCurveLpTokenDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public void dappsCurvePoolsHistoricalGet(Map<String, Object> params) {
+    public List<OASCurveLpTokenDTO> curveGetLpTokensHistorical(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -689,27 +710,62 @@ public class OASCurveApi {
 
         List<OAS.Param> form = new List<OAS.Param>();
 
-        client.invoke(
+        return (List<OASCurveLpTokenDTO>) client.invoke(
+            'GET', '/dapps/curve/lpTokens/historical', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>(),
+            new List<String>(),
+            List<OASCurveLpTokenDTO>.class
+        );
+    }
+    /**
+     * GetPools (historical) 🔥
+     * Gets pools.
+     * @param startBlock  (optional)
+     * @param endBlock  (optional)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @param poolId  (optional)
+     * @return List<OASCurvePoolDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASCurvePoolDTO> curveGetPoolsHistorical(Map<String, Object> params) {
+        List<OAS.Param> query = new List<OAS.Param>();
+
+        // cast query params to verify their expected type
+        query.addAll(client.makeParam('startBlock', (Long) params.get('startBlock')));
+        query.addAll(client.makeParam('endBlock', (Long) params.get('endBlock')));
+        query.addAll(client.makeParam('startDate', (Datetime) params.get('startDate')));
+        query.addAll(client.makeParam('endDate', (Datetime) params.get('endDate')));
+        query.addAll(client.makeParam('poolId', (String) params.get('poolId')));
+
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASCurvePoolDTO>) client.invoke(
             'GET', '/dapps/curve/pools/historical', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            new List<String>(),
-            null
+            List<OASCurvePoolDTO>.class
         );
     }
     /**
-     * 
-     * 
+     * GetProposals (historical)
+     * Gets proposals.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
      * @param endDate  (optional)
+     * @return List<OASCurveProposalDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public void dappsCurveProposalsHistoricalGet(Map<String, Object> params) {
+    public List<OASCurveProposalDTO> curveGetProposalsHistorical(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -720,27 +776,28 @@ public class OASCurveApi {
 
         List<OAS.Param> form = new List<OAS.Param>();
 
-        client.invoke(
+        return (List<OASCurveProposalDTO>) client.invoke(
             'GET', '/dapps/curve/proposals/historical', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            new List<String>(),
-            null
+            List<OASCurveProposalDTO>.class
         );
     }
     /**
-     * 
-     * 
+     * GetProposalsVotes (historical)
+     * Gets proposals votes.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
      * @param endDate  (optional)
+     * @return List<OASCurveProposalVoteDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public void dappsCurveProposalsVoteHistoricalGet(Map<String, Object> params) {
+    public List<OASCurveProposalVoteDTO> curveGetProposalsVotesHistorical(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -751,28 +808,29 @@ public class OASCurveApi {
 
         List<OAS.Param> form = new List<OAS.Param>();
 
-        client.invoke(
-            'GET', '/dapps/curve/proposalsVote/historical', '',
+        return (List<OASCurveProposalVoteDTO>) client.invoke(
+            'GET', '/dapps/curve/proposalsVotes/historical', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            new List<String>(),
-            null
+            List<OASCurveProposalVoteDTO>.class
         );
     }
     /**
-     * 
-     * 
+     * GetRemoveLiquidityEvents (historical)
+     * Gets remove liquidity events.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
      * @param endDate  (optional)
      * @param poolId  (optional)
+     * @return List<OASCurveRemoveLiquidityEventDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public void dappsCurveRemoveLiquidityEventHistoricalGet(Map<String, Object> params) {
+    public List<OASCurveRemoveLiquidityEventDTO> curveGetRemoveLiquidityEventsHistorical(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -784,28 +842,29 @@ public class OASCurveApi {
 
         List<OAS.Param> form = new List<OAS.Param>();
 
-        client.invoke(
-            'GET', '/dapps/curve/removeLiquidityEvent/historical', '',
+        return (List<OASCurveRemoveLiquidityEventDTO>) client.invoke(
+            'GET', '/dapps/curve/removeLiquidityEvents/historical', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            new List<String>(),
-            null
+            List<OASCurveRemoveLiquidityEventDTO>.class
         );
     }
     /**
-     * 
-     * 
+     * GetRemoveLiquidityOneEvents (historical)
+     * Gets remove liquidity one events.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
      * @param endDate  (optional)
      * @param poolId  (optional)
+     * @return List<OASCurveRemoveLiquidityOneEventDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public void dappsCurveRemoveLiquidityOneEventHistoricalGet(Map<String, Object> params) {
+    public List<OASCurveRemoveLiquidityOneEventDTO> curveGetRemoveLiquidityOneEventsHistorical(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -817,60 +876,28 @@ public class OASCurveApi {
 
         List<OAS.Param> form = new List<OAS.Param>();
 
-        client.invoke(
-            'GET', '/dapps/curve/removeLiquidityOneEvent/historical', '',
+        return (List<OASCurveRemoveLiquidityOneEventDTO>) client.invoke(
+            'GET', '/dapps/curve/removeLiquidityOneEvents/historical', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            new List<String>(),
-            null
+            List<OASCurveRemoveLiquidityOneEventDTO>.class
         );
     }
     /**
-     * 
-     * 
+     * GetSystemStates (historical)
+     * Gets system states.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
      * @param endDate  (optional)
-     * @param poolId  (optional)
+     * @return List<OASCurveSystemStateDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public void dappsCurveSwapsHistoricalGet(Map<String, Object> params) {
-        List<OAS.Param> query = new List<OAS.Param>();
-
-        // cast query params to verify their expected type
-        query.addAll(client.makeParam('startBlock', (Long) params.get('startBlock')));
-        query.addAll(client.makeParam('endBlock', (Long) params.get('endBlock')));
-        query.addAll(client.makeParam('startDate', (Datetime) params.get('startDate')));
-        query.addAll(client.makeParam('endDate', (Datetime) params.get('endDate')));
-        query.addAll(client.makeParam('poolId', (String) params.get('poolId')));
-
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        client.invoke(
-            'GET', '/dapps/curve/swaps/historical', '',
-            query, form,
-            new Map<String, Object>(),
-            new Map<String, Object>(),
-            new List<String>(),
-            new List<String>(),
-            new List<String>(),
-            null
-        );
-    }
-    /**
-     * 
-     * 
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @throws OAS.ApiException if fails to make API call
-     */
-    public void dappsCurveSystemStateHistoricalGet(Map<String, Object> params) {
+    public List<OASCurveSystemStateDTO> curveGetSystemStatesHistorical(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -881,28 +908,29 @@ public class OASCurveApi {
 
         List<OAS.Param> form = new List<OAS.Param>();
 
-        client.invoke(
-            'GET', '/dapps/curve/systemState/historical', '',
+        return (List<OASCurveSystemStateDTO>) client.invoke(
+            'GET', '/dapps/curve/systemStates/historical', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            new List<String>(),
-            null
+            List<OASCurveSystemStateDTO>.class
         );
     }
     /**
-     * 
-     * 
+     * GetTokens (historical) 🔥
+     * Gets tokens.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
      * @param endDate  (optional)
      * @param tokenId  (optional)
+     * @return List<OASCurveTokenDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public void dappsCurveTokensHistoricalGet(Map<String, Object> params) {
+    public List<OASCurveTokenDTO> curveGetTokensHistorical(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -914,28 +942,29 @@ public class OASCurveApi {
 
         List<OAS.Param> form = new List<OAS.Param>();
 
-        client.invoke(
+        return (List<OASCurveTokenDTO>) client.invoke(
             'GET', '/dapps/curve/tokens/historical', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            new List<String>(),
-            null
+            List<OASCurveTokenDTO>.class
         );
     }
     /**
-     * 
-     * 
+     * GetTransferOwnershipEvents (historical)
+     * Gets transfer ownership events.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
      * @param endDate  (optional)
      * @param poolId  (optional)
+     * @return List<OASCurveTransferOwnershipEventDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public void dappsCurveTransferOwnershipEventHistoricalGet(Map<String, Object> params) {
+    public List<OASCurveTransferOwnershipEventDTO> curveGetTransferOwnershipEventsHistorical(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -947,28 +976,29 @@ public class OASCurveApi {
 
         List<OAS.Param> form = new List<OAS.Param>();
 
-        client.invoke(
-            'GET', '/dapps/curve/transferOwnershipEvent/historical', '',
+        return (List<OASCurveTransferOwnershipEventDTO>) client.invoke(
+            'GET', '/dapps/curve/transferOwnershipEvents/historical', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            new List<String>(),
-            null
+            List<OASCurveTransferOwnershipEventDTO>.class
         );
     }
     /**
-     * 
-     * 
+     * GetUnderlyingCoins (historical)
+     * Gets underlying coins.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
      * @param endDate  (optional)
      * @param poolId  (optional)
+     * @return List<OASCurveUnderlyingCoinDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public void dappsCurveUnderlyingCoinHistoricalGet(Map<String, Object> params) {
+    public List<OASCurveUnderlyingCoinDTO> curveGetUnderlyingCoinsHistorical(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -980,27 +1010,28 @@ public class OASCurveApi {
 
         List<OAS.Param> form = new List<OAS.Param>();
 
-        client.invoke(
-            'GET', '/dapps/curve/underlyingCoin/historical', '',
+        return (List<OASCurveUnderlyingCoinDTO>) client.invoke(
+            'GET', '/dapps/curve/underlyingCoins/historical', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            new List<String>(),
-            null
+            List<OASCurveUnderlyingCoinDTO>.class
         );
     }
     /**
-     * 
-     * 
+     * GetVotingApps (historical)
+     * Gets voting apps.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
      * @param endDate  (optional)
+     * @return List<OASCurveVotingAppDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public void dappsCurveVotingAppHistoricalGet(Map<String, Object> params) {
+    public List<OASCurveVotingAppDTO> curveGetVotingAppsHistorical(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -1011,28 +1042,29 @@ public class OASCurveApi {
 
         List<OAS.Param> form = new List<OAS.Param>();
 
-        client.invoke(
-            'GET', '/dapps/curve/votingApp/historical', '',
+        return (List<OASCurveVotingAppDTO>) client.invoke(
+            'GET', '/dapps/curve/votingApps/historical', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            new List<String>(),
-            null
+            List<OASCurveVotingAppDTO>.class
         );
     }
     /**
-     * 
-     * 
+     * GetWeeklyVolumes (historical)
+     * Gets weekly volumes.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
      * @param endDate  (optional)
      * @param poolId  (optional)
+     * @return List<OASCurveWeeklyVolumeDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public void dappsCurveWeeklyVolumeHistoricalGet(Map<String, Object> params) {
+    public List<OASCurveWeeklyVolumeDTO> curveGetWeeklyVolumesHistorical(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -1044,15 +1076,15 @@ public class OASCurveApi {
 
         List<OAS.Param> form = new List<OAS.Param>();
 
-        client.invoke(
-            'GET', '/dapps/curve/weeklyVolume/historical', '',
+        return (List<OASCurveWeeklyVolumeDTO>) client.invoke(
+            'GET', '/dapps/curve/weeklyVolumes/historical', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            new List<String>(),
-            null
+            List<OASCurveWeeklyVolumeDTO>.class
         );
     }
 }

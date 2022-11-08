@@ -13,6 +13,54 @@
 
 
 import ApiClient from './ApiClient';
+import CowOrderDTO from './model/CowOrderDTO';
+import CowSettlementDTO from './model/CowSettlementDTO';
+import CowTokenDTO from './model/CowTokenDTO';
+import CowTradeDTO from './model/CowTradeDTO';
+import CowUserDTO from './model/CowUserDTO';
+import CurveAccountDTO from './model/CurveAccountDTO';
+import CurveAddLiquidityEventDTO from './model/CurveAddLiquidityEventDTO';
+import CurveAdminFeeChangeLogDTO from './model/CurveAdminFeeChangeLogDTO';
+import CurveAmplificationCoeffChangeLogDTO from './model/CurveAmplificationCoeffChangeLogDTO';
+import CurveCoinDTO from './model/CurveCoinDTO';
+import CurveContractDTO from './model/CurveContractDTO';
+import CurveContractVersionDTO from './model/CurveContractVersionDTO';
+import CurveDailyVolumeDTO from './model/CurveDailyVolumeDTO';
+import CurveExchangeDTO from './model/CurveExchangeDTO';
+import CurveFeeChangeLogDTO from './model/CurveFeeChangeLogDTO';
+import CurveGaugeDTO from './model/CurveGaugeDTO';
+import CurveGaugeDepositDTO from './model/CurveGaugeDepositDTO';
+import CurveGaugeLiquidityDTO from './model/CurveGaugeLiquidityDTO';
+import CurveGaugeTotalWeightDTO from './model/CurveGaugeTotalWeightDTO';
+import CurveGaugeTypeDTO from './model/CurveGaugeTypeDTO';
+import CurveGaugeTypeWeightDTO from './model/CurveGaugeTypeWeightDTO';
+import CurveGaugeWeightDTO from './model/CurveGaugeWeightDTO';
+import CurveGaugeWeightVoteDTO from './model/CurveGaugeWeightVoteDTO';
+import CurveGaugeWithdrawDTO from './model/CurveGaugeWithdrawDTO';
+import CurveHourlyVolumeDTO from './model/CurveHourlyVolumeDTO';
+import CurveLpTokenDTO from './model/CurveLpTokenDTO';
+import CurvePoolDTO from './model/CurvePoolDTO';
+import CurveProposalDTO from './model/CurveProposalDTO';
+import CurveProposalVoteDTO from './model/CurveProposalVoteDTO';
+import CurveRemoveLiquidityEventDTO from './model/CurveRemoveLiquidityEventDTO';
+import CurveRemoveLiquidityOneEventDTO from './model/CurveRemoveLiquidityOneEventDTO';
+import CurveSystemStateDTO from './model/CurveSystemStateDTO';
+import CurveTokenDTO from './model/CurveTokenDTO';
+import CurveTransferOwnershipEventDTO from './model/CurveTransferOwnershipEventDTO';
+import CurveUnderlyingCoinDTO from './model/CurveUnderlyingCoinDTO';
+import CurveVotingAppDTO from './model/CurveVotingAppDTO';
+import CurveWeeklyVolumeDTO from './model/CurveWeeklyVolumeDTO';
+import DexBatchDTO from './model/DexBatchDTO';
+import DexDepositDTO from './model/DexDepositDTO';
+import DexOrderDTO from './model/DexOrderDTO';
+import DexPriceDTO from './model/DexPriceDTO';
+import DexSolutionDTO from './model/DexSolutionDTO';
+import DexStatsDTO from './model/DexStatsDTO';
+import DexTokenDTO from './model/DexTokenDTO';
+import DexTradeDTO from './model/DexTradeDTO';
+import DexUserDTO from './model/DexUserDTO';
+import DexWithdrawDTO from './model/DexWithdrawDTO';
+import DexWithdrawRequestDTO from './model/DexWithdrawRequestDTO';
 import NumericsBigInteger from './model/NumericsBigInteger';
 import SushiswapBundleDTO from './model/SushiswapBundleDTO';
 import SushiswapBurnDTO from './model/SushiswapBurnDTO';
@@ -31,9 +79,21 @@ import SushiswapTokenDayDataDTO from './model/SushiswapTokenDayDataDTO';
 import SushiswapTransactionDTO from './model/SushiswapTransactionDTO';
 import SushiswapUserDTO from './model/SushiswapUserDTO';
 import TransactionsETradeAggressiveSide from './model/TransactionsETradeAggressiveSide';
+import UniswapV2BundleV2DTO from './model/UniswapV2BundleV2DTO';
+import UniswapV2BurnV2DTO from './model/UniswapV2BurnV2DTO';
+import UniswapV2LiquidityPositionSnapshotV2DTO from './model/UniswapV2LiquidityPositionSnapshotV2DTO';
+import UniswapV2LiquidityPositionV2DTO from './model/UniswapV2LiquidityPositionV2DTO';
+import UniswapV2MintV2DTO from './model/UniswapV2MintV2DTO';
+import UniswapV2PairDayDataV2DTO from './model/UniswapV2PairDayDataV2DTO';
+import UniswapV2PairHourDataV2DTO from './model/UniswapV2PairHourDataV2DTO';
 import UniswapV2PairV2DTO from './model/UniswapV2PairV2DTO';
 import UniswapV2SwapV2DTO from './model/UniswapV2SwapV2DTO';
+import UniswapV2TokenDayDataV2DTO from './model/UniswapV2TokenDayDataV2DTO';
 import UniswapV2TokenV2DTO from './model/UniswapV2TokenV2DTO';
+import UniswapV2TransactionV2DTO from './model/UniswapV2TransactionV2DTO';
+import UniswapV2UniswapDayDataV2DTO from './model/UniswapV2UniswapDayDataV2DTO';
+import UniswapV2UniswapFactoryV2DTO from './model/UniswapV2UniswapFactoryV2DTO';
+import UniswapV2UserV2DTO from './model/UniswapV2UserV2DTO';
 import UniswapV3BundleV3DTO from './model/UniswapV3BundleV3DTO';
 import UniswapV3BurnV3DTO from './model/UniswapV3BurnV3DTO';
 import UniswapV3FactoryV3DTO from './model/UniswapV3FactoryV3DTO';
@@ -49,6 +109,7 @@ import UniswapV3TickV3DTO from './model/UniswapV3TickV3DTO';
 import UniswapV3TokenHourDataV3DTO from './model/UniswapV3TokenHourDataV3DTO';
 import UniswapV3TokenV3DTO from './model/UniswapV3TokenV3DTO';
 import UniswapV3TokenV3DayDataDTO from './model/UniswapV3TokenV3DayDataDTO';
+import UniswapV3TransactionV3DTO from './model/UniswapV3TransactionV3DTO';
 import UniswapV3UniswapDayDataV3DTO from './model/UniswapV3UniswapDayDataV3DTO';
 import CowApi from './api/CowApi';
 import CurveApi from './api/CurveApi';
@@ -95,6 +156,294 @@ export {
      * @property {module:ApiClient}
      */
     ApiClient,
+
+    /**
+     * The CowOrderDTO model constructor.
+     * @property {module:model/CowOrderDTO}
+     */
+    CowOrderDTO,
+
+    /**
+     * The CowSettlementDTO model constructor.
+     * @property {module:model/CowSettlementDTO}
+     */
+    CowSettlementDTO,
+
+    /**
+     * The CowTokenDTO model constructor.
+     * @property {module:model/CowTokenDTO}
+     */
+    CowTokenDTO,
+
+    /**
+     * The CowTradeDTO model constructor.
+     * @property {module:model/CowTradeDTO}
+     */
+    CowTradeDTO,
+
+    /**
+     * The CowUserDTO model constructor.
+     * @property {module:model/CowUserDTO}
+     */
+    CowUserDTO,
+
+    /**
+     * The CurveAccountDTO model constructor.
+     * @property {module:model/CurveAccountDTO}
+     */
+    CurveAccountDTO,
+
+    /**
+     * The CurveAddLiquidityEventDTO model constructor.
+     * @property {module:model/CurveAddLiquidityEventDTO}
+     */
+    CurveAddLiquidityEventDTO,
+
+    /**
+     * The CurveAdminFeeChangeLogDTO model constructor.
+     * @property {module:model/CurveAdminFeeChangeLogDTO}
+     */
+    CurveAdminFeeChangeLogDTO,
+
+    /**
+     * The CurveAmplificationCoeffChangeLogDTO model constructor.
+     * @property {module:model/CurveAmplificationCoeffChangeLogDTO}
+     */
+    CurveAmplificationCoeffChangeLogDTO,
+
+    /**
+     * The CurveCoinDTO model constructor.
+     * @property {module:model/CurveCoinDTO}
+     */
+    CurveCoinDTO,
+
+    /**
+     * The CurveContractDTO model constructor.
+     * @property {module:model/CurveContractDTO}
+     */
+    CurveContractDTO,
+
+    /**
+     * The CurveContractVersionDTO model constructor.
+     * @property {module:model/CurveContractVersionDTO}
+     */
+    CurveContractVersionDTO,
+
+    /**
+     * The CurveDailyVolumeDTO model constructor.
+     * @property {module:model/CurveDailyVolumeDTO}
+     */
+    CurveDailyVolumeDTO,
+
+    /**
+     * The CurveExchangeDTO model constructor.
+     * @property {module:model/CurveExchangeDTO}
+     */
+    CurveExchangeDTO,
+
+    /**
+     * The CurveFeeChangeLogDTO model constructor.
+     * @property {module:model/CurveFeeChangeLogDTO}
+     */
+    CurveFeeChangeLogDTO,
+
+    /**
+     * The CurveGaugeDTO model constructor.
+     * @property {module:model/CurveGaugeDTO}
+     */
+    CurveGaugeDTO,
+
+    /**
+     * The CurveGaugeDepositDTO model constructor.
+     * @property {module:model/CurveGaugeDepositDTO}
+     */
+    CurveGaugeDepositDTO,
+
+    /**
+     * The CurveGaugeLiquidityDTO model constructor.
+     * @property {module:model/CurveGaugeLiquidityDTO}
+     */
+    CurveGaugeLiquidityDTO,
+
+    /**
+     * The CurveGaugeTotalWeightDTO model constructor.
+     * @property {module:model/CurveGaugeTotalWeightDTO}
+     */
+    CurveGaugeTotalWeightDTO,
+
+    /**
+     * The CurveGaugeTypeDTO model constructor.
+     * @property {module:model/CurveGaugeTypeDTO}
+     */
+    CurveGaugeTypeDTO,
+
+    /**
+     * The CurveGaugeTypeWeightDTO model constructor.
+     * @property {module:model/CurveGaugeTypeWeightDTO}
+     */
+    CurveGaugeTypeWeightDTO,
+
+    /**
+     * The CurveGaugeWeightDTO model constructor.
+     * @property {module:model/CurveGaugeWeightDTO}
+     */
+    CurveGaugeWeightDTO,
+
+    /**
+     * The CurveGaugeWeightVoteDTO model constructor.
+     * @property {module:model/CurveGaugeWeightVoteDTO}
+     */
+    CurveGaugeWeightVoteDTO,
+
+    /**
+     * The CurveGaugeWithdrawDTO model constructor.
+     * @property {module:model/CurveGaugeWithdrawDTO}
+     */
+    CurveGaugeWithdrawDTO,
+
+    /**
+     * The CurveHourlyVolumeDTO model constructor.
+     * @property {module:model/CurveHourlyVolumeDTO}
+     */
+    CurveHourlyVolumeDTO,
+
+    /**
+     * The CurveLpTokenDTO model constructor.
+     * @property {module:model/CurveLpTokenDTO}
+     */
+    CurveLpTokenDTO,
+
+    /**
+     * The CurvePoolDTO model constructor.
+     * @property {module:model/CurvePoolDTO}
+     */
+    CurvePoolDTO,
+
+    /**
+     * The CurveProposalDTO model constructor.
+     * @property {module:model/CurveProposalDTO}
+     */
+    CurveProposalDTO,
+
+    /**
+     * The CurveProposalVoteDTO model constructor.
+     * @property {module:model/CurveProposalVoteDTO}
+     */
+    CurveProposalVoteDTO,
+
+    /**
+     * The CurveRemoveLiquidityEventDTO model constructor.
+     * @property {module:model/CurveRemoveLiquidityEventDTO}
+     */
+    CurveRemoveLiquidityEventDTO,
+
+    /**
+     * The CurveRemoveLiquidityOneEventDTO model constructor.
+     * @property {module:model/CurveRemoveLiquidityOneEventDTO}
+     */
+    CurveRemoveLiquidityOneEventDTO,
+
+    /**
+     * The CurveSystemStateDTO model constructor.
+     * @property {module:model/CurveSystemStateDTO}
+     */
+    CurveSystemStateDTO,
+
+    /**
+     * The CurveTokenDTO model constructor.
+     * @property {module:model/CurveTokenDTO}
+     */
+    CurveTokenDTO,
+
+    /**
+     * The CurveTransferOwnershipEventDTO model constructor.
+     * @property {module:model/CurveTransferOwnershipEventDTO}
+     */
+    CurveTransferOwnershipEventDTO,
+
+    /**
+     * The CurveUnderlyingCoinDTO model constructor.
+     * @property {module:model/CurveUnderlyingCoinDTO}
+     */
+    CurveUnderlyingCoinDTO,
+
+    /**
+     * The CurveVotingAppDTO model constructor.
+     * @property {module:model/CurveVotingAppDTO}
+     */
+    CurveVotingAppDTO,
+
+    /**
+     * The CurveWeeklyVolumeDTO model constructor.
+     * @property {module:model/CurveWeeklyVolumeDTO}
+     */
+    CurveWeeklyVolumeDTO,
+
+    /**
+     * The DexBatchDTO model constructor.
+     * @property {module:model/DexBatchDTO}
+     */
+    DexBatchDTO,
+
+    /**
+     * The DexDepositDTO model constructor.
+     * @property {module:model/DexDepositDTO}
+     */
+    DexDepositDTO,
+
+    /**
+     * The DexOrderDTO model constructor.
+     * @property {module:model/DexOrderDTO}
+     */
+    DexOrderDTO,
+
+    /**
+     * The DexPriceDTO model constructor.
+     * @property {module:model/DexPriceDTO}
+     */
+    DexPriceDTO,
+
+    /**
+     * The DexSolutionDTO model constructor.
+     * @property {module:model/DexSolutionDTO}
+     */
+    DexSolutionDTO,
+
+    /**
+     * The DexStatsDTO model constructor.
+     * @property {module:model/DexStatsDTO}
+     */
+    DexStatsDTO,
+
+    /**
+     * The DexTokenDTO model constructor.
+     * @property {module:model/DexTokenDTO}
+     */
+    DexTokenDTO,
+
+    /**
+     * The DexTradeDTO model constructor.
+     * @property {module:model/DexTradeDTO}
+     */
+    DexTradeDTO,
+
+    /**
+     * The DexUserDTO model constructor.
+     * @property {module:model/DexUserDTO}
+     */
+    DexUserDTO,
+
+    /**
+     * The DexWithdrawDTO model constructor.
+     * @property {module:model/DexWithdrawDTO}
+     */
+    DexWithdrawDTO,
+
+    /**
+     * The DexWithdrawRequestDTO model constructor.
+     * @property {module:model/DexWithdrawRequestDTO}
+     */
+    DexWithdrawRequestDTO,
 
     /**
      * The NumericsBigInteger model constructor.
@@ -205,6 +554,48 @@ export {
     TransactionsETradeAggressiveSide,
 
     /**
+     * The UniswapV2BundleV2DTO model constructor.
+     * @property {module:model/UniswapV2BundleV2DTO}
+     */
+    UniswapV2BundleV2DTO,
+
+    /**
+     * The UniswapV2BurnV2DTO model constructor.
+     * @property {module:model/UniswapV2BurnV2DTO}
+     */
+    UniswapV2BurnV2DTO,
+
+    /**
+     * The UniswapV2LiquidityPositionSnapshotV2DTO model constructor.
+     * @property {module:model/UniswapV2LiquidityPositionSnapshotV2DTO}
+     */
+    UniswapV2LiquidityPositionSnapshotV2DTO,
+
+    /**
+     * The UniswapV2LiquidityPositionV2DTO model constructor.
+     * @property {module:model/UniswapV2LiquidityPositionV2DTO}
+     */
+    UniswapV2LiquidityPositionV2DTO,
+
+    /**
+     * The UniswapV2MintV2DTO model constructor.
+     * @property {module:model/UniswapV2MintV2DTO}
+     */
+    UniswapV2MintV2DTO,
+
+    /**
+     * The UniswapV2PairDayDataV2DTO model constructor.
+     * @property {module:model/UniswapV2PairDayDataV2DTO}
+     */
+    UniswapV2PairDayDataV2DTO,
+
+    /**
+     * The UniswapV2PairHourDataV2DTO model constructor.
+     * @property {module:model/UniswapV2PairHourDataV2DTO}
+     */
+    UniswapV2PairHourDataV2DTO,
+
+    /**
      * The UniswapV2PairV2DTO model constructor.
      * @property {module:model/UniswapV2PairV2DTO}
      */
@@ -217,10 +608,40 @@ export {
     UniswapV2SwapV2DTO,
 
     /**
+     * The UniswapV2TokenDayDataV2DTO model constructor.
+     * @property {module:model/UniswapV2TokenDayDataV2DTO}
+     */
+    UniswapV2TokenDayDataV2DTO,
+
+    /**
      * The UniswapV2TokenV2DTO model constructor.
      * @property {module:model/UniswapV2TokenV2DTO}
      */
     UniswapV2TokenV2DTO,
+
+    /**
+     * The UniswapV2TransactionV2DTO model constructor.
+     * @property {module:model/UniswapV2TransactionV2DTO}
+     */
+    UniswapV2TransactionV2DTO,
+
+    /**
+     * The UniswapV2UniswapDayDataV2DTO model constructor.
+     * @property {module:model/UniswapV2UniswapDayDataV2DTO}
+     */
+    UniswapV2UniswapDayDataV2DTO,
+
+    /**
+     * The UniswapV2UniswapFactoryV2DTO model constructor.
+     * @property {module:model/UniswapV2UniswapFactoryV2DTO}
+     */
+    UniswapV2UniswapFactoryV2DTO,
+
+    /**
+     * The UniswapV2UserV2DTO model constructor.
+     * @property {module:model/UniswapV2UserV2DTO}
+     */
+    UniswapV2UserV2DTO,
 
     /**
      * The UniswapV3BundleV3DTO model constructor.
@@ -311,6 +732,12 @@ export {
      * @property {module:model/UniswapV3TokenV3DayDataDTO}
      */
     UniswapV3TokenV3DayDataDTO,
+
+    /**
+     * The UniswapV3TransactionV3DTO model constructor.
+     * @property {module:model/UniswapV3TransactionV3DTO}
+     */
+    UniswapV3TransactionV3DTO,
 
     /**
      * The UniswapV3UniswapDayDataV3DTO model constructor.

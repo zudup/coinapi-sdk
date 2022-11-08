@@ -73,120 +73,132 @@ class DexApiTest extends TestCase
     }
 
     /**
-     * Test case for dappsDexBatchHistoricalGet
+     * Test case for dexGetBatchesHistorical
      *
-     * .
+     * GetBatches (historical).
      *
      */
-    public function testDappsDexBatchHistoricalGet()
+    public function testDexGetBatchesHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsDexOrdersHistoricalGet
+     * Test case for dexGetDepositsHistorical
      *
-     * .
+     * GetDeposits (historical).
      *
      */
-    public function testDappsDexOrdersHistoricalGet()
+    public function testDexGetDepositsHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsDexPricesHistoricalGet
+     * Test case for dexGetOrdersHistorical
      *
-     * .
+     * GetOrders (historical).
      *
      */
-    public function testDappsDexPricesHistoricalGet()
+    public function testDexGetOrdersHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsDexSolutionHistoricalGet
+     * Test case for dexGetPricesHistorical
      *
-     * .
+     * GetPrices (historical).
      *
      */
-    public function testDappsDexSolutionHistoricalGet()
+    public function testDexGetPricesHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsDexStatsHistoricalGet
+     * Test case for dexGetSolutionsHistorical
      *
-     * .
+     * GetSolutions (historical).
      *
      */
-    public function testDappsDexStatsHistoricalGet()
+    public function testDexGetSolutionsHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsDexTokensHistoricalGet
+     * Test case for dexGetStatsHistorical
      *
-     * .
+     * GetStats (historical).
      *
      */
-    public function testDappsDexTokensHistoricalGet()
+    public function testDexGetStatsHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsDexTradesHistoricalGet
+     * Test case for dexGetTokensHistorical
      *
-     * .
+     * GetTokens (historical) 🔥.
      *
      */
-    public function testDappsDexTradesHistoricalGet()
+    public function testDexGetTokensHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsDexUsersHistoricalGet
+     * Test case for dexGetTradesHistorical
      *
-     * .
+     * GetTrades (historical) 🔥.
      *
      */
-    public function testDappsDexUsersHistoricalGet()
+    public function testDexGetTradesHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsDexWithdrawHistoricalGet
+     * Test case for dexGetUsersHistorical
      *
-     * .
+     * GetUsers (historical).
      *
      */
-    public function testDappsDexWithdrawHistoricalGet()
+    public function testDexGetUsersHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsDexWithdrawRequestHistoricalGet
+     * Test case for dexGetWithdrawsHistorical
      *
-     * .
+     * GetWithdraws (historical).
      *
      */
-    public function testDappsDexWithdrawRequestHistoricalGet()
+    public function testDexGetWithdrawsHistorical()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for dexGetWithdrawsRequestsHistorical
+     *
+     * GetWithdrawsRequests (historical).
+     *
+     */
+    public function testDexGetWithdrawsRequestsHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

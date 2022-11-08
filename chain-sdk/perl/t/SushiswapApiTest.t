@@ -30,6 +30,18 @@ my $api = WWW::OpenAPIClient::SushiswapApi->new();
 isa_ok($api, 'WWW::OpenAPIClient::SushiswapApi');
 
 #
+# curve_get_exchanges__current test
+#
+# uncomment below and update the test
+#my $curve_get_exchanges__current_result = $api->curve_get_exchanges__current();
+
+#
+# dex_get_trades__current test
+#
+# uncomment below and update the test
+#my $dex_get_trades__current_result = $api->dex_get_trades__current();
+
+#
 # sushiswap_get_bundles__historical test
 #
 # uncomment below and update the test

@@ -1,6 +1,90 @@
 @isTest
 private class OASSushiswapApiTest {
     /**
+     * GetExchanges (current) 🔥
+     *
+     * Gets exchanges.
+     */
+    @isTest
+    private static void curveGetExchangesCurrentTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        OASClient client;
+        OASSushiswapApi api;
+        List<OASCurveExchangeDTO> response;
+        List<OASCurveExchangeDTO> expectedResponse;
+        String js = '';
+
+        api = new OASSushiswapApi(new OASClient());
+
+        js = JSON.serialize(new List<OASCurveExchangeDTO>{OASCurveExchangeDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveExchangeDTO>{OASCurveExchangeDTO.getExample()};
+        response = (List<OASCurveExchangeDTO>) api.curveGetExchangesCurrent();
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurveExchangeDTO>{OASCurveExchangeDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveExchangeDTO>{OASCurveExchangeDTO.getExample()};
+        response = (List<OASCurveExchangeDTO>) api.curveGetExchangesCurrent();
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurveExchangeDTO>{OASCurveExchangeDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveExchangeDTO>{OASCurveExchangeDTO.getExample()};
+        response = (List<OASCurveExchangeDTO>) api.curveGetExchangesCurrent();
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * GetTrades (current) 🔥
+     *
+     * Gets trades.
+     */
+    @isTest
+    private static void dexGetTradesCurrentTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        OASClient client;
+        OASSushiswapApi api;
+        List<OASDexTradeDTO> response;
+        List<OASDexTradeDTO> expectedResponse;
+        String js = '';
+
+        api = new OASSushiswapApi(new OASClient());
+
+        js = JSON.serialize(new List<OASDexTradeDTO>{OASDexTradeDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASDexTradeDTO>{OASDexTradeDTO.getExample()};
+        response = (List<OASDexTradeDTO>) api.dexGetTradesCurrent();
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASDexTradeDTO>{OASDexTradeDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASDexTradeDTO>{OASDexTradeDTO.getExample()};
+        response = (List<OASDexTradeDTO>) api.dexGetTradesCurrent();
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASDexTradeDTO>{OASDexTradeDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASDexTradeDTO>{OASDexTradeDTO.getExample()};
+        response = (List<OASDexTradeDTO>) api.dexGetTradesCurrent();
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
      * GetBundles (historical)
      *
      * Gets bundles.
@@ -397,7 +481,7 @@ private class OASSushiswapApiTest {
     }
 
     /**
-     * GetPools (current)
+     * GetPools (current) 🔥
      *
      * Gets pools.
      */
@@ -489,7 +573,7 @@ private class OASSushiswapApiTest {
     }
 
     /**
-     * GetPools (historical)
+     * GetPools (historical) 🔥
      *
      * Gets list of pools for given filters.
      */
@@ -589,7 +673,7 @@ private class OASSushiswapApiTest {
     }
 
     /**
-     * GetSwaps (current)
+     * GetSwaps (current) 🔥
      *
      * Gets swaps.
      */
@@ -631,7 +715,7 @@ private class OASSushiswapApiTest {
     }
 
     /**
-     * GetSwaps (historical)
+     * GetSwaps (historical) 🔥
      *
      * Gets list of swaps for given filters.
      */
@@ -681,7 +765,7 @@ private class OASSushiswapApiTest {
     }
 
     /**
-     * GetTokens (current)
+     * GetTokens (current) 🔥
      *
      * Gets tokens.
      */
@@ -773,7 +857,7 @@ private class OASSushiswapApiTest {
     }
 
     /**
-     * GetTokens (historical)
+     * GetTokens (historical) 🔥
      *
      * Gets list of tokens for given filters.
      */

@@ -7,265 +7,265 @@
 #
 
 Describe -tag 'PSOpenAPITools' -name 'UniswapV3Api' {
-    Context 'Invoke-DappsUniswapv3BundleCurrentGet' {
-        It 'Test Invoke-DappsUniswapv3BundleCurrentGet' {
-            #$TestResult = Invoke-DappsUniswapv3BundleCurrentGet
+    Context 'Invoke-UniswapV3GetBundlesCurrent' {
+        It 'Test Invoke-UniswapV3GetBundlesCurrent' {
+            #$TestResult = Invoke-UniswapV3GetBundlesCurrent
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsUniswapv3BundlesHistoricalGet' {
-        It 'Test Invoke-DappsUniswapv3BundlesHistoricalGet' {
-            #$TestResult = Invoke-DappsUniswapv3BundlesHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
+    Context 'Invoke-UniswapV3GetBundlesHistorical' {
+        It 'Test Invoke-UniswapV3GetBundlesHistorical' {
+            #$TestResult = Invoke-UniswapV3GetBundlesHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsUniswapv3BurnsCurrentGet' {
-        It 'Test Invoke-DappsUniswapv3BurnsCurrentGet' {
-            #$TestResult = Invoke-DappsUniswapv3BurnsCurrentGet -FilterPoolId "TEST_VALUE"
+    Context 'Invoke-UniswapV3GetBurnsCurrent' {
+        It 'Test Invoke-UniswapV3GetBurnsCurrent' {
+            #$TestResult = Invoke-UniswapV3GetBurnsCurrent -FilterPoolId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsUniswapv3BurnsHistoricalGet' {
-        It 'Test Invoke-DappsUniswapv3BurnsHistoricalGet' {
-            #$TestResult = Invoke-DappsUniswapv3BurnsHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
+    Context 'Invoke-UniswapV3GetBurnsHistorical' {
+        It 'Test Invoke-UniswapV3GetBurnsHistorical' {
+            #$TestResult = Invoke-UniswapV3GetBurnsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsUniswapv3DayDataHistoricalGet' {
-        It 'Test Invoke-DappsUniswapv3DayDataHistoricalGet' {
-            #$TestResult = Invoke-DappsUniswapv3DayDataHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
+    Context 'Invoke-UniswapV3GetDayDataCurrent' {
+        It 'Test Invoke-UniswapV3GetDayDataCurrent' {
+            #$TestResult = Invoke-UniswapV3GetDayDataCurrent
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsUniswapv3FactoryCurrentGet' {
-        It 'Test Invoke-DappsUniswapv3FactoryCurrentGet' {
-            #$TestResult = Invoke-DappsUniswapv3FactoryCurrentGet -ChainId "TEST_VALUE"
+    Context 'Invoke-UniswapV3GetDayDataHistorical' {
+        It 'Test Invoke-UniswapV3GetDayDataHistorical' {
+            #$TestResult = Invoke-UniswapV3GetDayDataHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsUniswapv3FactoryHistoricalGet' {
-        It 'Test Invoke-DappsUniswapv3FactoryHistoricalGet' {
-            #$TestResult = Invoke-DappsUniswapv3FactoryHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
+    Context 'Invoke-UniswapV3GetFactoryCurrent' {
+        It 'Test Invoke-UniswapV3GetFactoryCurrent' {
+            #$TestResult = Invoke-UniswapV3GetFactoryCurrent
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsUniswapv3MintsCurrentGet' {
-        It 'Test Invoke-DappsUniswapv3MintsCurrentGet' {
-            #$TestResult = Invoke-DappsUniswapv3MintsCurrentGet -FilterPoolId "TEST_VALUE"
+    Context 'Invoke-UniswapV3GetFactoryHistorical' {
+        It 'Test Invoke-UniswapV3GetFactoryHistorical' {
+            #$TestResult = Invoke-UniswapV3GetFactoryHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsUniswapv3MintsHistoricalGet' {
-        It 'Test Invoke-DappsUniswapv3MintsHistoricalGet' {
-            #$TestResult = Invoke-DappsUniswapv3MintsHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
+    Context 'Invoke-UniswapV3GetMintsCurrent' {
+        It 'Test Invoke-UniswapV3GetMintsCurrent' {
+            #$TestResult = Invoke-UniswapV3GetMintsCurrent -FilterPoolId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsUniswapv3PoolDayDataHistoricalGet' {
-        It 'Test Invoke-DappsUniswapv3PoolDayDataHistoricalGet' {
-            #$TestResult = Invoke-DappsUniswapv3PoolDayDataHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
+    Context 'Invoke-UniswapV3GetMintsHistorical' {
+        It 'Test Invoke-UniswapV3GetMintsHistorical' {
+            #$TestResult = Invoke-UniswapV3GetMintsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsUniswapv3PoolHourDataHistoricalGet' {
-        It 'Test Invoke-DappsUniswapv3PoolHourDataHistoricalGet' {
-            #$TestResult = Invoke-DappsUniswapv3PoolHourDataHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
+    Context 'Invoke-UniswapV3GetPoolsDayDataCurrent' {
+        It 'Test Invoke-UniswapV3GetPoolsDayDataCurrent' {
+            #$TestResult = Invoke-UniswapV3GetPoolsDayDataCurrent -FilterPoolId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsUniswapv3PoolsCurrentGet' {
-        It 'Test Invoke-DappsUniswapv3PoolsCurrentGet' {
-            #$TestResult = Invoke-DappsUniswapv3PoolsCurrentGet -FilterPoolId "TEST_VALUE"
+    Context 'Invoke-UniswapV3GetPoolsDayDataHistorical' {
+        It 'Test Invoke-UniswapV3GetPoolsDayDataHistorical' {
+            #$TestResult = Invoke-UniswapV3GetPoolsDayDataHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsUniswapv3PoolsDayDataCurrentGet' {
-        It 'Test Invoke-DappsUniswapv3PoolsDayDataCurrentGet' {
-            #$TestResult = Invoke-DappsUniswapv3PoolsDayDataCurrentGet -FilterPoolId "TEST_VALUE"
+    Context 'Invoke-UniswapV3GetPoolsHourDataCurrent' {
+        It 'Test Invoke-UniswapV3GetPoolsHourDataCurrent' {
+            #$TestResult = Invoke-UniswapV3GetPoolsHourDataCurrent -FilterPoolId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsUniswapv3PoolsHistoricalGet' {
-        It 'Test Invoke-DappsUniswapv3PoolsHistoricalGet' {
-            #$TestResult = Invoke-DappsUniswapv3PoolsHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
+    Context 'Invoke-UniswapV3GetPoolsHourDataHistorical' {
+        It 'Test Invoke-UniswapV3GetPoolsHourDataHistorical' {
+            #$TestResult = Invoke-UniswapV3GetPoolsHourDataHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsUniswapv3PoolsHourDataCurrentGet' {
-        It 'Test Invoke-DappsUniswapv3PoolsHourDataCurrentGet' {
-            #$TestResult = Invoke-DappsUniswapv3PoolsHourDataCurrentGet -FilterPoolId "TEST_VALUE"
+    Context 'Invoke-UniswapV3GetPoolsCurrent' {
+        It 'Test Invoke-UniswapV3GetPoolsCurrent' {
+            #$TestResult = Invoke-UniswapV3GetPoolsCurrent -FilterPoolId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsUniswapv3PositionSnapshotHistoricalGet' {
-        It 'Test Invoke-DappsUniswapv3PositionSnapshotHistoricalGet' {
-            #$TestResult = Invoke-DappsUniswapv3PositionSnapshotHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
+    Context 'Invoke-UniswapV3GetPoolsHistorical' {
+        It 'Test Invoke-UniswapV3GetPoolsHistorical' {
+            #$TestResult = Invoke-UniswapV3GetPoolsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsUniswapv3PositionSnapshotsCurrentGet' {
-        It 'Test Invoke-DappsUniswapv3PositionSnapshotsCurrentGet' {
-            #$TestResult = Invoke-DappsUniswapv3PositionSnapshotsCurrentGet -FilterPoolId "TEST_VALUE"
+    Context 'Invoke-UniswapV3GetPositionsSnaphotsHistorical' {
+        It 'Test Invoke-UniswapV3GetPositionsSnaphotsHistorical' {
+            #$TestResult = Invoke-UniswapV3GetPositionsSnaphotsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsUniswapv3PositionsCurrentGet' {
-        It 'Test Invoke-DappsUniswapv3PositionsCurrentGet' {
-            #$TestResult = Invoke-DappsUniswapv3PositionsCurrentGet -FilterPoolId "TEST_VALUE"
+    Context 'Invoke-UniswapV3GetPositionsSnapshotsCurrent' {
+        It 'Test Invoke-UniswapV3GetPositionsSnapshotsCurrent' {
+            #$TestResult = Invoke-UniswapV3GetPositionsSnapshotsCurrent -FilterPoolId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsUniswapv3PositionsHistoricalGet' {
-        It 'Test Invoke-DappsUniswapv3PositionsHistoricalGet' {
-            #$TestResult = Invoke-DappsUniswapv3PositionsHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
+    Context 'Invoke-UniswapV3GetPositionsCurrent' {
+        It 'Test Invoke-UniswapV3GetPositionsCurrent' {
+            #$TestResult = Invoke-UniswapV3GetPositionsCurrent -FilterPoolId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsUniswapv3SwapsCurrentGet' {
-        It 'Test Invoke-DappsUniswapv3SwapsCurrentGet' {
-            #$TestResult = Invoke-DappsUniswapv3SwapsCurrentGet -FilterPoolId "TEST_VALUE"
+    Context 'Invoke-UniswapV3GetPositionsHistorical' {
+        It 'Test Invoke-UniswapV3GetPositionsHistorical' {
+            #$TestResult = Invoke-UniswapV3GetPositionsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsUniswapv3SwapsHistoricalGet' {
-        It 'Test Invoke-DappsUniswapv3SwapsHistoricalGet' {
-            #$TestResult = Invoke-DappsUniswapv3SwapsHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
+    Context 'Invoke-UniswapV3GetSwapsCurrent' {
+        It 'Test Invoke-UniswapV3GetSwapsCurrent' {
+            #$TestResult = Invoke-UniswapV3GetSwapsCurrent -FilterPoolId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsUniswapv3TickDayDataHistoricalGet' {
-        It 'Test Invoke-DappsUniswapv3TickDayDataHistoricalGet' {
-            #$TestResult = Invoke-DappsUniswapv3TickDayDataHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
+    Context 'Invoke-UniswapV3GetSwapsHistorical' {
+        It 'Test Invoke-UniswapV3GetSwapsHistorical' {
+            #$TestResult = Invoke-UniswapV3GetSwapsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsUniswapv3TicksCurrentGet' {
-        It 'Test Invoke-DappsUniswapv3TicksCurrentGet' {
-            #$TestResult = Invoke-DappsUniswapv3TicksCurrentGet -FilterPoolId "TEST_VALUE"
+    Context 'Invoke-UniswapV3GetTicksDayDataCurrent' {
+        It 'Test Invoke-UniswapV3GetTicksDayDataCurrent' {
+            #$TestResult = Invoke-UniswapV3GetTicksDayDataCurrent -FilterPoolId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsUniswapv3TicksDayDataCurrentGet' {
-        It 'Test Invoke-DappsUniswapv3TicksDayDataCurrentGet' {
-            #$TestResult = Invoke-DappsUniswapv3TicksDayDataCurrentGet -FilterPoolId "TEST_VALUE"
+    Context 'Invoke-UniswapV3GetTicksDayDataHistorical' {
+        It 'Test Invoke-UniswapV3GetTicksDayDataHistorical' {
+            #$TestResult = Invoke-UniswapV3GetTicksDayDataHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsUniswapv3TicksHistoricalGet' {
-        It 'Test Invoke-DappsUniswapv3TicksHistoricalGet' {
-            #$TestResult = Invoke-DappsUniswapv3TicksHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
+    Context 'Invoke-UniswapV3GetTicksCurrent' {
+        It 'Test Invoke-UniswapV3GetTicksCurrent' {
+            #$TestResult = Invoke-UniswapV3GetTicksCurrent -FilterPoolId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsUniswapv3TokenDayDataHistoricalGet' {
-        It 'Test Invoke-DappsUniswapv3TokenDayDataHistoricalGet' {
-            #$TestResult = Invoke-DappsUniswapv3TokenDayDataHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -TokenId "TEST_VALUE"
+    Context 'Invoke-UniswapV3GetTicksHistorical' {
+        It 'Test Invoke-UniswapV3GetTicksHistorical' {
+            #$TestResult = Invoke-UniswapV3GetTicksHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsUniswapv3TokenHourDataHistoricalGet' {
-        It 'Test Invoke-DappsUniswapv3TokenHourDataHistoricalGet' {
-            #$TestResult = Invoke-DappsUniswapv3TokenHourDataHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -TokenId "TEST_VALUE"
+    Context 'Invoke-UniswapV3GetTokensDayDataCurrent' {
+        It 'Test Invoke-UniswapV3GetTokensDayDataCurrent' {
+            #$TestResult = Invoke-UniswapV3GetTokensDayDataCurrent -FilterTokenId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsUniswapv3TokensCurrentGet' {
-        It 'Test Invoke-DappsUniswapv3TokensCurrentGet' {
-            #$TestResult = Invoke-DappsUniswapv3TokensCurrentGet -FilterTokenId "TEST_VALUE"
+    Context 'Invoke-UniswapV3GetTokensDayDataHistorical' {
+        It 'Test Invoke-UniswapV3GetTokensDayDataHistorical' {
+            #$TestResult = Invoke-UniswapV3GetTokensDayDataHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -TokenId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsUniswapv3TokensDayDataCurrentGet' {
-        It 'Test Invoke-DappsUniswapv3TokensDayDataCurrentGet' {
-            #$TestResult = Invoke-DappsUniswapv3TokensDayDataCurrentGet -FilterTokenId "TEST_VALUE"
+    Context 'Invoke-UniswapV3GetTokensHourDataCurrent' {
+        It 'Test Invoke-UniswapV3GetTokensHourDataCurrent' {
+            #$TestResult = Invoke-UniswapV3GetTokensHourDataCurrent -FilterTokenId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsUniswapv3TokensHistoricalGet' {
-        It 'Test Invoke-DappsUniswapv3TokensHistoricalGet' {
-            #$TestResult = Invoke-DappsUniswapv3TokensHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -TokenId "TEST_VALUE"
+    Context 'Invoke-UniswapV3GetTokensHourDataHistorical' {
+        It 'Test Invoke-UniswapV3GetTokensHourDataHistorical' {
+            #$TestResult = Invoke-UniswapV3GetTokensHourDataHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -TokenId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsUniswapv3TokensHourDataCurrentGet' {
-        It 'Test Invoke-DappsUniswapv3TokensHourDataCurrentGet' {
-            #$TestResult = Invoke-DappsUniswapv3TokensHourDataCurrentGet -FilterTokenId "TEST_VALUE"
+    Context 'Invoke-UniswapV3GetTokensCurrent' {
+        It 'Test Invoke-UniswapV3GetTokensCurrent' {
+            #$TestResult = Invoke-UniswapV3GetTokensCurrent -FilterTokenId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsUniswapv3TransactionsHistoricalGet' {
-        It 'Test Invoke-DappsUniswapv3TransactionsHistoricalGet' {
-            #$TestResult = Invoke-DappsUniswapv3TransactionsHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
+    Context 'Invoke-UniswapV3GetTokensHistorical' {
+        It 'Test Invoke-UniswapV3GetTokensHistorical' {
+            #$TestResult = Invoke-UniswapV3GetTokensHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -TokenId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsUniswapv3UniswapDayDataCurrentGet' {
-        It 'Test Invoke-DappsUniswapv3UniswapDayDataCurrentGet' {
-            #$TestResult = Invoke-DappsUniswapv3UniswapDayDataCurrentGet
+    Context 'Invoke-UniswapV3GetTransactionsHistorical' {
+        It 'Test Invoke-UniswapV3GetTransactionsHistorical' {
+            #$TestResult = Invoke-UniswapV3GetTransactionsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }

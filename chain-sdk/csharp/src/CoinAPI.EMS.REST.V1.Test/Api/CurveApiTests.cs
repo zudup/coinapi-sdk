@@ -19,6 +19,7 @@ using NUnit.Framework;
 
 using CoinAPI.EMS.REST.V1.Client;
 using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Model;
 
 namespace CoinAPI.EMS.REST.V1.Test
 {
@@ -63,41 +64,25 @@ namespace CoinAPI.EMS.REST.V1.Test
 
         
         /// <summary>
-        /// Test DappsCurveAccountsHistoricalGet
+        /// Test CurveGetAccountsHistorical
         /// </summary>
         [Test]
-        public void DappsCurveAccountsHistoricalGetTest()
+        public void CurveGetAccountsHistoricalTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //long? startBlock = null;
             //long? endBlock = null;
             //DateTime? startDate = null;
             //DateTime? endDate = null;
-            //instance.DappsCurveAccountsHistoricalGet(startBlock, endBlock, startDate, endDate);
-            
+            //var response = instance.CurveGetAccountsHistorical(startBlock, endBlock, startDate, endDate);
+            //Assert.IsInstanceOf(typeof(List<CurveAccountDTO>), response, "response is List<CurveAccountDTO>");
         }
         
         /// <summary>
-        /// Test DappsCurveAddLiquidityEventHistoricalGet
+        /// Test CurveGetAddLiquidityEventsHistorical
         /// </summary>
         [Test]
-        public void DappsCurveAddLiquidityEventHistoricalGetTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? startBlock = null;
-            //long? endBlock = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //string poolId = null;
-            //instance.DappsCurveAddLiquidityEventHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
-            
-        }
-        
-        /// <summary>
-        /// Test DappsCurveAdminFeeChangeLogHistoricalGet
-        /// </summary>
-        [Test]
-        public void DappsCurveAdminFeeChangeLogHistoricalGetTest()
+        public void CurveGetAddLiquidityEventsHistoricalTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //long? startBlock = null;
@@ -105,15 +90,15 @@ namespace CoinAPI.EMS.REST.V1.Test
             //DateTime? startDate = null;
             //DateTime? endDate = null;
             //string poolId = null;
-            //instance.DappsCurveAdminFeeChangeLogHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
-            
+            //var response = instance.CurveGetAddLiquidityEventsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+            //Assert.IsInstanceOf(typeof(List<CurveAddLiquidityEventDTO>), response, "response is List<CurveAddLiquidityEventDTO>");
         }
         
         /// <summary>
-        /// Test DappsCurveAmplificationCoeffChangeLogHistoricalGet
+        /// Test CurveGetAdminFeeChangeLogsHistorical
         /// </summary>
         [Test]
-        public void DappsCurveAmplificationCoeffChangeLogHistoricalGetTest()
+        public void CurveGetAdminFeeChangeLogsHistoricalTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //long? startBlock = null;
@@ -121,15 +106,15 @@ namespace CoinAPI.EMS.REST.V1.Test
             //DateTime? startDate = null;
             //DateTime? endDate = null;
             //string poolId = null;
-            //instance.DappsCurveAmplificationCoeffChangeLogHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
-            
+            //var response = instance.CurveGetAdminFeeChangeLogsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+            //Assert.IsInstanceOf(typeof(List<CurveAdminFeeChangeLogDTO>), response, "response is List<CurveAdminFeeChangeLogDTO>");
         }
         
         /// <summary>
-        /// Test DappsCurveCoinsHistoricalGet
+        /// Test CurveGetAmplificationCoeffChangeLogsHistorical
         /// </summary>
         [Test]
-        public void DappsCurveCoinsHistoricalGetTest()
+        public void CurveGetAmplificationCoeffChangeLogsHistoricalTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //long? startBlock = null;
@@ -137,15 +122,15 @@ namespace CoinAPI.EMS.REST.V1.Test
             //DateTime? startDate = null;
             //DateTime? endDate = null;
             //string poolId = null;
-            //instance.DappsCurveCoinsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
-            
+            //var response = instance.CurveGetAmplificationCoeffChangeLogsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+            //Assert.IsInstanceOf(typeof(List<CurveAmplificationCoeffChangeLogDTO>), response, "response is List<CurveAmplificationCoeffChangeLogDTO>");
         }
         
         /// <summary>
-        /// Test DappsCurveContractsHistoricalGet
+        /// Test CurveGetCoinsHistorical
         /// </summary>
         [Test]
-        public void DappsCurveContractsHistoricalGetTest()
+        public void CurveGetCoinsHistoricalTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //long? startBlock = null;
@@ -153,15 +138,15 @@ namespace CoinAPI.EMS.REST.V1.Test
             //DateTime? startDate = null;
             //DateTime? endDate = null;
             //string poolId = null;
-            //instance.DappsCurveContractsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
-            
+            //var response = instance.CurveGetCoinsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+            //Assert.IsInstanceOf(typeof(List<CurveCoinDTO>), response, "response is List<CurveCoinDTO>");
         }
         
         /// <summary>
-        /// Test DappsCurveContractsVersionHistoricalGet
+        /// Test CurveGetContractsHistorical
         /// </summary>
         [Test]
-        public void DappsCurveContractsVersionHistoricalGetTest()
+        public void CurveGetContractsHistoricalTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //long? startBlock = null;
@@ -169,15 +154,15 @@ namespace CoinAPI.EMS.REST.V1.Test
             //DateTime? startDate = null;
             //DateTime? endDate = null;
             //string poolId = null;
-            //instance.DappsCurveContractsVersionHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
-            
+            //var response = instance.CurveGetContractsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+            //Assert.IsInstanceOf(typeof(List<CurveContractDTO>), response, "response is List<CurveContractDTO>");
         }
         
         /// <summary>
-        /// Test DappsCurveDailyVolumeHistoricalGet
+        /// Test CurveGetContractsVersionsHistorical
         /// </summary>
         [Test]
-        public void DappsCurveDailyVolumeHistoricalGetTest()
+        public void CurveGetContractsVersionsHistoricalTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //long? startBlock = null;
@@ -185,15 +170,15 @@ namespace CoinAPI.EMS.REST.V1.Test
             //DateTime? startDate = null;
             //DateTime? endDate = null;
             //string poolId = null;
-            //instance.DappsCurveDailyVolumeHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
-            
+            //var response = instance.CurveGetContractsVersionsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+            //Assert.IsInstanceOf(typeof(List<CurveContractVersionDTO>), response, "response is List<CurveContractVersionDTO>");
         }
         
         /// <summary>
-        /// Test DappsCurveFeeChangeLogHistoricalGet
+        /// Test CurveGetDailyVolumesHistorical
         /// </summary>
         [Test]
-        public void DappsCurveFeeChangeLogHistoricalGetTest()
+        public void CurveGetDailyVolumesHistoricalTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //long? startBlock = null;
@@ -201,30 +186,15 @@ namespace CoinAPI.EMS.REST.V1.Test
             //DateTime? startDate = null;
             //DateTime? endDate = null;
             //string poolId = null;
-            //instance.DappsCurveFeeChangeLogHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
-            
+            //var response = instance.CurveGetDailyVolumesHistorical(startBlock, endBlock, startDate, endDate, poolId);
+            //Assert.IsInstanceOf(typeof(List<CurveDailyVolumeDTO>), response, "response is List<CurveDailyVolumeDTO>");
         }
         
         /// <summary>
-        /// Test DappsCurveGaugeDepositHistoricalGet
+        /// Test CurveGetExchangesHistorical
         /// </summary>
         [Test]
-        public void DappsCurveGaugeDepositHistoricalGetTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? startBlock = null;
-            //long? endBlock = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //instance.DappsCurveGaugeDepositHistoricalGet(startBlock, endBlock, startDate, endDate);
-            
-        }
-        
-        /// <summary>
-        /// Test DappsCurveGaugeHistoricalGet
-        /// </summary>
-        [Test]
-        public void DappsCurveGaugeHistoricalGetTest()
+        public void CurveGetExchangesHistoricalTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //long? startBlock = null;
@@ -232,120 +202,15 @@ namespace CoinAPI.EMS.REST.V1.Test
             //DateTime? startDate = null;
             //DateTime? endDate = null;
             //string poolId = null;
-            //instance.DappsCurveGaugeHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
-            
+            //var response = instance.CurveGetExchangesHistorical(startBlock, endBlock, startDate, endDate, poolId);
+            //Assert.IsInstanceOf(typeof(List<CurveExchangeDTO>), response, "response is List<CurveExchangeDTO>");
         }
         
         /// <summary>
-        /// Test DappsCurveGaugeLiquidityHistoricalGet
+        /// Test CurveGetFeeChangeLogsHistorical
         /// </summary>
         [Test]
-        public void DappsCurveGaugeLiquidityHistoricalGetTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? startBlock = null;
-            //long? endBlock = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //instance.DappsCurveGaugeLiquidityHistoricalGet(startBlock, endBlock, startDate, endDate);
-            
-        }
-        
-        /// <summary>
-        /// Test DappsCurveGaugeTotalWeightHistoricalGet
-        /// </summary>
-        [Test]
-        public void DappsCurveGaugeTotalWeightHistoricalGetTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? startBlock = null;
-            //long? endBlock = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //instance.DappsCurveGaugeTotalWeightHistoricalGet(startBlock, endBlock, startDate, endDate);
-            
-        }
-        
-        /// <summary>
-        /// Test DappsCurveGaugeTypeHistoricalGet
-        /// </summary>
-        [Test]
-        public void DappsCurveGaugeTypeHistoricalGetTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? startBlock = null;
-            //long? endBlock = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //instance.DappsCurveGaugeTypeHistoricalGet(startBlock, endBlock, startDate, endDate);
-            
-        }
-        
-        /// <summary>
-        /// Test DappsCurveGaugeTypeWeightHistoricalGet
-        /// </summary>
-        [Test]
-        public void DappsCurveGaugeTypeWeightHistoricalGetTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? startBlock = null;
-            //long? endBlock = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //instance.DappsCurveGaugeTypeWeightHistoricalGet(startBlock, endBlock, startDate, endDate);
-            
-        }
-        
-        /// <summary>
-        /// Test DappsCurveGaugeWeightHistoricalGet
-        /// </summary>
-        [Test]
-        public void DappsCurveGaugeWeightHistoricalGetTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? startBlock = null;
-            //long? endBlock = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //instance.DappsCurveGaugeWeightHistoricalGet(startBlock, endBlock, startDate, endDate);
-            
-        }
-        
-        /// <summary>
-        /// Test DappsCurveGaugeWeightVoteHistoricalGet
-        /// </summary>
-        [Test]
-        public void DappsCurveGaugeWeightVoteHistoricalGetTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? startBlock = null;
-            //long? endBlock = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //instance.DappsCurveGaugeWeightVoteHistoricalGet(startBlock, endBlock, startDate, endDate);
-            
-        }
-        
-        /// <summary>
-        /// Test DappsCurveGaugeWithdrawHistoricalGet
-        /// </summary>
-        [Test]
-        public void DappsCurveGaugeWithdrawHistoricalGetTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? startBlock = null;
-            //long? endBlock = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //instance.DappsCurveGaugeWithdrawHistoricalGet(startBlock, endBlock, startDate, endDate);
-            
-        }
-        
-        /// <summary>
-        /// Test DappsCurveHourlyVolumeHistoricalGet
-        /// </summary>
-        [Test]
-        public void DappsCurveHourlyVolumeHistoricalGetTest()
+        public void CurveGetFeeChangeLogsHistoricalTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //long? startBlock = null;
@@ -353,15 +218,30 @@ namespace CoinAPI.EMS.REST.V1.Test
             //DateTime? startDate = null;
             //DateTime? endDate = null;
             //string poolId = null;
-            //instance.DappsCurveHourlyVolumeHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
-            
+            //var response = instance.CurveGetFeeChangeLogsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+            //Assert.IsInstanceOf(typeof(List<CurveFeeChangeLogDTO>), response, "response is List<CurveFeeChangeLogDTO>");
         }
         
         /// <summary>
-        /// Test DappsCurveLpTokenHistoricalGet
+        /// Test CurveGetGaugesDepositsHistorical
         /// </summary>
         [Test]
-        public void DappsCurveLpTokenHistoricalGetTest()
+        public void CurveGetGaugesDepositsHistoricalTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //long? startBlock = null;
+            //long? endBlock = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //var response = instance.CurveGetGaugesDepositsHistorical(startBlock, endBlock, startDate, endDate);
+            //Assert.IsInstanceOf(typeof(List<CurveGaugeDepositDTO>), response, "response is List<CurveGaugeDepositDTO>");
+        }
+        
+        /// <summary>
+        /// Test CurveGetGaugesHistorical
+        /// </summary>
+        [Test]
+        public void CurveGetGaugesHistoricalTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //long? startBlock = null;
@@ -369,15 +249,120 @@ namespace CoinAPI.EMS.REST.V1.Test
             //DateTime? startDate = null;
             //DateTime? endDate = null;
             //string poolId = null;
-            //instance.DappsCurveLpTokenHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
-            
+            //var response = instance.CurveGetGaugesHistorical(startBlock, endBlock, startDate, endDate, poolId);
+            //Assert.IsInstanceOf(typeof(List<CurveGaugeDTO>), response, "response is List<CurveGaugeDTO>");
         }
         
         /// <summary>
-        /// Test DappsCurvePoolsHistoricalGet
+        /// Test CurveGetGaugesLiquidityHistorical
         /// </summary>
         [Test]
-        public void DappsCurvePoolsHistoricalGetTest()
+        public void CurveGetGaugesLiquidityHistoricalTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //long? startBlock = null;
+            //long? endBlock = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //var response = instance.CurveGetGaugesLiquidityHistorical(startBlock, endBlock, startDate, endDate);
+            //Assert.IsInstanceOf(typeof(List<CurveGaugeLiquidityDTO>), response, "response is List<CurveGaugeLiquidityDTO>");
+        }
+        
+        /// <summary>
+        /// Test CurveGetGaugesTotalWeightsHistorical
+        /// </summary>
+        [Test]
+        public void CurveGetGaugesTotalWeightsHistoricalTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //long? startBlock = null;
+            //long? endBlock = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //var response = instance.CurveGetGaugesTotalWeightsHistorical(startBlock, endBlock, startDate, endDate);
+            //Assert.IsInstanceOf(typeof(List<CurveGaugeTotalWeightDTO>), response, "response is List<CurveGaugeTotalWeightDTO>");
+        }
+        
+        /// <summary>
+        /// Test CurveGetGaugesTypesHistorical
+        /// </summary>
+        [Test]
+        public void CurveGetGaugesTypesHistoricalTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //long? startBlock = null;
+            //long? endBlock = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //var response = instance.CurveGetGaugesTypesHistorical(startBlock, endBlock, startDate, endDate);
+            //Assert.IsInstanceOf(typeof(List<CurveGaugeTypeDTO>), response, "response is List<CurveGaugeTypeDTO>");
+        }
+        
+        /// <summary>
+        /// Test CurveGetGaugesTypesWeightsHistorical
+        /// </summary>
+        [Test]
+        public void CurveGetGaugesTypesWeightsHistoricalTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //long? startBlock = null;
+            //long? endBlock = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //var response = instance.CurveGetGaugesTypesWeightsHistorical(startBlock, endBlock, startDate, endDate);
+            //Assert.IsInstanceOf(typeof(List<CurveGaugeTypeWeightDTO>), response, "response is List<CurveGaugeTypeWeightDTO>");
+        }
+        
+        /// <summary>
+        /// Test CurveGetGaugesWeightsHistorical
+        /// </summary>
+        [Test]
+        public void CurveGetGaugesWeightsHistoricalTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //long? startBlock = null;
+            //long? endBlock = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //var response = instance.CurveGetGaugesWeightsHistorical(startBlock, endBlock, startDate, endDate);
+            //Assert.IsInstanceOf(typeof(List<CurveGaugeWeightDTO>), response, "response is List<CurveGaugeWeightDTO>");
+        }
+        
+        /// <summary>
+        /// Test CurveGetGaugesWeightsVotesHistorical
+        /// </summary>
+        [Test]
+        public void CurveGetGaugesWeightsVotesHistoricalTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //long? startBlock = null;
+            //long? endBlock = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //var response = instance.CurveGetGaugesWeightsVotesHistorical(startBlock, endBlock, startDate, endDate);
+            //Assert.IsInstanceOf(typeof(List<CurveGaugeWeightVoteDTO>), response, "response is List<CurveGaugeWeightVoteDTO>");
+        }
+        
+        /// <summary>
+        /// Test CurveGetGaugesWithdrawHistorical
+        /// </summary>
+        [Test]
+        public void CurveGetGaugesWithdrawHistoricalTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //long? startBlock = null;
+            //long? endBlock = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //var response = instance.CurveGetGaugesWithdrawHistorical(startBlock, endBlock, startDate, endDate);
+            //Assert.IsInstanceOf(typeof(List<CurveGaugeWithdrawDTO>), response, "response is List<CurveGaugeWithdrawDTO>");
+        }
+        
+        /// <summary>
+        /// Test CurveGetHourlyVolumesHistorical
+        /// </summary>
+        [Test]
+        public void CurveGetHourlyVolumesHistoricalTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //long? startBlock = null;
@@ -385,45 +370,15 @@ namespace CoinAPI.EMS.REST.V1.Test
             //DateTime? startDate = null;
             //DateTime? endDate = null;
             //string poolId = null;
-            //instance.DappsCurvePoolsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
-            
+            //var response = instance.CurveGetHourlyVolumesHistorical(startBlock, endBlock, startDate, endDate, poolId);
+            //Assert.IsInstanceOf(typeof(List<CurveHourlyVolumeDTO>), response, "response is List<CurveHourlyVolumeDTO>");
         }
         
         /// <summary>
-        /// Test DappsCurveProposalsHistoricalGet
+        /// Test CurveGetLpTokensHistorical
         /// </summary>
         [Test]
-        public void DappsCurveProposalsHistoricalGetTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? startBlock = null;
-            //long? endBlock = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //instance.DappsCurveProposalsHistoricalGet(startBlock, endBlock, startDate, endDate);
-            
-        }
-        
-        /// <summary>
-        /// Test DappsCurveProposalsVoteHistoricalGet
-        /// </summary>
-        [Test]
-        public void DappsCurveProposalsVoteHistoricalGetTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? startBlock = null;
-            //long? endBlock = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //instance.DappsCurveProposalsVoteHistoricalGet(startBlock, endBlock, startDate, endDate);
-            
-        }
-        
-        /// <summary>
-        /// Test DappsCurveRemoveLiquidityEventHistoricalGet
-        /// </summary>
-        [Test]
-        public void DappsCurveRemoveLiquidityEventHistoricalGetTest()
+        public void CurveGetLpTokensHistoricalTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //long? startBlock = null;
@@ -431,15 +386,15 @@ namespace CoinAPI.EMS.REST.V1.Test
             //DateTime? startDate = null;
             //DateTime? endDate = null;
             //string poolId = null;
-            //instance.DappsCurveRemoveLiquidityEventHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
-            
+            //var response = instance.CurveGetLpTokensHistorical(startBlock, endBlock, startDate, endDate, poolId);
+            //Assert.IsInstanceOf(typeof(List<CurveLpTokenDTO>), response, "response is List<CurveLpTokenDTO>");
         }
         
         /// <summary>
-        /// Test DappsCurveRemoveLiquidityOneEventHistoricalGet
+        /// Test CurveGetPoolsHistorical
         /// </summary>
         [Test]
-        public void DappsCurveRemoveLiquidityOneEventHistoricalGetTest()
+        public void CurveGetPoolsHistoricalTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //long? startBlock = null;
@@ -447,15 +402,45 @@ namespace CoinAPI.EMS.REST.V1.Test
             //DateTime? startDate = null;
             //DateTime? endDate = null;
             //string poolId = null;
-            //instance.DappsCurveRemoveLiquidityOneEventHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
-            
+            //var response = instance.CurveGetPoolsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+            //Assert.IsInstanceOf(typeof(List<CurvePoolDTO>), response, "response is List<CurvePoolDTO>");
         }
         
         /// <summary>
-        /// Test DappsCurveSwapsHistoricalGet
+        /// Test CurveGetProposalsHistorical
         /// </summary>
         [Test]
-        public void DappsCurveSwapsHistoricalGetTest()
+        public void CurveGetProposalsHistoricalTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //long? startBlock = null;
+            //long? endBlock = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //var response = instance.CurveGetProposalsHistorical(startBlock, endBlock, startDate, endDate);
+            //Assert.IsInstanceOf(typeof(List<CurveProposalDTO>), response, "response is List<CurveProposalDTO>");
+        }
+        
+        /// <summary>
+        /// Test CurveGetProposalsVotesHistorical
+        /// </summary>
+        [Test]
+        public void CurveGetProposalsVotesHistoricalTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //long? startBlock = null;
+            //long? endBlock = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //var response = instance.CurveGetProposalsVotesHistorical(startBlock, endBlock, startDate, endDate);
+            //Assert.IsInstanceOf(typeof(List<CurveProposalVoteDTO>), response, "response is List<CurveProposalVoteDTO>");
+        }
+        
+        /// <summary>
+        /// Test CurveGetRemoveLiquidityEventsHistorical
+        /// </summary>
+        [Test]
+        public void CurveGetRemoveLiquidityEventsHistoricalTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //long? startBlock = null;
@@ -463,30 +448,46 @@ namespace CoinAPI.EMS.REST.V1.Test
             //DateTime? startDate = null;
             //DateTime? endDate = null;
             //string poolId = null;
-            //instance.DappsCurveSwapsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
-            
+            //var response = instance.CurveGetRemoveLiquidityEventsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+            //Assert.IsInstanceOf(typeof(List<CurveRemoveLiquidityEventDTO>), response, "response is List<CurveRemoveLiquidityEventDTO>");
         }
         
         /// <summary>
-        /// Test DappsCurveSystemStateHistoricalGet
+        /// Test CurveGetRemoveLiquidityOneEventsHistorical
         /// </summary>
         [Test]
-        public void DappsCurveSystemStateHistoricalGetTest()
+        public void CurveGetRemoveLiquidityOneEventsHistoricalTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //long? startBlock = null;
             //long? endBlock = null;
             //DateTime? startDate = null;
             //DateTime? endDate = null;
-            //instance.DappsCurveSystemStateHistoricalGet(startBlock, endBlock, startDate, endDate);
-            
+            //string poolId = null;
+            //var response = instance.CurveGetRemoveLiquidityOneEventsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+            //Assert.IsInstanceOf(typeof(List<CurveRemoveLiquidityOneEventDTO>), response, "response is List<CurveRemoveLiquidityOneEventDTO>");
         }
         
         /// <summary>
-        /// Test DappsCurveTokensHistoricalGet
+        /// Test CurveGetSystemStatesHistorical
         /// </summary>
         [Test]
-        public void DappsCurveTokensHistoricalGetTest()
+        public void CurveGetSystemStatesHistoricalTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //long? startBlock = null;
+            //long? endBlock = null;
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //var response = instance.CurveGetSystemStatesHistorical(startBlock, endBlock, startDate, endDate);
+            //Assert.IsInstanceOf(typeof(List<CurveSystemStateDTO>), response, "response is List<CurveSystemStateDTO>");
+        }
+        
+        /// <summary>
+        /// Test CurveGetTokensHistorical
+        /// </summary>
+        [Test]
+        public void CurveGetTokensHistoricalTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //long? startBlock = null;
@@ -494,15 +495,15 @@ namespace CoinAPI.EMS.REST.V1.Test
             //DateTime? startDate = null;
             //DateTime? endDate = null;
             //string tokenId = null;
-            //instance.DappsCurveTokensHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId);
-            
+            //var response = instance.CurveGetTokensHistorical(startBlock, endBlock, startDate, endDate, tokenId);
+            //Assert.IsInstanceOf(typeof(List<CurveTokenDTO>), response, "response is List<CurveTokenDTO>");
         }
         
         /// <summary>
-        /// Test DappsCurveTransferOwnershipEventHistoricalGet
+        /// Test CurveGetTransferOwnershipEventsHistorical
         /// </summary>
         [Test]
-        public void DappsCurveTransferOwnershipEventHistoricalGetTest()
+        public void CurveGetTransferOwnershipEventsHistoricalTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //long? startBlock = null;
@@ -510,15 +511,15 @@ namespace CoinAPI.EMS.REST.V1.Test
             //DateTime? startDate = null;
             //DateTime? endDate = null;
             //string poolId = null;
-            //instance.DappsCurveTransferOwnershipEventHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
-            
+            //var response = instance.CurveGetTransferOwnershipEventsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+            //Assert.IsInstanceOf(typeof(List<CurveTransferOwnershipEventDTO>), response, "response is List<CurveTransferOwnershipEventDTO>");
         }
         
         /// <summary>
-        /// Test DappsCurveUnderlyingCoinHistoricalGet
+        /// Test CurveGetUnderlyingCoinsHistorical
         /// </summary>
         [Test]
-        public void DappsCurveUnderlyingCoinHistoricalGetTest()
+        public void CurveGetUnderlyingCoinsHistoricalTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //long? startBlock = null;
@@ -526,30 +527,30 @@ namespace CoinAPI.EMS.REST.V1.Test
             //DateTime? startDate = null;
             //DateTime? endDate = null;
             //string poolId = null;
-            //instance.DappsCurveUnderlyingCoinHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
-            
+            //var response = instance.CurveGetUnderlyingCoinsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+            //Assert.IsInstanceOf(typeof(List<CurveUnderlyingCoinDTO>), response, "response is List<CurveUnderlyingCoinDTO>");
         }
         
         /// <summary>
-        /// Test DappsCurveVotingAppHistoricalGet
+        /// Test CurveGetVotingAppsHistorical
         /// </summary>
         [Test]
-        public void DappsCurveVotingAppHistoricalGetTest()
+        public void CurveGetVotingAppsHistoricalTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //long? startBlock = null;
             //long? endBlock = null;
             //DateTime? startDate = null;
             //DateTime? endDate = null;
-            //instance.DappsCurveVotingAppHistoricalGet(startBlock, endBlock, startDate, endDate);
-            
+            //var response = instance.CurveGetVotingAppsHistorical(startBlock, endBlock, startDate, endDate);
+            //Assert.IsInstanceOf(typeof(List<CurveVotingAppDTO>), response, "response is List<CurveVotingAppDTO>");
         }
         
         /// <summary>
-        /// Test DappsCurveWeeklyVolumeHistoricalGet
+        /// Test CurveGetWeeklyVolumesHistorical
         /// </summary>
         [Test]
-        public void DappsCurveWeeklyVolumeHistoricalGetTest()
+        public void CurveGetWeeklyVolumesHistoricalTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //long? startBlock = null;
@@ -557,8 +558,8 @@ namespace CoinAPI.EMS.REST.V1.Test
             //DateTime? startDate = null;
             //DateTime? endDate = null;
             //string poolId = null;
-            //instance.DappsCurveWeeklyVolumeHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
-            
+            //var response = instance.CurveGetWeeklyVolumesHistorical(startBlock, endBlock, startDate, endDate, poolId);
+            //Assert.IsInstanceOf(typeof(List<CurveWeeklyVolumeDTO>), response, "response is List<CurveWeeklyVolumeDTO>");
         }
         
     }

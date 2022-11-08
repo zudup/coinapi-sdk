@@ -48,320 +48,320 @@
   }
 
   describe('CurveApi', function() {
-    describe('dappsCurveAccountsHistoricalGet', function() {
-      it('should call dappsCurveAccountsHistoricalGet successfully', function(done) {
-        //uncomment below and update the code to test dappsCurveAccountsHistoricalGet
-        //instance.dappsCurveAccountsHistoricalGet(function(error) {
+    describe('curveGetAccountsHistorical', function() {
+      it('should call curveGetAccountsHistorical successfully', function(done) {
+        //uncomment below and update the code to test curveGetAccountsHistorical
+        //instance.curveGetAccountsHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('dappsCurveAddLiquidityEventHistoricalGet', function() {
-      it('should call dappsCurveAddLiquidityEventHistoricalGet successfully', function(done) {
-        //uncomment below and update the code to test dappsCurveAddLiquidityEventHistoricalGet
-        //instance.dappsCurveAddLiquidityEventHistoricalGet(function(error) {
+    describe('curveGetAddLiquidityEventsHistorical', function() {
+      it('should call curveGetAddLiquidityEventsHistorical successfully', function(done) {
+        //uncomment below and update the code to test curveGetAddLiquidityEventsHistorical
+        //instance.curveGetAddLiquidityEventsHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('dappsCurveAdminFeeChangeLogHistoricalGet', function() {
-      it('should call dappsCurveAdminFeeChangeLogHistoricalGet successfully', function(done) {
-        //uncomment below and update the code to test dappsCurveAdminFeeChangeLogHistoricalGet
-        //instance.dappsCurveAdminFeeChangeLogHistoricalGet(function(error) {
+    describe('curveGetAdminFeeChangeLogsHistorical', function() {
+      it('should call curveGetAdminFeeChangeLogsHistorical successfully', function(done) {
+        //uncomment below and update the code to test curveGetAdminFeeChangeLogsHistorical
+        //instance.curveGetAdminFeeChangeLogsHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('dappsCurveAmplificationCoeffChangeLogHistoricalGet', function() {
-      it('should call dappsCurveAmplificationCoeffChangeLogHistoricalGet successfully', function(done) {
-        //uncomment below and update the code to test dappsCurveAmplificationCoeffChangeLogHistoricalGet
-        //instance.dappsCurveAmplificationCoeffChangeLogHistoricalGet(function(error) {
+    describe('curveGetAmplificationCoeffChangeLogsHistorical', function() {
+      it('should call curveGetAmplificationCoeffChangeLogsHistorical successfully', function(done) {
+        //uncomment below and update the code to test curveGetAmplificationCoeffChangeLogsHistorical
+        //instance.curveGetAmplificationCoeffChangeLogsHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('dappsCurveCoinsHistoricalGet', function() {
-      it('should call dappsCurveCoinsHistoricalGet successfully', function(done) {
-        //uncomment below and update the code to test dappsCurveCoinsHistoricalGet
-        //instance.dappsCurveCoinsHistoricalGet(function(error) {
+    describe('curveGetCoinsHistorical', function() {
+      it('should call curveGetCoinsHistorical successfully', function(done) {
+        //uncomment below and update the code to test curveGetCoinsHistorical
+        //instance.curveGetCoinsHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('dappsCurveContractsHistoricalGet', function() {
-      it('should call dappsCurveContractsHistoricalGet successfully', function(done) {
-        //uncomment below and update the code to test dappsCurveContractsHistoricalGet
-        //instance.dappsCurveContractsHistoricalGet(function(error) {
+    describe('curveGetContractsHistorical', function() {
+      it('should call curveGetContractsHistorical successfully', function(done) {
+        //uncomment below and update the code to test curveGetContractsHistorical
+        //instance.curveGetContractsHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('dappsCurveContractsVersionHistoricalGet', function() {
-      it('should call dappsCurveContractsVersionHistoricalGet successfully', function(done) {
-        //uncomment below and update the code to test dappsCurveContractsVersionHistoricalGet
-        //instance.dappsCurveContractsVersionHistoricalGet(function(error) {
+    describe('curveGetContractsVersionsHistorical', function() {
+      it('should call curveGetContractsVersionsHistorical successfully', function(done) {
+        //uncomment below and update the code to test curveGetContractsVersionsHistorical
+        //instance.curveGetContractsVersionsHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('dappsCurveDailyVolumeHistoricalGet', function() {
-      it('should call dappsCurveDailyVolumeHistoricalGet successfully', function(done) {
-        //uncomment below and update the code to test dappsCurveDailyVolumeHistoricalGet
-        //instance.dappsCurveDailyVolumeHistoricalGet(function(error) {
+    describe('curveGetDailyVolumesHistorical', function() {
+      it('should call curveGetDailyVolumesHistorical successfully', function(done) {
+        //uncomment below and update the code to test curveGetDailyVolumesHistorical
+        //instance.curveGetDailyVolumesHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('dappsCurveFeeChangeLogHistoricalGet', function() {
-      it('should call dappsCurveFeeChangeLogHistoricalGet successfully', function(done) {
-        //uncomment below and update the code to test dappsCurveFeeChangeLogHistoricalGet
-        //instance.dappsCurveFeeChangeLogHistoricalGet(function(error) {
+    describe('curveGetExchangesHistorical', function() {
+      it('should call curveGetExchangesHistorical successfully', function(done) {
+        //uncomment below and update the code to test curveGetExchangesHistorical
+        //instance.curveGetExchangesHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('dappsCurveGaugeDepositHistoricalGet', function() {
-      it('should call dappsCurveGaugeDepositHistoricalGet successfully', function(done) {
-        //uncomment below and update the code to test dappsCurveGaugeDepositHistoricalGet
-        //instance.dappsCurveGaugeDepositHistoricalGet(function(error) {
+    describe('curveGetFeeChangeLogsHistorical', function() {
+      it('should call curveGetFeeChangeLogsHistorical successfully', function(done) {
+        //uncomment below and update the code to test curveGetFeeChangeLogsHistorical
+        //instance.curveGetFeeChangeLogsHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('dappsCurveGaugeHistoricalGet', function() {
-      it('should call dappsCurveGaugeHistoricalGet successfully', function(done) {
-        //uncomment below and update the code to test dappsCurveGaugeHistoricalGet
-        //instance.dappsCurveGaugeHistoricalGet(function(error) {
+    describe('curveGetGaugesDepositsHistorical', function() {
+      it('should call curveGetGaugesDepositsHistorical successfully', function(done) {
+        //uncomment below and update the code to test curveGetGaugesDepositsHistorical
+        //instance.curveGetGaugesDepositsHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('dappsCurveGaugeLiquidityHistoricalGet', function() {
-      it('should call dappsCurveGaugeLiquidityHistoricalGet successfully', function(done) {
-        //uncomment below and update the code to test dappsCurveGaugeLiquidityHistoricalGet
-        //instance.dappsCurveGaugeLiquidityHistoricalGet(function(error) {
+    describe('curveGetGaugesHistorical', function() {
+      it('should call curveGetGaugesHistorical successfully', function(done) {
+        //uncomment below and update the code to test curveGetGaugesHistorical
+        //instance.curveGetGaugesHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('dappsCurveGaugeTotalWeightHistoricalGet', function() {
-      it('should call dappsCurveGaugeTotalWeightHistoricalGet successfully', function(done) {
-        //uncomment below and update the code to test dappsCurveGaugeTotalWeightHistoricalGet
-        //instance.dappsCurveGaugeTotalWeightHistoricalGet(function(error) {
+    describe('curveGetGaugesLiquidityHistorical', function() {
+      it('should call curveGetGaugesLiquidityHistorical successfully', function(done) {
+        //uncomment below and update the code to test curveGetGaugesLiquidityHistorical
+        //instance.curveGetGaugesLiquidityHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('dappsCurveGaugeTypeHistoricalGet', function() {
-      it('should call dappsCurveGaugeTypeHistoricalGet successfully', function(done) {
-        //uncomment below and update the code to test dappsCurveGaugeTypeHistoricalGet
-        //instance.dappsCurveGaugeTypeHistoricalGet(function(error) {
+    describe('curveGetGaugesTotalWeightsHistorical', function() {
+      it('should call curveGetGaugesTotalWeightsHistorical successfully', function(done) {
+        //uncomment below and update the code to test curveGetGaugesTotalWeightsHistorical
+        //instance.curveGetGaugesTotalWeightsHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('dappsCurveGaugeTypeWeightHistoricalGet', function() {
-      it('should call dappsCurveGaugeTypeWeightHistoricalGet successfully', function(done) {
-        //uncomment below and update the code to test dappsCurveGaugeTypeWeightHistoricalGet
-        //instance.dappsCurveGaugeTypeWeightHistoricalGet(function(error) {
+    describe('curveGetGaugesTypesHistorical', function() {
+      it('should call curveGetGaugesTypesHistorical successfully', function(done) {
+        //uncomment below and update the code to test curveGetGaugesTypesHistorical
+        //instance.curveGetGaugesTypesHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('dappsCurveGaugeWeightHistoricalGet', function() {
-      it('should call dappsCurveGaugeWeightHistoricalGet successfully', function(done) {
-        //uncomment below and update the code to test dappsCurveGaugeWeightHistoricalGet
-        //instance.dappsCurveGaugeWeightHistoricalGet(function(error) {
+    describe('curveGetGaugesTypesWeightsHistorical', function() {
+      it('should call curveGetGaugesTypesWeightsHistorical successfully', function(done) {
+        //uncomment below and update the code to test curveGetGaugesTypesWeightsHistorical
+        //instance.curveGetGaugesTypesWeightsHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('dappsCurveGaugeWeightVoteHistoricalGet', function() {
-      it('should call dappsCurveGaugeWeightVoteHistoricalGet successfully', function(done) {
-        //uncomment below and update the code to test dappsCurveGaugeWeightVoteHistoricalGet
-        //instance.dappsCurveGaugeWeightVoteHistoricalGet(function(error) {
+    describe('curveGetGaugesWeightsHistorical', function() {
+      it('should call curveGetGaugesWeightsHistorical successfully', function(done) {
+        //uncomment below and update the code to test curveGetGaugesWeightsHistorical
+        //instance.curveGetGaugesWeightsHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('dappsCurveGaugeWithdrawHistoricalGet', function() {
-      it('should call dappsCurveGaugeWithdrawHistoricalGet successfully', function(done) {
-        //uncomment below and update the code to test dappsCurveGaugeWithdrawHistoricalGet
-        //instance.dappsCurveGaugeWithdrawHistoricalGet(function(error) {
+    describe('curveGetGaugesWeightsVotesHistorical', function() {
+      it('should call curveGetGaugesWeightsVotesHistorical successfully', function(done) {
+        //uncomment below and update the code to test curveGetGaugesWeightsVotesHistorical
+        //instance.curveGetGaugesWeightsVotesHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('dappsCurveHourlyVolumeHistoricalGet', function() {
-      it('should call dappsCurveHourlyVolumeHistoricalGet successfully', function(done) {
-        //uncomment below and update the code to test dappsCurveHourlyVolumeHistoricalGet
-        //instance.dappsCurveHourlyVolumeHistoricalGet(function(error) {
+    describe('curveGetGaugesWithdrawHistorical', function() {
+      it('should call curveGetGaugesWithdrawHistorical successfully', function(done) {
+        //uncomment below and update the code to test curveGetGaugesWithdrawHistorical
+        //instance.curveGetGaugesWithdrawHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('dappsCurveLpTokenHistoricalGet', function() {
-      it('should call dappsCurveLpTokenHistoricalGet successfully', function(done) {
-        //uncomment below and update the code to test dappsCurveLpTokenHistoricalGet
-        //instance.dappsCurveLpTokenHistoricalGet(function(error) {
+    describe('curveGetHourlyVolumesHistorical', function() {
+      it('should call curveGetHourlyVolumesHistorical successfully', function(done) {
+        //uncomment below and update the code to test curveGetHourlyVolumesHistorical
+        //instance.curveGetHourlyVolumesHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('dappsCurvePoolsHistoricalGet', function() {
-      it('should call dappsCurvePoolsHistoricalGet successfully', function(done) {
-        //uncomment below and update the code to test dappsCurvePoolsHistoricalGet
-        //instance.dappsCurvePoolsHistoricalGet(function(error) {
+    describe('curveGetLpTokensHistorical', function() {
+      it('should call curveGetLpTokensHistorical successfully', function(done) {
+        //uncomment below and update the code to test curveGetLpTokensHistorical
+        //instance.curveGetLpTokensHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('dappsCurveProposalsHistoricalGet', function() {
-      it('should call dappsCurveProposalsHistoricalGet successfully', function(done) {
-        //uncomment below and update the code to test dappsCurveProposalsHistoricalGet
-        //instance.dappsCurveProposalsHistoricalGet(function(error) {
+    describe('curveGetPoolsHistorical', function() {
+      it('should call curveGetPoolsHistorical successfully', function(done) {
+        //uncomment below and update the code to test curveGetPoolsHistorical
+        //instance.curveGetPoolsHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('dappsCurveProposalsVoteHistoricalGet', function() {
-      it('should call dappsCurveProposalsVoteHistoricalGet successfully', function(done) {
-        //uncomment below and update the code to test dappsCurveProposalsVoteHistoricalGet
-        //instance.dappsCurveProposalsVoteHistoricalGet(function(error) {
+    describe('curveGetProposalsHistorical', function() {
+      it('should call curveGetProposalsHistorical successfully', function(done) {
+        //uncomment below and update the code to test curveGetProposalsHistorical
+        //instance.curveGetProposalsHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('dappsCurveRemoveLiquidityEventHistoricalGet', function() {
-      it('should call dappsCurveRemoveLiquidityEventHistoricalGet successfully', function(done) {
-        //uncomment below and update the code to test dappsCurveRemoveLiquidityEventHistoricalGet
-        //instance.dappsCurveRemoveLiquidityEventHistoricalGet(function(error) {
+    describe('curveGetProposalsVotesHistorical', function() {
+      it('should call curveGetProposalsVotesHistorical successfully', function(done) {
+        //uncomment below and update the code to test curveGetProposalsVotesHistorical
+        //instance.curveGetProposalsVotesHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('dappsCurveRemoveLiquidityOneEventHistoricalGet', function() {
-      it('should call dappsCurveRemoveLiquidityOneEventHistoricalGet successfully', function(done) {
-        //uncomment below and update the code to test dappsCurveRemoveLiquidityOneEventHistoricalGet
-        //instance.dappsCurveRemoveLiquidityOneEventHistoricalGet(function(error) {
+    describe('curveGetRemoveLiquidityEventsHistorical', function() {
+      it('should call curveGetRemoveLiquidityEventsHistorical successfully', function(done) {
+        //uncomment below and update the code to test curveGetRemoveLiquidityEventsHistorical
+        //instance.curveGetRemoveLiquidityEventsHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('dappsCurveSwapsHistoricalGet', function() {
-      it('should call dappsCurveSwapsHistoricalGet successfully', function(done) {
-        //uncomment below and update the code to test dappsCurveSwapsHistoricalGet
-        //instance.dappsCurveSwapsHistoricalGet(function(error) {
+    describe('curveGetRemoveLiquidityOneEventsHistorical', function() {
+      it('should call curveGetRemoveLiquidityOneEventsHistorical successfully', function(done) {
+        //uncomment below and update the code to test curveGetRemoveLiquidityOneEventsHistorical
+        //instance.curveGetRemoveLiquidityOneEventsHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('dappsCurveSystemStateHistoricalGet', function() {
-      it('should call dappsCurveSystemStateHistoricalGet successfully', function(done) {
-        //uncomment below and update the code to test dappsCurveSystemStateHistoricalGet
-        //instance.dappsCurveSystemStateHistoricalGet(function(error) {
+    describe('curveGetSystemStatesHistorical', function() {
+      it('should call curveGetSystemStatesHistorical successfully', function(done) {
+        //uncomment below and update the code to test curveGetSystemStatesHistorical
+        //instance.curveGetSystemStatesHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('dappsCurveTokensHistoricalGet', function() {
-      it('should call dappsCurveTokensHistoricalGet successfully', function(done) {
-        //uncomment below and update the code to test dappsCurveTokensHistoricalGet
-        //instance.dappsCurveTokensHistoricalGet(function(error) {
+    describe('curveGetTokensHistorical', function() {
+      it('should call curveGetTokensHistorical successfully', function(done) {
+        //uncomment below and update the code to test curveGetTokensHistorical
+        //instance.curveGetTokensHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('dappsCurveTransferOwnershipEventHistoricalGet', function() {
-      it('should call dappsCurveTransferOwnershipEventHistoricalGet successfully', function(done) {
-        //uncomment below and update the code to test dappsCurveTransferOwnershipEventHistoricalGet
-        //instance.dappsCurveTransferOwnershipEventHistoricalGet(function(error) {
+    describe('curveGetTransferOwnershipEventsHistorical', function() {
+      it('should call curveGetTransferOwnershipEventsHistorical successfully', function(done) {
+        //uncomment below and update the code to test curveGetTransferOwnershipEventsHistorical
+        //instance.curveGetTransferOwnershipEventsHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('dappsCurveUnderlyingCoinHistoricalGet', function() {
-      it('should call dappsCurveUnderlyingCoinHistoricalGet successfully', function(done) {
-        //uncomment below and update the code to test dappsCurveUnderlyingCoinHistoricalGet
-        //instance.dappsCurveUnderlyingCoinHistoricalGet(function(error) {
+    describe('curveGetUnderlyingCoinsHistorical', function() {
+      it('should call curveGetUnderlyingCoinsHistorical successfully', function(done) {
+        //uncomment below and update the code to test curveGetUnderlyingCoinsHistorical
+        //instance.curveGetUnderlyingCoinsHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('dappsCurveVotingAppHistoricalGet', function() {
-      it('should call dappsCurveVotingAppHistoricalGet successfully', function(done) {
-        //uncomment below and update the code to test dappsCurveVotingAppHistoricalGet
-        //instance.dappsCurveVotingAppHistoricalGet(function(error) {
+    describe('curveGetVotingAppsHistorical', function() {
+      it('should call curveGetVotingAppsHistorical successfully', function(done) {
+        //uncomment below and update the code to test curveGetVotingAppsHistorical
+        //instance.curveGetVotingAppsHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('dappsCurveWeeklyVolumeHistoricalGet', function() {
-      it('should call dappsCurveWeeklyVolumeHistoricalGet successfully', function(done) {
-        //uncomment below and update the code to test dappsCurveWeeklyVolumeHistoricalGet
-        //instance.dappsCurveWeeklyVolumeHistoricalGet(function(error) {
+    describe('curveGetWeeklyVolumesHistorical', function() {
+      it('should call curveGetWeeklyVolumesHistorical successfully', function(done) {
+        //uncomment below and update the code to test curveGetWeeklyVolumesHistorical
+        //instance.curveGetWeeklyVolumesHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

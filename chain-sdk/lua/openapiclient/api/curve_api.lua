@@ -16,6 +16,38 @@ local dkjson = require "dkjson"
 local basexx = require "basexx"
 
 -- model import
+local openapiclient_curve_account_dto = require "openapiclient.model.curve_account_dto"
+local openapiclient_curve_add_liquidity_event_dto = require "openapiclient.model.curve_add_liquidity_event_dto"
+local openapiclient_curve_admin_fee_change_log_dto = require "openapiclient.model.curve_admin_fee_change_log_dto"
+local openapiclient_curve_amplification_coeff_change_log_dto = require "openapiclient.model.curve_amplification_coeff_change_log_dto"
+local openapiclient_curve_coin_dto = require "openapiclient.model.curve_coin_dto"
+local openapiclient_curve_contract_dto = require "openapiclient.model.curve_contract_dto"
+local openapiclient_curve_contract_version_dto = require "openapiclient.model.curve_contract_version_dto"
+local openapiclient_curve_daily_volume_dto = require "openapiclient.model.curve_daily_volume_dto"
+local openapiclient_curve_exchange_dto = require "openapiclient.model.curve_exchange_dto"
+local openapiclient_curve_fee_change_log_dto = require "openapiclient.model.curve_fee_change_log_dto"
+local openapiclient_curve_gauge_dto = require "openapiclient.model.curve_gauge_dto"
+local openapiclient_curve_gauge_deposit_dto = require "openapiclient.model.curve_gauge_deposit_dto"
+local openapiclient_curve_gauge_liquidity_dto = require "openapiclient.model.curve_gauge_liquidity_dto"
+local openapiclient_curve_gauge_total_weight_dto = require "openapiclient.model.curve_gauge_total_weight_dto"
+local openapiclient_curve_gauge_type_dto = require "openapiclient.model.curve_gauge_type_dto"
+local openapiclient_curve_gauge_type_weight_dto = require "openapiclient.model.curve_gauge_type_weight_dto"
+local openapiclient_curve_gauge_weight_dto = require "openapiclient.model.curve_gauge_weight_dto"
+local openapiclient_curve_gauge_weight_vote_dto = require "openapiclient.model.curve_gauge_weight_vote_dto"
+local openapiclient_curve_gauge_withdraw_dto = require "openapiclient.model.curve_gauge_withdraw_dto"
+local openapiclient_curve_hourly_volume_dto = require "openapiclient.model.curve_hourly_volume_dto"
+local openapiclient_curve_lp_token_dto = require "openapiclient.model.curve_lp_token_dto"
+local openapiclient_curve_pool_dto = require "openapiclient.model.curve_pool_dto"
+local openapiclient_curve_proposal_dto = require "openapiclient.model.curve_proposal_dto"
+local openapiclient_curve_proposal_vote_dto = require "openapiclient.model.curve_proposal_vote_dto"
+local openapiclient_curve_remove_liquidity_event_dto = require "openapiclient.model.curve_remove_liquidity_event_dto"
+local openapiclient_curve_remove_liquidity_one_event_dto = require "openapiclient.model.curve_remove_liquidity_one_event_dto"
+local openapiclient_curve_system_state_dto = require "openapiclient.model.curve_system_state_dto"
+local openapiclient_curve_token_dto = require "openapiclient.model.curve_token_dto"
+local openapiclient_curve_transfer_ownership_event_dto = require "openapiclient.model.curve_transfer_ownership_event_dto"
+local openapiclient_curve_underlying_coin_dto = require "openapiclient.model.curve_underlying_coin_dto"
+local openapiclient_curve_voting_app_dto = require "openapiclient.model.curve_voting_app_dto"
+local openapiclient_curve_weekly_volume_dto = require "openapiclient.model.curve_weekly_volume_dto"
 
 local curve_api = {}
 local curve_api_mt = {
@@ -43,7 +75,7 @@ local function new_curve_api(authority, basePath, schemes)
 	}, curve_api_mt)
 end
 
-function curve_api:dapps_curve_accounts_historical_get(start_block, end_block, start_date, end_date)
+function curve_api:curve_get_accounts__historical(start_block, end_block, start_date, end_date)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
@@ -54,6 +86,10 @@ function curve_api:dapps_curve_accounts_historical_get(start_block, end_block, s
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
 
 	-- make the HTTP call
 	local headers, stream, errno = req:go()
@@ -62,7 +98,21 @@ function curve_api:dapps_curve_accounts_historical_get(start_block, end_block, s
 	end
 	local http_status = headers:get(":status")
 	if http_status:sub(1,1) == "2" then
-		return nil, headers
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_curve_account_dto.cast(ob)
+		end
+		return result, headers
 	else
 		local body, err, errno2 = stream:get_body_as_string()
 		if not body then
@@ -74,17 +124,21 @@ function curve_api:dapps_curve_accounts_historical_get(start_block, end_block, s
 	end
 end
 
-function curve_api:dapps_curve_add_liquidity_event_historical_get(start_block, end_block, start_date, end_date, pool_id)
+function curve_api:curve_get_add_liquidity_events__historical(start_block, end_block, start_date, end_date, pool_id)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/curve/addLiquidityEvent/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&poolId=%s",
+		path = string.format("%s/dapps/curve/addLiquidityEvents/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&poolId=%s",
 			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(pool_id));
 	})
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
 
 	-- make the HTTP call
 	local headers, stream, errno = req:go()
@@ -93,7 +147,21 @@ function curve_api:dapps_curve_add_liquidity_event_historical_get(start_block, e
 	end
 	local http_status = headers:get(":status")
 	if http_status:sub(1,1) == "2" then
-		return nil, headers
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_curve_add_liquidity_event_dto.cast(ob)
+		end
+		return result, headers
 	else
 		local body, err, errno2 = stream:get_body_as_string()
 		if not body then
@@ -105,17 +173,21 @@ function curve_api:dapps_curve_add_liquidity_event_historical_get(start_block, e
 	end
 end
 
-function curve_api:dapps_curve_admin_fee_change_log_historical_get(start_block, end_block, start_date, end_date, pool_id)
+function curve_api:curve_get_admin_fee_change_logs__historical(start_block, end_block, start_date, end_date, pool_id)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/curve/adminFeeChangeLog/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&poolId=%s",
+		path = string.format("%s/dapps/curve/adminFeeChangeLogs/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&poolId=%s",
 			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(pool_id));
 	})
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
 
 	-- make the HTTP call
 	local headers, stream, errno = req:go()
@@ -124,7 +196,21 @@ function curve_api:dapps_curve_admin_fee_change_log_historical_get(start_block, 
 	end
 	local http_status = headers:get(":status")
 	if http_status:sub(1,1) == "2" then
-		return nil, headers
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_curve_admin_fee_change_log_dto.cast(ob)
+		end
+		return result, headers
 	else
 		local body, err, errno2 = stream:get_body_as_string()
 		if not body then
@@ -136,17 +222,21 @@ function curve_api:dapps_curve_admin_fee_change_log_historical_get(start_block, 
 	end
 end
 
-function curve_api:dapps_curve_amplification_coeff_change_log_historical_get(start_block, end_block, start_date, end_date, pool_id)
+function curve_api:curve_get_amplification_coeff_change_logs__historical(start_block, end_block, start_date, end_date, pool_id)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/curve/amplificationCoeffChangeLog/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&poolId=%s",
+		path = string.format("%s/dapps/curve/amplificationCoeffChangeLogs/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&poolId=%s",
 			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(pool_id));
 	})
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
 
 	-- make the HTTP call
 	local headers, stream, errno = req:go()
@@ -155,7 +245,21 @@ function curve_api:dapps_curve_amplification_coeff_change_log_historical_get(sta
 	end
 	local http_status = headers:get(":status")
 	if http_status:sub(1,1) == "2" then
-		return nil, headers
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_curve_amplification_coeff_change_log_dto.cast(ob)
+		end
+		return result, headers
 	else
 		local body, err, errno2 = stream:get_body_as_string()
 		if not body then
@@ -167,7 +271,7 @@ function curve_api:dapps_curve_amplification_coeff_change_log_historical_get(sta
 	end
 end
 
-function curve_api:dapps_curve_coins_historical_get(start_block, end_block, start_date, end_date, pool_id)
+function curve_api:curve_get_coins__historical(start_block, end_block, start_date, end_date, pool_id)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
@@ -178,6 +282,10 @@ function curve_api:dapps_curve_coins_historical_get(start_block, end_block, star
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
 
 	-- make the HTTP call
 	local headers, stream, errno = req:go()
@@ -186,7 +294,21 @@ function curve_api:dapps_curve_coins_historical_get(start_block, end_block, star
 	end
 	local http_status = headers:get(":status")
 	if http_status:sub(1,1) == "2" then
-		return nil, headers
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_curve_coin_dto.cast(ob)
+		end
+		return result, headers
 	else
 		local body, err, errno2 = stream:get_body_as_string()
 		if not body then
@@ -198,7 +320,7 @@ function curve_api:dapps_curve_coins_historical_get(start_block, end_block, star
 	end
 end
 
-function curve_api:dapps_curve_contracts_historical_get(start_block, end_block, start_date, end_date, pool_id)
+function curve_api:curve_get_contracts__historical(start_block, end_block, start_date, end_date, pool_id)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
@@ -209,6 +331,10 @@ function curve_api:dapps_curve_contracts_historical_get(start_block, end_block, 
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
 
 	-- make the HTTP call
 	local headers, stream, errno = req:go()
@@ -217,7 +343,21 @@ function curve_api:dapps_curve_contracts_historical_get(start_block, end_block, 
 	end
 	local http_status = headers:get(":status")
 	if http_status:sub(1,1) == "2" then
-		return nil, headers
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_curve_contract_dto.cast(ob)
+		end
+		return result, headers
 	else
 		local body, err, errno2 = stream:get_body_as_string()
 		if not body then
@@ -229,17 +369,21 @@ function curve_api:dapps_curve_contracts_historical_get(start_block, end_block, 
 	end
 end
 
-function curve_api:dapps_curve_contracts_version_historical_get(start_block, end_block, start_date, end_date, pool_id)
+function curve_api:curve_get_contracts_versions__historical(start_block, end_block, start_date, end_date, pool_id)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/curve/contractsVersion/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&poolId=%s",
+		path = string.format("%s/dapps/curve/contractsVersions/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&poolId=%s",
 			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(pool_id));
 	})
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
 
 	-- make the HTTP call
 	local headers, stream, errno = req:go()
@@ -248,7 +392,21 @@ function curve_api:dapps_curve_contracts_version_historical_get(start_block, end
 	end
 	local http_status = headers:get(":status")
 	if http_status:sub(1,1) == "2" then
-		return nil, headers
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_curve_contract_version_dto.cast(ob)
+		end
+		return result, headers
 	else
 		local body, err, errno2 = stream:get_body_as_string()
 		if not body then
@@ -260,17 +418,21 @@ function curve_api:dapps_curve_contracts_version_historical_get(start_block, end
 	end
 end
 
-function curve_api:dapps_curve_daily_volume_historical_get(start_block, end_block, start_date, end_date, pool_id)
+function curve_api:curve_get_daily_volumes__historical(start_block, end_block, start_date, end_date, pool_id)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/curve/dailyVolume/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&poolId=%s",
+		path = string.format("%s/dapps/curve/dailyVolumes/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&poolId=%s",
 			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(pool_id));
 	})
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
 
 	-- make the HTTP call
 	local headers, stream, errno = req:go()
@@ -279,7 +441,21 @@ function curve_api:dapps_curve_daily_volume_historical_get(start_block, end_bloc
 	end
 	local http_status = headers:get(":status")
 	if http_status:sub(1,1) == "2" then
-		return nil, headers
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_curve_daily_volume_dto.cast(ob)
+		end
+		return result, headers
 	else
 		local body, err, errno2 = stream:get_body_as_string()
 		if not body then
@@ -291,17 +467,21 @@ function curve_api:dapps_curve_daily_volume_historical_get(start_block, end_bloc
 	end
 end
 
-function curve_api:dapps_curve_fee_change_log_historical_get(start_block, end_block, start_date, end_date, pool_id)
+function curve_api:curve_get_exchanges__historical(start_block, end_block, start_date, end_date, pool_id)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/curve/feeChangeLog/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&poolId=%s",
+		path = string.format("%s/dapps/curve/exchanges/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&poolId=%s",
 			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(pool_id));
 	})
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
 
 	-- make the HTTP call
 	local headers, stream, errno = req:go()
@@ -310,7 +490,21 @@ function curve_api:dapps_curve_fee_change_log_historical_get(start_block, end_bl
 	end
 	local http_status = headers:get(":status")
 	if http_status:sub(1,1) == "2" then
-		return nil, headers
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_curve_exchange_dto.cast(ob)
+		end
+		return result, headers
 	else
 		local body, err, errno2 = stream:get_body_as_string()
 		if not body then
@@ -322,48 +516,21 @@ function curve_api:dapps_curve_fee_change_log_historical_get(start_block, end_bl
 	end
 end
 
-function curve_api:dapps_curve_gauge_deposit_historical_get(start_block, end_block, start_date, end_date)
+function curve_api:curve_get_fee_change_logs__historical(start_block, end_block, start_date, end_date, pool_id)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/curve/gaugeDeposit/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s",
-			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date));
-	})
-
-	-- set HTTP verb
-	req.headers:upsert(":method", "GET")
-
-	-- make the HTTP call
-	local headers, stream, errno = req:go()
-	if not headers then
-		return nil, stream, errno
-	end
-	local http_status = headers:get(":status")
-	if http_status:sub(1,1) == "2" then
-		return nil, headers
-	else
-		local body, err, errno2 = stream:get_body_as_string()
-		if not body then
-			return nil, err, errno2
-		end
-		stream:shutdown()
-		-- return the error message (http body)
-		return nil, http_status, body
-	end
-end
-
-function curve_api:dapps_curve_gauge_historical_get(start_block, end_block, start_date, end_date, pool_id)
-	local req = http_request.new_from_uri({
-		scheme = self.default_scheme;
-		host = self.host;
-		port = self.port;
-		path = string.format("%s/dapps/curve/gauge/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&poolId=%s",
+		path = string.format("%s/dapps/curve/feeChangeLogs/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&poolId=%s",
 			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(pool_id));
 	})
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
 
 	-- make the HTTP call
 	local headers, stream, errno = req:go()
@@ -372,7 +539,21 @@ function curve_api:dapps_curve_gauge_historical_get(start_block, end_block, star
 	end
 	local http_status = headers:get(":status")
 	if http_status:sub(1,1) == "2" then
-		return nil, headers
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_curve_fee_change_log_dto.cast(ob)
+		end
+		return result, headers
 	else
 		local body, err, errno2 = stream:get_body_as_string()
 		if not body then
@@ -384,234 +565,21 @@ function curve_api:dapps_curve_gauge_historical_get(start_block, end_block, star
 	end
 end
 
-function curve_api:dapps_curve_gauge_liquidity_historical_get(start_block, end_block, start_date, end_date)
+function curve_api:curve_get_gauges__historical(start_block, end_block, start_date, end_date, pool_id)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/curve/gaugeLiquidity/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s",
-			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date));
-	})
-
-	-- set HTTP verb
-	req.headers:upsert(":method", "GET")
-
-	-- make the HTTP call
-	local headers, stream, errno = req:go()
-	if not headers then
-		return nil, stream, errno
-	end
-	local http_status = headers:get(":status")
-	if http_status:sub(1,1) == "2" then
-		return nil, headers
-	else
-		local body, err, errno2 = stream:get_body_as_string()
-		if not body then
-			return nil, err, errno2
-		end
-		stream:shutdown()
-		-- return the error message (http body)
-		return nil, http_status, body
-	end
-end
-
-function curve_api:dapps_curve_gauge_total_weight_historical_get(start_block, end_block, start_date, end_date)
-	local req = http_request.new_from_uri({
-		scheme = self.default_scheme;
-		host = self.host;
-		port = self.port;
-		path = string.format("%s/dapps/curve/gaugeTotalWeight/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s",
-			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date));
-	})
-
-	-- set HTTP verb
-	req.headers:upsert(":method", "GET")
-
-	-- make the HTTP call
-	local headers, stream, errno = req:go()
-	if not headers then
-		return nil, stream, errno
-	end
-	local http_status = headers:get(":status")
-	if http_status:sub(1,1) == "2" then
-		return nil, headers
-	else
-		local body, err, errno2 = stream:get_body_as_string()
-		if not body then
-			return nil, err, errno2
-		end
-		stream:shutdown()
-		-- return the error message (http body)
-		return nil, http_status, body
-	end
-end
-
-function curve_api:dapps_curve_gauge_type_historical_get(start_block, end_block, start_date, end_date)
-	local req = http_request.new_from_uri({
-		scheme = self.default_scheme;
-		host = self.host;
-		port = self.port;
-		path = string.format("%s/dapps/curve/gaugeType/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s",
-			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date));
-	})
-
-	-- set HTTP verb
-	req.headers:upsert(":method", "GET")
-
-	-- make the HTTP call
-	local headers, stream, errno = req:go()
-	if not headers then
-		return nil, stream, errno
-	end
-	local http_status = headers:get(":status")
-	if http_status:sub(1,1) == "2" then
-		return nil, headers
-	else
-		local body, err, errno2 = stream:get_body_as_string()
-		if not body then
-			return nil, err, errno2
-		end
-		stream:shutdown()
-		-- return the error message (http body)
-		return nil, http_status, body
-	end
-end
-
-function curve_api:dapps_curve_gauge_type_weight_historical_get(start_block, end_block, start_date, end_date)
-	local req = http_request.new_from_uri({
-		scheme = self.default_scheme;
-		host = self.host;
-		port = self.port;
-		path = string.format("%s/dapps/curve/gaugeTypeWeight/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s",
-			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date));
-	})
-
-	-- set HTTP verb
-	req.headers:upsert(":method", "GET")
-
-	-- make the HTTP call
-	local headers, stream, errno = req:go()
-	if not headers then
-		return nil, stream, errno
-	end
-	local http_status = headers:get(":status")
-	if http_status:sub(1,1) == "2" then
-		return nil, headers
-	else
-		local body, err, errno2 = stream:get_body_as_string()
-		if not body then
-			return nil, err, errno2
-		end
-		stream:shutdown()
-		-- return the error message (http body)
-		return nil, http_status, body
-	end
-end
-
-function curve_api:dapps_curve_gauge_weight_historical_get(start_block, end_block, start_date, end_date)
-	local req = http_request.new_from_uri({
-		scheme = self.default_scheme;
-		host = self.host;
-		port = self.port;
-		path = string.format("%s/dapps/curve/gaugeWeight/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s",
-			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date));
-	})
-
-	-- set HTTP verb
-	req.headers:upsert(":method", "GET")
-
-	-- make the HTTP call
-	local headers, stream, errno = req:go()
-	if not headers then
-		return nil, stream, errno
-	end
-	local http_status = headers:get(":status")
-	if http_status:sub(1,1) == "2" then
-		return nil, headers
-	else
-		local body, err, errno2 = stream:get_body_as_string()
-		if not body then
-			return nil, err, errno2
-		end
-		stream:shutdown()
-		-- return the error message (http body)
-		return nil, http_status, body
-	end
-end
-
-function curve_api:dapps_curve_gauge_weight_vote_historical_get(start_block, end_block, start_date, end_date)
-	local req = http_request.new_from_uri({
-		scheme = self.default_scheme;
-		host = self.host;
-		port = self.port;
-		path = string.format("%s/dapps/curve/gaugeWeightVote/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s",
-			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date));
-	})
-
-	-- set HTTP verb
-	req.headers:upsert(":method", "GET")
-
-	-- make the HTTP call
-	local headers, stream, errno = req:go()
-	if not headers then
-		return nil, stream, errno
-	end
-	local http_status = headers:get(":status")
-	if http_status:sub(1,1) == "2" then
-		return nil, headers
-	else
-		local body, err, errno2 = stream:get_body_as_string()
-		if not body then
-			return nil, err, errno2
-		end
-		stream:shutdown()
-		-- return the error message (http body)
-		return nil, http_status, body
-	end
-end
-
-function curve_api:dapps_curve_gauge_withdraw_historical_get(start_block, end_block, start_date, end_date)
-	local req = http_request.new_from_uri({
-		scheme = self.default_scheme;
-		host = self.host;
-		port = self.port;
-		path = string.format("%s/dapps/curve/gaugeWithdraw/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s",
-			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date));
-	})
-
-	-- set HTTP verb
-	req.headers:upsert(":method", "GET")
-
-	-- make the HTTP call
-	local headers, stream, errno = req:go()
-	if not headers then
-		return nil, stream, errno
-	end
-	local http_status = headers:get(":status")
-	if http_status:sub(1,1) == "2" then
-		return nil, headers
-	else
-		local body, err, errno2 = stream:get_body_as_string()
-		if not body then
-			return nil, err, errno2
-		end
-		stream:shutdown()
-		-- return the error message (http body)
-		return nil, http_status, body
-	end
-end
-
-function curve_api:dapps_curve_hourly_volume_historical_get(start_block, end_block, start_date, end_date, pool_id)
-	local req = http_request.new_from_uri({
-		scheme = self.default_scheme;
-		host = self.host;
-		port = self.port;
-		path = string.format("%s/dapps/curve/hourlyVolume/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&poolId=%s",
+		path = string.format("%s/dapps/curve/gauges/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&poolId=%s",
 			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(pool_id));
 	})
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
 
 	-- make the HTTP call
 	local headers, stream, errno = req:go()
@@ -620,7 +588,21 @@ function curve_api:dapps_curve_hourly_volume_historical_get(start_block, end_blo
 	end
 	local http_status = headers:get(":status")
 	if http_status:sub(1,1) == "2" then
-		return nil, headers
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_curve_gauge_dto.cast(ob)
+		end
+		return result, headers
 	else
 		local body, err, errno2 = stream:get_body_as_string()
 		if not body then
@@ -632,17 +614,413 @@ function curve_api:dapps_curve_hourly_volume_historical_get(start_block, end_blo
 	end
 end
 
-function curve_api:dapps_curve_lp_token_historical_get(start_block, end_block, start_date, end_date, pool_id)
+function curve_api:curve_get_gauges_deposits__historical(start_block, end_block, start_date, end_date)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/curve/lpToken/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&poolId=%s",
+		path = string.format("%s/dapps/curve/gaugesDeposits/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s",
+			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date));
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_curve_gauge_deposit_dto.cast(ob)
+		end
+		return result, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function curve_api:curve_get_gauges_liquidity__historical(start_block, end_block, start_date, end_date)
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/curve/gaugesLiquidity/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s",
+			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date));
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_curve_gauge_liquidity_dto.cast(ob)
+		end
+		return result, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function curve_api:curve_get_gauges_total_weights__historical(start_block, end_block, start_date, end_date)
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/curve/gaugesTotalWeights/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s",
+			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date));
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_curve_gauge_total_weight_dto.cast(ob)
+		end
+		return result, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function curve_api:curve_get_gauges_types__historical(start_block, end_block, start_date, end_date)
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/curve/gaugesTypes/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s",
+			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date));
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_curve_gauge_type_dto.cast(ob)
+		end
+		return result, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function curve_api:curve_get_gauges_types_weights__historical(start_block, end_block, start_date, end_date)
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/curve/gaugesTypesWeights/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s",
+			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date));
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_curve_gauge_type_weight_dto.cast(ob)
+		end
+		return result, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function curve_api:curve_get_gauges_weights__historical(start_block, end_block, start_date, end_date)
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/curve/gaugesWeights/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s",
+			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date));
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_curve_gauge_weight_dto.cast(ob)
+		end
+		return result, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function curve_api:curve_get_gauges_weights_votes__historical(start_block, end_block, start_date, end_date)
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/curve/gaugesWeightsVotes/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s",
+			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date));
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_curve_gauge_weight_vote_dto.cast(ob)
+		end
+		return result, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function curve_api:curve_get_gauges_withdraw__historical(start_block, end_block, start_date, end_date)
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/curve/gaugesWithdraws/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s",
+			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date));
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_curve_gauge_withdraw_dto.cast(ob)
+		end
+		return result, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function curve_api:curve_get_hourly_volumes__historical(start_block, end_block, start_date, end_date, pool_id)
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/curve/hourlyVolumes/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&poolId=%s",
 			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(pool_id));
 	})
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
 
 	-- make the HTTP call
 	local headers, stream, errno = req:go()
@@ -651,7 +1029,21 @@ function curve_api:dapps_curve_lp_token_historical_get(start_block, end_block, s
 	end
 	local http_status = headers:get(":status")
 	if http_status:sub(1,1) == "2" then
-		return nil, headers
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_curve_hourly_volume_dto.cast(ob)
+		end
+		return result, headers
 	else
 		local body, err, errno2 = stream:get_body_as_string()
 		if not body then
@@ -663,7 +1055,56 @@ function curve_api:dapps_curve_lp_token_historical_get(start_block, end_block, s
 	end
 end
 
-function curve_api:dapps_curve_pools_historical_get(start_block, end_block, start_date, end_date, pool_id)
+function curve_api:curve_get_lp_tokens__historical(start_block, end_block, start_date, end_date, pool_id)
+	local req = http_request.new_from_uri({
+		scheme = self.default_scheme;
+		host = self.host;
+		port = self.port;
+		path = string.format("%s/dapps/curve/lpTokens/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&poolId=%s",
+			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(pool_id));
+	})
+
+	-- set HTTP verb
+	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
+
+	-- make the HTTP call
+	local headers, stream, errno = req:go()
+	if not headers then
+		return nil, stream, errno
+	end
+	local http_status = headers:get(":status")
+	if http_status:sub(1,1) == "2" then
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_curve_lp_token_dto.cast(ob)
+		end
+		return result, headers
+	else
+		local body, err, errno2 = stream:get_body_as_string()
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		-- return the error message (http body)
+		return nil, http_status, body
+	end
+end
+
+function curve_api:curve_get_pools__historical(start_block, end_block, start_date, end_date, pool_id)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
@@ -674,6 +1115,10 @@ function curve_api:dapps_curve_pools_historical_get(start_block, end_block, star
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
 
 	-- make the HTTP call
 	local headers, stream, errno = req:go()
@@ -682,7 +1127,21 @@ function curve_api:dapps_curve_pools_historical_get(start_block, end_block, star
 	end
 	local http_status = headers:get(":status")
 	if http_status:sub(1,1) == "2" then
-		return nil, headers
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_curve_pool_dto.cast(ob)
+		end
+		return result, headers
 	else
 		local body, err, errno2 = stream:get_body_as_string()
 		if not body then
@@ -694,7 +1153,7 @@ function curve_api:dapps_curve_pools_historical_get(start_block, end_block, star
 	end
 end
 
-function curve_api:dapps_curve_proposals_historical_get(start_block, end_block, start_date, end_date)
+function curve_api:curve_get_proposals__historical(start_block, end_block, start_date, end_date)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
@@ -705,6 +1164,10 @@ function curve_api:dapps_curve_proposals_historical_get(start_block, end_block, 
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
 
 	-- make the HTTP call
 	local headers, stream, errno = req:go()
@@ -713,7 +1176,21 @@ function curve_api:dapps_curve_proposals_historical_get(start_block, end_block, 
 	end
 	local http_status = headers:get(":status")
 	if http_status:sub(1,1) == "2" then
-		return nil, headers
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_curve_proposal_dto.cast(ob)
+		end
+		return result, headers
 	else
 		local body, err, errno2 = stream:get_body_as_string()
 		if not body then
@@ -725,17 +1202,21 @@ function curve_api:dapps_curve_proposals_historical_get(start_block, end_block, 
 	end
 end
 
-function curve_api:dapps_curve_proposals_vote_historical_get(start_block, end_block, start_date, end_date)
+function curve_api:curve_get_proposals_votes__historical(start_block, end_block, start_date, end_date)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/curve/proposalsVote/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s",
+		path = string.format("%s/dapps/curve/proposalsVotes/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s",
 			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date));
 	})
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
 
 	-- make the HTTP call
 	local headers, stream, errno = req:go()
@@ -744,7 +1225,21 @@ function curve_api:dapps_curve_proposals_vote_historical_get(start_block, end_bl
 	end
 	local http_status = headers:get(":status")
 	if http_status:sub(1,1) == "2" then
-		return nil, headers
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_curve_proposal_vote_dto.cast(ob)
+		end
+		return result, headers
 	else
 		local body, err, errno2 = stream:get_body_as_string()
 		if not body then
@@ -756,17 +1251,21 @@ function curve_api:dapps_curve_proposals_vote_historical_get(start_block, end_bl
 	end
 end
 
-function curve_api:dapps_curve_remove_liquidity_event_historical_get(start_block, end_block, start_date, end_date, pool_id)
+function curve_api:curve_get_remove_liquidity_events__historical(start_block, end_block, start_date, end_date, pool_id)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/curve/removeLiquidityEvent/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&poolId=%s",
+		path = string.format("%s/dapps/curve/removeLiquidityEvents/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&poolId=%s",
 			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(pool_id));
 	})
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
 
 	-- make the HTTP call
 	local headers, stream, errno = req:go()
@@ -775,7 +1274,21 @@ function curve_api:dapps_curve_remove_liquidity_event_historical_get(start_block
 	end
 	local http_status = headers:get(":status")
 	if http_status:sub(1,1) == "2" then
-		return nil, headers
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_curve_remove_liquidity_event_dto.cast(ob)
+		end
+		return result, headers
 	else
 		local body, err, errno2 = stream:get_body_as_string()
 		if not body then
@@ -787,17 +1300,21 @@ function curve_api:dapps_curve_remove_liquidity_event_historical_get(start_block
 	end
 end
 
-function curve_api:dapps_curve_remove_liquidity_one_event_historical_get(start_block, end_block, start_date, end_date, pool_id)
+function curve_api:curve_get_remove_liquidity_one_events__historical(start_block, end_block, start_date, end_date, pool_id)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/curve/removeLiquidityOneEvent/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&poolId=%s",
+		path = string.format("%s/dapps/curve/removeLiquidityOneEvents/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&poolId=%s",
 			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(pool_id));
 	})
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
 
 	-- make the HTTP call
 	local headers, stream, errno = req:go()
@@ -806,7 +1323,21 @@ function curve_api:dapps_curve_remove_liquidity_one_event_historical_get(start_b
 	end
 	local http_status = headers:get(":status")
 	if http_status:sub(1,1) == "2" then
-		return nil, headers
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_curve_remove_liquidity_one_event_dto.cast(ob)
+		end
+		return result, headers
 	else
 		local body, err, errno2 = stream:get_body_as_string()
 		if not body then
@@ -818,48 +1349,21 @@ function curve_api:dapps_curve_remove_liquidity_one_event_historical_get(start_b
 	end
 end
 
-function curve_api:dapps_curve_swaps_historical_get(start_block, end_block, start_date, end_date, pool_id)
+function curve_api:curve_get_system_states__historical(start_block, end_block, start_date, end_date)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/curve/swaps/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&poolId=%s",
-			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(pool_id));
-	})
-
-	-- set HTTP verb
-	req.headers:upsert(":method", "GET")
-
-	-- make the HTTP call
-	local headers, stream, errno = req:go()
-	if not headers then
-		return nil, stream, errno
-	end
-	local http_status = headers:get(":status")
-	if http_status:sub(1,1) == "2" then
-		return nil, headers
-	else
-		local body, err, errno2 = stream:get_body_as_string()
-		if not body then
-			return nil, err, errno2
-		end
-		stream:shutdown()
-		-- return the error message (http body)
-		return nil, http_status, body
-	end
-end
-
-function curve_api:dapps_curve_system_state_historical_get(start_block, end_block, start_date, end_date)
-	local req = http_request.new_from_uri({
-		scheme = self.default_scheme;
-		host = self.host;
-		port = self.port;
-		path = string.format("%s/dapps/curve/systemState/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s",
+		path = string.format("%s/dapps/curve/systemStates/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s",
 			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date));
 	})
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
 
 	-- make the HTTP call
 	local headers, stream, errno = req:go()
@@ -868,7 +1372,21 @@ function curve_api:dapps_curve_system_state_historical_get(start_block, end_bloc
 	end
 	local http_status = headers:get(":status")
 	if http_status:sub(1,1) == "2" then
-		return nil, headers
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_curve_system_state_dto.cast(ob)
+		end
+		return result, headers
 	else
 		local body, err, errno2 = stream:get_body_as_string()
 		if not body then
@@ -880,7 +1398,7 @@ function curve_api:dapps_curve_system_state_historical_get(start_block, end_bloc
 	end
 end
 
-function curve_api:dapps_curve_tokens_historical_get(start_block, end_block, start_date, end_date, token_id)
+function curve_api:curve_get_tokens__historical(start_block, end_block, start_date, end_date, token_id)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
@@ -891,6 +1409,10 @@ function curve_api:dapps_curve_tokens_historical_get(start_block, end_block, sta
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
 
 	-- make the HTTP call
 	local headers, stream, errno = req:go()
@@ -899,7 +1421,21 @@ function curve_api:dapps_curve_tokens_historical_get(start_block, end_block, sta
 	end
 	local http_status = headers:get(":status")
 	if http_status:sub(1,1) == "2" then
-		return nil, headers
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_curve_token_dto.cast(ob)
+		end
+		return result, headers
 	else
 		local body, err, errno2 = stream:get_body_as_string()
 		if not body then
@@ -911,17 +1447,21 @@ function curve_api:dapps_curve_tokens_historical_get(start_block, end_block, sta
 	end
 end
 
-function curve_api:dapps_curve_transfer_ownership_event_historical_get(start_block, end_block, start_date, end_date, pool_id)
+function curve_api:curve_get_transfer_ownership_events__historical(start_block, end_block, start_date, end_date, pool_id)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/curve/transferOwnershipEvent/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&poolId=%s",
+		path = string.format("%s/dapps/curve/transferOwnershipEvents/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&poolId=%s",
 			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(pool_id));
 	})
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
 
 	-- make the HTTP call
 	local headers, stream, errno = req:go()
@@ -930,7 +1470,21 @@ function curve_api:dapps_curve_transfer_ownership_event_historical_get(start_blo
 	end
 	local http_status = headers:get(":status")
 	if http_status:sub(1,1) == "2" then
-		return nil, headers
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_curve_transfer_ownership_event_dto.cast(ob)
+		end
+		return result, headers
 	else
 		local body, err, errno2 = stream:get_body_as_string()
 		if not body then
@@ -942,17 +1496,21 @@ function curve_api:dapps_curve_transfer_ownership_event_historical_get(start_blo
 	end
 end
 
-function curve_api:dapps_curve_underlying_coin_historical_get(start_block, end_block, start_date, end_date, pool_id)
+function curve_api:curve_get_underlying_coins__historical(start_block, end_block, start_date, end_date, pool_id)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/curve/underlyingCoin/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&poolId=%s",
+		path = string.format("%s/dapps/curve/underlyingCoins/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&poolId=%s",
 			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(pool_id));
 	})
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
 
 	-- make the HTTP call
 	local headers, stream, errno = req:go()
@@ -961,7 +1519,21 @@ function curve_api:dapps_curve_underlying_coin_historical_get(start_block, end_b
 	end
 	local http_status = headers:get(":status")
 	if http_status:sub(1,1) == "2" then
-		return nil, headers
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_curve_underlying_coin_dto.cast(ob)
+		end
+		return result, headers
 	else
 		local body, err, errno2 = stream:get_body_as_string()
 		if not body then
@@ -973,17 +1545,21 @@ function curve_api:dapps_curve_underlying_coin_historical_get(start_block, end_b
 	end
 end
 
-function curve_api:dapps_curve_voting_app_historical_get(start_block, end_block, start_date, end_date)
+function curve_api:curve_get_voting_apps__historical(start_block, end_block, start_date, end_date)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/curve/votingApp/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s",
+		path = string.format("%s/dapps/curve/votingApps/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s",
 			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date));
 	})
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
 
 	-- make the HTTP call
 	local headers, stream, errno = req:go()
@@ -992,7 +1568,21 @@ function curve_api:dapps_curve_voting_app_historical_get(start_block, end_block,
 	end
 	local http_status = headers:get(":status")
 	if http_status:sub(1,1) == "2" then
-		return nil, headers
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_curve_voting_app_dto.cast(ob)
+		end
+		return result, headers
 	else
 		local body, err, errno2 = stream:get_body_as_string()
 		if not body then
@@ -1004,17 +1594,21 @@ function curve_api:dapps_curve_voting_app_historical_get(start_block, end_block,
 	end
 end
 
-function curve_api:dapps_curve_weekly_volume_historical_get(start_block, end_block, start_date, end_date, pool_id)
+function curve_api:curve_get_weekly_volumes__historical(start_block, end_block, start_date, end_date, pool_id)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/curve/weeklyVolume/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&poolId=%s",
+		path = string.format("%s/dapps/curve/weeklyVolumes/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&poolId=%s",
 			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(pool_id));
 	})
 
 	-- set HTTP verb
 	req.headers:upsert(":method", "GET")
+	-- TODO: create a function to select proper content-type
+	--local var_accept = { "text/plain", "application/json", "text/json" }
+	req.headers:upsert("content-type", "text/plain")
+
 
 	-- make the HTTP call
 	local headers, stream, errno = req:go()
@@ -1023,7 +1617,21 @@ function curve_api:dapps_curve_weekly_volume_historical_get(start_block, end_blo
 	end
 	local http_status = headers:get(":status")
 	if http_status:sub(1,1) == "2" then
-		return nil, headers
+		local body, err, errno2 = stream:get_body_as_string()
+		-- exception when getting the HTTP body
+		if not body then
+			return nil, err, errno2
+		end
+		stream:shutdown()
+		local result, _, err3 = dkjson.decode(body)
+		-- exception when decoding the HTTP body
+		if result == nil then
+			return nil, err3
+		end
+		for _, ob in ipairs(result) do
+			openapiclient_curve_weekly_volume_dto.cast(ob)
+		end
+		return result, headers
 	else
 		local body, err, errno2 = stream:get_body_as_string()
 		if not body then

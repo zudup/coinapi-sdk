@@ -12,6 +12,11 @@
 package org.openapitools.client.api
 
 import java.time.OffsetDateTime
+import org.openapitools.client.model.OrderDTO
+import org.openapitools.client.model.SettlementDTO
+import org.openapitools.client.model.TokenDTO
+import org.openapitools.client.model.TradeDTO
+import org.openapitools.client.model.UserDTO
 import org.openapitools.client.core._
 import org.openapitools.client.core.CollectionFormats._
 import org.openapitools.client.core.ApiKeyLocations._
@@ -24,44 +29,50 @@ object CowApi {
 class CowApi(baseUrl: String) {
 
   /**
+   * Gets orders.
+   * 
    * Expected answers:
-   *   code 200 :  (Success)
+   *   code 200 : Seq[OrderDTO] (successful operation)
    * 
    * @param startBlock 
    * @param endBlock 
    * @param startDate 
    * @param endDate 
    */
-  def dappsCowOrdersHistoricalGet(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None): ApiRequest[Unit] =
-    ApiRequest[Unit](ApiMethods.GET, baseUrl, "/dapps/cow/orders/historical", "application/json")
+  def cowGetOrdersHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None): ApiRequest[Seq[OrderDTO]] =
+    ApiRequest[Seq[OrderDTO]](ApiMethods.GET, baseUrl, "/dapps/cow/orders/historical", "application/json")
       .withQueryParam("startBlock", startBlock)
       .withQueryParam("endBlock", endBlock)
       .withQueryParam("startDate", startDate)
       .withQueryParam("endDate", endDate)
-      .withSuccessResponse[Unit](200)
+      .withSuccessResponse[Seq[OrderDTO]](200)
       
 
   /**
+   * Gets settlements.
+   * 
    * Expected answers:
-   *   code 200 :  (Success)
+   *   code 200 : Seq[SettlementDTO] (successful operation)
    * 
    * @param startBlock 
    * @param endBlock 
    * @param startDate 
    * @param endDate 
    */
-  def dappsCowSettlementHistoricalGet(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None): ApiRequest[Unit] =
-    ApiRequest[Unit](ApiMethods.GET, baseUrl, "/dapps/cow/settlement/historical", "application/json")
+  def cowGetSettlementsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None): ApiRequest[Seq[SettlementDTO]] =
+    ApiRequest[Seq[SettlementDTO]](ApiMethods.GET, baseUrl, "/dapps/cow/settlements/historical", "application/json")
       .withQueryParam("startBlock", startBlock)
       .withQueryParam("endBlock", endBlock)
       .withQueryParam("startDate", startDate)
       .withQueryParam("endDate", endDate)
-      .withSuccessResponse[Unit](200)
+      .withSuccessResponse[Seq[SettlementDTO]](200)
       
 
   /**
+   * Gets tokens.
+   * 
    * Expected answers:
-   *   code 200 :  (Success)
+   *   code 200 : Seq[TokenDTO] (successful operation)
    * 
    * @param startBlock 
    * @param endBlock 
@@ -69,50 +80,54 @@ class CowApi(baseUrl: String) {
    * @param endDate 
    * @param tokenId 
    */
-  def dappsCowTokensHistoricalGet(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, tokenId: Option[String] = None): ApiRequest[Unit] =
-    ApiRequest[Unit](ApiMethods.GET, baseUrl, "/dapps/cow/tokens/historical", "application/json")
+  def cowGetTokensHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, tokenId: Option[String] = None): ApiRequest[Seq[TokenDTO]] =
+    ApiRequest[Seq[TokenDTO]](ApiMethods.GET, baseUrl, "/dapps/cow/tokens/historical", "application/json")
       .withQueryParam("startBlock", startBlock)
       .withQueryParam("endBlock", endBlock)
       .withQueryParam("startDate", startDate)
       .withQueryParam("endDate", endDate)
       .withQueryParam("tokenId", tokenId)
-      .withSuccessResponse[Unit](200)
+      .withSuccessResponse[Seq[TokenDTO]](200)
       
 
   /**
+   * Gets trades.
+   * 
    * Expected answers:
-   *   code 200 :  (Success)
+   *   code 200 : Seq[TradeDTO] (successful operation)
    * 
    * @param startBlock 
    * @param endBlock 
    * @param startDate 
    * @param endDate 
    */
-  def dappsCowTradesHistoricalGet(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None): ApiRequest[Unit] =
-    ApiRequest[Unit](ApiMethods.GET, baseUrl, "/dapps/cow/trades/historical", "application/json")
+  def cowGetTradesHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None): ApiRequest[Seq[TradeDTO]] =
+    ApiRequest[Seq[TradeDTO]](ApiMethods.GET, baseUrl, "/dapps/cow/trades/historical", "application/json")
       .withQueryParam("startBlock", startBlock)
       .withQueryParam("endBlock", endBlock)
       .withQueryParam("startDate", startDate)
       .withQueryParam("endDate", endDate)
-      .withSuccessResponse[Unit](200)
+      .withSuccessResponse[Seq[TradeDTO]](200)
       
 
   /**
+   * Gets users.
+   * 
    * Expected answers:
-   *   code 200 :  (Success)
+   *   code 200 : Seq[UserDTO] (successful operation)
    * 
    * @param startBlock 
    * @param endBlock 
    * @param startDate 
    * @param endDate 
    */
-  def dappsCowUsersHistoricalGet(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None): ApiRequest[Unit] =
-    ApiRequest[Unit](ApiMethods.GET, baseUrl, "/dapps/cow/users/historical", "application/json")
+  def cowGetUsersHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None): ApiRequest[Seq[UserDTO]] =
+    ApiRequest[Seq[UserDTO]](ApiMethods.GET, baseUrl, "/dapps/cow/users/historical", "application/json")
       .withQueryParam("startBlock", startBlock)
       .withQueryParam("endBlock", endBlock)
       .withQueryParam("startDate", startDate)
       .withQueryParam("endDate", endDate)
-      .withSuccessResponse[Unit](200)
+      .withSuccessResponse[Seq[UserDTO]](200)
       
 
 

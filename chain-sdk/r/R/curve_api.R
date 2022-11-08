@@ -14,44 +14,28 @@
 #'
 #' @section Methods:
 #' \describe{
-#' \strong{ DappsCurveAccountsHistoricalGet } \emph{  }
+#' \strong{ CurveGetAccountsHistorical } \emph{ GetAccounts (historical) }
+#' Gets accounts.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
 #' \item \emph{ @param } end_block integer
 #' \item \emph{ @param } start_date character
 #' \item \emph{ @param } end_date character
+#' \item \emph{ @returnType } list( \link{Curve.AccountDTO} ) \cr
 #'
 #'
-#' \item status code : 200 | Success
+#' \item status code : 200 | successful operation
 #'
-#'
+#' \item return type : array[CurveAccountDTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
 #' }
 #' }
 #'
-#' \strong{ DappsCurveAddLiquidityEventHistoricalGet } \emph{  }
-#'
-#' \itemize{
-#' \item \emph{ @param } start_block integer
-#' \item \emph{ @param } end_block integer
-#' \item \emph{ @param } start_date character
-#' \item \emph{ @param } end_date character
-#' \item \emph{ @param } pool_id character
-#'
-#'
-#' \item status code : 200 | Success
-#'
-#'
-#' \item response headers :
-#'
-#' \tabular{ll}{
-#' }
-#' }
-#'
-#' \strong{ DappsCurveAdminFeeChangeLogHistoricalGet } \emph{  }
+#' \strong{ CurveGetAddLiquidityEventsHistorical } \emph{ GetAddLiquidityEvents (historical) }
+#' Gets add liquidity events.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
@@ -59,18 +43,20 @@
 #' \item \emph{ @param } start_date character
 #' \item \emph{ @param } end_date character
 #' \item \emph{ @param } pool_id character
+#' \item \emph{ @returnType } list( \link{Curve.AddLiquidityEventDTO} ) \cr
 #'
 #'
-#' \item status code : 200 | Success
+#' \item status code : 200 | successful operation
 #'
-#'
+#' \item return type : array[CurveAddLiquidityEventDTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
 #' }
 #' }
 #'
-#' \strong{ DappsCurveAmplificationCoeffChangeLogHistoricalGet } \emph{  }
+#' \strong{ CurveGetAdminFeeChangeLogsHistorical } \emph{ GetAdminFeeChangeLogs (historical) }
+#' Gets admin fee change logs.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
@@ -78,18 +64,20 @@
 #' \item \emph{ @param } start_date character
 #' \item \emph{ @param } end_date character
 #' \item \emph{ @param } pool_id character
+#' \item \emph{ @returnType } list( \link{Curve.AdminFeeChangeLogDTO} ) \cr
 #'
 #'
-#' \item status code : 200 | Success
+#' \item status code : 200 | successful operation
 #'
-#'
+#' \item return type : array[CurveAdminFeeChangeLogDTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
 #' }
 #' }
 #'
-#' \strong{ DappsCurveCoinsHistoricalGet } \emph{  }
+#' \strong{ CurveGetAmplificationCoeffChangeLogsHistorical } \emph{ GetAmplificationCoeffChangeLogs (historical) }
+#' Gets amplification coeff change logs.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
@@ -97,18 +85,20 @@
 #' \item \emph{ @param } start_date character
 #' \item \emph{ @param } end_date character
 #' \item \emph{ @param } pool_id character
+#' \item \emph{ @returnType } list( \link{Curve.AmplificationCoeffChangeLogDTO} ) \cr
 #'
 #'
-#' \item status code : 200 | Success
+#' \item status code : 200 | successful operation
 #'
-#'
+#' \item return type : array[CurveAmplificationCoeffChangeLogDTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
 #' }
 #' }
 #'
-#' \strong{ DappsCurveContractsHistoricalGet } \emph{  }
+#' \strong{ CurveGetCoinsHistorical } \emph{ GetCoins (historical) }
+#' Gets coins.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
@@ -116,18 +106,20 @@
 #' \item \emph{ @param } start_date character
 #' \item \emph{ @param } end_date character
 #' \item \emph{ @param } pool_id character
+#' \item \emph{ @returnType } list( \link{Curve.CoinDTO} ) \cr
 #'
 #'
-#' \item status code : 200 | Success
+#' \item status code : 200 | successful operation
 #'
-#'
+#' \item return type : array[CurveCoinDTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
 #' }
 #' }
 #'
-#' \strong{ DappsCurveContractsVersionHistoricalGet } \emph{  }
+#' \strong{ CurveGetContractsHistorical } \emph{ GetContracts (historical) }
+#' Gets contracts.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
@@ -135,18 +127,20 @@
 #' \item \emph{ @param } start_date character
 #' \item \emph{ @param } end_date character
 #' \item \emph{ @param } pool_id character
+#' \item \emph{ @returnType } list( \link{Curve.ContractDTO} ) \cr
 #'
 #'
-#' \item status code : 200 | Success
+#' \item status code : 200 | successful operation
 #'
-#'
+#' \item return type : array[CurveContractDTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
 #' }
 #' }
 #'
-#' \strong{ DappsCurveDailyVolumeHistoricalGet } \emph{  }
+#' \strong{ CurveGetContractsVersionsHistorical } \emph{ GetContractsVersions (historical) }
+#' Gets contracts versions.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
@@ -154,18 +148,20 @@
 #' \item \emph{ @param } start_date character
 #' \item \emph{ @param } end_date character
 #' \item \emph{ @param } pool_id character
+#' \item \emph{ @returnType } list( \link{Curve.ContractVersionDTO} ) \cr
 #'
 #'
-#' \item status code : 200 | Success
+#' \item status code : 200 | successful operation
 #'
-#'
+#' \item return type : array[CurveContractVersionDTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
 #' }
 #' }
 #'
-#' \strong{ DappsCurveFeeChangeLogHistoricalGet } \emph{  }
+#' \strong{ CurveGetDailyVolumesHistorical } \emph{ GetDailyVolumes (historical) }
+#' Gets daily volumes.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
@@ -173,36 +169,20 @@
 #' \item \emph{ @param } start_date character
 #' \item \emph{ @param } end_date character
 #' \item \emph{ @param } pool_id character
+#' \item \emph{ @returnType } list( \link{Curve.DailyVolumeDTO} ) \cr
 #'
 #'
-#' \item status code : 200 | Success
+#' \item status code : 200 | successful operation
 #'
-#'
+#' \item return type : array[CurveDailyVolumeDTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
 #' }
 #' }
 #'
-#' \strong{ DappsCurveGaugeDepositHistoricalGet } \emph{  }
-#'
-#' \itemize{
-#' \item \emph{ @param } start_block integer
-#' \item \emph{ @param } end_block integer
-#' \item \emph{ @param } start_date character
-#' \item \emph{ @param } end_date character
-#'
-#'
-#' \item status code : 200 | Success
-#'
-#'
-#' \item response headers :
-#'
-#' \tabular{ll}{
-#' }
-#' }
-#'
-#' \strong{ DappsCurveGaugeHistoricalGet } \emph{  }
+#' \strong{ CurveGetExchangesHistorical } \emph{ GetExchanges (historical) 🔥 }
+#' Gets exchanges.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
@@ -210,144 +190,20 @@
 #' \item \emph{ @param } start_date character
 #' \item \emph{ @param } end_date character
 #' \item \emph{ @param } pool_id character
+#' \item \emph{ @returnType } list( \link{Curve.ExchangeDTO} ) \cr
 #'
 #'
-#' \item status code : 200 | Success
+#' \item status code : 200 | successful operation
 #'
-#'
+#' \item return type : array[CurveExchangeDTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
 #' }
 #' }
 #'
-#' \strong{ DappsCurveGaugeLiquidityHistoricalGet } \emph{  }
-#'
-#' \itemize{
-#' \item \emph{ @param } start_block integer
-#' \item \emph{ @param } end_block integer
-#' \item \emph{ @param } start_date character
-#' \item \emph{ @param } end_date character
-#'
-#'
-#' \item status code : 200 | Success
-#'
-#'
-#' \item response headers :
-#'
-#' \tabular{ll}{
-#' }
-#' }
-#'
-#' \strong{ DappsCurveGaugeTotalWeightHistoricalGet } \emph{  }
-#'
-#' \itemize{
-#' \item \emph{ @param } start_block integer
-#' \item \emph{ @param } end_block integer
-#' \item \emph{ @param } start_date character
-#' \item \emph{ @param } end_date character
-#'
-#'
-#' \item status code : 200 | Success
-#'
-#'
-#' \item response headers :
-#'
-#' \tabular{ll}{
-#' }
-#' }
-#'
-#' \strong{ DappsCurveGaugeTypeHistoricalGet } \emph{  }
-#'
-#' \itemize{
-#' \item \emph{ @param } start_block integer
-#' \item \emph{ @param } end_block integer
-#' \item \emph{ @param } start_date character
-#' \item \emph{ @param } end_date character
-#'
-#'
-#' \item status code : 200 | Success
-#'
-#'
-#' \item response headers :
-#'
-#' \tabular{ll}{
-#' }
-#' }
-#'
-#' \strong{ DappsCurveGaugeTypeWeightHistoricalGet } \emph{  }
-#'
-#' \itemize{
-#' \item \emph{ @param } start_block integer
-#' \item \emph{ @param } end_block integer
-#' \item \emph{ @param } start_date character
-#' \item \emph{ @param } end_date character
-#'
-#'
-#' \item status code : 200 | Success
-#'
-#'
-#' \item response headers :
-#'
-#' \tabular{ll}{
-#' }
-#' }
-#'
-#' \strong{ DappsCurveGaugeWeightHistoricalGet } \emph{  }
-#'
-#' \itemize{
-#' \item \emph{ @param } start_block integer
-#' \item \emph{ @param } end_block integer
-#' \item \emph{ @param } start_date character
-#' \item \emph{ @param } end_date character
-#'
-#'
-#' \item status code : 200 | Success
-#'
-#'
-#' \item response headers :
-#'
-#' \tabular{ll}{
-#' }
-#' }
-#'
-#' \strong{ DappsCurveGaugeWeightVoteHistoricalGet } \emph{  }
-#'
-#' \itemize{
-#' \item \emph{ @param } start_block integer
-#' \item \emph{ @param } end_block integer
-#' \item \emph{ @param } start_date character
-#' \item \emph{ @param } end_date character
-#'
-#'
-#' \item status code : 200 | Success
-#'
-#'
-#' \item response headers :
-#'
-#' \tabular{ll}{
-#' }
-#' }
-#'
-#' \strong{ DappsCurveGaugeWithdrawHistoricalGet } \emph{  }
-#'
-#' \itemize{
-#' \item \emph{ @param } start_block integer
-#' \item \emph{ @param } end_block integer
-#' \item \emph{ @param } start_date character
-#' \item \emph{ @param } end_date character
-#'
-#'
-#' \item status code : 200 | Success
-#'
-#'
-#' \item response headers :
-#'
-#' \tabular{ll}{
-#' }
-#' }
-#'
-#' \strong{ DappsCurveHourlyVolumeHistoricalGet } \emph{  }
+#' \strong{ CurveGetFeeChangeLogsHistorical } \emph{ GetFeeChangeLogs (historical) }
+#' Gets fee change logs.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
@@ -355,18 +211,40 @@
 #' \item \emph{ @param } start_date character
 #' \item \emph{ @param } end_date character
 #' \item \emph{ @param } pool_id character
+#' \item \emph{ @returnType } list( \link{Curve.FeeChangeLogDTO} ) \cr
 #'
 #'
-#' \item status code : 200 | Success
+#' \item status code : 200 | successful operation
 #'
-#'
+#' \item return type : array[CurveFeeChangeLogDTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
 #' }
 #' }
 #'
-#' \strong{ DappsCurveLpTokenHistoricalGet } \emph{  }
+#' \strong{ CurveGetGaugesDepositsHistorical } \emph{ GetGaugesDeposits (historical) }
+#' Gets gauges deposits.
+#'
+#' \itemize{
+#' \item \emph{ @param } start_block integer
+#' \item \emph{ @param } end_block integer
+#' \item \emph{ @param } start_date character
+#' \item \emph{ @param } end_date character
+#' \item \emph{ @returnType } list( \link{Curve.GaugeDepositDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[CurveGaugeDepositDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ CurveGetGaugesHistorical } \emph{ GetGauges (historical) }
+#' Gets gauges.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
@@ -374,18 +252,160 @@
 #' \item \emph{ @param } start_date character
 #' \item \emph{ @param } end_date character
 #' \item \emph{ @param } pool_id character
+#' \item \emph{ @returnType } list( \link{Curve.GaugeDTO} ) \cr
 #'
 #'
-#' \item status code : 200 | Success
+#' \item status code : 200 | successful operation
 #'
-#'
+#' \item return type : array[CurveGaugeDTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
 #' }
 #' }
 #'
-#' \strong{ DappsCurvePoolsHistoricalGet } \emph{  }
+#' \strong{ CurveGetGaugesLiquidityHistorical } \emph{ GetGaugesLiquidity (historical) }
+#' Gets gauges liquidity.
+#'
+#' \itemize{
+#' \item \emph{ @param } start_block integer
+#' \item \emph{ @param } end_block integer
+#' \item \emph{ @param } start_date character
+#' \item \emph{ @param } end_date character
+#' \item \emph{ @returnType } list( \link{Curve.GaugeLiquidityDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[CurveGaugeLiquidityDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ CurveGetGaugesTotalWeightsHistorical } \emph{ GetGaugesTotalWeights (historical) }
+#' Gets gauges total weights.
+#'
+#' \itemize{
+#' \item \emph{ @param } start_block integer
+#' \item \emph{ @param } end_block integer
+#' \item \emph{ @param } start_date character
+#' \item \emph{ @param } end_date character
+#' \item \emph{ @returnType } list( \link{Curve.GaugeTotalWeightDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[CurveGaugeTotalWeightDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ CurveGetGaugesTypesHistorical } \emph{ GetGaugesTypes (historical) }
+#' Gets gauges types.
+#'
+#' \itemize{
+#' \item \emph{ @param } start_block integer
+#' \item \emph{ @param } end_block integer
+#' \item \emph{ @param } start_date character
+#' \item \emph{ @param } end_date character
+#' \item \emph{ @returnType } list( \link{Curve.GaugeTypeDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[CurveGaugeTypeDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ CurveGetGaugesTypesWeightsHistorical } \emph{ GetGaugesTypesWeights (historical) }
+#' Gets gauges types weights.
+#'
+#' \itemize{
+#' \item \emph{ @param } start_block integer
+#' \item \emph{ @param } end_block integer
+#' \item \emph{ @param } start_date character
+#' \item \emph{ @param } end_date character
+#' \item \emph{ @returnType } list( \link{Curve.GaugeTypeWeightDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[CurveGaugeTypeWeightDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ CurveGetGaugesWeightsHistorical } \emph{ GetGaugesWeights (historical) }
+#' Gets gauges weights.
+#'
+#' \itemize{
+#' \item \emph{ @param } start_block integer
+#' \item \emph{ @param } end_block integer
+#' \item \emph{ @param } start_date character
+#' \item \emph{ @param } end_date character
+#' \item \emph{ @returnType } list( \link{Curve.GaugeWeightDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[CurveGaugeWeightDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ CurveGetGaugesWeightsVotesHistorical } \emph{ GetGaugesWeightsVotes (historical) }
+#' Gets gauges weights votes.
+#'
+#' \itemize{
+#' \item \emph{ @param } start_block integer
+#' \item \emph{ @param } end_block integer
+#' \item \emph{ @param } start_date character
+#' \item \emph{ @param } end_date character
+#' \item \emph{ @returnType } list( \link{Curve.GaugeWeightVoteDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[CurveGaugeWeightVoteDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ CurveGetGaugesWithdrawHistorical } \emph{ GetGaugesWithdraw (historical) }
+#' Gets gauges withdraws.
+#'
+#' \itemize{
+#' \item \emph{ @param } start_block integer
+#' \item \emph{ @param } end_block integer
+#' \item \emph{ @param } start_date character
+#' \item \emph{ @param } end_date character
+#' \item \emph{ @returnType } list( \link{Curve.GaugeWithdrawDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[CurveGaugeWithdrawDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ CurveGetHourlyVolumesHistorical } \emph{ GetHourlyVolumes (historical) }
+#' Gets hourly volumes.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
@@ -393,54 +413,20 @@
 #' \item \emph{ @param } start_date character
 #' \item \emph{ @param } end_date character
 #' \item \emph{ @param } pool_id character
+#' \item \emph{ @returnType } list( \link{Curve.HourlyVolumeDTO} ) \cr
 #'
 #'
-#' \item status code : 200 | Success
+#' \item status code : 200 | successful operation
 #'
-#'
+#' \item return type : array[CurveHourlyVolumeDTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
 #' }
 #' }
 #'
-#' \strong{ DappsCurveProposalsHistoricalGet } \emph{  }
-#'
-#' \itemize{
-#' \item \emph{ @param } start_block integer
-#' \item \emph{ @param } end_block integer
-#' \item \emph{ @param } start_date character
-#' \item \emph{ @param } end_date character
-#'
-#'
-#' \item status code : 200 | Success
-#'
-#'
-#' \item response headers :
-#'
-#' \tabular{ll}{
-#' }
-#' }
-#'
-#' \strong{ DappsCurveProposalsVoteHistoricalGet } \emph{  }
-#'
-#' \itemize{
-#' \item \emph{ @param } start_block integer
-#' \item \emph{ @param } end_block integer
-#' \item \emph{ @param } start_date character
-#' \item \emph{ @param } end_date character
-#'
-#'
-#' \item status code : 200 | Success
-#'
-#'
-#' \item response headers :
-#'
-#' \tabular{ll}{
-#' }
-#' }
-#'
-#' \strong{ DappsCurveRemoveLiquidityEventHistoricalGet } \emph{  }
+#' \strong{ CurveGetLpTokensHistorical } \emph{ GetLpTokens (historical) }
+#' Gets lp tokens.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
@@ -448,18 +434,20 @@
 #' \item \emph{ @param } start_date character
 #' \item \emph{ @param } end_date character
 #' \item \emph{ @param } pool_id character
+#' \item \emph{ @returnType } list( \link{Curve.LpTokenDTO} ) \cr
 #'
 #'
-#' \item status code : 200 | Success
+#' \item status code : 200 | successful operation
 #'
-#'
+#' \item return type : array[CurveLpTokenDTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
 #' }
 #' }
 #'
-#' \strong{ DappsCurveRemoveLiquidityOneEventHistoricalGet } \emph{  }
+#' \strong{ CurveGetPoolsHistorical } \emph{ GetPools (historical) 🔥 }
+#' Gets pools.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
@@ -467,18 +455,60 @@
 #' \item \emph{ @param } start_date character
 #' \item \emph{ @param } end_date character
 #' \item \emph{ @param } pool_id character
+#' \item \emph{ @returnType } list( \link{Curve.PoolDTO} ) \cr
 #'
 #'
-#' \item status code : 200 | Success
+#' \item status code : 200 | successful operation
 #'
-#'
+#' \item return type : array[CurvePoolDTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
 #' }
 #' }
 #'
-#' \strong{ DappsCurveSwapsHistoricalGet } \emph{  }
+#' \strong{ CurveGetProposalsHistorical } \emph{ GetProposals (historical) }
+#' Gets proposals.
+#'
+#' \itemize{
+#' \item \emph{ @param } start_block integer
+#' \item \emph{ @param } end_block integer
+#' \item \emph{ @param } start_date character
+#' \item \emph{ @param } end_date character
+#' \item \emph{ @returnType } list( \link{Curve.ProposalDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[CurveProposalDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ CurveGetProposalsVotesHistorical } \emph{ GetProposalsVotes (historical) }
+#' Gets proposals votes.
+#'
+#' \itemize{
+#' \item \emph{ @param } start_block integer
+#' \item \emph{ @param } end_block integer
+#' \item \emph{ @param } start_date character
+#' \item \emph{ @param } end_date character
+#' \item \emph{ @returnType } list( \link{Curve.ProposalVoteDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[CurveProposalVoteDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ CurveGetRemoveLiquidityEventsHistorical } \emph{ GetRemoveLiquidityEvents (historical) }
+#' Gets remove liquidity events.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
@@ -486,36 +516,61 @@
 #' \item \emph{ @param } start_date character
 #' \item \emph{ @param } end_date character
 #' \item \emph{ @param } pool_id character
+#' \item \emph{ @returnType } list( \link{Curve.RemoveLiquidityEventDTO} ) \cr
 #'
 #'
-#' \item status code : 200 | Success
+#' \item status code : 200 | successful operation
 #'
-#'
+#' \item return type : array[CurveRemoveLiquidityEventDTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
 #' }
 #' }
 #'
-#' \strong{ DappsCurveSystemStateHistoricalGet } \emph{  }
+#' \strong{ CurveGetRemoveLiquidityOneEventsHistorical } \emph{ GetRemoveLiquidityOneEvents (historical) }
+#' Gets remove liquidity one events.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
 #' \item \emph{ @param } end_block integer
 #' \item \emph{ @param } start_date character
 #' \item \emph{ @param } end_date character
+#' \item \emph{ @param } pool_id character
+#' \item \emph{ @returnType } list( \link{Curve.RemoveLiquidityOneEventDTO} ) \cr
 #'
 #'
-#' \item status code : 200 | Success
+#' \item status code : 200 | successful operation
 #'
-#'
+#' \item return type : array[CurveRemoveLiquidityOneEventDTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
 #' }
 #' }
 #'
-#' \strong{ DappsCurveTokensHistoricalGet } \emph{  }
+#' \strong{ CurveGetSystemStatesHistorical } \emph{ GetSystemStates (historical) }
+#' Gets system states.
+#'
+#' \itemize{
+#' \item \emph{ @param } start_block integer
+#' \item \emph{ @param } end_block integer
+#' \item \emph{ @param } start_date character
+#' \item \emph{ @param } end_date character
+#' \item \emph{ @returnType } list( \link{Curve.SystemStateDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[CurveSystemStateDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ CurveGetTokensHistorical } \emph{ GetTokens (historical) 🔥 }
+#' Gets tokens.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
@@ -523,18 +578,20 @@
 #' \item \emph{ @param } start_date character
 #' \item \emph{ @param } end_date character
 #' \item \emph{ @param } token_id character
+#' \item \emph{ @returnType } list( \link{Curve.TokenDTO} ) \cr
 #'
 #'
-#' \item status code : 200 | Success
+#' \item status code : 200 | successful operation
 #'
-#'
+#' \item return type : array[CurveTokenDTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
 #' }
 #' }
 #'
-#' \strong{ DappsCurveTransferOwnershipEventHistoricalGet } \emph{  }
+#' \strong{ CurveGetTransferOwnershipEventsHistorical } \emph{ GetTransferOwnershipEvents (historical) }
+#' Gets transfer ownership events.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
@@ -542,18 +599,20 @@
 #' \item \emph{ @param } start_date character
 #' \item \emph{ @param } end_date character
 #' \item \emph{ @param } pool_id character
+#' \item \emph{ @returnType } list( \link{Curve.TransferOwnershipEventDTO} ) \cr
 #'
 #'
-#' \item status code : 200 | Success
+#' \item status code : 200 | successful operation
 #'
-#'
+#' \item return type : array[CurveTransferOwnershipEventDTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
 #' }
 #' }
 #'
-#' \strong{ DappsCurveUnderlyingCoinHistoricalGet } \emph{  }
+#' \strong{ CurveGetUnderlyingCoinsHistorical } \emph{ GetUnderlyingCoins (historical) }
+#' Gets underlying coins.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
@@ -561,36 +620,40 @@
 #' \item \emph{ @param } start_date character
 #' \item \emph{ @param } end_date character
 #' \item \emph{ @param } pool_id character
+#' \item \emph{ @returnType } list( \link{Curve.UnderlyingCoinDTO} ) \cr
 #'
 #'
-#' \item status code : 200 | Success
+#' \item status code : 200 | successful operation
 #'
-#'
+#' \item return type : array[CurveUnderlyingCoinDTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
 #' }
 #' }
 #'
-#' \strong{ DappsCurveVotingAppHistoricalGet } \emph{  }
+#' \strong{ CurveGetVotingAppsHistorical } \emph{ GetVotingApps (historical) }
+#' Gets voting apps.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
 #' \item \emph{ @param } end_block integer
 #' \item \emph{ @param } start_date character
 #' \item \emph{ @param } end_date character
+#' \item \emph{ @returnType } list( \link{Curve.VotingAppDTO} ) \cr
 #'
 #'
-#' \item status code : 200 | Success
+#' \item status code : 200 | successful operation
 #'
-#'
+#' \item return type : array[CurveVotingAppDTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
 #' }
 #' }
 #'
-#' \strong{ DappsCurveWeeklyVolumeHistoricalGet } \emph{  }
+#' \strong{ CurveGetWeeklyVolumesHistorical } \emph{ GetWeeklyVolumes (historical) }
+#' Gets weekly volumes.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
@@ -598,11 +661,12 @@
 #' \item \emph{ @param } start_date character
 #' \item \emph{ @param } end_date character
 #' \item \emph{ @param } pool_id character
+#' \item \emph{ @returnType } list( \link{Curve.WeeklyVolumeDTO} ) \cr
 #'
 #'
-#' \item status code : 200 | Success
+#' \item status code : 200 | successful operation
 #'
-#'
+#' \item return type : array[CurveWeeklyVolumeDTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -614,7 +678,7 @@
 #'
 #' @examples
 #' \dontrun{
-#' ####################  DappsCurveAccountsHistoricalGet  ####################
+#' ####################  CurveGetAccountsHistorical  ####################
 #'
 #' library(openapi)
 #' var_start_block <- 56 # integer |  (Optional)
@@ -622,26 +686,16 @@
 #' var_start_date <- "start_date_example" # character |  (Optional)
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #'
+#' #GetAccounts (historical)
 #' api_instance <- CurveApi$new()
 #'
-#' api_instance$DappsCurveAccountsHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$CurveGetAccountsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_datedata_file = "result.txt")
+#' result <- api_instance$CurveGetAccountsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
+#' dput(result)
 #'
 #'
-#' ####################  DappsCurveAddLiquidityEventHistoricalGet  ####################
-#'
-#' library(openapi)
-#' var_start_block <- 56 # integer |  (Optional)
-#' var_end_block <- 56 # integer |  (Optional)
-#' var_start_date <- "start_date_example" # character |  (Optional)
-#' var_end_date <- "end_date_example" # character |  (Optional)
-#' var_pool_id <- "pool_id_example" # character |  (Optional)
-#'
-#' api_instance <- CurveApi$new()
-#'
-#' api_instance$DappsCurveAddLiquidityEventHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
-#'
-#'
-#' ####################  DappsCurveAdminFeeChangeLogHistoricalGet  ####################
+#' ####################  CurveGetAddLiquidityEventsHistorical  ####################
 #'
 #' library(openapi)
 #' var_start_block <- 56 # integer |  (Optional)
@@ -650,12 +704,16 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
+#' #GetAddLiquidityEvents (historical)
 #' api_instance <- CurveApi$new()
 #'
-#' api_instance$DappsCurveAdminFeeChangeLogHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$CurveGetAddLiquidityEventsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+#' result <- api_instance$CurveGetAddLiquidityEventsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+#' dput(result)
 #'
 #'
-#' ####################  DappsCurveAmplificationCoeffChangeLogHistoricalGet  ####################
+#' ####################  CurveGetAdminFeeChangeLogsHistorical  ####################
 #'
 #' library(openapi)
 #' var_start_block <- 56 # integer |  (Optional)
@@ -664,12 +722,16 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
+#' #GetAdminFeeChangeLogs (historical)
 #' api_instance <- CurveApi$new()
 #'
-#' api_instance$DappsCurveAmplificationCoeffChangeLogHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$CurveGetAdminFeeChangeLogsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+#' result <- api_instance$CurveGetAdminFeeChangeLogsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+#' dput(result)
 #'
 #'
-#' ####################  DappsCurveCoinsHistoricalGet  ####################
+#' ####################  CurveGetAmplificationCoeffChangeLogsHistorical  ####################
 #'
 #' library(openapi)
 #' var_start_block <- 56 # integer |  (Optional)
@@ -678,12 +740,16 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
+#' #GetAmplificationCoeffChangeLogs (historical)
 #' api_instance <- CurveApi$new()
 #'
-#' api_instance$DappsCurveCoinsHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$CurveGetAmplificationCoeffChangeLogsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+#' result <- api_instance$CurveGetAmplificationCoeffChangeLogsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+#' dput(result)
 #'
 #'
-#' ####################  DappsCurveContractsHistoricalGet  ####################
+#' ####################  CurveGetCoinsHistorical  ####################
 #'
 #' library(openapi)
 #' var_start_block <- 56 # integer |  (Optional)
@@ -692,12 +758,16 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
+#' #GetCoins (historical)
 #' api_instance <- CurveApi$new()
 #'
-#' api_instance$DappsCurveContractsHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$CurveGetCoinsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+#' result <- api_instance$CurveGetCoinsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+#' dput(result)
 #'
 #'
-#' ####################  DappsCurveContractsVersionHistoricalGet  ####################
+#' ####################  CurveGetContractsHistorical  ####################
 #'
 #' library(openapi)
 #' var_start_block <- 56 # integer |  (Optional)
@@ -706,12 +776,16 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
+#' #GetContracts (historical)
 #' api_instance <- CurveApi$new()
 #'
-#' api_instance$DappsCurveContractsVersionHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$CurveGetContractsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+#' result <- api_instance$CurveGetContractsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+#' dput(result)
 #'
 #'
-#' ####################  DappsCurveDailyVolumeHistoricalGet  ####################
+#' ####################  CurveGetContractsVersionsHistorical  ####################
 #'
 #' library(openapi)
 #' var_start_block <- 56 # integer |  (Optional)
@@ -720,12 +794,16 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
+#' #GetContractsVersions (historical)
 #' api_instance <- CurveApi$new()
 #'
-#' api_instance$DappsCurveDailyVolumeHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$CurveGetContractsVersionsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+#' result <- api_instance$CurveGetContractsVersionsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+#' dput(result)
 #'
 #'
-#' ####################  DappsCurveFeeChangeLogHistoricalGet  ####################
+#' ####################  CurveGetDailyVolumesHistorical  ####################
 #'
 #' library(openapi)
 #' var_start_block <- 56 # integer |  (Optional)
@@ -734,25 +812,16 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
+#' #GetDailyVolumes (historical)
 #' api_instance <- CurveApi$new()
 #'
-#' api_instance$DappsCurveFeeChangeLogHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$CurveGetDailyVolumesHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+#' result <- api_instance$CurveGetDailyVolumesHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+#' dput(result)
 #'
 #'
-#' ####################  DappsCurveGaugeDepositHistoricalGet  ####################
-#'
-#' library(openapi)
-#' var_start_block <- 56 # integer |  (Optional)
-#' var_end_block <- 56 # integer |  (Optional)
-#' var_start_date <- "start_date_example" # character |  (Optional)
-#' var_end_date <- "end_date_example" # character |  (Optional)
-#'
-#' api_instance <- CurveApi$new()
-#'
-#' api_instance$DappsCurveGaugeDepositHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
-#'
-#'
-#' ####################  DappsCurveGaugeHistoricalGet  ####################
+#' ####################  CurveGetExchangesHistorical  ####################
 #'
 #' library(openapi)
 #' var_start_block <- 56 # integer |  (Optional)
@@ -761,103 +830,16 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
+#' #GetExchanges (historical) 🔥
 #' api_instance <- CurveApi$new()
 #'
-#' api_instance$DappsCurveGaugeHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$CurveGetExchangesHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+#' result <- api_instance$CurveGetExchangesHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+#' dput(result)
 #'
 #'
-#' ####################  DappsCurveGaugeLiquidityHistoricalGet  ####################
-#'
-#' library(openapi)
-#' var_start_block <- 56 # integer |  (Optional)
-#' var_end_block <- 56 # integer |  (Optional)
-#' var_start_date <- "start_date_example" # character |  (Optional)
-#' var_end_date <- "end_date_example" # character |  (Optional)
-#'
-#' api_instance <- CurveApi$new()
-#'
-#' api_instance$DappsCurveGaugeLiquidityHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
-#'
-#'
-#' ####################  DappsCurveGaugeTotalWeightHistoricalGet  ####################
-#'
-#' library(openapi)
-#' var_start_block <- 56 # integer |  (Optional)
-#' var_end_block <- 56 # integer |  (Optional)
-#' var_start_date <- "start_date_example" # character |  (Optional)
-#' var_end_date <- "end_date_example" # character |  (Optional)
-#'
-#' api_instance <- CurveApi$new()
-#'
-#' api_instance$DappsCurveGaugeTotalWeightHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
-#'
-#'
-#' ####################  DappsCurveGaugeTypeHistoricalGet  ####################
-#'
-#' library(openapi)
-#' var_start_block <- 56 # integer |  (Optional)
-#' var_end_block <- 56 # integer |  (Optional)
-#' var_start_date <- "start_date_example" # character |  (Optional)
-#' var_end_date <- "end_date_example" # character |  (Optional)
-#'
-#' api_instance <- CurveApi$new()
-#'
-#' api_instance$DappsCurveGaugeTypeHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
-#'
-#'
-#' ####################  DappsCurveGaugeTypeWeightHistoricalGet  ####################
-#'
-#' library(openapi)
-#' var_start_block <- 56 # integer |  (Optional)
-#' var_end_block <- 56 # integer |  (Optional)
-#' var_start_date <- "start_date_example" # character |  (Optional)
-#' var_end_date <- "end_date_example" # character |  (Optional)
-#'
-#' api_instance <- CurveApi$new()
-#'
-#' api_instance$DappsCurveGaugeTypeWeightHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
-#'
-#'
-#' ####################  DappsCurveGaugeWeightHistoricalGet  ####################
-#'
-#' library(openapi)
-#' var_start_block <- 56 # integer |  (Optional)
-#' var_end_block <- 56 # integer |  (Optional)
-#' var_start_date <- "start_date_example" # character |  (Optional)
-#' var_end_date <- "end_date_example" # character |  (Optional)
-#'
-#' api_instance <- CurveApi$new()
-#'
-#' api_instance$DappsCurveGaugeWeightHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
-#'
-#'
-#' ####################  DappsCurveGaugeWeightVoteHistoricalGet  ####################
-#'
-#' library(openapi)
-#' var_start_block <- 56 # integer |  (Optional)
-#' var_end_block <- 56 # integer |  (Optional)
-#' var_start_date <- "start_date_example" # character |  (Optional)
-#' var_end_date <- "end_date_example" # character |  (Optional)
-#'
-#' api_instance <- CurveApi$new()
-#'
-#' api_instance$DappsCurveGaugeWeightVoteHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
-#'
-#'
-#' ####################  DappsCurveGaugeWithdrawHistoricalGet  ####################
-#'
-#' library(openapi)
-#' var_start_block <- 56 # integer |  (Optional)
-#' var_end_block <- 56 # integer |  (Optional)
-#' var_start_date <- "start_date_example" # character |  (Optional)
-#' var_end_date <- "end_date_example" # character |  (Optional)
-#'
-#' api_instance <- CurveApi$new()
-#'
-#' api_instance$DappsCurveGaugeWithdrawHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
-#'
-#'
-#' ####################  DappsCurveHourlyVolumeHistoricalGet  ####################
+#' ####################  CurveGetFeeChangeLogsHistorical  ####################
 #'
 #' library(openapi)
 #' var_start_block <- 56 # integer |  (Optional)
@@ -866,12 +848,33 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
+#' #GetFeeChangeLogs (historical)
 #' api_instance <- CurveApi$new()
 #'
-#' api_instance$DappsCurveHourlyVolumeHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$CurveGetFeeChangeLogsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+#' result <- api_instance$CurveGetFeeChangeLogsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+#' dput(result)
 #'
 #'
-#' ####################  DappsCurveLpTokenHistoricalGet  ####################
+#' ####################  CurveGetGaugesDepositsHistorical  ####################
+#'
+#' library(openapi)
+#' var_start_block <- 56 # integer |  (Optional)
+#' var_end_block <- 56 # integer |  (Optional)
+#' var_start_date <- "start_date_example" # character |  (Optional)
+#' var_end_date <- "end_date_example" # character |  (Optional)
+#'
+#' #GetGaugesDeposits (historical)
+#' api_instance <- CurveApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$CurveGetGaugesDepositsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_datedata_file = "result.txt")
+#' result <- api_instance$CurveGetGaugesDepositsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
+#' dput(result)
+#'
+#'
+#' ####################  CurveGetGaugesHistorical  ####################
 #'
 #' library(openapi)
 #' var_start_block <- 56 # integer |  (Optional)
@@ -880,12 +883,135 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
+#' #GetGauges (historical)
 #' api_instance <- CurveApi$new()
 #'
-#' api_instance$DappsCurveLpTokenHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$CurveGetGaugesHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+#' result <- api_instance$CurveGetGaugesHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+#' dput(result)
 #'
 #'
-#' ####################  DappsCurvePoolsHistoricalGet  ####################
+#' ####################  CurveGetGaugesLiquidityHistorical  ####################
+#'
+#' library(openapi)
+#' var_start_block <- 56 # integer |  (Optional)
+#' var_end_block <- 56 # integer |  (Optional)
+#' var_start_date <- "start_date_example" # character |  (Optional)
+#' var_end_date <- "end_date_example" # character |  (Optional)
+#'
+#' #GetGaugesLiquidity (historical)
+#' api_instance <- CurveApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$CurveGetGaugesLiquidityHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_datedata_file = "result.txt")
+#' result <- api_instance$CurveGetGaugesLiquidityHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
+#' dput(result)
+#'
+#'
+#' ####################  CurveGetGaugesTotalWeightsHistorical  ####################
+#'
+#' library(openapi)
+#' var_start_block <- 56 # integer |  (Optional)
+#' var_end_block <- 56 # integer |  (Optional)
+#' var_start_date <- "start_date_example" # character |  (Optional)
+#' var_end_date <- "end_date_example" # character |  (Optional)
+#'
+#' #GetGaugesTotalWeights (historical)
+#' api_instance <- CurveApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$CurveGetGaugesTotalWeightsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_datedata_file = "result.txt")
+#' result <- api_instance$CurveGetGaugesTotalWeightsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
+#' dput(result)
+#'
+#'
+#' ####################  CurveGetGaugesTypesHistorical  ####################
+#'
+#' library(openapi)
+#' var_start_block <- 56 # integer |  (Optional)
+#' var_end_block <- 56 # integer |  (Optional)
+#' var_start_date <- "start_date_example" # character |  (Optional)
+#' var_end_date <- "end_date_example" # character |  (Optional)
+#'
+#' #GetGaugesTypes (historical)
+#' api_instance <- CurveApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$CurveGetGaugesTypesHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_datedata_file = "result.txt")
+#' result <- api_instance$CurveGetGaugesTypesHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
+#' dput(result)
+#'
+#'
+#' ####################  CurveGetGaugesTypesWeightsHistorical  ####################
+#'
+#' library(openapi)
+#' var_start_block <- 56 # integer |  (Optional)
+#' var_end_block <- 56 # integer |  (Optional)
+#' var_start_date <- "start_date_example" # character |  (Optional)
+#' var_end_date <- "end_date_example" # character |  (Optional)
+#'
+#' #GetGaugesTypesWeights (historical)
+#' api_instance <- CurveApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$CurveGetGaugesTypesWeightsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_datedata_file = "result.txt")
+#' result <- api_instance$CurveGetGaugesTypesWeightsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
+#' dput(result)
+#'
+#'
+#' ####################  CurveGetGaugesWeightsHistorical  ####################
+#'
+#' library(openapi)
+#' var_start_block <- 56 # integer |  (Optional)
+#' var_end_block <- 56 # integer |  (Optional)
+#' var_start_date <- "start_date_example" # character |  (Optional)
+#' var_end_date <- "end_date_example" # character |  (Optional)
+#'
+#' #GetGaugesWeights (historical)
+#' api_instance <- CurveApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$CurveGetGaugesWeightsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_datedata_file = "result.txt")
+#' result <- api_instance$CurveGetGaugesWeightsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
+#' dput(result)
+#'
+#'
+#' ####################  CurveGetGaugesWeightsVotesHistorical  ####################
+#'
+#' library(openapi)
+#' var_start_block <- 56 # integer |  (Optional)
+#' var_end_block <- 56 # integer |  (Optional)
+#' var_start_date <- "start_date_example" # character |  (Optional)
+#' var_end_date <- "end_date_example" # character |  (Optional)
+#'
+#' #GetGaugesWeightsVotes (historical)
+#' api_instance <- CurveApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$CurveGetGaugesWeightsVotesHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_datedata_file = "result.txt")
+#' result <- api_instance$CurveGetGaugesWeightsVotesHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
+#' dput(result)
+#'
+#'
+#' ####################  CurveGetGaugesWithdrawHistorical  ####################
+#'
+#' library(openapi)
+#' var_start_block <- 56 # integer |  (Optional)
+#' var_end_block <- 56 # integer |  (Optional)
+#' var_start_date <- "start_date_example" # character |  (Optional)
+#' var_end_date <- "end_date_example" # character |  (Optional)
+#'
+#' #GetGaugesWithdraw (historical)
+#' api_instance <- CurveApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$CurveGetGaugesWithdrawHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_datedata_file = "result.txt")
+#' result <- api_instance$CurveGetGaugesWithdrawHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
+#' dput(result)
+#'
+#'
+#' ####################  CurveGetHourlyVolumesHistorical  ####################
 #'
 #' library(openapi)
 #' var_start_block <- 56 # integer |  (Optional)
@@ -894,38 +1020,16 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
+#' #GetHourlyVolumes (historical)
 #' api_instance <- CurveApi$new()
 #'
-#' api_instance$DappsCurvePoolsHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$CurveGetHourlyVolumesHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+#' result <- api_instance$CurveGetHourlyVolumesHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+#' dput(result)
 #'
 #'
-#' ####################  DappsCurveProposalsHistoricalGet  ####################
-#'
-#' library(openapi)
-#' var_start_block <- 56 # integer |  (Optional)
-#' var_end_block <- 56 # integer |  (Optional)
-#' var_start_date <- "start_date_example" # character |  (Optional)
-#' var_end_date <- "end_date_example" # character |  (Optional)
-#'
-#' api_instance <- CurveApi$new()
-#'
-#' api_instance$DappsCurveProposalsHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
-#'
-#'
-#' ####################  DappsCurveProposalsVoteHistoricalGet  ####################
-#'
-#' library(openapi)
-#' var_start_block <- 56 # integer |  (Optional)
-#' var_end_block <- 56 # integer |  (Optional)
-#' var_start_date <- "start_date_example" # character |  (Optional)
-#' var_end_date <- "end_date_example" # character |  (Optional)
-#'
-#' api_instance <- CurveApi$new()
-#'
-#' api_instance$DappsCurveProposalsVoteHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
-#'
-#'
-#' ####################  DappsCurveRemoveLiquidityEventHistoricalGet  ####################
+#' ####################  CurveGetLpTokensHistorical  ####################
 #'
 #' library(openapi)
 #' var_start_block <- 56 # integer |  (Optional)
@@ -934,12 +1038,16 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
+#' #GetLpTokens (historical)
 #' api_instance <- CurveApi$new()
 #'
-#' api_instance$DappsCurveRemoveLiquidityEventHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$CurveGetLpTokensHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+#' result <- api_instance$CurveGetLpTokensHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+#' dput(result)
 #'
 #'
-#' ####################  DappsCurveRemoveLiquidityOneEventHistoricalGet  ####################
+#' ####################  CurveGetPoolsHistorical  ####################
 #'
 #' library(openapi)
 #' var_start_block <- 56 # integer |  (Optional)
@@ -948,12 +1056,50 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
+#' #GetPools (historical) 🔥
 #' api_instance <- CurveApi$new()
 #'
-#' api_instance$DappsCurveRemoveLiquidityOneEventHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$CurveGetPoolsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+#' result <- api_instance$CurveGetPoolsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+#' dput(result)
 #'
 #'
-#' ####################  DappsCurveSwapsHistoricalGet  ####################
+#' ####################  CurveGetProposalsHistorical  ####################
+#'
+#' library(openapi)
+#' var_start_block <- 56 # integer |  (Optional)
+#' var_end_block <- 56 # integer |  (Optional)
+#' var_start_date <- "start_date_example" # character |  (Optional)
+#' var_end_date <- "end_date_example" # character |  (Optional)
+#'
+#' #GetProposals (historical)
+#' api_instance <- CurveApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$CurveGetProposalsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_datedata_file = "result.txt")
+#' result <- api_instance$CurveGetProposalsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
+#' dput(result)
+#'
+#'
+#' ####################  CurveGetProposalsVotesHistorical  ####################
+#'
+#' library(openapi)
+#' var_start_block <- 56 # integer |  (Optional)
+#' var_end_block <- 56 # integer |  (Optional)
+#' var_start_date <- "start_date_example" # character |  (Optional)
+#' var_end_date <- "end_date_example" # character |  (Optional)
+#'
+#' #GetProposalsVotes (historical)
+#' api_instance <- CurveApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$CurveGetProposalsVotesHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_datedata_file = "result.txt")
+#' result <- api_instance$CurveGetProposalsVotesHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
+#' dput(result)
+#'
+#'
+#' ####################  CurveGetRemoveLiquidityEventsHistorical  ####################
 #'
 #' library(openapi)
 #' var_start_block <- 56 # integer |  (Optional)
@@ -962,12 +1108,34 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
+#' #GetRemoveLiquidityEvents (historical)
 #' api_instance <- CurveApi$new()
 #'
-#' api_instance$DappsCurveSwapsHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$CurveGetRemoveLiquidityEventsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+#' result <- api_instance$CurveGetRemoveLiquidityEventsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+#' dput(result)
 #'
 #'
-#' ####################  DappsCurveSystemStateHistoricalGet  ####################
+#' ####################  CurveGetRemoveLiquidityOneEventsHistorical  ####################
+#'
+#' library(openapi)
+#' var_start_block <- 56 # integer |  (Optional)
+#' var_end_block <- 56 # integer |  (Optional)
+#' var_start_date <- "start_date_example" # character |  (Optional)
+#' var_end_date <- "end_date_example" # character |  (Optional)
+#' var_pool_id <- "pool_id_example" # character |  (Optional)
+#'
+#' #GetRemoveLiquidityOneEvents (historical)
+#' api_instance <- CurveApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$CurveGetRemoveLiquidityOneEventsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+#' result <- api_instance$CurveGetRemoveLiquidityOneEventsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+#' dput(result)
+#'
+#'
+#' ####################  CurveGetSystemStatesHistorical  ####################
 #'
 #' library(openapi)
 #' var_start_block <- 56 # integer |  (Optional)
@@ -975,12 +1143,16 @@
 #' var_start_date <- "start_date_example" # character |  (Optional)
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #'
+#' #GetSystemStates (historical)
 #' api_instance <- CurveApi$new()
 #'
-#' api_instance$DappsCurveSystemStateHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$CurveGetSystemStatesHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_datedata_file = "result.txt")
+#' result <- api_instance$CurveGetSystemStatesHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
+#' dput(result)
 #'
 #'
-#' ####################  DappsCurveTokensHistoricalGet  ####################
+#' ####################  CurveGetTokensHistorical  ####################
 #'
 #' library(openapi)
 #' var_start_block <- 56 # integer |  (Optional)
@@ -989,12 +1161,16 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_token_id <- "token_id_example" # character |  (Optional)
 #'
+#' #GetTokens (historical) 🔥
 #' api_instance <- CurveApi$new()
 #'
-#' api_instance$DappsCurveTokensHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, token_id = var_token_id)
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$CurveGetTokensHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, token_id = var_token_iddata_file = "result.txt")
+#' result <- api_instance$CurveGetTokensHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, token_id = var_token_id)
+#' dput(result)
 #'
 #'
-#' ####################  DappsCurveTransferOwnershipEventHistoricalGet  ####################
+#' ####################  CurveGetTransferOwnershipEventsHistorical  ####################
 #'
 #' library(openapi)
 #' var_start_block <- 56 # integer |  (Optional)
@@ -1003,12 +1179,16 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
+#' #GetTransferOwnershipEvents (historical)
 #' api_instance <- CurveApi$new()
 #'
-#' api_instance$DappsCurveTransferOwnershipEventHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$CurveGetTransferOwnershipEventsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+#' result <- api_instance$CurveGetTransferOwnershipEventsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+#' dput(result)
 #'
 #'
-#' ####################  DappsCurveUnderlyingCoinHistoricalGet  ####################
+#' ####################  CurveGetUnderlyingCoinsHistorical  ####################
 #'
 #' library(openapi)
 #' var_start_block <- 56 # integer |  (Optional)
@@ -1017,12 +1197,16 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
+#' #GetUnderlyingCoins (historical)
 #' api_instance <- CurveApi$new()
 #'
-#' api_instance$DappsCurveUnderlyingCoinHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$CurveGetUnderlyingCoinsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+#' result <- api_instance$CurveGetUnderlyingCoinsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+#' dput(result)
 #'
 #'
-#' ####################  DappsCurveVotingAppHistoricalGet  ####################
+#' ####################  CurveGetVotingAppsHistorical  ####################
 #'
 #' library(openapi)
 #' var_start_block <- 56 # integer |  (Optional)
@@ -1030,12 +1214,16 @@
 #' var_start_date <- "start_date_example" # character |  (Optional)
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #'
+#' #GetVotingApps (historical)
 #' api_instance <- CurveApi$new()
 #'
-#' api_instance$DappsCurveVotingAppHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$CurveGetVotingAppsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_datedata_file = "result.txt")
+#' result <- api_instance$CurveGetVotingAppsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
+#' dput(result)
 #'
 #'
-#' ####################  DappsCurveWeeklyVolumeHistoricalGet  ####################
+#' ####################  CurveGetWeeklyVolumesHistorical  ####################
 #'
 #' library(openapi)
 #' var_start_block <- 56 # integer |  (Optional)
@@ -1044,9 +1232,13 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
+#' #GetWeeklyVolumes (historical)
 #' api_instance <- CurveApi$new()
 #'
-#' api_instance$DappsCurveWeeklyVolumeHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$CurveGetWeeklyVolumesHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+#' result <- api_instance$CurveGetWeeklyVolumesHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+#' dput(result)
 #'
 #'
 #' }
@@ -1071,20 +1263,21 @@ CurveApi <- R6::R6Class(
         self$api_client <- ApiClient$new()
       }
     },
-    #' 
+    #' GetAccounts (historical)
     #'
     #' @description
-    #' 
+    #' GetAccounts (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return void
+    #' @return array[CurveAccountDTO]
     #' @export
-    DappsCurveAccountsHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
-      local_var_response <- self$DappsCurveAccountsHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, ...)
+    CurveGetAccountsHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, data_file = NULL, ...) {
+      local_var_response <- self$CurveGetAccountsHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -1095,19 +1288,20 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' 
+    #' GetAccounts (historical)
     #'
     #' @description
-    #' 
+    #' GetAccounts (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
+    #' @return API response (array[CurveAccountDTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsCurveAccountsHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
+    CurveGetAccountsHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -1132,7 +1326,7 @@ CurveApi <- R6::R6Class(
       local_var_url_path <- "/dapps/curve/accounts/historical"
 
       # The Accept request HTTP header
-      local_var_accepts <- list()
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -1151,7 +1345,18 @@ CurveApi <- R6::R6Class(
                                  ...)
 
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[CurveAccountDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
         local_var_resp
       } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
         ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
@@ -1164,21 +1369,22 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' 
+    #' GetAddLiquidityEvents (historical)
     #'
     #' @description
-    #' 
+    #' GetAddLiquidityEvents (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
     #' @param pool_id (optional) No description
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return void
+    #' @return array[CurveAddLiquidityEventDTO]
     #' @export
-    DappsCurveAddLiquidityEventHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
-      local_var_response <- self$DappsCurveAddLiquidityEventHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, ...)
+    CurveGetAddLiquidityEventsHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$CurveGetAddLiquidityEventsHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -1189,20 +1395,21 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' 
+    #' GetAddLiquidityEvents (historical)
     #'
     #' @description
-    #' 
+    #' GetAddLiquidityEvents (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
     #' @param pool_id (optional) No description
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
+    #' @return API response (array[CurveAddLiquidityEventDTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsCurveAddLiquidityEventHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
+    CurveGetAddLiquidityEventsHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -1227,10 +1434,10 @@ CurveApi <- R6::R6Class(
 
       query_params[["poolId"]] <- `pool_id`
 
-      local_var_url_path <- "/dapps/curve/addLiquidityEvent/historical"
+      local_var_url_path <- "/dapps/curve/addLiquidityEvents/historical"
 
       # The Accept request HTTP header
-      local_var_accepts <- list()
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -1249,7 +1456,18 @@ CurveApi <- R6::R6Class(
                                  ...)
 
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[CurveAddLiquidityEventDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
         local_var_resp
       } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
         ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
@@ -1262,21 +1480,22 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' 
+    #' GetAdminFeeChangeLogs (historical)
     #'
     #' @description
-    #' 
+    #' GetAdminFeeChangeLogs (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return void
+    #' @return array[CurveAdminFeeChangeLogDTO]
     #' @export
-    DappsCurveAdminFeeChangeLogHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
-      local_var_response <- self$DappsCurveAdminFeeChangeLogHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, ...)
+    CurveGetAdminFeeChangeLogsHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$CurveGetAdminFeeChangeLogsHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -1287,20 +1506,21 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' 
+    #' GetAdminFeeChangeLogs (historical)
     #'
     #' @description
-    #' 
+    #' GetAdminFeeChangeLogs (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
+    #' @return API response (array[CurveAdminFeeChangeLogDTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsCurveAdminFeeChangeLogHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
+    CurveGetAdminFeeChangeLogsHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -1325,10 +1545,10 @@ CurveApi <- R6::R6Class(
 
       query_params[["poolId"]] <- `pool_id`
 
-      local_var_url_path <- "/dapps/curve/adminFeeChangeLog/historical"
+      local_var_url_path <- "/dapps/curve/adminFeeChangeLogs/historical"
 
       # The Accept request HTTP header
-      local_var_accepts <- list()
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -1347,7 +1567,18 @@ CurveApi <- R6::R6Class(
                                  ...)
 
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[CurveAdminFeeChangeLogDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
         local_var_resp
       } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
         ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
@@ -1360,21 +1591,22 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' 
+    #' GetAmplificationCoeffChangeLogs (historical)
     #'
     #' @description
-    #' 
+    #' GetAmplificationCoeffChangeLogs (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return void
+    #' @return array[CurveAmplificationCoeffChangeLogDTO]
     #' @export
-    DappsCurveAmplificationCoeffChangeLogHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
-      local_var_response <- self$DappsCurveAmplificationCoeffChangeLogHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, ...)
+    CurveGetAmplificationCoeffChangeLogsHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$CurveGetAmplificationCoeffChangeLogsHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -1385,20 +1617,21 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' 
+    #' GetAmplificationCoeffChangeLogs (historical)
     #'
     #' @description
-    #' 
+    #' GetAmplificationCoeffChangeLogs (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
+    #' @return API response (array[CurveAmplificationCoeffChangeLogDTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsCurveAmplificationCoeffChangeLogHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
+    CurveGetAmplificationCoeffChangeLogsHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -1423,10 +1656,10 @@ CurveApi <- R6::R6Class(
 
       query_params[["poolId"]] <- `pool_id`
 
-      local_var_url_path <- "/dapps/curve/amplificationCoeffChangeLog/historical"
+      local_var_url_path <- "/dapps/curve/amplificationCoeffChangeLogs/historical"
 
       # The Accept request HTTP header
-      local_var_accepts <- list()
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -1445,7 +1678,18 @@ CurveApi <- R6::R6Class(
                                  ...)
 
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[CurveAmplificationCoeffChangeLogDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
         local_var_resp
       } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
         ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
@@ -1458,21 +1702,22 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' 
+    #' GetCoins (historical)
     #'
     #' @description
-    #' 
+    #' GetCoins (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return void
+    #' @return array[CurveCoinDTO]
     #' @export
-    DappsCurveCoinsHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
-      local_var_response <- self$DappsCurveCoinsHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, ...)
+    CurveGetCoinsHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$CurveGetCoinsHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -1483,20 +1728,21 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' 
+    #' GetCoins (historical)
     #'
     #' @description
-    #' 
+    #' GetCoins (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
+    #' @return API response (array[CurveCoinDTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsCurveCoinsHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
+    CurveGetCoinsHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -1524,7 +1770,7 @@ CurveApi <- R6::R6Class(
       local_var_url_path <- "/dapps/curve/coins/historical"
 
       # The Accept request HTTP header
-      local_var_accepts <- list()
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -1543,7 +1789,18 @@ CurveApi <- R6::R6Class(
                                  ...)
 
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[CurveCoinDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
         local_var_resp
       } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
         ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
@@ -1556,21 +1813,22 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' 
+    #' GetContracts (historical)
     #'
     #' @description
-    #' 
+    #' GetContracts (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return void
+    #' @return array[CurveContractDTO]
     #' @export
-    DappsCurveContractsHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
-      local_var_response <- self$DappsCurveContractsHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, ...)
+    CurveGetContractsHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$CurveGetContractsHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -1581,20 +1839,21 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' 
+    #' GetContracts (historical)
     #'
     #' @description
-    #' 
+    #' GetContracts (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
+    #' @return API response (array[CurveContractDTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsCurveContractsHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
+    CurveGetContractsHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -1622,7 +1881,7 @@ CurveApi <- R6::R6Class(
       local_var_url_path <- "/dapps/curve/contracts/historical"
 
       # The Accept request HTTP header
-      local_var_accepts <- list()
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -1641,7 +1900,18 @@ CurveApi <- R6::R6Class(
                                  ...)
 
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[CurveContractDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
         local_var_resp
       } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
         ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
@@ -1654,21 +1924,22 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' 
+    #' GetContractsVersions (historical)
     #'
     #' @description
-    #' 
+    #' GetContractsVersions (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return void
+    #' @return array[CurveContractVersionDTO]
     #' @export
-    DappsCurveContractsVersionHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
-      local_var_response <- self$DappsCurveContractsVersionHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, ...)
+    CurveGetContractsVersionsHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$CurveGetContractsVersionsHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -1679,20 +1950,21 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' 
+    #' GetContractsVersions (historical)
     #'
     #' @description
-    #' 
+    #' GetContractsVersions (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
+    #' @return API response (array[CurveContractVersionDTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsCurveContractsVersionHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
+    CurveGetContractsVersionsHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -1717,10 +1989,10 @@ CurveApi <- R6::R6Class(
 
       query_params[["poolId"]] <- `pool_id`
 
-      local_var_url_path <- "/dapps/curve/contractsVersion/historical"
+      local_var_url_path <- "/dapps/curve/contractsVersions/historical"
 
       # The Accept request HTTP header
-      local_var_accepts <- list()
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -1739,7 +2011,18 @@ CurveApi <- R6::R6Class(
                                  ...)
 
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[CurveContractVersionDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
         local_var_resp
       } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
         ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
@@ -1752,21 +2035,22 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' 
+    #' GetDailyVolumes (historical)
     #'
     #' @description
-    #' 
+    #' GetDailyVolumes (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return void
+    #' @return array[CurveDailyVolumeDTO]
     #' @export
-    DappsCurveDailyVolumeHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
-      local_var_response <- self$DappsCurveDailyVolumeHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, ...)
+    CurveGetDailyVolumesHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$CurveGetDailyVolumesHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -1777,20 +2061,21 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' 
+    #' GetDailyVolumes (historical)
     #'
     #' @description
-    #' 
+    #' GetDailyVolumes (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
+    #' @return API response (array[CurveDailyVolumeDTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsCurveDailyVolumeHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
+    CurveGetDailyVolumesHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -1815,10 +2100,10 @@ CurveApi <- R6::R6Class(
 
       query_params[["poolId"]] <- `pool_id`
 
-      local_var_url_path <- "/dapps/curve/dailyVolume/historical"
+      local_var_url_path <- "/dapps/curve/dailyVolumes/historical"
 
       # The Accept request HTTP header
-      local_var_accepts <- list()
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -1837,7 +2122,18 @@ CurveApi <- R6::R6Class(
                                  ...)
 
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[CurveDailyVolumeDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
         local_var_resp
       } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
         ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
@@ -1850,21 +2146,22 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' 
+    #' GetExchanges (historical) 🔥
     #'
     #' @description
-    #' 
+    #' GetExchanges (historical) 🔥
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return void
+    #' @return array[CurveExchangeDTO]
     #' @export
-    DappsCurveFeeChangeLogHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
-      local_var_response <- self$DappsCurveFeeChangeLogHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, ...)
+    CurveGetExchangesHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$CurveGetExchangesHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -1875,20 +2172,21 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' 
+    #' GetExchanges (historical) 🔥
     #'
     #' @description
-    #' 
+    #' GetExchanges (historical) 🔥
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
+    #' @return API response (array[CurveExchangeDTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsCurveFeeChangeLogHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
+    CurveGetExchangesHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -1913,10 +2211,10 @@ CurveApi <- R6::R6Class(
 
       query_params[["poolId"]] <- `pool_id`
 
-      local_var_url_path <- "/dapps/curve/feeChangeLog/historical"
+      local_var_url_path <- "/dapps/curve/exchanges/historical"
 
       # The Accept request HTTP header
-      local_var_accepts <- list()
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -1935,7 +2233,18 @@ CurveApi <- R6::R6Class(
                                  ...)
 
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[CurveExchangeDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
         local_var_resp
       } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
         ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
@@ -1948,20 +2257,22 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' 
+    #' GetFeeChangeLogs (historical)
     #'
     #' @description
-    #' 
+    #' GetFeeChangeLogs (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return void
+    #' @return array[CurveFeeChangeLogDTO]
     #' @export
-    DappsCurveGaugeDepositHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
-      local_var_response <- self$DappsCurveGaugeDepositHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, ...)
+    CurveGetFeeChangeLogsHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$CurveGetFeeChangeLogsHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -1972,114 +2283,21 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' 
+    #' GetFeeChangeLogs (historical)
     #'
     #' @description
-    #' 
+    #' GetFeeChangeLogs (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
+    #' @return API response (array[CurveFeeChangeLogDTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsCurveGaugeDepositHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
-      args <- list(...)
-      query_params <- list()
-      header_params <- c()
-      form_params <- list()
-      file_params <- list()
-      local_var_body <- NULL
-      oauth_scopes <- NULL
-      is_oauth <- FALSE
-
-
-
-
-
-      query_params[["startBlock"]] <- `start_block`
-
-      query_params[["endBlock"]] <- `end_block`
-
-      query_params[["startDate"]] <- `start_date`
-
-      query_params[["endDate"]] <- `end_date`
-
-      local_var_url_path <- "/dapps/curve/gaugeDeposit/historical"
-
-      # The Accept request HTTP header
-      local_var_accepts <- list()
-
-      # The Content-Type representation header
-      local_var_content_types <- list()
-
-      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
-                                 method = "GET",
-                                 query_params = query_params,
-                                 header_params = header_params,
-                                 form_params = form_params,
-                                 file_params = file_params,
-                                 accepts = local_var_accepts,
-                                 content_types = local_var_content_types,
-                                 body = local_var_body,
-                                 is_oauth = is_oauth,
-                                 oauth_scopes = oauth_scopes,
-                                 ...)
-
-      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
-        local_var_resp
-      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
-        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
-      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
-        ApiResponse$new("API client error", local_var_resp)
-      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
-        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
-          local_var_resp$response <- "API server error"
-        }
-        local_var_resp
-      }
-    },
-    #' 
-    #'
-    #' @description
-    #' 
-    #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
-    #' @param ... Other optional arguments
-    #' @return void
-    #' @export
-    DappsCurveGaugeHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
-      local_var_response <- self$DappsCurveGaugeHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, ...)
-      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
-        local_var_response$content
-      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
-        local_var_response
-      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
-        local_var_response
-      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
-        local_var_response
-      }
-    },
-    #' 
-    #'
-    #' @description
-    #' 
-    #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
-    #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
-    #' @export
-    DappsCurveGaugeHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
+    CurveGetFeeChangeLogsHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -2104,10 +2322,10 @@ CurveApi <- R6::R6Class(
 
       query_params[["poolId"]] <- `pool_id`
 
-      local_var_url_path <- "/dapps/curve/gauge/historical"
+      local_var_url_path <- "/dapps/curve/feeChangeLogs/historical"
 
       # The Accept request HTTP header
-      local_var_accepts <- list()
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -2126,7 +2344,18 @@ CurveApi <- R6::R6Class(
                                  ...)
 
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[CurveFeeChangeLogDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
         local_var_resp
       } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
         ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
@@ -2139,20 +2368,21 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' 
+    #' GetGaugesDeposits (historical)
     #'
     #' @description
-    #' 
+    #' GetGaugesDeposits (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return void
+    #' @return array[CurveGaugeDepositDTO]
     #' @export
-    DappsCurveGaugeLiquidityHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
-      local_var_response <- self$DappsCurveGaugeLiquidityHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, ...)
+    CurveGetGaugesDepositsHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, data_file = NULL, ...) {
+      local_var_response <- self$CurveGetGaugesDepositsHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -2163,19 +2393,20 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' 
+    #' GetGaugesDeposits (historical)
     #'
     #' @description
-    #' 
+    #' GetGaugesDeposits (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
+    #' @return API response (array[CurveGaugeDepositDTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsCurveGaugeLiquidityHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
+    CurveGetGaugesDepositsHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -2197,10 +2428,10 @@ CurveApi <- R6::R6Class(
 
       query_params[["endDate"]] <- `end_date`
 
-      local_var_url_path <- "/dapps/curve/gaugeLiquidity/historical"
+      local_var_url_path <- "/dapps/curve/gaugesDeposits/historical"
 
       # The Accept request HTTP header
-      local_var_accepts <- list()
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -2219,7 +2450,18 @@ CurveApi <- R6::R6Class(
                                  ...)
 
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[CurveGaugeDepositDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
         local_var_resp
       } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
         ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
@@ -2232,20 +2474,22 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' 
+    #' GetGauges (historical)
     #'
     #' @description
-    #' 
+    #' GetGauges (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return void
+    #' @return array[CurveGaugeDTO]
     #' @export
-    DappsCurveGaugeTotalWeightHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
-      local_var_response <- self$DappsCurveGaugeTotalWeightHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, ...)
+    CurveGetGaugesHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$CurveGetGaugesHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -2256,579 +2500,21 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' 
+    #' GetGauges (historical)
     #'
     #' @description
-    #' 
+    #' GetGauges (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
+    #' @return API response (array[CurveGaugeDTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsCurveGaugeTotalWeightHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
-      args <- list(...)
-      query_params <- list()
-      header_params <- c()
-      form_params <- list()
-      file_params <- list()
-      local_var_body <- NULL
-      oauth_scopes <- NULL
-      is_oauth <- FALSE
-
-
-
-
-
-      query_params[["startBlock"]] <- `start_block`
-
-      query_params[["endBlock"]] <- `end_block`
-
-      query_params[["startDate"]] <- `start_date`
-
-      query_params[["endDate"]] <- `end_date`
-
-      local_var_url_path <- "/dapps/curve/gaugeTotalWeight/historical"
-
-      # The Accept request HTTP header
-      local_var_accepts <- list()
-
-      # The Content-Type representation header
-      local_var_content_types <- list()
-
-      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
-                                 method = "GET",
-                                 query_params = query_params,
-                                 header_params = header_params,
-                                 form_params = form_params,
-                                 file_params = file_params,
-                                 accepts = local_var_accepts,
-                                 content_types = local_var_content_types,
-                                 body = local_var_body,
-                                 is_oauth = is_oauth,
-                                 oauth_scopes = oauth_scopes,
-                                 ...)
-
-      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
-        local_var_resp
-      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
-        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
-      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
-        ApiResponse$new("API client error", local_var_resp)
-      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
-        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
-          local_var_resp$response <- "API server error"
-        }
-        local_var_resp
-      }
-    },
-    #' 
-    #'
-    #' @description
-    #' 
-    #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param ... Other optional arguments
-    #' @return void
-    #' @export
-    DappsCurveGaugeTypeHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
-      local_var_response <- self$DappsCurveGaugeTypeHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, ...)
-      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
-        local_var_response$content
-      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
-        local_var_response
-      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
-        local_var_response
-      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
-        local_var_response
-      }
-    },
-    #' 
-    #'
-    #' @description
-    #' 
-    #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
-    #' @export
-    DappsCurveGaugeTypeHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
-      args <- list(...)
-      query_params <- list()
-      header_params <- c()
-      form_params <- list()
-      file_params <- list()
-      local_var_body <- NULL
-      oauth_scopes <- NULL
-      is_oauth <- FALSE
-
-
-
-
-
-      query_params[["startBlock"]] <- `start_block`
-
-      query_params[["endBlock"]] <- `end_block`
-
-      query_params[["startDate"]] <- `start_date`
-
-      query_params[["endDate"]] <- `end_date`
-
-      local_var_url_path <- "/dapps/curve/gaugeType/historical"
-
-      # The Accept request HTTP header
-      local_var_accepts <- list()
-
-      # The Content-Type representation header
-      local_var_content_types <- list()
-
-      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
-                                 method = "GET",
-                                 query_params = query_params,
-                                 header_params = header_params,
-                                 form_params = form_params,
-                                 file_params = file_params,
-                                 accepts = local_var_accepts,
-                                 content_types = local_var_content_types,
-                                 body = local_var_body,
-                                 is_oauth = is_oauth,
-                                 oauth_scopes = oauth_scopes,
-                                 ...)
-
-      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
-        local_var_resp
-      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
-        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
-      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
-        ApiResponse$new("API client error", local_var_resp)
-      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
-        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
-          local_var_resp$response <- "API server error"
-        }
-        local_var_resp
-      }
-    },
-    #' 
-    #'
-    #' @description
-    #' 
-    #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param ... Other optional arguments
-    #' @return void
-    #' @export
-    DappsCurveGaugeTypeWeightHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
-      local_var_response <- self$DappsCurveGaugeTypeWeightHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, ...)
-      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
-        local_var_response$content
-      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
-        local_var_response
-      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
-        local_var_response
-      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
-        local_var_response
-      }
-    },
-    #' 
-    #'
-    #' @description
-    #' 
-    #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
-    #' @export
-    DappsCurveGaugeTypeWeightHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
-      args <- list(...)
-      query_params <- list()
-      header_params <- c()
-      form_params <- list()
-      file_params <- list()
-      local_var_body <- NULL
-      oauth_scopes <- NULL
-      is_oauth <- FALSE
-
-
-
-
-
-      query_params[["startBlock"]] <- `start_block`
-
-      query_params[["endBlock"]] <- `end_block`
-
-      query_params[["startDate"]] <- `start_date`
-
-      query_params[["endDate"]] <- `end_date`
-
-      local_var_url_path <- "/dapps/curve/gaugeTypeWeight/historical"
-
-      # The Accept request HTTP header
-      local_var_accepts <- list()
-
-      # The Content-Type representation header
-      local_var_content_types <- list()
-
-      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
-                                 method = "GET",
-                                 query_params = query_params,
-                                 header_params = header_params,
-                                 form_params = form_params,
-                                 file_params = file_params,
-                                 accepts = local_var_accepts,
-                                 content_types = local_var_content_types,
-                                 body = local_var_body,
-                                 is_oauth = is_oauth,
-                                 oauth_scopes = oauth_scopes,
-                                 ...)
-
-      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
-        local_var_resp
-      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
-        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
-      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
-        ApiResponse$new("API client error", local_var_resp)
-      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
-        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
-          local_var_resp$response <- "API server error"
-        }
-        local_var_resp
-      }
-    },
-    #' 
-    #'
-    #' @description
-    #' 
-    #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param ... Other optional arguments
-    #' @return void
-    #' @export
-    DappsCurveGaugeWeightHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
-      local_var_response <- self$DappsCurveGaugeWeightHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, ...)
-      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
-        local_var_response$content
-      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
-        local_var_response
-      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
-        local_var_response
-      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
-        local_var_response
-      }
-    },
-    #' 
-    #'
-    #' @description
-    #' 
-    #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
-    #' @export
-    DappsCurveGaugeWeightHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
-      args <- list(...)
-      query_params <- list()
-      header_params <- c()
-      form_params <- list()
-      file_params <- list()
-      local_var_body <- NULL
-      oauth_scopes <- NULL
-      is_oauth <- FALSE
-
-
-
-
-
-      query_params[["startBlock"]] <- `start_block`
-
-      query_params[["endBlock"]] <- `end_block`
-
-      query_params[["startDate"]] <- `start_date`
-
-      query_params[["endDate"]] <- `end_date`
-
-      local_var_url_path <- "/dapps/curve/gaugeWeight/historical"
-
-      # The Accept request HTTP header
-      local_var_accepts <- list()
-
-      # The Content-Type representation header
-      local_var_content_types <- list()
-
-      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
-                                 method = "GET",
-                                 query_params = query_params,
-                                 header_params = header_params,
-                                 form_params = form_params,
-                                 file_params = file_params,
-                                 accepts = local_var_accepts,
-                                 content_types = local_var_content_types,
-                                 body = local_var_body,
-                                 is_oauth = is_oauth,
-                                 oauth_scopes = oauth_scopes,
-                                 ...)
-
-      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
-        local_var_resp
-      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
-        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
-      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
-        ApiResponse$new("API client error", local_var_resp)
-      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
-        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
-          local_var_resp$response <- "API server error"
-        }
-        local_var_resp
-      }
-    },
-    #' 
-    #'
-    #' @description
-    #' 
-    #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param ... Other optional arguments
-    #' @return void
-    #' @export
-    DappsCurveGaugeWeightVoteHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
-      local_var_response <- self$DappsCurveGaugeWeightVoteHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, ...)
-      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
-        local_var_response$content
-      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
-        local_var_response
-      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
-        local_var_response
-      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
-        local_var_response
-      }
-    },
-    #' 
-    #'
-    #' @description
-    #' 
-    #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
-    #' @export
-    DappsCurveGaugeWeightVoteHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
-      args <- list(...)
-      query_params <- list()
-      header_params <- c()
-      form_params <- list()
-      file_params <- list()
-      local_var_body <- NULL
-      oauth_scopes <- NULL
-      is_oauth <- FALSE
-
-
-
-
-
-      query_params[["startBlock"]] <- `start_block`
-
-      query_params[["endBlock"]] <- `end_block`
-
-      query_params[["startDate"]] <- `start_date`
-
-      query_params[["endDate"]] <- `end_date`
-
-      local_var_url_path <- "/dapps/curve/gaugeWeightVote/historical"
-
-      # The Accept request HTTP header
-      local_var_accepts <- list()
-
-      # The Content-Type representation header
-      local_var_content_types <- list()
-
-      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
-                                 method = "GET",
-                                 query_params = query_params,
-                                 header_params = header_params,
-                                 form_params = form_params,
-                                 file_params = file_params,
-                                 accepts = local_var_accepts,
-                                 content_types = local_var_content_types,
-                                 body = local_var_body,
-                                 is_oauth = is_oauth,
-                                 oauth_scopes = oauth_scopes,
-                                 ...)
-
-      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
-        local_var_resp
-      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
-        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
-      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
-        ApiResponse$new("API client error", local_var_resp)
-      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
-        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
-          local_var_resp$response <- "API server error"
-        }
-        local_var_resp
-      }
-    },
-    #' 
-    #'
-    #' @description
-    #' 
-    #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param ... Other optional arguments
-    #' @return void
-    #' @export
-    DappsCurveGaugeWithdrawHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
-      local_var_response <- self$DappsCurveGaugeWithdrawHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, ...)
-      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
-        local_var_response$content
-      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
-        local_var_response
-      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
-        local_var_response
-      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
-        local_var_response
-      }
-    },
-    #' 
-    #'
-    #' @description
-    #' 
-    #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
-    #' @export
-    DappsCurveGaugeWithdrawHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
-      args <- list(...)
-      query_params <- list()
-      header_params <- c()
-      form_params <- list()
-      file_params <- list()
-      local_var_body <- NULL
-      oauth_scopes <- NULL
-      is_oauth <- FALSE
-
-
-
-
-
-      query_params[["startBlock"]] <- `start_block`
-
-      query_params[["endBlock"]] <- `end_block`
-
-      query_params[["startDate"]] <- `start_date`
-
-      query_params[["endDate"]] <- `end_date`
-
-      local_var_url_path <- "/dapps/curve/gaugeWithdraw/historical"
-
-      # The Accept request HTTP header
-      local_var_accepts <- list()
-
-      # The Content-Type representation header
-      local_var_content_types <- list()
-
-      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
-                                 method = "GET",
-                                 query_params = query_params,
-                                 header_params = header_params,
-                                 form_params = form_params,
-                                 file_params = file_params,
-                                 accepts = local_var_accepts,
-                                 content_types = local_var_content_types,
-                                 body = local_var_body,
-                                 is_oauth = is_oauth,
-                                 oauth_scopes = oauth_scopes,
-                                 ...)
-
-      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
-        local_var_resp
-      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
-        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
-      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
-        ApiResponse$new("API client error", local_var_resp)
-      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
-        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
-          local_var_resp$response <- "API server error"
-        }
-        local_var_resp
-      }
-    },
-    #' 
-    #'
-    #' @description
-    #' 
-    #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
-    #' @param ... Other optional arguments
-    #' @return void
-    #' @export
-    DappsCurveHourlyVolumeHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
-      local_var_response <- self$DappsCurveHourlyVolumeHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, ...)
-      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
-        local_var_response$content
-      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
-        local_var_response
-      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
-        local_var_response
-      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
-        local_var_response
-      }
-    },
-    #' 
-    #'
-    #' @description
-    #' 
-    #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
-    #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
-    #' @export
-    DappsCurveHourlyVolumeHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
+    CurveGetGaugesHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -2853,10 +2539,10 @@ CurveApi <- R6::R6Class(
 
       query_params[["poolId"]] <- `pool_id`
 
-      local_var_url_path <- "/dapps/curve/hourlyVolume/historical"
+      local_var_url_path <- "/dapps/curve/gauges/historical"
 
       # The Accept request HTTP header
-      local_var_accepts <- list()
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -2875,7 +2561,18 @@ CurveApi <- R6::R6Class(
                                  ...)
 
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[CurveGaugeDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
         local_var_resp
       } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
         ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
@@ -2888,21 +2585,21 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' 
+    #' GetGaugesLiquidity (historical)
     #'
     #' @description
-    #' 
+    #' GetGaugesLiquidity (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return void
+    #' @return array[CurveGaugeLiquidityDTO]
     #' @export
-    DappsCurveLpTokenHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
-      local_var_response <- self$DappsCurveLpTokenHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, ...)
+    CurveGetGaugesLiquidityHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, data_file = NULL, ...) {
+      local_var_response <- self$CurveGetGaugesLiquidityHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -2913,20 +2610,764 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' 
+    #' GetGaugesLiquidity (historical)
     #'
     #' @description
-    #' 
+    #' GetGaugesLiquidity (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
+    #' @return API response (array[CurveGaugeLiquidityDTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsCurveLpTokenHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
+    CurveGetGaugesLiquidityHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+
+
+
+
+      query_params[["startBlock"]] <- `start_block`
+
+      query_params[["endBlock"]] <- `end_block`
+
+      query_params[["startDate"]] <- `start_date`
+
+      query_params[["endDate"]] <- `end_date`
+
+      local_var_url_path <- "/dapps/curve/gaugesLiquidity/historical"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[CurveGaugeLiquidityDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' GetGaugesTotalWeights (historical)
+    #'
+    #' @description
+    #' GetGaugesTotalWeights (historical)
+    #'
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[CurveGaugeTotalWeightDTO]
+    #' @export
+    CurveGetGaugesTotalWeightsHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, data_file = NULL, ...) {
+      local_var_response <- self$CurveGetGaugesTotalWeightsHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' GetGaugesTotalWeights (historical)
+    #'
+    #' @description
+    #' GetGaugesTotalWeights (historical)
+    #'
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[CurveGaugeTotalWeightDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    CurveGetGaugesTotalWeightsHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+
+
+
+
+      query_params[["startBlock"]] <- `start_block`
+
+      query_params[["endBlock"]] <- `end_block`
+
+      query_params[["startDate"]] <- `start_date`
+
+      query_params[["endDate"]] <- `end_date`
+
+      local_var_url_path <- "/dapps/curve/gaugesTotalWeights/historical"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[CurveGaugeTotalWeightDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' GetGaugesTypes (historical)
+    #'
+    #' @description
+    #' GetGaugesTypes (historical)
+    #'
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[CurveGaugeTypeDTO]
+    #' @export
+    CurveGetGaugesTypesHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, data_file = NULL, ...) {
+      local_var_response <- self$CurveGetGaugesTypesHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' GetGaugesTypes (historical)
+    #'
+    #' @description
+    #' GetGaugesTypes (historical)
+    #'
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[CurveGaugeTypeDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    CurveGetGaugesTypesHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+
+
+
+
+      query_params[["startBlock"]] <- `start_block`
+
+      query_params[["endBlock"]] <- `end_block`
+
+      query_params[["startDate"]] <- `start_date`
+
+      query_params[["endDate"]] <- `end_date`
+
+      local_var_url_path <- "/dapps/curve/gaugesTypes/historical"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[CurveGaugeTypeDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' GetGaugesTypesWeights (historical)
+    #'
+    #' @description
+    #' GetGaugesTypesWeights (historical)
+    #'
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[CurveGaugeTypeWeightDTO]
+    #' @export
+    CurveGetGaugesTypesWeightsHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, data_file = NULL, ...) {
+      local_var_response <- self$CurveGetGaugesTypesWeightsHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' GetGaugesTypesWeights (historical)
+    #'
+    #' @description
+    #' GetGaugesTypesWeights (historical)
+    #'
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[CurveGaugeTypeWeightDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    CurveGetGaugesTypesWeightsHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+
+
+
+
+      query_params[["startBlock"]] <- `start_block`
+
+      query_params[["endBlock"]] <- `end_block`
+
+      query_params[["startDate"]] <- `start_date`
+
+      query_params[["endDate"]] <- `end_date`
+
+      local_var_url_path <- "/dapps/curve/gaugesTypesWeights/historical"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[CurveGaugeTypeWeightDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' GetGaugesWeights (historical)
+    #'
+    #' @description
+    #' GetGaugesWeights (historical)
+    #'
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[CurveGaugeWeightDTO]
+    #' @export
+    CurveGetGaugesWeightsHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, data_file = NULL, ...) {
+      local_var_response <- self$CurveGetGaugesWeightsHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' GetGaugesWeights (historical)
+    #'
+    #' @description
+    #' GetGaugesWeights (historical)
+    #'
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[CurveGaugeWeightDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    CurveGetGaugesWeightsHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+
+
+
+
+      query_params[["startBlock"]] <- `start_block`
+
+      query_params[["endBlock"]] <- `end_block`
+
+      query_params[["startDate"]] <- `start_date`
+
+      query_params[["endDate"]] <- `end_date`
+
+      local_var_url_path <- "/dapps/curve/gaugesWeights/historical"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[CurveGaugeWeightDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' GetGaugesWeightsVotes (historical)
+    #'
+    #' @description
+    #' GetGaugesWeightsVotes (historical)
+    #'
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[CurveGaugeWeightVoteDTO]
+    #' @export
+    CurveGetGaugesWeightsVotesHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, data_file = NULL, ...) {
+      local_var_response <- self$CurveGetGaugesWeightsVotesHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' GetGaugesWeightsVotes (historical)
+    #'
+    #' @description
+    #' GetGaugesWeightsVotes (historical)
+    #'
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[CurveGaugeWeightVoteDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    CurveGetGaugesWeightsVotesHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+
+
+
+
+      query_params[["startBlock"]] <- `start_block`
+
+      query_params[["endBlock"]] <- `end_block`
+
+      query_params[["startDate"]] <- `start_date`
+
+      query_params[["endDate"]] <- `end_date`
+
+      local_var_url_path <- "/dapps/curve/gaugesWeightsVotes/historical"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[CurveGaugeWeightVoteDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' GetGaugesWithdraw (historical)
+    #'
+    #' @description
+    #' GetGaugesWithdraw (historical)
+    #'
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[CurveGaugeWithdrawDTO]
+    #' @export
+    CurveGetGaugesWithdrawHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, data_file = NULL, ...) {
+      local_var_response <- self$CurveGetGaugesWithdrawHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' GetGaugesWithdraw (historical)
+    #'
+    #' @description
+    #' GetGaugesWithdraw (historical)
+    #'
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[CurveGaugeWithdrawDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    CurveGetGaugesWithdrawHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+
+
+
+
+      query_params[["startBlock"]] <- `start_block`
+
+      query_params[["endBlock"]] <- `end_block`
+
+      query_params[["startDate"]] <- `start_date`
+
+      query_params[["endDate"]] <- `end_date`
+
+      local_var_url_path <- "/dapps/curve/gaugesWithdraws/historical"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[CurveGaugeWithdrawDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' GetHourlyVolumes (historical)
+    #'
+    #' @description
+    #' GetHourlyVolumes (historical)
+    #'
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[CurveHourlyVolumeDTO]
+    #' @export
+    CurveGetHourlyVolumesHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$CurveGetHourlyVolumesHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' GetHourlyVolumes (historical)
+    #'
+    #' @description
+    #' GetHourlyVolumes (historical)
+    #'
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[CurveHourlyVolumeDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    CurveGetHourlyVolumesHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -2951,10 +3392,10 @@ CurveApi <- R6::R6Class(
 
       query_params[["poolId"]] <- `pool_id`
 
-      local_var_url_path <- "/dapps/curve/lpToken/historical"
+      local_var_url_path <- "/dapps/curve/hourlyVolumes/historical"
 
       # The Accept request HTTP header
-      local_var_accepts <- list()
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -2973,7 +3414,18 @@ CurveApi <- R6::R6Class(
                                  ...)
 
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[CurveHourlyVolumeDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
         local_var_resp
       } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
         ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
@@ -2986,21 +3438,22 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' 
+    #' GetLpTokens (historical)
     #'
     #' @description
-    #' 
+    #' GetLpTokens (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return void
+    #' @return array[CurveLpTokenDTO]
     #' @export
-    DappsCurvePoolsHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
-      local_var_response <- self$DappsCurvePoolsHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, ...)
+    CurveGetLpTokensHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$CurveGetLpTokensHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -3011,20 +3464,132 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' 
+    #' GetLpTokens (historical)
     #'
     #' @description
-    #' 
+    #' GetLpTokens (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
+    #' @return API response (array[CurveLpTokenDTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsCurvePoolsHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
+    CurveGetLpTokensHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+
+
+
+
+
+      query_params[["startBlock"]] <- `start_block`
+
+      query_params[["endBlock"]] <- `end_block`
+
+      query_params[["startDate"]] <- `start_date`
+
+      query_params[["endDate"]] <- `end_date`
+
+      query_params[["poolId"]] <- `pool_id`
+
+      local_var_url_path <- "/dapps/curve/lpTokens/historical"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[CurveLpTokenDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' GetPools (historical) 🔥
+    #'
+    #' @description
+    #' GetPools (historical) 🔥
+    #'
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[CurvePoolDTO]
+    #' @export
+    CurveGetPoolsHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$CurveGetPoolsHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' GetPools (historical) 🔥
+    #'
+    #' @description
+    #' GetPools (historical) 🔥
+    #'
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[CurvePoolDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    CurveGetPoolsHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -3052,7 +3617,7 @@ CurveApi <- R6::R6Class(
       local_var_url_path <- "/dapps/curve/pools/historical"
 
       # The Accept request HTTP header
-      local_var_accepts <- list()
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -3071,7 +3636,18 @@ CurveApi <- R6::R6Class(
                                  ...)
 
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[CurvePoolDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
         local_var_resp
       } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
         ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
@@ -3084,20 +3660,21 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' 
+    #' GetProposals (historical)
     #'
     #' @description
-    #' 
+    #' GetProposals (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return void
+    #' @return array[CurveProposalDTO]
     #' @export
-    DappsCurveProposalsHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
-      local_var_response <- self$DappsCurveProposalsHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, ...)
+    CurveGetProposalsHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, data_file = NULL, ...) {
+      local_var_response <- self$CurveGetProposalsHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -3108,19 +3685,20 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' 
+    #' GetProposals (historical)
     #'
     #' @description
-    #' 
+    #' GetProposals (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
+    #' @return API response (array[CurveProposalDTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsCurveProposalsHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
+    CurveGetProposalsHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -3145,7 +3723,7 @@ CurveApi <- R6::R6Class(
       local_var_url_path <- "/dapps/curve/proposals/historical"
 
       # The Accept request HTTP header
-      local_var_accepts <- list()
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -3164,7 +3742,18 @@ CurveApi <- R6::R6Class(
                                  ...)
 
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[CurveProposalDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
         local_var_resp
       } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
         ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
@@ -3177,20 +3766,21 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' 
+    #' GetProposalsVotes (historical)
     #'
     #' @description
-    #' 
+    #' GetProposalsVotes (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return void
+    #' @return array[CurveProposalVoteDTO]
     #' @export
-    DappsCurveProposalsVoteHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
-      local_var_response <- self$DappsCurveProposalsVoteHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, ...)
+    CurveGetProposalsVotesHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, data_file = NULL, ...) {
+      local_var_response <- self$CurveGetProposalsVotesHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -3201,19 +3791,20 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' 
+    #' GetProposalsVotes (historical)
     #'
     #' @description
-    #' 
+    #' GetProposalsVotes (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
+    #' @return API response (array[CurveProposalVoteDTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsCurveProposalsVoteHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
+    CurveGetProposalsVotesHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -3235,10 +3826,10 @@ CurveApi <- R6::R6Class(
 
       query_params[["endDate"]] <- `end_date`
 
-      local_var_url_path <- "/dapps/curve/proposalsVote/historical"
+      local_var_url_path <- "/dapps/curve/proposalsVotes/historical"
 
       # The Accept request HTTP header
-      local_var_accepts <- list()
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -3257,7 +3848,18 @@ CurveApi <- R6::R6Class(
                                  ...)
 
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[CurveProposalVoteDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
         local_var_resp
       } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
         ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
@@ -3270,21 +3872,22 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' 
+    #' GetRemoveLiquidityEvents (historical)
     #'
     #' @description
-    #' 
+    #' GetRemoveLiquidityEvents (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return void
+    #' @return array[CurveRemoveLiquidityEventDTO]
     #' @export
-    DappsCurveRemoveLiquidityEventHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
-      local_var_response <- self$DappsCurveRemoveLiquidityEventHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, ...)
+    CurveGetRemoveLiquidityEventsHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$CurveGetRemoveLiquidityEventsHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -3295,118 +3898,21 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' 
+    #' GetRemoveLiquidityEvents (historical)
     #'
     #' @description
-    #' 
+    #' GetRemoveLiquidityEvents (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
+    #' @return API response (array[CurveRemoveLiquidityEventDTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsCurveRemoveLiquidityEventHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
-      args <- list(...)
-      query_params <- list()
-      header_params <- c()
-      form_params <- list()
-      file_params <- list()
-      local_var_body <- NULL
-      oauth_scopes <- NULL
-      is_oauth <- FALSE
-
-
-
-
-
-
-      query_params[["startBlock"]] <- `start_block`
-
-      query_params[["endBlock"]] <- `end_block`
-
-      query_params[["startDate"]] <- `start_date`
-
-      query_params[["endDate"]] <- `end_date`
-
-      query_params[["poolId"]] <- `pool_id`
-
-      local_var_url_path <- "/dapps/curve/removeLiquidityEvent/historical"
-
-      # The Accept request HTTP header
-      local_var_accepts <- list()
-
-      # The Content-Type representation header
-      local_var_content_types <- list()
-
-      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
-                                 method = "GET",
-                                 query_params = query_params,
-                                 header_params = header_params,
-                                 form_params = form_params,
-                                 file_params = file_params,
-                                 accepts = local_var_accepts,
-                                 content_types = local_var_content_types,
-                                 body = local_var_body,
-                                 is_oauth = is_oauth,
-                                 oauth_scopes = oauth_scopes,
-                                 ...)
-
-      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
-        local_var_resp
-      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
-        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
-      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
-        ApiResponse$new("API client error", local_var_resp)
-      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
-        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
-          local_var_resp$response <- "API server error"
-        }
-        local_var_resp
-      }
-    },
-    #' 
-    #'
-    #' @description
-    #' 
-    #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
-    #' @param ... Other optional arguments
-    #' @return void
-    #' @export
-    DappsCurveRemoveLiquidityOneEventHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
-      local_var_response <- self$DappsCurveRemoveLiquidityOneEventHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, ...)
-      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
-        local_var_response$content
-      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
-        local_var_response
-      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
-        local_var_response
-      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
-        local_var_response
-      }
-    },
-    #' 
-    #'
-    #' @description
-    #' 
-    #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
-    #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
-    #' @export
-    DappsCurveRemoveLiquidityOneEventHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
+    CurveGetRemoveLiquidityEventsHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -3431,10 +3937,10 @@ CurveApi <- R6::R6Class(
 
       query_params[["poolId"]] <- `pool_id`
 
-      local_var_url_path <- "/dapps/curve/removeLiquidityOneEvent/historical"
+      local_var_url_path <- "/dapps/curve/removeLiquidityEvents/historical"
 
       # The Accept request HTTP header
-      local_var_accepts <- list()
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -3453,7 +3959,18 @@ CurveApi <- R6::R6Class(
                                  ...)
 
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[CurveRemoveLiquidityEventDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
         local_var_resp
       } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
         ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
@@ -3466,21 +3983,22 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' 
+    #' GetRemoveLiquidityOneEvents (historical)
     #'
     #' @description
-    #' 
+    #' GetRemoveLiquidityOneEvents (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return void
+    #' @return array[CurveRemoveLiquidityOneEventDTO]
     #' @export
-    DappsCurveSwapsHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
-      local_var_response <- self$DappsCurveSwapsHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, ...)
+    CurveGetRemoveLiquidityOneEventsHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$CurveGetRemoveLiquidityOneEventsHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -3491,20 +4009,21 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' 
+    #' GetRemoveLiquidityOneEvents (historical)
     #'
     #' @description
-    #' 
+    #' GetRemoveLiquidityOneEvents (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
+    #' @return API response (array[CurveRemoveLiquidityOneEventDTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsCurveSwapsHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
+    CurveGetRemoveLiquidityOneEventsHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -3529,10 +4048,10 @@ CurveApi <- R6::R6Class(
 
       query_params[["poolId"]] <- `pool_id`
 
-      local_var_url_path <- "/dapps/curve/swaps/historical"
+      local_var_url_path <- "/dapps/curve/removeLiquidityOneEvents/historical"
 
       # The Accept request HTTP header
-      local_var_accepts <- list()
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -3551,7 +4070,18 @@ CurveApi <- R6::R6Class(
                                  ...)
 
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[CurveRemoveLiquidityOneEventDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
         local_var_resp
       } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
         ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
@@ -3564,20 +4094,21 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' 
+    #' GetSystemStates (historical)
     #'
     #' @description
-    #' 
+    #' GetSystemStates (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return void
+    #' @return array[CurveSystemStateDTO]
     #' @export
-    DappsCurveSystemStateHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
-      local_var_response <- self$DappsCurveSystemStateHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, ...)
+    CurveGetSystemStatesHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, data_file = NULL, ...) {
+      local_var_response <- self$CurveGetSystemStatesHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -3588,19 +4119,20 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' 
+    #' GetSystemStates (historical)
     #'
     #' @description
-    #' 
+    #' GetSystemStates (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
+    #' @return API response (array[CurveSystemStateDTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsCurveSystemStateHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
+    CurveGetSystemStatesHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -3622,10 +4154,10 @@ CurveApi <- R6::R6Class(
 
       query_params[["endDate"]] <- `end_date`
 
-      local_var_url_path <- "/dapps/curve/systemState/historical"
+      local_var_url_path <- "/dapps/curve/systemStates/historical"
 
       # The Accept request HTTP header
-      local_var_accepts <- list()
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -3644,7 +4176,18 @@ CurveApi <- R6::R6Class(
                                  ...)
 
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[CurveSystemStateDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
         local_var_resp
       } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
         ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
@@ -3657,21 +4200,22 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' 
+    #' GetTokens (historical) 🔥
     #'
     #' @description
-    #' 
+    #' GetTokens (historical) 🔥
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param token_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param token_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return void
+    #' @return array[CurveTokenDTO]
     #' @export
-    DappsCurveTokensHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, token_id = NULL, ...) {
-      local_var_response <- self$DappsCurveTokensHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, token_id, ...)
+    CurveGetTokensHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, token_id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$CurveGetTokensHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, token_id, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -3682,20 +4226,21 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' 
+    #' GetTokens (historical) 🔥
     #'
     #' @description
-    #' 
+    #' GetTokens (historical) 🔥
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param token_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param token_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
+    #' @return API response (array[CurveTokenDTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsCurveTokensHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, token_id = NULL, ...) {
+    CurveGetTokensHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, token_id = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -3723,7 +4268,7 @@ CurveApi <- R6::R6Class(
       local_var_url_path <- "/dapps/curve/tokens/historical"
 
       # The Accept request HTTP header
-      local_var_accepts <- list()
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -3742,7 +4287,18 @@ CurveApi <- R6::R6Class(
                                  ...)
 
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[CurveTokenDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
         local_var_resp
       } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
         ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
@@ -3755,21 +4311,22 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' 
+    #' GetTransferOwnershipEvents (historical)
     #'
     #' @description
-    #' 
+    #' GetTransferOwnershipEvents (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return void
+    #' @return array[CurveTransferOwnershipEventDTO]
     #' @export
-    DappsCurveTransferOwnershipEventHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
-      local_var_response <- self$DappsCurveTransferOwnershipEventHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, ...)
+    CurveGetTransferOwnershipEventsHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$CurveGetTransferOwnershipEventsHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -3780,20 +4337,21 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' 
+    #' GetTransferOwnershipEvents (historical)
     #'
     #' @description
-    #' 
+    #' GetTransferOwnershipEvents (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
+    #' @return API response (array[CurveTransferOwnershipEventDTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsCurveTransferOwnershipEventHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
+    CurveGetTransferOwnershipEventsHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -3818,10 +4376,10 @@ CurveApi <- R6::R6Class(
 
       query_params[["poolId"]] <- `pool_id`
 
-      local_var_url_path <- "/dapps/curve/transferOwnershipEvent/historical"
+      local_var_url_path <- "/dapps/curve/transferOwnershipEvents/historical"
 
       # The Accept request HTTP header
-      local_var_accepts <- list()
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -3840,7 +4398,18 @@ CurveApi <- R6::R6Class(
                                  ...)
 
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[CurveTransferOwnershipEventDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
         local_var_resp
       } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
         ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
@@ -3853,21 +4422,22 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' 
+    #' GetUnderlyingCoins (historical)
     #'
     #' @description
-    #' 
+    #' GetUnderlyingCoins (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return void
+    #' @return array[CurveUnderlyingCoinDTO]
     #' @export
-    DappsCurveUnderlyingCoinHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
-      local_var_response <- self$DappsCurveUnderlyingCoinHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, ...)
+    CurveGetUnderlyingCoinsHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$CurveGetUnderlyingCoinsHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -3878,20 +4448,21 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' 
+    #' GetUnderlyingCoins (historical)
     #'
     #' @description
-    #' 
+    #' GetUnderlyingCoins (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
+    #' @return API response (array[CurveUnderlyingCoinDTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsCurveUnderlyingCoinHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
+    CurveGetUnderlyingCoinsHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -3916,10 +4487,10 @@ CurveApi <- R6::R6Class(
 
       query_params[["poolId"]] <- `pool_id`
 
-      local_var_url_path <- "/dapps/curve/underlyingCoin/historical"
+      local_var_url_path <- "/dapps/curve/underlyingCoins/historical"
 
       # The Accept request HTTP header
-      local_var_accepts <- list()
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -3938,7 +4509,18 @@ CurveApi <- R6::R6Class(
                                  ...)
 
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[CurveUnderlyingCoinDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
         local_var_resp
       } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
         ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
@@ -3951,20 +4533,21 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' 
+    #' GetVotingApps (historical)
     #'
     #' @description
-    #' 
+    #' GetVotingApps (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return void
+    #' @return array[CurveVotingAppDTO]
     #' @export
-    DappsCurveVotingAppHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
-      local_var_response <- self$DappsCurveVotingAppHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, ...)
+    CurveGetVotingAppsHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, data_file = NULL, ...) {
+      local_var_response <- self$CurveGetVotingAppsHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -3975,19 +4558,20 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' 
+    #' GetVotingApps (historical)
     #'
     #' @description
-    #' 
+    #' GetVotingApps (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
+    #' @return API response (array[CurveVotingAppDTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsCurveVotingAppHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
+    CurveGetVotingAppsHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -4009,10 +4593,10 @@ CurveApi <- R6::R6Class(
 
       query_params[["endDate"]] <- `end_date`
 
-      local_var_url_path <- "/dapps/curve/votingApp/historical"
+      local_var_url_path <- "/dapps/curve/votingApps/historical"
 
       # The Accept request HTTP header
-      local_var_accepts <- list()
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -4031,7 +4615,18 @@ CurveApi <- R6::R6Class(
                                  ...)
 
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[CurveVotingAppDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
         local_var_resp
       } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
         ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
@@ -4044,21 +4639,22 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' 
+    #' GetWeeklyVolumes (historical)
     #'
     #' @description
-    #' 
+    #' GetWeeklyVolumes (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return void
+    #' @return array[CurveWeeklyVolumeDTO]
     #' @export
-    DappsCurveWeeklyVolumeHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
-      local_var_response <- self$DappsCurveWeeklyVolumeHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, ...)
+    CurveGetWeeklyVolumesHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$CurveGetWeeklyVolumesHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -4069,20 +4665,21 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' 
+    #' GetWeeklyVolumes (historical)
     #'
     #' @description
-    #' 
+    #' GetWeeklyVolumes (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
+    #' @return API response (array[CurveWeeklyVolumeDTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsCurveWeeklyVolumeHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
+    CurveGetWeeklyVolumesHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -4107,10 +4704,10 @@ CurveApi <- R6::R6Class(
 
       query_params[["poolId"]] <- `pool_id`
 
-      local_var_url_path <- "/dapps/curve/weeklyVolume/historical"
+      local_var_url_path <- "/dapps/curve/weeklyVolumes/historical"
 
       # The Accept request HTTP header
-      local_var_accepts <- list()
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -4129,7 +4726,18 @@ CurveApi <- R6::R6Class(
                                  ...)
 
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[CurveWeeklyVolumeDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
         local_var_resp
       } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
         ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)

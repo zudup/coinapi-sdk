@@ -22,7 +22,18 @@
 
 
 #include "CppRestOpenAPIClient/ApiClient.h"
-#include "CppRestOpenAPIClient/ModelBase.h"
+
+#include "CppRestOpenAPIClient/model/Dex_BatchDTO.h"
+#include "CppRestOpenAPIClient/model/Dex_DepositDTO.h"
+#include "CppRestOpenAPIClient/model/Dex_OrderDTO.h"
+#include "CppRestOpenAPIClient/model/Dex_PriceDTO.h"
+#include "CppRestOpenAPIClient/model/Dex_SolutionDTO.h"
+#include "CppRestOpenAPIClient/model/Dex_StatsDTO.h"
+#include "CppRestOpenAPIClient/model/Dex_TokenDTO.h"
+#include "CppRestOpenAPIClient/model/Dex_TradeDTO.h"
+#include "CppRestOpenAPIClient/model/Dex_UserDTO.h"
+#include "CppRestOpenAPIClient/model/Dex_WithdrawDTO.h"
+#include "CppRestOpenAPIClient/model/Dex_WithdrawRequestDTO.h"
 #include <cpprest/details/basic_types.h>
 #include <boost/optional.hpp>
 
@@ -44,33 +55,33 @@ public:
     virtual ~DexApi();
 
     /// <summary>
-    /// 
+    /// GetBatches (historical)
     /// </summary>
     /// <remarks>
-    /// 
+    /// Gets batches.
     /// </remarks>
     /// <param name="startBlock"> (optional, default to 0L)</param>
     /// <param name="endBlock"> (optional, default to 0L)</param>
     /// <param name="startDate"> (optional, default to utility::datetime())</param>
     /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    pplx::task<void> dappsDexBatchHistoricalGet(
+    pplx::task<std::vector<std::shared_ptr<Dex_BatchDTO>>> dex_GetBatches__historical(
         boost::optional<int64_t> startBlock,
         boost::optional<int64_t> endBlock,
         boost::optional<utility::datetime> startDate,
         boost::optional<utility::datetime> endDate
     ) const;
     /// <summary>
-    /// 
+    /// GetDeposits (historical)
     /// </summary>
     /// <remarks>
-    /// 
+    /// Gets deposits.
     /// </remarks>
     /// <param name="startBlock"> (optional, default to 0L)</param>
     /// <param name="endBlock"> (optional, default to 0L)</param>
     /// <param name="startDate"> (optional, default to utility::datetime())</param>
     /// <param name="endDate"> (optional, default to utility::datetime())</param>
     /// <param name="tokenId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<void> dappsDexOrdersHistoricalGet(
+    pplx::task<std::vector<std::shared_ptr<Dex_DepositDTO>>> dex_GetDeposits__historical(
         boost::optional<int64_t> startBlock,
         boost::optional<int64_t> endBlock,
         boost::optional<utility::datetime> startDate,
@@ -78,17 +89,17 @@ public:
         boost::optional<utility::string_t> tokenId
     ) const;
     /// <summary>
-    /// 
+    /// GetOrders (historical)
     /// </summary>
     /// <remarks>
-    /// 
+    /// Gets orders.
     /// </remarks>
     /// <param name="startBlock"> (optional, default to 0L)</param>
     /// <param name="endBlock"> (optional, default to 0L)</param>
     /// <param name="startDate"> (optional, default to utility::datetime())</param>
     /// <param name="endDate"> (optional, default to utility::datetime())</param>
     /// <param name="tokenId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<void> dappsDexPricesHistoricalGet(
+    pplx::task<std::vector<std::shared_ptr<Dex_OrderDTO>>> dex_GetOrders__historical(
         boost::optional<int64_t> startBlock,
         boost::optional<int64_t> endBlock,
         boost::optional<utility::datetime> startDate,
@@ -96,17 +107,17 @@ public:
         boost::optional<utility::string_t> tokenId
     ) const;
     /// <summary>
-    /// 
+    /// GetPrices (historical)
     /// </summary>
     /// <remarks>
-    /// 
+    /// Gets prices.
     /// </remarks>
     /// <param name="startBlock"> (optional, default to 0L)</param>
     /// <param name="endBlock"> (optional, default to 0L)</param>
     /// <param name="startDate"> (optional, default to utility::datetime())</param>
     /// <param name="endDate"> (optional, default to utility::datetime())</param>
     /// <param name="tokenId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<void> dappsDexSolutionHistoricalGet(
+    pplx::task<std::vector<std::shared_ptr<Dex_PriceDTO>>> dex_GetPrices__historical(
         boost::optional<int64_t> startBlock,
         boost::optional<int64_t> endBlock,
         boost::optional<utility::datetime> startDate,
@@ -114,33 +125,51 @@ public:
         boost::optional<utility::string_t> tokenId
     ) const;
     /// <summary>
-    /// 
+    /// GetSolutions (historical)
     /// </summary>
     /// <remarks>
-    /// 
+    /// Gets solutions.
     /// </remarks>
     /// <param name="startBlock"> (optional, default to 0L)</param>
     /// <param name="endBlock"> (optional, default to 0L)</param>
     /// <param name="startDate"> (optional, default to utility::datetime())</param>
     /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    pplx::task<void> dappsDexStatsHistoricalGet(
+    /// <param name="tokenId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    pplx::task<std::vector<std::shared_ptr<Dex_SolutionDTO>>> dex_GetSolutions__historical(
+        boost::optional<int64_t> startBlock,
+        boost::optional<int64_t> endBlock,
+        boost::optional<utility::datetime> startDate,
+        boost::optional<utility::datetime> endDate,
+        boost::optional<utility::string_t> tokenId
+    ) const;
+    /// <summary>
+    /// GetStats (historical)
+    /// </summary>
+    /// <remarks>
+    /// Gets stats.
+    /// </remarks>
+    /// <param name="startBlock"> (optional, default to 0L)</param>
+    /// <param name="endBlock"> (optional, default to 0L)</param>
+    /// <param name="startDate"> (optional, default to utility::datetime())</param>
+    /// <param name="endDate"> (optional, default to utility::datetime())</param>
+    pplx::task<std::vector<std::shared_ptr<Dex_StatsDTO>>> dex_GetStats__historical(
         boost::optional<int64_t> startBlock,
         boost::optional<int64_t> endBlock,
         boost::optional<utility::datetime> startDate,
         boost::optional<utility::datetime> endDate
     ) const;
     /// <summary>
-    /// 
+    /// GetTokens (historical) 🔥
     /// </summary>
     /// <remarks>
-    /// 
+    /// Gets tokens.
     /// </remarks>
     /// <param name="startBlock"> (optional, default to 0L)</param>
     /// <param name="endBlock"> (optional, default to 0L)</param>
     /// <param name="startDate"> (optional, default to utility::datetime())</param>
     /// <param name="endDate"> (optional, default to utility::datetime())</param>
     /// <param name="tokenId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<void> dappsDexTokensHistoricalGet(
+    pplx::task<std::vector<std::shared_ptr<Dex_TokenDTO>>> dex_GetTokens__historical(
         boost::optional<int64_t> startBlock,
         boost::optional<int64_t> endBlock,
         boost::optional<utility::datetime> startDate,
@@ -148,49 +177,49 @@ public:
         boost::optional<utility::string_t> tokenId
     ) const;
     /// <summary>
-    /// 
+    /// GetTrades (historical) 🔥
     /// </summary>
     /// <remarks>
-    /// 
+    /// Gets trades.
     /// </remarks>
     /// <param name="startBlock"> (optional, default to 0L)</param>
     /// <param name="endBlock"> (optional, default to 0L)</param>
     /// <param name="startDate"> (optional, default to utility::datetime())</param>
     /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    pplx::task<void> dappsDexTradesHistoricalGet(
+    pplx::task<std::vector<std::shared_ptr<Dex_TradeDTO>>> dex_GetTrades__historical(
         boost::optional<int64_t> startBlock,
         boost::optional<int64_t> endBlock,
         boost::optional<utility::datetime> startDate,
         boost::optional<utility::datetime> endDate
     ) const;
     /// <summary>
-    /// 
+    /// GetUsers (historical)
     /// </summary>
     /// <remarks>
-    /// 
+    /// Gets users.
     /// </remarks>
     /// <param name="startBlock"> (optional, default to 0L)</param>
     /// <param name="endBlock"> (optional, default to 0L)</param>
     /// <param name="startDate"> (optional, default to utility::datetime())</param>
     /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    pplx::task<void> dappsDexUsersHistoricalGet(
+    pplx::task<std::vector<std::shared_ptr<Dex_UserDTO>>> dex_GetUsers__historical(
         boost::optional<int64_t> startBlock,
         boost::optional<int64_t> endBlock,
         boost::optional<utility::datetime> startDate,
         boost::optional<utility::datetime> endDate
     ) const;
     /// <summary>
-    /// 
+    /// GetWithdrawsRequests (historical)
     /// </summary>
     /// <remarks>
-    /// 
+    /// Gets withdraws requests.
     /// </remarks>
     /// <param name="startBlock"> (optional, default to 0L)</param>
     /// <param name="endBlock"> (optional, default to 0L)</param>
     /// <param name="startDate"> (optional, default to utility::datetime())</param>
     /// <param name="endDate"> (optional, default to utility::datetime())</param>
     /// <param name="tokenId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<void> dappsDexWithdrawHistoricalGet(
+    pplx::task<std::vector<std::shared_ptr<Dex_WithdrawRequestDTO>>> dex_GetWithdrawsRequests__historical(
         boost::optional<int64_t> startBlock,
         boost::optional<int64_t> endBlock,
         boost::optional<utility::datetime> startDate,
@@ -198,17 +227,17 @@ public:
         boost::optional<utility::string_t> tokenId
     ) const;
     /// <summary>
-    /// 
+    /// GetWithdraws (historical)
     /// </summary>
     /// <remarks>
-    /// 
+    /// Gets withdraws.
     /// </remarks>
     /// <param name="startBlock"> (optional, default to 0L)</param>
     /// <param name="endBlock"> (optional, default to 0L)</param>
     /// <param name="startDate"> (optional, default to utility::datetime())</param>
     /// <param name="endDate"> (optional, default to utility::datetime())</param>
     /// <param name="tokenId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<void> dappsDexWithdrawRequestHistoricalGet(
+    pplx::task<std::vector<std::shared_ptr<Dex_WithdrawDTO>>> dex_GetWithdraws__historical(
         boost::optional<int64_t> startBlock,
         boost::optional<int64_t> endBlock,
         boost::optional<utility::datetime> startDate,

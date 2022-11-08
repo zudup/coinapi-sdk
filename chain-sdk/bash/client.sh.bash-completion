@@ -68,53 +68,56 @@ _()
     # The list of available operation in the REST service
     # It's modelled as an associative array for efficient key lookup
     declare -A operations
-    operations["dappsCowOrdersHistoricalGet"]=1
-    operations["dappsCowSettlementHistoricalGet"]=1
-    operations["dappsCowTokensHistoricalGet"]=1
-    operations["dappsCowTradesHistoricalGet"]=1
-    operations["dappsCowUsersHistoricalGet"]=1
-    operations["dappsCurveAccountsHistoricalGet"]=1
-    operations["dappsCurveAddLiquidityEventHistoricalGet"]=1
-    operations["dappsCurveAdminFeeChangeLogHistoricalGet"]=1
-    operations["dappsCurveAmplificationCoeffChangeLogHistoricalGet"]=1
-    operations["dappsCurveCoinsHistoricalGet"]=1
-    operations["dappsCurveContractsHistoricalGet"]=1
-    operations["dappsCurveContractsVersionHistoricalGet"]=1
-    operations["dappsCurveDailyVolumeHistoricalGet"]=1
-    operations["dappsCurveFeeChangeLogHistoricalGet"]=1
-    operations["dappsCurveGaugeDepositHistoricalGet"]=1
-    operations["dappsCurveGaugeHistoricalGet"]=1
-    operations["dappsCurveGaugeLiquidityHistoricalGet"]=1
-    operations["dappsCurveGaugeTotalWeightHistoricalGet"]=1
-    operations["dappsCurveGaugeTypeHistoricalGet"]=1
-    operations["dappsCurveGaugeTypeWeightHistoricalGet"]=1
-    operations["dappsCurveGaugeWeightHistoricalGet"]=1
-    operations["dappsCurveGaugeWeightVoteHistoricalGet"]=1
-    operations["dappsCurveGaugeWithdrawHistoricalGet"]=1
-    operations["dappsCurveHourlyVolumeHistoricalGet"]=1
-    operations["dappsCurveLpTokenHistoricalGet"]=1
-    operations["dappsCurvePoolsHistoricalGet"]=1
-    operations["dappsCurveProposalsHistoricalGet"]=1
-    operations["dappsCurveProposalsVoteHistoricalGet"]=1
-    operations["dappsCurveRemoveLiquidityEventHistoricalGet"]=1
-    operations["dappsCurveRemoveLiquidityOneEventHistoricalGet"]=1
-    operations["dappsCurveSwapsHistoricalGet"]=1
-    operations["dappsCurveSystemStateHistoricalGet"]=1
-    operations["dappsCurveTokensHistoricalGet"]=1
-    operations["dappsCurveTransferOwnershipEventHistoricalGet"]=1
-    operations["dappsCurveUnderlyingCoinHistoricalGet"]=1
-    operations["dappsCurveVotingAppHistoricalGet"]=1
-    operations["dappsCurveWeeklyVolumeHistoricalGet"]=1
-    operations["dappsDexBatchHistoricalGet"]=1
-    operations["dappsDexOrdersHistoricalGet"]=1
-    operations["dappsDexPricesHistoricalGet"]=1
-    operations["dappsDexSolutionHistoricalGet"]=1
-    operations["dappsDexStatsHistoricalGet"]=1
-    operations["dappsDexTokensHistoricalGet"]=1
-    operations["dappsDexTradesHistoricalGet"]=1
-    operations["dappsDexUsersHistoricalGet"]=1
-    operations["dappsDexWithdrawHistoricalGet"]=1
-    operations["dappsDexWithdrawRequestHistoricalGet"]=1
+    operations["cowGetOrdersHistorical"]=1
+    operations["cowGetSettlementsHistorical"]=1
+    operations["cowGetTokensHistorical"]=1
+    operations["cowGetTradesHistorical"]=1
+    operations["cowGetUsersHistorical"]=1
+    operations["curveGetAccountsHistorical"]=1
+    operations["curveGetAddLiquidityEventsHistorical"]=1
+    operations["curveGetAdminFeeChangeLogsHistorical"]=1
+    operations["curveGetAmplificationCoeffChangeLogsHistorical"]=1
+    operations["curveGetCoinsHistorical"]=1
+    operations["curveGetContractsHistorical"]=1
+    operations["curveGetContractsVersionsHistorical"]=1
+    operations["curveGetDailyVolumesHistorical"]=1
+    operations["curveGetExchangesHistorical"]=1
+    operations["curveGetFeeChangeLogsHistorical"]=1
+    operations["curveGetGaugesDepositsHistorical"]=1
+    operations["curveGetGaugesHistorical"]=1
+    operations["curveGetGaugesLiquidityHistorical"]=1
+    operations["curveGetGaugesTotalWeightsHistorical"]=1
+    operations["curveGetGaugesTypesHistorical"]=1
+    operations["curveGetGaugesTypesWeightsHistorical"]=1
+    operations["curveGetGaugesWeightsHistorical"]=1
+    operations["curveGetGaugesWeightsVotesHistorical"]=1
+    operations["curveGetGaugesWithdrawHistorical"]=1
+    operations["curveGetHourlyVolumesHistorical"]=1
+    operations["curveGetLpTokensHistorical"]=1
+    operations["curveGetPoolsHistorical"]=1
+    operations["curveGetProposalsHistorical"]=1
+    operations["curveGetProposalsVotesHistorical"]=1
+    operations["curveGetRemoveLiquidityEventsHistorical"]=1
+    operations["curveGetRemoveLiquidityOneEventsHistorical"]=1
+    operations["curveGetSystemStatesHistorical"]=1
+    operations["curveGetTokensHistorical"]=1
+    operations["curveGetTransferOwnershipEventsHistorical"]=1
+    operations["curveGetUnderlyingCoinsHistorical"]=1
+    operations["curveGetVotingAppsHistorical"]=1
+    operations["curveGetWeeklyVolumesHistorical"]=1
+    operations["dexGetBatchesHistorical"]=1
+    operations["dexGetDepositsHistorical"]=1
+    operations["dexGetOrdersHistorical"]=1
+    operations["dexGetPricesHistorical"]=1
+    operations["dexGetSolutionsHistorical"]=1
+    operations["dexGetStatsHistorical"]=1
+    operations["dexGetTokensHistorical"]=1
+    operations["dexGetTradesHistorical"]=1
+    operations["dexGetUsersHistorical"]=1
+    operations["dexGetWithdrawsHistorical"]=1
+    operations["dexGetWithdrawsRequestsHistorical"]=1
+    operations["curveGetExchangesCurrent"]=1
+    operations["dexGetTradesCurrent"]=1
     operations["sushiswapGetBundlesHistorical"]=1
     operations["sushiswapGetBurnsHistorical"]=1
     operations["sushiswapGetDayDataHistorical"]=1
@@ -134,108 +137,111 @@ _()
     operations["sushiswapGetTokensHistorical"]=1
     operations["sushiswapGetTransactionsHistorical"]=1
     operations["sushiswapGetUsersHistorical"]=1
-    operations["dappsUniswapv2BundlesHistoricalGet"]=1
-    operations["dappsUniswapv2BurnsHistoricalGet"]=1
-    operations["dappsUniswapv2DayDataHistoricalGet"]=1
-    operations["dappsUniswapv2FactoryHistoricalGet"]=1
-    operations["dappsUniswapv2LiquidityPositionHistoricalGet"]=1
-    operations["dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet"]=1
-    operations["dappsUniswapv2MintsHistoricalGet"]=1
-    operations["dappsUniswapv2PoolDayDataHistoricalGet"]=1
-    operations["dappsUniswapv2PoolHourDataHistoricalGet"]=1
-    operations["dappsUniswapv2PoolsCurrentGet"]=1
-    operations["dappsUniswapv2PoolsHistoricalGet"]=1
-    operations["dappsUniswapv2SwapsCurrentGet"]=1
-    operations["dappsUniswapv2SwapsHistoricalGet"]=1
-    operations["dappsUniswapv2TokenDayDataHistoricalGet"]=1
-    operations["dappsUniswapv2TokensCurrentGet"]=1
-    operations["dappsUniswapv2TokensHistoricalGet"]=1
-    operations["dappsUniswapv2TransactionsHistoricalGet"]=1
-    operations["dappsUniswapv2UsersHistoricalGet"]=1
-    operations["dappsUniswapv3BundleCurrentGet"]=1
-    operations["dappsUniswapv3BundlesHistoricalGet"]=1
-    operations["dappsUniswapv3BurnsCurrentGet"]=1
-    operations["dappsUniswapv3BurnsHistoricalGet"]=1
-    operations["dappsUniswapv3DayDataHistoricalGet"]=1
-    operations["dappsUniswapv3FactoryCurrentGet"]=1
-    operations["dappsUniswapv3FactoryHistoricalGet"]=1
-    operations["dappsUniswapv3MintsCurrentGet"]=1
-    operations["dappsUniswapv3MintsHistoricalGet"]=1
-    operations["dappsUniswapv3PoolDayDataHistoricalGet"]=1
-    operations["dappsUniswapv3PoolHourDataHistoricalGet"]=1
-    operations["dappsUniswapv3PoolsCurrentGet"]=1
-    operations["dappsUniswapv3PoolsDayDataCurrentGet"]=1
-    operations["dappsUniswapv3PoolsHistoricalGet"]=1
-    operations["dappsUniswapv3PoolsHourDataCurrentGet"]=1
-    operations["dappsUniswapv3PositionSnapshotHistoricalGet"]=1
-    operations["dappsUniswapv3PositionSnapshotsCurrentGet"]=1
-    operations["dappsUniswapv3PositionsCurrentGet"]=1
-    operations["dappsUniswapv3PositionsHistoricalGet"]=1
-    operations["dappsUniswapv3SwapsCurrentGet"]=1
-    operations["dappsUniswapv3SwapsHistoricalGet"]=1
-    operations["dappsUniswapv3TickDayDataHistoricalGet"]=1
-    operations["dappsUniswapv3TicksCurrentGet"]=1
-    operations["dappsUniswapv3TicksDayDataCurrentGet"]=1
-    operations["dappsUniswapv3TicksHistoricalGet"]=1
-    operations["dappsUniswapv3TokenDayDataHistoricalGet"]=1
-    operations["dappsUniswapv3TokenHourDataHistoricalGet"]=1
-    operations["dappsUniswapv3TokensCurrentGet"]=1
-    operations["dappsUniswapv3TokensDayDataCurrentGet"]=1
-    operations["dappsUniswapv3TokensHistoricalGet"]=1
-    operations["dappsUniswapv3TokensHourDataCurrentGet"]=1
-    operations["dappsUniswapv3TransactionsHistoricalGet"]=1
-    operations["dappsUniswapv3UniswapDayDataCurrentGet"]=1
+    operations["uniswapV2GetBundlesHistorical"]=1
+    operations["uniswapV2GetBurnsHistorical"]=1
+    operations["uniswapV2GetDayDataHistorical"]=1
+    operations["uniswapV2GetFactoryHistorical"]=1
+    operations["uniswapV2GetLiquidityPositionsHistorical"]=1
+    operations["uniswapV2GetLiquidityPositionsSnapshotsHistorical"]=1
+    operations["uniswapV2GetMintsHistorical"]=1
+    operations["uniswapV2GetPoolsCurrent"]=1
+    operations["uniswapV2GetPoolsDayDataHistorical"]=1
+    operations["uniswapV2GetPoolsHistorical"]=1
+    operations["uniswapV2GetPoolsHourDataHistorical"]=1
+    operations["uniswapV2GetSwapsCurrent"]=1
+    operations["uniswapV2GetSwapsHistorical"]=1
+    operations["uniswapV2GetTokensCurrent"]=1
+    operations["uniswapV2GetTokensDayDataHistorical"]=1
+    operations["uniswapV2GetTokensHistorical"]=1
+    operations["uniswapV2GetTransactionsHistorical"]=1
+    operations["uniswapV2GetUsersHistorical"]=1
+    operations["uniswapV3GetBundlesCurrent"]=1
+    operations["uniswapV3GetBundlesHistorical"]=1
+    operations["uniswapV3GetBurnsCurrent"]=1
+    operations["uniswapV3GetBurnsHistorical"]=1
+    operations["uniswapV3GetDayDataCurrent"]=1
+    operations["uniswapV3GetDayDataHistorical"]=1
+    operations["uniswapV3GetFactoryCurrent"]=1
+    operations["uniswapV3GetFactoryHistorical"]=1
+    operations["uniswapV3GetMintsCurrent"]=1
+    operations["uniswapV3GetMintsHistorical"]=1
+    operations["uniswapV3GetPoolsCurrent"]=1
+    operations["uniswapV3GetPoolsDayDataCurrent"]=1
+    operations["uniswapV3GetPoolsDayDataHistorical"]=1
+    operations["uniswapV3GetPoolsHistorical"]=1
+    operations["uniswapV3GetPoolsHourDataCurrent"]=1
+    operations["uniswapV3GetPoolsHourDataHistorical"]=1
+    operations["uniswapV3GetPositionsCurrent"]=1
+    operations["uniswapV3GetPositionsHistorical"]=1
+    operations["uniswapV3GetPositionsSnaphotsHistorical"]=1
+    operations["uniswapV3GetPositionsSnapshotsCurrent"]=1
+    operations["uniswapV3GetSwapsCurrent"]=1
+    operations["uniswapV3GetSwapsHistorical"]=1
+    operations["uniswapV3GetTicksCurrent"]=1
+    operations["uniswapV3GetTicksDayDataCurrent"]=1
+    operations["uniswapV3GetTicksDayDataHistorical"]=1
+    operations["uniswapV3GetTicksHistorical"]=1
+    operations["uniswapV3GetTokensCurrent"]=1
+    operations["uniswapV3GetTokensDayDataCurrent"]=1
+    operations["uniswapV3GetTokensDayDataHistorical"]=1
+    operations["uniswapV3GetTokensHistorical"]=1
+    operations["uniswapV3GetTokensHourDataCurrent"]=1
+    operations["uniswapV3GetTokensHourDataHistorical"]=1
+    operations["uniswapV3GetTransactionsHistorical"]=1
 
     # An associative array of operations to their parameters
     # Only include path, query and header parameters
     declare -A operation_parameters
-    operation_parameters["dappsCowOrdersHistoricalGet"]="startBlock= endBlock= startDate= endDate= "
-    operation_parameters["dappsCowSettlementHistoricalGet"]="startBlock= endBlock= startDate= endDate= "
-    operation_parameters["dappsCowTokensHistoricalGet"]="startBlock= endBlock= startDate= endDate= tokenId= "
-    operation_parameters["dappsCowTradesHistoricalGet"]="startBlock= endBlock= startDate= endDate= "
-    operation_parameters["dappsCowUsersHistoricalGet"]="startBlock= endBlock= startDate= endDate= "
-    operation_parameters["dappsCurveAccountsHistoricalGet"]="startBlock= endBlock= startDate= endDate= "
-    operation_parameters["dappsCurveAddLiquidityEventHistoricalGet"]="startBlock= endBlock= startDate= endDate= poolId= "
-    operation_parameters["dappsCurveAdminFeeChangeLogHistoricalGet"]="startBlock= endBlock= startDate= endDate= poolId= "
-    operation_parameters["dappsCurveAmplificationCoeffChangeLogHistoricalGet"]="startBlock= endBlock= startDate= endDate= poolId= "
-    operation_parameters["dappsCurveCoinsHistoricalGet"]="startBlock= endBlock= startDate= endDate= poolId= "
-    operation_parameters["dappsCurveContractsHistoricalGet"]="startBlock= endBlock= startDate= endDate= poolId= "
-    operation_parameters["dappsCurveContractsVersionHistoricalGet"]="startBlock= endBlock= startDate= endDate= poolId= "
-    operation_parameters["dappsCurveDailyVolumeHistoricalGet"]="startBlock= endBlock= startDate= endDate= poolId= "
-    operation_parameters["dappsCurveFeeChangeLogHistoricalGet"]="startBlock= endBlock= startDate= endDate= poolId= "
-    operation_parameters["dappsCurveGaugeDepositHistoricalGet"]="startBlock= endBlock= startDate= endDate= "
-    operation_parameters["dappsCurveGaugeHistoricalGet"]="startBlock= endBlock= startDate= endDate= poolId= "
-    operation_parameters["dappsCurveGaugeLiquidityHistoricalGet"]="startBlock= endBlock= startDate= endDate= "
-    operation_parameters["dappsCurveGaugeTotalWeightHistoricalGet"]="startBlock= endBlock= startDate= endDate= "
-    operation_parameters["dappsCurveGaugeTypeHistoricalGet"]="startBlock= endBlock= startDate= endDate= "
-    operation_parameters["dappsCurveGaugeTypeWeightHistoricalGet"]="startBlock= endBlock= startDate= endDate= "
-    operation_parameters["dappsCurveGaugeWeightHistoricalGet"]="startBlock= endBlock= startDate= endDate= "
-    operation_parameters["dappsCurveGaugeWeightVoteHistoricalGet"]="startBlock= endBlock= startDate= endDate= "
-    operation_parameters["dappsCurveGaugeWithdrawHistoricalGet"]="startBlock= endBlock= startDate= endDate= "
-    operation_parameters["dappsCurveHourlyVolumeHistoricalGet"]="startBlock= endBlock= startDate= endDate= poolId= "
-    operation_parameters["dappsCurveLpTokenHistoricalGet"]="startBlock= endBlock= startDate= endDate= poolId= "
-    operation_parameters["dappsCurvePoolsHistoricalGet"]="startBlock= endBlock= startDate= endDate= poolId= "
-    operation_parameters["dappsCurveProposalsHistoricalGet"]="startBlock= endBlock= startDate= endDate= "
-    operation_parameters["dappsCurveProposalsVoteHistoricalGet"]="startBlock= endBlock= startDate= endDate= "
-    operation_parameters["dappsCurveRemoveLiquidityEventHistoricalGet"]="startBlock= endBlock= startDate= endDate= poolId= "
-    operation_parameters["dappsCurveRemoveLiquidityOneEventHistoricalGet"]="startBlock= endBlock= startDate= endDate= poolId= "
-    operation_parameters["dappsCurveSwapsHistoricalGet"]="startBlock= endBlock= startDate= endDate= poolId= "
-    operation_parameters["dappsCurveSystemStateHistoricalGet"]="startBlock= endBlock= startDate= endDate= "
-    operation_parameters["dappsCurveTokensHistoricalGet"]="startBlock= endBlock= startDate= endDate= tokenId= "
-    operation_parameters["dappsCurveTransferOwnershipEventHistoricalGet"]="startBlock= endBlock= startDate= endDate= poolId= "
-    operation_parameters["dappsCurveUnderlyingCoinHistoricalGet"]="startBlock= endBlock= startDate= endDate= poolId= "
-    operation_parameters["dappsCurveVotingAppHistoricalGet"]="startBlock= endBlock= startDate= endDate= "
-    operation_parameters["dappsCurveWeeklyVolumeHistoricalGet"]="startBlock= endBlock= startDate= endDate= poolId= "
-    operation_parameters["dappsDexBatchHistoricalGet"]="startBlock= endBlock= startDate= endDate= "
-    operation_parameters["dappsDexOrdersHistoricalGet"]="startBlock= endBlock= startDate= endDate= tokenId= "
-    operation_parameters["dappsDexPricesHistoricalGet"]="startBlock= endBlock= startDate= endDate= tokenId= "
-    operation_parameters["dappsDexSolutionHistoricalGet"]="startBlock= endBlock= startDate= endDate= tokenId= "
-    operation_parameters["dappsDexStatsHistoricalGet"]="startBlock= endBlock= startDate= endDate= "
-    operation_parameters["dappsDexTokensHistoricalGet"]="startBlock= endBlock= startDate= endDate= tokenId= "
-    operation_parameters["dappsDexTradesHistoricalGet"]="startBlock= endBlock= startDate= endDate= "
-    operation_parameters["dappsDexUsersHistoricalGet"]="startBlock= endBlock= startDate= endDate= "
-    operation_parameters["dappsDexWithdrawHistoricalGet"]="startBlock= endBlock= startDate= endDate= tokenId= "
-    operation_parameters["dappsDexWithdrawRequestHistoricalGet"]="startBlock= endBlock= startDate= endDate= tokenId= "
+    operation_parameters["cowGetOrdersHistorical"]="startBlock= endBlock= startDate= endDate= "
+    operation_parameters["cowGetSettlementsHistorical"]="startBlock= endBlock= startDate= endDate= "
+    operation_parameters["cowGetTokensHistorical"]="startBlock= endBlock= startDate= endDate= tokenId= "
+    operation_parameters["cowGetTradesHistorical"]="startBlock= endBlock= startDate= endDate= "
+    operation_parameters["cowGetUsersHistorical"]="startBlock= endBlock= startDate= endDate= "
+    operation_parameters["curveGetAccountsHistorical"]="startBlock= endBlock= startDate= endDate= "
+    operation_parameters["curveGetAddLiquidityEventsHistorical"]="startBlock= endBlock= startDate= endDate= poolId= "
+    operation_parameters["curveGetAdminFeeChangeLogsHistorical"]="startBlock= endBlock= startDate= endDate= poolId= "
+    operation_parameters["curveGetAmplificationCoeffChangeLogsHistorical"]="startBlock= endBlock= startDate= endDate= poolId= "
+    operation_parameters["curveGetCoinsHistorical"]="startBlock= endBlock= startDate= endDate= poolId= "
+    operation_parameters["curveGetContractsHistorical"]="startBlock= endBlock= startDate= endDate= poolId= "
+    operation_parameters["curveGetContractsVersionsHistorical"]="startBlock= endBlock= startDate= endDate= poolId= "
+    operation_parameters["curveGetDailyVolumesHistorical"]="startBlock= endBlock= startDate= endDate= poolId= "
+    operation_parameters["curveGetExchangesHistorical"]="startBlock= endBlock= startDate= endDate= poolId= "
+    operation_parameters["curveGetFeeChangeLogsHistorical"]="startBlock= endBlock= startDate= endDate= poolId= "
+    operation_parameters["curveGetGaugesDepositsHistorical"]="startBlock= endBlock= startDate= endDate= "
+    operation_parameters["curveGetGaugesHistorical"]="startBlock= endBlock= startDate= endDate= poolId= "
+    operation_parameters["curveGetGaugesLiquidityHistorical"]="startBlock= endBlock= startDate= endDate= "
+    operation_parameters["curveGetGaugesTotalWeightsHistorical"]="startBlock= endBlock= startDate= endDate= "
+    operation_parameters["curveGetGaugesTypesHistorical"]="startBlock= endBlock= startDate= endDate= "
+    operation_parameters["curveGetGaugesTypesWeightsHistorical"]="startBlock= endBlock= startDate= endDate= "
+    operation_parameters["curveGetGaugesWeightsHistorical"]="startBlock= endBlock= startDate= endDate= "
+    operation_parameters["curveGetGaugesWeightsVotesHistorical"]="startBlock= endBlock= startDate= endDate= "
+    operation_parameters["curveGetGaugesWithdrawHistorical"]="startBlock= endBlock= startDate= endDate= "
+    operation_parameters["curveGetHourlyVolumesHistorical"]="startBlock= endBlock= startDate= endDate= poolId= "
+    operation_parameters["curveGetLpTokensHistorical"]="startBlock= endBlock= startDate= endDate= poolId= "
+    operation_parameters["curveGetPoolsHistorical"]="startBlock= endBlock= startDate= endDate= poolId= "
+    operation_parameters["curveGetProposalsHistorical"]="startBlock= endBlock= startDate= endDate= "
+    operation_parameters["curveGetProposalsVotesHistorical"]="startBlock= endBlock= startDate= endDate= "
+    operation_parameters["curveGetRemoveLiquidityEventsHistorical"]="startBlock= endBlock= startDate= endDate= poolId= "
+    operation_parameters["curveGetRemoveLiquidityOneEventsHistorical"]="startBlock= endBlock= startDate= endDate= poolId= "
+    operation_parameters["curveGetSystemStatesHistorical"]="startBlock= endBlock= startDate= endDate= "
+    operation_parameters["curveGetTokensHistorical"]="startBlock= endBlock= startDate= endDate= tokenId= "
+    operation_parameters["curveGetTransferOwnershipEventsHistorical"]="startBlock= endBlock= startDate= endDate= poolId= "
+    operation_parameters["curveGetUnderlyingCoinsHistorical"]="startBlock= endBlock= startDate= endDate= poolId= "
+    operation_parameters["curveGetVotingAppsHistorical"]="startBlock= endBlock= startDate= endDate= "
+    operation_parameters["curveGetWeeklyVolumesHistorical"]="startBlock= endBlock= startDate= endDate= poolId= "
+    operation_parameters["dexGetBatchesHistorical"]="startBlock= endBlock= startDate= endDate= "
+    operation_parameters["dexGetDepositsHistorical"]="startBlock= endBlock= startDate= endDate= tokenId= "
+    operation_parameters["dexGetOrdersHistorical"]="startBlock= endBlock= startDate= endDate= tokenId= "
+    operation_parameters["dexGetPricesHistorical"]="startBlock= endBlock= startDate= endDate= tokenId= "
+    operation_parameters["dexGetSolutionsHistorical"]="startBlock= endBlock= startDate= endDate= tokenId= "
+    operation_parameters["dexGetStatsHistorical"]="startBlock= endBlock= startDate= endDate= "
+    operation_parameters["dexGetTokensHistorical"]="startBlock= endBlock= startDate= endDate= tokenId= "
+    operation_parameters["dexGetTradesHistorical"]="startBlock= endBlock= startDate= endDate= "
+    operation_parameters["dexGetUsersHistorical"]="startBlock= endBlock= startDate= endDate= "
+    operation_parameters["dexGetWithdrawsHistorical"]="startBlock= endBlock= startDate= endDate= tokenId= "
+    operation_parameters["dexGetWithdrawsRequestsHistorical"]="startBlock= endBlock= startDate= endDate= tokenId= "
+    operation_parameters["curveGetExchangesCurrent"]=""
+    operation_parameters["dexGetTradesCurrent"]=""
     operation_parameters["sushiswapGetBundlesHistorical"]="startBlock= endBlock= startDate= endDate= "
     operation_parameters["sushiswapGetBurnsHistorical"]="startBlock= endBlock= startDate= endDate= poolId= "
     operation_parameters["sushiswapGetDayDataHistorical"]="startBlock= endBlock= startDate= endDate= "
@@ -255,57 +261,57 @@ _()
     operation_parameters["sushiswapGetTokensHistorical"]="startBlock= endBlock= startDate= endDate= tokenId= "
     operation_parameters["sushiswapGetTransactionsHistorical"]="startBlock= endBlock= startDate= endDate= "
     operation_parameters["sushiswapGetUsersHistorical"]="startBlock= endBlock= startDate= endDate= "
-    operation_parameters["dappsUniswapv2BundlesHistoricalGet"]="startBlock= endBlock= startDate= endDate= "
-    operation_parameters["dappsUniswapv2BurnsHistoricalGet"]="startBlock= endBlock= startDate= endDate= poolId= "
-    operation_parameters["dappsUniswapv2DayDataHistoricalGet"]="startBlock= endBlock= startDate= endDate= "
-    operation_parameters["dappsUniswapv2FactoryHistoricalGet"]="startBlock= endBlock= startDate= endDate= "
-    operation_parameters["dappsUniswapv2LiquidityPositionHistoricalGet"]="startBlock= endBlock= startDate= endDate= poolId= "
-    operation_parameters["dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet"]="startBlock= endBlock= startDate= endDate= poolId= "
-    operation_parameters["dappsUniswapv2MintsHistoricalGet"]="startBlock= endBlock= startDate= endDate= poolId= "
-    operation_parameters["dappsUniswapv2PoolDayDataHistoricalGet"]="startBlock= endBlock= startDate= endDate= poolId= "
-    operation_parameters["dappsUniswapv2PoolHourDataHistoricalGet"]="startBlock= endBlock= startDate= endDate= poolId= "
-    operation_parameters["dappsUniswapv2PoolsCurrentGet"]="filter_pool_id= "
-    operation_parameters["dappsUniswapv2PoolsHistoricalGet"]="startBlock= endBlock= startDate= endDate= poolId= "
-    operation_parameters["dappsUniswapv2SwapsCurrentGet"]=""
-    operation_parameters["dappsUniswapv2SwapsHistoricalGet"]="startBlock= endBlock= startDate= endDate= poolId= "
-    operation_parameters["dappsUniswapv2TokenDayDataHistoricalGet"]="startBlock= endBlock= startDate= endDate= tokenId= "
-    operation_parameters["dappsUniswapv2TokensCurrentGet"]=""
-    operation_parameters["dappsUniswapv2TokensHistoricalGet"]="startBlock= endBlock= startDate= endDate= tokenId= "
-    operation_parameters["dappsUniswapv2TransactionsHistoricalGet"]="startBlock= endBlock= startDate= endDate= "
-    operation_parameters["dappsUniswapv2UsersHistoricalGet"]="startBlock= endBlock= startDate= endDate= "
-    operation_parameters["dappsUniswapv3BundleCurrentGet"]=""
-    operation_parameters["dappsUniswapv3BundlesHistoricalGet"]="startBlock= endBlock= startDate= endDate= "
-    operation_parameters["dappsUniswapv3BurnsCurrentGet"]="filter_pool_id= "
-    operation_parameters["dappsUniswapv3BurnsHistoricalGet"]="startBlock= endBlock= startDate= endDate= poolId= "
-    operation_parameters["dappsUniswapv3DayDataHistoricalGet"]="startBlock= endBlock= startDate= endDate= "
-    operation_parameters["dappsUniswapv3FactoryCurrentGet"]="chain_id= "
-    operation_parameters["dappsUniswapv3FactoryHistoricalGet"]="startBlock= endBlock= startDate= endDate= "
-    operation_parameters["dappsUniswapv3MintsCurrentGet"]="filter_pool_id= "
-    operation_parameters["dappsUniswapv3MintsHistoricalGet"]="startBlock= endBlock= startDate= endDate= poolId= "
-    operation_parameters["dappsUniswapv3PoolDayDataHistoricalGet"]="startBlock= endBlock= startDate= endDate= poolId= "
-    operation_parameters["dappsUniswapv3PoolHourDataHistoricalGet"]="startBlock= endBlock= startDate= endDate= poolId= "
-    operation_parameters["dappsUniswapv3PoolsCurrentGet"]="filter_pool_id= "
-    operation_parameters["dappsUniswapv3PoolsDayDataCurrentGet"]="filter_pool_id= "
-    operation_parameters["dappsUniswapv3PoolsHistoricalGet"]="startBlock= endBlock= startDate= endDate= poolId= "
-    operation_parameters["dappsUniswapv3PoolsHourDataCurrentGet"]="filter_pool_id= "
-    operation_parameters["dappsUniswapv3PositionSnapshotHistoricalGet"]="startBlock= endBlock= startDate= endDate= poolId= "
-    operation_parameters["dappsUniswapv3PositionSnapshotsCurrentGet"]="filter_pool_id= "
-    operation_parameters["dappsUniswapv3PositionsCurrentGet"]="filter_pool_id= "
-    operation_parameters["dappsUniswapv3PositionsHistoricalGet"]="startBlock= endBlock= startDate= endDate= poolId= "
-    operation_parameters["dappsUniswapv3SwapsCurrentGet"]="filter_pool_id= "
-    operation_parameters["dappsUniswapv3SwapsHistoricalGet"]="startBlock= endBlock= startDate= endDate= poolId= "
-    operation_parameters["dappsUniswapv3TickDayDataHistoricalGet"]="startBlock= endBlock= startDate= endDate= poolId= "
-    operation_parameters["dappsUniswapv3TicksCurrentGet"]="filter_pool_id= "
-    operation_parameters["dappsUniswapv3TicksDayDataCurrentGet"]="filter_pool_id= "
-    operation_parameters["dappsUniswapv3TicksHistoricalGet"]="startBlock= endBlock= startDate= endDate= poolId= "
-    operation_parameters["dappsUniswapv3TokenDayDataHistoricalGet"]="startBlock= endBlock= startDate= endDate= tokenId= "
-    operation_parameters["dappsUniswapv3TokenHourDataHistoricalGet"]="startBlock= endBlock= startDate= endDate= tokenId= "
-    operation_parameters["dappsUniswapv3TokensCurrentGet"]="filter_token_id= "
-    operation_parameters["dappsUniswapv3TokensDayDataCurrentGet"]="filter_token_id= "
-    operation_parameters["dappsUniswapv3TokensHistoricalGet"]="startBlock= endBlock= startDate= endDate= tokenId= "
-    operation_parameters["dappsUniswapv3TokensHourDataCurrentGet"]="filter_token_id= "
-    operation_parameters["dappsUniswapv3TransactionsHistoricalGet"]="startBlock= endBlock= startDate= endDate= "
-    operation_parameters["dappsUniswapv3UniswapDayDataCurrentGet"]=""
+    operation_parameters["uniswapV2GetBundlesHistorical"]="startBlock= endBlock= startDate= endDate= "
+    operation_parameters["uniswapV2GetBurnsHistorical"]="startBlock= endBlock= startDate= endDate= poolId= "
+    operation_parameters["uniswapV2GetDayDataHistorical"]="startBlock= endBlock= startDate= endDate= "
+    operation_parameters["uniswapV2GetFactoryHistorical"]="startBlock= endBlock= startDate= endDate= "
+    operation_parameters["uniswapV2GetLiquidityPositionsHistorical"]="startBlock= endBlock= startDate= endDate= poolId= "
+    operation_parameters["uniswapV2GetLiquidityPositionsSnapshotsHistorical"]="startBlock= endBlock= startDate= endDate= poolId= "
+    operation_parameters["uniswapV2GetMintsHistorical"]="startBlock= endBlock= startDate= endDate= poolId= "
+    operation_parameters["uniswapV2GetPoolsCurrent"]="filter_pool_id= "
+    operation_parameters["uniswapV2GetPoolsDayDataHistorical"]="startBlock= endBlock= startDate= endDate= poolId= "
+    operation_parameters["uniswapV2GetPoolsHistorical"]="startBlock= endBlock= startDate= endDate= poolId= "
+    operation_parameters["uniswapV2GetPoolsHourDataHistorical"]="startBlock= endBlock= startDate= endDate= poolId= "
+    operation_parameters["uniswapV2GetSwapsCurrent"]=""
+    operation_parameters["uniswapV2GetSwapsHistorical"]="startBlock= endBlock= startDate= endDate= poolId= "
+    operation_parameters["uniswapV2GetTokensCurrent"]=""
+    operation_parameters["uniswapV2GetTokensDayDataHistorical"]="startBlock= endBlock= startDate= endDate= tokenId= "
+    operation_parameters["uniswapV2GetTokensHistorical"]="startBlock= endBlock= startDate= endDate= tokenId= "
+    operation_parameters["uniswapV2GetTransactionsHistorical"]="startBlock= endBlock= startDate= endDate= "
+    operation_parameters["uniswapV2GetUsersHistorical"]="startBlock= endBlock= startDate= endDate= "
+    operation_parameters["uniswapV3GetBundlesCurrent"]=""
+    operation_parameters["uniswapV3GetBundlesHistorical"]="startBlock= endBlock= startDate= endDate= "
+    operation_parameters["uniswapV3GetBurnsCurrent"]="filter_pool_id= "
+    operation_parameters["uniswapV3GetBurnsHistorical"]="startBlock= endBlock= startDate= endDate= poolId= "
+    operation_parameters["uniswapV3GetDayDataCurrent"]=""
+    operation_parameters["uniswapV3GetDayDataHistorical"]="startBlock= endBlock= startDate= endDate= "
+    operation_parameters["uniswapV3GetFactoryCurrent"]=""
+    operation_parameters["uniswapV3GetFactoryHistorical"]="startBlock= endBlock= startDate= endDate= "
+    operation_parameters["uniswapV3GetMintsCurrent"]="filter_pool_id= "
+    operation_parameters["uniswapV3GetMintsHistorical"]="startBlock= endBlock= startDate= endDate= poolId= "
+    operation_parameters["uniswapV3GetPoolsCurrent"]="filter_pool_id= "
+    operation_parameters["uniswapV3GetPoolsDayDataCurrent"]="filter_pool_id= "
+    operation_parameters["uniswapV3GetPoolsDayDataHistorical"]="startBlock= endBlock= startDate= endDate= poolId= "
+    operation_parameters["uniswapV3GetPoolsHistorical"]="startBlock= endBlock= startDate= endDate= poolId= "
+    operation_parameters["uniswapV3GetPoolsHourDataCurrent"]="filter_pool_id= "
+    operation_parameters["uniswapV3GetPoolsHourDataHistorical"]="startBlock= endBlock= startDate= endDate= poolId= "
+    operation_parameters["uniswapV3GetPositionsCurrent"]="filter_pool_id= "
+    operation_parameters["uniswapV3GetPositionsHistorical"]="startBlock= endBlock= startDate= endDate= poolId= "
+    operation_parameters["uniswapV3GetPositionsSnaphotsHistorical"]="startBlock= endBlock= startDate= endDate= poolId= "
+    operation_parameters["uniswapV3GetPositionsSnapshotsCurrent"]="filter_pool_id= "
+    operation_parameters["uniswapV3GetSwapsCurrent"]="filter_pool_id= "
+    operation_parameters["uniswapV3GetSwapsHistorical"]="startBlock= endBlock= startDate= endDate= poolId= "
+    operation_parameters["uniswapV3GetTicksCurrent"]="filter_pool_id= "
+    operation_parameters["uniswapV3GetTicksDayDataCurrent"]="filter_pool_id= "
+    operation_parameters["uniswapV3GetTicksDayDataHistorical"]="startBlock= endBlock= startDate= endDate= poolId= "
+    operation_parameters["uniswapV3GetTicksHistorical"]="startBlock= endBlock= startDate= endDate= poolId= "
+    operation_parameters["uniswapV3GetTokensCurrent"]="filter_token_id= "
+    operation_parameters["uniswapV3GetTokensDayDataCurrent"]="filter_token_id= "
+    operation_parameters["uniswapV3GetTokensDayDataHistorical"]="startBlock= endBlock= startDate= endDate= tokenId= "
+    operation_parameters["uniswapV3GetTokensHistorical"]="startBlock= endBlock= startDate= endDate= tokenId= "
+    operation_parameters["uniswapV3GetTokensHourDataCurrent"]="filter_token_id= "
+    operation_parameters["uniswapV3GetTokensHourDataHistorical"]="startBlock= endBlock= startDate= endDate= tokenId= "
+    operation_parameters["uniswapV3GetTransactionsHistorical"]="startBlock= endBlock= startDate= endDate= "
 
     # An associative array of possible values for enum parameters
     declare -A operation_parameters_enum_values

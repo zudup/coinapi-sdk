@@ -5,6 +5,38 @@
 #include <cstring>
 #include <list>
 #include <glib.h>
+#include "Curve.AccountDTO.h"
+#include "Curve.AddLiquidityEventDTO.h"
+#include "Curve.AdminFeeChangeLogDTO.h"
+#include "Curve.AmplificationCoeffChangeLogDTO.h"
+#include "Curve.CoinDTO.h"
+#include "Curve.ContractDTO.h"
+#include "Curve.ContractVersionDTO.h"
+#include "Curve.DailyVolumeDTO.h"
+#include "Curve.ExchangeDTO.h"
+#include "Curve.FeeChangeLogDTO.h"
+#include "Curve.GaugeDTO.h"
+#include "Curve.GaugeDepositDTO.h"
+#include "Curve.GaugeLiquidityDTO.h"
+#include "Curve.GaugeTotalWeightDTO.h"
+#include "Curve.GaugeTypeDTO.h"
+#include "Curve.GaugeTypeWeightDTO.h"
+#include "Curve.GaugeWeightDTO.h"
+#include "Curve.GaugeWeightVoteDTO.h"
+#include "Curve.GaugeWithdrawDTO.h"
+#include "Curve.HourlyVolumeDTO.h"
+#include "Curve.LpTokenDTO.h"
+#include "Curve.PoolDTO.h"
+#include "Curve.ProposalDTO.h"
+#include "Curve.ProposalVoteDTO.h"
+#include "Curve.RemoveLiquidityEventDTO.h"
+#include "Curve.RemoveLiquidityOneEventDTO.h"
+#include "Curve.SystemStateDTO.h"
+#include "Curve.TokenDTO.h"
+#include "Curve.TransferOwnershipEventDTO.h"
+#include "Curve.UnderlyingCoinDTO.h"
+#include "Curve.VotingAppDTO.h"
+#include "Curve.WeeklyVolumeDTO.h"
 #include "Error.h"
 
 /** \defgroup Operations API Endpoints
@@ -23,9 +55,9 @@ public:
 	CurveManager();
 	virtual ~CurveManager();
 
-/*! \brief . *Synchronous*
+/*! \brief GetAccounts (historical). *Synchronous*
  *
- * 
+ * Gets accounts.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -34,14 +66,14 @@ public:
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsCurveAccountsHistoricalGetSync(char * accessToken,
+bool curveGetAccounts (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Curve.AccountDTO>, Error, void* )
+	, void* userData);
 
-/*! \brief . *Asynchronous*
+/*! \brief GetAccounts (historical). *Asynchronous*
  *
- * 
+ * Gets accounts.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -50,15 +82,15 @@ bool dappsCurveAccountsHistoricalGetSync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsCurveAccountsHistoricalGetAsync(char * accessToken,
+bool curveGetAccounts (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Curve.AccountDTO>, Error, void* )
+	, void* userData);
 
 
-/*! \brief . *Synchronous*
+/*! \brief GetAddLiquidityEvents (historical). *Synchronous*
  *
- * 
+ * Gets add liquidity events.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -68,14 +100,14 @@ bool dappsCurveAccountsHistoricalGetAsync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsCurveAddLiquidityEventHistoricalGetSync(char * accessToken,
+bool curveGetAddLiquidityEvents (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Curve.AddLiquidityEventDTO>, Error, void* )
+	, void* userData);
 
-/*! \brief . *Asynchronous*
+/*! \brief GetAddLiquidityEvents (historical). *Asynchronous*
  *
- * 
+ * Gets add liquidity events.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -85,15 +117,15 @@ bool dappsCurveAddLiquidityEventHistoricalGetSync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsCurveAddLiquidityEventHistoricalGetAsync(char * accessToken,
+bool curveGetAddLiquidityEvents (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Curve.AddLiquidityEventDTO>, Error, void* )
+	, void* userData);
 
 
-/*! \brief . *Synchronous*
+/*! \brief GetAdminFeeChangeLogs (historical). *Synchronous*
  *
- * 
+ * Gets admin fee change logs.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -103,14 +135,14 @@ bool dappsCurveAddLiquidityEventHistoricalGetAsync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsCurveAdminFeeChangeLogHistoricalGetSync(char * accessToken,
+bool curveGetAdminFeeChangeLogs (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Curve.AdminFeeChangeLogDTO>, Error, void* )
+	, void* userData);
 
-/*! \brief . *Asynchronous*
+/*! \brief GetAdminFeeChangeLogs (historical). *Asynchronous*
  *
- * 
+ * Gets admin fee change logs.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -120,15 +152,15 @@ bool dappsCurveAdminFeeChangeLogHistoricalGetSync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsCurveAdminFeeChangeLogHistoricalGetAsync(char * accessToken,
+bool curveGetAdminFeeChangeLogs (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Curve.AdminFeeChangeLogDTO>, Error, void* )
+	, void* userData);
 
 
-/*! \brief . *Synchronous*
+/*! \brief GetAmplificationCoeffChangeLogs (historical). *Synchronous*
  *
- * 
+ * Gets amplification coeff change logs.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -138,14 +170,14 @@ bool dappsCurveAdminFeeChangeLogHistoricalGetAsync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsCurveAmplificationCoeffChangeLogHistoricalGetSync(char * accessToken,
+bool curveGetAmplificationCoeffChangeLogs (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Curve.AmplificationCoeffChangeLogDTO>, Error, void* )
+	, void* userData);
 
-/*! \brief . *Asynchronous*
+/*! \brief GetAmplificationCoeffChangeLogs (historical). *Asynchronous*
  *
- * 
+ * Gets amplification coeff change logs.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -155,15 +187,15 @@ bool dappsCurveAmplificationCoeffChangeLogHistoricalGetSync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsCurveAmplificationCoeffChangeLogHistoricalGetAsync(char * accessToken,
+bool curveGetAmplificationCoeffChangeLogs (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Curve.AmplificationCoeffChangeLogDTO>, Error, void* )
+	, void* userData);
 
 
-/*! \brief . *Synchronous*
+/*! \brief GetCoins (historical). *Synchronous*
  *
- * 
+ * Gets coins.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -173,14 +205,14 @@ bool dappsCurveAmplificationCoeffChangeLogHistoricalGetAsync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsCurveCoinsHistoricalGetSync(char * accessToken,
+bool curveGetCoins (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Curve.CoinDTO>, Error, void* )
+	, void* userData);
 
-/*! \brief . *Asynchronous*
+/*! \brief GetCoins (historical). *Asynchronous*
  *
- * 
+ * Gets coins.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -190,15 +222,15 @@ bool dappsCurveCoinsHistoricalGetSync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsCurveCoinsHistoricalGetAsync(char * accessToken,
+bool curveGetCoins (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Curve.CoinDTO>, Error, void* )
+	, void* userData);
 
 
-/*! \brief . *Synchronous*
+/*! \brief GetContracts (historical). *Synchronous*
  *
- * 
+ * Gets contracts.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -208,14 +240,14 @@ bool dappsCurveCoinsHistoricalGetAsync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsCurveContractsHistoricalGetSync(char * accessToken,
+bool curveGetContracts (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Curve.ContractDTO>, Error, void* )
+	, void* userData);
 
-/*! \brief . *Asynchronous*
+/*! \brief GetContracts (historical). *Asynchronous*
  *
- * 
+ * Gets contracts.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -225,15 +257,15 @@ bool dappsCurveContractsHistoricalGetSync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsCurveContractsHistoricalGetAsync(char * accessToken,
+bool curveGetContracts (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Curve.ContractDTO>, Error, void* )
+	, void* userData);
 
 
-/*! \brief . *Synchronous*
+/*! \brief GetContractsVersions (historical). *Synchronous*
  *
- * 
+ * Gets contracts versions.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -243,14 +275,14 @@ bool dappsCurveContractsHistoricalGetAsync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsCurveContractsVersionHistoricalGetSync(char * accessToken,
+bool curveGetContractsVersions (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Curve.ContractVersionDTO>, Error, void* )
+	, void* userData);
 
-/*! \brief . *Asynchronous*
+/*! \brief GetContractsVersions (historical). *Asynchronous*
  *
- * 
+ * Gets contracts versions.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -260,15 +292,15 @@ bool dappsCurveContractsVersionHistoricalGetSync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsCurveContractsVersionHistoricalGetAsync(char * accessToken,
+bool curveGetContractsVersions (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Curve.ContractVersionDTO>, Error, void* )
+	, void* userData);
 
 
-/*! \brief . *Synchronous*
+/*! \brief GetDailyVolumes (historical). *Synchronous*
  *
- * 
+ * Gets daily volumes.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -278,14 +310,14 @@ bool dappsCurveContractsVersionHistoricalGetAsync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsCurveDailyVolumeHistoricalGetSync(char * accessToken,
+bool curveGetDailyVolumes (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Curve.DailyVolumeDTO>, Error, void* )
+	, void* userData);
 
-/*! \brief . *Asynchronous*
+/*! \brief GetDailyVolumes (historical). *Asynchronous*
  *
- * 
+ * Gets daily volumes.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -295,15 +327,15 @@ bool dappsCurveDailyVolumeHistoricalGetSync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsCurveDailyVolumeHistoricalGetAsync(char * accessToken,
+bool curveGetDailyVolumes (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Curve.DailyVolumeDTO>, Error, void* )
+	, void* userData);
 
 
-/*! \brief . *Synchronous*
+/*! \brief GetExchanges (historical) 🔥. *Synchronous*
  *
- * 
+ * Gets exchanges.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -313,14 +345,14 @@ bool dappsCurveDailyVolumeHistoricalGetAsync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsCurveFeeChangeLogHistoricalGetSync(char * accessToken,
+bool curveGetExchanges (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Curve.ExchangeDTO>, Error, void* )
+	, void* userData);
 
-/*! \brief . *Asynchronous*
+/*! \brief GetExchanges (historical) 🔥. *Asynchronous*
  *
- * 
+ * Gets exchanges.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -330,15 +362,85 @@ bool dappsCurveFeeChangeLogHistoricalGetSync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsCurveFeeChangeLogHistoricalGetAsync(char * accessToken,
+bool curveGetExchanges (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Curve.ExchangeDTO>, Error, void* )
+	, void* userData);
 
 
-/*! \brief . *Synchronous*
+/*! \brief GetFeeChangeLogs (historical). *Synchronous*
  *
- * 
+ * Gets fee change logs.
+ * \param startBlock 
+ * \param endBlock 
+ * \param startDate 
+ * \param endDate 
+ * \param poolId 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveGetFeeChangeLogs (historical)Sync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.FeeChangeLogDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief GetFeeChangeLogs (historical). *Asynchronous*
+ *
+ * Gets fee change logs.
+ * \param startBlock 
+ * \param endBlock 
+ * \param startDate 
+ * \param endDate 
+ * \param poolId 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveGetFeeChangeLogs (historical)Async(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.FeeChangeLogDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief GetGauges (historical). *Synchronous*
+ *
+ * Gets gauges.
+ * \param startBlock 
+ * \param endBlock 
+ * \param startDate 
+ * \param endDate 
+ * \param poolId 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveGetGauges (historical)Sync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.GaugeDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief GetGauges (historical). *Asynchronous*
+ *
+ * Gets gauges.
+ * \param startBlock 
+ * \param endBlock 
+ * \param startDate 
+ * \param endDate 
+ * \param poolId 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveGetGauges (historical)Async(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.GaugeDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief GetGaugesDeposits (historical). *Synchronous*
+ *
+ * Gets gauges deposits.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -347,14 +449,14 @@ bool dappsCurveFeeChangeLogHistoricalGetAsync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsCurveGaugeDepositHistoricalGetSync(char * accessToken,
+bool curveGetGaugesDeposits (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Curve.GaugeDepositDTO>, Error, void* )
+	, void* userData);
 
-/*! \brief . *Asynchronous*
+/*! \brief GetGaugesDeposits (historical). *Asynchronous*
  *
- * 
+ * Gets gauges deposits.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -363,15 +465,246 @@ bool dappsCurveGaugeDepositHistoricalGetSync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsCurveGaugeDepositHistoricalGetAsync(char * accessToken,
+bool curveGetGaugesDeposits (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Curve.GaugeDepositDTO>, Error, void* )
+	, void* userData);
 
 
-/*! \brief . *Synchronous*
+/*! \brief GetGaugesLiquidity (historical). *Synchronous*
  *
- * 
+ * Gets gauges liquidity.
+ * \param startBlock 
+ * \param endBlock 
+ * \param startDate 
+ * \param endDate 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveGetGaugesLiquidity (historical)Sync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
+	void(* handler)(std::list<Curve.GaugeLiquidityDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief GetGaugesLiquidity (historical). *Asynchronous*
+ *
+ * Gets gauges liquidity.
+ * \param startBlock 
+ * \param endBlock 
+ * \param startDate 
+ * \param endDate 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveGetGaugesLiquidity (historical)Async(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
+	void(* handler)(std::list<Curve.GaugeLiquidityDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief GetGaugesTotalWeights (historical). *Synchronous*
+ *
+ * Gets gauges total weights.
+ * \param startBlock 
+ * \param endBlock 
+ * \param startDate 
+ * \param endDate 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveGetGaugesTotalWeights (historical)Sync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
+	void(* handler)(std::list<Curve.GaugeTotalWeightDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief GetGaugesTotalWeights (historical). *Asynchronous*
+ *
+ * Gets gauges total weights.
+ * \param startBlock 
+ * \param endBlock 
+ * \param startDate 
+ * \param endDate 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveGetGaugesTotalWeights (historical)Async(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
+	void(* handler)(std::list<Curve.GaugeTotalWeightDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief GetGaugesTypes (historical). *Synchronous*
+ *
+ * Gets gauges types.
+ * \param startBlock 
+ * \param endBlock 
+ * \param startDate 
+ * \param endDate 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveGetGaugesTypes (historical)Sync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
+	void(* handler)(std::list<Curve.GaugeTypeDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief GetGaugesTypes (historical). *Asynchronous*
+ *
+ * Gets gauges types.
+ * \param startBlock 
+ * \param endBlock 
+ * \param startDate 
+ * \param endDate 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveGetGaugesTypes (historical)Async(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
+	void(* handler)(std::list<Curve.GaugeTypeDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief GetGaugesTypesWeights (historical). *Synchronous*
+ *
+ * Gets gauges types weights.
+ * \param startBlock 
+ * \param endBlock 
+ * \param startDate 
+ * \param endDate 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveGetGaugesTypesWeights (historical)Sync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
+	void(* handler)(std::list<Curve.GaugeTypeWeightDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief GetGaugesTypesWeights (historical). *Asynchronous*
+ *
+ * Gets gauges types weights.
+ * \param startBlock 
+ * \param endBlock 
+ * \param startDate 
+ * \param endDate 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveGetGaugesTypesWeights (historical)Async(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
+	void(* handler)(std::list<Curve.GaugeTypeWeightDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief GetGaugesWeights (historical). *Synchronous*
+ *
+ * Gets gauges weights.
+ * \param startBlock 
+ * \param endBlock 
+ * \param startDate 
+ * \param endDate 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveGetGaugesWeights (historical)Sync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
+	void(* handler)(std::list<Curve.GaugeWeightDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief GetGaugesWeights (historical). *Asynchronous*
+ *
+ * Gets gauges weights.
+ * \param startBlock 
+ * \param endBlock 
+ * \param startDate 
+ * \param endDate 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveGetGaugesWeights (historical)Async(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
+	void(* handler)(std::list<Curve.GaugeWeightDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief GetGaugesWeightsVotes (historical). *Synchronous*
+ *
+ * Gets gauges weights votes.
+ * \param startBlock 
+ * \param endBlock 
+ * \param startDate 
+ * \param endDate 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveGetGaugesWeightsVotes (historical)Sync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
+	void(* handler)(std::list<Curve.GaugeWeightVoteDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief GetGaugesWeightsVotes (historical). *Asynchronous*
+ *
+ * Gets gauges weights votes.
+ * \param startBlock 
+ * \param endBlock 
+ * \param startDate 
+ * \param endDate 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveGetGaugesWeightsVotes (historical)Async(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
+	void(* handler)(std::list<Curve.GaugeWeightVoteDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief GetGaugesWithdraw (historical). *Synchronous*
+ *
+ * Gets gauges withdraws.
+ * \param startBlock 
+ * \param endBlock 
+ * \param startDate 
+ * \param endDate 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveGetGaugesWithdraw (historical)Sync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
+	void(* handler)(std::list<Curve.GaugeWithdrawDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief GetGaugesWithdraw (historical). *Asynchronous*
+ *
+ * Gets gauges withdraws.
+ * \param startBlock 
+ * \param endBlock 
+ * \param startDate 
+ * \param endDate 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool curveGetGaugesWithdraw (historical)Async(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
+	void(* handler)(std::list<Curve.GaugeWithdrawDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief GetHourlyVolumes (historical). *Synchronous*
+ *
+ * Gets hourly volumes.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -381,14 +714,14 @@ bool dappsCurveGaugeDepositHistoricalGetAsync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsCurveGaugeHistoricalGetSync(char * accessToken,
+bool curveGetHourlyVolumes (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Curve.HourlyVolumeDTO>, Error, void* )
+	, void* userData);
 
-/*! \brief . *Asynchronous*
+/*! \brief GetHourlyVolumes (historical). *Asynchronous*
  *
- * 
+ * Gets hourly volumes.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -398,246 +731,15 @@ bool dappsCurveGaugeHistoricalGetSync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsCurveGaugeHistoricalGetAsync(char * accessToken,
+bool curveGetHourlyVolumes (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Curve.HourlyVolumeDTO>, Error, void* )
+	, void* userData);
 
 
-/*! \brief . *Synchronous*
+/*! \brief GetLpTokens (historical). *Synchronous*
  *
- * 
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool dappsCurveGaugeLiquidityHistoricalGetSync(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData);
-
-/*! \brief . *Asynchronous*
- *
- * 
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool dappsCurveGaugeLiquidityHistoricalGetAsync(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData);
-
-
-/*! \brief . *Synchronous*
- *
- * 
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool dappsCurveGaugeTotalWeightHistoricalGetSync(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData);
-
-/*! \brief . *Asynchronous*
- *
- * 
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool dappsCurveGaugeTotalWeightHistoricalGetAsync(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData);
-
-
-/*! \brief . *Synchronous*
- *
- * 
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool dappsCurveGaugeTypeHistoricalGetSync(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData);
-
-/*! \brief . *Asynchronous*
- *
- * 
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool dappsCurveGaugeTypeHistoricalGetAsync(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData);
-
-
-/*! \brief . *Synchronous*
- *
- * 
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool dappsCurveGaugeTypeWeightHistoricalGetSync(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData);
-
-/*! \brief . *Asynchronous*
- *
- * 
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool dappsCurveGaugeTypeWeightHistoricalGetAsync(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData);
-
-
-/*! \brief . *Synchronous*
- *
- * 
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool dappsCurveGaugeWeightHistoricalGetSync(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData);
-
-/*! \brief . *Asynchronous*
- *
- * 
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool dappsCurveGaugeWeightHistoricalGetAsync(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData);
-
-
-/*! \brief . *Synchronous*
- *
- * 
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool dappsCurveGaugeWeightVoteHistoricalGetSync(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData);
-
-/*! \brief . *Asynchronous*
- *
- * 
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool dappsCurveGaugeWeightVoteHistoricalGetAsync(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData);
-
-
-/*! \brief . *Synchronous*
- *
- * 
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool dappsCurveGaugeWithdrawHistoricalGetSync(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData);
-
-/*! \brief . *Asynchronous*
- *
- * 
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool dappsCurveGaugeWithdrawHistoricalGetAsync(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData);
-
-
-/*! \brief . *Synchronous*
- *
- * 
+ * Gets lp tokens.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -647,14 +749,14 @@ bool dappsCurveGaugeWithdrawHistoricalGetAsync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsCurveHourlyVolumeHistoricalGetSync(char * accessToken,
+bool curveGetLpTokens (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Curve.LpTokenDTO>, Error, void* )
+	, void* userData);
 
-/*! \brief . *Asynchronous*
+/*! \brief GetLpTokens (historical). *Asynchronous*
  *
- * 
+ * Gets lp tokens.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -664,15 +766,15 @@ bool dappsCurveHourlyVolumeHistoricalGetSync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsCurveHourlyVolumeHistoricalGetAsync(char * accessToken,
+bool curveGetLpTokens (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Curve.LpTokenDTO>, Error, void* )
+	, void* userData);
 
 
-/*! \brief . *Synchronous*
+/*! \brief GetPools (historical) 🔥. *Synchronous*
  *
- * 
+ * Gets pools.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -682,14 +784,14 @@ bool dappsCurveHourlyVolumeHistoricalGetAsync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsCurveLpTokenHistoricalGetSync(char * accessToken,
+bool curveGetPools (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Curve.PoolDTO>, Error, void* )
+	, void* userData);
 
-/*! \brief . *Asynchronous*
+/*! \brief GetPools (historical) 🔥. *Asynchronous*
  *
- * 
+ * Gets pools.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -699,50 +801,15 @@ bool dappsCurveLpTokenHistoricalGetSync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsCurveLpTokenHistoricalGetAsync(char * accessToken,
+bool curveGetPools (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Curve.PoolDTO>, Error, void* )
+	, void* userData);
 
 
-/*! \brief . *Synchronous*
+/*! \brief GetProposals (historical). *Synchronous*
  *
- * 
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param poolId 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool dappsCurvePoolsHistoricalGetSync(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
-
-/*! \brief . *Asynchronous*
- *
- * 
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param poolId 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool dappsCurvePoolsHistoricalGetAsync(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
-
-
-/*! \brief . *Synchronous*
- *
- * 
+ * Gets proposals.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -751,14 +818,14 @@ bool dappsCurvePoolsHistoricalGetAsync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsCurveProposalsHistoricalGetSync(char * accessToken,
+bool curveGetProposals (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Curve.ProposalDTO>, Error, void* )
+	, void* userData);
 
-/*! \brief . *Asynchronous*
+/*! \brief GetProposals (historical). *Asynchronous*
  *
- * 
+ * Gets proposals.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -767,15 +834,15 @@ bool dappsCurveProposalsHistoricalGetSync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsCurveProposalsHistoricalGetAsync(char * accessToken,
+bool curveGetProposals (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Curve.ProposalDTO>, Error, void* )
+	, void* userData);
 
 
-/*! \brief . *Synchronous*
+/*! \brief GetProposalsVotes (historical). *Synchronous*
  *
- * 
+ * Gets proposals votes.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -784,14 +851,14 @@ bool dappsCurveProposalsHistoricalGetAsync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsCurveProposalsVoteHistoricalGetSync(char * accessToken,
+bool curveGetProposalsVotes (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Curve.ProposalVoteDTO>, Error, void* )
+	, void* userData);
 
-/*! \brief . *Asynchronous*
+/*! \brief GetProposalsVotes (historical). *Asynchronous*
  *
- * 
+ * Gets proposals votes.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -800,15 +867,15 @@ bool dappsCurveProposalsVoteHistoricalGetSync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsCurveProposalsVoteHistoricalGetAsync(char * accessToken,
+bool curveGetProposalsVotes (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Curve.ProposalVoteDTO>, Error, void* )
+	, void* userData);
 
 
-/*! \brief . *Synchronous*
+/*! \brief GetRemoveLiquidityEvents (historical). *Synchronous*
  *
- * 
+ * Gets remove liquidity events.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -818,14 +885,14 @@ bool dappsCurveProposalsVoteHistoricalGetAsync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsCurveRemoveLiquidityEventHistoricalGetSync(char * accessToken,
+bool curveGetRemoveLiquidityEvents (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Curve.RemoveLiquidityEventDTO>, Error, void* )
+	, void* userData);
 
-/*! \brief . *Asynchronous*
+/*! \brief GetRemoveLiquidityEvents (historical). *Asynchronous*
  *
- * 
+ * Gets remove liquidity events.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -835,15 +902,15 @@ bool dappsCurveRemoveLiquidityEventHistoricalGetSync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsCurveRemoveLiquidityEventHistoricalGetAsync(char * accessToken,
+bool curveGetRemoveLiquidityEvents (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Curve.RemoveLiquidityEventDTO>, Error, void* )
+	, void* userData);
 
 
-/*! \brief . *Synchronous*
+/*! \brief GetRemoveLiquidityOneEvents (historical). *Synchronous*
  *
- * 
+ * Gets remove liquidity one events.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -853,14 +920,14 @@ bool dappsCurveRemoveLiquidityEventHistoricalGetAsync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsCurveRemoveLiquidityOneEventHistoricalGetSync(char * accessToken,
+bool curveGetRemoveLiquidityOneEvents (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Curve.RemoveLiquidityOneEventDTO>, Error, void* )
+	, void* userData);
 
-/*! \brief . *Asynchronous*
+/*! \brief GetRemoveLiquidityOneEvents (historical). *Asynchronous*
  *
- * 
+ * Gets remove liquidity one events.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -870,50 +937,15 @@ bool dappsCurveRemoveLiquidityOneEventHistoricalGetSync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsCurveRemoveLiquidityOneEventHistoricalGetAsync(char * accessToken,
+bool curveGetRemoveLiquidityOneEvents (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Curve.RemoveLiquidityOneEventDTO>, Error, void* )
+	, void* userData);
 
 
-/*! \brief . *Synchronous*
+/*! \brief GetSystemStates (historical). *Synchronous*
  *
- * 
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param poolId 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool dappsCurveSwapsHistoricalGetSync(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
-
-/*! \brief . *Asynchronous*
- *
- * 
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param poolId 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool dappsCurveSwapsHistoricalGetAsync(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
-
-
-/*! \brief . *Synchronous*
- *
- * 
+ * Gets system states.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -922,14 +954,14 @@ bool dappsCurveSwapsHistoricalGetAsync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsCurveSystemStateHistoricalGetSync(char * accessToken,
+bool curveGetSystemStates (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Curve.SystemStateDTO>, Error, void* )
+	, void* userData);
 
-/*! \brief . *Asynchronous*
+/*! \brief GetSystemStates (historical). *Asynchronous*
  *
- * 
+ * Gets system states.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -938,15 +970,15 @@ bool dappsCurveSystemStateHistoricalGetSync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsCurveSystemStateHistoricalGetAsync(char * accessToken,
+bool curveGetSystemStates (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Curve.SystemStateDTO>, Error, void* )
+	, void* userData);
 
 
-/*! \brief . *Synchronous*
+/*! \brief GetTokens (historical) 🔥. *Synchronous*
  *
- * 
+ * Gets tokens.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -956,14 +988,14 @@ bool dappsCurveSystemStateHistoricalGetAsync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsCurveTokensHistoricalGetSync(char * accessToken,
+bool curveGetTokens (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Curve.TokenDTO>, Error, void* )
+	, void* userData);
 
-/*! \brief . *Asynchronous*
+/*! \brief GetTokens (historical) 🔥. *Asynchronous*
  *
- * 
+ * Gets tokens.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -973,15 +1005,15 @@ bool dappsCurveTokensHistoricalGetSync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsCurveTokensHistoricalGetAsync(char * accessToken,
+bool curveGetTokens (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Curve.TokenDTO>, Error, void* )
+	, void* userData);
 
 
-/*! \brief . *Synchronous*
+/*! \brief GetTransferOwnershipEvents (historical). *Synchronous*
  *
- * 
+ * Gets transfer ownership events.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -991,14 +1023,14 @@ bool dappsCurveTokensHistoricalGetAsync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsCurveTransferOwnershipEventHistoricalGetSync(char * accessToken,
+bool curveGetTransferOwnershipEvents (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Curve.TransferOwnershipEventDTO>, Error, void* )
+	, void* userData);
 
-/*! \brief . *Asynchronous*
+/*! \brief GetTransferOwnershipEvents (historical). *Asynchronous*
  *
- * 
+ * Gets transfer ownership events.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -1008,15 +1040,15 @@ bool dappsCurveTransferOwnershipEventHistoricalGetSync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsCurveTransferOwnershipEventHistoricalGetAsync(char * accessToken,
+bool curveGetTransferOwnershipEvents (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Curve.TransferOwnershipEventDTO>, Error, void* )
+	, void* userData);
 
 
-/*! \brief . *Synchronous*
+/*! \brief GetUnderlyingCoins (historical). *Synchronous*
  *
- * 
+ * Gets underlying coins.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -1026,14 +1058,14 @@ bool dappsCurveTransferOwnershipEventHistoricalGetAsync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsCurveUnderlyingCoinHistoricalGetSync(char * accessToken,
+bool curveGetUnderlyingCoins (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Curve.UnderlyingCoinDTO>, Error, void* )
+	, void* userData);
 
-/*! \brief . *Asynchronous*
+/*! \brief GetUnderlyingCoins (historical). *Asynchronous*
  *
- * 
+ * Gets underlying coins.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -1043,15 +1075,15 @@ bool dappsCurveUnderlyingCoinHistoricalGetSync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsCurveUnderlyingCoinHistoricalGetAsync(char * accessToken,
+bool curveGetUnderlyingCoins (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Curve.UnderlyingCoinDTO>, Error, void* )
+	, void* userData);
 
 
-/*! \brief . *Synchronous*
+/*! \brief GetVotingApps (historical). *Synchronous*
  *
- * 
+ * Gets voting apps.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -1060,14 +1092,14 @@ bool dappsCurveUnderlyingCoinHistoricalGetAsync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsCurveVotingAppHistoricalGetSync(char * accessToken,
+bool curveGetVotingApps (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Curve.VotingAppDTO>, Error, void* )
+	, void* userData);
 
-/*! \brief . *Asynchronous*
+/*! \brief GetVotingApps (historical). *Asynchronous*
  *
- * 
+ * Gets voting apps.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -1076,15 +1108,15 @@ bool dappsCurveVotingAppHistoricalGetSync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsCurveVotingAppHistoricalGetAsync(char * accessToken,
+bool curveGetVotingApps (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Curve.VotingAppDTO>, Error, void* )
+	, void* userData);
 
 
-/*! \brief . *Synchronous*
+/*! \brief GetWeeklyVolumes (historical). *Synchronous*
  *
- * 
+ * Gets weekly volumes.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -1094,14 +1126,14 @@ bool dappsCurveVotingAppHistoricalGetAsync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsCurveWeeklyVolumeHistoricalGetSync(char * accessToken,
+bool curveGetWeeklyVolumes (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Curve.WeeklyVolumeDTO>, Error, void* )
+	, void* userData);
 
-/*! \brief . *Asynchronous*
+/*! \brief GetWeeklyVolumes (historical). *Asynchronous*
  *
- * 
+ * Gets weekly volumes.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -1111,10 +1143,10 @@ bool dappsCurveWeeklyVolumeHistoricalGetSync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsCurveWeeklyVolumeHistoricalGetAsync(char * accessToken,
+bool curveGetWeeklyVolumes (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Curve.WeeklyVolumeDTO>, Error, void* )
+	, void* userData);
 
 
 

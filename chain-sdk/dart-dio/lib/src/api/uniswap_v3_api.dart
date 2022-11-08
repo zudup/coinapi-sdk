@@ -24,6 +24,7 @@ import 'package:openapi/src/model/uniswap_v3_tick_v3_dto.dart';
 import 'package:openapi/src/model/uniswap_v3_token_hour_data_v3_dto.dart';
 import 'package:openapi/src/model/uniswap_v3_token_v3_day_data_dto.dart';
 import 'package:openapi/src/model/uniswap_v3_token_v3_dto.dart';
+import 'package:openapi/src/model/uniswap_v3_transaction_v3_dto.dart';
 import 'package:openapi/src/model/uniswap_v3_uniswap_day_data_v3_dto.dart';
 
 class UniswapV3Api {
@@ -34,8 +35,8 @@ class UniswapV3Api {
 
   const UniswapV3Api(this._dio, this._serializers);
 
-  /// GetBundles
-  /// 
+  /// GetBundles (current)
+  /// Gets bundles.
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -47,7 +48,7 @@ class UniswapV3Api {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV3BundleV3DTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<UniswapV3BundleV3DTO>>> dappsUniswapv3BundleCurrentGet({ 
+  Future<Response<BuiltList<UniswapV3BundleV3DTO>>> uniswapV3GetBundlesCurrent({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -55,7 +56,7 @@ class UniswapV3Api {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/uniswapv3/bundle/current';
+    final _path = r'/dapps/uniswapv3/bundles/current';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -106,14 +107,14 @@ class UniswapV3Api {
     );
   }
 
-  /// dappsUniswapv3BundlesHistoricalGet
-  /// 
+  /// GetBundles (historical)
+  /// Gets bundles.
   ///
   /// Parameters:
-  /// * [startBlock] 
-  /// * [endBlock] 
-  /// * [startDate] 
-  /// * [endDate] 
+  /// * [startBlock] - 
+  /// * [endBlock] - 
+  /// * [startDate] - 
+  /// * [endDate] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -121,9 +122,9 @@ class UniswapV3Api {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future]
+  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV3BundleV3DTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<void>> dappsUniswapv3BundlesHistoricalGet({ 
+  Future<Response<BuiltList<UniswapV3BundleV3DTO>>> uniswapV3GetBundlesHistorical({ 
     int? startBlock,
     int? endBlock,
     DateTime? startDate,
@@ -164,14 +165,41 @@ class UniswapV3Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    return _response;
+    BuiltList<UniswapV3BundleV3DTO> _responseData;
+
+    try {
+      const _responseType = FullType(BuiltList, [FullType(UniswapV3BundleV3DTO)]);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as BuiltList<UniswapV3BundleV3DTO>;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<BuiltList<UniswapV3BundleV3DTO>>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
   }
 
-  /// GetBurns
-  /// 
+  /// GetBurns (current)
+  /// Gets burns.
   ///
   /// Parameters:
-  /// * [filterPoolId] - Filter pool id
+  /// * [filterPoolId] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -181,7 +209,7 @@ class UniswapV3Api {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV3BurnV3DTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<UniswapV3BurnV3DTO>>> dappsUniswapv3BurnsCurrentGet({ 
+  Future<Response<BuiltList<UniswapV3BurnV3DTO>>> uniswapV3GetBurnsCurrent({ 
     String? filterPoolId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -246,15 +274,15 @@ class UniswapV3Api {
     );
   }
 
-  /// dappsUniswapv3BurnsHistoricalGet
-  /// 
+  /// GetBurns (historical)
+  /// Gets burns.
   ///
   /// Parameters:
-  /// * [startBlock] 
-  /// * [endBlock] 
-  /// * [startDate] 
-  /// * [endDate] 
-  /// * [poolId] 
+  /// * [startBlock] - 
+  /// * [endBlock] - 
+  /// * [startDate] - 
+  /// * [endDate] - 
+  /// * [poolId] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -262,9 +290,9 @@ class UniswapV3Api {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future]
+  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV3BurnV3DTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<void>> dappsUniswapv3BurnsHistoricalGet({ 
+  Future<Response<BuiltList<UniswapV3BurnV3DTO>>> uniswapV3GetBurnsHistorical({ 
     int? startBlock,
     int? endBlock,
     DateTime? startDate,
@@ -307,17 +335,40 @@ class UniswapV3Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    return _response;
+    BuiltList<UniswapV3BurnV3DTO> _responseData;
+
+    try {
+      const _responseType = FullType(BuiltList, [FullType(UniswapV3BurnV3DTO)]);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as BuiltList<UniswapV3BurnV3DTO>;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<BuiltList<UniswapV3BurnV3DTO>>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
   }
 
-  /// dappsUniswapv3DayDataHistoricalGet
-  /// 
+  /// GetDayData (current)
+  /// Gets uniswapv3 day data.
   ///
   /// Parameters:
-  /// * [startBlock] 
-  /// * [endBlock] 
-  /// * [startDate] 
-  /// * [endDate] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -325,9 +376,85 @@ class UniswapV3Api {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future]
+  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV3UniswapDayDataV3DTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<void>> dappsUniswapv3DayDataHistoricalGet({ 
+  Future<Response<BuiltList<UniswapV3UniswapDayDataV3DTO>>> uniswapV3GetDayDataCurrent({ 
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/dapps/uniswapv3/dayData/current';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    BuiltList<UniswapV3UniswapDayDataV3DTO> _responseData;
+
+    try {
+      const _responseType = FullType(BuiltList, [FullType(UniswapV3UniswapDayDataV3DTO)]);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as BuiltList<UniswapV3UniswapDayDataV3DTO>;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<BuiltList<UniswapV3UniswapDayDataV3DTO>>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// GetDayData (historical)
+  /// Gets uniswapv3 day data.
+  ///
+  /// Parameters:
+  /// * [startBlock] - 
+  /// * [endBlock] - 
+  /// * [startDate] - 
+  /// * [endDate] - 
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV3UniswapDayDataV3DTO>] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<BuiltList<UniswapV3UniswapDayDataV3DTO>>> uniswapV3GetDayDataHistorical({ 
     int? startBlock,
     int? endBlock,
     DateTime? startDate,
@@ -368,14 +495,40 @@ class UniswapV3Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    return _response;
+    BuiltList<UniswapV3UniswapDayDataV3DTO> _responseData;
+
+    try {
+      const _responseType = FullType(BuiltList, [FullType(UniswapV3UniswapDayDataV3DTO)]);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as BuiltList<UniswapV3UniswapDayDataV3DTO>;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<BuiltList<UniswapV3UniswapDayDataV3DTO>>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
   }
 
-  /// GetFactory
-  /// 
+  /// GetFactory (current)
+  /// Gets factory.
   ///
   /// Parameters:
-  /// * [chainId] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -385,8 +538,7 @@ class UniswapV3Api {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV3FactoryV3DTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<UniswapV3FactoryV3DTO>>> dappsUniswapv3FactoryCurrentGet({ 
-    required String chainId,
+  Future<Response<BuiltList<UniswapV3FactoryV3DTO>>> uniswapV3GetFactoryCurrent({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -394,7 +546,7 @@ class UniswapV3Api {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/uniswapv3/factory/current'.replaceAll('{' r'chain_id' '}', chainId.toString());
+    final _path = r'/dapps/uniswapv3/factory/current';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -445,14 +597,14 @@ class UniswapV3Api {
     );
   }
 
-  /// dappsUniswapv3FactoryHistoricalGet
-  /// 
+  /// GetFactory (historical)
+  /// Gets factory.
   ///
   /// Parameters:
-  /// * [startBlock] 
-  /// * [endBlock] 
-  /// * [startDate] 
-  /// * [endDate] 
+  /// * [startBlock] - 
+  /// * [endBlock] - 
+  /// * [startDate] - 
+  /// * [endDate] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -460,9 +612,9 @@ class UniswapV3Api {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future]
+  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV3FactoryV3DTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<void>> dappsUniswapv3FactoryHistoricalGet({ 
+  Future<Response<BuiltList<UniswapV3FactoryV3DTO>>> uniswapV3GetFactoryHistorical({ 
     int? startBlock,
     int? endBlock,
     DateTime? startDate,
@@ -503,14 +655,41 @@ class UniswapV3Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    return _response;
+    BuiltList<UniswapV3FactoryV3DTO> _responseData;
+
+    try {
+      const _responseType = FullType(BuiltList, [FullType(UniswapV3FactoryV3DTO)]);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as BuiltList<UniswapV3FactoryV3DTO>;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<BuiltList<UniswapV3FactoryV3DTO>>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
   }
 
-  /// GetMints
-  /// 
+  /// GetMints (current)
+  /// Gets mints.
   ///
   /// Parameters:
-  /// * [filterPoolId] - Filter pool id
+  /// * [filterPoolId] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -520,7 +699,7 @@ class UniswapV3Api {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV3MintV3DTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<UniswapV3MintV3DTO>>> dappsUniswapv3MintsCurrentGet({ 
+  Future<Response<BuiltList<UniswapV3MintV3DTO>>> uniswapV3GetMintsCurrent({ 
     String? filterPoolId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -585,15 +764,15 @@ class UniswapV3Api {
     );
   }
 
-  /// dappsUniswapv3MintsHistoricalGet
-  /// 
+  /// GetMints (historical)
+  /// Gets mints.
   ///
   /// Parameters:
-  /// * [startBlock] 
-  /// * [endBlock] 
-  /// * [startDate] 
-  /// * [endDate] 
-  /// * [poolId] 
+  /// * [startBlock] - 
+  /// * [endBlock] - 
+  /// * [startDate] - 
+  /// * [endDate] - 
+  /// * [poolId] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -601,9 +780,9 @@ class UniswapV3Api {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future]
+  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV3MintV3DTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<void>> dappsUniswapv3MintsHistoricalGet({ 
+  Future<Response<BuiltList<UniswapV3MintV3DTO>>> uniswapV3GetMintsHistorical({ 
     int? startBlock,
     int? endBlock,
     DateTime? startDate,
@@ -646,142 +825,41 @@ class UniswapV3Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    return _response;
+    BuiltList<UniswapV3MintV3DTO> _responseData;
+
+    try {
+      const _responseType = FullType(BuiltList, [FullType(UniswapV3MintV3DTO)]);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as BuiltList<UniswapV3MintV3DTO>;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<BuiltList<UniswapV3MintV3DTO>>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
   }
 
-  /// dappsUniswapv3PoolDayDataHistoricalGet
-  /// 
+  /// GetPools (current) 🔥
+  /// Gets pools.
   ///
   /// Parameters:
-  /// * [startBlock] 
-  /// * [endBlock] 
-  /// * [startDate] 
-  /// * [endDate] 
-  /// * [poolId] 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future]
-  /// Throws [DioError] if API call or serialization fails
-  Future<Response<void>> dappsUniswapv3PoolDayDataHistoricalGet({ 
-    int? startBlock,
-    int? endBlock,
-    DateTime? startDate,
-    DateTime? endDate,
-    String? poolId,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/dapps/uniswapv3/poolDayData/historical';
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _queryParameters = <String, dynamic>{
-      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
-      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
-      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
-      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
-      if (poolId != null) r'poolId': encodeQueryParameter(_serializers, poolId, const FullType(String)),
-    };
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      queryParameters: _queryParameters,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    return _response;
-  }
-
-  /// dappsUniswapv3PoolHourDataHistoricalGet
-  /// 
-  ///
-  /// Parameters:
-  /// * [startBlock] 
-  /// * [endBlock] 
-  /// * [startDate] 
-  /// * [endDate] 
-  /// * [poolId] 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future]
-  /// Throws [DioError] if API call or serialization fails
-  Future<Response<void>> dappsUniswapv3PoolHourDataHistoricalGet({ 
-    int? startBlock,
-    int? endBlock,
-    DateTime? startDate,
-    DateTime? endDate,
-    String? poolId,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/dapps/uniswapv3/poolHourData/historical';
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _queryParameters = <String, dynamic>{
-      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
-      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
-      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
-      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
-      if (poolId != null) r'poolId': encodeQueryParameter(_serializers, poolId, const FullType(String)),
-    };
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      queryParameters: _queryParameters,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    return _response;
-  }
-
-  /// GetPools
-  /// 
-  ///
-  /// Parameters:
-  /// * [filterPoolId] - Filter pool id
+  /// * [filterPoolId] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -791,7 +869,7 @@ class UniswapV3Api {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV3PoolV3DTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<UniswapV3PoolV3DTO>>> dappsUniswapv3PoolsCurrentGet({ 
+  Future<Response<BuiltList<UniswapV3PoolV3DTO>>> uniswapV3GetPoolsCurrent({ 
     String? filterPoolId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -856,11 +934,11 @@ class UniswapV3Api {
     );
   }
 
-  /// GetPoolsDayData
-  /// 
+  /// GetPoolsDayData (current)
+  /// Gets pools day data.
   ///
   /// Parameters:
-  /// * [filterPoolId] - Filter pool id
+  /// * [filterPoolId] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -870,7 +948,7 @@ class UniswapV3Api {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV3PoolDayDataV3DTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<UniswapV3PoolDayDataV3DTO>>> dappsUniswapv3PoolsDayDataCurrentGet({ 
+  Future<Response<BuiltList<UniswapV3PoolDayDataV3DTO>>> uniswapV3GetPoolsDayDataCurrent({ 
     String? filterPoolId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -935,15 +1013,15 @@ class UniswapV3Api {
     );
   }
 
-  /// dappsUniswapv3PoolsHistoricalGet
-  /// 
+  /// GetPoolsDayData (historical)
+  /// Gets pools day data.
   ///
   /// Parameters:
-  /// * [startBlock] 
-  /// * [endBlock] 
-  /// * [startDate] 
-  /// * [endDate] 
-  /// * [poolId] 
+  /// * [startBlock] - 
+  /// * [endBlock] - 
+  /// * [startDate] - 
+  /// * [endDate] - 
+  /// * [poolId] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -951,9 +1029,100 @@ class UniswapV3Api {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future]
+  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV3PoolDayDataV3DTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<void>> dappsUniswapv3PoolsHistoricalGet({ 
+  Future<Response<BuiltList<UniswapV3PoolDayDataV3DTO>>> uniswapV3GetPoolsDayDataHistorical({ 
+    int? startBlock,
+    int? endBlock,
+    DateTime? startDate,
+    DateTime? endDate,
+    String? poolId,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/dapps/uniswapv3/poolsDayData/historical';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _queryParameters = <String, dynamic>{
+      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
+      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
+      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
+      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
+      if (poolId != null) r'poolId': encodeQueryParameter(_serializers, poolId, const FullType(String)),
+    };
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      queryParameters: _queryParameters,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    BuiltList<UniswapV3PoolDayDataV3DTO> _responseData;
+
+    try {
+      const _responseType = FullType(BuiltList, [FullType(UniswapV3PoolDayDataV3DTO)]);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as BuiltList<UniswapV3PoolDayDataV3DTO>;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<BuiltList<UniswapV3PoolDayDataV3DTO>>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// GetPools (historical) 🔥
+  /// Gets pools.
+  ///
+  /// Parameters:
+  /// * [startBlock] - 
+  /// * [endBlock] - 
+  /// * [startDate] - 
+  /// * [endDate] - 
+  /// * [poolId] - 
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV3PoolV3DTO>] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<BuiltList<UniswapV3PoolV3DTO>>> uniswapV3GetPoolsHistorical({ 
     int? startBlock,
     int? endBlock,
     DateTime? startDate,
@@ -996,14 +1165,41 @@ class UniswapV3Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    return _response;
+    BuiltList<UniswapV3PoolV3DTO> _responseData;
+
+    try {
+      const _responseType = FullType(BuiltList, [FullType(UniswapV3PoolV3DTO)]);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as BuiltList<UniswapV3PoolV3DTO>;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<BuiltList<UniswapV3PoolV3DTO>>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
   }
 
-  /// GetPoolsHourData
-  /// 
+  /// GetPoolsHourData (current)
+  /// Gets pools hour data.
   ///
   /// Parameters:
-  /// * [filterPoolId] - Filter pool id
+  /// * [filterPoolId] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -1013,7 +1209,7 @@ class UniswapV3Api {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV3PoolHourDataV3DTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<UniswapV3PoolHourDataV3DTO>>> dappsUniswapv3PoolsHourDataCurrentGet({ 
+  Future<Response<BuiltList<UniswapV3PoolHourDataV3DTO>>> uniswapV3GetPoolsHourDataCurrent({ 
     String? filterPoolId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -1078,15 +1274,15 @@ class UniswapV3Api {
     );
   }
 
-  /// dappsUniswapv3PositionSnapshotHistoricalGet
-  /// 
+  /// GetPoolsHourData (historical)
+  /// Gets pools hour data.
   ///
   /// Parameters:
-  /// * [startBlock] 
-  /// * [endBlock] 
-  /// * [startDate] 
-  /// * [endDate] 
-  /// * [poolId] 
+  /// * [startBlock] - 
+  /// * [endBlock] - 
+  /// * [startDate] - 
+  /// * [endDate] - 
+  /// * [poolId] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -1094,9 +1290,9 @@ class UniswapV3Api {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future]
+  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV3PoolHourDataV3DTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<void>> dappsUniswapv3PositionSnapshotHistoricalGet({ 
+  Future<Response<BuiltList<UniswapV3PoolHourDataV3DTO>>> uniswapV3GetPoolsHourDataHistorical({ 
     int? startBlock,
     int? endBlock,
     DateTime? startDate,
@@ -1109,7 +1305,7 @@ class UniswapV3Api {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/uniswapv3/positionSnapshot/historical';
+    final _path = r'/dapps/uniswapv3/poolsHourData/historical';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -1139,66 +1335,14 @@ class UniswapV3Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    return _response;
-  }
-
-  /// GetPositionSnapshot
-  /// 
-  ///
-  /// Parameters:
-  /// * [filterPoolId] - Filter pool id
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV3PositionSnapshotV3DTO>] as data
-  /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<UniswapV3PositionSnapshotV3DTO>>> dappsUniswapv3PositionSnapshotsCurrentGet({ 
-    String? filterPoolId,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/dapps/uniswapv3/positionSnapshots/current';
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _queryParameters = <String, dynamic>{
-      if (filterPoolId != null) r'filter_pool_id': encodeQueryParameter(_serializers, filterPoolId, const FullType(String)),
-    };
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      queryParameters: _queryParameters,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    BuiltList<UniswapV3PositionSnapshotV3DTO> _responseData;
+    BuiltList<UniswapV3PoolHourDataV3DTO> _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(UniswapV3PositionSnapshotV3DTO)]);
+      const _responseType = FullType(BuiltList, [FullType(UniswapV3PoolHourDataV3DTO)]);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as BuiltList<UniswapV3PositionSnapshotV3DTO>;
+      ) as BuiltList<UniswapV3PoolHourDataV3DTO>;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -1209,7 +1353,7 @@ class UniswapV3Api {
       )..stackTrace = stackTrace;
     }
 
-    return Response<BuiltList<UniswapV3PositionSnapshotV3DTO>>(
+    return Response<BuiltList<UniswapV3PoolHourDataV3DTO>>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -1221,11 +1365,11 @@ class UniswapV3Api {
     );
   }
 
-  /// GetPositions
-  /// 
+  /// GetPositions (current)
+  /// Gets positions.
   ///
   /// Parameters:
-  /// * [filterPoolId] - Filter pool id
+  /// * [filterPoolId] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -1235,7 +1379,7 @@ class UniswapV3Api {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV3PositionV3DTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<UniswapV3PositionV3DTO>>> dappsUniswapv3PositionsCurrentGet({ 
+  Future<Response<BuiltList<UniswapV3PositionV3DTO>>> uniswapV3GetPositionsCurrent({ 
     String? filterPoolId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -1300,15 +1444,15 @@ class UniswapV3Api {
     );
   }
 
-  /// dappsUniswapv3PositionsHistoricalGet
-  /// 
+  /// GetPositions (historical)
+  /// Gets positions.
   ///
   /// Parameters:
-  /// * [startBlock] 
-  /// * [endBlock] 
-  /// * [startDate] 
-  /// * [endDate] 
-  /// * [poolId] 
+  /// * [startBlock] - 
+  /// * [endBlock] - 
+  /// * [startDate] - 
+  /// * [endDate] - 
+  /// * [poolId] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -1316,9 +1460,9 @@ class UniswapV3Api {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future]
+  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV3PositionV3DTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<void>> dappsUniswapv3PositionsHistoricalGet({ 
+  Future<Response<BuiltList<UniswapV3PositionV3DTO>>> uniswapV3GetPositionsHistorical({ 
     int? startBlock,
     int? endBlock,
     DateTime? startDate,
@@ -1361,14 +1505,211 @@ class UniswapV3Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    return _response;
+    BuiltList<UniswapV3PositionV3DTO> _responseData;
+
+    try {
+      const _responseType = FullType(BuiltList, [FullType(UniswapV3PositionV3DTO)]);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as BuiltList<UniswapV3PositionV3DTO>;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<BuiltList<UniswapV3PositionV3DTO>>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
   }
 
-  /// GetSwaps
-  /// 
+  /// GetPositionsSnaphots (historical)
+  /// Gets positions snapshots.
   ///
   /// Parameters:
-  /// * [filterPoolId] - Filter pool id
+  /// * [startBlock] - 
+  /// * [endBlock] - 
+  /// * [startDate] - 
+  /// * [endDate] - 
+  /// * [poolId] - 
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV3PositionSnapshotV3DTO>] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<BuiltList<UniswapV3PositionSnapshotV3DTO>>> uniswapV3GetPositionsSnaphotsHistorical({ 
+    int? startBlock,
+    int? endBlock,
+    DateTime? startDate,
+    DateTime? endDate,
+    String? poolId,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/dapps/uniswapv3/positionsSnapshots/historical';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _queryParameters = <String, dynamic>{
+      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
+      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
+      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
+      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
+      if (poolId != null) r'poolId': encodeQueryParameter(_serializers, poolId, const FullType(String)),
+    };
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      queryParameters: _queryParameters,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    BuiltList<UniswapV3PositionSnapshotV3DTO> _responseData;
+
+    try {
+      const _responseType = FullType(BuiltList, [FullType(UniswapV3PositionSnapshotV3DTO)]);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as BuiltList<UniswapV3PositionSnapshotV3DTO>;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<BuiltList<UniswapV3PositionSnapshotV3DTO>>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// GetPositionsSnapshots (current)
+  /// Gets positions snapshots.
+  ///
+  /// Parameters:
+  /// * [filterPoolId] 
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV3PositionSnapshotV3DTO>] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<BuiltList<UniswapV3PositionSnapshotV3DTO>>> uniswapV3GetPositionsSnapshotsCurrent({ 
+    String? filterPoolId,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/dapps/uniswapv3/positionSnapshots/current';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _queryParameters = <String, dynamic>{
+      if (filterPoolId != null) r'filter_pool_id': encodeQueryParameter(_serializers, filterPoolId, const FullType(String)),
+    };
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      queryParameters: _queryParameters,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    BuiltList<UniswapV3PositionSnapshotV3DTO> _responseData;
+
+    try {
+      const _responseType = FullType(BuiltList, [FullType(UniswapV3PositionSnapshotV3DTO)]);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as BuiltList<UniswapV3PositionSnapshotV3DTO>;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<BuiltList<UniswapV3PositionSnapshotV3DTO>>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// GetSwaps (current) 🔥
+  /// Gets swaps.
+  ///
+  /// Parameters:
+  /// * [filterPoolId] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -1378,7 +1719,7 @@ class UniswapV3Api {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV3SwapV3DTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<UniswapV3SwapV3DTO>>> dappsUniswapv3SwapsCurrentGet({ 
+  Future<Response<BuiltList<UniswapV3SwapV3DTO>>> uniswapV3GetSwapsCurrent({ 
     String? filterPoolId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -1443,15 +1784,15 @@ class UniswapV3Api {
     );
   }
 
-  /// dappsUniswapv3SwapsHistoricalGet
-  /// 
+  /// GetSwaps (historical) 🔥
+  /// Gets swaps.
   ///
   /// Parameters:
-  /// * [startBlock] 
-  /// * [endBlock] 
-  /// * [startDate] 
-  /// * [endDate] 
-  /// * [poolId] 
+  /// * [startBlock] - 
+  /// * [endBlock] - 
+  /// * [startDate] - 
+  /// * [endDate] - 
+  /// * [poolId] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -1459,9 +1800,9 @@ class UniswapV3Api {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future]
+  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV3SwapV3DTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<void>> dappsUniswapv3SwapsHistoricalGet({ 
+  Future<Response<BuiltList<UniswapV3SwapV3DTO>>> uniswapV3GetSwapsHistorical({ 
     int? startBlock,
     int? endBlock,
     DateTime? startDate,
@@ -1504,78 +1845,41 @@ class UniswapV3Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    return _response;
+    BuiltList<UniswapV3SwapV3DTO> _responseData;
+
+    try {
+      const _responseType = FullType(BuiltList, [FullType(UniswapV3SwapV3DTO)]);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as BuiltList<UniswapV3SwapV3DTO>;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<BuiltList<UniswapV3SwapV3DTO>>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
   }
 
-  /// dappsUniswapv3TickDayDataHistoricalGet
-  /// 
+  /// GetTicks (current)
+  /// Gets ticks.
   ///
   /// Parameters:
-  /// * [startBlock] 
-  /// * [endBlock] 
-  /// * [startDate] 
-  /// * [endDate] 
-  /// * [poolId] 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future]
-  /// Throws [DioError] if API call or serialization fails
-  Future<Response<void>> dappsUniswapv3TickDayDataHistoricalGet({ 
-    int? startBlock,
-    int? endBlock,
-    DateTime? startDate,
-    DateTime? endDate,
-    String? poolId,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/dapps/uniswapv3/tickDayData/historical';
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _queryParameters = <String, dynamic>{
-      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
-      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
-      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
-      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
-      if (poolId != null) r'poolId': encodeQueryParameter(_serializers, poolId, const FullType(String)),
-    };
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      queryParameters: _queryParameters,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    return _response;
-  }
-
-  /// GetTicks
-  /// 
-  ///
-  /// Parameters:
-  /// * [filterPoolId] - Filter pool id
+  /// * [filterPoolId] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -1585,7 +1889,7 @@ class UniswapV3Api {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV3TickV3DTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<UniswapV3TickV3DTO>>> dappsUniswapv3TicksCurrentGet({ 
+  Future<Response<BuiltList<UniswapV3TickV3DTO>>> uniswapV3GetTicksCurrent({ 
     String? filterPoolId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -1650,11 +1954,11 @@ class UniswapV3Api {
     );
   }
 
-  /// GetTicksDayData
-  /// 
+  /// GetTicksDayData (current)
+  /// Gets ticks day data.
   ///
   /// Parameters:
-  /// * [filterPoolId] - Filter pool id
+  /// * [filterPoolId] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -1664,7 +1968,7 @@ class UniswapV3Api {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV3TickDayDataV3DTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<UniswapV3TickDayDataV3DTO>>> dappsUniswapv3TicksDayDataCurrentGet({ 
+  Future<Response<BuiltList<UniswapV3TickDayDataV3DTO>>> uniswapV3GetTicksDayDataCurrent({ 
     String? filterPoolId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -1729,15 +2033,15 @@ class UniswapV3Api {
     );
   }
 
-  /// dappsUniswapv3TicksHistoricalGet
-  /// 
+  /// GetTicksDayData (historical)
+  /// Gets ticks day data.
   ///
   /// Parameters:
-  /// * [startBlock] 
-  /// * [endBlock] 
-  /// * [startDate] 
-  /// * [endDate] 
-  /// * [poolId] 
+  /// * [startBlock] - 
+  /// * [endBlock] - 
+  /// * [startDate] - 
+  /// * [endDate] - 
+  /// * [poolId] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -1745,9 +2049,100 @@ class UniswapV3Api {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future]
+  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV3TickDayDataV3DTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<void>> dappsUniswapv3TicksHistoricalGet({ 
+  Future<Response<BuiltList<UniswapV3TickDayDataV3DTO>>> uniswapV3GetTicksDayDataHistorical({ 
+    int? startBlock,
+    int? endBlock,
+    DateTime? startDate,
+    DateTime? endDate,
+    String? poolId,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/dapps/uniswapv3/ticksDayData/historical';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _queryParameters = <String, dynamic>{
+      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
+      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
+      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
+      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
+      if (poolId != null) r'poolId': encodeQueryParameter(_serializers, poolId, const FullType(String)),
+    };
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      queryParameters: _queryParameters,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    BuiltList<UniswapV3TickDayDataV3DTO> _responseData;
+
+    try {
+      const _responseType = FullType(BuiltList, [FullType(UniswapV3TickDayDataV3DTO)]);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as BuiltList<UniswapV3TickDayDataV3DTO>;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<BuiltList<UniswapV3TickDayDataV3DTO>>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// GetTicks (historical)
+  /// Gets ticks.
+  ///
+  /// Parameters:
+  /// * [startBlock] - 
+  /// * [endBlock] - 
+  /// * [startDate] - 
+  /// * [endDate] - 
+  /// * [poolId] - 
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV3TickV3DTO>] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<BuiltList<UniswapV3TickV3DTO>>> uniswapV3GetTicksHistorical({ 
     int? startBlock,
     int? endBlock,
     DateTime? startDate,
@@ -1790,139 +2185,38 @@ class UniswapV3Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    return _response;
+    BuiltList<UniswapV3TickV3DTO> _responseData;
+
+    try {
+      const _responseType = FullType(BuiltList, [FullType(UniswapV3TickV3DTO)]);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as BuiltList<UniswapV3TickV3DTO>;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<BuiltList<UniswapV3TickV3DTO>>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
   }
 
-  /// dappsUniswapv3TokenDayDataHistoricalGet
-  /// 
-  ///
-  /// Parameters:
-  /// * [startBlock] 
-  /// * [endBlock] 
-  /// * [startDate] 
-  /// * [endDate] 
-  /// * [tokenId] 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future]
-  /// Throws [DioError] if API call or serialization fails
-  Future<Response<void>> dappsUniswapv3TokenDayDataHistoricalGet({ 
-    int? startBlock,
-    int? endBlock,
-    DateTime? startDate,
-    DateTime? endDate,
-    String? tokenId,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/dapps/uniswapv3/tokenDayData/historical';
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _queryParameters = <String, dynamic>{
-      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
-      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
-      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
-      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
-      if (tokenId != null) r'tokenId': encodeQueryParameter(_serializers, tokenId, const FullType(String)),
-    };
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      queryParameters: _queryParameters,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    return _response;
-  }
-
-  /// dappsUniswapv3TokenHourDataHistoricalGet
-  /// 
-  ///
-  /// Parameters:
-  /// * [startBlock] 
-  /// * [endBlock] 
-  /// * [startDate] 
-  /// * [endDate] 
-  /// * [tokenId] 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future]
-  /// Throws [DioError] if API call or serialization fails
-  Future<Response<void>> dappsUniswapv3TokenHourDataHistoricalGet({ 
-    int? startBlock,
-    int? endBlock,
-    DateTime? startDate,
-    DateTime? endDate,
-    String? tokenId,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/dapps/uniswapv3/tokenHourData/historical';
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _queryParameters = <String, dynamic>{
-      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
-      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
-      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
-      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
-      if (tokenId != null) r'tokenId': encodeQueryParameter(_serializers, tokenId, const FullType(String)),
-    };
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      queryParameters: _queryParameters,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    return _response;
-  }
-
-  /// GetTokens
-  /// 
+  /// GetTokens (current) 🔥
+  /// Gets tokens.
   ///
   /// Parameters:
   /// * [filterTokenId] 
@@ -1935,7 +2229,7 @@ class UniswapV3Api {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV3TokenV3DTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<UniswapV3TokenV3DTO>>> dappsUniswapv3TokensCurrentGet({ 
+  Future<Response<BuiltList<UniswapV3TokenV3DTO>>> uniswapV3GetTokensCurrent({ 
     String? filterTokenId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -2000,8 +2294,8 @@ class UniswapV3Api {
     );
   }
 
-  /// GetTokensDayData
-  /// 
+  /// GetTokensDayData (current)
+  /// Gets tokens day data.
   ///
   /// Parameters:
   /// * [filterTokenId] 
@@ -2014,7 +2308,7 @@ class UniswapV3Api {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV3TokenV3DayDataDTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<UniswapV3TokenV3DayDataDTO>>> dappsUniswapv3TokensDayDataCurrentGet({ 
+  Future<Response<BuiltList<UniswapV3TokenV3DayDataDTO>>> uniswapV3GetTokensDayDataCurrent({ 
     String? filterTokenId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -2079,15 +2373,15 @@ class UniswapV3Api {
     );
   }
 
-  /// dappsUniswapv3TokensHistoricalGet
-  /// 
+  /// GetTokensDayData (historical)
+  /// Gets tokens day data.
   ///
   /// Parameters:
-  /// * [startBlock] 
-  /// * [endBlock] 
-  /// * [startDate] 
-  /// * [endDate] 
-  /// * [tokenId] 
+  /// * [startBlock] - 
+  /// * [endBlock] - 
+  /// * [startDate] - 
+  /// * [endDate] - 
+  /// * [tokenId] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -2095,9 +2389,100 @@ class UniswapV3Api {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future]
+  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV3TokenV3DayDataDTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<void>> dappsUniswapv3TokensHistoricalGet({ 
+  Future<Response<BuiltList<UniswapV3TokenV3DayDataDTO>>> uniswapV3GetTokensDayDataHistorical({ 
+    int? startBlock,
+    int? endBlock,
+    DateTime? startDate,
+    DateTime? endDate,
+    String? tokenId,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/dapps/uniswapv3/tokensDayData/historical';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _queryParameters = <String, dynamic>{
+      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
+      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
+      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
+      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
+      if (tokenId != null) r'tokenId': encodeQueryParameter(_serializers, tokenId, const FullType(String)),
+    };
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      queryParameters: _queryParameters,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    BuiltList<UniswapV3TokenV3DayDataDTO> _responseData;
+
+    try {
+      const _responseType = FullType(BuiltList, [FullType(UniswapV3TokenV3DayDataDTO)]);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as BuiltList<UniswapV3TokenV3DayDataDTO>;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<BuiltList<UniswapV3TokenV3DayDataDTO>>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// GetTokens (historical) 🔥
+  /// Gets tokens.
+  ///
+  /// Parameters:
+  /// * [startBlock] - 
+  /// * [endBlock] - 
+  /// * [startDate] - 
+  /// * [endDate] - 
+  /// * [tokenId] - 
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV3TokenV3DTO>] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<BuiltList<UniswapV3TokenV3DTO>>> uniswapV3GetTokensHistorical({ 
     int? startBlock,
     int? endBlock,
     DateTime? startDate,
@@ -2140,11 +2525,38 @@ class UniswapV3Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    return _response;
+    BuiltList<UniswapV3TokenV3DTO> _responseData;
+
+    try {
+      const _responseType = FullType(BuiltList, [FullType(UniswapV3TokenV3DTO)]);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as BuiltList<UniswapV3TokenV3DTO>;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<BuiltList<UniswapV3TokenV3DTO>>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
   }
 
-  /// GetTokensHourData
-  /// 
+  /// GetTokensHourData (current)
+  /// Gets tokens hour data.
   ///
   /// Parameters:
   /// * [filterTokenId] 
@@ -2157,7 +2569,7 @@ class UniswapV3Api {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV3TokenHourDataV3DTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<UniswapV3TokenHourDataV3DTO>>> dappsUniswapv3TokensHourDataCurrentGet({ 
+  Future<Response<BuiltList<UniswapV3TokenHourDataV3DTO>>> uniswapV3GetTokensHourDataCurrent({ 
     String? filterTokenId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -2222,14 +2634,15 @@ class UniswapV3Api {
     );
   }
 
-  /// dappsUniswapv3TransactionsHistoricalGet
-  /// 
+  /// GetTokensHourData (historical)
+  /// Gets tokens hour data.
   ///
   /// Parameters:
-  /// * [startBlock] 
-  /// * [endBlock] 
-  /// * [startDate] 
-  /// * [endDate] 
+  /// * [startBlock] - 
+  /// * [endBlock] - 
+  /// * [startDate] - 
+  /// * [endDate] - 
+  /// * [tokenId] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -2237,9 +2650,99 @@ class UniswapV3Api {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future]
+  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV3TokenHourDataV3DTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<void>> dappsUniswapv3TransactionsHistoricalGet({ 
+  Future<Response<BuiltList<UniswapV3TokenHourDataV3DTO>>> uniswapV3GetTokensHourDataHistorical({ 
+    int? startBlock,
+    int? endBlock,
+    DateTime? startDate,
+    DateTime? endDate,
+    String? tokenId,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/dapps/uniswapv3/tokensHourData/historical';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _queryParameters = <String, dynamic>{
+      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
+      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
+      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
+      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
+      if (tokenId != null) r'tokenId': encodeQueryParameter(_serializers, tokenId, const FullType(String)),
+    };
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      queryParameters: _queryParameters,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    BuiltList<UniswapV3TokenHourDataV3DTO> _responseData;
+
+    try {
+      const _responseType = FullType(BuiltList, [FullType(UniswapV3TokenHourDataV3DTO)]);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as BuiltList<UniswapV3TokenHourDataV3DTO>;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<BuiltList<UniswapV3TokenHourDataV3DTO>>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// GetTransactions (historical)
+  /// Gets transactions.
+  ///
+  /// Parameters:
+  /// * [startBlock] - 
+  /// * [endBlock] - 
+  /// * [startDate] - 
+  /// * [endDate] - 
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV3TransactionV3DTO>] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<BuiltList<UniswapV3TransactionV3DTO>>> uniswapV3GetTransactionsHistorical({ 
     int? startBlock,
     int? endBlock,
     DateTime? startDate,
@@ -2280,59 +2783,14 @@ class UniswapV3Api {
       onReceiveProgress: onReceiveProgress,
     );
 
-    return _response;
-  }
-
-  /// GetUniswapDayData
-  /// 
-  ///
-  /// Parameters:
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV3UniswapDayDataV3DTO>] as data
-  /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<UniswapV3UniswapDayDataV3DTO>>> dappsUniswapv3UniswapDayDataCurrentGet({ 
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/dapps/uniswapv3/uniswapDayData/current';
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    BuiltList<UniswapV3UniswapDayDataV3DTO> _responseData;
+    BuiltList<UniswapV3TransactionV3DTO> _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(UniswapV3UniswapDayDataV3DTO)]);
+      const _responseType = FullType(BuiltList, [FullType(UniswapV3TransactionV3DTO)]);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as BuiltList<UniswapV3UniswapDayDataV3DTO>;
+      ) as BuiltList<UniswapV3TransactionV3DTO>;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -2343,7 +2801,7 @@ class UniswapV3Api {
       )..stackTrace = stackTrace;
     }
 
-    return Response<BuiltList<UniswapV3UniswapDayDataV3DTO>>(
+    return Response<BuiltList<UniswapV3TransactionV3DTO>>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

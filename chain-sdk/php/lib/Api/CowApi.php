@@ -72,19 +72,19 @@ class CowApi
 
     /** @var string[] $contentTypes **/
     public const contentTypes = [
-        'dappsCowOrdersHistoricalGet' => [
+        'cowGetOrdersHistorical' => [
             'application/json',
         ],
-        'dappsCowSettlementHistoricalGet' => [
+        'cowGetSettlementsHistorical' => [
             'application/json',
         ],
-        'dappsCowTokensHistoricalGet' => [
+        'cowGetTokensHistorical' => [
             'application/json',
         ],
-        'dappsCowTradesHistoricalGet' => [
+        'cowGetTradesHistorical' => [
             'application/json',
         ],
-        'dappsCowUsersHistoricalGet' => [
+        'cowGetUsersHistorical' => [
             'application/json',
         ],
     ];
@@ -136,39 +136,44 @@ class CowApi
     }
 
     /**
-     * Operation dappsCowOrdersHistoricalGet
+     * Operation cowGetOrdersHistorical
      *
-     * @param  int $start_block start_block (optional)
-     * @param  int $end_block end_block (optional)
-     * @param  \DateTime $start_date start_date (optional)
+     * GetOrders (historical)
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
      * @param  \DateTime $end_date end_date (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsCowOrdersHistoricalGet'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cowGetOrdersHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return void
+     * @return \OpenAPI\Client\Model\CowOrderDTO[]
      */
-    public function dappsCowOrdersHistoricalGet($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['dappsCowOrdersHistoricalGet'][0])
+    public function cowGetOrdersHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['cowGetOrdersHistorical'][0])
     {
-        $this->dappsCowOrdersHistoricalGetWithHttpInfo($start_block, $end_block, $start_date, $end_date, $contentType);
+        list($response) = $this->cowGetOrdersHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $contentType);
+        return $response;
     }
 
     /**
-     * Operation dappsCowOrdersHistoricalGetWithHttpInfo
+     * Operation cowGetOrdersHistoricalWithHttpInfo
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
+     * GetOrders (historical)
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
      * @param  \DateTime $end_date (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsCowOrdersHistoricalGet'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cowGetOrdersHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\CowOrderDTO[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function dappsCowOrdersHistoricalGetWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['dappsCowOrdersHistoricalGet'][0])
+    public function cowGetOrdersHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['cowGetOrdersHistorical'][0])
     {
-        $request = $this->dappsCowOrdersHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $contentType);
+        $request = $this->cowGetOrdersHistoricalRequest($start_block, $end_block, $start_date, $end_date, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -205,30 +210,72 @@ class CowApi
                 );
             }
 
-            return [null, $statusCode, $response->getHeaders()];
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\CowOrderDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\CowOrderDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CowOrderDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\CowOrderDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\CowOrderDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
             }
             throw $e;
         }
     }
 
     /**
-     * Operation dappsCowOrdersHistoricalGetAsync
+     * Operation cowGetOrdersHistoricalAsync
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
+     * GetOrders (historical)
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
      * @param  \DateTime $end_date (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsCowOrdersHistoricalGet'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cowGetOrdersHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function dappsCowOrdersHistoricalGetAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['dappsCowOrdersHistoricalGet'][0])
+    public function cowGetOrdersHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['cowGetOrdersHistorical'][0])
     {
-        return $this->dappsCowOrdersHistoricalGetAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $contentType)
+        return $this->cowGetOrdersHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -237,27 +284,42 @@ class CowApi
     }
 
     /**
-     * Operation dappsCowOrdersHistoricalGetAsyncWithHttpInfo
+     * Operation cowGetOrdersHistoricalAsyncWithHttpInfo
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
+     * GetOrders (historical)
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
      * @param  \DateTime $end_date (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsCowOrdersHistoricalGet'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cowGetOrdersHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function dappsCowOrdersHistoricalGetAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['dappsCowOrdersHistoricalGet'][0])
+    public function cowGetOrdersHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['cowGetOrdersHistorical'][0])
     {
-        $returnType = '';
-        $request = $this->dappsCowOrdersHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $contentType);
+        $returnType = '\OpenAPI\Client\Model\CowOrderDTO[]';
+        $request = $this->cowGetOrdersHistoricalRequest($start_block, $end_block, $start_date, $end_date, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();
@@ -277,18 +339,18 @@ class CowApi
     }
 
     /**
-     * Create request for operation 'dappsCowOrdersHistoricalGet'
+     * Create request for operation 'cowGetOrdersHistorical'
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
      * @param  \DateTime $end_date (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsCowOrdersHistoricalGet'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cowGetOrdersHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function dappsCowOrdersHistoricalGetRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['dappsCowOrdersHistoricalGet'][0])
+    public function cowGetOrdersHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['cowGetOrdersHistorical'][0])
     {
 
 
@@ -344,7 +406,7 @@ class CowApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            [],
+            ['text/plain', 'application/json', 'text/json', ],
             $contentType,
             $multipart
         );
@@ -397,39 +459,44 @@ class CowApi
     }
 
     /**
-     * Operation dappsCowSettlementHistoricalGet
+     * Operation cowGetSettlementsHistorical
      *
-     * @param  int $start_block start_block (optional)
-     * @param  int $end_block end_block (optional)
-     * @param  \DateTime $start_date start_date (optional)
+     * GetSettlements (historical)
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
      * @param  \DateTime $end_date end_date (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsCowSettlementHistoricalGet'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cowGetSettlementsHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return void
+     * @return \OpenAPI\Client\Model\CowSettlementDTO[]
      */
-    public function dappsCowSettlementHistoricalGet($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['dappsCowSettlementHistoricalGet'][0])
+    public function cowGetSettlementsHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['cowGetSettlementsHistorical'][0])
     {
-        $this->dappsCowSettlementHistoricalGetWithHttpInfo($start_block, $end_block, $start_date, $end_date, $contentType);
+        list($response) = $this->cowGetSettlementsHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $contentType);
+        return $response;
     }
 
     /**
-     * Operation dappsCowSettlementHistoricalGetWithHttpInfo
+     * Operation cowGetSettlementsHistoricalWithHttpInfo
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
+     * GetSettlements (historical)
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
      * @param  \DateTime $end_date (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsCowSettlementHistoricalGet'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cowGetSettlementsHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\CowSettlementDTO[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function dappsCowSettlementHistoricalGetWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['dappsCowSettlementHistoricalGet'][0])
+    public function cowGetSettlementsHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['cowGetSettlementsHistorical'][0])
     {
-        $request = $this->dappsCowSettlementHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $contentType);
+        $request = $this->cowGetSettlementsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -466,30 +533,72 @@ class CowApi
                 );
             }
 
-            return [null, $statusCode, $response->getHeaders()];
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\CowSettlementDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\CowSettlementDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CowSettlementDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\CowSettlementDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\CowSettlementDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
             }
             throw $e;
         }
     }
 
     /**
-     * Operation dappsCowSettlementHistoricalGetAsync
+     * Operation cowGetSettlementsHistoricalAsync
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
+     * GetSettlements (historical)
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
      * @param  \DateTime $end_date (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsCowSettlementHistoricalGet'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cowGetSettlementsHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function dappsCowSettlementHistoricalGetAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['dappsCowSettlementHistoricalGet'][0])
+    public function cowGetSettlementsHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['cowGetSettlementsHistorical'][0])
     {
-        return $this->dappsCowSettlementHistoricalGetAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $contentType)
+        return $this->cowGetSettlementsHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -498,27 +607,42 @@ class CowApi
     }
 
     /**
-     * Operation dappsCowSettlementHistoricalGetAsyncWithHttpInfo
+     * Operation cowGetSettlementsHistoricalAsyncWithHttpInfo
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
+     * GetSettlements (historical)
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
      * @param  \DateTime $end_date (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsCowSettlementHistoricalGet'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cowGetSettlementsHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function dappsCowSettlementHistoricalGetAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['dappsCowSettlementHistoricalGet'][0])
+    public function cowGetSettlementsHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['cowGetSettlementsHistorical'][0])
     {
-        $returnType = '';
-        $request = $this->dappsCowSettlementHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $contentType);
+        $returnType = '\OpenAPI\Client\Model\CowSettlementDTO[]';
+        $request = $this->cowGetSettlementsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();
@@ -538,18 +662,18 @@ class CowApi
     }
 
     /**
-     * Create request for operation 'dappsCowSettlementHistoricalGet'
+     * Create request for operation 'cowGetSettlementsHistorical'
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
      * @param  \DateTime $end_date (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsCowSettlementHistoricalGet'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cowGetSettlementsHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function dappsCowSettlementHistoricalGetRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['dappsCowSettlementHistoricalGet'][0])
+    public function cowGetSettlementsHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['cowGetSettlementsHistorical'][0])
     {
 
 
@@ -557,7 +681,7 @@ class CowApi
 
 
 
-        $resourcePath = '/dapps/cow/settlement/historical';
+        $resourcePath = '/dapps/cow/settlements/historical';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -605,7 +729,7 @@ class CowApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            [],
+            ['text/plain', 'application/json', 'text/json', ],
             $contentType,
             $multipart
         );
@@ -658,41 +782,46 @@ class CowApi
     }
 
     /**
-     * Operation dappsCowTokensHistoricalGet
+     * Operation cowGetTokensHistorical
      *
-     * @param  int $start_block start_block (optional)
-     * @param  int $end_block end_block (optional)
-     * @param  \DateTime $start_date start_date (optional)
-     * @param  \DateTime $end_date end_date (optional)
-     * @param  string $token_id token_id (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsCowTokensHistoricalGet'] to see the possible values for this operation
+     * GetTokens (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $token_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cowGetTokensHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return void
+     * @return \OpenAPI\Client\Model\CowTokenDTO[]
      */
-    public function dappsCowTokensHistoricalGet($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dappsCowTokensHistoricalGet'][0])
+    public function cowGetTokensHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['cowGetTokensHistorical'][0])
     {
-        $this->dappsCowTokensHistoricalGetWithHttpInfo($start_block, $end_block, $start_date, $end_date, $token_id, $contentType);
+        list($response) = $this->cowGetTokensHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $token_id, $contentType);
+        return $response;
     }
 
     /**
-     * Operation dappsCowTokensHistoricalGetWithHttpInfo
+     * Operation cowGetTokensHistoricalWithHttpInfo
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $token_id (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsCowTokensHistoricalGet'] to see the possible values for this operation
+     * GetTokens (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $token_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cowGetTokensHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\CowTokenDTO[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function dappsCowTokensHistoricalGetWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dappsCowTokensHistoricalGet'][0])
+    public function cowGetTokensHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['cowGetTokensHistorical'][0])
     {
-        $request = $this->dappsCowTokensHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $token_id, $contentType);
+        $request = $this->cowGetTokensHistoricalRequest($start_block, $end_block, $start_date, $end_date, $token_id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -729,31 +858,73 @@ class CowApi
                 );
             }
 
-            return [null, $statusCode, $response->getHeaders()];
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\CowTokenDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\CowTokenDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CowTokenDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\CowTokenDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\CowTokenDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
             }
             throw $e;
         }
     }
 
     /**
-     * Operation dappsCowTokensHistoricalGetAsync
+     * Operation cowGetTokensHistoricalAsync
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $token_id (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsCowTokensHistoricalGet'] to see the possible values for this operation
+     * GetTokens (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $token_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cowGetTokensHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function dappsCowTokensHistoricalGetAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dappsCowTokensHistoricalGet'][0])
+    public function cowGetTokensHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['cowGetTokensHistorical'][0])
     {
-        return $this->dappsCowTokensHistoricalGetAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $token_id, $contentType)
+        return $this->cowGetTokensHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $token_id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -762,28 +933,43 @@ class CowApi
     }
 
     /**
-     * Operation dappsCowTokensHistoricalGetAsyncWithHttpInfo
+     * Operation cowGetTokensHistoricalAsyncWithHttpInfo
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $token_id (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsCowTokensHistoricalGet'] to see the possible values for this operation
+     * GetTokens (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $token_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cowGetTokensHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function dappsCowTokensHistoricalGetAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dappsCowTokensHistoricalGet'][0])
+    public function cowGetTokensHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['cowGetTokensHistorical'][0])
     {
-        $returnType = '';
-        $request = $this->dappsCowTokensHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $token_id, $contentType);
+        $returnType = '\OpenAPI\Client\Model\CowTokenDTO[]';
+        $request = $this->cowGetTokensHistoricalRequest($start_block, $end_block, $start_date, $end_date, $token_id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();
@@ -803,19 +989,19 @@ class CowApi
     }
 
     /**
-     * Create request for operation 'dappsCowTokensHistoricalGet'
+     * Create request for operation 'cowGetTokensHistorical'
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $token_id (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsCowTokensHistoricalGet'] to see the possible values for this operation
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $token_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cowGetTokensHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function dappsCowTokensHistoricalGetRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['dappsCowTokensHistoricalGet'][0])
+    public function cowGetTokensHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $token_id = null, string $contentType = self::contentTypes['cowGetTokensHistorical'][0])
     {
 
 
@@ -881,7 +1067,7 @@ class CowApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            [],
+            ['text/plain', 'application/json', 'text/json', ],
             $contentType,
             $multipart
         );
@@ -934,39 +1120,44 @@ class CowApi
     }
 
     /**
-     * Operation dappsCowTradesHistoricalGet
+     * Operation cowGetTradesHistorical
      *
-     * @param  int $start_block start_block (optional)
-     * @param  int $end_block end_block (optional)
-     * @param  \DateTime $start_date start_date (optional)
-     * @param  \DateTime $end_date end_date (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsCowTradesHistoricalGet'] to see the possible values for this operation
+     * GetTrades (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cowGetTradesHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return void
+     * @return \OpenAPI\Client\Model\CowTradeDTO[]
      */
-    public function dappsCowTradesHistoricalGet($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['dappsCowTradesHistoricalGet'][0])
+    public function cowGetTradesHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['cowGetTradesHistorical'][0])
     {
-        $this->dappsCowTradesHistoricalGetWithHttpInfo($start_block, $end_block, $start_date, $end_date, $contentType);
+        list($response) = $this->cowGetTradesHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $contentType);
+        return $response;
     }
 
     /**
-     * Operation dappsCowTradesHistoricalGetWithHttpInfo
+     * Operation cowGetTradesHistoricalWithHttpInfo
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsCowTradesHistoricalGet'] to see the possible values for this operation
+     * GetTrades (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cowGetTradesHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\CowTradeDTO[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function dappsCowTradesHistoricalGetWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['dappsCowTradesHistoricalGet'][0])
+    public function cowGetTradesHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['cowGetTradesHistorical'][0])
     {
-        $request = $this->dappsCowTradesHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $contentType);
+        $request = $this->cowGetTradesHistoricalRequest($start_block, $end_block, $start_date, $end_date, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1003,30 +1194,72 @@ class CowApi
                 );
             }
 
-            return [null, $statusCode, $response->getHeaders()];
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\CowTradeDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\CowTradeDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CowTradeDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\CowTradeDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\CowTradeDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
             }
             throw $e;
         }
     }
 
     /**
-     * Operation dappsCowTradesHistoricalGetAsync
+     * Operation cowGetTradesHistoricalAsync
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsCowTradesHistoricalGet'] to see the possible values for this operation
+     * GetTrades (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cowGetTradesHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function dappsCowTradesHistoricalGetAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['dappsCowTradesHistoricalGet'][0])
+    public function cowGetTradesHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['cowGetTradesHistorical'][0])
     {
-        return $this->dappsCowTradesHistoricalGetAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $contentType)
+        return $this->cowGetTradesHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1035,27 +1268,42 @@ class CowApi
     }
 
     /**
-     * Operation dappsCowTradesHistoricalGetAsyncWithHttpInfo
+     * Operation cowGetTradesHistoricalAsyncWithHttpInfo
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsCowTradesHistoricalGet'] to see the possible values for this operation
+     * GetTrades (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cowGetTradesHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function dappsCowTradesHistoricalGetAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['dappsCowTradesHistoricalGet'][0])
+    public function cowGetTradesHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['cowGetTradesHistorical'][0])
     {
-        $returnType = '';
-        $request = $this->dappsCowTradesHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $contentType);
+        $returnType = '\OpenAPI\Client\Model\CowTradeDTO[]';
+        $request = $this->cowGetTradesHistoricalRequest($start_block, $end_block, $start_date, $end_date, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();
@@ -1075,18 +1323,18 @@ class CowApi
     }
 
     /**
-     * Create request for operation 'dappsCowTradesHistoricalGet'
+     * Create request for operation 'cowGetTradesHistorical'
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsCowTradesHistoricalGet'] to see the possible values for this operation
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cowGetTradesHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function dappsCowTradesHistoricalGetRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['dappsCowTradesHistoricalGet'][0])
+    public function cowGetTradesHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['cowGetTradesHistorical'][0])
     {
 
 
@@ -1142,7 +1390,7 @@ class CowApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            [],
+            ['text/plain', 'application/json', 'text/json', ],
             $contentType,
             $multipart
         );
@@ -1195,39 +1443,44 @@ class CowApi
     }
 
     /**
-     * Operation dappsCowUsersHistoricalGet
+     * Operation cowGetUsersHistorical
      *
-     * @param  int $start_block start_block (optional)
-     * @param  int $end_block end_block (optional)
-     * @param  \DateTime $start_date start_date (optional)
-     * @param  \DateTime $end_date end_date (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsCowUsersHistoricalGet'] to see the possible values for this operation
+     * GetUsers (historical)
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cowGetUsersHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return void
+     * @return \OpenAPI\Client\Model\CowUserDTO[]
      */
-    public function dappsCowUsersHistoricalGet($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['dappsCowUsersHistoricalGet'][0])
+    public function cowGetUsersHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['cowGetUsersHistorical'][0])
     {
-        $this->dappsCowUsersHistoricalGetWithHttpInfo($start_block, $end_block, $start_date, $end_date, $contentType);
+        list($response) = $this->cowGetUsersHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $contentType);
+        return $response;
     }
 
     /**
-     * Operation dappsCowUsersHistoricalGetWithHttpInfo
+     * Operation cowGetUsersHistoricalWithHttpInfo
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsCowUsersHistoricalGet'] to see the possible values for this operation
+     * GetUsers (historical)
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cowGetUsersHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\CowUserDTO[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function dappsCowUsersHistoricalGetWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['dappsCowUsersHistoricalGet'][0])
+    public function cowGetUsersHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['cowGetUsersHistorical'][0])
     {
-        $request = $this->dappsCowUsersHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $contentType);
+        $request = $this->cowGetUsersHistoricalRequest($start_block, $end_block, $start_date, $end_date, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1264,30 +1517,72 @@ class CowApi
                 );
             }
 
-            return [null, $statusCode, $response->getHeaders()];
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\CowUserDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\CowUserDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CowUserDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\CowUserDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\CowUserDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
             }
             throw $e;
         }
     }
 
     /**
-     * Operation dappsCowUsersHistoricalGetAsync
+     * Operation cowGetUsersHistoricalAsync
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsCowUsersHistoricalGet'] to see the possible values for this operation
+     * GetUsers (historical)
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cowGetUsersHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function dappsCowUsersHistoricalGetAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['dappsCowUsersHistoricalGet'][0])
+    public function cowGetUsersHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['cowGetUsersHistorical'][0])
     {
-        return $this->dappsCowUsersHistoricalGetAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $contentType)
+        return $this->cowGetUsersHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1296,27 +1591,42 @@ class CowApi
     }
 
     /**
-     * Operation dappsCowUsersHistoricalGetAsyncWithHttpInfo
+     * Operation cowGetUsersHistoricalAsyncWithHttpInfo
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsCowUsersHistoricalGet'] to see the possible values for this operation
+     * GetUsers (historical)
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cowGetUsersHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function dappsCowUsersHistoricalGetAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['dappsCowUsersHistoricalGet'][0])
+    public function cowGetUsersHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['cowGetUsersHistorical'][0])
     {
-        $returnType = '';
-        $request = $this->dappsCowUsersHistoricalGetRequest($start_block, $end_block, $start_date, $end_date, $contentType);
+        $returnType = '\OpenAPI\Client\Model\CowUserDTO[]';
+        $request = $this->cowGetUsersHistoricalRequest($start_block, $end_block, $start_date, $end_date, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();
@@ -1336,18 +1646,18 @@ class CowApi
     }
 
     /**
-     * Create request for operation 'dappsCowUsersHistoricalGet'
+     * Create request for operation 'cowGetUsersHistorical'
      *
-     * @param  int $start_block (optional)
-     * @param  int $end_block (optional)
-     * @param  \DateTime $start_date (optional)
-     * @param  \DateTime $end_date (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dappsCowUsersHistoricalGet'] to see the possible values for this operation
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cowGetUsersHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function dappsCowUsersHistoricalGetRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['dappsCowUsersHistoricalGet'][0])
+    public function cowGetUsersHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, string $contentType = self::contentTypes['cowGetUsersHistorical'][0])
     {
 
 
@@ -1403,7 +1713,7 @@ class CowApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            [],
+            ['text/plain', 'application/json', 'text/json', ],
             $contentType,
             $multipart
         );

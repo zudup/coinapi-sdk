@@ -4,19 +4,21 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**dappsCowOrdersHistoricalGet**](CowApi.md#dappsCowOrdersHistoricalGet) | **GET** /dapps/cow/orders/historical | 
-[**dappsCowSettlementHistoricalGet**](CowApi.md#dappsCowSettlementHistoricalGet) | **GET** /dapps/cow/settlement/historical | 
-[**dappsCowTokensHistoricalGet**](CowApi.md#dappsCowTokensHistoricalGet) | **GET** /dapps/cow/tokens/historical | 
-[**dappsCowTradesHistoricalGet**](CowApi.md#dappsCowTradesHistoricalGet) | **GET** /dapps/cow/trades/historical | 
-[**dappsCowUsersHistoricalGet**](CowApi.md#dappsCowUsersHistoricalGet) | **GET** /dapps/cow/users/historical | 
+[**cowGetOrdersHistorical**](CowApi.md#cowGetOrdersHistorical) | **GET** /dapps/cow/orders/historical | GetOrders (historical)
+[**cowGetSettlementsHistorical**](CowApi.md#cowGetSettlementsHistorical) | **GET** /dapps/cow/settlements/historical | GetSettlements (historical)
+[**cowGetTokensHistorical**](CowApi.md#cowGetTokensHistorical) | **GET** /dapps/cow/tokens/historical | GetTokens (historical) 🔥
+[**cowGetTradesHistorical**](CowApi.md#cowGetTradesHistorical) | **GET** /dapps/cow/trades/historical | GetTrades (historical) 🔥
+[**cowGetUsersHistorical**](CowApi.md#cowGetUsersHistorical) | **GET** /dapps/cow/users/historical | GetUsers (historical)
 
 
 
-## dappsCowOrdersHistoricalGet
+## cowGetOrdersHistorical
 
-> dappsCowOrdersHistoricalGet(opts)
+> [CowOrderDTO] cowGetOrdersHistorical(opts)
 
+GetOrders (historical)
 
+Gets orders.
 
 ### Example
 
@@ -30,11 +32,11 @@ let opts = {
   'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'endDate': new Date("2013-10-20T19:20:30+01:00") // Date | 
 };
-apiInstance.dappsCowOrdersHistoricalGet(opts, (error, data, response) => {
+apiInstance.cowGetOrdersHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -51,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**[CowOrderDTO]**](CowOrderDTO.md)
 
 ### Authorization
 
@@ -60,14 +62,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsCowSettlementHistoricalGet
+## cowGetSettlementsHistorical
 
-> dappsCowSettlementHistoricalGet(opts)
+> [CowSettlementDTO] cowGetSettlementsHistorical(opts)
 
+GetSettlements (historical)
 
+Gets settlements.
 
 ### Example
 
@@ -81,11 +85,11 @@ let opts = {
   'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'endDate': new Date("2013-10-20T19:20:30+01:00") // Date | 
 };
-apiInstance.dappsCowSettlementHistoricalGet(opts, (error, data, response) => {
+apiInstance.cowGetSettlementsHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -102,7 +106,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**[CowSettlementDTO]**](CowSettlementDTO.md)
 
 ### Authorization
 
@@ -111,14 +115,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsCowTokensHistoricalGet
+## cowGetTokensHistorical
 
-> dappsCowTokensHistoricalGet(opts)
+> [CowTokenDTO] cowGetTokensHistorical(opts)
 
+GetTokens (historical) 🔥
 
+Gets tokens.
 
 ### Example
 
@@ -133,11 +139,11 @@ let opts = {
   'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'tokenId': "tokenId_example" // String | 
 };
-apiInstance.dappsCowTokensHistoricalGet(opts, (error, data, response) => {
+apiInstance.cowGetTokensHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -155,7 +161,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**[CowTokenDTO]**](CowTokenDTO.md)
 
 ### Authorization
 
@@ -164,14 +170,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsCowTradesHistoricalGet
+## cowGetTradesHistorical
 
-> dappsCowTradesHistoricalGet(opts)
+> [CowTradeDTO] cowGetTradesHistorical(opts)
 
+GetTrades (historical) 🔥
 
+Gets trades.
 
 ### Example
 
@@ -185,11 +193,11 @@ let opts = {
   'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'endDate': new Date("2013-10-20T19:20:30+01:00") // Date | 
 };
-apiInstance.dappsCowTradesHistoricalGet(opts, (error, data, response) => {
+apiInstance.cowGetTradesHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -206,7 +214,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**[CowTradeDTO]**](CowTradeDTO.md)
 
 ### Authorization
 
@@ -215,14 +223,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsCowUsersHistoricalGet
+## cowGetUsersHistorical
 
-> dappsCowUsersHistoricalGet(opts)
+> [CowUserDTO] cowGetUsersHistorical(opts)
 
+GetUsers (historical)
 
+Gets users.
 
 ### Example
 
@@ -236,11 +246,11 @@ let opts = {
   'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'endDate': new Date("2013-10-20T19:20:30+01:00") // Date | 
 };
-apiInstance.dappsCowUsersHistoricalGet(opts, (error, data, response) => {
+apiInstance.cowGetUsersHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -257,7 +267,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**[CowUserDTO]**](CowUserDTO.md)
 
 ### Authorization
 
@@ -266,5 +276,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 

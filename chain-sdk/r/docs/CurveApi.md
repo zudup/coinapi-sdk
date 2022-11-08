@@ -4,49 +4,53 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**DappsCurveAccountsHistoricalGet**](CurveApi.md#DappsCurveAccountsHistoricalGet) | **GET** /dapps/curve/accounts/historical | 
-[**DappsCurveAddLiquidityEventHistoricalGet**](CurveApi.md#DappsCurveAddLiquidityEventHistoricalGet) | **GET** /dapps/curve/addLiquidityEvent/historical | 
-[**DappsCurveAdminFeeChangeLogHistoricalGet**](CurveApi.md#DappsCurveAdminFeeChangeLogHistoricalGet) | **GET** /dapps/curve/adminFeeChangeLog/historical | 
-[**DappsCurveAmplificationCoeffChangeLogHistoricalGet**](CurveApi.md#DappsCurveAmplificationCoeffChangeLogHistoricalGet) | **GET** /dapps/curve/amplificationCoeffChangeLog/historical | 
-[**DappsCurveCoinsHistoricalGet**](CurveApi.md#DappsCurveCoinsHistoricalGet) | **GET** /dapps/curve/coins/historical | 
-[**DappsCurveContractsHistoricalGet**](CurveApi.md#DappsCurveContractsHistoricalGet) | **GET** /dapps/curve/contracts/historical | 
-[**DappsCurveContractsVersionHistoricalGet**](CurveApi.md#DappsCurveContractsVersionHistoricalGet) | **GET** /dapps/curve/contractsVersion/historical | 
-[**DappsCurveDailyVolumeHistoricalGet**](CurveApi.md#DappsCurveDailyVolumeHistoricalGet) | **GET** /dapps/curve/dailyVolume/historical | 
-[**DappsCurveFeeChangeLogHistoricalGet**](CurveApi.md#DappsCurveFeeChangeLogHistoricalGet) | **GET** /dapps/curve/feeChangeLog/historical | 
-[**DappsCurveGaugeDepositHistoricalGet**](CurveApi.md#DappsCurveGaugeDepositHistoricalGet) | **GET** /dapps/curve/gaugeDeposit/historical | 
-[**DappsCurveGaugeHistoricalGet**](CurveApi.md#DappsCurveGaugeHistoricalGet) | **GET** /dapps/curve/gauge/historical | 
-[**DappsCurveGaugeLiquidityHistoricalGet**](CurveApi.md#DappsCurveGaugeLiquidityHistoricalGet) | **GET** /dapps/curve/gaugeLiquidity/historical | 
-[**DappsCurveGaugeTotalWeightHistoricalGet**](CurveApi.md#DappsCurveGaugeTotalWeightHistoricalGet) | **GET** /dapps/curve/gaugeTotalWeight/historical | 
-[**DappsCurveGaugeTypeHistoricalGet**](CurveApi.md#DappsCurveGaugeTypeHistoricalGet) | **GET** /dapps/curve/gaugeType/historical | 
-[**DappsCurveGaugeTypeWeightHistoricalGet**](CurveApi.md#DappsCurveGaugeTypeWeightHistoricalGet) | **GET** /dapps/curve/gaugeTypeWeight/historical | 
-[**DappsCurveGaugeWeightHistoricalGet**](CurveApi.md#DappsCurveGaugeWeightHistoricalGet) | **GET** /dapps/curve/gaugeWeight/historical | 
-[**DappsCurveGaugeWeightVoteHistoricalGet**](CurveApi.md#DappsCurveGaugeWeightVoteHistoricalGet) | **GET** /dapps/curve/gaugeWeightVote/historical | 
-[**DappsCurveGaugeWithdrawHistoricalGet**](CurveApi.md#DappsCurveGaugeWithdrawHistoricalGet) | **GET** /dapps/curve/gaugeWithdraw/historical | 
-[**DappsCurveHourlyVolumeHistoricalGet**](CurveApi.md#DappsCurveHourlyVolumeHistoricalGet) | **GET** /dapps/curve/hourlyVolume/historical | 
-[**DappsCurveLpTokenHistoricalGet**](CurveApi.md#DappsCurveLpTokenHistoricalGet) | **GET** /dapps/curve/lpToken/historical | 
-[**DappsCurvePoolsHistoricalGet**](CurveApi.md#DappsCurvePoolsHistoricalGet) | **GET** /dapps/curve/pools/historical | 
-[**DappsCurveProposalsHistoricalGet**](CurveApi.md#DappsCurveProposalsHistoricalGet) | **GET** /dapps/curve/proposals/historical | 
-[**DappsCurveProposalsVoteHistoricalGet**](CurveApi.md#DappsCurveProposalsVoteHistoricalGet) | **GET** /dapps/curve/proposalsVote/historical | 
-[**DappsCurveRemoveLiquidityEventHistoricalGet**](CurveApi.md#DappsCurveRemoveLiquidityEventHistoricalGet) | **GET** /dapps/curve/removeLiquidityEvent/historical | 
-[**DappsCurveRemoveLiquidityOneEventHistoricalGet**](CurveApi.md#DappsCurveRemoveLiquidityOneEventHistoricalGet) | **GET** /dapps/curve/removeLiquidityOneEvent/historical | 
-[**DappsCurveSwapsHistoricalGet**](CurveApi.md#DappsCurveSwapsHistoricalGet) | **GET** /dapps/curve/swaps/historical | 
-[**DappsCurveSystemStateHistoricalGet**](CurveApi.md#DappsCurveSystemStateHistoricalGet) | **GET** /dapps/curve/systemState/historical | 
-[**DappsCurveTokensHistoricalGet**](CurveApi.md#DappsCurveTokensHistoricalGet) | **GET** /dapps/curve/tokens/historical | 
-[**DappsCurveTransferOwnershipEventHistoricalGet**](CurveApi.md#DappsCurveTransferOwnershipEventHistoricalGet) | **GET** /dapps/curve/transferOwnershipEvent/historical | 
-[**DappsCurveUnderlyingCoinHistoricalGet**](CurveApi.md#DappsCurveUnderlyingCoinHistoricalGet) | **GET** /dapps/curve/underlyingCoin/historical | 
-[**DappsCurveVotingAppHistoricalGet**](CurveApi.md#DappsCurveVotingAppHistoricalGet) | **GET** /dapps/curve/votingApp/historical | 
-[**DappsCurveWeeklyVolumeHistoricalGet**](CurveApi.md#DappsCurveWeeklyVolumeHistoricalGet) | **GET** /dapps/curve/weeklyVolume/historical | 
+[**CurveGetAccountsHistorical**](CurveApi.md#CurveGetAccountsHistorical) | **GET** /dapps/curve/accounts/historical | GetAccounts (historical)
+[**CurveGetAddLiquidityEventsHistorical**](CurveApi.md#CurveGetAddLiquidityEventsHistorical) | **GET** /dapps/curve/addLiquidityEvents/historical | GetAddLiquidityEvents (historical)
+[**CurveGetAdminFeeChangeLogsHistorical**](CurveApi.md#CurveGetAdminFeeChangeLogsHistorical) | **GET** /dapps/curve/adminFeeChangeLogs/historical | GetAdminFeeChangeLogs (historical)
+[**CurveGetAmplificationCoeffChangeLogsHistorical**](CurveApi.md#CurveGetAmplificationCoeffChangeLogsHistorical) | **GET** /dapps/curve/amplificationCoeffChangeLogs/historical | GetAmplificationCoeffChangeLogs (historical)
+[**CurveGetCoinsHistorical**](CurveApi.md#CurveGetCoinsHistorical) | **GET** /dapps/curve/coins/historical | GetCoins (historical)
+[**CurveGetContractsHistorical**](CurveApi.md#CurveGetContractsHistorical) | **GET** /dapps/curve/contracts/historical | GetContracts (historical)
+[**CurveGetContractsVersionsHistorical**](CurveApi.md#CurveGetContractsVersionsHistorical) | **GET** /dapps/curve/contractsVersions/historical | GetContractsVersions (historical)
+[**CurveGetDailyVolumesHistorical**](CurveApi.md#CurveGetDailyVolumesHistorical) | **GET** /dapps/curve/dailyVolumes/historical | GetDailyVolumes (historical)
+[**CurveGetExchangesHistorical**](CurveApi.md#CurveGetExchangesHistorical) | **GET** /dapps/curve/exchanges/historical | GetExchanges (historical) 🔥
+[**CurveGetFeeChangeLogsHistorical**](CurveApi.md#CurveGetFeeChangeLogsHistorical) | **GET** /dapps/curve/feeChangeLogs/historical | GetFeeChangeLogs (historical)
+[**CurveGetGaugesDepositsHistorical**](CurveApi.md#CurveGetGaugesDepositsHistorical) | **GET** /dapps/curve/gaugesDeposits/historical | GetGaugesDeposits (historical)
+[**CurveGetGaugesHistorical**](CurveApi.md#CurveGetGaugesHistorical) | **GET** /dapps/curve/gauges/historical | GetGauges (historical)
+[**CurveGetGaugesLiquidityHistorical**](CurveApi.md#CurveGetGaugesLiquidityHistorical) | **GET** /dapps/curve/gaugesLiquidity/historical | GetGaugesLiquidity (historical)
+[**CurveGetGaugesTotalWeightsHistorical**](CurveApi.md#CurveGetGaugesTotalWeightsHistorical) | **GET** /dapps/curve/gaugesTotalWeights/historical | GetGaugesTotalWeights (historical)
+[**CurveGetGaugesTypesHistorical**](CurveApi.md#CurveGetGaugesTypesHistorical) | **GET** /dapps/curve/gaugesTypes/historical | GetGaugesTypes (historical)
+[**CurveGetGaugesTypesWeightsHistorical**](CurveApi.md#CurveGetGaugesTypesWeightsHistorical) | **GET** /dapps/curve/gaugesTypesWeights/historical | GetGaugesTypesWeights (historical)
+[**CurveGetGaugesWeightsHistorical**](CurveApi.md#CurveGetGaugesWeightsHistorical) | **GET** /dapps/curve/gaugesWeights/historical | GetGaugesWeights (historical)
+[**CurveGetGaugesWeightsVotesHistorical**](CurveApi.md#CurveGetGaugesWeightsVotesHistorical) | **GET** /dapps/curve/gaugesWeightsVotes/historical | GetGaugesWeightsVotes (historical)
+[**CurveGetGaugesWithdrawHistorical**](CurveApi.md#CurveGetGaugesWithdrawHistorical) | **GET** /dapps/curve/gaugesWithdraws/historical | GetGaugesWithdraw (historical)
+[**CurveGetHourlyVolumesHistorical**](CurveApi.md#CurveGetHourlyVolumesHistorical) | **GET** /dapps/curve/hourlyVolumes/historical | GetHourlyVolumes (historical)
+[**CurveGetLpTokensHistorical**](CurveApi.md#CurveGetLpTokensHistorical) | **GET** /dapps/curve/lpTokens/historical | GetLpTokens (historical)
+[**CurveGetPoolsHistorical**](CurveApi.md#CurveGetPoolsHistorical) | **GET** /dapps/curve/pools/historical | GetPools (historical) 🔥
+[**CurveGetProposalsHistorical**](CurveApi.md#CurveGetProposalsHistorical) | **GET** /dapps/curve/proposals/historical | GetProposals (historical)
+[**CurveGetProposalsVotesHistorical**](CurveApi.md#CurveGetProposalsVotesHistorical) | **GET** /dapps/curve/proposalsVotes/historical | GetProposalsVotes (historical)
+[**CurveGetRemoveLiquidityEventsHistorical**](CurveApi.md#CurveGetRemoveLiquidityEventsHistorical) | **GET** /dapps/curve/removeLiquidityEvents/historical | GetRemoveLiquidityEvents (historical)
+[**CurveGetRemoveLiquidityOneEventsHistorical**](CurveApi.md#CurveGetRemoveLiquidityOneEventsHistorical) | **GET** /dapps/curve/removeLiquidityOneEvents/historical | GetRemoveLiquidityOneEvents (historical)
+[**CurveGetSystemStatesHistorical**](CurveApi.md#CurveGetSystemStatesHistorical) | **GET** /dapps/curve/systemStates/historical | GetSystemStates (historical)
+[**CurveGetTokensHistorical**](CurveApi.md#CurveGetTokensHistorical) | **GET** /dapps/curve/tokens/historical | GetTokens (historical) 🔥
+[**CurveGetTransferOwnershipEventsHistorical**](CurveApi.md#CurveGetTransferOwnershipEventsHistorical) | **GET** /dapps/curve/transferOwnershipEvents/historical | GetTransferOwnershipEvents (historical)
+[**CurveGetUnderlyingCoinsHistorical**](CurveApi.md#CurveGetUnderlyingCoinsHistorical) | **GET** /dapps/curve/underlyingCoins/historical | GetUnderlyingCoins (historical)
+[**CurveGetVotingAppsHistorical**](CurveApi.md#CurveGetVotingAppsHistorical) | **GET** /dapps/curve/votingApps/historical | GetVotingApps (historical)
+[**CurveGetWeeklyVolumesHistorical**](CurveApi.md#CurveGetWeeklyVolumesHistorical) | **GET** /dapps/curve/weeklyVolumes/historical | GetWeeklyVolumes (historical)
 
 
-# **DappsCurveAccountsHistoricalGet**
-> DappsCurveAccountsHistoricalGet(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date)
+# **CurveGetAccountsHistorical**
+> array[CurveAccountDTO] CurveGetAccountsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date)
 
+GetAccounts (historical)
 
+Gets accounts.
 
 ### Example
 ```R
 library(openapi)
 
+# GetAccounts (historical)
+#
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
 var_end_block <- 56 # integer |  (Optional)
@@ -54,7 +58,10 @@ var_start_date <- "start_date_example" # character |  (Optional)
 var_end_date <- "end_date_example" # character |  (Optional)
 
 api_instance <- CurveApi$new()
-api_instance$DappsCurveAccountsHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
+# to save the result into a file, simply add the optional `data_file` parameter, e.g.
+# result <- api_instance$CurveGetAccountsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_datedata_file = "result.txt")
+result <- api_instance$CurveGetAccountsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
+dput(result)
 ```
 
 ### Parameters
@@ -68,7 +75,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**array[CurveAccountDTO]**](Curve.AccountDTO.md)
 
 ### Authorization
 
@@ -77,22 +84,26 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
-# **DappsCurveAddLiquidityEventHistoricalGet**
-> DappsCurveAddLiquidityEventHistoricalGet(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
+# **CurveGetAddLiquidityEventsHistorical**
+> array[CurveAddLiquidityEventDTO] CurveGetAddLiquidityEventsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
 
+GetAddLiquidityEvents (historical)
 
+Gets add liquidity events.
 
 ### Example
 ```R
 library(openapi)
 
+# GetAddLiquidityEvents (historical)
+#
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
 var_end_block <- 56 # integer |  (Optional)
@@ -101,7 +112,10 @@ var_end_date <- "end_date_example" # character |  (Optional)
 var_pool_id <- "pool_id_example" # character |  (Optional)
 
 api_instance <- CurveApi$new()
-api_instance$DappsCurveAddLiquidityEventHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+# to save the result into a file, simply add the optional `data_file` parameter, e.g.
+# result <- api_instance$CurveGetAddLiquidityEventsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+result <- api_instance$CurveGetAddLiquidityEventsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+dput(result)
 ```
 
 ### Parameters
@@ -116,7 +130,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**array[CurveAddLiquidityEventDTO]**](Curve.AddLiquidityEventDTO.md)
 
 ### Authorization
 
@@ -125,22 +139,26 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
-# **DappsCurveAdminFeeChangeLogHistoricalGet**
-> DappsCurveAdminFeeChangeLogHistoricalGet(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
+# **CurveGetAdminFeeChangeLogsHistorical**
+> array[CurveAdminFeeChangeLogDTO] CurveGetAdminFeeChangeLogsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
 
+GetAdminFeeChangeLogs (historical)
 
+Gets admin fee change logs.
 
 ### Example
 ```R
 library(openapi)
 
+# GetAdminFeeChangeLogs (historical)
+#
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
 var_end_block <- 56 # integer |  (Optional)
@@ -149,7 +167,10 @@ var_end_date <- "end_date_example" # character |  (Optional)
 var_pool_id <- "pool_id_example" # character |  (Optional)
 
 api_instance <- CurveApi$new()
-api_instance$DappsCurveAdminFeeChangeLogHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+# to save the result into a file, simply add the optional `data_file` parameter, e.g.
+# result <- api_instance$CurveGetAdminFeeChangeLogsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+result <- api_instance$CurveGetAdminFeeChangeLogsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+dput(result)
 ```
 
 ### Parameters
@@ -164,7 +185,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**array[CurveAdminFeeChangeLogDTO]**](Curve.AdminFeeChangeLogDTO.md)
 
 ### Authorization
 
@@ -173,22 +194,26 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
-# **DappsCurveAmplificationCoeffChangeLogHistoricalGet**
-> DappsCurveAmplificationCoeffChangeLogHistoricalGet(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
+# **CurveGetAmplificationCoeffChangeLogsHistorical**
+> array[CurveAmplificationCoeffChangeLogDTO] CurveGetAmplificationCoeffChangeLogsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
 
+GetAmplificationCoeffChangeLogs (historical)
 
+Gets amplification coeff change logs.
 
 ### Example
 ```R
 library(openapi)
 
+# GetAmplificationCoeffChangeLogs (historical)
+#
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
 var_end_block <- 56 # integer |  (Optional)
@@ -197,7 +222,10 @@ var_end_date <- "end_date_example" # character |  (Optional)
 var_pool_id <- "pool_id_example" # character |  (Optional)
 
 api_instance <- CurveApi$new()
-api_instance$DappsCurveAmplificationCoeffChangeLogHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+# to save the result into a file, simply add the optional `data_file` parameter, e.g.
+# result <- api_instance$CurveGetAmplificationCoeffChangeLogsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+result <- api_instance$CurveGetAmplificationCoeffChangeLogsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+dput(result)
 ```
 
 ### Parameters
@@ -212,7 +240,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**array[CurveAmplificationCoeffChangeLogDTO]**](Curve.AmplificationCoeffChangeLogDTO.md)
 
 ### Authorization
 
@@ -221,22 +249,26 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
-# **DappsCurveCoinsHistoricalGet**
-> DappsCurveCoinsHistoricalGet(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
+# **CurveGetCoinsHistorical**
+> array[CurveCoinDTO] CurveGetCoinsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
 
+GetCoins (historical)
 
+Gets coins.
 
 ### Example
 ```R
 library(openapi)
 
+# GetCoins (historical)
+#
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
 var_end_block <- 56 # integer |  (Optional)
@@ -245,7 +277,10 @@ var_end_date <- "end_date_example" # character |  (Optional)
 var_pool_id <- "pool_id_example" # character |  (Optional)
 
 api_instance <- CurveApi$new()
-api_instance$DappsCurveCoinsHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+# to save the result into a file, simply add the optional `data_file` parameter, e.g.
+# result <- api_instance$CurveGetCoinsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+result <- api_instance$CurveGetCoinsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+dput(result)
 ```
 
 ### Parameters
@@ -260,7 +295,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**array[CurveCoinDTO]**](Curve.CoinDTO.md)
 
 ### Authorization
 
@@ -269,22 +304,26 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
-# **DappsCurveContractsHistoricalGet**
-> DappsCurveContractsHistoricalGet(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
+# **CurveGetContractsHistorical**
+> array[CurveContractDTO] CurveGetContractsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
 
+GetContracts (historical)
 
+Gets contracts.
 
 ### Example
 ```R
 library(openapi)
 
+# GetContracts (historical)
+#
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
 var_end_block <- 56 # integer |  (Optional)
@@ -293,7 +332,10 @@ var_end_date <- "end_date_example" # character |  (Optional)
 var_pool_id <- "pool_id_example" # character |  (Optional)
 
 api_instance <- CurveApi$new()
-api_instance$DappsCurveContractsHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+# to save the result into a file, simply add the optional `data_file` parameter, e.g.
+# result <- api_instance$CurveGetContractsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+result <- api_instance$CurveGetContractsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+dput(result)
 ```
 
 ### Parameters
@@ -308,7 +350,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**array[CurveContractDTO]**](Curve.ContractDTO.md)
 
 ### Authorization
 
@@ -317,22 +359,26 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
-# **DappsCurveContractsVersionHistoricalGet**
-> DappsCurveContractsVersionHistoricalGet(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
+# **CurveGetContractsVersionsHistorical**
+> array[CurveContractVersionDTO] CurveGetContractsVersionsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
 
+GetContractsVersions (historical)
 
+Gets contracts versions.
 
 ### Example
 ```R
 library(openapi)
 
+# GetContractsVersions (historical)
+#
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
 var_end_block <- 56 # integer |  (Optional)
@@ -341,7 +387,10 @@ var_end_date <- "end_date_example" # character |  (Optional)
 var_pool_id <- "pool_id_example" # character |  (Optional)
 
 api_instance <- CurveApi$new()
-api_instance$DappsCurveContractsVersionHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+# to save the result into a file, simply add the optional `data_file` parameter, e.g.
+# result <- api_instance$CurveGetContractsVersionsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+result <- api_instance$CurveGetContractsVersionsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+dput(result)
 ```
 
 ### Parameters
@@ -356,7 +405,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**array[CurveContractVersionDTO]**](Curve.ContractVersionDTO.md)
 
 ### Authorization
 
@@ -365,22 +414,26 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
-# **DappsCurveDailyVolumeHistoricalGet**
-> DappsCurveDailyVolumeHistoricalGet(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
+# **CurveGetDailyVolumesHistorical**
+> array[CurveDailyVolumeDTO] CurveGetDailyVolumesHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
 
+GetDailyVolumes (historical)
 
+Gets daily volumes.
 
 ### Example
 ```R
 library(openapi)
 
+# GetDailyVolumes (historical)
+#
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
 var_end_block <- 56 # integer |  (Optional)
@@ -389,7 +442,10 @@ var_end_date <- "end_date_example" # character |  (Optional)
 var_pool_id <- "pool_id_example" # character |  (Optional)
 
 api_instance <- CurveApi$new()
-api_instance$DappsCurveDailyVolumeHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+# to save the result into a file, simply add the optional `data_file` parameter, e.g.
+# result <- api_instance$CurveGetDailyVolumesHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+result <- api_instance$CurveGetDailyVolumesHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+dput(result)
 ```
 
 ### Parameters
@@ -404,7 +460,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**array[CurveDailyVolumeDTO]**](Curve.DailyVolumeDTO.md)
 
 ### Authorization
 
@@ -413,22 +469,26 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
-# **DappsCurveFeeChangeLogHistoricalGet**
-> DappsCurveFeeChangeLogHistoricalGet(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
+# **CurveGetExchangesHistorical**
+> array[CurveExchangeDTO] CurveGetExchangesHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
 
+GetExchanges (historical) 🔥
 
+Gets exchanges.
 
 ### Example
 ```R
 library(openapi)
 
+# GetExchanges (historical) 🔥
+#
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
 var_end_block <- 56 # integer |  (Optional)
@@ -437,7 +497,10 @@ var_end_date <- "end_date_example" # character |  (Optional)
 var_pool_id <- "pool_id_example" # character |  (Optional)
 
 api_instance <- CurveApi$new()
-api_instance$DappsCurveFeeChangeLogHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+# to save the result into a file, simply add the optional `data_file` parameter, e.g.
+# result <- api_instance$CurveGetExchangesHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+result <- api_instance$CurveGetExchangesHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+dput(result)
 ```
 
 ### Parameters
@@ -452,7 +515,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**array[CurveExchangeDTO]**](Curve.ExchangeDTO.md)
 
 ### Authorization
 
@@ -461,68 +524,26 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
-# **DappsCurveGaugeDepositHistoricalGet**
-> DappsCurveGaugeDepositHistoricalGet(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date)
+# **CurveGetFeeChangeLogsHistorical**
+> array[CurveFeeChangeLogDTO] CurveGetFeeChangeLogsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
 
+GetFeeChangeLogs (historical)
 
+Gets fee change logs.
 
 ### Example
 ```R
 library(openapi)
 
-# prepare function argument(s)
-var_start_block <- 56 # integer |  (Optional)
-var_end_block <- 56 # integer |  (Optional)
-var_start_date <- "start_date_example" # character |  (Optional)
-var_end_date <- "end_date_example" # character |  (Optional)
-
-api_instance <- CurveApi$new()
-api_instance$DappsCurveGaugeDepositHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **integer**|  | [optional] 
- **end_block** | **integer**|  | [optional] 
- **start_date** | **character**|  | [optional] 
- **end_date** | **character**|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-
-# **DappsCurveGaugeHistoricalGet**
-> DappsCurveGaugeHistoricalGet(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
-
-
-
-### Example
-```R
-library(openapi)
-
+# GetFeeChangeLogs (historical)
+#
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
 var_end_block <- 56 # integer |  (Optional)
@@ -531,7 +552,10 @@ var_end_date <- "end_date_example" # character |  (Optional)
 var_pool_id <- "pool_id_example" # character |  (Optional)
 
 api_instance <- CurveApi$new()
-api_instance$DappsCurveGaugeHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+# to save the result into a file, simply add the optional `data_file` parameter, e.g.
+# result <- api_instance$CurveGetFeeChangeLogsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+result <- api_instance$CurveGetFeeChangeLogsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+dput(result)
 ```
 
 ### Parameters
@@ -546,7 +570,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**array[CurveFeeChangeLogDTO]**](Curve.FeeChangeLogDTO.md)
 
 ### Authorization
 
@@ -555,22 +579,26 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
-# **DappsCurveGaugeLiquidityHistoricalGet**
-> DappsCurveGaugeLiquidityHistoricalGet(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date)
+# **CurveGetGaugesDepositsHistorical**
+> array[CurveGaugeDepositDTO] CurveGetGaugesDepositsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date)
 
+GetGaugesDeposits (historical)
 
+Gets gauges deposits.
 
 ### Example
 ```R
 library(openapi)
 
+# GetGaugesDeposits (historical)
+#
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
 var_end_block <- 56 # integer |  (Optional)
@@ -578,7 +606,10 @@ var_start_date <- "start_date_example" # character |  (Optional)
 var_end_date <- "end_date_example" # character |  (Optional)
 
 api_instance <- CurveApi$new()
-api_instance$DappsCurveGaugeLiquidityHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
+# to save the result into a file, simply add the optional `data_file` parameter, e.g.
+# result <- api_instance$CurveGetGaugesDepositsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_datedata_file = "result.txt")
+result <- api_instance$CurveGetGaugesDepositsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
+dput(result)
 ```
 
 ### Parameters
@@ -592,7 +623,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**array[CurveGaugeDepositDTO]**](Curve.GaugeDepositDTO.md)
 
 ### Authorization
 
@@ -601,298 +632,26 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
-# **DappsCurveGaugeTotalWeightHistoricalGet**
-> DappsCurveGaugeTotalWeightHistoricalGet(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date)
+# **CurveGetGaugesHistorical**
+> array[CurveGaugeDTO] CurveGetGaugesHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
 
+GetGauges (historical)
 
+Gets gauges.
 
 ### Example
 ```R
 library(openapi)
 
-# prepare function argument(s)
-var_start_block <- 56 # integer |  (Optional)
-var_end_block <- 56 # integer |  (Optional)
-var_start_date <- "start_date_example" # character |  (Optional)
-var_end_date <- "end_date_example" # character |  (Optional)
-
-api_instance <- CurveApi$new()
-api_instance$DappsCurveGaugeTotalWeightHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **integer**|  | [optional] 
- **end_block** | **integer**|  | [optional] 
- **start_date** | **character**|  | [optional] 
- **end_date** | **character**|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-
-# **DappsCurveGaugeTypeHistoricalGet**
-> DappsCurveGaugeTypeHistoricalGet(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date)
-
-
-
-### Example
-```R
-library(openapi)
-
-# prepare function argument(s)
-var_start_block <- 56 # integer |  (Optional)
-var_end_block <- 56 # integer |  (Optional)
-var_start_date <- "start_date_example" # character |  (Optional)
-var_end_date <- "end_date_example" # character |  (Optional)
-
-api_instance <- CurveApi$new()
-api_instance$DappsCurveGaugeTypeHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **integer**|  | [optional] 
- **end_block** | **integer**|  | [optional] 
- **start_date** | **character**|  | [optional] 
- **end_date** | **character**|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-
-# **DappsCurveGaugeTypeWeightHistoricalGet**
-> DappsCurveGaugeTypeWeightHistoricalGet(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date)
-
-
-
-### Example
-```R
-library(openapi)
-
-# prepare function argument(s)
-var_start_block <- 56 # integer |  (Optional)
-var_end_block <- 56 # integer |  (Optional)
-var_start_date <- "start_date_example" # character |  (Optional)
-var_end_date <- "end_date_example" # character |  (Optional)
-
-api_instance <- CurveApi$new()
-api_instance$DappsCurveGaugeTypeWeightHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **integer**|  | [optional] 
- **end_block** | **integer**|  | [optional] 
- **start_date** | **character**|  | [optional] 
- **end_date** | **character**|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-
-# **DappsCurveGaugeWeightHistoricalGet**
-> DappsCurveGaugeWeightHistoricalGet(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date)
-
-
-
-### Example
-```R
-library(openapi)
-
-# prepare function argument(s)
-var_start_block <- 56 # integer |  (Optional)
-var_end_block <- 56 # integer |  (Optional)
-var_start_date <- "start_date_example" # character |  (Optional)
-var_end_date <- "end_date_example" # character |  (Optional)
-
-api_instance <- CurveApi$new()
-api_instance$DappsCurveGaugeWeightHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **integer**|  | [optional] 
- **end_block** | **integer**|  | [optional] 
- **start_date** | **character**|  | [optional] 
- **end_date** | **character**|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-
-# **DappsCurveGaugeWeightVoteHistoricalGet**
-> DappsCurveGaugeWeightVoteHistoricalGet(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date)
-
-
-
-### Example
-```R
-library(openapi)
-
-# prepare function argument(s)
-var_start_block <- 56 # integer |  (Optional)
-var_end_block <- 56 # integer |  (Optional)
-var_start_date <- "start_date_example" # character |  (Optional)
-var_end_date <- "end_date_example" # character |  (Optional)
-
-api_instance <- CurveApi$new()
-api_instance$DappsCurveGaugeWeightVoteHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **integer**|  | [optional] 
- **end_block** | **integer**|  | [optional] 
- **start_date** | **character**|  | [optional] 
- **end_date** | **character**|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-
-# **DappsCurveGaugeWithdrawHistoricalGet**
-> DappsCurveGaugeWithdrawHistoricalGet(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date)
-
-
-
-### Example
-```R
-library(openapi)
-
-# prepare function argument(s)
-var_start_block <- 56 # integer |  (Optional)
-var_end_block <- 56 # integer |  (Optional)
-var_start_date <- "start_date_example" # character |  (Optional)
-var_end_date <- "end_date_example" # character |  (Optional)
-
-api_instance <- CurveApi$new()
-api_instance$DappsCurveGaugeWithdrawHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **integer**|  | [optional] 
- **end_block** | **integer**|  | [optional] 
- **start_date** | **character**|  | [optional] 
- **end_date** | **character**|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-
-# **DappsCurveHourlyVolumeHistoricalGet**
-> DappsCurveHourlyVolumeHistoricalGet(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
-
-
-
-### Example
-```R
-library(openapi)
-
+# GetGauges (historical)
+#
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
 var_end_block <- 56 # integer |  (Optional)
@@ -901,7 +660,10 @@ var_end_date <- "end_date_example" # character |  (Optional)
 var_pool_id <- "pool_id_example" # character |  (Optional)
 
 api_instance <- CurveApi$new()
-api_instance$DappsCurveHourlyVolumeHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+# to save the result into a file, simply add the optional `data_file` parameter, e.g.
+# result <- api_instance$CurveGetGaugesHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+result <- api_instance$CurveGetGaugesHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+dput(result)
 ```
 
 ### Parameters
@@ -916,7 +678,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**array[CurveGaugeDTO]**](Curve.GaugeDTO.md)
 
 ### Authorization
 
@@ -925,22 +687,397 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
-# **DappsCurveLpTokenHistoricalGet**
-> DappsCurveLpTokenHistoricalGet(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
+# **CurveGetGaugesLiquidityHistorical**
+> array[CurveGaugeLiquidityDTO] CurveGetGaugesLiquidityHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date)
 
+GetGaugesLiquidity (historical)
 
+Gets gauges liquidity.
 
 ### Example
 ```R
 library(openapi)
 
+# GetGaugesLiquidity (historical)
+#
+# prepare function argument(s)
+var_start_block <- 56 # integer |  (Optional)
+var_end_block <- 56 # integer |  (Optional)
+var_start_date <- "start_date_example" # character |  (Optional)
+var_end_date <- "end_date_example" # character |  (Optional)
+
+api_instance <- CurveApi$new()
+# to save the result into a file, simply add the optional `data_file` parameter, e.g.
+# result <- api_instance$CurveGetGaugesLiquidityHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_datedata_file = "result.txt")
+result <- api_instance$CurveGetGaugesLiquidityHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
+dput(result)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **integer**|  | [optional] 
+ **end_block** | **integer**|  | [optional] 
+ **start_date** | **character**|  | [optional] 
+ **end_date** | **character**|  | [optional] 
+
+### Return type
+
+[**array[CurveGaugeLiquidityDTO]**](Curve.GaugeLiquidityDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+# **CurveGetGaugesTotalWeightsHistorical**
+> array[CurveGaugeTotalWeightDTO] CurveGetGaugesTotalWeightsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date)
+
+GetGaugesTotalWeights (historical)
+
+Gets gauges total weights.
+
+### Example
+```R
+library(openapi)
+
+# GetGaugesTotalWeights (historical)
+#
+# prepare function argument(s)
+var_start_block <- 56 # integer |  (Optional)
+var_end_block <- 56 # integer |  (Optional)
+var_start_date <- "start_date_example" # character |  (Optional)
+var_end_date <- "end_date_example" # character |  (Optional)
+
+api_instance <- CurveApi$new()
+# to save the result into a file, simply add the optional `data_file` parameter, e.g.
+# result <- api_instance$CurveGetGaugesTotalWeightsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_datedata_file = "result.txt")
+result <- api_instance$CurveGetGaugesTotalWeightsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
+dput(result)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **integer**|  | [optional] 
+ **end_block** | **integer**|  | [optional] 
+ **start_date** | **character**|  | [optional] 
+ **end_date** | **character**|  | [optional] 
+
+### Return type
+
+[**array[CurveGaugeTotalWeightDTO]**](Curve.GaugeTotalWeightDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+# **CurveGetGaugesTypesHistorical**
+> array[CurveGaugeTypeDTO] CurveGetGaugesTypesHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date)
+
+GetGaugesTypes (historical)
+
+Gets gauges types.
+
+### Example
+```R
+library(openapi)
+
+# GetGaugesTypes (historical)
+#
+# prepare function argument(s)
+var_start_block <- 56 # integer |  (Optional)
+var_end_block <- 56 # integer |  (Optional)
+var_start_date <- "start_date_example" # character |  (Optional)
+var_end_date <- "end_date_example" # character |  (Optional)
+
+api_instance <- CurveApi$new()
+# to save the result into a file, simply add the optional `data_file` parameter, e.g.
+# result <- api_instance$CurveGetGaugesTypesHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_datedata_file = "result.txt")
+result <- api_instance$CurveGetGaugesTypesHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
+dput(result)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **integer**|  | [optional] 
+ **end_block** | **integer**|  | [optional] 
+ **start_date** | **character**|  | [optional] 
+ **end_date** | **character**|  | [optional] 
+
+### Return type
+
+[**array[CurveGaugeTypeDTO]**](Curve.GaugeTypeDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+# **CurveGetGaugesTypesWeightsHistorical**
+> array[CurveGaugeTypeWeightDTO] CurveGetGaugesTypesWeightsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date)
+
+GetGaugesTypesWeights (historical)
+
+Gets gauges types weights.
+
+### Example
+```R
+library(openapi)
+
+# GetGaugesTypesWeights (historical)
+#
+# prepare function argument(s)
+var_start_block <- 56 # integer |  (Optional)
+var_end_block <- 56 # integer |  (Optional)
+var_start_date <- "start_date_example" # character |  (Optional)
+var_end_date <- "end_date_example" # character |  (Optional)
+
+api_instance <- CurveApi$new()
+# to save the result into a file, simply add the optional `data_file` parameter, e.g.
+# result <- api_instance$CurveGetGaugesTypesWeightsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_datedata_file = "result.txt")
+result <- api_instance$CurveGetGaugesTypesWeightsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
+dput(result)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **integer**|  | [optional] 
+ **end_block** | **integer**|  | [optional] 
+ **start_date** | **character**|  | [optional] 
+ **end_date** | **character**|  | [optional] 
+
+### Return type
+
+[**array[CurveGaugeTypeWeightDTO]**](Curve.GaugeTypeWeightDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+# **CurveGetGaugesWeightsHistorical**
+> array[CurveGaugeWeightDTO] CurveGetGaugesWeightsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date)
+
+GetGaugesWeights (historical)
+
+Gets gauges weights.
+
+### Example
+```R
+library(openapi)
+
+# GetGaugesWeights (historical)
+#
+# prepare function argument(s)
+var_start_block <- 56 # integer |  (Optional)
+var_end_block <- 56 # integer |  (Optional)
+var_start_date <- "start_date_example" # character |  (Optional)
+var_end_date <- "end_date_example" # character |  (Optional)
+
+api_instance <- CurveApi$new()
+# to save the result into a file, simply add the optional `data_file` parameter, e.g.
+# result <- api_instance$CurveGetGaugesWeightsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_datedata_file = "result.txt")
+result <- api_instance$CurveGetGaugesWeightsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
+dput(result)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **integer**|  | [optional] 
+ **end_block** | **integer**|  | [optional] 
+ **start_date** | **character**|  | [optional] 
+ **end_date** | **character**|  | [optional] 
+
+### Return type
+
+[**array[CurveGaugeWeightDTO]**](Curve.GaugeWeightDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+# **CurveGetGaugesWeightsVotesHistorical**
+> array[CurveGaugeWeightVoteDTO] CurveGetGaugesWeightsVotesHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date)
+
+GetGaugesWeightsVotes (historical)
+
+Gets gauges weights votes.
+
+### Example
+```R
+library(openapi)
+
+# GetGaugesWeightsVotes (historical)
+#
+# prepare function argument(s)
+var_start_block <- 56 # integer |  (Optional)
+var_end_block <- 56 # integer |  (Optional)
+var_start_date <- "start_date_example" # character |  (Optional)
+var_end_date <- "end_date_example" # character |  (Optional)
+
+api_instance <- CurveApi$new()
+# to save the result into a file, simply add the optional `data_file` parameter, e.g.
+# result <- api_instance$CurveGetGaugesWeightsVotesHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_datedata_file = "result.txt")
+result <- api_instance$CurveGetGaugesWeightsVotesHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
+dput(result)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **integer**|  | [optional] 
+ **end_block** | **integer**|  | [optional] 
+ **start_date** | **character**|  | [optional] 
+ **end_date** | **character**|  | [optional] 
+
+### Return type
+
+[**array[CurveGaugeWeightVoteDTO]**](Curve.GaugeWeightVoteDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+# **CurveGetGaugesWithdrawHistorical**
+> array[CurveGaugeWithdrawDTO] CurveGetGaugesWithdrawHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date)
+
+GetGaugesWithdraw (historical)
+
+Gets gauges withdraws.
+
+### Example
+```R
+library(openapi)
+
+# GetGaugesWithdraw (historical)
+#
+# prepare function argument(s)
+var_start_block <- 56 # integer |  (Optional)
+var_end_block <- 56 # integer |  (Optional)
+var_start_date <- "start_date_example" # character |  (Optional)
+var_end_date <- "end_date_example" # character |  (Optional)
+
+api_instance <- CurveApi$new()
+# to save the result into a file, simply add the optional `data_file` parameter, e.g.
+# result <- api_instance$CurveGetGaugesWithdrawHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_datedata_file = "result.txt")
+result <- api_instance$CurveGetGaugesWithdrawHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
+dput(result)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **integer**|  | [optional] 
+ **end_block** | **integer**|  | [optional] 
+ **start_date** | **character**|  | [optional] 
+ **end_date** | **character**|  | [optional] 
+
+### Return type
+
+[**array[CurveGaugeWithdrawDTO]**](Curve.GaugeWithdrawDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+# **CurveGetHourlyVolumesHistorical**
+> array[CurveHourlyVolumeDTO] CurveGetHourlyVolumesHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
+
+GetHourlyVolumes (historical)
+
+Gets hourly volumes.
+
+### Example
+```R
+library(openapi)
+
+# GetHourlyVolumes (historical)
+#
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
 var_end_block <- 56 # integer |  (Optional)
@@ -949,7 +1086,10 @@ var_end_date <- "end_date_example" # character |  (Optional)
 var_pool_id <- "pool_id_example" # character |  (Optional)
 
 api_instance <- CurveApi$new()
-api_instance$DappsCurveLpTokenHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+# to save the result into a file, simply add the optional `data_file` parameter, e.g.
+# result <- api_instance$CurveGetHourlyVolumesHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+result <- api_instance$CurveGetHourlyVolumesHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+dput(result)
 ```
 
 ### Parameters
@@ -964,7 +1104,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**array[CurveHourlyVolumeDTO]**](Curve.HourlyVolumeDTO.md)
 
 ### Authorization
 
@@ -973,22 +1113,26 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
-# **DappsCurvePoolsHistoricalGet**
-> DappsCurvePoolsHistoricalGet(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
+# **CurveGetLpTokensHistorical**
+> array[CurveLpTokenDTO] CurveGetLpTokensHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
 
+GetLpTokens (historical)
 
+Gets lp tokens.
 
 ### Example
 ```R
 library(openapi)
 
+# GetLpTokens (historical)
+#
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
 var_end_block <- 56 # integer |  (Optional)
@@ -997,7 +1141,10 @@ var_end_date <- "end_date_example" # character |  (Optional)
 var_pool_id <- "pool_id_example" # character |  (Optional)
 
 api_instance <- CurveApi$new()
-api_instance$DappsCurvePoolsHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+# to save the result into a file, simply add the optional `data_file` parameter, e.g.
+# result <- api_instance$CurveGetLpTokensHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+result <- api_instance$CurveGetLpTokensHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+dput(result)
 ```
 
 ### Parameters
@@ -1012,7 +1159,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**array[CurveLpTokenDTO]**](Curve.LpTokenDTO.md)
 
 ### Authorization
 
@@ -1021,114 +1168,26 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
-# **DappsCurveProposalsHistoricalGet**
-> DappsCurveProposalsHistoricalGet(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date)
+# **CurveGetPoolsHistorical**
+> array[CurvePoolDTO] CurveGetPoolsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
 
+GetPools (historical) 🔥
 
+Gets pools.
 
 ### Example
 ```R
 library(openapi)
 
-# prepare function argument(s)
-var_start_block <- 56 # integer |  (Optional)
-var_end_block <- 56 # integer |  (Optional)
-var_start_date <- "start_date_example" # character |  (Optional)
-var_end_date <- "end_date_example" # character |  (Optional)
-
-api_instance <- CurveApi$new()
-api_instance$DappsCurveProposalsHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **integer**|  | [optional] 
- **end_block** | **integer**|  | [optional] 
- **start_date** | **character**|  | [optional] 
- **end_date** | **character**|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-
-# **DappsCurveProposalsVoteHistoricalGet**
-> DappsCurveProposalsVoteHistoricalGet(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date)
-
-
-
-### Example
-```R
-library(openapi)
-
-# prepare function argument(s)
-var_start_block <- 56 # integer |  (Optional)
-var_end_block <- 56 # integer |  (Optional)
-var_start_date <- "start_date_example" # character |  (Optional)
-var_end_date <- "end_date_example" # character |  (Optional)
-
-api_instance <- CurveApi$new()
-api_instance$DappsCurveProposalsVoteHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **integer**|  | [optional] 
- **end_block** | **integer**|  | [optional] 
- **start_date** | **character**|  | [optional] 
- **end_date** | **character**|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-
-# **DappsCurveRemoveLiquidityEventHistoricalGet**
-> DappsCurveRemoveLiquidityEventHistoricalGet(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
-
-
-
-### Example
-```R
-library(openapi)
-
+# GetPools (historical) 🔥
+#
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
 var_end_block <- 56 # integer |  (Optional)
@@ -1137,7 +1196,10 @@ var_end_date <- "end_date_example" # character |  (Optional)
 var_pool_id <- "pool_id_example" # character |  (Optional)
 
 api_instance <- CurveApi$new()
-api_instance$DappsCurveRemoveLiquidityEventHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+# to save the result into a file, simply add the optional `data_file` parameter, e.g.
+# result <- api_instance$CurveGetPoolsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+result <- api_instance$CurveGetPoolsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+dput(result)
 ```
 
 ### Parameters
@@ -1152,7 +1214,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**array[CurvePoolDTO]**](Curve.PoolDTO.md)
 
 ### Authorization
 
@@ -1161,22 +1223,132 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
-# **DappsCurveRemoveLiquidityOneEventHistoricalGet**
-> DappsCurveRemoveLiquidityOneEventHistoricalGet(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
+# **CurveGetProposalsHistorical**
+> array[CurveProposalDTO] CurveGetProposalsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date)
 
+GetProposals (historical)
 
+Gets proposals.
 
 ### Example
 ```R
 library(openapi)
 
+# GetProposals (historical)
+#
+# prepare function argument(s)
+var_start_block <- 56 # integer |  (Optional)
+var_end_block <- 56 # integer |  (Optional)
+var_start_date <- "start_date_example" # character |  (Optional)
+var_end_date <- "end_date_example" # character |  (Optional)
+
+api_instance <- CurveApi$new()
+# to save the result into a file, simply add the optional `data_file` parameter, e.g.
+# result <- api_instance$CurveGetProposalsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_datedata_file = "result.txt")
+result <- api_instance$CurveGetProposalsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
+dput(result)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **integer**|  | [optional] 
+ **end_block** | **integer**|  | [optional] 
+ **start_date** | **character**|  | [optional] 
+ **end_date** | **character**|  | [optional] 
+
+### Return type
+
+[**array[CurveProposalDTO]**](Curve.ProposalDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+# **CurveGetProposalsVotesHistorical**
+> array[CurveProposalVoteDTO] CurveGetProposalsVotesHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date)
+
+GetProposalsVotes (historical)
+
+Gets proposals votes.
+
+### Example
+```R
+library(openapi)
+
+# GetProposalsVotes (historical)
+#
+# prepare function argument(s)
+var_start_block <- 56 # integer |  (Optional)
+var_end_block <- 56 # integer |  (Optional)
+var_start_date <- "start_date_example" # character |  (Optional)
+var_end_date <- "end_date_example" # character |  (Optional)
+
+api_instance <- CurveApi$new()
+# to save the result into a file, simply add the optional `data_file` parameter, e.g.
+# result <- api_instance$CurveGetProposalsVotesHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_datedata_file = "result.txt")
+result <- api_instance$CurveGetProposalsVotesHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
+dput(result)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **integer**|  | [optional] 
+ **end_block** | **integer**|  | [optional] 
+ **start_date** | **character**|  | [optional] 
+ **end_date** | **character**|  | [optional] 
+
+### Return type
+
+[**array[CurveProposalVoteDTO]**](Curve.ProposalVoteDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+# **CurveGetRemoveLiquidityEventsHistorical**
+> array[CurveRemoveLiquidityEventDTO] CurveGetRemoveLiquidityEventsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
+
+GetRemoveLiquidityEvents (historical)
+
+Gets remove liquidity events.
+
+### Example
+```R
+library(openapi)
+
+# GetRemoveLiquidityEvents (historical)
+#
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
 var_end_block <- 56 # integer |  (Optional)
@@ -1185,7 +1357,10 @@ var_end_date <- "end_date_example" # character |  (Optional)
 var_pool_id <- "pool_id_example" # character |  (Optional)
 
 api_instance <- CurveApi$new()
-api_instance$DappsCurveRemoveLiquidityOneEventHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+# to save the result into a file, simply add the optional `data_file` parameter, e.g.
+# result <- api_instance$CurveGetRemoveLiquidityEventsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+result <- api_instance$CurveGetRemoveLiquidityEventsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+dput(result)
 ```
 
 ### Parameters
@@ -1200,7 +1375,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**array[CurveRemoveLiquidityEventDTO]**](Curve.RemoveLiquidityEventDTO.md)
 
 ### Authorization
 
@@ -1209,22 +1384,26 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
-# **DappsCurveSwapsHistoricalGet**
-> DappsCurveSwapsHistoricalGet(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
+# **CurveGetRemoveLiquidityOneEventsHistorical**
+> array[CurveRemoveLiquidityOneEventDTO] CurveGetRemoveLiquidityOneEventsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
 
+GetRemoveLiquidityOneEvents (historical)
 
+Gets remove liquidity one events.
 
 ### Example
 ```R
 library(openapi)
 
+# GetRemoveLiquidityOneEvents (historical)
+#
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
 var_end_block <- 56 # integer |  (Optional)
@@ -1233,7 +1412,10 @@ var_end_date <- "end_date_example" # character |  (Optional)
 var_pool_id <- "pool_id_example" # character |  (Optional)
 
 api_instance <- CurveApi$new()
-api_instance$DappsCurveSwapsHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+# to save the result into a file, simply add the optional `data_file` parameter, e.g.
+# result <- api_instance$CurveGetRemoveLiquidityOneEventsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+result <- api_instance$CurveGetRemoveLiquidityOneEventsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+dput(result)
 ```
 
 ### Parameters
@@ -1248,7 +1430,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**array[CurveRemoveLiquidityOneEventDTO]**](Curve.RemoveLiquidityOneEventDTO.md)
 
 ### Authorization
 
@@ -1257,22 +1439,26 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
-# **DappsCurveSystemStateHistoricalGet**
-> DappsCurveSystemStateHistoricalGet(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date)
+# **CurveGetSystemStatesHistorical**
+> array[CurveSystemStateDTO] CurveGetSystemStatesHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date)
 
+GetSystemStates (historical)
 
+Gets system states.
 
 ### Example
 ```R
 library(openapi)
 
+# GetSystemStates (historical)
+#
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
 var_end_block <- 56 # integer |  (Optional)
@@ -1280,7 +1466,10 @@ var_start_date <- "start_date_example" # character |  (Optional)
 var_end_date <- "end_date_example" # character |  (Optional)
 
 api_instance <- CurveApi$new()
-api_instance$DappsCurveSystemStateHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
+# to save the result into a file, simply add the optional `data_file` parameter, e.g.
+# result <- api_instance$CurveGetSystemStatesHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_datedata_file = "result.txt")
+result <- api_instance$CurveGetSystemStatesHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
+dput(result)
 ```
 
 ### Parameters
@@ -1294,7 +1483,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**array[CurveSystemStateDTO]**](Curve.SystemStateDTO.md)
 
 ### Authorization
 
@@ -1303,22 +1492,26 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
-# **DappsCurveTokensHistoricalGet**
-> DappsCurveTokensHistoricalGet(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, token_id = var.token_id)
+# **CurveGetTokensHistorical**
+> array[CurveTokenDTO] CurveGetTokensHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, token_id = var.token_id)
 
+GetTokens (historical) 🔥
 
+Gets tokens.
 
 ### Example
 ```R
 library(openapi)
 
+# GetTokens (historical) 🔥
+#
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
 var_end_block <- 56 # integer |  (Optional)
@@ -1327,7 +1520,10 @@ var_end_date <- "end_date_example" # character |  (Optional)
 var_token_id <- "token_id_example" # character |  (Optional)
 
 api_instance <- CurveApi$new()
-api_instance$DappsCurveTokensHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, token_id = var_token_id)
+# to save the result into a file, simply add the optional `data_file` parameter, e.g.
+# result <- api_instance$CurveGetTokensHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, token_id = var_token_iddata_file = "result.txt")
+result <- api_instance$CurveGetTokensHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, token_id = var_token_id)
+dput(result)
 ```
 
 ### Parameters
@@ -1342,7 +1538,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**array[CurveTokenDTO]**](Curve.TokenDTO.md)
 
 ### Authorization
 
@@ -1351,22 +1547,26 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
-# **DappsCurveTransferOwnershipEventHistoricalGet**
-> DappsCurveTransferOwnershipEventHistoricalGet(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
+# **CurveGetTransferOwnershipEventsHistorical**
+> array[CurveTransferOwnershipEventDTO] CurveGetTransferOwnershipEventsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
 
+GetTransferOwnershipEvents (historical)
 
+Gets transfer ownership events.
 
 ### Example
 ```R
 library(openapi)
 
+# GetTransferOwnershipEvents (historical)
+#
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
 var_end_block <- 56 # integer |  (Optional)
@@ -1375,7 +1575,10 @@ var_end_date <- "end_date_example" # character |  (Optional)
 var_pool_id <- "pool_id_example" # character |  (Optional)
 
 api_instance <- CurveApi$new()
-api_instance$DappsCurveTransferOwnershipEventHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+# to save the result into a file, simply add the optional `data_file` parameter, e.g.
+# result <- api_instance$CurveGetTransferOwnershipEventsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+result <- api_instance$CurveGetTransferOwnershipEventsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+dput(result)
 ```
 
 ### Parameters
@@ -1390,7 +1593,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**array[CurveTransferOwnershipEventDTO]**](Curve.TransferOwnershipEventDTO.md)
 
 ### Authorization
 
@@ -1399,22 +1602,26 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
-# **DappsCurveUnderlyingCoinHistoricalGet**
-> DappsCurveUnderlyingCoinHistoricalGet(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
+# **CurveGetUnderlyingCoinsHistorical**
+> array[CurveUnderlyingCoinDTO] CurveGetUnderlyingCoinsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
 
+GetUnderlyingCoins (historical)
 
+Gets underlying coins.
 
 ### Example
 ```R
 library(openapi)
 
+# GetUnderlyingCoins (historical)
+#
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
 var_end_block <- 56 # integer |  (Optional)
@@ -1423,7 +1630,10 @@ var_end_date <- "end_date_example" # character |  (Optional)
 var_pool_id <- "pool_id_example" # character |  (Optional)
 
 api_instance <- CurveApi$new()
-api_instance$DappsCurveUnderlyingCoinHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+# to save the result into a file, simply add the optional `data_file` parameter, e.g.
+# result <- api_instance$CurveGetUnderlyingCoinsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+result <- api_instance$CurveGetUnderlyingCoinsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+dput(result)
 ```
 
 ### Parameters
@@ -1438,7 +1648,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**array[CurveUnderlyingCoinDTO]**](Curve.UnderlyingCoinDTO.md)
 
 ### Authorization
 
@@ -1447,22 +1657,26 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
-# **DappsCurveVotingAppHistoricalGet**
-> DappsCurveVotingAppHistoricalGet(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date)
+# **CurveGetVotingAppsHistorical**
+> array[CurveVotingAppDTO] CurveGetVotingAppsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date)
 
+GetVotingApps (historical)
 
+Gets voting apps.
 
 ### Example
 ```R
 library(openapi)
 
+# GetVotingApps (historical)
+#
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
 var_end_block <- 56 # integer |  (Optional)
@@ -1470,7 +1684,10 @@ var_start_date <- "start_date_example" # character |  (Optional)
 var_end_date <- "end_date_example" # character |  (Optional)
 
 api_instance <- CurveApi$new()
-api_instance$DappsCurveVotingAppHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
+# to save the result into a file, simply add the optional `data_file` parameter, e.g.
+# result <- api_instance$CurveGetVotingAppsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_datedata_file = "result.txt")
+result <- api_instance$CurveGetVotingAppsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
+dput(result)
 ```
 
 ### Parameters
@@ -1484,7 +1701,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**array[CurveVotingAppDTO]**](Curve.VotingAppDTO.md)
 
 ### Authorization
 
@@ -1493,22 +1710,26 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
-# **DappsCurveWeeklyVolumeHistoricalGet**
-> DappsCurveWeeklyVolumeHistoricalGet(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
+# **CurveGetWeeklyVolumesHistorical**
+> array[CurveWeeklyVolumeDTO] CurveGetWeeklyVolumesHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
 
+GetWeeklyVolumes (historical)
 
+Gets weekly volumes.
 
 ### Example
 ```R
 library(openapi)
 
+# GetWeeklyVolumes (historical)
+#
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
 var_end_block <- 56 # integer |  (Optional)
@@ -1517,7 +1738,10 @@ var_end_date <- "end_date_example" # character |  (Optional)
 var_pool_id <- "pool_id_example" # character |  (Optional)
 
 api_instance <- CurveApi$new()
-api_instance$DappsCurveWeeklyVolumeHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+# to save the result into a file, simply add the optional `data_file` parameter, e.g.
+# result <- api_instance$CurveGetWeeklyVolumesHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+result <- api_instance$CurveGetWeeklyVolumesHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+dput(result)
 ```
 
 ### Parameters
@@ -1532,7 +1756,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**array[CurveWeeklyVolumeDTO]**](Curve.WeeklyVolumeDTO.md)
 
 ### Authorization
 
@@ -1541,10 +1765,10 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 

@@ -7,6 +7,22 @@
 #
 
 Describe -tag 'PSOpenAPITools' -name 'SushiswapApi' {
+    Context 'Invoke-CurveGetExchangesCurrent' {
+        It 'Test Invoke-CurveGetExchangesCurrent' {
+            #$TestResult = Invoke-CurveGetExchangesCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-DexGetTradesCurrent' {
+        It 'Test Invoke-DexGetTradesCurrent' {
+            #$TestResult = Invoke-DexGetTradesCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
     Context 'Invoke-SushiswapGetBundlesHistorical' {
         It 'Test Invoke-SushiswapGetBundlesHistorical' {
             #$TestResult = Invoke-SushiswapGetBundlesHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"

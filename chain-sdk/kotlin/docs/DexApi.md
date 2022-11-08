@@ -4,23 +4,26 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**dappsDexBatchHistoricalGet**](DexApi.md#dappsDexBatchHistoricalGet) | **GET** /dapps/dex/batch/historical | 
-[**dappsDexOrdersHistoricalGet**](DexApi.md#dappsDexOrdersHistoricalGet) | **GET** /dapps/dex/orders/historical | 
-[**dappsDexPricesHistoricalGet**](DexApi.md#dappsDexPricesHistoricalGet) | **GET** /dapps/dex/prices/historical | 
-[**dappsDexSolutionHistoricalGet**](DexApi.md#dappsDexSolutionHistoricalGet) | **GET** /dapps/dex/solution/historical | 
-[**dappsDexStatsHistoricalGet**](DexApi.md#dappsDexStatsHistoricalGet) | **GET** /dapps/dex/stats/historical | 
-[**dappsDexTokensHistoricalGet**](DexApi.md#dappsDexTokensHistoricalGet) | **GET** /dapps/dex/tokens/historical | 
-[**dappsDexTradesHistoricalGet**](DexApi.md#dappsDexTradesHistoricalGet) | **GET** /dapps/dex/trades/historical | 
-[**dappsDexUsersHistoricalGet**](DexApi.md#dappsDexUsersHistoricalGet) | **GET** /dapps/dex/users/historical | 
-[**dappsDexWithdrawHistoricalGet**](DexApi.md#dappsDexWithdrawHistoricalGet) | **GET** /dapps/dex/withdraw/historical | 
-[**dappsDexWithdrawRequestHistoricalGet**](DexApi.md#dappsDexWithdrawRequestHistoricalGet) | **GET** /dapps/dex/withdrawRequest/historical | 
+[**dexGetBatchesHistorical**](DexApi.md#dexGetBatchesHistorical) | **GET** /dapps/dex/batches/historical | GetBatches (historical)
+[**dexGetDepositsHistorical**](DexApi.md#dexGetDepositsHistorical) | **GET** /dapps/dex/deposits/historical | GetDeposits (historical)
+[**dexGetOrdersHistorical**](DexApi.md#dexGetOrdersHistorical) | **GET** /dapps/dex/orders/historical | GetOrders (historical)
+[**dexGetPricesHistorical**](DexApi.md#dexGetPricesHistorical) | **GET** /dapps/dex/prices/historical | GetPrices (historical)
+[**dexGetSolutionsHistorical**](DexApi.md#dexGetSolutionsHistorical) | **GET** /dapps/dex/solutions/historical | GetSolutions (historical)
+[**dexGetStatsHistorical**](DexApi.md#dexGetStatsHistorical) | **GET** /dapps/dex/stats/historical | GetStats (historical)
+[**dexGetTokensHistorical**](DexApi.md#dexGetTokensHistorical) | **GET** /dapps/dex/tokens/historical | GetTokens (historical) 🔥
+[**dexGetTradesHistorical**](DexApi.md#dexGetTradesHistorical) | **GET** /dapps/dex/trades/historical | GetTrades (historical) 🔥
+[**dexGetUsersHistorical**](DexApi.md#dexGetUsersHistorical) | **GET** /dapps/dex/users/historical | GetUsers (historical)
+[**dexGetWithdrawsHistorical**](DexApi.md#dexGetWithdrawsHistorical) | **GET** /dapps/dex/withdraws/historical | GetWithdraws (historical)
+[**dexGetWithdrawsRequestsHistorical**](DexApi.md#dexGetWithdrawsRequestsHistorical) | **GET** /dapps/dex/withdrawsRequests/historical | GetWithdrawsRequests (historical)
 
 
-<a name="dappsDexBatchHistoricalGet"></a>
-# **dappsDexBatchHistoricalGet**
-> dappsDexBatchHistoricalGet(startBlock, endBlock, startDate, endDate)
+<a name="dexGetBatchesHistorical"></a>
+# **dexGetBatchesHistorical**
+> kotlin.collections.List&lt;DexBatchDTO&gt; dexGetBatchesHistorical(startBlock, endBlock, startDate, endDate)
 
+GetBatches (historical)
 
+Gets batches.
 
 ### Example
 ```kotlin
@@ -34,12 +37,13 @@ val endBlock : kotlin.Long = 789 // kotlin.Long |
 val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
 val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
 try {
-    apiInstance.dappsDexBatchHistoricalGet(startBlock, endBlock, startDate, endDate)
+    val result : kotlin.collections.List<DexBatchDTO> = apiInstance.dexGetBatchesHistorical(startBlock, endBlock, startDate, endDate)
+    println(result)
 } catch (e: ClientException) {
-    println("4xx response calling DexApi#dappsDexBatchHistoricalGet")
+    println("4xx response calling DexApi#dexGetBatchesHistorical")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling DexApi#dappsDexBatchHistoricalGet")
+    println("5xx response calling DexApi#dexGetBatchesHistorical")
     e.printStackTrace()
 }
 ```
@@ -55,7 +59,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**kotlin.collections.List&lt;DexBatchDTO&gt;**](DexBatchDTO.md)
 
 ### Authorization
 
@@ -64,13 +68,15 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
-<a name="dappsDexOrdersHistoricalGet"></a>
-# **dappsDexOrdersHistoricalGet**
-> dappsDexOrdersHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId)
+<a name="dexGetDepositsHistorical"></a>
+# **dexGetDepositsHistorical**
+> kotlin.collections.List&lt;DexDepositDTO&gt; dexGetDepositsHistorical(startBlock, endBlock, startDate, endDate, tokenId)
 
+GetDeposits (historical)
 
+Gets deposits.
 
 ### Example
 ```kotlin
@@ -85,12 +91,13 @@ val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.tim
 val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
 val tokenId : kotlin.String = tokenId_example // kotlin.String | 
 try {
-    apiInstance.dappsDexOrdersHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId)
+    val result : kotlin.collections.List<DexDepositDTO> = apiInstance.dexGetDepositsHistorical(startBlock, endBlock, startDate, endDate, tokenId)
+    println(result)
 } catch (e: ClientException) {
-    println("4xx response calling DexApi#dappsDexOrdersHistoricalGet")
+    println("4xx response calling DexApi#dexGetDepositsHistorical")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling DexApi#dappsDexOrdersHistoricalGet")
+    println("5xx response calling DexApi#dexGetDepositsHistorical")
     e.printStackTrace()
 }
 ```
@@ -107,7 +114,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**kotlin.collections.List&lt;DexDepositDTO&gt;**](DexDepositDTO.md)
 
 ### Authorization
 
@@ -116,13 +123,15 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
-<a name="dappsDexPricesHistoricalGet"></a>
-# **dappsDexPricesHistoricalGet**
-> dappsDexPricesHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId)
+<a name="dexGetOrdersHistorical"></a>
+# **dexGetOrdersHistorical**
+> kotlin.collections.List&lt;DexOrderDTO&gt; dexGetOrdersHistorical(startBlock, endBlock, startDate, endDate, tokenId)
 
+GetOrders (historical)
 
+Gets orders.
 
 ### Example
 ```kotlin
@@ -137,12 +146,13 @@ val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.tim
 val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
 val tokenId : kotlin.String = tokenId_example // kotlin.String | 
 try {
-    apiInstance.dappsDexPricesHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId)
+    val result : kotlin.collections.List<DexOrderDTO> = apiInstance.dexGetOrdersHistorical(startBlock, endBlock, startDate, endDate, tokenId)
+    println(result)
 } catch (e: ClientException) {
-    println("4xx response calling DexApi#dappsDexPricesHistoricalGet")
+    println("4xx response calling DexApi#dexGetOrdersHistorical")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling DexApi#dappsDexPricesHistoricalGet")
+    println("5xx response calling DexApi#dexGetOrdersHistorical")
     e.printStackTrace()
 }
 ```
@@ -159,7 +169,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**kotlin.collections.List&lt;DexOrderDTO&gt;**](DexOrderDTO.md)
 
 ### Authorization
 
@@ -168,13 +178,15 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
-<a name="dappsDexSolutionHistoricalGet"></a>
-# **dappsDexSolutionHistoricalGet**
-> dappsDexSolutionHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId)
+<a name="dexGetPricesHistorical"></a>
+# **dexGetPricesHistorical**
+> kotlin.collections.List&lt;DexPriceDTO&gt; dexGetPricesHistorical(startBlock, endBlock, startDate, endDate, tokenId)
 
+GetPrices (historical)
 
+Gets prices.
 
 ### Example
 ```kotlin
@@ -189,12 +201,13 @@ val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.tim
 val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
 val tokenId : kotlin.String = tokenId_example // kotlin.String | 
 try {
-    apiInstance.dappsDexSolutionHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId)
+    val result : kotlin.collections.List<DexPriceDTO> = apiInstance.dexGetPricesHistorical(startBlock, endBlock, startDate, endDate, tokenId)
+    println(result)
 } catch (e: ClientException) {
-    println("4xx response calling DexApi#dappsDexSolutionHistoricalGet")
+    println("4xx response calling DexApi#dexGetPricesHistorical")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling DexApi#dappsDexSolutionHistoricalGet")
+    println("5xx response calling DexApi#dexGetPricesHistorical")
     e.printStackTrace()
 }
 ```
@@ -211,7 +224,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**kotlin.collections.List&lt;DexPriceDTO&gt;**](DexPriceDTO.md)
 
 ### Authorization
 
@@ -220,63 +233,15 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
-<a name="dappsDexStatsHistoricalGet"></a>
-# **dappsDexStatsHistoricalGet**
-> dappsDexStatsHistoricalGet(startBlock, endBlock, startDate, endDate)
+<a name="dexGetSolutionsHistorical"></a>
+# **dexGetSolutionsHistorical**
+> kotlin.collections.List&lt;DexSolutionDTO&gt; dexGetSolutionsHistorical(startBlock, endBlock, startDate, endDate, tokenId)
 
+GetSolutions (historical)
 
-
-### Example
-```kotlin
-// Import classes:
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
-
-val apiInstance = DexApi()
-val startBlock : kotlin.Long = 789 // kotlin.Long | 
-val endBlock : kotlin.Long = 789 // kotlin.Long | 
-val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
-val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
-try {
-    apiInstance.dappsDexStatsHistoricalGet(startBlock, endBlock, startDate, endDate)
-} catch (e: ClientException) {
-    println("4xx response calling DexApi#dappsDexStatsHistoricalGet")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling DexApi#dappsDexStatsHistoricalGet")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **kotlin.Long**|  | [optional]
- **endBlock** | **kotlin.Long**|  | [optional]
- **startDate** | **java.time.OffsetDateTime**|  | [optional]
- **endDate** | **java.time.OffsetDateTime**|  | [optional]
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-<a name="dappsDexTokensHistoricalGet"></a>
-# **dappsDexTokensHistoricalGet**
-> dappsDexTokensHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId)
-
-
+Gets solutions.
 
 ### Example
 ```kotlin
@@ -291,12 +256,13 @@ val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.tim
 val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
 val tokenId : kotlin.String = tokenId_example // kotlin.String | 
 try {
-    apiInstance.dappsDexTokensHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId)
+    val result : kotlin.collections.List<DexSolutionDTO> = apiInstance.dexGetSolutionsHistorical(startBlock, endBlock, startDate, endDate, tokenId)
+    println(result)
 } catch (e: ClientException) {
-    println("4xx response calling DexApi#dappsDexTokensHistoricalGet")
+    println("4xx response calling DexApi#dexGetSolutionsHistorical")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling DexApi#dappsDexTokensHistoricalGet")
+    println("5xx response calling DexApi#dexGetSolutionsHistorical")
     e.printStackTrace()
 }
 ```
@@ -313,7 +279,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**kotlin.collections.List&lt;DexSolutionDTO&gt;**](DexSolutionDTO.md)
 
 ### Authorization
 
@@ -322,13 +288,15 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
-<a name="dappsDexTradesHistoricalGet"></a>
-# **dappsDexTradesHistoricalGet**
-> dappsDexTradesHistoricalGet(startBlock, endBlock, startDate, endDate)
+<a name="dexGetStatsHistorical"></a>
+# **dexGetStatsHistorical**
+> kotlin.collections.List&lt;DexStatsDTO&gt; dexGetStatsHistorical(startBlock, endBlock, startDate, endDate)
 
+GetStats (historical)
 
+Gets stats.
 
 ### Example
 ```kotlin
@@ -342,12 +310,13 @@ val endBlock : kotlin.Long = 789 // kotlin.Long |
 val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
 val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
 try {
-    apiInstance.dappsDexTradesHistoricalGet(startBlock, endBlock, startDate, endDate)
+    val result : kotlin.collections.List<DexStatsDTO> = apiInstance.dexGetStatsHistorical(startBlock, endBlock, startDate, endDate)
+    println(result)
 } catch (e: ClientException) {
-    println("4xx response calling DexApi#dappsDexTradesHistoricalGet")
+    println("4xx response calling DexApi#dexGetStatsHistorical")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling DexApi#dappsDexTradesHistoricalGet")
+    println("5xx response calling DexApi#dexGetStatsHistorical")
     e.printStackTrace()
 }
 ```
@@ -363,7 +332,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**kotlin.collections.List&lt;DexStatsDTO&gt;**](DexStatsDTO.md)
 
 ### Authorization
 
@@ -372,63 +341,15 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
-<a name="dappsDexUsersHistoricalGet"></a>
-# **dappsDexUsersHistoricalGet**
-> dappsDexUsersHistoricalGet(startBlock, endBlock, startDate, endDate)
+<a name="dexGetTokensHistorical"></a>
+# **dexGetTokensHistorical**
+> kotlin.collections.List&lt;DexTokenDTO&gt; dexGetTokensHistorical(startBlock, endBlock, startDate, endDate, tokenId)
 
+GetTokens (historical) 🔥
 
-
-### Example
-```kotlin
-// Import classes:
-//import org.openapitools.client.infrastructure.*
-//import org.openapitools.client.models.*
-
-val apiInstance = DexApi()
-val startBlock : kotlin.Long = 789 // kotlin.Long | 
-val endBlock : kotlin.Long = 789 // kotlin.Long | 
-val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
-val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
-try {
-    apiInstance.dappsDexUsersHistoricalGet(startBlock, endBlock, startDate, endDate)
-} catch (e: ClientException) {
-    println("4xx response calling DexApi#dappsDexUsersHistoricalGet")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling DexApi#dappsDexUsersHistoricalGet")
-    e.printStackTrace()
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **kotlin.Long**|  | [optional]
- **endBlock** | **kotlin.Long**|  | [optional]
- **startDate** | **java.time.OffsetDateTime**|  | [optional]
- **endDate** | **java.time.OffsetDateTime**|  | [optional]
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-<a name="dappsDexWithdrawHistoricalGet"></a>
-# **dappsDexWithdrawHistoricalGet**
-> dappsDexWithdrawHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId)
-
-
+Gets tokens.
 
 ### Example
 ```kotlin
@@ -443,12 +364,13 @@ val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.tim
 val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
 val tokenId : kotlin.String = tokenId_example // kotlin.String | 
 try {
-    apiInstance.dappsDexWithdrawHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId)
+    val result : kotlin.collections.List<DexTokenDTO> = apiInstance.dexGetTokensHistorical(startBlock, endBlock, startDate, endDate, tokenId)
+    println(result)
 } catch (e: ClientException) {
-    println("4xx response calling DexApi#dappsDexWithdrawHistoricalGet")
+    println("4xx response calling DexApi#dexGetTokensHistorical")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling DexApi#dappsDexWithdrawHistoricalGet")
+    println("5xx response calling DexApi#dexGetTokensHistorical")
     e.printStackTrace()
 }
 ```
@@ -465,7 +387,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**kotlin.collections.List&lt;DexTokenDTO&gt;**](DexTokenDTO.md)
 
 ### Authorization
 
@@ -474,13 +396,121 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
-<a name="dappsDexWithdrawRequestHistoricalGet"></a>
-# **dappsDexWithdrawRequestHistoricalGet**
-> dappsDexWithdrawRequestHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId)
+<a name="dexGetTradesHistorical"></a>
+# **dexGetTradesHistorical**
+> kotlin.collections.List&lt;DexTradeDTO&gt; dexGetTradesHistorical(startBlock, endBlock, startDate, endDate)
 
+GetTrades (historical) 🔥
 
+Gets trades.
+
+### Example
+```kotlin
+// Import classes:
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
+
+val apiInstance = DexApi()
+val startBlock : kotlin.Long = 789 // kotlin.Long | 
+val endBlock : kotlin.Long = 789 // kotlin.Long | 
+val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+try {
+    val result : kotlin.collections.List<DexTradeDTO> = apiInstance.dexGetTradesHistorical(startBlock, endBlock, startDate, endDate)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling DexApi#dexGetTradesHistorical")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling DexApi#dexGetTradesHistorical")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **kotlin.Long**|  | [optional]
+ **endBlock** | **kotlin.Long**|  | [optional]
+ **startDate** | **java.time.OffsetDateTime**|  | [optional]
+ **endDate** | **java.time.OffsetDateTime**|  | [optional]
+
+### Return type
+
+[**kotlin.collections.List&lt;DexTradeDTO&gt;**](DexTradeDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="dexGetUsersHistorical"></a>
+# **dexGetUsersHistorical**
+> kotlin.collections.List&lt;DexUserDTO&gt; dexGetUsersHistorical(startBlock, endBlock, startDate, endDate)
+
+GetUsers (historical)
+
+Gets users.
+
+### Example
+```kotlin
+// Import classes:
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
+
+val apiInstance = DexApi()
+val startBlock : kotlin.Long = 789 // kotlin.Long | 
+val endBlock : kotlin.Long = 789 // kotlin.Long | 
+val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+try {
+    val result : kotlin.collections.List<DexUserDTO> = apiInstance.dexGetUsersHistorical(startBlock, endBlock, startDate, endDate)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling DexApi#dexGetUsersHistorical")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling DexApi#dexGetUsersHistorical")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **kotlin.Long**|  | [optional]
+ **endBlock** | **kotlin.Long**|  | [optional]
+ **startDate** | **java.time.OffsetDateTime**|  | [optional]
+ **endDate** | **java.time.OffsetDateTime**|  | [optional]
+
+### Return type
+
+[**kotlin.collections.List&lt;DexUserDTO&gt;**](DexUserDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="dexGetWithdrawsHistorical"></a>
+# **dexGetWithdrawsHistorical**
+> kotlin.collections.List&lt;DexWithdrawDTO&gt; dexGetWithdrawsHistorical(startBlock, endBlock, startDate, endDate, tokenId)
+
+GetWithdraws (historical)
+
+Gets withdraws.
 
 ### Example
 ```kotlin
@@ -495,12 +525,13 @@ val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.tim
 val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
 val tokenId : kotlin.String = tokenId_example // kotlin.String | 
 try {
-    apiInstance.dappsDexWithdrawRequestHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId)
+    val result : kotlin.collections.List<DexWithdrawDTO> = apiInstance.dexGetWithdrawsHistorical(startBlock, endBlock, startDate, endDate, tokenId)
+    println(result)
 } catch (e: ClientException) {
-    println("4xx response calling DexApi#dappsDexWithdrawRequestHistoricalGet")
+    println("4xx response calling DexApi#dexGetWithdrawsHistorical")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling DexApi#dappsDexWithdrawRequestHistoricalGet")
+    println("5xx response calling DexApi#dexGetWithdrawsHistorical")
     e.printStackTrace()
 }
 ```
@@ -517,7 +548,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**kotlin.collections.List&lt;DexWithdrawDTO&gt;**](DexWithdrawDTO.md)
 
 ### Authorization
 
@@ -526,5 +557,60 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
+
+<a name="dexGetWithdrawsRequestsHistorical"></a>
+# **dexGetWithdrawsRequestsHistorical**
+> kotlin.collections.List&lt;DexWithdrawRequestDTO&gt; dexGetWithdrawsRequestsHistorical(startBlock, endBlock, startDate, endDate, tokenId)
+
+GetWithdrawsRequests (historical)
+
+Gets withdraws requests.
+
+### Example
+```kotlin
+// Import classes:
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
+
+val apiInstance = DexApi()
+val startBlock : kotlin.Long = 789 // kotlin.Long | 
+val endBlock : kotlin.Long = 789 // kotlin.Long | 
+val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
+val tokenId : kotlin.String = tokenId_example // kotlin.String | 
+try {
+    val result : kotlin.collections.List<DexWithdrawRequestDTO> = apiInstance.dexGetWithdrawsRequestsHistorical(startBlock, endBlock, startDate, endDate, tokenId)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling DexApi#dexGetWithdrawsRequestsHistorical")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling DexApi#dexGetWithdrawsRequestsHistorical")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **kotlin.Long**|  | [optional]
+ **endBlock** | **kotlin.Long**|  | [optional]
+ **startDate** | **java.time.OffsetDateTime**|  | [optional]
+ **endDate** | **java.time.OffsetDateTime**|  | [optional]
+ **tokenId** | **kotlin.String**|  | [optional]
+
+### Return type
+
+[**kotlin.collections.List&lt;DexWithdrawRequestDTO&gt;**](DexWithdrawRequestDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
 

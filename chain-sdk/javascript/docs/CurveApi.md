@@ -4,46 +4,48 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**dappsCurveAccountsHistoricalGet**](CurveApi.md#dappsCurveAccountsHistoricalGet) | **GET** /dapps/curve/accounts/historical | 
-[**dappsCurveAddLiquidityEventHistoricalGet**](CurveApi.md#dappsCurveAddLiquidityEventHistoricalGet) | **GET** /dapps/curve/addLiquidityEvent/historical | 
-[**dappsCurveAdminFeeChangeLogHistoricalGet**](CurveApi.md#dappsCurveAdminFeeChangeLogHistoricalGet) | **GET** /dapps/curve/adminFeeChangeLog/historical | 
-[**dappsCurveAmplificationCoeffChangeLogHistoricalGet**](CurveApi.md#dappsCurveAmplificationCoeffChangeLogHistoricalGet) | **GET** /dapps/curve/amplificationCoeffChangeLog/historical | 
-[**dappsCurveCoinsHistoricalGet**](CurveApi.md#dappsCurveCoinsHistoricalGet) | **GET** /dapps/curve/coins/historical | 
-[**dappsCurveContractsHistoricalGet**](CurveApi.md#dappsCurveContractsHistoricalGet) | **GET** /dapps/curve/contracts/historical | 
-[**dappsCurveContractsVersionHistoricalGet**](CurveApi.md#dappsCurveContractsVersionHistoricalGet) | **GET** /dapps/curve/contractsVersion/historical | 
-[**dappsCurveDailyVolumeHistoricalGet**](CurveApi.md#dappsCurveDailyVolumeHistoricalGet) | **GET** /dapps/curve/dailyVolume/historical | 
-[**dappsCurveFeeChangeLogHistoricalGet**](CurveApi.md#dappsCurveFeeChangeLogHistoricalGet) | **GET** /dapps/curve/feeChangeLog/historical | 
-[**dappsCurveGaugeDepositHistoricalGet**](CurveApi.md#dappsCurveGaugeDepositHistoricalGet) | **GET** /dapps/curve/gaugeDeposit/historical | 
-[**dappsCurveGaugeHistoricalGet**](CurveApi.md#dappsCurveGaugeHistoricalGet) | **GET** /dapps/curve/gauge/historical | 
-[**dappsCurveGaugeLiquidityHistoricalGet**](CurveApi.md#dappsCurveGaugeLiquidityHistoricalGet) | **GET** /dapps/curve/gaugeLiquidity/historical | 
-[**dappsCurveGaugeTotalWeightHistoricalGet**](CurveApi.md#dappsCurveGaugeTotalWeightHistoricalGet) | **GET** /dapps/curve/gaugeTotalWeight/historical | 
-[**dappsCurveGaugeTypeHistoricalGet**](CurveApi.md#dappsCurveGaugeTypeHistoricalGet) | **GET** /dapps/curve/gaugeType/historical | 
-[**dappsCurveGaugeTypeWeightHistoricalGet**](CurveApi.md#dappsCurveGaugeTypeWeightHistoricalGet) | **GET** /dapps/curve/gaugeTypeWeight/historical | 
-[**dappsCurveGaugeWeightHistoricalGet**](CurveApi.md#dappsCurveGaugeWeightHistoricalGet) | **GET** /dapps/curve/gaugeWeight/historical | 
-[**dappsCurveGaugeWeightVoteHistoricalGet**](CurveApi.md#dappsCurveGaugeWeightVoteHistoricalGet) | **GET** /dapps/curve/gaugeWeightVote/historical | 
-[**dappsCurveGaugeWithdrawHistoricalGet**](CurveApi.md#dappsCurveGaugeWithdrawHistoricalGet) | **GET** /dapps/curve/gaugeWithdraw/historical | 
-[**dappsCurveHourlyVolumeHistoricalGet**](CurveApi.md#dappsCurveHourlyVolumeHistoricalGet) | **GET** /dapps/curve/hourlyVolume/historical | 
-[**dappsCurveLpTokenHistoricalGet**](CurveApi.md#dappsCurveLpTokenHistoricalGet) | **GET** /dapps/curve/lpToken/historical | 
-[**dappsCurvePoolsHistoricalGet**](CurveApi.md#dappsCurvePoolsHistoricalGet) | **GET** /dapps/curve/pools/historical | 
-[**dappsCurveProposalsHistoricalGet**](CurveApi.md#dappsCurveProposalsHistoricalGet) | **GET** /dapps/curve/proposals/historical | 
-[**dappsCurveProposalsVoteHistoricalGet**](CurveApi.md#dappsCurveProposalsVoteHistoricalGet) | **GET** /dapps/curve/proposalsVote/historical | 
-[**dappsCurveRemoveLiquidityEventHistoricalGet**](CurveApi.md#dappsCurveRemoveLiquidityEventHistoricalGet) | **GET** /dapps/curve/removeLiquidityEvent/historical | 
-[**dappsCurveRemoveLiquidityOneEventHistoricalGet**](CurveApi.md#dappsCurveRemoveLiquidityOneEventHistoricalGet) | **GET** /dapps/curve/removeLiquidityOneEvent/historical | 
-[**dappsCurveSwapsHistoricalGet**](CurveApi.md#dappsCurveSwapsHistoricalGet) | **GET** /dapps/curve/swaps/historical | 
-[**dappsCurveSystemStateHistoricalGet**](CurveApi.md#dappsCurveSystemStateHistoricalGet) | **GET** /dapps/curve/systemState/historical | 
-[**dappsCurveTokensHistoricalGet**](CurveApi.md#dappsCurveTokensHistoricalGet) | **GET** /dapps/curve/tokens/historical | 
-[**dappsCurveTransferOwnershipEventHistoricalGet**](CurveApi.md#dappsCurveTransferOwnershipEventHistoricalGet) | **GET** /dapps/curve/transferOwnershipEvent/historical | 
-[**dappsCurveUnderlyingCoinHistoricalGet**](CurveApi.md#dappsCurveUnderlyingCoinHistoricalGet) | **GET** /dapps/curve/underlyingCoin/historical | 
-[**dappsCurveVotingAppHistoricalGet**](CurveApi.md#dappsCurveVotingAppHistoricalGet) | **GET** /dapps/curve/votingApp/historical | 
-[**dappsCurveWeeklyVolumeHistoricalGet**](CurveApi.md#dappsCurveWeeklyVolumeHistoricalGet) | **GET** /dapps/curve/weeklyVolume/historical | 
+[**curveGetAccountsHistorical**](CurveApi.md#curveGetAccountsHistorical) | **GET** /dapps/curve/accounts/historical | GetAccounts (historical)
+[**curveGetAddLiquidityEventsHistorical**](CurveApi.md#curveGetAddLiquidityEventsHistorical) | **GET** /dapps/curve/addLiquidityEvents/historical | GetAddLiquidityEvents (historical)
+[**curveGetAdminFeeChangeLogsHistorical**](CurveApi.md#curveGetAdminFeeChangeLogsHistorical) | **GET** /dapps/curve/adminFeeChangeLogs/historical | GetAdminFeeChangeLogs (historical)
+[**curveGetAmplificationCoeffChangeLogsHistorical**](CurveApi.md#curveGetAmplificationCoeffChangeLogsHistorical) | **GET** /dapps/curve/amplificationCoeffChangeLogs/historical | GetAmplificationCoeffChangeLogs (historical)
+[**curveGetCoinsHistorical**](CurveApi.md#curveGetCoinsHistorical) | **GET** /dapps/curve/coins/historical | GetCoins (historical)
+[**curveGetContractsHistorical**](CurveApi.md#curveGetContractsHistorical) | **GET** /dapps/curve/contracts/historical | GetContracts (historical)
+[**curveGetContractsVersionsHistorical**](CurveApi.md#curveGetContractsVersionsHistorical) | **GET** /dapps/curve/contractsVersions/historical | GetContractsVersions (historical)
+[**curveGetDailyVolumesHistorical**](CurveApi.md#curveGetDailyVolumesHistorical) | **GET** /dapps/curve/dailyVolumes/historical | GetDailyVolumes (historical)
+[**curveGetExchangesHistorical**](CurveApi.md#curveGetExchangesHistorical) | **GET** /dapps/curve/exchanges/historical | GetExchanges (historical) 🔥
+[**curveGetFeeChangeLogsHistorical**](CurveApi.md#curveGetFeeChangeLogsHistorical) | **GET** /dapps/curve/feeChangeLogs/historical | GetFeeChangeLogs (historical)
+[**curveGetGaugesDepositsHistorical**](CurveApi.md#curveGetGaugesDepositsHistorical) | **GET** /dapps/curve/gaugesDeposits/historical | GetGaugesDeposits (historical)
+[**curveGetGaugesHistorical**](CurveApi.md#curveGetGaugesHistorical) | **GET** /dapps/curve/gauges/historical | GetGauges (historical)
+[**curveGetGaugesLiquidityHistorical**](CurveApi.md#curveGetGaugesLiquidityHistorical) | **GET** /dapps/curve/gaugesLiquidity/historical | GetGaugesLiquidity (historical)
+[**curveGetGaugesTotalWeightsHistorical**](CurveApi.md#curveGetGaugesTotalWeightsHistorical) | **GET** /dapps/curve/gaugesTotalWeights/historical | GetGaugesTotalWeights (historical)
+[**curveGetGaugesTypesHistorical**](CurveApi.md#curveGetGaugesTypesHistorical) | **GET** /dapps/curve/gaugesTypes/historical | GetGaugesTypes (historical)
+[**curveGetGaugesTypesWeightsHistorical**](CurveApi.md#curveGetGaugesTypesWeightsHistorical) | **GET** /dapps/curve/gaugesTypesWeights/historical | GetGaugesTypesWeights (historical)
+[**curveGetGaugesWeightsHistorical**](CurveApi.md#curveGetGaugesWeightsHistorical) | **GET** /dapps/curve/gaugesWeights/historical | GetGaugesWeights (historical)
+[**curveGetGaugesWeightsVotesHistorical**](CurveApi.md#curveGetGaugesWeightsVotesHistorical) | **GET** /dapps/curve/gaugesWeightsVotes/historical | GetGaugesWeightsVotes (historical)
+[**curveGetGaugesWithdrawHistorical**](CurveApi.md#curveGetGaugesWithdrawHistorical) | **GET** /dapps/curve/gaugesWithdraws/historical | GetGaugesWithdraw (historical)
+[**curveGetHourlyVolumesHistorical**](CurveApi.md#curveGetHourlyVolumesHistorical) | **GET** /dapps/curve/hourlyVolumes/historical | GetHourlyVolumes (historical)
+[**curveGetLpTokensHistorical**](CurveApi.md#curveGetLpTokensHistorical) | **GET** /dapps/curve/lpTokens/historical | GetLpTokens (historical)
+[**curveGetPoolsHistorical**](CurveApi.md#curveGetPoolsHistorical) | **GET** /dapps/curve/pools/historical | GetPools (historical) 🔥
+[**curveGetProposalsHistorical**](CurveApi.md#curveGetProposalsHistorical) | **GET** /dapps/curve/proposals/historical | GetProposals (historical)
+[**curveGetProposalsVotesHistorical**](CurveApi.md#curveGetProposalsVotesHistorical) | **GET** /dapps/curve/proposalsVotes/historical | GetProposalsVotes (historical)
+[**curveGetRemoveLiquidityEventsHistorical**](CurveApi.md#curveGetRemoveLiquidityEventsHistorical) | **GET** /dapps/curve/removeLiquidityEvents/historical | GetRemoveLiquidityEvents (historical)
+[**curveGetRemoveLiquidityOneEventsHistorical**](CurveApi.md#curveGetRemoveLiquidityOneEventsHistorical) | **GET** /dapps/curve/removeLiquidityOneEvents/historical | GetRemoveLiquidityOneEvents (historical)
+[**curveGetSystemStatesHistorical**](CurveApi.md#curveGetSystemStatesHistorical) | **GET** /dapps/curve/systemStates/historical | GetSystemStates (historical)
+[**curveGetTokensHistorical**](CurveApi.md#curveGetTokensHistorical) | **GET** /dapps/curve/tokens/historical | GetTokens (historical) 🔥
+[**curveGetTransferOwnershipEventsHistorical**](CurveApi.md#curveGetTransferOwnershipEventsHistorical) | **GET** /dapps/curve/transferOwnershipEvents/historical | GetTransferOwnershipEvents (historical)
+[**curveGetUnderlyingCoinsHistorical**](CurveApi.md#curveGetUnderlyingCoinsHistorical) | **GET** /dapps/curve/underlyingCoins/historical | GetUnderlyingCoins (historical)
+[**curveGetVotingAppsHistorical**](CurveApi.md#curveGetVotingAppsHistorical) | **GET** /dapps/curve/votingApps/historical | GetVotingApps (historical)
+[**curveGetWeeklyVolumesHistorical**](CurveApi.md#curveGetWeeklyVolumesHistorical) | **GET** /dapps/curve/weeklyVolumes/historical | GetWeeklyVolumes (historical)
 
 
 
-## dappsCurveAccountsHistoricalGet
+## curveGetAccountsHistorical
 
-> dappsCurveAccountsHistoricalGet(opts)
+> [CurveAccountDTO] curveGetAccountsHistorical(opts)
 
+GetAccounts (historical)
 
+Gets accounts.
 
 ### Example
 
@@ -57,11 +59,11 @@ let opts = {
   'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'endDate': new Date("2013-10-20T19:20:30+01:00") // Date | 
 };
-apiInstance.dappsCurveAccountsHistoricalGet(opts, (error, data, response) => {
+apiInstance.curveGetAccountsHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -78,7 +80,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**[CurveAccountDTO]**](CurveAccountDTO.md)
 
 ### Authorization
 
@@ -87,14 +89,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsCurveAddLiquidityEventHistoricalGet
+## curveGetAddLiquidityEventsHistorical
 
-> dappsCurveAddLiquidityEventHistoricalGet(opts)
+> [CurveAddLiquidityEventDTO] curveGetAddLiquidityEventsHistorical(opts)
 
+GetAddLiquidityEvents (historical)
 
+Gets add liquidity events.
 
 ### Example
 
@@ -109,11 +113,11 @@ let opts = {
   'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'poolId': "poolId_example" // String | 
 };
-apiInstance.dappsCurveAddLiquidityEventHistoricalGet(opts, (error, data, response) => {
+apiInstance.curveGetAddLiquidityEventsHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -131,7 +135,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**[CurveAddLiquidityEventDTO]**](CurveAddLiquidityEventDTO.md)
 
 ### Authorization
 
@@ -140,14 +144,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsCurveAdminFeeChangeLogHistoricalGet
+## curveGetAdminFeeChangeLogsHistorical
 
-> dappsCurveAdminFeeChangeLogHistoricalGet(opts)
+> [CurveAdminFeeChangeLogDTO] curveGetAdminFeeChangeLogsHistorical(opts)
 
+GetAdminFeeChangeLogs (historical)
 
+Gets admin fee change logs.
 
 ### Example
 
@@ -162,11 +168,11 @@ let opts = {
   'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'poolId': "poolId_example" // String | 
 };
-apiInstance.dappsCurveAdminFeeChangeLogHistoricalGet(opts, (error, data, response) => {
+apiInstance.curveGetAdminFeeChangeLogsHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -184,7 +190,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**[CurveAdminFeeChangeLogDTO]**](CurveAdminFeeChangeLogDTO.md)
 
 ### Authorization
 
@@ -193,14 +199,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsCurveAmplificationCoeffChangeLogHistoricalGet
+## curveGetAmplificationCoeffChangeLogsHistorical
 
-> dappsCurveAmplificationCoeffChangeLogHistoricalGet(opts)
+> [CurveAmplificationCoeffChangeLogDTO] curveGetAmplificationCoeffChangeLogsHistorical(opts)
 
+GetAmplificationCoeffChangeLogs (historical)
 
+Gets amplification coeff change logs.
 
 ### Example
 
@@ -215,11 +223,11 @@ let opts = {
   'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'poolId': "poolId_example" // String | 
 };
-apiInstance.dappsCurveAmplificationCoeffChangeLogHistoricalGet(opts, (error, data, response) => {
+apiInstance.curveGetAmplificationCoeffChangeLogsHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -237,7 +245,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**[CurveAmplificationCoeffChangeLogDTO]**](CurveAmplificationCoeffChangeLogDTO.md)
 
 ### Authorization
 
@@ -246,14 +254,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsCurveCoinsHistoricalGet
+## curveGetCoinsHistorical
 
-> dappsCurveCoinsHistoricalGet(opts)
+> [CurveCoinDTO] curveGetCoinsHistorical(opts)
 
+GetCoins (historical)
 
+Gets coins.
 
 ### Example
 
@@ -268,11 +278,11 @@ let opts = {
   'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'poolId': "poolId_example" // String | 
 };
-apiInstance.dappsCurveCoinsHistoricalGet(opts, (error, data, response) => {
+apiInstance.curveGetCoinsHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -290,7 +300,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**[CurveCoinDTO]**](CurveCoinDTO.md)
 
 ### Authorization
 
@@ -299,14 +309,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsCurveContractsHistoricalGet
+## curveGetContractsHistorical
 
-> dappsCurveContractsHistoricalGet(opts)
+> [CurveContractDTO] curveGetContractsHistorical(opts)
 
+GetContracts (historical)
 
+Gets contracts.
 
 ### Example
 
@@ -321,11 +333,11 @@ let opts = {
   'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'poolId': "poolId_example" // String | 
 };
-apiInstance.dappsCurveContractsHistoricalGet(opts, (error, data, response) => {
+apiInstance.curveGetContractsHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -343,7 +355,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**[CurveContractDTO]**](CurveContractDTO.md)
 
 ### Authorization
 
@@ -352,14 +364,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsCurveContractsVersionHistoricalGet
+## curveGetContractsVersionsHistorical
 
-> dappsCurveContractsVersionHistoricalGet(opts)
+> [CurveContractVersionDTO] curveGetContractsVersionsHistorical(opts)
 
+GetContractsVersions (historical)
 
+Gets contracts versions.
 
 ### Example
 
@@ -374,11 +388,11 @@ let opts = {
   'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'poolId': "poolId_example" // String | 
 };
-apiInstance.dappsCurveContractsVersionHistoricalGet(opts, (error, data, response) => {
+apiInstance.curveGetContractsVersionsHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -396,7 +410,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**[CurveContractVersionDTO]**](CurveContractVersionDTO.md)
 
 ### Authorization
 
@@ -405,14 +419,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsCurveDailyVolumeHistoricalGet
+## curveGetDailyVolumesHistorical
 
-> dappsCurveDailyVolumeHistoricalGet(opts)
+> [CurveDailyVolumeDTO] curveGetDailyVolumesHistorical(opts)
 
+GetDailyVolumes (historical)
 
+Gets daily volumes.
 
 ### Example
 
@@ -427,11 +443,11 @@ let opts = {
   'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'poolId': "poolId_example" // String | 
 };
-apiInstance.dappsCurveDailyVolumeHistoricalGet(opts, (error, data, response) => {
+apiInstance.curveGetDailyVolumesHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -449,7 +465,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**[CurveDailyVolumeDTO]**](CurveDailyVolumeDTO.md)
 
 ### Authorization
 
@@ -458,14 +474,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsCurveFeeChangeLogHistoricalGet
+## curveGetExchangesHistorical
 
-> dappsCurveFeeChangeLogHistoricalGet(opts)
+> [CurveExchangeDTO] curveGetExchangesHistorical(opts)
 
+GetExchanges (historical) 🔥
 
+Gets exchanges.
 
 ### Example
 
@@ -480,11 +498,11 @@ let opts = {
   'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'poolId': "poolId_example" // String | 
 };
-apiInstance.dappsCurveFeeChangeLogHistoricalGet(opts, (error, data, response) => {
+apiInstance.curveGetExchangesHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -502,7 +520,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**[CurveExchangeDTO]**](CurveExchangeDTO.md)
 
 ### Authorization
 
@@ -511,14 +529,71 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsCurveGaugeDepositHistoricalGet
+## curveGetFeeChangeLogsHistorical
 
-> dappsCurveGaugeDepositHistoricalGet(opts)
+> [CurveFeeChangeLogDTO] curveGetFeeChangeLogsHistorical(opts)
+
+GetFeeChangeLogs (historical)
+
+Gets fee change logs.
+
+### Example
+
+```javascript
+import OnChainApi from 'on_chain_api';
+
+let apiInstance = new OnChainApi.CurveApi();
+let opts = {
+  'startBlock': 789, // Number | 
+  'endBlock': 789, // Number | 
+  'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'poolId': "poolId_example" // String | 
+};
+apiInstance.curveGetFeeChangeLogsHistorical(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
 
 
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Number**|  | [optional] 
+ **endBlock** | **Number**|  | [optional] 
+ **startDate** | **Date**|  | [optional] 
+ **endDate** | **Date**|  | [optional] 
+ **poolId** | **String**|  | [optional] 
+
+### Return type
+
+[**[CurveFeeChangeLogDTO]**](CurveFeeChangeLogDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## curveGetGaugesDepositsHistorical
+
+> [CurveGaugeDepositDTO] curveGetGaugesDepositsHistorical(opts)
+
+GetGaugesDeposits (historical)
+
+Gets gauges deposits.
 
 ### Example
 
@@ -532,11 +607,11 @@ let opts = {
   'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'endDate': new Date("2013-10-20T19:20:30+01:00") // Date | 
 };
-apiInstance.dappsCurveGaugeDepositHistoricalGet(opts, (error, data, response) => {
+apiInstance.curveGetGaugesDepositsHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -553,7 +628,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**[CurveGaugeDepositDTO]**](CurveGaugeDepositDTO.md)
 
 ### Authorization
 
@@ -562,14 +637,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsCurveGaugeHistoricalGet
+## curveGetGaugesHistorical
 
-> dappsCurveGaugeHistoricalGet(opts)
+> [CurveGaugeDTO] curveGetGaugesHistorical(opts)
 
+GetGauges (historical)
 
+Gets gauges.
 
 ### Example
 
@@ -584,11 +661,11 @@ let opts = {
   'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'poolId': "poolId_example" // String | 
 };
-apiInstance.dappsCurveGaugeHistoricalGet(opts, (error, data, response) => {
+apiInstance.curveGetGaugesHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -606,7 +683,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**[CurveGaugeDTO]**](CurveGaugeDTO.md)
 
 ### Authorization
 
@@ -615,14 +692,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsCurveGaugeLiquidityHistoricalGet
+## curveGetGaugesLiquidityHistorical
 
-> dappsCurveGaugeLiquidityHistoricalGet(opts)
+> [CurveGaugeLiquidityDTO] curveGetGaugesLiquidityHistorical(opts)
 
+GetGaugesLiquidity (historical)
 
+Gets gauges liquidity.
 
 ### Example
 
@@ -636,11 +715,11 @@ let opts = {
   'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'endDate': new Date("2013-10-20T19:20:30+01:00") // Date | 
 };
-apiInstance.dappsCurveGaugeLiquidityHistoricalGet(opts, (error, data, response) => {
+apiInstance.curveGetGaugesLiquidityHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -657,7 +736,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**[CurveGaugeLiquidityDTO]**](CurveGaugeLiquidityDTO.md)
 
 ### Authorization
 
@@ -666,14 +745,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsCurveGaugeTotalWeightHistoricalGet
+## curveGetGaugesTotalWeightsHistorical
 
-> dappsCurveGaugeTotalWeightHistoricalGet(opts)
+> [CurveGaugeTotalWeightDTO] curveGetGaugesTotalWeightsHistorical(opts)
 
+GetGaugesTotalWeights (historical)
 
+Gets gauges total weights.
 
 ### Example
 
@@ -687,11 +768,11 @@ let opts = {
   'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'endDate': new Date("2013-10-20T19:20:30+01:00") // Date | 
 };
-apiInstance.dappsCurveGaugeTotalWeightHistoricalGet(opts, (error, data, response) => {
+apiInstance.curveGetGaugesTotalWeightsHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -708,7 +789,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**[CurveGaugeTotalWeightDTO]**](CurveGaugeTotalWeightDTO.md)
 
 ### Authorization
 
@@ -717,14 +798,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsCurveGaugeTypeHistoricalGet
+## curveGetGaugesTypesHistorical
 
-> dappsCurveGaugeTypeHistoricalGet(opts)
+> [CurveGaugeTypeDTO] curveGetGaugesTypesHistorical(opts)
 
+GetGaugesTypes (historical)
 
+Gets gauges types.
 
 ### Example
 
@@ -738,11 +821,11 @@ let opts = {
   'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'endDate': new Date("2013-10-20T19:20:30+01:00") // Date | 
 };
-apiInstance.dappsCurveGaugeTypeHistoricalGet(opts, (error, data, response) => {
+apiInstance.curveGetGaugesTypesHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -759,7 +842,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**[CurveGaugeTypeDTO]**](CurveGaugeTypeDTO.md)
 
 ### Authorization
 
@@ -768,14 +851,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsCurveGaugeTypeWeightHistoricalGet
+## curveGetGaugesTypesWeightsHistorical
 
-> dappsCurveGaugeTypeWeightHistoricalGet(opts)
+> [CurveGaugeTypeWeightDTO] curveGetGaugesTypesWeightsHistorical(opts)
 
+GetGaugesTypesWeights (historical)
 
+Gets gauges types weights.
 
 ### Example
 
@@ -789,11 +874,11 @@ let opts = {
   'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'endDate': new Date("2013-10-20T19:20:30+01:00") // Date | 
 };
-apiInstance.dappsCurveGaugeTypeWeightHistoricalGet(opts, (error, data, response) => {
+apiInstance.curveGetGaugesTypesWeightsHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -810,7 +895,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**[CurveGaugeTypeWeightDTO]**](CurveGaugeTypeWeightDTO.md)
 
 ### Authorization
 
@@ -819,14 +904,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsCurveGaugeWeightHistoricalGet
+## curveGetGaugesWeightsHistorical
 
-> dappsCurveGaugeWeightHistoricalGet(opts)
+> [CurveGaugeWeightDTO] curveGetGaugesWeightsHistorical(opts)
 
+GetGaugesWeights (historical)
 
+Gets gauges weights.
 
 ### Example
 
@@ -840,11 +927,11 @@ let opts = {
   'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'endDate': new Date("2013-10-20T19:20:30+01:00") // Date | 
 };
-apiInstance.dappsCurveGaugeWeightHistoricalGet(opts, (error, data, response) => {
+apiInstance.curveGetGaugesWeightsHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -861,7 +948,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**[CurveGaugeWeightDTO]**](CurveGaugeWeightDTO.md)
 
 ### Authorization
 
@@ -870,14 +957,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsCurveGaugeWeightVoteHistoricalGet
+## curveGetGaugesWeightsVotesHistorical
 
-> dappsCurveGaugeWeightVoteHistoricalGet(opts)
+> [CurveGaugeWeightVoteDTO] curveGetGaugesWeightsVotesHistorical(opts)
 
+GetGaugesWeightsVotes (historical)
 
+Gets gauges weights votes.
 
 ### Example
 
@@ -891,11 +980,11 @@ let opts = {
   'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'endDate': new Date("2013-10-20T19:20:30+01:00") // Date | 
 };
-apiInstance.dappsCurveGaugeWeightVoteHistoricalGet(opts, (error, data, response) => {
+apiInstance.curveGetGaugesWeightsVotesHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -912,7 +1001,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**[CurveGaugeWeightVoteDTO]**](CurveGaugeWeightVoteDTO.md)
 
 ### Authorization
 
@@ -921,14 +1010,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsCurveGaugeWithdrawHistoricalGet
+## curveGetGaugesWithdrawHistorical
 
-> dappsCurveGaugeWithdrawHistoricalGet(opts)
+> [CurveGaugeWithdrawDTO] curveGetGaugesWithdrawHistorical(opts)
 
+GetGaugesWithdraw (historical)
 
+Gets gauges withdraws.
 
 ### Example
 
@@ -942,11 +1033,11 @@ let opts = {
   'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'endDate': new Date("2013-10-20T19:20:30+01:00") // Date | 
 };
-apiInstance.dappsCurveGaugeWithdrawHistoricalGet(opts, (error, data, response) => {
+apiInstance.curveGetGaugesWithdrawHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -963,7 +1054,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**[CurveGaugeWithdrawDTO]**](CurveGaugeWithdrawDTO.md)
 
 ### Authorization
 
@@ -972,14 +1063,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsCurveHourlyVolumeHistoricalGet
+## curveGetHourlyVolumesHistorical
 
-> dappsCurveHourlyVolumeHistoricalGet(opts)
+> [CurveHourlyVolumeDTO] curveGetHourlyVolumesHistorical(opts)
 
+GetHourlyVolumes (historical)
 
+Gets hourly volumes.
 
 ### Example
 
@@ -994,11 +1087,11 @@ let opts = {
   'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'poolId': "poolId_example" // String | 
 };
-apiInstance.dappsCurveHourlyVolumeHistoricalGet(opts, (error, data, response) => {
+apiInstance.curveGetHourlyVolumesHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -1016,7 +1109,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**[CurveHourlyVolumeDTO]**](CurveHourlyVolumeDTO.md)
 
 ### Authorization
 
@@ -1025,14 +1118,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsCurveLpTokenHistoricalGet
+## curveGetLpTokensHistorical
 
-> dappsCurveLpTokenHistoricalGet(opts)
+> [CurveLpTokenDTO] curveGetLpTokensHistorical(opts)
 
+GetLpTokens (historical)
 
+Gets lp tokens.
 
 ### Example
 
@@ -1047,11 +1142,11 @@ let opts = {
   'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'poolId': "poolId_example" // String | 
 };
-apiInstance.dappsCurveLpTokenHistoricalGet(opts, (error, data, response) => {
+apiInstance.curveGetLpTokensHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -1069,7 +1164,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**[CurveLpTokenDTO]**](CurveLpTokenDTO.md)
 
 ### Authorization
 
@@ -1078,14 +1173,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsCurvePoolsHistoricalGet
+## curveGetPoolsHistorical
 
-> dappsCurvePoolsHistoricalGet(opts)
+> [CurvePoolDTO] curveGetPoolsHistorical(opts)
 
+GetPools (historical) 🔥
 
+Gets pools.
 
 ### Example
 
@@ -1100,11 +1197,11 @@ let opts = {
   'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'poolId': "poolId_example" // String | 
 };
-apiInstance.dappsCurvePoolsHistoricalGet(opts, (error, data, response) => {
+apiInstance.curveGetPoolsHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -1122,7 +1219,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**[CurvePoolDTO]**](CurvePoolDTO.md)
 
 ### Authorization
 
@@ -1131,14 +1228,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsCurveProposalsHistoricalGet
+## curveGetProposalsHistorical
 
-> dappsCurveProposalsHistoricalGet(opts)
+> [CurveProposalDTO] curveGetProposalsHistorical(opts)
 
+GetProposals (historical)
 
+Gets proposals.
 
 ### Example
 
@@ -1152,11 +1251,11 @@ let opts = {
   'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'endDate': new Date("2013-10-20T19:20:30+01:00") // Date | 
 };
-apiInstance.dappsCurveProposalsHistoricalGet(opts, (error, data, response) => {
+apiInstance.curveGetProposalsHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -1173,7 +1272,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**[CurveProposalDTO]**](CurveProposalDTO.md)
 
 ### Authorization
 
@@ -1182,14 +1281,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsCurveProposalsVoteHistoricalGet
+## curveGetProposalsVotesHistorical
 
-> dappsCurveProposalsVoteHistoricalGet(opts)
+> [CurveProposalVoteDTO] curveGetProposalsVotesHistorical(opts)
 
+GetProposalsVotes (historical)
 
+Gets proposals votes.
 
 ### Example
 
@@ -1203,11 +1304,11 @@ let opts = {
   'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'endDate': new Date("2013-10-20T19:20:30+01:00") // Date | 
 };
-apiInstance.dappsCurveProposalsVoteHistoricalGet(opts, (error, data, response) => {
+apiInstance.curveGetProposalsVotesHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -1224,7 +1325,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**[CurveProposalVoteDTO]**](CurveProposalVoteDTO.md)
 
 ### Authorization
 
@@ -1233,14 +1334,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsCurveRemoveLiquidityEventHistoricalGet
+## curveGetRemoveLiquidityEventsHistorical
 
-> dappsCurveRemoveLiquidityEventHistoricalGet(opts)
+> [CurveRemoveLiquidityEventDTO] curveGetRemoveLiquidityEventsHistorical(opts)
 
+GetRemoveLiquidityEvents (historical)
 
+Gets remove liquidity events.
 
 ### Example
 
@@ -1255,11 +1358,11 @@ let opts = {
   'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'poolId': "poolId_example" // String | 
 };
-apiInstance.dappsCurveRemoveLiquidityEventHistoricalGet(opts, (error, data, response) => {
+apiInstance.curveGetRemoveLiquidityEventsHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -1277,7 +1380,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**[CurveRemoveLiquidityEventDTO]**](CurveRemoveLiquidityEventDTO.md)
 
 ### Authorization
 
@@ -1286,14 +1389,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsCurveRemoveLiquidityOneEventHistoricalGet
+## curveGetRemoveLiquidityOneEventsHistorical
 
-> dappsCurveRemoveLiquidityOneEventHistoricalGet(opts)
+> [CurveRemoveLiquidityOneEventDTO] curveGetRemoveLiquidityOneEventsHistorical(opts)
 
+GetRemoveLiquidityOneEvents (historical)
 
+Gets remove liquidity one events.
 
 ### Example
 
@@ -1308,11 +1413,11 @@ let opts = {
   'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'poolId': "poolId_example" // String | 
 };
-apiInstance.dappsCurveRemoveLiquidityOneEventHistoricalGet(opts, (error, data, response) => {
+apiInstance.curveGetRemoveLiquidityOneEventsHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -1330,7 +1435,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**[CurveRemoveLiquidityOneEventDTO]**](CurveRemoveLiquidityOneEventDTO.md)
 
 ### Authorization
 
@@ -1339,67 +1444,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsCurveSwapsHistoricalGet
+## curveGetSystemStatesHistorical
 
-> dappsCurveSwapsHistoricalGet(opts)
+> [CurveSystemStateDTO] curveGetSystemStatesHistorical(opts)
 
+GetSystemStates (historical)
 
-
-### Example
-
-```javascript
-import OnChainApi from 'on_chain_api';
-
-let apiInstance = new OnChainApi.CurveApi();
-let opts = {
-  'startBlock': 789, // Number | 
-  'endBlock': 789, // Number | 
-  'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
-  'poolId': "poolId_example" // String | 
-};
-apiInstance.dappsCurveSwapsHistoricalGet(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **Number**|  | [optional] 
- **endBlock** | **Number**|  | [optional] 
- **startDate** | **Date**|  | [optional] 
- **endDate** | **Date**|  | [optional] 
- **poolId** | **String**|  | [optional] 
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-
-## dappsCurveSystemStateHistoricalGet
-
-> dappsCurveSystemStateHistoricalGet(opts)
-
-
+Gets system states.
 
 ### Example
 
@@ -1413,11 +1467,11 @@ let opts = {
   'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'endDate': new Date("2013-10-20T19:20:30+01:00") // Date | 
 };
-apiInstance.dappsCurveSystemStateHistoricalGet(opts, (error, data, response) => {
+apiInstance.curveGetSystemStatesHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -1434,7 +1488,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**[CurveSystemStateDTO]**](CurveSystemStateDTO.md)
 
 ### Authorization
 
@@ -1443,14 +1497,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsCurveTokensHistoricalGet
+## curveGetTokensHistorical
 
-> dappsCurveTokensHistoricalGet(opts)
+> [CurveTokenDTO] curveGetTokensHistorical(opts)
 
+GetTokens (historical) 🔥
 
+Gets tokens.
 
 ### Example
 
@@ -1465,11 +1521,11 @@ let opts = {
   'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'tokenId': "tokenId_example" // String | 
 };
-apiInstance.dappsCurveTokensHistoricalGet(opts, (error, data, response) => {
+apiInstance.curveGetTokensHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -1487,7 +1543,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**[CurveTokenDTO]**](CurveTokenDTO.md)
 
 ### Authorization
 
@@ -1496,14 +1552,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsCurveTransferOwnershipEventHistoricalGet
+## curveGetTransferOwnershipEventsHistorical
 
-> dappsCurveTransferOwnershipEventHistoricalGet(opts)
+> [CurveTransferOwnershipEventDTO] curveGetTransferOwnershipEventsHistorical(opts)
 
+GetTransferOwnershipEvents (historical)
 
+Gets transfer ownership events.
 
 ### Example
 
@@ -1518,11 +1576,11 @@ let opts = {
   'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'poolId': "poolId_example" // String | 
 };
-apiInstance.dappsCurveTransferOwnershipEventHistoricalGet(opts, (error, data, response) => {
+apiInstance.curveGetTransferOwnershipEventsHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -1540,7 +1598,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**[CurveTransferOwnershipEventDTO]**](CurveTransferOwnershipEventDTO.md)
 
 ### Authorization
 
@@ -1549,14 +1607,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsCurveUnderlyingCoinHistoricalGet
+## curveGetUnderlyingCoinsHistorical
 
-> dappsCurveUnderlyingCoinHistoricalGet(opts)
+> [CurveUnderlyingCoinDTO] curveGetUnderlyingCoinsHistorical(opts)
 
+GetUnderlyingCoins (historical)
 
+Gets underlying coins.
 
 ### Example
 
@@ -1571,11 +1631,11 @@ let opts = {
   'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'poolId': "poolId_example" // String | 
 };
-apiInstance.dappsCurveUnderlyingCoinHistoricalGet(opts, (error, data, response) => {
+apiInstance.curveGetUnderlyingCoinsHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -1593,7 +1653,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**[CurveUnderlyingCoinDTO]**](CurveUnderlyingCoinDTO.md)
 
 ### Authorization
 
@@ -1602,14 +1662,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsCurveVotingAppHistoricalGet
+## curveGetVotingAppsHistorical
 
-> dappsCurveVotingAppHistoricalGet(opts)
+> [CurveVotingAppDTO] curveGetVotingAppsHistorical(opts)
 
+GetVotingApps (historical)
 
+Gets voting apps.
 
 ### Example
 
@@ -1623,11 +1685,11 @@ let opts = {
   'startDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'endDate': new Date("2013-10-20T19:20:30+01:00") // Date | 
 };
-apiInstance.dappsCurveVotingAppHistoricalGet(opts, (error, data, response) => {
+apiInstance.curveGetVotingAppsHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -1644,7 +1706,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**[CurveVotingAppDTO]**](CurveVotingAppDTO.md)
 
 ### Authorization
 
@@ -1653,14 +1715,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dappsCurveWeeklyVolumeHistoricalGet
+## curveGetWeeklyVolumesHistorical
 
-> dappsCurveWeeklyVolumeHistoricalGet(opts)
+> [CurveWeeklyVolumeDTO] curveGetWeeklyVolumesHistorical(opts)
 
+GetWeeklyVolumes (historical)
 
+Gets weekly volumes.
 
 ### Example
 
@@ -1675,11 +1739,11 @@ let opts = {
   'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | 
   'poolId': "poolId_example" // String | 
 };
-apiInstance.dappsCurveWeeklyVolumeHistoricalGet(opts, (error, data, response) => {
+apiInstance.curveGetWeeklyVolumesHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -1697,7 +1761,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**[CurveWeeklyVolumeDTO]**](CurveWeeklyVolumeDTO.md)
 
 ### Authorization
 
@@ -1706,5 +1770,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 

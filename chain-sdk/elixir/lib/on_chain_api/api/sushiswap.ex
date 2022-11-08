@@ -10,6 +10,64 @@ defmodule OnChainAPI.Api.Sushiswap do
   import OnChainAPI.RequestBuilder
 
   @doc """
+  GetExchanges (current) 🔥
+  Gets exchanges.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%CurveExchangeDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec curve_get_exchanges__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.CurveExchangeDto.t)} | {:error, Tesla.Env.t}
+  def curve_get_exchanges__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/sushiswap/exchanges/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.CurveExchangeDto{}]}
+    ])
+  end
+
+  @doc """
+  GetTrades (current) 🔥
+  Gets trades.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%DexTradeDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec dex_get_trades__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.DexTradeDto.t)} | {:error, Tesla.Env.t}
+  def dex_get_trades__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/sushiswap/trades/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.DexTradeDto{}]}
+    ])
+  end
+
+  @doc """
   GetBundles (historical)
   Gets bundles.
 
@@ -17,10 +75,10 @@ defmodule OnChainAPI.Api.Sushiswap do
 
   - `connection` (OnChainAPI.Connection): Connection to server
   - `opts` (keyword): Optional parameters
-    - `:startBlock` (integer()): 
-    - `:endBlock` (integer()): 
-    - `:startDate` (DateTime.t): 
-    - `:endDate` (DateTime.t): 
+    - `:startBlock` (integer()): AAAAAAAAAA
+    - `:endBlock` (integer()): BBBBBBBBBBBB
+    - `:startDate` (DateTime.t): CCCCCCCCC
+    - `:endDate` (DateTime.t): DDDDDDDDDDD
 
   ### Returns
 
@@ -346,7 +404,7 @@ defmodule OnChainAPI.Api.Sushiswap do
   end
 
   @doc """
-  GetPools (current)
+  GetPools (current) 🔥
   Gets pools.
 
   ### Parameters
@@ -375,18 +433,18 @@ defmodule OnChainAPI.Api.Sushiswap do
   end
 
   @doc """
-  GetPools (historical)
+  GetPools (historical) 🔥
   Gets list of pools for given filters.
 
   ### Parameters
 
   - `connection` (OnChainAPI.Connection): Connection to server
   - `opts` (keyword): Optional parameters
-    - `:startBlock` (integer()): 
-    - `:endBlock` (integer()): 
-    - `:startDate` (DateTime.t): 
-    - `:endDate` (DateTime.t): 
-    - `:poolId` (String.t): 
+    - `:startBlock` (integer()): The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    - `:endBlock` (integer()): The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    - `:startDate` (DateTime.t): The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    - `:endDate` (DateTime.t): The end date of timeframe
+    - `:poolId` (String.t): The pool address.
 
   ### Returns
 
@@ -504,7 +562,7 @@ defmodule OnChainAPI.Api.Sushiswap do
   end
 
   @doc """
-  GetSwaps (current)
+  GetSwaps (current) 🔥
   Gets swaps.
 
   ### Parameters
@@ -533,18 +591,18 @@ defmodule OnChainAPI.Api.Sushiswap do
   end
 
   @doc """
-  GetSwaps (historical)
+  GetSwaps (historical) 🔥
   Gets list of swaps for given filters.
 
   ### Parameters
 
   - `connection` (OnChainAPI.Connection): Connection to server
   - `opts` (keyword): Optional parameters
-    - `:startBlock` (integer()): 
-    - `:endBlock` (integer()): 
-    - `:startDate` (DateTime.t): 
-    - `:endDate` (DateTime.t): 
-    - `:poolId` (String.t): 
+    - `:startBlock` (integer()): The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    - `:endBlock` (integer()): The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    - `:startDate` (DateTime.t): The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    - `:endDate` (DateTime.t): The end date of timeframe
+    - `:poolId` (String.t): The pool address.
 
   ### Returns
 
@@ -576,7 +634,7 @@ defmodule OnChainAPI.Api.Sushiswap do
   end
 
   @doc """
-  GetTokens (current)
+  GetTokens (current) 🔥
   Gets tokens.
 
   ### Parameters
@@ -605,18 +663,18 @@ defmodule OnChainAPI.Api.Sushiswap do
   end
 
   @doc """
-  GetTokens (historical)
+  GetTokens (historical) 🔥
   Gets list of tokens for given filters.
 
   ### Parameters
 
   - `connection` (OnChainAPI.Connection): Connection to server
   - `opts` (keyword): Optional parameters
-    - `:startBlock` (integer()): 
-    - `:endBlock` (integer()): 
-    - `:startDate` (DateTime.t): 
-    - `:endDate` (DateTime.t): 
-    - `:tokenId` (String.t): 
+    - `:startBlock` (integer()): The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    - `:endBlock` (integer()): The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    - `:startDate` (DateTime.t): The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    - `:endDate` (DateTime.t): The end date of timeframe
+    - `:tokenId` (String.t): The token address.
 
   ### Returns
 

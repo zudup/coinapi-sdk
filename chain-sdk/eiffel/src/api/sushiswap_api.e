@@ -24,17 +24,83 @@ inherit
 feature -- API Access
 
 
+	curve_get_exchanges_current : detachable LIST [CURVE_EXCHANGE_DTO]
+			-- GetExchanges (current) 🔥
+			-- Gets exchanges.
+			-- 
+			-- 
+			-- Result LIST [CURVE_EXCHANGE_DTO]
+		require
+		local
+  			l_path: STRING
+  			l_request: API_CLIENT_REQUEST
+  			l_response: API_CLIENT_RESPONSE
+		do
+			reset_error
+			create l_request
+			
+			l_path := "/dapps/sushiswap/exchanges/current"
+
+
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
+				l_request.add_header(l_accept,"Accept");
+			end
+			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
+			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
+			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
+			if l_response.has_error then
+				last_error := l_response.error
+			elseif attached { LIST [CURVE_EXCHANGE_DTO] } l_response.data ({ LIST [CURVE_EXCHANGE_DTO] }) as l_data then
+				Result := l_data
+			else
+				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
+			end
+		end
+
+	dex_get_trades_current : detachable LIST [DEX_TRADE_DTO]
+			-- GetTrades (current) 🔥
+			-- Gets trades.
+			-- 
+			-- 
+			-- Result LIST [DEX_TRADE_DTO]
+		require
+		local
+  			l_path: STRING
+  			l_request: API_CLIENT_REQUEST
+  			l_response: API_CLIENT_RESPONSE
+		do
+			reset_error
+			create l_request
+			
+			l_path := "/dapps/sushiswap/trades/current"
+
+
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
+				l_request.add_header(l_accept,"Accept");
+			end
+			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
+			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
+			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
+			if l_response.has_error then
+				last_error := l_response.error
+			elseif attached { LIST [DEX_TRADE_DTO] } l_response.data ({ LIST [DEX_TRADE_DTO] }) as l_data then
+				Result := l_data
+			else
+				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
+			end
+		end
+
 	sushiswap_get_bundles_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME): detachable LIST [SUSHISWAP_BUNDLE_DTO]
 			-- GetBundles (historical)
 			-- Gets bundles.
 			-- 
-			-- argument: start_block  (optional, default to null)
+			-- argument: start_block AAAAAAAAAA (optional, default to null)
 			-- 
-			-- argument: end_block  (optional, default to null)
+			-- argument: end_block BBBBBBBBBBBB (optional, default to null)
 			-- 
-			-- argument: start_date  (optional, default to null)
+			-- argument: start_date CCCCCCCCC (optional, default to null)
 			-- 
-			-- argument: end_date  (optional, default to null)
+			-- argument: end_date DDDDDDDDDDD (optional, default to null)
 			-- 
 			-- 
 			-- Result LIST [SUSHISWAP_BUNDLE_DTO]
@@ -397,7 +463,7 @@ feature -- API Access
 		end
 
 	sushiswap_get_pools_current : detachable LIST [SUSHISWAP_PAIR_DTO]
-			-- GetPools (current)
+			-- GetPools (current) 🔥
 			-- Gets pools.
 			-- 
 			-- 
@@ -478,18 +544,18 @@ feature -- API Access
 		end
 
 	sushiswap_get_pools_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [SUSHISWAP_PAIR_DTO]
-			-- GetPools (historical)
+			-- GetPools (historical) 🔥
 			-- Gets list of pools for given filters.
 			-- 
-			-- argument: start_block  (optional, default to null)
+			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
 			-- 
-			-- argument: end_block  (optional, default to null)
+			-- argument: end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to null)
 			-- 
-			-- argument: start_date  (optional, default to null)
+			-- argument: start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional, default to null)
 			-- 
-			-- argument: end_date  (optional, default to null)
+			-- argument: end_date The end date of timeframe (optional, default to null)
 			-- 
-			-- argument: pool_id  (optional, default to null)
+			-- argument: pool_id The pool address. (optional, default to null)
 			-- 
 			-- 
 			-- Result LIST [SUSHISWAP_PAIR_DTO]
@@ -574,7 +640,7 @@ feature -- API Access
 		end
 
 	sushiswap_get_swaps_current : detachable LIST [SUSHISWAP_SWAP_DTO]
-			-- GetSwaps (current)
+			-- GetSwaps (current) 🔥
 			-- Gets swaps.
 			-- 
 			-- 
@@ -607,18 +673,18 @@ feature -- API Access
 		end
 
 	sushiswap_get_swaps_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [SUSHISWAP_SWAP_DTO]
-			-- GetSwaps (historical)
+			-- GetSwaps (historical) 🔥
 			-- Gets list of swaps for given filters.
 			-- 
-			-- argument: start_block  (optional, default to null)
+			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
 			-- 
-			-- argument: end_block  (optional, default to null)
+			-- argument: end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to null)
 			-- 
-			-- argument: start_date  (optional, default to null)
+			-- argument: start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional, default to null)
 			-- 
-			-- argument: end_date  (optional, default to null)
+			-- argument: end_date The end date of timeframe (optional, default to null)
 			-- 
-			-- argument: pool_id  (optional, default to null)
+			-- argument: pool_id The pool address. (optional, default to null)
 			-- 
 			-- 
 			-- Result LIST [SUSHISWAP_SWAP_DTO]
@@ -655,7 +721,7 @@ feature -- API Access
 		end
 
 	sushiswap_get_tokens_current : detachable LIST [SUSHISWAP_TOKEN_DTO]
-			-- GetTokens (current)
+			-- GetTokens (current) 🔥
 			-- Gets tokens.
 			-- 
 			-- 
@@ -736,18 +802,18 @@ feature -- API Access
 		end
 
 	sushiswap_get_tokens_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; token_id: STRING_32): detachable LIST [SUSHISWAP_TOKEN_DTO]
-			-- GetTokens (historical)
+			-- GetTokens (historical) 🔥
 			-- Gets list of tokens for given filters.
 			-- 
-			-- argument: start_block  (optional, default to null)
+			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
 			-- 
-			-- argument: end_block  (optional, default to null)
+			-- argument: end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to null)
 			-- 
-			-- argument: start_date  (optional, default to null)
+			-- argument: start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional, default to null)
 			-- 
-			-- argument: end_date  (optional, default to null)
+			-- argument: end_date The end date of timeframe (optional, default to null)
 			-- 
-			-- argument: token_id  (optional, default to null)
+			-- argument: token_id The token address. (optional, default to null)
 			-- 
 			-- 
 			-- Result LIST [SUSHISWAP_TOKEN_DTO]

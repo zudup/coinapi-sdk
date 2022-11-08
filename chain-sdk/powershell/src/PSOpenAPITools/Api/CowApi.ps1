@@ -9,23 +9,27 @@
 <#
 .SYNOPSIS
 
-No summary available.
+GetOrders (historical)
 
 .DESCRIPTION
 
 No description available.
 
 .PARAMETER StartBlock
-No description available.
+
 
 .PARAMETER EndBlock
-No description available.
+
 
 .PARAMETER StartDate
-No description available.
+
 
 .PARAMETER EndDate
 No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
 
 .PARAMETER WithHttpInfo
 
@@ -33,9 +37,9 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 .OUTPUTS
 
-None
+CowOrderDTO[]
 #>
-function Invoke-DappsCowOrdersHistoricalGet {
+function Invoke-CowGetOrdersHistorical {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -50,12 +54,15 @@ function Invoke-DappsCowOrdersHistoricalGet {
         [Parameter(Position = 3, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
         [System.Nullable[System.DateTime]]
         ${EndDate},
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
         [Switch]
         $WithHttpInfo
     )
 
     Process {
-        'Calling method: Invoke-DappsCowOrdersHistoricalGet' | Write-Debug
+        'Calling method: Invoke-CowGetOrdersHistorical' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -68,6 +75,14 @@ function Invoke-DappsCowOrdersHistoricalGet {
         $LocalVarBodyParameter = $null
 
         $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
         $LocalVarUri = '/dapps/cow/orders/historical'
 
         if ($StartBlock) {
@@ -95,7 +110,7 @@ function Invoke-DappsCowOrdersHistoricalGet {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "" `
+                                -ReturnType "CowOrderDTO[]" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {
@@ -109,23 +124,27 @@ function Invoke-DappsCowOrdersHistoricalGet {
 <#
 .SYNOPSIS
 
-No summary available.
+GetSettlements (historical)
 
 .DESCRIPTION
 
 No description available.
 
 .PARAMETER StartBlock
-No description available.
+
 
 .PARAMETER EndBlock
-No description available.
+
 
 .PARAMETER StartDate
-No description available.
+
 
 .PARAMETER EndDate
 No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
 
 .PARAMETER WithHttpInfo
 
@@ -133,9 +152,9 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 .OUTPUTS
 
-None
+CowSettlementDTO[]
 #>
-function Invoke-DappsCowSettlementHistoricalGet {
+function Invoke-CowGetSettlementsHistorical {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -150,12 +169,15 @@ function Invoke-DappsCowSettlementHistoricalGet {
         [Parameter(Position = 3, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
         [System.Nullable[System.DateTime]]
         ${EndDate},
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
         [Switch]
         $WithHttpInfo
     )
 
     Process {
-        'Calling method: Invoke-DappsCowSettlementHistoricalGet' | Write-Debug
+        'Calling method: Invoke-CowGetSettlementsHistorical' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -168,7 +190,15 @@ function Invoke-DappsCowSettlementHistoricalGet {
         $LocalVarBodyParameter = $null
 
         $Configuration = Get-Configuration
-        $LocalVarUri = '/dapps/cow/settlement/historical'
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/cow/settlements/historical'
 
         if ($StartBlock) {
             $LocalVarQueryParameters['startBlock'] = $StartBlock
@@ -195,7 +225,7 @@ function Invoke-DappsCowSettlementHistoricalGet {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "" `
+                                -ReturnType "CowSettlementDTO[]" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {
@@ -209,26 +239,30 @@ function Invoke-DappsCowSettlementHistoricalGet {
 <#
 .SYNOPSIS
 
-No summary available.
+GetTokens (historical) 🔥
 
 .DESCRIPTION
 
 No description available.
 
 .PARAMETER StartBlock
-No description available.
+
 
 .PARAMETER EndBlock
-No description available.
+
 
 .PARAMETER StartDate
-No description available.
+
 
 .PARAMETER EndDate
-No description available.
+
 
 .PARAMETER TokenId
-No description available.
+
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
 
 .PARAMETER WithHttpInfo
 
@@ -236,9 +270,9 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 .OUTPUTS
 
-None
+CowTokenDTO[]
 #>
-function Invoke-DappsCowTokensHistoricalGet {
+function Invoke-CowGetTokensHistorical {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -256,12 +290,15 @@ function Invoke-DappsCowTokensHistoricalGet {
         [Parameter(Position = 4, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
         [String]
         ${TokenId},
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
         [Switch]
         $WithHttpInfo
     )
 
     Process {
-        'Calling method: Invoke-DappsCowTokensHistoricalGet' | Write-Debug
+        'Calling method: Invoke-CowGetTokensHistorical' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -274,6 +311,14 @@ function Invoke-DappsCowTokensHistoricalGet {
         $LocalVarBodyParameter = $null
 
         $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
         $LocalVarUri = '/dapps/cow/tokens/historical'
 
         if ($StartBlock) {
@@ -305,7 +350,7 @@ function Invoke-DappsCowTokensHistoricalGet {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "" `
+                                -ReturnType "CowTokenDTO[]" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {
@@ -319,23 +364,27 @@ function Invoke-DappsCowTokensHistoricalGet {
 <#
 .SYNOPSIS
 
-No summary available.
+GetTrades (historical) 🔥
 
 .DESCRIPTION
 
 No description available.
 
 .PARAMETER StartBlock
-No description available.
+
 
 .PARAMETER EndBlock
-No description available.
+
 
 .PARAMETER StartDate
-No description available.
+
 
 .PARAMETER EndDate
-No description available.
+
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
 
 .PARAMETER WithHttpInfo
 
@@ -343,9 +392,9 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 .OUTPUTS
 
-None
+CowTradeDTO[]
 #>
-function Invoke-DappsCowTradesHistoricalGet {
+function Invoke-CowGetTradesHistorical {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -360,12 +409,15 @@ function Invoke-DappsCowTradesHistoricalGet {
         [Parameter(Position = 3, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
         [System.Nullable[System.DateTime]]
         ${EndDate},
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
         [Switch]
         $WithHttpInfo
     )
 
     Process {
-        'Calling method: Invoke-DappsCowTradesHistoricalGet' | Write-Debug
+        'Calling method: Invoke-CowGetTradesHistorical' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -378,6 +430,14 @@ function Invoke-DappsCowTradesHistoricalGet {
         $LocalVarBodyParameter = $null
 
         $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
         $LocalVarUri = '/dapps/cow/trades/historical'
 
         if ($StartBlock) {
@@ -405,7 +465,7 @@ function Invoke-DappsCowTradesHistoricalGet {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "" `
+                                -ReturnType "CowTradeDTO[]" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {
@@ -419,23 +479,27 @@ function Invoke-DappsCowTradesHistoricalGet {
 <#
 .SYNOPSIS
 
-No summary available.
+GetUsers (historical)
 
 .DESCRIPTION
 
 No description available.
 
 .PARAMETER StartBlock
-No description available.
+
 
 .PARAMETER EndBlock
-No description available.
+
 
 .PARAMETER StartDate
-No description available.
+
 
 .PARAMETER EndDate
-No description available.
+
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
 
 .PARAMETER WithHttpInfo
 
@@ -443,9 +507,9 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 .OUTPUTS
 
-None
+CowUserDTO[]
 #>
-function Invoke-DappsCowUsersHistoricalGet {
+function Invoke-CowGetUsersHistorical {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -460,12 +524,15 @@ function Invoke-DappsCowUsersHistoricalGet {
         [Parameter(Position = 3, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
         [System.Nullable[System.DateTime]]
         ${EndDate},
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
         [Switch]
         $WithHttpInfo
     )
 
     Process {
-        'Calling method: Invoke-DappsCowUsersHistoricalGet' | Write-Debug
+        'Calling method: Invoke-CowGetUsersHistorical' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -478,6 +545,14 @@ function Invoke-DappsCowUsersHistoricalGet {
         $LocalVarBodyParameter = $null
 
         $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
         $LocalVarUri = '/dapps/cow/users/historical'
 
         if ($StartBlock) {
@@ -505,7 +580,7 @@ function Invoke-DappsCowUsersHistoricalGet {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "" `
+                                -ReturnType "CowUserDTO[]" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {

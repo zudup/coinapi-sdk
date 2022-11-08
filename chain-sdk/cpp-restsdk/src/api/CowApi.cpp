@@ -36,7 +36,7 @@ CowApi::~CowApi()
 {
 }
 
-pplx::task<void> CowApi::dappsCowOrdersHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate) const
+pplx::task<std::vector<std::shared_ptr<Cow_OrderDTO>>> CowApi::cow_GetOrders__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate) const
 {
 
 
@@ -49,6 +49,9 @@ pplx::task<void> CowApi::dappsCowOrdersHistoricalGet(boost::optional<int64_t> st
     std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
 
     std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -69,7 +72,7 @@ pplx::task<void> CowApi::dappsCowOrdersHistoricalGet(boost::optional<int64_t> st
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("CowApi->dappsCowOrdersHistoricalGet does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("CowApi->cow_GetOrders__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -112,7 +115,7 @@ pplx::task<void> CowApi::dappsCowOrdersHistoricalGet(boost::optional<int64_t> st
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("CowApi->dappsCowOrdersHistoricalGet does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("CowApi->cow_GetOrders__historical does not consume any supported media type"));
     }
 
 
@@ -132,7 +135,7 @@ pplx::task<void> CowApi::dappsCowOrdersHistoricalGet(boost::optional<int64_t> st
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsCowOrdersHistoricalGet: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling cow_GetOrders__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -143,7 +146,7 @@ pplx::task<void> CowApi::dappsCowOrdersHistoricalGet(boost::optional<int64_t> st
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsCowOrdersHistoricalGet: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling cow_GetOrders__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -152,15 +155,37 @@ pplx::task<void> CowApi::dappsCowOrdersHistoricalGet(boost::optional<int64_t> st
     })
     .then([=](utility::string_t localVarResponse)
     {
-        return void();
+        std::vector<std::shared_ptr<Cow_OrderDTO>> localVarResult;
+
+        if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
+        {
+            web::json::value localVarJson = web::json::value::parse(localVarResponse);
+            for( auto& localVarItem : localVarJson.as_array() )
+            {
+                std::shared_ptr<Cow_OrderDTO> localVarItemObj;
+                ModelBase::fromJson(localVarItem, localVarItemObj);
+                localVarResult.push_back(localVarItemObj);
+            }
+        }
+        // else if(localVarResponseHttpContentType == utility::conversions::to_string_t("multipart/form-data"))
+        // {
+        // TODO multipart response parsing
+        // }
+        else
+        {
+            throw ApiException(500
+                , utility::conversions::to_string_t("error calling cow_GetOrders__historical: unsupported response type"));
+        }
+
+        return localVarResult;
     });
 }
-pplx::task<void> CowApi::dappsCowSettlementHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate) const
+pplx::task<std::vector<std::shared_ptr<Cow_SettlementDTO>>> CowApi::cow_GetSettlements__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate) const
 {
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/cow/settlement/historical");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/cow/settlements/historical");
     
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -168,6 +193,9 @@ pplx::task<void> CowApi::dappsCowSettlementHistoricalGet(boost::optional<int64_t
     std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
 
     std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -188,7 +216,7 @@ pplx::task<void> CowApi::dappsCowSettlementHistoricalGet(boost::optional<int64_t
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("CowApi->dappsCowSettlementHistoricalGet does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("CowApi->cow_GetSettlements__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -231,7 +259,7 @@ pplx::task<void> CowApi::dappsCowSettlementHistoricalGet(boost::optional<int64_t
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("CowApi->dappsCowSettlementHistoricalGet does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("CowApi->cow_GetSettlements__historical does not consume any supported media type"));
     }
 
 
@@ -251,7 +279,7 @@ pplx::task<void> CowApi::dappsCowSettlementHistoricalGet(boost::optional<int64_t
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsCowSettlementHistoricalGet: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling cow_GetSettlements__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -262,7 +290,7 @@ pplx::task<void> CowApi::dappsCowSettlementHistoricalGet(boost::optional<int64_t
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsCowSettlementHistoricalGet: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling cow_GetSettlements__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -271,10 +299,32 @@ pplx::task<void> CowApi::dappsCowSettlementHistoricalGet(boost::optional<int64_t
     })
     .then([=](utility::string_t localVarResponse)
     {
-        return void();
+        std::vector<std::shared_ptr<Cow_SettlementDTO>> localVarResult;
+
+        if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
+        {
+            web::json::value localVarJson = web::json::value::parse(localVarResponse);
+            for( auto& localVarItem : localVarJson.as_array() )
+            {
+                std::shared_ptr<Cow_SettlementDTO> localVarItemObj;
+                ModelBase::fromJson(localVarItem, localVarItemObj);
+                localVarResult.push_back(localVarItemObj);
+            }
+        }
+        // else if(localVarResponseHttpContentType == utility::conversions::to_string_t("multipart/form-data"))
+        // {
+        // TODO multipart response parsing
+        // }
+        else
+        {
+            throw ApiException(500
+                , utility::conversions::to_string_t("error calling cow_GetSettlements__historical: unsupported response type"));
+        }
+
+        return localVarResult;
     });
 }
-pplx::task<void> CowApi::dappsCowTokensHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> tokenId) const
+pplx::task<std::vector<std::shared_ptr<Cow_TokenDTO>>> CowApi::cow_GetTokens__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> tokenId) const
 {
 
 
@@ -287,6 +337,9 @@ pplx::task<void> CowApi::dappsCowTokensHistoricalGet(boost::optional<int64_t> st
     std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
 
     std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -307,7 +360,7 @@ pplx::task<void> CowApi::dappsCowTokensHistoricalGet(boost::optional<int64_t> st
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("CowApi->dappsCowTokensHistoricalGet does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("CowApi->cow_GetTokens__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -354,7 +407,7 @@ pplx::task<void> CowApi::dappsCowTokensHistoricalGet(boost::optional<int64_t> st
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("CowApi->dappsCowTokensHistoricalGet does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("CowApi->cow_GetTokens__historical does not consume any supported media type"));
     }
 
 
@@ -374,7 +427,7 @@ pplx::task<void> CowApi::dappsCowTokensHistoricalGet(boost::optional<int64_t> st
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsCowTokensHistoricalGet: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling cow_GetTokens__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -385,7 +438,7 @@ pplx::task<void> CowApi::dappsCowTokensHistoricalGet(boost::optional<int64_t> st
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsCowTokensHistoricalGet: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling cow_GetTokens__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -394,10 +447,32 @@ pplx::task<void> CowApi::dappsCowTokensHistoricalGet(boost::optional<int64_t> st
     })
     .then([=](utility::string_t localVarResponse)
     {
-        return void();
+        std::vector<std::shared_ptr<Cow_TokenDTO>> localVarResult;
+
+        if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
+        {
+            web::json::value localVarJson = web::json::value::parse(localVarResponse);
+            for( auto& localVarItem : localVarJson.as_array() )
+            {
+                std::shared_ptr<Cow_TokenDTO> localVarItemObj;
+                ModelBase::fromJson(localVarItem, localVarItemObj);
+                localVarResult.push_back(localVarItemObj);
+            }
+        }
+        // else if(localVarResponseHttpContentType == utility::conversions::to_string_t("multipart/form-data"))
+        // {
+        // TODO multipart response parsing
+        // }
+        else
+        {
+            throw ApiException(500
+                , utility::conversions::to_string_t("error calling cow_GetTokens__historical: unsupported response type"));
+        }
+
+        return localVarResult;
     });
 }
-pplx::task<void> CowApi::dappsCowTradesHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate) const
+pplx::task<std::vector<std::shared_ptr<Cow_TradeDTO>>> CowApi::cow_GetTrades__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate) const
 {
 
 
@@ -410,6 +485,9 @@ pplx::task<void> CowApi::dappsCowTradesHistoricalGet(boost::optional<int64_t> st
     std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
 
     std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -430,7 +508,7 @@ pplx::task<void> CowApi::dappsCowTradesHistoricalGet(boost::optional<int64_t> st
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("CowApi->dappsCowTradesHistoricalGet does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("CowApi->cow_GetTrades__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -473,7 +551,7 @@ pplx::task<void> CowApi::dappsCowTradesHistoricalGet(boost::optional<int64_t> st
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("CowApi->dappsCowTradesHistoricalGet does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("CowApi->cow_GetTrades__historical does not consume any supported media type"));
     }
 
 
@@ -493,7 +571,7 @@ pplx::task<void> CowApi::dappsCowTradesHistoricalGet(boost::optional<int64_t> st
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsCowTradesHistoricalGet: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling cow_GetTrades__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -504,7 +582,7 @@ pplx::task<void> CowApi::dappsCowTradesHistoricalGet(boost::optional<int64_t> st
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsCowTradesHistoricalGet: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling cow_GetTrades__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -513,10 +591,32 @@ pplx::task<void> CowApi::dappsCowTradesHistoricalGet(boost::optional<int64_t> st
     })
     .then([=](utility::string_t localVarResponse)
     {
-        return void();
+        std::vector<std::shared_ptr<Cow_TradeDTO>> localVarResult;
+
+        if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
+        {
+            web::json::value localVarJson = web::json::value::parse(localVarResponse);
+            for( auto& localVarItem : localVarJson.as_array() )
+            {
+                std::shared_ptr<Cow_TradeDTO> localVarItemObj;
+                ModelBase::fromJson(localVarItem, localVarItemObj);
+                localVarResult.push_back(localVarItemObj);
+            }
+        }
+        // else if(localVarResponseHttpContentType == utility::conversions::to_string_t("multipart/form-data"))
+        // {
+        // TODO multipart response parsing
+        // }
+        else
+        {
+            throw ApiException(500
+                , utility::conversions::to_string_t("error calling cow_GetTrades__historical: unsupported response type"));
+        }
+
+        return localVarResult;
     });
 }
-pplx::task<void> CowApi::dappsCowUsersHistoricalGet(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate) const
+pplx::task<std::vector<std::shared_ptr<Cow_UserDTO>>> CowApi::cow_GetUsers__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate) const
 {
 
 
@@ -529,6 +629,9 @@ pplx::task<void> CowApi::dappsCowUsersHistoricalGet(boost::optional<int64_t> sta
     std::map<utility::string_t, std::shared_ptr<HttpContent>> localVarFileParams;
 
     std::unordered_set<utility::string_t> localVarResponseHttpContentTypes;
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/plain") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("application/json") );
+    localVarResponseHttpContentTypes.insert( utility::conversions::to_string_t("text/json") );
 
     utility::string_t localVarResponseHttpContentType;
 
@@ -549,7 +652,7 @@ pplx::task<void> CowApi::dappsCowUsersHistoricalGet(boost::optional<int64_t> sta
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("CowApi->dappsCowUsersHistoricalGet does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("CowApi->cow_GetUsers__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -592,7 +695,7 @@ pplx::task<void> CowApi::dappsCowUsersHistoricalGet(boost::optional<int64_t> sta
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("CowApi->dappsCowUsersHistoricalGet does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("CowApi->cow_GetUsers__historical does not consume any supported media type"));
     }
 
 
@@ -612,7 +715,7 @@ pplx::task<void> CowApi::dappsCowUsersHistoricalGet(boost::optional<int64_t> sta
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling dappsCowUsersHistoricalGet: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling cow_GetUsers__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -623,7 +726,7 @@ pplx::task<void> CowApi::dappsCowUsersHistoricalGet(boost::optional<int64_t> sta
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling dappsCowUsersHistoricalGet: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling cow_GetUsers__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -632,7 +735,29 @@ pplx::task<void> CowApi::dappsCowUsersHistoricalGet(boost::optional<int64_t> sta
     })
     .then([=](utility::string_t localVarResponse)
     {
-        return void();
+        std::vector<std::shared_ptr<Cow_UserDTO>> localVarResult;
+
+        if(localVarResponseHttpContentType == utility::conversions::to_string_t("application/json"))
+        {
+            web::json::value localVarJson = web::json::value::parse(localVarResponse);
+            for( auto& localVarItem : localVarJson.as_array() )
+            {
+                std::shared_ptr<Cow_UserDTO> localVarItemObj;
+                ModelBase::fromJson(localVarItem, localVarItemObj);
+                localVarResult.push_back(localVarItemObj);
+            }
+        }
+        // else if(localVarResponseHttpContentType == utility::conversions::to_string_t("multipart/form-data"))
+        // {
+        // TODO multipart response parsing
+        // }
+        else
+        {
+            throw ApiException(500
+                , utility::conversions::to_string_t("error calling cow_GetUsers__historical: unsupported response type"));
+        }
+
+        return localVarResult;
     });
 }
 

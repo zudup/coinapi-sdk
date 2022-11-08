@@ -15,71 +15,78 @@ Please update as you see appropriate
 ]]
 describe("dex_api", function()
   local openapiclient_dex_api = require "openapiclient.api.dex_api"
-  -- unit tests for dapps_dex_batch_historical_get
-  describe("dapps_dex_batch_historical_get test", function()
+  -- unit tests for dex_get_batches__historical
+  describe("dex_get_batches__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for dapps_dex_orders_historical_get
-  describe("dapps_dex_orders_historical_get test", function()
+  -- unit tests for dex_get_deposits__historical
+  describe("dex_get_deposits__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for dapps_dex_prices_historical_get
-  describe("dapps_dex_prices_historical_get test", function()
+  -- unit tests for dex_get_orders__historical
+  describe("dex_get_orders__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for dapps_dex_solution_historical_get
-  describe("dapps_dex_solution_historical_get test", function()
+  -- unit tests for dex_get_prices__historical
+  describe("dex_get_prices__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for dapps_dex_stats_historical_get
-  describe("dapps_dex_stats_historical_get test", function()
+  -- unit tests for dex_get_solutions__historical
+  describe("dex_get_solutions__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for dapps_dex_tokens_historical_get
-  describe("dapps_dex_tokens_historical_get test", function()
+  -- unit tests for dex_get_stats__historical
+  describe("dex_get_stats__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for dapps_dex_trades_historical_get
-  describe("dapps_dex_trades_historical_get test", function()
+  -- unit tests for dex_get_tokens__historical
+  describe("dex_get_tokens__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for dapps_dex_users_historical_get
-  describe("dapps_dex_users_historical_get test", function()
+  -- unit tests for dex_get_trades__historical
+  describe("dex_get_trades__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for dapps_dex_withdraw_historical_get
-  describe("dapps_dex_withdraw_historical_get test", function()
+  -- unit tests for dex_get_users__historical
+  describe("dex_get_users__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for dapps_dex_withdraw_request_historical_get
-  describe("dapps_dex_withdraw_request_historical_get test", function()
+  -- unit tests for dex_get_withdraws__historical
+  describe("dex_get_withdraws__historical test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for dex_get_withdraws_requests__historical
+  describe("dex_get_withdraws_requests__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)

@@ -22,11 +22,11 @@ func Test_openapi_CurveApiService(t *testing.T) {
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
 
-    t.Run("Test CurveApiService DappsCurveAccountsHistoricalGet", func(t *testing.T) {
+    t.Run("Test CurveApiService CurveGetAccountsHistorical", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.CurveApi.DappsCurveAccountsHistoricalGet(context.Background()).Execute()
+        resp, httpRes, err := apiClient.CurveApi.CurveGetAccountsHistorical(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)
@@ -34,11 +34,11 @@ func Test_openapi_CurveApiService(t *testing.T) {
 
     })
 
-    t.Run("Test CurveApiService DappsCurveAddLiquidityEventHistoricalGet", func(t *testing.T) {
+    t.Run("Test CurveApiService CurveGetAddLiquidityEventsHistorical", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.CurveApi.DappsCurveAddLiquidityEventHistoricalGet(context.Background()).Execute()
+        resp, httpRes, err := apiClient.CurveApi.CurveGetAddLiquidityEventsHistorical(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)
@@ -46,11 +46,11 @@ func Test_openapi_CurveApiService(t *testing.T) {
 
     })
 
-    t.Run("Test CurveApiService DappsCurveAdminFeeChangeLogHistoricalGet", func(t *testing.T) {
+    t.Run("Test CurveApiService CurveGetAdminFeeChangeLogsHistorical", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.CurveApi.DappsCurveAdminFeeChangeLogHistoricalGet(context.Background()).Execute()
+        resp, httpRes, err := apiClient.CurveApi.CurveGetAdminFeeChangeLogsHistorical(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)
@@ -58,11 +58,11 @@ func Test_openapi_CurveApiService(t *testing.T) {
 
     })
 
-    t.Run("Test CurveApiService DappsCurveAmplificationCoeffChangeLogHistoricalGet", func(t *testing.T) {
+    t.Run("Test CurveApiService CurveGetAmplificationCoeffChangeLogsHistorical", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.CurveApi.DappsCurveAmplificationCoeffChangeLogHistoricalGet(context.Background()).Execute()
+        resp, httpRes, err := apiClient.CurveApi.CurveGetAmplificationCoeffChangeLogsHistorical(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)
@@ -70,11 +70,11 @@ func Test_openapi_CurveApiService(t *testing.T) {
 
     })
 
-    t.Run("Test CurveApiService DappsCurveCoinsHistoricalGet", func(t *testing.T) {
+    t.Run("Test CurveApiService CurveGetCoinsHistorical", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.CurveApi.DappsCurveCoinsHistoricalGet(context.Background()).Execute()
+        resp, httpRes, err := apiClient.CurveApi.CurveGetCoinsHistorical(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)
@@ -82,11 +82,11 @@ func Test_openapi_CurveApiService(t *testing.T) {
 
     })
 
-    t.Run("Test CurveApiService DappsCurveContractsHistoricalGet", func(t *testing.T) {
+    t.Run("Test CurveApiService CurveGetContractsHistorical", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.CurveApi.DappsCurveContractsHistoricalGet(context.Background()).Execute()
+        resp, httpRes, err := apiClient.CurveApi.CurveGetContractsHistorical(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)
@@ -94,11 +94,11 @@ func Test_openapi_CurveApiService(t *testing.T) {
 
     })
 
-    t.Run("Test CurveApiService DappsCurveContractsVersionHistoricalGet", func(t *testing.T) {
+    t.Run("Test CurveApiService CurveGetContractsVersionsHistorical", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.CurveApi.DappsCurveContractsVersionHistoricalGet(context.Background()).Execute()
+        resp, httpRes, err := apiClient.CurveApi.CurveGetContractsVersionsHistorical(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)
@@ -106,11 +106,11 @@ func Test_openapi_CurveApiService(t *testing.T) {
 
     })
 
-    t.Run("Test CurveApiService DappsCurveDailyVolumeHistoricalGet", func(t *testing.T) {
+    t.Run("Test CurveApiService CurveGetDailyVolumesHistorical", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.CurveApi.DappsCurveDailyVolumeHistoricalGet(context.Background()).Execute()
+        resp, httpRes, err := apiClient.CurveApi.CurveGetDailyVolumesHistorical(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)
@@ -118,11 +118,11 @@ func Test_openapi_CurveApiService(t *testing.T) {
 
     })
 
-    t.Run("Test CurveApiService DappsCurveFeeChangeLogHistoricalGet", func(t *testing.T) {
+    t.Run("Test CurveApiService CurveGetExchangesHistorical", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.CurveApi.DappsCurveFeeChangeLogHistoricalGet(context.Background()).Execute()
+        resp, httpRes, err := apiClient.CurveApi.CurveGetExchangesHistorical(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)
@@ -130,11 +130,11 @@ func Test_openapi_CurveApiService(t *testing.T) {
 
     })
 
-    t.Run("Test CurveApiService DappsCurveGaugeDepositHistoricalGet", func(t *testing.T) {
+    t.Run("Test CurveApiService CurveGetFeeChangeLogsHistorical", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.CurveApi.DappsCurveGaugeDepositHistoricalGet(context.Background()).Execute()
+        resp, httpRes, err := apiClient.CurveApi.CurveGetFeeChangeLogsHistorical(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)
@@ -142,11 +142,11 @@ func Test_openapi_CurveApiService(t *testing.T) {
 
     })
 
-    t.Run("Test CurveApiService DappsCurveGaugeHistoricalGet", func(t *testing.T) {
+    t.Run("Test CurveApiService CurveGetGaugesDepositsHistorical", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.CurveApi.DappsCurveGaugeHistoricalGet(context.Background()).Execute()
+        resp, httpRes, err := apiClient.CurveApi.CurveGetGaugesDepositsHistorical(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)
@@ -154,11 +154,11 @@ func Test_openapi_CurveApiService(t *testing.T) {
 
     })
 
-    t.Run("Test CurveApiService DappsCurveGaugeLiquidityHistoricalGet", func(t *testing.T) {
+    t.Run("Test CurveApiService CurveGetGaugesHistorical", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.CurveApi.DappsCurveGaugeLiquidityHistoricalGet(context.Background()).Execute()
+        resp, httpRes, err := apiClient.CurveApi.CurveGetGaugesHistorical(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)
@@ -166,11 +166,11 @@ func Test_openapi_CurveApiService(t *testing.T) {
 
     })
 
-    t.Run("Test CurveApiService DappsCurveGaugeTotalWeightHistoricalGet", func(t *testing.T) {
+    t.Run("Test CurveApiService CurveGetGaugesLiquidityHistorical", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.CurveApi.DappsCurveGaugeTotalWeightHistoricalGet(context.Background()).Execute()
+        resp, httpRes, err := apiClient.CurveApi.CurveGetGaugesLiquidityHistorical(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)
@@ -178,11 +178,11 @@ func Test_openapi_CurveApiService(t *testing.T) {
 
     })
 
-    t.Run("Test CurveApiService DappsCurveGaugeTypeHistoricalGet", func(t *testing.T) {
+    t.Run("Test CurveApiService CurveGetGaugesTotalWeightsHistorical", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.CurveApi.DappsCurveGaugeTypeHistoricalGet(context.Background()).Execute()
+        resp, httpRes, err := apiClient.CurveApi.CurveGetGaugesTotalWeightsHistorical(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)
@@ -190,11 +190,11 @@ func Test_openapi_CurveApiService(t *testing.T) {
 
     })
 
-    t.Run("Test CurveApiService DappsCurveGaugeTypeWeightHistoricalGet", func(t *testing.T) {
+    t.Run("Test CurveApiService CurveGetGaugesTypesHistorical", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.CurveApi.DappsCurveGaugeTypeWeightHistoricalGet(context.Background()).Execute()
+        resp, httpRes, err := apiClient.CurveApi.CurveGetGaugesTypesHistorical(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)
@@ -202,11 +202,11 @@ func Test_openapi_CurveApiService(t *testing.T) {
 
     })
 
-    t.Run("Test CurveApiService DappsCurveGaugeWeightHistoricalGet", func(t *testing.T) {
+    t.Run("Test CurveApiService CurveGetGaugesTypesWeightsHistorical", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.CurveApi.DappsCurveGaugeWeightHistoricalGet(context.Background()).Execute()
+        resp, httpRes, err := apiClient.CurveApi.CurveGetGaugesTypesWeightsHistorical(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)
@@ -214,11 +214,11 @@ func Test_openapi_CurveApiService(t *testing.T) {
 
     })
 
-    t.Run("Test CurveApiService DappsCurveGaugeWeightVoteHistoricalGet", func(t *testing.T) {
+    t.Run("Test CurveApiService CurveGetGaugesWeightsHistorical", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.CurveApi.DappsCurveGaugeWeightVoteHistoricalGet(context.Background()).Execute()
+        resp, httpRes, err := apiClient.CurveApi.CurveGetGaugesWeightsHistorical(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)
@@ -226,11 +226,11 @@ func Test_openapi_CurveApiService(t *testing.T) {
 
     })
 
-    t.Run("Test CurveApiService DappsCurveGaugeWithdrawHistoricalGet", func(t *testing.T) {
+    t.Run("Test CurveApiService CurveGetGaugesWeightsVotesHistorical", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.CurveApi.DappsCurveGaugeWithdrawHistoricalGet(context.Background()).Execute()
+        resp, httpRes, err := apiClient.CurveApi.CurveGetGaugesWeightsVotesHistorical(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)
@@ -238,11 +238,11 @@ func Test_openapi_CurveApiService(t *testing.T) {
 
     })
 
-    t.Run("Test CurveApiService DappsCurveHourlyVolumeHistoricalGet", func(t *testing.T) {
+    t.Run("Test CurveApiService CurveGetGaugesWithdrawHistorical", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.CurveApi.DappsCurveHourlyVolumeHistoricalGet(context.Background()).Execute()
+        resp, httpRes, err := apiClient.CurveApi.CurveGetGaugesWithdrawHistorical(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)
@@ -250,11 +250,11 @@ func Test_openapi_CurveApiService(t *testing.T) {
 
     })
 
-    t.Run("Test CurveApiService DappsCurveLpTokenHistoricalGet", func(t *testing.T) {
+    t.Run("Test CurveApiService CurveGetHourlyVolumesHistorical", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.CurveApi.DappsCurveLpTokenHistoricalGet(context.Background()).Execute()
+        resp, httpRes, err := apiClient.CurveApi.CurveGetHourlyVolumesHistorical(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)
@@ -262,11 +262,11 @@ func Test_openapi_CurveApiService(t *testing.T) {
 
     })
 
-    t.Run("Test CurveApiService DappsCurvePoolsHistoricalGet", func(t *testing.T) {
+    t.Run("Test CurveApiService CurveGetLpTokensHistorical", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.CurveApi.DappsCurvePoolsHistoricalGet(context.Background()).Execute()
+        resp, httpRes, err := apiClient.CurveApi.CurveGetLpTokensHistorical(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)
@@ -274,11 +274,11 @@ func Test_openapi_CurveApiService(t *testing.T) {
 
     })
 
-    t.Run("Test CurveApiService DappsCurveProposalsHistoricalGet", func(t *testing.T) {
+    t.Run("Test CurveApiService CurveGetPoolsHistorical", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.CurveApi.DappsCurveProposalsHistoricalGet(context.Background()).Execute()
+        resp, httpRes, err := apiClient.CurveApi.CurveGetPoolsHistorical(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)
@@ -286,11 +286,11 @@ func Test_openapi_CurveApiService(t *testing.T) {
 
     })
 
-    t.Run("Test CurveApiService DappsCurveProposalsVoteHistoricalGet", func(t *testing.T) {
+    t.Run("Test CurveApiService CurveGetProposalsHistorical", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.CurveApi.DappsCurveProposalsVoteHistoricalGet(context.Background()).Execute()
+        resp, httpRes, err := apiClient.CurveApi.CurveGetProposalsHistorical(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)
@@ -298,11 +298,11 @@ func Test_openapi_CurveApiService(t *testing.T) {
 
     })
 
-    t.Run("Test CurveApiService DappsCurveRemoveLiquidityEventHistoricalGet", func(t *testing.T) {
+    t.Run("Test CurveApiService CurveGetProposalsVotesHistorical", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.CurveApi.DappsCurveRemoveLiquidityEventHistoricalGet(context.Background()).Execute()
+        resp, httpRes, err := apiClient.CurveApi.CurveGetProposalsVotesHistorical(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)
@@ -310,11 +310,11 @@ func Test_openapi_CurveApiService(t *testing.T) {
 
     })
 
-    t.Run("Test CurveApiService DappsCurveRemoveLiquidityOneEventHistoricalGet", func(t *testing.T) {
+    t.Run("Test CurveApiService CurveGetRemoveLiquidityEventsHistorical", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.CurveApi.DappsCurveRemoveLiquidityOneEventHistoricalGet(context.Background()).Execute()
+        resp, httpRes, err := apiClient.CurveApi.CurveGetRemoveLiquidityEventsHistorical(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)
@@ -322,11 +322,11 @@ func Test_openapi_CurveApiService(t *testing.T) {
 
     })
 
-    t.Run("Test CurveApiService DappsCurveSwapsHistoricalGet", func(t *testing.T) {
+    t.Run("Test CurveApiService CurveGetRemoveLiquidityOneEventsHistorical", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.CurveApi.DappsCurveSwapsHistoricalGet(context.Background()).Execute()
+        resp, httpRes, err := apiClient.CurveApi.CurveGetRemoveLiquidityOneEventsHistorical(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)
@@ -334,11 +334,11 @@ func Test_openapi_CurveApiService(t *testing.T) {
 
     })
 
-    t.Run("Test CurveApiService DappsCurveSystemStateHistoricalGet", func(t *testing.T) {
+    t.Run("Test CurveApiService CurveGetSystemStatesHistorical", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.CurveApi.DappsCurveSystemStateHistoricalGet(context.Background()).Execute()
+        resp, httpRes, err := apiClient.CurveApi.CurveGetSystemStatesHistorical(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)
@@ -346,11 +346,11 @@ func Test_openapi_CurveApiService(t *testing.T) {
 
     })
 
-    t.Run("Test CurveApiService DappsCurveTokensHistoricalGet", func(t *testing.T) {
+    t.Run("Test CurveApiService CurveGetTokensHistorical", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.CurveApi.DappsCurveTokensHistoricalGet(context.Background()).Execute()
+        resp, httpRes, err := apiClient.CurveApi.CurveGetTokensHistorical(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)
@@ -358,11 +358,11 @@ func Test_openapi_CurveApiService(t *testing.T) {
 
     })
 
-    t.Run("Test CurveApiService DappsCurveTransferOwnershipEventHistoricalGet", func(t *testing.T) {
+    t.Run("Test CurveApiService CurveGetTransferOwnershipEventsHistorical", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.CurveApi.DappsCurveTransferOwnershipEventHistoricalGet(context.Background()).Execute()
+        resp, httpRes, err := apiClient.CurveApi.CurveGetTransferOwnershipEventsHistorical(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)
@@ -370,11 +370,11 @@ func Test_openapi_CurveApiService(t *testing.T) {
 
     })
 
-    t.Run("Test CurveApiService DappsCurveUnderlyingCoinHistoricalGet", func(t *testing.T) {
+    t.Run("Test CurveApiService CurveGetUnderlyingCoinsHistorical", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.CurveApi.DappsCurveUnderlyingCoinHistoricalGet(context.Background()).Execute()
+        resp, httpRes, err := apiClient.CurveApi.CurveGetUnderlyingCoinsHistorical(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)
@@ -382,11 +382,11 @@ func Test_openapi_CurveApiService(t *testing.T) {
 
     })
 
-    t.Run("Test CurveApiService DappsCurveVotingAppHistoricalGet", func(t *testing.T) {
+    t.Run("Test CurveApiService CurveGetVotingAppsHistorical", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.CurveApi.DappsCurveVotingAppHistoricalGet(context.Background()).Execute()
+        resp, httpRes, err := apiClient.CurveApi.CurveGetVotingAppsHistorical(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)
@@ -394,11 +394,11 @@ func Test_openapi_CurveApiService(t *testing.T) {
 
     })
 
-    t.Run("Test CurveApiService DappsCurveWeeklyVolumeHistoricalGet", func(t *testing.T) {
+    t.Run("Test CurveApiService CurveGetWeeklyVolumesHistorical", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.CurveApi.DappsCurveWeeklyVolumeHistoricalGet(context.Background()).Execute()
+        resp, httpRes, err := apiClient.CurveApi.CurveGetWeeklyVolumesHistorical(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)

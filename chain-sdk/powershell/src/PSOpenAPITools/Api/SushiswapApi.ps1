@@ -9,6 +9,156 @@
 <#
 .SYNOPSIS
 
+GetExchanges (current) 🔥
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+CurveExchangeDTO[]
+#>
+function Invoke-CurveGetExchangesCurrent {
+    [CmdletBinding()]
+    Param (
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-CurveGetExchangesCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/sushiswap/exchanges/current'
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "CurveExchangeDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+GetTrades (current) 🔥
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json, text/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+DexTradeDTO[]
+#>
+function Invoke-DexGetTradesCurrent {
+    [CmdletBinding()]
+    Param (
+        [String]
+        [ValidateSet("text/plain", "application/json", "text/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Invoke-DexGetTradesCurrent' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json', 'text/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/dapps/sushiswap/trades/current'
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "DexTradeDTO[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
 GetBundles (historical)
 
 .DESCRIPTION
@@ -16,16 +166,16 @@ GetBundles (historical)
 No description available.
 
 .PARAMETER StartBlock
-No description available.
+AAAAAAAAAA
 
 .PARAMETER EndBlock
-No description available.
+BBBBBBBBBBBB
 
 .PARAMETER StartDate
-No description available.
+CCCCCCCCC
 
 .PARAMETER EndDate
-No description available.
+DDDDDDDDDDD
 
 .PARAMETER ReturnType
 
@@ -131,19 +281,19 @@ GetBurns (historical)
 No description available.
 
 .PARAMETER StartBlock
-No description available.
+
 
 .PARAMETER EndBlock
-No description available.
+
 
 .PARAMETER StartDate
-No description available.
+
 
 .PARAMETER EndDate
-No description available.
+
 
 .PARAMETER PoolId
-No description available.
+
 
 .PARAMETER ReturnType
 
@@ -256,16 +406,16 @@ GetDayData (historical)
 No description available.
 
 .PARAMETER StartBlock
-No description available.
+
 
 .PARAMETER EndBlock
-No description available.
+
 
 .PARAMETER StartDate
-No description available.
+
 
 .PARAMETER EndDate
-No description available.
+
 
 .PARAMETER ReturnType
 
@@ -371,16 +521,16 @@ GetFactory (historical)
 No description available.
 
 .PARAMETER StartBlock
-No description available.
+
 
 .PARAMETER EndBlock
-No description available.
+
 
 .PARAMETER StartDate
-No description available.
+
 
 .PARAMETER EndDate
-No description available.
+
 
 .PARAMETER ReturnType
 
@@ -486,16 +636,16 @@ GetHourData (historical)
 No description available.
 
 .PARAMETER StartBlock
-No description available.
+
 
 .PARAMETER EndBlock
-No description available.
+
 
 .PARAMETER StartDate
-No description available.
+
 
 .PARAMETER EndDate
-No description available.
+
 
 .PARAMETER ReturnType
 
@@ -601,19 +751,19 @@ GetLiquidityPositionSnapshot (historical)
 No description available.
 
 .PARAMETER StartBlock
-No description available.
+
 
 .PARAMETER EndBlock
-No description available.
+
 
 .PARAMETER StartDate
-No description available.
+
 
 .PARAMETER EndDate
-No description available.
+
 
 .PARAMETER PoolId
-No description available.
+
 
 .PARAMETER ReturnType
 
@@ -726,19 +876,19 @@ GetLiquidityPosition (historical)
 No description available.
 
 .PARAMETER StartBlock
-No description available.
+
 
 .PARAMETER EndBlock
-No description available.
+
 
 .PARAMETER StartDate
-No description available.
+
 
 .PARAMETER EndDate
-No description available.
+
 
 .PARAMETER PoolId
-No description available.
+
 
 .PARAMETER ReturnType
 
@@ -851,19 +1001,19 @@ GetMints (historical)
 No description available.
 
 .PARAMETER StartBlock
-No description available.
+
 
 .PARAMETER EndBlock
-No description available.
+
 
 .PARAMETER StartDate
-No description available.
+
 
 .PARAMETER EndDate
-No description available.
+
 
 .PARAMETER PoolId
-No description available.
+
 
 .PARAMETER ReturnType
 
@@ -976,19 +1126,19 @@ GetPoolsDayData (historical)
 No description available.
 
 .PARAMETER StartBlock
-No description available.
+
 
 .PARAMETER EndBlock
-No description available.
+
 
 .PARAMETER StartDate
-No description available.
+
 
 .PARAMETER EndDate
-No description available.
+
 
 .PARAMETER PoolId
-No description available.
+
 
 .PARAMETER ReturnType
 
@@ -1101,19 +1251,19 @@ GetPoolsHourData (historical)
 No description available.
 
 .PARAMETER StartBlock
-No description available.
+
 
 .PARAMETER EndBlock
-No description available.
+
 
 .PARAMETER StartDate
-No description available.
+
 
 .PARAMETER EndDate
-No description available.
+
 
 .PARAMETER PoolId
-No description available.
+
 
 .PARAMETER ReturnType
 
@@ -1219,7 +1369,7 @@ function Invoke-SushiswapGetPoolsHourDataHistorical {
 <#
 .SYNOPSIS
 
-GetPools (current)
+GetPools (current) 🔥
 
 .DESCRIPTION
 
@@ -1294,26 +1444,26 @@ function Invoke-SushiswapGetPoolsCurrent {
 <#
 .SYNOPSIS
 
-GetPools (historical)
+GetPools (historical) 🔥
 
 .DESCRIPTION
 
 No description available.
 
 .PARAMETER StartBlock
-No description available.
+The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 
 .PARAMETER EndBlock
-No description available.
+The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 
 .PARAMETER StartDate
-No description available.
+The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 
 .PARAMETER EndDate
-No description available.
+The end date of timeframe
 
 .PARAMETER PoolId
-No description available.
+The pool address.
 
 .PARAMETER ReturnType
 
@@ -1419,7 +1569,7 @@ function Invoke-SushiswapGetPoolsHistorical {
 <#
 .SYNOPSIS
 
-GetSwaps (current)
+GetSwaps (current) 🔥
 
 .DESCRIPTION
 
@@ -1494,26 +1644,26 @@ function Invoke-SushiswapGetSwapsCurrent {
 <#
 .SYNOPSIS
 
-GetSwaps (historical)
+GetSwaps (historical) 🔥
 
 .DESCRIPTION
 
 No description available.
 
 .PARAMETER StartBlock
-No description available.
+The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 
 .PARAMETER EndBlock
-No description available.
+The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 
 .PARAMETER StartDate
-No description available.
+The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 
 .PARAMETER EndDate
-No description available.
+The end date of timeframe
 
 .PARAMETER PoolId
-No description available.
+The pool address.
 
 .PARAMETER ReturnType
 
@@ -1626,19 +1776,19 @@ GetTokensDayData (historical)
 No description available.
 
 .PARAMETER StartBlock
-No description available.
+
 
 .PARAMETER EndBlock
-No description available.
+
 
 .PARAMETER StartDate
-No description available.
+
 
 .PARAMETER EndDate
-No description available.
+
 
 .PARAMETER TokenId
-No description available.
+
 
 .PARAMETER ReturnType
 
@@ -1744,7 +1894,7 @@ function Invoke-SushiswapGetTokensDayDataHistorical {
 <#
 .SYNOPSIS
 
-GetTokens (current)
+GetTokens (current) 🔥
 
 .DESCRIPTION
 
@@ -1819,26 +1969,26 @@ function Invoke-SushiswapGetTokensCurrent {
 <#
 .SYNOPSIS
 
-GetTokens (historical)
+GetTokens (historical) 🔥
 
 .DESCRIPTION
 
 No description available.
 
 .PARAMETER StartBlock
-No description available.
+The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
 
 .PARAMETER EndBlock
-No description available.
+The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
 
 .PARAMETER StartDate
-No description available.
+The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
 
 .PARAMETER EndDate
-No description available.
+The end date of timeframe
 
 .PARAMETER TokenId
-No description available.
+The token address.
 
 .PARAMETER ReturnType
 
@@ -1951,16 +2101,16 @@ GetTransactions (historical)
 No description available.
 
 .PARAMETER StartBlock
-No description available.
+
 
 .PARAMETER EndBlock
-No description available.
+
 
 .PARAMETER StartDate
-No description available.
+
 
 .PARAMETER EndDate
-No description available.
+
 
 .PARAMETER ReturnType
 
@@ -2066,16 +2216,16 @@ GetUsers (historical)
 No description available.
 
 .PARAMETER StartBlock
-No description available.
+
 
 .PARAMETER EndBlock
-No description available.
+
 
 .PARAMETER StartDate
-No description available.
+
 
 .PARAMETER EndDate
-No description available.
+
 
 .PARAMETER ReturnType
 

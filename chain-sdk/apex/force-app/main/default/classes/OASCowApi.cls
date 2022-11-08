@@ -26,15 +26,16 @@ public class OASCowApi {
     }
 
     /**
-     * 
-     * 
+     * GetOrders (historical)
+     * Gets orders.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
      * @param endDate  (optional)
+     * @return List<OASCowOrderDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public void dappsCowOrdersHistoricalGet(Map<String, Object> params) {
+    public List<OASCowOrderDTO> cowGetOrdersHistorical(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -45,27 +46,28 @@ public class OASCowApi {
 
         List<OAS.Param> form = new List<OAS.Param>();
 
-        client.invoke(
+        return (List<OASCowOrderDTO>) client.invoke(
             'GET', '/dapps/cow/orders/historical', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            new List<String>(),
-            null
+            List<OASCowOrderDTO>.class
         );
     }
     /**
-     * 
-     * 
+     * GetSettlements (historical)
+     * Gets settlements.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
      * @param endDate  (optional)
+     * @return List<OASCowSettlementDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public void dappsCowSettlementHistoricalGet(Map<String, Object> params) {
+    public List<OASCowSettlementDTO> cowGetSettlementsHistorical(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -76,28 +78,29 @@ public class OASCowApi {
 
         List<OAS.Param> form = new List<OAS.Param>();
 
-        client.invoke(
-            'GET', '/dapps/cow/settlement/historical', '',
+        return (List<OASCowSettlementDTO>) client.invoke(
+            'GET', '/dapps/cow/settlements/historical', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            new List<String>(),
-            null
+            List<OASCowSettlementDTO>.class
         );
     }
     /**
-     * 
-     * 
+     * GetTokens (historical) 🔥
+     * Gets tokens.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
      * @param endDate  (optional)
      * @param tokenId  (optional)
+     * @return List<OASCowTokenDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public void dappsCowTokensHistoricalGet(Map<String, Object> params) {
+    public List<OASCowTokenDTO> cowGetTokensHistorical(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -109,27 +112,28 @@ public class OASCowApi {
 
         List<OAS.Param> form = new List<OAS.Param>();
 
-        client.invoke(
+        return (List<OASCowTokenDTO>) client.invoke(
             'GET', '/dapps/cow/tokens/historical', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            new List<String>(),
-            null
+            List<OASCowTokenDTO>.class
         );
     }
     /**
-     * 
-     * 
+     * GetTrades (historical) 🔥
+     * Gets trades.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
      * @param endDate  (optional)
+     * @return List<OASCowTradeDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public void dappsCowTradesHistoricalGet(Map<String, Object> params) {
+    public List<OASCowTradeDTO> cowGetTradesHistorical(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -140,27 +144,28 @@ public class OASCowApi {
 
         List<OAS.Param> form = new List<OAS.Param>();
 
-        client.invoke(
+        return (List<OASCowTradeDTO>) client.invoke(
             'GET', '/dapps/cow/trades/historical', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            new List<String>(),
-            null
+            List<OASCowTradeDTO>.class
         );
     }
     /**
-     * 
-     * 
+     * GetUsers (historical)
+     * Gets users.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
      * @param endDate  (optional)
+     * @return List<OASCowUserDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public void dappsCowUsersHistoricalGet(Map<String, Object> params) {
+    public List<OASCowUserDTO> cowGetUsersHistorical(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -171,15 +176,15 @@ public class OASCowApi {
 
         List<OAS.Param> form = new List<OAS.Param>();
 
-        client.invoke(
+        return (List<OASCowUserDTO>) client.invoke(
             'GET', '/dapps/cow/users/historical', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
             new List<String>(),
             new List<String>(),
-            new List<String>(),
-            null
+            List<OASCowUserDTO>.class
         );
     }
 }

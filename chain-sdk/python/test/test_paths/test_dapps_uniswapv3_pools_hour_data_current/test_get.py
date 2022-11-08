@@ -21,7 +21,7 @@ from .. import ApiTestMixin
 class TestDappsUniswapv3PoolsHourDataCurrent(ApiTestMixin, unittest.TestCase):
     """
     DappsUniswapv3PoolsHourDataCurrent unit test stubs
-        GetPoolsHourData  # noqa: E501
+        GetPoolsHourData (current)  # noqa: E501
     """
     _configuration = configuration.Configuration()
 

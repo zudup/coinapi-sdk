@@ -21,7 +21,7 @@ from .. import ApiTestMixin
 class TestDappsUniswapv3BurnsCurrent(ApiTestMixin, unittest.TestCase):
     """
     DappsUniswapv3BurnsCurrent unit test stubs
-        GetBurns  # noqa: E501
+        GetBurns (current)  # noqa: E501
     """
     _configuration = configuration.Configuration()
 

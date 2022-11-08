@@ -48,23 +48,37 @@ static gpointer __CowManagerthreadFunc(gpointer data)
 }
 
 
-static bool dappsCowOrdersHistoricalGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+static bool cowGetOrders (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
+	void(* handler)(std::list<Cow.OrderDTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<Cow.OrderDTO>, Error, void* )> (voidHandler);
 	
-	void(* handler)(Error, void* ) = reinterpret_cast<void(*)(Error, void* )> (voidHandler);
 	JsonNode* pJson;
 	char * data = p_chunk.memory;
 
+	std::list<Cow.OrderDTO> out;
 	
 
 	if (code >= 200 && code < 300) {
 		Error error(code, string("No Error"));
 
 
-		handler(error, userData);
-		return true;
 
+		pJson = json_from_string(data, NULL);
+		JsonArray * jsonarray = json_node_get_array (pJson);
+		guint length = json_array_get_length (jsonarray);
+		for(guint i = 0; i < length; i++){
+			JsonNode* myJson = json_array_get_element (jsonarray, i);
+			char * singlenodestr = json_to_string(myJson, false);
+			Cow.OrderDTO singlemodel;
+			singlemodel.fromJson(singlenodestr);
+			out.push_front(singlemodel);
+			g_free(static_cast<gpointer>(singlenodestr));
+			json_node_free(myJson);
+		}
+		json_array_unref (jsonarray);
+		json_node_free(pJson);
 
 
 	} else {
@@ -76,15 +90,15 @@ static bool dappsCowOrdersHistoricalGetProcessor(MemoryStruct_s p_chunk, long co
 		} else {
 			error = Error(code, string("Unknown Error"));
 		}
-		handler(error, userData);
+		 handler(out, error, userData);
 		return false;
-	}
+			}
 }
 
-static bool dappsCowOrdersHistoricalGetHelper(char * accessToken,
+static bool cowGetOrders (historical)Helper(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData, bool isAsync)
+	void(* handler)(std::list<Cow.OrderDTO>, Error, void* )
+	, void* userData, bool isAsync)
 {
 
 	//TODO: maybe delete headerList after its used to free up space?
@@ -150,7 +164,7 @@ static bool dappsCowOrdersHistoricalGetHelper(char * accessToken,
 	if(!isAsync){
 		NetClient::easycurl(CowManager::getBasePath(), url, myhttpmethod, queryParams,
 			mBody, headerList, p_chunk, &code, errormsg);
-		bool retval = dappsCowOrdersHistoricalGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+		bool retval = cowGetOrders (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
 
 		curl_slist_free_all(headerList);
 		if (p_chunk) {
@@ -168,7 +182,7 @@ static bool dappsCowOrdersHistoricalGetHelper(char * accessToken,
 		RequestInfo *requestInfo = NULL;
 
 		requestInfo = new(nothrow) RequestInfo (CowManager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dappsCowOrdersHistoricalGetProcessor);;
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), cowGetOrders (historical)Processor);;
 		if(requestInfo == NULL)
 			return false;
 
@@ -180,43 +194,57 @@ static bool dappsCowOrdersHistoricalGetHelper(char * accessToken,
 
 
 
-bool CowManager::dappsCowOrdersHistoricalGetAsync(char * accessToken,
+bool CowManager::cowGetOrders (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData)
+	void(* handler)(std::list<Cow.OrderDTO>, Error, void* )
+	, void* userData)
 {
-	return dappsCowOrdersHistoricalGetHelper(accessToken,
+	return cowGetOrders (historical)Helper(accessToken,
 	startBlock, endBlock, startDate, endDate, 
 	handler, userData, true);
 }
 
-bool CowManager::dappsCowOrdersHistoricalGetSync(char * accessToken,
+bool CowManager::cowGetOrders (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData)
+	void(* handler)(std::list<Cow.OrderDTO>, Error, void* )
+	, void* userData)
 {
-	return dappsCowOrdersHistoricalGetHelper(accessToken,
+	return cowGetOrders (historical)Helper(accessToken,
 	startBlock, endBlock, startDate, endDate, 
 	handler, userData, false);
 }
 
-static bool dappsCowSettlementHistoricalGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+static bool cowGetSettlements (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
+	void(* handler)(std::list<Cow.SettlementDTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<Cow.SettlementDTO>, Error, void* )> (voidHandler);
 	
-	void(* handler)(Error, void* ) = reinterpret_cast<void(*)(Error, void* )> (voidHandler);
 	JsonNode* pJson;
 	char * data = p_chunk.memory;
 
+	std::list<Cow.SettlementDTO> out;
 	
 
 	if (code >= 200 && code < 300) {
 		Error error(code, string("No Error"));
 
 
-		handler(error, userData);
-		return true;
 
+		pJson = json_from_string(data, NULL);
+		JsonArray * jsonarray = json_node_get_array (pJson);
+		guint length = json_array_get_length (jsonarray);
+		for(guint i = 0; i < length; i++){
+			JsonNode* myJson = json_array_get_element (jsonarray, i);
+			char * singlenodestr = json_to_string(myJson, false);
+			Cow.SettlementDTO singlemodel;
+			singlemodel.fromJson(singlenodestr);
+			out.push_front(singlemodel);
+			g_free(static_cast<gpointer>(singlenodestr));
+			json_node_free(myJson);
+		}
+		json_array_unref (jsonarray);
+		json_node_free(pJson);
 
 
 	} else {
@@ -228,15 +256,15 @@ static bool dappsCowSettlementHistoricalGetProcessor(MemoryStruct_s p_chunk, lon
 		} else {
 			error = Error(code, string("Unknown Error"));
 		}
-		handler(error, userData);
+		 handler(out, error, userData);
 		return false;
-	}
+			}
 }
 
-static bool dappsCowSettlementHistoricalGetHelper(char * accessToken,
+static bool cowGetSettlements (historical)Helper(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData, bool isAsync)
+	void(* handler)(std::list<Cow.SettlementDTO>, Error, void* )
+	, void* userData, bool isAsync)
 {
 
 	//TODO: maybe delete headerList after its used to free up space?
@@ -283,7 +311,7 @@ static bool dappsCowSettlementHistoricalGetHelper(char * accessToken,
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/dapps/cow/settlement/historical");
+	string url("/dapps/cow/settlements/historical");
 	int pos;
 
 
@@ -302,7 +330,7 @@ static bool dappsCowSettlementHistoricalGetHelper(char * accessToken,
 	if(!isAsync){
 		NetClient::easycurl(CowManager::getBasePath(), url, myhttpmethod, queryParams,
 			mBody, headerList, p_chunk, &code, errormsg);
-		bool retval = dappsCowSettlementHistoricalGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+		bool retval = cowGetSettlements (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
 
 		curl_slist_free_all(headerList);
 		if (p_chunk) {
@@ -320,7 +348,7 @@ static bool dappsCowSettlementHistoricalGetHelper(char * accessToken,
 		RequestInfo *requestInfo = NULL;
 
 		requestInfo = new(nothrow) RequestInfo (CowManager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dappsCowSettlementHistoricalGetProcessor);;
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), cowGetSettlements (historical)Processor);;
 		if(requestInfo == NULL)
 			return false;
 
@@ -332,43 +360,57 @@ static bool dappsCowSettlementHistoricalGetHelper(char * accessToken,
 
 
 
-bool CowManager::dappsCowSettlementHistoricalGetAsync(char * accessToken,
+bool CowManager::cowGetSettlements (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData)
+	void(* handler)(std::list<Cow.SettlementDTO>, Error, void* )
+	, void* userData)
 {
-	return dappsCowSettlementHistoricalGetHelper(accessToken,
+	return cowGetSettlements (historical)Helper(accessToken,
 	startBlock, endBlock, startDate, endDate, 
 	handler, userData, true);
 }
 
-bool CowManager::dappsCowSettlementHistoricalGetSync(char * accessToken,
+bool CowManager::cowGetSettlements (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData)
+	void(* handler)(std::list<Cow.SettlementDTO>, Error, void* )
+	, void* userData)
 {
-	return dappsCowSettlementHistoricalGetHelper(accessToken,
+	return cowGetSettlements (historical)Helper(accessToken,
 	startBlock, endBlock, startDate, endDate, 
 	handler, userData, false);
 }
 
-static bool dappsCowTokensHistoricalGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+static bool cowGetTokens (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
+	void(* handler)(std::list<Cow.TokenDTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<Cow.TokenDTO>, Error, void* )> (voidHandler);
 	
-	void(* handler)(Error, void* ) = reinterpret_cast<void(*)(Error, void* )> (voidHandler);
 	JsonNode* pJson;
 	char * data = p_chunk.memory;
 
+	std::list<Cow.TokenDTO> out;
 	
 
 	if (code >= 200 && code < 300) {
 		Error error(code, string("No Error"));
 
 
-		handler(error, userData);
-		return true;
 
+		pJson = json_from_string(data, NULL);
+		JsonArray * jsonarray = json_node_get_array (pJson);
+		guint length = json_array_get_length (jsonarray);
+		for(guint i = 0; i < length; i++){
+			JsonNode* myJson = json_array_get_element (jsonarray, i);
+			char * singlenodestr = json_to_string(myJson, false);
+			Cow.TokenDTO singlemodel;
+			singlemodel.fromJson(singlenodestr);
+			out.push_front(singlemodel);
+			g_free(static_cast<gpointer>(singlenodestr));
+			json_node_free(myJson);
+		}
+		json_array_unref (jsonarray);
+		json_node_free(pJson);
 
 
 	} else {
@@ -380,15 +422,15 @@ static bool dappsCowTokensHistoricalGetProcessor(MemoryStruct_s p_chunk, long co
 		} else {
 			error = Error(code, string("Unknown Error"));
 		}
-		handler(error, userData);
+		 handler(out, error, userData);
 		return false;
-	}
+			}
 }
 
-static bool dappsCowTokensHistoricalGetHelper(char * accessToken,
+static bool cowGetTokens (historical)Helper(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
-	
-	void(* handler)(Error, void* ) , void* userData, bool isAsync)
+	void(* handler)(std::list<Cow.TokenDTO>, Error, void* )
+	, void* userData, bool isAsync)
 {
 
 	//TODO: maybe delete headerList after its used to free up space?
@@ -461,7 +503,7 @@ static bool dappsCowTokensHistoricalGetHelper(char * accessToken,
 	if(!isAsync){
 		NetClient::easycurl(CowManager::getBasePath(), url, myhttpmethod, queryParams,
 			mBody, headerList, p_chunk, &code, errormsg);
-		bool retval = dappsCowTokensHistoricalGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+		bool retval = cowGetTokens (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
 
 		curl_slist_free_all(headerList);
 		if (p_chunk) {
@@ -479,7 +521,7 @@ static bool dappsCowTokensHistoricalGetHelper(char * accessToken,
 		RequestInfo *requestInfo = NULL;
 
 		requestInfo = new(nothrow) RequestInfo (CowManager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dappsCowTokensHistoricalGetProcessor);;
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), cowGetTokens (historical)Processor);;
 		if(requestInfo == NULL)
 			return false;
 
@@ -491,43 +533,57 @@ static bool dappsCowTokensHistoricalGetHelper(char * accessToken,
 
 
 
-bool CowManager::dappsCowTokensHistoricalGetAsync(char * accessToken,
+bool CowManager::cowGetTokens (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
-	
-	void(* handler)(Error, void* ) , void* userData)
+	void(* handler)(std::list<Cow.TokenDTO>, Error, void* )
+	, void* userData)
 {
-	return dappsCowTokensHistoricalGetHelper(accessToken,
+	return cowGetTokens (historical)Helper(accessToken,
 	startBlock, endBlock, startDate, endDate, tokenId, 
 	handler, userData, true);
 }
 
-bool CowManager::dappsCowTokensHistoricalGetSync(char * accessToken,
+bool CowManager::cowGetTokens (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
-	
-	void(* handler)(Error, void* ) , void* userData)
+	void(* handler)(std::list<Cow.TokenDTO>, Error, void* )
+	, void* userData)
 {
-	return dappsCowTokensHistoricalGetHelper(accessToken,
+	return cowGetTokens (historical)Helper(accessToken,
 	startBlock, endBlock, startDate, endDate, tokenId, 
 	handler, userData, false);
 }
 
-static bool dappsCowTradesHistoricalGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+static bool cowGetTrades (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
+	void(* handler)(std::list<Cow.TradeDTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<Cow.TradeDTO>, Error, void* )> (voidHandler);
 	
-	void(* handler)(Error, void* ) = reinterpret_cast<void(*)(Error, void* )> (voidHandler);
 	JsonNode* pJson;
 	char * data = p_chunk.memory;
 
+	std::list<Cow.TradeDTO> out;
 	
 
 	if (code >= 200 && code < 300) {
 		Error error(code, string("No Error"));
 
 
-		handler(error, userData);
-		return true;
 
+		pJson = json_from_string(data, NULL);
+		JsonArray * jsonarray = json_node_get_array (pJson);
+		guint length = json_array_get_length (jsonarray);
+		for(guint i = 0; i < length; i++){
+			JsonNode* myJson = json_array_get_element (jsonarray, i);
+			char * singlenodestr = json_to_string(myJson, false);
+			Cow.TradeDTO singlemodel;
+			singlemodel.fromJson(singlenodestr);
+			out.push_front(singlemodel);
+			g_free(static_cast<gpointer>(singlenodestr));
+			json_node_free(myJson);
+		}
+		json_array_unref (jsonarray);
+		json_node_free(pJson);
 
 
 	} else {
@@ -539,15 +595,15 @@ static bool dappsCowTradesHistoricalGetProcessor(MemoryStruct_s p_chunk, long co
 		} else {
 			error = Error(code, string("Unknown Error"));
 		}
-		handler(error, userData);
+		 handler(out, error, userData);
 		return false;
-	}
+			}
 }
 
-static bool dappsCowTradesHistoricalGetHelper(char * accessToken,
+static bool cowGetTrades (historical)Helper(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData, bool isAsync)
+	void(* handler)(std::list<Cow.TradeDTO>, Error, void* )
+	, void* userData, bool isAsync)
 {
 
 	//TODO: maybe delete headerList after its used to free up space?
@@ -613,7 +669,7 @@ static bool dappsCowTradesHistoricalGetHelper(char * accessToken,
 	if(!isAsync){
 		NetClient::easycurl(CowManager::getBasePath(), url, myhttpmethod, queryParams,
 			mBody, headerList, p_chunk, &code, errormsg);
-		bool retval = dappsCowTradesHistoricalGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+		bool retval = cowGetTrades (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
 
 		curl_slist_free_all(headerList);
 		if (p_chunk) {
@@ -631,7 +687,7 @@ static bool dappsCowTradesHistoricalGetHelper(char * accessToken,
 		RequestInfo *requestInfo = NULL;
 
 		requestInfo = new(nothrow) RequestInfo (CowManager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dappsCowTradesHistoricalGetProcessor);;
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), cowGetTrades (historical)Processor);;
 		if(requestInfo == NULL)
 			return false;
 
@@ -643,43 +699,57 @@ static bool dappsCowTradesHistoricalGetHelper(char * accessToken,
 
 
 
-bool CowManager::dappsCowTradesHistoricalGetAsync(char * accessToken,
+bool CowManager::cowGetTrades (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData)
+	void(* handler)(std::list<Cow.TradeDTO>, Error, void* )
+	, void* userData)
 {
-	return dappsCowTradesHistoricalGetHelper(accessToken,
+	return cowGetTrades (historical)Helper(accessToken,
 	startBlock, endBlock, startDate, endDate, 
 	handler, userData, true);
 }
 
-bool CowManager::dappsCowTradesHistoricalGetSync(char * accessToken,
+bool CowManager::cowGetTrades (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData)
+	void(* handler)(std::list<Cow.TradeDTO>, Error, void* )
+	, void* userData)
 {
-	return dappsCowTradesHistoricalGetHelper(accessToken,
+	return cowGetTrades (historical)Helper(accessToken,
 	startBlock, endBlock, startDate, endDate, 
 	handler, userData, false);
 }
 
-static bool dappsCowUsersHistoricalGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+static bool cowGetUsers (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
+	void(* handler)(std::list<Cow.UserDTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<Cow.UserDTO>, Error, void* )> (voidHandler);
 	
-	void(* handler)(Error, void* ) = reinterpret_cast<void(*)(Error, void* )> (voidHandler);
 	JsonNode* pJson;
 	char * data = p_chunk.memory;
 
+	std::list<Cow.UserDTO> out;
 	
 
 	if (code >= 200 && code < 300) {
 		Error error(code, string("No Error"));
 
 
-		handler(error, userData);
-		return true;
 
+		pJson = json_from_string(data, NULL);
+		JsonArray * jsonarray = json_node_get_array (pJson);
+		guint length = json_array_get_length (jsonarray);
+		for(guint i = 0; i < length; i++){
+			JsonNode* myJson = json_array_get_element (jsonarray, i);
+			char * singlenodestr = json_to_string(myJson, false);
+			Cow.UserDTO singlemodel;
+			singlemodel.fromJson(singlenodestr);
+			out.push_front(singlemodel);
+			g_free(static_cast<gpointer>(singlenodestr));
+			json_node_free(myJson);
+		}
+		json_array_unref (jsonarray);
+		json_node_free(pJson);
 
 
 	} else {
@@ -691,15 +761,15 @@ static bool dappsCowUsersHistoricalGetProcessor(MemoryStruct_s p_chunk, long cod
 		} else {
 			error = Error(code, string("Unknown Error"));
 		}
-		handler(error, userData);
+		 handler(out, error, userData);
 		return false;
-	}
+			}
 }
 
-static bool dappsCowUsersHistoricalGetHelper(char * accessToken,
+static bool cowGetUsers (historical)Helper(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData, bool isAsync)
+	void(* handler)(std::list<Cow.UserDTO>, Error, void* )
+	, void* userData, bool isAsync)
 {
 
 	//TODO: maybe delete headerList after its used to free up space?
@@ -765,7 +835,7 @@ static bool dappsCowUsersHistoricalGetHelper(char * accessToken,
 	if(!isAsync){
 		NetClient::easycurl(CowManager::getBasePath(), url, myhttpmethod, queryParams,
 			mBody, headerList, p_chunk, &code, errormsg);
-		bool retval = dappsCowUsersHistoricalGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+		bool retval = cowGetUsers (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
 
 		curl_slist_free_all(headerList);
 		if (p_chunk) {
@@ -783,7 +853,7 @@ static bool dappsCowUsersHistoricalGetHelper(char * accessToken,
 		RequestInfo *requestInfo = NULL;
 
 		requestInfo = new(nothrow) RequestInfo (CowManager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dappsCowUsersHistoricalGetProcessor);;
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), cowGetUsers (historical)Processor);;
 		if(requestInfo == NULL)
 			return false;
 
@@ -795,22 +865,22 @@ static bool dappsCowUsersHistoricalGetHelper(char * accessToken,
 
 
 
-bool CowManager::dappsCowUsersHistoricalGetAsync(char * accessToken,
+bool CowManager::cowGetUsers (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData)
+	void(* handler)(std::list<Cow.UserDTO>, Error, void* )
+	, void* userData)
 {
-	return dappsCowUsersHistoricalGetHelper(accessToken,
+	return cowGetUsers (historical)Helper(accessToken,
 	startBlock, endBlock, startDate, endDate, 
 	handler, userData, true);
 }
 
-bool CowManager::dappsCowUsersHistoricalGetSync(char * accessToken,
+bool CowManager::cowGetUsers (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData)
+	void(* handler)(std::list<Cow.UserDTO>, Error, void* )
+	, void* userData)
 {
-	return dappsCowUsersHistoricalGetHelper(accessToken,
+	return cowGetUsers (historical)Helper(accessToken,
 	startBlock, endBlock, startDate, endDate, 
 	handler, userData, false);
 }

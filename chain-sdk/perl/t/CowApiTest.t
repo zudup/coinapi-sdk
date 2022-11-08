@@ -30,53 +30,53 @@ my $api = WWW::OpenAPIClient::CowApi->new();
 isa_ok($api, 'WWW::OpenAPIClient::CowApi');
 
 #
-# dapps_cow_orders_historical_get test
+# cow_get_orders__historical test
 #
 # uncomment below and update the test
-#my $dapps_cow_orders_historical_get_start_block = undef; # replace NULL with a proper value
-#my $dapps_cow_orders_historical_get_end_block = undef; # replace NULL with a proper value
-#my $dapps_cow_orders_historical_get_start_date = undef; # replace NULL with a proper value
-#my $dapps_cow_orders_historical_get_end_date = undef; # replace NULL with a proper value
-#my $dapps_cow_orders_historical_get_result = $api->dapps_cow_orders_historical_get(start_block => $dapps_cow_orders_historical_get_start_block, end_block => $dapps_cow_orders_historical_get_end_block, start_date => $dapps_cow_orders_historical_get_start_date, end_date => $dapps_cow_orders_historical_get_end_date);
+#my $cow_get_orders__historical_start_block = undef; # replace NULL with a proper value
+#my $cow_get_orders__historical_end_block = undef; # replace NULL with a proper value
+#my $cow_get_orders__historical_start_date = undef; # replace NULL with a proper value
+#my $cow_get_orders__historical_end_date = undef; # replace NULL with a proper value
+#my $cow_get_orders__historical_result = $api->cow_get_orders__historical(start_block => $cow_get_orders__historical_start_block, end_block => $cow_get_orders__historical_end_block, start_date => $cow_get_orders__historical_start_date, end_date => $cow_get_orders__historical_end_date);
 
 #
-# dapps_cow_settlement_historical_get test
+# cow_get_settlements__historical test
 #
 # uncomment below and update the test
-#my $dapps_cow_settlement_historical_get_start_block = undef; # replace NULL with a proper value
-#my $dapps_cow_settlement_historical_get_end_block = undef; # replace NULL with a proper value
-#my $dapps_cow_settlement_historical_get_start_date = undef; # replace NULL with a proper value
-#my $dapps_cow_settlement_historical_get_end_date = undef; # replace NULL with a proper value
-#my $dapps_cow_settlement_historical_get_result = $api->dapps_cow_settlement_historical_get(start_block => $dapps_cow_settlement_historical_get_start_block, end_block => $dapps_cow_settlement_historical_get_end_block, start_date => $dapps_cow_settlement_historical_get_start_date, end_date => $dapps_cow_settlement_historical_get_end_date);
+#my $cow_get_settlements__historical_start_block = undef; # replace NULL with a proper value
+#my $cow_get_settlements__historical_end_block = undef; # replace NULL with a proper value
+#my $cow_get_settlements__historical_start_date = undef; # replace NULL with a proper value
+#my $cow_get_settlements__historical_end_date = undef; # replace NULL with a proper value
+#my $cow_get_settlements__historical_result = $api->cow_get_settlements__historical(start_block => $cow_get_settlements__historical_start_block, end_block => $cow_get_settlements__historical_end_block, start_date => $cow_get_settlements__historical_start_date, end_date => $cow_get_settlements__historical_end_date);
 
 #
-# dapps_cow_tokens_historical_get test
+# cow_get_tokens__historical test
 #
 # uncomment below and update the test
-#my $dapps_cow_tokens_historical_get_start_block = undef; # replace NULL with a proper value
-#my $dapps_cow_tokens_historical_get_end_block = undef; # replace NULL with a proper value
-#my $dapps_cow_tokens_historical_get_start_date = undef; # replace NULL with a proper value
-#my $dapps_cow_tokens_historical_get_end_date = undef; # replace NULL with a proper value
-#my $dapps_cow_tokens_historical_get_token_id = undef; # replace NULL with a proper value
-#my $dapps_cow_tokens_historical_get_result = $api->dapps_cow_tokens_historical_get(start_block => $dapps_cow_tokens_historical_get_start_block, end_block => $dapps_cow_tokens_historical_get_end_block, start_date => $dapps_cow_tokens_historical_get_start_date, end_date => $dapps_cow_tokens_historical_get_end_date, token_id => $dapps_cow_tokens_historical_get_token_id);
+#my $cow_get_tokens__historical_start_block = undef; # replace NULL with a proper value
+#my $cow_get_tokens__historical_end_block = undef; # replace NULL with a proper value
+#my $cow_get_tokens__historical_start_date = undef; # replace NULL with a proper value
+#my $cow_get_tokens__historical_end_date = undef; # replace NULL with a proper value
+#my $cow_get_tokens__historical_token_id = undef; # replace NULL with a proper value
+#my $cow_get_tokens__historical_result = $api->cow_get_tokens__historical(start_block => $cow_get_tokens__historical_start_block, end_block => $cow_get_tokens__historical_end_block, start_date => $cow_get_tokens__historical_start_date, end_date => $cow_get_tokens__historical_end_date, token_id => $cow_get_tokens__historical_token_id);
 
 #
-# dapps_cow_trades_historical_get test
+# cow_get_trades__historical test
 #
 # uncomment below and update the test
-#my $dapps_cow_trades_historical_get_start_block = undef; # replace NULL with a proper value
-#my $dapps_cow_trades_historical_get_end_block = undef; # replace NULL with a proper value
-#my $dapps_cow_trades_historical_get_start_date = undef; # replace NULL with a proper value
-#my $dapps_cow_trades_historical_get_end_date = undef; # replace NULL with a proper value
-#my $dapps_cow_trades_historical_get_result = $api->dapps_cow_trades_historical_get(start_block => $dapps_cow_trades_historical_get_start_block, end_block => $dapps_cow_trades_historical_get_end_block, start_date => $dapps_cow_trades_historical_get_start_date, end_date => $dapps_cow_trades_historical_get_end_date);
+#my $cow_get_trades__historical_start_block = undef; # replace NULL with a proper value
+#my $cow_get_trades__historical_end_block = undef; # replace NULL with a proper value
+#my $cow_get_trades__historical_start_date = undef; # replace NULL with a proper value
+#my $cow_get_trades__historical_end_date = undef; # replace NULL with a proper value
+#my $cow_get_trades__historical_result = $api->cow_get_trades__historical(start_block => $cow_get_trades__historical_start_block, end_block => $cow_get_trades__historical_end_block, start_date => $cow_get_trades__historical_start_date, end_date => $cow_get_trades__historical_end_date);
 
 #
-# dapps_cow_users_historical_get test
+# cow_get_users__historical test
 #
 # uncomment below and update the test
-#my $dapps_cow_users_historical_get_start_block = undef; # replace NULL with a proper value
-#my $dapps_cow_users_historical_get_end_block = undef; # replace NULL with a proper value
-#my $dapps_cow_users_historical_get_start_date = undef; # replace NULL with a proper value
-#my $dapps_cow_users_historical_get_end_date = undef; # replace NULL with a proper value
-#my $dapps_cow_users_historical_get_result = $api->dapps_cow_users_historical_get(start_block => $dapps_cow_users_historical_get_start_block, end_block => $dapps_cow_users_historical_get_end_block, start_date => $dapps_cow_users_historical_get_start_date, end_date => $dapps_cow_users_historical_get_end_date);
+#my $cow_get_users__historical_start_block = undef; # replace NULL with a proper value
+#my $cow_get_users__historical_end_block = undef; # replace NULL with a proper value
+#my $cow_get_users__historical_start_date = undef; # replace NULL with a proper value
+#my $cow_get_users__historical_end_date = undef; # replace NULL with a proper value
+#my $cow_get_users__historical_result = $api->cow_get_users__historical(start_block => $cow_get_users__historical_start_block, end_block => $cow_get_users__historical_end_block, start_date => $cow_get_users__historical_start_date, end_date => $cow_get_users__historical_end_date);
 

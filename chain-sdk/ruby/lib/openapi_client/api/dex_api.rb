@@ -19,29 +19,33 @@ module OpenapiClient
     def initialize(api_client = ApiClient.default)
       @api_client = api_client
     end
+    # GetBatches (historical)
+    # Gets batches.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
     # @option opts [Time] :start_date 
     # @option opts [Time] :end_date 
-    # @return [nil]
-    def dapps_dex_batch_historical_get(opts = {})
-      dapps_dex_batch_historical_get_with_http_info(opts)
-      nil
+    # @return [Array<DexBatchDTO>]
+    def dex_get_batches__historical(opts = {})
+      data, _status_code, _headers = dex_get_batches__historical_with_http_info(opts)
+      data
     end
 
+    # GetBatches (historical)
+    # Gets batches.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
     # @option opts [Time] :start_date 
     # @option opts [Time] :end_date 
-    # @return [Array<(nil, Integer, Hash)>] nil, response status code and response headers
-    def dapps_dex_batch_historical_get_with_http_info(opts = {})
+    # @return [Array<(Array<DexBatchDTO>, Integer, Hash)>] Array<DexBatchDTO> data, response status code and response headers
+    def dex_get_batches__historical_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: DexApi.dapps_dex_batch_historical_get ...'
+        @api_client.config.logger.debug 'Calling API: DexApi.dex_get_batches__historical ...'
       end
       # resource path
-      local_var_path = '/dapps/dex/batch/historical'
+      local_var_path = '/dapps/dex/batches/historical'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -52,6 +56,8 @@ module OpenapiClient
 
       # header parameters
       header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
 
       # form parameters
       form_params = opts[:form_params] || {}
@@ -60,13 +66,13 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type]
+      return_type = opts[:debug_return_type] || 'Array<DexBatchDTO>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"DexApi.dapps_dex_batch_historical_get",
+        :operation => :"DexApi.dex_get_batches__historical",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -77,33 +83,109 @@ module OpenapiClient
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: DexApi#dapps_dex_batch_historical_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: DexApi#dex_get_batches__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
+    # GetDeposits (historical)
+    # Gets deposits.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
     # @option opts [Time] :start_date 
     # @option opts [Time] :end_date 
     # @option opts [String] :token_id 
-    # @return [nil]
-    def dapps_dex_orders_historical_get(opts = {})
-      dapps_dex_orders_historical_get_with_http_info(opts)
-      nil
+    # @return [Array<DexDepositDTO>]
+    def dex_get_deposits__historical(opts = {})
+      data, _status_code, _headers = dex_get_deposits__historical_with_http_info(opts)
+      data
     end
 
+    # GetDeposits (historical)
+    # Gets deposits.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
     # @option opts [Time] :start_date 
     # @option opts [Time] :end_date 
     # @option opts [String] :token_id 
-    # @return [Array<(nil, Integer, Hash)>] nil, response status code and response headers
-    def dapps_dex_orders_historical_get_with_http_info(opts = {})
+    # @return [Array<(Array<DexDepositDTO>, Integer, Hash)>] Array<DexDepositDTO> data, response status code and response headers
+    def dex_get_deposits__historical_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: DexApi.dapps_dex_orders_historical_get ...'
+        @api_client.config.logger.debug 'Calling API: DexApi.dex_get_deposits__historical ...'
+      end
+      # resource path
+      local_var_path = '/dapps/dex/deposits/historical'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+      query_params[:'startBlock'] = opts[:'start_block'] if !opts[:'start_block'].nil?
+      query_params[:'endBlock'] = opts[:'end_block'] if !opts[:'end_block'].nil?
+      query_params[:'startDate'] = opts[:'start_date'] if !opts[:'start_date'].nil?
+      query_params[:'endDate'] = opts[:'end_date'] if !opts[:'end_date'].nil?
+      query_params[:'tokenId'] = opts[:'token_id'] if !opts[:'token_id'].nil?
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<DexDepositDTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"DexApi.dex_get_deposits__historical",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: DexApi#dex_get_deposits__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # GetOrders (historical)
+    # Gets orders.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :start_block 
+    # @option opts [Integer] :end_block 
+    # @option opts [Time] :start_date 
+    # @option opts [Time] :end_date 
+    # @option opts [String] :token_id 
+    # @return [Array<DexOrderDTO>]
+    def dex_get_orders__historical(opts = {})
+      data, _status_code, _headers = dex_get_orders__historical_with_http_info(opts)
+      data
+    end
+
+    # GetOrders (historical)
+    # Gets orders.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :start_block 
+    # @option opts [Integer] :end_block 
+    # @option opts [Time] :start_date 
+    # @option opts [Time] :end_date 
+    # @option opts [String] :token_id 
+    # @return [Array<(Array<DexOrderDTO>, Integer, Hash)>] Array<DexOrderDTO> data, response status code and response headers
+    def dex_get_orders__historical_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: DexApi.dex_get_orders__historical ...'
       end
       # resource path
       local_var_path = '/dapps/dex/orders/historical'
@@ -118,6 +200,8 @@ module OpenapiClient
 
       # header parameters
       header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
 
       # form parameters
       form_params = opts[:form_params] || {}
@@ -126,13 +210,13 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type]
+      return_type = opts[:debug_return_type] || 'Array<DexOrderDTO>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"DexApi.dapps_dex_orders_historical_get",
+        :operation => :"DexApi.dex_get_orders__historical",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -143,33 +227,37 @@ module OpenapiClient
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: DexApi#dapps_dex_orders_historical_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: DexApi#dex_get_orders__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
+    # GetPrices (historical)
+    # Gets prices.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
     # @option opts [Time] :start_date 
     # @option opts [Time] :end_date 
     # @option opts [String] :token_id 
-    # @return [nil]
-    def dapps_dex_prices_historical_get(opts = {})
-      dapps_dex_prices_historical_get_with_http_info(opts)
-      nil
+    # @return [Array<DexPriceDTO>]
+    def dex_get_prices__historical(opts = {})
+      data, _status_code, _headers = dex_get_prices__historical_with_http_info(opts)
+      data
     end
 
+    # GetPrices (historical)
+    # Gets prices.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
     # @option opts [Time] :start_date 
     # @option opts [Time] :end_date 
     # @option opts [String] :token_id 
-    # @return [Array<(nil, Integer, Hash)>] nil, response status code and response headers
-    def dapps_dex_prices_historical_get_with_http_info(opts = {})
+    # @return [Array<(Array<DexPriceDTO>, Integer, Hash)>] Array<DexPriceDTO> data, response status code and response headers
+    def dex_get_prices__historical_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: DexApi.dapps_dex_prices_historical_get ...'
+        @api_client.config.logger.debug 'Calling API: DexApi.dex_get_prices__historical ...'
       end
       # resource path
       local_var_path = '/dapps/dex/prices/historical'
@@ -184,6 +272,8 @@ module OpenapiClient
 
       # header parameters
       header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
 
       # form parameters
       form_params = opts[:form_params] || {}
@@ -192,13 +282,13 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type]
+      return_type = opts[:debug_return_type] || 'Array<DexPriceDTO>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"DexApi.dapps_dex_prices_historical_get",
+        :operation => :"DexApi.dex_get_prices__historical",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -209,36 +299,40 @@ module OpenapiClient
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: DexApi#dapps_dex_prices_historical_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: DexApi#dex_get_prices__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
+    # GetSolutions (historical)
+    # Gets solutions.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
     # @option opts [Time] :start_date 
     # @option opts [Time] :end_date 
     # @option opts [String] :token_id 
-    # @return [nil]
-    def dapps_dex_solution_historical_get(opts = {})
-      dapps_dex_solution_historical_get_with_http_info(opts)
-      nil
+    # @return [Array<DexSolutionDTO>]
+    def dex_get_solutions__historical(opts = {})
+      data, _status_code, _headers = dex_get_solutions__historical_with_http_info(opts)
+      data
     end
 
+    # GetSolutions (historical)
+    # Gets solutions.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
     # @option opts [Time] :start_date 
     # @option opts [Time] :end_date 
     # @option opts [String] :token_id 
-    # @return [Array<(nil, Integer, Hash)>] nil, response status code and response headers
-    def dapps_dex_solution_historical_get_with_http_info(opts = {})
+    # @return [Array<(Array<DexSolutionDTO>, Integer, Hash)>] Array<DexSolutionDTO> data, response status code and response headers
+    def dex_get_solutions__historical_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: DexApi.dapps_dex_solution_historical_get ...'
+        @api_client.config.logger.debug 'Calling API: DexApi.dex_get_solutions__historical ...'
       end
       # resource path
-      local_var_path = '/dapps/dex/solution/historical'
+      local_var_path = '/dapps/dex/solutions/historical'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -250,6 +344,8 @@ module OpenapiClient
 
       # header parameters
       header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
 
       # form parameters
       form_params = opts[:form_params] || {}
@@ -258,13 +354,13 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type]
+      return_type = opts[:debug_return_type] || 'Array<DexSolutionDTO>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"DexApi.dapps_dex_solution_historical_get",
+        :operation => :"DexApi.dex_get_solutions__historical",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -275,31 +371,35 @@ module OpenapiClient
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: DexApi#dapps_dex_solution_historical_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: DexApi#dex_get_solutions__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
+    # GetStats (historical)
+    # Gets stats.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
     # @option opts [Time] :start_date 
     # @option opts [Time] :end_date 
-    # @return [nil]
-    def dapps_dex_stats_historical_get(opts = {})
-      dapps_dex_stats_historical_get_with_http_info(opts)
-      nil
+    # @return [Array<DexStatsDTO>]
+    def dex_get_stats__historical(opts = {})
+      data, _status_code, _headers = dex_get_stats__historical_with_http_info(opts)
+      data
     end
 
+    # GetStats (historical)
+    # Gets stats.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
     # @option opts [Time] :start_date 
     # @option opts [Time] :end_date 
-    # @return [Array<(nil, Integer, Hash)>] nil, response status code and response headers
-    def dapps_dex_stats_historical_get_with_http_info(opts = {})
+    # @return [Array<(Array<DexStatsDTO>, Integer, Hash)>] Array<DexStatsDTO> data, response status code and response headers
+    def dex_get_stats__historical_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: DexApi.dapps_dex_stats_historical_get ...'
+        @api_client.config.logger.debug 'Calling API: DexApi.dex_get_stats__historical ...'
       end
       # resource path
       local_var_path = '/dapps/dex/stats/historical'
@@ -313,6 +413,8 @@ module OpenapiClient
 
       # header parameters
       header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
 
       # form parameters
       form_params = opts[:form_params] || {}
@@ -321,13 +423,13 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type]
+      return_type = opts[:debug_return_type] || 'Array<DexStatsDTO>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"DexApi.dapps_dex_stats_historical_get",
+        :operation => :"DexApi.dex_get_stats__historical",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -338,33 +440,37 @@ module OpenapiClient
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: DexApi#dapps_dex_stats_historical_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: DexApi#dex_get_stats__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
+    # GetTokens (historical) 🔥
+    # Gets tokens.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
     # @option opts [Time] :start_date 
     # @option opts [Time] :end_date 
     # @option opts [String] :token_id 
-    # @return [nil]
-    def dapps_dex_tokens_historical_get(opts = {})
-      dapps_dex_tokens_historical_get_with_http_info(opts)
-      nil
+    # @return [Array<DexTokenDTO>]
+    def dex_get_tokens__historical(opts = {})
+      data, _status_code, _headers = dex_get_tokens__historical_with_http_info(opts)
+      data
     end
 
+    # GetTokens (historical) 🔥
+    # Gets tokens.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
     # @option opts [Time] :start_date 
     # @option opts [Time] :end_date 
     # @option opts [String] :token_id 
-    # @return [Array<(nil, Integer, Hash)>] nil, response status code and response headers
-    def dapps_dex_tokens_historical_get_with_http_info(opts = {})
+    # @return [Array<(Array<DexTokenDTO>, Integer, Hash)>] Array<DexTokenDTO> data, response status code and response headers
+    def dex_get_tokens__historical_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: DexApi.dapps_dex_tokens_historical_get ...'
+        @api_client.config.logger.debug 'Calling API: DexApi.dex_get_tokens__historical ...'
       end
       # resource path
       local_var_path = '/dapps/dex/tokens/historical'
@@ -379,6 +485,8 @@ module OpenapiClient
 
       # header parameters
       header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
 
       # form parameters
       form_params = opts[:form_params] || {}
@@ -387,13 +495,13 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type]
+      return_type = opts[:debug_return_type] || 'Array<DexTokenDTO>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"DexApi.dapps_dex_tokens_historical_get",
+        :operation => :"DexApi.dex_get_tokens__historical",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -404,31 +512,35 @@ module OpenapiClient
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: DexApi#dapps_dex_tokens_historical_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: DexApi#dex_get_tokens__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
+    # GetTrades (historical) 🔥
+    # Gets trades.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
     # @option opts [Time] :start_date 
     # @option opts [Time] :end_date 
-    # @return [nil]
-    def dapps_dex_trades_historical_get(opts = {})
-      dapps_dex_trades_historical_get_with_http_info(opts)
-      nil
+    # @return [Array<DexTradeDTO>]
+    def dex_get_trades__historical(opts = {})
+      data, _status_code, _headers = dex_get_trades__historical_with_http_info(opts)
+      data
     end
 
+    # GetTrades (historical) 🔥
+    # Gets trades.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
     # @option opts [Time] :start_date 
     # @option opts [Time] :end_date 
-    # @return [Array<(nil, Integer, Hash)>] nil, response status code and response headers
-    def dapps_dex_trades_historical_get_with_http_info(opts = {})
+    # @return [Array<(Array<DexTradeDTO>, Integer, Hash)>] Array<DexTradeDTO> data, response status code and response headers
+    def dex_get_trades__historical_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: DexApi.dapps_dex_trades_historical_get ...'
+        @api_client.config.logger.debug 'Calling API: DexApi.dex_get_trades__historical ...'
       end
       # resource path
       local_var_path = '/dapps/dex/trades/historical'
@@ -442,6 +554,8 @@ module OpenapiClient
 
       # header parameters
       header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
 
       # form parameters
       form_params = opts[:form_params] || {}
@@ -450,13 +564,13 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type]
+      return_type = opts[:debug_return_type] || 'Array<DexTradeDTO>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"DexApi.dapps_dex_trades_historical_get",
+        :operation => :"DexApi.dex_get_trades__historical",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -467,31 +581,35 @@ module OpenapiClient
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: DexApi#dapps_dex_trades_historical_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: DexApi#dex_get_trades__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
+    # GetUsers (historical)
+    # Gets users.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
     # @option opts [Time] :start_date 
     # @option opts [Time] :end_date 
-    # @return [nil]
-    def dapps_dex_users_historical_get(opts = {})
-      dapps_dex_users_historical_get_with_http_info(opts)
-      nil
+    # @return [Array<DexUserDTO>]
+    def dex_get_users__historical(opts = {})
+      data, _status_code, _headers = dex_get_users__historical_with_http_info(opts)
+      data
     end
 
+    # GetUsers (historical)
+    # Gets users.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
     # @option opts [Time] :start_date 
     # @option opts [Time] :end_date 
-    # @return [Array<(nil, Integer, Hash)>] nil, response status code and response headers
-    def dapps_dex_users_historical_get_with_http_info(opts = {})
+    # @return [Array<(Array<DexUserDTO>, Integer, Hash)>] Array<DexUserDTO> data, response status code and response headers
+    def dex_get_users__historical_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: DexApi.dapps_dex_users_historical_get ...'
+        @api_client.config.logger.debug 'Calling API: DexApi.dex_get_users__historical ...'
       end
       # resource path
       local_var_path = '/dapps/dex/users/historical'
@@ -505,6 +623,8 @@ module OpenapiClient
 
       # header parameters
       header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
 
       # form parameters
       form_params = opts[:form_params] || {}
@@ -513,13 +633,13 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type]
+      return_type = opts[:debug_return_type] || 'Array<DexUserDTO>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"DexApi.dapps_dex_users_historical_get",
+        :operation => :"DexApi.dex_get_users__historical",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -530,36 +650,40 @@ module OpenapiClient
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: DexApi#dapps_dex_users_historical_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: DexApi#dex_get_users__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
+    # GetWithdraws (historical)
+    # Gets withdraws.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
     # @option opts [Time] :start_date 
     # @option opts [Time] :end_date 
     # @option opts [String] :token_id 
-    # @return [nil]
-    def dapps_dex_withdraw_historical_get(opts = {})
-      dapps_dex_withdraw_historical_get_with_http_info(opts)
-      nil
+    # @return [Array<DexWithdrawDTO>]
+    def dex_get_withdraws__historical(opts = {})
+      data, _status_code, _headers = dex_get_withdraws__historical_with_http_info(opts)
+      data
     end
 
+    # GetWithdraws (historical)
+    # Gets withdraws.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
     # @option opts [Time] :start_date 
     # @option opts [Time] :end_date 
     # @option opts [String] :token_id 
-    # @return [Array<(nil, Integer, Hash)>] nil, response status code and response headers
-    def dapps_dex_withdraw_historical_get_with_http_info(opts = {})
+    # @return [Array<(Array<DexWithdrawDTO>, Integer, Hash)>] Array<DexWithdrawDTO> data, response status code and response headers
+    def dex_get_withdraws__historical_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: DexApi.dapps_dex_withdraw_historical_get ...'
+        @api_client.config.logger.debug 'Calling API: DexApi.dex_get_withdraws__historical ...'
       end
       # resource path
-      local_var_path = '/dapps/dex/withdraw/historical'
+      local_var_path = '/dapps/dex/withdraws/historical'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -571,6 +695,8 @@ module OpenapiClient
 
       # header parameters
       header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
 
       # form parameters
       form_params = opts[:form_params] || {}
@@ -579,13 +705,13 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type]
+      return_type = opts[:debug_return_type] || 'Array<DexWithdrawDTO>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"DexApi.dapps_dex_withdraw_historical_get",
+        :operation => :"DexApi.dex_get_withdraws__historical",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -596,36 +722,40 @@ module OpenapiClient
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: DexApi#dapps_dex_withdraw_historical_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: DexApi#dex_get_withdraws__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
+    # GetWithdrawsRequests (historical)
+    # Gets withdraws requests.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
     # @option opts [Time] :start_date 
     # @option opts [Time] :end_date 
     # @option opts [String] :token_id 
-    # @return [nil]
-    def dapps_dex_withdraw_request_historical_get(opts = {})
-      dapps_dex_withdraw_request_historical_get_with_http_info(opts)
-      nil
+    # @return [Array<DexWithdrawRequestDTO>]
+    def dex_get_withdraws_requests__historical(opts = {})
+      data, _status_code, _headers = dex_get_withdraws_requests__historical_with_http_info(opts)
+      data
     end
 
+    # GetWithdrawsRequests (historical)
+    # Gets withdraws requests.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
     # @option opts [Time] :start_date 
     # @option opts [Time] :end_date 
     # @option opts [String] :token_id 
-    # @return [Array<(nil, Integer, Hash)>] nil, response status code and response headers
-    def dapps_dex_withdraw_request_historical_get_with_http_info(opts = {})
+    # @return [Array<(Array<DexWithdrawRequestDTO>, Integer, Hash)>] Array<DexWithdrawRequestDTO> data, response status code and response headers
+    def dex_get_withdraws_requests__historical_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: DexApi.dapps_dex_withdraw_request_historical_get ...'
+        @api_client.config.logger.debug 'Calling API: DexApi.dex_get_withdraws_requests__historical ...'
       end
       # resource path
-      local_var_path = '/dapps/dex/withdrawRequest/historical'
+      local_var_path = '/dapps/dex/withdrawsRequests/historical'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -637,6 +767,8 @@ module OpenapiClient
 
       # header parameters
       header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
 
       # form parameters
       form_params = opts[:form_params] || {}
@@ -645,13 +777,13 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type]
+      return_type = opts[:debug_return_type] || 'Array<DexWithdrawRequestDTO>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"DexApi.dapps_dex_withdraw_request_historical_get",
+        :operation => :"DexApi.dex_get_withdraws_requests__historical",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -662,7 +794,7 @@ module OpenapiClient
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: DexApi#dapps_dex_withdraw_request_historical_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: DexApi#dex_get_withdraws_requests__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

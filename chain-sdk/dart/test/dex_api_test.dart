@@ -17,53 +17,102 @@ void main() {
   // final instance = DexApi();
 
   group('tests for DexApi', () {
-    //Future dappsDexBatchHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
-    test('test dappsDexBatchHistoricalGet', () async {
+    // GetBatches (historical)
+    //
+    // Gets batches.
+    //
+    //Future<List<DexBatchDTO>> dexGetBatchesHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
+    test('test dexGetBatchesHistorical', () async {
       // TODO
     });
 
-    //Future dappsDexOrdersHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String tokenId }) async
-    test('test dappsDexOrdersHistoricalGet', () async {
+    // GetDeposits (historical)
+    //
+    // Gets deposits.
+    //
+    //Future<List<DexDepositDTO>> dexGetDepositsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String tokenId }) async
+    test('test dexGetDepositsHistorical', () async {
       // TODO
     });
 
-    //Future dappsDexPricesHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String tokenId }) async
-    test('test dappsDexPricesHistoricalGet', () async {
+    // GetOrders (historical)
+    //
+    // Gets orders.
+    //
+    //Future<List<DexOrderDTO>> dexGetOrdersHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String tokenId }) async
+    test('test dexGetOrdersHistorical', () async {
       // TODO
     });
 
-    //Future dappsDexSolutionHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String tokenId }) async
-    test('test dappsDexSolutionHistoricalGet', () async {
+    // GetPrices (historical)
+    //
+    // Gets prices.
+    //
+    //Future<List<DexPriceDTO>> dexGetPricesHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String tokenId }) async
+    test('test dexGetPricesHistorical', () async {
       // TODO
     });
 
-    //Future dappsDexStatsHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
-    test('test dappsDexStatsHistoricalGet', () async {
+    // GetSolutions (historical)
+    //
+    // Gets solutions.
+    //
+    //Future<List<DexSolutionDTO>> dexGetSolutionsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String tokenId }) async
+    test('test dexGetSolutionsHistorical', () async {
       // TODO
     });
 
-    //Future dappsDexTokensHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String tokenId }) async
-    test('test dappsDexTokensHistoricalGet', () async {
+    // GetStats (historical)
+    //
+    // Gets stats.
+    //
+    //Future<List<DexStatsDTO>> dexGetStatsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
+    test('test dexGetStatsHistorical', () async {
       // TODO
     });
 
-    //Future dappsDexTradesHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
-    test('test dappsDexTradesHistoricalGet', () async {
+    // GetTokens (historical) 🔥
+    //
+    // Gets tokens.
+    //
+    //Future<List<DexTokenDTO>> dexGetTokensHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String tokenId }) async
+    test('test dexGetTokensHistorical', () async {
       // TODO
     });
 
-    //Future dappsDexUsersHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
-    test('test dappsDexUsersHistoricalGet', () async {
+    // GetTrades (historical) 🔥
+    //
+    // Gets trades.
+    //
+    //Future<List<DexTradeDTO>> dexGetTradesHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
+    test('test dexGetTradesHistorical', () async {
       // TODO
     });
 
-    //Future dappsDexWithdrawHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String tokenId }) async
-    test('test dappsDexWithdrawHistoricalGet', () async {
+    // GetUsers (historical)
+    //
+    // Gets users.
+    //
+    //Future<List<DexUserDTO>> dexGetUsersHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
+    test('test dexGetUsersHistorical', () async {
       // TODO
     });
 
-    //Future dappsDexWithdrawRequestHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String tokenId }) async
-    test('test dappsDexWithdrawRequestHistoricalGet', () async {
+    // GetWithdraws (historical)
+    //
+    // Gets withdraws.
+    //
+    //Future<List<DexWithdrawDTO>> dexGetWithdrawsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String tokenId }) async
+    test('test dexGetWithdrawsHistorical', () async {
+      // TODO
+    });
+
+    // GetWithdrawsRequests (historical)
+    //
+    // Gets withdraws requests.
+    //
+    //Future<List<DexWithdrawRequestDTO>> dexGetWithdrawsRequestsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String tokenId }) async
+    test('test dexGetWithdrawsRequestsHistorical', () async {
       // TODO
     });
 

@@ -4,49 +4,51 @@ All URIs are relative to **
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**dappsCurveAccountsHistoricalGet**](CurveApi.md#dappsCurveAccountsHistoricalGet) | **GET** /dapps/curve/accounts/historical | 
-[**dappsCurveAddLiquidityEventHistoricalGet**](CurveApi.md#dappsCurveAddLiquidityEventHistoricalGet) | **GET** /dapps/curve/addLiquidityEvent/historical | 
-[**dappsCurveAdminFeeChangeLogHistoricalGet**](CurveApi.md#dappsCurveAdminFeeChangeLogHistoricalGet) | **GET** /dapps/curve/adminFeeChangeLog/historical | 
-[**dappsCurveAmplificationCoeffChangeLogHistoricalGet**](CurveApi.md#dappsCurveAmplificationCoeffChangeLogHistoricalGet) | **GET** /dapps/curve/amplificationCoeffChangeLog/historical | 
-[**dappsCurveCoinsHistoricalGet**](CurveApi.md#dappsCurveCoinsHistoricalGet) | **GET** /dapps/curve/coins/historical | 
-[**dappsCurveContractsHistoricalGet**](CurveApi.md#dappsCurveContractsHistoricalGet) | **GET** /dapps/curve/contracts/historical | 
-[**dappsCurveContractsVersionHistoricalGet**](CurveApi.md#dappsCurveContractsVersionHistoricalGet) | **GET** /dapps/curve/contractsVersion/historical | 
-[**dappsCurveDailyVolumeHistoricalGet**](CurveApi.md#dappsCurveDailyVolumeHistoricalGet) | **GET** /dapps/curve/dailyVolume/historical | 
-[**dappsCurveFeeChangeLogHistoricalGet**](CurveApi.md#dappsCurveFeeChangeLogHistoricalGet) | **GET** /dapps/curve/feeChangeLog/historical | 
-[**dappsCurveGaugeDepositHistoricalGet**](CurveApi.md#dappsCurveGaugeDepositHistoricalGet) | **GET** /dapps/curve/gaugeDeposit/historical | 
-[**dappsCurveGaugeHistoricalGet**](CurveApi.md#dappsCurveGaugeHistoricalGet) | **GET** /dapps/curve/gauge/historical | 
-[**dappsCurveGaugeLiquidityHistoricalGet**](CurveApi.md#dappsCurveGaugeLiquidityHistoricalGet) | **GET** /dapps/curve/gaugeLiquidity/historical | 
-[**dappsCurveGaugeTotalWeightHistoricalGet**](CurveApi.md#dappsCurveGaugeTotalWeightHistoricalGet) | **GET** /dapps/curve/gaugeTotalWeight/historical | 
-[**dappsCurveGaugeTypeHistoricalGet**](CurveApi.md#dappsCurveGaugeTypeHistoricalGet) | **GET** /dapps/curve/gaugeType/historical | 
-[**dappsCurveGaugeTypeWeightHistoricalGet**](CurveApi.md#dappsCurveGaugeTypeWeightHistoricalGet) | **GET** /dapps/curve/gaugeTypeWeight/historical | 
-[**dappsCurveGaugeWeightHistoricalGet**](CurveApi.md#dappsCurveGaugeWeightHistoricalGet) | **GET** /dapps/curve/gaugeWeight/historical | 
-[**dappsCurveGaugeWeightVoteHistoricalGet**](CurveApi.md#dappsCurveGaugeWeightVoteHistoricalGet) | **GET** /dapps/curve/gaugeWeightVote/historical | 
-[**dappsCurveGaugeWithdrawHistoricalGet**](CurveApi.md#dappsCurveGaugeWithdrawHistoricalGet) | **GET** /dapps/curve/gaugeWithdraw/historical | 
-[**dappsCurveHourlyVolumeHistoricalGet**](CurveApi.md#dappsCurveHourlyVolumeHistoricalGet) | **GET** /dapps/curve/hourlyVolume/historical | 
-[**dappsCurveLpTokenHistoricalGet**](CurveApi.md#dappsCurveLpTokenHistoricalGet) | **GET** /dapps/curve/lpToken/historical | 
-[**dappsCurvePoolsHistoricalGet**](CurveApi.md#dappsCurvePoolsHistoricalGet) | **GET** /dapps/curve/pools/historical | 
-[**dappsCurveProposalsHistoricalGet**](CurveApi.md#dappsCurveProposalsHistoricalGet) | **GET** /dapps/curve/proposals/historical | 
-[**dappsCurveProposalsVoteHistoricalGet**](CurveApi.md#dappsCurveProposalsVoteHistoricalGet) | **GET** /dapps/curve/proposalsVote/historical | 
-[**dappsCurveRemoveLiquidityEventHistoricalGet**](CurveApi.md#dappsCurveRemoveLiquidityEventHistoricalGet) | **GET** /dapps/curve/removeLiquidityEvent/historical | 
-[**dappsCurveRemoveLiquidityOneEventHistoricalGet**](CurveApi.md#dappsCurveRemoveLiquidityOneEventHistoricalGet) | **GET** /dapps/curve/removeLiquidityOneEvent/historical | 
-[**dappsCurveSwapsHistoricalGet**](CurveApi.md#dappsCurveSwapsHistoricalGet) | **GET** /dapps/curve/swaps/historical | 
-[**dappsCurveSystemStateHistoricalGet**](CurveApi.md#dappsCurveSystemStateHistoricalGet) | **GET** /dapps/curve/systemState/historical | 
-[**dappsCurveTokensHistoricalGet**](CurveApi.md#dappsCurveTokensHistoricalGet) | **GET** /dapps/curve/tokens/historical | 
-[**dappsCurveTransferOwnershipEventHistoricalGet**](CurveApi.md#dappsCurveTransferOwnershipEventHistoricalGet) | **GET** /dapps/curve/transferOwnershipEvent/historical | 
-[**dappsCurveUnderlyingCoinHistoricalGet**](CurveApi.md#dappsCurveUnderlyingCoinHistoricalGet) | **GET** /dapps/curve/underlyingCoin/historical | 
-[**dappsCurveVotingAppHistoricalGet**](CurveApi.md#dappsCurveVotingAppHistoricalGet) | **GET** /dapps/curve/votingApp/historical | 
-[**dappsCurveWeeklyVolumeHistoricalGet**](CurveApi.md#dappsCurveWeeklyVolumeHistoricalGet) | **GET** /dapps/curve/weeklyVolume/historical | 
+[**curveGetAccountsHistorical**](CurveApi.md#curveGetAccountsHistorical) | **GET** /dapps/curve/accounts/historical | GetAccounts (historical)
+[**curveGetAddLiquidityEventsHistorical**](CurveApi.md#curveGetAddLiquidityEventsHistorical) | **GET** /dapps/curve/addLiquidityEvents/historical | GetAddLiquidityEvents (historical)
+[**curveGetAdminFeeChangeLogsHistorical**](CurveApi.md#curveGetAdminFeeChangeLogsHistorical) | **GET** /dapps/curve/adminFeeChangeLogs/historical | GetAdminFeeChangeLogs (historical)
+[**curveGetAmplificationCoeffChangeLogsHistorical**](CurveApi.md#curveGetAmplificationCoeffChangeLogsHistorical) | **GET** /dapps/curve/amplificationCoeffChangeLogs/historical | GetAmplificationCoeffChangeLogs (historical)
+[**curveGetCoinsHistorical**](CurveApi.md#curveGetCoinsHistorical) | **GET** /dapps/curve/coins/historical | GetCoins (historical)
+[**curveGetContractsHistorical**](CurveApi.md#curveGetContractsHistorical) | **GET** /dapps/curve/contracts/historical | GetContracts (historical)
+[**curveGetContractsVersionsHistorical**](CurveApi.md#curveGetContractsVersionsHistorical) | **GET** /dapps/curve/contractsVersions/historical | GetContractsVersions (historical)
+[**curveGetDailyVolumesHistorical**](CurveApi.md#curveGetDailyVolumesHistorical) | **GET** /dapps/curve/dailyVolumes/historical | GetDailyVolumes (historical)
+[**curveGetExchangesHistorical**](CurveApi.md#curveGetExchangesHistorical) | **GET** /dapps/curve/exchanges/historical | GetExchanges (historical) 🔥
+[**curveGetFeeChangeLogsHistorical**](CurveApi.md#curveGetFeeChangeLogsHistorical) | **GET** /dapps/curve/feeChangeLogs/historical | GetFeeChangeLogs (historical)
+[**curveGetGaugesDepositsHistorical**](CurveApi.md#curveGetGaugesDepositsHistorical) | **GET** /dapps/curve/gaugesDeposits/historical | GetGaugesDeposits (historical)
+[**curveGetGaugesHistorical**](CurveApi.md#curveGetGaugesHistorical) | **GET** /dapps/curve/gauges/historical | GetGauges (historical)
+[**curveGetGaugesLiquidityHistorical**](CurveApi.md#curveGetGaugesLiquidityHistorical) | **GET** /dapps/curve/gaugesLiquidity/historical | GetGaugesLiquidity (historical)
+[**curveGetGaugesTotalWeightsHistorical**](CurveApi.md#curveGetGaugesTotalWeightsHistorical) | **GET** /dapps/curve/gaugesTotalWeights/historical | GetGaugesTotalWeights (historical)
+[**curveGetGaugesTypesHistorical**](CurveApi.md#curveGetGaugesTypesHistorical) | **GET** /dapps/curve/gaugesTypes/historical | GetGaugesTypes (historical)
+[**curveGetGaugesTypesWeightsHistorical**](CurveApi.md#curveGetGaugesTypesWeightsHistorical) | **GET** /dapps/curve/gaugesTypesWeights/historical | GetGaugesTypesWeights (historical)
+[**curveGetGaugesWeightsHistorical**](CurveApi.md#curveGetGaugesWeightsHistorical) | **GET** /dapps/curve/gaugesWeights/historical | GetGaugesWeights (historical)
+[**curveGetGaugesWeightsVotesHistorical**](CurveApi.md#curveGetGaugesWeightsVotesHistorical) | **GET** /dapps/curve/gaugesWeightsVotes/historical | GetGaugesWeightsVotes (historical)
+[**curveGetGaugesWithdrawHistorical**](CurveApi.md#curveGetGaugesWithdrawHistorical) | **GET** /dapps/curve/gaugesWithdraws/historical | GetGaugesWithdraw (historical)
+[**curveGetHourlyVolumesHistorical**](CurveApi.md#curveGetHourlyVolumesHistorical) | **GET** /dapps/curve/hourlyVolumes/historical | GetHourlyVolumes (historical)
+[**curveGetLpTokensHistorical**](CurveApi.md#curveGetLpTokensHistorical) | **GET** /dapps/curve/lpTokens/historical | GetLpTokens (historical)
+[**curveGetPoolsHistorical**](CurveApi.md#curveGetPoolsHistorical) | **GET** /dapps/curve/pools/historical | GetPools (historical) 🔥
+[**curveGetProposalsHistorical**](CurveApi.md#curveGetProposalsHistorical) | **GET** /dapps/curve/proposals/historical | GetProposals (historical)
+[**curveGetProposalsVotesHistorical**](CurveApi.md#curveGetProposalsVotesHistorical) | **GET** /dapps/curve/proposalsVotes/historical | GetProposalsVotes (historical)
+[**curveGetRemoveLiquidityEventsHistorical**](CurveApi.md#curveGetRemoveLiquidityEventsHistorical) | **GET** /dapps/curve/removeLiquidityEvents/historical | GetRemoveLiquidityEvents (historical)
+[**curveGetRemoveLiquidityOneEventsHistorical**](CurveApi.md#curveGetRemoveLiquidityOneEventsHistorical) | **GET** /dapps/curve/removeLiquidityOneEvents/historical | GetRemoveLiquidityOneEvents (historical)
+[**curveGetSystemStatesHistorical**](CurveApi.md#curveGetSystemStatesHistorical) | **GET** /dapps/curve/systemStates/historical | GetSystemStates (historical)
+[**curveGetTokensHistorical**](CurveApi.md#curveGetTokensHistorical) | **GET** /dapps/curve/tokens/historical | GetTokens (historical) 🔥
+[**curveGetTransferOwnershipEventsHistorical**](CurveApi.md#curveGetTransferOwnershipEventsHistorical) | **GET** /dapps/curve/transferOwnershipEvents/historical | GetTransferOwnershipEvents (historical)
+[**curveGetUnderlyingCoinsHistorical**](CurveApi.md#curveGetUnderlyingCoinsHistorical) | **GET** /dapps/curve/underlyingCoins/historical | GetUnderlyingCoins (historical)
+[**curveGetVotingAppsHistorical**](CurveApi.md#curveGetVotingAppsHistorical) | **GET** /dapps/curve/votingApps/historical | GetVotingApps (historical)
+[**curveGetWeeklyVolumesHistorical**](CurveApi.md#curveGetWeeklyVolumesHistorical) | **GET** /dapps/curve/weeklyVolumes/historical | GetWeeklyVolumes (historical)
 
 
 
-## dappsCurveAccountsHistoricalGet
+## curveGetAccountsHistorical
 
+GetAccounts (historical)
 
+Gets accounts.
 
 ### Example
 
 ```bash
- dappsCurveAccountsHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value
+ curveGetAccountsHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value
 ```
 
 ### Parameters
@@ -61,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-(empty response body)
+[**array[CurveAccountDTO]**](CurveAccountDTO.md)
 
 ### Authorization
 
@@ -70,56 +72,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## dappsCurveAddLiquidityEventHistoricalGet
+## curveGetAddLiquidityEventsHistorical
 
+GetAddLiquidityEvents (historical)
 
-
-### Example
-
-```bash
- dappsCurveAddLiquidityEventHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **integer** |  | [optional] [default to null]
- **endBlock** | **integer** |  | [optional] [default to null]
- **startDate** | **string** |  | [optional] [default to null]
- **endDate** | **string** |  | [optional] [default to null]
- **poolId** | **string** |  | [optional] [default to null]
-
-### Return type
-
-(empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## dappsCurveAdminFeeChangeLogHistoricalGet
-
-
+Gets add liquidity events.
 
 ### Example
 
 ```bash
- dappsCurveAdminFeeChangeLogHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
+ curveGetAddLiquidityEventsHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
 ```
 
 ### Parameters
@@ -135,7 +102,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-(empty response body)
+[**array[CurveAddLiquidityEventDTO]**](CurveAddLiquidityEventDTO.md)
 
 ### Authorization
 
@@ -144,19 +111,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## dappsCurveAmplificationCoeffChangeLogHistoricalGet
+## curveGetAdminFeeChangeLogsHistorical
 
+GetAdminFeeChangeLogs (historical)
 
+Gets admin fee change logs.
 
 ### Example
 
 ```bash
- dappsCurveAmplificationCoeffChangeLogHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
+ curveGetAdminFeeChangeLogsHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
 ```
 
 ### Parameters
@@ -172,7 +141,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-(empty response body)
+[**array[CurveAdminFeeChangeLogDTO]**](CurveAdminFeeChangeLogDTO.md)
 
 ### Authorization
 
@@ -181,19 +150,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## dappsCurveCoinsHistoricalGet
+## curveGetAmplificationCoeffChangeLogsHistorical
 
+GetAmplificationCoeffChangeLogs (historical)
 
+Gets amplification coeff change logs.
 
 ### Example
 
 ```bash
- dappsCurveCoinsHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
+ curveGetAmplificationCoeffChangeLogsHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
 ```
 
 ### Parameters
@@ -209,7 +180,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-(empty response body)
+[**array[CurveAmplificationCoeffChangeLogDTO]**](CurveAmplificationCoeffChangeLogDTO.md)
 
 ### Authorization
 
@@ -218,19 +189,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## dappsCurveContractsHistoricalGet
+## curveGetCoinsHistorical
 
+GetCoins (historical)
 
+Gets coins.
 
 ### Example
 
 ```bash
- dappsCurveContractsHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
+ curveGetCoinsHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
 ```
 
 ### Parameters
@@ -246,7 +219,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-(empty response body)
+[**array[CurveCoinDTO]**](CurveCoinDTO.md)
 
 ### Authorization
 
@@ -255,19 +228,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## dappsCurveContractsVersionHistoricalGet
+## curveGetContractsHistorical
 
+GetContracts (historical)
 
+Gets contracts.
 
 ### Example
 
 ```bash
- dappsCurveContractsVersionHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
+ curveGetContractsHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
 ```
 
 ### Parameters
@@ -283,7 +258,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-(empty response body)
+[**array[CurveContractDTO]**](CurveContractDTO.md)
 
 ### Authorization
 
@@ -292,19 +267,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## dappsCurveDailyVolumeHistoricalGet
+## curveGetContractsVersionsHistorical
 
+GetContractsVersions (historical)
 
+Gets contracts versions.
 
 ### Example
 
 ```bash
- dappsCurveDailyVolumeHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
+ curveGetContractsVersionsHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
 ```
 
 ### Parameters
@@ -320,7 +297,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-(empty response body)
+[**array[CurveContractVersionDTO]**](CurveContractVersionDTO.md)
 
 ### Authorization
 
@@ -329,19 +306,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## dappsCurveFeeChangeLogHistoricalGet
+## curveGetDailyVolumesHistorical
 
+GetDailyVolumes (historical)
 
+Gets daily volumes.
 
 ### Example
 
 ```bash
- dappsCurveFeeChangeLogHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
+ curveGetDailyVolumesHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
 ```
 
 ### Parameters
@@ -357,7 +336,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-(empty response body)
+[**array[CurveDailyVolumeDTO]**](CurveDailyVolumeDTO.md)
 
 ### Authorization
 
@@ -366,55 +345,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## dappsCurveGaugeDepositHistoricalGet
+## curveGetExchangesHistorical
 
+GetExchanges (historical) 🔥
 
-
-### Example
-
-```bash
- dappsCurveGaugeDepositHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **integer** |  | [optional] [default to null]
- **endBlock** | **integer** |  | [optional] [default to null]
- **startDate** | **string** |  | [optional] [default to null]
- **endDate** | **string** |  | [optional] [default to null]
-
-### Return type
-
-(empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## dappsCurveGaugeHistoricalGet
-
-
+Gets exchanges.
 
 ### Example
 
 ```bash
- dappsCurveGaugeHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
+ curveGetExchangesHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
 ```
 
 ### Parameters
@@ -430,7 +375,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-(empty response body)
+[**array[CurveExchangeDTO]**](CurveExchangeDTO.md)
 
 ### Authorization
 
@@ -439,271 +384,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## dappsCurveGaugeLiquidityHistoricalGet
+## curveGetFeeChangeLogsHistorical
 
+GetFeeChangeLogs (historical)
 
-
-### Example
-
-```bash
- dappsCurveGaugeLiquidityHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **integer** |  | [optional] [default to null]
- **endBlock** | **integer** |  | [optional] [default to null]
- **startDate** | **string** |  | [optional] [default to null]
- **endDate** | **string** |  | [optional] [default to null]
-
-### Return type
-
-(empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## dappsCurveGaugeTotalWeightHistoricalGet
-
-
+Gets fee change logs.
 
 ### Example
 
 ```bash
- dappsCurveGaugeTotalWeightHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **integer** |  | [optional] [default to null]
- **endBlock** | **integer** |  | [optional] [default to null]
- **startDate** | **string** |  | [optional] [default to null]
- **endDate** | **string** |  | [optional] [default to null]
-
-### Return type
-
-(empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## dappsCurveGaugeTypeHistoricalGet
-
-
-
-### Example
-
-```bash
- dappsCurveGaugeTypeHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **integer** |  | [optional] [default to null]
- **endBlock** | **integer** |  | [optional] [default to null]
- **startDate** | **string** |  | [optional] [default to null]
- **endDate** | **string** |  | [optional] [default to null]
-
-### Return type
-
-(empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## dappsCurveGaugeTypeWeightHistoricalGet
-
-
-
-### Example
-
-```bash
- dappsCurveGaugeTypeWeightHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **integer** |  | [optional] [default to null]
- **endBlock** | **integer** |  | [optional] [default to null]
- **startDate** | **string** |  | [optional] [default to null]
- **endDate** | **string** |  | [optional] [default to null]
-
-### Return type
-
-(empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## dappsCurveGaugeWeightHistoricalGet
-
-
-
-### Example
-
-```bash
- dappsCurveGaugeWeightHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **integer** |  | [optional] [default to null]
- **endBlock** | **integer** |  | [optional] [default to null]
- **startDate** | **string** |  | [optional] [default to null]
- **endDate** | **string** |  | [optional] [default to null]
-
-### Return type
-
-(empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## dappsCurveGaugeWeightVoteHistoricalGet
-
-
-
-### Example
-
-```bash
- dappsCurveGaugeWeightVoteHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **integer** |  | [optional] [default to null]
- **endBlock** | **integer** |  | [optional] [default to null]
- **startDate** | **string** |  | [optional] [default to null]
- **endDate** | **string** |  | [optional] [default to null]
-
-### Return type
-
-(empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## dappsCurveGaugeWithdrawHistoricalGet
-
-
-
-### Example
-
-```bash
- dappsCurveGaugeWithdrawHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **integer** |  | [optional] [default to null]
- **endBlock** | **integer** |  | [optional] [default to null]
- **startDate** | **string** |  | [optional] [default to null]
- **endDate** | **string** |  | [optional] [default to null]
-
-### Return type
-
-(empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## dappsCurveHourlyVolumeHistoricalGet
-
-
-
-### Example
-
-```bash
- dappsCurveHourlyVolumeHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
+ curveGetFeeChangeLogsHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
 ```
 
 ### Parameters
@@ -719,7 +414,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-(empty response body)
+[**array[CurveFeeChangeLogDTO]**](CurveFeeChangeLogDTO.md)
 
 ### Authorization
 
@@ -728,19 +423,59 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## dappsCurveLpTokenHistoricalGet
+## curveGetGaugesDepositsHistorical
 
+GetGaugesDeposits (historical)
 
+Gets gauges deposits.
 
 ### Example
 
 ```bash
- dappsCurveLpTokenHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
+ curveGetGaugesDepositsHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **integer** |  | [optional] [default to null]
+ **endBlock** | **integer** |  | [optional] [default to null]
+ **startDate** | **string** |  | [optional] [default to null]
+ **endDate** | **string** |  | [optional] [default to null]
+
+### Return type
+
+[**array[CurveGaugeDepositDTO]**](CurveGaugeDepositDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## curveGetGaugesHistorical
+
+GetGauges (historical)
+
+Gets gauges.
+
+### Example
+
+```bash
+ curveGetGaugesHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
 ```
 
 ### Parameters
@@ -756,7 +491,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-(empty response body)
+[**array[CurveGaugeDTO]**](CurveGaugeDTO.md)
 
 ### Authorization
 
@@ -765,19 +500,287 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## dappsCurvePoolsHistoricalGet
+## curveGetGaugesLiquidityHistorical
 
+GetGaugesLiquidity (historical)
 
+Gets gauges liquidity.
 
 ### Example
 
 ```bash
- dappsCurvePoolsHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
+ curveGetGaugesLiquidityHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **integer** |  | [optional] [default to null]
+ **endBlock** | **integer** |  | [optional] [default to null]
+ **startDate** | **string** |  | [optional] [default to null]
+ **endDate** | **string** |  | [optional] [default to null]
+
+### Return type
+
+[**array[CurveGaugeLiquidityDTO]**](CurveGaugeLiquidityDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## curveGetGaugesTotalWeightsHistorical
+
+GetGaugesTotalWeights (historical)
+
+Gets gauges total weights.
+
+### Example
+
+```bash
+ curveGetGaugesTotalWeightsHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **integer** |  | [optional] [default to null]
+ **endBlock** | **integer** |  | [optional] [default to null]
+ **startDate** | **string** |  | [optional] [default to null]
+ **endDate** | **string** |  | [optional] [default to null]
+
+### Return type
+
+[**array[CurveGaugeTotalWeightDTO]**](CurveGaugeTotalWeightDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## curveGetGaugesTypesHistorical
+
+GetGaugesTypes (historical)
+
+Gets gauges types.
+
+### Example
+
+```bash
+ curveGetGaugesTypesHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **integer** |  | [optional] [default to null]
+ **endBlock** | **integer** |  | [optional] [default to null]
+ **startDate** | **string** |  | [optional] [default to null]
+ **endDate** | **string** |  | [optional] [default to null]
+
+### Return type
+
+[**array[CurveGaugeTypeDTO]**](CurveGaugeTypeDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## curveGetGaugesTypesWeightsHistorical
+
+GetGaugesTypesWeights (historical)
+
+Gets gauges types weights.
+
+### Example
+
+```bash
+ curveGetGaugesTypesWeightsHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **integer** |  | [optional] [default to null]
+ **endBlock** | **integer** |  | [optional] [default to null]
+ **startDate** | **string** |  | [optional] [default to null]
+ **endDate** | **string** |  | [optional] [default to null]
+
+### Return type
+
+[**array[CurveGaugeTypeWeightDTO]**](CurveGaugeTypeWeightDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## curveGetGaugesWeightsHistorical
+
+GetGaugesWeights (historical)
+
+Gets gauges weights.
+
+### Example
+
+```bash
+ curveGetGaugesWeightsHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **integer** |  | [optional] [default to null]
+ **endBlock** | **integer** |  | [optional] [default to null]
+ **startDate** | **string** |  | [optional] [default to null]
+ **endDate** | **string** |  | [optional] [default to null]
+
+### Return type
+
+[**array[CurveGaugeWeightDTO]**](CurveGaugeWeightDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## curveGetGaugesWeightsVotesHistorical
+
+GetGaugesWeightsVotes (historical)
+
+Gets gauges weights votes.
+
+### Example
+
+```bash
+ curveGetGaugesWeightsVotesHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **integer** |  | [optional] [default to null]
+ **endBlock** | **integer** |  | [optional] [default to null]
+ **startDate** | **string** |  | [optional] [default to null]
+ **endDate** | **string** |  | [optional] [default to null]
+
+### Return type
+
+[**array[CurveGaugeWeightVoteDTO]**](CurveGaugeWeightVoteDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## curveGetGaugesWithdrawHistorical
+
+GetGaugesWithdraw (historical)
+
+Gets gauges withdraws.
+
+### Example
+
+```bash
+ curveGetGaugesWithdrawHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **integer** |  | [optional] [default to null]
+ **endBlock** | **integer** |  | [optional] [default to null]
+ **startDate** | **string** |  | [optional] [default to null]
+ **endDate** | **string** |  | [optional] [default to null]
+
+### Return type
+
+[**array[CurveGaugeWithdrawDTO]**](CurveGaugeWithdrawDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## curveGetHourlyVolumesHistorical
+
+GetHourlyVolumes (historical)
+
+Gets hourly volumes.
+
+### Example
+
+```bash
+ curveGetHourlyVolumesHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
 ```
 
 ### Parameters
@@ -793,7 +796,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-(empty response body)
+[**array[CurveHourlyVolumeDTO]**](CurveHourlyVolumeDTO.md)
 
 ### Authorization
 
@@ -802,91 +805,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## dappsCurveProposalsHistoricalGet
+## curveGetLpTokensHistorical
 
+GetLpTokens (historical)
 
-
-### Example
-
-```bash
- dappsCurveProposalsHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **integer** |  | [optional] [default to null]
- **endBlock** | **integer** |  | [optional] [default to null]
- **startDate** | **string** |  | [optional] [default to null]
- **endDate** | **string** |  | [optional] [default to null]
-
-### Return type
-
-(empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## dappsCurveProposalsVoteHistoricalGet
-
-
+Gets lp tokens.
 
 ### Example
 
 ```bash
- dappsCurveProposalsVoteHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **integer** |  | [optional] [default to null]
- **endBlock** | **integer** |  | [optional] [default to null]
- **startDate** | **string** |  | [optional] [default to null]
- **endDate** | **string** |  | [optional] [default to null]
-
-### Return type
-
-(empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## dappsCurveRemoveLiquidityEventHistoricalGet
-
-
-
-### Example
-
-```bash
- dappsCurveRemoveLiquidityEventHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
+ curveGetLpTokensHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
 ```
 
 ### Parameters
@@ -902,7 +835,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-(empty response body)
+[**array[CurveLpTokenDTO]**](CurveLpTokenDTO.md)
 
 ### Authorization
 
@@ -911,19 +844,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## dappsCurveRemoveLiquidityOneEventHistoricalGet
+## curveGetPoolsHistorical
 
+GetPools (historical) 🔥
 
+Gets pools.
 
 ### Example
 
 ```bash
- dappsCurveRemoveLiquidityOneEventHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
+ curveGetPoolsHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
 ```
 
 ### Parameters
@@ -939,7 +874,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-(empty response body)
+[**array[CurvePoolDTO]**](CurvePoolDTO.md)
 
 ### Authorization
 
@@ -948,19 +883,97 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## dappsCurveSwapsHistoricalGet
+## curveGetProposalsHistorical
 
+GetProposals (historical)
 
+Gets proposals.
 
 ### Example
 
 ```bash
- dappsCurveSwapsHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
+ curveGetProposalsHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **integer** |  | [optional] [default to null]
+ **endBlock** | **integer** |  | [optional] [default to null]
+ **startDate** | **string** |  | [optional] [default to null]
+ **endDate** | **string** |  | [optional] [default to null]
+
+### Return type
+
+[**array[CurveProposalDTO]**](CurveProposalDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## curveGetProposalsVotesHistorical
+
+GetProposalsVotes (historical)
+
+Gets proposals votes.
+
+### Example
+
+```bash
+ curveGetProposalsVotesHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **integer** |  | [optional] [default to null]
+ **endBlock** | **integer** |  | [optional] [default to null]
+ **startDate** | **string** |  | [optional] [default to null]
+ **endDate** | **string** |  | [optional] [default to null]
+
+### Return type
+
+[**array[CurveProposalVoteDTO]**](CurveProposalVoteDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## curveGetRemoveLiquidityEventsHistorical
+
+GetRemoveLiquidityEvents (historical)
+
+Gets remove liquidity events.
+
+### Example
+
+```bash
+ curveGetRemoveLiquidityEventsHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
 ```
 
 ### Parameters
@@ -976,7 +989,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-(empty response body)
+[**array[CurveRemoveLiquidityEventDTO]**](CurveRemoveLiquidityEventDTO.md)
 
 ### Authorization
 
@@ -985,19 +998,60 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## dappsCurveSystemStateHistoricalGet
+## curveGetRemoveLiquidityOneEventsHistorical
 
+GetRemoveLiquidityOneEvents (historical)
 
+Gets remove liquidity one events.
 
 ### Example
 
 ```bash
- dappsCurveSystemStateHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value
+ curveGetRemoveLiquidityOneEventsHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **integer** |  | [optional] [default to null]
+ **endBlock** | **integer** |  | [optional] [default to null]
+ **startDate** | **string** |  | [optional] [default to null]
+ **endDate** | **string** |  | [optional] [default to null]
+ **poolId** | **string** |  | [optional] [default to null]
+
+### Return type
+
+[**array[CurveRemoveLiquidityOneEventDTO]**](CurveRemoveLiquidityOneEventDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## curveGetSystemStatesHistorical
+
+GetSystemStates (historical)
+
+Gets system states.
+
+### Example
+
+```bash
+ curveGetSystemStatesHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value
 ```
 
 ### Parameters
@@ -1012,7 +1066,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-(empty response body)
+[**array[CurveSystemStateDTO]**](CurveSystemStateDTO.md)
 
 ### Authorization
 
@@ -1021,19 +1075,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## dappsCurveTokensHistoricalGet
+## curveGetTokensHistorical
 
+GetTokens (historical) 🔥
 
+Gets tokens.
 
 ### Example
 
 ```bash
- dappsCurveTokensHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value  tokenId=value
+ curveGetTokensHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  tokenId=value
 ```
 
 ### Parameters
@@ -1049,7 +1105,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-(empty response body)
+[**array[CurveTokenDTO]**](CurveTokenDTO.md)
 
 ### Authorization
 
@@ -1058,19 +1114,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## dappsCurveTransferOwnershipEventHistoricalGet
+## curveGetTransferOwnershipEventsHistorical
 
+GetTransferOwnershipEvents (historical)
 
+Gets transfer ownership events.
 
 ### Example
 
 ```bash
- dappsCurveTransferOwnershipEventHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
+ curveGetTransferOwnershipEventsHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
 ```
 
 ### Parameters
@@ -1086,7 +1144,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-(empty response body)
+[**array[CurveTransferOwnershipEventDTO]**](CurveTransferOwnershipEventDTO.md)
 
 ### Authorization
 
@@ -1095,19 +1153,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## dappsCurveUnderlyingCoinHistoricalGet
+## curveGetUnderlyingCoinsHistorical
 
+GetUnderlyingCoins (historical)
 
+Gets underlying coins.
 
 ### Example
 
 ```bash
- dappsCurveUnderlyingCoinHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
+ curveGetUnderlyingCoinsHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
 ```
 
 ### Parameters
@@ -1123,7 +1183,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-(empty response body)
+[**array[CurveUnderlyingCoinDTO]**](CurveUnderlyingCoinDTO.md)
 
 ### Authorization
 
@@ -1132,19 +1192,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## dappsCurveVotingAppHistoricalGet
+## curveGetVotingAppsHistorical
 
+GetVotingApps (historical)
 
+Gets voting apps.
 
 ### Example
 
 ```bash
- dappsCurveVotingAppHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value
+ curveGetVotingAppsHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value
 ```
 
 ### Parameters
@@ -1159,7 +1221,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-(empty response body)
+[**array[CurveVotingAppDTO]**](CurveVotingAppDTO.md)
 
 ### Authorization
 
@@ -1168,19 +1230,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## dappsCurveWeeklyVolumeHistoricalGet
+## curveGetWeeklyVolumesHistorical
 
+GetWeeklyVolumes (historical)
 
+Gets weekly volumes.
 
 ### Example
 
 ```bash
- dappsCurveWeeklyVolumeHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
+ curveGetWeeklyVolumesHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
 ```
 
 ### Parameters
@@ -1196,7 +1260,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-(empty response body)
+[**array[CurveWeeklyVolumeDTO]**](CurveWeeklyVolumeDTO.md)
 
 ### Authorization
 
@@ -1205,7 +1269,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

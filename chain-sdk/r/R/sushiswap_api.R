@@ -14,6 +14,38 @@
 #'
 #' @section Methods:
 #' \describe{
+#' \strong{ CurveGetExchangesCurrent } \emph{ GetExchanges (current) 🔥 }
+#' Gets exchanges.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{Curve.ExchangeDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[CurveExchangeDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ DexGetTradesCurrent } \emph{ GetTrades (current) 🔥 }
+#' Gets trades.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{Dex.TradeDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[DexTradeDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
 #' \strong{ SushiswapGetBundlesHistorical } \emph{ GetBundles (historical) }
 #' Gets bundles.
 #'
@@ -178,7 +210,7 @@
 #' }
 #' }
 #'
-#' \strong{ SushiswapGetPoolsCurrent } \emph{ GetPools (current) }
+#' \strong{ SushiswapGetPoolsCurrent } \emph{ GetPools (current) 🔥 }
 #' Gets pools.
 #'
 #' \itemize{
@@ -215,7 +247,7 @@
 #' }
 #' }
 #'
-#' \strong{ SushiswapGetPoolsHistorical } \emph{ GetPools (historical) }
+#' \strong{ SushiswapGetPoolsHistorical } \emph{ GetPools (historical) 🔥 }
 #' Gets list of pools for given filters.
 #'
 #' \itemize{
@@ -257,7 +289,7 @@
 #' }
 #' }
 #'
-#' \strong{ SushiswapGetSwapsCurrent } \emph{ GetSwaps (current) }
+#' \strong{ SushiswapGetSwapsCurrent } \emph{ GetSwaps (current) 🔥 }
 #' Gets swaps.
 #'
 #' \itemize{
@@ -273,7 +305,7 @@
 #' }
 #' }
 #'
-#' \strong{ SushiswapGetSwapsHistorical } \emph{ GetSwaps (historical) }
+#' \strong{ SushiswapGetSwapsHistorical } \emph{ GetSwaps (historical) 🔥 }
 #' Gets list of swaps for given filters.
 #'
 #' \itemize{
@@ -294,7 +326,7 @@
 #' }
 #' }
 #'
-#' \strong{ SushiswapGetTokensCurrent } \emph{ GetTokens (current) }
+#' \strong{ SushiswapGetTokensCurrent } \emph{ GetTokens (current) 🔥 }
 #' Gets tokens.
 #'
 #' \itemize{
@@ -331,7 +363,7 @@
 #' }
 #' }
 #'
-#' \strong{ SushiswapGetTokensHistorical } \emph{ GetTokens (historical) }
+#' \strong{ SushiswapGetTokensHistorical } \emph{ GetTokens (historical) 🔥 }
 #' Gets list of tokens for given filters.
 #'
 #' \itemize{
@@ -397,13 +429,39 @@
 #'
 #' @examples
 #' \dontrun{
+#' ####################  CurveGetExchangesCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #GetExchanges (current) 🔥
+#' api_instance <- SushiswapApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$CurveGetExchangesCurrent(data_file = "result.txt")
+#' result <- api_instance$CurveGetExchangesCurrent()
+#' dput(result)
+#'
+#'
+#' ####################  DexGetTradesCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #GetTrades (current) 🔥
+#' api_instance <- SushiswapApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$DexGetTradesCurrent(data_file = "result.txt")
+#' result <- api_instance$DexGetTradesCurrent()
+#' dput(result)
+#'
+#'
 #' ####################  SushiswapGetBundlesHistorical  ####################
 #'
 #' library(openapi)
-#' var_start_block <- 56 # integer |  (Optional)
-#' var_end_block <- 56 # integer |  (Optional)
-#' var_start_date <- "start_date_example" # character |  (Optional)
-#' var_end_date <- "end_date_example" # character |  (Optional)
+#' var_start_block <- 56 # integer | AAAAAAAAAA (Optional)
+#' var_end_block <- 56 # integer | BBBBBBBBBBBB (Optional)
+#' var_start_date <- "start_date_example" # character | CCCCCCCCC (Optional)
+#' var_end_date <- "end_date_example" # character | DDDDDDDDDDD (Optional)
 #'
 #' #GetBundles (historical)
 #' api_instance <- SushiswapApi$new()
@@ -541,7 +599,7 @@
 #'
 #' library(openapi)
 #'
-#' #GetPools (current)
+#' #GetPools (current) 🔥
 #' api_instance <- SushiswapApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -571,13 +629,13 @@
 #' ####################  SushiswapGetPoolsHistorical  ####################
 #'
 #' library(openapi)
-#' var_start_block <- 56 # integer |  (Optional)
-#' var_end_block <- 56 # integer |  (Optional)
-#' var_start_date <- "start_date_example" # character |  (Optional)
-#' var_end_date <- "end_date_example" # character |  (Optional)
-#' var_pool_id <- "pool_id_example" # character |  (Optional)
+#' var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
+#' var_end_block <- 56 # integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (Optional)
+#' var_start_date <- "start_date_example" # character | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (Optional)
+#' var_end_date <- "end_date_example" # character | The end date of timeframe (Optional)
+#' var_pool_id <- "pool_id_example" # character | The pool address. (Optional)
 #'
-#' #GetPools (historical)
+#' #GetPools (historical) 🔥
 #' api_instance <- SushiswapApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -608,7 +666,7 @@
 #'
 #' library(openapi)
 #'
-#' #GetSwaps (current)
+#' #GetSwaps (current) 🔥
 #' api_instance <- SushiswapApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -620,13 +678,13 @@
 #' ####################  SushiswapGetSwapsHistorical  ####################
 #'
 #' library(openapi)
-#' var_start_block <- 56 # integer |  (Optional)
-#' var_end_block <- 56 # integer |  (Optional)
-#' var_start_date <- "start_date_example" # character |  (Optional)
-#' var_end_date <- "end_date_example" # character |  (Optional)
-#' var_pool_id <- "pool_id_example" # character |  (Optional)
+#' var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
+#' var_end_block <- 56 # integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (Optional)
+#' var_start_date <- "start_date_example" # character | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (Optional)
+#' var_end_date <- "end_date_example" # character | The end date of timeframe (Optional)
+#' var_pool_id <- "pool_id_example" # character | The pool address. (Optional)
 #'
-#' #GetSwaps (historical)
+#' #GetSwaps (historical) 🔥
 #' api_instance <- SushiswapApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -639,7 +697,7 @@
 #'
 #' library(openapi)
 #'
-#' #GetTokens (current)
+#' #GetTokens (current) 🔥
 #' api_instance <- SushiswapApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -669,13 +727,13 @@
 #' ####################  SushiswapGetTokensHistorical  ####################
 #'
 #' library(openapi)
-#' var_start_block <- 56 # integer |  (Optional)
-#' var_end_block <- 56 # integer |  (Optional)
-#' var_start_date <- "start_date_example" # character |  (Optional)
-#' var_end_date <- "end_date_example" # character |  (Optional)
-#' var_token_id <- "token_id_example" # character |  (Optional)
+#' var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
+#' var_end_block <- 56 # integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (Optional)
+#' var_start_date <- "start_date_example" # character | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (Optional)
+#' var_end_date <- "end_date_example" # character | The end date of timeframe (Optional)
+#' var_token_id <- "token_id_example" # character | The token address. (Optional)
 #'
-#' #GetTokens (historical)
+#' #GetTokens (historical) 🔥
 #' api_instance <- SushiswapApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -740,15 +798,187 @@ SushiswapApi <- R6::R6Class(
         self$api_client <- ApiClient$new()
       }
     },
+    #' GetExchanges (current) 🔥
+    #'
+    #' @description
+    #' GetExchanges (current) 🔥
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[CurveExchangeDTO]
+    #' @export
+    CurveGetExchangesCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$CurveGetExchangesCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' GetExchanges (current) 🔥
+    #'
+    #' @description
+    #' GetExchanges (current) 🔥
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[CurveExchangeDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    CurveGetExchangesCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/dapps/sushiswap/exchanges/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[CurveExchangeDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' GetTrades (current) 🔥
+    #'
+    #' @description
+    #' GetTrades (current) 🔥
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[DexTradeDTO]
+    #' @export
+    DexGetTradesCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$DexGetTradesCurrentWithHttpInfo(data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' GetTrades (current) 🔥
+    #'
+    #' @description
+    #' GetTrades (current) 🔥
+    #'
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[DexTradeDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    DexGetTradesCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/dapps/sushiswap/trades/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[DexTradeDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
     #' GetBundles (historical)
     #'
     #' @description
     #' GetBundles (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
+    #' @param start_block (optional) AAAAAAAAAA
+    #' @param end_block (optional) BBBBBBBBBBBB
+    #' @param start_date (optional) CCCCCCCCC
+    #' @param end_date (optional) DDDDDDDDDDD
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[SushiswapBundleDTO]
@@ -770,10 +1000,10 @@ SushiswapApi <- R6::R6Class(
     #' @description
     #' GetBundles (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
+    #' @param start_block (optional) AAAAAAAAAA
+    #' @param end_block (optional) BBBBBBBBBBBB
+    #' @param start_date (optional) CCCCCCCCC
+    #' @param end_date (optional) DDDDDDDDDDD
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[SushiswapBundleDTO]) with additional information such as HTTP status code, headers
@@ -851,11 +1081,11 @@ SushiswapApi <- R6::R6Class(
     #' @description
     #' GetBurns (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[SushiswapBurnDTO]
@@ -877,11 +1107,11 @@ SushiswapApi <- R6::R6Class(
     #' @description
     #' GetBurns (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[SushiswapBurnDTO]) with additional information such as HTTP status code, headers
@@ -962,10 +1192,10 @@ SushiswapApi <- R6::R6Class(
     #' @description
     #' GetDayData (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[SushiswapDayDataDTO]
@@ -987,10 +1217,10 @@ SushiswapApi <- R6::R6Class(
     #' @description
     #' GetDayData (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[SushiswapDayDataDTO]) with additional information such as HTTP status code, headers
@@ -1068,10 +1298,10 @@ SushiswapApi <- R6::R6Class(
     #' @description
     #' GetFactory (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[SushiswapFactoryDTO]
@@ -1093,10 +1323,10 @@ SushiswapApi <- R6::R6Class(
     #' @description
     #' GetFactory (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[SushiswapFactoryDTO]) with additional information such as HTTP status code, headers
@@ -1174,10 +1404,10 @@ SushiswapApi <- R6::R6Class(
     #' @description
     #' GetHourData (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[SushiswapHourDataDTO]
@@ -1199,10 +1429,10 @@ SushiswapApi <- R6::R6Class(
     #' @description
     #' GetHourData (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[SushiswapHourDataDTO]) with additional information such as HTTP status code, headers
@@ -1280,11 +1510,11 @@ SushiswapApi <- R6::R6Class(
     #' @description
     #' GetLiquidityPosition (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[SushiswapLiquidityPositionDTO]
@@ -1306,11 +1536,11 @@ SushiswapApi <- R6::R6Class(
     #' @description
     #' GetLiquidityPosition (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[SushiswapLiquidityPositionDTO]) with additional information such as HTTP status code, headers
@@ -1391,11 +1621,11 @@ SushiswapApi <- R6::R6Class(
     #' @description
     #' GetLiquidityPositionSnapshot (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[SushiswapLiquidityPositionSnapshotDTO]
@@ -1417,11 +1647,11 @@ SushiswapApi <- R6::R6Class(
     #' @description
     #' GetLiquidityPositionSnapshot (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[SushiswapLiquidityPositionSnapshotDTO]) with additional information such as HTTP status code, headers
@@ -1502,11 +1732,11 @@ SushiswapApi <- R6::R6Class(
     #' @description
     #' GetMints (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[SushiswapMintDTO]
@@ -1528,11 +1758,11 @@ SushiswapApi <- R6::R6Class(
     #' @description
     #' GetMints (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[SushiswapMintDTO]) with additional information such as HTTP status code, headers
@@ -1608,10 +1838,10 @@ SushiswapApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetPools (current)
+    #' GetPools (current) 🔥
     #'
     #' @description
-    #' GetPools (current)
+    #' GetPools (current) 🔥
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
@@ -1629,10 +1859,10 @@ SushiswapApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetPools (current)
+    #' GetPools (current) 🔥
     #'
     #' @description
-    #' GetPools (current)
+    #' GetPools (current) 🔥
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
@@ -1699,11 +1929,11 @@ SushiswapApi <- R6::R6Class(
     #' @description
     #' GetPoolsDayData (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[SushiswapPairDayDataDTO]
@@ -1725,11 +1955,11 @@ SushiswapApi <- R6::R6Class(
     #' @description
     #' GetPoolsDayData (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[SushiswapPairDayDataDTO]) with additional information such as HTTP status code, headers
@@ -1805,16 +2035,16 @@ SushiswapApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetPools (historical)
+    #' GetPools (historical) 🔥
     #'
     #' @description
-    #' GetPools (historical)
+    #' GetPools (historical) 🔥
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
+    #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    #' @param start_date (optional) The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    #' @param end_date (optional) The end date of timeframe
+    #' @param pool_id (optional) The pool address.
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[SushiswapPairDTO]
@@ -1831,16 +2061,16 @@ SushiswapApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetPools (historical)
+    #' GetPools (historical) 🔥
     #'
     #' @description
-    #' GetPools (historical)
+    #' GetPools (historical) 🔥
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
+    #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    #' @param start_date (optional) The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    #' @param end_date (optional) The end date of timeframe
+    #' @param pool_id (optional) The pool address.
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[SushiswapPairDTO]) with additional information such as HTTP status code, headers
@@ -1921,11 +2151,11 @@ SushiswapApi <- R6::R6Class(
     #' @description
     #' GetPoolsHourData (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[SushiswapPairHourDataDTO]
@@ -1947,11 +2177,11 @@ SushiswapApi <- R6::R6Class(
     #' @description
     #' GetPoolsHourData (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[SushiswapPairHourDataDTO]) with additional information such as HTTP status code, headers
@@ -2027,10 +2257,10 @@ SushiswapApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetSwaps (current)
+    #' GetSwaps (current) 🔥
     #'
     #' @description
-    #' GetSwaps (current)
+    #' GetSwaps (current) 🔥
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
@@ -2048,10 +2278,10 @@ SushiswapApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetSwaps (current)
+    #' GetSwaps (current) 🔥
     #'
     #' @description
-    #' GetSwaps (current)
+    #' GetSwaps (current) 🔥
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
@@ -2113,16 +2343,16 @@ SushiswapApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetSwaps (historical)
+    #' GetSwaps (historical) 🔥
     #'
     #' @description
-    #' GetSwaps (historical)
+    #' GetSwaps (historical) 🔥
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
+    #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    #' @param start_date (optional) The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    #' @param end_date (optional) The end date of timeframe
+    #' @param pool_id (optional) The pool address.
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[SushiswapSwapDTO]
@@ -2139,16 +2369,16 @@ SushiswapApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetSwaps (historical)
+    #' GetSwaps (historical) 🔥
     #'
     #' @description
-    #' GetSwaps (historical)
+    #' GetSwaps (historical) 🔥
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
+    #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    #' @param start_date (optional) The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    #' @param end_date (optional) The end date of timeframe
+    #' @param pool_id (optional) The pool address.
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[SushiswapSwapDTO]) with additional information such as HTTP status code, headers
@@ -2224,10 +2454,10 @@ SushiswapApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetTokens (current)
+    #' GetTokens (current) 🔥
     #'
     #' @description
-    #' GetTokens (current)
+    #' GetTokens (current) 🔥
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
@@ -2245,10 +2475,10 @@ SushiswapApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetTokens (current)
+    #' GetTokens (current) 🔥
     #'
     #' @description
-    #' GetTokens (current)
+    #' GetTokens (current) 🔥
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
@@ -2315,11 +2545,11 @@ SushiswapApi <- R6::R6Class(
     #' @description
     #' GetTokensDayData (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param token_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param token_id (optional) 
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[SushiswapTokenDayDataDTO]
@@ -2341,11 +2571,11 @@ SushiswapApi <- R6::R6Class(
     #' @description
     #' GetTokensDayData (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param token_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param token_id (optional) 
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[SushiswapTokenDayDataDTO]) with additional information such as HTTP status code, headers
@@ -2421,16 +2651,16 @@ SushiswapApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetTokens (historical)
+    #' GetTokens (historical) 🔥
     #'
     #' @description
-    #' GetTokens (historical)
+    #' GetTokens (historical) 🔥
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param token_id (optional) No description
+    #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    #' @param start_date (optional) The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    #' @param end_date (optional) The end date of timeframe
+    #' @param token_id (optional) The token address.
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[SushiswapTokenDTO]
@@ -2447,16 +2677,16 @@ SushiswapApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetTokens (historical)
+    #' GetTokens (historical) 🔥
     #'
     #' @description
-    #' GetTokens (historical)
+    #' GetTokens (historical) 🔥
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param token_id (optional) No description
+    #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    #' @param start_date (optional) The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    #' @param end_date (optional) The end date of timeframe
+    #' @param token_id (optional) The token address.
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[SushiswapTokenDTO]) with additional information such as HTTP status code, headers
@@ -2537,10 +2767,10 @@ SushiswapApi <- R6::R6Class(
     #' @description
     #' GetTransactions (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[SushiswapTransactionDTO]
@@ -2562,10 +2792,10 @@ SushiswapApi <- R6::R6Class(
     #' @description
     #' GetTransactions (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[SushiswapTransactionDTO]) with additional information such as HTTP status code, headers
@@ -2643,10 +2873,10 @@ SushiswapApi <- R6::R6Class(
     #' @description
     #' GetUsers (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[SushiswapUserDTO]
@@ -2668,10 +2898,10 @@ SushiswapApi <- R6::R6Class(
     #' @description
     #' GetUsers (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[SushiswapUserDTO]) with additional information such as HTTP status code, headers

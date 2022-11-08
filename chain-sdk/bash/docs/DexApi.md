@@ -4,27 +4,30 @@ All URIs are relative to **
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**dappsDexBatchHistoricalGet**](DexApi.md#dappsDexBatchHistoricalGet) | **GET** /dapps/dex/batch/historical | 
-[**dappsDexOrdersHistoricalGet**](DexApi.md#dappsDexOrdersHistoricalGet) | **GET** /dapps/dex/orders/historical | 
-[**dappsDexPricesHistoricalGet**](DexApi.md#dappsDexPricesHistoricalGet) | **GET** /dapps/dex/prices/historical | 
-[**dappsDexSolutionHistoricalGet**](DexApi.md#dappsDexSolutionHistoricalGet) | **GET** /dapps/dex/solution/historical | 
-[**dappsDexStatsHistoricalGet**](DexApi.md#dappsDexStatsHistoricalGet) | **GET** /dapps/dex/stats/historical | 
-[**dappsDexTokensHistoricalGet**](DexApi.md#dappsDexTokensHistoricalGet) | **GET** /dapps/dex/tokens/historical | 
-[**dappsDexTradesHistoricalGet**](DexApi.md#dappsDexTradesHistoricalGet) | **GET** /dapps/dex/trades/historical | 
-[**dappsDexUsersHistoricalGet**](DexApi.md#dappsDexUsersHistoricalGet) | **GET** /dapps/dex/users/historical | 
-[**dappsDexWithdrawHistoricalGet**](DexApi.md#dappsDexWithdrawHistoricalGet) | **GET** /dapps/dex/withdraw/historical | 
-[**dappsDexWithdrawRequestHistoricalGet**](DexApi.md#dappsDexWithdrawRequestHistoricalGet) | **GET** /dapps/dex/withdrawRequest/historical | 
+[**dexGetBatchesHistorical**](DexApi.md#dexGetBatchesHistorical) | **GET** /dapps/dex/batches/historical | GetBatches (historical)
+[**dexGetDepositsHistorical**](DexApi.md#dexGetDepositsHistorical) | **GET** /dapps/dex/deposits/historical | GetDeposits (historical)
+[**dexGetOrdersHistorical**](DexApi.md#dexGetOrdersHistorical) | **GET** /dapps/dex/orders/historical | GetOrders (historical)
+[**dexGetPricesHistorical**](DexApi.md#dexGetPricesHistorical) | **GET** /dapps/dex/prices/historical | GetPrices (historical)
+[**dexGetSolutionsHistorical**](DexApi.md#dexGetSolutionsHistorical) | **GET** /dapps/dex/solutions/historical | GetSolutions (historical)
+[**dexGetStatsHistorical**](DexApi.md#dexGetStatsHistorical) | **GET** /dapps/dex/stats/historical | GetStats (historical)
+[**dexGetTokensHistorical**](DexApi.md#dexGetTokensHistorical) | **GET** /dapps/dex/tokens/historical | GetTokens (historical) 🔥
+[**dexGetTradesHistorical**](DexApi.md#dexGetTradesHistorical) | **GET** /dapps/dex/trades/historical | GetTrades (historical) 🔥
+[**dexGetUsersHistorical**](DexApi.md#dexGetUsersHistorical) | **GET** /dapps/dex/users/historical | GetUsers (historical)
+[**dexGetWithdrawsHistorical**](DexApi.md#dexGetWithdrawsHistorical) | **GET** /dapps/dex/withdraws/historical | GetWithdraws (historical)
+[**dexGetWithdrawsRequestsHistorical**](DexApi.md#dexGetWithdrawsRequestsHistorical) | **GET** /dapps/dex/withdrawsRequests/historical | GetWithdrawsRequests (historical)
 
 
 
-## dappsDexBatchHistoricalGet
+## dexGetBatchesHistorical
 
+GetBatches (historical)
 
+Gets batches.
 
 ### Example
 
 ```bash
- dappsDexBatchHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value
+ dexGetBatchesHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value
 ```
 
 ### Parameters
@@ -39,7 +42,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-(empty response body)
+[**array[DexBatchDTO]**](DexBatchDTO.md)
 
 ### Authorization
 
@@ -48,19 +51,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## dappsDexOrdersHistoricalGet
+## dexGetDepositsHistorical
 
+GetDeposits (historical)
 
+Gets deposits.
 
 ### Example
 
 ```bash
- dappsDexOrdersHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value  tokenId=value
+ dexGetDepositsHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  tokenId=value
 ```
 
 ### Parameters
@@ -76,7 +81,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-(empty response body)
+[**array[DexDepositDTO]**](DexDepositDTO.md)
 
 ### Authorization
 
@@ -85,19 +90,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## dappsDexPricesHistoricalGet
+## dexGetOrdersHistorical
 
+GetOrders (historical)
 
+Gets orders.
 
 ### Example
 
 ```bash
- dappsDexPricesHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value  tokenId=value
+ dexGetOrdersHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  tokenId=value
 ```
 
 ### Parameters
@@ -113,7 +120,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-(empty response body)
+[**array[DexOrderDTO]**](DexOrderDTO.md)
 
 ### Authorization
 
@@ -122,19 +129,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## dappsDexSolutionHistoricalGet
+## dexGetPricesHistorical
 
+GetPrices (historical)
 
+Gets prices.
 
 ### Example
 
 ```bash
- dappsDexSolutionHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value  tokenId=value
+ dexGetPricesHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  tokenId=value
 ```
 
 ### Parameters
@@ -150,7 +159,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-(empty response body)
+[**array[DexPriceDTO]**](DexPriceDTO.md)
 
 ### Authorization
 
@@ -159,55 +168,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## dappsDexStatsHistoricalGet
+## dexGetSolutionsHistorical
 
+GetSolutions (historical)
 
-
-### Example
-
-```bash
- dappsDexStatsHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **integer** |  | [optional] [default to null]
- **endBlock** | **integer** |  | [optional] [default to null]
- **startDate** | **string** |  | [optional] [default to null]
- **endDate** | **string** |  | [optional] [default to null]
-
-### Return type
-
-(empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## dappsDexTokensHistoricalGet
-
-
+Gets solutions.
 
 ### Example
 
 ```bash
- dappsDexTokensHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value  tokenId=value
+ dexGetSolutionsHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  tokenId=value
 ```
 
 ### Parameters
@@ -223,7 +198,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-(empty response body)
+[**array[DexSolutionDTO]**](DexSolutionDTO.md)
 
 ### Authorization
 
@@ -232,19 +207,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## dappsDexTradesHistoricalGet
+## dexGetStatsHistorical
 
+GetStats (historical)
 
+Gets stats.
 
 ### Example
 
 ```bash
- dappsDexTradesHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value
+ dexGetStatsHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value
 ```
 
 ### Parameters
@@ -259,7 +236,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-(empty response body)
+[**array[DexStatsDTO]**](DexStatsDTO.md)
 
 ### Authorization
 
@@ -268,55 +245,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## dappsDexUsersHistoricalGet
+## dexGetTokensHistorical
 
+GetTokens (historical) 🔥
 
-
-### Example
-
-```bash
- dappsDexUsersHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **integer** |  | [optional] [default to null]
- **endBlock** | **integer** |  | [optional] [default to null]
- **startDate** | **string** |  | [optional] [default to null]
- **endDate** | **string** |  | [optional] [default to null]
-
-### Return type
-
-(empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## dappsDexWithdrawHistoricalGet
-
-
+Gets tokens.
 
 ### Example
 
 ```bash
- dappsDexWithdrawHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value  tokenId=value
+ dexGetTokensHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  tokenId=value
 ```
 
 ### Parameters
@@ -332,7 +275,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-(empty response body)
+[**array[DexTokenDTO]**](DexTokenDTO.md)
 
 ### Authorization
 
@@ -341,19 +284,97 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## dappsDexWithdrawRequestHistoricalGet
+## dexGetTradesHistorical
 
+GetTrades (historical) 🔥
 
+Gets trades.
 
 ### Example
 
 ```bash
- dappsDexWithdrawRequestHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value  tokenId=value
+ dexGetTradesHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **integer** |  | [optional] [default to null]
+ **endBlock** | **integer** |  | [optional] [default to null]
+ **startDate** | **string** |  | [optional] [default to null]
+ **endDate** | **string** |  | [optional] [default to null]
+
+### Return type
+
+[**array[DexTradeDTO]**](DexTradeDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## dexGetUsersHistorical
+
+GetUsers (historical)
+
+Gets users.
+
+### Example
+
+```bash
+ dexGetUsersHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **integer** |  | [optional] [default to null]
+ **endBlock** | **integer** |  | [optional] [default to null]
+ **startDate** | **string** |  | [optional] [default to null]
+ **endDate** | **string** |  | [optional] [default to null]
+
+### Return type
+
+[**array[DexUserDTO]**](DexUserDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## dexGetWithdrawsHistorical
+
+GetWithdraws (historical)
+
+Gets withdraws.
+
+### Example
+
+```bash
+ dexGetWithdrawsHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  tokenId=value
 ```
 
 ### Parameters
@@ -369,7 +390,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-(empty response body)
+[**array[DexWithdrawDTO]**](DexWithdrawDTO.md)
 
 ### Authorization
 
@@ -378,7 +399,46 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## dexGetWithdrawsRequestsHistorical
+
+GetWithdrawsRequests (historical)
+
+Gets withdraws requests.
+
+### Example
+
+```bash
+ dexGetWithdrawsRequestsHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  tokenId=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **integer** |  | [optional] [default to null]
+ **endBlock** | **integer** |  | [optional] [default to null]
+ **startDate** | **string** |  | [optional] [default to null]
+ **endDate** | **string** |  | [optional] [default to null]
+ **tokenId** | **string** |  | [optional] [default to null]
+
+### Return type
+
+[**array[DexWithdrawRequestDTO]**](DexWithdrawRequestDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

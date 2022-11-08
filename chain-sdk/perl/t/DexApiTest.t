@@ -30,108 +30,119 @@ my $api = WWW::OpenAPIClient::DexApi->new();
 isa_ok($api, 'WWW::OpenAPIClient::DexApi');
 
 #
-# dapps_dex_batch_historical_get test
+# dex_get_batches__historical test
 #
 # uncomment below and update the test
-#my $dapps_dex_batch_historical_get_start_block = undef; # replace NULL with a proper value
-#my $dapps_dex_batch_historical_get_end_block = undef; # replace NULL with a proper value
-#my $dapps_dex_batch_historical_get_start_date = undef; # replace NULL with a proper value
-#my $dapps_dex_batch_historical_get_end_date = undef; # replace NULL with a proper value
-#my $dapps_dex_batch_historical_get_result = $api->dapps_dex_batch_historical_get(start_block => $dapps_dex_batch_historical_get_start_block, end_block => $dapps_dex_batch_historical_get_end_block, start_date => $dapps_dex_batch_historical_get_start_date, end_date => $dapps_dex_batch_historical_get_end_date);
+#my $dex_get_batches__historical_start_block = undef; # replace NULL with a proper value
+#my $dex_get_batches__historical_end_block = undef; # replace NULL with a proper value
+#my $dex_get_batches__historical_start_date = undef; # replace NULL with a proper value
+#my $dex_get_batches__historical_end_date = undef; # replace NULL with a proper value
+#my $dex_get_batches__historical_result = $api->dex_get_batches__historical(start_block => $dex_get_batches__historical_start_block, end_block => $dex_get_batches__historical_end_block, start_date => $dex_get_batches__historical_start_date, end_date => $dex_get_batches__historical_end_date);
 
 #
-# dapps_dex_orders_historical_get test
+# dex_get_deposits__historical test
 #
 # uncomment below and update the test
-#my $dapps_dex_orders_historical_get_start_block = undef; # replace NULL with a proper value
-#my $dapps_dex_orders_historical_get_end_block = undef; # replace NULL with a proper value
-#my $dapps_dex_orders_historical_get_start_date = undef; # replace NULL with a proper value
-#my $dapps_dex_orders_historical_get_end_date = undef; # replace NULL with a proper value
-#my $dapps_dex_orders_historical_get_token_id = undef; # replace NULL with a proper value
-#my $dapps_dex_orders_historical_get_result = $api->dapps_dex_orders_historical_get(start_block => $dapps_dex_orders_historical_get_start_block, end_block => $dapps_dex_orders_historical_get_end_block, start_date => $dapps_dex_orders_historical_get_start_date, end_date => $dapps_dex_orders_historical_get_end_date, token_id => $dapps_dex_orders_historical_get_token_id);
+#my $dex_get_deposits__historical_start_block = undef; # replace NULL with a proper value
+#my $dex_get_deposits__historical_end_block = undef; # replace NULL with a proper value
+#my $dex_get_deposits__historical_start_date = undef; # replace NULL with a proper value
+#my $dex_get_deposits__historical_end_date = undef; # replace NULL with a proper value
+#my $dex_get_deposits__historical_token_id = undef; # replace NULL with a proper value
+#my $dex_get_deposits__historical_result = $api->dex_get_deposits__historical(start_block => $dex_get_deposits__historical_start_block, end_block => $dex_get_deposits__historical_end_block, start_date => $dex_get_deposits__historical_start_date, end_date => $dex_get_deposits__historical_end_date, token_id => $dex_get_deposits__historical_token_id);
 
 #
-# dapps_dex_prices_historical_get test
+# dex_get_orders__historical test
 #
 # uncomment below and update the test
-#my $dapps_dex_prices_historical_get_start_block = undef; # replace NULL with a proper value
-#my $dapps_dex_prices_historical_get_end_block = undef; # replace NULL with a proper value
-#my $dapps_dex_prices_historical_get_start_date = undef; # replace NULL with a proper value
-#my $dapps_dex_prices_historical_get_end_date = undef; # replace NULL with a proper value
-#my $dapps_dex_prices_historical_get_token_id = undef; # replace NULL with a proper value
-#my $dapps_dex_prices_historical_get_result = $api->dapps_dex_prices_historical_get(start_block => $dapps_dex_prices_historical_get_start_block, end_block => $dapps_dex_prices_historical_get_end_block, start_date => $dapps_dex_prices_historical_get_start_date, end_date => $dapps_dex_prices_historical_get_end_date, token_id => $dapps_dex_prices_historical_get_token_id);
+#my $dex_get_orders__historical_start_block = undef; # replace NULL with a proper value
+#my $dex_get_orders__historical_end_block = undef; # replace NULL with a proper value
+#my $dex_get_orders__historical_start_date = undef; # replace NULL with a proper value
+#my $dex_get_orders__historical_end_date = undef; # replace NULL with a proper value
+#my $dex_get_orders__historical_token_id = undef; # replace NULL with a proper value
+#my $dex_get_orders__historical_result = $api->dex_get_orders__historical(start_block => $dex_get_orders__historical_start_block, end_block => $dex_get_orders__historical_end_block, start_date => $dex_get_orders__historical_start_date, end_date => $dex_get_orders__historical_end_date, token_id => $dex_get_orders__historical_token_id);
 
 #
-# dapps_dex_solution_historical_get test
+# dex_get_prices__historical test
 #
 # uncomment below and update the test
-#my $dapps_dex_solution_historical_get_start_block = undef; # replace NULL with a proper value
-#my $dapps_dex_solution_historical_get_end_block = undef; # replace NULL with a proper value
-#my $dapps_dex_solution_historical_get_start_date = undef; # replace NULL with a proper value
-#my $dapps_dex_solution_historical_get_end_date = undef; # replace NULL with a proper value
-#my $dapps_dex_solution_historical_get_token_id = undef; # replace NULL with a proper value
-#my $dapps_dex_solution_historical_get_result = $api->dapps_dex_solution_historical_get(start_block => $dapps_dex_solution_historical_get_start_block, end_block => $dapps_dex_solution_historical_get_end_block, start_date => $dapps_dex_solution_historical_get_start_date, end_date => $dapps_dex_solution_historical_get_end_date, token_id => $dapps_dex_solution_historical_get_token_id);
+#my $dex_get_prices__historical_start_block = undef; # replace NULL with a proper value
+#my $dex_get_prices__historical_end_block = undef; # replace NULL with a proper value
+#my $dex_get_prices__historical_start_date = undef; # replace NULL with a proper value
+#my $dex_get_prices__historical_end_date = undef; # replace NULL with a proper value
+#my $dex_get_prices__historical_token_id = undef; # replace NULL with a proper value
+#my $dex_get_prices__historical_result = $api->dex_get_prices__historical(start_block => $dex_get_prices__historical_start_block, end_block => $dex_get_prices__historical_end_block, start_date => $dex_get_prices__historical_start_date, end_date => $dex_get_prices__historical_end_date, token_id => $dex_get_prices__historical_token_id);
 
 #
-# dapps_dex_stats_historical_get test
+# dex_get_solutions__historical test
 #
 # uncomment below and update the test
-#my $dapps_dex_stats_historical_get_start_block = undef; # replace NULL with a proper value
-#my $dapps_dex_stats_historical_get_end_block = undef; # replace NULL with a proper value
-#my $dapps_dex_stats_historical_get_start_date = undef; # replace NULL with a proper value
-#my $dapps_dex_stats_historical_get_end_date = undef; # replace NULL with a proper value
-#my $dapps_dex_stats_historical_get_result = $api->dapps_dex_stats_historical_get(start_block => $dapps_dex_stats_historical_get_start_block, end_block => $dapps_dex_stats_historical_get_end_block, start_date => $dapps_dex_stats_historical_get_start_date, end_date => $dapps_dex_stats_historical_get_end_date);
+#my $dex_get_solutions__historical_start_block = undef; # replace NULL with a proper value
+#my $dex_get_solutions__historical_end_block = undef; # replace NULL with a proper value
+#my $dex_get_solutions__historical_start_date = undef; # replace NULL with a proper value
+#my $dex_get_solutions__historical_end_date = undef; # replace NULL with a proper value
+#my $dex_get_solutions__historical_token_id = undef; # replace NULL with a proper value
+#my $dex_get_solutions__historical_result = $api->dex_get_solutions__historical(start_block => $dex_get_solutions__historical_start_block, end_block => $dex_get_solutions__historical_end_block, start_date => $dex_get_solutions__historical_start_date, end_date => $dex_get_solutions__historical_end_date, token_id => $dex_get_solutions__historical_token_id);
 
 #
-# dapps_dex_tokens_historical_get test
+# dex_get_stats__historical test
 #
 # uncomment below and update the test
-#my $dapps_dex_tokens_historical_get_start_block = undef; # replace NULL with a proper value
-#my $dapps_dex_tokens_historical_get_end_block = undef; # replace NULL with a proper value
-#my $dapps_dex_tokens_historical_get_start_date = undef; # replace NULL with a proper value
-#my $dapps_dex_tokens_historical_get_end_date = undef; # replace NULL with a proper value
-#my $dapps_dex_tokens_historical_get_token_id = undef; # replace NULL with a proper value
-#my $dapps_dex_tokens_historical_get_result = $api->dapps_dex_tokens_historical_get(start_block => $dapps_dex_tokens_historical_get_start_block, end_block => $dapps_dex_tokens_historical_get_end_block, start_date => $dapps_dex_tokens_historical_get_start_date, end_date => $dapps_dex_tokens_historical_get_end_date, token_id => $dapps_dex_tokens_historical_get_token_id);
+#my $dex_get_stats__historical_start_block = undef; # replace NULL with a proper value
+#my $dex_get_stats__historical_end_block = undef; # replace NULL with a proper value
+#my $dex_get_stats__historical_start_date = undef; # replace NULL with a proper value
+#my $dex_get_stats__historical_end_date = undef; # replace NULL with a proper value
+#my $dex_get_stats__historical_result = $api->dex_get_stats__historical(start_block => $dex_get_stats__historical_start_block, end_block => $dex_get_stats__historical_end_block, start_date => $dex_get_stats__historical_start_date, end_date => $dex_get_stats__historical_end_date);
 
 #
-# dapps_dex_trades_historical_get test
+# dex_get_tokens__historical test
 #
 # uncomment below and update the test
-#my $dapps_dex_trades_historical_get_start_block = undef; # replace NULL with a proper value
-#my $dapps_dex_trades_historical_get_end_block = undef; # replace NULL with a proper value
-#my $dapps_dex_trades_historical_get_start_date = undef; # replace NULL with a proper value
-#my $dapps_dex_trades_historical_get_end_date = undef; # replace NULL with a proper value
-#my $dapps_dex_trades_historical_get_result = $api->dapps_dex_trades_historical_get(start_block => $dapps_dex_trades_historical_get_start_block, end_block => $dapps_dex_trades_historical_get_end_block, start_date => $dapps_dex_trades_historical_get_start_date, end_date => $dapps_dex_trades_historical_get_end_date);
+#my $dex_get_tokens__historical_start_block = undef; # replace NULL with a proper value
+#my $dex_get_tokens__historical_end_block = undef; # replace NULL with a proper value
+#my $dex_get_tokens__historical_start_date = undef; # replace NULL with a proper value
+#my $dex_get_tokens__historical_end_date = undef; # replace NULL with a proper value
+#my $dex_get_tokens__historical_token_id = undef; # replace NULL with a proper value
+#my $dex_get_tokens__historical_result = $api->dex_get_tokens__historical(start_block => $dex_get_tokens__historical_start_block, end_block => $dex_get_tokens__historical_end_block, start_date => $dex_get_tokens__historical_start_date, end_date => $dex_get_tokens__historical_end_date, token_id => $dex_get_tokens__historical_token_id);
 
 #
-# dapps_dex_users_historical_get test
+# dex_get_trades__historical test
 #
 # uncomment below and update the test
-#my $dapps_dex_users_historical_get_start_block = undef; # replace NULL with a proper value
-#my $dapps_dex_users_historical_get_end_block = undef; # replace NULL with a proper value
-#my $dapps_dex_users_historical_get_start_date = undef; # replace NULL with a proper value
-#my $dapps_dex_users_historical_get_end_date = undef; # replace NULL with a proper value
-#my $dapps_dex_users_historical_get_result = $api->dapps_dex_users_historical_get(start_block => $dapps_dex_users_historical_get_start_block, end_block => $dapps_dex_users_historical_get_end_block, start_date => $dapps_dex_users_historical_get_start_date, end_date => $dapps_dex_users_historical_get_end_date);
+#my $dex_get_trades__historical_start_block = undef; # replace NULL with a proper value
+#my $dex_get_trades__historical_end_block = undef; # replace NULL with a proper value
+#my $dex_get_trades__historical_start_date = undef; # replace NULL with a proper value
+#my $dex_get_trades__historical_end_date = undef; # replace NULL with a proper value
+#my $dex_get_trades__historical_result = $api->dex_get_trades__historical(start_block => $dex_get_trades__historical_start_block, end_block => $dex_get_trades__historical_end_block, start_date => $dex_get_trades__historical_start_date, end_date => $dex_get_trades__historical_end_date);
 
 #
-# dapps_dex_withdraw_historical_get test
+# dex_get_users__historical test
 #
 # uncomment below and update the test
-#my $dapps_dex_withdraw_historical_get_start_block = undef; # replace NULL with a proper value
-#my $dapps_dex_withdraw_historical_get_end_block = undef; # replace NULL with a proper value
-#my $dapps_dex_withdraw_historical_get_start_date = undef; # replace NULL with a proper value
-#my $dapps_dex_withdraw_historical_get_end_date = undef; # replace NULL with a proper value
-#my $dapps_dex_withdraw_historical_get_token_id = undef; # replace NULL with a proper value
-#my $dapps_dex_withdraw_historical_get_result = $api->dapps_dex_withdraw_historical_get(start_block => $dapps_dex_withdraw_historical_get_start_block, end_block => $dapps_dex_withdraw_historical_get_end_block, start_date => $dapps_dex_withdraw_historical_get_start_date, end_date => $dapps_dex_withdraw_historical_get_end_date, token_id => $dapps_dex_withdraw_historical_get_token_id);
+#my $dex_get_users__historical_start_block = undef; # replace NULL with a proper value
+#my $dex_get_users__historical_end_block = undef; # replace NULL with a proper value
+#my $dex_get_users__historical_start_date = undef; # replace NULL with a proper value
+#my $dex_get_users__historical_end_date = undef; # replace NULL with a proper value
+#my $dex_get_users__historical_result = $api->dex_get_users__historical(start_block => $dex_get_users__historical_start_block, end_block => $dex_get_users__historical_end_block, start_date => $dex_get_users__historical_start_date, end_date => $dex_get_users__historical_end_date);
 
 #
-# dapps_dex_withdraw_request_historical_get test
+# dex_get_withdraws__historical test
 #
 # uncomment below and update the test
-#my $dapps_dex_withdraw_request_historical_get_start_block = undef; # replace NULL with a proper value
-#my $dapps_dex_withdraw_request_historical_get_end_block = undef; # replace NULL with a proper value
-#my $dapps_dex_withdraw_request_historical_get_start_date = undef; # replace NULL with a proper value
-#my $dapps_dex_withdraw_request_historical_get_end_date = undef; # replace NULL with a proper value
-#my $dapps_dex_withdraw_request_historical_get_token_id = undef; # replace NULL with a proper value
-#my $dapps_dex_withdraw_request_historical_get_result = $api->dapps_dex_withdraw_request_historical_get(start_block => $dapps_dex_withdraw_request_historical_get_start_block, end_block => $dapps_dex_withdraw_request_historical_get_end_block, start_date => $dapps_dex_withdraw_request_historical_get_start_date, end_date => $dapps_dex_withdraw_request_historical_get_end_date, token_id => $dapps_dex_withdraw_request_historical_get_token_id);
+#my $dex_get_withdraws__historical_start_block = undef; # replace NULL with a proper value
+#my $dex_get_withdraws__historical_end_block = undef; # replace NULL with a proper value
+#my $dex_get_withdraws__historical_start_date = undef; # replace NULL with a proper value
+#my $dex_get_withdraws__historical_end_date = undef; # replace NULL with a proper value
+#my $dex_get_withdraws__historical_token_id = undef; # replace NULL with a proper value
+#my $dex_get_withdraws__historical_result = $api->dex_get_withdraws__historical(start_block => $dex_get_withdraws__historical_start_block, end_block => $dex_get_withdraws__historical_end_block, start_date => $dex_get_withdraws__historical_start_date, end_date => $dex_get_withdraws__historical_end_date, token_id => $dex_get_withdraws__historical_token_id);
+
+#
+# dex_get_withdraws_requests__historical test
+#
+# uncomment below and update the test
+#my $dex_get_withdraws_requests__historical_start_block = undef; # replace NULL with a proper value
+#my $dex_get_withdraws_requests__historical_end_block = undef; # replace NULL with a proper value
+#my $dex_get_withdraws_requests__historical_start_date = undef; # replace NULL with a proper value
+#my $dex_get_withdraws_requests__historical_end_date = undef; # replace NULL with a proper value
+#my $dex_get_withdraws_requests__historical_token_id = undef; # replace NULL with a proper value
+#my $dex_get_withdraws_requests__historical_result = $api->dex_get_withdraws_requests__historical(start_block => $dex_get_withdraws_requests__historical_start_block, end_block => $dex_get_withdraws_requests__historical_end_block, start_date => $dex_get_withdraws_requests__historical_start_date, end_date => $dex_get_withdraws_requests__historical_end_date, token_id => $dex_get_withdraws_requests__historical_token_id);
 

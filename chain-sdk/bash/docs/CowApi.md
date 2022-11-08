@@ -4,22 +4,24 @@ All URIs are relative to **
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**dappsCowOrdersHistoricalGet**](CowApi.md#dappsCowOrdersHistoricalGet) | **GET** /dapps/cow/orders/historical | 
-[**dappsCowSettlementHistoricalGet**](CowApi.md#dappsCowSettlementHistoricalGet) | **GET** /dapps/cow/settlement/historical | 
-[**dappsCowTokensHistoricalGet**](CowApi.md#dappsCowTokensHistoricalGet) | **GET** /dapps/cow/tokens/historical | 
-[**dappsCowTradesHistoricalGet**](CowApi.md#dappsCowTradesHistoricalGet) | **GET** /dapps/cow/trades/historical | 
-[**dappsCowUsersHistoricalGet**](CowApi.md#dappsCowUsersHistoricalGet) | **GET** /dapps/cow/users/historical | 
+[**cowGetOrdersHistorical**](CowApi.md#cowGetOrdersHistorical) | **GET** /dapps/cow/orders/historical | GetOrders (historical)
+[**cowGetSettlementsHistorical**](CowApi.md#cowGetSettlementsHistorical) | **GET** /dapps/cow/settlements/historical | GetSettlements (historical)
+[**cowGetTokensHistorical**](CowApi.md#cowGetTokensHistorical) | **GET** /dapps/cow/tokens/historical | GetTokens (historical) 🔥
+[**cowGetTradesHistorical**](CowApi.md#cowGetTradesHistorical) | **GET** /dapps/cow/trades/historical | GetTrades (historical) 🔥
+[**cowGetUsersHistorical**](CowApi.md#cowGetUsersHistorical) | **GET** /dapps/cow/users/historical | GetUsers (historical)
 
 
 
-## dappsCowOrdersHistoricalGet
+## cowGetOrdersHistorical
 
+GetOrders (historical)
 
+Gets orders.
 
 ### Example
 
 ```bash
- dappsCowOrdersHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value
+ cowGetOrdersHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value
 ```
 
 ### Parameters
@@ -34,7 +36,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-(empty response body)
+[**array[CowOrderDTO]**](CowOrderDTO.md)
 
 ### Authorization
 
@@ -43,19 +45,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## dappsCowSettlementHistoricalGet
+## cowGetSettlementsHistorical
 
+GetSettlements (historical)
 
+Gets settlements.
 
 ### Example
 
 ```bash
- dappsCowSettlementHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value
+ cowGetSettlementsHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value
 ```
 
 ### Parameters
@@ -70,7 +74,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-(empty response body)
+[**array[CowSettlementDTO]**](CowSettlementDTO.md)
 
 ### Authorization
 
@@ -79,19 +83,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## dappsCowTokensHistoricalGet
+## cowGetTokensHistorical
 
+GetTokens (historical) 🔥
 
+Gets tokens.
 
 ### Example
 
 ```bash
- dappsCowTokensHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value  tokenId=value
+ cowGetTokensHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  tokenId=value
 ```
 
 ### Parameters
@@ -107,7 +113,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-(empty response body)
+[**array[CowTokenDTO]**](CowTokenDTO.md)
 
 ### Authorization
 
@@ -116,19 +122,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## dappsCowTradesHistoricalGet
+## cowGetTradesHistorical
 
+GetTrades (historical) 🔥
 
+Gets trades.
 
 ### Example
 
 ```bash
- dappsCowTradesHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value
+ cowGetTradesHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value
 ```
 
 ### Parameters
@@ -143,7 +151,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-(empty response body)
+[**array[CowTradeDTO]**](CowTradeDTO.md)
 
 ### Authorization
 
@@ -152,19 +160,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## dappsCowUsersHistoricalGet
+## cowGetUsersHistorical
 
+GetUsers (historical)
 
+Gets users.
 
 ### Example
 
 ```bash
- dappsCowUsersHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value
+ cowGetUsersHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value
 ```
 
 ### Parameters
@@ -179,7 +189,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-(empty response body)
+[**array[CowUserDTO]**](CowUserDTO.md)
 
 ### Authorization
 
@@ -188,7 +198,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

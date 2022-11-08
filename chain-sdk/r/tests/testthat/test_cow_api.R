@@ -5,67 +5,77 @@ context("Test CowApi")
 
 api_instance <- CowApi$new()
 
-test_that("DappsCowOrdersHistoricalGet", {
-  # tests for DappsCowOrdersHistoricalGet
+test_that("CowGetOrdersHistorical", {
+  # tests for CowGetOrdersHistorical
   # base path: https://onchain.coinapi.io
+  # GetOrders (historical)
+  # Gets orders.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
   # @param start_date character  (optional)
   # @param end_date character  (optional)
-  # @return [Void]
+  # @return [array[CowOrderDTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("DappsCowSettlementHistoricalGet", {
-  # tests for DappsCowSettlementHistoricalGet
+test_that("CowGetSettlementsHistorical", {
+  # tests for CowGetSettlementsHistorical
   # base path: https://onchain.coinapi.io
+  # GetSettlements (historical)
+  # Gets settlements.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
   # @param start_date character  (optional)
   # @param end_date character  (optional)
-  # @return [Void]
+  # @return [array[CowSettlementDTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("DappsCowTokensHistoricalGet", {
-  # tests for DappsCowTokensHistoricalGet
+test_that("CowGetTokensHistorical", {
+  # tests for CowGetTokensHistorical
   # base path: https://onchain.coinapi.io
+  # GetTokens (historical) 🔥
+  # Gets tokens.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
   # @param start_date character  (optional)
   # @param end_date character  (optional)
   # @param token_id character  (optional)
-  # @return [Void]
+  # @return [array[CowTokenDTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("DappsCowTradesHistoricalGet", {
-  # tests for DappsCowTradesHistoricalGet
+test_that("CowGetTradesHistorical", {
+  # tests for CowGetTradesHistorical
   # base path: https://onchain.coinapi.io
+  # GetTrades (historical) 🔥
+  # Gets trades.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
   # @param start_date character  (optional)
   # @param end_date character  (optional)
-  # @return [Void]
+  # @return [array[CowTradeDTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("DappsCowUsersHistoricalGet", {
-  # tests for DappsCowUsersHistoricalGet
+test_that("CowGetUsersHistorical", {
+  # tests for CowGetUsersHistorical
   # base path: https://onchain.coinapi.io
+  # GetUsers (historical)
+  # Gets users.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
   # @param start_date character  (optional)
   # @param end_date character  (optional)
-  # @return [Void]
+  # @return [array[CowUserDTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")

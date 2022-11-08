@@ -4,35 +4,37 @@ All URIs are relative to **
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**dappsUniswapv2BundlesHistoricalGet**](UniswapV2Api.md#dappsUniswapv2BundlesHistoricalGet) | **GET** /dapps/uniswapv2/bundles/historical | 
-[**dappsUniswapv2BurnsHistoricalGet**](UniswapV2Api.md#dappsUniswapv2BurnsHistoricalGet) | **GET** /dapps/uniswapv2/burns/historical | 
-[**dappsUniswapv2DayDataHistoricalGet**](UniswapV2Api.md#dappsUniswapv2DayDataHistoricalGet) | **GET** /dapps/uniswapv2/dayData/historical | 
-[**dappsUniswapv2FactoryHistoricalGet**](UniswapV2Api.md#dappsUniswapv2FactoryHistoricalGet) | **GET** /dapps/uniswapv2/factory/historical | 
-[**dappsUniswapv2LiquidityPositionHistoricalGet**](UniswapV2Api.md#dappsUniswapv2LiquidityPositionHistoricalGet) | **GET** /dapps/uniswapv2/liquidityPosition/historical | 
-[**dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet**](UniswapV2Api.md#dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet) | **GET** /dapps/uniswapv2/liquidityPositionSnapshots/historical | 
-[**dappsUniswapv2MintsHistoricalGet**](UniswapV2Api.md#dappsUniswapv2MintsHistoricalGet) | **GET** /dapps/uniswapv2/mints/historical | 
-[**dappsUniswapv2PoolDayDataHistoricalGet**](UniswapV2Api.md#dappsUniswapv2PoolDayDataHistoricalGet) | **GET** /dapps/uniswapv2/poolDayData/historical | 
-[**dappsUniswapv2PoolHourDataHistoricalGet**](UniswapV2Api.md#dappsUniswapv2PoolHourDataHistoricalGet) | **GET** /dapps/uniswapv2/poolHourData/historical | 
-[**dappsUniswapv2PoolsCurrentGet**](UniswapV2Api.md#dappsUniswapv2PoolsCurrentGet) | **GET** /dapps/uniswapv2/pools/current | GetPools
-[**dappsUniswapv2PoolsHistoricalGet**](UniswapV2Api.md#dappsUniswapv2PoolsHistoricalGet) | **GET** /dapps/uniswapv2/pools/historical | 
-[**dappsUniswapv2SwapsCurrentGet**](UniswapV2Api.md#dappsUniswapv2SwapsCurrentGet) | **GET** /dapps/uniswapv2/swaps/current | GetSwaps
-[**dappsUniswapv2SwapsHistoricalGet**](UniswapV2Api.md#dappsUniswapv2SwapsHistoricalGet) | **GET** /dapps/uniswapv2/swaps/historical | 
-[**dappsUniswapv2TokenDayDataHistoricalGet**](UniswapV2Api.md#dappsUniswapv2TokenDayDataHistoricalGet) | **GET** /dapps/uniswapv2/tokenDayData/historical | 
-[**dappsUniswapv2TokensCurrentGet**](UniswapV2Api.md#dappsUniswapv2TokensCurrentGet) | **GET** /dapps/uniswapv2/tokens/current | GetTokens
-[**dappsUniswapv2TokensHistoricalGet**](UniswapV2Api.md#dappsUniswapv2TokensHistoricalGet) | **GET** /dapps/uniswapv2/tokens/historical | 
-[**dappsUniswapv2TransactionsHistoricalGet**](UniswapV2Api.md#dappsUniswapv2TransactionsHistoricalGet) | **GET** /dapps/uniswapv2/transactions/historical | 
-[**dappsUniswapv2UsersHistoricalGet**](UniswapV2Api.md#dappsUniswapv2UsersHistoricalGet) | **GET** /dapps/uniswapv2/users/historical | 
+[**uniswapV2GetBundlesHistorical**](UniswapV2Api.md#uniswapV2GetBundlesHistorical) | **GET** /dapps/uniswapv2/bundles/historical | GetBundles (historical)
+[**uniswapV2GetBurnsHistorical**](UniswapV2Api.md#uniswapV2GetBurnsHistorical) | **GET** /dapps/uniswapv2/burns/historical | GetBurns (historical)
+[**uniswapV2GetDayDataHistorical**](UniswapV2Api.md#uniswapV2GetDayDataHistorical) | **GET** /dapps/uniswapv2/dayData/historical | GetDayData (historical)
+[**uniswapV2GetFactoryHistorical**](UniswapV2Api.md#uniswapV2GetFactoryHistorical) | **GET** /dapps/uniswapv2/factory/historical | GetFactory (historical)
+[**uniswapV2GetLiquidityPositionsHistorical**](UniswapV2Api.md#uniswapV2GetLiquidityPositionsHistorical) | **GET** /dapps/uniswapv2/liquidityPositions/historical | GetLiquidityPositions (historical)
+[**uniswapV2GetLiquidityPositionsSnapshotsHistorical**](UniswapV2Api.md#uniswapV2GetLiquidityPositionsSnapshotsHistorical) | **GET** /dapps/uniswapv2/liquidityPositionsSnapshots/historical | GetLiquidityPositionsSnapshots (historical)
+[**uniswapV2GetMintsHistorical**](UniswapV2Api.md#uniswapV2GetMintsHistorical) | **GET** /dapps/uniswapv2/mints/historical | GetMints (historical)
+[**uniswapV2GetPoolsCurrent**](UniswapV2Api.md#uniswapV2GetPoolsCurrent) | **GET** /dapps/uniswapv2/pools/current | GetPools (current) 🔥
+[**uniswapV2GetPoolsDayDataHistorical**](UniswapV2Api.md#uniswapV2GetPoolsDayDataHistorical) | **GET** /dapps/uniswapv2/poolsDayData/historical | GetPoolsDayData (historical)
+[**uniswapV2GetPoolsHistorical**](UniswapV2Api.md#uniswapV2GetPoolsHistorical) | **GET** /dapps/uniswapv2/pools/historical | GetPools (historical) 🔥
+[**uniswapV2GetPoolsHourDataHistorical**](UniswapV2Api.md#uniswapV2GetPoolsHourDataHistorical) | **GET** /dapps/uniswapv2/poolsHourData/historical | GetPoolsHourData (historical)
+[**uniswapV2GetSwapsCurrent**](UniswapV2Api.md#uniswapV2GetSwapsCurrent) | **GET** /dapps/uniswapv2/swaps/current | GetSwaps (current) 🔥
+[**uniswapV2GetSwapsHistorical**](UniswapV2Api.md#uniswapV2GetSwapsHistorical) | **GET** /dapps/uniswapv2/swaps/historical | GetSwaps (historical) 🔥
+[**uniswapV2GetTokensCurrent**](UniswapV2Api.md#uniswapV2GetTokensCurrent) | **GET** /dapps/uniswapv2/tokens/current | GetTokens (current) 🔥
+[**uniswapV2GetTokensDayDataHistorical**](UniswapV2Api.md#uniswapV2GetTokensDayDataHistorical) | **GET** /dapps/uniswapv2/tokensDayData/historical | GetTokensDayData (historical)
+[**uniswapV2GetTokensHistorical**](UniswapV2Api.md#uniswapV2GetTokensHistorical) | **GET** /dapps/uniswapv2/tokens/historical | GetTokens (historical) 🔥
+[**uniswapV2GetTransactionsHistorical**](UniswapV2Api.md#uniswapV2GetTransactionsHistorical) | **GET** /dapps/uniswapv2/transactions/historical | GetTransactions (historical)
+[**uniswapV2GetUsersHistorical**](UniswapV2Api.md#uniswapV2GetUsersHistorical) | **GET** /dapps/uniswapv2/users/historical | GetUsers (historical)
 
 
 
-## dappsUniswapv2BundlesHistoricalGet
+## uniswapV2GetBundlesHistorical
 
+GetBundles (historical)
 
+Gets bundles.
 
 ### Example
 
 ```bash
- dappsUniswapv2BundlesHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value
+ uniswapV2GetBundlesHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value
 ```
 
 ### Parameters
@@ -47,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-(empty response body)
+[**array[UniswapV2BundleV2DTO]**](UniswapV2BundleV2DTO.md)
 
 ### Authorization
 
@@ -56,128 +58,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## dappsUniswapv2BurnsHistoricalGet
+## uniswapV2GetBurnsHistorical
 
+GetBurns (historical)
 
-
-### Example
-
-```bash
- dappsUniswapv2BurnsHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **integer** |  | [optional] [default to null]
- **endBlock** | **integer** |  | [optional] [default to null]
- **startDate** | **string** |  | [optional] [default to null]
- **endDate** | **string** |  | [optional] [default to null]
- **poolId** | **string** |  | [optional] [default to null]
-
-### Return type
-
-(empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## dappsUniswapv2DayDataHistoricalGet
-
-
+Gets burns.
 
 ### Example
 
 ```bash
- dappsUniswapv2DayDataHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **integer** |  | [optional] [default to null]
- **endBlock** | **integer** |  | [optional] [default to null]
- **startDate** | **string** |  | [optional] [default to null]
- **endDate** | **string** |  | [optional] [default to null]
-
-### Return type
-
-(empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## dappsUniswapv2FactoryHistoricalGet
-
-
-
-### Example
-
-```bash
- dappsUniswapv2FactoryHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **integer** |  | [optional] [default to null]
- **endBlock** | **integer** |  | [optional] [default to null]
- **startDate** | **string** |  | [optional] [default to null]
- **endDate** | **string** |  | [optional] [default to null]
-
-### Return type
-
-(empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## dappsUniswapv2LiquidityPositionHistoricalGet
-
-
-
-### Example
-
-```bash
- dappsUniswapv2LiquidityPositionHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
+ uniswapV2GetBurnsHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
 ```
 
 ### Parameters
@@ -193,7 +88,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-(empty response body)
+[**array[UniswapV2BurnV2DTO]**](UniswapV2BurnV2DTO.md)
 
 ### Authorization
 
@@ -202,19 +97,97 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet
+## uniswapV2GetDayDataHistorical
 
+GetDayData (historical)
 
+Gets uniswapv2 day data.
 
 ### Example
 
 ```bash
- dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
+ uniswapV2GetDayDataHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **integer** |  | [optional] [default to null]
+ **endBlock** | **integer** |  | [optional] [default to null]
+ **startDate** | **string** |  | [optional] [default to null]
+ **endDate** | **string** |  | [optional] [default to null]
+
+### Return type
+
+[**array[UniswapV2UniswapDayDataV2DTO]**](UniswapV2UniswapDayDataV2DTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## uniswapV2GetFactoryHistorical
+
+GetFactory (historical)
+
+Gets factory.
+
+### Example
+
+```bash
+ uniswapV2GetFactoryHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **integer** |  | [optional] [default to null]
+ **endBlock** | **integer** |  | [optional] [default to null]
+ **startDate** | **string** |  | [optional] [default to null]
+ **endDate** | **string** |  | [optional] [default to null]
+
+### Return type
+
+[**array[UniswapV2UniswapFactoryV2DTO]**](UniswapV2UniswapFactoryV2DTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## uniswapV2GetLiquidityPositionsHistorical
+
+GetLiquidityPositions (historical)
+
+Gets liquidity positions.
+
+### Example
+
+```bash
+ uniswapV2GetLiquidityPositionsHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
 ```
 
 ### Parameters
@@ -230,7 +203,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-(empty response body)
+[**array[UniswapV2LiquidityPositionV2DTO]**](UniswapV2LiquidityPositionV2DTO.md)
 
 ### Authorization
 
@@ -239,19 +212,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## dappsUniswapv2MintsHistoricalGet
+## uniswapV2GetLiquidityPositionsSnapshotsHistorical
 
+GetLiquidityPositionsSnapshots (historical)
 
+Gets liquidity positions snapshots.
 
 ### Example
 
 ```bash
- dappsUniswapv2MintsHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
+ uniswapV2GetLiquidityPositionsSnapshotsHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
 ```
 
 ### Parameters
@@ -267,7 +242,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-(empty response body)
+[**array[UniswapV2LiquidityPositionSnapshotV2DTO]**](UniswapV2LiquidityPositionSnapshotV2DTO.md)
 
 ### Authorization
 
@@ -276,19 +251,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## dappsUniswapv2PoolDayDataHistoricalGet
+## uniswapV2GetMintsHistorical
 
+GetMints (historical)
 
+Gets mints.
 
 ### Example
 
 ```bash
- dappsUniswapv2PoolDayDataHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
+ uniswapV2GetMintsHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
 ```
 
 ### Parameters
@@ -304,7 +281,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-(empty response body)
+[**array[UniswapV2MintV2DTO]**](UniswapV2MintV2DTO.md)
 
 ### Authorization
 
@@ -313,19 +290,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## dappsUniswapv2PoolHourDataHistoricalGet
+## uniswapV2GetPoolsCurrent
 
+GetPools (current) 🔥
 
+Gets pools.
 
 ### Example
 
 ```bash
- dappsUniswapv2PoolHourDataHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
+ uniswapV2GetPoolsCurrent  filter_pool_id=value
 ```
 
 ### Parameters
@@ -333,44 +312,7 @@ No authorization required
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startBlock** | **integer** |  | [optional] [default to null]
- **endBlock** | **integer** |  | [optional] [default to null]
- **startDate** | **string** |  | [optional] [default to null]
- **endDate** | **string** |  | [optional] [default to null]
- **poolId** | **string** |  | [optional] [default to null]
-
-### Return type
-
-(empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## dappsUniswapv2PoolsCurrentGet
-
-GetPools
-
-### Example
-
-```bash
- dappsUniswapv2PoolsCurrentGet  filter_pool_id=value
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **filterPoolId** | **string** | Filter pool id | [optional] [default to null]
+ **filterPoolId** | **string** |  | [optional] [default to null]
 
 ### Return type
 
@@ -388,14 +330,16 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## dappsUniswapv2PoolsHistoricalGet
+## uniswapV2GetPoolsDayDataHistorical
 
+GetPoolsDayData (historical)
 
+Gets pools day data.
 
 ### Example
 
 ```bash
- dappsUniswapv2PoolsHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
+ uniswapV2GetPoolsDayDataHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
 ```
 
 ### Parameters
@@ -411,7 +355,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-(empty response body)
+[**array[UniswapV2PairDayDataV2DTO]**](UniswapV2PairDayDataV2DTO.md)
 
 ### Authorization
 
@@ -420,19 +364,99 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## dappsUniswapv2SwapsCurrentGet
+## uniswapV2GetPoolsHistorical
 
-GetSwaps
+GetPools (historical) 🔥
+
+Gets pools.
 
 ### Example
 
 ```bash
- dappsUniswapv2SwapsCurrentGet
+ uniswapV2GetPoolsHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **integer** |  | [optional] [default to null]
+ **endBlock** | **integer** |  | [optional] [default to null]
+ **startDate** | **string** |  | [optional] [default to null]
+ **endDate** | **string** |  | [optional] [default to null]
+ **poolId** | **string** |  | [optional] [default to null]
+
+### Return type
+
+[**array[UniswapV2PairV2DTO]**](UniswapV2PairV2DTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## uniswapV2GetPoolsHourDataHistorical
+
+GetPoolsHourData (historical)
+
+Gets pools tracked each our.
+
+### Example
+
+```bash
+ uniswapV2GetPoolsHourDataHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **integer** |  | [optional] [default to null]
+ **endBlock** | **integer** |  | [optional] [default to null]
+ **startDate** | **string** |  | [optional] [default to null]
+ **endDate** | **string** |  | [optional] [default to null]
+ **poolId** | **string** |  | [optional] [default to null]
+
+### Return type
+
+[**array[UniswapV2PairHourDataV2DTO]**](UniswapV2PairHourDataV2DTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## uniswapV2GetSwapsCurrent
+
+GetSwaps (current) 🔥
+
+Gets swaps.
+
+### Example
+
+```bash
+ uniswapV2GetSwapsCurrent
 ```
 
 ### Parameters
@@ -455,14 +479,16 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## dappsUniswapv2SwapsHistoricalGet
+## uniswapV2GetSwapsHistorical
 
+GetSwaps (historical) 🔥
 
+Gets swaps.
 
 ### Example
 
 ```bash
- dappsUniswapv2SwapsHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
+ uniswapV2GetSwapsHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  poolId=value
 ```
 
 ### Parameters
@@ -478,7 +504,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-(empty response body)
+[**array[UniswapV2SwapV2DTO]**](UniswapV2SwapV2DTO.md)
 
 ### Authorization
 
@@ -487,56 +513,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## dappsUniswapv2TokenDayDataHistoricalGet
+## uniswapV2GetTokensCurrent
 
+GetTokens (current) 🔥
 
-
-### Example
-
-```bash
- dappsUniswapv2TokenDayDataHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value  tokenId=value
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **integer** |  | [optional] [default to null]
- **endBlock** | **integer** |  | [optional] [default to null]
- **startDate** | **string** |  | [optional] [default to null]
- **endDate** | **string** |  | [optional] [default to null]
- **tokenId** | **string** |  | [optional] [default to null]
-
-### Return type
-
-(empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## dappsUniswapv2TokensCurrentGet
-
-GetTokens
+Gets tokens.
 
 ### Example
 
 ```bash
- dappsUniswapv2TokensCurrentGet
+ uniswapV2GetTokensCurrent
 ```
 
 ### Parameters
@@ -559,14 +550,16 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## dappsUniswapv2TokensHistoricalGet
+## uniswapV2GetTokensDayDataHistorical
 
+GetTokensDayData (historical)
 
+Gets tokens day data.
 
 ### Example
 
 ```bash
- dappsUniswapv2TokensHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value  tokenId=value
+ uniswapV2GetTokensDayDataHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  tokenId=value
 ```
 
 ### Parameters
@@ -582,7 +575,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-(empty response body)
+[**array[UniswapV2TokenDayDataV2DTO]**](UniswapV2TokenDayDataV2DTO.md)
 
 ### Authorization
 
@@ -591,19 +584,60 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## dappsUniswapv2TransactionsHistoricalGet
+## uniswapV2GetTokensHistorical
 
+GetTokens (historical) 🔥
 
+Gets tokens.
 
 ### Example
 
 ```bash
- dappsUniswapv2TransactionsHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value
+ uniswapV2GetTokensHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value  tokenId=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **integer** |  | [optional] [default to null]
+ **endBlock** | **integer** |  | [optional] [default to null]
+ **startDate** | **string** |  | [optional] [default to null]
+ **endDate** | **string** |  | [optional] [default to null]
+ **tokenId** | **string** |  | [optional] [default to null]
+
+### Return type
+
+[**array[UniswapV2TokenV2DTO]**](UniswapV2TokenV2DTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## uniswapV2GetTransactionsHistorical
+
+GetTransactions (historical)
+
+Gets transactions.
+
+### Example
+
+```bash
+ uniswapV2GetTransactionsHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value
 ```
 
 ### Parameters
@@ -618,7 +652,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-(empty response body)
+[**array[UniswapV2TransactionV2DTO]**](UniswapV2TransactionV2DTO.md)
 
 ### Authorization
 
@@ -627,19 +661,21 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## dappsUniswapv2UsersHistoricalGet
+## uniswapV2GetUsersHistorical
 
+GetUsers (historical)
 
+Gets users.
 
 ### Example
 
 ```bash
- dappsUniswapv2UsersHistoricalGet  startBlock=value  endBlock=value  startDate=value  endDate=value
+ uniswapV2GetUsersHistorical  startBlock=value  endBlock=value  startDate=value  endDate=value
 ```
 
 ### Parameters
@@ -654,7 +690,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-(empty response body)
+[**array[UniswapV2UserV2DTO]**](UniswapV2UserV2DTO.md)
 
 ### Authorization
 
@@ -663,7 +699,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
-- **Accept**: Not Applicable
+- **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

@@ -73,396 +73,396 @@ class UniswapV3ApiTest extends TestCase
     }
 
     /**
-     * Test case for dappsUniswapv3BundleCurrentGet
+     * Test case for uniswapV3GetBundlesCurrent
      *
-     * GetBundles.
+     * GetBundles (current).
      *
      */
-    public function testDappsUniswapv3BundleCurrentGet()
+    public function testUniswapV3GetBundlesCurrent()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsUniswapv3BundlesHistoricalGet
+     * Test case for uniswapV3GetBundlesHistorical
      *
-     * .
+     * GetBundles (historical).
      *
      */
-    public function testDappsUniswapv3BundlesHistoricalGet()
+    public function testUniswapV3GetBundlesHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsUniswapv3BurnsCurrentGet
+     * Test case for uniswapV3GetBurnsCurrent
      *
-     * GetBurns.
+     * GetBurns (current).
      *
      */
-    public function testDappsUniswapv3BurnsCurrentGet()
+    public function testUniswapV3GetBurnsCurrent()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsUniswapv3BurnsHistoricalGet
+     * Test case for uniswapV3GetBurnsHistorical
      *
-     * .
+     * GetBurns (historical).
      *
      */
-    public function testDappsUniswapv3BurnsHistoricalGet()
+    public function testUniswapV3GetBurnsHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsUniswapv3DayDataHistoricalGet
+     * Test case for uniswapV3GetDayDataCurrent
      *
-     * .
+     * GetDayData (current).
      *
      */
-    public function testDappsUniswapv3DayDataHistoricalGet()
+    public function testUniswapV3GetDayDataCurrent()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsUniswapv3FactoryCurrentGet
+     * Test case for uniswapV3GetDayDataHistorical
      *
-     * GetFactory.
+     * GetDayData (historical).
      *
      */
-    public function testDappsUniswapv3FactoryCurrentGet()
+    public function testUniswapV3GetDayDataHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsUniswapv3FactoryHistoricalGet
+     * Test case for uniswapV3GetFactoryCurrent
      *
-     * .
+     * GetFactory (current).
      *
      */
-    public function testDappsUniswapv3FactoryHistoricalGet()
+    public function testUniswapV3GetFactoryCurrent()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsUniswapv3MintsCurrentGet
+     * Test case for uniswapV3GetFactoryHistorical
      *
-     * GetMints.
+     * GetFactory (historical).
      *
      */
-    public function testDappsUniswapv3MintsCurrentGet()
+    public function testUniswapV3GetFactoryHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsUniswapv3MintsHistoricalGet
+     * Test case for uniswapV3GetMintsCurrent
      *
-     * .
+     * GetMints (current).
      *
      */
-    public function testDappsUniswapv3MintsHistoricalGet()
+    public function testUniswapV3GetMintsCurrent()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsUniswapv3PoolDayDataHistoricalGet
+     * Test case for uniswapV3GetMintsHistorical
      *
-     * .
+     * GetMints (historical).
      *
      */
-    public function testDappsUniswapv3PoolDayDataHistoricalGet()
+    public function testUniswapV3GetMintsHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsUniswapv3PoolHourDataHistoricalGet
+     * Test case for uniswapV3GetPoolsCurrent
      *
-     * .
+     * GetPools (current) 🔥.
      *
      */
-    public function testDappsUniswapv3PoolHourDataHistoricalGet()
+    public function testUniswapV3GetPoolsCurrent()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsUniswapv3PoolsCurrentGet
+     * Test case for uniswapV3GetPoolsDayDataCurrent
      *
-     * GetPools.
+     * GetPoolsDayData (current).
      *
      */
-    public function testDappsUniswapv3PoolsCurrentGet()
+    public function testUniswapV3GetPoolsDayDataCurrent()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsUniswapv3PoolsDayDataCurrentGet
+     * Test case for uniswapV3GetPoolsDayDataHistorical
      *
-     * GetPoolsDayData.
+     * GetPoolsDayData (historical).
      *
      */
-    public function testDappsUniswapv3PoolsDayDataCurrentGet()
+    public function testUniswapV3GetPoolsDayDataHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsUniswapv3PoolsHistoricalGet
+     * Test case for uniswapV3GetPoolsHistorical
      *
-     * .
+     * GetPools (historical) 🔥.
      *
      */
-    public function testDappsUniswapv3PoolsHistoricalGet()
+    public function testUniswapV3GetPoolsHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsUniswapv3PoolsHourDataCurrentGet
+     * Test case for uniswapV3GetPoolsHourDataCurrent
      *
-     * GetPoolsHourData.
+     * GetPoolsHourData (current).
      *
      */
-    public function testDappsUniswapv3PoolsHourDataCurrentGet()
+    public function testUniswapV3GetPoolsHourDataCurrent()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsUniswapv3PositionSnapshotHistoricalGet
+     * Test case for uniswapV3GetPoolsHourDataHistorical
      *
-     * .
+     * GetPoolsHourData (historical).
      *
      */
-    public function testDappsUniswapv3PositionSnapshotHistoricalGet()
+    public function testUniswapV3GetPoolsHourDataHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsUniswapv3PositionSnapshotsCurrentGet
+     * Test case for uniswapV3GetPositionsCurrent
      *
-     * GetPositionSnapshot.
+     * GetPositions (current).
      *
      */
-    public function testDappsUniswapv3PositionSnapshotsCurrentGet()
+    public function testUniswapV3GetPositionsCurrent()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsUniswapv3PositionsCurrentGet
+     * Test case for uniswapV3GetPositionsHistorical
      *
-     * GetPositions.
+     * GetPositions (historical).
      *
      */
-    public function testDappsUniswapv3PositionsCurrentGet()
+    public function testUniswapV3GetPositionsHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsUniswapv3PositionsHistoricalGet
+     * Test case for uniswapV3GetPositionsSnaphotsHistorical
      *
-     * .
+     * GetPositionsSnaphots (historical).
      *
      */
-    public function testDappsUniswapv3PositionsHistoricalGet()
+    public function testUniswapV3GetPositionsSnaphotsHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsUniswapv3SwapsCurrentGet
+     * Test case for uniswapV3GetPositionsSnapshotsCurrent
      *
-     * GetSwaps.
+     * GetPositionsSnapshots (current).
      *
      */
-    public function testDappsUniswapv3SwapsCurrentGet()
+    public function testUniswapV3GetPositionsSnapshotsCurrent()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsUniswapv3SwapsHistoricalGet
+     * Test case for uniswapV3GetSwapsCurrent
      *
-     * .
+     * GetSwaps (current) 🔥.
      *
      */
-    public function testDappsUniswapv3SwapsHistoricalGet()
+    public function testUniswapV3GetSwapsCurrent()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsUniswapv3TickDayDataHistoricalGet
+     * Test case for uniswapV3GetSwapsHistorical
      *
-     * .
+     * GetSwaps (historical) 🔥.
      *
      */
-    public function testDappsUniswapv3TickDayDataHistoricalGet()
+    public function testUniswapV3GetSwapsHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsUniswapv3TicksCurrentGet
+     * Test case for uniswapV3GetTicksCurrent
      *
-     * GetTicks.
+     * GetTicks (current).
      *
      */
-    public function testDappsUniswapv3TicksCurrentGet()
+    public function testUniswapV3GetTicksCurrent()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsUniswapv3TicksDayDataCurrentGet
+     * Test case for uniswapV3GetTicksDayDataCurrent
      *
-     * GetTicksDayData.
+     * GetTicksDayData (current).
      *
      */
-    public function testDappsUniswapv3TicksDayDataCurrentGet()
+    public function testUniswapV3GetTicksDayDataCurrent()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsUniswapv3TicksHistoricalGet
+     * Test case for uniswapV3GetTicksDayDataHistorical
      *
-     * .
+     * GetTicksDayData (historical).
      *
      */
-    public function testDappsUniswapv3TicksHistoricalGet()
+    public function testUniswapV3GetTicksDayDataHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsUniswapv3TokenDayDataHistoricalGet
+     * Test case for uniswapV3GetTicksHistorical
      *
-     * .
+     * GetTicks (historical).
      *
      */
-    public function testDappsUniswapv3TokenDayDataHistoricalGet()
+    public function testUniswapV3GetTicksHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsUniswapv3TokenHourDataHistoricalGet
+     * Test case for uniswapV3GetTokensCurrent
      *
-     * .
+     * GetTokens (current) 🔥.
      *
      */
-    public function testDappsUniswapv3TokenHourDataHistoricalGet()
+    public function testUniswapV3GetTokensCurrent()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsUniswapv3TokensCurrentGet
+     * Test case for uniswapV3GetTokensDayDataCurrent
      *
-     * GetTokens.
+     * GetTokensDayData (current).
      *
      */
-    public function testDappsUniswapv3TokensCurrentGet()
+    public function testUniswapV3GetTokensDayDataCurrent()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsUniswapv3TokensDayDataCurrentGet
+     * Test case for uniswapV3GetTokensDayDataHistorical
      *
-     * GetTokensDayData.
+     * GetTokensDayData (historical).
      *
      */
-    public function testDappsUniswapv3TokensDayDataCurrentGet()
+    public function testUniswapV3GetTokensDayDataHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsUniswapv3TokensHistoricalGet
+     * Test case for uniswapV3GetTokensHistorical
      *
-     * .
+     * GetTokens (historical) 🔥.
      *
      */
-    public function testDappsUniswapv3TokensHistoricalGet()
+    public function testUniswapV3GetTokensHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsUniswapv3TokensHourDataCurrentGet
+     * Test case for uniswapV3GetTokensHourDataCurrent
      *
-     * GetTokensHourData.
+     * GetTokensHourData (current).
      *
      */
-    public function testDappsUniswapv3TokensHourDataCurrentGet()
+    public function testUniswapV3GetTokensHourDataCurrent()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsUniswapv3TransactionsHistoricalGet
+     * Test case for uniswapV3GetTokensHourDataHistorical
      *
-     * .
+     * GetTokensHourData (historical).
      *
      */
-    public function testDappsUniswapv3TransactionsHistoricalGet()
+    public function testUniswapV3GetTokensHourDataHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsUniswapv3UniswapDayDataCurrentGet
+     * Test case for uniswapV3GetTransactionsHistorical
      *
-     * GetUniswapDayData.
+     * GetTransactions (historical).
      *
      */
-    public function testDappsUniswapv3UniswapDayDataCurrentGet()
+    public function testUniswapV3GetTransactionsHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

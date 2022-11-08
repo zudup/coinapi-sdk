@@ -1,13 +1,45 @@
 package org.openapitools.api;
 
 import org.openapitools.api.ApiUtils
+import org.openapitools.model.CurveAccountDTO
+import org.openapitools.model.CurveAddLiquidityEventDTO
+import org.openapitools.model.CurveAdminFeeChangeLogDTO
+import org.openapitools.model.CurveAmplificationCoeffChangeLogDTO
+import org.openapitools.model.CurveCoinDTO
+import org.openapitools.model.CurveContractDTO
+import org.openapitools.model.CurveContractVersionDTO
+import org.openapitools.model.CurveDailyVolumeDTO
+import org.openapitools.model.CurveExchangeDTO
+import org.openapitools.model.CurveFeeChangeLogDTO
+import org.openapitools.model.CurveGaugeDTO
+import org.openapitools.model.CurveGaugeDepositDTO
+import org.openapitools.model.CurveGaugeLiquidityDTO
+import org.openapitools.model.CurveGaugeTotalWeightDTO
+import org.openapitools.model.CurveGaugeTypeDTO
+import org.openapitools.model.CurveGaugeTypeWeightDTO
+import org.openapitools.model.CurveGaugeWeightDTO
+import org.openapitools.model.CurveGaugeWeightVoteDTO
+import org.openapitools.model.CurveGaugeWithdrawDTO
+import org.openapitools.model.CurveHourlyVolumeDTO
+import org.openapitools.model.CurveLpTokenDTO
+import org.openapitools.model.CurvePoolDTO
+import org.openapitools.model.CurveProposalDTO
+import org.openapitools.model.CurveProposalVoteDTO
+import org.openapitools.model.CurveRemoveLiquidityEventDTO
+import org.openapitools.model.CurveRemoveLiquidityOneEventDTO
+import org.openapitools.model.CurveSystemStateDTO
+import org.openapitools.model.CurveTokenDTO
+import org.openapitools.model.CurveTransferOwnershipEventDTO
+import org.openapitools.model.CurveUnderlyingCoinDTO
+import org.openapitools.model.CurveVotingAppDTO
+import org.openapitools.model.CurveWeeklyVolumeDTO
 
 class CurveApi {
     String basePath = "https://onchain.coinapi.io"
     String versionPath = ""
     ApiUtils apiUtils = new ApiUtils();
 
-    def dappsCurveAccountsHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
+    def curveGetAccountsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
         String resourcePath = "/dapps/curve/accounts/historical"
 
         // params
@@ -34,13 +66,13 @@ class CurveApi {
 
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "",
-                    null )
+                    "GET", "array",
+                    CurveAccountDTO.class )
 
     }
 
-    def dappsCurveAddLiquidityEventHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/curve/addLiquidityEvent/historical"
+    def curveGetAddLiquidityEventsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/curve/addLiquidityEvents/historical"
 
         // params
         def queryParams = [:]
@@ -69,13 +101,13 @@ class CurveApi {
 
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "",
-                    null )
+                    "GET", "array",
+                    CurveAddLiquidityEventDTO.class )
 
     }
 
-    def dappsCurveAdminFeeChangeLogHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/curve/adminFeeChangeLog/historical"
+    def curveGetAdminFeeChangeLogsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/curve/adminFeeChangeLogs/historical"
 
         // params
         def queryParams = [:]
@@ -104,13 +136,13 @@ class CurveApi {
 
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "",
-                    null )
+                    "GET", "array",
+                    CurveAdminFeeChangeLogDTO.class )
 
     }
 
-    def dappsCurveAmplificationCoeffChangeLogHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/curve/amplificationCoeffChangeLog/historical"
+    def curveGetAmplificationCoeffChangeLogsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/curve/amplificationCoeffChangeLogs/historical"
 
         // params
         def queryParams = [:]
@@ -139,12 +171,12 @@ class CurveApi {
 
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "",
-                    null )
+                    "GET", "array",
+                    CurveAmplificationCoeffChangeLogDTO.class )
 
     }
 
-    def dappsCurveCoinsHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
+    def curveGetCoinsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
         String resourcePath = "/dapps/curve/coins/historical"
 
         // params
@@ -174,12 +206,12 @@ class CurveApi {
 
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "",
-                    null )
+                    "GET", "array",
+                    CurveCoinDTO.class )
 
     }
 
-    def dappsCurveContractsHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
+    def curveGetContractsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
         String resourcePath = "/dapps/curve/contracts/historical"
 
         // params
@@ -209,13 +241,13 @@ class CurveApi {
 
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "",
-                    null )
+                    "GET", "array",
+                    CurveContractDTO.class )
 
     }
 
-    def dappsCurveContractsVersionHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/curve/contractsVersion/historical"
+    def curveGetContractsVersionsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/curve/contractsVersions/historical"
 
         // params
         def queryParams = [:]
@@ -244,13 +276,13 @@ class CurveApi {
 
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "",
-                    null )
+                    "GET", "array",
+                    CurveContractVersionDTO.class )
 
     }
 
-    def dappsCurveDailyVolumeHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/curve/dailyVolume/historical"
+    def curveGetDailyVolumesHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/curve/dailyVolumes/historical"
 
         // params
         def queryParams = [:]
@@ -279,13 +311,13 @@ class CurveApi {
 
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "",
-                    null )
+                    "GET", "array",
+                    CurveDailyVolumeDTO.class )
 
     }
 
-    def dappsCurveFeeChangeLogHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/curve/feeChangeLog/historical"
+    def curveGetExchangesHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/curve/exchanges/historical"
 
         // params
         def queryParams = [:]
@@ -314,45 +346,13 @@ class CurveApi {
 
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "",
-                    null )
+                    "GET", "array",
+                    CurveExchangeDTO.class )
 
     }
 
-    def dappsCurveGaugeDepositHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/curve/gaugeDeposit/historical"
-
-        // params
-        def queryParams = [:]
-        def headerParams = [:]
-        def bodyParams
-        def contentType
-
-
-        if (startBlock != null) {
-            queryParams.put("startBlock", startBlock)
-        }
-        if (endBlock != null) {
-            queryParams.put("endBlock", endBlock)
-        }
-        if (startDate != null) {
-            queryParams.put("startDate", startDate)
-        }
-        if (endDate != null) {
-            queryParams.put("endDate", endDate)
-        }
-
-
-
-
-        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "",
-                    null )
-
-    }
-
-    def dappsCurveGaugeHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/curve/gauge/historical"
+    def curveGetFeeChangeLogsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/curve/feeChangeLogs/historical"
 
         // params
         def queryParams = [:]
@@ -381,13 +381,13 @@ class CurveApi {
 
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "",
-                    null )
+                    "GET", "array",
+                    CurveFeeChangeLogDTO.class )
 
     }
 
-    def dappsCurveGaugeLiquidityHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/curve/gaugeLiquidity/historical"
+    def curveGetGaugesDepositsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/curve/gaugesDeposits/historical"
 
         // params
         def queryParams = [:]
@@ -413,205 +413,13 @@ class CurveApi {
 
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "",
-                    null )
+                    "GET", "array",
+                    CurveGaugeDepositDTO.class )
 
     }
 
-    def dappsCurveGaugeTotalWeightHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/curve/gaugeTotalWeight/historical"
-
-        // params
-        def queryParams = [:]
-        def headerParams = [:]
-        def bodyParams
-        def contentType
-
-
-        if (startBlock != null) {
-            queryParams.put("startBlock", startBlock)
-        }
-        if (endBlock != null) {
-            queryParams.put("endBlock", endBlock)
-        }
-        if (startDate != null) {
-            queryParams.put("startDate", startDate)
-        }
-        if (endDate != null) {
-            queryParams.put("endDate", endDate)
-        }
-
-
-
-
-        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "",
-                    null )
-
-    }
-
-    def dappsCurveGaugeTypeHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/curve/gaugeType/historical"
-
-        // params
-        def queryParams = [:]
-        def headerParams = [:]
-        def bodyParams
-        def contentType
-
-
-        if (startBlock != null) {
-            queryParams.put("startBlock", startBlock)
-        }
-        if (endBlock != null) {
-            queryParams.put("endBlock", endBlock)
-        }
-        if (startDate != null) {
-            queryParams.put("startDate", startDate)
-        }
-        if (endDate != null) {
-            queryParams.put("endDate", endDate)
-        }
-
-
-
-
-        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "",
-                    null )
-
-    }
-
-    def dappsCurveGaugeTypeWeightHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/curve/gaugeTypeWeight/historical"
-
-        // params
-        def queryParams = [:]
-        def headerParams = [:]
-        def bodyParams
-        def contentType
-
-
-        if (startBlock != null) {
-            queryParams.put("startBlock", startBlock)
-        }
-        if (endBlock != null) {
-            queryParams.put("endBlock", endBlock)
-        }
-        if (startDate != null) {
-            queryParams.put("startDate", startDate)
-        }
-        if (endDate != null) {
-            queryParams.put("endDate", endDate)
-        }
-
-
-
-
-        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "",
-                    null )
-
-    }
-
-    def dappsCurveGaugeWeightHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/curve/gaugeWeight/historical"
-
-        // params
-        def queryParams = [:]
-        def headerParams = [:]
-        def bodyParams
-        def contentType
-
-
-        if (startBlock != null) {
-            queryParams.put("startBlock", startBlock)
-        }
-        if (endBlock != null) {
-            queryParams.put("endBlock", endBlock)
-        }
-        if (startDate != null) {
-            queryParams.put("startDate", startDate)
-        }
-        if (endDate != null) {
-            queryParams.put("endDate", endDate)
-        }
-
-
-
-
-        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "",
-                    null )
-
-    }
-
-    def dappsCurveGaugeWeightVoteHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/curve/gaugeWeightVote/historical"
-
-        // params
-        def queryParams = [:]
-        def headerParams = [:]
-        def bodyParams
-        def contentType
-
-
-        if (startBlock != null) {
-            queryParams.put("startBlock", startBlock)
-        }
-        if (endBlock != null) {
-            queryParams.put("endBlock", endBlock)
-        }
-        if (startDate != null) {
-            queryParams.put("startDate", startDate)
-        }
-        if (endDate != null) {
-            queryParams.put("endDate", endDate)
-        }
-
-
-
-
-        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "",
-                    null )
-
-    }
-
-    def dappsCurveGaugeWithdrawHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/curve/gaugeWithdraw/historical"
-
-        // params
-        def queryParams = [:]
-        def headerParams = [:]
-        def bodyParams
-        def contentType
-
-
-        if (startBlock != null) {
-            queryParams.put("startBlock", startBlock)
-        }
-        if (endBlock != null) {
-            queryParams.put("endBlock", endBlock)
-        }
-        if (startDate != null) {
-            queryParams.put("startDate", startDate)
-        }
-        if (endDate != null) {
-            queryParams.put("endDate", endDate)
-        }
-
-
-
-
-        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "",
-                    null )
-
-    }
-
-    def dappsCurveHourlyVolumeHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/curve/hourlyVolume/historical"
+    def curveGetGaugesHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/curve/gauges/historical"
 
         // params
         def queryParams = [:]
@@ -640,13 +448,237 @@ class CurveApi {
 
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "",
-                    null )
+                    "GET", "array",
+                    CurveGaugeDTO.class )
 
     }
 
-    def dappsCurveLpTokenHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/curve/lpToken/historical"
+    def curveGetGaugesLiquidityHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/curve/gaugesLiquidity/historical"
+
+        // params
+        def queryParams = [:]
+        def headerParams = [:]
+        def bodyParams
+        def contentType
+
+
+        if (startBlock != null) {
+            queryParams.put("startBlock", startBlock)
+        }
+        if (endBlock != null) {
+            queryParams.put("endBlock", endBlock)
+        }
+        if (startDate != null) {
+            queryParams.put("startDate", startDate)
+        }
+        if (endDate != null) {
+            queryParams.put("endDate", endDate)
+        }
+
+
+
+
+        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
+                    "GET", "array",
+                    CurveGaugeLiquidityDTO.class )
+
+    }
+
+    def curveGetGaugesTotalWeightsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/curve/gaugesTotalWeights/historical"
+
+        // params
+        def queryParams = [:]
+        def headerParams = [:]
+        def bodyParams
+        def contentType
+
+
+        if (startBlock != null) {
+            queryParams.put("startBlock", startBlock)
+        }
+        if (endBlock != null) {
+            queryParams.put("endBlock", endBlock)
+        }
+        if (startDate != null) {
+            queryParams.put("startDate", startDate)
+        }
+        if (endDate != null) {
+            queryParams.put("endDate", endDate)
+        }
+
+
+
+
+        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
+                    "GET", "array",
+                    CurveGaugeTotalWeightDTO.class )
+
+    }
+
+    def curveGetGaugesTypesHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/curve/gaugesTypes/historical"
+
+        // params
+        def queryParams = [:]
+        def headerParams = [:]
+        def bodyParams
+        def contentType
+
+
+        if (startBlock != null) {
+            queryParams.put("startBlock", startBlock)
+        }
+        if (endBlock != null) {
+            queryParams.put("endBlock", endBlock)
+        }
+        if (startDate != null) {
+            queryParams.put("startDate", startDate)
+        }
+        if (endDate != null) {
+            queryParams.put("endDate", endDate)
+        }
+
+
+
+
+        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
+                    "GET", "array",
+                    CurveGaugeTypeDTO.class )
+
+    }
+
+    def curveGetGaugesTypesWeightsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/curve/gaugesTypesWeights/historical"
+
+        // params
+        def queryParams = [:]
+        def headerParams = [:]
+        def bodyParams
+        def contentType
+
+
+        if (startBlock != null) {
+            queryParams.put("startBlock", startBlock)
+        }
+        if (endBlock != null) {
+            queryParams.put("endBlock", endBlock)
+        }
+        if (startDate != null) {
+            queryParams.put("startDate", startDate)
+        }
+        if (endDate != null) {
+            queryParams.put("endDate", endDate)
+        }
+
+
+
+
+        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
+                    "GET", "array",
+                    CurveGaugeTypeWeightDTO.class )
+
+    }
+
+    def curveGetGaugesWeightsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/curve/gaugesWeights/historical"
+
+        // params
+        def queryParams = [:]
+        def headerParams = [:]
+        def bodyParams
+        def contentType
+
+
+        if (startBlock != null) {
+            queryParams.put("startBlock", startBlock)
+        }
+        if (endBlock != null) {
+            queryParams.put("endBlock", endBlock)
+        }
+        if (startDate != null) {
+            queryParams.put("startDate", startDate)
+        }
+        if (endDate != null) {
+            queryParams.put("endDate", endDate)
+        }
+
+
+
+
+        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
+                    "GET", "array",
+                    CurveGaugeWeightDTO.class )
+
+    }
+
+    def curveGetGaugesWeightsVotesHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/curve/gaugesWeightsVotes/historical"
+
+        // params
+        def queryParams = [:]
+        def headerParams = [:]
+        def bodyParams
+        def contentType
+
+
+        if (startBlock != null) {
+            queryParams.put("startBlock", startBlock)
+        }
+        if (endBlock != null) {
+            queryParams.put("endBlock", endBlock)
+        }
+        if (startDate != null) {
+            queryParams.put("startDate", startDate)
+        }
+        if (endDate != null) {
+            queryParams.put("endDate", endDate)
+        }
+
+
+
+
+        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
+                    "GET", "array",
+                    CurveGaugeWeightVoteDTO.class )
+
+    }
+
+    def curveGetGaugesWithdrawHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/curve/gaugesWithdraws/historical"
+
+        // params
+        def queryParams = [:]
+        def headerParams = [:]
+        def bodyParams
+        def contentType
+
+
+        if (startBlock != null) {
+            queryParams.put("startBlock", startBlock)
+        }
+        if (endBlock != null) {
+            queryParams.put("endBlock", endBlock)
+        }
+        if (startDate != null) {
+            queryParams.put("startDate", startDate)
+        }
+        if (endDate != null) {
+            queryParams.put("endDate", endDate)
+        }
+
+
+
+
+        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
+                    "GET", "array",
+                    CurveGaugeWithdrawDTO.class )
+
+    }
+
+    def curveGetHourlyVolumesHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/curve/hourlyVolumes/historical"
 
         // params
         def queryParams = [:]
@@ -675,12 +707,47 @@ class CurveApi {
 
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "",
-                    null )
+                    "GET", "array",
+                    CurveHourlyVolumeDTO.class )
 
     }
 
-    def dappsCurvePoolsHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
+    def curveGetLpTokensHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/curve/lpTokens/historical"
+
+        // params
+        def queryParams = [:]
+        def headerParams = [:]
+        def bodyParams
+        def contentType
+
+
+        if (startBlock != null) {
+            queryParams.put("startBlock", startBlock)
+        }
+        if (endBlock != null) {
+            queryParams.put("endBlock", endBlock)
+        }
+        if (startDate != null) {
+            queryParams.put("startDate", startDate)
+        }
+        if (endDate != null) {
+            queryParams.put("endDate", endDate)
+        }
+        if (poolId != null) {
+            queryParams.put("poolId", poolId)
+        }
+
+
+
+
+        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
+                    "GET", "array",
+                    CurveLpTokenDTO.class )
+
+    }
+
+    def curveGetPoolsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
         String resourcePath = "/dapps/curve/pools/historical"
 
         // params
@@ -710,12 +777,12 @@ class CurveApi {
 
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "",
-                    null )
+                    "GET", "array",
+                    CurvePoolDTO.class )
 
     }
 
-    def dappsCurveProposalsHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
+    def curveGetProposalsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
         String resourcePath = "/dapps/curve/proposals/historical"
 
         // params
@@ -742,13 +809,13 @@ class CurveApi {
 
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "",
-                    null )
+                    "GET", "array",
+                    CurveProposalDTO.class )
 
     }
 
-    def dappsCurveProposalsVoteHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/curve/proposalsVote/historical"
+    def curveGetProposalsVotesHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/curve/proposalsVotes/historical"
 
         // params
         def queryParams = [:]
@@ -774,48 +841,13 @@ class CurveApi {
 
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "",
-                    null )
+                    "GET", "array",
+                    CurveProposalVoteDTO.class )
 
     }
 
-    def dappsCurveRemoveLiquidityEventHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/curve/removeLiquidityEvent/historical"
-
-        // params
-        def queryParams = [:]
-        def headerParams = [:]
-        def bodyParams
-        def contentType
-
-
-        if (startBlock != null) {
-            queryParams.put("startBlock", startBlock)
-        }
-        if (endBlock != null) {
-            queryParams.put("endBlock", endBlock)
-        }
-        if (startDate != null) {
-            queryParams.put("startDate", startDate)
-        }
-        if (endDate != null) {
-            queryParams.put("endDate", endDate)
-        }
-        if (poolId != null) {
-            queryParams.put("poolId", poolId)
-        }
-
-
-
-
-        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "",
-                    null )
-
-    }
-
-    def dappsCurveRemoveLiquidityOneEventHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/curve/removeLiquidityOneEvent/historical"
+    def curveGetRemoveLiquidityEventsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/curve/removeLiquidityEvents/historical"
 
         // params
         def queryParams = [:]
@@ -844,13 +876,13 @@ class CurveApi {
 
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "",
-                    null )
+                    "GET", "array",
+                    CurveRemoveLiquidityEventDTO.class )
 
     }
 
-    def dappsCurveSwapsHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/curve/swaps/historical"
+    def curveGetRemoveLiquidityOneEventsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/curve/removeLiquidityOneEvents/historical"
 
         // params
         def queryParams = [:]
@@ -879,13 +911,13 @@ class CurveApi {
 
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "",
-                    null )
+                    "GET", "array",
+                    CurveRemoveLiquidityOneEventDTO.class )
 
     }
 
-    def dappsCurveSystemStateHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/curve/systemState/historical"
+    def curveGetSystemStatesHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/curve/systemStates/historical"
 
         // params
         def queryParams = [:]
@@ -911,12 +943,12 @@ class CurveApi {
 
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "",
-                    null )
+                    "GET", "array",
+                    CurveSystemStateDTO.class )
 
     }
 
-    def dappsCurveTokensHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId, Closure onSuccess, Closure onFailure)  {
+    def curveGetTokensHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId, Closure onSuccess, Closure onFailure)  {
         String resourcePath = "/dapps/curve/tokens/historical"
 
         // params
@@ -946,13 +978,13 @@ class CurveApi {
 
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "",
-                    null )
+                    "GET", "array",
+                    CurveTokenDTO.class )
 
     }
 
-    def dappsCurveTransferOwnershipEventHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/curve/transferOwnershipEvent/historical"
+    def curveGetTransferOwnershipEventsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/curve/transferOwnershipEvents/historical"
 
         // params
         def queryParams = [:]
@@ -981,13 +1013,13 @@ class CurveApi {
 
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "",
-                    null )
+                    "GET", "array",
+                    CurveTransferOwnershipEventDTO.class )
 
     }
 
-    def dappsCurveUnderlyingCoinHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/curve/underlyingCoin/historical"
+    def curveGetUnderlyingCoinsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/curve/underlyingCoins/historical"
 
         // params
         def queryParams = [:]
@@ -1016,13 +1048,13 @@ class CurveApi {
 
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "",
-                    null )
+                    "GET", "array",
+                    CurveUnderlyingCoinDTO.class )
 
     }
 
-    def dappsCurveVotingAppHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/curve/votingApp/historical"
+    def curveGetVotingAppsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/curve/votingApps/historical"
 
         // params
         def queryParams = [:]
@@ -1048,13 +1080,13 @@ class CurveApi {
 
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "",
-                    null )
+                    "GET", "array",
+                    CurveVotingAppDTO.class )
 
     }
 
-    def dappsCurveWeeklyVolumeHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/curve/weeklyVolume/historical"
+    def curveGetWeeklyVolumesHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/curve/weeklyVolumes/historical"
 
         // params
         def queryParams = [:]
@@ -1083,8 +1115,8 @@ class CurveApi {
 
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "",
-                    null )
+                    "GET", "array",
+                    CurveWeeklyVolumeDTO.class )
 
     }
 

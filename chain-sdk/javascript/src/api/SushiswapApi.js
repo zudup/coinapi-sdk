@@ -13,6 +13,8 @@
 
 
 import ApiClient from "../ApiClient";
+import CurveExchangeDTO from '../model/CurveExchangeDTO';
+import DexTradeDTO from '../model/DexTradeDTO';
 import SushiswapBundleDTO from '../model/SushiswapBundleDTO';
 import SushiswapBurnDTO from '../model/SushiswapBurnDTO';
 import SushiswapDayDataDTO from '../model/SushiswapDayDataDTO';
@@ -50,6 +52,80 @@ export default class SushiswapApi {
 
 
     /**
+     * Callback function to receive the result of the curveGetExchangesCurrent operation.
+     * @callback module:api/SushiswapApi~curveGetExchangesCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/CurveExchangeDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * GetExchanges (current) 🔥
+     * Gets exchanges.
+     * @param {module:api/SushiswapApi~curveGetExchangesCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/CurveExchangeDTO>}
+     */
+    curveGetExchangesCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [CurveExchangeDTO];
+      return this.apiClient.callApi(
+        '/dapps/sushiswap/exchanges/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the dexGetTradesCurrent operation.
+     * @callback module:api/SushiswapApi~dexGetTradesCurrentCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/DexTradeDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * GetTrades (current) 🔥
+     * Gets trades.
+     * @param {module:api/SushiswapApi~dexGetTradesCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/DexTradeDTO>}
+     */
+    dexGetTradesCurrent(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [DexTradeDTO];
+      return this.apiClient.callApi(
+        '/dapps/sushiswap/trades/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the sushiswapGetBundlesHistorical operation.
      * @callback module:api/SushiswapApi~sushiswapGetBundlesHistoricalCallback
      * @param {String} error Error message, if any.
@@ -61,10 +137,10 @@ export default class SushiswapApi {
      * GetBundles (historical)
      * Gets bundles.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock 
-     * @param {Number} opts.endBlock 
-     * @param {Date} opts.startDate 
-     * @param {Date} opts.endDate 
+     * @param {Number} opts.startBlock AAAAAAAAAA
+     * @param {Number} opts.endBlock BBBBBBBBBBBB
+     * @param {Date} opts.startDate CCCCCCCCC
+     * @param {Date} opts.endDate DDDDDDDDDDD
      * @param {module:api/SushiswapApi~sushiswapGetBundlesHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/SushiswapBundleDTO>}
      */
@@ -442,7 +518,7 @@ export default class SushiswapApi {
      */
 
     /**
-     * GetPools (current)
+     * GetPools (current) 🔥
      * Gets pools.
      * @param {module:api/SushiswapApi~sushiswapGetPoolsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/SushiswapPairDTO>}
@@ -528,14 +604,14 @@ export default class SushiswapApi {
      */
 
     /**
-     * GetPools (historical)
+     * GetPools (historical) 🔥
      * Gets list of pools for given filters.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock 
-     * @param {Number} opts.endBlock 
-     * @param {Date} opts.startDate 
-     * @param {Date} opts.endDate 
-     * @param {String} opts.poolId 
+     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} opts.endDate The end date of timeframe
+     * @param {String} opts.poolId The pool address.
      * @param {module:api/SushiswapApi~sushiswapGetPoolsHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/SushiswapPairDTO>}
      */
@@ -626,7 +702,7 @@ export default class SushiswapApi {
      */
 
     /**
-     * GetSwaps (current)
+     * GetSwaps (current) 🔥
      * Gets swaps.
      * @param {module:api/SushiswapApi~sushiswapGetSwapsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/SushiswapSwapDTO>}
@@ -663,14 +739,14 @@ export default class SushiswapApi {
      */
 
     /**
-     * GetSwaps (historical)
+     * GetSwaps (historical) 🔥
      * Gets list of swaps for given filters.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock 
-     * @param {Number} opts.endBlock 
-     * @param {Date} opts.startDate 
-     * @param {Date} opts.endDate 
-     * @param {String} opts.poolId 
+     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} opts.endDate The end date of timeframe
+     * @param {String} opts.poolId The pool address.
      * @param {module:api/SushiswapApi~sushiswapGetSwapsHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/SushiswapSwapDTO>}
      */
@@ -712,7 +788,7 @@ export default class SushiswapApi {
      */
 
     /**
-     * GetTokens (current)
+     * GetTokens (current) 🔥
      * Gets tokens.
      * @param {module:api/SushiswapApi~sushiswapGetTokensCurrentCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/SushiswapTokenDTO>}
@@ -798,14 +874,14 @@ export default class SushiswapApi {
      */
 
     /**
-     * GetTokens (historical)
+     * GetTokens (historical) 🔥
      * Gets list of tokens for given filters.
      * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock 
-     * @param {Number} opts.endBlock 
-     * @param {Date} opts.startDate 
-     * @param {Date} opts.endDate 
-     * @param {String} opts.tokenId 
+     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} opts.endDate The end date of timeframe
+     * @param {String} opts.tokenId The token address.
      * @param {module:api/SushiswapApi~sushiswapGetTokensHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/SushiswapTokenDTO>}
      */

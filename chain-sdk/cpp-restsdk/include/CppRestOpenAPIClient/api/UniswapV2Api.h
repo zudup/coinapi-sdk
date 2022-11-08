@@ -23,9 +23,21 @@
 
 #include "CppRestOpenAPIClient/ApiClient.h"
 
+#include "CppRestOpenAPIClient/model/UniswapV2_BundleV2DTO.h"
+#include "CppRestOpenAPIClient/model/UniswapV2_BurnV2DTO.h"
+#include "CppRestOpenAPIClient/model/UniswapV2_LiquidityPositionSnapshotV2DTO.h"
+#include "CppRestOpenAPIClient/model/UniswapV2_LiquidityPositionV2DTO.h"
+#include "CppRestOpenAPIClient/model/UniswapV2_MintV2DTO.h"
+#include "CppRestOpenAPIClient/model/UniswapV2_PairDayDataV2DTO.h"
+#include "CppRestOpenAPIClient/model/UniswapV2_PairHourDataV2DTO.h"
 #include "CppRestOpenAPIClient/model/UniswapV2_PairV2DTO.h"
 #include "CppRestOpenAPIClient/model/UniswapV2_SwapV2DTO.h"
+#include "CppRestOpenAPIClient/model/UniswapV2_TokenDayDataV2DTO.h"
 #include "CppRestOpenAPIClient/model/UniswapV2_TokenV2DTO.h"
+#include "CppRestOpenAPIClient/model/UniswapV2_TransactionV2DTO.h"
+#include "CppRestOpenAPIClient/model/UniswapV2_UniswapDayDataV2DTO.h"
+#include "CppRestOpenAPIClient/model/UniswapV2_UniswapFactoryV2DTO.h"
+#include "CppRestOpenAPIClient/model/UniswapV2_UserV2DTO.h"
 #include <cpprest/details/basic_types.h>
 #include <boost/optional.hpp>
 
@@ -47,33 +59,33 @@ public:
     virtual ~UniswapV2Api();
 
     /// <summary>
-    /// 
+    /// GetBundles (historical)
     /// </summary>
     /// <remarks>
-    /// 
+    /// Gets bundles.
     /// </remarks>
     /// <param name="startBlock"> (optional, default to 0L)</param>
     /// <param name="endBlock"> (optional, default to 0L)</param>
     /// <param name="startDate"> (optional, default to utility::datetime())</param>
     /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    pplx::task<void> dappsUniswapv2BundlesHistoricalGet(
+    pplx::task<std::vector<std::shared_ptr<UniswapV2_BundleV2DTO>>> uniswapV2_GetBundles__historical(
         boost::optional<int64_t> startBlock,
         boost::optional<int64_t> endBlock,
         boost::optional<utility::datetime> startDate,
         boost::optional<utility::datetime> endDate
     ) const;
     /// <summary>
-    /// 
+    /// GetBurns (historical)
     /// </summary>
     /// <remarks>
-    /// 
+    /// Gets burns.
     /// </remarks>
     /// <param name="startBlock"> (optional, default to 0L)</param>
     /// <param name="endBlock"> (optional, default to 0L)</param>
     /// <param name="startDate"> (optional, default to utility::datetime())</param>
     /// <param name="endDate"> (optional, default to utility::datetime())</param>
     /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<void> dappsUniswapv2BurnsHistoricalGet(
+    pplx::task<std::vector<std::shared_ptr<UniswapV2_BurnV2DTO>>> uniswapV2_GetBurns__historical(
         boost::optional<int64_t> startBlock,
         boost::optional<int64_t> endBlock,
         boost::optional<utility::datetime> startDate,
@@ -81,49 +93,49 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// 
+    /// GetDayData (historical)
     /// </summary>
     /// <remarks>
-    /// 
+    /// Gets uniswapv2 day data.
     /// </remarks>
     /// <param name="startBlock"> (optional, default to 0L)</param>
     /// <param name="endBlock"> (optional, default to 0L)</param>
     /// <param name="startDate"> (optional, default to utility::datetime())</param>
     /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    pplx::task<void> dappsUniswapv2DayDataHistoricalGet(
+    pplx::task<std::vector<std::shared_ptr<UniswapV2_UniswapDayDataV2DTO>>> uniswapV2_GetDayData__historical(
         boost::optional<int64_t> startBlock,
         boost::optional<int64_t> endBlock,
         boost::optional<utility::datetime> startDate,
         boost::optional<utility::datetime> endDate
     ) const;
     /// <summary>
-    /// 
+    /// GetFactory (historical)
     /// </summary>
     /// <remarks>
-    /// 
+    /// Gets factory.
     /// </remarks>
     /// <param name="startBlock"> (optional, default to 0L)</param>
     /// <param name="endBlock"> (optional, default to 0L)</param>
     /// <param name="startDate"> (optional, default to utility::datetime())</param>
     /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    pplx::task<void> dappsUniswapv2FactoryHistoricalGet(
+    pplx::task<std::vector<std::shared_ptr<UniswapV2_UniswapFactoryV2DTO>>> uniswapV2_GetFactory__historical(
         boost::optional<int64_t> startBlock,
         boost::optional<int64_t> endBlock,
         boost::optional<utility::datetime> startDate,
         boost::optional<utility::datetime> endDate
     ) const;
     /// <summary>
-    /// 
+    /// GetLiquidityPositionsSnapshots (historical)
     /// </summary>
     /// <remarks>
-    /// 
+    /// Gets liquidity positions snapshots.
     /// </remarks>
     /// <param name="startBlock"> (optional, default to 0L)</param>
     /// <param name="endBlock"> (optional, default to 0L)</param>
     /// <param name="startDate"> (optional, default to utility::datetime())</param>
     /// <param name="endDate"> (optional, default to utility::datetime())</param>
     /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<void> dappsUniswapv2LiquidityPositionHistoricalGet(
+    pplx::task<std::vector<std::shared_ptr<UniswapV2_LiquidityPositionSnapshotV2DTO>>> uniswapV2_GetLiquidityPositionsSnapshots__historical(
         boost::optional<int64_t> startBlock,
         boost::optional<int64_t> endBlock,
         boost::optional<utility::datetime> startDate,
@@ -131,17 +143,17 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// 
+    /// GetLiquidityPositions (historical)
     /// </summary>
     /// <remarks>
-    /// 
+    /// Gets liquidity positions.
     /// </remarks>
     /// <param name="startBlock"> (optional, default to 0L)</param>
     /// <param name="endBlock"> (optional, default to 0L)</param>
     /// <param name="startDate"> (optional, default to utility::datetime())</param>
     /// <param name="endDate"> (optional, default to utility::datetime())</param>
     /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<void> dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet(
+    pplx::task<std::vector<std::shared_ptr<UniswapV2_LiquidityPositionV2DTO>>> uniswapV2_GetLiquidityPositions__historical(
         boost::optional<int64_t> startBlock,
         boost::optional<int64_t> endBlock,
         boost::optional<utility::datetime> startDate,
@@ -149,17 +161,17 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// 
+    /// GetMints (historical)
     /// </summary>
     /// <remarks>
-    /// 
+    /// Gets mints.
     /// </remarks>
     /// <param name="startBlock"> (optional, default to 0L)</param>
     /// <param name="endBlock"> (optional, default to 0L)</param>
     /// <param name="startDate"> (optional, default to utility::datetime())</param>
     /// <param name="endDate"> (optional, default to utility::datetime())</param>
     /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<void> dappsUniswapv2MintsHistoricalGet(
+    pplx::task<std::vector<std::shared_ptr<UniswapV2_MintV2DTO>>> uniswapV2_GetMints__historical(
         boost::optional<int64_t> startBlock,
         boost::optional<int64_t> endBlock,
         boost::optional<utility::datetime> startDate,
@@ -167,17 +179,17 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// 
+    /// GetPoolsDayData (historical)
     /// </summary>
     /// <remarks>
-    /// 
+    /// Gets pools day data.
     /// </remarks>
     /// <param name="startBlock"> (optional, default to 0L)</param>
     /// <param name="endBlock"> (optional, default to 0L)</param>
     /// <param name="startDate"> (optional, default to utility::datetime())</param>
     /// <param name="endDate"> (optional, default to utility::datetime())</param>
     /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<void> dappsUniswapv2PoolDayDataHistoricalGet(
+    pplx::task<std::vector<std::shared_ptr<UniswapV2_PairDayDataV2DTO>>> uniswapV2_GetPoolsDayData__historical(
         boost::optional<int64_t> startBlock,
         boost::optional<int64_t> endBlock,
         boost::optional<utility::datetime> startDate,
@@ -185,17 +197,17 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// 
+    /// GetPoolsHourData (historical)
     /// </summary>
     /// <remarks>
-    /// 
+    /// Gets pools tracked each our.
     /// </remarks>
     /// <param name="startBlock"> (optional, default to 0L)</param>
     /// <param name="endBlock"> (optional, default to 0L)</param>
     /// <param name="startDate"> (optional, default to utility::datetime())</param>
     /// <param name="endDate"> (optional, default to utility::datetime())</param>
     /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<void> dappsUniswapv2PoolHourDataHistoricalGet(
+    pplx::task<std::vector<std::shared_ptr<UniswapV2_PairHourDataV2DTO>>> uniswapV2_GetPoolsHourData__historical(
         boost::optional<int64_t> startBlock,
         boost::optional<int64_t> endBlock,
         boost::optional<utility::datetime> startDate,
@@ -203,27 +215,27 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// GetPools
+    /// GetPools (current) 🔥
     /// </summary>
     /// <remarks>
-    /// 
+    /// Gets pools.
     /// </remarks>
-    /// <param name="filterPoolId">Filter pool id (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<UniswapV2_PairV2DTO>>> dappsUniswapv2PoolsCurrentGet(
+    /// <param name="filterPoolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    pplx::task<std::vector<std::shared_ptr<UniswapV2_PairV2DTO>>> uniswapV2_GetPools__current(
         boost::optional<utility::string_t> filterPoolId
     ) const;
     /// <summary>
-    /// 
+    /// GetPools (historical) 🔥
     /// </summary>
     /// <remarks>
-    /// 
+    /// Gets pools.
     /// </remarks>
     /// <param name="startBlock"> (optional, default to 0L)</param>
     /// <param name="endBlock"> (optional, default to 0L)</param>
     /// <param name="startDate"> (optional, default to utility::datetime())</param>
     /// <param name="endDate"> (optional, default to utility::datetime())</param>
     /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<void> dappsUniswapv2PoolsHistoricalGet(
+    pplx::task<std::vector<std::shared_ptr<UniswapV2_PairV2DTO>>> uniswapV2_GetPools__historical(
         boost::optional<int64_t> startBlock,
         boost::optional<int64_t> endBlock,
         boost::optional<utility::datetime> startDate,
@@ -231,25 +243,25 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// GetSwaps
+    /// GetSwaps (current) 🔥
     /// </summary>
     /// <remarks>
-    /// 
+    /// Gets swaps.
     /// </remarks>
-    pplx::task<std::vector<std::shared_ptr<UniswapV2_SwapV2DTO>>> dappsUniswapv2SwapsCurrentGet(
+    pplx::task<std::vector<std::shared_ptr<UniswapV2_SwapV2DTO>>> uniswapV2_GetSwaps__current(
     ) const;
     /// <summary>
-    /// 
+    /// GetSwaps (historical) 🔥
     /// </summary>
     /// <remarks>
-    /// 
+    /// Gets swaps.
     /// </remarks>
     /// <param name="startBlock"> (optional, default to 0L)</param>
     /// <param name="endBlock"> (optional, default to 0L)</param>
     /// <param name="startDate"> (optional, default to utility::datetime())</param>
     /// <param name="endDate"> (optional, default to utility::datetime())</param>
     /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<void> dappsUniswapv2SwapsHistoricalGet(
+    pplx::task<std::vector<std::shared_ptr<UniswapV2_SwapV2DTO>>> uniswapV2_GetSwaps__historical(
         boost::optional<int64_t> startBlock,
         boost::optional<int64_t> endBlock,
         boost::optional<utility::datetime> startDate,
@@ -257,17 +269,17 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// 
+    /// GetTokensDayData (historical)
     /// </summary>
     /// <remarks>
-    /// 
+    /// Gets tokens day data.
     /// </remarks>
     /// <param name="startBlock"> (optional, default to 0L)</param>
     /// <param name="endBlock"> (optional, default to 0L)</param>
     /// <param name="startDate"> (optional, default to utility::datetime())</param>
     /// <param name="endDate"> (optional, default to utility::datetime())</param>
     /// <param name="tokenId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<void> dappsUniswapv2TokenDayDataHistoricalGet(
+    pplx::task<std::vector<std::shared_ptr<UniswapV2_TokenDayDataV2DTO>>> uniswapV2_GetTokensDayData__historical(
         boost::optional<int64_t> startBlock,
         boost::optional<int64_t> endBlock,
         boost::optional<utility::datetime> startDate,
@@ -275,25 +287,25 @@ public:
         boost::optional<utility::string_t> tokenId
     ) const;
     /// <summary>
-    /// GetTokens
+    /// GetTokens (current) 🔥
     /// </summary>
     /// <remarks>
-    /// 
+    /// Gets tokens.
     /// </remarks>
-    pplx::task<std::vector<std::shared_ptr<UniswapV2_TokenV2DTO>>> dappsUniswapv2TokensCurrentGet(
+    pplx::task<std::vector<std::shared_ptr<UniswapV2_TokenV2DTO>>> uniswapV2_GetTokens__current(
     ) const;
     /// <summary>
-    /// 
+    /// GetTokens (historical) 🔥
     /// </summary>
     /// <remarks>
-    /// 
+    /// Gets tokens.
     /// </remarks>
     /// <param name="startBlock"> (optional, default to 0L)</param>
     /// <param name="endBlock"> (optional, default to 0L)</param>
     /// <param name="startDate"> (optional, default to utility::datetime())</param>
     /// <param name="endDate"> (optional, default to utility::datetime())</param>
     /// <param name="tokenId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<void> dappsUniswapv2TokensHistoricalGet(
+    pplx::task<std::vector<std::shared_ptr<UniswapV2_TokenV2DTO>>> uniswapV2_GetTokens__historical(
         boost::optional<int64_t> startBlock,
         boost::optional<int64_t> endBlock,
         boost::optional<utility::datetime> startDate,
@@ -301,32 +313,32 @@ public:
         boost::optional<utility::string_t> tokenId
     ) const;
     /// <summary>
-    /// 
+    /// GetTransactions (historical)
     /// </summary>
     /// <remarks>
-    /// 
+    /// Gets transactions.
     /// </remarks>
     /// <param name="startBlock"> (optional, default to 0L)</param>
     /// <param name="endBlock"> (optional, default to 0L)</param>
     /// <param name="startDate"> (optional, default to utility::datetime())</param>
     /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    pplx::task<void> dappsUniswapv2TransactionsHistoricalGet(
+    pplx::task<std::vector<std::shared_ptr<UniswapV2_TransactionV2DTO>>> uniswapV2_GetTransactions__historical(
         boost::optional<int64_t> startBlock,
         boost::optional<int64_t> endBlock,
         boost::optional<utility::datetime> startDate,
         boost::optional<utility::datetime> endDate
     ) const;
     /// <summary>
-    /// 
+    /// GetUsers (historical)
     /// </summary>
     /// <remarks>
-    /// 
+    /// Gets users.
     /// </remarks>
     /// <param name="startBlock"> (optional, default to 0L)</param>
     /// <param name="endBlock"> (optional, default to 0L)</param>
     /// <param name="startDate"> (optional, default to utility::datetime())</param>
     /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    pplx::task<void> dappsUniswapv2UsersHistoricalGet(
+    pplx::task<std::vector<std::shared_ptr<UniswapV2_UserV2DTO>>> uniswapV2_GetUsers__historical(
         boost::optional<int64_t> startBlock,
         boost::optional<int64_t> endBlock,
         boost::optional<utility::datetime> startDate,

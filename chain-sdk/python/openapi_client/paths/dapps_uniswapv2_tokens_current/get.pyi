@@ -138,7 +138,7 @@ _all_accept_content_types = (
 
 class BaseApi(api_client.Api):
     @typing.overload
-    def _dapps_uniswapv2_tokens_current_get_oapg(
+    def _uniswap_v2_get_tokens__current_oapg(
         self,
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
@@ -149,7 +149,7 @@ class BaseApi(api_client.Api):
     ]: ...
 
     @typing.overload
-    def _dapps_uniswapv2_tokens_current_get_oapg(
+    def _uniswap_v2_get_tokens__current_oapg(
         self,
         skip_deserialization: typing_extensions.Literal[True],
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
@@ -158,7 +158,7 @@ class BaseApi(api_client.Api):
     ) -> api_client.ApiResponseWithoutDeserialization: ...
 
     @typing.overload
-    def _dapps_uniswapv2_tokens_current_get_oapg(
+    def _uniswap_v2_get_tokens__current_oapg(
         self,
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
@@ -169,7 +169,7 @@ class BaseApi(api_client.Api):
         api_client.ApiResponseWithoutDeserialization,
     ]: ...
 
-    def _dapps_uniswapv2_tokens_current_get_oapg(
+    def _uniswap_v2_get_tokens__current_oapg(
         self,
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
@@ -177,7 +177,7 @@ class BaseApi(api_client.Api):
         skip_deserialization: bool = False,
     ):
         """
-        GetTokens
+        GetTokens (current) 🔥
         :param skip_deserialization: If true then api_response.response will be set but
             api_response.body and api_response.headers will not be deserialized into schema
             class instances
@@ -213,11 +213,11 @@ class BaseApi(api_client.Api):
         return api_response
 
 
-class DappsUniswapv2TokensCurrentGet(BaseApi):
+class UniswapV2GetTokensCurrent(BaseApi):
     # this class is used by api classes that refer to endpoints with operationId fn names
 
     @typing.overload
-    def dapps_uniswapv2_tokens_current_get(
+    def uniswap_v2_get_tokens__current(
         self,
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
@@ -228,7 +228,7 @@ class DappsUniswapv2TokensCurrentGet(BaseApi):
     ]: ...
 
     @typing.overload
-    def dapps_uniswapv2_tokens_current_get(
+    def uniswap_v2_get_tokens__current(
         self,
         skip_deserialization: typing_extensions.Literal[True],
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
@@ -237,7 +237,7 @@ class DappsUniswapv2TokensCurrentGet(BaseApi):
     ) -> api_client.ApiResponseWithoutDeserialization: ...
 
     @typing.overload
-    def dapps_uniswapv2_tokens_current_get(
+    def uniswap_v2_get_tokens__current(
         self,
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
@@ -248,14 +248,14 @@ class DappsUniswapv2TokensCurrentGet(BaseApi):
         api_client.ApiResponseWithoutDeserialization,
     ]: ...
 
-    def dapps_uniswapv2_tokens_current_get(
+    def uniswap_v2_get_tokens__current(
         self,
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
         skip_deserialization: bool = False,
     ):
-        return self._dapps_uniswapv2_tokens_current_get_oapg(
+        return self._uniswap_v2_get_tokens__current_oapg(
             accept_content_types=accept_content_types,
             stream=stream,
             timeout=timeout,
@@ -305,7 +305,7 @@ class ApiForget(BaseApi):
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
         skip_deserialization: bool = False,
     ):
-        return self._dapps_uniswapv2_tokens_current_get_oapg(
+        return self._uniswap_v2_get_tokens__current_oapg(
             accept_content_types=accept_content_types,
             stream=stream,
             timeout=timeout,

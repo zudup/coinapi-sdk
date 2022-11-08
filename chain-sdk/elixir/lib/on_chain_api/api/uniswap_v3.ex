@@ -10,7 +10,8 @@ defmodule OnChainAPI.Api.UniswapV3 do
   import OnChainAPI.RequestBuilder
 
   @doc """
-  GetBundles
+  GetBundles (current)
+  Gets bundles.
 
   ### Parameters
 
@@ -22,12 +23,12 @@ defmodule OnChainAPI.Api.UniswapV3 do
   - `{:ok, [%UniswapV3BundleV3Dto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec dapps_uniswapv3_bundle_current_get(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3BundleV3Dto.t)} | {:error, Tesla.Env.t}
-  def dapps_uniswapv3_bundle_current_get(connection, _opts \\ []) do
+  @spec uniswap_v3_get_bundles__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3BundleV3Dto.t)} | {:error, Tesla.Env.t}
+  def uniswap_v3_get_bundles__current(connection, _opts \\ []) do
     request =
       %{}
       |> method(:get)
-      |> url("/dapps/uniswapv3/bundle/current")
+      |> url("/dapps/uniswapv3/bundles/current")
       |> Enum.into([])
 
     connection
@@ -38,6 +39,8 @@ defmodule OnChainAPI.Api.UniswapV3 do
   end
 
   @doc """
+  GetBundles (historical)
+  Gets bundles.
 
   ### Parameters
 
@@ -50,11 +53,11 @@ defmodule OnChainAPI.Api.UniswapV3 do
 
   ### Returns
 
-  - `{:ok, nil}` on success
+  - `{:ok, [%UniswapV3BundleV3Dto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec dapps_uniswapv3_bundles_historical_get(Tesla.Env.client, keyword()) :: {:ok, nil} | {:error, Tesla.Env.t}
-  def dapps_uniswapv3_bundles_historical_get(connection, opts \\ []) do
+  @spec uniswap_v3_get_bundles__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3BundleV3Dto.t)} | {:error, Tesla.Env.t}
+  def uniswap_v3_get_bundles__historical(connection, opts \\ []) do
     optional_params = %{
       :startBlock => :query,
       :endBlock => :query,
@@ -72,26 +75,27 @@ defmodule OnChainAPI.Api.UniswapV3 do
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, false}
+      {200, [%OnChainAPI.Model.UniswapV3BundleV3Dto{}]}
     ])
   end
 
   @doc """
-  GetBurns
+  GetBurns (current)
+  Gets burns.
 
   ### Parameters
 
   - `connection` (OnChainAPI.Connection): Connection to server
   - `opts` (keyword): Optional parameters
-    - `:filter_pool_id` (String.t): Filter pool id
+    - `:filter_pool_id` (String.t): 
 
   ### Returns
 
   - `{:ok, [%UniswapV3BurnV3Dto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec dapps_uniswapv3_burns_current_get(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3BurnV3Dto.t)} | {:error, Tesla.Env.t}
-  def dapps_uniswapv3_burns_current_get(connection, opts \\ []) do
+  @spec uniswap_v3_get_burns__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3BurnV3Dto.t)} | {:error, Tesla.Env.t}
+  def uniswap_v3_get_burns__current(connection, opts \\ []) do
     optional_params = %{
       :filter_pool_id => :query
     }
@@ -111,6 +115,8 @@ defmodule OnChainAPI.Api.UniswapV3 do
   end
 
   @doc """
+  GetBurns (historical)
+  Gets burns.
 
   ### Parameters
 
@@ -124,11 +130,11 @@ defmodule OnChainAPI.Api.UniswapV3 do
 
   ### Returns
 
-  - `{:ok, nil}` on success
+  - `{:ok, [%UniswapV3BurnV3Dto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec dapps_uniswapv3_burns_historical_get(Tesla.Env.client, keyword()) :: {:ok, nil} | {:error, Tesla.Env.t}
-  def dapps_uniswapv3_burns_historical_get(connection, opts \\ []) do
+  @spec uniswap_v3_get_burns__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3BurnV3Dto.t)} | {:error, Tesla.Env.t}
+  def uniswap_v3_get_burns__historical(connection, opts \\ []) do
     optional_params = %{
       :startBlock => :query,
       :endBlock => :query,
@@ -147,11 +153,42 @@ defmodule OnChainAPI.Api.UniswapV3 do
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, false}
+      {200, [%OnChainAPI.Model.UniswapV3BurnV3Dto{}]}
     ])
   end
 
   @doc """
+  GetDayData (current)
+  Gets uniswapv3 day data.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+
+  ### Returns
+
+  - `{:ok, [%UniswapV3UniswapDayDataV3Dto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec uniswap_v3_get_day_data__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3UniswapDayDataV3Dto.t)} | {:error, Tesla.Env.t}
+  def uniswap_v3_get_day_data__current(connection, _opts \\ []) do
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/uniswapv3/dayData/current")
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.UniswapV3UniswapDayDataV3Dto{}]}
+    ])
+  end
+
+  @doc """
+  GetDayData (historical)
+  Gets uniswapv3 day data.
 
   ### Parameters
 
@@ -164,11 +201,11 @@ defmodule OnChainAPI.Api.UniswapV3 do
 
   ### Returns
 
-  - `{:ok, nil}` on success
+  - `{:ok, [%UniswapV3UniswapDayDataV3Dto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec dapps_uniswapv3_day_data_historical_get(Tesla.Env.client, keyword()) :: {:ok, nil} | {:error, Tesla.Env.t}
-  def dapps_uniswapv3_day_data_historical_get(connection, opts \\ []) do
+  @spec uniswap_v3_get_day_data__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3UniswapDayDataV3Dto.t)} | {:error, Tesla.Env.t}
+  def uniswap_v3_get_day_data__historical(connection, opts \\ []) do
     optional_params = %{
       :startBlock => :query,
       :endBlock => :query,
@@ -186,17 +223,17 @@ defmodule OnChainAPI.Api.UniswapV3 do
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, false}
+      {200, [%OnChainAPI.Model.UniswapV3UniswapDayDataV3Dto{}]}
     ])
   end
 
   @doc """
-  GetFactory
+  GetFactory (current)
+  Gets factory.
 
   ### Parameters
 
   - `connection` (OnChainAPI.Connection): Connection to server
-  - `chain_id` (String.t): 
   - `opts` (keyword): Optional parameters
 
   ### Returns
@@ -204,8 +241,8 @@ defmodule OnChainAPI.Api.UniswapV3 do
   - `{:ok, [%UniswapV3FactoryV3Dto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec dapps_uniswapv3_factory_current_get(Tesla.Env.client, String.t, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3FactoryV3Dto.t)} | {:error, Tesla.Env.t}
-  def dapps_uniswapv3_factory_current_get(connection, chain_id, _opts \\ []) do
+  @spec uniswap_v3_get_factory__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3FactoryV3Dto.t)} | {:error, Tesla.Env.t}
+  def uniswap_v3_get_factory__current(connection, _opts \\ []) do
     request =
       %{}
       |> method(:get)
@@ -220,6 +257,8 @@ defmodule OnChainAPI.Api.UniswapV3 do
   end
 
   @doc """
+  GetFactory (historical)
+  Gets factory.
 
   ### Parameters
 
@@ -232,11 +271,11 @@ defmodule OnChainAPI.Api.UniswapV3 do
 
   ### Returns
 
-  - `{:ok, nil}` on success
+  - `{:ok, [%UniswapV3FactoryV3Dto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec dapps_uniswapv3_factory_historical_get(Tesla.Env.client, keyword()) :: {:ok, nil} | {:error, Tesla.Env.t}
-  def dapps_uniswapv3_factory_historical_get(connection, opts \\ []) do
+  @spec uniswap_v3_get_factory__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3FactoryV3Dto.t)} | {:error, Tesla.Env.t}
+  def uniswap_v3_get_factory__historical(connection, opts \\ []) do
     optional_params = %{
       :startBlock => :query,
       :endBlock => :query,
@@ -254,26 +293,27 @@ defmodule OnChainAPI.Api.UniswapV3 do
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, false}
+      {200, [%OnChainAPI.Model.UniswapV3FactoryV3Dto{}]}
     ])
   end
 
   @doc """
-  GetMints
+  GetMints (current)
+  Gets mints.
 
   ### Parameters
 
   - `connection` (OnChainAPI.Connection): Connection to server
   - `opts` (keyword): Optional parameters
-    - `:filter_pool_id` (String.t): Filter pool id
+    - `:filter_pool_id` (String.t): 
 
   ### Returns
 
   - `{:ok, [%UniswapV3MintV3Dto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec dapps_uniswapv3_mints_current_get(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3MintV3Dto.t)} | {:error, Tesla.Env.t}
-  def dapps_uniswapv3_mints_current_get(connection, opts \\ []) do
+  @spec uniswap_v3_get_mints__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3MintV3Dto.t)} | {:error, Tesla.Env.t}
+  def uniswap_v3_get_mints__current(connection, opts \\ []) do
     optional_params = %{
       :filter_pool_id => :query
     }
@@ -293,6 +333,8 @@ defmodule OnChainAPI.Api.UniswapV3 do
   end
 
   @doc """
+  GetMints (historical)
+  Gets mints.
 
   ### Parameters
 
@@ -306,11 +348,11 @@ defmodule OnChainAPI.Api.UniswapV3 do
 
   ### Returns
 
-  - `{:ok, nil}` on success
+  - `{:ok, [%UniswapV3MintV3Dto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec dapps_uniswapv3_mints_historical_get(Tesla.Env.client, keyword()) :: {:ok, nil} | {:error, Tesla.Env.t}
-  def dapps_uniswapv3_mints_historical_get(connection, opts \\ []) do
+  @spec uniswap_v3_get_mints__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3MintV3Dto.t)} | {:error, Tesla.Env.t}
+  def uniswap_v3_get_mints__historical(connection, opts \\ []) do
     optional_params = %{
       :startBlock => :query,
       :endBlock => :query,
@@ -329,108 +371,27 @@ defmodule OnChainAPI.Api.UniswapV3 do
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, false}
+      {200, [%OnChainAPI.Model.UniswapV3MintV3Dto{}]}
     ])
   end
 
   @doc """
+  GetPools (current) 🔥
+  Gets pools.
 
   ### Parameters
 
   - `connection` (OnChainAPI.Connection): Connection to server
   - `opts` (keyword): Optional parameters
-    - `:startBlock` (integer()): 
-    - `:endBlock` (integer()): 
-    - `:startDate` (DateTime.t): 
-    - `:endDate` (DateTime.t): 
-    - `:poolId` (String.t): 
-
-  ### Returns
-
-  - `{:ok, nil}` on success
-  - `{:error, Tesla.Env.t}` on failure
-  """
-  @spec dapps_uniswapv3_pool_day_data_historical_get(Tesla.Env.client, keyword()) :: {:ok, nil} | {:error, Tesla.Env.t}
-  def dapps_uniswapv3_pool_day_data_historical_get(connection, opts \\ []) do
-    optional_params = %{
-      :startBlock => :query,
-      :endBlock => :query,
-      :startDate => :query,
-      :endDate => :query,
-      :poolId => :query
-    }
-
-    request =
-      %{}
-      |> method(:get)
-      |> url("/dapps/uniswapv3/poolDayData/historical")
-      |> add_optional_params(optional_params, opts)
-      |> Enum.into([])
-
-    connection
-    |> Connection.request(request)
-    |> evaluate_response([
-      {200, false}
-    ])
-  end
-
-  @doc """
-
-  ### Parameters
-
-  - `connection` (OnChainAPI.Connection): Connection to server
-  - `opts` (keyword): Optional parameters
-    - `:startBlock` (integer()): 
-    - `:endBlock` (integer()): 
-    - `:startDate` (DateTime.t): 
-    - `:endDate` (DateTime.t): 
-    - `:poolId` (String.t): 
-
-  ### Returns
-
-  - `{:ok, nil}` on success
-  - `{:error, Tesla.Env.t}` on failure
-  """
-  @spec dapps_uniswapv3_pool_hour_data_historical_get(Tesla.Env.client, keyword()) :: {:ok, nil} | {:error, Tesla.Env.t}
-  def dapps_uniswapv3_pool_hour_data_historical_get(connection, opts \\ []) do
-    optional_params = %{
-      :startBlock => :query,
-      :endBlock => :query,
-      :startDate => :query,
-      :endDate => :query,
-      :poolId => :query
-    }
-
-    request =
-      %{}
-      |> method(:get)
-      |> url("/dapps/uniswapv3/poolHourData/historical")
-      |> add_optional_params(optional_params, opts)
-      |> Enum.into([])
-
-    connection
-    |> Connection.request(request)
-    |> evaluate_response([
-      {200, false}
-    ])
-  end
-
-  @doc """
-  GetPools
-
-  ### Parameters
-
-  - `connection` (OnChainAPI.Connection): Connection to server
-  - `opts` (keyword): Optional parameters
-    - `:filter_pool_id` (String.t): Filter pool id
+    - `:filter_pool_id` (String.t): 
 
   ### Returns
 
   - `{:ok, [%UniswapV3PoolV3Dto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec dapps_uniswapv3_pools_current_get(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3PoolV3Dto.t)} | {:error, Tesla.Env.t}
-  def dapps_uniswapv3_pools_current_get(connection, opts \\ []) do
+  @spec uniswap_v3_get_pools__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3PoolV3Dto.t)} | {:error, Tesla.Env.t}
+  def uniswap_v3_get_pools__current(connection, opts \\ []) do
     optional_params = %{
       :filter_pool_id => :query
     }
@@ -450,21 +411,65 @@ defmodule OnChainAPI.Api.UniswapV3 do
   end
 
   @doc """
-  GetPoolsDayData
+  GetPools (historical) 🔥
+  Gets pools.
 
   ### Parameters
 
   - `connection` (OnChainAPI.Connection): Connection to server
   - `opts` (keyword): Optional parameters
-    - `:filter_pool_id` (String.t): Filter pool id
+    - `:startBlock` (integer()): 
+    - `:endBlock` (integer()): 
+    - `:startDate` (DateTime.t): 
+    - `:endDate` (DateTime.t): 
+    - `:poolId` (String.t): 
+
+  ### Returns
+
+  - `{:ok, [%UniswapV3PoolV3Dto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec uniswap_v3_get_pools__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3PoolV3Dto.t)} | {:error, Tesla.Env.t}
+  def uniswap_v3_get_pools__historical(connection, opts \\ []) do
+    optional_params = %{
+      :startBlock => :query,
+      :endBlock => :query,
+      :startDate => :query,
+      :endDate => :query,
+      :poolId => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/uniswapv3/pools/historical")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.UniswapV3PoolV3Dto{}]}
+    ])
+  end
+
+  @doc """
+  GetPoolsDayData (current)
+  Gets pools day data.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:filter_pool_id` (String.t): 
 
   ### Returns
 
   - `{:ok, [%UniswapV3PoolDayDataV3Dto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec dapps_uniswapv3_pools_day_data_current_get(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3PoolDayDataV3Dto.t)} | {:error, Tesla.Env.t}
-  def dapps_uniswapv3_pools_day_data_current_get(connection, opts \\ []) do
+  @spec uniswap_v3_get_pools_day_data__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3PoolDayDataV3Dto.t)} | {:error, Tesla.Env.t}
+  def uniswap_v3_get_pools_day_data__current(connection, opts \\ []) do
     optional_params = %{
       :filter_pool_id => :query
     }
@@ -484,6 +489,8 @@ defmodule OnChainAPI.Api.UniswapV3 do
   end
 
   @doc """
+  GetPoolsDayData (historical)
+  Gets pools day data.
 
   ### Parameters
 
@@ -497,11 +504,11 @@ defmodule OnChainAPI.Api.UniswapV3 do
 
   ### Returns
 
-  - `{:ok, nil}` on success
+  - `{:ok, [%UniswapV3PoolDayDataV3Dto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec dapps_uniswapv3_pools_historical_get(Tesla.Env.client, keyword()) :: {:ok, nil} | {:error, Tesla.Env.t}
-  def dapps_uniswapv3_pools_historical_get(connection, opts \\ []) do
+  @spec uniswap_v3_get_pools_day_data__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3PoolDayDataV3Dto.t)} | {:error, Tesla.Env.t}
+  def uniswap_v3_get_pools_day_data__historical(connection, opts \\ []) do
     optional_params = %{
       :startBlock => :query,
       :endBlock => :query,
@@ -513,33 +520,34 @@ defmodule OnChainAPI.Api.UniswapV3 do
     request =
       %{}
       |> method(:get)
-      |> url("/dapps/uniswapv3/pools/historical")
+      |> url("/dapps/uniswapv3/poolsDayData/historical")
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, false}
+      {200, [%OnChainAPI.Model.UniswapV3PoolDayDataV3Dto{}]}
     ])
   end
 
   @doc """
-  GetPoolsHourData
+  GetPoolsHourData (current)
+  Gets pools hour data.
 
   ### Parameters
 
   - `connection` (OnChainAPI.Connection): Connection to server
   - `opts` (keyword): Optional parameters
-    - `:filter_pool_id` (String.t): Filter pool id
+    - `:filter_pool_id` (String.t): 
 
   ### Returns
 
   - `{:ok, [%UniswapV3PoolHourDataV3Dto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec dapps_uniswapv3_pools_hour_data_current_get(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3PoolHourDataV3Dto.t)} | {:error, Tesla.Env.t}
-  def dapps_uniswapv3_pools_hour_data_current_get(connection, opts \\ []) do
+  @spec uniswap_v3_get_pools_hour_data__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3PoolHourDataV3Dto.t)} | {:error, Tesla.Env.t}
+  def uniswap_v3_get_pools_hour_data__current(connection, opts \\ []) do
     optional_params = %{
       :filter_pool_id => :query
     }
@@ -559,6 +567,8 @@ defmodule OnChainAPI.Api.UniswapV3 do
   end
 
   @doc """
+  GetPoolsHourData (historical)
+  Gets pools hour data.
 
   ### Parameters
 
@@ -572,11 +582,11 @@ defmodule OnChainAPI.Api.UniswapV3 do
 
   ### Returns
 
-  - `{:ok, nil}` on success
+  - `{:ok, [%UniswapV3PoolHourDataV3Dto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec dapps_uniswapv3_position_snapshot_historical_get(Tesla.Env.client, keyword()) :: {:ok, nil} | {:error, Tesla.Env.t}
-  def dapps_uniswapv3_position_snapshot_historical_get(connection, opts \\ []) do
+  @spec uniswap_v3_get_pools_hour_data__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3PoolHourDataV3Dto.t)} | {:error, Tesla.Env.t}
+  def uniswap_v3_get_pools_hour_data__historical(connection, opts \\ []) do
     optional_params = %{
       :startBlock => :query,
       :endBlock => :query,
@@ -588,67 +598,34 @@ defmodule OnChainAPI.Api.UniswapV3 do
     request =
       %{}
       |> method(:get)
-      |> url("/dapps/uniswapv3/positionSnapshot/historical")
+      |> url("/dapps/uniswapv3/poolsHourData/historical")
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, false}
+      {200, [%OnChainAPI.Model.UniswapV3PoolHourDataV3Dto{}]}
     ])
   end
 
   @doc """
-  GetPositionSnapshot
+  GetPositions (current)
+  Gets positions.
 
   ### Parameters
 
   - `connection` (OnChainAPI.Connection): Connection to server
   - `opts` (keyword): Optional parameters
-    - `:filter_pool_id` (String.t): Filter pool id
-
-  ### Returns
-
-  - `{:ok, [%UniswapV3PositionSnapshotV3Dto{}, ...]}` on success
-  - `{:error, Tesla.Env.t}` on failure
-  """
-  @spec dapps_uniswapv3_position_snapshots_current_get(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3PositionSnapshotV3Dto.t)} | {:error, Tesla.Env.t}
-  def dapps_uniswapv3_position_snapshots_current_get(connection, opts \\ []) do
-    optional_params = %{
-      :filter_pool_id => :query
-    }
-
-    request =
-      %{}
-      |> method(:get)
-      |> url("/dapps/uniswapv3/positionSnapshots/current")
-      |> add_optional_params(optional_params, opts)
-      |> Enum.into([])
-
-    connection
-    |> Connection.request(request)
-    |> evaluate_response([
-      {200, [%OnChainAPI.Model.UniswapV3PositionSnapshotV3Dto{}]}
-    ])
-  end
-
-  @doc """
-  GetPositions
-
-  ### Parameters
-
-  - `connection` (OnChainAPI.Connection): Connection to server
-  - `opts` (keyword): Optional parameters
-    - `:filter_pool_id` (String.t): Filter pool id
+    - `:filter_pool_id` (String.t): 
 
   ### Returns
 
   - `{:ok, [%UniswapV3PositionV3Dto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec dapps_uniswapv3_positions_current_get(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3PositionV3Dto.t)} | {:error, Tesla.Env.t}
-  def dapps_uniswapv3_positions_current_get(connection, opts \\ []) do
+  @spec uniswap_v3_get_positions__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3PositionV3Dto.t)} | {:error, Tesla.Env.t}
+  def uniswap_v3_get_positions__current(connection, opts \\ []) do
     optional_params = %{
       :filter_pool_id => :query
     }
@@ -668,6 +645,8 @@ defmodule OnChainAPI.Api.UniswapV3 do
   end
 
   @doc """
+  GetPositions (historical)
+  Gets positions.
 
   ### Parameters
 
@@ -681,11 +660,11 @@ defmodule OnChainAPI.Api.UniswapV3 do
 
   ### Returns
 
-  - `{:ok, nil}` on success
+  - `{:ok, [%UniswapV3PositionV3Dto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec dapps_uniswapv3_positions_historical_get(Tesla.Env.client, keyword()) :: {:ok, nil} | {:error, Tesla.Env.t}
-  def dapps_uniswapv3_positions_historical_get(connection, opts \\ []) do
+  @spec uniswap_v3_get_positions__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3PositionV3Dto.t)} | {:error, Tesla.Env.t}
+  def uniswap_v3_get_positions__historical(connection, opts \\ []) do
     optional_params = %{
       :startBlock => :query,
       :endBlock => :query,
@@ -704,26 +683,105 @@ defmodule OnChainAPI.Api.UniswapV3 do
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, false}
+      {200, [%OnChainAPI.Model.UniswapV3PositionV3Dto{}]}
     ])
   end
 
   @doc """
-  GetSwaps
+  GetPositionsSnaphots (historical)
+  Gets positions snapshots.
 
   ### Parameters
 
   - `connection` (OnChainAPI.Connection): Connection to server
   - `opts` (keyword): Optional parameters
-    - `:filter_pool_id` (String.t): Filter pool id
+    - `:startBlock` (integer()): 
+    - `:endBlock` (integer()): 
+    - `:startDate` (DateTime.t): 
+    - `:endDate` (DateTime.t): 
+    - `:poolId` (String.t): 
+
+  ### Returns
+
+  - `{:ok, [%UniswapV3PositionSnapshotV3Dto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec uniswap_v3_get_positions_snaphots__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3PositionSnapshotV3Dto.t)} | {:error, Tesla.Env.t}
+  def uniswap_v3_get_positions_snaphots__historical(connection, opts \\ []) do
+    optional_params = %{
+      :startBlock => :query,
+      :endBlock => :query,
+      :startDate => :query,
+      :endDate => :query,
+      :poolId => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/uniswapv3/positionsSnapshots/historical")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.UniswapV3PositionSnapshotV3Dto{}]}
+    ])
+  end
+
+  @doc """
+  GetPositionsSnapshots (current)
+  Gets positions snapshots.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:filter_pool_id` (String.t): 
+
+  ### Returns
+
+  - `{:ok, [%UniswapV3PositionSnapshotV3Dto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec uniswap_v3_get_positions_snapshots__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3PositionSnapshotV3Dto.t)} | {:error, Tesla.Env.t}
+  def uniswap_v3_get_positions_snapshots__current(connection, opts \\ []) do
+    optional_params = %{
+      :filter_pool_id => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/uniswapv3/positionSnapshots/current")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.UniswapV3PositionSnapshotV3Dto{}]}
+    ])
+  end
+
+  @doc """
+  GetSwaps (current) 🔥
+  Gets swaps.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:filter_pool_id` (String.t): 
 
   ### Returns
 
   - `{:ok, [%UniswapV3SwapV3Dto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec dapps_uniswapv3_swaps_current_get(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3SwapV3Dto.t)} | {:error, Tesla.Env.t}
-  def dapps_uniswapv3_swaps_current_get(connection, opts \\ []) do
+  @spec uniswap_v3_get_swaps__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3SwapV3Dto.t)} | {:error, Tesla.Env.t}
+  def uniswap_v3_get_swaps__current(connection, opts \\ []) do
     optional_params = %{
       :filter_pool_id => :query
     }
@@ -743,6 +801,8 @@ defmodule OnChainAPI.Api.UniswapV3 do
   end
 
   @doc """
+  GetSwaps (historical) 🔥
+  Gets swaps.
 
   ### Parameters
 
@@ -756,11 +816,11 @@ defmodule OnChainAPI.Api.UniswapV3 do
 
   ### Returns
 
-  - `{:ok, nil}` on success
+  - `{:ok, [%UniswapV3SwapV3Dto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec dapps_uniswapv3_swaps_historical_get(Tesla.Env.client, keyword()) :: {:ok, nil} | {:error, Tesla.Env.t}
-  def dapps_uniswapv3_swaps_historical_get(connection, opts \\ []) do
+  @spec uniswap_v3_get_swaps__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3SwapV3Dto.t)} | {:error, Tesla.Env.t}
+  def uniswap_v3_get_swaps__historical(connection, opts \\ []) do
     optional_params = %{
       :startBlock => :query,
       :endBlock => :query,
@@ -779,67 +839,27 @@ defmodule OnChainAPI.Api.UniswapV3 do
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, false}
+      {200, [%OnChainAPI.Model.UniswapV3SwapV3Dto{}]}
     ])
   end
 
   @doc """
+  GetTicks (current)
+  Gets ticks.
 
   ### Parameters
 
   - `connection` (OnChainAPI.Connection): Connection to server
   - `opts` (keyword): Optional parameters
-    - `:startBlock` (integer()): 
-    - `:endBlock` (integer()): 
-    - `:startDate` (DateTime.t): 
-    - `:endDate` (DateTime.t): 
-    - `:poolId` (String.t): 
-
-  ### Returns
-
-  - `{:ok, nil}` on success
-  - `{:error, Tesla.Env.t}` on failure
-  """
-  @spec dapps_uniswapv3_tick_day_data_historical_get(Tesla.Env.client, keyword()) :: {:ok, nil} | {:error, Tesla.Env.t}
-  def dapps_uniswapv3_tick_day_data_historical_get(connection, opts \\ []) do
-    optional_params = %{
-      :startBlock => :query,
-      :endBlock => :query,
-      :startDate => :query,
-      :endDate => :query,
-      :poolId => :query
-    }
-
-    request =
-      %{}
-      |> method(:get)
-      |> url("/dapps/uniswapv3/tickDayData/historical")
-      |> add_optional_params(optional_params, opts)
-      |> Enum.into([])
-
-    connection
-    |> Connection.request(request)
-    |> evaluate_response([
-      {200, false}
-    ])
-  end
-
-  @doc """
-  GetTicks
-
-  ### Parameters
-
-  - `connection` (OnChainAPI.Connection): Connection to server
-  - `opts` (keyword): Optional parameters
-    - `:filter_pool_id` (String.t): Filter pool id
+    - `:filter_pool_id` (String.t): 
 
   ### Returns
 
   - `{:ok, [%UniswapV3TickV3Dto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec dapps_uniswapv3_ticks_current_get(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3TickV3Dto.t)} | {:error, Tesla.Env.t}
-  def dapps_uniswapv3_ticks_current_get(connection, opts \\ []) do
+  @spec uniswap_v3_get_ticks__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3TickV3Dto.t)} | {:error, Tesla.Env.t}
+  def uniswap_v3_get_ticks__current(connection, opts \\ []) do
     optional_params = %{
       :filter_pool_id => :query
     }
@@ -859,21 +879,65 @@ defmodule OnChainAPI.Api.UniswapV3 do
   end
 
   @doc """
-  GetTicksDayData
+  GetTicks (historical)
+  Gets ticks.
 
   ### Parameters
 
   - `connection` (OnChainAPI.Connection): Connection to server
   - `opts` (keyword): Optional parameters
-    - `:filter_pool_id` (String.t): Filter pool id
+    - `:startBlock` (integer()): 
+    - `:endBlock` (integer()): 
+    - `:startDate` (DateTime.t): 
+    - `:endDate` (DateTime.t): 
+    - `:poolId` (String.t): 
+
+  ### Returns
+
+  - `{:ok, [%UniswapV3TickV3Dto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec uniswap_v3_get_ticks__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3TickV3Dto.t)} | {:error, Tesla.Env.t}
+  def uniswap_v3_get_ticks__historical(connection, opts \\ []) do
+    optional_params = %{
+      :startBlock => :query,
+      :endBlock => :query,
+      :startDate => :query,
+      :endDate => :query,
+      :poolId => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/uniswapv3/ticks/historical")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.UniswapV3TickV3Dto{}]}
+    ])
+  end
+
+  @doc """
+  GetTicksDayData (current)
+  Gets ticks day data.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:filter_pool_id` (String.t): 
 
   ### Returns
 
   - `{:ok, [%UniswapV3TickDayDataV3Dto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec dapps_uniswapv3_ticks_day_data_current_get(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3TickDayDataV3Dto.t)} | {:error, Tesla.Env.t}
-  def dapps_uniswapv3_ticks_day_data_current_get(connection, opts \\ []) do
+  @spec uniswap_v3_get_ticks_day_data__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3TickDayDataV3Dto.t)} | {:error, Tesla.Env.t}
+  def uniswap_v3_get_ticks_day_data__current(connection, opts \\ []) do
     optional_params = %{
       :filter_pool_id => :query
     }
@@ -893,6 +957,8 @@ defmodule OnChainAPI.Api.UniswapV3 do
   end
 
   @doc """
+  GetTicksDayData (historical)
+  Gets ticks day data.
 
   ### Parameters
 
@@ -906,11 +972,11 @@ defmodule OnChainAPI.Api.UniswapV3 do
 
   ### Returns
 
-  - `{:ok, nil}` on success
+  - `{:ok, [%UniswapV3TickDayDataV3Dto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec dapps_uniswapv3_ticks_historical_get(Tesla.Env.client, keyword()) :: {:ok, nil} | {:error, Tesla.Env.t}
-  def dapps_uniswapv3_ticks_historical_get(connection, opts \\ []) do
+  @spec uniswap_v3_get_ticks_day_data__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3TickDayDataV3Dto.t)} | {:error, Tesla.Env.t}
+  def uniswap_v3_get_ticks_day_data__historical(connection, opts \\ []) do
     optional_params = %{
       :startBlock => :query,
       :endBlock => :query,
@@ -922,101 +988,20 @@ defmodule OnChainAPI.Api.UniswapV3 do
     request =
       %{}
       |> method(:get)
-      |> url("/dapps/uniswapv3/ticks/historical")
+      |> url("/dapps/uniswapv3/ticksDayData/historical")
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, false}
+      {200, [%OnChainAPI.Model.UniswapV3TickDayDataV3Dto{}]}
     ])
   end
 
   @doc """
-
-  ### Parameters
-
-  - `connection` (OnChainAPI.Connection): Connection to server
-  - `opts` (keyword): Optional parameters
-    - `:startBlock` (integer()): 
-    - `:endBlock` (integer()): 
-    - `:startDate` (DateTime.t): 
-    - `:endDate` (DateTime.t): 
-    - `:tokenId` (String.t): 
-
-  ### Returns
-
-  - `{:ok, nil}` on success
-  - `{:error, Tesla.Env.t}` on failure
-  """
-  @spec dapps_uniswapv3_token_day_data_historical_get(Tesla.Env.client, keyword()) :: {:ok, nil} | {:error, Tesla.Env.t}
-  def dapps_uniswapv3_token_day_data_historical_get(connection, opts \\ []) do
-    optional_params = %{
-      :startBlock => :query,
-      :endBlock => :query,
-      :startDate => :query,
-      :endDate => :query,
-      :tokenId => :query
-    }
-
-    request =
-      %{}
-      |> method(:get)
-      |> url("/dapps/uniswapv3/tokenDayData/historical")
-      |> add_optional_params(optional_params, opts)
-      |> Enum.into([])
-
-    connection
-    |> Connection.request(request)
-    |> evaluate_response([
-      {200, false}
-    ])
-  end
-
-  @doc """
-
-  ### Parameters
-
-  - `connection` (OnChainAPI.Connection): Connection to server
-  - `opts` (keyword): Optional parameters
-    - `:startBlock` (integer()): 
-    - `:endBlock` (integer()): 
-    - `:startDate` (DateTime.t): 
-    - `:endDate` (DateTime.t): 
-    - `:tokenId` (String.t): 
-
-  ### Returns
-
-  - `{:ok, nil}` on success
-  - `{:error, Tesla.Env.t}` on failure
-  """
-  @spec dapps_uniswapv3_token_hour_data_historical_get(Tesla.Env.client, keyword()) :: {:ok, nil} | {:error, Tesla.Env.t}
-  def dapps_uniswapv3_token_hour_data_historical_get(connection, opts \\ []) do
-    optional_params = %{
-      :startBlock => :query,
-      :endBlock => :query,
-      :startDate => :query,
-      :endDate => :query,
-      :tokenId => :query
-    }
-
-    request =
-      %{}
-      |> method(:get)
-      |> url("/dapps/uniswapv3/tokenHourData/historical")
-      |> add_optional_params(optional_params, opts)
-      |> Enum.into([])
-
-    connection
-    |> Connection.request(request)
-    |> evaluate_response([
-      {200, false}
-    ])
-  end
-
-  @doc """
-  GetTokens
+  GetTokens (current) 🔥
+  Gets tokens.
 
   ### Parameters
 
@@ -1029,8 +1014,8 @@ defmodule OnChainAPI.Api.UniswapV3 do
   - `{:ok, [%UniswapV3TokenV3Dto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec dapps_uniswapv3_tokens_current_get(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3TokenV3Dto.t)} | {:error, Tesla.Env.t}
-  def dapps_uniswapv3_tokens_current_get(connection, opts \\ []) do
+  @spec uniswap_v3_get_tokens__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3TokenV3Dto.t)} | {:error, Tesla.Env.t}
+  def uniswap_v3_get_tokens__current(connection, opts \\ []) do
     optional_params = %{
       :filter_token_id => :query
     }
@@ -1050,7 +1035,51 @@ defmodule OnChainAPI.Api.UniswapV3 do
   end
 
   @doc """
-  GetTokensDayData
+  GetTokens (historical) 🔥
+  Gets tokens.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:startBlock` (integer()): 
+    - `:endBlock` (integer()): 
+    - `:startDate` (DateTime.t): 
+    - `:endDate` (DateTime.t): 
+    - `:tokenId` (String.t): 
+
+  ### Returns
+
+  - `{:ok, [%UniswapV3TokenV3Dto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec uniswap_v3_get_tokens__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3TokenV3Dto.t)} | {:error, Tesla.Env.t}
+  def uniswap_v3_get_tokens__historical(connection, opts \\ []) do
+    optional_params = %{
+      :startBlock => :query,
+      :endBlock => :query,
+      :startDate => :query,
+      :endDate => :query,
+      :tokenId => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/uniswapv3/tokens/historical")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.UniswapV3TokenV3Dto{}]}
+    ])
+  end
+
+  @doc """
+  GetTokensDayData (current)
+  Gets tokens day data.
 
   ### Parameters
 
@@ -1063,8 +1092,8 @@ defmodule OnChainAPI.Api.UniswapV3 do
   - `{:ok, [%UniswapV3TokenV3DayDataDto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec dapps_uniswapv3_tokens_day_data_current_get(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3TokenV3DayDataDto.t)} | {:error, Tesla.Env.t}
-  def dapps_uniswapv3_tokens_day_data_current_get(connection, opts \\ []) do
+  @spec uniswap_v3_get_tokens_day_data__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3TokenV3DayDataDto.t)} | {:error, Tesla.Env.t}
+  def uniswap_v3_get_tokens_day_data__current(connection, opts \\ []) do
     optional_params = %{
       :filter_token_id => :query
     }
@@ -1084,6 +1113,8 @@ defmodule OnChainAPI.Api.UniswapV3 do
   end
 
   @doc """
+  GetTokensDayData (historical)
+  Gets tokens day data.
 
   ### Parameters
 
@@ -1097,11 +1128,11 @@ defmodule OnChainAPI.Api.UniswapV3 do
 
   ### Returns
 
-  - `{:ok, nil}` on success
+  - `{:ok, [%UniswapV3TokenV3DayDataDto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec dapps_uniswapv3_tokens_historical_get(Tesla.Env.client, keyword()) :: {:ok, nil} | {:error, Tesla.Env.t}
-  def dapps_uniswapv3_tokens_historical_get(connection, opts \\ []) do
+  @spec uniswap_v3_get_tokens_day_data__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3TokenV3DayDataDto.t)} | {:error, Tesla.Env.t}
+  def uniswap_v3_get_tokens_day_data__historical(connection, opts \\ []) do
     optional_params = %{
       :startBlock => :query,
       :endBlock => :query,
@@ -1113,19 +1144,20 @@ defmodule OnChainAPI.Api.UniswapV3 do
     request =
       %{}
       |> method(:get)
-      |> url("/dapps/uniswapv3/tokens/historical")
+      |> url("/dapps/uniswapv3/tokensDayData/historical")
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, false}
+      {200, [%OnChainAPI.Model.UniswapV3TokenV3DayDataDto{}]}
     ])
   end
 
   @doc """
-  GetTokensHourData
+  GetTokensHourData (current)
+  Gets tokens hour data.
 
   ### Parameters
 
@@ -1138,8 +1170,8 @@ defmodule OnChainAPI.Api.UniswapV3 do
   - `{:ok, [%UniswapV3TokenHourDataV3Dto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec dapps_uniswapv3_tokens_hour_data_current_get(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3TokenHourDataV3Dto.t)} | {:error, Tesla.Env.t}
-  def dapps_uniswapv3_tokens_hour_data_current_get(connection, opts \\ []) do
+  @spec uniswap_v3_get_tokens_hour_data__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3TokenHourDataV3Dto.t)} | {:error, Tesla.Env.t}
+  def uniswap_v3_get_tokens_hour_data__current(connection, opts \\ []) do
     optional_params = %{
       :filter_token_id => :query
     }
@@ -1159,6 +1191,51 @@ defmodule OnChainAPI.Api.UniswapV3 do
   end
 
   @doc """
+  GetTokensHourData (historical)
+  Gets tokens hour data.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:startBlock` (integer()): 
+    - `:endBlock` (integer()): 
+    - `:startDate` (DateTime.t): 
+    - `:endDate` (DateTime.t): 
+    - `:tokenId` (String.t): 
+
+  ### Returns
+
+  - `{:ok, [%UniswapV3TokenHourDataV3Dto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec uniswap_v3_get_tokens_hour_data__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3TokenHourDataV3Dto.t)} | {:error, Tesla.Env.t}
+  def uniswap_v3_get_tokens_hour_data__historical(connection, opts \\ []) do
+    optional_params = %{
+      :startBlock => :query,
+      :endBlock => :query,
+      :startDate => :query,
+      :endDate => :query,
+      :tokenId => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/uniswapv3/tokensHourData/historical")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.UniswapV3TokenHourDataV3Dto{}]}
+    ])
+  end
+
+  @doc """
+  GetTransactions (historical)
+  Gets transactions.
 
   ### Parameters
 
@@ -1171,11 +1248,11 @@ defmodule OnChainAPI.Api.UniswapV3 do
 
   ### Returns
 
-  - `{:ok, nil}` on success
+  - `{:ok, [%UniswapV3TransactionV3Dto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec dapps_uniswapv3_transactions_historical_get(Tesla.Env.client, keyword()) :: {:ok, nil} | {:error, Tesla.Env.t}
-  def dapps_uniswapv3_transactions_historical_get(connection, opts \\ []) do
+  @spec uniswap_v3_get_transactions__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3TransactionV3Dto.t)} | {:error, Tesla.Env.t}
+  def uniswap_v3_get_transactions__historical(connection, opts \\ []) do
     optional_params = %{
       :startBlock => :query,
       :endBlock => :query,
@@ -1193,35 +1270,7 @@ defmodule OnChainAPI.Api.UniswapV3 do
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, false}
-    ])
-  end
-
-  @doc """
-  GetUniswapDayData
-
-  ### Parameters
-
-  - `connection` (OnChainAPI.Connection): Connection to server
-  - `opts` (keyword): Optional parameters
-
-  ### Returns
-
-  - `{:ok, [%UniswapV3UniswapDayDataV3Dto{}, ...]}` on success
-  - `{:error, Tesla.Env.t}` on failure
-  """
-  @spec dapps_uniswapv3_uniswap_day_data_current_get(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV3UniswapDayDataV3Dto.t)} | {:error, Tesla.Env.t}
-  def dapps_uniswapv3_uniswap_day_data_current_get(connection, _opts \\ []) do
-    request =
-      %{}
-      |> method(:get)
-      |> url("/dapps/uniswapv3/uniswapDayData/current")
-      |> Enum.into([])
-
-    connection
-    |> Connection.request(request)
-    |> evaluate_response([
-      {200, [%OnChainAPI.Model.UniswapV3UniswapDayDataV3Dto{}]}
+      {200, [%OnChainAPI.Model.UniswapV3TransactionV3Dto{}]}
     ])
   end
 end

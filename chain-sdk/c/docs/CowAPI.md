@@ -4,16 +4,20 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CowAPI_dappsCowOrdersHistoricalGet**](CowAPI.md#CowAPI_dappsCowOrdersHistoricalGet) | **GET** /dapps/cow/orders/historical | 
-[**CowAPI_dappsCowSettlementHistoricalGet**](CowAPI.md#CowAPI_dappsCowSettlementHistoricalGet) | **GET** /dapps/cow/settlement/historical | 
-[**CowAPI_dappsCowTokensHistoricalGet**](CowAPI.md#CowAPI_dappsCowTokensHistoricalGet) | **GET** /dapps/cow/tokens/historical | 
-[**CowAPI_dappsCowTradesHistoricalGet**](CowAPI.md#CowAPI_dappsCowTradesHistoricalGet) | **GET** /dapps/cow/trades/historical | 
-[**CowAPI_dappsCowUsersHistoricalGet**](CowAPI.md#CowAPI_dappsCowUsersHistoricalGet) | **GET** /dapps/cow/users/historical | 
+[**CowAPI_cowGetOrdersHistorical**](CowAPI.md#CowAPI_cowGetOrdersHistorical) | **GET** /dapps/cow/orders/historical | GetOrders (historical)
+[**CowAPI_cowGetSettlementsHistorical**](CowAPI.md#CowAPI_cowGetSettlementsHistorical) | **GET** /dapps/cow/settlements/historical | GetSettlements (historical)
+[**CowAPI_cowGetTokensHistorical**](CowAPI.md#CowAPI_cowGetTokensHistorical) | **GET** /dapps/cow/tokens/historical | GetTokens (historical) 🔥
+[**CowAPI_cowGetTradesHistorical**](CowAPI.md#CowAPI_cowGetTradesHistorical) | **GET** /dapps/cow/trades/historical | GetTrades (historical) 🔥
+[**CowAPI_cowGetUsersHistorical**](CowAPI.md#CowAPI_cowGetUsersHistorical) | **GET** /dapps/cow/users/historical | GetUsers (historical)
 
 
-# **CowAPI_dappsCowOrdersHistoricalGet**
+# **CowAPI_cowGetOrdersHistorical**
 ```c
-void CowAPI_dappsCowOrdersHistoricalGet(apiClient_t *apiClient, long startBlock, long endBlock, char startDate, char endDate);
+// GetOrders (historical)
+//
+// Gets orders.
+//
+list_t* CowAPI_cowGetOrdersHistorical(apiClient_t *apiClient, long startBlock, long endBlock, char startDate, char endDate);
 ```
 
 ### Parameters
@@ -27,7 +31,8 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void
+[list_t](cow_order_dto.md) *
+
 
 ### Authorization
 
@@ -36,13 +41,17 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **CowAPI_dappsCowSettlementHistoricalGet**
+# **CowAPI_cowGetSettlementsHistorical**
 ```c
-void CowAPI_dappsCowSettlementHistoricalGet(apiClient_t *apiClient, long startBlock, long endBlock, char startDate, char endDate);
+// GetSettlements (historical)
+//
+// Gets settlements.
+//
+list_t* CowAPI_cowGetSettlementsHistorical(apiClient_t *apiClient, long startBlock, long endBlock, char startDate, char endDate);
 ```
 
 ### Parameters
@@ -56,7 +65,8 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void
+[list_t](cow_settlement_dto.md) *
+
 
 ### Authorization
 
@@ -65,13 +75,17 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **CowAPI_dappsCowTokensHistoricalGet**
+# **CowAPI_cowGetTokensHistorical**
 ```c
-void CowAPI_dappsCowTokensHistoricalGet(apiClient_t *apiClient, long startBlock, long endBlock, char startDate, char endDate, char * tokenId);
+// GetTokens (historical) 🔥
+//
+// Gets tokens.
+//
+list_t* CowAPI_cowGetTokensHistorical(apiClient_t *apiClient, long startBlock, long endBlock, char startDate, char endDate, char * tokenId);
 ```
 
 ### Parameters
@@ -86,7 +100,8 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void
+[list_t](cow_token_dto.md) *
+
 
 ### Authorization
 
@@ -95,13 +110,17 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **CowAPI_dappsCowTradesHistoricalGet**
+# **CowAPI_cowGetTradesHistorical**
 ```c
-void CowAPI_dappsCowTradesHistoricalGet(apiClient_t *apiClient, long startBlock, long endBlock, char startDate, char endDate);
+// GetTrades (historical) 🔥
+//
+// Gets trades.
+//
+list_t* CowAPI_cowGetTradesHistorical(apiClient_t *apiClient, long startBlock, long endBlock, char startDate, char endDate);
 ```
 
 ### Parameters
@@ -115,7 +134,8 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void
+[list_t](cow_trade_dto.md) *
+
 
 ### Authorization
 
@@ -124,13 +144,17 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **CowAPI_dappsCowUsersHistoricalGet**
+# **CowAPI_cowGetUsersHistorical**
 ```c
-void CowAPI_dappsCowUsersHistoricalGet(apiClient_t *apiClient, long startBlock, long endBlock, char startDate, char endDate);
+// GetUsers (historical)
+//
+// Gets users.
+//
+list_t* CowAPI_cowGetUsersHistorical(apiClient_t *apiClient, long startBlock, long endBlock, char startDate, char endDate);
 ```
 
 ### Parameters
@@ -144,7 +168,8 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void
+[list_t](cow_user_dto.md) *
+
 
 ### Authorization
 
@@ -153,7 +178,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

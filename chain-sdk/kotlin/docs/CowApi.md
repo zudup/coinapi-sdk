@@ -4,18 +4,20 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**dappsCowOrdersHistoricalGet**](CowApi.md#dappsCowOrdersHistoricalGet) | **GET** /dapps/cow/orders/historical | 
-[**dappsCowSettlementHistoricalGet**](CowApi.md#dappsCowSettlementHistoricalGet) | **GET** /dapps/cow/settlement/historical | 
-[**dappsCowTokensHistoricalGet**](CowApi.md#dappsCowTokensHistoricalGet) | **GET** /dapps/cow/tokens/historical | 
-[**dappsCowTradesHistoricalGet**](CowApi.md#dappsCowTradesHistoricalGet) | **GET** /dapps/cow/trades/historical | 
-[**dappsCowUsersHistoricalGet**](CowApi.md#dappsCowUsersHistoricalGet) | **GET** /dapps/cow/users/historical | 
+[**cowGetOrdersHistorical**](CowApi.md#cowGetOrdersHistorical) | **GET** /dapps/cow/orders/historical | GetOrders (historical)
+[**cowGetSettlementsHistorical**](CowApi.md#cowGetSettlementsHistorical) | **GET** /dapps/cow/settlements/historical | GetSettlements (historical)
+[**cowGetTokensHistorical**](CowApi.md#cowGetTokensHistorical) | **GET** /dapps/cow/tokens/historical | GetTokens (historical) 🔥
+[**cowGetTradesHistorical**](CowApi.md#cowGetTradesHistorical) | **GET** /dapps/cow/trades/historical | GetTrades (historical) 🔥
+[**cowGetUsersHistorical**](CowApi.md#cowGetUsersHistorical) | **GET** /dapps/cow/users/historical | GetUsers (historical)
 
 
-<a name="dappsCowOrdersHistoricalGet"></a>
-# **dappsCowOrdersHistoricalGet**
-> dappsCowOrdersHistoricalGet(startBlock, endBlock, startDate, endDate)
+<a name="cowGetOrdersHistorical"></a>
+# **cowGetOrdersHistorical**
+> kotlin.collections.List&lt;CowOrderDTO&gt; cowGetOrdersHistorical(startBlock, endBlock, startDate, endDate)
 
+GetOrders (historical)
 
+Gets orders.
 
 ### Example
 ```kotlin
@@ -29,12 +31,13 @@ val endBlock : kotlin.Long = 789 // kotlin.Long |
 val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
 val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
 try {
-    apiInstance.dappsCowOrdersHistoricalGet(startBlock, endBlock, startDate, endDate)
+    val result : kotlin.collections.List<CowOrderDTO> = apiInstance.cowGetOrdersHistorical(startBlock, endBlock, startDate, endDate)
+    println(result)
 } catch (e: ClientException) {
-    println("4xx response calling CowApi#dappsCowOrdersHistoricalGet")
+    println("4xx response calling CowApi#cowGetOrdersHistorical")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling CowApi#dappsCowOrdersHistoricalGet")
+    println("5xx response calling CowApi#cowGetOrdersHistorical")
     e.printStackTrace()
 }
 ```
@@ -50,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**kotlin.collections.List&lt;CowOrderDTO&gt;**](CowOrderDTO.md)
 
 ### Authorization
 
@@ -59,13 +62,15 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
-<a name="dappsCowSettlementHistoricalGet"></a>
-# **dappsCowSettlementHistoricalGet**
-> dappsCowSettlementHistoricalGet(startBlock, endBlock, startDate, endDate)
+<a name="cowGetSettlementsHistorical"></a>
+# **cowGetSettlementsHistorical**
+> kotlin.collections.List&lt;CowSettlementDTO&gt; cowGetSettlementsHistorical(startBlock, endBlock, startDate, endDate)
 
+GetSettlements (historical)
 
+Gets settlements.
 
 ### Example
 ```kotlin
@@ -79,12 +84,13 @@ val endBlock : kotlin.Long = 789 // kotlin.Long |
 val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
 val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
 try {
-    apiInstance.dappsCowSettlementHistoricalGet(startBlock, endBlock, startDate, endDate)
+    val result : kotlin.collections.List<CowSettlementDTO> = apiInstance.cowGetSettlementsHistorical(startBlock, endBlock, startDate, endDate)
+    println(result)
 } catch (e: ClientException) {
-    println("4xx response calling CowApi#dappsCowSettlementHistoricalGet")
+    println("4xx response calling CowApi#cowGetSettlementsHistorical")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling CowApi#dappsCowSettlementHistoricalGet")
+    println("5xx response calling CowApi#cowGetSettlementsHistorical")
     e.printStackTrace()
 }
 ```
@@ -100,7 +106,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**kotlin.collections.List&lt;CowSettlementDTO&gt;**](CowSettlementDTO.md)
 
 ### Authorization
 
@@ -109,13 +115,15 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
-<a name="dappsCowTokensHistoricalGet"></a>
-# **dappsCowTokensHistoricalGet**
-> dappsCowTokensHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId)
+<a name="cowGetTokensHistorical"></a>
+# **cowGetTokensHistorical**
+> kotlin.collections.List&lt;CowTokenDTO&gt; cowGetTokensHistorical(startBlock, endBlock, startDate, endDate, tokenId)
 
+GetTokens (historical) 🔥
 
+Gets tokens.
 
 ### Example
 ```kotlin
@@ -130,12 +138,13 @@ val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.tim
 val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
 val tokenId : kotlin.String = tokenId_example // kotlin.String | 
 try {
-    apiInstance.dappsCowTokensHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId)
+    val result : kotlin.collections.List<CowTokenDTO> = apiInstance.cowGetTokensHistorical(startBlock, endBlock, startDate, endDate, tokenId)
+    println(result)
 } catch (e: ClientException) {
-    println("4xx response calling CowApi#dappsCowTokensHistoricalGet")
+    println("4xx response calling CowApi#cowGetTokensHistorical")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling CowApi#dappsCowTokensHistoricalGet")
+    println("5xx response calling CowApi#cowGetTokensHistorical")
     e.printStackTrace()
 }
 ```
@@ -152,7 +161,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**kotlin.collections.List&lt;CowTokenDTO&gt;**](CowTokenDTO.md)
 
 ### Authorization
 
@@ -161,13 +170,15 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
-<a name="dappsCowTradesHistoricalGet"></a>
-# **dappsCowTradesHistoricalGet**
-> dappsCowTradesHistoricalGet(startBlock, endBlock, startDate, endDate)
+<a name="cowGetTradesHistorical"></a>
+# **cowGetTradesHistorical**
+> kotlin.collections.List&lt;CowTradeDTO&gt; cowGetTradesHistorical(startBlock, endBlock, startDate, endDate)
 
+GetTrades (historical) 🔥
 
+Gets trades.
 
 ### Example
 ```kotlin
@@ -181,12 +192,13 @@ val endBlock : kotlin.Long = 789 // kotlin.Long |
 val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
 val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
 try {
-    apiInstance.dappsCowTradesHistoricalGet(startBlock, endBlock, startDate, endDate)
+    val result : kotlin.collections.List<CowTradeDTO> = apiInstance.cowGetTradesHistorical(startBlock, endBlock, startDate, endDate)
+    println(result)
 } catch (e: ClientException) {
-    println("4xx response calling CowApi#dappsCowTradesHistoricalGet")
+    println("4xx response calling CowApi#cowGetTradesHistorical")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling CowApi#dappsCowTradesHistoricalGet")
+    println("5xx response calling CowApi#cowGetTradesHistorical")
     e.printStackTrace()
 }
 ```
@@ -202,7 +214,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**kotlin.collections.List&lt;CowTradeDTO&gt;**](CowTradeDTO.md)
 
 ### Authorization
 
@@ -211,13 +223,15 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
-<a name="dappsCowUsersHistoricalGet"></a>
-# **dappsCowUsersHistoricalGet**
-> dappsCowUsersHistoricalGet(startBlock, endBlock, startDate, endDate)
+<a name="cowGetUsersHistorical"></a>
+# **cowGetUsersHistorical**
+> kotlin.collections.List&lt;CowUserDTO&gt; cowGetUsersHistorical(startBlock, endBlock, startDate, endDate)
 
+GetUsers (historical)
 
+Gets users.
 
 ### Example
 ```kotlin
@@ -231,12 +245,13 @@ val endBlock : kotlin.Long = 789 // kotlin.Long |
 val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
 val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | 
 try {
-    apiInstance.dappsCowUsersHistoricalGet(startBlock, endBlock, startDate, endDate)
+    val result : kotlin.collections.List<CowUserDTO> = apiInstance.cowGetUsersHistorical(startBlock, endBlock, startDate, endDate)
+    println(result)
 } catch (e: ClientException) {
-    println("4xx response calling CowApi#dappsCowUsersHistoricalGet")
+    println("4xx response calling CowApi#cowGetUsersHistorical")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling CowApi#dappsCowUsersHistoricalGet")
+    println("5xx response calling CowApi#cowGetUsersHistorical")
     e.printStackTrace()
 }
 ```
@@ -252,7 +267,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**kotlin.collections.List&lt;CowUserDTO&gt;**](CowUserDTO.md)
 
 ### Authorization
 
@@ -261,5 +276,5 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 

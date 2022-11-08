@@ -14,6 +14,11 @@
 
 goog.provide('API.Client.CowApi');
 
+goog.require('API.Client.Cow.OrderDTO');
+goog.require('API.Client.Cow.SettlementDTO');
+goog.require('API.Client.Cow.TokenDTO');
+goog.require('API.Client.Cow.TradeDTO');
+goog.require('API.Client.Cow.UserDTO');
 
 /**
  * @constructor
@@ -43,16 +48,16 @@ API.Client.CowApi = function($http, $httpParamSerializer, $injector) {
 API.Client.CowApi.$inject = ['$http', '$httpParamSerializer', '$injector'];
 
 /**
- * 
- * 
+ * GetOrders (historical)
+ * Gets orders.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
  * @param {!Date=} opt_startDate 
  * @param {!Date=} opt_endDate 
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise}
+ * @return {!angular.$q.Promise<!Array<!API.Client.Cow.OrderDTO>>}
  */
-API.Client.CowApi.prototype.dappsCowOrdersHistoricalGet = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_extraHttpRequestParams) {
+API.Client.CowApi.prototype.cowGetOrdersHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_extraHttpRequestParams) {
   /** @const {string} */
   var path = this.basePath_ + '/dapps/cow/orders/historical';
 
@@ -94,18 +99,18 @@ API.Client.CowApi.prototype.dappsCowOrdersHistoricalGet = function(opt_startBloc
 }
 
 /**
- * 
- * 
+ * GetSettlements (historical)
+ * Gets settlements.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
  * @param {!Date=} opt_startDate 
  * @param {!Date=} opt_endDate 
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise}
+ * @return {!angular.$q.Promise<!Array<!API.Client.Cow.SettlementDTO>>}
  */
-API.Client.CowApi.prototype.dappsCowSettlementHistoricalGet = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_extraHttpRequestParams) {
+API.Client.CowApi.prototype.cowGetSettlementsHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/cow/settlement/historical';
+  var path = this.basePath_ + '/dapps/cow/settlements/historical';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -145,17 +150,17 @@ API.Client.CowApi.prototype.dappsCowSettlementHistoricalGet = function(opt_start
 }
 
 /**
- * 
- * 
+ * GetTokens (historical) 🔥
+ * Gets tokens.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
  * @param {!Date=} opt_startDate 
  * @param {!Date=} opt_endDate 
  * @param {!string=} opt_tokenId 
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise}
+ * @return {!angular.$q.Promise<!Array<!API.Client.Cow.TokenDTO>>}
  */
-API.Client.CowApi.prototype.dappsCowTokensHistoricalGet = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_tokenId, opt_extraHttpRequestParams) {
+API.Client.CowApi.prototype.cowGetTokensHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_tokenId, opt_extraHttpRequestParams) {
   /** @const {string} */
   var path = this.basePath_ + '/dapps/cow/tokens/historical';
 
@@ -201,16 +206,16 @@ API.Client.CowApi.prototype.dappsCowTokensHistoricalGet = function(opt_startBloc
 }
 
 /**
- * 
- * 
+ * GetTrades (historical) 🔥
+ * Gets trades.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
  * @param {!Date=} opt_startDate 
  * @param {!Date=} opt_endDate 
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise}
+ * @return {!angular.$q.Promise<!Array<!API.Client.Cow.TradeDTO>>}
  */
-API.Client.CowApi.prototype.dappsCowTradesHistoricalGet = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_extraHttpRequestParams) {
+API.Client.CowApi.prototype.cowGetTradesHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_extraHttpRequestParams) {
   /** @const {string} */
   var path = this.basePath_ + '/dapps/cow/trades/historical';
 
@@ -252,16 +257,16 @@ API.Client.CowApi.prototype.dappsCowTradesHistoricalGet = function(opt_startBloc
 }
 
 /**
- * 
- * 
+ * GetUsers (historical)
+ * Gets users.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
  * @param {!Date=} opt_startDate 
  * @param {!Date=} opt_endDate 
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise}
+ * @return {!angular.$q.Promise<!Array<!API.Client.Cow.UserDTO>>}
  */
-API.Client.CowApi.prototype.dappsCowUsersHistoricalGet = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_extraHttpRequestParams) {
+API.Client.CowApi.prototype.cowGetUsersHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_extraHttpRequestParams) {
   /** @const {string} */
   var path = this.basePath_ + '/dapps/cow/users/historical';
 

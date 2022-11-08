@@ -29,32 +29,6 @@ from openapi_client.model.uniswap_v3_factory_v3_dto import UniswapV3FactoryV3DTO
 
 from . import path
 
-# Path params
-ChainIdSchema = schemas.StrSchema
-RequestRequiredPathParams = typing_extensions.TypedDict(
-    'RequestRequiredPathParams',
-    {
-        'chain_id': typing.Union[ChainIdSchema, str, ],
-    }
-)
-RequestOptionalPathParams = typing_extensions.TypedDict(
-    'RequestOptionalPathParams',
-    {
-    },
-    total=False
-)
-
-
-class RequestPathParams(RequestRequiredPathParams, RequestOptionalPathParams):
-    pass
-
-
-request_path_chain_id = api_client.PathParameter(
-    name="chain_id",
-    style=api_client.ParameterStyle.SIMPLE,
-    schema=ChainIdSchema,
-    required=True,
-)
 
 
 class SchemaFor200ResponseBodyTextPlain(
@@ -169,9 +143,8 @@ _all_accept_content_types = (
 
 class BaseApi(api_client.Api):
     @typing.overload
-    def _dapps_uniswapv3_factory_current_get_oapg(
+    def _uniswap_v3_get_factory__current_oapg(
         self,
-        path_params: RequestPathParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -181,19 +154,17 @@ class BaseApi(api_client.Api):
     ]: ...
 
     @typing.overload
-    def _dapps_uniswapv3_factory_current_get_oapg(
+    def _uniswap_v3_get_factory__current_oapg(
         self,
         skip_deserialization: typing_extensions.Literal[True],
-        path_params: RequestPathParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
     ) -> api_client.ApiResponseWithoutDeserialization: ...
 
     @typing.overload
-    def _dapps_uniswapv3_factory_current_get_oapg(
+    def _uniswap_v3_get_factory__current_oapg(
         self,
-        path_params: RequestPathParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -203,35 +174,20 @@ class BaseApi(api_client.Api):
         api_client.ApiResponseWithoutDeserialization,
     ]: ...
 
-    def _dapps_uniswapv3_factory_current_get_oapg(
+    def _uniswap_v3_get_factory__current_oapg(
         self,
-        path_params: RequestPathParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
         skip_deserialization: bool = False,
     ):
         """
-        GetFactory
+        GetFactory (current)
         :param skip_deserialization: If true then api_response.response will be set but
             api_response.body and api_response.headers will not be deserialized into schema
             class instances
         """
-        self._verify_typed_dict_inputs_oapg(RequestPathParams, path_params)
         used_path = path.value
-
-        _path_params = {}
-        for parameter in (
-            request_path_chain_id,
-        ):
-            parameter_data = path_params.get(parameter.name, schemas.unset)
-            if parameter_data is schemas.unset:
-                continue
-            serialized_data = parameter.serialize(parameter_data)
-            _path_params.update(serialized_data)
-
-        for k, v in _path_params.items():
-            used_path = used_path.replace('{%s}' % k, v)
 
         _headers = HTTPHeaderDict()
         # TODO add cookie handling
@@ -262,13 +218,12 @@ class BaseApi(api_client.Api):
         return api_response
 
 
-class DappsUniswapv3FactoryCurrentGet(BaseApi):
+class UniswapV3GetFactoryCurrent(BaseApi):
     # this class is used by api classes that refer to endpoints with operationId fn names
 
     @typing.overload
-    def dapps_uniswapv3_factory_current_get(
+    def uniswap_v3_get_factory__current(
         self,
-        path_params: RequestPathParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -278,19 +233,17 @@ class DappsUniswapv3FactoryCurrentGet(BaseApi):
     ]: ...
 
     @typing.overload
-    def dapps_uniswapv3_factory_current_get(
+    def uniswap_v3_get_factory__current(
         self,
         skip_deserialization: typing_extensions.Literal[True],
-        path_params: RequestPathParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
     ) -> api_client.ApiResponseWithoutDeserialization: ...
 
     @typing.overload
-    def dapps_uniswapv3_factory_current_get(
+    def uniswap_v3_get_factory__current(
         self,
-        path_params: RequestPathParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -300,16 +253,14 @@ class DappsUniswapv3FactoryCurrentGet(BaseApi):
         api_client.ApiResponseWithoutDeserialization,
     ]: ...
 
-    def dapps_uniswapv3_factory_current_get(
+    def uniswap_v3_get_factory__current(
         self,
-        path_params: RequestPathParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
         skip_deserialization: bool = False,
     ):
-        return self._dapps_uniswapv3_factory_current_get_oapg(
-            path_params=path_params,
+        return self._uniswap_v3_get_factory__current_oapg(
             accept_content_types=accept_content_types,
             stream=stream,
             timeout=timeout,
@@ -323,7 +274,6 @@ class ApiForget(BaseApi):
     @typing.overload
     def get(
         self,
-        path_params: RequestPathParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -336,7 +286,6 @@ class ApiForget(BaseApi):
     def get(
         self,
         skip_deserialization: typing_extensions.Literal[True],
-        path_params: RequestPathParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -345,7 +294,6 @@ class ApiForget(BaseApi):
     @typing.overload
     def get(
         self,
-        path_params: RequestPathParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -357,14 +305,12 @@ class ApiForget(BaseApi):
 
     def get(
         self,
-        path_params: RequestPathParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
         skip_deserialization: bool = False,
     ):
-        return self._dapps_uniswapv3_factory_current_get_oapg(
-            path_params=path_params,
+        return self._uniswap_v3_get_factory__current_oapg(
             accept_content_types=accept_content_types,
             stream=stream,
             timeout=timeout,

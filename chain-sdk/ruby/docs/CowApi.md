@@ -4,87 +4,20 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
-| [**dapps_cow_orders_historical_get**](CowApi.md#dapps_cow_orders_historical_get) | **GET** /dapps/cow/orders/historical |  |
-| [**dapps_cow_settlement_historical_get**](CowApi.md#dapps_cow_settlement_historical_get) | **GET** /dapps/cow/settlement/historical |  |
-| [**dapps_cow_tokens_historical_get**](CowApi.md#dapps_cow_tokens_historical_get) | **GET** /dapps/cow/tokens/historical |  |
-| [**dapps_cow_trades_historical_get**](CowApi.md#dapps_cow_trades_historical_get) | **GET** /dapps/cow/trades/historical |  |
-| [**dapps_cow_users_historical_get**](CowApi.md#dapps_cow_users_historical_get) | **GET** /dapps/cow/users/historical |  |
+| [**cow_get_orders__historical**](CowApi.md#cow_get_orders__historical) | **GET** /dapps/cow/orders/historical | GetOrders (historical) |
+| [**cow_get_settlements__historical**](CowApi.md#cow_get_settlements__historical) | **GET** /dapps/cow/settlements/historical | GetSettlements (historical) |
+| [**cow_get_tokens__historical**](CowApi.md#cow_get_tokens__historical) | **GET** /dapps/cow/tokens/historical | GetTokens (historical) 🔥 |
+| [**cow_get_trades__historical**](CowApi.md#cow_get_trades__historical) | **GET** /dapps/cow/trades/historical | GetTrades (historical) 🔥 |
+| [**cow_get_users__historical**](CowApi.md#cow_get_users__historical) | **GET** /dapps/cow/users/historical | GetUsers (historical) |
 
 
-## dapps_cow_orders_historical_get
+## cow_get_orders__historical
 
-> dapps_cow_orders_historical_get(opts)
+> <Array<CowOrderDTO>> cow_get_orders__historical(opts)
 
+GetOrders (historical)
 
-
-### Examples
-
-```ruby
-require 'time'
-require 'openapi_client'
-
-api_instance = OpenapiClient::CowApi.new
-opts = {
-  start_block: 789, # Integer | 
-  end_block: 789, # Integer | 
-  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
-  end_date: Time.parse('2013-10-20T19:20:30+01:00') # Time | 
-}
-
-begin
-  
-  api_instance.dapps_cow_orders_historical_get(opts)
-rescue OpenapiClient::ApiError => e
-  puts "Error when calling CowApi->dapps_cow_orders_historical_get: #{e}"
-end
-```
-
-#### Using the dapps_cow_orders_historical_get_with_http_info variant
-
-This returns an Array which contains the response data (`nil` in this case), status code and headers.
-
-> <Array(nil, Integer, Hash)> dapps_cow_orders_historical_get_with_http_info(opts)
-
-```ruby
-begin
-  
-  data, status_code, headers = api_instance.dapps_cow_orders_historical_get_with_http_info(opts)
-  p status_code # => 2xx
-  p headers # => { ... }
-  p data # => nil
-rescue OpenapiClient::ApiError => e
-  puts "Error when calling CowApi->dapps_cow_orders_historical_get_with_http_info: #{e}"
-end
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-| ---- | ---- | ----------- | ----- |
-| **start_block** | **Integer** |  | [optional] |
-| **end_block** | **Integer** |  | [optional] |
-| **start_date** | **Time** |  | [optional] |
-| **end_date** | **Time** |  | [optional] |
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-
-## dapps_cow_settlement_historical_get
-
-> dapps_cow_settlement_historical_get(opts)
-
-
+Gets orders.
 
 ### Examples
 
@@ -101,28 +34,29 @@ opts = {
 }
 
 begin
-  
-  api_instance.dapps_cow_settlement_historical_get(opts)
+  # GetOrders (historical)
+  result = api_instance.cow_get_orders__historical(opts)
+  p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling CowApi->dapps_cow_settlement_historical_get: #{e}"
+  puts "Error when calling CowApi->cow_get_orders__historical: #{e}"
 end
 ```
 
-#### Using the dapps_cow_settlement_historical_get_with_http_info variant
+#### Using the cow_get_orders__historical_with_http_info variant
 
-This returns an Array which contains the response data (`nil` in this case), status code and headers.
+This returns an Array which contains the response data, status code and headers.
 
-> <Array(nil, Integer, Hash)> dapps_cow_settlement_historical_get_with_http_info(opts)
+> <Array(<Array<CowOrderDTO>>, Integer, Hash)> cow_get_orders__historical_with_http_info(opts)
 
 ```ruby
 begin
-  
-  data, status_code, headers = api_instance.dapps_cow_settlement_historical_get_with_http_info(opts)
+  # GetOrders (historical)
+  data, status_code, headers = api_instance.cow_get_orders__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => nil
+  p data # => <Array<CowOrderDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling CowApi->dapps_cow_settlement_historical_get_with_http_info: #{e}"
+  puts "Error when calling CowApi->cow_get_orders__historical_with_http_info: #{e}"
 end
 ```
 
@@ -137,7 +71,7 @@ end
 
 ### Return type
 
-nil (empty response body)
+[**Array&lt;CowOrderDTO&gt;**](CowOrderDTO.md)
 
 ### Authorization
 
@@ -146,14 +80,88 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dapps_cow_tokens_historical_get
+## cow_get_settlements__historical
 
-> dapps_cow_tokens_historical_get(opts)
+> <Array<CowSettlementDTO>> cow_get_settlements__historical(opts)
+
+GetSettlements (historical)
+
+Gets settlements.
+
+### Examples
+
+```ruby
+require 'time'
+require 'openapi_client'
+
+api_instance = OpenapiClient::CowApi.new
+opts = {
+  start_block: 789, # Integer | 
+  end_block: 789, # Integer | 
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  end_date: Time.parse('2013-10-20T19:20:30+01:00') # Time | 
+}
+
+begin
+  # GetSettlements (historical)
+  result = api_instance.cow_get_settlements__historical(opts)
+  p result
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling CowApi->cow_get_settlements__historical: #{e}"
+end
+```
+
+#### Using the cow_get_settlements__historical_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<Array<CowSettlementDTO>>, Integer, Hash)> cow_get_settlements__historical_with_http_info(opts)
+
+```ruby
+begin
+  # GetSettlements (historical)
+  data, status_code, headers = api_instance.cow_get_settlements__historical_with_http_info(opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <Array<CowSettlementDTO>>
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling CowApi->cow_get_settlements__historical_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **start_block** | **Integer** |  | [optional] |
+| **end_block** | **Integer** |  | [optional] |
+| **start_date** | **Time** |  | [optional] |
+| **end_date** | **Time** |  | [optional] |
+
+### Return type
+
+[**Array&lt;CowSettlementDTO&gt;**](CowSettlementDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
+## cow_get_tokens__historical
+
+> <Array<CowTokenDTO>> cow_get_tokens__historical(opts)
+
+GetTokens (historical) 🔥
+
+Gets tokens.
 
 ### Examples
 
@@ -171,28 +179,29 @@ opts = {
 }
 
 begin
-  
-  api_instance.dapps_cow_tokens_historical_get(opts)
+  # GetTokens (historical) 🔥
+  result = api_instance.cow_get_tokens__historical(opts)
+  p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling CowApi->dapps_cow_tokens_historical_get: #{e}"
+  puts "Error when calling CowApi->cow_get_tokens__historical: #{e}"
 end
 ```
 
-#### Using the dapps_cow_tokens_historical_get_with_http_info variant
+#### Using the cow_get_tokens__historical_with_http_info variant
 
-This returns an Array which contains the response data (`nil` in this case), status code and headers.
+This returns an Array which contains the response data, status code and headers.
 
-> <Array(nil, Integer, Hash)> dapps_cow_tokens_historical_get_with_http_info(opts)
+> <Array(<Array<CowTokenDTO>>, Integer, Hash)> cow_get_tokens__historical_with_http_info(opts)
 
 ```ruby
 begin
-  
-  data, status_code, headers = api_instance.dapps_cow_tokens_historical_get_with_http_info(opts)
+  # GetTokens (historical) 🔥
+  data, status_code, headers = api_instance.cow_get_tokens__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => nil
+  p data # => <Array<CowTokenDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling CowApi->dapps_cow_tokens_historical_get_with_http_info: #{e}"
+  puts "Error when calling CowApi->cow_get_tokens__historical_with_http_info: #{e}"
 end
 ```
 
@@ -208,7 +217,7 @@ end
 
 ### Return type
 
-nil (empty response body)
+[**Array&lt;CowTokenDTO&gt;**](CowTokenDTO.md)
 
 ### Authorization
 
@@ -217,14 +226,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dapps_cow_trades_historical_get
+## cow_get_trades__historical
 
-> dapps_cow_trades_historical_get(opts)
+> <Array<CowTradeDTO>> cow_get_trades__historical(opts)
 
+GetTrades (historical) 🔥
 
+Gets trades.
 
 ### Examples
 
@@ -241,28 +252,29 @@ opts = {
 }
 
 begin
-  
-  api_instance.dapps_cow_trades_historical_get(opts)
+  # GetTrades (historical) 🔥
+  result = api_instance.cow_get_trades__historical(opts)
+  p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling CowApi->dapps_cow_trades_historical_get: #{e}"
+  puts "Error when calling CowApi->cow_get_trades__historical: #{e}"
 end
 ```
 
-#### Using the dapps_cow_trades_historical_get_with_http_info variant
+#### Using the cow_get_trades__historical_with_http_info variant
 
-This returns an Array which contains the response data (`nil` in this case), status code and headers.
+This returns an Array which contains the response data, status code and headers.
 
-> <Array(nil, Integer, Hash)> dapps_cow_trades_historical_get_with_http_info(opts)
+> <Array(<Array<CowTradeDTO>>, Integer, Hash)> cow_get_trades__historical_with_http_info(opts)
 
 ```ruby
 begin
-  
-  data, status_code, headers = api_instance.dapps_cow_trades_historical_get_with_http_info(opts)
+  # GetTrades (historical) 🔥
+  data, status_code, headers = api_instance.cow_get_trades__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => nil
+  p data # => <Array<CowTradeDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling CowApi->dapps_cow_trades_historical_get_with_http_info: #{e}"
+  puts "Error when calling CowApi->cow_get_trades__historical_with_http_info: #{e}"
 end
 ```
 
@@ -277,7 +289,7 @@ end
 
 ### Return type
 
-nil (empty response body)
+[**Array&lt;CowTradeDTO&gt;**](CowTradeDTO.md)
 
 ### Authorization
 
@@ -286,14 +298,16 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
-## dapps_cow_users_historical_get
+## cow_get_users__historical
 
-> dapps_cow_users_historical_get(opts)
+> <Array<CowUserDTO>> cow_get_users__historical(opts)
 
+GetUsers (historical)
 
+Gets users.
 
 ### Examples
 
@@ -310,28 +324,29 @@ opts = {
 }
 
 begin
-  
-  api_instance.dapps_cow_users_historical_get(opts)
+  # GetUsers (historical)
+  result = api_instance.cow_get_users__historical(opts)
+  p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling CowApi->dapps_cow_users_historical_get: #{e}"
+  puts "Error when calling CowApi->cow_get_users__historical: #{e}"
 end
 ```
 
-#### Using the dapps_cow_users_historical_get_with_http_info variant
+#### Using the cow_get_users__historical_with_http_info variant
 
-This returns an Array which contains the response data (`nil` in this case), status code and headers.
+This returns an Array which contains the response data, status code and headers.
 
-> <Array(nil, Integer, Hash)> dapps_cow_users_historical_get_with_http_info(opts)
+> <Array(<Array<CowUserDTO>>, Integer, Hash)> cow_get_users__historical_with_http_info(opts)
 
 ```ruby
 begin
-  
-  data, status_code, headers = api_instance.dapps_cow_users_historical_get_with_http_info(opts)
+  # GetUsers (historical)
+  data, status_code, headers = api_instance.cow_get_users__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => nil
+  p data # => <Array<CowUserDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling CowApi->dapps_cow_users_historical_get_with_http_info: #{e}"
+  puts "Error when calling CowApi->cow_get_users__historical_with_http_info: #{e}"
 end
 ```
 
@@ -346,7 +361,7 @@ end
 
 ### Return type
 
-nil (empty response body)
+[**Array&lt;CowUserDTO&gt;**](CowUserDTO.md)
 
 ### Authorization
 
@@ -355,5 +370,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 

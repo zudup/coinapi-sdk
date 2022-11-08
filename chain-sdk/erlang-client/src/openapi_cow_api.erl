@@ -1,21 +1,21 @@
 -module(openapi_cow_api).
 
--export([dapps_cow_orders_historical_get/1, dapps_cow_orders_historical_get/2,
-         dapps_cow_settlement_historical_get/1, dapps_cow_settlement_historical_get/2,
-         dapps_cow_tokens_historical_get/1, dapps_cow_tokens_historical_get/2,
-         dapps_cow_trades_historical_get/1, dapps_cow_trades_historical_get/2,
-         dapps_cow_users_historical_get/1, dapps_cow_users_historical_get/2]).
+-export([cow_get_orders_(historical)/1, cow_get_orders_(historical)/2,
+         cow_get_settlements_(historical)/1, cow_get_settlements_(historical)/2,
+         cow_get_tokens_(historical)/1, cow_get_tokens_(historical)/2,
+         cow_get_trades_(historical)/1, cow_get_trades_(historical)/2,
+         cow_get_users_(historical)/1, cow_get_users_(historical)/2]).
 
 -define(BASE_URL, <<"">>).
 
-%% @doc 
-%% 
--spec dapps_cow_orders_historical_get(ctx:ctx()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-dapps_cow_orders_historical_get(Ctx) ->
-    dapps_cow_orders_historical_get(Ctx, #{}).
+%% @doc GetOrders (historical)
+%% Gets orders.
+-spec cow_get_orders_(historical)(ctx:ctx()) -> {ok, [openapi_cow_order_dto:openapi_cow_order_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+cow_get_orders_(historical)(Ctx) ->
+    cow_get_orders_(historical)(Ctx, #{}).
 
--spec dapps_cow_orders_historical_get(ctx:ctx(), maps:map()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-dapps_cow_orders_historical_get(Ctx, Optional) ->
+-spec cow_get_orders_(historical)(ctx:ctx(), maps:map()) -> {ok, [openapi_cow_order_dto:openapi_cow_order_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+cow_get_orders_(historical)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
 
@@ -29,19 +29,19 @@ dapps_cow_orders_historical_get(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc 
-%% 
--spec dapps_cow_settlement_historical_get(ctx:ctx()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-dapps_cow_settlement_historical_get(Ctx) ->
-    dapps_cow_settlement_historical_get(Ctx, #{}).
+%% @doc GetSettlements (historical)
+%% Gets settlements.
+-spec cow_get_settlements_(historical)(ctx:ctx()) -> {ok, [openapi_cow_settlement_dto:openapi_cow_settlement_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+cow_get_settlements_(historical)(Ctx) ->
+    cow_get_settlements_(historical)(Ctx, #{}).
 
--spec dapps_cow_settlement_historical_get(ctx:ctx(), maps:map()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-dapps_cow_settlement_historical_get(Ctx, Optional) ->
+-spec cow_get_settlements_(historical)(ctx:ctx(), maps:map()) -> {ok, [openapi_cow_settlement_dto:openapi_cow_settlement_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+cow_get_settlements_(historical)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
 
     Method = get,
-    Path = [<<"/dapps/cow/settlement/historical">>],
+    Path = [<<"/dapps/cow/settlements/historical">>],
     QS = lists:flatten([])++openapi_utils:optional_params(['startBlock', 'endBlock', 'startDate', 'endDate'], _OptionalParams),
     Headers = [],
     Body1 = [],
@@ -50,14 +50,14 @@ dapps_cow_settlement_historical_get(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc 
-%% 
--spec dapps_cow_tokens_historical_get(ctx:ctx()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-dapps_cow_tokens_historical_get(Ctx) ->
-    dapps_cow_tokens_historical_get(Ctx, #{}).
+%% @doc GetTokens (historical) 🔥
+%% Gets tokens.
+-spec cow_get_tokens_(historical)(ctx:ctx()) -> {ok, [openapi_cow_token_dto:openapi_cow_token_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+cow_get_tokens_(historical)(Ctx) ->
+    cow_get_tokens_(historical)(Ctx, #{}).
 
--spec dapps_cow_tokens_historical_get(ctx:ctx(), maps:map()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-dapps_cow_tokens_historical_get(Ctx, Optional) ->
+-spec cow_get_tokens_(historical)(ctx:ctx(), maps:map()) -> {ok, [openapi_cow_token_dto:openapi_cow_token_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+cow_get_tokens_(historical)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
 
@@ -71,14 +71,14 @@ dapps_cow_tokens_historical_get(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc 
-%% 
--spec dapps_cow_trades_historical_get(ctx:ctx()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-dapps_cow_trades_historical_get(Ctx) ->
-    dapps_cow_trades_historical_get(Ctx, #{}).
+%% @doc GetTrades (historical) 🔥
+%% Gets trades.
+-spec cow_get_trades_(historical)(ctx:ctx()) -> {ok, [openapi_cow_trade_dto:openapi_cow_trade_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+cow_get_trades_(historical)(Ctx) ->
+    cow_get_trades_(historical)(Ctx, #{}).
 
--spec dapps_cow_trades_historical_get(ctx:ctx(), maps:map()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-dapps_cow_trades_historical_get(Ctx, Optional) ->
+-spec cow_get_trades_(historical)(ctx:ctx(), maps:map()) -> {ok, [openapi_cow_trade_dto:openapi_cow_trade_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+cow_get_trades_(historical)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
 
@@ -92,14 +92,14 @@ dapps_cow_trades_historical_get(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc 
-%% 
--spec dapps_cow_users_historical_get(ctx:ctx()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-dapps_cow_users_historical_get(Ctx) ->
-    dapps_cow_users_historical_get(Ctx, #{}).
+%% @doc GetUsers (historical)
+%% Gets users.
+-spec cow_get_users_(historical)(ctx:ctx()) -> {ok, [openapi_cow_user_dto:openapi_cow_user_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+cow_get_users_(historical)(Ctx) ->
+    cow_get_users_(historical)(Ctx, #{}).
 
--spec dapps_cow_users_historical_get(ctx:ctx(), maps:map()) -> {ok, [], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-dapps_cow_users_historical_get(Ctx, Optional) ->
+-spec cow_get_users_(historical)(ctx:ctx(), maps:map()) -> {ok, [openapi_cow_user_dto:openapi_cow_user_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+cow_get_users_(historical)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
 

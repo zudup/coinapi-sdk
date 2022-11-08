@@ -12,13 +12,17 @@
 }while(0)
 
 
-void
-CurveAPI_dappsCurveAccountsHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate )
+// GetAccounts (historical)
+//
+// Gets accounts.
+//
+list_t*
+CurveAPI_curveGetAccountsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate )
 {
     list_t    *localVarQueryParameters = list_createList();
     list_t    *localVarHeaderParameters = NULL;
     list_t    *localVarFormParameters = NULL;
-    list_t *localVarHeaderType = NULL;
+    list_t *localVarHeaderType = list_createList();
     list_t *localVarContentType = NULL;
     char      *localVarBodyParameters = NULL;
 
@@ -77,6 +81,9 @@ CurveAPI_dappsCurveAccountsHistoricalGet(apiClient_t *apiClient, long startBlock
         keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
         list_addElement(localVarQueryParameters,keyPairQuery_endDate);
     }
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
     apiClient_invoke(apiClient,
                     localVarPath,
                     localVarQueryParameters,
@@ -89,10 +96,27 @@ CurveAPI_dappsCurveAccountsHistoricalGet(apiClient_t *apiClient, long startBlock
 
     // uncomment below to debug the error response
     //if (apiClient->response_code == 200) {
-    //    printf("%s\n","Success");
+    //    printf("%s\n","successful operation");
     //}
-    //No return type
-end:
+    cJSON *CurveAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(CurveAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, CurveAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( CurveAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
     if (apiClient->dataReceived) {
         free(apiClient->dataReceived);
         apiClient->dataReceived = NULL;
@@ -101,26 +125,66 @@ end:
     list_freeList(localVarQueryParameters);
     
     
-    
+    list_freeList(localVarHeaderType);
     
     free(localVarPath);
+    if(keyQuery_startBlock){
+        free(keyQuery_startBlock);
+        keyQuery_startBlock = NULL;
+    }
+    if(keyPairQuery_startBlock){
+        keyValuePair_free(keyPairQuery_startBlock);
+        keyPairQuery_startBlock = NULL;
+    }
+    if(keyQuery_endBlock){
+        free(keyQuery_endBlock);
+        keyQuery_endBlock = NULL;
+    }
+    if(keyPairQuery_endBlock){
+        keyValuePair_free(keyPairQuery_endBlock);
+        keyPairQuery_endBlock = NULL;
+    }
+    if(keyQuery_startDate){
+        free(keyQuery_startDate);
+        keyQuery_startDate = NULL;
+    }
+    if(keyPairQuery_startDate){
+        keyValuePair_free(keyPairQuery_startDate);
+        keyPairQuery_startDate = NULL;
+    }
+    if(keyQuery_endDate){
+        free(keyQuery_endDate);
+        keyQuery_endDate = NULL;
+    }
+    if(keyPairQuery_endDate){
+        keyValuePair_free(keyPairQuery_endDate);
+        keyPairQuery_endDate = NULL;
+    }
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
 
 }
 
-void
-CurveAPI_dappsCurveAddLiquidityEventHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId )
+// GetAddLiquidityEvents (historical)
+//
+// Gets add liquidity events.
+//
+list_t*
+CurveAPI_curveGetAddLiquidityEventsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId )
 {
     list_t    *localVarQueryParameters = list_createList();
     list_t    *localVarHeaderParameters = NULL;
     list_t    *localVarFormParameters = NULL;
-    list_t *localVarHeaderType = NULL;
+    list_t *localVarHeaderType = list_createList();
     list_t *localVarContentType = NULL;
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/curve/addLiquidityEvent/historical")+1;
+    long sizeOfPath = strlen("/dapps/curve/addLiquidityEvents/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/curve/addLiquidityEvent/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/addLiquidityEvents/historical");
 
 
 
@@ -184,6 +248,9 @@ CurveAPI_dappsCurveAddLiquidityEventHistoricalGet(apiClient_t *apiClient, long s
         keyPairQuery_poolId = keyValuePair_create(keyQuery_poolId, valueQuery_poolId);
         list_addElement(localVarQueryParameters,keyPairQuery_poolId);
     }
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
     apiClient_invoke(apiClient,
                     localVarPath,
                     localVarQueryParameters,
@@ -196,10 +263,27 @@ CurveAPI_dappsCurveAddLiquidityEventHistoricalGet(apiClient_t *apiClient, long s
 
     // uncomment below to debug the error response
     //if (apiClient->response_code == 200) {
-    //    printf("%s\n","Success");
+    //    printf("%s\n","successful operation");
     //}
-    //No return type
-end:
+    cJSON *CurveAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(CurveAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, CurveAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( CurveAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
     if (apiClient->dataReceived) {
         free(apiClient->dataReceived);
         apiClient->dataReceived = NULL;
@@ -208,9 +292,41 @@ end:
     list_freeList(localVarQueryParameters);
     
     
-    
+    list_freeList(localVarHeaderType);
     
     free(localVarPath);
+    if(keyQuery_startBlock){
+        free(keyQuery_startBlock);
+        keyQuery_startBlock = NULL;
+    }
+    if(keyPairQuery_startBlock){
+        keyValuePair_free(keyPairQuery_startBlock);
+        keyPairQuery_startBlock = NULL;
+    }
+    if(keyQuery_endBlock){
+        free(keyQuery_endBlock);
+        keyQuery_endBlock = NULL;
+    }
+    if(keyPairQuery_endBlock){
+        keyValuePair_free(keyPairQuery_endBlock);
+        keyPairQuery_endBlock = NULL;
+    }
+    if(keyQuery_startDate){
+        free(keyQuery_startDate);
+        keyQuery_startDate = NULL;
+    }
+    if(keyPairQuery_startDate){
+        keyValuePair_free(keyPairQuery_startDate);
+        keyPairQuery_startDate = NULL;
+    }
+    if(keyQuery_endDate){
+        free(keyQuery_endDate);
+        keyQuery_endDate = NULL;
+    }
+    if(keyPairQuery_endDate){
+        keyValuePair_free(keyPairQuery_endDate);
+        keyPairQuery_endDate = NULL;
+    }
     if(keyQuery_poolId){
         free(keyQuery_poolId);
         keyQuery_poolId = NULL;
@@ -223,31 +339,31 @@ end:
         keyValuePair_free(keyPairQuery_poolId);
         keyPairQuery_poolId = NULL;
     }
-    if(keyQuery_poolId){
-        free(keyQuery_poolId);
-        keyQuery_poolId = NULL;
-    }
-    if(keyPairQuery_poolId){
-        keyValuePair_free(keyPairQuery_poolId);
-        keyPairQuery_poolId = NULL;
-    }
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
 
 }
 
-void
-CurveAPI_dappsCurveAdminFeeChangeLogHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId )
+// GetAdminFeeChangeLogs (historical)
+//
+// Gets admin fee change logs.
+//
+list_t*
+CurveAPI_curveGetAdminFeeChangeLogsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId )
 {
     list_t    *localVarQueryParameters = list_createList();
     list_t    *localVarHeaderParameters = NULL;
     list_t    *localVarFormParameters = NULL;
-    list_t *localVarHeaderType = NULL;
+    list_t *localVarHeaderType = list_createList();
     list_t *localVarContentType = NULL;
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/curve/adminFeeChangeLog/historical")+1;
+    long sizeOfPath = strlen("/dapps/curve/adminFeeChangeLogs/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/curve/adminFeeChangeLog/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/adminFeeChangeLogs/historical");
 
 
 
@@ -311,6 +427,9 @@ CurveAPI_dappsCurveAdminFeeChangeLogHistoricalGet(apiClient_t *apiClient, long s
         keyPairQuery_poolId = keyValuePair_create(keyQuery_poolId, valueQuery_poolId);
         list_addElement(localVarQueryParameters,keyPairQuery_poolId);
     }
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
     apiClient_invoke(apiClient,
                     localVarPath,
                     localVarQueryParameters,
@@ -323,10 +442,27 @@ CurveAPI_dappsCurveAdminFeeChangeLogHistoricalGet(apiClient_t *apiClient, long s
 
     // uncomment below to debug the error response
     //if (apiClient->response_code == 200) {
-    //    printf("%s\n","Success");
+    //    printf("%s\n","successful operation");
     //}
-    //No return type
-end:
+    cJSON *CurveAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(CurveAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, CurveAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( CurveAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
     if (apiClient->dataReceived) {
         free(apiClient->dataReceived);
         apiClient->dataReceived = NULL;
@@ -335,9 +471,41 @@ end:
     list_freeList(localVarQueryParameters);
     
     
-    
+    list_freeList(localVarHeaderType);
     
     free(localVarPath);
+    if(keyQuery_startBlock){
+        free(keyQuery_startBlock);
+        keyQuery_startBlock = NULL;
+    }
+    if(keyPairQuery_startBlock){
+        keyValuePair_free(keyPairQuery_startBlock);
+        keyPairQuery_startBlock = NULL;
+    }
+    if(keyQuery_endBlock){
+        free(keyQuery_endBlock);
+        keyQuery_endBlock = NULL;
+    }
+    if(keyPairQuery_endBlock){
+        keyValuePair_free(keyPairQuery_endBlock);
+        keyPairQuery_endBlock = NULL;
+    }
+    if(keyQuery_startDate){
+        free(keyQuery_startDate);
+        keyQuery_startDate = NULL;
+    }
+    if(keyPairQuery_startDate){
+        keyValuePair_free(keyPairQuery_startDate);
+        keyPairQuery_startDate = NULL;
+    }
+    if(keyQuery_endDate){
+        free(keyQuery_endDate);
+        keyQuery_endDate = NULL;
+    }
+    if(keyPairQuery_endDate){
+        keyValuePair_free(keyPairQuery_endDate);
+        keyPairQuery_endDate = NULL;
+    }
     if(keyQuery_poolId){
         free(keyQuery_poolId);
         keyQuery_poolId = NULL;
@@ -350,31 +518,31 @@ end:
         keyValuePair_free(keyPairQuery_poolId);
         keyPairQuery_poolId = NULL;
     }
-    if(keyQuery_poolId){
-        free(keyQuery_poolId);
-        keyQuery_poolId = NULL;
-    }
-    if(keyPairQuery_poolId){
-        keyValuePair_free(keyPairQuery_poolId);
-        keyPairQuery_poolId = NULL;
-    }
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
 
 }
 
-void
-CurveAPI_dappsCurveAmplificationCoeffChangeLogHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId )
+// GetAmplificationCoeffChangeLogs (historical)
+//
+// Gets amplification coeff change logs.
+//
+list_t*
+CurveAPI_curveGetAmplificationCoeffChangeLogsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId )
 {
     list_t    *localVarQueryParameters = list_createList();
     list_t    *localVarHeaderParameters = NULL;
     list_t    *localVarFormParameters = NULL;
-    list_t *localVarHeaderType = NULL;
+    list_t *localVarHeaderType = list_createList();
     list_t *localVarContentType = NULL;
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/curve/amplificationCoeffChangeLog/historical")+1;
+    long sizeOfPath = strlen("/dapps/curve/amplificationCoeffChangeLogs/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/curve/amplificationCoeffChangeLog/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/amplificationCoeffChangeLogs/historical");
 
 
 
@@ -438,6 +606,9 @@ CurveAPI_dappsCurveAmplificationCoeffChangeLogHistoricalGet(apiClient_t *apiClie
         keyPairQuery_poolId = keyValuePair_create(keyQuery_poolId, valueQuery_poolId);
         list_addElement(localVarQueryParameters,keyPairQuery_poolId);
     }
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
     apiClient_invoke(apiClient,
                     localVarPath,
                     localVarQueryParameters,
@@ -450,10 +621,27 @@ CurveAPI_dappsCurveAmplificationCoeffChangeLogHistoricalGet(apiClient_t *apiClie
 
     // uncomment below to debug the error response
     //if (apiClient->response_code == 200) {
-    //    printf("%s\n","Success");
+    //    printf("%s\n","successful operation");
     //}
-    //No return type
-end:
+    cJSON *CurveAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(CurveAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, CurveAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( CurveAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
     if (apiClient->dataReceived) {
         free(apiClient->dataReceived);
         apiClient->dataReceived = NULL;
@@ -462,9 +650,41 @@ end:
     list_freeList(localVarQueryParameters);
     
     
-    
+    list_freeList(localVarHeaderType);
     
     free(localVarPath);
+    if(keyQuery_startBlock){
+        free(keyQuery_startBlock);
+        keyQuery_startBlock = NULL;
+    }
+    if(keyPairQuery_startBlock){
+        keyValuePair_free(keyPairQuery_startBlock);
+        keyPairQuery_startBlock = NULL;
+    }
+    if(keyQuery_endBlock){
+        free(keyQuery_endBlock);
+        keyQuery_endBlock = NULL;
+    }
+    if(keyPairQuery_endBlock){
+        keyValuePair_free(keyPairQuery_endBlock);
+        keyPairQuery_endBlock = NULL;
+    }
+    if(keyQuery_startDate){
+        free(keyQuery_startDate);
+        keyQuery_startDate = NULL;
+    }
+    if(keyPairQuery_startDate){
+        keyValuePair_free(keyPairQuery_startDate);
+        keyPairQuery_startDate = NULL;
+    }
+    if(keyQuery_endDate){
+        free(keyQuery_endDate);
+        keyQuery_endDate = NULL;
+    }
+    if(keyPairQuery_endDate){
+        keyValuePair_free(keyPairQuery_endDate);
+        keyPairQuery_endDate = NULL;
+    }
     if(keyQuery_poolId){
         free(keyQuery_poolId);
         keyQuery_poolId = NULL;
@@ -477,24 +697,24 @@ end:
         keyValuePair_free(keyPairQuery_poolId);
         keyPairQuery_poolId = NULL;
     }
-    if(keyQuery_poolId){
-        free(keyQuery_poolId);
-        keyQuery_poolId = NULL;
-    }
-    if(keyPairQuery_poolId){
-        keyValuePair_free(keyPairQuery_poolId);
-        keyPairQuery_poolId = NULL;
-    }
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
 
 }
 
-void
-CurveAPI_dappsCurveCoinsHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId )
+// GetCoins (historical)
+//
+// Gets coins.
+//
+list_t*
+CurveAPI_curveGetCoinsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId )
 {
     list_t    *localVarQueryParameters = list_createList();
     list_t    *localVarHeaderParameters = NULL;
     list_t    *localVarFormParameters = NULL;
-    list_t *localVarHeaderType = NULL;
+    list_t *localVarHeaderType = list_createList();
     list_t *localVarContentType = NULL;
     char      *localVarBodyParameters = NULL;
 
@@ -565,6 +785,9 @@ CurveAPI_dappsCurveCoinsHistoricalGet(apiClient_t *apiClient, long startBlock , 
         keyPairQuery_poolId = keyValuePair_create(keyQuery_poolId, valueQuery_poolId);
         list_addElement(localVarQueryParameters,keyPairQuery_poolId);
     }
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
     apiClient_invoke(apiClient,
                     localVarPath,
                     localVarQueryParameters,
@@ -577,10 +800,27 @@ CurveAPI_dappsCurveCoinsHistoricalGet(apiClient_t *apiClient, long startBlock , 
 
     // uncomment below to debug the error response
     //if (apiClient->response_code == 200) {
-    //    printf("%s\n","Success");
+    //    printf("%s\n","successful operation");
     //}
-    //No return type
-end:
+    cJSON *CurveAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(CurveAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, CurveAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( CurveAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
     if (apiClient->dataReceived) {
         free(apiClient->dataReceived);
         apiClient->dataReceived = NULL;
@@ -589,9 +829,41 @@ end:
     list_freeList(localVarQueryParameters);
     
     
-    
+    list_freeList(localVarHeaderType);
     
     free(localVarPath);
+    if(keyQuery_startBlock){
+        free(keyQuery_startBlock);
+        keyQuery_startBlock = NULL;
+    }
+    if(keyPairQuery_startBlock){
+        keyValuePair_free(keyPairQuery_startBlock);
+        keyPairQuery_startBlock = NULL;
+    }
+    if(keyQuery_endBlock){
+        free(keyQuery_endBlock);
+        keyQuery_endBlock = NULL;
+    }
+    if(keyPairQuery_endBlock){
+        keyValuePair_free(keyPairQuery_endBlock);
+        keyPairQuery_endBlock = NULL;
+    }
+    if(keyQuery_startDate){
+        free(keyQuery_startDate);
+        keyQuery_startDate = NULL;
+    }
+    if(keyPairQuery_startDate){
+        keyValuePair_free(keyPairQuery_startDate);
+        keyPairQuery_startDate = NULL;
+    }
+    if(keyQuery_endDate){
+        free(keyQuery_endDate);
+        keyQuery_endDate = NULL;
+    }
+    if(keyPairQuery_endDate){
+        keyValuePair_free(keyPairQuery_endDate);
+        keyPairQuery_endDate = NULL;
+    }
     if(keyQuery_poolId){
         free(keyQuery_poolId);
         keyQuery_poolId = NULL;
@@ -604,24 +876,24 @@ end:
         keyValuePair_free(keyPairQuery_poolId);
         keyPairQuery_poolId = NULL;
     }
-    if(keyQuery_poolId){
-        free(keyQuery_poolId);
-        keyQuery_poolId = NULL;
-    }
-    if(keyPairQuery_poolId){
-        keyValuePair_free(keyPairQuery_poolId);
-        keyPairQuery_poolId = NULL;
-    }
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
 
 }
 
-void
-CurveAPI_dappsCurveContractsHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId )
+// GetContracts (historical)
+//
+// Gets contracts.
+//
+list_t*
+CurveAPI_curveGetContractsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId )
 {
     list_t    *localVarQueryParameters = list_createList();
     list_t    *localVarHeaderParameters = NULL;
     list_t    *localVarFormParameters = NULL;
-    list_t *localVarHeaderType = NULL;
+    list_t *localVarHeaderType = list_createList();
     list_t *localVarContentType = NULL;
     char      *localVarBodyParameters = NULL;
 
@@ -692,6 +964,9 @@ CurveAPI_dappsCurveContractsHistoricalGet(apiClient_t *apiClient, long startBloc
         keyPairQuery_poolId = keyValuePair_create(keyQuery_poolId, valueQuery_poolId);
         list_addElement(localVarQueryParameters,keyPairQuery_poolId);
     }
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
     apiClient_invoke(apiClient,
                     localVarPath,
                     localVarQueryParameters,
@@ -704,10 +979,27 @@ CurveAPI_dappsCurveContractsHistoricalGet(apiClient_t *apiClient, long startBloc
 
     // uncomment below to debug the error response
     //if (apiClient->response_code == 200) {
-    //    printf("%s\n","Success");
+    //    printf("%s\n","successful operation");
     //}
-    //No return type
-end:
+    cJSON *CurveAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(CurveAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, CurveAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( CurveAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
     if (apiClient->dataReceived) {
         free(apiClient->dataReceived);
         apiClient->dataReceived = NULL;
@@ -716,9 +1008,41 @@ end:
     list_freeList(localVarQueryParameters);
     
     
-    
+    list_freeList(localVarHeaderType);
     
     free(localVarPath);
+    if(keyQuery_startBlock){
+        free(keyQuery_startBlock);
+        keyQuery_startBlock = NULL;
+    }
+    if(keyPairQuery_startBlock){
+        keyValuePair_free(keyPairQuery_startBlock);
+        keyPairQuery_startBlock = NULL;
+    }
+    if(keyQuery_endBlock){
+        free(keyQuery_endBlock);
+        keyQuery_endBlock = NULL;
+    }
+    if(keyPairQuery_endBlock){
+        keyValuePair_free(keyPairQuery_endBlock);
+        keyPairQuery_endBlock = NULL;
+    }
+    if(keyQuery_startDate){
+        free(keyQuery_startDate);
+        keyQuery_startDate = NULL;
+    }
+    if(keyPairQuery_startDate){
+        keyValuePair_free(keyPairQuery_startDate);
+        keyPairQuery_startDate = NULL;
+    }
+    if(keyQuery_endDate){
+        free(keyQuery_endDate);
+        keyQuery_endDate = NULL;
+    }
+    if(keyPairQuery_endDate){
+        keyValuePair_free(keyPairQuery_endDate);
+        keyPairQuery_endDate = NULL;
+    }
     if(keyQuery_poolId){
         free(keyQuery_poolId);
         keyQuery_poolId = NULL;
@@ -731,31 +1055,31 @@ end:
         keyValuePair_free(keyPairQuery_poolId);
         keyPairQuery_poolId = NULL;
     }
-    if(keyQuery_poolId){
-        free(keyQuery_poolId);
-        keyQuery_poolId = NULL;
-    }
-    if(keyPairQuery_poolId){
-        keyValuePair_free(keyPairQuery_poolId);
-        keyPairQuery_poolId = NULL;
-    }
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
 
 }
 
-void
-CurveAPI_dappsCurveContractsVersionHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId )
+// GetContractsVersions (historical)
+//
+// Gets contracts versions.
+//
+list_t*
+CurveAPI_curveGetContractsVersionsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId )
 {
     list_t    *localVarQueryParameters = list_createList();
     list_t    *localVarHeaderParameters = NULL;
     list_t    *localVarFormParameters = NULL;
-    list_t *localVarHeaderType = NULL;
+    list_t *localVarHeaderType = list_createList();
     list_t *localVarContentType = NULL;
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/curve/contractsVersion/historical")+1;
+    long sizeOfPath = strlen("/dapps/curve/contractsVersions/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/curve/contractsVersion/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/contractsVersions/historical");
 
 
 
@@ -819,6 +1143,9 @@ CurveAPI_dappsCurveContractsVersionHistoricalGet(apiClient_t *apiClient, long st
         keyPairQuery_poolId = keyValuePair_create(keyQuery_poolId, valueQuery_poolId);
         list_addElement(localVarQueryParameters,keyPairQuery_poolId);
     }
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
     apiClient_invoke(apiClient,
                     localVarPath,
                     localVarQueryParameters,
@@ -831,10 +1158,27 @@ CurveAPI_dappsCurveContractsVersionHistoricalGet(apiClient_t *apiClient, long st
 
     // uncomment below to debug the error response
     //if (apiClient->response_code == 200) {
-    //    printf("%s\n","Success");
+    //    printf("%s\n","successful operation");
     //}
-    //No return type
-end:
+    cJSON *CurveAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(CurveAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, CurveAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( CurveAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
     if (apiClient->dataReceived) {
         free(apiClient->dataReceived);
         apiClient->dataReceived = NULL;
@@ -843,9 +1187,41 @@ end:
     list_freeList(localVarQueryParameters);
     
     
-    
+    list_freeList(localVarHeaderType);
     
     free(localVarPath);
+    if(keyQuery_startBlock){
+        free(keyQuery_startBlock);
+        keyQuery_startBlock = NULL;
+    }
+    if(keyPairQuery_startBlock){
+        keyValuePair_free(keyPairQuery_startBlock);
+        keyPairQuery_startBlock = NULL;
+    }
+    if(keyQuery_endBlock){
+        free(keyQuery_endBlock);
+        keyQuery_endBlock = NULL;
+    }
+    if(keyPairQuery_endBlock){
+        keyValuePair_free(keyPairQuery_endBlock);
+        keyPairQuery_endBlock = NULL;
+    }
+    if(keyQuery_startDate){
+        free(keyQuery_startDate);
+        keyQuery_startDate = NULL;
+    }
+    if(keyPairQuery_startDate){
+        keyValuePair_free(keyPairQuery_startDate);
+        keyPairQuery_startDate = NULL;
+    }
+    if(keyQuery_endDate){
+        free(keyQuery_endDate);
+        keyQuery_endDate = NULL;
+    }
+    if(keyPairQuery_endDate){
+        keyValuePair_free(keyPairQuery_endDate);
+        keyPairQuery_endDate = NULL;
+    }
     if(keyQuery_poolId){
         free(keyQuery_poolId);
         keyQuery_poolId = NULL;
@@ -858,31 +1234,31 @@ end:
         keyValuePair_free(keyPairQuery_poolId);
         keyPairQuery_poolId = NULL;
     }
-    if(keyQuery_poolId){
-        free(keyQuery_poolId);
-        keyQuery_poolId = NULL;
-    }
-    if(keyPairQuery_poolId){
-        keyValuePair_free(keyPairQuery_poolId);
-        keyPairQuery_poolId = NULL;
-    }
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
 
 }
 
-void
-CurveAPI_dappsCurveDailyVolumeHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId )
+// GetDailyVolumes (historical)
+//
+// Gets daily volumes.
+//
+list_t*
+CurveAPI_curveGetDailyVolumesHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId )
 {
     list_t    *localVarQueryParameters = list_createList();
     list_t    *localVarHeaderParameters = NULL;
     list_t    *localVarFormParameters = NULL;
-    list_t *localVarHeaderType = NULL;
+    list_t *localVarHeaderType = list_createList();
     list_t *localVarContentType = NULL;
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/curve/dailyVolume/historical")+1;
+    long sizeOfPath = strlen("/dapps/curve/dailyVolumes/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/curve/dailyVolume/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/dailyVolumes/historical");
 
 
 
@@ -946,6 +1322,9 @@ CurveAPI_dappsCurveDailyVolumeHistoricalGet(apiClient_t *apiClient, long startBl
         keyPairQuery_poolId = keyValuePair_create(keyQuery_poolId, valueQuery_poolId);
         list_addElement(localVarQueryParameters,keyPairQuery_poolId);
     }
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
     apiClient_invoke(apiClient,
                     localVarPath,
                     localVarQueryParameters,
@@ -958,10 +1337,27 @@ CurveAPI_dappsCurveDailyVolumeHistoricalGet(apiClient_t *apiClient, long startBl
 
     // uncomment below to debug the error response
     //if (apiClient->response_code == 200) {
-    //    printf("%s\n","Success");
+    //    printf("%s\n","successful operation");
     //}
-    //No return type
-end:
+    cJSON *CurveAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(CurveAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, CurveAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( CurveAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
     if (apiClient->dataReceived) {
         free(apiClient->dataReceived);
         apiClient->dataReceived = NULL;
@@ -970,9 +1366,41 @@ end:
     list_freeList(localVarQueryParameters);
     
     
-    
+    list_freeList(localVarHeaderType);
     
     free(localVarPath);
+    if(keyQuery_startBlock){
+        free(keyQuery_startBlock);
+        keyQuery_startBlock = NULL;
+    }
+    if(keyPairQuery_startBlock){
+        keyValuePair_free(keyPairQuery_startBlock);
+        keyPairQuery_startBlock = NULL;
+    }
+    if(keyQuery_endBlock){
+        free(keyQuery_endBlock);
+        keyQuery_endBlock = NULL;
+    }
+    if(keyPairQuery_endBlock){
+        keyValuePair_free(keyPairQuery_endBlock);
+        keyPairQuery_endBlock = NULL;
+    }
+    if(keyQuery_startDate){
+        free(keyQuery_startDate);
+        keyQuery_startDate = NULL;
+    }
+    if(keyPairQuery_startDate){
+        keyValuePair_free(keyPairQuery_startDate);
+        keyPairQuery_startDate = NULL;
+    }
+    if(keyQuery_endDate){
+        free(keyQuery_endDate);
+        keyQuery_endDate = NULL;
+    }
+    if(keyPairQuery_endDate){
+        keyValuePair_free(keyPairQuery_endDate);
+        keyPairQuery_endDate = NULL;
+    }
     if(keyQuery_poolId){
         free(keyQuery_poolId);
         keyQuery_poolId = NULL;
@@ -985,31 +1413,31 @@ end:
         keyValuePair_free(keyPairQuery_poolId);
         keyPairQuery_poolId = NULL;
     }
-    if(keyQuery_poolId){
-        free(keyQuery_poolId);
-        keyQuery_poolId = NULL;
-    }
-    if(keyPairQuery_poolId){
-        keyValuePair_free(keyPairQuery_poolId);
-        keyPairQuery_poolId = NULL;
-    }
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
 
 }
 
-void
-CurveAPI_dappsCurveFeeChangeLogHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId )
+// GetExchanges (historical) 🔥
+//
+// Gets exchanges.
+//
+list_t*
+CurveAPI_curveGetExchangesHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId )
 {
     list_t    *localVarQueryParameters = list_createList();
     list_t    *localVarHeaderParameters = NULL;
     list_t    *localVarFormParameters = NULL;
-    list_t *localVarHeaderType = NULL;
+    list_t *localVarHeaderType = list_createList();
     list_t *localVarContentType = NULL;
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/curve/feeChangeLog/historical")+1;
+    long sizeOfPath = strlen("/dapps/curve/exchanges/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/curve/feeChangeLog/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/exchanges/historical");
 
 
 
@@ -1073,6 +1501,9 @@ CurveAPI_dappsCurveFeeChangeLogHistoricalGet(apiClient_t *apiClient, long startB
         keyPairQuery_poolId = keyValuePair_create(keyQuery_poolId, valueQuery_poolId);
         list_addElement(localVarQueryParameters,keyPairQuery_poolId);
     }
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
     apiClient_invoke(apiClient,
                     localVarPath,
                     localVarQueryParameters,
@@ -1085,10 +1516,27 @@ CurveAPI_dappsCurveFeeChangeLogHistoricalGet(apiClient_t *apiClient, long startB
 
     // uncomment below to debug the error response
     //if (apiClient->response_code == 200) {
-    //    printf("%s\n","Success");
+    //    printf("%s\n","successful operation");
     //}
-    //No return type
-end:
+    cJSON *CurveAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(CurveAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, CurveAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( CurveAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
     if (apiClient->dataReceived) {
         free(apiClient->dataReceived);
         apiClient->dataReceived = NULL;
@@ -1097,9 +1545,41 @@ end:
     list_freeList(localVarQueryParameters);
     
     
-    
+    list_freeList(localVarHeaderType);
     
     free(localVarPath);
+    if(keyQuery_startBlock){
+        free(keyQuery_startBlock);
+        keyQuery_startBlock = NULL;
+    }
+    if(keyPairQuery_startBlock){
+        keyValuePair_free(keyPairQuery_startBlock);
+        keyPairQuery_startBlock = NULL;
+    }
+    if(keyQuery_endBlock){
+        free(keyQuery_endBlock);
+        keyQuery_endBlock = NULL;
+    }
+    if(keyPairQuery_endBlock){
+        keyValuePair_free(keyPairQuery_endBlock);
+        keyPairQuery_endBlock = NULL;
+    }
+    if(keyQuery_startDate){
+        free(keyQuery_startDate);
+        keyQuery_startDate = NULL;
+    }
+    if(keyPairQuery_startDate){
+        keyValuePair_free(keyPairQuery_startDate);
+        keyPairQuery_startDate = NULL;
+    }
+    if(keyQuery_endDate){
+        free(keyQuery_endDate);
+        keyQuery_endDate = NULL;
+    }
+    if(keyPairQuery_endDate){
+        keyValuePair_free(keyPairQuery_endDate);
+        keyPairQuery_endDate = NULL;
+    }
     if(keyQuery_poolId){
         free(keyQuery_poolId);
         keyQuery_poolId = NULL;
@@ -1112,126 +1592,31 @@ end:
         keyValuePair_free(keyPairQuery_poolId);
         keyPairQuery_poolId = NULL;
     }
-    if(keyQuery_poolId){
-        free(keyQuery_poolId);
-        keyQuery_poolId = NULL;
-    }
-    if(keyPairQuery_poolId){
-        keyValuePair_free(keyPairQuery_poolId);
-        keyPairQuery_poolId = NULL;
-    }
-
-}
-
-void
-CurveAPI_dappsCurveGaugeDepositHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate )
-{
-    list_t    *localVarQueryParameters = list_createList();
-    list_t    *localVarHeaderParameters = NULL;
-    list_t    *localVarFormParameters = NULL;
-    list_t *localVarHeaderType = NULL;
-    list_t *localVarContentType = NULL;
-    char      *localVarBodyParameters = NULL;
-
-    // create the path
-    long sizeOfPath = strlen("/dapps/curve/gaugeDeposit/historical")+1;
-    char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/curve/gaugeDeposit/historical");
-
-
-
-
-    // query parameters
-    char *keyQuery_startBlock = NULL;
-    long valueQuery_startBlock ;
-    keyValuePair_t *keyPairQuery_startBlock = 0;
-    if (startBlock)
-    {
-        keyQuery_startBlock = strdup("startBlock");
-        valueQuery_startBlock = (startBlock);
-        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
-        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
-    }
-
-    // query parameters
-    char *keyQuery_endBlock = NULL;
-    long valueQuery_endBlock ;
-    keyValuePair_t *keyPairQuery_endBlock = 0;
-    if (endBlock)
-    {
-        keyQuery_endBlock = strdup("endBlock");
-        valueQuery_endBlock = (endBlock);
-        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
-        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
-    }
-
-    // query parameters
-    char *keyQuery_startDate = NULL;
-    char valueQuery_startDate ;
-    keyValuePair_t *keyPairQuery_startDate = 0;
-    if (startDate)
-    {
-        keyQuery_startDate = strdup("startDate");
-        valueQuery_startDate = (startDate);
-        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
-        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
-    }
-
-    // query parameters
-    char *keyQuery_endDate = NULL;
-    char valueQuery_endDate ;
-    keyValuePair_t *keyPairQuery_endDate = 0;
-    if (endDate)
-    {
-        keyQuery_endDate = strdup("endDate");
-        valueQuery_endDate = (endDate);
-        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
-        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
-    }
-    apiClient_invoke(apiClient,
-                    localVarPath,
-                    localVarQueryParameters,
-                    localVarHeaderParameters,
-                    localVarFormParameters,
-                    localVarHeaderType,
-                    localVarContentType,
-                    localVarBodyParameters,
-                    "GET");
-
-    // uncomment below to debug the error response
-    //if (apiClient->response_code == 200) {
-    //    printf("%s\n","Success");
-    //}
-    //No return type
+    return elementToReturn;
 end:
-    if (apiClient->dataReceived) {
-        free(apiClient->dataReceived);
-        apiClient->dataReceived = NULL;
-        apiClient->dataReceivedLen = 0;
-    }
-    list_freeList(localVarQueryParameters);
-    
-    
-    
-    
     free(localVarPath);
+    return NULL;
 
 }
 
-void
-CurveAPI_dappsCurveGaugeHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId )
+// GetFeeChangeLogs (historical)
+//
+// Gets fee change logs.
+//
+list_t*
+CurveAPI_curveGetFeeChangeLogsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId )
 {
     list_t    *localVarQueryParameters = list_createList();
     list_t    *localVarHeaderParameters = NULL;
     list_t    *localVarFormParameters = NULL;
-    list_t *localVarHeaderType = NULL;
+    list_t *localVarHeaderType = list_createList();
     list_t *localVarContentType = NULL;
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/curve/gauge/historical")+1;
+    long sizeOfPath = strlen("/dapps/curve/feeChangeLogs/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/curve/gauge/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/feeChangeLogs/historical");
 
 
 
@@ -1295,6 +1680,9 @@ CurveAPI_dappsCurveGaugeHistoricalGet(apiClient_t *apiClient, long startBlock , 
         keyPairQuery_poolId = keyValuePair_create(keyQuery_poolId, valueQuery_poolId);
         list_addElement(localVarQueryParameters,keyPairQuery_poolId);
     }
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
     apiClient_invoke(apiClient,
                     localVarPath,
                     localVarQueryParameters,
@@ -1307,10 +1695,27 @@ CurveAPI_dappsCurveGaugeHistoricalGet(apiClient_t *apiClient, long startBlock , 
 
     // uncomment below to debug the error response
     //if (apiClient->response_code == 200) {
-    //    printf("%s\n","Success");
+    //    printf("%s\n","successful operation");
     //}
-    //No return type
-end:
+    cJSON *CurveAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(CurveAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, CurveAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( CurveAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
     if (apiClient->dataReceived) {
         free(apiClient->dataReceived);
         apiClient->dataReceived = NULL;
@@ -1319,9 +1724,41 @@ end:
     list_freeList(localVarQueryParameters);
     
     
-    
+    list_freeList(localVarHeaderType);
     
     free(localVarPath);
+    if(keyQuery_startBlock){
+        free(keyQuery_startBlock);
+        keyQuery_startBlock = NULL;
+    }
+    if(keyPairQuery_startBlock){
+        keyValuePair_free(keyPairQuery_startBlock);
+        keyPairQuery_startBlock = NULL;
+    }
+    if(keyQuery_endBlock){
+        free(keyQuery_endBlock);
+        keyQuery_endBlock = NULL;
+    }
+    if(keyPairQuery_endBlock){
+        keyValuePair_free(keyPairQuery_endBlock);
+        keyPairQuery_endBlock = NULL;
+    }
+    if(keyQuery_startDate){
+        free(keyQuery_startDate);
+        keyQuery_startDate = NULL;
+    }
+    if(keyPairQuery_startDate){
+        keyValuePair_free(keyPairQuery_startDate);
+        keyPairQuery_startDate = NULL;
+    }
+    if(keyQuery_endDate){
+        free(keyQuery_endDate);
+        keyQuery_endDate = NULL;
+    }
+    if(keyPairQuery_endDate){
+        keyValuePair_free(keyPairQuery_endDate);
+        keyPairQuery_endDate = NULL;
+    }
     if(keyQuery_poolId){
         free(keyQuery_poolId);
         keyQuery_poolId = NULL;
@@ -1334,31 +1771,31 @@ end:
         keyValuePair_free(keyPairQuery_poolId);
         keyPairQuery_poolId = NULL;
     }
-    if(keyQuery_poolId){
-        free(keyQuery_poolId);
-        keyQuery_poolId = NULL;
-    }
-    if(keyPairQuery_poolId){
-        keyValuePair_free(keyPairQuery_poolId);
-        keyPairQuery_poolId = NULL;
-    }
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
 
 }
 
-void
-CurveAPI_dappsCurveGaugeLiquidityHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate )
+// GetGaugesDeposits (historical)
+//
+// Gets gauges deposits.
+//
+list_t*
+CurveAPI_curveGetGaugesDepositsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate )
 {
     list_t    *localVarQueryParameters = list_createList();
     list_t    *localVarHeaderParameters = NULL;
     list_t    *localVarFormParameters = NULL;
-    list_t *localVarHeaderType = NULL;
+    list_t *localVarHeaderType = list_createList();
     list_t *localVarContentType = NULL;
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/curve/gaugeLiquidity/historical")+1;
+    long sizeOfPath = strlen("/dapps/curve/gaugesDeposits/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/curve/gaugeLiquidity/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/gaugesDeposits/historical");
 
 
 
@@ -1410,6 +1847,9 @@ CurveAPI_dappsCurveGaugeLiquidityHistoricalGet(apiClient_t *apiClient, long star
         keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
         list_addElement(localVarQueryParameters,keyPairQuery_endDate);
     }
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
     apiClient_invoke(apiClient,
                     localVarPath,
                     localVarQueryParameters,
@@ -1422,10 +1862,27 @@ CurveAPI_dappsCurveGaugeLiquidityHistoricalGet(apiClient_t *apiClient, long star
 
     // uncomment below to debug the error response
     //if (apiClient->response_code == 200) {
-    //    printf("%s\n","Success");
+    //    printf("%s\n","successful operation");
     //}
-    //No return type
-end:
+    cJSON *CurveAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(CurveAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, CurveAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( CurveAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
     if (apiClient->dataReceived) {
         free(apiClient->dataReceived);
         apiClient->dataReceived = NULL;
@@ -1434,596 +1891,66 @@ end:
     list_freeList(localVarQueryParameters);
     
     
-    
+    list_freeList(localVarHeaderType);
     
     free(localVarPath);
-
-}
-
-void
-CurveAPI_dappsCurveGaugeTotalWeightHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate )
-{
-    list_t    *localVarQueryParameters = list_createList();
-    list_t    *localVarHeaderParameters = NULL;
-    list_t    *localVarFormParameters = NULL;
-    list_t *localVarHeaderType = NULL;
-    list_t *localVarContentType = NULL;
-    char      *localVarBodyParameters = NULL;
-
-    // create the path
-    long sizeOfPath = strlen("/dapps/curve/gaugeTotalWeight/historical")+1;
-    char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/curve/gaugeTotalWeight/historical");
-
-
-
-
-    // query parameters
-    char *keyQuery_startBlock = NULL;
-    long valueQuery_startBlock ;
-    keyValuePair_t *keyPairQuery_startBlock = 0;
-    if (startBlock)
-    {
-        keyQuery_startBlock = strdup("startBlock");
-        valueQuery_startBlock = (startBlock);
-        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
-        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
+    if(keyQuery_startBlock){
+        free(keyQuery_startBlock);
+        keyQuery_startBlock = NULL;
     }
-
-    // query parameters
-    char *keyQuery_endBlock = NULL;
-    long valueQuery_endBlock ;
-    keyValuePair_t *keyPairQuery_endBlock = 0;
-    if (endBlock)
-    {
-        keyQuery_endBlock = strdup("endBlock");
-        valueQuery_endBlock = (endBlock);
-        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
-        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
+    if(keyPairQuery_startBlock){
+        keyValuePair_free(keyPairQuery_startBlock);
+        keyPairQuery_startBlock = NULL;
     }
-
-    // query parameters
-    char *keyQuery_startDate = NULL;
-    char valueQuery_startDate ;
-    keyValuePair_t *keyPairQuery_startDate = 0;
-    if (startDate)
-    {
-        keyQuery_startDate = strdup("startDate");
-        valueQuery_startDate = (startDate);
-        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
-        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
+    if(keyQuery_endBlock){
+        free(keyQuery_endBlock);
+        keyQuery_endBlock = NULL;
     }
-
-    // query parameters
-    char *keyQuery_endDate = NULL;
-    char valueQuery_endDate ;
-    keyValuePair_t *keyPairQuery_endDate = 0;
-    if (endDate)
-    {
-        keyQuery_endDate = strdup("endDate");
-        valueQuery_endDate = (endDate);
-        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
-        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
+    if(keyPairQuery_endBlock){
+        keyValuePair_free(keyPairQuery_endBlock);
+        keyPairQuery_endBlock = NULL;
     }
-    apiClient_invoke(apiClient,
-                    localVarPath,
-                    localVarQueryParameters,
-                    localVarHeaderParameters,
-                    localVarFormParameters,
-                    localVarHeaderType,
-                    localVarContentType,
-                    localVarBodyParameters,
-                    "GET");
-
-    // uncomment below to debug the error response
-    //if (apiClient->response_code == 200) {
-    //    printf("%s\n","Success");
-    //}
-    //No return type
+    if(keyQuery_startDate){
+        free(keyQuery_startDate);
+        keyQuery_startDate = NULL;
+    }
+    if(keyPairQuery_startDate){
+        keyValuePair_free(keyPairQuery_startDate);
+        keyPairQuery_startDate = NULL;
+    }
+    if(keyQuery_endDate){
+        free(keyQuery_endDate);
+        keyQuery_endDate = NULL;
+    }
+    if(keyPairQuery_endDate){
+        keyValuePair_free(keyPairQuery_endDate);
+        keyPairQuery_endDate = NULL;
+    }
+    return elementToReturn;
 end:
-    if (apiClient->dataReceived) {
-        free(apiClient->dataReceived);
-        apiClient->dataReceived = NULL;
-        apiClient->dataReceivedLen = 0;
-    }
-    list_freeList(localVarQueryParameters);
-    
-    
-    
-    
     free(localVarPath);
+    return NULL;
 
 }
 
-void
-CurveAPI_dappsCurveGaugeTypeHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate )
+// GetGauges (historical)
+//
+// Gets gauges.
+//
+list_t*
+CurveAPI_curveGetGaugesHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId )
 {
     list_t    *localVarQueryParameters = list_createList();
     list_t    *localVarHeaderParameters = NULL;
     list_t    *localVarFormParameters = NULL;
-    list_t *localVarHeaderType = NULL;
+    list_t *localVarHeaderType = list_createList();
     list_t *localVarContentType = NULL;
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/curve/gaugeType/historical")+1;
+    long sizeOfPath = strlen("/dapps/curve/gauges/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/curve/gaugeType/historical");
-
-
-
-
-    // query parameters
-    char *keyQuery_startBlock = NULL;
-    long valueQuery_startBlock ;
-    keyValuePair_t *keyPairQuery_startBlock = 0;
-    if (startBlock)
-    {
-        keyQuery_startBlock = strdup("startBlock");
-        valueQuery_startBlock = (startBlock);
-        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
-        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
-    }
-
-    // query parameters
-    char *keyQuery_endBlock = NULL;
-    long valueQuery_endBlock ;
-    keyValuePair_t *keyPairQuery_endBlock = 0;
-    if (endBlock)
-    {
-        keyQuery_endBlock = strdup("endBlock");
-        valueQuery_endBlock = (endBlock);
-        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
-        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
-    }
-
-    // query parameters
-    char *keyQuery_startDate = NULL;
-    char valueQuery_startDate ;
-    keyValuePair_t *keyPairQuery_startDate = 0;
-    if (startDate)
-    {
-        keyQuery_startDate = strdup("startDate");
-        valueQuery_startDate = (startDate);
-        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
-        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
-    }
-
-    // query parameters
-    char *keyQuery_endDate = NULL;
-    char valueQuery_endDate ;
-    keyValuePair_t *keyPairQuery_endDate = 0;
-    if (endDate)
-    {
-        keyQuery_endDate = strdup("endDate");
-        valueQuery_endDate = (endDate);
-        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
-        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
-    }
-    apiClient_invoke(apiClient,
-                    localVarPath,
-                    localVarQueryParameters,
-                    localVarHeaderParameters,
-                    localVarFormParameters,
-                    localVarHeaderType,
-                    localVarContentType,
-                    localVarBodyParameters,
-                    "GET");
-
-    // uncomment below to debug the error response
-    //if (apiClient->response_code == 200) {
-    //    printf("%s\n","Success");
-    //}
-    //No return type
-end:
-    if (apiClient->dataReceived) {
-        free(apiClient->dataReceived);
-        apiClient->dataReceived = NULL;
-        apiClient->dataReceivedLen = 0;
-    }
-    list_freeList(localVarQueryParameters);
-    
-    
-    
-    
-    free(localVarPath);
-
-}
-
-void
-CurveAPI_dappsCurveGaugeTypeWeightHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate )
-{
-    list_t    *localVarQueryParameters = list_createList();
-    list_t    *localVarHeaderParameters = NULL;
-    list_t    *localVarFormParameters = NULL;
-    list_t *localVarHeaderType = NULL;
-    list_t *localVarContentType = NULL;
-    char      *localVarBodyParameters = NULL;
-
-    // create the path
-    long sizeOfPath = strlen("/dapps/curve/gaugeTypeWeight/historical")+1;
-    char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/curve/gaugeTypeWeight/historical");
-
-
-
-
-    // query parameters
-    char *keyQuery_startBlock = NULL;
-    long valueQuery_startBlock ;
-    keyValuePair_t *keyPairQuery_startBlock = 0;
-    if (startBlock)
-    {
-        keyQuery_startBlock = strdup("startBlock");
-        valueQuery_startBlock = (startBlock);
-        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
-        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
-    }
-
-    // query parameters
-    char *keyQuery_endBlock = NULL;
-    long valueQuery_endBlock ;
-    keyValuePair_t *keyPairQuery_endBlock = 0;
-    if (endBlock)
-    {
-        keyQuery_endBlock = strdup("endBlock");
-        valueQuery_endBlock = (endBlock);
-        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
-        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
-    }
-
-    // query parameters
-    char *keyQuery_startDate = NULL;
-    char valueQuery_startDate ;
-    keyValuePair_t *keyPairQuery_startDate = 0;
-    if (startDate)
-    {
-        keyQuery_startDate = strdup("startDate");
-        valueQuery_startDate = (startDate);
-        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
-        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
-    }
-
-    // query parameters
-    char *keyQuery_endDate = NULL;
-    char valueQuery_endDate ;
-    keyValuePair_t *keyPairQuery_endDate = 0;
-    if (endDate)
-    {
-        keyQuery_endDate = strdup("endDate");
-        valueQuery_endDate = (endDate);
-        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
-        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
-    }
-    apiClient_invoke(apiClient,
-                    localVarPath,
-                    localVarQueryParameters,
-                    localVarHeaderParameters,
-                    localVarFormParameters,
-                    localVarHeaderType,
-                    localVarContentType,
-                    localVarBodyParameters,
-                    "GET");
-
-    // uncomment below to debug the error response
-    //if (apiClient->response_code == 200) {
-    //    printf("%s\n","Success");
-    //}
-    //No return type
-end:
-    if (apiClient->dataReceived) {
-        free(apiClient->dataReceived);
-        apiClient->dataReceived = NULL;
-        apiClient->dataReceivedLen = 0;
-    }
-    list_freeList(localVarQueryParameters);
-    
-    
-    
-    
-    free(localVarPath);
-
-}
-
-void
-CurveAPI_dappsCurveGaugeWeightHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate )
-{
-    list_t    *localVarQueryParameters = list_createList();
-    list_t    *localVarHeaderParameters = NULL;
-    list_t    *localVarFormParameters = NULL;
-    list_t *localVarHeaderType = NULL;
-    list_t *localVarContentType = NULL;
-    char      *localVarBodyParameters = NULL;
-
-    // create the path
-    long sizeOfPath = strlen("/dapps/curve/gaugeWeight/historical")+1;
-    char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/curve/gaugeWeight/historical");
-
-
-
-
-    // query parameters
-    char *keyQuery_startBlock = NULL;
-    long valueQuery_startBlock ;
-    keyValuePair_t *keyPairQuery_startBlock = 0;
-    if (startBlock)
-    {
-        keyQuery_startBlock = strdup("startBlock");
-        valueQuery_startBlock = (startBlock);
-        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
-        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
-    }
-
-    // query parameters
-    char *keyQuery_endBlock = NULL;
-    long valueQuery_endBlock ;
-    keyValuePair_t *keyPairQuery_endBlock = 0;
-    if (endBlock)
-    {
-        keyQuery_endBlock = strdup("endBlock");
-        valueQuery_endBlock = (endBlock);
-        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
-        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
-    }
-
-    // query parameters
-    char *keyQuery_startDate = NULL;
-    char valueQuery_startDate ;
-    keyValuePair_t *keyPairQuery_startDate = 0;
-    if (startDate)
-    {
-        keyQuery_startDate = strdup("startDate");
-        valueQuery_startDate = (startDate);
-        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
-        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
-    }
-
-    // query parameters
-    char *keyQuery_endDate = NULL;
-    char valueQuery_endDate ;
-    keyValuePair_t *keyPairQuery_endDate = 0;
-    if (endDate)
-    {
-        keyQuery_endDate = strdup("endDate");
-        valueQuery_endDate = (endDate);
-        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
-        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
-    }
-    apiClient_invoke(apiClient,
-                    localVarPath,
-                    localVarQueryParameters,
-                    localVarHeaderParameters,
-                    localVarFormParameters,
-                    localVarHeaderType,
-                    localVarContentType,
-                    localVarBodyParameters,
-                    "GET");
-
-    // uncomment below to debug the error response
-    //if (apiClient->response_code == 200) {
-    //    printf("%s\n","Success");
-    //}
-    //No return type
-end:
-    if (apiClient->dataReceived) {
-        free(apiClient->dataReceived);
-        apiClient->dataReceived = NULL;
-        apiClient->dataReceivedLen = 0;
-    }
-    list_freeList(localVarQueryParameters);
-    
-    
-    
-    
-    free(localVarPath);
-
-}
-
-void
-CurveAPI_dappsCurveGaugeWeightVoteHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate )
-{
-    list_t    *localVarQueryParameters = list_createList();
-    list_t    *localVarHeaderParameters = NULL;
-    list_t    *localVarFormParameters = NULL;
-    list_t *localVarHeaderType = NULL;
-    list_t *localVarContentType = NULL;
-    char      *localVarBodyParameters = NULL;
-
-    // create the path
-    long sizeOfPath = strlen("/dapps/curve/gaugeWeightVote/historical")+1;
-    char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/curve/gaugeWeightVote/historical");
-
-
-
-
-    // query parameters
-    char *keyQuery_startBlock = NULL;
-    long valueQuery_startBlock ;
-    keyValuePair_t *keyPairQuery_startBlock = 0;
-    if (startBlock)
-    {
-        keyQuery_startBlock = strdup("startBlock");
-        valueQuery_startBlock = (startBlock);
-        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
-        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
-    }
-
-    // query parameters
-    char *keyQuery_endBlock = NULL;
-    long valueQuery_endBlock ;
-    keyValuePair_t *keyPairQuery_endBlock = 0;
-    if (endBlock)
-    {
-        keyQuery_endBlock = strdup("endBlock");
-        valueQuery_endBlock = (endBlock);
-        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
-        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
-    }
-
-    // query parameters
-    char *keyQuery_startDate = NULL;
-    char valueQuery_startDate ;
-    keyValuePair_t *keyPairQuery_startDate = 0;
-    if (startDate)
-    {
-        keyQuery_startDate = strdup("startDate");
-        valueQuery_startDate = (startDate);
-        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
-        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
-    }
-
-    // query parameters
-    char *keyQuery_endDate = NULL;
-    char valueQuery_endDate ;
-    keyValuePair_t *keyPairQuery_endDate = 0;
-    if (endDate)
-    {
-        keyQuery_endDate = strdup("endDate");
-        valueQuery_endDate = (endDate);
-        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
-        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
-    }
-    apiClient_invoke(apiClient,
-                    localVarPath,
-                    localVarQueryParameters,
-                    localVarHeaderParameters,
-                    localVarFormParameters,
-                    localVarHeaderType,
-                    localVarContentType,
-                    localVarBodyParameters,
-                    "GET");
-
-    // uncomment below to debug the error response
-    //if (apiClient->response_code == 200) {
-    //    printf("%s\n","Success");
-    //}
-    //No return type
-end:
-    if (apiClient->dataReceived) {
-        free(apiClient->dataReceived);
-        apiClient->dataReceived = NULL;
-        apiClient->dataReceivedLen = 0;
-    }
-    list_freeList(localVarQueryParameters);
-    
-    
-    
-    
-    free(localVarPath);
-
-}
-
-void
-CurveAPI_dappsCurveGaugeWithdrawHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate )
-{
-    list_t    *localVarQueryParameters = list_createList();
-    list_t    *localVarHeaderParameters = NULL;
-    list_t    *localVarFormParameters = NULL;
-    list_t *localVarHeaderType = NULL;
-    list_t *localVarContentType = NULL;
-    char      *localVarBodyParameters = NULL;
-
-    // create the path
-    long sizeOfPath = strlen("/dapps/curve/gaugeWithdraw/historical")+1;
-    char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/curve/gaugeWithdraw/historical");
-
-
-
-
-    // query parameters
-    char *keyQuery_startBlock = NULL;
-    long valueQuery_startBlock ;
-    keyValuePair_t *keyPairQuery_startBlock = 0;
-    if (startBlock)
-    {
-        keyQuery_startBlock = strdup("startBlock");
-        valueQuery_startBlock = (startBlock);
-        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
-        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
-    }
-
-    // query parameters
-    char *keyQuery_endBlock = NULL;
-    long valueQuery_endBlock ;
-    keyValuePair_t *keyPairQuery_endBlock = 0;
-    if (endBlock)
-    {
-        keyQuery_endBlock = strdup("endBlock");
-        valueQuery_endBlock = (endBlock);
-        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
-        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
-    }
-
-    // query parameters
-    char *keyQuery_startDate = NULL;
-    char valueQuery_startDate ;
-    keyValuePair_t *keyPairQuery_startDate = 0;
-    if (startDate)
-    {
-        keyQuery_startDate = strdup("startDate");
-        valueQuery_startDate = (startDate);
-        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
-        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
-    }
-
-    // query parameters
-    char *keyQuery_endDate = NULL;
-    char valueQuery_endDate ;
-    keyValuePair_t *keyPairQuery_endDate = 0;
-    if (endDate)
-    {
-        keyQuery_endDate = strdup("endDate");
-        valueQuery_endDate = (endDate);
-        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
-        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
-    }
-    apiClient_invoke(apiClient,
-                    localVarPath,
-                    localVarQueryParameters,
-                    localVarHeaderParameters,
-                    localVarFormParameters,
-                    localVarHeaderType,
-                    localVarContentType,
-                    localVarBodyParameters,
-                    "GET");
-
-    // uncomment below to debug the error response
-    //if (apiClient->response_code == 200) {
-    //    printf("%s\n","Success");
-    //}
-    //No return type
-end:
-    if (apiClient->dataReceived) {
-        free(apiClient->dataReceived);
-        apiClient->dataReceived = NULL;
-        apiClient->dataReceivedLen = 0;
-    }
-    list_freeList(localVarQueryParameters);
-    
-    
-    
-    
-    free(localVarPath);
-
-}
-
-void
-CurveAPI_dappsCurveHourlyVolumeHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId )
-{
-    list_t    *localVarQueryParameters = list_createList();
-    list_t    *localVarHeaderParameters = NULL;
-    list_t    *localVarFormParameters = NULL;
-    list_t *localVarHeaderType = NULL;
-    list_t *localVarContentType = NULL;
-    char      *localVarBodyParameters = NULL;
-
-    // create the path
-    long sizeOfPath = strlen("/dapps/curve/hourlyVolume/historical")+1;
-    char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/curve/hourlyVolume/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/gauges/historical");
 
 
 
@@ -2087,6 +2014,9 @@ CurveAPI_dappsCurveHourlyVolumeHistoricalGet(apiClient_t *apiClient, long startB
         keyPairQuery_poolId = keyValuePair_create(keyQuery_poolId, valueQuery_poolId);
         list_addElement(localVarQueryParameters,keyPairQuery_poolId);
     }
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
     apiClient_invoke(apiClient,
                     localVarPath,
                     localVarQueryParameters,
@@ -2099,10 +2029,27 @@ CurveAPI_dappsCurveHourlyVolumeHistoricalGet(apiClient_t *apiClient, long startB
 
     // uncomment below to debug the error response
     //if (apiClient->response_code == 200) {
-    //    printf("%s\n","Success");
+    //    printf("%s\n","successful operation");
     //}
-    //No return type
-end:
+    cJSON *CurveAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(CurveAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, CurveAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( CurveAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
     if (apiClient->dataReceived) {
         free(apiClient->dataReceived);
         apiClient->dataReceived = NULL;
@@ -2111,9 +2058,41 @@ end:
     list_freeList(localVarQueryParameters);
     
     
-    
+    list_freeList(localVarHeaderType);
     
     free(localVarPath);
+    if(keyQuery_startBlock){
+        free(keyQuery_startBlock);
+        keyQuery_startBlock = NULL;
+    }
+    if(keyPairQuery_startBlock){
+        keyValuePair_free(keyPairQuery_startBlock);
+        keyPairQuery_startBlock = NULL;
+    }
+    if(keyQuery_endBlock){
+        free(keyQuery_endBlock);
+        keyQuery_endBlock = NULL;
+    }
+    if(keyPairQuery_endBlock){
+        keyValuePair_free(keyPairQuery_endBlock);
+        keyPairQuery_endBlock = NULL;
+    }
+    if(keyQuery_startDate){
+        free(keyQuery_startDate);
+        keyQuery_startDate = NULL;
+    }
+    if(keyPairQuery_startDate){
+        keyValuePair_free(keyPairQuery_startDate);
+        keyPairQuery_startDate = NULL;
+    }
+    if(keyQuery_endDate){
+        free(keyQuery_endDate);
+        keyQuery_endDate = NULL;
+    }
+    if(keyPairQuery_endDate){
+        keyValuePair_free(keyPairQuery_endDate);
+        keyPairQuery_endDate = NULL;
+    }
     if(keyQuery_poolId){
         free(keyQuery_poolId);
         keyQuery_poolId = NULL;
@@ -2126,31 +2105,1116 @@ end:
         keyValuePair_free(keyPairQuery_poolId);
         keyPairQuery_poolId = NULL;
     }
-    if(keyQuery_poolId){
-        free(keyQuery_poolId);
-        keyQuery_poolId = NULL;
-    }
-    if(keyPairQuery_poolId){
-        keyValuePair_free(keyPairQuery_poolId);
-        keyPairQuery_poolId = NULL;
-    }
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
 
 }
 
-void
-CurveAPI_dappsCurveLpTokenHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId )
+// GetGaugesLiquidity (historical)
+//
+// Gets gauges liquidity.
+//
+list_t*
+CurveAPI_curveGetGaugesLiquidityHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate )
 {
     list_t    *localVarQueryParameters = list_createList();
     list_t    *localVarHeaderParameters = NULL;
     list_t    *localVarFormParameters = NULL;
-    list_t *localVarHeaderType = NULL;
+    list_t *localVarHeaderType = list_createList();
     list_t *localVarContentType = NULL;
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/curve/lpToken/historical")+1;
+    long sizeOfPath = strlen("/dapps/curve/gaugesLiquidity/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/curve/lpToken/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/gaugesLiquidity/historical");
+
+
+
+
+    // query parameters
+    char *keyQuery_startBlock = NULL;
+    long valueQuery_startBlock ;
+    keyValuePair_t *keyPairQuery_startBlock = 0;
+    if (startBlock)
+    {
+        keyQuery_startBlock = strdup("startBlock");
+        valueQuery_startBlock = (startBlock);
+        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
+    }
+
+    // query parameters
+    char *keyQuery_endBlock = NULL;
+    long valueQuery_endBlock ;
+    keyValuePair_t *keyPairQuery_endBlock = 0;
+    if (endBlock)
+    {
+        keyQuery_endBlock = strdup("endBlock");
+        valueQuery_endBlock = (endBlock);
+        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
+    }
+
+    // query parameters
+    char *keyQuery_startDate = NULL;
+    char valueQuery_startDate ;
+    keyValuePair_t *keyPairQuery_startDate = 0;
+    if (startDate)
+    {
+        keyQuery_startDate = strdup("startDate");
+        valueQuery_startDate = (startDate);
+        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
+    }
+
+    // query parameters
+    char *keyQuery_endDate = NULL;
+    char valueQuery_endDate ;
+    keyValuePair_t *keyPairQuery_endDate = 0;
+    if (endDate)
+    {
+        keyQuery_endDate = strdup("endDate");
+        valueQuery_endDate = (endDate);
+        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
+    }
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *CurveAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(CurveAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, CurveAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( CurveAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    list_freeList(localVarQueryParameters);
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    if(keyQuery_startBlock){
+        free(keyQuery_startBlock);
+        keyQuery_startBlock = NULL;
+    }
+    if(keyPairQuery_startBlock){
+        keyValuePair_free(keyPairQuery_startBlock);
+        keyPairQuery_startBlock = NULL;
+    }
+    if(keyQuery_endBlock){
+        free(keyQuery_endBlock);
+        keyQuery_endBlock = NULL;
+    }
+    if(keyPairQuery_endBlock){
+        keyValuePair_free(keyPairQuery_endBlock);
+        keyPairQuery_endBlock = NULL;
+    }
+    if(keyQuery_startDate){
+        free(keyQuery_startDate);
+        keyQuery_startDate = NULL;
+    }
+    if(keyPairQuery_startDate){
+        keyValuePair_free(keyPairQuery_startDate);
+        keyPairQuery_startDate = NULL;
+    }
+    if(keyQuery_endDate){
+        free(keyQuery_endDate);
+        keyQuery_endDate = NULL;
+    }
+    if(keyPairQuery_endDate){
+        keyValuePair_free(keyPairQuery_endDate);
+        keyPairQuery_endDate = NULL;
+    }
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// GetGaugesTotalWeights (historical)
+//
+// Gets gauges total weights.
+//
+list_t*
+CurveAPI_curveGetGaugesTotalWeightsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate )
+{
+    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/curve/gaugesTotalWeights/historical")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/gaugesTotalWeights/historical");
+
+
+
+
+    // query parameters
+    char *keyQuery_startBlock = NULL;
+    long valueQuery_startBlock ;
+    keyValuePair_t *keyPairQuery_startBlock = 0;
+    if (startBlock)
+    {
+        keyQuery_startBlock = strdup("startBlock");
+        valueQuery_startBlock = (startBlock);
+        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
+    }
+
+    // query parameters
+    char *keyQuery_endBlock = NULL;
+    long valueQuery_endBlock ;
+    keyValuePair_t *keyPairQuery_endBlock = 0;
+    if (endBlock)
+    {
+        keyQuery_endBlock = strdup("endBlock");
+        valueQuery_endBlock = (endBlock);
+        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
+    }
+
+    // query parameters
+    char *keyQuery_startDate = NULL;
+    char valueQuery_startDate ;
+    keyValuePair_t *keyPairQuery_startDate = 0;
+    if (startDate)
+    {
+        keyQuery_startDate = strdup("startDate");
+        valueQuery_startDate = (startDate);
+        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
+    }
+
+    // query parameters
+    char *keyQuery_endDate = NULL;
+    char valueQuery_endDate ;
+    keyValuePair_t *keyPairQuery_endDate = 0;
+    if (endDate)
+    {
+        keyQuery_endDate = strdup("endDate");
+        valueQuery_endDate = (endDate);
+        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
+    }
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *CurveAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(CurveAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, CurveAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( CurveAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    list_freeList(localVarQueryParameters);
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    if(keyQuery_startBlock){
+        free(keyQuery_startBlock);
+        keyQuery_startBlock = NULL;
+    }
+    if(keyPairQuery_startBlock){
+        keyValuePair_free(keyPairQuery_startBlock);
+        keyPairQuery_startBlock = NULL;
+    }
+    if(keyQuery_endBlock){
+        free(keyQuery_endBlock);
+        keyQuery_endBlock = NULL;
+    }
+    if(keyPairQuery_endBlock){
+        keyValuePair_free(keyPairQuery_endBlock);
+        keyPairQuery_endBlock = NULL;
+    }
+    if(keyQuery_startDate){
+        free(keyQuery_startDate);
+        keyQuery_startDate = NULL;
+    }
+    if(keyPairQuery_startDate){
+        keyValuePair_free(keyPairQuery_startDate);
+        keyPairQuery_startDate = NULL;
+    }
+    if(keyQuery_endDate){
+        free(keyQuery_endDate);
+        keyQuery_endDate = NULL;
+    }
+    if(keyPairQuery_endDate){
+        keyValuePair_free(keyPairQuery_endDate);
+        keyPairQuery_endDate = NULL;
+    }
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// GetGaugesTypes (historical)
+//
+// Gets gauges types.
+//
+list_t*
+CurveAPI_curveGetGaugesTypesHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate )
+{
+    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/curve/gaugesTypes/historical")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/gaugesTypes/historical");
+
+
+
+
+    // query parameters
+    char *keyQuery_startBlock = NULL;
+    long valueQuery_startBlock ;
+    keyValuePair_t *keyPairQuery_startBlock = 0;
+    if (startBlock)
+    {
+        keyQuery_startBlock = strdup("startBlock");
+        valueQuery_startBlock = (startBlock);
+        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
+    }
+
+    // query parameters
+    char *keyQuery_endBlock = NULL;
+    long valueQuery_endBlock ;
+    keyValuePair_t *keyPairQuery_endBlock = 0;
+    if (endBlock)
+    {
+        keyQuery_endBlock = strdup("endBlock");
+        valueQuery_endBlock = (endBlock);
+        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
+    }
+
+    // query parameters
+    char *keyQuery_startDate = NULL;
+    char valueQuery_startDate ;
+    keyValuePair_t *keyPairQuery_startDate = 0;
+    if (startDate)
+    {
+        keyQuery_startDate = strdup("startDate");
+        valueQuery_startDate = (startDate);
+        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
+    }
+
+    // query parameters
+    char *keyQuery_endDate = NULL;
+    char valueQuery_endDate ;
+    keyValuePair_t *keyPairQuery_endDate = 0;
+    if (endDate)
+    {
+        keyQuery_endDate = strdup("endDate");
+        valueQuery_endDate = (endDate);
+        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
+    }
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *CurveAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(CurveAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, CurveAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( CurveAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    list_freeList(localVarQueryParameters);
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    if(keyQuery_startBlock){
+        free(keyQuery_startBlock);
+        keyQuery_startBlock = NULL;
+    }
+    if(keyPairQuery_startBlock){
+        keyValuePair_free(keyPairQuery_startBlock);
+        keyPairQuery_startBlock = NULL;
+    }
+    if(keyQuery_endBlock){
+        free(keyQuery_endBlock);
+        keyQuery_endBlock = NULL;
+    }
+    if(keyPairQuery_endBlock){
+        keyValuePair_free(keyPairQuery_endBlock);
+        keyPairQuery_endBlock = NULL;
+    }
+    if(keyQuery_startDate){
+        free(keyQuery_startDate);
+        keyQuery_startDate = NULL;
+    }
+    if(keyPairQuery_startDate){
+        keyValuePair_free(keyPairQuery_startDate);
+        keyPairQuery_startDate = NULL;
+    }
+    if(keyQuery_endDate){
+        free(keyQuery_endDate);
+        keyQuery_endDate = NULL;
+    }
+    if(keyPairQuery_endDate){
+        keyValuePair_free(keyPairQuery_endDate);
+        keyPairQuery_endDate = NULL;
+    }
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// GetGaugesTypesWeights (historical)
+//
+// Gets gauges types weights.
+//
+list_t*
+CurveAPI_curveGetGaugesTypesWeightsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate )
+{
+    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/curve/gaugesTypesWeights/historical")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/gaugesTypesWeights/historical");
+
+
+
+
+    // query parameters
+    char *keyQuery_startBlock = NULL;
+    long valueQuery_startBlock ;
+    keyValuePair_t *keyPairQuery_startBlock = 0;
+    if (startBlock)
+    {
+        keyQuery_startBlock = strdup("startBlock");
+        valueQuery_startBlock = (startBlock);
+        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
+    }
+
+    // query parameters
+    char *keyQuery_endBlock = NULL;
+    long valueQuery_endBlock ;
+    keyValuePair_t *keyPairQuery_endBlock = 0;
+    if (endBlock)
+    {
+        keyQuery_endBlock = strdup("endBlock");
+        valueQuery_endBlock = (endBlock);
+        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
+    }
+
+    // query parameters
+    char *keyQuery_startDate = NULL;
+    char valueQuery_startDate ;
+    keyValuePair_t *keyPairQuery_startDate = 0;
+    if (startDate)
+    {
+        keyQuery_startDate = strdup("startDate");
+        valueQuery_startDate = (startDate);
+        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
+    }
+
+    // query parameters
+    char *keyQuery_endDate = NULL;
+    char valueQuery_endDate ;
+    keyValuePair_t *keyPairQuery_endDate = 0;
+    if (endDate)
+    {
+        keyQuery_endDate = strdup("endDate");
+        valueQuery_endDate = (endDate);
+        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
+    }
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *CurveAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(CurveAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, CurveAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( CurveAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    list_freeList(localVarQueryParameters);
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    if(keyQuery_startBlock){
+        free(keyQuery_startBlock);
+        keyQuery_startBlock = NULL;
+    }
+    if(keyPairQuery_startBlock){
+        keyValuePair_free(keyPairQuery_startBlock);
+        keyPairQuery_startBlock = NULL;
+    }
+    if(keyQuery_endBlock){
+        free(keyQuery_endBlock);
+        keyQuery_endBlock = NULL;
+    }
+    if(keyPairQuery_endBlock){
+        keyValuePair_free(keyPairQuery_endBlock);
+        keyPairQuery_endBlock = NULL;
+    }
+    if(keyQuery_startDate){
+        free(keyQuery_startDate);
+        keyQuery_startDate = NULL;
+    }
+    if(keyPairQuery_startDate){
+        keyValuePair_free(keyPairQuery_startDate);
+        keyPairQuery_startDate = NULL;
+    }
+    if(keyQuery_endDate){
+        free(keyQuery_endDate);
+        keyQuery_endDate = NULL;
+    }
+    if(keyPairQuery_endDate){
+        keyValuePair_free(keyPairQuery_endDate);
+        keyPairQuery_endDate = NULL;
+    }
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// GetGaugesWeights (historical)
+//
+// Gets gauges weights.
+//
+list_t*
+CurveAPI_curveGetGaugesWeightsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate )
+{
+    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/curve/gaugesWeights/historical")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/gaugesWeights/historical");
+
+
+
+
+    // query parameters
+    char *keyQuery_startBlock = NULL;
+    long valueQuery_startBlock ;
+    keyValuePair_t *keyPairQuery_startBlock = 0;
+    if (startBlock)
+    {
+        keyQuery_startBlock = strdup("startBlock");
+        valueQuery_startBlock = (startBlock);
+        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
+    }
+
+    // query parameters
+    char *keyQuery_endBlock = NULL;
+    long valueQuery_endBlock ;
+    keyValuePair_t *keyPairQuery_endBlock = 0;
+    if (endBlock)
+    {
+        keyQuery_endBlock = strdup("endBlock");
+        valueQuery_endBlock = (endBlock);
+        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
+    }
+
+    // query parameters
+    char *keyQuery_startDate = NULL;
+    char valueQuery_startDate ;
+    keyValuePair_t *keyPairQuery_startDate = 0;
+    if (startDate)
+    {
+        keyQuery_startDate = strdup("startDate");
+        valueQuery_startDate = (startDate);
+        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
+    }
+
+    // query parameters
+    char *keyQuery_endDate = NULL;
+    char valueQuery_endDate ;
+    keyValuePair_t *keyPairQuery_endDate = 0;
+    if (endDate)
+    {
+        keyQuery_endDate = strdup("endDate");
+        valueQuery_endDate = (endDate);
+        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
+    }
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *CurveAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(CurveAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, CurveAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( CurveAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    list_freeList(localVarQueryParameters);
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    if(keyQuery_startBlock){
+        free(keyQuery_startBlock);
+        keyQuery_startBlock = NULL;
+    }
+    if(keyPairQuery_startBlock){
+        keyValuePair_free(keyPairQuery_startBlock);
+        keyPairQuery_startBlock = NULL;
+    }
+    if(keyQuery_endBlock){
+        free(keyQuery_endBlock);
+        keyQuery_endBlock = NULL;
+    }
+    if(keyPairQuery_endBlock){
+        keyValuePair_free(keyPairQuery_endBlock);
+        keyPairQuery_endBlock = NULL;
+    }
+    if(keyQuery_startDate){
+        free(keyQuery_startDate);
+        keyQuery_startDate = NULL;
+    }
+    if(keyPairQuery_startDate){
+        keyValuePair_free(keyPairQuery_startDate);
+        keyPairQuery_startDate = NULL;
+    }
+    if(keyQuery_endDate){
+        free(keyQuery_endDate);
+        keyQuery_endDate = NULL;
+    }
+    if(keyPairQuery_endDate){
+        keyValuePair_free(keyPairQuery_endDate);
+        keyPairQuery_endDate = NULL;
+    }
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// GetGaugesWeightsVotes (historical)
+//
+// Gets gauges weights votes.
+//
+list_t*
+CurveAPI_curveGetGaugesWeightsVotesHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate )
+{
+    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/curve/gaugesWeightsVotes/historical")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/gaugesWeightsVotes/historical");
+
+
+
+
+    // query parameters
+    char *keyQuery_startBlock = NULL;
+    long valueQuery_startBlock ;
+    keyValuePair_t *keyPairQuery_startBlock = 0;
+    if (startBlock)
+    {
+        keyQuery_startBlock = strdup("startBlock");
+        valueQuery_startBlock = (startBlock);
+        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
+    }
+
+    // query parameters
+    char *keyQuery_endBlock = NULL;
+    long valueQuery_endBlock ;
+    keyValuePair_t *keyPairQuery_endBlock = 0;
+    if (endBlock)
+    {
+        keyQuery_endBlock = strdup("endBlock");
+        valueQuery_endBlock = (endBlock);
+        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
+    }
+
+    // query parameters
+    char *keyQuery_startDate = NULL;
+    char valueQuery_startDate ;
+    keyValuePair_t *keyPairQuery_startDate = 0;
+    if (startDate)
+    {
+        keyQuery_startDate = strdup("startDate");
+        valueQuery_startDate = (startDate);
+        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
+    }
+
+    // query parameters
+    char *keyQuery_endDate = NULL;
+    char valueQuery_endDate ;
+    keyValuePair_t *keyPairQuery_endDate = 0;
+    if (endDate)
+    {
+        keyQuery_endDate = strdup("endDate");
+        valueQuery_endDate = (endDate);
+        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
+    }
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *CurveAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(CurveAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, CurveAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( CurveAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    list_freeList(localVarQueryParameters);
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    if(keyQuery_startBlock){
+        free(keyQuery_startBlock);
+        keyQuery_startBlock = NULL;
+    }
+    if(keyPairQuery_startBlock){
+        keyValuePair_free(keyPairQuery_startBlock);
+        keyPairQuery_startBlock = NULL;
+    }
+    if(keyQuery_endBlock){
+        free(keyQuery_endBlock);
+        keyQuery_endBlock = NULL;
+    }
+    if(keyPairQuery_endBlock){
+        keyValuePair_free(keyPairQuery_endBlock);
+        keyPairQuery_endBlock = NULL;
+    }
+    if(keyQuery_startDate){
+        free(keyQuery_startDate);
+        keyQuery_startDate = NULL;
+    }
+    if(keyPairQuery_startDate){
+        keyValuePair_free(keyPairQuery_startDate);
+        keyPairQuery_startDate = NULL;
+    }
+    if(keyQuery_endDate){
+        free(keyQuery_endDate);
+        keyQuery_endDate = NULL;
+    }
+    if(keyPairQuery_endDate){
+        keyValuePair_free(keyPairQuery_endDate);
+        keyPairQuery_endDate = NULL;
+    }
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// GetGaugesWithdraw (historical)
+//
+// Gets gauges withdraws.
+//
+list_t*
+CurveAPI_curveGetGaugesWithdrawHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate )
+{
+    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/curve/gaugesWithdraws/historical")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/gaugesWithdraws/historical");
+
+
+
+
+    // query parameters
+    char *keyQuery_startBlock = NULL;
+    long valueQuery_startBlock ;
+    keyValuePair_t *keyPairQuery_startBlock = 0;
+    if (startBlock)
+    {
+        keyQuery_startBlock = strdup("startBlock");
+        valueQuery_startBlock = (startBlock);
+        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
+    }
+
+    // query parameters
+    char *keyQuery_endBlock = NULL;
+    long valueQuery_endBlock ;
+    keyValuePair_t *keyPairQuery_endBlock = 0;
+    if (endBlock)
+    {
+        keyQuery_endBlock = strdup("endBlock");
+        valueQuery_endBlock = (endBlock);
+        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
+    }
+
+    // query parameters
+    char *keyQuery_startDate = NULL;
+    char valueQuery_startDate ;
+    keyValuePair_t *keyPairQuery_startDate = 0;
+    if (startDate)
+    {
+        keyQuery_startDate = strdup("startDate");
+        valueQuery_startDate = (startDate);
+        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
+    }
+
+    // query parameters
+    char *keyQuery_endDate = NULL;
+    char valueQuery_endDate ;
+    keyValuePair_t *keyPairQuery_endDate = 0;
+    if (endDate)
+    {
+        keyQuery_endDate = strdup("endDate");
+        valueQuery_endDate = (endDate);
+        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
+    }
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *CurveAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(CurveAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, CurveAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( CurveAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    list_freeList(localVarQueryParameters);
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    if(keyQuery_startBlock){
+        free(keyQuery_startBlock);
+        keyQuery_startBlock = NULL;
+    }
+    if(keyPairQuery_startBlock){
+        keyValuePair_free(keyPairQuery_startBlock);
+        keyPairQuery_startBlock = NULL;
+    }
+    if(keyQuery_endBlock){
+        free(keyQuery_endBlock);
+        keyQuery_endBlock = NULL;
+    }
+    if(keyPairQuery_endBlock){
+        keyValuePair_free(keyPairQuery_endBlock);
+        keyPairQuery_endBlock = NULL;
+    }
+    if(keyQuery_startDate){
+        free(keyQuery_startDate);
+        keyQuery_startDate = NULL;
+    }
+    if(keyPairQuery_startDate){
+        keyValuePair_free(keyPairQuery_startDate);
+        keyPairQuery_startDate = NULL;
+    }
+    if(keyQuery_endDate){
+        free(keyQuery_endDate);
+        keyQuery_endDate = NULL;
+    }
+    if(keyPairQuery_endDate){
+        keyValuePair_free(keyPairQuery_endDate);
+        keyPairQuery_endDate = NULL;
+    }
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// GetHourlyVolumes (historical)
+//
+// Gets hourly volumes.
+//
+list_t*
+CurveAPI_curveGetHourlyVolumesHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId )
+{
+    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/curve/hourlyVolumes/historical")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/hourlyVolumes/historical");
 
 
 
@@ -2214,6 +3278,9 @@ CurveAPI_dappsCurveLpTokenHistoricalGet(apiClient_t *apiClient, long startBlock 
         keyPairQuery_poolId = keyValuePair_create(keyQuery_poolId, valueQuery_poolId);
         list_addElement(localVarQueryParameters,keyPairQuery_poolId);
     }
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
     apiClient_invoke(apiClient,
                     localVarPath,
                     localVarQueryParameters,
@@ -2226,10 +3293,27 @@ CurveAPI_dappsCurveLpTokenHistoricalGet(apiClient_t *apiClient, long startBlock 
 
     // uncomment below to debug the error response
     //if (apiClient->response_code == 200) {
-    //    printf("%s\n","Success");
+    //    printf("%s\n","successful operation");
     //}
-    //No return type
-end:
+    cJSON *CurveAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(CurveAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, CurveAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( CurveAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
     if (apiClient->dataReceived) {
         free(apiClient->dataReceived);
         apiClient->dataReceived = NULL;
@@ -2238,9 +3322,41 @@ end:
     list_freeList(localVarQueryParameters);
     
     
-    
+    list_freeList(localVarHeaderType);
     
     free(localVarPath);
+    if(keyQuery_startBlock){
+        free(keyQuery_startBlock);
+        keyQuery_startBlock = NULL;
+    }
+    if(keyPairQuery_startBlock){
+        keyValuePair_free(keyPairQuery_startBlock);
+        keyPairQuery_startBlock = NULL;
+    }
+    if(keyQuery_endBlock){
+        free(keyQuery_endBlock);
+        keyQuery_endBlock = NULL;
+    }
+    if(keyPairQuery_endBlock){
+        keyValuePair_free(keyPairQuery_endBlock);
+        keyPairQuery_endBlock = NULL;
+    }
+    if(keyQuery_startDate){
+        free(keyQuery_startDate);
+        keyQuery_startDate = NULL;
+    }
+    if(keyPairQuery_startDate){
+        keyValuePair_free(keyPairQuery_startDate);
+        keyPairQuery_startDate = NULL;
+    }
+    if(keyQuery_endDate){
+        free(keyQuery_endDate);
+        keyQuery_endDate = NULL;
+    }
+    if(keyPairQuery_endDate){
+        keyValuePair_free(keyPairQuery_endDate);
+        keyPairQuery_endDate = NULL;
+    }
     if(keyQuery_poolId){
         free(keyQuery_poolId);
         keyQuery_poolId = NULL;
@@ -2253,24 +3369,203 @@ end:
         keyValuePair_free(keyPairQuery_poolId);
         keyPairQuery_poolId = NULL;
     }
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// GetLpTokens (historical)
+//
+// Gets lp tokens.
+//
+list_t*
+CurveAPI_curveGetLpTokensHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId )
+{
+    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/curve/lpTokens/historical")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/lpTokens/historical");
+
+
+
+
+    // query parameters
+    char *keyQuery_startBlock = NULL;
+    long valueQuery_startBlock ;
+    keyValuePair_t *keyPairQuery_startBlock = 0;
+    if (startBlock)
+    {
+        keyQuery_startBlock = strdup("startBlock");
+        valueQuery_startBlock = (startBlock);
+        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
+    }
+
+    // query parameters
+    char *keyQuery_endBlock = NULL;
+    long valueQuery_endBlock ;
+    keyValuePair_t *keyPairQuery_endBlock = 0;
+    if (endBlock)
+    {
+        keyQuery_endBlock = strdup("endBlock");
+        valueQuery_endBlock = (endBlock);
+        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
+    }
+
+    // query parameters
+    char *keyQuery_startDate = NULL;
+    char valueQuery_startDate ;
+    keyValuePair_t *keyPairQuery_startDate = 0;
+    if (startDate)
+    {
+        keyQuery_startDate = strdup("startDate");
+        valueQuery_startDate = (startDate);
+        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
+    }
+
+    // query parameters
+    char *keyQuery_endDate = NULL;
+    char valueQuery_endDate ;
+    keyValuePair_t *keyPairQuery_endDate = 0;
+    if (endDate)
+    {
+        keyQuery_endDate = strdup("endDate");
+        valueQuery_endDate = (endDate);
+        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
+    }
+
+    // query parameters
+    char *keyQuery_poolId = NULL;
+    char * valueQuery_poolId = NULL;
+    keyValuePair_t *keyPairQuery_poolId = 0;
+    if (poolId)
+    {
+        keyQuery_poolId = strdup("poolId");
+        valueQuery_poolId = strdup((poolId));
+        keyPairQuery_poolId = keyValuePair_create(keyQuery_poolId, valueQuery_poolId);
+        list_addElement(localVarQueryParameters,keyPairQuery_poolId);
+    }
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *CurveAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(CurveAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, CurveAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( CurveAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    list_freeList(localVarQueryParameters);
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    if(keyQuery_startBlock){
+        free(keyQuery_startBlock);
+        keyQuery_startBlock = NULL;
+    }
+    if(keyPairQuery_startBlock){
+        keyValuePair_free(keyPairQuery_startBlock);
+        keyPairQuery_startBlock = NULL;
+    }
+    if(keyQuery_endBlock){
+        free(keyQuery_endBlock);
+        keyQuery_endBlock = NULL;
+    }
+    if(keyPairQuery_endBlock){
+        keyValuePair_free(keyPairQuery_endBlock);
+        keyPairQuery_endBlock = NULL;
+    }
+    if(keyQuery_startDate){
+        free(keyQuery_startDate);
+        keyQuery_startDate = NULL;
+    }
+    if(keyPairQuery_startDate){
+        keyValuePair_free(keyPairQuery_startDate);
+        keyPairQuery_startDate = NULL;
+    }
+    if(keyQuery_endDate){
+        free(keyQuery_endDate);
+        keyQuery_endDate = NULL;
+    }
+    if(keyPairQuery_endDate){
+        keyValuePair_free(keyPairQuery_endDate);
+        keyPairQuery_endDate = NULL;
+    }
     if(keyQuery_poolId){
         free(keyQuery_poolId);
         keyQuery_poolId = NULL;
+    }
+    if(valueQuery_poolId){
+        free(valueQuery_poolId);
+        valueQuery_poolId = NULL;
     }
     if(keyPairQuery_poolId){
         keyValuePair_free(keyPairQuery_poolId);
         keyPairQuery_poolId = NULL;
     }
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
 
 }
 
-void
-CurveAPI_dappsCurvePoolsHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId )
+// GetPools (historical) 🔥
+//
+// Gets pools.
+//
+list_t*
+CurveAPI_curveGetPoolsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId )
 {
     list_t    *localVarQueryParameters = list_createList();
     list_t    *localVarHeaderParameters = NULL;
     list_t    *localVarFormParameters = NULL;
-    list_t *localVarHeaderType = NULL;
+    list_t *localVarHeaderType = list_createList();
     list_t *localVarContentType = NULL;
     char      *localVarBodyParameters = NULL;
 
@@ -2341,6 +3636,9 @@ CurveAPI_dappsCurvePoolsHistoricalGet(apiClient_t *apiClient, long startBlock , 
         keyPairQuery_poolId = keyValuePair_create(keyQuery_poolId, valueQuery_poolId);
         list_addElement(localVarQueryParameters,keyPairQuery_poolId);
     }
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
     apiClient_invoke(apiClient,
                     localVarPath,
                     localVarQueryParameters,
@@ -2353,10 +3651,27 @@ CurveAPI_dappsCurvePoolsHistoricalGet(apiClient_t *apiClient, long startBlock , 
 
     // uncomment below to debug the error response
     //if (apiClient->response_code == 200) {
-    //    printf("%s\n","Success");
+    //    printf("%s\n","successful operation");
     //}
-    //No return type
-end:
+    cJSON *CurveAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(CurveAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, CurveAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( CurveAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
     if (apiClient->dataReceived) {
         free(apiClient->dataReceived);
         apiClient->dataReceived = NULL;
@@ -2365,9 +3680,41 @@ end:
     list_freeList(localVarQueryParameters);
     
     
-    
+    list_freeList(localVarHeaderType);
     
     free(localVarPath);
+    if(keyQuery_startBlock){
+        free(keyQuery_startBlock);
+        keyQuery_startBlock = NULL;
+    }
+    if(keyPairQuery_startBlock){
+        keyValuePair_free(keyPairQuery_startBlock);
+        keyPairQuery_startBlock = NULL;
+    }
+    if(keyQuery_endBlock){
+        free(keyQuery_endBlock);
+        keyQuery_endBlock = NULL;
+    }
+    if(keyPairQuery_endBlock){
+        keyValuePair_free(keyPairQuery_endBlock);
+        keyPairQuery_endBlock = NULL;
+    }
+    if(keyQuery_startDate){
+        free(keyQuery_startDate);
+        keyQuery_startDate = NULL;
+    }
+    if(keyPairQuery_startDate){
+        keyValuePair_free(keyPairQuery_startDate);
+        keyPairQuery_startDate = NULL;
+    }
+    if(keyQuery_endDate){
+        free(keyQuery_endDate);
+        keyQuery_endDate = NULL;
+    }
+    if(keyPairQuery_endDate){
+        keyValuePair_free(keyPairQuery_endDate);
+        keyPairQuery_endDate = NULL;
+    }
     if(keyQuery_poolId){
         free(keyQuery_poolId);
         keyQuery_poolId = NULL;
@@ -2380,24 +3727,24 @@ end:
         keyValuePair_free(keyPairQuery_poolId);
         keyPairQuery_poolId = NULL;
     }
-    if(keyQuery_poolId){
-        free(keyQuery_poolId);
-        keyQuery_poolId = NULL;
-    }
-    if(keyPairQuery_poolId){
-        keyValuePair_free(keyPairQuery_poolId);
-        keyPairQuery_poolId = NULL;
-    }
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
 
 }
 
-void
-CurveAPI_dappsCurveProposalsHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate )
+// GetProposals (historical)
+//
+// Gets proposals.
+//
+list_t*
+CurveAPI_curveGetProposalsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate )
 {
     list_t    *localVarQueryParameters = list_createList();
     list_t    *localVarHeaderParameters = NULL;
     list_t    *localVarFormParameters = NULL;
-    list_t *localVarHeaderType = NULL;
+    list_t *localVarHeaderType = list_createList();
     list_t *localVarContentType = NULL;
     char      *localVarBodyParameters = NULL;
 
@@ -2456,6 +3803,9 @@ CurveAPI_dappsCurveProposalsHistoricalGet(apiClient_t *apiClient, long startBloc
         keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
         list_addElement(localVarQueryParameters,keyPairQuery_endDate);
     }
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
     apiClient_invoke(apiClient,
                     localVarPath,
                     localVarQueryParameters,
@@ -2468,10 +3818,27 @@ CurveAPI_dappsCurveProposalsHistoricalGet(apiClient_t *apiClient, long startBloc
 
     // uncomment below to debug the error response
     //if (apiClient->response_code == 200) {
-    //    printf("%s\n","Success");
+    //    printf("%s\n","successful operation");
     //}
-    //No return type
-end:
+    cJSON *CurveAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(CurveAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, CurveAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( CurveAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
     if (apiClient->dataReceived) {
         free(apiClient->dataReceived);
         apiClient->dataReceived = NULL;
@@ -2480,26 +3847,66 @@ end:
     list_freeList(localVarQueryParameters);
     
     
-    
+    list_freeList(localVarHeaderType);
     
     free(localVarPath);
+    if(keyQuery_startBlock){
+        free(keyQuery_startBlock);
+        keyQuery_startBlock = NULL;
+    }
+    if(keyPairQuery_startBlock){
+        keyValuePair_free(keyPairQuery_startBlock);
+        keyPairQuery_startBlock = NULL;
+    }
+    if(keyQuery_endBlock){
+        free(keyQuery_endBlock);
+        keyQuery_endBlock = NULL;
+    }
+    if(keyPairQuery_endBlock){
+        keyValuePair_free(keyPairQuery_endBlock);
+        keyPairQuery_endBlock = NULL;
+    }
+    if(keyQuery_startDate){
+        free(keyQuery_startDate);
+        keyQuery_startDate = NULL;
+    }
+    if(keyPairQuery_startDate){
+        keyValuePair_free(keyPairQuery_startDate);
+        keyPairQuery_startDate = NULL;
+    }
+    if(keyQuery_endDate){
+        free(keyQuery_endDate);
+        keyQuery_endDate = NULL;
+    }
+    if(keyPairQuery_endDate){
+        keyValuePair_free(keyPairQuery_endDate);
+        keyPairQuery_endDate = NULL;
+    }
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
 
 }
 
-void
-CurveAPI_dappsCurveProposalsVoteHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate )
+// GetProposalsVotes (historical)
+//
+// Gets proposals votes.
+//
+list_t*
+CurveAPI_curveGetProposalsVotesHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate )
 {
     list_t    *localVarQueryParameters = list_createList();
     list_t    *localVarHeaderParameters = NULL;
     list_t    *localVarFormParameters = NULL;
-    list_t *localVarHeaderType = NULL;
+    list_t *localVarHeaderType = list_createList();
     list_t *localVarContentType = NULL;
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/curve/proposalsVote/historical")+1;
+    long sizeOfPath = strlen("/dapps/curve/proposalsVotes/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/curve/proposalsVote/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/proposalsVotes/historical");
 
 
 
@@ -2551,6 +3958,9 @@ CurveAPI_dappsCurveProposalsVoteHistoricalGet(apiClient_t *apiClient, long start
         keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
         list_addElement(localVarQueryParameters,keyPairQuery_endDate);
     }
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
     apiClient_invoke(apiClient,
                     localVarPath,
                     localVarQueryParameters,
@@ -2563,10 +3973,27 @@ CurveAPI_dappsCurveProposalsVoteHistoricalGet(apiClient_t *apiClient, long start
 
     // uncomment below to debug the error response
     //if (apiClient->response_code == 200) {
-    //    printf("%s\n","Success");
+    //    printf("%s\n","successful operation");
     //}
-    //No return type
-end:
+    cJSON *CurveAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(CurveAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, CurveAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( CurveAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
     if (apiClient->dataReceived) {
         free(apiClient->dataReceived);
         apiClient->dataReceived = NULL;
@@ -2575,280 +4002,66 @@ end:
     list_freeList(localVarQueryParameters);
     
     
-    
+    list_freeList(localVarHeaderType);
     
     free(localVarPath);
-
-}
-
-void
-CurveAPI_dappsCurveRemoveLiquidityEventHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId )
-{
-    list_t    *localVarQueryParameters = list_createList();
-    list_t    *localVarHeaderParameters = NULL;
-    list_t    *localVarFormParameters = NULL;
-    list_t *localVarHeaderType = NULL;
-    list_t *localVarContentType = NULL;
-    char      *localVarBodyParameters = NULL;
-
-    // create the path
-    long sizeOfPath = strlen("/dapps/curve/removeLiquidityEvent/historical")+1;
-    char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/curve/removeLiquidityEvent/historical");
-
-
-
-
-    // query parameters
-    char *keyQuery_startBlock = NULL;
-    long valueQuery_startBlock ;
-    keyValuePair_t *keyPairQuery_startBlock = 0;
-    if (startBlock)
-    {
-        keyQuery_startBlock = strdup("startBlock");
-        valueQuery_startBlock = (startBlock);
-        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
-        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
+    if(keyQuery_startBlock){
+        free(keyQuery_startBlock);
+        keyQuery_startBlock = NULL;
     }
-
-    // query parameters
-    char *keyQuery_endBlock = NULL;
-    long valueQuery_endBlock ;
-    keyValuePair_t *keyPairQuery_endBlock = 0;
-    if (endBlock)
-    {
-        keyQuery_endBlock = strdup("endBlock");
-        valueQuery_endBlock = (endBlock);
-        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
-        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
+    if(keyPairQuery_startBlock){
+        keyValuePair_free(keyPairQuery_startBlock);
+        keyPairQuery_startBlock = NULL;
     }
-
-    // query parameters
-    char *keyQuery_startDate = NULL;
-    char valueQuery_startDate ;
-    keyValuePair_t *keyPairQuery_startDate = 0;
-    if (startDate)
-    {
-        keyQuery_startDate = strdup("startDate");
-        valueQuery_startDate = (startDate);
-        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
-        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
+    if(keyQuery_endBlock){
+        free(keyQuery_endBlock);
+        keyQuery_endBlock = NULL;
     }
-
-    // query parameters
-    char *keyQuery_endDate = NULL;
-    char valueQuery_endDate ;
-    keyValuePair_t *keyPairQuery_endDate = 0;
-    if (endDate)
-    {
-        keyQuery_endDate = strdup("endDate");
-        valueQuery_endDate = (endDate);
-        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
-        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
+    if(keyPairQuery_endBlock){
+        keyValuePair_free(keyPairQuery_endBlock);
+        keyPairQuery_endBlock = NULL;
     }
-
-    // query parameters
-    char *keyQuery_poolId = NULL;
-    char * valueQuery_poolId = NULL;
-    keyValuePair_t *keyPairQuery_poolId = 0;
-    if (poolId)
-    {
-        keyQuery_poolId = strdup("poolId");
-        valueQuery_poolId = strdup((poolId));
-        keyPairQuery_poolId = keyValuePair_create(keyQuery_poolId, valueQuery_poolId);
-        list_addElement(localVarQueryParameters,keyPairQuery_poolId);
+    if(keyQuery_startDate){
+        free(keyQuery_startDate);
+        keyQuery_startDate = NULL;
     }
-    apiClient_invoke(apiClient,
-                    localVarPath,
-                    localVarQueryParameters,
-                    localVarHeaderParameters,
-                    localVarFormParameters,
-                    localVarHeaderType,
-                    localVarContentType,
-                    localVarBodyParameters,
-                    "GET");
-
-    // uncomment below to debug the error response
-    //if (apiClient->response_code == 200) {
-    //    printf("%s\n","Success");
-    //}
-    //No return type
+    if(keyPairQuery_startDate){
+        keyValuePair_free(keyPairQuery_startDate);
+        keyPairQuery_startDate = NULL;
+    }
+    if(keyQuery_endDate){
+        free(keyQuery_endDate);
+        keyQuery_endDate = NULL;
+    }
+    if(keyPairQuery_endDate){
+        keyValuePair_free(keyPairQuery_endDate);
+        keyPairQuery_endDate = NULL;
+    }
+    return elementToReturn;
 end:
-    if (apiClient->dataReceived) {
-        free(apiClient->dataReceived);
-        apiClient->dataReceived = NULL;
-        apiClient->dataReceivedLen = 0;
-    }
-    list_freeList(localVarQueryParameters);
-    
-    
-    
-    
     free(localVarPath);
-    if(keyQuery_poolId){
-        free(keyQuery_poolId);
-        keyQuery_poolId = NULL;
-    }
-    if(valueQuery_poolId){
-        free(valueQuery_poolId);
-        valueQuery_poolId = NULL;
-    }
-    if(keyPairQuery_poolId){
-        keyValuePair_free(keyPairQuery_poolId);
-        keyPairQuery_poolId = NULL;
-    }
-    if(keyQuery_poolId){
-        free(keyQuery_poolId);
-        keyQuery_poolId = NULL;
-    }
-    if(keyPairQuery_poolId){
-        keyValuePair_free(keyPairQuery_poolId);
-        keyPairQuery_poolId = NULL;
-    }
+    return NULL;
 
 }
 
-void
-CurveAPI_dappsCurveRemoveLiquidityOneEventHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId )
+// GetRemoveLiquidityEvents (historical)
+//
+// Gets remove liquidity events.
+//
+list_t*
+CurveAPI_curveGetRemoveLiquidityEventsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId )
 {
     list_t    *localVarQueryParameters = list_createList();
     list_t    *localVarHeaderParameters = NULL;
     list_t    *localVarFormParameters = NULL;
-    list_t *localVarHeaderType = NULL;
+    list_t *localVarHeaderType = list_createList();
     list_t *localVarContentType = NULL;
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/curve/removeLiquidityOneEvent/historical")+1;
+    long sizeOfPath = strlen("/dapps/curve/removeLiquidityEvents/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/curve/removeLiquidityOneEvent/historical");
-
-
-
-
-    // query parameters
-    char *keyQuery_startBlock = NULL;
-    long valueQuery_startBlock ;
-    keyValuePair_t *keyPairQuery_startBlock = 0;
-    if (startBlock)
-    {
-        keyQuery_startBlock = strdup("startBlock");
-        valueQuery_startBlock = (startBlock);
-        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
-        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
-    }
-
-    // query parameters
-    char *keyQuery_endBlock = NULL;
-    long valueQuery_endBlock ;
-    keyValuePair_t *keyPairQuery_endBlock = 0;
-    if (endBlock)
-    {
-        keyQuery_endBlock = strdup("endBlock");
-        valueQuery_endBlock = (endBlock);
-        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
-        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
-    }
-
-    // query parameters
-    char *keyQuery_startDate = NULL;
-    char valueQuery_startDate ;
-    keyValuePair_t *keyPairQuery_startDate = 0;
-    if (startDate)
-    {
-        keyQuery_startDate = strdup("startDate");
-        valueQuery_startDate = (startDate);
-        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
-        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
-    }
-
-    // query parameters
-    char *keyQuery_endDate = NULL;
-    char valueQuery_endDate ;
-    keyValuePair_t *keyPairQuery_endDate = 0;
-    if (endDate)
-    {
-        keyQuery_endDate = strdup("endDate");
-        valueQuery_endDate = (endDate);
-        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
-        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
-    }
-
-    // query parameters
-    char *keyQuery_poolId = NULL;
-    char * valueQuery_poolId = NULL;
-    keyValuePair_t *keyPairQuery_poolId = 0;
-    if (poolId)
-    {
-        keyQuery_poolId = strdup("poolId");
-        valueQuery_poolId = strdup((poolId));
-        keyPairQuery_poolId = keyValuePair_create(keyQuery_poolId, valueQuery_poolId);
-        list_addElement(localVarQueryParameters,keyPairQuery_poolId);
-    }
-    apiClient_invoke(apiClient,
-                    localVarPath,
-                    localVarQueryParameters,
-                    localVarHeaderParameters,
-                    localVarFormParameters,
-                    localVarHeaderType,
-                    localVarContentType,
-                    localVarBodyParameters,
-                    "GET");
-
-    // uncomment below to debug the error response
-    //if (apiClient->response_code == 200) {
-    //    printf("%s\n","Success");
-    //}
-    //No return type
-end:
-    if (apiClient->dataReceived) {
-        free(apiClient->dataReceived);
-        apiClient->dataReceived = NULL;
-        apiClient->dataReceivedLen = 0;
-    }
-    list_freeList(localVarQueryParameters);
-    
-    
-    
-    
-    free(localVarPath);
-    if(keyQuery_poolId){
-        free(keyQuery_poolId);
-        keyQuery_poolId = NULL;
-    }
-    if(valueQuery_poolId){
-        free(valueQuery_poolId);
-        valueQuery_poolId = NULL;
-    }
-    if(keyPairQuery_poolId){
-        keyValuePair_free(keyPairQuery_poolId);
-        keyPairQuery_poolId = NULL;
-    }
-    if(keyQuery_poolId){
-        free(keyQuery_poolId);
-        keyQuery_poolId = NULL;
-    }
-    if(keyPairQuery_poolId){
-        keyValuePair_free(keyPairQuery_poolId);
-        keyPairQuery_poolId = NULL;
-    }
-
-}
-
-void
-CurveAPI_dappsCurveSwapsHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId )
-{
-    list_t    *localVarQueryParameters = list_createList();
-    list_t    *localVarHeaderParameters = NULL;
-    list_t    *localVarFormParameters = NULL;
-    list_t *localVarHeaderType = NULL;
-    list_t *localVarContentType = NULL;
-    char      *localVarBodyParameters = NULL;
-
-    // create the path
-    long sizeOfPath = strlen("/dapps/curve/swaps/historical")+1;
-    char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/curve/swaps/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/removeLiquidityEvents/historical");
 
 
 
@@ -2912,6 +4125,9 @@ CurveAPI_dappsCurveSwapsHistoricalGet(apiClient_t *apiClient, long startBlock , 
         keyPairQuery_poolId = keyValuePair_create(keyQuery_poolId, valueQuery_poolId);
         list_addElement(localVarQueryParameters,keyPairQuery_poolId);
     }
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
     apiClient_invoke(apiClient,
                     localVarPath,
                     localVarQueryParameters,
@@ -2924,10 +4140,27 @@ CurveAPI_dappsCurveSwapsHistoricalGet(apiClient_t *apiClient, long startBlock , 
 
     // uncomment below to debug the error response
     //if (apiClient->response_code == 200) {
-    //    printf("%s\n","Success");
+    //    printf("%s\n","successful operation");
     //}
-    //No return type
-end:
+    cJSON *CurveAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(CurveAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, CurveAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( CurveAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
     if (apiClient->dataReceived) {
         free(apiClient->dataReceived);
         apiClient->dataReceived = NULL;
@@ -2936,9 +4169,41 @@ end:
     list_freeList(localVarQueryParameters);
     
     
-    
+    list_freeList(localVarHeaderType);
     
     free(localVarPath);
+    if(keyQuery_startBlock){
+        free(keyQuery_startBlock);
+        keyQuery_startBlock = NULL;
+    }
+    if(keyPairQuery_startBlock){
+        keyValuePair_free(keyPairQuery_startBlock);
+        keyPairQuery_startBlock = NULL;
+    }
+    if(keyQuery_endBlock){
+        free(keyQuery_endBlock);
+        keyQuery_endBlock = NULL;
+    }
+    if(keyPairQuery_endBlock){
+        keyValuePair_free(keyPairQuery_endBlock);
+        keyPairQuery_endBlock = NULL;
+    }
+    if(keyQuery_startDate){
+        free(keyQuery_startDate);
+        keyQuery_startDate = NULL;
+    }
+    if(keyPairQuery_startDate){
+        keyValuePair_free(keyPairQuery_startDate);
+        keyPairQuery_startDate = NULL;
+    }
+    if(keyQuery_endDate){
+        free(keyQuery_endDate);
+        keyQuery_endDate = NULL;
+    }
+    if(keyPairQuery_endDate){
+        keyValuePair_free(keyPairQuery_endDate);
+        keyPairQuery_endDate = NULL;
+    }
     if(keyQuery_poolId){
         free(keyQuery_poolId);
         keyQuery_poolId = NULL;
@@ -2951,31 +4216,31 @@ end:
         keyValuePair_free(keyPairQuery_poolId);
         keyPairQuery_poolId = NULL;
     }
-    if(keyQuery_poolId){
-        free(keyQuery_poolId);
-        keyQuery_poolId = NULL;
-    }
-    if(keyPairQuery_poolId){
-        keyValuePair_free(keyPairQuery_poolId);
-        keyPairQuery_poolId = NULL;
-    }
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
 
 }
 
-void
-CurveAPI_dappsCurveSystemStateHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate )
+// GetRemoveLiquidityOneEvents (historical)
+//
+// Gets remove liquidity one events.
+//
+list_t*
+CurveAPI_curveGetRemoveLiquidityOneEventsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId )
 {
     list_t    *localVarQueryParameters = list_createList();
     list_t    *localVarHeaderParameters = NULL;
     list_t    *localVarFormParameters = NULL;
-    list_t *localVarHeaderType = NULL;
+    list_t *localVarHeaderType = list_createList();
     list_t *localVarContentType = NULL;
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/curve/systemState/historical")+1;
+    long sizeOfPath = strlen("/dapps/curve/removeLiquidityOneEvents/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/curve/systemState/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/removeLiquidityOneEvents/historical");
 
 
 
@@ -3027,6 +4292,21 @@ CurveAPI_dappsCurveSystemStateHistoricalGet(apiClient_t *apiClient, long startBl
         keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
         list_addElement(localVarQueryParameters,keyPairQuery_endDate);
     }
+
+    // query parameters
+    char *keyQuery_poolId = NULL;
+    char * valueQuery_poolId = NULL;
+    keyValuePair_t *keyPairQuery_poolId = 0;
+    if (poolId)
+    {
+        keyQuery_poolId = strdup("poolId");
+        valueQuery_poolId = strdup((poolId));
+        keyPairQuery_poolId = keyValuePair_create(keyQuery_poolId, valueQuery_poolId);
+        list_addElement(localVarQueryParameters,keyPairQuery_poolId);
+    }
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
     apiClient_invoke(apiClient,
                     localVarPath,
                     localVarQueryParameters,
@@ -3039,10 +4319,27 @@ CurveAPI_dappsCurveSystemStateHistoricalGet(apiClient_t *apiClient, long startBl
 
     // uncomment below to debug the error response
     //if (apiClient->response_code == 200) {
-    //    printf("%s\n","Success");
+    //    printf("%s\n","successful operation");
     //}
-    //No return type
-end:
+    cJSON *CurveAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(CurveAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, CurveAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( CurveAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
     if (apiClient->dataReceived) {
         free(apiClient->dataReceived);
         apiClient->dataReceived = NULL;
@@ -3051,19 +4348,226 @@ end:
     list_freeList(localVarQueryParameters);
     
     
-    
+    list_freeList(localVarHeaderType);
     
     free(localVarPath);
+    if(keyQuery_startBlock){
+        free(keyQuery_startBlock);
+        keyQuery_startBlock = NULL;
+    }
+    if(keyPairQuery_startBlock){
+        keyValuePair_free(keyPairQuery_startBlock);
+        keyPairQuery_startBlock = NULL;
+    }
+    if(keyQuery_endBlock){
+        free(keyQuery_endBlock);
+        keyQuery_endBlock = NULL;
+    }
+    if(keyPairQuery_endBlock){
+        keyValuePair_free(keyPairQuery_endBlock);
+        keyPairQuery_endBlock = NULL;
+    }
+    if(keyQuery_startDate){
+        free(keyQuery_startDate);
+        keyQuery_startDate = NULL;
+    }
+    if(keyPairQuery_startDate){
+        keyValuePair_free(keyPairQuery_startDate);
+        keyPairQuery_startDate = NULL;
+    }
+    if(keyQuery_endDate){
+        free(keyQuery_endDate);
+        keyQuery_endDate = NULL;
+    }
+    if(keyPairQuery_endDate){
+        keyValuePair_free(keyPairQuery_endDate);
+        keyPairQuery_endDate = NULL;
+    }
+    if(keyQuery_poolId){
+        free(keyQuery_poolId);
+        keyQuery_poolId = NULL;
+    }
+    if(valueQuery_poolId){
+        free(valueQuery_poolId);
+        valueQuery_poolId = NULL;
+    }
+    if(keyPairQuery_poolId){
+        keyValuePair_free(keyPairQuery_poolId);
+        keyPairQuery_poolId = NULL;
+    }
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
 
 }
 
-void
-CurveAPI_dappsCurveTokensHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * tokenId )
+// GetSystemStates (historical)
+//
+// Gets system states.
+//
+list_t*
+CurveAPI_curveGetSystemStatesHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate )
 {
     list_t    *localVarQueryParameters = list_createList();
     list_t    *localVarHeaderParameters = NULL;
     list_t    *localVarFormParameters = NULL;
-    list_t *localVarHeaderType = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/curve/systemStates/historical")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/systemStates/historical");
+
+
+
+
+    // query parameters
+    char *keyQuery_startBlock = NULL;
+    long valueQuery_startBlock ;
+    keyValuePair_t *keyPairQuery_startBlock = 0;
+    if (startBlock)
+    {
+        keyQuery_startBlock = strdup("startBlock");
+        valueQuery_startBlock = (startBlock);
+        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
+    }
+
+    // query parameters
+    char *keyQuery_endBlock = NULL;
+    long valueQuery_endBlock ;
+    keyValuePair_t *keyPairQuery_endBlock = 0;
+    if (endBlock)
+    {
+        keyQuery_endBlock = strdup("endBlock");
+        valueQuery_endBlock = (endBlock);
+        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
+    }
+
+    // query parameters
+    char *keyQuery_startDate = NULL;
+    char valueQuery_startDate ;
+    keyValuePair_t *keyPairQuery_startDate = 0;
+    if (startDate)
+    {
+        keyQuery_startDate = strdup("startDate");
+        valueQuery_startDate = (startDate);
+        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
+    }
+
+    // query parameters
+    char *keyQuery_endDate = NULL;
+    char valueQuery_endDate ;
+    keyValuePair_t *keyPairQuery_endDate = 0;
+    if (endDate)
+    {
+        keyQuery_endDate = strdup("endDate");
+        valueQuery_endDate = (endDate);
+        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
+    }
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *CurveAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(CurveAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, CurveAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( CurveAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    list_freeList(localVarQueryParameters);
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    if(keyQuery_startBlock){
+        free(keyQuery_startBlock);
+        keyQuery_startBlock = NULL;
+    }
+    if(keyPairQuery_startBlock){
+        keyValuePair_free(keyPairQuery_startBlock);
+        keyPairQuery_startBlock = NULL;
+    }
+    if(keyQuery_endBlock){
+        free(keyQuery_endBlock);
+        keyQuery_endBlock = NULL;
+    }
+    if(keyPairQuery_endBlock){
+        keyValuePair_free(keyPairQuery_endBlock);
+        keyPairQuery_endBlock = NULL;
+    }
+    if(keyQuery_startDate){
+        free(keyQuery_startDate);
+        keyQuery_startDate = NULL;
+    }
+    if(keyPairQuery_startDate){
+        keyValuePair_free(keyPairQuery_startDate);
+        keyPairQuery_startDate = NULL;
+    }
+    if(keyQuery_endDate){
+        free(keyQuery_endDate);
+        keyQuery_endDate = NULL;
+    }
+    if(keyPairQuery_endDate){
+        keyValuePair_free(keyPairQuery_endDate);
+        keyPairQuery_endDate = NULL;
+    }
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// GetTokens (historical) 🔥
+//
+// Gets tokens.
+//
+list_t*
+CurveAPI_curveGetTokensHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * tokenId )
+{
+    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
     list_t *localVarContentType = NULL;
     char      *localVarBodyParameters = NULL;
 
@@ -3134,6 +4638,9 @@ CurveAPI_dappsCurveTokensHistoricalGet(apiClient_t *apiClient, long startBlock ,
         keyPairQuery_tokenId = keyValuePair_create(keyQuery_tokenId, valueQuery_tokenId);
         list_addElement(localVarQueryParameters,keyPairQuery_tokenId);
     }
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
     apiClient_invoke(apiClient,
                     localVarPath,
                     localVarQueryParameters,
@@ -3146,10 +4653,27 @@ CurveAPI_dappsCurveTokensHistoricalGet(apiClient_t *apiClient, long startBlock ,
 
     // uncomment below to debug the error response
     //if (apiClient->response_code == 200) {
-    //    printf("%s\n","Success");
+    //    printf("%s\n","successful operation");
     //}
-    //No return type
-end:
+    cJSON *CurveAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(CurveAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, CurveAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( CurveAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
     if (apiClient->dataReceived) {
         free(apiClient->dataReceived);
         apiClient->dataReceived = NULL;
@@ -3158,9 +4682,41 @@ end:
     list_freeList(localVarQueryParameters);
     
     
-    
+    list_freeList(localVarHeaderType);
     
     free(localVarPath);
+    if(keyQuery_startBlock){
+        free(keyQuery_startBlock);
+        keyQuery_startBlock = NULL;
+    }
+    if(keyPairQuery_startBlock){
+        keyValuePair_free(keyPairQuery_startBlock);
+        keyPairQuery_startBlock = NULL;
+    }
+    if(keyQuery_endBlock){
+        free(keyQuery_endBlock);
+        keyQuery_endBlock = NULL;
+    }
+    if(keyPairQuery_endBlock){
+        keyValuePair_free(keyPairQuery_endBlock);
+        keyPairQuery_endBlock = NULL;
+    }
+    if(keyQuery_startDate){
+        free(keyQuery_startDate);
+        keyQuery_startDate = NULL;
+    }
+    if(keyPairQuery_startDate){
+        keyValuePair_free(keyPairQuery_startDate);
+        keyPairQuery_startDate = NULL;
+    }
+    if(keyQuery_endDate){
+        free(keyQuery_endDate);
+        keyQuery_endDate = NULL;
+    }
+    if(keyPairQuery_endDate){
+        keyValuePair_free(keyPairQuery_endDate);
+        keyPairQuery_endDate = NULL;
+    }
     if(keyQuery_tokenId){
         free(keyQuery_tokenId);
         keyQuery_tokenId = NULL;
@@ -3173,31 +4729,31 @@ end:
         keyValuePair_free(keyPairQuery_tokenId);
         keyPairQuery_tokenId = NULL;
     }
-    if(keyQuery_tokenId){
-        free(keyQuery_tokenId);
-        keyQuery_tokenId = NULL;
-    }
-    if(keyPairQuery_tokenId){
-        keyValuePair_free(keyPairQuery_tokenId);
-        keyPairQuery_tokenId = NULL;
-    }
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
 
 }
 
-void
-CurveAPI_dappsCurveTransferOwnershipEventHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId )
+// GetTransferOwnershipEvents (historical)
+//
+// Gets transfer ownership events.
+//
+list_t*
+CurveAPI_curveGetTransferOwnershipEventsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId )
 {
     list_t    *localVarQueryParameters = list_createList();
     list_t    *localVarHeaderParameters = NULL;
     list_t    *localVarFormParameters = NULL;
-    list_t *localVarHeaderType = NULL;
+    list_t *localVarHeaderType = list_createList();
     list_t *localVarContentType = NULL;
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/curve/transferOwnershipEvent/historical")+1;
+    long sizeOfPath = strlen("/dapps/curve/transferOwnershipEvents/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/curve/transferOwnershipEvent/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/transferOwnershipEvents/historical");
 
 
 
@@ -3261,6 +4817,9 @@ CurveAPI_dappsCurveTransferOwnershipEventHistoricalGet(apiClient_t *apiClient, l
         keyPairQuery_poolId = keyValuePair_create(keyQuery_poolId, valueQuery_poolId);
         list_addElement(localVarQueryParameters,keyPairQuery_poolId);
     }
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
     apiClient_invoke(apiClient,
                     localVarPath,
                     localVarQueryParameters,
@@ -3273,10 +4832,27 @@ CurveAPI_dappsCurveTransferOwnershipEventHistoricalGet(apiClient_t *apiClient, l
 
     // uncomment below to debug the error response
     //if (apiClient->response_code == 200) {
-    //    printf("%s\n","Success");
+    //    printf("%s\n","successful operation");
     //}
-    //No return type
-end:
+    cJSON *CurveAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(CurveAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, CurveAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( CurveAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
     if (apiClient->dataReceived) {
         free(apiClient->dataReceived);
         apiClient->dataReceived = NULL;
@@ -3285,9 +4861,41 @@ end:
     list_freeList(localVarQueryParameters);
     
     
-    
+    list_freeList(localVarHeaderType);
     
     free(localVarPath);
+    if(keyQuery_startBlock){
+        free(keyQuery_startBlock);
+        keyQuery_startBlock = NULL;
+    }
+    if(keyPairQuery_startBlock){
+        keyValuePair_free(keyPairQuery_startBlock);
+        keyPairQuery_startBlock = NULL;
+    }
+    if(keyQuery_endBlock){
+        free(keyQuery_endBlock);
+        keyQuery_endBlock = NULL;
+    }
+    if(keyPairQuery_endBlock){
+        keyValuePair_free(keyPairQuery_endBlock);
+        keyPairQuery_endBlock = NULL;
+    }
+    if(keyQuery_startDate){
+        free(keyQuery_startDate);
+        keyQuery_startDate = NULL;
+    }
+    if(keyPairQuery_startDate){
+        keyValuePair_free(keyPairQuery_startDate);
+        keyPairQuery_startDate = NULL;
+    }
+    if(keyQuery_endDate){
+        free(keyQuery_endDate);
+        keyQuery_endDate = NULL;
+    }
+    if(keyPairQuery_endDate){
+        keyValuePair_free(keyPairQuery_endDate);
+        keyPairQuery_endDate = NULL;
+    }
     if(keyQuery_poolId){
         free(keyQuery_poolId);
         keyQuery_poolId = NULL;
@@ -3300,31 +4908,31 @@ end:
         keyValuePair_free(keyPairQuery_poolId);
         keyPairQuery_poolId = NULL;
     }
-    if(keyQuery_poolId){
-        free(keyQuery_poolId);
-        keyQuery_poolId = NULL;
-    }
-    if(keyPairQuery_poolId){
-        keyValuePair_free(keyPairQuery_poolId);
-        keyPairQuery_poolId = NULL;
-    }
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
 
 }
 
-void
-CurveAPI_dappsCurveUnderlyingCoinHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId )
+// GetUnderlyingCoins (historical)
+//
+// Gets underlying coins.
+//
+list_t*
+CurveAPI_curveGetUnderlyingCoinsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId )
 {
     list_t    *localVarQueryParameters = list_createList();
     list_t    *localVarHeaderParameters = NULL;
     list_t    *localVarFormParameters = NULL;
-    list_t *localVarHeaderType = NULL;
+    list_t *localVarHeaderType = list_createList();
     list_t *localVarContentType = NULL;
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/curve/underlyingCoin/historical")+1;
+    long sizeOfPath = strlen("/dapps/curve/underlyingCoins/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/curve/underlyingCoin/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/underlyingCoins/historical");
 
 
 
@@ -3388,6 +4996,9 @@ CurveAPI_dappsCurveUnderlyingCoinHistoricalGet(apiClient_t *apiClient, long star
         keyPairQuery_poolId = keyValuePair_create(keyQuery_poolId, valueQuery_poolId);
         list_addElement(localVarQueryParameters,keyPairQuery_poolId);
     }
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
     apiClient_invoke(apiClient,
                     localVarPath,
                     localVarQueryParameters,
@@ -3400,10 +5011,27 @@ CurveAPI_dappsCurveUnderlyingCoinHistoricalGet(apiClient_t *apiClient, long star
 
     // uncomment below to debug the error response
     //if (apiClient->response_code == 200) {
-    //    printf("%s\n","Success");
+    //    printf("%s\n","successful operation");
     //}
-    //No return type
-end:
+    cJSON *CurveAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(CurveAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, CurveAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( CurveAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
     if (apiClient->dataReceived) {
         free(apiClient->dataReceived);
         apiClient->dataReceived = NULL;
@@ -3412,9 +5040,41 @@ end:
     list_freeList(localVarQueryParameters);
     
     
-    
+    list_freeList(localVarHeaderType);
     
     free(localVarPath);
+    if(keyQuery_startBlock){
+        free(keyQuery_startBlock);
+        keyQuery_startBlock = NULL;
+    }
+    if(keyPairQuery_startBlock){
+        keyValuePair_free(keyPairQuery_startBlock);
+        keyPairQuery_startBlock = NULL;
+    }
+    if(keyQuery_endBlock){
+        free(keyQuery_endBlock);
+        keyQuery_endBlock = NULL;
+    }
+    if(keyPairQuery_endBlock){
+        keyValuePair_free(keyPairQuery_endBlock);
+        keyPairQuery_endBlock = NULL;
+    }
+    if(keyQuery_startDate){
+        free(keyQuery_startDate);
+        keyQuery_startDate = NULL;
+    }
+    if(keyPairQuery_startDate){
+        keyValuePair_free(keyPairQuery_startDate);
+        keyPairQuery_startDate = NULL;
+    }
+    if(keyQuery_endDate){
+        free(keyQuery_endDate);
+        keyQuery_endDate = NULL;
+    }
+    if(keyPairQuery_endDate){
+        keyValuePair_free(keyPairQuery_endDate);
+        keyPairQuery_endDate = NULL;
+    }
     if(keyQuery_poolId){
         free(keyQuery_poolId);
         keyQuery_poolId = NULL;
@@ -3427,31 +5087,31 @@ end:
         keyValuePair_free(keyPairQuery_poolId);
         keyPairQuery_poolId = NULL;
     }
-    if(keyQuery_poolId){
-        free(keyQuery_poolId);
-        keyQuery_poolId = NULL;
-    }
-    if(keyPairQuery_poolId){
-        keyValuePair_free(keyPairQuery_poolId);
-        keyPairQuery_poolId = NULL;
-    }
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
 
 }
 
-void
-CurveAPI_dappsCurveVotingAppHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate )
+// GetVotingApps (historical)
+//
+// Gets voting apps.
+//
+list_t*
+CurveAPI_curveGetVotingAppsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate )
 {
     list_t    *localVarQueryParameters = list_createList();
     list_t    *localVarHeaderParameters = NULL;
     list_t    *localVarFormParameters = NULL;
-    list_t *localVarHeaderType = NULL;
+    list_t *localVarHeaderType = list_createList();
     list_t *localVarContentType = NULL;
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/curve/votingApp/historical")+1;
+    long sizeOfPath = strlen("/dapps/curve/votingApps/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/curve/votingApp/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/votingApps/historical");
 
 
 
@@ -3503,6 +5163,9 @@ CurveAPI_dappsCurveVotingAppHistoricalGet(apiClient_t *apiClient, long startBloc
         keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
         list_addElement(localVarQueryParameters,keyPairQuery_endDate);
     }
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
     apiClient_invoke(apiClient,
                     localVarPath,
                     localVarQueryParameters,
@@ -3515,10 +5178,27 @@ CurveAPI_dappsCurveVotingAppHistoricalGet(apiClient_t *apiClient, long startBloc
 
     // uncomment below to debug the error response
     //if (apiClient->response_code == 200) {
-    //    printf("%s\n","Success");
+    //    printf("%s\n","successful operation");
     //}
-    //No return type
-end:
+    cJSON *CurveAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(CurveAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, CurveAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( CurveAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
     if (apiClient->dataReceived) {
         free(apiClient->dataReceived);
         apiClient->dataReceived = NULL;
@@ -3527,26 +5207,66 @@ end:
     list_freeList(localVarQueryParameters);
     
     
-    
+    list_freeList(localVarHeaderType);
     
     free(localVarPath);
+    if(keyQuery_startBlock){
+        free(keyQuery_startBlock);
+        keyQuery_startBlock = NULL;
+    }
+    if(keyPairQuery_startBlock){
+        keyValuePair_free(keyPairQuery_startBlock);
+        keyPairQuery_startBlock = NULL;
+    }
+    if(keyQuery_endBlock){
+        free(keyQuery_endBlock);
+        keyQuery_endBlock = NULL;
+    }
+    if(keyPairQuery_endBlock){
+        keyValuePair_free(keyPairQuery_endBlock);
+        keyPairQuery_endBlock = NULL;
+    }
+    if(keyQuery_startDate){
+        free(keyQuery_startDate);
+        keyQuery_startDate = NULL;
+    }
+    if(keyPairQuery_startDate){
+        keyValuePair_free(keyPairQuery_startDate);
+        keyPairQuery_startDate = NULL;
+    }
+    if(keyQuery_endDate){
+        free(keyQuery_endDate);
+        keyQuery_endDate = NULL;
+    }
+    if(keyPairQuery_endDate){
+        keyValuePair_free(keyPairQuery_endDate);
+        keyPairQuery_endDate = NULL;
+    }
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
 
 }
 
-void
-CurveAPI_dappsCurveWeeklyVolumeHistoricalGet(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId )
+// GetWeeklyVolumes (historical)
+//
+// Gets weekly volumes.
+//
+list_t*
+CurveAPI_curveGetWeeklyVolumesHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId )
 {
     list_t    *localVarQueryParameters = list_createList();
     list_t    *localVarHeaderParameters = NULL;
     list_t    *localVarFormParameters = NULL;
-    list_t *localVarHeaderType = NULL;
+    list_t *localVarHeaderType = list_createList();
     list_t *localVarContentType = NULL;
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/curve/weeklyVolume/historical")+1;
+    long sizeOfPath = strlen("/dapps/curve/weeklyVolumes/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/curve/weeklyVolume/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/weeklyVolumes/historical");
 
 
 
@@ -3610,6 +5330,9 @@ CurveAPI_dappsCurveWeeklyVolumeHistoricalGet(apiClient_t *apiClient, long startB
         keyPairQuery_poolId = keyValuePair_create(keyQuery_poolId, valueQuery_poolId);
         list_addElement(localVarQueryParameters,keyPairQuery_poolId);
     }
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
     apiClient_invoke(apiClient,
                     localVarPath,
                     localVarQueryParameters,
@@ -3622,10 +5345,27 @@ CurveAPI_dappsCurveWeeklyVolumeHistoricalGet(apiClient_t *apiClient, long startB
 
     // uncomment below to debug the error response
     //if (apiClient->response_code == 200) {
-    //    printf("%s\n","Success");
+    //    printf("%s\n","successful operation");
     //}
-    //No return type
-end:
+    cJSON *CurveAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(CurveAPIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, CurveAPIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( CurveAPIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
     if (apiClient->dataReceived) {
         free(apiClient->dataReceived);
         apiClient->dataReceived = NULL;
@@ -3634,9 +5374,41 @@ end:
     list_freeList(localVarQueryParameters);
     
     
-    
+    list_freeList(localVarHeaderType);
     
     free(localVarPath);
+    if(keyQuery_startBlock){
+        free(keyQuery_startBlock);
+        keyQuery_startBlock = NULL;
+    }
+    if(keyPairQuery_startBlock){
+        keyValuePair_free(keyPairQuery_startBlock);
+        keyPairQuery_startBlock = NULL;
+    }
+    if(keyQuery_endBlock){
+        free(keyQuery_endBlock);
+        keyQuery_endBlock = NULL;
+    }
+    if(keyPairQuery_endBlock){
+        keyValuePair_free(keyPairQuery_endBlock);
+        keyPairQuery_endBlock = NULL;
+    }
+    if(keyQuery_startDate){
+        free(keyQuery_startDate);
+        keyQuery_startDate = NULL;
+    }
+    if(keyPairQuery_startDate){
+        keyValuePair_free(keyPairQuery_startDate);
+        keyPairQuery_startDate = NULL;
+    }
+    if(keyQuery_endDate){
+        free(keyQuery_endDate);
+        keyQuery_endDate = NULL;
+    }
+    if(keyPairQuery_endDate){
+        keyValuePair_free(keyPairQuery_endDate);
+        keyPairQuery_endDate = NULL;
+    }
     if(keyQuery_poolId){
         free(keyQuery_poolId);
         keyQuery_poolId = NULL;
@@ -3649,14 +5421,10 @@ end:
         keyValuePair_free(keyPairQuery_poolId);
         keyPairQuery_poolId = NULL;
     }
-    if(keyQuery_poolId){
-        free(keyQuery_poolId);
-        keyQuery_poolId = NULL;
-    }
-    if(keyPairQuery_poolId){
-        keyValuePair_free(keyPairQuery_poolId);
-        keyPairQuery_poolId = NULL;
-    }
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
 
 }
 

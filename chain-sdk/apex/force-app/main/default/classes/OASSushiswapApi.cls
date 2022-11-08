@@ -26,12 +26,54 @@ public class OASSushiswapApi {
     }
 
     /**
+     * GetExchanges (current) 🔥
+     * Gets exchanges.
+     * @return List<OASCurveExchangeDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASCurveExchangeDTO> curveGetExchangesCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASCurveExchangeDTO>) client.invoke(
+            'GET', '/dapps/sushiswap/exchanges/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>(),
+            new List<String>(),
+            List<OASCurveExchangeDTO>.class
+        );
+    }
+    /**
+     * GetTrades (current) 🔥
+     * Gets trades.
+     * @return List<OASDexTradeDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASDexTradeDTO> dexGetTradesCurrent() {
+        List<OAS.Param> query = new List<OAS.Param>();
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASDexTradeDTO>) client.invoke(
+            'GET', '/dapps/sushiswap/trades/current', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>(),
+            new List<String>(),
+            List<OASDexTradeDTO>.class
+        );
+    }
+    /**
      * GetBundles (historical)
      * Gets bundles.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
+     * @param startBlock AAAAAAAAAA (optional)
+     * @param endBlock BBBBBBBBBBBB (optional)
+     * @param startDate CCCCCCCCC (optional)
+     * @param endDate DDDDDDDDDDD (optional)
      * @return List<OASSushiswapBundleDTO>
      * @throws OAS.ApiException if fails to make API call
      */
@@ -290,7 +332,7 @@ public class OASSushiswapApi {
         );
     }
     /**
-     * GetPools (current)
+     * GetPools (current) 🔥
      * Gets pools.
      * @return List<OASSushiswapPairDTO>
      * @throws OAS.ApiException if fails to make API call
@@ -345,13 +387,13 @@ public class OASSushiswapApi {
         );
     }
     /**
-     * GetPools (historical)
+     * GetPools (historical) 🔥
      * Gets list of pools for given filters.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param poolId  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe (optional)
+     * @param poolId The pool address. (optional)
      * @return List<OASSushiswapPairDTO>
      * @throws OAS.ApiException if fails to make API call
      */
@@ -413,7 +455,7 @@ public class OASSushiswapApi {
         );
     }
     /**
-     * GetSwaps (current)
+     * GetSwaps (current) 🔥
      * Gets swaps.
      * @return List<OASSushiswapSwapDTO>
      * @throws OAS.ApiException if fails to make API call
@@ -434,13 +476,13 @@ public class OASSushiswapApi {
         );
     }
     /**
-     * GetSwaps (historical)
+     * GetSwaps (historical) 🔥
      * Gets list of swaps for given filters.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param poolId  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe (optional)
+     * @param poolId The pool address. (optional)
      * @return List<OASSushiswapSwapDTO>
      * @throws OAS.ApiException if fails to make API call
      */
@@ -468,7 +510,7 @@ public class OASSushiswapApi {
         );
     }
     /**
-     * GetTokens (current)
+     * GetTokens (current) 🔥
      * Gets tokens.
      * @return List<OASSushiswapTokenDTO>
      * @throws OAS.ApiException if fails to make API call
@@ -523,13 +565,13 @@ public class OASSushiswapApi {
         );
     }
     /**
-     * GetTokens (historical)
+     * GetTokens (historical) 🔥
      * Gets list of tokens for given filters.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param tokenId  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe (optional)
+     * @param tokenId The token address. (optional)
      * @return List<OASSushiswapTokenDTO>
      * @throws OAS.ApiException if fails to make API call
      */

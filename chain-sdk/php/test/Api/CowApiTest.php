@@ -73,60 +73,60 @@ class CowApiTest extends TestCase
     }
 
     /**
-     * Test case for dappsCowOrdersHistoricalGet
+     * Test case for cowGetOrdersHistorical
      *
-     * .
+     * GetOrders (historical).
      *
      */
-    public function testDappsCowOrdersHistoricalGet()
+    public function testCowGetOrdersHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsCowSettlementHistoricalGet
+     * Test case for cowGetSettlementsHistorical
      *
-     * .
+     * GetSettlements (historical).
      *
      */
-    public function testDappsCowSettlementHistoricalGet()
+    public function testCowGetSettlementsHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsCowTokensHistoricalGet
+     * Test case for cowGetTokensHistorical
      *
-     * .
+     * GetTokens (historical) 🔥.
      *
      */
-    public function testDappsCowTokensHistoricalGet()
+    public function testCowGetTokensHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsCowTradesHistoricalGet
+     * Test case for cowGetTradesHistorical
      *
-     * .
+     * GetTrades (historical) 🔥.
      *
      */
-    public function testDappsCowTradesHistoricalGet()
+    public function testCowGetTradesHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsCowUsersHistoricalGet
+     * Test case for cowGetUsersHistorical
      *
-     * .
+     * GetUsers (historical).
      *
      */
-    public function testDappsCowUsersHistoricalGet()
+    public function testCowGetUsersHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

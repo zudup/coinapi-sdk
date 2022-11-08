@@ -24,6 +24,17 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
 import java.util.Date;
+import org.openapitools.client.model.DexBatchDTO;
+import org.openapitools.client.model.DexDepositDTO;
+import org.openapitools.client.model.DexOrderDTO;
+import org.openapitools.client.model.DexPriceDTO;
+import org.openapitools.client.model.DexSolutionDTO;
+import org.openapitools.client.model.DexStatsDTO;
+import org.openapitools.client.model.DexTokenDTO;
+import org.openapitools.client.model.DexTradeDTO;
+import org.openapitools.client.model.DexUserDTO;
+import org.openapitools.client.model.DexWithdrawDTO;
+import org.openapitools.client.model.DexWithdrawRequestDTO;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
@@ -56,19 +67,19 @@ public class DexApi {
   }
 
   /**
-  * 
-  * 
+  * GetBatches (historical)
+  * Gets batches.
    * @param startBlock 
    * @param endBlock 
    * @param startDate 
    * @param endDate 
-   * @return void
+   * @return List<DexBatchDTO>
   */
-  public void dappsDexBatchHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<DexBatchDTO> dexGetBatchesHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/dex/batch/historical";
+    String path = "/dapps/dex/batches/historical";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -98,9 +109,9 @@ public class DexApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return ;
+         return (List<DexBatchDTO>) ApiInvoker.deserialize(localVarResponse, "array", DexBatchDTO.class);
       } else {
-         return ;
+         return null;
       }
     } catch (ApiException ex) {
        throw ex;
@@ -120,16 +131,16 @@ public class DexApi {
   }
 
       /**
-   * 
-   * 
+   * GetBatches (historical)
+   * Gets batches.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate 
   */
-  public void dappsDexBatchHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, final Response.Listener<String> responseListener, final Response.ErrorListener errorListener) {
+  public void dexGetBatchesHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, final Response.Listener<List<DexBatchDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
     // create path and map variables
-    String path = "/dapps/dex/batch/historical".replaceAll("\\{format\\}","json");
+    String path = "/dapps/dex/batches/historical".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -167,7 +178,11 @@ public class DexApi {
         new Response.Listener<String>() {
           @Override
           public void onResponse(String localVarResponse) {
-              responseListener.onResponse(localVarResponse);
+            try {
+              responseListener.onResponse((List<DexBatchDTO>) ApiInvoker.deserialize(localVarResponse,  "array", DexBatchDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
           }
       }, new Response.ErrorListener() {
           @Override
@@ -180,16 +195,147 @@ public class DexApi {
     }
   }
   /**
-  * 
-  * 
+  * GetDeposits (historical)
+  * Gets deposits.
    * @param startBlock 
    * @param endBlock 
    * @param startDate 
    * @param endDate 
    * @param tokenId 
-   * @return void
+   * @return List<DexDepositDTO>
   */
-  public void dappsDexOrdersHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<DexDepositDTO> dexGetDepositsHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+    Object postBody = null;
+
+    // create path and map variables
+    String path = "/dapps/dex/deposits/historical";
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startBlock", startBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endBlock", endBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startDate", startDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endDate", endDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "tokenId", tokenId));
+    String[] contentTypes = {
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+    }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
+      if (localVarResponse != null) {
+         return (List<DexDepositDTO>) ApiInvoker.deserialize(localVarResponse, "array", DexDepositDTO.class);
+      } else {
+         return null;
+      }
+    } catch (ApiException ex) {
+       throw ex;
+    } catch (InterruptedException ex) {
+       throw ex;
+    } catch (ExecutionException ex) {
+      if (ex.getCause() instanceof VolleyError) {
+        VolleyError volleyError = (VolleyError)ex.getCause();
+        if (volleyError.networkResponse != null) {
+          throw new ApiException(volleyError.networkResponse.statusCode, volleyError.getMessage());
+        }
+      }
+      throw ex;
+    } catch (TimeoutException ex) {
+      throw ex;
+    }
+  }
+
+      /**
+   * GetDeposits (historical)
+   * Gets deposits.
+   * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param tokenId 
+  */
+  public void dexGetDepositsHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId, final Response.Listener<List<DexDepositDTO>> responseListener, final Response.ErrorListener errorListener) {
+    Object postBody = null;
+
+
+    // create path and map variables
+    String path = "/dapps/dex/deposits/historical".replaceAll("\\{format\\}","json");
+
+    // query params
+    List<Pair> queryParams = new ArrayList<Pair>();
+    // header params
+    Map<String, String> headerParams = new HashMap<String, String>();
+    // form params
+    Map<String, String> formParams = new HashMap<String, String>();
+
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startBlock", startBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endBlock", endBlock));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "startDate", startDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "endDate", endDate));
+    queryParams.addAll(ApiInvoker.parameterToPairs("", "tokenId", tokenId));
+
+
+    String[] contentTypes = {
+      
+    };
+    String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
+
+    if (contentType.startsWith("multipart/form-data")) {
+      // file uploading
+      MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
+      
+
+      HttpEntity httpEntity = localVarBuilder.build();
+      postBody = httpEntity;
+    } else {
+      // normal form params
+          }
+
+    String[] authNames = new String[] {  };
+
+    try {
+      apiInvoker.invokeAPI(basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames,
+        new Response.Listener<String>() {
+          @Override
+          public void onResponse(String localVarResponse) {
+            try {
+              responseListener.onResponse((List<DexDepositDTO>) ApiInvoker.deserialize(localVarResponse,  "array", DexDepositDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
+          }
+      }, new Response.ErrorListener() {
+          @Override
+          public void onErrorResponse(VolleyError error) {
+            errorListener.onErrorResponse(error);
+          }
+      });
+    } catch (ApiException ex) {
+      errorListener.onErrorResponse(new VolleyError(ex));
+    }
+  }
+  /**
+  * GetOrders (historical)
+  * Gets orders.
+   * @param startBlock 
+   * @param endBlock 
+   * @param startDate 
+   * @param endDate 
+   * @param tokenId 
+   * @return List<DexOrderDTO>
+  */
+  public List<DexOrderDTO> dexGetOrdersHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
@@ -224,9 +370,9 @@ public class DexApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return ;
+         return (List<DexOrderDTO>) ApiInvoker.deserialize(localVarResponse, "array", DexOrderDTO.class);
       } else {
-         return ;
+         return null;
       }
     } catch (ApiException ex) {
        throw ex;
@@ -246,11 +392,11 @@ public class DexApi {
   }
 
       /**
-   * 
-   * 
+   * GetOrders (historical)
+   * Gets orders.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param tokenId 
   */
-  public void dappsDexOrdersHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId, final Response.Listener<String> responseListener, final Response.ErrorListener errorListener) {
+  public void dexGetOrdersHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId, final Response.Listener<List<DexOrderDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
@@ -294,7 +440,11 @@ public class DexApi {
         new Response.Listener<String>() {
           @Override
           public void onResponse(String localVarResponse) {
-              responseListener.onResponse(localVarResponse);
+            try {
+              responseListener.onResponse((List<DexOrderDTO>) ApiInvoker.deserialize(localVarResponse,  "array", DexOrderDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
           }
       }, new Response.ErrorListener() {
           @Override
@@ -307,16 +457,16 @@ public class DexApi {
     }
   }
   /**
-  * 
-  * 
+  * GetPrices (historical)
+  * Gets prices.
    * @param startBlock 
    * @param endBlock 
    * @param startDate 
    * @param endDate 
    * @param tokenId 
-   * @return void
+   * @return List<DexPriceDTO>
   */
-  public void dappsDexPricesHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<DexPriceDTO> dexGetPricesHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
@@ -351,9 +501,9 @@ public class DexApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return ;
+         return (List<DexPriceDTO>) ApiInvoker.deserialize(localVarResponse, "array", DexPriceDTO.class);
       } else {
-         return ;
+         return null;
       }
     } catch (ApiException ex) {
        throw ex;
@@ -373,11 +523,11 @@ public class DexApi {
   }
 
       /**
-   * 
-   * 
+   * GetPrices (historical)
+   * Gets prices.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param tokenId 
   */
-  public void dappsDexPricesHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId, final Response.Listener<String> responseListener, final Response.ErrorListener errorListener) {
+  public void dexGetPricesHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId, final Response.Listener<List<DexPriceDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
@@ -421,7 +571,11 @@ public class DexApi {
         new Response.Listener<String>() {
           @Override
           public void onResponse(String localVarResponse) {
-              responseListener.onResponse(localVarResponse);
+            try {
+              responseListener.onResponse((List<DexPriceDTO>) ApiInvoker.deserialize(localVarResponse,  "array", DexPriceDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
           }
       }, new Response.ErrorListener() {
           @Override
@@ -434,20 +588,20 @@ public class DexApi {
     }
   }
   /**
-  * 
-  * 
+  * GetSolutions (historical)
+  * Gets solutions.
    * @param startBlock 
    * @param endBlock 
    * @param startDate 
    * @param endDate 
    * @param tokenId 
-   * @return void
+   * @return List<DexSolutionDTO>
   */
-  public void dappsDexSolutionHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<DexSolutionDTO> dexGetSolutionsHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/dex/solution/historical";
+    String path = "/dapps/dex/solutions/historical";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -478,9 +632,9 @@ public class DexApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return ;
+         return (List<DexSolutionDTO>) ApiInvoker.deserialize(localVarResponse, "array", DexSolutionDTO.class);
       } else {
-         return ;
+         return null;
       }
     } catch (ApiException ex) {
        throw ex;
@@ -500,16 +654,16 @@ public class DexApi {
   }
 
       /**
-   * 
-   * 
+   * GetSolutions (historical)
+   * Gets solutions.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param tokenId 
   */
-  public void dappsDexSolutionHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId, final Response.Listener<String> responseListener, final Response.ErrorListener errorListener) {
+  public void dexGetSolutionsHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId, final Response.Listener<List<DexSolutionDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
     // create path and map variables
-    String path = "/dapps/dex/solution/historical".replaceAll("\\{format\\}","json");
+    String path = "/dapps/dex/solutions/historical".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -548,7 +702,11 @@ public class DexApi {
         new Response.Listener<String>() {
           @Override
           public void onResponse(String localVarResponse) {
-              responseListener.onResponse(localVarResponse);
+            try {
+              responseListener.onResponse((List<DexSolutionDTO>) ApiInvoker.deserialize(localVarResponse,  "array", DexSolutionDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
           }
       }, new Response.ErrorListener() {
           @Override
@@ -561,15 +719,15 @@ public class DexApi {
     }
   }
   /**
-  * 
-  * 
+  * GetStats (historical)
+  * Gets stats.
    * @param startBlock 
    * @param endBlock 
    * @param startDate 
    * @param endDate 
-   * @return void
+   * @return List<DexStatsDTO>
   */
-  public void dappsDexStatsHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<DexStatsDTO> dexGetStatsHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
@@ -603,9 +761,9 @@ public class DexApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return ;
+         return (List<DexStatsDTO>) ApiInvoker.deserialize(localVarResponse, "array", DexStatsDTO.class);
       } else {
-         return ;
+         return null;
       }
     } catch (ApiException ex) {
        throw ex;
@@ -625,11 +783,11 @@ public class DexApi {
   }
 
       /**
-   * 
-   * 
+   * GetStats (historical)
+   * Gets stats.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate 
   */
-  public void dappsDexStatsHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, final Response.Listener<String> responseListener, final Response.ErrorListener errorListener) {
+  public void dexGetStatsHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, final Response.Listener<List<DexStatsDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
@@ -672,7 +830,11 @@ public class DexApi {
         new Response.Listener<String>() {
           @Override
           public void onResponse(String localVarResponse) {
-              responseListener.onResponse(localVarResponse);
+            try {
+              responseListener.onResponse((List<DexStatsDTO>) ApiInvoker.deserialize(localVarResponse,  "array", DexStatsDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
           }
       }, new Response.ErrorListener() {
           @Override
@@ -685,16 +847,16 @@ public class DexApi {
     }
   }
   /**
-  * 
-  * 
+  * GetTokens (historical) 🔥
+  * Gets tokens.
    * @param startBlock 
    * @param endBlock 
    * @param startDate 
    * @param endDate 
    * @param tokenId 
-   * @return void
+   * @return List<DexTokenDTO>
   */
-  public void dappsDexTokensHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<DexTokenDTO> dexGetTokensHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
@@ -729,9 +891,9 @@ public class DexApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return ;
+         return (List<DexTokenDTO>) ApiInvoker.deserialize(localVarResponse, "array", DexTokenDTO.class);
       } else {
-         return ;
+         return null;
       }
     } catch (ApiException ex) {
        throw ex;
@@ -751,11 +913,11 @@ public class DexApi {
   }
 
       /**
-   * 
-   * 
+   * GetTokens (historical) 🔥
+   * Gets tokens.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param tokenId 
   */
-  public void dappsDexTokensHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId, final Response.Listener<String> responseListener, final Response.ErrorListener errorListener) {
+  public void dexGetTokensHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId, final Response.Listener<List<DexTokenDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
@@ -799,7 +961,11 @@ public class DexApi {
         new Response.Listener<String>() {
           @Override
           public void onResponse(String localVarResponse) {
-              responseListener.onResponse(localVarResponse);
+            try {
+              responseListener.onResponse((List<DexTokenDTO>) ApiInvoker.deserialize(localVarResponse,  "array", DexTokenDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
           }
       }, new Response.ErrorListener() {
           @Override
@@ -812,15 +978,15 @@ public class DexApi {
     }
   }
   /**
-  * 
-  * 
+  * GetTrades (historical) 🔥
+  * Gets trades.
    * @param startBlock 
    * @param endBlock 
    * @param startDate 
    * @param endDate 
-   * @return void
+   * @return List<DexTradeDTO>
   */
-  public void dappsDexTradesHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<DexTradeDTO> dexGetTradesHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
@@ -854,9 +1020,9 @@ public class DexApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return ;
+         return (List<DexTradeDTO>) ApiInvoker.deserialize(localVarResponse, "array", DexTradeDTO.class);
       } else {
-         return ;
+         return null;
       }
     } catch (ApiException ex) {
        throw ex;
@@ -876,11 +1042,11 @@ public class DexApi {
   }
 
       /**
-   * 
-   * 
+   * GetTrades (historical) 🔥
+   * Gets trades.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate 
   */
-  public void dappsDexTradesHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, final Response.Listener<String> responseListener, final Response.ErrorListener errorListener) {
+  public void dexGetTradesHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, final Response.Listener<List<DexTradeDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
@@ -923,7 +1089,11 @@ public class DexApi {
         new Response.Listener<String>() {
           @Override
           public void onResponse(String localVarResponse) {
-              responseListener.onResponse(localVarResponse);
+            try {
+              responseListener.onResponse((List<DexTradeDTO>) ApiInvoker.deserialize(localVarResponse,  "array", DexTradeDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
           }
       }, new Response.ErrorListener() {
           @Override
@@ -936,15 +1106,15 @@ public class DexApi {
     }
   }
   /**
-  * 
-  * 
+  * GetUsers (historical)
+  * Gets users.
    * @param startBlock 
    * @param endBlock 
    * @param startDate 
    * @param endDate 
-   * @return void
+   * @return List<DexUserDTO>
   */
-  public void dappsDexUsersHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<DexUserDTO> dexGetUsersHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
@@ -978,9 +1148,9 @@ public class DexApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return ;
+         return (List<DexUserDTO>) ApiInvoker.deserialize(localVarResponse, "array", DexUserDTO.class);
       } else {
-         return ;
+         return null;
       }
     } catch (ApiException ex) {
        throw ex;
@@ -1000,11 +1170,11 @@ public class DexApi {
   }
 
       /**
-   * 
-   * 
+   * GetUsers (historical)
+   * Gets users.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate 
   */
-  public void dappsDexUsersHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, final Response.Listener<String> responseListener, final Response.ErrorListener errorListener) {
+  public void dexGetUsersHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, final Response.Listener<List<DexUserDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
@@ -1047,7 +1217,11 @@ public class DexApi {
         new Response.Listener<String>() {
           @Override
           public void onResponse(String localVarResponse) {
-              responseListener.onResponse(localVarResponse);
+            try {
+              responseListener.onResponse((List<DexUserDTO>) ApiInvoker.deserialize(localVarResponse,  "array", DexUserDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
           }
       }, new Response.ErrorListener() {
           @Override
@@ -1060,20 +1234,20 @@ public class DexApi {
     }
   }
   /**
-  * 
-  * 
+  * GetWithdraws (historical)
+  * Gets withdraws.
    * @param startBlock 
    * @param endBlock 
    * @param startDate 
    * @param endDate 
    * @param tokenId 
-   * @return void
+   * @return List<DexWithdrawDTO>
   */
-  public void dappsDexWithdrawHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<DexWithdrawDTO> dexGetWithdrawsHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/dex/withdraw/historical";
+    String path = "/dapps/dex/withdraws/historical";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1104,9 +1278,9 @@ public class DexApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return ;
+         return (List<DexWithdrawDTO>) ApiInvoker.deserialize(localVarResponse, "array", DexWithdrawDTO.class);
       } else {
-         return ;
+         return null;
       }
     } catch (ApiException ex) {
        throw ex;
@@ -1126,16 +1300,16 @@ public class DexApi {
   }
 
       /**
-   * 
-   * 
+   * GetWithdraws (historical)
+   * Gets withdraws.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param tokenId 
   */
-  public void dappsDexWithdrawHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId, final Response.Listener<String> responseListener, final Response.ErrorListener errorListener) {
+  public void dexGetWithdrawsHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId, final Response.Listener<List<DexWithdrawDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
     // create path and map variables
-    String path = "/dapps/dex/withdraw/historical".replaceAll("\\{format\\}","json");
+    String path = "/dapps/dex/withdraws/historical".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1174,7 +1348,11 @@ public class DexApi {
         new Response.Listener<String>() {
           @Override
           public void onResponse(String localVarResponse) {
-              responseListener.onResponse(localVarResponse);
+            try {
+              responseListener.onResponse((List<DexWithdrawDTO>) ApiInvoker.deserialize(localVarResponse,  "array", DexWithdrawDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
           }
       }, new Response.ErrorListener() {
           @Override
@@ -1187,20 +1365,20 @@ public class DexApi {
     }
   }
   /**
-  * 
-  * 
+  * GetWithdrawsRequests (historical)
+  * Gets withdraws requests.
    * @param startBlock 
    * @param endBlock 
    * @param startDate 
    * @param endDate 
    * @param tokenId 
-   * @return void
+   * @return List<DexWithdrawRequestDTO>
   */
-  public void dappsDexWithdrawRequestHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<DexWithdrawRequestDTO> dexGetWithdrawsRequestsHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/dex/withdrawRequest/historical";
+    String path = "/dapps/dex/withdrawsRequests/historical";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1231,9 +1409,9 @@ public class DexApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return ;
+         return (List<DexWithdrawRequestDTO>) ApiInvoker.deserialize(localVarResponse, "array", DexWithdrawRequestDTO.class);
       } else {
-         return ;
+         return null;
       }
     } catch (ApiException ex) {
        throw ex;
@@ -1253,16 +1431,16 @@ public class DexApi {
   }
 
       /**
-   * 
-   * 
+   * GetWithdrawsRequests (historical)
+   * Gets withdraws requests.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param tokenId 
   */
-  public void dappsDexWithdrawRequestHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId, final Response.Listener<String> responseListener, final Response.ErrorListener errorListener) {
+  public void dexGetWithdrawsRequestsHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId, final Response.Listener<List<DexWithdrawRequestDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
     // create path and map variables
-    String path = "/dapps/dex/withdrawRequest/historical".replaceAll("\\{format\\}","json");
+    String path = "/dapps/dex/withdrawsRequests/historical".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1301,7 +1479,11 @@ public class DexApi {
         new Response.Listener<String>() {
           @Override
           public void onResponse(String localVarResponse) {
-              responseListener.onResponse(localVarResponse);
+            try {
+              responseListener.onResponse((List<DexWithdrawRequestDTO>) ApiInvoker.deserialize(localVarResponse,  "array", DexWithdrawRequestDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
           }
       }, new Response.ErrorListener() {
           @Override

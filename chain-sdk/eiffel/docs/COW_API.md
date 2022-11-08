@@ -4,49 +4,20 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Feature | HTTP request | Description
 ------------- | ------------- | -------------
-[**dapps_cow_orders_historical_get**](COW_API.md#dapps_cow_orders_historical_get) | **Get** /dapps/cow/orders/historical | 
-[**dapps_cow_settlement_historical_get**](COW_API.md#dapps_cow_settlement_historical_get) | **Get** /dapps/cow/settlement/historical | 
-[**dapps_cow_tokens_historical_get**](COW_API.md#dapps_cow_tokens_historical_get) | **Get** /dapps/cow/tokens/historical | 
-[**dapps_cow_trades_historical_get**](COW_API.md#dapps_cow_trades_historical_get) | **Get** /dapps/cow/trades/historical | 
-[**dapps_cow_users_historical_get**](COW_API.md#dapps_cow_users_historical_get) | **Get** /dapps/cow/users/historical | 
+[**cow_get_orders_historical**](COW_API.md#cow_get_orders_historical) | **Get** /dapps/cow/orders/historical | GetOrders (historical)
+[**cow_get_settlements_historical**](COW_API.md#cow_get_settlements_historical) | **Get** /dapps/cow/settlements/historical | GetSettlements (historical)
+[**cow_get_tokens_historical**](COW_API.md#cow_get_tokens_historical) | **Get** /dapps/cow/tokens/historical | GetTokens (historical) 🔥
+[**cow_get_trades_historical**](COW_API.md#cow_get_trades_historical) | **Get** /dapps/cow/trades/historical | GetTrades (historical) 🔥
+[**cow_get_users_historical**](COW_API.md#cow_get_users_historical) | **Get** /dapps/cow/users/historical | GetUsers (historical)
 
 
-# **dapps_cow_orders_historical_get**
-> dapps_cow_orders_historical_get (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME )
+# **cow_get_orders_historical**
+> cow_get_orders_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ): detachable LIST [COW_ORDER_DTO]
 
 
+GetOrders (historical)
 
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **INTEGER_64**|  | [optional] [default to null]
- **end_block** | **INTEGER_64**|  | [optional] [default to null]
- **start_date** | **DATE_TIME**|  | [optional] [default to null]
- **end_date** | **DATE_TIME**|  | [optional] [default to null]
-
-### Return type
-
-{empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **dapps_cow_settlement_historical_get**
-> dapps_cow_settlement_historical_get (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME )
-
-
-
+Gets orders.
 
 
 ### Parameters
@@ -60,7 +31,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-{empty response body)
+[**LIST [COW_ORDER_DTO]**](Cow.OrderDTO.md)
 
 ### Authorization
 
@@ -69,15 +40,50 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dapps_cow_tokens_historical_get**
-> dapps_cow_tokens_historical_get (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; token_id:  detachable STRING_32 )
+# **cow_get_settlements_historical**
+> cow_get_settlements_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ): detachable LIST [COW_SETTLEMENT_DTO]
 
 
+GetSettlements (historical)
 
+Gets settlements.
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **INTEGER_64**|  | [optional] [default to null]
+ **end_block** | **INTEGER_64**|  | [optional] [default to null]
+ **start_date** | **DATE_TIME**|  | [optional] [default to null]
+ **end_date** | **DATE_TIME**|  | [optional] [default to null]
+
+### Return type
+
+[**LIST [COW_SETTLEMENT_DTO]**](Cow.SettlementDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **cow_get_tokens_historical**
+> cow_get_tokens_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; token_id:  detachable STRING_32 ): detachable LIST [COW_TOKEN_DTO]
+
+
+GetTokens (historical) 🔥
+
+Gets tokens.
 
 
 ### Parameters
@@ -92,7 +98,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-{empty response body)
+[**LIST [COW_TOKEN_DTO]**](Cow.TokenDTO.md)
 
 ### Authorization
 
@@ -101,15 +107,17 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dapps_cow_trades_historical_get**
-> dapps_cow_trades_historical_get (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME )
+# **cow_get_trades_historical**
+> cow_get_trades_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ): detachable LIST [COW_TRADE_DTO]
 
 
+GetTrades (historical) 🔥
 
+Gets trades.
 
 
 ### Parameters
@@ -123,7 +131,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-{empty response body)
+[**LIST [COW_TRADE_DTO]**](Cow.TradeDTO.md)
 
 ### Authorization
 
@@ -132,15 +140,17 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dapps_cow_users_historical_get**
-> dapps_cow_users_historical_get (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME )
+# **cow_get_users_historical**
+> cow_get_users_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ): detachable LIST [COW_USER_DTO]
 
 
+GetUsers (historical)
 
+Gets users.
 
 
 ### Parameters
@@ -154,7 +164,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-{empty response body)
+[**LIST [COW_USER_DTO]**](Cow.UserDTO.md)
 
 ### Authorization
 
@@ -163,7 +173,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

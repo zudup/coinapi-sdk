@@ -23,6 +23,11 @@ import java.util.*;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 
+import org.openapitools.client.model.CowOrderDTO;
+import org.openapitools.client.model.CowSettlementDTO;
+import org.openapitools.client.model.CowTokenDTO;
+import org.openapitools.client.model.CowTradeDTO;
+import org.openapitools.client.model.CowUserDTO;
 import java.util.Date;
 
 import org.apache.http.HttpEntity;
@@ -56,15 +61,15 @@ public class CowApi {
   }
 
   /**
-  * 
-  * 
+  * GetOrders (historical)
+  * Gets orders.
    * @param startBlock 
    * @param endBlock 
    * @param startDate 
    * @param endDate 
-   * @return void
+   * @return List<CowOrderDTO>
   */
-  public void dappsCowOrdersHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<CowOrderDTO> cowGetOrdersHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
@@ -98,9 +103,9 @@ public class CowApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return ;
+         return (List<CowOrderDTO>) ApiInvoker.deserialize(localVarResponse, "array", CowOrderDTO.class);
       } else {
-         return ;
+         return null;
       }
     } catch (ApiException ex) {
        throw ex;
@@ -120,11 +125,11 @@ public class CowApi {
   }
 
       /**
-   * 
-   * 
+   * GetOrders (historical)
+   * Gets orders.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate 
   */
-  public void dappsCowOrdersHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, final Response.Listener<String> responseListener, final Response.ErrorListener errorListener) {
+  public void cowGetOrdersHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, final Response.Listener<List<CowOrderDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
@@ -167,7 +172,11 @@ public class CowApi {
         new Response.Listener<String>() {
           @Override
           public void onResponse(String localVarResponse) {
-              responseListener.onResponse(localVarResponse);
+            try {
+              responseListener.onResponse((List<CowOrderDTO>) ApiInvoker.deserialize(localVarResponse,  "array", CowOrderDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
           }
       }, new Response.ErrorListener() {
           @Override
@@ -180,19 +189,19 @@ public class CowApi {
     }
   }
   /**
-  * 
-  * 
+  * GetSettlements (historical)
+  * Gets settlements.
    * @param startBlock 
    * @param endBlock 
    * @param startDate 
    * @param endDate 
-   * @return void
+   * @return List<CowSettlementDTO>
   */
-  public void dappsCowSettlementHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<CowSettlementDTO> cowGetSettlementsHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/cow/settlement/historical";
+    String path = "/dapps/cow/settlements/historical";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -222,9 +231,9 @@ public class CowApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return ;
+         return (List<CowSettlementDTO>) ApiInvoker.deserialize(localVarResponse, "array", CowSettlementDTO.class);
       } else {
-         return ;
+         return null;
       }
     } catch (ApiException ex) {
        throw ex;
@@ -244,16 +253,16 @@ public class CowApi {
   }
 
       /**
-   * 
-   * 
+   * GetSettlements (historical)
+   * Gets settlements.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate 
   */
-  public void dappsCowSettlementHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, final Response.Listener<String> responseListener, final Response.ErrorListener errorListener) {
+  public void cowGetSettlementsHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, final Response.Listener<List<CowSettlementDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
     // create path and map variables
-    String path = "/dapps/cow/settlement/historical".replaceAll("\\{format\\}","json");
+    String path = "/dapps/cow/settlements/historical".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -291,7 +300,11 @@ public class CowApi {
         new Response.Listener<String>() {
           @Override
           public void onResponse(String localVarResponse) {
-              responseListener.onResponse(localVarResponse);
+            try {
+              responseListener.onResponse((List<CowSettlementDTO>) ApiInvoker.deserialize(localVarResponse,  "array", CowSettlementDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
           }
       }, new Response.ErrorListener() {
           @Override
@@ -304,16 +317,16 @@ public class CowApi {
     }
   }
   /**
-  * 
-  * 
+  * GetTokens (historical) 🔥
+  * Gets tokens.
    * @param startBlock 
    * @param endBlock 
    * @param startDate 
    * @param endDate 
    * @param tokenId 
-   * @return void
+   * @return List<CowTokenDTO>
   */
-  public void dappsCowTokensHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<CowTokenDTO> cowGetTokensHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
@@ -348,9 +361,9 @@ public class CowApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return ;
+         return (List<CowTokenDTO>) ApiInvoker.deserialize(localVarResponse, "array", CowTokenDTO.class);
       } else {
-         return ;
+         return null;
       }
     } catch (ApiException ex) {
        throw ex;
@@ -370,11 +383,11 @@ public class CowApi {
   }
 
       /**
-   * 
-   * 
+   * GetTokens (historical) 🔥
+   * Gets tokens.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param tokenId 
   */
-  public void dappsCowTokensHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId, final Response.Listener<String> responseListener, final Response.ErrorListener errorListener) {
+  public void cowGetTokensHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId, final Response.Listener<List<CowTokenDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
@@ -418,7 +431,11 @@ public class CowApi {
         new Response.Listener<String>() {
           @Override
           public void onResponse(String localVarResponse) {
-              responseListener.onResponse(localVarResponse);
+            try {
+              responseListener.onResponse((List<CowTokenDTO>) ApiInvoker.deserialize(localVarResponse,  "array", CowTokenDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
           }
       }, new Response.ErrorListener() {
           @Override
@@ -431,15 +448,15 @@ public class CowApi {
     }
   }
   /**
-  * 
-  * 
+  * GetTrades (historical) 🔥
+  * Gets trades.
    * @param startBlock 
    * @param endBlock 
    * @param startDate 
    * @param endDate 
-   * @return void
+   * @return List<CowTradeDTO>
   */
-  public void dappsCowTradesHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<CowTradeDTO> cowGetTradesHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
@@ -473,9 +490,9 @@ public class CowApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return ;
+         return (List<CowTradeDTO>) ApiInvoker.deserialize(localVarResponse, "array", CowTradeDTO.class);
       } else {
-         return ;
+         return null;
       }
     } catch (ApiException ex) {
        throw ex;
@@ -495,11 +512,11 @@ public class CowApi {
   }
 
       /**
-   * 
-   * 
+   * GetTrades (historical) 🔥
+   * Gets trades.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate 
   */
-  public void dappsCowTradesHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, final Response.Listener<String> responseListener, final Response.ErrorListener errorListener) {
+  public void cowGetTradesHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, final Response.Listener<List<CowTradeDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
@@ -542,7 +559,11 @@ public class CowApi {
         new Response.Listener<String>() {
           @Override
           public void onResponse(String localVarResponse) {
-              responseListener.onResponse(localVarResponse);
+            try {
+              responseListener.onResponse((List<CowTradeDTO>) ApiInvoker.deserialize(localVarResponse,  "array", CowTradeDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
           }
       }, new Response.ErrorListener() {
           @Override
@@ -555,15 +576,15 @@ public class CowApi {
     }
   }
   /**
-  * 
-  * 
+  * GetUsers (historical)
+  * Gets users.
    * @param startBlock 
    * @param endBlock 
    * @param startDate 
    * @param endDate 
-   * @return void
+   * @return List<CowUserDTO>
   */
-  public void dappsCowUsersHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<CowUserDTO> cowGetUsersHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
@@ -597,9 +618,9 @@ public class CowApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return ;
+         return (List<CowUserDTO>) ApiInvoker.deserialize(localVarResponse, "array", CowUserDTO.class);
       } else {
-         return ;
+         return null;
       }
     } catch (ApiException ex) {
        throw ex;
@@ -619,11 +640,11 @@ public class CowApi {
   }
 
       /**
-   * 
-   * 
+   * GetUsers (historical)
+   * Gets users.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate 
   */
-  public void dappsCowUsersHistoricalGet (Long startBlock, Long endBlock, Date startDate, Date endDate, final Response.Listener<String> responseListener, final Response.ErrorListener errorListener) {
+  public void cowGetUsersHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, final Response.Listener<List<CowUserDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
@@ -666,7 +687,11 @@ public class CowApi {
         new Response.Listener<String>() {
           @Override
           public void onResponse(String localVarResponse) {
-              responseListener.onResponse(localVarResponse);
+            try {
+              responseListener.onResponse((List<CowUserDTO>) ApiInvoker.deserialize(localVarResponse,  "array", CowUserDTO.class));
+            } catch (ApiException exception) {
+               errorListener.onErrorResponse(new VolleyError(exception));
+            }
           }
       }, new Response.ErrorListener() {
           @Override

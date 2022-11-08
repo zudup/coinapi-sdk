@@ -14,6 +14,8 @@
 
 goog.provide('API.Client.SushiswapApi');
 
+goog.require('API.Client.Curve.ExchangeDTO');
+goog.require('API.Client.Dex.TradeDTO');
 goog.require('API.Client.Sushiswap.BundleDTO');
 goog.require('API.Client.Sushiswap.BurnDTO');
 goog.require('API.Client.Sushiswap.DayDataDTO');
@@ -59,12 +61,74 @@ API.Client.SushiswapApi = function($http, $httpParamSerializer, $injector) {
 API.Client.SushiswapApi.$inject = ['$http', '$httpParamSerializer', '$injector'];
 
 /**
+ * GetExchanges (current) 🔥
+ * Gets exchanges.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.Curve.ExchangeDTO>>}
+ */
+API.Client.SushiswapApi.prototype.curveGetExchangesCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/sushiswap/exchanges/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * GetTrades (current) 🔥
+ * Gets trades.
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.Dex.TradeDTO>>}
+ */
+API.Client.SushiswapApi.prototype.dexGetTradesCurrent = function(opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/sushiswap/trades/current';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
  * GetBundles (historical)
  * Gets bundles.
- * @param {!number=} opt_startBlock 
- * @param {!number=} opt_endBlock 
- * @param {!Date=} opt_startDate 
- * @param {!Date=} opt_endDate 
+ * @param {!number=} opt_startBlock AAAAAAAAAA
+ * @param {!number=} opt_endBlock BBBBBBBBBBBB
+ * @param {!Date=} opt_startDate CCCCCCCCC
+ * @param {!Date=} opt_endDate DDDDDDDDDDD
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.Sushiswap.BundleDTO>>}
  */
@@ -487,7 +551,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetMintsHistorical = function(opt_sta
 }
 
 /**
- * GetPools (current)
+ * GetPools (current) 🔥
  * Gets pools.
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.Sushiswap.PairDTO>>}
@@ -574,13 +638,13 @@ API.Client.SushiswapApi.prototype.sushiswapGetPoolsDayDataHistorical = function(
 }
 
 /**
- * GetPools (historical)
+ * GetPools (historical) 🔥
  * Gets list of pools for given filters.
- * @param {!number=} opt_startBlock 
- * @param {!number=} opt_endBlock 
- * @param {!Date=} opt_startDate 
- * @param {!Date=} opt_endDate 
- * @param {!string=} opt_poolId 
+ * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+ * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+ * @param {!Date=} opt_startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+ * @param {!Date=} opt_endDate The end date of timeframe
+ * @param {!string=} opt_poolId The pool address.
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.Sushiswap.PairDTO>>}
  */
@@ -686,7 +750,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetPoolsHourDataHistorical = function
 }
 
 /**
- * GetSwaps (current)
+ * GetSwaps (current) 🔥
  * Gets swaps.
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.Sushiswap.SwapDTO>>}
@@ -717,13 +781,13 @@ API.Client.SushiswapApi.prototype.sushiswapGetSwapsCurrent = function(opt_extraH
 }
 
 /**
- * GetSwaps (historical)
+ * GetSwaps (historical) 🔥
  * Gets list of swaps for given filters.
- * @param {!number=} opt_startBlock 
- * @param {!number=} opt_endBlock 
- * @param {!Date=} opt_startDate 
- * @param {!Date=} opt_endDate 
- * @param {!string=} opt_poolId 
+ * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+ * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+ * @param {!Date=} opt_startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+ * @param {!Date=} opt_endDate The end date of timeframe
+ * @param {!string=} opt_poolId The pool address.
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.Sushiswap.SwapDTO>>}
  */
@@ -773,7 +837,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetSwapsHistorical = function(opt_sta
 }
 
 /**
- * GetTokens (current)
+ * GetTokens (current) 🔥
  * Gets tokens.
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.Sushiswap.TokenDTO>>}
@@ -860,13 +924,13 @@ API.Client.SushiswapApi.prototype.sushiswapGetTokensDayDataHistorical = function
 }
 
 /**
- * GetTokens (historical)
+ * GetTokens (historical) 🔥
  * Gets list of tokens for given filters.
- * @param {!number=} opt_startBlock 
- * @param {!number=} opt_endBlock 
- * @param {!Date=} opt_startDate 
- * @param {!Date=} opt_endDate 
- * @param {!string=} opt_tokenId 
+ * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+ * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+ * @param {!Date=} opt_startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+ * @param {!Date=} opt_endDate The end date of timeframe
+ * @param {!string=} opt_tokenId The token address.
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.Sushiswap.TokenDTO>>}
  */

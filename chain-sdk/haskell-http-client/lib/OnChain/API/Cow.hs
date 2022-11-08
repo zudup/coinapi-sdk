@@ -58,130 +58,218 @@ import qualified Prelude as P
 
 -- ** Cow
 
--- *** dappsCowOrdersHistoricalGet
+-- *** cowGetOrdersHistorical
 
 -- | @GET \/dapps\/cow\/orders\/historical@
 -- 
-dappsCowOrdersHistoricalGet
-  :: OnChainRequest DappsCowOrdersHistoricalGet MimeNoContent NoContent MimeNoContent
-dappsCowOrdersHistoricalGet =
+-- GetOrders (historical)
+-- 
+-- Gets orders.
+-- 
+cowGetOrdersHistorical
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CowGetOrdersHistorical MimeNoContent [CowOrderDTO] accept
+cowGetOrdersHistorical  _ =
   _mkRequest "GET" ["/dapps/cow/orders/historical"]
 
-data DappsCowOrdersHistoricalGet  
-instance HasOptionalParam DappsCowOrdersHistoricalGet StartBlock where
+data CowGetOrdersHistorical  
+
+-- | /Optional Param/ "startBlock" - 
+instance HasOptionalParam CowGetOrdersHistorical StartBlock where
   applyOptionalParam req (StartBlock xs) =
     req `addQuery` toQuery ("startBlock", Just xs)
-instance HasOptionalParam DappsCowOrdersHistoricalGet EndBlock where
+
+-- | /Optional Param/ "endBlock" - 
+instance HasOptionalParam CowGetOrdersHistorical EndBlock where
   applyOptionalParam req (EndBlock xs) =
     req `addQuery` toQuery ("endBlock", Just xs)
-instance HasOptionalParam DappsCowOrdersHistoricalGet StartDate where
+
+-- | /Optional Param/ "startDate" - 
+instance HasOptionalParam CowGetOrdersHistorical StartDate where
   applyOptionalParam req (StartDate xs) =
     req `addQuery` toQuery ("startDate", Just xs)
-instance HasOptionalParam DappsCowOrdersHistoricalGet EndDate where
+instance HasOptionalParam CowGetOrdersHistorical EndDate where
   applyOptionalParam req (EndDate xs) =
     req `addQuery` toQuery ("endDate", Just xs)
-instance Produces DappsCowOrdersHistoricalGet MimeNoContent
+-- | @application/json@
+instance Produces CowGetOrdersHistorical MimeJSON
+-- | @text/json@
+instance Produces CowGetOrdersHistorical MimeTextJson
+-- | @text/plain@
+instance Produces CowGetOrdersHistorical MimePlainText
 
 
--- *** dappsCowSettlementHistoricalGet
+-- *** cowGetSettlementsHistorical
 
--- | @GET \/dapps\/cow\/settlement\/historical@
+-- | @GET \/dapps\/cow\/settlements\/historical@
 -- 
-dappsCowSettlementHistoricalGet
-  :: OnChainRequest DappsCowSettlementHistoricalGet MimeNoContent NoContent MimeNoContent
-dappsCowSettlementHistoricalGet =
-  _mkRequest "GET" ["/dapps/cow/settlement/historical"]
+-- GetSettlements (historical)
+-- 
+-- Gets settlements.
+-- 
+cowGetSettlementsHistorical
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CowGetSettlementsHistorical MimeNoContent [CowSettlementDTO] accept
+cowGetSettlementsHistorical  _ =
+  _mkRequest "GET" ["/dapps/cow/settlements/historical"]
 
-data DappsCowSettlementHistoricalGet  
-instance HasOptionalParam DappsCowSettlementHistoricalGet StartBlock where
+data CowGetSettlementsHistorical  
+
+-- | /Optional Param/ "startBlock" - 
+instance HasOptionalParam CowGetSettlementsHistorical StartBlock where
   applyOptionalParam req (StartBlock xs) =
     req `addQuery` toQuery ("startBlock", Just xs)
-instance HasOptionalParam DappsCowSettlementHistoricalGet EndBlock where
+
+-- | /Optional Param/ "endBlock" - 
+instance HasOptionalParam CowGetSettlementsHistorical EndBlock where
   applyOptionalParam req (EndBlock xs) =
     req `addQuery` toQuery ("endBlock", Just xs)
-instance HasOptionalParam DappsCowSettlementHistoricalGet StartDate where
+
+-- | /Optional Param/ "startDate" - 
+instance HasOptionalParam CowGetSettlementsHistorical StartDate where
   applyOptionalParam req (StartDate xs) =
     req `addQuery` toQuery ("startDate", Just xs)
-instance HasOptionalParam DappsCowSettlementHistoricalGet EndDate where
+instance HasOptionalParam CowGetSettlementsHistorical EndDate where
   applyOptionalParam req (EndDate xs) =
     req `addQuery` toQuery ("endDate", Just xs)
-instance Produces DappsCowSettlementHistoricalGet MimeNoContent
+-- | @application/json@
+instance Produces CowGetSettlementsHistorical MimeJSON
+-- | @text/json@
+instance Produces CowGetSettlementsHistorical MimeTextJson
+-- | @text/plain@
+instance Produces CowGetSettlementsHistorical MimePlainText
 
 
--- *** dappsCowTokensHistoricalGet
+-- *** cowGetTokensHistorical
 
 -- | @GET \/dapps\/cow\/tokens\/historical@
 -- 
-dappsCowTokensHistoricalGet
-  :: OnChainRequest DappsCowTokensHistoricalGet MimeNoContent NoContent MimeNoContent
-dappsCowTokensHistoricalGet =
+-- GetTokens (historical) 🔥
+-- 
+-- Gets tokens.
+-- 
+cowGetTokensHistorical
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CowGetTokensHistorical MimeNoContent [CowTokenDTO] accept
+cowGetTokensHistorical  _ =
   _mkRequest "GET" ["/dapps/cow/tokens/historical"]
 
-data DappsCowTokensHistoricalGet  
-instance HasOptionalParam DappsCowTokensHistoricalGet StartBlock where
+data CowGetTokensHistorical  
+
+-- | /Optional Param/ "startBlock" - 
+instance HasOptionalParam CowGetTokensHistorical StartBlock where
   applyOptionalParam req (StartBlock xs) =
     req `addQuery` toQuery ("startBlock", Just xs)
-instance HasOptionalParam DappsCowTokensHistoricalGet EndBlock where
+
+-- | /Optional Param/ "endBlock" - 
+instance HasOptionalParam CowGetTokensHistorical EndBlock where
   applyOptionalParam req (EndBlock xs) =
     req `addQuery` toQuery ("endBlock", Just xs)
-instance HasOptionalParam DappsCowTokensHistoricalGet StartDate where
+
+-- | /Optional Param/ "startDate" - 
+instance HasOptionalParam CowGetTokensHistorical StartDate where
   applyOptionalParam req (StartDate xs) =
     req `addQuery` toQuery ("startDate", Just xs)
-instance HasOptionalParam DappsCowTokensHistoricalGet EndDate where
+
+-- | /Optional Param/ "endDate" - 
+instance HasOptionalParam CowGetTokensHistorical EndDate where
   applyOptionalParam req (EndDate xs) =
     req `addQuery` toQuery ("endDate", Just xs)
-instance HasOptionalParam DappsCowTokensHistoricalGet TokenId where
+
+-- | /Optional Param/ "tokenId" - 
+instance HasOptionalParam CowGetTokensHistorical TokenId where
   applyOptionalParam req (TokenId xs) =
     req `addQuery` toQuery ("tokenId", Just xs)
-instance Produces DappsCowTokensHistoricalGet MimeNoContent
+-- | @application/json@
+instance Produces CowGetTokensHistorical MimeJSON
+-- | @text/json@
+instance Produces CowGetTokensHistorical MimeTextJson
+-- | @text/plain@
+instance Produces CowGetTokensHistorical MimePlainText
 
 
--- *** dappsCowTradesHistoricalGet
+-- *** cowGetTradesHistorical
 
 -- | @GET \/dapps\/cow\/trades\/historical@
 -- 
-dappsCowTradesHistoricalGet
-  :: OnChainRequest DappsCowTradesHistoricalGet MimeNoContent NoContent MimeNoContent
-dappsCowTradesHistoricalGet =
+-- GetTrades (historical) 🔥
+-- 
+-- Gets trades.
+-- 
+cowGetTradesHistorical
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CowGetTradesHistorical MimeNoContent [CowTradeDTO] accept
+cowGetTradesHistorical  _ =
   _mkRequest "GET" ["/dapps/cow/trades/historical"]
 
-data DappsCowTradesHistoricalGet  
-instance HasOptionalParam DappsCowTradesHistoricalGet StartBlock where
+data CowGetTradesHistorical  
+
+-- | /Optional Param/ "startBlock" - 
+instance HasOptionalParam CowGetTradesHistorical StartBlock where
   applyOptionalParam req (StartBlock xs) =
     req `addQuery` toQuery ("startBlock", Just xs)
-instance HasOptionalParam DappsCowTradesHistoricalGet EndBlock where
+
+-- | /Optional Param/ "endBlock" - 
+instance HasOptionalParam CowGetTradesHistorical EndBlock where
   applyOptionalParam req (EndBlock xs) =
     req `addQuery` toQuery ("endBlock", Just xs)
-instance HasOptionalParam DappsCowTradesHistoricalGet StartDate where
+
+-- | /Optional Param/ "startDate" - 
+instance HasOptionalParam CowGetTradesHistorical StartDate where
   applyOptionalParam req (StartDate xs) =
     req `addQuery` toQuery ("startDate", Just xs)
-instance HasOptionalParam DappsCowTradesHistoricalGet EndDate where
+
+-- | /Optional Param/ "endDate" - 
+instance HasOptionalParam CowGetTradesHistorical EndDate where
   applyOptionalParam req (EndDate xs) =
     req `addQuery` toQuery ("endDate", Just xs)
-instance Produces DappsCowTradesHistoricalGet MimeNoContent
+-- | @application/json@
+instance Produces CowGetTradesHistorical MimeJSON
+-- | @text/json@
+instance Produces CowGetTradesHistorical MimeTextJson
+-- | @text/plain@
+instance Produces CowGetTradesHistorical MimePlainText
 
 
--- *** dappsCowUsersHistoricalGet
+-- *** cowGetUsersHistorical
 
 -- | @GET \/dapps\/cow\/users\/historical@
 -- 
-dappsCowUsersHistoricalGet
-  :: OnChainRequest DappsCowUsersHistoricalGet MimeNoContent NoContent MimeNoContent
-dappsCowUsersHistoricalGet =
+-- GetUsers (historical)
+-- 
+-- Gets users.
+-- 
+cowGetUsersHistorical
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest CowGetUsersHistorical MimeNoContent [CowUserDTO] accept
+cowGetUsersHistorical  _ =
   _mkRequest "GET" ["/dapps/cow/users/historical"]
 
-data DappsCowUsersHistoricalGet  
-instance HasOptionalParam DappsCowUsersHistoricalGet StartBlock where
+data CowGetUsersHistorical  
+
+-- | /Optional Param/ "startBlock" - 
+instance HasOptionalParam CowGetUsersHistorical StartBlock where
   applyOptionalParam req (StartBlock xs) =
     req `addQuery` toQuery ("startBlock", Just xs)
-instance HasOptionalParam DappsCowUsersHistoricalGet EndBlock where
+
+-- | /Optional Param/ "endBlock" - 
+instance HasOptionalParam CowGetUsersHistorical EndBlock where
   applyOptionalParam req (EndBlock xs) =
     req `addQuery` toQuery ("endBlock", Just xs)
-instance HasOptionalParam DappsCowUsersHistoricalGet StartDate where
+
+-- | /Optional Param/ "startDate" - 
+instance HasOptionalParam CowGetUsersHistorical StartDate where
   applyOptionalParam req (StartDate xs) =
     req `addQuery` toQuery ("startDate", Just xs)
-instance HasOptionalParam DappsCowUsersHistoricalGet EndDate where
+
+-- | /Optional Param/ "endDate" - 
+instance HasOptionalParam CowGetUsersHistorical EndDate where
   applyOptionalParam req (EndDate xs) =
     req `addQuery` toQuery ("endDate", Just xs)
-instance Produces DappsCowUsersHistoricalGet MimeNoContent
+-- | @application/json@
+instance Produces CowGetUsersHistorical MimeJSON
+-- | @text/json@
+instance Produces CowGetUsersHistorical MimeTextJson
+-- | @text/plain@
+instance Produces CowGetUsersHistorical MimePlainText
 

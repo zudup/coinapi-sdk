@@ -7,163 +7,291 @@ void main() {
   final instance = Openapi().getCurveApi();
 
   group(CurveApi, () {
-    //Future dappsCurveAccountsHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
-    test('test dappsCurveAccountsHistoricalGet', () async {
+    // GetAccounts (historical)
+    //
+    // Gets accounts.
+    //
+    //Future<BuiltList<CurveAccountDTO>> curveGetAccountsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
+    test('test curveGetAccountsHistorical', () async {
       // TODO
     });
 
-    //Future dappsCurveAddLiquidityEventHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
-    test('test dappsCurveAddLiquidityEventHistoricalGet', () async {
+    // GetAddLiquidityEvents (historical)
+    //
+    // Gets add liquidity events.
+    //
+    //Future<BuiltList<CurveAddLiquidityEventDTO>> curveGetAddLiquidityEventsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test curveGetAddLiquidityEventsHistorical', () async {
       // TODO
     });
 
-    //Future dappsCurveAdminFeeChangeLogHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
-    test('test dappsCurveAdminFeeChangeLogHistoricalGet', () async {
+    // GetAdminFeeChangeLogs (historical)
+    //
+    // Gets admin fee change logs.
+    //
+    //Future<BuiltList<CurveAdminFeeChangeLogDTO>> curveGetAdminFeeChangeLogsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test curveGetAdminFeeChangeLogsHistorical', () async {
       // TODO
     });
 
-    //Future dappsCurveAmplificationCoeffChangeLogHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
-    test('test dappsCurveAmplificationCoeffChangeLogHistoricalGet', () async {
+    // GetAmplificationCoeffChangeLogs (historical)
+    //
+    // Gets amplification coeff change logs.
+    //
+    //Future<BuiltList<CurveAmplificationCoeffChangeLogDTO>> curveGetAmplificationCoeffChangeLogsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test curveGetAmplificationCoeffChangeLogsHistorical', () async {
       // TODO
     });
 
-    //Future dappsCurveCoinsHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
-    test('test dappsCurveCoinsHistoricalGet', () async {
+    // GetCoins (historical)
+    //
+    // Gets coins.
+    //
+    //Future<BuiltList<CurveCoinDTO>> curveGetCoinsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test curveGetCoinsHistorical', () async {
       // TODO
     });
 
-    //Future dappsCurveContractsHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
-    test('test dappsCurveContractsHistoricalGet', () async {
+    // GetContracts (historical)
+    //
+    // Gets contracts.
+    //
+    //Future<BuiltList<CurveContractDTO>> curveGetContractsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test curveGetContractsHistorical', () async {
       // TODO
     });
 
-    //Future dappsCurveContractsVersionHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
-    test('test dappsCurveContractsVersionHistoricalGet', () async {
+    // GetContractsVersions (historical)
+    //
+    // Gets contracts versions.
+    //
+    //Future<BuiltList<CurveContractVersionDTO>> curveGetContractsVersionsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test curveGetContractsVersionsHistorical', () async {
       // TODO
     });
 
-    //Future dappsCurveDailyVolumeHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
-    test('test dappsCurveDailyVolumeHistoricalGet', () async {
+    // GetDailyVolumes (historical)
+    //
+    // Gets daily volumes.
+    //
+    //Future<BuiltList<CurveDailyVolumeDTO>> curveGetDailyVolumesHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test curveGetDailyVolumesHistorical', () async {
       // TODO
     });
 
-    //Future dappsCurveFeeChangeLogHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
-    test('test dappsCurveFeeChangeLogHistoricalGet', () async {
+    // GetExchanges (historical) 🔥
+    //
+    // Gets exchanges.
+    //
+    //Future<BuiltList<CurveExchangeDTO>> curveGetExchangesHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test curveGetExchangesHistorical', () async {
       // TODO
     });
 
-    //Future dappsCurveGaugeDepositHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
-    test('test dappsCurveGaugeDepositHistoricalGet', () async {
+    // GetFeeChangeLogs (historical)
+    //
+    // Gets fee change logs.
+    //
+    //Future<BuiltList<CurveFeeChangeLogDTO>> curveGetFeeChangeLogsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test curveGetFeeChangeLogsHistorical', () async {
       // TODO
     });
 
-    //Future dappsCurveGaugeHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
-    test('test dappsCurveGaugeHistoricalGet', () async {
+    // GetGaugesDeposits (historical)
+    //
+    // Gets gauges deposits.
+    //
+    //Future<BuiltList<CurveGaugeDepositDTO>> curveGetGaugesDepositsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
+    test('test curveGetGaugesDepositsHistorical', () async {
       // TODO
     });
 
-    //Future dappsCurveGaugeLiquidityHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
-    test('test dappsCurveGaugeLiquidityHistoricalGet', () async {
+    // GetGauges (historical)
+    //
+    // Gets gauges.
+    //
+    //Future<BuiltList<CurveGaugeDTO>> curveGetGaugesHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test curveGetGaugesHistorical', () async {
       // TODO
     });
 
-    //Future dappsCurveGaugeTotalWeightHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
-    test('test dappsCurveGaugeTotalWeightHistoricalGet', () async {
+    // GetGaugesLiquidity (historical)
+    //
+    // Gets gauges liquidity.
+    //
+    //Future<BuiltList<CurveGaugeLiquidityDTO>> curveGetGaugesLiquidityHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
+    test('test curveGetGaugesLiquidityHistorical', () async {
       // TODO
     });
 
-    //Future dappsCurveGaugeTypeHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
-    test('test dappsCurveGaugeTypeHistoricalGet', () async {
+    // GetGaugesTotalWeights (historical)
+    //
+    // Gets gauges total weights.
+    //
+    //Future<BuiltList<CurveGaugeTotalWeightDTO>> curveGetGaugesTotalWeightsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
+    test('test curveGetGaugesTotalWeightsHistorical', () async {
       // TODO
     });
 
-    //Future dappsCurveGaugeTypeWeightHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
-    test('test dappsCurveGaugeTypeWeightHistoricalGet', () async {
+    // GetGaugesTypes (historical)
+    //
+    // Gets gauges types.
+    //
+    //Future<BuiltList<CurveGaugeTypeDTO>> curveGetGaugesTypesHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
+    test('test curveGetGaugesTypesHistorical', () async {
       // TODO
     });
 
-    //Future dappsCurveGaugeWeightHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
-    test('test dappsCurveGaugeWeightHistoricalGet', () async {
+    // GetGaugesTypesWeights (historical)
+    //
+    // Gets gauges types weights.
+    //
+    //Future<BuiltList<CurveGaugeTypeWeightDTO>> curveGetGaugesTypesWeightsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
+    test('test curveGetGaugesTypesWeightsHistorical', () async {
       // TODO
     });
 
-    //Future dappsCurveGaugeWeightVoteHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
-    test('test dappsCurveGaugeWeightVoteHistoricalGet', () async {
+    // GetGaugesWeights (historical)
+    //
+    // Gets gauges weights.
+    //
+    //Future<BuiltList<CurveGaugeWeightDTO>> curveGetGaugesWeightsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
+    test('test curveGetGaugesWeightsHistorical', () async {
       // TODO
     });
 
-    //Future dappsCurveGaugeWithdrawHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
-    test('test dappsCurveGaugeWithdrawHistoricalGet', () async {
+    // GetGaugesWeightsVotes (historical)
+    //
+    // Gets gauges weights votes.
+    //
+    //Future<BuiltList<CurveGaugeWeightVoteDTO>> curveGetGaugesWeightsVotesHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
+    test('test curveGetGaugesWeightsVotesHistorical', () async {
       // TODO
     });
 
-    //Future dappsCurveHourlyVolumeHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
-    test('test dappsCurveHourlyVolumeHistoricalGet', () async {
+    // GetGaugesWithdraw (historical)
+    //
+    // Gets gauges withdraws.
+    //
+    //Future<BuiltList<CurveGaugeWithdrawDTO>> curveGetGaugesWithdrawHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
+    test('test curveGetGaugesWithdrawHistorical', () async {
       // TODO
     });
 
-    //Future dappsCurveLpTokenHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
-    test('test dappsCurveLpTokenHistoricalGet', () async {
+    // GetHourlyVolumes (historical)
+    //
+    // Gets hourly volumes.
+    //
+    //Future<BuiltList<CurveHourlyVolumeDTO>> curveGetHourlyVolumesHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test curveGetHourlyVolumesHistorical', () async {
       // TODO
     });
 
-    //Future dappsCurvePoolsHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
-    test('test dappsCurvePoolsHistoricalGet', () async {
+    // GetLpTokens (historical)
+    //
+    // Gets lp tokens.
+    //
+    //Future<BuiltList<CurveLpTokenDTO>> curveGetLpTokensHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test curveGetLpTokensHistorical', () async {
       // TODO
     });
 
-    //Future dappsCurveProposalsHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
-    test('test dappsCurveProposalsHistoricalGet', () async {
+    // GetPools (historical) 🔥
+    //
+    // Gets pools.
+    //
+    //Future<BuiltList<CurvePoolDTO>> curveGetPoolsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test curveGetPoolsHistorical', () async {
       // TODO
     });
 
-    //Future dappsCurveProposalsVoteHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
-    test('test dappsCurveProposalsVoteHistoricalGet', () async {
+    // GetProposals (historical)
+    //
+    // Gets proposals.
+    //
+    //Future<BuiltList<CurveProposalDTO>> curveGetProposalsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
+    test('test curveGetProposalsHistorical', () async {
       // TODO
     });
 
-    //Future dappsCurveRemoveLiquidityEventHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
-    test('test dappsCurveRemoveLiquidityEventHistoricalGet', () async {
+    // GetProposalsVotes (historical)
+    //
+    // Gets proposals votes.
+    //
+    //Future<BuiltList<CurveProposalVoteDTO>> curveGetProposalsVotesHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
+    test('test curveGetProposalsVotesHistorical', () async {
       // TODO
     });
 
-    //Future dappsCurveRemoveLiquidityOneEventHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
-    test('test dappsCurveRemoveLiquidityOneEventHistoricalGet', () async {
+    // GetRemoveLiquidityEvents (historical)
+    //
+    // Gets remove liquidity events.
+    //
+    //Future<BuiltList<CurveRemoveLiquidityEventDTO>> curveGetRemoveLiquidityEventsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test curveGetRemoveLiquidityEventsHistorical', () async {
       // TODO
     });
 
-    //Future dappsCurveSwapsHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
-    test('test dappsCurveSwapsHistoricalGet', () async {
+    // GetRemoveLiquidityOneEvents (historical)
+    //
+    // Gets remove liquidity one events.
+    //
+    //Future<BuiltList<CurveRemoveLiquidityOneEventDTO>> curveGetRemoveLiquidityOneEventsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test curveGetRemoveLiquidityOneEventsHistorical', () async {
       // TODO
     });
 
-    //Future dappsCurveSystemStateHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
-    test('test dappsCurveSystemStateHistoricalGet', () async {
+    // GetSystemStates (historical)
+    //
+    // Gets system states.
+    //
+    //Future<BuiltList<CurveSystemStateDTO>> curveGetSystemStatesHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
+    test('test curveGetSystemStatesHistorical', () async {
       // TODO
     });
 
-    //Future dappsCurveTokensHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String tokenId }) async
-    test('test dappsCurveTokensHistoricalGet', () async {
+    // GetTokens (historical) 🔥
+    //
+    // Gets tokens.
+    //
+    //Future<BuiltList<CurveTokenDTO>> curveGetTokensHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String tokenId }) async
+    test('test curveGetTokensHistorical', () async {
       // TODO
     });
 
-    //Future dappsCurveTransferOwnershipEventHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
-    test('test dappsCurveTransferOwnershipEventHistoricalGet', () async {
+    // GetTransferOwnershipEvents (historical)
+    //
+    // Gets transfer ownership events.
+    //
+    //Future<BuiltList<CurveTransferOwnershipEventDTO>> curveGetTransferOwnershipEventsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test curveGetTransferOwnershipEventsHistorical', () async {
       // TODO
     });
 
-    //Future dappsCurveUnderlyingCoinHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
-    test('test dappsCurveUnderlyingCoinHistoricalGet', () async {
+    // GetUnderlyingCoins (historical)
+    //
+    // Gets underlying coins.
+    //
+    //Future<BuiltList<CurveUnderlyingCoinDTO>> curveGetUnderlyingCoinsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test curveGetUnderlyingCoinsHistorical', () async {
       // TODO
     });
 
-    //Future dappsCurveVotingAppHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
-    test('test dappsCurveVotingAppHistoricalGet', () async {
+    // GetVotingApps (historical)
+    //
+    // Gets voting apps.
+    //
+    //Future<BuiltList<CurveVotingAppDTO>> curveGetVotingAppsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
+    test('test curveGetVotingAppsHistorical', () async {
       // TODO
     });
 
-    //Future dappsCurveWeeklyVolumeHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
-    test('test dappsCurveWeeklyVolumeHistoricalGet', () async {
+    // GetWeeklyVolumes (historical)
+    //
+    // Gets weekly volumes.
+    //
+    //Future<BuiltList<CurveWeeklyVolumeDTO>> curveGetWeeklyVolumesHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test curveGetWeeklyVolumesHistorical', () async {
       // TODO
     });
 

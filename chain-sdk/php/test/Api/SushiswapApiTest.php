@@ -73,6 +73,30 @@ class SushiswapApiTest extends TestCase
     }
 
     /**
+     * Test case for curveGetExchangesCurrent
+     *
+     * GetExchanges (current) 🔥.
+     *
+     */
+    public function testCurveGetExchangesCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for dexGetTradesCurrent
+     *
+     * GetTrades (current) 🔥.
+     *
+     */
+    public function testDexGetTradesCurrent()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for sushiswapGetBundlesHistorical
      *
      * GetBundles (historical).
@@ -171,7 +195,7 @@ class SushiswapApiTest extends TestCase
     /**
      * Test case for sushiswapGetPoolsCurrent
      *
-     * GetPools (current).
+     * GetPools (current) 🔥.
      *
      */
     public function testSushiswapGetPoolsCurrent()
@@ -195,7 +219,7 @@ class SushiswapApiTest extends TestCase
     /**
      * Test case for sushiswapGetPoolsHistorical
      *
-     * GetPools (historical).
+     * GetPools (historical) 🔥.
      *
      */
     public function testSushiswapGetPoolsHistorical()
@@ -219,7 +243,7 @@ class SushiswapApiTest extends TestCase
     /**
      * Test case for sushiswapGetSwapsCurrent
      *
-     * GetSwaps (current).
+     * GetSwaps (current) 🔥.
      *
      */
     public function testSushiswapGetSwapsCurrent()
@@ -231,7 +255,7 @@ class SushiswapApiTest extends TestCase
     /**
      * Test case for sushiswapGetSwapsHistorical
      *
-     * GetSwaps (historical).
+     * GetSwaps (historical) 🔥.
      *
      */
     public function testSushiswapGetSwapsHistorical()
@@ -243,7 +267,7 @@ class SushiswapApiTest extends TestCase
     /**
      * Test case for sushiswapGetTokensCurrent
      *
-     * GetTokens (current).
+     * GetTokens (current) 🔥.
      *
      */
     public function testSushiswapGetTokensCurrent()
@@ -267,7 +291,7 @@ class SushiswapApiTest extends TestCase
     /**
      * Test case for sushiswapGetTokensHistorical
      *
-     * GetTokens (historical).
+     * GetTokens (historical) 🔥.
      *
      */
     public function testSushiswapGetTokensHistorical()

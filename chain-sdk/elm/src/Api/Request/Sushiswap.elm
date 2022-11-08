@@ -15,7 +15,9 @@
 
 
 module Api.Request.Sushiswap exposing
-    ( sushiswapGetBundlesHistorical
+    ( curveGetExchangesCurrent
+    , dexGetTradesCurrent
+    , sushiswapGetBundlesHistorical
     , sushiswapGetBurnsHistorical
     , sushiswapGetDayDataHistorical
     , sushiswapGetFactoryHistorical
@@ -43,6 +45,36 @@ import Dict
 import Http
 import Json.Decode
 import Json.Encode
+
+
+
+{-| Gets exchanges.
+-}
+curveGetExchangesCurrent : Api.Request (List Api.Data.CurveExchangeDTO)
+curveGetExchangesCurrent =
+    Api.request
+        "GET"
+        "/dapps/sushiswap/exchanges/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.curveExchangeDTODecoder)
+
+
+
+{-| Gets trades.
+-}
+dexGetTradesCurrent : Api.Request (List Api.Data.DexTradeDTO)
+dexGetTradesCurrent =
+    Api.request
+        "GET"
+        "/dapps/sushiswap/trades/current"
+        []
+        []
+        []
+        Nothing
+        (Json.Decode.list Api.Data.dexTradeDTODecoder)
 
 
 

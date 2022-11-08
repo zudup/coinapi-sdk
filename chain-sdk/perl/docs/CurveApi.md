@@ -9,44 +9,46 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**dapps_curve_accounts_historical_get**](CurveApi.md#dapps_curve_accounts_historical_get) | **GET** /dapps/curve/accounts/historical | 
-[**dapps_curve_add_liquidity_event_historical_get**](CurveApi.md#dapps_curve_add_liquidity_event_historical_get) | **GET** /dapps/curve/addLiquidityEvent/historical | 
-[**dapps_curve_admin_fee_change_log_historical_get**](CurveApi.md#dapps_curve_admin_fee_change_log_historical_get) | **GET** /dapps/curve/adminFeeChangeLog/historical | 
-[**dapps_curve_amplification_coeff_change_log_historical_get**](CurveApi.md#dapps_curve_amplification_coeff_change_log_historical_get) | **GET** /dapps/curve/amplificationCoeffChangeLog/historical | 
-[**dapps_curve_coins_historical_get**](CurveApi.md#dapps_curve_coins_historical_get) | **GET** /dapps/curve/coins/historical | 
-[**dapps_curve_contracts_historical_get**](CurveApi.md#dapps_curve_contracts_historical_get) | **GET** /dapps/curve/contracts/historical | 
-[**dapps_curve_contracts_version_historical_get**](CurveApi.md#dapps_curve_contracts_version_historical_get) | **GET** /dapps/curve/contractsVersion/historical | 
-[**dapps_curve_daily_volume_historical_get**](CurveApi.md#dapps_curve_daily_volume_historical_get) | **GET** /dapps/curve/dailyVolume/historical | 
-[**dapps_curve_fee_change_log_historical_get**](CurveApi.md#dapps_curve_fee_change_log_historical_get) | **GET** /dapps/curve/feeChangeLog/historical | 
-[**dapps_curve_gauge_deposit_historical_get**](CurveApi.md#dapps_curve_gauge_deposit_historical_get) | **GET** /dapps/curve/gaugeDeposit/historical | 
-[**dapps_curve_gauge_historical_get**](CurveApi.md#dapps_curve_gauge_historical_get) | **GET** /dapps/curve/gauge/historical | 
-[**dapps_curve_gauge_liquidity_historical_get**](CurveApi.md#dapps_curve_gauge_liquidity_historical_get) | **GET** /dapps/curve/gaugeLiquidity/historical | 
-[**dapps_curve_gauge_total_weight_historical_get**](CurveApi.md#dapps_curve_gauge_total_weight_historical_get) | **GET** /dapps/curve/gaugeTotalWeight/historical | 
-[**dapps_curve_gauge_type_historical_get**](CurveApi.md#dapps_curve_gauge_type_historical_get) | **GET** /dapps/curve/gaugeType/historical | 
-[**dapps_curve_gauge_type_weight_historical_get**](CurveApi.md#dapps_curve_gauge_type_weight_historical_get) | **GET** /dapps/curve/gaugeTypeWeight/historical | 
-[**dapps_curve_gauge_weight_historical_get**](CurveApi.md#dapps_curve_gauge_weight_historical_get) | **GET** /dapps/curve/gaugeWeight/historical | 
-[**dapps_curve_gauge_weight_vote_historical_get**](CurveApi.md#dapps_curve_gauge_weight_vote_historical_get) | **GET** /dapps/curve/gaugeWeightVote/historical | 
-[**dapps_curve_gauge_withdraw_historical_get**](CurveApi.md#dapps_curve_gauge_withdraw_historical_get) | **GET** /dapps/curve/gaugeWithdraw/historical | 
-[**dapps_curve_hourly_volume_historical_get**](CurveApi.md#dapps_curve_hourly_volume_historical_get) | **GET** /dapps/curve/hourlyVolume/historical | 
-[**dapps_curve_lp_token_historical_get**](CurveApi.md#dapps_curve_lp_token_historical_get) | **GET** /dapps/curve/lpToken/historical | 
-[**dapps_curve_pools_historical_get**](CurveApi.md#dapps_curve_pools_historical_get) | **GET** /dapps/curve/pools/historical | 
-[**dapps_curve_proposals_historical_get**](CurveApi.md#dapps_curve_proposals_historical_get) | **GET** /dapps/curve/proposals/historical | 
-[**dapps_curve_proposals_vote_historical_get**](CurveApi.md#dapps_curve_proposals_vote_historical_get) | **GET** /dapps/curve/proposalsVote/historical | 
-[**dapps_curve_remove_liquidity_event_historical_get**](CurveApi.md#dapps_curve_remove_liquidity_event_historical_get) | **GET** /dapps/curve/removeLiquidityEvent/historical | 
-[**dapps_curve_remove_liquidity_one_event_historical_get**](CurveApi.md#dapps_curve_remove_liquidity_one_event_historical_get) | **GET** /dapps/curve/removeLiquidityOneEvent/historical | 
-[**dapps_curve_swaps_historical_get**](CurveApi.md#dapps_curve_swaps_historical_get) | **GET** /dapps/curve/swaps/historical | 
-[**dapps_curve_system_state_historical_get**](CurveApi.md#dapps_curve_system_state_historical_get) | **GET** /dapps/curve/systemState/historical | 
-[**dapps_curve_tokens_historical_get**](CurveApi.md#dapps_curve_tokens_historical_get) | **GET** /dapps/curve/tokens/historical | 
-[**dapps_curve_transfer_ownership_event_historical_get**](CurveApi.md#dapps_curve_transfer_ownership_event_historical_get) | **GET** /dapps/curve/transferOwnershipEvent/historical | 
-[**dapps_curve_underlying_coin_historical_get**](CurveApi.md#dapps_curve_underlying_coin_historical_get) | **GET** /dapps/curve/underlyingCoin/historical | 
-[**dapps_curve_voting_app_historical_get**](CurveApi.md#dapps_curve_voting_app_historical_get) | **GET** /dapps/curve/votingApp/historical | 
-[**dapps_curve_weekly_volume_historical_get**](CurveApi.md#dapps_curve_weekly_volume_historical_get) | **GET** /dapps/curve/weeklyVolume/historical | 
+[**curve_get_accounts__historical**](CurveApi.md#curve_get_accounts__historical) | **GET** /dapps/curve/accounts/historical | GetAccounts (historical)
+[**curve_get_add_liquidity_events__historical**](CurveApi.md#curve_get_add_liquidity_events__historical) | **GET** /dapps/curve/addLiquidityEvents/historical | GetAddLiquidityEvents (historical)
+[**curve_get_admin_fee_change_logs__historical**](CurveApi.md#curve_get_admin_fee_change_logs__historical) | **GET** /dapps/curve/adminFeeChangeLogs/historical | GetAdminFeeChangeLogs (historical)
+[**curve_get_amplification_coeff_change_logs__historical**](CurveApi.md#curve_get_amplification_coeff_change_logs__historical) | **GET** /dapps/curve/amplificationCoeffChangeLogs/historical | GetAmplificationCoeffChangeLogs (historical)
+[**curve_get_coins__historical**](CurveApi.md#curve_get_coins__historical) | **GET** /dapps/curve/coins/historical | GetCoins (historical)
+[**curve_get_contracts__historical**](CurveApi.md#curve_get_contracts__historical) | **GET** /dapps/curve/contracts/historical | GetContracts (historical)
+[**curve_get_contracts_versions__historical**](CurveApi.md#curve_get_contracts_versions__historical) | **GET** /dapps/curve/contractsVersions/historical | GetContractsVersions (historical)
+[**curve_get_daily_volumes__historical**](CurveApi.md#curve_get_daily_volumes__historical) | **GET** /dapps/curve/dailyVolumes/historical | GetDailyVolumes (historical)
+[**curve_get_exchanges__historical**](CurveApi.md#curve_get_exchanges__historical) | **GET** /dapps/curve/exchanges/historical | GetExchanges (historical) 🔥
+[**curve_get_fee_change_logs__historical**](CurveApi.md#curve_get_fee_change_logs__historical) | **GET** /dapps/curve/feeChangeLogs/historical | GetFeeChangeLogs (historical)
+[**curve_get_gauges__historical**](CurveApi.md#curve_get_gauges__historical) | **GET** /dapps/curve/gauges/historical | GetGauges (historical)
+[**curve_get_gauges_deposits__historical**](CurveApi.md#curve_get_gauges_deposits__historical) | **GET** /dapps/curve/gaugesDeposits/historical | GetGaugesDeposits (historical)
+[**curve_get_gauges_liquidity__historical**](CurveApi.md#curve_get_gauges_liquidity__historical) | **GET** /dapps/curve/gaugesLiquidity/historical | GetGaugesLiquidity (historical)
+[**curve_get_gauges_total_weights__historical**](CurveApi.md#curve_get_gauges_total_weights__historical) | **GET** /dapps/curve/gaugesTotalWeights/historical | GetGaugesTotalWeights (historical)
+[**curve_get_gauges_types__historical**](CurveApi.md#curve_get_gauges_types__historical) | **GET** /dapps/curve/gaugesTypes/historical | GetGaugesTypes (historical)
+[**curve_get_gauges_types_weights__historical**](CurveApi.md#curve_get_gauges_types_weights__historical) | **GET** /dapps/curve/gaugesTypesWeights/historical | GetGaugesTypesWeights (historical)
+[**curve_get_gauges_weights__historical**](CurveApi.md#curve_get_gauges_weights__historical) | **GET** /dapps/curve/gaugesWeights/historical | GetGaugesWeights (historical)
+[**curve_get_gauges_weights_votes__historical**](CurveApi.md#curve_get_gauges_weights_votes__historical) | **GET** /dapps/curve/gaugesWeightsVotes/historical | GetGaugesWeightsVotes (historical)
+[**curve_get_gauges_withdraw__historical**](CurveApi.md#curve_get_gauges_withdraw__historical) | **GET** /dapps/curve/gaugesWithdraws/historical | GetGaugesWithdraw (historical)
+[**curve_get_hourly_volumes__historical**](CurveApi.md#curve_get_hourly_volumes__historical) | **GET** /dapps/curve/hourlyVolumes/historical | GetHourlyVolumes (historical)
+[**curve_get_lp_tokens__historical**](CurveApi.md#curve_get_lp_tokens__historical) | **GET** /dapps/curve/lpTokens/historical | GetLpTokens (historical)
+[**curve_get_pools__historical**](CurveApi.md#curve_get_pools__historical) | **GET** /dapps/curve/pools/historical | GetPools (historical) 🔥
+[**curve_get_proposals__historical**](CurveApi.md#curve_get_proposals__historical) | **GET** /dapps/curve/proposals/historical | GetProposals (historical)
+[**curve_get_proposals_votes__historical**](CurveApi.md#curve_get_proposals_votes__historical) | **GET** /dapps/curve/proposalsVotes/historical | GetProposalsVotes (historical)
+[**curve_get_remove_liquidity_events__historical**](CurveApi.md#curve_get_remove_liquidity_events__historical) | **GET** /dapps/curve/removeLiquidityEvents/historical | GetRemoveLiquidityEvents (historical)
+[**curve_get_remove_liquidity_one_events__historical**](CurveApi.md#curve_get_remove_liquidity_one_events__historical) | **GET** /dapps/curve/removeLiquidityOneEvents/historical | GetRemoveLiquidityOneEvents (historical)
+[**curve_get_system_states__historical**](CurveApi.md#curve_get_system_states__historical) | **GET** /dapps/curve/systemStates/historical | GetSystemStates (historical)
+[**curve_get_tokens__historical**](CurveApi.md#curve_get_tokens__historical) | **GET** /dapps/curve/tokens/historical | GetTokens (historical) 🔥
+[**curve_get_transfer_ownership_events__historical**](CurveApi.md#curve_get_transfer_ownership_events__historical) | **GET** /dapps/curve/transferOwnershipEvents/historical | GetTransferOwnershipEvents (historical)
+[**curve_get_underlying_coins__historical**](CurveApi.md#curve_get_underlying_coins__historical) | **GET** /dapps/curve/underlyingCoins/historical | GetUnderlyingCoins (historical)
+[**curve_get_voting_apps__historical**](CurveApi.md#curve_get_voting_apps__historical) | **GET** /dapps/curve/votingApps/historical | GetVotingApps (historical)
+[**curve_get_weekly_volumes__historical**](CurveApi.md#curve_get_weekly_volumes__historical) | **GET** /dapps/curve/weeklyVolumes/historical | GetWeeklyVolumes (historical)
 
 
-# **dapps_curve_accounts_historical_get**
-> dapps_curve_accounts_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date)
+# **curve_get_accounts__historical**
+> ARRAY[CurveAccountDTO] curve_get_accounts__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date)
 
+GetAccounts (historical)
 
+Gets accounts.
 
 ### Example
 ```perl
@@ -61,10 +63,11 @@ my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME |
 my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
 
 eval {
-    $api_instance->dapps_curve_accounts_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date);
+    my $result = $api_instance->curve_get_accounts__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date);
+    print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling CurveApi->dapps_curve_accounts_historical_get: $@\n";
+    warn "Exception when calling CurveApi->curve_get_accounts__historical: $@\n";
 }
 ```
 
@@ -79,7 +82,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**ARRAY[CurveAccountDTO]**](CurveAccountDTO.md)
 
 ### Authorization
 
@@ -88,65 +91,16 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dapps_curve_add_liquidity_event_historical_get**
-> dapps_curve_add_liquidity_event_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
+# **curve_get_add_liquidity_events__historical**
+> ARRAY[CurveAddLiquidityEventDTO] curve_get_add_liquidity_events__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
 
+GetAddLiquidityEvents (historical)
 
-
-### Example
-```perl
-use Data::Dumper;
-use WWW::OpenAPIClient::CurveApi;
-my $api_instance = WWW::OpenAPIClient::CurveApi->new(
-);
-
-my $start_block = 789; # int | 
-my $end_block = 789; # int | 
-my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $pool_id = "pool_id_example"; # string | 
-
-eval {
-    $api_instance->dapps_curve_add_liquidity_event_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
-};
-if ($@) {
-    warn "Exception when calling CurveApi->dapps_curve_add_liquidity_event_historical_get: $@\n";
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **int**|  | [optional] 
- **end_block** | **int**|  | [optional] 
- **start_date** | **DATE_TIME**|  | [optional] 
- **end_date** | **DATE_TIME**|  | [optional] 
- **pool_id** | **string**|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **dapps_curve_admin_fee_change_log_historical_get**
-> dapps_curve_admin_fee_change_log_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
-
-
+Gets add liquidity events.
 
 ### Example
 ```perl
@@ -162,10 +116,11 @@ my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME |
 my $pool_id = "pool_id_example"; # string | 
 
 eval {
-    $api_instance->dapps_curve_admin_fee_change_log_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
+    my $result = $api_instance->curve_get_add_liquidity_events__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
+    print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling CurveApi->dapps_curve_admin_fee_change_log_historical_get: $@\n";
+    warn "Exception when calling CurveApi->curve_get_add_liquidity_events__historical: $@\n";
 }
 ```
 
@@ -181,7 +136,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**ARRAY[CurveAddLiquidityEventDTO]**](CurveAddLiquidityEventDTO.md)
 
 ### Authorization
 
@@ -190,14 +145,16 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dapps_curve_amplification_coeff_change_log_historical_get**
-> dapps_curve_amplification_coeff_change_log_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
+# **curve_get_admin_fee_change_logs__historical**
+> ARRAY[CurveAdminFeeChangeLogDTO] curve_get_admin_fee_change_logs__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
 
+GetAdminFeeChangeLogs (historical)
 
+Gets admin fee change logs.
 
 ### Example
 ```perl
@@ -213,10 +170,11 @@ my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME |
 my $pool_id = "pool_id_example"; # string | 
 
 eval {
-    $api_instance->dapps_curve_amplification_coeff_change_log_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
+    my $result = $api_instance->curve_get_admin_fee_change_logs__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
+    print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling CurveApi->dapps_curve_amplification_coeff_change_log_historical_get: $@\n";
+    warn "Exception when calling CurveApi->curve_get_admin_fee_change_logs__historical: $@\n";
 }
 ```
 
@@ -232,7 +190,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**ARRAY[CurveAdminFeeChangeLogDTO]**](CurveAdminFeeChangeLogDTO.md)
 
 ### Authorization
 
@@ -241,14 +199,16 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dapps_curve_coins_historical_get**
-> dapps_curve_coins_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
+# **curve_get_amplification_coeff_change_logs__historical**
+> ARRAY[CurveAmplificationCoeffChangeLogDTO] curve_get_amplification_coeff_change_logs__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
 
+GetAmplificationCoeffChangeLogs (historical)
 
+Gets amplification coeff change logs.
 
 ### Example
 ```perl
@@ -264,10 +224,11 @@ my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME |
 my $pool_id = "pool_id_example"; # string | 
 
 eval {
-    $api_instance->dapps_curve_coins_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
+    my $result = $api_instance->curve_get_amplification_coeff_change_logs__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
+    print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling CurveApi->dapps_curve_coins_historical_get: $@\n";
+    warn "Exception when calling CurveApi->curve_get_amplification_coeff_change_logs__historical: $@\n";
 }
 ```
 
@@ -283,7 +244,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**ARRAY[CurveAmplificationCoeffChangeLogDTO]**](CurveAmplificationCoeffChangeLogDTO.md)
 
 ### Authorization
 
@@ -292,14 +253,16 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dapps_curve_contracts_historical_get**
-> dapps_curve_contracts_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
+# **curve_get_coins__historical**
+> ARRAY[CurveCoinDTO] curve_get_coins__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
 
+GetCoins (historical)
 
+Gets coins.
 
 ### Example
 ```perl
@@ -315,10 +278,11 @@ my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME |
 my $pool_id = "pool_id_example"; # string | 
 
 eval {
-    $api_instance->dapps_curve_contracts_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
+    my $result = $api_instance->curve_get_coins__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
+    print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling CurveApi->dapps_curve_contracts_historical_get: $@\n";
+    warn "Exception when calling CurveApi->curve_get_coins__historical: $@\n";
 }
 ```
 
@@ -334,7 +298,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**ARRAY[CurveCoinDTO]**](CurveCoinDTO.md)
 
 ### Authorization
 
@@ -343,14 +307,16 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dapps_curve_contracts_version_historical_get**
-> dapps_curve_contracts_version_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
+# **curve_get_contracts__historical**
+> ARRAY[CurveContractDTO] curve_get_contracts__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
 
+GetContracts (historical)
 
+Gets contracts.
 
 ### Example
 ```perl
@@ -366,10 +332,11 @@ my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME |
 my $pool_id = "pool_id_example"; # string | 
 
 eval {
-    $api_instance->dapps_curve_contracts_version_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
+    my $result = $api_instance->curve_get_contracts__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
+    print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling CurveApi->dapps_curve_contracts_version_historical_get: $@\n";
+    warn "Exception when calling CurveApi->curve_get_contracts__historical: $@\n";
 }
 ```
 
@@ -385,7 +352,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**ARRAY[CurveContractDTO]**](CurveContractDTO.md)
 
 ### Authorization
 
@@ -394,14 +361,16 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dapps_curve_daily_volume_historical_get**
-> dapps_curve_daily_volume_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
+# **curve_get_contracts_versions__historical**
+> ARRAY[CurveContractVersionDTO] curve_get_contracts_versions__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
 
+GetContractsVersions (historical)
 
+Gets contracts versions.
 
 ### Example
 ```perl
@@ -417,10 +386,11 @@ my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME |
 my $pool_id = "pool_id_example"; # string | 
 
 eval {
-    $api_instance->dapps_curve_daily_volume_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
+    my $result = $api_instance->curve_get_contracts_versions__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
+    print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling CurveApi->dapps_curve_daily_volume_historical_get: $@\n";
+    warn "Exception when calling CurveApi->curve_get_contracts_versions__historical: $@\n";
 }
 ```
 
@@ -436,7 +406,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**ARRAY[CurveContractVersionDTO]**](CurveContractVersionDTO.md)
 
 ### Authorization
 
@@ -445,14 +415,16 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dapps_curve_fee_change_log_historical_get**
-> dapps_curve_fee_change_log_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
+# **curve_get_daily_volumes__historical**
+> ARRAY[CurveDailyVolumeDTO] curve_get_daily_volumes__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
 
+GetDailyVolumes (historical)
 
+Gets daily volumes.
 
 ### Example
 ```perl
@@ -468,10 +440,11 @@ my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME |
 my $pool_id = "pool_id_example"; # string | 
 
 eval {
-    $api_instance->dapps_curve_fee_change_log_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
+    my $result = $api_instance->curve_get_daily_volumes__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
+    print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling CurveApi->dapps_curve_fee_change_log_historical_get: $@\n";
+    warn "Exception when calling CurveApi->curve_get_daily_volumes__historical: $@\n";
 }
 ```
 
@@ -487,7 +460,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**ARRAY[CurveDailyVolumeDTO]**](CurveDailyVolumeDTO.md)
 
 ### Authorization
 
@@ -496,63 +469,16 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dapps_curve_gauge_deposit_historical_get**
-> dapps_curve_gauge_deposit_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date)
+# **curve_get_exchanges__historical**
+> ARRAY[CurveExchangeDTO] curve_get_exchanges__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
 
+GetExchanges (historical) 🔥
 
-
-### Example
-```perl
-use Data::Dumper;
-use WWW::OpenAPIClient::CurveApi;
-my $api_instance = WWW::OpenAPIClient::CurveApi->new(
-);
-
-my $start_block = 789; # int | 
-my $end_block = 789; # int | 
-my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-
-eval {
-    $api_instance->dapps_curve_gauge_deposit_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date);
-};
-if ($@) {
-    warn "Exception when calling CurveApi->dapps_curve_gauge_deposit_historical_get: $@\n";
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **int**|  | [optional] 
- **end_block** | **int**|  | [optional] 
- **start_date** | **DATE_TIME**|  | [optional] 
- **end_date** | **DATE_TIME**|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **dapps_curve_gauge_historical_get**
-> dapps_curve_gauge_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
-
-
+Gets exchanges.
 
 ### Example
 ```perl
@@ -568,10 +494,11 @@ my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME |
 my $pool_id = "pool_id_example"; # string | 
 
 eval {
-    $api_instance->dapps_curve_gauge_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
+    my $result = $api_instance->curve_get_exchanges__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
+    print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling CurveApi->dapps_curve_gauge_historical_get: $@\n";
+    warn "Exception when calling CurveApi->curve_get_exchanges__historical: $@\n";
 }
 ```
 
@@ -587,7 +514,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**ARRAY[CurveExchangeDTO]**](CurveExchangeDTO.md)
 
 ### Authorization
 
@@ -596,357 +523,16 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dapps_curve_gauge_liquidity_historical_get**
-> dapps_curve_gauge_liquidity_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date)
+# **curve_get_fee_change_logs__historical**
+> ARRAY[CurveFeeChangeLogDTO] curve_get_fee_change_logs__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
 
+GetFeeChangeLogs (historical)
 
-
-### Example
-```perl
-use Data::Dumper;
-use WWW::OpenAPIClient::CurveApi;
-my $api_instance = WWW::OpenAPIClient::CurveApi->new(
-);
-
-my $start_block = 789; # int | 
-my $end_block = 789; # int | 
-my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-
-eval {
-    $api_instance->dapps_curve_gauge_liquidity_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date);
-};
-if ($@) {
-    warn "Exception when calling CurveApi->dapps_curve_gauge_liquidity_historical_get: $@\n";
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **int**|  | [optional] 
- **end_block** | **int**|  | [optional] 
- **start_date** | **DATE_TIME**|  | [optional] 
- **end_date** | **DATE_TIME**|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **dapps_curve_gauge_total_weight_historical_get**
-> dapps_curve_gauge_total_weight_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date)
-
-
-
-### Example
-```perl
-use Data::Dumper;
-use WWW::OpenAPIClient::CurveApi;
-my $api_instance = WWW::OpenAPIClient::CurveApi->new(
-);
-
-my $start_block = 789; # int | 
-my $end_block = 789; # int | 
-my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-
-eval {
-    $api_instance->dapps_curve_gauge_total_weight_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date);
-};
-if ($@) {
-    warn "Exception when calling CurveApi->dapps_curve_gauge_total_weight_historical_get: $@\n";
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **int**|  | [optional] 
- **end_block** | **int**|  | [optional] 
- **start_date** | **DATE_TIME**|  | [optional] 
- **end_date** | **DATE_TIME**|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **dapps_curve_gauge_type_historical_get**
-> dapps_curve_gauge_type_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date)
-
-
-
-### Example
-```perl
-use Data::Dumper;
-use WWW::OpenAPIClient::CurveApi;
-my $api_instance = WWW::OpenAPIClient::CurveApi->new(
-);
-
-my $start_block = 789; # int | 
-my $end_block = 789; # int | 
-my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-
-eval {
-    $api_instance->dapps_curve_gauge_type_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date);
-};
-if ($@) {
-    warn "Exception when calling CurveApi->dapps_curve_gauge_type_historical_get: $@\n";
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **int**|  | [optional] 
- **end_block** | **int**|  | [optional] 
- **start_date** | **DATE_TIME**|  | [optional] 
- **end_date** | **DATE_TIME**|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **dapps_curve_gauge_type_weight_historical_get**
-> dapps_curve_gauge_type_weight_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date)
-
-
-
-### Example
-```perl
-use Data::Dumper;
-use WWW::OpenAPIClient::CurveApi;
-my $api_instance = WWW::OpenAPIClient::CurveApi->new(
-);
-
-my $start_block = 789; # int | 
-my $end_block = 789; # int | 
-my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-
-eval {
-    $api_instance->dapps_curve_gauge_type_weight_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date);
-};
-if ($@) {
-    warn "Exception when calling CurveApi->dapps_curve_gauge_type_weight_historical_get: $@\n";
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **int**|  | [optional] 
- **end_block** | **int**|  | [optional] 
- **start_date** | **DATE_TIME**|  | [optional] 
- **end_date** | **DATE_TIME**|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **dapps_curve_gauge_weight_historical_get**
-> dapps_curve_gauge_weight_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date)
-
-
-
-### Example
-```perl
-use Data::Dumper;
-use WWW::OpenAPIClient::CurveApi;
-my $api_instance = WWW::OpenAPIClient::CurveApi->new(
-);
-
-my $start_block = 789; # int | 
-my $end_block = 789; # int | 
-my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-
-eval {
-    $api_instance->dapps_curve_gauge_weight_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date);
-};
-if ($@) {
-    warn "Exception when calling CurveApi->dapps_curve_gauge_weight_historical_get: $@\n";
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **int**|  | [optional] 
- **end_block** | **int**|  | [optional] 
- **start_date** | **DATE_TIME**|  | [optional] 
- **end_date** | **DATE_TIME**|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **dapps_curve_gauge_weight_vote_historical_get**
-> dapps_curve_gauge_weight_vote_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date)
-
-
-
-### Example
-```perl
-use Data::Dumper;
-use WWW::OpenAPIClient::CurveApi;
-my $api_instance = WWW::OpenAPIClient::CurveApi->new(
-);
-
-my $start_block = 789; # int | 
-my $end_block = 789; # int | 
-my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-
-eval {
-    $api_instance->dapps_curve_gauge_weight_vote_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date);
-};
-if ($@) {
-    warn "Exception when calling CurveApi->dapps_curve_gauge_weight_vote_historical_get: $@\n";
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **int**|  | [optional] 
- **end_block** | **int**|  | [optional] 
- **start_date** | **DATE_TIME**|  | [optional] 
- **end_date** | **DATE_TIME**|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **dapps_curve_gauge_withdraw_historical_get**
-> dapps_curve_gauge_withdraw_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date)
-
-
-
-### Example
-```perl
-use Data::Dumper;
-use WWW::OpenAPIClient::CurveApi;
-my $api_instance = WWW::OpenAPIClient::CurveApi->new(
-);
-
-my $start_block = 789; # int | 
-my $end_block = 789; # int | 
-my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-
-eval {
-    $api_instance->dapps_curve_gauge_withdraw_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date);
-};
-if ($@) {
-    warn "Exception when calling CurveApi->dapps_curve_gauge_withdraw_historical_get: $@\n";
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **int**|  | [optional] 
- **end_block** | **int**|  | [optional] 
- **start_date** | **DATE_TIME**|  | [optional] 
- **end_date** | **DATE_TIME**|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **dapps_curve_hourly_volume_historical_get**
-> dapps_curve_hourly_volume_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
-
-
+Gets fee change logs.
 
 ### Example
 ```perl
@@ -962,10 +548,11 @@ my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME |
 my $pool_id = "pool_id_example"; # string | 
 
 eval {
-    $api_instance->dapps_curve_hourly_volume_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
+    my $result = $api_instance->curve_get_fee_change_logs__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
+    print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling CurveApi->dapps_curve_hourly_volume_historical_get: $@\n";
+    warn "Exception when calling CurveApi->curve_get_fee_change_logs__historical: $@\n";
 }
 ```
 
@@ -981,7 +568,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**ARRAY[CurveFeeChangeLogDTO]**](CurveFeeChangeLogDTO.md)
 
 ### Authorization
 
@@ -990,14 +577,16 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dapps_curve_lp_token_historical_get**
-> dapps_curve_lp_token_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
+# **curve_get_gauges__historical**
+> ARRAY[CurveGaugeDTO] curve_get_gauges__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
 
+GetGauges (historical)
 
+Gets gauges.
 
 ### Example
 ```perl
@@ -1013,10 +602,11 @@ my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME |
 my $pool_id = "pool_id_example"; # string | 
 
 eval {
-    $api_instance->dapps_curve_lp_token_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
+    my $result = $api_instance->curve_get_gauges__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
+    print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling CurveApi->dapps_curve_lp_token_historical_get: $@\n";
+    warn "Exception when calling CurveApi->curve_get_gauges__historical: $@\n";
 }
 ```
 
@@ -1032,7 +622,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**ARRAY[CurveGaugeDTO]**](CurveGaugeDTO.md)
 
 ### Authorization
 
@@ -1041,14 +631,432 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dapps_curve_pools_historical_get**
-> dapps_curve_pools_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
+# **curve_get_gauges_deposits__historical**
+> ARRAY[CurveGaugeDepositDTO] curve_get_gauges_deposits__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date)
 
+GetGaugesDeposits (historical)
 
+Gets gauges deposits.
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::CurveApi;
+my $api_instance = WWW::OpenAPIClient::CurveApi->new(
+);
+
+my $start_block = 789; # int | 
+my $end_block = 789; # int | 
+my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+
+eval {
+    my $result = $api_instance->curve_get_gauges_deposits__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling CurveApi->curve_get_gauges_deposits__historical: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **int**|  | [optional] 
+ **end_block** | **int**|  | [optional] 
+ **start_date** | **DATE_TIME**|  | [optional] 
+ **end_date** | **DATE_TIME**|  | [optional] 
+
+### Return type
+
+[**ARRAY[CurveGaugeDepositDTO]**](CurveGaugeDepositDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **curve_get_gauges_liquidity__historical**
+> ARRAY[CurveGaugeLiquidityDTO] curve_get_gauges_liquidity__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date)
+
+GetGaugesLiquidity (historical)
+
+Gets gauges liquidity.
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::CurveApi;
+my $api_instance = WWW::OpenAPIClient::CurveApi->new(
+);
+
+my $start_block = 789; # int | 
+my $end_block = 789; # int | 
+my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+
+eval {
+    my $result = $api_instance->curve_get_gauges_liquidity__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling CurveApi->curve_get_gauges_liquidity__historical: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **int**|  | [optional] 
+ **end_block** | **int**|  | [optional] 
+ **start_date** | **DATE_TIME**|  | [optional] 
+ **end_date** | **DATE_TIME**|  | [optional] 
+
+### Return type
+
+[**ARRAY[CurveGaugeLiquidityDTO]**](CurveGaugeLiquidityDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **curve_get_gauges_total_weights__historical**
+> ARRAY[CurveGaugeTotalWeightDTO] curve_get_gauges_total_weights__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date)
+
+GetGaugesTotalWeights (historical)
+
+Gets gauges total weights.
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::CurveApi;
+my $api_instance = WWW::OpenAPIClient::CurveApi->new(
+);
+
+my $start_block = 789; # int | 
+my $end_block = 789; # int | 
+my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+
+eval {
+    my $result = $api_instance->curve_get_gauges_total_weights__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling CurveApi->curve_get_gauges_total_weights__historical: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **int**|  | [optional] 
+ **end_block** | **int**|  | [optional] 
+ **start_date** | **DATE_TIME**|  | [optional] 
+ **end_date** | **DATE_TIME**|  | [optional] 
+
+### Return type
+
+[**ARRAY[CurveGaugeTotalWeightDTO]**](CurveGaugeTotalWeightDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **curve_get_gauges_types__historical**
+> ARRAY[CurveGaugeTypeDTO] curve_get_gauges_types__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date)
+
+GetGaugesTypes (historical)
+
+Gets gauges types.
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::CurveApi;
+my $api_instance = WWW::OpenAPIClient::CurveApi->new(
+);
+
+my $start_block = 789; # int | 
+my $end_block = 789; # int | 
+my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+
+eval {
+    my $result = $api_instance->curve_get_gauges_types__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling CurveApi->curve_get_gauges_types__historical: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **int**|  | [optional] 
+ **end_block** | **int**|  | [optional] 
+ **start_date** | **DATE_TIME**|  | [optional] 
+ **end_date** | **DATE_TIME**|  | [optional] 
+
+### Return type
+
+[**ARRAY[CurveGaugeTypeDTO]**](CurveGaugeTypeDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **curve_get_gauges_types_weights__historical**
+> ARRAY[CurveGaugeTypeWeightDTO] curve_get_gauges_types_weights__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date)
+
+GetGaugesTypesWeights (historical)
+
+Gets gauges types weights.
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::CurveApi;
+my $api_instance = WWW::OpenAPIClient::CurveApi->new(
+);
+
+my $start_block = 789; # int | 
+my $end_block = 789; # int | 
+my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+
+eval {
+    my $result = $api_instance->curve_get_gauges_types_weights__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling CurveApi->curve_get_gauges_types_weights__historical: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **int**|  | [optional] 
+ **end_block** | **int**|  | [optional] 
+ **start_date** | **DATE_TIME**|  | [optional] 
+ **end_date** | **DATE_TIME**|  | [optional] 
+
+### Return type
+
+[**ARRAY[CurveGaugeTypeWeightDTO]**](CurveGaugeTypeWeightDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **curve_get_gauges_weights__historical**
+> ARRAY[CurveGaugeWeightDTO] curve_get_gauges_weights__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date)
+
+GetGaugesWeights (historical)
+
+Gets gauges weights.
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::CurveApi;
+my $api_instance = WWW::OpenAPIClient::CurveApi->new(
+);
+
+my $start_block = 789; # int | 
+my $end_block = 789; # int | 
+my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+
+eval {
+    my $result = $api_instance->curve_get_gauges_weights__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling CurveApi->curve_get_gauges_weights__historical: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **int**|  | [optional] 
+ **end_block** | **int**|  | [optional] 
+ **start_date** | **DATE_TIME**|  | [optional] 
+ **end_date** | **DATE_TIME**|  | [optional] 
+
+### Return type
+
+[**ARRAY[CurveGaugeWeightDTO]**](CurveGaugeWeightDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **curve_get_gauges_weights_votes__historical**
+> ARRAY[CurveGaugeWeightVoteDTO] curve_get_gauges_weights_votes__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date)
+
+GetGaugesWeightsVotes (historical)
+
+Gets gauges weights votes.
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::CurveApi;
+my $api_instance = WWW::OpenAPIClient::CurveApi->new(
+);
+
+my $start_block = 789; # int | 
+my $end_block = 789; # int | 
+my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+
+eval {
+    my $result = $api_instance->curve_get_gauges_weights_votes__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling CurveApi->curve_get_gauges_weights_votes__historical: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **int**|  | [optional] 
+ **end_block** | **int**|  | [optional] 
+ **start_date** | **DATE_TIME**|  | [optional] 
+ **end_date** | **DATE_TIME**|  | [optional] 
+
+### Return type
+
+[**ARRAY[CurveGaugeWeightVoteDTO]**](CurveGaugeWeightVoteDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **curve_get_gauges_withdraw__historical**
+> ARRAY[CurveGaugeWithdrawDTO] curve_get_gauges_withdraw__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date)
+
+GetGaugesWithdraw (historical)
+
+Gets gauges withdraws.
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::CurveApi;
+my $api_instance = WWW::OpenAPIClient::CurveApi->new(
+);
+
+my $start_block = 789; # int | 
+my $end_block = 789; # int | 
+my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+
+eval {
+    my $result = $api_instance->curve_get_gauges_withdraw__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling CurveApi->curve_get_gauges_withdraw__historical: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **int**|  | [optional] 
+ **end_block** | **int**|  | [optional] 
+ **start_date** | **DATE_TIME**|  | [optional] 
+ **end_date** | **DATE_TIME**|  | [optional] 
+
+### Return type
+
+[**ARRAY[CurveGaugeWithdrawDTO]**](CurveGaugeWithdrawDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **curve_get_hourly_volumes__historical**
+> ARRAY[CurveHourlyVolumeDTO] curve_get_hourly_volumes__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
+
+GetHourlyVolumes (historical)
+
+Gets hourly volumes.
 
 ### Example
 ```perl
@@ -1064,10 +1072,11 @@ my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME |
 my $pool_id = "pool_id_example"; # string | 
 
 eval {
-    $api_instance->dapps_curve_pools_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
+    my $result = $api_instance->curve_get_hourly_volumes__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
+    print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling CurveApi->dapps_curve_pools_historical_get: $@\n";
+    warn "Exception when calling CurveApi->curve_get_hourly_volumes__historical: $@\n";
 }
 ```
 
@@ -1083,7 +1092,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**ARRAY[CurveHourlyVolumeDTO]**](CurveHourlyVolumeDTO.md)
 
 ### Authorization
 
@@ -1092,112 +1101,16 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dapps_curve_proposals_historical_get**
-> dapps_curve_proposals_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date)
+# **curve_get_lp_tokens__historical**
+> ARRAY[CurveLpTokenDTO] curve_get_lp_tokens__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
 
+GetLpTokens (historical)
 
-
-### Example
-```perl
-use Data::Dumper;
-use WWW::OpenAPIClient::CurveApi;
-my $api_instance = WWW::OpenAPIClient::CurveApi->new(
-);
-
-my $start_block = 789; # int | 
-my $end_block = 789; # int | 
-my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-
-eval {
-    $api_instance->dapps_curve_proposals_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date);
-};
-if ($@) {
-    warn "Exception when calling CurveApi->dapps_curve_proposals_historical_get: $@\n";
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **int**|  | [optional] 
- **end_block** | **int**|  | [optional] 
- **start_date** | **DATE_TIME**|  | [optional] 
- **end_date** | **DATE_TIME**|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **dapps_curve_proposals_vote_historical_get**
-> dapps_curve_proposals_vote_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date)
-
-
-
-### Example
-```perl
-use Data::Dumper;
-use WWW::OpenAPIClient::CurveApi;
-my $api_instance = WWW::OpenAPIClient::CurveApi->new(
-);
-
-my $start_block = 789; # int | 
-my $end_block = 789; # int | 
-my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-
-eval {
-    $api_instance->dapps_curve_proposals_vote_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date);
-};
-if ($@) {
-    warn "Exception when calling CurveApi->dapps_curve_proposals_vote_historical_get: $@\n";
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **int**|  | [optional] 
- **end_block** | **int**|  | [optional] 
- **start_date** | **DATE_TIME**|  | [optional] 
- **end_date** | **DATE_TIME**|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **dapps_curve_remove_liquidity_event_historical_get**
-> dapps_curve_remove_liquidity_event_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
-
-
+Gets lp tokens.
 
 ### Example
 ```perl
@@ -1213,10 +1126,11 @@ my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME |
 my $pool_id = "pool_id_example"; # string | 
 
 eval {
-    $api_instance->dapps_curve_remove_liquidity_event_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
+    my $result = $api_instance->curve_get_lp_tokens__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
+    print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling CurveApi->dapps_curve_remove_liquidity_event_historical_get: $@\n";
+    warn "Exception when calling CurveApi->curve_get_lp_tokens__historical: $@\n";
 }
 ```
 
@@ -1232,7 +1146,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**ARRAY[CurveLpTokenDTO]**](CurveLpTokenDTO.md)
 
 ### Authorization
 
@@ -1241,14 +1155,16 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dapps_curve_remove_liquidity_one_event_historical_get**
-> dapps_curve_remove_liquidity_one_event_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
+# **curve_get_pools__historical**
+> ARRAY[CurvePoolDTO] curve_get_pools__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
 
+GetPools (historical) 🔥
 
+Gets pools.
 
 ### Example
 ```perl
@@ -1264,10 +1180,11 @@ my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME |
 my $pool_id = "pool_id_example"; # string | 
 
 eval {
-    $api_instance->dapps_curve_remove_liquidity_one_event_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
+    my $result = $api_instance->curve_get_pools__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
+    print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling CurveApi->dapps_curve_remove_liquidity_one_event_historical_get: $@\n";
+    warn "Exception when calling CurveApi->curve_get_pools__historical: $@\n";
 }
 ```
 
@@ -1283,7 +1200,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**ARRAY[CurvePoolDTO]**](CurvePoolDTO.md)
 
 ### Authorization
 
@@ -1292,14 +1209,120 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dapps_curve_swaps_historical_get**
-> dapps_curve_swaps_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
+# **curve_get_proposals__historical**
+> ARRAY[CurveProposalDTO] curve_get_proposals__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date)
 
+GetProposals (historical)
 
+Gets proposals.
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::CurveApi;
+my $api_instance = WWW::OpenAPIClient::CurveApi->new(
+);
+
+my $start_block = 789; # int | 
+my $end_block = 789; # int | 
+my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+
+eval {
+    my $result = $api_instance->curve_get_proposals__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling CurveApi->curve_get_proposals__historical: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **int**|  | [optional] 
+ **end_block** | **int**|  | [optional] 
+ **start_date** | **DATE_TIME**|  | [optional] 
+ **end_date** | **DATE_TIME**|  | [optional] 
+
+### Return type
+
+[**ARRAY[CurveProposalDTO]**](CurveProposalDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **curve_get_proposals_votes__historical**
+> ARRAY[CurveProposalVoteDTO] curve_get_proposals_votes__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date)
+
+GetProposalsVotes (historical)
+
+Gets proposals votes.
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::CurveApi;
+my $api_instance = WWW::OpenAPIClient::CurveApi->new(
+);
+
+my $start_block = 789; # int | 
+my $end_block = 789; # int | 
+my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+
+eval {
+    my $result = $api_instance->curve_get_proposals_votes__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling CurveApi->curve_get_proposals_votes__historical: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **int**|  | [optional] 
+ **end_block** | **int**|  | [optional] 
+ **start_date** | **DATE_TIME**|  | [optional] 
+ **end_date** | **DATE_TIME**|  | [optional] 
+
+### Return type
+
+[**ARRAY[CurveProposalVoteDTO]**](CurveProposalVoteDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **curve_get_remove_liquidity_events__historical**
+> ARRAY[CurveRemoveLiquidityEventDTO] curve_get_remove_liquidity_events__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
+
+GetRemoveLiquidityEvents (historical)
+
+Gets remove liquidity events.
 
 ### Example
 ```perl
@@ -1315,10 +1338,11 @@ my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME |
 my $pool_id = "pool_id_example"; # string | 
 
 eval {
-    $api_instance->dapps_curve_swaps_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
+    my $result = $api_instance->curve_get_remove_liquidity_events__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
+    print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling CurveApi->dapps_curve_swaps_historical_get: $@\n";
+    warn "Exception when calling CurveApi->curve_get_remove_liquidity_events__historical: $@\n";
 }
 ```
 
@@ -1334,7 +1358,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**ARRAY[CurveRemoveLiquidityEventDTO]**](CurveRemoveLiquidityEventDTO.md)
 
 ### Authorization
 
@@ -1343,14 +1367,70 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dapps_curve_system_state_historical_get**
-> dapps_curve_system_state_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date)
+# **curve_get_remove_liquidity_one_events__historical**
+> ARRAY[CurveRemoveLiquidityOneEventDTO] curve_get_remove_liquidity_one_events__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
 
+GetRemoveLiquidityOneEvents (historical)
 
+Gets remove liquidity one events.
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::CurveApi;
+my $api_instance = WWW::OpenAPIClient::CurveApi->new(
+);
+
+my $start_block = 789; # int | 
+my $end_block = 789; # int | 
+my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+my $pool_id = "pool_id_example"; # string | 
+
+eval {
+    my $result = $api_instance->curve_get_remove_liquidity_one_events__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling CurveApi->curve_get_remove_liquidity_one_events__historical: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **int**|  | [optional] 
+ **end_block** | **int**|  | [optional] 
+ **start_date** | **DATE_TIME**|  | [optional] 
+ **end_date** | **DATE_TIME**|  | [optional] 
+ **pool_id** | **string**|  | [optional] 
+
+### Return type
+
+[**ARRAY[CurveRemoveLiquidityOneEventDTO]**](CurveRemoveLiquidityOneEventDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **curve_get_system_states__historical**
+> ARRAY[CurveSystemStateDTO] curve_get_system_states__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date)
+
+GetSystemStates (historical)
+
+Gets system states.
 
 ### Example
 ```perl
@@ -1365,10 +1445,11 @@ my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME |
 my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
 
 eval {
-    $api_instance->dapps_curve_system_state_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date);
+    my $result = $api_instance->curve_get_system_states__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date);
+    print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling CurveApi->dapps_curve_system_state_historical_get: $@\n";
+    warn "Exception when calling CurveApi->curve_get_system_states__historical: $@\n";
 }
 ```
 
@@ -1383,7 +1464,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**ARRAY[CurveSystemStateDTO]**](CurveSystemStateDTO.md)
 
 ### Authorization
 
@@ -1392,14 +1473,16 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dapps_curve_tokens_historical_get**
-> dapps_curve_tokens_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, token_id => $token_id)
+# **curve_get_tokens__historical**
+> ARRAY[CurveTokenDTO] curve_get_tokens__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, token_id => $token_id)
 
+GetTokens (historical) 🔥
 
+Gets tokens.
 
 ### Example
 ```perl
@@ -1415,10 +1498,11 @@ my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME |
 my $token_id = "token_id_example"; # string | 
 
 eval {
-    $api_instance->dapps_curve_tokens_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, token_id => $token_id);
+    my $result = $api_instance->curve_get_tokens__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, token_id => $token_id);
+    print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling CurveApi->dapps_curve_tokens_historical_get: $@\n";
+    warn "Exception when calling CurveApi->curve_get_tokens__historical: $@\n";
 }
 ```
 
@@ -1434,7 +1518,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**ARRAY[CurveTokenDTO]**](CurveTokenDTO.md)
 
 ### Authorization
 
@@ -1443,14 +1527,16 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dapps_curve_transfer_ownership_event_historical_get**
-> dapps_curve_transfer_ownership_event_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
+# **curve_get_transfer_ownership_events__historical**
+> ARRAY[CurveTransferOwnershipEventDTO] curve_get_transfer_ownership_events__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
 
+GetTransferOwnershipEvents (historical)
 
+Gets transfer ownership events.
 
 ### Example
 ```perl
@@ -1466,10 +1552,11 @@ my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME |
 my $pool_id = "pool_id_example"; # string | 
 
 eval {
-    $api_instance->dapps_curve_transfer_ownership_event_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
+    my $result = $api_instance->curve_get_transfer_ownership_events__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
+    print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling CurveApi->dapps_curve_transfer_ownership_event_historical_get: $@\n";
+    warn "Exception when calling CurveApi->curve_get_transfer_ownership_events__historical: $@\n";
 }
 ```
 
@@ -1485,7 +1572,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**ARRAY[CurveTransferOwnershipEventDTO]**](CurveTransferOwnershipEventDTO.md)
 
 ### Authorization
 
@@ -1494,14 +1581,16 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dapps_curve_underlying_coin_historical_get**
-> dapps_curve_underlying_coin_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
+# **curve_get_underlying_coins__historical**
+> ARRAY[CurveUnderlyingCoinDTO] curve_get_underlying_coins__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
 
+GetUnderlyingCoins (historical)
 
+Gets underlying coins.
 
 ### Example
 ```perl
@@ -1517,10 +1606,11 @@ my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME |
 my $pool_id = "pool_id_example"; # string | 
 
 eval {
-    $api_instance->dapps_curve_underlying_coin_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
+    my $result = $api_instance->curve_get_underlying_coins__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
+    print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling CurveApi->dapps_curve_underlying_coin_historical_get: $@\n";
+    warn "Exception when calling CurveApi->curve_get_underlying_coins__historical: $@\n";
 }
 ```
 
@@ -1536,7 +1626,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**ARRAY[CurveUnderlyingCoinDTO]**](CurveUnderlyingCoinDTO.md)
 
 ### Authorization
 
@@ -1545,14 +1635,16 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dapps_curve_voting_app_historical_get**
-> dapps_curve_voting_app_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date)
+# **curve_get_voting_apps__historical**
+> ARRAY[CurveVotingAppDTO] curve_get_voting_apps__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date)
 
+GetVotingApps (historical)
 
+Gets voting apps.
 
 ### Example
 ```perl
@@ -1567,10 +1659,11 @@ my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME |
 my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
 
 eval {
-    $api_instance->dapps_curve_voting_app_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date);
+    my $result = $api_instance->curve_get_voting_apps__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date);
+    print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling CurveApi->dapps_curve_voting_app_historical_get: $@\n";
+    warn "Exception when calling CurveApi->curve_get_voting_apps__historical: $@\n";
 }
 ```
 
@@ -1585,7 +1678,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**ARRAY[CurveVotingAppDTO]**](CurveVotingAppDTO.md)
 
 ### Authorization
 
@@ -1594,14 +1687,16 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dapps_curve_weekly_volume_historical_get**
-> dapps_curve_weekly_volume_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
+# **curve_get_weekly_volumes__historical**
+> ARRAY[CurveWeeklyVolumeDTO] curve_get_weekly_volumes__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
 
+GetWeeklyVolumes (historical)
 
+Gets weekly volumes.
 
 ### Example
 ```perl
@@ -1617,10 +1712,11 @@ my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME |
 my $pool_id = "pool_id_example"; # string | 
 
 eval {
-    $api_instance->dapps_curve_weekly_volume_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
+    my $result = $api_instance->curve_get_weekly_volumes__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
+    print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling CurveApi->dapps_curve_weekly_volume_historical_get: $@\n";
+    warn "Exception when calling CurveApi->curve_get_weekly_volumes__historical: $@\n";
 }
 ```
 
@@ -1636,7 +1732,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**ARRAY[CurveWeeklyVolumeDTO]**](CurveWeeklyVolumeDTO.md)
 
 ### Authorization
 
@@ -1645,7 +1741,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

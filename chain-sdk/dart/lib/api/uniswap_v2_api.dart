@@ -16,17 +16,26 @@ class UniswapV2Api {
 
   final ApiClient apiClient;
 
-  /// Performs an HTTP 'GET /dapps/uniswapv2/bundles/historical' operation and returns the [Response].
+  /// GetBundles (historical)
+  ///
+  /// Gets bundles.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
-  Future<Response> dappsUniswapv2BundlesHistoricalGetWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
+  ///   
+  Future<Response> uniswapV2GetBundlesHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
     // ignore: prefer_const_declarations
     final path = r'/dapps/uniswapv2/bundles/historical';
 
@@ -64,35 +73,64 @@ class UniswapV2Api {
     );
   }
 
+  /// GetBundles (historical)
+  ///
+  /// Gets bundles.
+  ///
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
-  Future<void> dappsUniswapv2BundlesHistoricalGet({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
-    final response = await dappsUniswapv2BundlesHistoricalGetWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, );
+  ///   
+  Future<List<UniswapV2BundleV2DTO>?> uniswapV2GetBundlesHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
+    final response = await uniswapV2GetBundlesHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV2BundleV2DTO>') as List)
+        .cast<UniswapV2BundleV2DTO>()
+        .toList();
+
+    }
+    return null;
   }
 
-  /// Performs an HTTP 'GET /dapps/uniswapv2/burns/historical' operation and returns the [Response].
+  /// GetBurns (historical)
+  ///
+  /// Gets burns.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
+  ///   
   ///
   /// * [String] poolId:
-  Future<Response> dappsUniswapv2BurnsHistoricalGetWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+  ///   
+  Future<Response> uniswapV2GetBurnsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
     // ignore: prefer_const_declarations
     final path = r'/dapps/uniswapv2/burns/historical';
 
@@ -133,35 +171,64 @@ class UniswapV2Api {
     );
   }
 
+  /// GetBurns (historical)
+  ///
+  /// Gets burns.
+  ///
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
+  ///   
   ///
   /// * [String] poolId:
-  Future<void> dappsUniswapv2BurnsHistoricalGet({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
-    final response = await dappsUniswapv2BurnsHistoricalGetWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
+  ///   
+  Future<List<UniswapV2BurnV2DTO>?> uniswapV2GetBurnsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    final response = await uniswapV2GetBurnsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV2BurnV2DTO>') as List)
+        .cast<UniswapV2BurnV2DTO>()
+        .toList();
+
+    }
+    return null;
   }
 
-  /// Performs an HTTP 'GET /dapps/uniswapv2/dayData/historical' operation and returns the [Response].
+  /// GetDayData (historical)
+  ///
+  /// Gets uniswapv2 day data.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
-  Future<Response> dappsUniswapv2DayDataHistoricalGetWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
+  ///   
+  Future<Response> uniswapV2GetDayDataHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
     // ignore: prefer_const_declarations
     final path = r'/dapps/uniswapv2/dayData/historical';
 
@@ -199,33 +266,61 @@ class UniswapV2Api {
     );
   }
 
+  /// GetDayData (historical)
+  ///
+  /// Gets uniswapv2 day data.
+  ///
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
-  Future<void> dappsUniswapv2DayDataHistoricalGet({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
-    final response = await dappsUniswapv2DayDataHistoricalGetWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, );
+  ///   
+  Future<List<UniswapV2UniswapDayDataV2DTO>?> uniswapV2GetDayDataHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
+    final response = await uniswapV2GetDayDataHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV2UniswapDayDataV2DTO>') as List)
+        .cast<UniswapV2UniswapDayDataV2DTO>()
+        .toList();
+
+    }
+    return null;
   }
 
-  /// Performs an HTTP 'GET /dapps/uniswapv2/factory/historical' operation and returns the [Response].
+  /// GetFactory (historical)
+  ///
+  /// Gets factory.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
-  Future<Response> dappsUniswapv2FactoryHistoricalGetWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
+  ///   
+  Future<Response> uniswapV2GetFactoryHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
     // ignore: prefer_const_declarations
     final path = r'/dapps/uniswapv2/factory/historical';
 
@@ -263,37 +358,66 @@ class UniswapV2Api {
     );
   }
 
+  /// GetFactory (historical)
+  ///
+  /// Gets factory.
+  ///
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
-  Future<void> dappsUniswapv2FactoryHistoricalGet({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
-    final response = await dappsUniswapv2FactoryHistoricalGetWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, );
+  ///   
+  Future<List<UniswapV2UniswapFactoryV2DTO>?> uniswapV2GetFactoryHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
+    final response = await uniswapV2GetFactoryHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV2UniswapFactoryV2DTO>') as List)
+        .cast<UniswapV2UniswapFactoryV2DTO>()
+        .toList();
+
+    }
+    return null;
   }
 
-  /// Performs an HTTP 'GET /dapps/uniswapv2/liquidityPosition/historical' operation and returns the [Response].
+  /// GetLiquidityPositions (historical)
+  ///
+  /// Gets liquidity positions.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
+  ///   
   ///
   /// * [String] poolId:
-  Future<Response> dappsUniswapv2LiquidityPositionHistoricalGetWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+  ///   
+  Future<Response> uniswapV2GetLiquidityPositionsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/uniswapv2/liquidityPosition/historical';
+    final path = r'/dapps/uniswapv2/liquidityPositions/historical';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -332,39 +456,69 @@ class UniswapV2Api {
     );
   }
 
+  /// GetLiquidityPositions (historical)
+  ///
+  /// Gets liquidity positions.
+  ///
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
+  ///   
   ///
   /// * [String] poolId:
-  Future<void> dappsUniswapv2LiquidityPositionHistoricalGet({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
-    final response = await dappsUniswapv2LiquidityPositionHistoricalGetWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
+  ///   
+  Future<List<UniswapV2LiquidityPositionV2DTO>?> uniswapV2GetLiquidityPositionsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    final response = await uniswapV2GetLiquidityPositionsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV2LiquidityPositionV2DTO>') as List)
+        .cast<UniswapV2LiquidityPositionV2DTO>()
+        .toList();
+
+    }
+    return null;
   }
 
-  /// Performs an HTTP 'GET /dapps/uniswapv2/liquidityPositionSnapshots/historical' operation and returns the [Response].
+  /// GetLiquidityPositionsSnapshots (historical)
+  ///
+  /// Gets liquidity positions snapshots.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
+  ///   
   ///
   /// * [String] poolId:
-  Future<Response> dappsUniswapv2LiquidityPositionSnapshotsHistoricalGetWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+  ///   
+  Future<Response> uniswapV2GetLiquidityPositionsSnapshotsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/uniswapv2/liquidityPositionSnapshots/historical';
+    final path = r'/dapps/uniswapv2/liquidityPositionsSnapshots/historical';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -403,37 +557,67 @@ class UniswapV2Api {
     );
   }
 
+  /// GetLiquidityPositionsSnapshots (historical)
+  ///
+  /// Gets liquidity positions snapshots.
+  ///
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
+  ///   
   ///
   /// * [String] poolId:
-  Future<void> dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
-    final response = await dappsUniswapv2LiquidityPositionSnapshotsHistoricalGetWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
+  ///   
+  Future<List<UniswapV2LiquidityPositionSnapshotV2DTO>?> uniswapV2GetLiquidityPositionsSnapshotsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    final response = await uniswapV2GetLiquidityPositionsSnapshotsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV2LiquidityPositionSnapshotV2DTO>') as List)
+        .cast<UniswapV2LiquidityPositionSnapshotV2DTO>()
+        .toList();
+
+    }
+    return null;
   }
 
-  /// Performs an HTTP 'GET /dapps/uniswapv2/mints/historical' operation and returns the [Response].
+  /// GetMints (historical)
+  ///
+  /// Gets mints.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
+  ///   
   ///
   /// * [String] poolId:
-  Future<Response> dappsUniswapv2MintsHistoricalGetWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+  ///   
+  Future<Response> uniswapV2GetMintsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
     // ignore: prefer_const_declarations
     final path = r'/dapps/uniswapv2/mints/historical';
 
@@ -474,175 +658,54 @@ class UniswapV2Api {
     );
   }
 
+  /// GetMints (historical)
+  ///
+  /// Gets mints.
+  ///
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
+  ///   
   ///
   /// * [String] poolId:
-  Future<void> dappsUniswapv2MintsHistoricalGet({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
-    final response = await dappsUniswapv2MintsHistoricalGetWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
+  ///   
+  Future<List<UniswapV2MintV2DTO>?> uniswapV2GetMintsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    final response = await uniswapV2GetMintsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV2MintV2DTO>') as List)
+        .cast<UniswapV2MintV2DTO>()
+        .toList();
+
+    }
+    return null;
   }
 
-  /// Performs an HTTP 'GET /dapps/uniswapv2/poolDayData/historical' operation and returns the [Response].
-  /// Parameters:
+  /// GetPools (current) 🔥
   ///
-  /// * [int] startBlock:
-  ///
-  /// * [int] endBlock:
-  ///
-  /// * [DateTime] startDate:
-  ///
-  /// * [DateTime] endDate:
-  ///
-  /// * [String] poolId:
-  Future<Response> dappsUniswapv2PoolDayDataHistoricalGetWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
-    // ignore: prefer_const_declarations
-    final path = r'/dapps/uniswapv2/poolDayData/historical';
-
-    // ignore: prefer_final_locals
-    Object? postBody;
-
-    final queryParams = <QueryParam>[];
-    final headerParams = <String, String>{};
-    final formParams = <String, String>{};
-
-    if (startBlock != null) {
-      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
-    }
-    if (endBlock != null) {
-      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
-    }
-    if (startDate != null) {
-      queryParams.addAll(_queryParams('', 'startDate', startDate));
-    }
-    if (endDate != null) {
-      queryParams.addAll(_queryParams('', 'endDate', endDate));
-    }
-    if (poolId != null) {
-      queryParams.addAll(_queryParams('', 'poolId', poolId));
-    }
-
-    const contentTypes = <String>[];
-
-
-    return apiClient.invokeAPI(
-      path,
-      'GET',
-      queryParams,
-      postBody,
-      headerParams,
-      formParams,
-      contentTypes.isEmpty ? null : contentTypes.first,
-    );
-  }
-
-  /// Parameters:
-  ///
-  /// * [int] startBlock:
-  ///
-  /// * [int] endBlock:
-  ///
-  /// * [DateTime] startDate:
-  ///
-  /// * [DateTime] endDate:
-  ///
-  /// * [String] poolId:
-  Future<void> dappsUniswapv2PoolDayDataHistoricalGet({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
-    final response = await dappsUniswapv2PoolDayDataHistoricalGetWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
-    if (response.statusCode >= HttpStatus.badRequest) {
-      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
-    }
-  }
-
-  /// Performs an HTTP 'GET /dapps/uniswapv2/poolHourData/historical' operation and returns the [Response].
-  /// Parameters:
-  ///
-  /// * [int] startBlock:
-  ///
-  /// * [int] endBlock:
-  ///
-  /// * [DateTime] startDate:
-  ///
-  /// * [DateTime] endDate:
-  ///
-  /// * [String] poolId:
-  Future<Response> dappsUniswapv2PoolHourDataHistoricalGetWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
-    // ignore: prefer_const_declarations
-    final path = r'/dapps/uniswapv2/poolHourData/historical';
-
-    // ignore: prefer_final_locals
-    Object? postBody;
-
-    final queryParams = <QueryParam>[];
-    final headerParams = <String, String>{};
-    final formParams = <String, String>{};
-
-    if (startBlock != null) {
-      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
-    }
-    if (endBlock != null) {
-      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
-    }
-    if (startDate != null) {
-      queryParams.addAll(_queryParams('', 'startDate', startDate));
-    }
-    if (endDate != null) {
-      queryParams.addAll(_queryParams('', 'endDate', endDate));
-    }
-    if (poolId != null) {
-      queryParams.addAll(_queryParams('', 'poolId', poolId));
-    }
-
-    const contentTypes = <String>[];
-
-
-    return apiClient.invokeAPI(
-      path,
-      'GET',
-      queryParams,
-      postBody,
-      headerParams,
-      formParams,
-      contentTypes.isEmpty ? null : contentTypes.first,
-    );
-  }
-
-  /// Parameters:
-  ///
-  /// * [int] startBlock:
-  ///
-  /// * [int] endBlock:
-  ///
-  /// * [DateTime] startDate:
-  ///
-  /// * [DateTime] endDate:
-  ///
-  /// * [String] poolId:
-  Future<void> dappsUniswapv2PoolHourDataHistoricalGet({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
-    final response = await dappsUniswapv2PoolHourDataHistoricalGetWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
-    if (response.statusCode >= HttpStatus.badRequest) {
-      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
-    }
-  }
-
-  /// GetPools
+  /// Gets pools.
   ///
   /// Note: This method returns the HTTP [Response].
   ///
   /// Parameters:
   ///
   /// * [String] filterPoolId:
-  ///   Filter pool id
-  Future<Response> dappsUniswapv2PoolsCurrentGetWithHttpInfo({ String? filterPoolId, }) async {
+  Future<Response> uniswapV2GetPoolsCurrentWithHttpInfo({ String? filterPoolId, }) async {
     // ignore: prefer_const_declarations
     final path = r'/dapps/uniswapv2/pools/current';
 
@@ -671,14 +734,15 @@ class UniswapV2Api {
     );
   }
 
-  /// GetPools
+  /// GetPools (current) 🔥
+  ///
+  /// Gets pools.
   ///
   /// Parameters:
   ///
   /// * [String] filterPoolId:
-  ///   Filter pool id
-  Future<List<UniswapV2PairV2DTO>?> dappsUniswapv2PoolsCurrentGet({ String? filterPoolId, }) async {
-    final response = await dappsUniswapv2PoolsCurrentGetWithHttpInfo( filterPoolId: filterPoolId, );
+  Future<List<UniswapV2PairV2DTO>?> uniswapV2GetPoolsCurrent({ String? filterPoolId, }) async {
+    final response = await uniswapV2GetPoolsCurrentWithHttpInfo( filterPoolId: filterPoolId, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -695,19 +759,130 @@ class UniswapV2Api {
     return null;
   }
 
-  /// Performs an HTTP 'GET /dapps/uniswapv2/pools/historical' operation and returns the [Response].
+  /// GetPoolsDayData (historical)
+  ///
+  /// Gets pools day data.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
+  ///   
   ///
   /// * [String] poolId:
-  Future<Response> dappsUniswapv2PoolsHistoricalGetWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+  ///   
+  Future<Response> uniswapV2GetPoolsDayDataHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/uniswapv2/poolsDayData/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (poolId != null) {
+      queryParams.addAll(_queryParams('', 'poolId', poolId));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// GetPoolsDayData (historical)
+  ///
+  /// Gets pools day data.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<List<UniswapV2PairDayDataV2DTO>?> uniswapV2GetPoolsDayDataHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    final response = await uniswapV2GetPoolsDayDataHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV2PairDayDataV2DTO>') as List)
+        .cast<UniswapV2PairDayDataV2DTO>()
+        .toList();
+
+    }
+    return null;
+  }
+
+  /// GetPools (historical) 🔥
+  ///
+  /// Gets pools.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<Response> uniswapV2GetPoolsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
     // ignore: prefer_const_declarations
     final path = r'/dapps/uniswapv2/pools/historical';
 
@@ -748,28 +923,151 @@ class UniswapV2Api {
     );
   }
 
+  /// GetPools (historical) 🔥
+  ///
+  /// Gets pools.
+  ///
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
+  ///   
   ///
   /// * [String] poolId:
-  Future<void> dappsUniswapv2PoolsHistoricalGet({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
-    final response = await dappsUniswapv2PoolsHistoricalGetWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
+  ///   
+  Future<List<UniswapV2PairV2DTO>?> uniswapV2GetPoolsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    final response = await uniswapV2GetPoolsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV2PairV2DTO>') as List)
+        .cast<UniswapV2PairV2DTO>()
+        .toList();
+
+    }
+    return null;
   }
 
-  /// GetSwaps
+  /// GetPoolsHourData (historical)
+  ///
+  /// Gets pools tracked each our.
   ///
   /// Note: This method returns the HTTP [Response].
-  Future<Response> dappsUniswapv2SwapsCurrentGetWithHttpInfo() async {
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<Response> uniswapV2GetPoolsHourDataHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/uniswapv2/poolsHourData/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (poolId != null) {
+      queryParams.addAll(_queryParams('', 'poolId', poolId));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// GetPoolsHourData (historical)
+  ///
+  /// Gets pools tracked each our.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<List<UniswapV2PairHourDataV2DTO>?> uniswapV2GetPoolsHourDataHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    final response = await uniswapV2GetPoolsHourDataHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV2PairHourDataV2DTO>') as List)
+        .cast<UniswapV2PairHourDataV2DTO>()
+        .toList();
+
+    }
+    return null;
+  }
+
+  /// GetSwaps (current) 🔥
+  ///
+  /// Gets swaps.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  Future<Response> uniswapV2GetSwapsCurrentWithHttpInfo() async {
     // ignore: prefer_const_declarations
     final path = r'/dapps/uniswapv2/swaps/current';
 
@@ -794,9 +1092,11 @@ class UniswapV2Api {
     );
   }
 
-  /// GetSwaps
-  Future<List<UniswapV2SwapV2DTO>?> dappsUniswapv2SwapsCurrentGet() async {
-    final response = await dappsUniswapv2SwapsCurrentGetWithHttpInfo();
+  /// GetSwaps (current) 🔥
+  ///
+  /// Gets swaps.
+  Future<List<UniswapV2SwapV2DTO>?> uniswapV2GetSwapsCurrent() async {
+    final response = await uniswapV2GetSwapsCurrentWithHttpInfo();
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -813,19 +1113,29 @@ class UniswapV2Api {
     return null;
   }
 
-  /// Performs an HTTP 'GET /dapps/uniswapv2/swaps/historical' operation and returns the [Response].
+  /// GetSwaps (historical) 🔥
+  ///
+  /// Gets swaps.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
+  ///   
   ///
   /// * [String] poolId:
-  Future<Response> dappsUniswapv2SwapsHistoricalGetWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+  ///   
+  Future<Response> uniswapV2GetSwapsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
     // ignore: prefer_const_declarations
     final path = r'/dapps/uniswapv2/swaps/historical';
 
@@ -866,39 +1176,120 @@ class UniswapV2Api {
     );
   }
 
+  /// GetSwaps (historical) 🔥
+  ///
+  /// Gets swaps.
+  ///
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
+  ///   
   ///
   /// * [String] poolId:
-  Future<void> dappsUniswapv2SwapsHistoricalGet({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
-    final response = await dappsUniswapv2SwapsHistoricalGetWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
+  ///   
+  Future<List<UniswapV2SwapV2DTO>?> uniswapV2GetSwapsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    final response = await uniswapV2GetSwapsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV2SwapV2DTO>') as List)
+        .cast<UniswapV2SwapV2DTO>()
+        .toList();
+
+    }
+    return null;
   }
 
-  /// Performs an HTTP 'GET /dapps/uniswapv2/tokenDayData/historical' operation and returns the [Response].
+  /// GetTokens (current) 🔥
+  ///
+  /// Gets tokens.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  Future<Response> uniswapV2GetTokensCurrentWithHttpInfo() async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/uniswapv2/tokens/current';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// GetTokens (current) 🔥
+  ///
+  /// Gets tokens.
+  Future<List<UniswapV2TokenV2DTO>?> uniswapV2GetTokensCurrent() async {
+    final response = await uniswapV2GetTokensCurrentWithHttpInfo();
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV2TokenV2DTO>') as List)
+        .cast<UniswapV2TokenV2DTO>()
+        .toList();
+
+    }
+    return null;
+  }
+
+  /// GetTokensDayData (historical)
+  ///
+  /// Gets tokens day data.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
+  ///   
   ///
   /// * [String] tokenId:
-  Future<Response> dappsUniswapv2TokenDayDataHistoricalGetWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? tokenId, }) async {
+  ///   
+  Future<Response> uniswapV2GetTokensDayDataHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? tokenId, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/uniswapv2/tokenDayData/historical';
+    final path = r'/dapps/uniswapv2/tokensDayData/historical';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -937,55 +1328,28 @@ class UniswapV2Api {
     );
   }
 
+  /// GetTokensDayData (historical)
+  ///
+  /// Gets tokens day data.
+  ///
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
+  ///   
   ///
   /// * [String] tokenId:
-  Future<void> dappsUniswapv2TokenDayDataHistoricalGet({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? tokenId, }) async {
-    final response = await dappsUniswapv2TokenDayDataHistoricalGetWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, tokenId: tokenId, );
-    if (response.statusCode >= HttpStatus.badRequest) {
-      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
-    }
-  }
-
-  /// GetTokens
-  ///
-  /// Note: This method returns the HTTP [Response].
-  Future<Response> dappsUniswapv2TokensCurrentGetWithHttpInfo() async {
-    // ignore: prefer_const_declarations
-    final path = r'/dapps/uniswapv2/tokens/current';
-
-    // ignore: prefer_final_locals
-    Object? postBody;
-
-    final queryParams = <QueryParam>[];
-    final headerParams = <String, String>{};
-    final formParams = <String, String>{};
-
-    const contentTypes = <String>[];
-
-
-    return apiClient.invokeAPI(
-      path,
-      'GET',
-      queryParams,
-      postBody,
-      headerParams,
-      formParams,
-      contentTypes.isEmpty ? null : contentTypes.first,
-    );
-  }
-
-  /// GetTokens
-  Future<List<UniswapV2TokenV2DTO>?> dappsUniswapv2TokensCurrentGet() async {
-    final response = await dappsUniswapv2TokensCurrentGetWithHttpInfo();
+  ///   
+  Future<List<UniswapV2TokenDayDataV2DTO>?> uniswapV2GetTokensDayDataHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? tokenId, }) async {
+    final response = await uniswapV2GetTokensDayDataHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, tokenId: tokenId, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -994,27 +1358,37 @@ class UniswapV2Api {
     // FormatException when trying to decode an empty string.
     if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       final responseBody = await _decodeBodyBytes(response);
-      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV2TokenV2DTO>') as List)
-        .cast<UniswapV2TokenV2DTO>()
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV2TokenDayDataV2DTO>') as List)
+        .cast<UniswapV2TokenDayDataV2DTO>()
         .toList();
 
     }
     return null;
   }
 
-  /// Performs an HTTP 'GET /dapps/uniswapv2/tokens/historical' operation and returns the [Response].
+  /// GetTokens (historical) 🔥
+  ///
+  /// Gets tokens.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
+  ///   
   ///
   /// * [String] tokenId:
-  Future<Response> dappsUniswapv2TokensHistoricalGetWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? tokenId, }) async {
+  ///   
+  Future<Response> uniswapV2GetTokensHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? tokenId, }) async {
     // ignore: prefer_const_declarations
     final path = r'/dapps/uniswapv2/tokens/historical';
 
@@ -1055,35 +1429,64 @@ class UniswapV2Api {
     );
   }
 
+  /// GetTokens (historical) 🔥
+  ///
+  /// Gets tokens.
+  ///
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
+  ///   
   ///
   /// * [String] tokenId:
-  Future<void> dappsUniswapv2TokensHistoricalGet({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? tokenId, }) async {
-    final response = await dappsUniswapv2TokensHistoricalGetWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, tokenId: tokenId, );
+  ///   
+  Future<List<UniswapV2TokenV2DTO>?> uniswapV2GetTokensHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? tokenId, }) async {
+    final response = await uniswapV2GetTokensHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, tokenId: tokenId, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV2TokenV2DTO>') as List)
+        .cast<UniswapV2TokenV2DTO>()
+        .toList();
+
+    }
+    return null;
   }
 
-  /// Performs an HTTP 'GET /dapps/uniswapv2/transactions/historical' operation and returns the [Response].
+  /// GetTransactions (historical)
+  ///
+  /// Gets transactions.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
-  Future<Response> dappsUniswapv2TransactionsHistoricalGetWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
+  ///   
+  Future<Response> uniswapV2GetTransactionsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
     // ignore: prefer_const_declarations
     final path = r'/dapps/uniswapv2/transactions/historical';
 
@@ -1121,33 +1524,61 @@ class UniswapV2Api {
     );
   }
 
+  /// GetTransactions (historical)
+  ///
+  /// Gets transactions.
+  ///
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
-  Future<void> dappsUniswapv2TransactionsHistoricalGet({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
-    final response = await dappsUniswapv2TransactionsHistoricalGetWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, );
+  ///   
+  Future<List<UniswapV2TransactionV2DTO>?> uniswapV2GetTransactionsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
+    final response = await uniswapV2GetTransactionsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV2TransactionV2DTO>') as List)
+        .cast<UniswapV2TransactionV2DTO>()
+        .toList();
+
+    }
+    return null;
   }
 
-  /// Performs an HTTP 'GET /dapps/uniswapv2/users/historical' operation and returns the [Response].
+  /// GetUsers (historical)
+  ///
+  /// Gets users.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
-  Future<Response> dappsUniswapv2UsersHistoricalGetWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
+  ///   
+  Future<Response> uniswapV2GetUsersHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
     // ignore: prefer_const_declarations
     final path = r'/dapps/uniswapv2/users/historical';
 
@@ -1185,19 +1616,38 @@ class UniswapV2Api {
     );
   }
 
+  /// GetUsers (historical)
+  ///
+  /// Gets users.
+  ///
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
-  Future<void> dappsUniswapv2UsersHistoricalGet({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
-    final response = await dappsUniswapv2UsersHistoricalGetWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, );
+  ///   
+  Future<List<UniswapV2UserV2DTO>?> uniswapV2GetUsersHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
+    final response = await uniswapV2GetUsersHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV2UserV2DTO>') as List)
+        .cast<UniswapV2UserV2DTO>()
+        .toList();
+
+    }
+    return null;
   }
 }

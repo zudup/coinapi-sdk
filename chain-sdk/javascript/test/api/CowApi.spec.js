@@ -48,50 +48,50 @@
   }
 
   describe('CowApi', function() {
-    describe('dappsCowOrdersHistoricalGet', function() {
-      it('should call dappsCowOrdersHistoricalGet successfully', function(done) {
-        //uncomment below and update the code to test dappsCowOrdersHistoricalGet
-        //instance.dappsCowOrdersHistoricalGet(function(error) {
+    describe('cowGetOrdersHistorical', function() {
+      it('should call cowGetOrdersHistorical successfully', function(done) {
+        //uncomment below and update the code to test cowGetOrdersHistorical
+        //instance.cowGetOrdersHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('dappsCowSettlementHistoricalGet', function() {
-      it('should call dappsCowSettlementHistoricalGet successfully', function(done) {
-        //uncomment below and update the code to test dappsCowSettlementHistoricalGet
-        //instance.dappsCowSettlementHistoricalGet(function(error) {
+    describe('cowGetSettlementsHistorical', function() {
+      it('should call cowGetSettlementsHistorical successfully', function(done) {
+        //uncomment below and update the code to test cowGetSettlementsHistorical
+        //instance.cowGetSettlementsHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('dappsCowTokensHistoricalGet', function() {
-      it('should call dappsCowTokensHistoricalGet successfully', function(done) {
-        //uncomment below and update the code to test dappsCowTokensHistoricalGet
-        //instance.dappsCowTokensHistoricalGet(function(error) {
+    describe('cowGetTokensHistorical', function() {
+      it('should call cowGetTokensHistorical successfully', function(done) {
+        //uncomment below and update the code to test cowGetTokensHistorical
+        //instance.cowGetTokensHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('dappsCowTradesHistoricalGet', function() {
-      it('should call dappsCowTradesHistoricalGet successfully', function(done) {
-        //uncomment below and update the code to test dappsCowTradesHistoricalGet
-        //instance.dappsCowTradesHistoricalGet(function(error) {
+    describe('cowGetTradesHistorical', function() {
+      it('should call cowGetTradesHistorical successfully', function(done) {
+        //uncomment below and update the code to test cowGetTradesHistorical
+        //instance.cowGetTradesHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('dappsCowUsersHistoricalGet', function() {
-      it('should call dappsCowUsersHistoricalGet successfully', function(done) {
-        //uncomment below and update the code to test dappsCowUsersHistoricalGet
-        //instance.dappsCowUsersHistoricalGet(function(error) {
+    describe('cowGetUsersHistorical', function() {
+      it('should call cowGetUsersHistorical successfully', function(done) {
+        //uncomment below and update the code to test cowGetUsersHistorical
+        //instance.cowGetUsersHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

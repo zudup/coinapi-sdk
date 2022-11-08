@@ -17,28 +17,48 @@ void main() {
   // final instance = CowApi();
 
   group('tests for CowApi', () {
-    //Future dappsCowOrdersHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
-    test('test dappsCowOrdersHistoricalGet', () async {
+    // GetOrders (historical)
+    //
+    // Gets orders.
+    //
+    //Future<List<CowOrderDTO>> cowGetOrdersHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
+    test('test cowGetOrdersHistorical', () async {
       // TODO
     });
 
-    //Future dappsCowSettlementHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
-    test('test dappsCowSettlementHistoricalGet', () async {
+    // GetSettlements (historical)
+    //
+    // Gets settlements.
+    //
+    //Future<List<CowSettlementDTO>> cowGetSettlementsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
+    test('test cowGetSettlementsHistorical', () async {
       // TODO
     });
 
-    //Future dappsCowTokensHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String tokenId }) async
-    test('test dappsCowTokensHistoricalGet', () async {
+    // GetTokens (historical) 🔥
+    //
+    // Gets tokens.
+    //
+    //Future<List<CowTokenDTO>> cowGetTokensHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String tokenId }) async
+    test('test cowGetTokensHistorical', () async {
       // TODO
     });
 
-    //Future dappsCowTradesHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
-    test('test dappsCowTradesHistoricalGet', () async {
+    // GetTrades (historical) 🔥
+    //
+    // Gets trades.
+    //
+    //Future<List<CowTradeDTO>> cowGetTradesHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
+    test('test cowGetTradesHistorical', () async {
       // TODO
     });
 
-    //Future dappsCowUsersHistoricalGet({ int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
-    test('test dappsCowUsersHistoricalGet', () async {
+    // GetUsers (historical)
+    //
+    // Gets users.
+    //
+    //Future<List<CowUserDTO>> cowGetUsersHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
+    test('test cowGetUsersHistorical', () async {
       // TODO
     });
 

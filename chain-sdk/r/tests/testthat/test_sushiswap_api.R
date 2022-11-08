@@ -5,15 +5,37 @@ context("Test SushiswapApi")
 
 api_instance <- SushiswapApi$new()
 
+test_that("CurveGetExchangesCurrent", {
+  # tests for CurveGetExchangesCurrent
+  # base path: https://onchain.coinapi.io
+  # GetExchanges (current) 🔥
+  # Gets exchanges.
+  # @return [array[CurveExchangeDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("DexGetTradesCurrent", {
+  # tests for DexGetTradesCurrent
+  # base path: https://onchain.coinapi.io
+  # GetTrades (current) 🔥
+  # Gets trades.
+  # @return [array[DexTradeDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
 test_that("SushiswapGetBundlesHistorical", {
   # tests for SushiswapGetBundlesHistorical
   # base path: https://onchain.coinapi.io
   # GetBundles (historical)
   # Gets bundles.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
+  # @param start_block integer AAAAAAAAAA (optional)
+  # @param end_block integer BBBBBBBBBBBB (optional)
+  # @param start_date character CCCCCCCCC (optional)
+  # @param end_date character DDDDDDDDDDD (optional)
   # @return [array[SushiswapBundleDTO]]
 
   # uncomment below to test the operation
@@ -132,7 +154,7 @@ test_that("SushiswapGetMintsHistorical", {
 test_that("SushiswapGetPoolsCurrent", {
   # tests for SushiswapGetPoolsCurrent
   # base path: https://onchain.coinapi.io
-  # GetPools (current)
+  # GetPools (current) 🔥
   # Gets pools.
   # @return [array[SushiswapPairDTO]]
 
@@ -159,13 +181,13 @@ test_that("SushiswapGetPoolsDayDataHistorical", {
 test_that("SushiswapGetPoolsHistorical", {
   # tests for SushiswapGetPoolsHistorical
   # base path: https://onchain.coinapi.io
-  # GetPools (historical)
+  # GetPools (historical) 🔥
   # Gets list of pools for given filters.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param pool_id character  (optional)
+  # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+  # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+  # @param start_date character The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+  # @param end_date character The end date of timeframe (optional)
+  # @param pool_id character The pool address. (optional)
   # @return [array[SushiswapPairDTO]]
 
   # uncomment below to test the operation
@@ -191,7 +213,7 @@ test_that("SushiswapGetPoolsHourDataHistorical", {
 test_that("SushiswapGetSwapsCurrent", {
   # tests for SushiswapGetSwapsCurrent
   # base path: https://onchain.coinapi.io
-  # GetSwaps (current)
+  # GetSwaps (current) 🔥
   # Gets swaps.
   # @return [array[SushiswapSwapDTO]]
 
@@ -202,13 +224,13 @@ test_that("SushiswapGetSwapsCurrent", {
 test_that("SushiswapGetSwapsHistorical", {
   # tests for SushiswapGetSwapsHistorical
   # base path: https://onchain.coinapi.io
-  # GetSwaps (historical)
+  # GetSwaps (historical) 🔥
   # Gets list of swaps for given filters.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param pool_id character  (optional)
+  # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+  # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+  # @param start_date character The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+  # @param end_date character The end date of timeframe (optional)
+  # @param pool_id character The pool address. (optional)
   # @return [array[SushiswapSwapDTO]]
 
   # uncomment below to test the operation
@@ -218,7 +240,7 @@ test_that("SushiswapGetSwapsHistorical", {
 test_that("SushiswapGetTokensCurrent", {
   # tests for SushiswapGetTokensCurrent
   # base path: https://onchain.coinapi.io
-  # GetTokens (current)
+  # GetTokens (current) 🔥
   # Gets tokens.
   # @return [array[SushiswapTokenDTO]]
 
@@ -245,13 +267,13 @@ test_that("SushiswapGetTokensDayDataHistorical", {
 test_that("SushiswapGetTokensHistorical", {
   # tests for SushiswapGetTokensHistorical
   # base path: https://onchain.coinapi.io
-  # GetTokens (historical)
+  # GetTokens (historical) 🔥
   # Gets list of tokens for given filters.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param token_id character  (optional)
+  # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+  # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+  # @param start_date character The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+  # @param end_date character The end date of timeframe (optional)
+  # @param token_id character The token address. (optional)
   # @return [array[SushiswapTokenDTO]]
 
   # uncomment below to test the operation

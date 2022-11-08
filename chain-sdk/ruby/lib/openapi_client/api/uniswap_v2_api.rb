@@ -19,26 +19,30 @@ module OpenapiClient
     def initialize(api_client = ApiClient.default)
       @api_client = api_client
     end
+    # GetBundles (historical)
+    # Gets bundles.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
     # @option opts [Time] :start_date 
     # @option opts [Time] :end_date 
-    # @return [nil]
-    def dapps_uniswapv2_bundles_historical_get(opts = {})
-      dapps_uniswapv2_bundles_historical_get_with_http_info(opts)
-      nil
+    # @return [Array<UniswapV2BundleV2DTO>]
+    def uniswap_v2_get_bundles__historical(opts = {})
+      data, _status_code, _headers = uniswap_v2_get_bundles__historical_with_http_info(opts)
+      data
     end
 
+    # GetBundles (historical)
+    # Gets bundles.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
     # @option opts [Time] :start_date 
     # @option opts [Time] :end_date 
-    # @return [Array<(nil, Integer, Hash)>] nil, response status code and response headers
-    def dapps_uniswapv2_bundles_historical_get_with_http_info(opts = {})
+    # @return [Array<(Array<UniswapV2BundleV2DTO>, Integer, Hash)>] Array<UniswapV2BundleV2DTO> data, response status code and response headers
+    def uniswap_v2_get_bundles__historical_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: UniswapV2Api.dapps_uniswapv2_bundles_historical_get ...'
+        @api_client.config.logger.debug 'Calling API: UniswapV2Api.uniswap_v2_get_bundles__historical ...'
       end
       # resource path
       local_var_path = '/dapps/uniswapv2/bundles/historical'
@@ -52,6 +56,8 @@ module OpenapiClient
 
       # header parameters
       header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
 
       # form parameters
       form_params = opts[:form_params] || {}
@@ -60,13 +66,13 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type]
+      return_type = opts[:debug_return_type] || 'Array<UniswapV2BundleV2DTO>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"UniswapV2Api.dapps_uniswapv2_bundles_historical_get",
+        :operation => :"UniswapV2Api.uniswap_v2_get_bundles__historical",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -77,33 +83,37 @@ module OpenapiClient
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: UniswapV2Api#dapps_uniswapv2_bundles_historical_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: UniswapV2Api#uniswap_v2_get_bundles__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
+    # GetBurns (historical)
+    # Gets burns.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
     # @option opts [Time] :start_date 
     # @option opts [Time] :end_date 
     # @option opts [String] :pool_id 
-    # @return [nil]
-    def dapps_uniswapv2_burns_historical_get(opts = {})
-      dapps_uniswapv2_burns_historical_get_with_http_info(opts)
-      nil
+    # @return [Array<UniswapV2BurnV2DTO>]
+    def uniswap_v2_get_burns__historical(opts = {})
+      data, _status_code, _headers = uniswap_v2_get_burns__historical_with_http_info(opts)
+      data
     end
 
+    # GetBurns (historical)
+    # Gets burns.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
     # @option opts [Time] :start_date 
     # @option opts [Time] :end_date 
     # @option opts [String] :pool_id 
-    # @return [Array<(nil, Integer, Hash)>] nil, response status code and response headers
-    def dapps_uniswapv2_burns_historical_get_with_http_info(opts = {})
+    # @return [Array<(Array<UniswapV2BurnV2DTO>, Integer, Hash)>] Array<UniswapV2BurnV2DTO> data, response status code and response headers
+    def uniswap_v2_get_burns__historical_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: UniswapV2Api.dapps_uniswapv2_burns_historical_get ...'
+        @api_client.config.logger.debug 'Calling API: UniswapV2Api.uniswap_v2_get_burns__historical ...'
       end
       # resource path
       local_var_path = '/dapps/uniswapv2/burns/historical'
@@ -118,6 +128,8 @@ module OpenapiClient
 
       # header parameters
       header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
 
       # form parameters
       form_params = opts[:form_params] || {}
@@ -126,13 +138,13 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type]
+      return_type = opts[:debug_return_type] || 'Array<UniswapV2BurnV2DTO>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"UniswapV2Api.dapps_uniswapv2_burns_historical_get",
+        :operation => :"UniswapV2Api.uniswap_v2_get_burns__historical",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -143,31 +155,35 @@ module OpenapiClient
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: UniswapV2Api#dapps_uniswapv2_burns_historical_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: UniswapV2Api#uniswap_v2_get_burns__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
+    # GetDayData (historical)
+    # Gets uniswapv2 day data.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
     # @option opts [Time] :start_date 
     # @option opts [Time] :end_date 
-    # @return [nil]
-    def dapps_uniswapv2_day_data_historical_get(opts = {})
-      dapps_uniswapv2_day_data_historical_get_with_http_info(opts)
-      nil
+    # @return [Array<UniswapV2UniswapDayDataV2DTO>]
+    def uniswap_v2_get_day_data__historical(opts = {})
+      data, _status_code, _headers = uniswap_v2_get_day_data__historical_with_http_info(opts)
+      data
     end
 
+    # GetDayData (historical)
+    # Gets uniswapv2 day data.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
     # @option opts [Time] :start_date 
     # @option opts [Time] :end_date 
-    # @return [Array<(nil, Integer, Hash)>] nil, response status code and response headers
-    def dapps_uniswapv2_day_data_historical_get_with_http_info(opts = {})
+    # @return [Array<(Array<UniswapV2UniswapDayDataV2DTO>, Integer, Hash)>] Array<UniswapV2UniswapDayDataV2DTO> data, response status code and response headers
+    def uniswap_v2_get_day_data__historical_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: UniswapV2Api.dapps_uniswapv2_day_data_historical_get ...'
+        @api_client.config.logger.debug 'Calling API: UniswapV2Api.uniswap_v2_get_day_data__historical ...'
       end
       # resource path
       local_var_path = '/dapps/uniswapv2/dayData/historical'
@@ -181,6 +197,8 @@ module OpenapiClient
 
       # header parameters
       header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
 
       # form parameters
       form_params = opts[:form_params] || {}
@@ -189,13 +207,13 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type]
+      return_type = opts[:debug_return_type] || 'Array<UniswapV2UniswapDayDataV2DTO>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"UniswapV2Api.dapps_uniswapv2_day_data_historical_get",
+        :operation => :"UniswapV2Api.uniswap_v2_get_day_data__historical",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -206,31 +224,35 @@ module OpenapiClient
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: UniswapV2Api#dapps_uniswapv2_day_data_historical_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: UniswapV2Api#uniswap_v2_get_day_data__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
+    # GetFactory (historical)
+    # Gets factory.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
     # @option opts [Time] :start_date 
     # @option opts [Time] :end_date 
-    # @return [nil]
-    def dapps_uniswapv2_factory_historical_get(opts = {})
-      dapps_uniswapv2_factory_historical_get_with_http_info(opts)
-      nil
+    # @return [Array<UniswapV2UniswapFactoryV2DTO>]
+    def uniswap_v2_get_factory__historical(opts = {})
+      data, _status_code, _headers = uniswap_v2_get_factory__historical_with_http_info(opts)
+      data
     end
 
+    # GetFactory (historical)
+    # Gets factory.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
     # @option opts [Time] :start_date 
     # @option opts [Time] :end_date 
-    # @return [Array<(nil, Integer, Hash)>] nil, response status code and response headers
-    def dapps_uniswapv2_factory_historical_get_with_http_info(opts = {})
+    # @return [Array<(Array<UniswapV2UniswapFactoryV2DTO>, Integer, Hash)>] Array<UniswapV2UniswapFactoryV2DTO> data, response status code and response headers
+    def uniswap_v2_get_factory__historical_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: UniswapV2Api.dapps_uniswapv2_factory_historical_get ...'
+        @api_client.config.logger.debug 'Calling API: UniswapV2Api.uniswap_v2_get_factory__historical ...'
       end
       # resource path
       local_var_path = '/dapps/uniswapv2/factory/historical'
@@ -244,6 +266,8 @@ module OpenapiClient
 
       # header parameters
       header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
 
       # form parameters
       form_params = opts[:form_params] || {}
@@ -252,13 +276,13 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type]
+      return_type = opts[:debug_return_type] || 'Array<UniswapV2UniswapFactoryV2DTO>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"UniswapV2Api.dapps_uniswapv2_factory_historical_get",
+        :operation => :"UniswapV2Api.uniswap_v2_get_factory__historical",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -269,36 +293,40 @@ module OpenapiClient
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: UniswapV2Api#dapps_uniswapv2_factory_historical_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: UniswapV2Api#uniswap_v2_get_factory__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
+    # GetLiquidityPositions (historical)
+    # Gets liquidity positions.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
     # @option opts [Time] :start_date 
     # @option opts [Time] :end_date 
     # @option opts [String] :pool_id 
-    # @return [nil]
-    def dapps_uniswapv2_liquidity_position_historical_get(opts = {})
-      dapps_uniswapv2_liquidity_position_historical_get_with_http_info(opts)
-      nil
+    # @return [Array<UniswapV2LiquidityPositionV2DTO>]
+    def uniswap_v2_get_liquidity_positions__historical(opts = {})
+      data, _status_code, _headers = uniswap_v2_get_liquidity_positions__historical_with_http_info(opts)
+      data
     end
 
+    # GetLiquidityPositions (historical)
+    # Gets liquidity positions.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
     # @option opts [Time] :start_date 
     # @option opts [Time] :end_date 
     # @option opts [String] :pool_id 
-    # @return [Array<(nil, Integer, Hash)>] nil, response status code and response headers
-    def dapps_uniswapv2_liquidity_position_historical_get_with_http_info(opts = {})
+    # @return [Array<(Array<UniswapV2LiquidityPositionV2DTO>, Integer, Hash)>] Array<UniswapV2LiquidityPositionV2DTO> data, response status code and response headers
+    def uniswap_v2_get_liquidity_positions__historical_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: UniswapV2Api.dapps_uniswapv2_liquidity_position_historical_get ...'
+        @api_client.config.logger.debug 'Calling API: UniswapV2Api.uniswap_v2_get_liquidity_positions__historical ...'
       end
       # resource path
-      local_var_path = '/dapps/uniswapv2/liquidityPosition/historical'
+      local_var_path = '/dapps/uniswapv2/liquidityPositions/historical'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -310,6 +338,8 @@ module OpenapiClient
 
       # header parameters
       header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
 
       # form parameters
       form_params = opts[:form_params] || {}
@@ -318,13 +348,13 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type]
+      return_type = opts[:debug_return_type] || 'Array<UniswapV2LiquidityPositionV2DTO>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"UniswapV2Api.dapps_uniswapv2_liquidity_position_historical_get",
+        :operation => :"UniswapV2Api.uniswap_v2_get_liquidity_positions__historical",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -335,36 +365,40 @@ module OpenapiClient
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: UniswapV2Api#dapps_uniswapv2_liquidity_position_historical_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: UniswapV2Api#uniswap_v2_get_liquidity_positions__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
+    # GetLiquidityPositionsSnapshots (historical)
+    # Gets liquidity positions snapshots.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
     # @option opts [Time] :start_date 
     # @option opts [Time] :end_date 
     # @option opts [String] :pool_id 
-    # @return [nil]
-    def dapps_uniswapv2_liquidity_position_snapshots_historical_get(opts = {})
-      dapps_uniswapv2_liquidity_position_snapshots_historical_get_with_http_info(opts)
-      nil
+    # @return [Array<UniswapV2LiquidityPositionSnapshotV2DTO>]
+    def uniswap_v2_get_liquidity_positions_snapshots__historical(opts = {})
+      data, _status_code, _headers = uniswap_v2_get_liquidity_positions_snapshots__historical_with_http_info(opts)
+      data
     end
 
+    # GetLiquidityPositionsSnapshots (historical)
+    # Gets liquidity positions snapshots.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
     # @option opts [Time] :start_date 
     # @option opts [Time] :end_date 
     # @option opts [String] :pool_id 
-    # @return [Array<(nil, Integer, Hash)>] nil, response status code and response headers
-    def dapps_uniswapv2_liquidity_position_snapshots_historical_get_with_http_info(opts = {})
+    # @return [Array<(Array<UniswapV2LiquidityPositionSnapshotV2DTO>, Integer, Hash)>] Array<UniswapV2LiquidityPositionSnapshotV2DTO> data, response status code and response headers
+    def uniswap_v2_get_liquidity_positions_snapshots__historical_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: UniswapV2Api.dapps_uniswapv2_liquidity_position_snapshots_historical_get ...'
+        @api_client.config.logger.debug 'Calling API: UniswapV2Api.uniswap_v2_get_liquidity_positions_snapshots__historical ...'
       end
       # resource path
-      local_var_path = '/dapps/uniswapv2/liquidityPositionSnapshots/historical'
+      local_var_path = '/dapps/uniswapv2/liquidityPositionsSnapshots/historical'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -376,6 +410,8 @@ module OpenapiClient
 
       # header parameters
       header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
 
       # form parameters
       form_params = opts[:form_params] || {}
@@ -384,13 +420,13 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type]
+      return_type = opts[:debug_return_type] || 'Array<UniswapV2LiquidityPositionSnapshotV2DTO>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"UniswapV2Api.dapps_uniswapv2_liquidity_position_snapshots_historical_get",
+        :operation => :"UniswapV2Api.uniswap_v2_get_liquidity_positions_snapshots__historical",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -401,33 +437,37 @@ module OpenapiClient
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: UniswapV2Api#dapps_uniswapv2_liquidity_position_snapshots_historical_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: UniswapV2Api#uniswap_v2_get_liquidity_positions_snapshots__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
+    # GetMints (historical)
+    # Gets mints.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
     # @option opts [Time] :start_date 
     # @option opts [Time] :end_date 
     # @option opts [String] :pool_id 
-    # @return [nil]
-    def dapps_uniswapv2_mints_historical_get(opts = {})
-      dapps_uniswapv2_mints_historical_get_with_http_info(opts)
-      nil
+    # @return [Array<UniswapV2MintV2DTO>]
+    def uniswap_v2_get_mints__historical(opts = {})
+      data, _status_code, _headers = uniswap_v2_get_mints__historical_with_http_info(opts)
+      data
     end
 
+    # GetMints (historical)
+    # Gets mints.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
     # @option opts [Time] :start_date 
     # @option opts [Time] :end_date 
     # @option opts [String] :pool_id 
-    # @return [Array<(nil, Integer, Hash)>] nil, response status code and response headers
-    def dapps_uniswapv2_mints_historical_get_with_http_info(opts = {})
+    # @return [Array<(Array<UniswapV2MintV2DTO>, Integer, Hash)>] Array<UniswapV2MintV2DTO> data, response status code and response headers
+    def uniswap_v2_get_mints__historical_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: UniswapV2Api.dapps_uniswapv2_mints_historical_get ...'
+        @api_client.config.logger.debug 'Calling API: UniswapV2Api.uniswap_v2_get_mints__historical ...'
       end
       # resource path
       local_var_path = '/dapps/uniswapv2/mints/historical'
@@ -442,6 +482,8 @@ module OpenapiClient
 
       # header parameters
       header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
 
       # form parameters
       form_params = opts[:form_params] || {}
@@ -450,13 +492,13 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type]
+      return_type = opts[:debug_return_type] || 'Array<UniswapV2MintV2DTO>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"UniswapV2Api.dapps_uniswapv2_mints_historical_get",
+        :operation => :"UniswapV2Api.uniswap_v2_get_mints__historical",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -467,159 +509,29 @@ module OpenapiClient
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: UniswapV2Api#dapps_uniswapv2_mints_historical_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: UniswapV2Api#uniswap_v2_get_mints__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
+    # GetPools (current) 🔥
+    # Gets pools.
     # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :start_block 
-    # @option opts [Integer] :end_block 
-    # @option opts [Time] :start_date 
-    # @option opts [Time] :end_date 
-    # @option opts [String] :pool_id 
-    # @return [nil]
-    def dapps_uniswapv2_pool_day_data_historical_get(opts = {})
-      dapps_uniswapv2_pool_day_data_historical_get_with_http_info(opts)
-      nil
-    end
-
-    # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :start_block 
-    # @option opts [Integer] :end_block 
-    # @option opts [Time] :start_date 
-    # @option opts [Time] :end_date 
-    # @option opts [String] :pool_id 
-    # @return [Array<(nil, Integer, Hash)>] nil, response status code and response headers
-    def dapps_uniswapv2_pool_day_data_historical_get_with_http_info(opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: UniswapV2Api.dapps_uniswapv2_pool_day_data_historical_get ...'
-      end
-      # resource path
-      local_var_path = '/dapps/uniswapv2/poolDayData/historical'
-
-      # query parameters
-      query_params = opts[:query_params] || {}
-      query_params[:'startBlock'] = opts[:'start_block'] if !opts[:'start_block'].nil?
-      query_params[:'endBlock'] = opts[:'end_block'] if !opts[:'end_block'].nil?
-      query_params[:'startDate'] = opts[:'start_date'] if !opts[:'start_date'].nil?
-      query_params[:'endDate'] = opts[:'end_date'] if !opts[:'end_date'].nil?
-      query_params[:'poolId'] = opts[:'pool_id'] if !opts[:'pool_id'].nil?
-
-      # header parameters
-      header_params = opts[:header_params] || {}
-
-      # form parameters
-      form_params = opts[:form_params] || {}
-
-      # http body (model)
-      post_body = opts[:debug_body]
-
-      # return_type
-      return_type = opts[:debug_return_type]
-
-      # auth_names
-      auth_names = opts[:debug_auth_names] || []
-
-      new_options = opts.merge(
-        :operation => :"UniswapV2Api.dapps_uniswapv2_pool_day_data_historical_get",
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => return_type
-      )
-
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: UniswapV2Api#dapps_uniswapv2_pool_day_data_historical_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :start_block 
-    # @option opts [Integer] :end_block 
-    # @option opts [Time] :start_date 
-    # @option opts [Time] :end_date 
-    # @option opts [String] :pool_id 
-    # @return [nil]
-    def dapps_uniswapv2_pool_hour_data_historical_get(opts = {})
-      dapps_uniswapv2_pool_hour_data_historical_get_with_http_info(opts)
-      nil
-    end
-
-    # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :start_block 
-    # @option opts [Integer] :end_block 
-    # @option opts [Time] :start_date 
-    # @option opts [Time] :end_date 
-    # @option opts [String] :pool_id 
-    # @return [Array<(nil, Integer, Hash)>] nil, response status code and response headers
-    def dapps_uniswapv2_pool_hour_data_historical_get_with_http_info(opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: UniswapV2Api.dapps_uniswapv2_pool_hour_data_historical_get ...'
-      end
-      # resource path
-      local_var_path = '/dapps/uniswapv2/poolHourData/historical'
-
-      # query parameters
-      query_params = opts[:query_params] || {}
-      query_params[:'startBlock'] = opts[:'start_block'] if !opts[:'start_block'].nil?
-      query_params[:'endBlock'] = opts[:'end_block'] if !opts[:'end_block'].nil?
-      query_params[:'startDate'] = opts[:'start_date'] if !opts[:'start_date'].nil?
-      query_params[:'endDate'] = opts[:'end_date'] if !opts[:'end_date'].nil?
-      query_params[:'poolId'] = opts[:'pool_id'] if !opts[:'pool_id'].nil?
-
-      # header parameters
-      header_params = opts[:header_params] || {}
-
-      # form parameters
-      form_params = opts[:form_params] || {}
-
-      # http body (model)
-      post_body = opts[:debug_body]
-
-      # return_type
-      return_type = opts[:debug_return_type]
-
-      # auth_names
-      auth_names = opts[:debug_auth_names] || []
-
-      new_options = opts.merge(
-        :operation => :"UniswapV2Api.dapps_uniswapv2_pool_hour_data_historical_get",
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => return_type
-      )
-
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: UniswapV2Api#dapps_uniswapv2_pool_hour_data_historical_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # GetPools
-    # @param [Hash] opts the optional parameters
-    # @option opts [String] :filter_pool_id Filter pool id
+    # @option opts [String] :filter_pool_id 
     # @return [Array<UniswapV2PairV2DTO>]
-    def dapps_uniswapv2_pools_current_get(opts = {})
-      data, _status_code, _headers = dapps_uniswapv2_pools_current_get_with_http_info(opts)
+    def uniswap_v2_get_pools__current(opts = {})
+      data, _status_code, _headers = uniswap_v2_get_pools__current_with_http_info(opts)
       data
     end
 
-    # GetPools
+    # GetPools (current) 🔥
+    # Gets pools.
     # @param [Hash] opts the optional parameters
-    # @option opts [String] :filter_pool_id Filter pool id
+    # @option opts [String] :filter_pool_id 
     # @return [Array<(Array<UniswapV2PairV2DTO>, Integer, Hash)>] Array<UniswapV2PairV2DTO> data, response status code and response headers
-    def dapps_uniswapv2_pools_current_get_with_http_info(opts = {})
+    def uniswap_v2_get_pools__current_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: UniswapV2Api.dapps_uniswapv2_pools_current_get ...'
+        @api_client.config.logger.debug 'Calling API: UniswapV2Api.uniswap_v2_get_pools__current ...'
       end
       # resource path
       local_var_path = '/dapps/uniswapv2/pools/current'
@@ -646,7 +558,7 @@ module OpenapiClient
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"UniswapV2Api.dapps_uniswapv2_pools_current_get",
+        :operation => :"UniswapV2Api.uniswap_v2_get_pools__current",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -657,33 +569,37 @@ module OpenapiClient
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: UniswapV2Api#dapps_uniswapv2_pools_current_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: UniswapV2Api#uniswap_v2_get_pools__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
+    # GetPools (historical) 🔥
+    # Gets pools.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
     # @option opts [Time] :start_date 
     # @option opts [Time] :end_date 
     # @option opts [String] :pool_id 
-    # @return [nil]
-    def dapps_uniswapv2_pools_historical_get(opts = {})
-      dapps_uniswapv2_pools_historical_get_with_http_info(opts)
-      nil
+    # @return [Array<UniswapV2PairV2DTO>]
+    def uniswap_v2_get_pools__historical(opts = {})
+      data, _status_code, _headers = uniswap_v2_get_pools__historical_with_http_info(opts)
+      data
     end
 
+    # GetPools (historical) 🔥
+    # Gets pools.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
     # @option opts [Time] :start_date 
     # @option opts [Time] :end_date 
     # @option opts [String] :pool_id 
-    # @return [Array<(nil, Integer, Hash)>] nil, response status code and response headers
-    def dapps_uniswapv2_pools_historical_get_with_http_info(opts = {})
+    # @return [Array<(Array<UniswapV2PairV2DTO>, Integer, Hash)>] Array<UniswapV2PairV2DTO> data, response status code and response headers
+    def uniswap_v2_get_pools__historical_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: UniswapV2Api.dapps_uniswapv2_pools_historical_get ...'
+        @api_client.config.logger.debug 'Calling API: UniswapV2Api.uniswap_v2_get_pools__historical ...'
       end
       # resource path
       local_var_path = '/dapps/uniswapv2/pools/historical'
@@ -698,6 +614,8 @@ module OpenapiClient
 
       # header parameters
       header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
 
       # form parameters
       form_params = opts[:form_params] || {}
@@ -706,13 +624,13 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type]
+      return_type = opts[:debug_return_type] || 'Array<UniswapV2PairV2DTO>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"UniswapV2Api.dapps_uniswapv2_pools_historical_get",
+        :operation => :"UniswapV2Api.uniswap_v2_get_pools__historical",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -723,25 +641,171 @@ module OpenapiClient
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: UniswapV2Api#dapps_uniswapv2_pools_historical_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: UniswapV2Api#uniswap_v2_get_pools__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
-    # GetSwaps
+    # GetPoolsDayData (historical)
+    # Gets pools day data.
     # @param [Hash] opts the optional parameters
-    # @return [Array<UniswapV2SwapV2DTO>]
-    def dapps_uniswapv2_swaps_current_get(opts = {})
-      data, _status_code, _headers = dapps_uniswapv2_swaps_current_get_with_http_info(opts)
+    # @option opts [Integer] :start_block 
+    # @option opts [Integer] :end_block 
+    # @option opts [Time] :start_date 
+    # @option opts [Time] :end_date 
+    # @option opts [String] :pool_id 
+    # @return [Array<UniswapV2PairDayDataV2DTO>]
+    def uniswap_v2_get_pools_day_data__historical(opts = {})
+      data, _status_code, _headers = uniswap_v2_get_pools_day_data__historical_with_http_info(opts)
       data
     end
 
-    # GetSwaps
+    # GetPoolsDayData (historical)
+    # Gets pools day data.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :start_block 
+    # @option opts [Integer] :end_block 
+    # @option opts [Time] :start_date 
+    # @option opts [Time] :end_date 
+    # @option opts [String] :pool_id 
+    # @return [Array<(Array<UniswapV2PairDayDataV2DTO>, Integer, Hash)>] Array<UniswapV2PairDayDataV2DTO> data, response status code and response headers
+    def uniswap_v2_get_pools_day_data__historical_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: UniswapV2Api.uniswap_v2_get_pools_day_data__historical ...'
+      end
+      # resource path
+      local_var_path = '/dapps/uniswapv2/poolsDayData/historical'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+      query_params[:'startBlock'] = opts[:'start_block'] if !opts[:'start_block'].nil?
+      query_params[:'endBlock'] = opts[:'end_block'] if !opts[:'end_block'].nil?
+      query_params[:'startDate'] = opts[:'start_date'] if !opts[:'start_date'].nil?
+      query_params[:'endDate'] = opts[:'end_date'] if !opts[:'end_date'].nil?
+      query_params[:'poolId'] = opts[:'pool_id'] if !opts[:'pool_id'].nil?
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<UniswapV2PairDayDataV2DTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"UniswapV2Api.uniswap_v2_get_pools_day_data__historical",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: UniswapV2Api#uniswap_v2_get_pools_day_data__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # GetPoolsHourData (historical)
+    # Gets pools tracked each our.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :start_block 
+    # @option opts [Integer] :end_block 
+    # @option opts [Time] :start_date 
+    # @option opts [Time] :end_date 
+    # @option opts [String] :pool_id 
+    # @return [Array<UniswapV2PairHourDataV2DTO>]
+    def uniswap_v2_get_pools_hour_data__historical(opts = {})
+      data, _status_code, _headers = uniswap_v2_get_pools_hour_data__historical_with_http_info(opts)
+      data
+    end
+
+    # GetPoolsHourData (historical)
+    # Gets pools tracked each our.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :start_block 
+    # @option opts [Integer] :end_block 
+    # @option opts [Time] :start_date 
+    # @option opts [Time] :end_date 
+    # @option opts [String] :pool_id 
+    # @return [Array<(Array<UniswapV2PairHourDataV2DTO>, Integer, Hash)>] Array<UniswapV2PairHourDataV2DTO> data, response status code and response headers
+    def uniswap_v2_get_pools_hour_data__historical_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: UniswapV2Api.uniswap_v2_get_pools_hour_data__historical ...'
+      end
+      # resource path
+      local_var_path = '/dapps/uniswapv2/poolsHourData/historical'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+      query_params[:'startBlock'] = opts[:'start_block'] if !opts[:'start_block'].nil?
+      query_params[:'endBlock'] = opts[:'end_block'] if !opts[:'end_block'].nil?
+      query_params[:'startDate'] = opts[:'start_date'] if !opts[:'start_date'].nil?
+      query_params[:'endDate'] = opts[:'end_date'] if !opts[:'end_date'].nil?
+      query_params[:'poolId'] = opts[:'pool_id'] if !opts[:'pool_id'].nil?
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<UniswapV2PairHourDataV2DTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"UniswapV2Api.uniswap_v2_get_pools_hour_data__historical",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: UniswapV2Api#uniswap_v2_get_pools_hour_data__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # GetSwaps (current) 🔥
+    # Gets swaps.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<UniswapV2SwapV2DTO>]
+    def uniswap_v2_get_swaps__current(opts = {})
+      data, _status_code, _headers = uniswap_v2_get_swaps__current_with_http_info(opts)
+      data
+    end
+
+    # GetSwaps (current) 🔥
+    # Gets swaps.
     # @param [Hash] opts the optional parameters
     # @return [Array<(Array<UniswapV2SwapV2DTO>, Integer, Hash)>] Array<UniswapV2SwapV2DTO> data, response status code and response headers
-    def dapps_uniswapv2_swaps_current_get_with_http_info(opts = {})
+    def uniswap_v2_get_swaps__current_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: UniswapV2Api.dapps_uniswapv2_swaps_current_get ...'
+        @api_client.config.logger.debug 'Calling API: UniswapV2Api.uniswap_v2_get_swaps__current ...'
       end
       # resource path
       local_var_path = '/dapps/uniswapv2/swaps/current'
@@ -767,7 +831,7 @@ module OpenapiClient
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"UniswapV2Api.dapps_uniswapv2_swaps_current_get",
+        :operation => :"UniswapV2Api.uniswap_v2_get_swaps__current",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -778,33 +842,37 @@ module OpenapiClient
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: UniswapV2Api#dapps_uniswapv2_swaps_current_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: UniswapV2Api#uniswap_v2_get_swaps__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
+    # GetSwaps (historical) 🔥
+    # Gets swaps.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
     # @option opts [Time] :start_date 
     # @option opts [Time] :end_date 
     # @option opts [String] :pool_id 
-    # @return [nil]
-    def dapps_uniswapv2_swaps_historical_get(opts = {})
-      dapps_uniswapv2_swaps_historical_get_with_http_info(opts)
-      nil
+    # @return [Array<UniswapV2SwapV2DTO>]
+    def uniswap_v2_get_swaps__historical(opts = {})
+      data, _status_code, _headers = uniswap_v2_get_swaps__historical_with_http_info(opts)
+      data
     end
 
+    # GetSwaps (historical) 🔥
+    # Gets swaps.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
     # @option opts [Time] :start_date 
     # @option opts [Time] :end_date 
     # @option opts [String] :pool_id 
-    # @return [Array<(nil, Integer, Hash)>] nil, response status code and response headers
-    def dapps_uniswapv2_swaps_historical_get_with_http_info(opts = {})
+    # @return [Array<(Array<UniswapV2SwapV2DTO>, Integer, Hash)>] Array<UniswapV2SwapV2DTO> data, response status code and response headers
+    def uniswap_v2_get_swaps__historical_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: UniswapV2Api.dapps_uniswapv2_swaps_historical_get ...'
+        @api_client.config.logger.debug 'Calling API: UniswapV2Api.uniswap_v2_get_swaps__historical ...'
       end
       # resource path
       local_var_path = '/dapps/uniswapv2/swaps/historical'
@@ -819,6 +887,8 @@ module OpenapiClient
 
       # header parameters
       header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
 
       # form parameters
       form_params = opts[:form_params] || {}
@@ -827,13 +897,13 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type]
+      return_type = opts[:debug_return_type] || 'Array<UniswapV2SwapV2DTO>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"UniswapV2Api.dapps_uniswapv2_swaps_historical_get",
+        :operation => :"UniswapV2Api.uniswap_v2_get_swaps__historical",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -844,91 +914,27 @@ module OpenapiClient
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: UniswapV2Api#dapps_uniswapv2_swaps_historical_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: UniswapV2Api#uniswap_v2_get_swaps__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
-    # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :start_block 
-    # @option opts [Integer] :end_block 
-    # @option opts [Time] :start_date 
-    # @option opts [Time] :end_date 
-    # @option opts [String] :token_id 
-    # @return [nil]
-    def dapps_uniswapv2_token_day_data_historical_get(opts = {})
-      dapps_uniswapv2_token_day_data_historical_get_with_http_info(opts)
-      nil
-    end
-
-    # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :start_block 
-    # @option opts [Integer] :end_block 
-    # @option opts [Time] :start_date 
-    # @option opts [Time] :end_date 
-    # @option opts [String] :token_id 
-    # @return [Array<(nil, Integer, Hash)>] nil, response status code and response headers
-    def dapps_uniswapv2_token_day_data_historical_get_with_http_info(opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: UniswapV2Api.dapps_uniswapv2_token_day_data_historical_get ...'
-      end
-      # resource path
-      local_var_path = '/dapps/uniswapv2/tokenDayData/historical'
-
-      # query parameters
-      query_params = opts[:query_params] || {}
-      query_params[:'startBlock'] = opts[:'start_block'] if !opts[:'start_block'].nil?
-      query_params[:'endBlock'] = opts[:'end_block'] if !opts[:'end_block'].nil?
-      query_params[:'startDate'] = opts[:'start_date'] if !opts[:'start_date'].nil?
-      query_params[:'endDate'] = opts[:'end_date'] if !opts[:'end_date'].nil?
-      query_params[:'tokenId'] = opts[:'token_id'] if !opts[:'token_id'].nil?
-
-      # header parameters
-      header_params = opts[:header_params] || {}
-
-      # form parameters
-      form_params = opts[:form_params] || {}
-
-      # http body (model)
-      post_body = opts[:debug_body]
-
-      # return_type
-      return_type = opts[:debug_return_type]
-
-      # auth_names
-      auth_names = opts[:debug_auth_names] || []
-
-      new_options = opts.merge(
-        :operation => :"UniswapV2Api.dapps_uniswapv2_token_day_data_historical_get",
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => return_type
-      )
-
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: UniswapV2Api#dapps_uniswapv2_token_day_data_historical_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # GetTokens
+    # GetTokens (current) 🔥
+    # Gets tokens.
     # @param [Hash] opts the optional parameters
     # @return [Array<UniswapV2TokenV2DTO>]
-    def dapps_uniswapv2_tokens_current_get(opts = {})
-      data, _status_code, _headers = dapps_uniswapv2_tokens_current_get_with_http_info(opts)
+    def uniswap_v2_get_tokens__current(opts = {})
+      data, _status_code, _headers = uniswap_v2_get_tokens__current_with_http_info(opts)
       data
     end
 
-    # GetTokens
+    # GetTokens (current) 🔥
+    # Gets tokens.
     # @param [Hash] opts the optional parameters
     # @return [Array<(Array<UniswapV2TokenV2DTO>, Integer, Hash)>] Array<UniswapV2TokenV2DTO> data, response status code and response headers
-    def dapps_uniswapv2_tokens_current_get_with_http_info(opts = {})
+    def uniswap_v2_get_tokens__current_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: UniswapV2Api.dapps_uniswapv2_tokens_current_get ...'
+        @api_client.config.logger.debug 'Calling API: UniswapV2Api.uniswap_v2_get_tokens__current ...'
       end
       # resource path
       local_var_path = '/dapps/uniswapv2/tokens/current'
@@ -954,7 +960,7 @@ module OpenapiClient
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"UniswapV2Api.dapps_uniswapv2_tokens_current_get",
+        :operation => :"UniswapV2Api.uniswap_v2_get_tokens__current",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -965,33 +971,37 @@ module OpenapiClient
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: UniswapV2Api#dapps_uniswapv2_tokens_current_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: UniswapV2Api#uniswap_v2_get_tokens__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
+    # GetTokens (historical) 🔥
+    # Gets tokens.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
     # @option opts [Time] :start_date 
     # @option opts [Time] :end_date 
     # @option opts [String] :token_id 
-    # @return [nil]
-    def dapps_uniswapv2_tokens_historical_get(opts = {})
-      dapps_uniswapv2_tokens_historical_get_with_http_info(opts)
-      nil
+    # @return [Array<UniswapV2TokenV2DTO>]
+    def uniswap_v2_get_tokens__historical(opts = {})
+      data, _status_code, _headers = uniswap_v2_get_tokens__historical_with_http_info(opts)
+      data
     end
 
+    # GetTokens (historical) 🔥
+    # Gets tokens.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
     # @option opts [Time] :start_date 
     # @option opts [Time] :end_date 
     # @option opts [String] :token_id 
-    # @return [Array<(nil, Integer, Hash)>] nil, response status code and response headers
-    def dapps_uniswapv2_tokens_historical_get_with_http_info(opts = {})
+    # @return [Array<(Array<UniswapV2TokenV2DTO>, Integer, Hash)>] Array<UniswapV2TokenV2DTO> data, response status code and response headers
+    def uniswap_v2_get_tokens__historical_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: UniswapV2Api.dapps_uniswapv2_tokens_historical_get ...'
+        @api_client.config.logger.debug 'Calling API: UniswapV2Api.uniswap_v2_get_tokens__historical ...'
       end
       # resource path
       local_var_path = '/dapps/uniswapv2/tokens/historical'
@@ -1006,6 +1016,8 @@ module OpenapiClient
 
       # header parameters
       header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
 
       # form parameters
       form_params = opts[:form_params] || {}
@@ -1014,13 +1026,13 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type]
+      return_type = opts[:debug_return_type] || 'Array<UniswapV2TokenV2DTO>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"UniswapV2Api.dapps_uniswapv2_tokens_historical_get",
+        :operation => :"UniswapV2Api.uniswap_v2_get_tokens__historical",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -1031,31 +1043,107 @@ module OpenapiClient
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: UniswapV2Api#dapps_uniswapv2_tokens_historical_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: UniswapV2Api#uniswap_v2_get_tokens__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
+    # GetTokensDayData (historical)
+    # Gets tokens day data.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
     # @option opts [Time] :start_date 
     # @option opts [Time] :end_date 
-    # @return [nil]
-    def dapps_uniswapv2_transactions_historical_get(opts = {})
-      dapps_uniswapv2_transactions_historical_get_with_http_info(opts)
-      nil
+    # @option opts [String] :token_id 
+    # @return [Array<UniswapV2TokenDayDataV2DTO>]
+    def uniswap_v2_get_tokens_day_data__historical(opts = {})
+      data, _status_code, _headers = uniswap_v2_get_tokens_day_data__historical_with_http_info(opts)
+      data
     end
 
+    # GetTokensDayData (historical)
+    # Gets tokens day data.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
     # @option opts [Time] :start_date 
     # @option opts [Time] :end_date 
-    # @return [Array<(nil, Integer, Hash)>] nil, response status code and response headers
-    def dapps_uniswapv2_transactions_historical_get_with_http_info(opts = {})
+    # @option opts [String] :token_id 
+    # @return [Array<(Array<UniswapV2TokenDayDataV2DTO>, Integer, Hash)>] Array<UniswapV2TokenDayDataV2DTO> data, response status code and response headers
+    def uniswap_v2_get_tokens_day_data__historical_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: UniswapV2Api.dapps_uniswapv2_transactions_historical_get ...'
+        @api_client.config.logger.debug 'Calling API: UniswapV2Api.uniswap_v2_get_tokens_day_data__historical ...'
+      end
+      # resource path
+      local_var_path = '/dapps/uniswapv2/tokensDayData/historical'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+      query_params[:'startBlock'] = opts[:'start_block'] if !opts[:'start_block'].nil?
+      query_params[:'endBlock'] = opts[:'end_block'] if !opts[:'end_block'].nil?
+      query_params[:'startDate'] = opts[:'start_date'] if !opts[:'start_date'].nil?
+      query_params[:'endDate'] = opts[:'end_date'] if !opts[:'end_date'].nil?
+      query_params[:'tokenId'] = opts[:'token_id'] if !opts[:'token_id'].nil?
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<UniswapV2TokenDayDataV2DTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"UniswapV2Api.uniswap_v2_get_tokens_day_data__historical",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: UniswapV2Api#uniswap_v2_get_tokens_day_data__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # GetTransactions (historical)
+    # Gets transactions.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :start_block 
+    # @option opts [Integer] :end_block 
+    # @option opts [Time] :start_date 
+    # @option opts [Time] :end_date 
+    # @return [Array<UniswapV2TransactionV2DTO>]
+    def uniswap_v2_get_transactions__historical(opts = {})
+      data, _status_code, _headers = uniswap_v2_get_transactions__historical_with_http_info(opts)
+      data
+    end
+
+    # GetTransactions (historical)
+    # Gets transactions.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :start_block 
+    # @option opts [Integer] :end_block 
+    # @option opts [Time] :start_date 
+    # @option opts [Time] :end_date 
+    # @return [Array<(Array<UniswapV2TransactionV2DTO>, Integer, Hash)>] Array<UniswapV2TransactionV2DTO> data, response status code and response headers
+    def uniswap_v2_get_transactions__historical_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: UniswapV2Api.uniswap_v2_get_transactions__historical ...'
       end
       # resource path
       local_var_path = '/dapps/uniswapv2/transactions/historical'
@@ -1069,6 +1157,8 @@ module OpenapiClient
 
       # header parameters
       header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
 
       # form parameters
       form_params = opts[:form_params] || {}
@@ -1077,13 +1167,13 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type]
+      return_type = opts[:debug_return_type] || 'Array<UniswapV2TransactionV2DTO>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"UniswapV2Api.dapps_uniswapv2_transactions_historical_get",
+        :operation => :"UniswapV2Api.uniswap_v2_get_transactions__historical",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -1094,31 +1184,35 @@ module OpenapiClient
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: UniswapV2Api#dapps_uniswapv2_transactions_historical_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: UniswapV2Api#uniswap_v2_get_transactions__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
+    # GetUsers (historical)
+    # Gets users.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
     # @option opts [Time] :start_date 
     # @option opts [Time] :end_date 
-    # @return [nil]
-    def dapps_uniswapv2_users_historical_get(opts = {})
-      dapps_uniswapv2_users_historical_get_with_http_info(opts)
-      nil
+    # @return [Array<UniswapV2UserV2DTO>]
+    def uniswap_v2_get_users__historical(opts = {})
+      data, _status_code, _headers = uniswap_v2_get_users__historical_with_http_info(opts)
+      data
     end
 
+    # GetUsers (historical)
+    # Gets users.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
     # @option opts [Time] :start_date 
     # @option opts [Time] :end_date 
-    # @return [Array<(nil, Integer, Hash)>] nil, response status code and response headers
-    def dapps_uniswapv2_users_historical_get_with_http_info(opts = {})
+    # @return [Array<(Array<UniswapV2UserV2DTO>, Integer, Hash)>] Array<UniswapV2UserV2DTO> data, response status code and response headers
+    def uniswap_v2_get_users__historical_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: UniswapV2Api.dapps_uniswapv2_users_historical_get ...'
+        @api_client.config.logger.debug 'Calling API: UniswapV2Api.uniswap_v2_get_users__historical ...'
       end
       # resource path
       local_var_path = '/dapps/uniswapv2/users/historical'
@@ -1132,6 +1226,8 @@ module OpenapiClient
 
       # header parameters
       header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
 
       # form parameters
       form_params = opts[:form_params] || {}
@@ -1140,13 +1236,13 @@ module OpenapiClient
       post_body = opts[:debug_body]
 
       # return_type
-      return_type = opts[:debug_return_type]
+      return_type = opts[:debug_return_type] || 'Array<UniswapV2UserV2DTO>'
 
       # auth_names
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"UniswapV2Api.dapps_uniswapv2_users_historical_get",
+        :operation => :"UniswapV2Api.uniswap_v2_get_users__historical",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -1157,7 +1253,7 @@ module OpenapiClient
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: UniswapV2Api#dapps_uniswapv2_users_historical_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: UniswapV2Api#uniswap_v2_get_users__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

@@ -4,6 +4,8 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
+| [**curve_get_exchanges__current**](SushiswapApi.md#curve_get_exchanges__current) | **GET** /dapps/sushiswap/exchanges/current | GetExchanges (current) 🔥 |
+| [**dex_get_trades__current**](SushiswapApi.md#dex_get_trades__current) | **GET** /dapps/sushiswap/trades/current | GetTrades (current) 🔥 |
 | [**sushiswap_get_bundles__historical**](SushiswapApi.md#sushiswap_get_bundles__historical) | **GET** /dapps/sushiswap/bundles/historical | GetBundles (historical) |
 | [**sushiswap_get_burns__historical**](SushiswapApi.md#sushiswap_get_burns__historical) | **GET** /dapps/sushiswap/burns/historical | GetBurns (historical) |
 | [**sushiswap_get_day_data__historical**](SushiswapApi.md#sushiswap_get_day_data__historical) | **GET** /dapps/sushiswap/dayData/historical | GetDayData (historical) |
@@ -12,17 +14,139 @@ All URIs are relative to *https://onchain.coinapi.io*
 | [**sushiswap_get_liquidity_position__historical**](SushiswapApi.md#sushiswap_get_liquidity_position__historical) | **GET** /dapps/sushiswap/liquidityPosition/historical | GetLiquidityPosition (historical) |
 | [**sushiswap_get_liquidity_position_snapshot__historical**](SushiswapApi.md#sushiswap_get_liquidity_position_snapshot__historical) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/historical | GetLiquidityPositionSnapshot (historical) |
 | [**sushiswap_get_mints__historical**](SushiswapApi.md#sushiswap_get_mints__historical) | **GET** /dapps/sushiswap/mints/historical | GetMints (historical) |
-| [**sushiswap_get_pools__current**](SushiswapApi.md#sushiswap_get_pools__current) | **GET** /dapps/sushiswap/pools/current | GetPools (current) |
-| [**sushiswap_get_pools__historical**](SushiswapApi.md#sushiswap_get_pools__historical) | **GET** /dapps/sushiswap/pools/historical | GetPools (historical) |
+| [**sushiswap_get_pools__current**](SushiswapApi.md#sushiswap_get_pools__current) | **GET** /dapps/sushiswap/pools/current | GetPools (current) 🔥 |
+| [**sushiswap_get_pools__historical**](SushiswapApi.md#sushiswap_get_pools__historical) | **GET** /dapps/sushiswap/pools/historical | GetPools (historical) 🔥 |
 | [**sushiswap_get_pools_day_data__historical**](SushiswapApi.md#sushiswap_get_pools_day_data__historical) | **GET** /dapps/sushiswap/poolsDayData/historical | GetPoolsDayData (historical) |
 | [**sushiswap_get_pools_hour_data__historical**](SushiswapApi.md#sushiswap_get_pools_hour_data__historical) | **GET** /dapps/sushiswap/poolsHourData/historical | GetPoolsHourData (historical) |
-| [**sushiswap_get_swaps__current**](SushiswapApi.md#sushiswap_get_swaps__current) | **GET** /dapps/sushiswap/swaps/current | GetSwaps (current) |
-| [**sushiswap_get_swaps__historical**](SushiswapApi.md#sushiswap_get_swaps__historical) | **GET** /dapps/sushiswap/swaps/historical | GetSwaps (historical) |
-| [**sushiswap_get_tokens__current**](SushiswapApi.md#sushiswap_get_tokens__current) | **GET** /dapps/sushiswap/tokens/current | GetTokens (current) |
-| [**sushiswap_get_tokens__historical**](SushiswapApi.md#sushiswap_get_tokens__historical) | **GET** /dapps/sushiswap/tokens/historical | GetTokens (historical) |
+| [**sushiswap_get_swaps__current**](SushiswapApi.md#sushiswap_get_swaps__current) | **GET** /dapps/sushiswap/swaps/current | GetSwaps (current) 🔥 |
+| [**sushiswap_get_swaps__historical**](SushiswapApi.md#sushiswap_get_swaps__historical) | **GET** /dapps/sushiswap/swaps/historical | GetSwaps (historical) 🔥 |
+| [**sushiswap_get_tokens__current**](SushiswapApi.md#sushiswap_get_tokens__current) | **GET** /dapps/sushiswap/tokens/current | GetTokens (current) 🔥 |
+| [**sushiswap_get_tokens__historical**](SushiswapApi.md#sushiswap_get_tokens__historical) | **GET** /dapps/sushiswap/tokens/historical | GetTokens (historical) 🔥 |
 | [**sushiswap_get_tokens_day_data__historical**](SushiswapApi.md#sushiswap_get_tokens_day_data__historical) | **GET** /dapps/sushiswap/tokensDayData/historical | GetTokensDayData (historical) |
 | [**sushiswap_get_transactions__historical**](SushiswapApi.md#sushiswap_get_transactions__historical) | **GET** /dapps/sushiswap/transactions/historical | GetTransactions (historical) |
 | [**sushiswap_get_users__historical**](SushiswapApi.md#sushiswap_get_users__historical) | **GET** /dapps/sushiswap/users/historical | GetUsers (historical) |
+
+
+## curve_get_exchanges__current
+
+> <Array<CurveExchangeDTO>> curve_get_exchanges__current
+
+GetExchanges (current) 🔥
+
+Gets exchanges.
+
+### Examples
+
+```ruby
+require 'time'
+require 'openapi_client'
+
+api_instance = OpenapiClient::SushiswapApi.new
+
+begin
+  # GetExchanges (current) 🔥
+  result = api_instance.curve_get_exchanges__current
+  p result
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->curve_get_exchanges__current: #{e}"
+end
+```
+
+#### Using the curve_get_exchanges__current_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<Array<CurveExchangeDTO>>, Integer, Hash)> curve_get_exchanges__current_with_http_info
+
+```ruby
+begin
+  # GetExchanges (current) 🔥
+  data, status_code, headers = api_instance.curve_get_exchanges__current_with_http_info
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <Array<CurveExchangeDTO>>
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->curve_get_exchanges__current_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**Array&lt;CurveExchangeDTO&gt;**](CurveExchangeDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## dex_get_trades__current
+
+> <Array<DexTradeDTO>> dex_get_trades__current
+
+GetTrades (current) 🔥
+
+Gets trades.
+
+### Examples
+
+```ruby
+require 'time'
+require 'openapi_client'
+
+api_instance = OpenapiClient::SushiswapApi.new
+
+begin
+  # GetTrades (current) 🔥
+  result = api_instance.dex_get_trades__current
+  p result
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->dex_get_trades__current: #{e}"
+end
+```
+
+#### Using the dex_get_trades__current_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<Array<DexTradeDTO>>, Integer, Hash)> dex_get_trades__current_with_http_info
+
+```ruby
+begin
+  # GetTrades (current) 🔥
+  data, status_code, headers = api_instance.dex_get_trades__current_with_http_info
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <Array<DexTradeDTO>>
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->dex_get_trades__current_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**Array&lt;DexTradeDTO&gt;**](DexTradeDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
 ## sushiswap_get_bundles__historical
@@ -41,10 +165,10 @@ require 'openapi_client'
 
 api_instance = OpenapiClient::SushiswapApi.new
 opts = {
-  start_block: 789, # Integer | 
-  end_block: 789, # Integer | 
-  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
-  end_date: Time.parse('2013-10-20T19:20:30+01:00') # Time | 
+  start_block: 789, # Integer | AAAAAAAAAA
+  end_block: 789, # Integer | BBBBBBBBBBBB
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | CCCCCCCCC
+  end_date: Time.parse('2013-10-20T19:20:30+01:00') # Time | DDDDDDDDDDD
 }
 
 begin
@@ -78,10 +202,10 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **start_block** | **Integer** |  | [optional] |
-| **end_block** | **Integer** |  | [optional] |
-| **start_date** | **Time** |  | [optional] |
-| **end_date** | **Time** |  | [optional] |
+| **start_block** | **Integer** | AAAAAAAAAA | [optional] |
+| **end_block** | **Integer** | BBBBBBBBBBBB | [optional] |
+| **start_date** | **Time** | CCCCCCCCC | [optional] |
+| **end_date** | **Time** | DDDDDDDDDDD | [optional] |
 
 ### Return type
 
@@ -613,7 +737,7 @@ No authorization required
 
 > <Array<SushiswapPairDTO>> sushiswap_get_pools__current
 
-GetPools (current)
+GetPools (current) 🔥
 
 Gets pools.
 
@@ -626,7 +750,7 @@ require 'openapi_client'
 api_instance = OpenapiClient::SushiswapApi.new
 
 begin
-  # GetPools (current)
+  # GetPools (current) 🔥
   result = api_instance.sushiswap_get_pools__current
   p result
 rescue OpenapiClient::ApiError => e
@@ -642,7 +766,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetPools (current)
+  # GetPools (current) 🔥
   data, status_code, headers = api_instance.sushiswap_get_pools__current_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
@@ -674,7 +798,7 @@ No authorization required
 
 > <Array<SushiswapPairDTO>> sushiswap_get_pools__historical(opts)
 
-GetPools (historical)
+GetPools (historical) 🔥
 
 Gets list of pools for given filters.
 
@@ -686,15 +810,15 @@ require 'openapi_client'
 
 api_instance = OpenapiClient::SushiswapApi.new
 opts = {
-  start_block: 789, # Integer | 
-  end_block: 789, # Integer | 
-  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
-  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
-  pool_id: 'pool_id_example' # String | 
+  start_block: 789, # Integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  end_block: 789, # Integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | The end date of timeframe
+  pool_id: 'pool_id_example' # String | The pool address.
 }
 
 begin
-  # GetPools (historical)
+  # GetPools (historical) 🔥
   result = api_instance.sushiswap_get_pools__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -710,7 +834,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetPools (historical)
+  # GetPools (historical) 🔥
   data, status_code, headers = api_instance.sushiswap_get_pools__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -724,11 +848,11 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **start_block** | **Integer** |  | [optional] |
-| **end_block** | **Integer** |  | [optional] |
-| **start_date** | **Time** |  | [optional] |
-| **end_date** | **Time** |  | [optional] |
-| **pool_id** | **String** |  | [optional] |
+| **start_block** | **Integer** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] |
+| **end_block** | **Integer** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] |
+| **start_date** | **Time** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] |
+| **end_date** | **Time** | The end date of timeframe | [optional] |
+| **pool_id** | **String** | The pool address. | [optional] |
 
 ### Return type
 
@@ -896,7 +1020,7 @@ No authorization required
 
 > <Array<SushiswapSwapDTO>> sushiswap_get_swaps__current
 
-GetSwaps (current)
+GetSwaps (current) 🔥
 
 Gets swaps.
 
@@ -909,7 +1033,7 @@ require 'openapi_client'
 api_instance = OpenapiClient::SushiswapApi.new
 
 begin
-  # GetSwaps (current)
+  # GetSwaps (current) 🔥
   result = api_instance.sushiswap_get_swaps__current
   p result
 rescue OpenapiClient::ApiError => e
@@ -925,7 +1049,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetSwaps (current)
+  # GetSwaps (current) 🔥
   data, status_code, headers = api_instance.sushiswap_get_swaps__current_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
@@ -957,7 +1081,7 @@ No authorization required
 
 > <Array<SushiswapSwapDTO>> sushiswap_get_swaps__historical(opts)
 
-GetSwaps (historical)
+GetSwaps (historical) 🔥
 
 Gets list of swaps for given filters.
 
@@ -969,15 +1093,15 @@ require 'openapi_client'
 
 api_instance = OpenapiClient::SushiswapApi.new
 opts = {
-  start_block: 789, # Integer | 
-  end_block: 789, # Integer | 
-  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
-  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
-  pool_id: 'pool_id_example' # String | 
+  start_block: 789, # Integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  end_block: 789, # Integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | The end date of timeframe
+  pool_id: 'pool_id_example' # String | The pool address.
 }
 
 begin
-  # GetSwaps (historical)
+  # GetSwaps (historical) 🔥
   result = api_instance.sushiswap_get_swaps__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -993,7 +1117,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetSwaps (historical)
+  # GetSwaps (historical) 🔥
   data, status_code, headers = api_instance.sushiswap_get_swaps__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -1007,11 +1131,11 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **start_block** | **Integer** |  | [optional] |
-| **end_block** | **Integer** |  | [optional] |
-| **start_date** | **Time** |  | [optional] |
-| **end_date** | **Time** |  | [optional] |
-| **pool_id** | **String** |  | [optional] |
+| **start_block** | **Integer** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] |
+| **end_block** | **Integer** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] |
+| **start_date** | **Time** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] |
+| **end_date** | **Time** | The end date of timeframe | [optional] |
+| **pool_id** | **String** | The pool address. | [optional] |
 
 ### Return type
 
@@ -1031,7 +1155,7 @@ No authorization required
 
 > <Array<SushiswapTokenDTO>> sushiswap_get_tokens__current
 
-GetTokens (current)
+GetTokens (current) 🔥
 
 Gets tokens.
 
@@ -1044,7 +1168,7 @@ require 'openapi_client'
 api_instance = OpenapiClient::SushiswapApi.new
 
 begin
-  # GetTokens (current)
+  # GetTokens (current) 🔥
   result = api_instance.sushiswap_get_tokens__current
   p result
 rescue OpenapiClient::ApiError => e
@@ -1060,7 +1184,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetTokens (current)
+  # GetTokens (current) 🔥
   data, status_code, headers = api_instance.sushiswap_get_tokens__current_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
@@ -1092,7 +1216,7 @@ No authorization required
 
 > <Array<SushiswapTokenDTO>> sushiswap_get_tokens__historical(opts)
 
-GetTokens (historical)
+GetTokens (historical) 🔥
 
 Gets list of tokens for given filters.
 
@@ -1104,15 +1228,15 @@ require 'openapi_client'
 
 api_instance = OpenapiClient::SushiswapApi.new
 opts = {
-  start_block: 789, # Integer | 
-  end_block: 789, # Integer | 
-  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
-  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
-  token_id: 'token_id_example' # String | 
+  start_block: 789, # Integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  end_block: 789, # Integer | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | The end date of timeframe
+  token_id: 'token_id_example' # String | The token address.
 }
 
 begin
-  # GetTokens (historical)
+  # GetTokens (historical) 🔥
   result = api_instance.sushiswap_get_tokens__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -1128,7 +1252,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetTokens (historical)
+  # GetTokens (historical) 🔥
   data, status_code, headers = api_instance.sushiswap_get_tokens__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -1142,11 +1266,11 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **start_block** | **Integer** |  | [optional] |
-| **end_block** | **Integer** |  | [optional] |
-| **start_date** | **Time** |  | [optional] |
-| **end_date** | **Time** |  | [optional] |
-| **token_id** | **String** |  | [optional] |
+| **start_block** | **Integer** | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] |
+| **end_block** | **Integer** | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] |
+| **start_date** | **Time** | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] |
+| **end_date** | **Time** | The end date of timeframe | [optional] |
+| **token_id** | **String** | The token address. | [optional] |
 
 ### Return type
 

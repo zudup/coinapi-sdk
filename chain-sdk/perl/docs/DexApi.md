@@ -9,22 +9,25 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**dapps_dex_batch_historical_get**](DexApi.md#dapps_dex_batch_historical_get) | **GET** /dapps/dex/batch/historical | 
-[**dapps_dex_orders_historical_get**](DexApi.md#dapps_dex_orders_historical_get) | **GET** /dapps/dex/orders/historical | 
-[**dapps_dex_prices_historical_get**](DexApi.md#dapps_dex_prices_historical_get) | **GET** /dapps/dex/prices/historical | 
-[**dapps_dex_solution_historical_get**](DexApi.md#dapps_dex_solution_historical_get) | **GET** /dapps/dex/solution/historical | 
-[**dapps_dex_stats_historical_get**](DexApi.md#dapps_dex_stats_historical_get) | **GET** /dapps/dex/stats/historical | 
-[**dapps_dex_tokens_historical_get**](DexApi.md#dapps_dex_tokens_historical_get) | **GET** /dapps/dex/tokens/historical | 
-[**dapps_dex_trades_historical_get**](DexApi.md#dapps_dex_trades_historical_get) | **GET** /dapps/dex/trades/historical | 
-[**dapps_dex_users_historical_get**](DexApi.md#dapps_dex_users_historical_get) | **GET** /dapps/dex/users/historical | 
-[**dapps_dex_withdraw_historical_get**](DexApi.md#dapps_dex_withdraw_historical_get) | **GET** /dapps/dex/withdraw/historical | 
-[**dapps_dex_withdraw_request_historical_get**](DexApi.md#dapps_dex_withdraw_request_historical_get) | **GET** /dapps/dex/withdrawRequest/historical | 
+[**dex_get_batches__historical**](DexApi.md#dex_get_batches__historical) | **GET** /dapps/dex/batches/historical | GetBatches (historical)
+[**dex_get_deposits__historical**](DexApi.md#dex_get_deposits__historical) | **GET** /dapps/dex/deposits/historical | GetDeposits (historical)
+[**dex_get_orders__historical**](DexApi.md#dex_get_orders__historical) | **GET** /dapps/dex/orders/historical | GetOrders (historical)
+[**dex_get_prices__historical**](DexApi.md#dex_get_prices__historical) | **GET** /dapps/dex/prices/historical | GetPrices (historical)
+[**dex_get_solutions__historical**](DexApi.md#dex_get_solutions__historical) | **GET** /dapps/dex/solutions/historical | GetSolutions (historical)
+[**dex_get_stats__historical**](DexApi.md#dex_get_stats__historical) | **GET** /dapps/dex/stats/historical | GetStats (historical)
+[**dex_get_tokens__historical**](DexApi.md#dex_get_tokens__historical) | **GET** /dapps/dex/tokens/historical | GetTokens (historical) 🔥
+[**dex_get_trades__historical**](DexApi.md#dex_get_trades__historical) | **GET** /dapps/dex/trades/historical | GetTrades (historical) 🔥
+[**dex_get_users__historical**](DexApi.md#dex_get_users__historical) | **GET** /dapps/dex/users/historical | GetUsers (historical)
+[**dex_get_withdraws__historical**](DexApi.md#dex_get_withdraws__historical) | **GET** /dapps/dex/withdraws/historical | GetWithdraws (historical)
+[**dex_get_withdraws_requests__historical**](DexApi.md#dex_get_withdraws_requests__historical) | **GET** /dapps/dex/withdrawsRequests/historical | GetWithdrawsRequests (historical)
 
 
-# **dapps_dex_batch_historical_get**
-> dapps_dex_batch_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date)
+# **dex_get_batches__historical**
+> ARRAY[DexBatchDTO] dex_get_batches__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date)
 
+GetBatches (historical)
 
+Gets batches.
 
 ### Example
 ```perl
@@ -39,10 +42,11 @@ my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME |
 my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
 
 eval {
-    $api_instance->dapps_dex_batch_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date);
+    my $result = $api_instance->dex_get_batches__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date);
+    print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling DexApi->dapps_dex_batch_historical_get: $@\n";
+    warn "Exception when calling DexApi->dex_get_batches__historical: $@\n";
 }
 ```
 
@@ -57,7 +61,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**ARRAY[DexBatchDTO]**](DexBatchDTO.md)
 
 ### Authorization
 
@@ -66,14 +70,16 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dapps_dex_orders_historical_get**
-> dapps_dex_orders_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, token_id => $token_id)
+# **dex_get_deposits__historical**
+> ARRAY[DexDepositDTO] dex_get_deposits__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, token_id => $token_id)
 
+GetDeposits (historical)
 
+Gets deposits.
 
 ### Example
 ```perl
@@ -89,10 +95,11 @@ my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME |
 my $token_id = "token_id_example"; # string | 
 
 eval {
-    $api_instance->dapps_dex_orders_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, token_id => $token_id);
+    my $result = $api_instance->dex_get_deposits__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, token_id => $token_id);
+    print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling DexApi->dapps_dex_orders_historical_get: $@\n";
+    warn "Exception when calling DexApi->dex_get_deposits__historical: $@\n";
 }
 ```
 
@@ -108,7 +115,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**ARRAY[DexDepositDTO]**](DexDepositDTO.md)
 
 ### Authorization
 
@@ -117,14 +124,16 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dapps_dex_prices_historical_get**
-> dapps_dex_prices_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, token_id => $token_id)
+# **dex_get_orders__historical**
+> ARRAY[DexOrderDTO] dex_get_orders__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, token_id => $token_id)
 
+GetOrders (historical)
 
+Gets orders.
 
 ### Example
 ```perl
@@ -140,10 +149,11 @@ my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME |
 my $token_id = "token_id_example"; # string | 
 
 eval {
-    $api_instance->dapps_dex_prices_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, token_id => $token_id);
+    my $result = $api_instance->dex_get_orders__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, token_id => $token_id);
+    print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling DexApi->dapps_dex_prices_historical_get: $@\n";
+    warn "Exception when calling DexApi->dex_get_orders__historical: $@\n";
 }
 ```
 
@@ -159,7 +169,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**ARRAY[DexOrderDTO]**](DexOrderDTO.md)
 
 ### Authorization
 
@@ -168,14 +178,16 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dapps_dex_solution_historical_get**
-> dapps_dex_solution_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, token_id => $token_id)
+# **dex_get_prices__historical**
+> ARRAY[DexPriceDTO] dex_get_prices__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, token_id => $token_id)
 
+GetPrices (historical)
 
+Gets prices.
 
 ### Example
 ```perl
@@ -191,10 +203,11 @@ my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME |
 my $token_id = "token_id_example"; # string | 
 
 eval {
-    $api_instance->dapps_dex_solution_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, token_id => $token_id);
+    my $result = $api_instance->dex_get_prices__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, token_id => $token_id);
+    print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling DexApi->dapps_dex_solution_historical_get: $@\n";
+    warn "Exception when calling DexApi->dex_get_prices__historical: $@\n";
 }
 ```
 
@@ -210,7 +223,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**ARRAY[DexPriceDTO]**](DexPriceDTO.md)
 
 ### Authorization
 
@@ -219,63 +232,16 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dapps_dex_stats_historical_get**
-> dapps_dex_stats_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date)
+# **dex_get_solutions__historical**
+> ARRAY[DexSolutionDTO] dex_get_solutions__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, token_id => $token_id)
 
+GetSolutions (historical)
 
-
-### Example
-```perl
-use Data::Dumper;
-use WWW::OpenAPIClient::DexApi;
-my $api_instance = WWW::OpenAPIClient::DexApi->new(
-);
-
-my $start_block = 789; # int | 
-my $end_block = 789; # int | 
-my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-
-eval {
-    $api_instance->dapps_dex_stats_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date);
-};
-if ($@) {
-    warn "Exception when calling DexApi->dapps_dex_stats_historical_get: $@\n";
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **int**|  | [optional] 
- **end_block** | **int**|  | [optional] 
- **start_date** | **DATE_TIME**|  | [optional] 
- **end_date** | **DATE_TIME**|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **dapps_dex_tokens_historical_get**
-> dapps_dex_tokens_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, token_id => $token_id)
-
-
+Gets solutions.
 
 ### Example
 ```perl
@@ -291,10 +257,11 @@ my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME |
 my $token_id = "token_id_example"; # string | 
 
 eval {
-    $api_instance->dapps_dex_tokens_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, token_id => $token_id);
+    my $result = $api_instance->dex_get_solutions__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, token_id => $token_id);
+    print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling DexApi->dapps_dex_tokens_historical_get: $@\n";
+    warn "Exception when calling DexApi->dex_get_solutions__historical: $@\n";
 }
 ```
 
@@ -310,7 +277,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**ARRAY[DexSolutionDTO]**](DexSolutionDTO.md)
 
 ### Authorization
 
@@ -319,14 +286,16 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dapps_dex_trades_historical_get**
-> dapps_dex_trades_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date)
+# **dex_get_stats__historical**
+> ARRAY[DexStatsDTO] dex_get_stats__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date)
 
+GetStats (historical)
 
+Gets stats.
 
 ### Example
 ```perl
@@ -341,10 +310,11 @@ my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME |
 my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
 
 eval {
-    $api_instance->dapps_dex_trades_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date);
+    my $result = $api_instance->dex_get_stats__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date);
+    print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling DexApi->dapps_dex_trades_historical_get: $@\n";
+    warn "Exception when calling DexApi->dex_get_stats__historical: $@\n";
 }
 ```
 
@@ -359,7 +329,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**ARRAY[DexStatsDTO]**](DexStatsDTO.md)
 
 ### Authorization
 
@@ -368,63 +338,16 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dapps_dex_users_historical_get**
-> dapps_dex_users_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date)
+# **dex_get_tokens__historical**
+> ARRAY[DexTokenDTO] dex_get_tokens__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, token_id => $token_id)
 
+GetTokens (historical) 🔥
 
-
-### Example
-```perl
-use Data::Dumper;
-use WWW::OpenAPIClient::DexApi;
-my $api_instance = WWW::OpenAPIClient::DexApi->new(
-);
-
-my $start_block = 789; # int | 
-my $end_block = 789; # int | 
-my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-
-eval {
-    $api_instance->dapps_dex_users_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date);
-};
-if ($@) {
-    warn "Exception when calling DexApi->dapps_dex_users_historical_get: $@\n";
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **int**|  | [optional] 
- **end_block** | **int**|  | [optional] 
- **start_date** | **DATE_TIME**|  | [optional] 
- **end_date** | **DATE_TIME**|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **dapps_dex_withdraw_historical_get**
-> dapps_dex_withdraw_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, token_id => $token_id)
-
-
+Gets tokens.
 
 ### Example
 ```perl
@@ -440,10 +363,11 @@ my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME |
 my $token_id = "token_id_example"; # string | 
 
 eval {
-    $api_instance->dapps_dex_withdraw_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, token_id => $token_id);
+    my $result = $api_instance->dex_get_tokens__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, token_id => $token_id);
+    print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling DexApi->dapps_dex_withdraw_historical_get: $@\n";
+    warn "Exception when calling DexApi->dex_get_tokens__historical: $@\n";
 }
 ```
 
@@ -459,7 +383,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**ARRAY[DexTokenDTO]**](DexTokenDTO.md)
 
 ### Authorization
 
@@ -468,14 +392,120 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dapps_dex_withdraw_request_historical_get**
-> dapps_dex_withdraw_request_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, token_id => $token_id)
+# **dex_get_trades__historical**
+> ARRAY[DexTradeDTO] dex_get_trades__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date)
 
+GetTrades (historical) 🔥
 
+Gets trades.
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::DexApi;
+my $api_instance = WWW::OpenAPIClient::DexApi->new(
+);
+
+my $start_block = 789; # int | 
+my $end_block = 789; # int | 
+my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+
+eval {
+    my $result = $api_instance->dex_get_trades__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling DexApi->dex_get_trades__historical: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **int**|  | [optional] 
+ **end_block** | **int**|  | [optional] 
+ **start_date** | **DATE_TIME**|  | [optional] 
+ **end_date** | **DATE_TIME**|  | [optional] 
+
+### Return type
+
+[**ARRAY[DexTradeDTO]**](DexTradeDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dex_get_users__historical**
+> ARRAY[DexUserDTO] dex_get_users__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date)
+
+GetUsers (historical)
+
+Gets users.
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::DexApi;
+my $api_instance = WWW::OpenAPIClient::DexApi->new(
+);
+
+my $start_block = 789; # int | 
+my $end_block = 789; # int | 
+my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+
+eval {
+    my $result = $api_instance->dex_get_users__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling DexApi->dex_get_users__historical: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **int**|  | [optional] 
+ **end_block** | **int**|  | [optional] 
+ **start_date** | **DATE_TIME**|  | [optional] 
+ **end_date** | **DATE_TIME**|  | [optional] 
+
+### Return type
+
+[**ARRAY[DexUserDTO]**](DexUserDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dex_get_withdraws__historical**
+> ARRAY[DexWithdrawDTO] dex_get_withdraws__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, token_id => $token_id)
+
+GetWithdraws (historical)
+
+Gets withdraws.
 
 ### Example
 ```perl
@@ -491,10 +521,11 @@ my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME |
 my $token_id = "token_id_example"; # string | 
 
 eval {
-    $api_instance->dapps_dex_withdraw_request_historical_get(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, token_id => $token_id);
+    my $result = $api_instance->dex_get_withdraws__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, token_id => $token_id);
+    print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling DexApi->dapps_dex_withdraw_request_historical_get: $@\n";
+    warn "Exception when calling DexApi->dex_get_withdraws__historical: $@\n";
 }
 ```
 
@@ -510,7 +541,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**ARRAY[DexWithdrawDTO]**](DexWithdrawDTO.md)
 
 ### Authorization
 
@@ -519,7 +550,61 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dex_get_withdraws_requests__historical**
+> ARRAY[DexWithdrawRequestDTO] dex_get_withdraws_requests__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, token_id => $token_id)
+
+GetWithdrawsRequests (historical)
+
+Gets withdraws requests.
+
+### Example
+```perl
+use Data::Dumper;
+use WWW::OpenAPIClient::DexApi;
+my $api_instance = WWW::OpenAPIClient::DexApi->new(
+);
+
+my $start_block = 789; # int | 
+my $end_block = 789; # int | 
+my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
+my $token_id = "token_id_example"; # string | 
+
+eval {
+    my $result = $api_instance->dex_get_withdraws_requests__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, token_id => $token_id);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling DexApi->dex_get_withdraws_requests__historical: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **int**|  | [optional] 
+ **end_block** | **int**|  | [optional] 
+ **start_date** | **DATE_TIME**|  | [optional] 
+ **end_date** | **DATE_TIME**|  | [optional] 
+ **token_id** | **string**|  | [optional] 
+
+### Return type
+
+[**ARRAY[DexWithdrawRequestDTO]**](DexWithdrawRequestDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

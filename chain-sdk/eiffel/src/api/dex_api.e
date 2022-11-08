@@ -24,9 +24,9 @@ inherit
 feature -- API Access
 
 
-	dapps_dex_batch_historical_get (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME)
-			-- 
-			-- 
+	dex_get_batches_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME): detachable LIST [DEX_BATCH_DTO]
+			-- GetBatches (historical)
+			-- Gets batches.
 			-- 
 			-- argument: start_block  (optional, default to null)
 			-- 
@@ -37,6 +37,7 @@ feature -- API Access
 			-- argument: end_date  (optional, default to null)
 			-- 
 			-- 
+			-- Result LIST [DEX_BATCH_DTO]
 		require
 		local
   			l_path: STRING
@@ -46,27 +47,31 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/dex/batch/historical"
+			l_path := "/dapps/dex/batches/historical"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
 
 
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<>>)  as l_accept then
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
 				l_request.add_header(l_accept,"Accept");
 			end
 			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
 			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, agent serializer, Void)
+			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
 			if l_response.has_error then
 				last_error := l_response.error
+			elseif attached { LIST [DEX_BATCH_DTO] } l_response.data ({ LIST [DEX_BATCH_DTO] }) as l_data then
+				Result := l_data
+			else
+				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
 			end
 		end
 
-	dapps_dex_orders_historical_get (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; token_id: STRING_32)
-			-- 
-			-- 
+	dex_get_deposits_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; token_id: STRING_32): detachable LIST [DEX_DEPOSIT_DTO]
+			-- GetDeposits (historical)
+			-- Gets deposits.
 			-- 
 			-- argument: start_block  (optional, default to null)
 			-- 
@@ -79,6 +84,55 @@ feature -- API Access
 			-- argument: token_id  (optional, default to null)
 			-- 
 			-- 
+			-- Result LIST [DEX_DEPOSIT_DTO]
+		require
+		local
+  			l_path: STRING
+  			l_request: API_CLIENT_REQUEST
+  			l_response: API_CLIENT_RESPONSE
+		do
+			reset_error
+			create l_request
+			
+			l_path := "/dapps/dex/deposits/historical"
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
+			l_request.fill_query_params(api_client.parameter_to_tuple("", "tokenId", token_id));
+
+
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
+				l_request.add_header(l_accept,"Accept");
+			end
+			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
+			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
+			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
+			if l_response.has_error then
+				last_error := l_response.error
+			elseif attached { LIST [DEX_DEPOSIT_DTO] } l_response.data ({ LIST [DEX_DEPOSIT_DTO] }) as l_data then
+				Result := l_data
+			else
+				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
+			end
+		end
+
+	dex_get_orders_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; token_id: STRING_32): detachable LIST [DEX_ORDER_DTO]
+			-- GetOrders (historical)
+			-- Gets orders.
+			-- 
+			-- argument: start_block  (optional, default to null)
+			-- 
+			-- argument: end_block  (optional, default to null)
+			-- 
+			-- argument: start_date  (optional, default to null)
+			-- 
+			-- argument: end_date  (optional, default to null)
+			-- 
+			-- argument: token_id  (optional, default to null)
+			-- 
+			-- 
+			-- Result LIST [DEX_ORDER_DTO]
 		require
 		local
   			l_path: STRING
@@ -96,20 +150,24 @@ feature -- API Access
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "tokenId", token_id));
 
 
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<>>)  as l_accept then
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
 				l_request.add_header(l_accept,"Accept");
 			end
 			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
 			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, agent serializer, Void)
+			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
 			if l_response.has_error then
 				last_error := l_response.error
+			elseif attached { LIST [DEX_ORDER_DTO] } l_response.data ({ LIST [DEX_ORDER_DTO] }) as l_data then
+				Result := l_data
+			else
+				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
 			end
 		end
 
-	dapps_dex_prices_historical_get (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; token_id: STRING_32)
-			-- 
-			-- 
+	dex_get_prices_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; token_id: STRING_32): detachable LIST [DEX_PRICE_DTO]
+			-- GetPrices (historical)
+			-- Gets prices.
 			-- 
 			-- argument: start_block  (optional, default to null)
 			-- 
@@ -122,6 +180,7 @@ feature -- API Access
 			-- argument: token_id  (optional, default to null)
 			-- 
 			-- 
+			-- Result LIST [DEX_PRICE_DTO]
 		require
 		local
   			l_path: STRING
@@ -139,20 +198,24 @@ feature -- API Access
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "tokenId", token_id));
 
 
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<>>)  as l_accept then
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
 				l_request.add_header(l_accept,"Accept");
 			end
 			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
 			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, agent serializer, Void)
+			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
 			if l_response.has_error then
 				last_error := l_response.error
+			elseif attached { LIST [DEX_PRICE_DTO] } l_response.data ({ LIST [DEX_PRICE_DTO] }) as l_data then
+				Result := l_data
+			else
+				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
 			end
 		end
 
-	dapps_dex_solution_historical_get (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; token_id: STRING_32)
-			-- 
-			-- 
+	dex_get_solutions_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; token_id: STRING_32): detachable LIST [DEX_SOLUTION_DTO]
+			-- GetSolutions (historical)
+			-- Gets solutions.
 			-- 
 			-- argument: start_block  (optional, default to null)
 			-- 
@@ -165,6 +228,7 @@ feature -- API Access
 			-- argument: token_id  (optional, default to null)
 			-- 
 			-- 
+			-- Result LIST [DEX_SOLUTION_DTO]
 		require
 		local
   			l_path: STRING
@@ -174,7 +238,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/dex/solution/historical"
+			l_path := "/dapps/dex/solutions/historical"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -182,20 +246,24 @@ feature -- API Access
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "tokenId", token_id));
 
 
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<>>)  as l_accept then
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
 				l_request.add_header(l_accept,"Accept");
 			end
 			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
 			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, agent serializer, Void)
+			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
 			if l_response.has_error then
 				last_error := l_response.error
+			elseif attached { LIST [DEX_SOLUTION_DTO] } l_response.data ({ LIST [DEX_SOLUTION_DTO] }) as l_data then
+				Result := l_data
+			else
+				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
 			end
 		end
 
-	dapps_dex_stats_historical_get (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME)
-			-- 
-			-- 
+	dex_get_stats_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME): detachable LIST [DEX_STATS_DTO]
+			-- GetStats (historical)
+			-- Gets stats.
 			-- 
 			-- argument: start_block  (optional, default to null)
 			-- 
@@ -206,6 +274,7 @@ feature -- API Access
 			-- argument: end_date  (optional, default to null)
 			-- 
 			-- 
+			-- Result LIST [DEX_STATS_DTO]
 		require
 		local
   			l_path: STRING
@@ -222,20 +291,24 @@ feature -- API Access
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
 
 
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<>>)  as l_accept then
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
 				l_request.add_header(l_accept,"Accept");
 			end
 			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
 			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, agent serializer, Void)
+			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
 			if l_response.has_error then
 				last_error := l_response.error
+			elseif attached { LIST [DEX_STATS_DTO] } l_response.data ({ LIST [DEX_STATS_DTO] }) as l_data then
+				Result := l_data
+			else
+				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
 			end
 		end
 
-	dapps_dex_tokens_historical_get (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; token_id: STRING_32)
-			-- 
-			-- 
+	dex_get_tokens_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; token_id: STRING_32): detachable LIST [DEX_TOKEN_DTO]
+			-- GetTokens (historical) 🔥
+			-- Gets tokens.
 			-- 
 			-- argument: start_block  (optional, default to null)
 			-- 
@@ -248,6 +321,7 @@ feature -- API Access
 			-- argument: token_id  (optional, default to null)
 			-- 
 			-- 
+			-- Result LIST [DEX_TOKEN_DTO]
 		require
 		local
   			l_path: STRING
@@ -265,20 +339,24 @@ feature -- API Access
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "tokenId", token_id));
 
 
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<>>)  as l_accept then
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
 				l_request.add_header(l_accept,"Accept");
 			end
 			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
 			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, agent serializer, Void)
+			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
 			if l_response.has_error then
 				last_error := l_response.error
+			elseif attached { LIST [DEX_TOKEN_DTO] } l_response.data ({ LIST [DEX_TOKEN_DTO] }) as l_data then
+				Result := l_data
+			else
+				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
 			end
 		end
 
-	dapps_dex_trades_historical_get (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME)
-			-- 
-			-- 
+	dex_get_trades_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME): detachable LIST [DEX_TRADE_DTO]
+			-- GetTrades (historical) 🔥
+			-- Gets trades.
 			-- 
 			-- argument: start_block  (optional, default to null)
 			-- 
@@ -289,6 +367,7 @@ feature -- API Access
 			-- argument: end_date  (optional, default to null)
 			-- 
 			-- 
+			-- Result LIST [DEX_TRADE_DTO]
 		require
 		local
   			l_path: STRING
@@ -305,20 +384,24 @@ feature -- API Access
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
 
 
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<>>)  as l_accept then
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
 				l_request.add_header(l_accept,"Accept");
 			end
 			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
 			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, agent serializer, Void)
+			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
 			if l_response.has_error then
 				last_error := l_response.error
+			elseif attached { LIST [DEX_TRADE_DTO] } l_response.data ({ LIST [DEX_TRADE_DTO] }) as l_data then
+				Result := l_data
+			else
+				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
 			end
 		end
 
-	dapps_dex_users_historical_get (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME)
-			-- 
-			-- 
+	dex_get_users_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME): detachable LIST [DEX_USER_DTO]
+			-- GetUsers (historical)
+			-- Gets users.
 			-- 
 			-- argument: start_block  (optional, default to null)
 			-- 
@@ -329,6 +412,7 @@ feature -- API Access
 			-- argument: end_date  (optional, default to null)
 			-- 
 			-- 
+			-- Result LIST [DEX_USER_DTO]
 		require
 		local
   			l_path: STRING
@@ -345,20 +429,24 @@ feature -- API Access
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
 
 
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<>>)  as l_accept then
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
 				l_request.add_header(l_accept,"Accept");
 			end
 			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
 			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, agent serializer, Void)
+			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
 			if l_response.has_error then
 				last_error := l_response.error
+			elseif attached { LIST [DEX_USER_DTO] } l_response.data ({ LIST [DEX_USER_DTO] }) as l_data then
+				Result := l_data
+			else
+				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
 			end
 		end
 
-	dapps_dex_withdraw_historical_get (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; token_id: STRING_32)
-			-- 
-			-- 
+	dex_get_withdraws_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; token_id: STRING_32): detachable LIST [DEX_WITHDRAW_DTO]
+			-- GetWithdraws (historical)
+			-- Gets withdraws.
 			-- 
 			-- argument: start_block  (optional, default to null)
 			-- 
@@ -371,6 +459,7 @@ feature -- API Access
 			-- argument: token_id  (optional, default to null)
 			-- 
 			-- 
+			-- Result LIST [DEX_WITHDRAW_DTO]
 		require
 		local
   			l_path: STRING
@@ -380,7 +469,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/dex/withdraw/historical"
+			l_path := "/dapps/dex/withdraws/historical"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -388,20 +477,24 @@ feature -- API Access
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "tokenId", token_id));
 
 
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<>>)  as l_accept then
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
 				l_request.add_header(l_accept,"Accept");
 			end
 			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
 			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, agent serializer, Void)
+			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
 			if l_response.has_error then
 				last_error := l_response.error
+			elseif attached { LIST [DEX_WITHDRAW_DTO] } l_response.data ({ LIST [DEX_WITHDRAW_DTO] }) as l_data then
+				Result := l_data
+			else
+				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
 			end
 		end
 
-	dapps_dex_withdraw_request_historical_get (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; token_id: STRING_32)
-			-- 
-			-- 
+	dex_get_withdraws_requests_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; token_id: STRING_32): detachable LIST [DEX_WITHDRAW_REQUEST_DTO]
+			-- GetWithdrawsRequests (historical)
+			-- Gets withdraws requests.
 			-- 
 			-- argument: start_block  (optional, default to null)
 			-- 
@@ -414,6 +507,7 @@ feature -- API Access
 			-- argument: token_id  (optional, default to null)
 			-- 
 			-- 
+			-- Result LIST [DEX_WITHDRAW_REQUEST_DTO]
 		require
 		local
   			l_path: STRING
@@ -423,7 +517,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/dex/withdrawRequest/historical"
+			l_path := "/dapps/dex/withdrawsRequests/historical"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -431,14 +525,18 @@ feature -- API Access
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "tokenId", token_id));
 
 
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<>>)  as l_accept then
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
 				l_request.add_header(l_accept,"Accept");
 			end
 			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
 			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, agent serializer, Void)
+			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
 			if l_response.has_error then
 				last_error := l_response.error
+			elseif attached { LIST [DEX_WITHDRAW_REQUEST_DTO] } l_response.data ({ LIST [DEX_WITHDRAW_REQUEST_DTO] }) as l_data then
+				Result := l_data
+			else
+				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
 			end
 		end
 

@@ -14,25 +14,28 @@
 #'
 #' @section Methods:
 #' \describe{
-#' \strong{ DappsDexBatchHistoricalGet } \emph{  }
+#' \strong{ DexGetBatchesHistorical } \emph{ GetBatches (historical) }
+#' Gets batches.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
 #' \item \emph{ @param } end_block integer
 #' \item \emph{ @param } start_date character
 #' \item \emph{ @param } end_date character
+#' \item \emph{ @returnType } list( \link{Dex.BatchDTO} ) \cr
 #'
 #'
-#' \item status code : 200 | Success
+#' \item status code : 200 | successful operation
 #'
-#'
+#' \item return type : array[DexBatchDTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
 #' }
 #' }
 #'
-#' \strong{ DappsDexOrdersHistoricalGet } \emph{  }
+#' \strong{ DexGetDepositsHistorical } \emph{ GetDeposits (historical) }
+#' Gets deposits.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
@@ -40,18 +43,20 @@
 #' \item \emph{ @param } start_date character
 #' \item \emph{ @param } end_date character
 #' \item \emph{ @param } token_id character
+#' \item \emph{ @returnType } list( \link{Dex.DepositDTO} ) \cr
 #'
 #'
-#' \item status code : 200 | Success
+#' \item status code : 200 | successful operation
 #'
-#'
+#' \item return type : array[DexDepositDTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
 #' }
 #' }
 #'
-#' \strong{ DappsDexPricesHistoricalGet } \emph{  }
+#' \strong{ DexGetOrdersHistorical } \emph{ GetOrders (historical) }
+#' Gets orders.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
@@ -59,18 +64,20 @@
 #' \item \emph{ @param } start_date character
 #' \item \emph{ @param } end_date character
 #' \item \emph{ @param } token_id character
+#' \item \emph{ @returnType } list( \link{Dex.OrderDTO} ) \cr
 #'
 #'
-#' \item status code : 200 | Success
+#' \item status code : 200 | successful operation
 #'
-#'
+#' \item return type : array[DexOrderDTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
 #' }
 #' }
 #'
-#' \strong{ DappsDexSolutionHistoricalGet } \emph{  }
+#' \strong{ DexGetPricesHistorical } \emph{ GetPrices (historical) }
+#' Gets prices.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
@@ -78,36 +85,20 @@
 #' \item \emph{ @param } start_date character
 #' \item \emph{ @param } end_date character
 #' \item \emph{ @param } token_id character
+#' \item \emph{ @returnType } list( \link{Dex.PriceDTO} ) \cr
 #'
 #'
-#' \item status code : 200 | Success
+#' \item status code : 200 | successful operation
 #'
-#'
+#' \item return type : array[DexPriceDTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
 #' }
 #' }
 #'
-#' \strong{ DappsDexStatsHistoricalGet } \emph{  }
-#'
-#' \itemize{
-#' \item \emph{ @param } start_block integer
-#' \item \emph{ @param } end_block integer
-#' \item \emph{ @param } start_date character
-#' \item \emph{ @param } end_date character
-#'
-#'
-#' \item status code : 200 | Success
-#'
-#'
-#' \item response headers :
-#'
-#' \tabular{ll}{
-#' }
-#' }
-#'
-#' \strong{ DappsDexTokensHistoricalGet } \emph{  }
+#' \strong{ DexGetSolutionsHistorical } \emph{ GetSolutions (historical) }
+#' Gets solutions.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
@@ -115,54 +106,40 @@
 #' \item \emph{ @param } start_date character
 #' \item \emph{ @param } end_date character
 #' \item \emph{ @param } token_id character
+#' \item \emph{ @returnType } list( \link{Dex.SolutionDTO} ) \cr
 #'
 #'
-#' \item status code : 200 | Success
+#' \item status code : 200 | successful operation
 #'
-#'
+#' \item return type : array[DexSolutionDTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
 #' }
 #' }
 #'
-#' \strong{ DappsDexTradesHistoricalGet } \emph{  }
+#' \strong{ DexGetStatsHistorical } \emph{ GetStats (historical) }
+#' Gets stats.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
 #' \item \emph{ @param } end_block integer
 #' \item \emph{ @param } start_date character
 #' \item \emph{ @param } end_date character
+#' \item \emph{ @returnType } list( \link{Dex.StatsDTO} ) \cr
 #'
 #'
-#' \item status code : 200 | Success
+#' \item status code : 200 | successful operation
 #'
-#'
+#' \item return type : array[DexStatsDTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
 #' }
 #' }
 #'
-#' \strong{ DappsDexUsersHistoricalGet } \emph{  }
-#'
-#' \itemize{
-#' \item \emph{ @param } start_block integer
-#' \item \emph{ @param } end_block integer
-#' \item \emph{ @param } start_date character
-#' \item \emph{ @param } end_date character
-#'
-#'
-#' \item status code : 200 | Success
-#'
-#'
-#' \item response headers :
-#'
-#' \tabular{ll}{
-#' }
-#' }
-#'
-#' \strong{ DappsDexWithdrawHistoricalGet } \emph{  }
+#' \strong{ DexGetTokensHistorical } \emph{ GetTokens (historical) 🔥 }
+#' Gets tokens.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
@@ -170,18 +147,60 @@
 #' \item \emph{ @param } start_date character
 #' \item \emph{ @param } end_date character
 #' \item \emph{ @param } token_id character
+#' \item \emph{ @returnType } list( \link{Dex.TokenDTO} ) \cr
 #'
 #'
-#' \item status code : 200 | Success
+#' \item status code : 200 | successful operation
 #'
-#'
+#' \item return type : array[DexTokenDTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
 #' }
 #' }
 #'
-#' \strong{ DappsDexWithdrawRequestHistoricalGet } \emph{  }
+#' \strong{ DexGetTradesHistorical } \emph{ GetTrades (historical) 🔥 }
+#' Gets trades.
+#'
+#' \itemize{
+#' \item \emph{ @param } start_block integer
+#' \item \emph{ @param } end_block integer
+#' \item \emph{ @param } start_date character
+#' \item \emph{ @param } end_date character
+#' \item \emph{ @returnType } list( \link{Dex.TradeDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[DexTradeDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ DexGetUsersHistorical } \emph{ GetUsers (historical) }
+#' Gets users.
+#'
+#' \itemize{
+#' \item \emph{ @param } start_block integer
+#' \item \emph{ @param } end_block integer
+#' \item \emph{ @param } start_date character
+#' \item \emph{ @param } end_date character
+#' \item \emph{ @returnType } list( \link{Dex.UserDTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[DexUserDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ DexGetWithdrawsHistorical } \emph{ GetWithdraws (historical) }
+#' Gets withdraws.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
@@ -189,11 +208,33 @@
 #' \item \emph{ @param } start_date character
 #' \item \emph{ @param } end_date character
 #' \item \emph{ @param } token_id character
+#' \item \emph{ @returnType } list( \link{Dex.WithdrawDTO} ) \cr
 #'
 #'
-#' \item status code : 200 | Success
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[DexWithdrawDTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ DexGetWithdrawsRequestsHistorical } \emph{ GetWithdrawsRequests (historical) }
+#' Gets withdraws requests.
+#'
+#' \itemize{
+#' \item \emph{ @param } start_block integer
+#' \item \emph{ @param } end_block integer
+#' \item \emph{ @param } start_date character
+#' \item \emph{ @param } end_date character
+#' \item \emph{ @param } token_id character
+#' \item \emph{ @returnType } list( \link{Dex.WithdrawRequestDTO} ) \cr
 #'
 #'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[DexWithdrawRequestDTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -205,7 +246,7 @@
 #'
 #' @examples
 #' \dontrun{
-#' ####################  DappsDexBatchHistoricalGet  ####################
+#' ####################  DexGetBatchesHistorical  ####################
 #'
 #' library(openapi)
 #' var_start_block <- 56 # integer |  (Optional)
@@ -213,26 +254,16 @@
 #' var_start_date <- "start_date_example" # character |  (Optional)
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #'
+#' #GetBatches (historical)
 #' api_instance <- DexApi$new()
 #'
-#' api_instance$DappsDexBatchHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$DexGetBatchesHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_datedata_file = "result.txt")
+#' result <- api_instance$DexGetBatchesHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
+#' dput(result)
 #'
 #'
-#' ####################  DappsDexOrdersHistoricalGet  ####################
-#'
-#' library(openapi)
-#' var_start_block <- 56 # integer |  (Optional)
-#' var_end_block <- 56 # integer |  (Optional)
-#' var_start_date <- "start_date_example" # character |  (Optional)
-#' var_end_date <- "end_date_example" # character |  (Optional)
-#' var_token_id <- "token_id_example" # character |  (Optional)
-#'
-#' api_instance <- DexApi$new()
-#'
-#' api_instance$DappsDexOrdersHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, token_id = var_token_id)
-#'
-#'
-#' ####################  DappsDexPricesHistoricalGet  ####################
+#' ####################  DexGetDepositsHistorical  ####################
 #'
 #' library(openapi)
 #' var_start_block <- 56 # integer |  (Optional)
@@ -241,12 +272,16 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_token_id <- "token_id_example" # character |  (Optional)
 #'
+#' #GetDeposits (historical)
 #' api_instance <- DexApi$new()
 #'
-#' api_instance$DappsDexPricesHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, token_id = var_token_id)
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$DexGetDepositsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, token_id = var_token_iddata_file = "result.txt")
+#' result <- api_instance$DexGetDepositsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, token_id = var_token_id)
+#' dput(result)
 #'
 #'
-#' ####################  DappsDexSolutionHistoricalGet  ####################
+#' ####################  DexGetOrdersHistorical  ####################
 #'
 #' library(openapi)
 #' var_start_block <- 56 # integer |  (Optional)
@@ -255,25 +290,16 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_token_id <- "token_id_example" # character |  (Optional)
 #'
+#' #GetOrders (historical)
 #' api_instance <- DexApi$new()
 #'
-#' api_instance$DappsDexSolutionHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, token_id = var_token_id)
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$DexGetOrdersHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, token_id = var_token_iddata_file = "result.txt")
+#' result <- api_instance$DexGetOrdersHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, token_id = var_token_id)
+#' dput(result)
 #'
 #'
-#' ####################  DappsDexStatsHistoricalGet  ####################
-#'
-#' library(openapi)
-#' var_start_block <- 56 # integer |  (Optional)
-#' var_end_block <- 56 # integer |  (Optional)
-#' var_start_date <- "start_date_example" # character |  (Optional)
-#' var_end_date <- "end_date_example" # character |  (Optional)
-#'
-#' api_instance <- DexApi$new()
-#'
-#' api_instance$DappsDexStatsHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
-#'
-#'
-#' ####################  DappsDexTokensHistoricalGet  ####################
+#' ####################  DexGetPricesHistorical  ####################
 #'
 #' library(openapi)
 #' var_start_block <- 56 # integer |  (Optional)
@@ -282,38 +308,16 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_token_id <- "token_id_example" # character |  (Optional)
 #'
+#' #GetPrices (historical)
 #' api_instance <- DexApi$new()
 #'
-#' api_instance$DappsDexTokensHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, token_id = var_token_id)
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$DexGetPricesHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, token_id = var_token_iddata_file = "result.txt")
+#' result <- api_instance$DexGetPricesHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, token_id = var_token_id)
+#' dput(result)
 #'
 #'
-#' ####################  DappsDexTradesHistoricalGet  ####################
-#'
-#' library(openapi)
-#' var_start_block <- 56 # integer |  (Optional)
-#' var_end_block <- 56 # integer |  (Optional)
-#' var_start_date <- "start_date_example" # character |  (Optional)
-#' var_end_date <- "end_date_example" # character |  (Optional)
-#'
-#' api_instance <- DexApi$new()
-#'
-#' api_instance$DappsDexTradesHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
-#'
-#'
-#' ####################  DappsDexUsersHistoricalGet  ####################
-#'
-#' library(openapi)
-#' var_start_block <- 56 # integer |  (Optional)
-#' var_end_block <- 56 # integer |  (Optional)
-#' var_start_date <- "start_date_example" # character |  (Optional)
-#' var_end_date <- "end_date_example" # character |  (Optional)
-#'
-#' api_instance <- DexApi$new()
-#'
-#' api_instance$DappsDexUsersHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
-#'
-#'
-#' ####################  DappsDexWithdrawHistoricalGet  ####################
+#' ####################  DexGetSolutionsHistorical  ####################
 #'
 #' library(openapi)
 #' var_start_block <- 56 # integer |  (Optional)
@@ -322,12 +326,33 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_token_id <- "token_id_example" # character |  (Optional)
 #'
+#' #GetSolutions (historical)
 #' api_instance <- DexApi$new()
 #'
-#' api_instance$DappsDexWithdrawHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, token_id = var_token_id)
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$DexGetSolutionsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, token_id = var_token_iddata_file = "result.txt")
+#' result <- api_instance$DexGetSolutionsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, token_id = var_token_id)
+#' dput(result)
 #'
 #'
-#' ####################  DappsDexWithdrawRequestHistoricalGet  ####################
+#' ####################  DexGetStatsHistorical  ####################
+#'
+#' library(openapi)
+#' var_start_block <- 56 # integer |  (Optional)
+#' var_end_block <- 56 # integer |  (Optional)
+#' var_start_date <- "start_date_example" # character |  (Optional)
+#' var_end_date <- "end_date_example" # character |  (Optional)
+#'
+#' #GetStats (historical)
+#' api_instance <- DexApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$DexGetStatsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_datedata_file = "result.txt")
+#' result <- api_instance$DexGetStatsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
+#' dput(result)
+#'
+#'
+#' ####################  DexGetTokensHistorical  ####################
 #'
 #' library(openapi)
 #' var_start_block <- 56 # integer |  (Optional)
@@ -336,9 +361,83 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_token_id <- "token_id_example" # character |  (Optional)
 #'
+#' #GetTokens (historical) 🔥
 #' api_instance <- DexApi$new()
 #'
-#' api_instance$DappsDexWithdrawRequestHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, token_id = var_token_id)
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$DexGetTokensHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, token_id = var_token_iddata_file = "result.txt")
+#' result <- api_instance$DexGetTokensHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, token_id = var_token_id)
+#' dput(result)
+#'
+#'
+#' ####################  DexGetTradesHistorical  ####################
+#'
+#' library(openapi)
+#' var_start_block <- 56 # integer |  (Optional)
+#' var_end_block <- 56 # integer |  (Optional)
+#' var_start_date <- "start_date_example" # character |  (Optional)
+#' var_end_date <- "end_date_example" # character |  (Optional)
+#'
+#' #GetTrades (historical) 🔥
+#' api_instance <- DexApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$DexGetTradesHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_datedata_file = "result.txt")
+#' result <- api_instance$DexGetTradesHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
+#' dput(result)
+#'
+#'
+#' ####################  DexGetUsersHistorical  ####################
+#'
+#' library(openapi)
+#' var_start_block <- 56 # integer |  (Optional)
+#' var_end_block <- 56 # integer |  (Optional)
+#' var_start_date <- "start_date_example" # character |  (Optional)
+#' var_end_date <- "end_date_example" # character |  (Optional)
+#'
+#' #GetUsers (historical)
+#' api_instance <- DexApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$DexGetUsersHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_datedata_file = "result.txt")
+#' result <- api_instance$DexGetUsersHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
+#' dput(result)
+#'
+#'
+#' ####################  DexGetWithdrawsHistorical  ####################
+#'
+#' library(openapi)
+#' var_start_block <- 56 # integer |  (Optional)
+#' var_end_block <- 56 # integer |  (Optional)
+#' var_start_date <- "start_date_example" # character |  (Optional)
+#' var_end_date <- "end_date_example" # character |  (Optional)
+#' var_token_id <- "token_id_example" # character |  (Optional)
+#'
+#' #GetWithdraws (historical)
+#' api_instance <- DexApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$DexGetWithdrawsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, token_id = var_token_iddata_file = "result.txt")
+#' result <- api_instance$DexGetWithdrawsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, token_id = var_token_id)
+#' dput(result)
+#'
+#'
+#' ####################  DexGetWithdrawsRequestsHistorical  ####################
+#'
+#' library(openapi)
+#' var_start_block <- 56 # integer |  (Optional)
+#' var_end_block <- 56 # integer |  (Optional)
+#' var_start_date <- "start_date_example" # character |  (Optional)
+#' var_end_date <- "end_date_example" # character |  (Optional)
+#' var_token_id <- "token_id_example" # character |  (Optional)
+#'
+#' #GetWithdrawsRequests (historical)
+#' api_instance <- DexApi$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$DexGetWithdrawsRequestsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, token_id = var_token_iddata_file = "result.txt")
+#' result <- api_instance$DexGetWithdrawsRequestsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, token_id = var_token_id)
+#' dput(result)
 #'
 #'
 #' }
@@ -363,20 +462,21 @@ DexApi <- R6::R6Class(
         self$api_client <- ApiClient$new()
       }
     },
-    #' 
+    #' GetBatches (historical)
     #'
     #' @description
-    #' 
+    #' GetBatches (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return void
+    #' @return array[DexBatchDTO]
     #' @export
-    DappsDexBatchHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
-      local_var_response <- self$DappsDexBatchHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, ...)
+    DexGetBatchesHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, data_file = NULL, ...) {
+      local_var_response <- self$DexGetBatchesHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -387,19 +487,20 @@ DexApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' 
+    #' GetBatches (historical)
     #'
     #' @description
-    #' 
+    #' GetBatches (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
+    #' @return API response (array[DexBatchDTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsDexBatchHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
+    DexGetBatchesHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -421,10 +522,10 @@ DexApi <- R6::R6Class(
 
       query_params[["endDate"]] <- `end_date`
 
-      local_var_url_path <- "/dapps/dex/batch/historical"
+      local_var_url_path <- "/dapps/dex/batches/historical"
 
       # The Accept request HTTP header
-      local_var_accepts <- list()
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -443,7 +544,18 @@ DexApi <- R6::R6Class(
                                  ...)
 
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[DexBatchDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
         local_var_resp
       } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
         ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
@@ -456,21 +568,22 @@ DexApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' 
+    #' GetDeposits (historical)
     #'
     #' @description
-    #' 
+    #' GetDeposits (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param token_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param token_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return void
+    #' @return array[DexDepositDTO]
     #' @export
-    DappsDexOrdersHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, token_id = NULL, ...) {
-      local_var_response <- self$DappsDexOrdersHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, token_id, ...)
+    DexGetDepositsHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, token_id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$DexGetDepositsHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, token_id, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -481,20 +594,132 @@ DexApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' 
+    #' GetDeposits (historical)
     #'
     #' @description
-    #' 
+    #' GetDeposits (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param token_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param token_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
+    #' @return API response (array[DexDepositDTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsDexOrdersHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, token_id = NULL, ...) {
+    DexGetDepositsHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, token_id = NULL, data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+
+
+
+
+
+      query_params[["startBlock"]] <- `start_block`
+
+      query_params[["endBlock"]] <- `end_block`
+
+      query_params[["startDate"]] <- `start_date`
+
+      query_params[["endDate"]] <- `end_date`
+
+      query_params[["tokenId"]] <- `token_id`
+
+      local_var_url_path <- "/dapps/dex/deposits/historical"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[DexDepositDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' GetOrders (historical)
+    #'
+    #' @description
+    #' GetOrders (historical)
+    #'
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param token_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[DexOrderDTO]
+    #' @export
+    DexGetOrdersHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, token_id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$DexGetOrdersHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, token_id, data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' GetOrders (historical)
+    #'
+    #' @description
+    #' GetOrders (historical)
+    #'
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param token_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[DexOrderDTO]) with additional information such as HTTP status code, headers
+    #' @export
+    DexGetOrdersHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, token_id = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -522,7 +747,7 @@ DexApi <- R6::R6Class(
       local_var_url_path <- "/dapps/dex/orders/historical"
 
       # The Accept request HTTP header
-      local_var_accepts <- list()
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -541,7 +766,18 @@ DexApi <- R6::R6Class(
                                  ...)
 
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[DexOrderDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
         local_var_resp
       } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
         ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
@@ -554,21 +790,22 @@ DexApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' 
+    #' GetPrices (historical)
     #'
     #' @description
-    #' 
+    #' GetPrices (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param token_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param token_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return void
+    #' @return array[DexPriceDTO]
     #' @export
-    DappsDexPricesHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, token_id = NULL, ...) {
-      local_var_response <- self$DappsDexPricesHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, token_id, ...)
+    DexGetPricesHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, token_id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$DexGetPricesHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, token_id, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -579,20 +816,21 @@ DexApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' 
+    #' GetPrices (historical)
     #'
     #' @description
-    #' 
+    #' GetPrices (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param token_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param token_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
+    #' @return API response (array[DexPriceDTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsDexPricesHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, token_id = NULL, ...) {
+    DexGetPricesHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, token_id = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -620,7 +858,7 @@ DexApi <- R6::R6Class(
       local_var_url_path <- "/dapps/dex/prices/historical"
 
       # The Accept request HTTP header
-      local_var_accepts <- list()
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -639,7 +877,18 @@ DexApi <- R6::R6Class(
                                  ...)
 
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[DexPriceDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
         local_var_resp
       } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
         ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
@@ -652,21 +901,22 @@ DexApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' 
+    #' GetSolutions (historical)
     #'
     #' @description
-    #' 
+    #' GetSolutions (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param token_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param token_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return void
+    #' @return array[DexSolutionDTO]
     #' @export
-    DappsDexSolutionHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, token_id = NULL, ...) {
-      local_var_response <- self$DappsDexSolutionHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, token_id, ...)
+    DexGetSolutionsHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, token_id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$DexGetSolutionsHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, token_id, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -677,20 +927,21 @@ DexApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' 
+    #' GetSolutions (historical)
     #'
     #' @description
-    #' 
+    #' GetSolutions (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param token_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param token_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
+    #' @return API response (array[DexSolutionDTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsDexSolutionHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, token_id = NULL, ...) {
+    DexGetSolutionsHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, token_id = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -715,10 +966,10 @@ DexApi <- R6::R6Class(
 
       query_params[["tokenId"]] <- `token_id`
 
-      local_var_url_path <- "/dapps/dex/solution/historical"
+      local_var_url_path <- "/dapps/dex/solutions/historical"
 
       # The Accept request HTTP header
-      local_var_accepts <- list()
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -737,7 +988,18 @@ DexApi <- R6::R6Class(
                                  ...)
 
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[DexSolutionDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
         local_var_resp
       } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
         ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
@@ -750,20 +1012,21 @@ DexApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' 
+    #' GetStats (historical)
     #'
     #' @description
-    #' 
+    #' GetStats (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return void
+    #' @return array[DexStatsDTO]
     #' @export
-    DappsDexStatsHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
-      local_var_response <- self$DappsDexStatsHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, ...)
+    DexGetStatsHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, data_file = NULL, ...) {
+      local_var_response <- self$DexGetStatsHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -774,19 +1037,20 @@ DexApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' 
+    #' GetStats (historical)
     #'
     #' @description
-    #' 
+    #' GetStats (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
+    #' @return API response (array[DexStatsDTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsDexStatsHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
+    DexGetStatsHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -811,7 +1075,7 @@ DexApi <- R6::R6Class(
       local_var_url_path <- "/dapps/dex/stats/historical"
 
       # The Accept request HTTP header
-      local_var_accepts <- list()
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -830,7 +1094,18 @@ DexApi <- R6::R6Class(
                                  ...)
 
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[DexStatsDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
         local_var_resp
       } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
         ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
@@ -843,21 +1118,22 @@ DexApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' 
+    #' GetTokens (historical) 🔥
     #'
     #' @description
-    #' 
+    #' GetTokens (historical) 🔥
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param token_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param token_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return void
+    #' @return array[DexTokenDTO]
     #' @export
-    DappsDexTokensHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, token_id = NULL, ...) {
-      local_var_response <- self$DappsDexTokensHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, token_id, ...)
+    DexGetTokensHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, token_id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$DexGetTokensHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, token_id, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -868,20 +1144,21 @@ DexApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' 
+    #' GetTokens (historical) 🔥
     #'
     #' @description
-    #' 
+    #' GetTokens (historical) 🔥
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param token_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param token_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
+    #' @return API response (array[DexTokenDTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsDexTokensHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, token_id = NULL, ...) {
+    DexGetTokensHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, token_id = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -909,7 +1186,7 @@ DexApi <- R6::R6Class(
       local_var_url_path <- "/dapps/dex/tokens/historical"
 
       # The Accept request HTTP header
-      local_var_accepts <- list()
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -928,7 +1205,18 @@ DexApi <- R6::R6Class(
                                  ...)
 
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[DexTokenDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
         local_var_resp
       } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
         ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
@@ -941,20 +1229,21 @@ DexApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' 
+    #' GetTrades (historical) 🔥
     #'
     #' @description
-    #' 
+    #' GetTrades (historical) 🔥
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return void
+    #' @return array[DexTradeDTO]
     #' @export
-    DappsDexTradesHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
-      local_var_response <- self$DappsDexTradesHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, ...)
+    DexGetTradesHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, data_file = NULL, ...) {
+      local_var_response <- self$DexGetTradesHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -965,19 +1254,20 @@ DexApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' 
+    #' GetTrades (historical) 🔥
     #'
     #' @description
-    #' 
+    #' GetTrades (historical) 🔥
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
+    #' @return API response (array[DexTradeDTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsDexTradesHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
+    DexGetTradesHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -1002,7 +1292,7 @@ DexApi <- R6::R6Class(
       local_var_url_path <- "/dapps/dex/trades/historical"
 
       # The Accept request HTTP header
-      local_var_accepts <- list()
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -1021,7 +1311,18 @@ DexApi <- R6::R6Class(
                                  ...)
 
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[DexTradeDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
         local_var_resp
       } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
         ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
@@ -1034,20 +1335,21 @@ DexApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' 
+    #' GetUsers (historical)
     #'
     #' @description
-    #' 
+    #' GetUsers (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return void
+    #' @return array[DexUserDTO]
     #' @export
-    DappsDexUsersHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
-      local_var_response <- self$DappsDexUsersHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, ...)
+    DexGetUsersHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, data_file = NULL, ...) {
+      local_var_response <- self$DexGetUsersHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -1058,19 +1360,20 @@ DexApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' 
+    #' GetUsers (historical)
     #'
     #' @description
-    #' 
+    #' GetUsers (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
+    #' @return API response (array[DexUserDTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsDexUsersHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
+    DexGetUsersHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -1095,7 +1398,7 @@ DexApi <- R6::R6Class(
       local_var_url_path <- "/dapps/dex/users/historical"
 
       # The Accept request HTTP header
-      local_var_accepts <- list()
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -1114,7 +1417,18 @@ DexApi <- R6::R6Class(
                                  ...)
 
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[DexUserDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
         local_var_resp
       } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
         ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
@@ -1127,21 +1441,22 @@ DexApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' 
+    #' GetWithdraws (historical)
     #'
     #' @description
-    #' 
+    #' GetWithdraws (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param token_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param token_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return void
+    #' @return array[DexWithdrawDTO]
     #' @export
-    DappsDexWithdrawHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, token_id = NULL, ...) {
-      local_var_response <- self$DappsDexWithdrawHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, token_id, ...)
+    DexGetWithdrawsHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, token_id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$DexGetWithdrawsHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, token_id, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -1152,20 +1467,21 @@ DexApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' 
+    #' GetWithdraws (historical)
     #'
     #' @description
-    #' 
+    #' GetWithdraws (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param token_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param token_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
+    #' @return API response (array[DexWithdrawDTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsDexWithdrawHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, token_id = NULL, ...) {
+    DexGetWithdrawsHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, token_id = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -1190,10 +1506,10 @@ DexApi <- R6::R6Class(
 
       query_params[["tokenId"]] <- `token_id`
 
-      local_var_url_path <- "/dapps/dex/withdraw/historical"
+      local_var_url_path <- "/dapps/dex/withdraws/historical"
 
       # The Accept request HTTP header
-      local_var_accepts <- list()
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -1212,7 +1528,18 @@ DexApi <- R6::R6Class(
                                  ...)
 
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[DexWithdrawDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
         local_var_resp
       } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
         ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
@@ -1225,21 +1552,22 @@ DexApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' 
+    #' GetWithdrawsRequests (historical)
     #'
     #' @description
-    #' 
+    #' GetWithdrawsRequests (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param token_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param token_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return void
+    #' @return array[DexWithdrawRequestDTO]
     #' @export
-    DappsDexWithdrawRequestHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, token_id = NULL, ...) {
-      local_var_response <- self$DappsDexWithdrawRequestHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, token_id, ...)
+    DexGetWithdrawsRequestsHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, token_id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$DexGetWithdrawsRequestsHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, token_id, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -1250,20 +1578,21 @@ DexApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' 
+    #' GetWithdrawsRequests (historical)
     #'
     #' @description
-    #' 
+    #' GetWithdrawsRequests (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param token_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param token_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
+    #' @return API response (array[DexWithdrawRequestDTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsDexWithdrawRequestHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, token_id = NULL, ...) {
+    DexGetWithdrawsRequestsHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, token_id = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -1288,10 +1617,10 @@ DexApi <- R6::R6Class(
 
       query_params[["tokenId"]] <- `token_id`
 
-      local_var_url_path <- "/dapps/dex/withdrawRequest/historical"
+      local_var_url_path <- "/dapps/dex/withdrawsRequests/historical"
 
       # The Accept request HTTP header
-      local_var_accepts <- list()
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -1310,7 +1639,18 @@ DexApi <- R6::R6Class(
                                  ...)
 
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[DexWithdrawRequestDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
         local_var_resp
       } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
         ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)

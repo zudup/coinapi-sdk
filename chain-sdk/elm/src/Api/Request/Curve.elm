@@ -15,38 +15,38 @@
 
 
 module Api.Request.Curve exposing
-    ( dappsCurveAccountsHistoricalGet
-    , dappsCurveAddLiquidityEventHistoricalGet
-    , dappsCurveAdminFeeChangeLogHistoricalGet
-    , dappsCurveAmplificationCoeffChangeLogHistoricalGet
-    , dappsCurveCoinsHistoricalGet
-    , dappsCurveContractsHistoricalGet
-    , dappsCurveContractsVersionHistoricalGet
-    , dappsCurveDailyVolumeHistoricalGet
-    , dappsCurveFeeChangeLogHistoricalGet
-    , dappsCurveGaugeDepositHistoricalGet
-    , dappsCurveGaugeHistoricalGet
-    , dappsCurveGaugeLiquidityHistoricalGet
-    , dappsCurveGaugeTotalWeightHistoricalGet
-    , dappsCurveGaugeTypeHistoricalGet
-    , dappsCurveGaugeTypeWeightHistoricalGet
-    , dappsCurveGaugeWeightHistoricalGet
-    , dappsCurveGaugeWeightVoteHistoricalGet
-    , dappsCurveGaugeWithdrawHistoricalGet
-    , dappsCurveHourlyVolumeHistoricalGet
-    , dappsCurveLpTokenHistoricalGet
-    , dappsCurvePoolsHistoricalGet
-    , dappsCurveProposalsHistoricalGet
-    , dappsCurveProposalsVoteHistoricalGet
-    , dappsCurveRemoveLiquidityEventHistoricalGet
-    , dappsCurveRemoveLiquidityOneEventHistoricalGet
-    , dappsCurveSwapsHistoricalGet
-    , dappsCurveSystemStateHistoricalGet
-    , dappsCurveTokensHistoricalGet
-    , dappsCurveTransferOwnershipEventHistoricalGet
-    , dappsCurveUnderlyingCoinHistoricalGet
-    , dappsCurveVotingAppHistoricalGet
-    , dappsCurveWeeklyVolumeHistoricalGet
+    ( curveGetAccountsHistorical
+    , curveGetAddLiquidityEventsHistorical
+    , curveGetAdminFeeChangeLogsHistorical
+    , curveGetAmplificationCoeffChangeLogsHistorical
+    , curveGetCoinsHistorical
+    , curveGetContractsHistorical
+    , curveGetContractsVersionsHistorical
+    , curveGetDailyVolumesHistorical
+    , curveGetExchangesHistorical
+    , curveGetFeeChangeLogsHistorical
+    , curveGetGaugesDepositsHistorical
+    , curveGetGaugesHistorical
+    , curveGetGaugesLiquidityHistorical
+    , curveGetGaugesTotalWeightsHistorical
+    , curveGetGaugesTypesHistorical
+    , curveGetGaugesTypesWeightsHistorical
+    , curveGetGaugesWeightsHistorical
+    , curveGetGaugesWeightsVotesHistorical
+    , curveGetGaugesWithdrawHistorical
+    , curveGetHourlyVolumesHistorical
+    , curveGetLpTokensHistorical
+    , curveGetPoolsHistorical
+    , curveGetProposalsHistorical
+    , curveGetProposalsVotesHistorical
+    , curveGetRemoveLiquidityEventsHistorical
+    , curveGetRemoveLiquidityOneEventsHistorical
+    , curveGetSystemStatesHistorical
+    , curveGetTokensHistorical
+    , curveGetTransferOwnershipEventsHistorical
+    , curveGetUnderlyingCoinsHistorical
+    , curveGetVotingAppsHistorical
+    , curveGetWeeklyVolumesHistorical
     )
 
 import Api
@@ -59,8 +59,10 @@ import Json.Encode
 
 
 
-dappsCurveAccountsHistoricalGet : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Api.Request ()
-dappsCurveAccountsHistoricalGet startBlock_query endBlock_query startDate_query endDate_query =
+{-| Gets accounts.
+-}
+curveGetAccountsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Api.Request (List Api.Data.CurveAccountDTO)
+curveGetAccountsHistorical startBlock_query endBlock_query startDate_query endDate_query =
     Api.request
         "GET"
         "/dapps/curve/accounts/historical"
@@ -68,51 +70,59 @@ dappsCurveAccountsHistoricalGet startBlock_query endBlock_query startDate_query 
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ) ]
         []
         Nothing
-        (Json.Decode.succeed ())
+        (Json.Decode.list Api.Data.curveAccountDTODecoder)
 
 
 
-dappsCurveAddLiquidityEventHistoricalGet : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request ()
-dappsCurveAddLiquidityEventHistoricalGet startBlock_query endBlock_query startDate_query endDate_query poolId_query =
+{-| Gets add liquidity events.
+-}
+curveGetAddLiquidityEventsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.CurveAddLiquidityEventDTO)
+curveGetAddLiquidityEventsHistorical startBlock_query endBlock_query startDate_query endDate_query poolId_query =
     Api.request
         "GET"
-        "/dapps/curve/addLiquidityEvent/historical"
+        "/dapps/curve/addLiquidityEvents/historical"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
         []
         Nothing
-        (Json.Decode.succeed ())
+        (Json.Decode.list Api.Data.curveAddLiquidityEventDTODecoder)
 
 
 
-dappsCurveAdminFeeChangeLogHistoricalGet : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request ()
-dappsCurveAdminFeeChangeLogHistoricalGet startBlock_query endBlock_query startDate_query endDate_query poolId_query =
+{-| Gets admin fee change logs.
+-}
+curveGetAdminFeeChangeLogsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.CurveAdminFeeChangeLogDTO)
+curveGetAdminFeeChangeLogsHistorical startBlock_query endBlock_query startDate_query endDate_query poolId_query =
     Api.request
         "GET"
-        "/dapps/curve/adminFeeChangeLog/historical"
+        "/dapps/curve/adminFeeChangeLogs/historical"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
         []
         Nothing
-        (Json.Decode.succeed ())
+        (Json.Decode.list Api.Data.curveAdminFeeChangeLogDTODecoder)
 
 
 
-dappsCurveAmplificationCoeffChangeLogHistoricalGet : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request ()
-dappsCurveAmplificationCoeffChangeLogHistoricalGet startBlock_query endBlock_query startDate_query endDate_query poolId_query =
+{-| Gets amplification coeff change logs.
+-}
+curveGetAmplificationCoeffChangeLogsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.CurveAmplificationCoeffChangeLogDTO)
+curveGetAmplificationCoeffChangeLogsHistorical startBlock_query endBlock_query startDate_query endDate_query poolId_query =
     Api.request
         "GET"
-        "/dapps/curve/amplificationCoeffChangeLog/historical"
+        "/dapps/curve/amplificationCoeffChangeLogs/historical"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
         []
         Nothing
-        (Json.Decode.succeed ())
+        (Json.Decode.list Api.Data.curveAmplificationCoeffChangeLogDTODecoder)
 
 
 
-dappsCurveCoinsHistoricalGet : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request ()
-dappsCurveCoinsHistoricalGet startBlock_query endBlock_query startDate_query endDate_query poolId_query =
+{-| Gets coins.
+-}
+curveGetCoinsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.CurveCoinDTO)
+curveGetCoinsHistorical startBlock_query endBlock_query startDate_query endDate_query poolId_query =
     Api.request
         "GET"
         "/dapps/curve/coins/historical"
@@ -120,12 +130,14 @@ dappsCurveCoinsHistoricalGet startBlock_query endBlock_query startDate_query end
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
         []
         Nothing
-        (Json.Decode.succeed ())
+        (Json.Decode.list Api.Data.curveCoinDTODecoder)
 
 
 
-dappsCurveContractsHistoricalGet : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request ()
-dappsCurveContractsHistoricalGet startBlock_query endBlock_query startDate_query endDate_query poolId_query =
+{-| Gets contracts.
+-}
+curveGetContractsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.CurveContractDTO)
+curveGetContractsHistorical startBlock_query endBlock_query startDate_query endDate_query poolId_query =
     Api.request
         "GET"
         "/dapps/curve/contracts/historical"
@@ -133,194 +145,239 @@ dappsCurveContractsHistoricalGet startBlock_query endBlock_query startDate_query
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
         []
         Nothing
-        (Json.Decode.succeed ())
+        (Json.Decode.list Api.Data.curveContractDTODecoder)
 
 
 
-dappsCurveContractsVersionHistoricalGet : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request ()
-dappsCurveContractsVersionHistoricalGet startBlock_query endBlock_query startDate_query endDate_query poolId_query =
+{-| Gets contracts versions.
+-}
+curveGetContractsVersionsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.CurveContractVersionDTO)
+curveGetContractsVersionsHistorical startBlock_query endBlock_query startDate_query endDate_query poolId_query =
     Api.request
         "GET"
-        "/dapps/curve/contractsVersion/historical"
+        "/dapps/curve/contractsVersions/historical"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
         []
         Nothing
-        (Json.Decode.succeed ())
+        (Json.Decode.list Api.Data.curveContractVersionDTODecoder)
 
 
 
-dappsCurveDailyVolumeHistoricalGet : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request ()
-dappsCurveDailyVolumeHistoricalGet startBlock_query endBlock_query startDate_query endDate_query poolId_query =
+{-| Gets daily volumes.
+-}
+curveGetDailyVolumesHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.CurveDailyVolumeDTO)
+curveGetDailyVolumesHistorical startBlock_query endBlock_query startDate_query endDate_query poolId_query =
     Api.request
         "GET"
-        "/dapps/curve/dailyVolume/historical"
+        "/dapps/curve/dailyVolumes/historical"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
         []
         Nothing
-        (Json.Decode.succeed ())
+        (Json.Decode.list Api.Data.curveDailyVolumeDTODecoder)
 
 
 
-dappsCurveFeeChangeLogHistoricalGet : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request ()
-dappsCurveFeeChangeLogHistoricalGet startBlock_query endBlock_query startDate_query endDate_query poolId_query =
+{-| Gets exchanges.
+-}
+curveGetExchangesHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.CurveExchangeDTO)
+curveGetExchangesHistorical startBlock_query endBlock_query startDate_query endDate_query poolId_query =
     Api.request
         "GET"
-        "/dapps/curve/feeChangeLog/historical"
+        "/dapps/curve/exchanges/historical"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
         []
         Nothing
-        (Json.Decode.succeed ())
+        (Json.Decode.list Api.Data.curveExchangeDTODecoder)
 
 
 
-dappsCurveGaugeDepositHistoricalGet : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Api.Request ()
-dappsCurveGaugeDepositHistoricalGet startBlock_query endBlock_query startDate_query endDate_query =
+{-| Gets fee change logs.
+-}
+curveGetFeeChangeLogsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.CurveFeeChangeLogDTO)
+curveGetFeeChangeLogsHistorical startBlock_query endBlock_query startDate_query endDate_query poolId_query =
     Api.request
         "GET"
-        "/dapps/curve/gaugeDeposit/historical"
-        []
-        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ) ]
-        []
-        Nothing
-        (Json.Decode.succeed ())
-
-
-
-dappsCurveGaugeHistoricalGet : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request ()
-dappsCurveGaugeHistoricalGet startBlock_query endBlock_query startDate_query endDate_query poolId_query =
-    Api.request
-        "GET"
-        "/dapps/curve/gauge/historical"
+        "/dapps/curve/feeChangeLogs/historical"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
         []
         Nothing
-        (Json.Decode.succeed ())
+        (Json.Decode.list Api.Data.curveFeeChangeLogDTODecoder)
 
 
 
-dappsCurveGaugeLiquidityHistoricalGet : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Api.Request ()
-dappsCurveGaugeLiquidityHistoricalGet startBlock_query endBlock_query startDate_query endDate_query =
+{-| Gets gauges deposits.
+-}
+curveGetGaugesDepositsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Api.Request (List Api.Data.CurveGaugeDepositDTO)
+curveGetGaugesDepositsHistorical startBlock_query endBlock_query startDate_query endDate_query =
     Api.request
         "GET"
-        "/dapps/curve/gaugeLiquidity/historical"
+        "/dapps/curve/gaugesDeposits/historical"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ) ]
         []
         Nothing
-        (Json.Decode.succeed ())
+        (Json.Decode.list Api.Data.curveGaugeDepositDTODecoder)
 
 
 
-dappsCurveGaugeTotalWeightHistoricalGet : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Api.Request ()
-dappsCurveGaugeTotalWeightHistoricalGet startBlock_query endBlock_query startDate_query endDate_query =
+{-| Gets gauges.
+-}
+curveGetGaugesHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.CurveGaugeDTO)
+curveGetGaugesHistorical startBlock_query endBlock_query startDate_query endDate_query poolId_query =
     Api.request
         "GET"
-        "/dapps/curve/gaugeTotalWeight/historical"
-        []
-        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ) ]
-        []
-        Nothing
-        (Json.Decode.succeed ())
-
-
-
-dappsCurveGaugeTypeHistoricalGet : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Api.Request ()
-dappsCurveGaugeTypeHistoricalGet startBlock_query endBlock_query startDate_query endDate_query =
-    Api.request
-        "GET"
-        "/dapps/curve/gaugeType/historical"
-        []
-        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ) ]
-        []
-        Nothing
-        (Json.Decode.succeed ())
-
-
-
-dappsCurveGaugeTypeWeightHistoricalGet : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Api.Request ()
-dappsCurveGaugeTypeWeightHistoricalGet startBlock_query endBlock_query startDate_query endDate_query =
-    Api.request
-        "GET"
-        "/dapps/curve/gaugeTypeWeight/historical"
-        []
-        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ) ]
-        []
-        Nothing
-        (Json.Decode.succeed ())
-
-
-
-dappsCurveGaugeWeightHistoricalGet : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Api.Request ()
-dappsCurveGaugeWeightHistoricalGet startBlock_query endBlock_query startDate_query endDate_query =
-    Api.request
-        "GET"
-        "/dapps/curve/gaugeWeight/historical"
-        []
-        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ) ]
-        []
-        Nothing
-        (Json.Decode.succeed ())
-
-
-
-dappsCurveGaugeWeightVoteHistoricalGet : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Api.Request ()
-dappsCurveGaugeWeightVoteHistoricalGet startBlock_query endBlock_query startDate_query endDate_query =
-    Api.request
-        "GET"
-        "/dapps/curve/gaugeWeightVote/historical"
-        []
-        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ) ]
-        []
-        Nothing
-        (Json.Decode.succeed ())
-
-
-
-dappsCurveGaugeWithdrawHistoricalGet : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Api.Request ()
-dappsCurveGaugeWithdrawHistoricalGet startBlock_query endBlock_query startDate_query endDate_query =
-    Api.request
-        "GET"
-        "/dapps/curve/gaugeWithdraw/historical"
-        []
-        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ) ]
-        []
-        Nothing
-        (Json.Decode.succeed ())
-
-
-
-dappsCurveHourlyVolumeHistoricalGet : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request ()
-dappsCurveHourlyVolumeHistoricalGet startBlock_query endBlock_query startDate_query endDate_query poolId_query =
-    Api.request
-        "GET"
-        "/dapps/curve/hourlyVolume/historical"
+        "/dapps/curve/gauges/historical"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
         []
         Nothing
-        (Json.Decode.succeed ())
+        (Json.Decode.list Api.Data.curveGaugeDTODecoder)
 
 
 
-dappsCurveLpTokenHistoricalGet : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request ()
-dappsCurveLpTokenHistoricalGet startBlock_query endBlock_query startDate_query endDate_query poolId_query =
+{-| Gets gauges liquidity.
+-}
+curveGetGaugesLiquidityHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Api.Request (List Api.Data.CurveGaugeLiquidityDTO)
+curveGetGaugesLiquidityHistorical startBlock_query endBlock_query startDate_query endDate_query =
     Api.request
         "GET"
-        "/dapps/curve/lpToken/historical"
+        "/dapps/curve/gaugesLiquidity/historical"
+        []
+        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ) ]
+        []
+        Nothing
+        (Json.Decode.list Api.Data.curveGaugeLiquidityDTODecoder)
+
+
+
+{-| Gets gauges total weights.
+-}
+curveGetGaugesTotalWeightsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Api.Request (List Api.Data.CurveGaugeTotalWeightDTO)
+curveGetGaugesTotalWeightsHistorical startBlock_query endBlock_query startDate_query endDate_query =
+    Api.request
+        "GET"
+        "/dapps/curve/gaugesTotalWeights/historical"
+        []
+        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ) ]
+        []
+        Nothing
+        (Json.Decode.list Api.Data.curveGaugeTotalWeightDTODecoder)
+
+
+
+{-| Gets gauges types.
+-}
+curveGetGaugesTypesHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Api.Request (List Api.Data.CurveGaugeTypeDTO)
+curveGetGaugesTypesHistorical startBlock_query endBlock_query startDate_query endDate_query =
+    Api.request
+        "GET"
+        "/dapps/curve/gaugesTypes/historical"
+        []
+        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ) ]
+        []
+        Nothing
+        (Json.Decode.list Api.Data.curveGaugeTypeDTODecoder)
+
+
+
+{-| Gets gauges types weights.
+-}
+curveGetGaugesTypesWeightsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Api.Request (List Api.Data.CurveGaugeTypeWeightDTO)
+curveGetGaugesTypesWeightsHistorical startBlock_query endBlock_query startDate_query endDate_query =
+    Api.request
+        "GET"
+        "/dapps/curve/gaugesTypesWeights/historical"
+        []
+        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ) ]
+        []
+        Nothing
+        (Json.Decode.list Api.Data.curveGaugeTypeWeightDTODecoder)
+
+
+
+{-| Gets gauges weights.
+-}
+curveGetGaugesWeightsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Api.Request (List Api.Data.CurveGaugeWeightDTO)
+curveGetGaugesWeightsHistorical startBlock_query endBlock_query startDate_query endDate_query =
+    Api.request
+        "GET"
+        "/dapps/curve/gaugesWeights/historical"
+        []
+        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ) ]
+        []
+        Nothing
+        (Json.Decode.list Api.Data.curveGaugeWeightDTODecoder)
+
+
+
+{-| Gets gauges weights votes.
+-}
+curveGetGaugesWeightsVotesHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Api.Request (List Api.Data.CurveGaugeWeightVoteDTO)
+curveGetGaugesWeightsVotesHistorical startBlock_query endBlock_query startDate_query endDate_query =
+    Api.request
+        "GET"
+        "/dapps/curve/gaugesWeightsVotes/historical"
+        []
+        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ) ]
+        []
+        Nothing
+        (Json.Decode.list Api.Data.curveGaugeWeightVoteDTODecoder)
+
+
+
+{-| Gets gauges withdraws.
+-}
+curveGetGaugesWithdrawHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Api.Request (List Api.Data.CurveGaugeWithdrawDTO)
+curveGetGaugesWithdrawHistorical startBlock_query endBlock_query startDate_query endDate_query =
+    Api.request
+        "GET"
+        "/dapps/curve/gaugesWithdraws/historical"
+        []
+        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ) ]
+        []
+        Nothing
+        (Json.Decode.list Api.Data.curveGaugeWithdrawDTODecoder)
+
+
+
+{-| Gets hourly volumes.
+-}
+curveGetHourlyVolumesHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.CurveHourlyVolumeDTO)
+curveGetHourlyVolumesHistorical startBlock_query endBlock_query startDate_query endDate_query poolId_query =
+    Api.request
+        "GET"
+        "/dapps/curve/hourlyVolumes/historical"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
         []
         Nothing
-        (Json.Decode.succeed ())
+        (Json.Decode.list Api.Data.curveHourlyVolumeDTODecoder)
 
 
 
-dappsCurvePoolsHistoricalGet : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request ()
-dappsCurvePoolsHistoricalGet startBlock_query endBlock_query startDate_query endDate_query poolId_query =
+{-| Gets lp tokens.
+-}
+curveGetLpTokensHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.CurveLpTokenDTO)
+curveGetLpTokensHistorical startBlock_query endBlock_query startDate_query endDate_query poolId_query =
+    Api.request
+        "GET"
+        "/dapps/curve/lpTokens/historical"
+        []
+        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
+        []
+        Nothing
+        (Json.Decode.list Api.Data.curveLpTokenDTODecoder)
+
+
+
+{-| Gets pools.
+-}
+curveGetPoolsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.CurvePoolDTO)
+curveGetPoolsHistorical startBlock_query endBlock_query startDate_query endDate_query poolId_query =
     Api.request
         "GET"
         "/dapps/curve/pools/historical"
@@ -328,12 +385,14 @@ dappsCurvePoolsHistoricalGet startBlock_query endBlock_query startDate_query end
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
         []
         Nothing
-        (Json.Decode.succeed ())
+        (Json.Decode.list Api.Data.curvePoolDTODecoder)
 
 
 
-dappsCurveProposalsHistoricalGet : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Api.Request ()
-dappsCurveProposalsHistoricalGet startBlock_query endBlock_query startDate_query endDate_query =
+{-| Gets proposals.
+-}
+curveGetProposalsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Api.Request (List Api.Data.CurveProposalDTO)
+curveGetProposalsHistorical startBlock_query endBlock_query startDate_query endDate_query =
     Api.request
         "GET"
         "/dapps/curve/proposals/historical"
@@ -341,77 +400,74 @@ dappsCurveProposalsHistoricalGet startBlock_query endBlock_query startDate_query
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ) ]
         []
         Nothing
-        (Json.Decode.succeed ())
+        (Json.Decode.list Api.Data.curveProposalDTODecoder)
 
 
 
-dappsCurveProposalsVoteHistoricalGet : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Api.Request ()
-dappsCurveProposalsVoteHistoricalGet startBlock_query endBlock_query startDate_query endDate_query =
+{-| Gets proposals votes.
+-}
+curveGetProposalsVotesHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Api.Request (List Api.Data.CurveProposalVoteDTO)
+curveGetProposalsVotesHistorical startBlock_query endBlock_query startDate_query endDate_query =
     Api.request
         "GET"
-        "/dapps/curve/proposalsVote/historical"
+        "/dapps/curve/proposalsVotes/historical"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ) ]
         []
         Nothing
-        (Json.Decode.succeed ())
+        (Json.Decode.list Api.Data.curveProposalVoteDTODecoder)
 
 
 
-dappsCurveRemoveLiquidityEventHistoricalGet : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request ()
-dappsCurveRemoveLiquidityEventHistoricalGet startBlock_query endBlock_query startDate_query endDate_query poolId_query =
+{-| Gets remove liquidity events.
+-}
+curveGetRemoveLiquidityEventsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.CurveRemoveLiquidityEventDTO)
+curveGetRemoveLiquidityEventsHistorical startBlock_query endBlock_query startDate_query endDate_query poolId_query =
     Api.request
         "GET"
-        "/dapps/curve/removeLiquidityEvent/historical"
+        "/dapps/curve/removeLiquidityEvents/historical"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
         []
         Nothing
-        (Json.Decode.succeed ())
+        (Json.Decode.list Api.Data.curveRemoveLiquidityEventDTODecoder)
 
 
 
-dappsCurveRemoveLiquidityOneEventHistoricalGet : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request ()
-dappsCurveRemoveLiquidityOneEventHistoricalGet startBlock_query endBlock_query startDate_query endDate_query poolId_query =
+{-| Gets remove liquidity one events.
+-}
+curveGetRemoveLiquidityOneEventsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.CurveRemoveLiquidityOneEventDTO)
+curveGetRemoveLiquidityOneEventsHistorical startBlock_query endBlock_query startDate_query endDate_query poolId_query =
     Api.request
         "GET"
-        "/dapps/curve/removeLiquidityOneEvent/historical"
+        "/dapps/curve/removeLiquidityOneEvents/historical"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
         []
         Nothing
-        (Json.Decode.succeed ())
+        (Json.Decode.list Api.Data.curveRemoveLiquidityOneEventDTODecoder)
 
 
 
-dappsCurveSwapsHistoricalGet : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request ()
-dappsCurveSwapsHistoricalGet startBlock_query endBlock_query startDate_query endDate_query poolId_query =
+{-| Gets system states.
+-}
+curveGetSystemStatesHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Api.Request (List Api.Data.CurveSystemStateDTO)
+curveGetSystemStatesHistorical startBlock_query endBlock_query startDate_query endDate_query =
     Api.request
         "GET"
-        "/dapps/curve/swaps/historical"
-        []
-        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
-        []
-        Nothing
-        (Json.Decode.succeed ())
-
-
-
-dappsCurveSystemStateHistoricalGet : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Api.Request ()
-dappsCurveSystemStateHistoricalGet startBlock_query endBlock_query startDate_query endDate_query =
-    Api.request
-        "GET"
-        "/dapps/curve/systemState/historical"
+        "/dapps/curve/systemStates/historical"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ) ]
         []
         Nothing
-        (Json.Decode.succeed ())
+        (Json.Decode.list Api.Data.curveSystemStateDTODecoder)
 
 
 
-dappsCurveTokensHistoricalGet : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request ()
-dappsCurveTokensHistoricalGet startBlock_query endBlock_query startDate_query endDate_query tokenId_query =
+{-| Gets tokens.
+-}
+curveGetTokensHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.CurveTokenDTO)
+curveGetTokensHistorical startBlock_query endBlock_query startDate_query endDate_query tokenId_query =
     Api.request
         "GET"
         "/dapps/curve/tokens/historical"
@@ -419,56 +475,64 @@ dappsCurveTokensHistoricalGet startBlock_query endBlock_query startDate_query en
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "tokenId", Maybe.map identity tokenId_query ) ]
         []
         Nothing
-        (Json.Decode.succeed ())
+        (Json.Decode.list Api.Data.curveTokenDTODecoder)
 
 
 
-dappsCurveTransferOwnershipEventHistoricalGet : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request ()
-dappsCurveTransferOwnershipEventHistoricalGet startBlock_query endBlock_query startDate_query endDate_query poolId_query =
+{-| Gets transfer ownership events.
+-}
+curveGetTransferOwnershipEventsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.CurveTransferOwnershipEventDTO)
+curveGetTransferOwnershipEventsHistorical startBlock_query endBlock_query startDate_query endDate_query poolId_query =
     Api.request
         "GET"
-        "/dapps/curve/transferOwnershipEvent/historical"
+        "/dapps/curve/transferOwnershipEvents/historical"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
         []
         Nothing
-        (Json.Decode.succeed ())
+        (Json.Decode.list Api.Data.curveTransferOwnershipEventDTODecoder)
 
 
 
-dappsCurveUnderlyingCoinHistoricalGet : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request ()
-dappsCurveUnderlyingCoinHistoricalGet startBlock_query endBlock_query startDate_query endDate_query poolId_query =
+{-| Gets underlying coins.
+-}
+curveGetUnderlyingCoinsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.CurveUnderlyingCoinDTO)
+curveGetUnderlyingCoinsHistorical startBlock_query endBlock_query startDate_query endDate_query poolId_query =
     Api.request
         "GET"
-        "/dapps/curve/underlyingCoin/historical"
+        "/dapps/curve/underlyingCoins/historical"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
         []
         Nothing
-        (Json.Decode.succeed ())
+        (Json.Decode.list Api.Data.curveUnderlyingCoinDTODecoder)
 
 
 
-dappsCurveVotingAppHistoricalGet : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Api.Request ()
-dappsCurveVotingAppHistoricalGet startBlock_query endBlock_query startDate_query endDate_query =
+{-| Gets voting apps.
+-}
+curveGetVotingAppsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Api.Request (List Api.Data.CurveVotingAppDTO)
+curveGetVotingAppsHistorical startBlock_query endBlock_query startDate_query endDate_query =
     Api.request
         "GET"
-        "/dapps/curve/votingApp/historical"
+        "/dapps/curve/votingApps/historical"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ) ]
         []
         Nothing
-        (Json.Decode.succeed ())
+        (Json.Decode.list Api.Data.curveVotingAppDTODecoder)
 
 
 
-dappsCurveWeeklyVolumeHistoricalGet : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request ()
-dappsCurveWeeklyVolumeHistoricalGet startBlock_query endBlock_query startDate_query endDate_query poolId_query =
+{-| Gets weekly volumes.
+-}
+curveGetWeeklyVolumesHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.CurveWeeklyVolumeDTO)
+curveGetWeeklyVolumesHistorical startBlock_query endBlock_query startDate_query endDate_query poolId_query =
     Api.request
         "GET"
-        "/dapps/curve/weeklyVolume/historical"
+        "/dapps/curve/weeklyVolumes/historical"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
         []
         Nothing
-        (Json.Decode.succeed ())
+        (Json.Decode.list Api.Data.curveWeeklyVolumeDTODecoder)

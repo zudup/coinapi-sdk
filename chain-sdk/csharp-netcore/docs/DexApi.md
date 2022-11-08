@@ -4,22 +4,25 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**DappsDexBatchHistoricalGet**](DexApi.md#dappsdexbatchhistoricalget) | **GET** /dapps/dex/batch/historical |  |
-| [**DappsDexOrdersHistoricalGet**](DexApi.md#dappsdexordershistoricalget) | **GET** /dapps/dex/orders/historical |  |
-| [**DappsDexPricesHistoricalGet**](DexApi.md#dappsdexpriceshistoricalget) | **GET** /dapps/dex/prices/historical |  |
-| [**DappsDexSolutionHistoricalGet**](DexApi.md#dappsdexsolutionhistoricalget) | **GET** /dapps/dex/solution/historical |  |
-| [**DappsDexStatsHistoricalGet**](DexApi.md#dappsdexstatshistoricalget) | **GET** /dapps/dex/stats/historical |  |
-| [**DappsDexTokensHistoricalGet**](DexApi.md#dappsdextokenshistoricalget) | **GET** /dapps/dex/tokens/historical |  |
-| [**DappsDexTradesHistoricalGet**](DexApi.md#dappsdextradeshistoricalget) | **GET** /dapps/dex/trades/historical |  |
-| [**DappsDexUsersHistoricalGet**](DexApi.md#dappsdexusershistoricalget) | **GET** /dapps/dex/users/historical |  |
-| [**DappsDexWithdrawHistoricalGet**](DexApi.md#dappsdexwithdrawhistoricalget) | **GET** /dapps/dex/withdraw/historical |  |
-| [**DappsDexWithdrawRequestHistoricalGet**](DexApi.md#dappsdexwithdrawrequesthistoricalget) | **GET** /dapps/dex/withdrawRequest/historical |  |
+| [**DexGetBatchesHistorical**](DexApi.md#dexgetbatcheshistorical) | **GET** /dapps/dex/batches/historical | GetBatches (historical) |
+| [**DexGetDepositsHistorical**](DexApi.md#dexgetdepositshistorical) | **GET** /dapps/dex/deposits/historical | GetDeposits (historical) |
+| [**DexGetOrdersHistorical**](DexApi.md#dexgetordershistorical) | **GET** /dapps/dex/orders/historical | GetOrders (historical) |
+| [**DexGetPricesHistorical**](DexApi.md#dexgetpriceshistorical) | **GET** /dapps/dex/prices/historical | GetPrices (historical) |
+| [**DexGetSolutionsHistorical**](DexApi.md#dexgetsolutionshistorical) | **GET** /dapps/dex/solutions/historical | GetSolutions (historical) |
+| [**DexGetStatsHistorical**](DexApi.md#dexgetstatshistorical) | **GET** /dapps/dex/stats/historical | GetStats (historical) |
+| [**DexGetTokensHistorical**](DexApi.md#dexgettokenshistorical) | **GET** /dapps/dex/tokens/historical | GetTokens (historical) 🔥 |
+| [**DexGetTradesHistorical**](DexApi.md#dexgettradeshistorical) | **GET** /dapps/dex/trades/historical | GetTrades (historical) 🔥 |
+| [**DexGetUsersHistorical**](DexApi.md#dexgetusershistorical) | **GET** /dapps/dex/users/historical | GetUsers (historical) |
+| [**DexGetWithdrawsHistorical**](DexApi.md#dexgetwithdrawshistorical) | **GET** /dapps/dex/withdraws/historical | GetWithdraws (historical) |
+| [**DexGetWithdrawsRequestsHistorical**](DexApi.md#dexgetwithdrawsrequestshistorical) | **GET** /dapps/dex/withdrawsRequests/historical | GetWithdrawsRequests (historical) |
 
-<a name="dappsdexbatchhistoricalget"></a>
-# **DappsDexBatchHistoricalGet**
-> void DappsDexBatchHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
+<a name="dexgetbatcheshistorical"></a>
+# **DexGetBatchesHistorical**
+> List&lt;DexBatchDTO&gt; DexGetBatchesHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
 
+GetBatches (historical)
 
+Gets batches.
 
 ### Example
 ```csharp
@@ -31,7 +34,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class DappsDexBatchHistoricalGetExample
+    public class DexGetBatchesHistoricalExample
     {
         public static void Main()
         {
@@ -45,11 +48,13 @@ namespace Example
 
             try
             {
-                apiInstance.DappsDexBatchHistoricalGet(startBlock, endBlock, startDate, endDate);
+                // GetBatches (historical)
+                List<DexBatchDTO> result = apiInstance.DexGetBatchesHistorical(startBlock, endBlock, startDate, endDate);
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling DexApi.DappsDexBatchHistoricalGet: " + e.Message);
+                Debug.Print("Exception when calling DexApi.DexGetBatchesHistorical: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -58,17 +63,21 @@ namespace Example
 }
 ```
 
-#### Using the DappsDexBatchHistoricalGetWithHttpInfo variant
+#### Using the DexGetBatchesHistoricalWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    apiInstance.DappsDexBatchHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate);
+    // GetBatches (historical)
+    ApiResponse<List<DexBatchDTO>> response = apiInstance.DexGetBatchesHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling DexApi.DappsDexBatchHistoricalGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling DexApi.DexGetBatchesHistoricalWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -85,7 +94,7 @@ catch (ApiException e)
 
 ### Return type
 
-void (empty response body)
+[**List&lt;DexBatchDTO&gt;**](DexBatchDTO.md)
 
 ### Authorization
 
@@ -94,21 +103,23 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="dappsdexordershistoricalget"></a>
-# **DappsDexOrdersHistoricalGet**
-> void DappsDexOrdersHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string tokenId = null)
+<a name="dexgetdepositshistorical"></a>
+# **DexGetDepositsHistorical**
+> List&lt;DexDepositDTO&gt; DexGetDepositsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string tokenId = null)
 
+GetDeposits (historical)
 
+Gets deposits.
 
 ### Example
 ```csharp
@@ -120,7 +131,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class DappsDexOrdersHistoricalGetExample
+    public class DexGetDepositsHistoricalExample
     {
         public static void Main()
         {
@@ -135,11 +146,13 @@ namespace Example
 
             try
             {
-                apiInstance.DappsDexOrdersHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId);
+                // GetDeposits (historical)
+                List<DexDepositDTO> result = apiInstance.DexGetDepositsHistorical(startBlock, endBlock, startDate, endDate, tokenId);
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling DexApi.DappsDexOrdersHistoricalGet: " + e.Message);
+                Debug.Print("Exception when calling DexApi.DexGetDepositsHistorical: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -148,17 +161,21 @@ namespace Example
 }
 ```
 
-#### Using the DappsDexOrdersHistoricalGetWithHttpInfo variant
+#### Using the DexGetDepositsHistoricalWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    apiInstance.DappsDexOrdersHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate, tokenId);
+    // GetDeposits (historical)
+    ApiResponse<List<DexDepositDTO>> response = apiInstance.DexGetDepositsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, tokenId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling DexApi.DappsDexOrdersHistoricalGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling DexApi.DexGetDepositsHistoricalWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -176,7 +193,7 @@ catch (ApiException e)
 
 ### Return type
 
-void (empty response body)
+[**List&lt;DexDepositDTO&gt;**](DexDepositDTO.md)
 
 ### Authorization
 
@@ -185,21 +202,23 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="dappsdexpriceshistoricalget"></a>
-# **DappsDexPricesHistoricalGet**
-> void DappsDexPricesHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string tokenId = null)
+<a name="dexgetordershistorical"></a>
+# **DexGetOrdersHistorical**
+> List&lt;DexOrderDTO&gt; DexGetOrdersHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string tokenId = null)
 
+GetOrders (historical)
 
+Gets orders.
 
 ### Example
 ```csharp
@@ -211,7 +230,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class DappsDexPricesHistoricalGetExample
+    public class DexGetOrdersHistoricalExample
     {
         public static void Main()
         {
@@ -226,11 +245,13 @@ namespace Example
 
             try
             {
-                apiInstance.DappsDexPricesHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId);
+                // GetOrders (historical)
+                List<DexOrderDTO> result = apiInstance.DexGetOrdersHistorical(startBlock, endBlock, startDate, endDate, tokenId);
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling DexApi.DappsDexPricesHistoricalGet: " + e.Message);
+                Debug.Print("Exception when calling DexApi.DexGetOrdersHistorical: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -239,17 +260,21 @@ namespace Example
 }
 ```
 
-#### Using the DappsDexPricesHistoricalGetWithHttpInfo variant
+#### Using the DexGetOrdersHistoricalWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    apiInstance.DappsDexPricesHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate, tokenId);
+    // GetOrders (historical)
+    ApiResponse<List<DexOrderDTO>> response = apiInstance.DexGetOrdersHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, tokenId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling DexApi.DappsDexPricesHistoricalGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling DexApi.DexGetOrdersHistoricalWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -267,7 +292,7 @@ catch (ApiException e)
 
 ### Return type
 
-void (empty response body)
+[**List&lt;DexOrderDTO&gt;**](DexOrderDTO.md)
 
 ### Authorization
 
@@ -276,21 +301,23 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="dappsdexsolutionhistoricalget"></a>
-# **DappsDexSolutionHistoricalGet**
-> void DappsDexSolutionHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string tokenId = null)
+<a name="dexgetpriceshistorical"></a>
+# **DexGetPricesHistorical**
+> List&lt;DexPriceDTO&gt; DexGetPricesHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string tokenId = null)
 
+GetPrices (historical)
 
+Gets prices.
 
 ### Example
 ```csharp
@@ -302,7 +329,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class DappsDexSolutionHistoricalGetExample
+    public class DexGetPricesHistoricalExample
     {
         public static void Main()
         {
@@ -317,11 +344,13 @@ namespace Example
 
             try
             {
-                apiInstance.DappsDexSolutionHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId);
+                // GetPrices (historical)
+                List<DexPriceDTO> result = apiInstance.DexGetPricesHistorical(startBlock, endBlock, startDate, endDate, tokenId);
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling DexApi.DappsDexSolutionHistoricalGet: " + e.Message);
+                Debug.Print("Exception when calling DexApi.DexGetPricesHistorical: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -330,17 +359,21 @@ namespace Example
 }
 ```
 
-#### Using the DappsDexSolutionHistoricalGetWithHttpInfo variant
+#### Using the DexGetPricesHistoricalWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    apiInstance.DappsDexSolutionHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate, tokenId);
+    // GetPrices (historical)
+    ApiResponse<List<DexPriceDTO>> response = apiInstance.DexGetPricesHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, tokenId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling DexApi.DappsDexSolutionHistoricalGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling DexApi.DexGetPricesHistoricalWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -358,7 +391,7 @@ catch (ApiException e)
 
 ### Return type
 
-void (empty response body)
+[**List&lt;DexPriceDTO&gt;**](DexPriceDTO.md)
 
 ### Authorization
 
@@ -367,21 +400,23 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="dappsdexstatshistoricalget"></a>
-# **DappsDexStatsHistoricalGet**
-> void DappsDexStatsHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
+<a name="dexgetsolutionshistorical"></a>
+# **DexGetSolutionsHistorical**
+> List&lt;DexSolutionDTO&gt; DexGetSolutionsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string tokenId = null)
 
+GetSolutions (historical)
 
+Gets solutions.
 
 ### Example
 ```csharp
@@ -393,96 +428,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class DappsDexStatsHistoricalGetExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "https://onchain.coinapi.io";
-            var apiInstance = new DexApi(config);
-            var startBlock = 789L;  // long? |  (optional) 
-            var endBlock = 789L;  // long? |  (optional) 
-            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
-            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
-
-            try
-            {
-                apiInstance.DappsDexStatsHistoricalGet(startBlock, endBlock, startDate, endDate);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling DexApi.DappsDexStatsHistoricalGet: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-#### Using the DappsDexStatsHistoricalGetWithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    apiInstance.DappsDexStatsHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling DexApi.DappsDexStatsHistoricalGetWithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **startBlock** | **long?** |  | [optional]  |
-| **endBlock** | **long?** |  | [optional]  |
-| **startDate** | **DateTime?** |  | [optional]  |
-| **endDate** | **DateTime?** |  | [optional]  |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="dappsdextokenshistoricalget"></a>
-# **DappsDexTokensHistoricalGet**
-> void DappsDexTokensHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string tokenId = null)
-
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using CoinAPI.EMS.REST.V1.Api;
-using CoinAPI.EMS.REST.V1.Client;
-using CoinAPI.EMS.REST.V1.Model;
-
-namespace Example
-{
-    public class DappsDexTokensHistoricalGetExample
+    public class DexGetSolutionsHistoricalExample
     {
         public static void Main()
         {
@@ -497,11 +443,13 @@ namespace Example
 
             try
             {
-                apiInstance.DappsDexTokensHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId);
+                // GetSolutions (historical)
+                List<DexSolutionDTO> result = apiInstance.DexGetSolutionsHistorical(startBlock, endBlock, startDate, endDate, tokenId);
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling DexApi.DappsDexTokensHistoricalGet: " + e.Message);
+                Debug.Print("Exception when calling DexApi.DexGetSolutionsHistorical: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -510,17 +458,21 @@ namespace Example
 }
 ```
 
-#### Using the DappsDexTokensHistoricalGetWithHttpInfo variant
+#### Using the DexGetSolutionsHistoricalWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    apiInstance.DappsDexTokensHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate, tokenId);
+    // GetSolutions (historical)
+    ApiResponse<List<DexSolutionDTO>> response = apiInstance.DexGetSolutionsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, tokenId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling DexApi.DappsDexTokensHistoricalGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling DexApi.DexGetSolutionsHistoricalWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -538,7 +490,7 @@ catch (ApiException e)
 
 ### Return type
 
-void (empty response body)
+[**List&lt;DexSolutionDTO&gt;**](DexSolutionDTO.md)
 
 ### Authorization
 
@@ -547,21 +499,23 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="dappsdextradeshistoricalget"></a>
-# **DappsDexTradesHistoricalGet**
-> void DappsDexTradesHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
+<a name="dexgetstatshistorical"></a>
+# **DexGetStatsHistorical**
+> List&lt;DexStatsDTO&gt; DexGetStatsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
 
+GetStats (historical)
 
+Gets stats.
 
 ### Example
 ```csharp
@@ -573,7 +527,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class DappsDexTradesHistoricalGetExample
+    public class DexGetStatsHistoricalExample
     {
         public static void Main()
         {
@@ -587,11 +541,13 @@ namespace Example
 
             try
             {
-                apiInstance.DappsDexTradesHistoricalGet(startBlock, endBlock, startDate, endDate);
+                // GetStats (historical)
+                List<DexStatsDTO> result = apiInstance.DexGetStatsHistorical(startBlock, endBlock, startDate, endDate);
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling DexApi.DappsDexTradesHistoricalGet: " + e.Message);
+                Debug.Print("Exception when calling DexApi.DexGetStatsHistorical: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -600,17 +556,21 @@ namespace Example
 }
 ```
 
-#### Using the DappsDexTradesHistoricalGetWithHttpInfo variant
+#### Using the DexGetStatsHistoricalWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    apiInstance.DappsDexTradesHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate);
+    // GetStats (historical)
+    ApiResponse<List<DexStatsDTO>> response = apiInstance.DexGetStatsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling DexApi.DappsDexTradesHistoricalGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling DexApi.DexGetStatsHistoricalWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -627,7 +587,7 @@ catch (ApiException e)
 
 ### Return type
 
-void (empty response body)
+[**List&lt;DexStatsDTO&gt;**](DexStatsDTO.md)
 
 ### Authorization
 
@@ -636,21 +596,23 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="dappsdexusershistoricalget"></a>
-# **DappsDexUsersHistoricalGet**
-> void DappsDexUsersHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
+<a name="dexgettokenshistorical"></a>
+# **DexGetTokensHistorical**
+> List&lt;DexTokenDTO&gt; DexGetTokensHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string tokenId = null)
 
+GetTokens (historical) 🔥
 
+Gets tokens.
 
 ### Example
 ```csharp
@@ -662,96 +624,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class DappsDexUsersHistoricalGetExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "https://onchain.coinapi.io";
-            var apiInstance = new DexApi(config);
-            var startBlock = 789L;  // long? |  (optional) 
-            var endBlock = 789L;  // long? |  (optional) 
-            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
-            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
-
-            try
-            {
-                apiInstance.DappsDexUsersHistoricalGet(startBlock, endBlock, startDate, endDate);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling DexApi.DappsDexUsersHistoricalGet: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-#### Using the DappsDexUsersHistoricalGetWithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    apiInstance.DappsDexUsersHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling DexApi.DappsDexUsersHistoricalGetWithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-|------|------|-------------|-------|
-| **startBlock** | **long?** |  | [optional]  |
-| **endBlock** | **long?** |  | [optional]  |
-| **startDate** | **DateTime?** |  | [optional]  |
-| **endDate** | **DateTime?** |  | [optional]  |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="dappsdexwithdrawhistoricalget"></a>
-# **DappsDexWithdrawHistoricalGet**
-> void DappsDexWithdrawHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string tokenId = null)
-
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using CoinAPI.EMS.REST.V1.Api;
-using CoinAPI.EMS.REST.V1.Client;
-using CoinAPI.EMS.REST.V1.Model;
-
-namespace Example
-{
-    public class DappsDexWithdrawHistoricalGetExample
+    public class DexGetTokensHistoricalExample
     {
         public static void Main()
         {
@@ -766,11 +639,13 @@ namespace Example
 
             try
             {
-                apiInstance.DappsDexWithdrawHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId);
+                // GetTokens (historical) 🔥
+                List<DexTokenDTO> result = apiInstance.DexGetTokensHistorical(startBlock, endBlock, startDate, endDate, tokenId);
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling DexApi.DappsDexWithdrawHistoricalGet: " + e.Message);
+                Debug.Print("Exception when calling DexApi.DexGetTokensHistorical: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -779,17 +654,21 @@ namespace Example
 }
 ```
 
-#### Using the DappsDexWithdrawHistoricalGetWithHttpInfo variant
+#### Using the DexGetTokensHistoricalWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    apiInstance.DappsDexWithdrawHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate, tokenId);
+    // GetTokens (historical) 🔥
+    ApiResponse<List<DexTokenDTO>> response = apiInstance.DexGetTokensHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, tokenId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling DexApi.DappsDexWithdrawHistoricalGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling DexApi.DexGetTokensHistoricalWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -807,7 +686,7 @@ catch (ApiException e)
 
 ### Return type
 
-void (empty response body)
+[**List&lt;DexTokenDTO&gt;**](DexTokenDTO.md)
 
 ### Authorization
 
@@ -816,21 +695,23 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="dappsdexwithdrawrequesthistoricalget"></a>
-# **DappsDexWithdrawRequestHistoricalGet**
-> void DappsDexWithdrawRequestHistoricalGet (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string tokenId = null)
+<a name="dexgettradeshistorical"></a>
+# **DexGetTradesHistorical**
+> List&lt;DexTradeDTO&gt; DexGetTradesHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
 
+GetTrades (historical) 🔥
 
+Gets trades.
 
 ### Example
 ```csharp
@@ -842,7 +723,201 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class DappsDexWithdrawRequestHistoricalGetExample
+    public class DexGetTradesHistoricalExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new DexApi(config);
+            var startBlock = 789L;  // long? |  (optional) 
+            var endBlock = 789L;  // long? |  (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+
+            try
+            {
+                // GetTrades (historical) 🔥
+                List<DexTradeDTO> result = apiInstance.DexGetTradesHistorical(startBlock, endBlock, startDate, endDate);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling DexApi.DexGetTradesHistorical: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the DexGetTradesHistoricalWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // GetTrades (historical) 🔥
+    ApiResponse<List<DexTradeDTO>> response = apiInstance.DexGetTradesHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling DexApi.DexGetTradesHistoricalWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **startBlock** | **long?** |  | [optional]  |
+| **endBlock** | **long?** |  | [optional]  |
+| **startDate** | **DateTime?** |  | [optional]  |
+| **endDate** | **DateTime?** |  | [optional]  |
+
+### Return type
+
+[**List&lt;DexTradeDTO&gt;**](DexTradeDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="dexgetusershistorical"></a>
+# **DexGetUsersHistorical**
+> List&lt;DexUserDTO&gt; DexGetUsersHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
+
+GetUsers (historical)
+
+Gets users.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class DexGetUsersHistoricalExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new DexApi(config);
+            var startBlock = 789L;  // long? |  (optional) 
+            var endBlock = 789L;  // long? |  (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+
+            try
+            {
+                // GetUsers (historical)
+                List<DexUserDTO> result = apiInstance.DexGetUsersHistorical(startBlock, endBlock, startDate, endDate);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling DexApi.DexGetUsersHistorical: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the DexGetUsersHistoricalWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // GetUsers (historical)
+    ApiResponse<List<DexUserDTO>> response = apiInstance.DexGetUsersHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling DexApi.DexGetUsersHistoricalWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **startBlock** | **long?** |  | [optional]  |
+| **endBlock** | **long?** |  | [optional]  |
+| **startDate** | **DateTime?** |  | [optional]  |
+| **endDate** | **DateTime?** |  | [optional]  |
+
+### Return type
+
+[**List&lt;DexUserDTO&gt;**](DexUserDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="dexgetwithdrawshistorical"></a>
+# **DexGetWithdrawsHistorical**
+> List&lt;DexWithdrawDTO&gt; DexGetWithdrawsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string tokenId = null)
+
+GetWithdraws (historical)
+
+Gets withdraws.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class DexGetWithdrawsHistoricalExample
     {
         public static void Main()
         {
@@ -857,11 +932,13 @@ namespace Example
 
             try
             {
-                apiInstance.DappsDexWithdrawRequestHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId);
+                // GetWithdraws (historical)
+                List<DexWithdrawDTO> result = apiInstance.DexGetWithdrawsHistorical(startBlock, endBlock, startDate, endDate, tokenId);
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling DexApi.DappsDexWithdrawRequestHistoricalGet: " + e.Message);
+                Debug.Print("Exception when calling DexApi.DexGetWithdrawsHistorical: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -870,17 +947,21 @@ namespace Example
 }
 ```
 
-#### Using the DappsDexWithdrawRequestHistoricalGetWithHttpInfo variant
+#### Using the DexGetWithdrawsHistoricalWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    apiInstance.DappsDexWithdrawRequestHistoricalGetWithHttpInfo(startBlock, endBlock, startDate, endDate, tokenId);
+    // GetWithdraws (historical)
+    ApiResponse<List<DexWithdrawDTO>> response = apiInstance.DexGetWithdrawsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, tokenId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling DexApi.DappsDexWithdrawRequestHistoricalGetWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling DexApi.DexGetWithdrawsHistoricalWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -898,7 +979,7 @@ catch (ApiException e)
 
 ### Return type
 
-void (empty response body)
+[**List&lt;DexWithdrawDTO&gt;**](DexWithdrawDTO.md)
 
 ### Authorization
 
@@ -907,13 +988,112 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="dexgetwithdrawsrequestshistorical"></a>
+# **DexGetWithdrawsRequestsHistorical**
+> List&lt;DexWithdrawRequestDTO&gt; DexGetWithdrawsRequestsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string tokenId = null)
+
+GetWithdrawsRequests (historical)
+
+Gets withdraws requests.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class DexGetWithdrawsRequestsHistoricalExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new DexApi(config);
+            var startBlock = 789L;  // long? |  (optional) 
+            var endBlock = 789L;  // long? |  (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var tokenId = "tokenId_example";  // string |  (optional) 
+
+            try
+            {
+                // GetWithdrawsRequests (historical)
+                List<DexWithdrawRequestDTO> result = apiInstance.DexGetWithdrawsRequestsHistorical(startBlock, endBlock, startDate, endDate, tokenId);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling DexApi.DexGetWithdrawsRequestsHistorical: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the DexGetWithdrawsRequestsHistoricalWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // GetWithdrawsRequests (historical)
+    ApiResponse<List<DexWithdrawRequestDTO>> response = apiInstance.DexGetWithdrawsRequestsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, tokenId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling DexApi.DexGetWithdrawsRequestsHistoricalWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **startBlock** | **long?** |  | [optional]  |
+| **endBlock** | **long?** |  | [optional]  |
+| **startDate** | **DateTime?** |  | [optional]  |
+| **endDate** | **DateTime?** |  | [optional]  |
+| **tokenId** | **string** |  | [optional]  |
+
+### Return type
+
+[**List&lt;DexWithdrawRequestDTO&gt;**](DexWithdrawRequestDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

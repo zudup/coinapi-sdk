@@ -13,6 +13,32 @@ inherit
 feature -- Test routines
 
 
+    test_curve_get_exchanges_current
+            -- GetExchanges (current) 🔥
+            --
+            -- Gets exchanges.
+        local
+            l_response: LIST [CURVE_EXCHANGE_DTO]
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.curve_get_exchanges_current
+            assert ("not_implemented", False)
+        end
+
+    test_dex_get_trades_current
+            -- GetTrades (current) 🔥
+            --
+            -- Gets trades.
+        local
+            l_response: LIST [DEX_TRADE_DTO]
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.dex_get_trades_current
+            assert ("not_implemented", False)
+        end
+
     test_sushiswap_get_bundles_historical
             -- GetBundles (historical)
             --
@@ -154,7 +180,7 @@ feature -- Test routines
         end
 
     test_sushiswap_get_pools_current
-            -- GetPools (current)
+            -- GetPools (current) 🔥
             --
             -- Gets pools.
         local
@@ -185,7 +211,7 @@ feature -- Test routines
         end
 
     test_sushiswap_get_pools_historical
-            -- GetPools (historical)
+            -- GetPools (historical) 🔥
             --
             -- Gets list of pools for given filters.
         local
@@ -221,7 +247,7 @@ feature -- Test routines
         end
 
     test_sushiswap_get_swaps_current
-            -- GetSwaps (current)
+            -- GetSwaps (current) 🔥
             --
             -- Gets swaps.
         local
@@ -234,7 +260,7 @@ feature -- Test routines
         end
 
     test_sushiswap_get_swaps_historical
-            -- GetSwaps (historical)
+            -- GetSwaps (historical) 🔥
             --
             -- Gets list of swaps for given filters.
         local
@@ -252,7 +278,7 @@ feature -- Test routines
         end
 
     test_sushiswap_get_tokens_current
-            -- GetTokens (current)
+            -- GetTokens (current) 🔥
             --
             -- Gets tokens.
         local
@@ -283,7 +309,7 @@ feature -- Test routines
         end
 
     test_sushiswap_get_tokens_historical
-            -- GetTokens (historical)
+            -- GetTokens (historical) 🔥
             --
             -- Gets list of tokens for given filters.
         local

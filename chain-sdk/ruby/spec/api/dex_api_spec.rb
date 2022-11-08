@@ -32,137 +32,173 @@ describe 'DexApi' do
     end
   end
 
-  # unit tests for dapps_dex_batch_historical_get
+  # unit tests for dex_get_batches__historical
+  # GetBatches (historical)
+  # Gets batches.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
   # @option opts [Integer] :end_block 
   # @option opts [Time] :start_date 
   # @option opts [Time] :end_date 
-  # @return [nil]
-  describe 'dapps_dex_batch_historical_get test' do
+  # @return [Array<DexBatchDTO>]
+  describe 'dex_get_batches__historical test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for dapps_dex_orders_historical_get
+  # unit tests for dex_get_deposits__historical
+  # GetDeposits (historical)
+  # Gets deposits.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
   # @option opts [Integer] :end_block 
   # @option opts [Time] :start_date 
   # @option opts [Time] :end_date 
   # @option opts [String] :token_id 
-  # @return [nil]
-  describe 'dapps_dex_orders_historical_get test' do
+  # @return [Array<DexDepositDTO>]
+  describe 'dex_get_deposits__historical test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for dapps_dex_prices_historical_get
+  # unit tests for dex_get_orders__historical
+  # GetOrders (historical)
+  # Gets orders.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
   # @option opts [Integer] :end_block 
   # @option opts [Time] :start_date 
   # @option opts [Time] :end_date 
   # @option opts [String] :token_id 
-  # @return [nil]
-  describe 'dapps_dex_prices_historical_get test' do
+  # @return [Array<DexOrderDTO>]
+  describe 'dex_get_orders__historical test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for dapps_dex_solution_historical_get
+  # unit tests for dex_get_prices__historical
+  # GetPrices (historical)
+  # Gets prices.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
   # @option opts [Integer] :end_block 
   # @option opts [Time] :start_date 
   # @option opts [Time] :end_date 
   # @option opts [String] :token_id 
-  # @return [nil]
-  describe 'dapps_dex_solution_historical_get test' do
+  # @return [Array<DexPriceDTO>]
+  describe 'dex_get_prices__historical test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for dapps_dex_stats_historical_get
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block 
-  # @option opts [Integer] :end_block 
-  # @option opts [Time] :start_date 
-  # @option opts [Time] :end_date 
-  # @return [nil]
-  describe 'dapps_dex_stats_historical_get test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for dapps_dex_tokens_historical_get
+  # unit tests for dex_get_solutions__historical
+  # GetSolutions (historical)
+  # Gets solutions.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
   # @option opts [Integer] :end_block 
   # @option opts [Time] :start_date 
   # @option opts [Time] :end_date 
   # @option opts [String] :token_id 
-  # @return [nil]
-  describe 'dapps_dex_tokens_historical_get test' do
+  # @return [Array<DexSolutionDTO>]
+  describe 'dex_get_solutions__historical test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for dapps_dex_trades_historical_get
+  # unit tests for dex_get_stats__historical
+  # GetStats (historical)
+  # Gets stats.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
   # @option opts [Integer] :end_block 
   # @option opts [Time] :start_date 
   # @option opts [Time] :end_date 
-  # @return [nil]
-  describe 'dapps_dex_trades_historical_get test' do
+  # @return [Array<DexStatsDTO>]
+  describe 'dex_get_stats__historical test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for dapps_dex_users_historical_get
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block 
-  # @option opts [Integer] :end_block 
-  # @option opts [Time] :start_date 
-  # @option opts [Time] :end_date 
-  # @return [nil]
-  describe 'dapps_dex_users_historical_get test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for dapps_dex_withdraw_historical_get
+  # unit tests for dex_get_tokens__historical
+  # GetTokens (historical) 🔥
+  # Gets tokens.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
   # @option opts [Integer] :end_block 
   # @option opts [Time] :start_date 
   # @option opts [Time] :end_date 
   # @option opts [String] :token_id 
-  # @return [nil]
-  describe 'dapps_dex_withdraw_historical_get test' do
+  # @return [Array<DexTokenDTO>]
+  describe 'dex_get_tokens__historical test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
   end
 
-  # unit tests for dapps_dex_withdraw_request_historical_get
+  # unit tests for dex_get_trades__historical
+  # GetTrades (historical) 🔥
+  # Gets trades.
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :start_block 
+  # @option opts [Integer] :end_block 
+  # @option opts [Time] :start_date 
+  # @option opts [Time] :end_date 
+  # @return [Array<DexTradeDTO>]
+  describe 'dex_get_trades__historical test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for dex_get_users__historical
+  # GetUsers (historical)
+  # Gets users.
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :start_block 
+  # @option opts [Integer] :end_block 
+  # @option opts [Time] :start_date 
+  # @option opts [Time] :end_date 
+  # @return [Array<DexUserDTO>]
+  describe 'dex_get_users__historical test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for dex_get_withdraws__historical
+  # GetWithdraws (historical)
+  # Gets withdraws.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
   # @option opts [Integer] :end_block 
   # @option opts [Time] :start_date 
   # @option opts [Time] :end_date 
   # @option opts [String] :token_id 
-  # @return [nil]
-  describe 'dapps_dex_withdraw_request_historical_get test' do
+  # @return [Array<DexWithdrawDTO>]
+  describe 'dex_get_withdraws__historical test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for dex_get_withdraws_requests__historical
+  # GetWithdrawsRequests (historical)
+  # Gets withdraws requests.
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :start_block 
+  # @option opts [Integer] :end_block 
+  # @option opts [Time] :start_date 
+  # @option opts [Time] :end_date 
+  # @option opts [String] :token_id 
+  # @return [Array<DexWithdrawRequestDTO>]
+  describe 'dex_get_withdraws_requests__historical test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

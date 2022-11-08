@@ -56,6 +56,28 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
         }
 
         /// <summary>
+        /// Test CurveGetExchangesCurrent
+        /// </summary>
+        [Fact]
+        public void CurveGetExchangesCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.CurveGetExchangesCurrent();
+            //Assert.IsType<List<CurveExchangeDTO>>(response);
+        }
+
+        /// <summary>
+        /// Test DexGetTradesCurrent
+        /// </summary>
+        [Fact]
+        public void DexGetTradesCurrentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.DexGetTradesCurrent();
+            //Assert.IsType<List<DexTradeDTO>>(response);
+        }
+
+        /// <summary>
         /// Test SushiswapGetBundlesHistorical
         /// </summary>
         [Fact]

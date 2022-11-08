@@ -9,22 +9,25 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**dappsDexBatchHistoricalGet**](DexApi.md#dappsdexbatchhistoricalget) | **GET** /dapps/dex/batch/historical | 
-[**dappsDexOrdersHistoricalGet**](DexApi.md#dappsdexordershistoricalget) | **GET** /dapps/dex/orders/historical | 
-[**dappsDexPricesHistoricalGet**](DexApi.md#dappsdexpriceshistoricalget) | **GET** /dapps/dex/prices/historical | 
-[**dappsDexSolutionHistoricalGet**](DexApi.md#dappsdexsolutionhistoricalget) | **GET** /dapps/dex/solution/historical | 
-[**dappsDexStatsHistoricalGet**](DexApi.md#dappsdexstatshistoricalget) | **GET** /dapps/dex/stats/historical | 
-[**dappsDexTokensHistoricalGet**](DexApi.md#dappsdextokenshistoricalget) | **GET** /dapps/dex/tokens/historical | 
-[**dappsDexTradesHistoricalGet**](DexApi.md#dappsdextradeshistoricalget) | **GET** /dapps/dex/trades/historical | 
-[**dappsDexUsersHistoricalGet**](DexApi.md#dappsdexusershistoricalget) | **GET** /dapps/dex/users/historical | 
-[**dappsDexWithdrawHistoricalGet**](DexApi.md#dappsdexwithdrawhistoricalget) | **GET** /dapps/dex/withdraw/historical | 
-[**dappsDexWithdrawRequestHistoricalGet**](DexApi.md#dappsdexwithdrawrequesthistoricalget) | **GET** /dapps/dex/withdrawRequest/historical | 
+[**dexGetBatchesHistorical**](DexApi.md#dexgetbatcheshistorical) | **GET** /dapps/dex/batches/historical | GetBatches (historical)
+[**dexGetDepositsHistorical**](DexApi.md#dexgetdepositshistorical) | **GET** /dapps/dex/deposits/historical | GetDeposits (historical)
+[**dexGetOrdersHistorical**](DexApi.md#dexgetordershistorical) | **GET** /dapps/dex/orders/historical | GetOrders (historical)
+[**dexGetPricesHistorical**](DexApi.md#dexgetpriceshistorical) | **GET** /dapps/dex/prices/historical | GetPrices (historical)
+[**dexGetSolutionsHistorical**](DexApi.md#dexgetsolutionshistorical) | **GET** /dapps/dex/solutions/historical | GetSolutions (historical)
+[**dexGetStatsHistorical**](DexApi.md#dexgetstatshistorical) | **GET** /dapps/dex/stats/historical | GetStats (historical)
+[**dexGetTokensHistorical**](DexApi.md#dexgettokenshistorical) | **GET** /dapps/dex/tokens/historical | GetTokens (historical) 🔥
+[**dexGetTradesHistorical**](DexApi.md#dexgettradeshistorical) | **GET** /dapps/dex/trades/historical | GetTrades (historical) 🔥
+[**dexGetUsersHistorical**](DexApi.md#dexgetusershistorical) | **GET** /dapps/dex/users/historical | GetUsers (historical)
+[**dexGetWithdrawsHistorical**](DexApi.md#dexgetwithdrawshistorical) | **GET** /dapps/dex/withdraws/historical | GetWithdraws (historical)
+[**dexGetWithdrawsRequestsHistorical**](DexApi.md#dexgetwithdrawsrequestshistorical) | **GET** /dapps/dex/withdrawsRequests/historical | GetWithdrawsRequests (historical)
 
 
-# **dappsDexBatchHistoricalGet**
-> dappsDexBatchHistoricalGet(startBlock, endBlock, startDate, endDate)
+# **dexGetBatchesHistorical**
+> List<DexBatchDTO> dexGetBatchesHistorical(startBlock, endBlock, startDate, endDate)
 
+GetBatches (historical)
 
+Gets batches.
 
 ### Example
 ```dart
@@ -37,9 +40,10 @@ final startDate = 2013-10-20T19:20:30+01:00; // DateTime |
 final endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
 
 try {
-    api_instance.dappsDexBatchHistoricalGet(startBlock, endBlock, startDate, endDate);
+    final result = api_instance.dexGetBatchesHistorical(startBlock, endBlock, startDate, endDate);
+    print(result);
 } catch (e) {
-    print('Exception when calling DexApi->dappsDexBatchHistoricalGet: $e\n');
+    print('Exception when calling DexApi->dexGetBatchesHistorical: $e\n');
 }
 ```
 
@@ -54,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**List<DexBatchDTO>**](DexBatchDTO.md)
 
 ### Authorization
 
@@ -63,14 +67,16 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dappsDexOrdersHistoricalGet**
-> dappsDexOrdersHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId)
+# **dexGetDepositsHistorical**
+> List<DexDepositDTO> dexGetDepositsHistorical(startBlock, endBlock, startDate, endDate, tokenId)
 
+GetDeposits (historical)
 
+Gets deposits.
 
 ### Example
 ```dart
@@ -84,9 +90,10 @@ final endDate = 2013-10-20T19:20:30+01:00; // DateTime |
 final tokenId = tokenId_example; // String | 
 
 try {
-    api_instance.dappsDexOrdersHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId);
+    final result = api_instance.dexGetDepositsHistorical(startBlock, endBlock, startDate, endDate, tokenId);
+    print(result);
 } catch (e) {
-    print('Exception when calling DexApi->dappsDexOrdersHistoricalGet: $e\n');
+    print('Exception when calling DexApi->dexGetDepositsHistorical: $e\n');
 }
 ```
 
@@ -102,7 +109,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**List<DexDepositDTO>**](DexDepositDTO.md)
 
 ### Authorization
 
@@ -111,14 +118,16 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dappsDexPricesHistoricalGet**
-> dappsDexPricesHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId)
+# **dexGetOrdersHistorical**
+> List<DexOrderDTO> dexGetOrdersHistorical(startBlock, endBlock, startDate, endDate, tokenId)
 
+GetOrders (historical)
 
+Gets orders.
 
 ### Example
 ```dart
@@ -132,9 +141,10 @@ final endDate = 2013-10-20T19:20:30+01:00; // DateTime |
 final tokenId = tokenId_example; // String | 
 
 try {
-    api_instance.dappsDexPricesHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId);
+    final result = api_instance.dexGetOrdersHistorical(startBlock, endBlock, startDate, endDate, tokenId);
+    print(result);
 } catch (e) {
-    print('Exception when calling DexApi->dappsDexPricesHistoricalGet: $e\n');
+    print('Exception when calling DexApi->dexGetOrdersHistorical: $e\n');
 }
 ```
 
@@ -150,7 +160,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**List<DexOrderDTO>**](DexOrderDTO.md)
 
 ### Authorization
 
@@ -159,14 +169,16 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dappsDexSolutionHistoricalGet**
-> dappsDexSolutionHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId)
+# **dexGetPricesHistorical**
+> List<DexPriceDTO> dexGetPricesHistorical(startBlock, endBlock, startDate, endDate, tokenId)
 
+GetPrices (historical)
 
+Gets prices.
 
 ### Example
 ```dart
@@ -180,9 +192,10 @@ final endDate = 2013-10-20T19:20:30+01:00; // DateTime |
 final tokenId = tokenId_example; // String | 
 
 try {
-    api_instance.dappsDexSolutionHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId);
+    final result = api_instance.dexGetPricesHistorical(startBlock, endBlock, startDate, endDate, tokenId);
+    print(result);
 } catch (e) {
-    print('Exception when calling DexApi->dappsDexSolutionHistoricalGet: $e\n');
+    print('Exception when calling DexApi->dexGetPricesHistorical: $e\n');
 }
 ```
 
@@ -198,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**List<DexPriceDTO>**](DexPriceDTO.md)
 
 ### Authorization
 
@@ -207,60 +220,16 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dappsDexStatsHistoricalGet**
-> dappsDexStatsHistoricalGet(startBlock, endBlock, startDate, endDate)
+# **dexGetSolutionsHistorical**
+> List<DexSolutionDTO> dexGetSolutionsHistorical(startBlock, endBlock, startDate, endDate, tokenId)
 
+GetSolutions (historical)
 
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-
-final api_instance = DexApi();
-final startBlock = 789; // int | 
-final endBlock = 789; // int | 
-final startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-final endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-
-try {
-    api_instance.dappsDexStatsHistoricalGet(startBlock, endBlock, startDate, endDate);
-} catch (e) {
-    print('Exception when calling DexApi->dappsDexStatsHistoricalGet: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **int**|  | [optional] 
- **endBlock** | **int**|  | [optional] 
- **startDate** | **DateTime**|  | [optional] 
- **endDate** | **DateTime**|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **dappsDexTokensHistoricalGet**
-> dappsDexTokensHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId)
-
-
+Gets solutions.
 
 ### Example
 ```dart
@@ -274,9 +243,10 @@ final endDate = 2013-10-20T19:20:30+01:00; // DateTime |
 final tokenId = tokenId_example; // String | 
 
 try {
-    api_instance.dappsDexTokensHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId);
+    final result = api_instance.dexGetSolutionsHistorical(startBlock, endBlock, startDate, endDate, tokenId);
+    print(result);
 } catch (e) {
-    print('Exception when calling DexApi->dappsDexTokensHistoricalGet: $e\n');
+    print('Exception when calling DexApi->dexGetSolutionsHistorical: $e\n');
 }
 ```
 
@@ -292,7 +262,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**List<DexSolutionDTO>**](DexSolutionDTO.md)
 
 ### Authorization
 
@@ -301,14 +271,16 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dappsDexTradesHistoricalGet**
-> dappsDexTradesHistoricalGet(startBlock, endBlock, startDate, endDate)
+# **dexGetStatsHistorical**
+> List<DexStatsDTO> dexGetStatsHistorical(startBlock, endBlock, startDate, endDate)
 
+GetStats (historical)
 
+Gets stats.
 
 ### Example
 ```dart
@@ -321,9 +293,10 @@ final startDate = 2013-10-20T19:20:30+01:00; // DateTime |
 final endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
 
 try {
-    api_instance.dappsDexTradesHistoricalGet(startBlock, endBlock, startDate, endDate);
+    final result = api_instance.dexGetStatsHistorical(startBlock, endBlock, startDate, endDate);
+    print(result);
 } catch (e) {
-    print('Exception when calling DexApi->dappsDexTradesHistoricalGet: $e\n');
+    print('Exception when calling DexApi->dexGetStatsHistorical: $e\n');
 }
 ```
 
@@ -338,7 +311,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**List<DexStatsDTO>**](DexStatsDTO.md)
 
 ### Authorization
 
@@ -347,60 +320,16 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dappsDexUsersHistoricalGet**
-> dappsDexUsersHistoricalGet(startBlock, endBlock, startDate, endDate)
+# **dexGetTokensHistorical**
+> List<DexTokenDTO> dexGetTokensHistorical(startBlock, endBlock, startDate, endDate, tokenId)
 
+GetTokens (historical) 🔥
 
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-
-final api_instance = DexApi();
-final startBlock = 789; // int | 
-final endBlock = 789; // int | 
-final startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-final endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-
-try {
-    api_instance.dappsDexUsersHistoricalGet(startBlock, endBlock, startDate, endDate);
-} catch (e) {
-    print('Exception when calling DexApi->dappsDexUsersHistoricalGet: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **int**|  | [optional] 
- **endBlock** | **int**|  | [optional] 
- **startDate** | **DateTime**|  | [optional] 
- **endDate** | **DateTime**|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **dappsDexWithdrawHistoricalGet**
-> dappsDexWithdrawHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId)
-
-
+Gets tokens.
 
 ### Example
 ```dart
@@ -414,9 +343,10 @@ final endDate = 2013-10-20T19:20:30+01:00; // DateTime |
 final tokenId = tokenId_example; // String | 
 
 try {
-    api_instance.dappsDexWithdrawHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId);
+    final result = api_instance.dexGetTokensHistorical(startBlock, endBlock, startDate, endDate, tokenId);
+    print(result);
 } catch (e) {
-    print('Exception when calling DexApi->dappsDexWithdrawHistoricalGet: $e\n');
+    print('Exception when calling DexApi->dexGetTokensHistorical: $e\n');
 }
 ```
 
@@ -432,7 +362,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**List<DexTokenDTO>**](DexTokenDTO.md)
 
 ### Authorization
 
@@ -441,14 +371,114 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dappsDexWithdrawRequestHistoricalGet**
-> dappsDexWithdrawRequestHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId)
+# **dexGetTradesHistorical**
+> List<DexTradeDTO> dexGetTradesHistorical(startBlock, endBlock, startDate, endDate)
 
+GetTrades (historical) 🔥
 
+Gets trades.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = DexApi();
+final startBlock = 789; // int | 
+final endBlock = 789; // int | 
+final startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+
+try {
+    final result = api_instance.dexGetTradesHistorical(startBlock, endBlock, startDate, endDate);
+    print(result);
+} catch (e) {
+    print('Exception when calling DexApi->dexGetTradesHistorical: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int**|  | [optional] 
+ **endBlock** | **int**|  | [optional] 
+ **startDate** | **DateTime**|  | [optional] 
+ **endDate** | **DateTime**|  | [optional] 
+
+### Return type
+
+[**List<DexTradeDTO>**](DexTradeDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dexGetUsersHistorical**
+> List<DexUserDTO> dexGetUsersHistorical(startBlock, endBlock, startDate, endDate)
+
+GetUsers (historical)
+
+Gets users.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = DexApi();
+final startBlock = 789; // int | 
+final endBlock = 789; // int | 
+final startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+
+try {
+    final result = api_instance.dexGetUsersHistorical(startBlock, endBlock, startDate, endDate);
+    print(result);
+} catch (e) {
+    print('Exception when calling DexApi->dexGetUsersHistorical: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int**|  | [optional] 
+ **endBlock** | **int**|  | [optional] 
+ **startDate** | **DateTime**|  | [optional] 
+ **endDate** | **DateTime**|  | [optional] 
+
+### Return type
+
+[**List<DexUserDTO>**](DexUserDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dexGetWithdrawsHistorical**
+> List<DexWithdrawDTO> dexGetWithdrawsHistorical(startBlock, endBlock, startDate, endDate, tokenId)
+
+GetWithdraws (historical)
+
+Gets withdraws.
 
 ### Example
 ```dart
@@ -462,9 +492,10 @@ final endDate = 2013-10-20T19:20:30+01:00; // DateTime |
 final tokenId = tokenId_example; // String | 
 
 try {
-    api_instance.dappsDexWithdrawRequestHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId);
+    final result = api_instance.dexGetWithdrawsHistorical(startBlock, endBlock, startDate, endDate, tokenId);
+    print(result);
 } catch (e) {
-    print('Exception when calling DexApi->dappsDexWithdrawRequestHistoricalGet: $e\n');
+    print('Exception when calling DexApi->dexGetWithdrawsHistorical: $e\n');
 }
 ```
 
@@ -480,7 +511,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**List<DexWithdrawDTO>**](DexWithdrawDTO.md)
 
 ### Authorization
 
@@ -489,7 +520,58 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dexGetWithdrawsRequestsHistorical**
+> List<DexWithdrawRequestDTO> dexGetWithdrawsRequestsHistorical(startBlock, endBlock, startDate, endDate, tokenId)
+
+GetWithdrawsRequests (historical)
+
+Gets withdraws requests.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api_instance = DexApi();
+final startBlock = 789; // int | 
+final endBlock = 789; // int | 
+final startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final tokenId = tokenId_example; // String | 
+
+try {
+    final result = api_instance.dexGetWithdrawsRequestsHistorical(startBlock, endBlock, startDate, endDate, tokenId);
+    print(result);
+} catch (e) {
+    print('Exception when calling DexApi->dexGetWithdrawsRequestsHistorical: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int**|  | [optional] 
+ **endBlock** | **int**|  | [optional] 
+ **startDate** | **DateTime**|  | [optional] 
+ **endDate** | **DateTime**|  | [optional] 
+ **tokenId** | **String**|  | [optional] 
+
+### Return type
+
+[**List<DexWithdrawRequestDTO>**](DexWithdrawRequestDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

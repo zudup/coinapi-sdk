@@ -14,6 +14,17 @@
 
 goog.provide('API.Client.DexApi');
 
+goog.require('API.Client.Dex.BatchDTO');
+goog.require('API.Client.Dex.DepositDTO');
+goog.require('API.Client.Dex.OrderDTO');
+goog.require('API.Client.Dex.PriceDTO');
+goog.require('API.Client.Dex.SolutionDTO');
+goog.require('API.Client.Dex.StatsDTO');
+goog.require('API.Client.Dex.TokenDTO');
+goog.require('API.Client.Dex.TradeDTO');
+goog.require('API.Client.Dex.UserDTO');
+goog.require('API.Client.Dex.WithdrawDTO');
+goog.require('API.Client.Dex.WithdrawRequestDTO');
 
 /**
  * @constructor
@@ -43,18 +54,18 @@ API.Client.DexApi = function($http, $httpParamSerializer, $injector) {
 API.Client.DexApi.$inject = ['$http', '$httpParamSerializer', '$injector'];
 
 /**
- * 
- * 
+ * GetBatches (historical)
+ * Gets batches.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
  * @param {!Date=} opt_startDate 
  * @param {!Date=} opt_endDate 
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise}
+ * @return {!angular.$q.Promise<!Array<!API.Client.Dex.BatchDTO>>}
  */
-API.Client.DexApi.prototype.dappsDexBatchHistoricalGet = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_extraHttpRequestParams) {
+API.Client.DexApi.prototype.dexGetBatchesHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/dex/batch/historical';
+  var path = this.basePath_ + '/dapps/dex/batches/historical';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -94,17 +105,73 @@ API.Client.DexApi.prototype.dappsDexBatchHistoricalGet = function(opt_startBlock
 }
 
 /**
- * 
- * 
+ * GetDeposits (historical)
+ * Gets deposits.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
  * @param {!Date=} opt_startDate 
  * @param {!Date=} opt_endDate 
  * @param {!string=} opt_tokenId 
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise}
+ * @return {!angular.$q.Promise<!Array<!API.Client.Dex.DepositDTO>>}
  */
-API.Client.DexApi.prototype.dappsDexOrdersHistoricalGet = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_tokenId, opt_extraHttpRequestParams) {
+API.Client.DexApi.prototype.dexGetDepositsHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_tokenId, opt_extraHttpRequestParams) {
+  /** @const {string} */
+  var path = this.basePath_ + '/dapps/dex/deposits/historical';
+
+  /** @type {!Object} */
+  var queryParameters = {};
+
+  /** @type {!Object} */
+  var headerParams = angular.extend({}, this.defaultHeaders_);
+  if (opt_startBlock !== undefined) {
+    queryParameters['startBlock'] = opt_startBlock;
+  }
+
+  if (opt_endBlock !== undefined) {
+    queryParameters['endBlock'] = opt_endBlock;
+  }
+
+  if (opt_startDate !== undefined) {
+    queryParameters['startDate'] = opt_startDate;
+  }
+
+  if (opt_endDate !== undefined) {
+    queryParameters['endDate'] = opt_endDate;
+  }
+
+  if (opt_tokenId !== undefined) {
+    queryParameters['tokenId'] = opt_tokenId;
+  }
+
+  /** @type {!Object} */
+  var httpRequestParams = {
+    method: 'GET',
+    url: path,
+    json: true,
+            params: queryParameters,
+    headers: headerParams
+  };
+
+  if (opt_extraHttpRequestParams) {
+    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
+  }
+
+  return (/** @type {?} */ (this.http_))(httpRequestParams);
+}
+
+/**
+ * GetOrders (historical)
+ * Gets orders.
+ * @param {!number=} opt_startBlock 
+ * @param {!number=} opt_endBlock 
+ * @param {!Date=} opt_startDate 
+ * @param {!Date=} opt_endDate 
+ * @param {!string=} opt_tokenId 
+ * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
+ * @return {!angular.$q.Promise<!Array<!API.Client.Dex.OrderDTO>>}
+ */
+API.Client.DexApi.prototype.dexGetOrdersHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_tokenId, opt_extraHttpRequestParams) {
   /** @const {string} */
   var path = this.basePath_ + '/dapps/dex/orders/historical';
 
@@ -150,17 +217,17 @@ API.Client.DexApi.prototype.dappsDexOrdersHistoricalGet = function(opt_startBloc
 }
 
 /**
- * 
- * 
+ * GetPrices (historical)
+ * Gets prices.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
  * @param {!Date=} opt_startDate 
  * @param {!Date=} opt_endDate 
  * @param {!string=} opt_tokenId 
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise}
+ * @return {!angular.$q.Promise<!Array<!API.Client.Dex.PriceDTO>>}
  */
-API.Client.DexApi.prototype.dappsDexPricesHistoricalGet = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_tokenId, opt_extraHttpRequestParams) {
+API.Client.DexApi.prototype.dexGetPricesHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_tokenId, opt_extraHttpRequestParams) {
   /** @const {string} */
   var path = this.basePath_ + '/dapps/dex/prices/historical';
 
@@ -206,19 +273,19 @@ API.Client.DexApi.prototype.dappsDexPricesHistoricalGet = function(opt_startBloc
 }
 
 /**
- * 
- * 
+ * GetSolutions (historical)
+ * Gets solutions.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
  * @param {!Date=} opt_startDate 
  * @param {!Date=} opt_endDate 
  * @param {!string=} opt_tokenId 
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise}
+ * @return {!angular.$q.Promise<!Array<!API.Client.Dex.SolutionDTO>>}
  */
-API.Client.DexApi.prototype.dappsDexSolutionHistoricalGet = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_tokenId, opt_extraHttpRequestParams) {
+API.Client.DexApi.prototype.dexGetSolutionsHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_tokenId, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/dex/solution/historical';
+  var path = this.basePath_ + '/dapps/dex/solutions/historical';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -262,16 +329,16 @@ API.Client.DexApi.prototype.dappsDexSolutionHistoricalGet = function(opt_startBl
 }
 
 /**
- * 
- * 
+ * GetStats (historical)
+ * Gets stats.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
  * @param {!Date=} opt_startDate 
  * @param {!Date=} opt_endDate 
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise}
+ * @return {!angular.$q.Promise<!Array<!API.Client.Dex.StatsDTO>>}
  */
-API.Client.DexApi.prototype.dappsDexStatsHistoricalGet = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_extraHttpRequestParams) {
+API.Client.DexApi.prototype.dexGetStatsHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_extraHttpRequestParams) {
   /** @const {string} */
   var path = this.basePath_ + '/dapps/dex/stats/historical';
 
@@ -313,17 +380,17 @@ API.Client.DexApi.prototype.dappsDexStatsHistoricalGet = function(opt_startBlock
 }
 
 /**
- * 
- * 
+ * GetTokens (historical) 🔥
+ * Gets tokens.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
  * @param {!Date=} opt_startDate 
  * @param {!Date=} opt_endDate 
  * @param {!string=} opt_tokenId 
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise}
+ * @return {!angular.$q.Promise<!Array<!API.Client.Dex.TokenDTO>>}
  */
-API.Client.DexApi.prototype.dappsDexTokensHistoricalGet = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_tokenId, opt_extraHttpRequestParams) {
+API.Client.DexApi.prototype.dexGetTokensHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_tokenId, opt_extraHttpRequestParams) {
   /** @const {string} */
   var path = this.basePath_ + '/dapps/dex/tokens/historical';
 
@@ -369,16 +436,16 @@ API.Client.DexApi.prototype.dappsDexTokensHistoricalGet = function(opt_startBloc
 }
 
 /**
- * 
- * 
+ * GetTrades (historical) 🔥
+ * Gets trades.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
  * @param {!Date=} opt_startDate 
  * @param {!Date=} opt_endDate 
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise}
+ * @return {!angular.$q.Promise<!Array<!API.Client.Dex.TradeDTO>>}
  */
-API.Client.DexApi.prototype.dappsDexTradesHistoricalGet = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_extraHttpRequestParams) {
+API.Client.DexApi.prototype.dexGetTradesHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_extraHttpRequestParams) {
   /** @const {string} */
   var path = this.basePath_ + '/dapps/dex/trades/historical';
 
@@ -420,16 +487,16 @@ API.Client.DexApi.prototype.dappsDexTradesHistoricalGet = function(opt_startBloc
 }
 
 /**
- * 
- * 
+ * GetUsers (historical)
+ * Gets users.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
  * @param {!Date=} opt_startDate 
  * @param {!Date=} opt_endDate 
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise}
+ * @return {!angular.$q.Promise<!Array<!API.Client.Dex.UserDTO>>}
  */
-API.Client.DexApi.prototype.dappsDexUsersHistoricalGet = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_extraHttpRequestParams) {
+API.Client.DexApi.prototype.dexGetUsersHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_extraHttpRequestParams) {
   /** @const {string} */
   var path = this.basePath_ + '/dapps/dex/users/historical';
 
@@ -471,19 +538,19 @@ API.Client.DexApi.prototype.dappsDexUsersHistoricalGet = function(opt_startBlock
 }
 
 /**
- * 
- * 
+ * GetWithdraws (historical)
+ * Gets withdraws.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
  * @param {!Date=} opt_startDate 
  * @param {!Date=} opt_endDate 
  * @param {!string=} opt_tokenId 
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise}
+ * @return {!angular.$q.Promise<!Array<!API.Client.Dex.WithdrawDTO>>}
  */
-API.Client.DexApi.prototype.dappsDexWithdrawHistoricalGet = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_tokenId, opt_extraHttpRequestParams) {
+API.Client.DexApi.prototype.dexGetWithdrawsHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_tokenId, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/dex/withdraw/historical';
+  var path = this.basePath_ + '/dapps/dex/withdraws/historical';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -527,19 +594,19 @@ API.Client.DexApi.prototype.dappsDexWithdrawHistoricalGet = function(opt_startBl
 }
 
 /**
- * 
- * 
+ * GetWithdrawsRequests (historical)
+ * Gets withdraws requests.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
  * @param {!Date=} opt_startDate 
  * @param {!Date=} opt_endDate 
  * @param {!string=} opt_tokenId 
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise}
+ * @return {!angular.$q.Promise<!Array<!API.Client.Dex.WithdrawRequestDTO>>}
  */
-API.Client.DexApi.prototype.dappsDexWithdrawRequestHistoricalGet = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_tokenId, opt_extraHttpRequestParams) {
+API.Client.DexApi.prototype.dexGetWithdrawsRequestsHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_tokenId, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/dex/withdrawRequest/historical';
+  var path = this.basePath_ + '/dapps/dex/withdrawsRequests/historical';
 
   /** @type {!Object} */
   var queryParameters = {};

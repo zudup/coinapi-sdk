@@ -16,6 +16,108 @@ class SushiswapApi {
 
   final ApiClient apiClient;
 
+  /// GetExchanges (current) 🔥
+  ///
+  /// Gets exchanges.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  Future<Response> curveGetExchangesCurrentWithHttpInfo() async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/sushiswap/exchanges/current';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// GetExchanges (current) 🔥
+  ///
+  /// Gets exchanges.
+  Future<List<CurveExchangeDTO>?> curveGetExchangesCurrent() async {
+    final response = await curveGetExchangesCurrentWithHttpInfo();
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<CurveExchangeDTO>') as List)
+        .cast<CurveExchangeDTO>()
+        .toList();
+
+    }
+    return null;
+  }
+
+  /// GetTrades (current) 🔥
+  ///
+  /// Gets trades.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  Future<Response> dexGetTradesCurrentWithHttpInfo() async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/sushiswap/trades/current';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// GetTrades (current) 🔥
+  ///
+  /// Gets trades.
+  Future<List<DexTradeDTO>?> dexGetTradesCurrent() async {
+    final response = await dexGetTradesCurrentWithHttpInfo();
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<DexTradeDTO>') as List)
+        .cast<DexTradeDTO>()
+        .toList();
+
+    }
+    return null;
+  }
+
   /// GetBundles (historical)
   ///
   /// Gets bundles.
@@ -25,12 +127,16 @@ class SushiswapApi {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   AAAAAAAAAA
   ///
   /// * [int] endBlock:
+  ///   BBBBBBBBBBBB
   ///
   /// * [DateTime] startDate:
+  ///   CCCCCCCCC
   ///
   /// * [DateTime] endDate:
+  ///   DDDDDDDDDDD
   Future<Response> sushiswapGetBundlesHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
     // ignore: prefer_const_declarations
     final path = r'/dapps/sushiswap/bundles/historical';
@@ -76,12 +182,16 @@ class SushiswapApi {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   AAAAAAAAAA
   ///
   /// * [int] endBlock:
+  ///   BBBBBBBBBBBB
   ///
   /// * [DateTime] startDate:
+  ///   CCCCCCCCC
   ///
   /// * [DateTime] endDate:
+  ///   DDDDDDDDDDD
   Future<List<SushiswapBundleDTO>?> sushiswapGetBundlesHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
     final response = await sushiswapGetBundlesHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, );
     if (response.statusCode >= HttpStatus.badRequest) {
@@ -109,14 +219,19 @@ class SushiswapApi {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
+  ///   
   ///
   /// * [String] poolId:
+  ///   
   Future<Response> sushiswapGetBurnsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
     // ignore: prefer_const_declarations
     final path = r'/dapps/sushiswap/burns/historical';
@@ -165,14 +280,19 @@ class SushiswapApi {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
+  ///   
   ///
   /// * [String] poolId:
+  ///   
   Future<List<SushiswapBurnDTO>?> sushiswapGetBurnsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
     final response = await sushiswapGetBurnsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
     if (response.statusCode >= HttpStatus.badRequest) {
@@ -200,12 +320,16 @@ class SushiswapApi {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
+  ///   
   Future<Response> sushiswapGetDayDataHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
     // ignore: prefer_const_declarations
     final path = r'/dapps/sushiswap/dayData/historical';
@@ -251,12 +375,16 @@ class SushiswapApi {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
+  ///   
   Future<List<SushiswapDayDataDTO>?> sushiswapGetDayDataHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
     final response = await sushiswapGetDayDataHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, );
     if (response.statusCode >= HttpStatus.badRequest) {
@@ -284,12 +412,16 @@ class SushiswapApi {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
+  ///   
   Future<Response> sushiswapGetFactoryHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
     // ignore: prefer_const_declarations
     final path = r'/dapps/sushiswap/factory/historical';
@@ -335,12 +467,16 @@ class SushiswapApi {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
+  ///   
   Future<List<SushiswapFactoryDTO>?> sushiswapGetFactoryHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
     final response = await sushiswapGetFactoryHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, );
     if (response.statusCode >= HttpStatus.badRequest) {
@@ -368,12 +504,16 @@ class SushiswapApi {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
+  ///   
   Future<Response> sushiswapGetHourDataHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
     // ignore: prefer_const_declarations
     final path = r'/dapps/sushiswap/hourData/historical';
@@ -419,12 +559,16 @@ class SushiswapApi {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
+  ///   
   Future<List<SushiswapHourDataDTO>?> sushiswapGetHourDataHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
     final response = await sushiswapGetHourDataHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, );
     if (response.statusCode >= HttpStatus.badRequest) {
@@ -452,14 +596,19 @@ class SushiswapApi {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
+  ///   
   ///
   /// * [String] poolId:
+  ///   
   Future<Response> sushiswapGetLiquidityPositionHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
     // ignore: prefer_const_declarations
     final path = r'/dapps/sushiswap/liquidityPosition/historical';
@@ -508,14 +657,19 @@ class SushiswapApi {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
+  ///   
   ///
   /// * [String] poolId:
+  ///   
   Future<List<SushiswapLiquidityPositionDTO>?> sushiswapGetLiquidityPositionHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
     final response = await sushiswapGetLiquidityPositionHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
     if (response.statusCode >= HttpStatus.badRequest) {
@@ -543,14 +697,19 @@ class SushiswapApi {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
+  ///   
   ///
   /// * [String] poolId:
+  ///   
   Future<Response> sushiswapGetLiquidityPositionSnapshotHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
     // ignore: prefer_const_declarations
     final path = r'/dapps/sushiswap/liquidityPositionSnapshots/historical';
@@ -599,14 +758,19 @@ class SushiswapApi {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
+  ///   
   ///
   /// * [String] poolId:
+  ///   
   Future<List<SushiswapLiquidityPositionSnapshotDTO>?> sushiswapGetLiquidityPositionSnapshotHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
     final response = await sushiswapGetLiquidityPositionSnapshotHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
     if (response.statusCode >= HttpStatus.badRequest) {
@@ -634,14 +798,19 @@ class SushiswapApi {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
+  ///   
   ///
   /// * [String] poolId:
+  ///   
   Future<Response> sushiswapGetMintsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
     // ignore: prefer_const_declarations
     final path = r'/dapps/sushiswap/mints/historical';
@@ -690,14 +859,19 @@ class SushiswapApi {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
+  ///   
   ///
   /// * [String] poolId:
+  ///   
   Future<List<SushiswapMintDTO>?> sushiswapGetMintsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
     final response = await sushiswapGetMintsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
     if (response.statusCode >= HttpStatus.badRequest) {
@@ -716,7 +890,7 @@ class SushiswapApi {
     return null;
   }
 
-  /// GetPools (current)
+  /// GetPools (current) 🔥
   ///
   /// Gets pools.
   ///
@@ -746,7 +920,7 @@ class SushiswapApi {
     );
   }
 
-  /// GetPools (current)
+  /// GetPools (current) 🔥
   ///
   /// Gets pools.
   Future<List<SushiswapPairDTO>?> sushiswapGetPoolsCurrent() async {
@@ -776,14 +950,19 @@ class SushiswapApi {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
+  ///   
   ///
   /// * [String] poolId:
+  ///   
   Future<Response> sushiswapGetPoolsDayDataHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
     // ignore: prefer_const_declarations
     final path = r'/dapps/sushiswap/poolsDayData/historical';
@@ -832,14 +1011,19 @@ class SushiswapApi {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
+  ///   
   ///
   /// * [String] poolId:
+  ///   
   Future<List<SushiswapPairDayDataDTO>?> sushiswapGetPoolsDayDataHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
     final response = await sushiswapGetPoolsDayDataHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
     if (response.statusCode >= HttpStatus.badRequest) {
@@ -858,7 +1042,7 @@ class SushiswapApi {
     return null;
   }
 
-  /// GetPools (historical)
+  /// GetPools (historical) 🔥
   ///
   /// Gets list of pools for given filters.
   ///
@@ -867,14 +1051,19 @@ class SushiswapApi {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   ///
   /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
   ///
   /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
   ///
   /// * [DateTime] endDate:
+  ///   The end date of timeframe
   ///
   /// * [String] poolId:
+  ///   The pool address.
   Future<Response> sushiswapGetPoolsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
     // ignore: prefer_const_declarations
     final path = r'/dapps/sushiswap/pools/historical';
@@ -916,21 +1105,26 @@ class SushiswapApi {
     );
   }
 
-  /// GetPools (historical)
+  /// GetPools (historical) 🔥
   ///
   /// Gets list of pools for given filters.
   ///
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   ///
   /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
   ///
   /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
   ///
   /// * [DateTime] endDate:
+  ///   The end date of timeframe
   ///
   /// * [String] poolId:
+  ///   The pool address.
   Future<List<SushiswapPairDTO>?> sushiswapGetPoolsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
     final response = await sushiswapGetPoolsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
     if (response.statusCode >= HttpStatus.badRequest) {
@@ -958,14 +1152,19 @@ class SushiswapApi {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
+  ///   
   ///
   /// * [String] poolId:
+  ///   
   Future<Response> sushiswapGetPoolsHourDataHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
     // ignore: prefer_const_declarations
     final path = r'/dapps/sushiswap/poolsHourData/historical';
@@ -1014,14 +1213,19 @@ class SushiswapApi {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
+  ///   
   ///
   /// * [String] poolId:
+  ///   
   Future<List<SushiswapPairHourDataDTO>?> sushiswapGetPoolsHourDataHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
     final response = await sushiswapGetPoolsHourDataHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
     if (response.statusCode >= HttpStatus.badRequest) {
@@ -1040,7 +1244,7 @@ class SushiswapApi {
     return null;
   }
 
-  /// GetSwaps (current)
+  /// GetSwaps (current) 🔥
   ///
   /// Gets swaps.
   ///
@@ -1070,7 +1274,7 @@ class SushiswapApi {
     );
   }
 
-  /// GetSwaps (current)
+  /// GetSwaps (current) 🔥
   ///
   /// Gets swaps.
   Future<List<SushiswapSwapDTO>?> sushiswapGetSwapsCurrent() async {
@@ -1091,7 +1295,7 @@ class SushiswapApi {
     return null;
   }
 
-  /// GetSwaps (historical)
+  /// GetSwaps (historical) 🔥
   ///
   /// Gets list of swaps for given filters.
   ///
@@ -1100,14 +1304,19 @@ class SushiswapApi {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   ///
   /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
   ///
   /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
   ///
   /// * [DateTime] endDate:
+  ///   The end date of timeframe
   ///
   /// * [String] poolId:
+  ///   The pool address.
   Future<Response> sushiswapGetSwapsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
     // ignore: prefer_const_declarations
     final path = r'/dapps/sushiswap/swaps/historical';
@@ -1149,21 +1358,26 @@ class SushiswapApi {
     );
   }
 
-  /// GetSwaps (historical)
+  /// GetSwaps (historical) 🔥
   ///
   /// Gets list of swaps for given filters.
   ///
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   ///
   /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
   ///
   /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
   ///
   /// * [DateTime] endDate:
+  ///   The end date of timeframe
   ///
   /// * [String] poolId:
+  ///   The pool address.
   Future<List<SushiswapSwapDTO>?> sushiswapGetSwapsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
     final response = await sushiswapGetSwapsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
     if (response.statusCode >= HttpStatus.badRequest) {
@@ -1182,7 +1396,7 @@ class SushiswapApi {
     return null;
   }
 
-  /// GetTokens (current)
+  /// GetTokens (current) 🔥
   ///
   /// Gets tokens.
   ///
@@ -1212,7 +1426,7 @@ class SushiswapApi {
     );
   }
 
-  /// GetTokens (current)
+  /// GetTokens (current) 🔥
   ///
   /// Gets tokens.
   Future<List<SushiswapTokenDTO>?> sushiswapGetTokensCurrent() async {
@@ -1242,14 +1456,19 @@ class SushiswapApi {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
+  ///   
   ///
   /// * [String] tokenId:
+  ///   
   Future<Response> sushiswapGetTokensDayDataHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? tokenId, }) async {
     // ignore: prefer_const_declarations
     final path = r'/dapps/sushiswap/tokensDayData/historical';
@@ -1298,14 +1517,19 @@ class SushiswapApi {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
+  ///   
   ///
   /// * [String] tokenId:
+  ///   
   Future<List<SushiswapTokenDayDataDTO>?> sushiswapGetTokensDayDataHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? tokenId, }) async {
     final response = await sushiswapGetTokensDayDataHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, tokenId: tokenId, );
     if (response.statusCode >= HttpStatus.badRequest) {
@@ -1324,7 +1548,7 @@ class SushiswapApi {
     return null;
   }
 
-  /// GetTokens (historical)
+  /// GetTokens (historical) 🔥
   ///
   /// Gets list of tokens for given filters.
   ///
@@ -1333,14 +1557,19 @@ class SushiswapApi {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   ///
   /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
   ///
   /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
   ///
   /// * [DateTime] endDate:
+  ///   The end date of timeframe
   ///
   /// * [String] tokenId:
+  ///   The token address.
   Future<Response> sushiswapGetTokensHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? tokenId, }) async {
     // ignore: prefer_const_declarations
     final path = r'/dapps/sushiswap/tokens/historical';
@@ -1382,21 +1611,26 @@ class SushiswapApi {
     );
   }
 
-  /// GetTokens (historical)
+  /// GetTokens (historical) 🔥
   ///
   /// Gets list of tokens for given filters.
   ///
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   ///
   /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
   ///
   /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
   ///
   /// * [DateTime] endDate:
+  ///   The end date of timeframe
   ///
   /// * [String] tokenId:
+  ///   The token address.
   Future<List<SushiswapTokenDTO>?> sushiswapGetTokensHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? tokenId, }) async {
     final response = await sushiswapGetTokensHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, tokenId: tokenId, );
     if (response.statusCode >= HttpStatus.badRequest) {
@@ -1424,12 +1658,16 @@ class SushiswapApi {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
+  ///   
   Future<Response> sushiswapGetTransactionsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
     // ignore: prefer_const_declarations
     final path = r'/dapps/sushiswap/transactions/historical';
@@ -1475,12 +1713,16 @@ class SushiswapApi {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
+  ///   
   Future<List<SushiswapTransactionDTO>?> sushiswapGetTransactionsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
     final response = await sushiswapGetTransactionsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, );
     if (response.statusCode >= HttpStatus.badRequest) {
@@ -1508,12 +1750,16 @@ class SushiswapApi {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
+  ///   
   Future<Response> sushiswapGetUsersHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
     // ignore: prefer_const_declarations
     final path = r'/dapps/sushiswap/users/historical';
@@ -1559,12 +1805,16 @@ class SushiswapApi {
   /// Parameters:
   ///
   /// * [int] startBlock:
+  ///   
   ///
   /// * [int] endBlock:
+  ///   
   ///
   /// * [DateTime] startDate:
+  ///   
   ///
   /// * [DateTime] endDate:
+  ///   
   Future<List<SushiswapUserDTO>?> sushiswapGetUsersHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, }) async {
     final response = await sushiswapGetUsersHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, );
     if (response.statusCode >= HttpStatus.badRequest) {

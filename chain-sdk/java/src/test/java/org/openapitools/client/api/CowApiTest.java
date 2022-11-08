@@ -14,6 +14,11 @@
 package org.openapitools.client.api;
 
 import org.openapitools.client.ApiException;
+import org.openapitools.client.model.CowOrderDTO;
+import org.openapitools.client.model.CowSettlementDTO;
+import org.openapitools.client.model.CowTokenDTO;
+import org.openapitools.client.model.CowTradeDTO;
+import org.openapitools.client.model.CowUserDTO;
 import java.time.OffsetDateTime;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -32,68 +37,88 @@ public class CowApiTest {
     private final CowApi api = new CowApi();
 
     /**
+     * GetOrders (historical)
+     *
+     * Gets orders.
+     *
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void dappsCowOrdersHistoricalGetTest() throws ApiException {
+    public void cowGetOrdersHistoricalTest() throws ApiException {
         Long startBlock = null;
         Long endBlock = null;
         OffsetDateTime startDate = null;
         OffsetDateTime endDate = null;
-        api.dappsCowOrdersHistoricalGet(startBlock, endBlock, startDate, endDate);
+        List<CowOrderDTO> response = api.cowGetOrdersHistorical(startBlock, endBlock, startDate, endDate);
         // TODO: test validations
     }
 
     /**
+     * GetSettlements (historical)
+     *
+     * Gets settlements.
+     *
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void dappsCowSettlementHistoricalGetTest() throws ApiException {
+    public void cowGetSettlementsHistoricalTest() throws ApiException {
         Long startBlock = null;
         Long endBlock = null;
         OffsetDateTime startDate = null;
         OffsetDateTime endDate = null;
-        api.dappsCowSettlementHistoricalGet(startBlock, endBlock, startDate, endDate);
+        List<CowSettlementDTO> response = api.cowGetSettlementsHistorical(startBlock, endBlock, startDate, endDate);
         // TODO: test validations
     }
 
     /**
+     * GetTokens (historical) 🔥
+     *
+     * Gets tokens.
+     *
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void dappsCowTokensHistoricalGetTest() throws ApiException {
+    public void cowGetTokensHistoricalTest() throws ApiException {
         Long startBlock = null;
         Long endBlock = null;
         OffsetDateTime startDate = null;
         OffsetDateTime endDate = null;
         String tokenId = null;
-        api.dappsCowTokensHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId);
+        List<CowTokenDTO> response = api.cowGetTokensHistorical(startBlock, endBlock, startDate, endDate, tokenId);
         // TODO: test validations
     }
 
     /**
+     * GetTrades (historical) 🔥
+     *
+     * Gets trades.
+     *
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void dappsCowTradesHistoricalGetTest() throws ApiException {
+    public void cowGetTradesHistoricalTest() throws ApiException {
         Long startBlock = null;
         Long endBlock = null;
         OffsetDateTime startDate = null;
         OffsetDateTime endDate = null;
-        api.dappsCowTradesHistoricalGet(startBlock, endBlock, startDate, endDate);
+        List<CowTradeDTO> response = api.cowGetTradesHistorical(startBlock, endBlock, startDate, endDate);
         // TODO: test validations
     }
 
     /**
+     * GetUsers (historical)
+     *
+     * Gets users.
+     *
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void dappsCowUsersHistoricalGetTest() throws ApiException {
+    public void cowGetUsersHistoricalTest() throws ApiException {
         Long startBlock = null;
         Long endBlock = null;
         OffsetDateTime startDate = null;
         OffsetDateTime endDate = null;
-        api.dappsCowUsersHistoricalGet(startBlock, endBlock, startDate, endDate);
+        List<CowUserDTO> response = api.cowGetUsersHistorical(startBlock, endBlock, startDate, endDate);
         // TODO: test validations
     }
 

@@ -5,6 +5,11 @@
 #include <cstring>
 #include <list>
 #include <glib.h>
+#include "Cow.OrderDTO.h"
+#include "Cow.SettlementDTO.h"
+#include "Cow.TokenDTO.h"
+#include "Cow.TradeDTO.h"
+#include "Cow.UserDTO.h"
 #include "Error.h"
 
 /** \defgroup Operations API Endpoints
@@ -23,9 +28,9 @@ public:
 	CowManager();
 	virtual ~CowManager();
 
-/*! \brief . *Synchronous*
+/*! \brief GetOrders (historical). *Synchronous*
  *
- * 
+ * Gets orders.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -34,14 +39,14 @@ public:
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsCowOrdersHistoricalGetSync(char * accessToken,
+bool cowGetOrders (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Cow.OrderDTO>, Error, void* )
+	, void* userData);
 
-/*! \brief . *Asynchronous*
+/*! \brief GetOrders (historical). *Asynchronous*
  *
- * 
+ * Gets orders.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -50,15 +55,15 @@ bool dappsCowOrdersHistoricalGetSync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsCowOrdersHistoricalGetAsync(char * accessToken,
+bool cowGetOrders (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Cow.OrderDTO>, Error, void* )
+	, void* userData);
 
 
-/*! \brief . *Synchronous*
+/*! \brief GetSettlements (historical). *Synchronous*
  *
- * 
+ * Gets settlements.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -67,14 +72,14 @@ bool dappsCowOrdersHistoricalGetAsync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsCowSettlementHistoricalGetSync(char * accessToken,
+bool cowGetSettlements (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Cow.SettlementDTO>, Error, void* )
+	, void* userData);
 
-/*! \brief . *Asynchronous*
+/*! \brief GetSettlements (historical). *Asynchronous*
  *
- * 
+ * Gets settlements.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -83,15 +88,15 @@ bool dappsCowSettlementHistoricalGetSync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsCowSettlementHistoricalGetAsync(char * accessToken,
+bool cowGetSettlements (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Cow.SettlementDTO>, Error, void* )
+	, void* userData);
 
 
-/*! \brief . *Synchronous*
+/*! \brief GetTokens (historical) 🔥. *Synchronous*
  *
- * 
+ * Gets tokens.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -101,14 +106,14 @@ bool dappsCowSettlementHistoricalGetAsync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsCowTokensHistoricalGetSync(char * accessToken,
+bool cowGetTokens (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Cow.TokenDTO>, Error, void* )
+	, void* userData);
 
-/*! \brief . *Asynchronous*
+/*! \brief GetTokens (historical) 🔥. *Asynchronous*
  *
- * 
+ * Gets tokens.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -118,15 +123,15 @@ bool dappsCowTokensHistoricalGetSync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsCowTokensHistoricalGetAsync(char * accessToken,
+bool cowGetTokens (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Cow.TokenDTO>, Error, void* )
+	, void* userData);
 
 
-/*! \brief . *Synchronous*
+/*! \brief GetTrades (historical) 🔥. *Synchronous*
  *
- * 
+ * Gets trades.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -135,14 +140,14 @@ bool dappsCowTokensHistoricalGetAsync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsCowTradesHistoricalGetSync(char * accessToken,
+bool cowGetTrades (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Cow.TradeDTO>, Error, void* )
+	, void* userData);
 
-/*! \brief . *Asynchronous*
+/*! \brief GetTrades (historical) 🔥. *Asynchronous*
  *
- * 
+ * Gets trades.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -151,15 +156,15 @@ bool dappsCowTradesHistoricalGetSync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsCowTradesHistoricalGetAsync(char * accessToken,
+bool cowGetTrades (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Cow.TradeDTO>, Error, void* )
+	, void* userData);
 
 
-/*! \brief . *Synchronous*
+/*! \brief GetUsers (historical). *Synchronous*
  *
- * 
+ * Gets users.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -168,14 +173,14 @@ bool dappsCowTradesHistoricalGetAsync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsCowUsersHistoricalGetSync(char * accessToken,
+bool cowGetUsers (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Cow.UserDTO>, Error, void* )
+	, void* userData);
 
-/*! \brief . *Asynchronous*
+/*! \brief GetUsers (historical). *Asynchronous*
  *
- * 
+ * Gets users.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -184,10 +189,10 @@ bool dappsCowUsersHistoricalGetSync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsCowUsersHistoricalGetAsync(char * accessToken,
+bool cowGetUsers (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<Cow.UserDTO>, Error, void* )
+	, void* userData);
 
 
 

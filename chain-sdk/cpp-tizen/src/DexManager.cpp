@@ -48,23 +48,37 @@ static gpointer __DexManagerthreadFunc(gpointer data)
 }
 
 
-static bool dappsDexBatchHistoricalGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+static bool dexGetBatches (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
+	void(* handler)(std::list<Dex.BatchDTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<Dex.BatchDTO>, Error, void* )> (voidHandler);
 	
-	void(* handler)(Error, void* ) = reinterpret_cast<void(*)(Error, void* )> (voidHandler);
 	JsonNode* pJson;
 	char * data = p_chunk.memory;
 
+	std::list<Dex.BatchDTO> out;
 	
 
 	if (code >= 200 && code < 300) {
 		Error error(code, string("No Error"));
 
 
-		handler(error, userData);
-		return true;
 
+		pJson = json_from_string(data, NULL);
+		JsonArray * jsonarray = json_node_get_array (pJson);
+		guint length = json_array_get_length (jsonarray);
+		for(guint i = 0; i < length; i++){
+			JsonNode* myJson = json_array_get_element (jsonarray, i);
+			char * singlenodestr = json_to_string(myJson, false);
+			Dex.BatchDTO singlemodel;
+			singlemodel.fromJson(singlenodestr);
+			out.push_front(singlemodel);
+			g_free(static_cast<gpointer>(singlenodestr));
+			json_node_free(myJson);
+		}
+		json_array_unref (jsonarray);
+		json_node_free(pJson);
 
 
 	} else {
@@ -76,15 +90,15 @@ static bool dappsDexBatchHistoricalGetProcessor(MemoryStruct_s p_chunk, long cod
 		} else {
 			error = Error(code, string("Unknown Error"));
 		}
-		handler(error, userData);
+		 handler(out, error, userData);
 		return false;
-	}
+			}
 }
 
-static bool dappsDexBatchHistoricalGetHelper(char * accessToken,
+static bool dexGetBatches (historical)Helper(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData, bool isAsync)
+	void(* handler)(std::list<Dex.BatchDTO>, Error, void* )
+	, void* userData, bool isAsync)
 {
 
 	//TODO: maybe delete headerList after its used to free up space?
@@ -131,7 +145,7 @@ static bool dappsDexBatchHistoricalGetHelper(char * accessToken,
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/dapps/dex/batch/historical");
+	string url("/dapps/dex/batches/historical");
 	int pos;
 
 
@@ -150,7 +164,7 @@ static bool dappsDexBatchHistoricalGetHelper(char * accessToken,
 	if(!isAsync){
 		NetClient::easycurl(DexManager::getBasePath(), url, myhttpmethod, queryParams,
 			mBody, headerList, p_chunk, &code, errormsg);
-		bool retval = dappsDexBatchHistoricalGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+		bool retval = dexGetBatches (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
 
 		curl_slist_free_all(headerList);
 		if (p_chunk) {
@@ -168,7 +182,7 @@ static bool dappsDexBatchHistoricalGetHelper(char * accessToken,
 		RequestInfo *requestInfo = NULL;
 
 		requestInfo = new(nothrow) RequestInfo (DexManager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dappsDexBatchHistoricalGetProcessor);;
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dexGetBatches (historical)Processor);;
 		if(requestInfo == NULL)
 			return false;
 
@@ -180,43 +194,57 @@ static bool dappsDexBatchHistoricalGetHelper(char * accessToken,
 
 
 
-bool DexManager::dappsDexBatchHistoricalGetAsync(char * accessToken,
+bool DexManager::dexGetBatches (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData)
+	void(* handler)(std::list<Dex.BatchDTO>, Error, void* )
+	, void* userData)
 {
-	return dappsDexBatchHistoricalGetHelper(accessToken,
+	return dexGetBatches (historical)Helper(accessToken,
 	startBlock, endBlock, startDate, endDate, 
 	handler, userData, true);
 }
 
-bool DexManager::dappsDexBatchHistoricalGetSync(char * accessToken,
+bool DexManager::dexGetBatches (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData)
+	void(* handler)(std::list<Dex.BatchDTO>, Error, void* )
+	, void* userData)
 {
-	return dappsDexBatchHistoricalGetHelper(accessToken,
+	return dexGetBatches (historical)Helper(accessToken,
 	startBlock, endBlock, startDate, endDate, 
 	handler, userData, false);
 }
 
-static bool dappsDexOrdersHistoricalGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+static bool dexGetDeposits (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
+	void(* handler)(std::list<Dex.DepositDTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<Dex.DepositDTO>, Error, void* )> (voidHandler);
 	
-	void(* handler)(Error, void* ) = reinterpret_cast<void(*)(Error, void* )> (voidHandler);
 	JsonNode* pJson;
 	char * data = p_chunk.memory;
 
+	std::list<Dex.DepositDTO> out;
 	
 
 	if (code >= 200 && code < 300) {
 		Error error(code, string("No Error"));
 
 
-		handler(error, userData);
-		return true;
 
+		pJson = json_from_string(data, NULL);
+		JsonArray * jsonarray = json_node_get_array (pJson);
+		guint length = json_array_get_length (jsonarray);
+		for(guint i = 0; i < length; i++){
+			JsonNode* myJson = json_array_get_element (jsonarray, i);
+			char * singlenodestr = json_to_string(myJson, false);
+			Dex.DepositDTO singlemodel;
+			singlemodel.fromJson(singlenodestr);
+			out.push_front(singlemodel);
+			g_free(static_cast<gpointer>(singlenodestr));
+			json_node_free(myJson);
+		}
+		json_array_unref (jsonarray);
+		json_node_free(pJson);
 
 
 	} else {
@@ -228,15 +256,188 @@ static bool dappsDexOrdersHistoricalGetProcessor(MemoryStruct_s p_chunk, long co
 		} else {
 			error = Error(code, string("Unknown Error"));
 		}
-		handler(error, userData);
+		 handler(out, error, userData);
 		return false;
+			}
+}
+
+static bool dexGetDeposits (historical)Helper(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
+	void(* handler)(std::list<Dex.DepositDTO>, Error, void* )
+	, void* userData, bool isAsync)
+{
+
+	//TODO: maybe delete headerList after its used to free up space?
+	struct curl_slist *headerList = NULL;
+
+	
+	string accessHeader = "Authorization: Bearer ";
+	accessHeader.append(accessToken);
+	headerList = curl_slist_append(headerList, accessHeader.c_str());
+	headerList = curl_slist_append(headerList, "Content-Type: application/json");
+
+	map <string, string> queryParams;
+	string itemAtq;
+	
+
+	itemAtq = stringify(&startBlock, "long long");
+	queryParams.insert(pair<string, string>("startBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startBlock");
+	}
+
+
+	itemAtq = stringify(&endBlock, "long long");
+	queryParams.insert(pair<string, string>("endBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endBlock");
+	}
+
+
+	itemAtq = stringify(&startDate, "std::string");
+	queryParams.insert(pair<string, string>("startDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startDate");
+	}
+
+
+	itemAtq = stringify(&endDate, "std::string");
+	queryParams.insert(pair<string, string>("endDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endDate");
+	}
+
+
+	itemAtq = stringify(&tokenId, "std::string");
+	queryParams.insert(pair<string, string>("tokenId", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("tokenId");
+	}
+
+	string mBody = "";
+	JsonNode* node;
+	JsonArray* json_array;
+
+	string url("/dapps/dex/deposits/historical");
+	int pos;
+
+
+	//TODO: free memory of errormsg, memorystruct
+	MemoryStruct_s* p_chunk = new MemoryStruct_s();
+	long code;
+	char* errormsg = NULL;
+	string myhttpmethod("GET");
+
+	if(strcmp("PUT", "GET") == 0){
+		if(strcmp("", mBody.c_str()) == 0){
+			mBody.append("{}");
+		}
+	}
+
+	if(!isAsync){
+		NetClient::easycurl(DexManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg);
+		bool retval = dexGetDeposits (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+
+		curl_slist_free_all(headerList);
+		if (p_chunk) {
+			if(p_chunk->memory) {
+				free(p_chunk->memory);
+			}
+			delete (p_chunk);
+		}
+		if (errormsg) {
+			free(errormsg);
+		}
+		return retval;
+	} else{
+		GThread *thread = NULL;
+		RequestInfo *requestInfo = NULL;
+
+		requestInfo = new(nothrow) RequestInfo (DexManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dexGetDeposits (historical)Processor);;
+		if(requestInfo == NULL)
+			return false;
+
+		thread = g_thread_new(NULL, __DexManagerthreadFunc, static_cast<gpointer>(requestInfo));
+		return true;
 	}
 }
 
-static bool dappsDexOrdersHistoricalGetHelper(char * accessToken,
+
+
+
+bool DexManager::dexGetDeposits (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
+	void(* handler)(std::list<Dex.DepositDTO>, Error, void* )
+	, void* userData)
+{
+	return dexGetDeposits (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, tokenId, 
+	handler, userData, true);
+}
+
+bool DexManager::dexGetDeposits (historical)Sync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
+	void(* handler)(std::list<Dex.DepositDTO>, Error, void* )
+	, void* userData)
+{
+	return dexGetDeposits (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, tokenId, 
+	handler, userData, false);
+}
+
+static bool dexGetOrders (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+	void(* voidHandler)())
+{
+	void(* handler)(std::list<Dex.OrderDTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<Dex.OrderDTO>, Error, void* )> (voidHandler);
 	
-	void(* handler)(Error, void* ) , void* userData, bool isAsync)
+	JsonNode* pJson;
+	char * data = p_chunk.memory;
+
+	std::list<Dex.OrderDTO> out;
+	
+
+	if (code >= 200 && code < 300) {
+		Error error(code, string("No Error"));
+
+
+
+		pJson = json_from_string(data, NULL);
+		JsonArray * jsonarray = json_node_get_array (pJson);
+		guint length = json_array_get_length (jsonarray);
+		for(guint i = 0; i < length; i++){
+			JsonNode* myJson = json_array_get_element (jsonarray, i);
+			char * singlenodestr = json_to_string(myJson, false);
+			Dex.OrderDTO singlemodel;
+			singlemodel.fromJson(singlenodestr);
+			out.push_front(singlemodel);
+			g_free(static_cast<gpointer>(singlenodestr));
+			json_node_free(myJson);
+		}
+		json_array_unref (jsonarray);
+		json_node_free(pJson);
+
+
+	} else {
+		Error error;
+		if (errormsg != NULL) {
+			error = Error(code, string(errormsg));
+		} else if (p_chunk.memory != NULL) {
+			error = Error(code, string(p_chunk.memory));
+		} else {
+			error = Error(code, string("Unknown Error"));
+		}
+		 handler(out, error, userData);
+		return false;
+			}
+}
+
+static bool dexGetOrders (historical)Helper(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
+	void(* handler)(std::list<Dex.OrderDTO>, Error, void* )
+	, void* userData, bool isAsync)
 {
 
 	//TODO: maybe delete headerList after its used to free up space?
@@ -309,7 +510,7 @@ static bool dappsDexOrdersHistoricalGetHelper(char * accessToken,
 	if(!isAsync){
 		NetClient::easycurl(DexManager::getBasePath(), url, myhttpmethod, queryParams,
 			mBody, headerList, p_chunk, &code, errormsg);
-		bool retval = dappsDexOrdersHistoricalGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+		bool retval = dexGetOrders (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
 
 		curl_slist_free_all(headerList);
 		if (p_chunk) {
@@ -327,7 +528,7 @@ static bool dappsDexOrdersHistoricalGetHelper(char * accessToken,
 		RequestInfo *requestInfo = NULL;
 
 		requestInfo = new(nothrow) RequestInfo (DexManager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dappsDexOrdersHistoricalGetProcessor);;
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dexGetOrders (historical)Processor);;
 		if(requestInfo == NULL)
 			return false;
 
@@ -339,43 +540,57 @@ static bool dappsDexOrdersHistoricalGetHelper(char * accessToken,
 
 
 
-bool DexManager::dappsDexOrdersHistoricalGetAsync(char * accessToken,
+bool DexManager::dexGetOrders (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
-	
-	void(* handler)(Error, void* ) , void* userData)
+	void(* handler)(std::list<Dex.OrderDTO>, Error, void* )
+	, void* userData)
 {
-	return dappsDexOrdersHistoricalGetHelper(accessToken,
+	return dexGetOrders (historical)Helper(accessToken,
 	startBlock, endBlock, startDate, endDate, tokenId, 
 	handler, userData, true);
 }
 
-bool DexManager::dappsDexOrdersHistoricalGetSync(char * accessToken,
+bool DexManager::dexGetOrders (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
-	
-	void(* handler)(Error, void* ) , void* userData)
+	void(* handler)(std::list<Dex.OrderDTO>, Error, void* )
+	, void* userData)
 {
-	return dappsDexOrdersHistoricalGetHelper(accessToken,
+	return dexGetOrders (historical)Helper(accessToken,
 	startBlock, endBlock, startDate, endDate, tokenId, 
 	handler, userData, false);
 }
 
-static bool dappsDexPricesHistoricalGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+static bool dexGetPrices (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
+	void(* handler)(std::list<Dex.PriceDTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<Dex.PriceDTO>, Error, void* )> (voidHandler);
 	
-	void(* handler)(Error, void* ) = reinterpret_cast<void(*)(Error, void* )> (voidHandler);
 	JsonNode* pJson;
 	char * data = p_chunk.memory;
 
+	std::list<Dex.PriceDTO> out;
 	
 
 	if (code >= 200 && code < 300) {
 		Error error(code, string("No Error"));
 
 
-		handler(error, userData);
-		return true;
 
+		pJson = json_from_string(data, NULL);
+		JsonArray * jsonarray = json_node_get_array (pJson);
+		guint length = json_array_get_length (jsonarray);
+		for(guint i = 0; i < length; i++){
+			JsonNode* myJson = json_array_get_element (jsonarray, i);
+			char * singlenodestr = json_to_string(myJson, false);
+			Dex.PriceDTO singlemodel;
+			singlemodel.fromJson(singlenodestr);
+			out.push_front(singlemodel);
+			g_free(static_cast<gpointer>(singlenodestr));
+			json_node_free(myJson);
+		}
+		json_array_unref (jsonarray);
+		json_node_free(pJson);
 
 
 	} else {
@@ -387,15 +602,15 @@ static bool dappsDexPricesHistoricalGetProcessor(MemoryStruct_s p_chunk, long co
 		} else {
 			error = Error(code, string("Unknown Error"));
 		}
-		handler(error, userData);
+		 handler(out, error, userData);
 		return false;
-	}
+			}
 }
 
-static bool dappsDexPricesHistoricalGetHelper(char * accessToken,
+static bool dexGetPrices (historical)Helper(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
-	
-	void(* handler)(Error, void* ) , void* userData, bool isAsync)
+	void(* handler)(std::list<Dex.PriceDTO>, Error, void* )
+	, void* userData, bool isAsync)
 {
 
 	//TODO: maybe delete headerList after its used to free up space?
@@ -468,7 +683,7 @@ static bool dappsDexPricesHistoricalGetHelper(char * accessToken,
 	if(!isAsync){
 		NetClient::easycurl(DexManager::getBasePath(), url, myhttpmethod, queryParams,
 			mBody, headerList, p_chunk, &code, errormsg);
-		bool retval = dappsDexPricesHistoricalGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+		bool retval = dexGetPrices (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
 
 		curl_slist_free_all(headerList);
 		if (p_chunk) {
@@ -486,7 +701,7 @@ static bool dappsDexPricesHistoricalGetHelper(char * accessToken,
 		RequestInfo *requestInfo = NULL;
 
 		requestInfo = new(nothrow) RequestInfo (DexManager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dappsDexPricesHistoricalGetProcessor);;
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dexGetPrices (historical)Processor);;
 		if(requestInfo == NULL)
 			return false;
 
@@ -498,43 +713,57 @@ static bool dappsDexPricesHistoricalGetHelper(char * accessToken,
 
 
 
-bool DexManager::dappsDexPricesHistoricalGetAsync(char * accessToken,
+bool DexManager::dexGetPrices (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
-	
-	void(* handler)(Error, void* ) , void* userData)
+	void(* handler)(std::list<Dex.PriceDTO>, Error, void* )
+	, void* userData)
 {
-	return dappsDexPricesHistoricalGetHelper(accessToken,
+	return dexGetPrices (historical)Helper(accessToken,
 	startBlock, endBlock, startDate, endDate, tokenId, 
 	handler, userData, true);
 }
 
-bool DexManager::dappsDexPricesHistoricalGetSync(char * accessToken,
+bool DexManager::dexGetPrices (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
-	
-	void(* handler)(Error, void* ) , void* userData)
+	void(* handler)(std::list<Dex.PriceDTO>, Error, void* )
+	, void* userData)
 {
-	return dappsDexPricesHistoricalGetHelper(accessToken,
+	return dexGetPrices (historical)Helper(accessToken,
 	startBlock, endBlock, startDate, endDate, tokenId, 
 	handler, userData, false);
 }
 
-static bool dappsDexSolutionHistoricalGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+static bool dexGetSolutions (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
+	void(* handler)(std::list<Dex.SolutionDTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<Dex.SolutionDTO>, Error, void* )> (voidHandler);
 	
-	void(* handler)(Error, void* ) = reinterpret_cast<void(*)(Error, void* )> (voidHandler);
 	JsonNode* pJson;
 	char * data = p_chunk.memory;
 
+	std::list<Dex.SolutionDTO> out;
 	
 
 	if (code >= 200 && code < 300) {
 		Error error(code, string("No Error"));
 
 
-		handler(error, userData);
-		return true;
 
+		pJson = json_from_string(data, NULL);
+		JsonArray * jsonarray = json_node_get_array (pJson);
+		guint length = json_array_get_length (jsonarray);
+		for(guint i = 0; i < length; i++){
+			JsonNode* myJson = json_array_get_element (jsonarray, i);
+			char * singlenodestr = json_to_string(myJson, false);
+			Dex.SolutionDTO singlemodel;
+			singlemodel.fromJson(singlenodestr);
+			out.push_front(singlemodel);
+			g_free(static_cast<gpointer>(singlenodestr));
+			json_node_free(myJson);
+		}
+		json_array_unref (jsonarray);
+		json_node_free(pJson);
 
 
 	} else {
@@ -546,15 +775,15 @@ static bool dappsDexSolutionHistoricalGetProcessor(MemoryStruct_s p_chunk, long 
 		} else {
 			error = Error(code, string("Unknown Error"));
 		}
-		handler(error, userData);
+		 handler(out, error, userData);
 		return false;
-	}
+			}
 }
 
-static bool dappsDexSolutionHistoricalGetHelper(char * accessToken,
+static bool dexGetSolutions (historical)Helper(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
-	
-	void(* handler)(Error, void* ) , void* userData, bool isAsync)
+	void(* handler)(std::list<Dex.SolutionDTO>, Error, void* )
+	, void* userData, bool isAsync)
 {
 
 	//TODO: maybe delete headerList after its used to free up space?
@@ -608,7 +837,7 @@ static bool dappsDexSolutionHistoricalGetHelper(char * accessToken,
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/dapps/dex/solution/historical");
+	string url("/dapps/dex/solutions/historical");
 	int pos;
 
 
@@ -627,7 +856,7 @@ static bool dappsDexSolutionHistoricalGetHelper(char * accessToken,
 	if(!isAsync){
 		NetClient::easycurl(DexManager::getBasePath(), url, myhttpmethod, queryParams,
 			mBody, headerList, p_chunk, &code, errormsg);
-		bool retval = dappsDexSolutionHistoricalGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+		bool retval = dexGetSolutions (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
 
 		curl_slist_free_all(headerList);
 		if (p_chunk) {
@@ -645,7 +874,7 @@ static bool dappsDexSolutionHistoricalGetHelper(char * accessToken,
 		RequestInfo *requestInfo = NULL;
 
 		requestInfo = new(nothrow) RequestInfo (DexManager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dappsDexSolutionHistoricalGetProcessor);;
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dexGetSolutions (historical)Processor);;
 		if(requestInfo == NULL)
 			return false;
 
@@ -657,43 +886,57 @@ static bool dappsDexSolutionHistoricalGetHelper(char * accessToken,
 
 
 
-bool DexManager::dappsDexSolutionHistoricalGetAsync(char * accessToken,
+bool DexManager::dexGetSolutions (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
-	
-	void(* handler)(Error, void* ) , void* userData)
+	void(* handler)(std::list<Dex.SolutionDTO>, Error, void* )
+	, void* userData)
 {
-	return dappsDexSolutionHistoricalGetHelper(accessToken,
+	return dexGetSolutions (historical)Helper(accessToken,
 	startBlock, endBlock, startDate, endDate, tokenId, 
 	handler, userData, true);
 }
 
-bool DexManager::dappsDexSolutionHistoricalGetSync(char * accessToken,
+bool DexManager::dexGetSolutions (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
-	
-	void(* handler)(Error, void* ) , void* userData)
+	void(* handler)(std::list<Dex.SolutionDTO>, Error, void* )
+	, void* userData)
 {
-	return dappsDexSolutionHistoricalGetHelper(accessToken,
+	return dexGetSolutions (historical)Helper(accessToken,
 	startBlock, endBlock, startDate, endDate, tokenId, 
 	handler, userData, false);
 }
 
-static bool dappsDexStatsHistoricalGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+static bool dexGetStats (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
+	void(* handler)(std::list<Dex.StatsDTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<Dex.StatsDTO>, Error, void* )> (voidHandler);
 	
-	void(* handler)(Error, void* ) = reinterpret_cast<void(*)(Error, void* )> (voidHandler);
 	JsonNode* pJson;
 	char * data = p_chunk.memory;
 
+	std::list<Dex.StatsDTO> out;
 	
 
 	if (code >= 200 && code < 300) {
 		Error error(code, string("No Error"));
 
 
-		handler(error, userData);
-		return true;
 
+		pJson = json_from_string(data, NULL);
+		JsonArray * jsonarray = json_node_get_array (pJson);
+		guint length = json_array_get_length (jsonarray);
+		for(guint i = 0; i < length; i++){
+			JsonNode* myJson = json_array_get_element (jsonarray, i);
+			char * singlenodestr = json_to_string(myJson, false);
+			Dex.StatsDTO singlemodel;
+			singlemodel.fromJson(singlenodestr);
+			out.push_front(singlemodel);
+			g_free(static_cast<gpointer>(singlenodestr));
+			json_node_free(myJson);
+		}
+		json_array_unref (jsonarray);
+		json_node_free(pJson);
 
 
 	} else {
@@ -705,15 +948,15 @@ static bool dappsDexStatsHistoricalGetProcessor(MemoryStruct_s p_chunk, long cod
 		} else {
 			error = Error(code, string("Unknown Error"));
 		}
-		handler(error, userData);
+		 handler(out, error, userData);
 		return false;
-	}
+			}
 }
 
-static bool dappsDexStatsHistoricalGetHelper(char * accessToken,
+static bool dexGetStats (historical)Helper(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData, bool isAsync)
+	void(* handler)(std::list<Dex.StatsDTO>, Error, void* )
+	, void* userData, bool isAsync)
 {
 
 	//TODO: maybe delete headerList after its used to free up space?
@@ -779,7 +1022,7 @@ static bool dappsDexStatsHistoricalGetHelper(char * accessToken,
 	if(!isAsync){
 		NetClient::easycurl(DexManager::getBasePath(), url, myhttpmethod, queryParams,
 			mBody, headerList, p_chunk, &code, errormsg);
-		bool retval = dappsDexStatsHistoricalGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+		bool retval = dexGetStats (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
 
 		curl_slist_free_all(headerList);
 		if (p_chunk) {
@@ -797,7 +1040,7 @@ static bool dappsDexStatsHistoricalGetHelper(char * accessToken,
 		RequestInfo *requestInfo = NULL;
 
 		requestInfo = new(nothrow) RequestInfo (DexManager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dappsDexStatsHistoricalGetProcessor);;
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dexGetStats (historical)Processor);;
 		if(requestInfo == NULL)
 			return false;
 
@@ -809,43 +1052,57 @@ static bool dappsDexStatsHistoricalGetHelper(char * accessToken,
 
 
 
-bool DexManager::dappsDexStatsHistoricalGetAsync(char * accessToken,
+bool DexManager::dexGetStats (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData)
+	void(* handler)(std::list<Dex.StatsDTO>, Error, void* )
+	, void* userData)
 {
-	return dappsDexStatsHistoricalGetHelper(accessToken,
+	return dexGetStats (historical)Helper(accessToken,
 	startBlock, endBlock, startDate, endDate, 
 	handler, userData, true);
 }
 
-bool DexManager::dappsDexStatsHistoricalGetSync(char * accessToken,
+bool DexManager::dexGetStats (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData)
+	void(* handler)(std::list<Dex.StatsDTO>, Error, void* )
+	, void* userData)
 {
-	return dappsDexStatsHistoricalGetHelper(accessToken,
+	return dexGetStats (historical)Helper(accessToken,
 	startBlock, endBlock, startDate, endDate, 
 	handler, userData, false);
 }
 
-static bool dappsDexTokensHistoricalGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+static bool dexGetTokens (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
+	void(* handler)(std::list<Dex.TokenDTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<Dex.TokenDTO>, Error, void* )> (voidHandler);
 	
-	void(* handler)(Error, void* ) = reinterpret_cast<void(*)(Error, void* )> (voidHandler);
 	JsonNode* pJson;
 	char * data = p_chunk.memory;
 
+	std::list<Dex.TokenDTO> out;
 	
 
 	if (code >= 200 && code < 300) {
 		Error error(code, string("No Error"));
 
 
-		handler(error, userData);
-		return true;
 
+		pJson = json_from_string(data, NULL);
+		JsonArray * jsonarray = json_node_get_array (pJson);
+		guint length = json_array_get_length (jsonarray);
+		for(guint i = 0; i < length; i++){
+			JsonNode* myJson = json_array_get_element (jsonarray, i);
+			char * singlenodestr = json_to_string(myJson, false);
+			Dex.TokenDTO singlemodel;
+			singlemodel.fromJson(singlenodestr);
+			out.push_front(singlemodel);
+			g_free(static_cast<gpointer>(singlenodestr));
+			json_node_free(myJson);
+		}
+		json_array_unref (jsonarray);
+		json_node_free(pJson);
 
 
 	} else {
@@ -857,15 +1114,15 @@ static bool dappsDexTokensHistoricalGetProcessor(MemoryStruct_s p_chunk, long co
 		} else {
 			error = Error(code, string("Unknown Error"));
 		}
-		handler(error, userData);
+		 handler(out, error, userData);
 		return false;
-	}
+			}
 }
 
-static bool dappsDexTokensHistoricalGetHelper(char * accessToken,
+static bool dexGetTokens (historical)Helper(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
-	
-	void(* handler)(Error, void* ) , void* userData, bool isAsync)
+	void(* handler)(std::list<Dex.TokenDTO>, Error, void* )
+	, void* userData, bool isAsync)
 {
 
 	//TODO: maybe delete headerList after its used to free up space?
@@ -938,7 +1195,7 @@ static bool dappsDexTokensHistoricalGetHelper(char * accessToken,
 	if(!isAsync){
 		NetClient::easycurl(DexManager::getBasePath(), url, myhttpmethod, queryParams,
 			mBody, headerList, p_chunk, &code, errormsg);
-		bool retval = dappsDexTokensHistoricalGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+		bool retval = dexGetTokens (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
 
 		curl_slist_free_all(headerList);
 		if (p_chunk) {
@@ -956,7 +1213,7 @@ static bool dappsDexTokensHistoricalGetHelper(char * accessToken,
 		RequestInfo *requestInfo = NULL;
 
 		requestInfo = new(nothrow) RequestInfo (DexManager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dappsDexTokensHistoricalGetProcessor);;
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dexGetTokens (historical)Processor);;
 		if(requestInfo == NULL)
 			return false;
 
@@ -968,43 +1225,57 @@ static bool dappsDexTokensHistoricalGetHelper(char * accessToken,
 
 
 
-bool DexManager::dappsDexTokensHistoricalGetAsync(char * accessToken,
+bool DexManager::dexGetTokens (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
-	
-	void(* handler)(Error, void* ) , void* userData)
+	void(* handler)(std::list<Dex.TokenDTO>, Error, void* )
+	, void* userData)
 {
-	return dappsDexTokensHistoricalGetHelper(accessToken,
+	return dexGetTokens (historical)Helper(accessToken,
 	startBlock, endBlock, startDate, endDate, tokenId, 
 	handler, userData, true);
 }
 
-bool DexManager::dappsDexTokensHistoricalGetSync(char * accessToken,
+bool DexManager::dexGetTokens (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
-	
-	void(* handler)(Error, void* ) , void* userData)
+	void(* handler)(std::list<Dex.TokenDTO>, Error, void* )
+	, void* userData)
 {
-	return dappsDexTokensHistoricalGetHelper(accessToken,
+	return dexGetTokens (historical)Helper(accessToken,
 	startBlock, endBlock, startDate, endDate, tokenId, 
 	handler, userData, false);
 }
 
-static bool dappsDexTradesHistoricalGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+static bool dexGetTrades (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
+	void(* handler)(std::list<Dex.TradeDTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<Dex.TradeDTO>, Error, void* )> (voidHandler);
 	
-	void(* handler)(Error, void* ) = reinterpret_cast<void(*)(Error, void* )> (voidHandler);
 	JsonNode* pJson;
 	char * data = p_chunk.memory;
 
+	std::list<Dex.TradeDTO> out;
 	
 
 	if (code >= 200 && code < 300) {
 		Error error(code, string("No Error"));
 
 
-		handler(error, userData);
-		return true;
 
+		pJson = json_from_string(data, NULL);
+		JsonArray * jsonarray = json_node_get_array (pJson);
+		guint length = json_array_get_length (jsonarray);
+		for(guint i = 0; i < length; i++){
+			JsonNode* myJson = json_array_get_element (jsonarray, i);
+			char * singlenodestr = json_to_string(myJson, false);
+			Dex.TradeDTO singlemodel;
+			singlemodel.fromJson(singlenodestr);
+			out.push_front(singlemodel);
+			g_free(static_cast<gpointer>(singlenodestr));
+			json_node_free(myJson);
+		}
+		json_array_unref (jsonarray);
+		json_node_free(pJson);
 
 
 	} else {
@@ -1016,15 +1287,15 @@ static bool dappsDexTradesHistoricalGetProcessor(MemoryStruct_s p_chunk, long co
 		} else {
 			error = Error(code, string("Unknown Error"));
 		}
-		handler(error, userData);
+		 handler(out, error, userData);
 		return false;
-	}
+			}
 }
 
-static bool dappsDexTradesHistoricalGetHelper(char * accessToken,
+static bool dexGetTrades (historical)Helper(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData, bool isAsync)
+	void(* handler)(std::list<Dex.TradeDTO>, Error, void* )
+	, void* userData, bool isAsync)
 {
 
 	//TODO: maybe delete headerList after its used to free up space?
@@ -1090,7 +1361,7 @@ static bool dappsDexTradesHistoricalGetHelper(char * accessToken,
 	if(!isAsync){
 		NetClient::easycurl(DexManager::getBasePath(), url, myhttpmethod, queryParams,
 			mBody, headerList, p_chunk, &code, errormsg);
-		bool retval = dappsDexTradesHistoricalGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+		bool retval = dexGetTrades (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
 
 		curl_slist_free_all(headerList);
 		if (p_chunk) {
@@ -1108,7 +1379,7 @@ static bool dappsDexTradesHistoricalGetHelper(char * accessToken,
 		RequestInfo *requestInfo = NULL;
 
 		requestInfo = new(nothrow) RequestInfo (DexManager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dappsDexTradesHistoricalGetProcessor);;
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dexGetTrades (historical)Processor);;
 		if(requestInfo == NULL)
 			return false;
 
@@ -1120,43 +1391,57 @@ static bool dappsDexTradesHistoricalGetHelper(char * accessToken,
 
 
 
-bool DexManager::dappsDexTradesHistoricalGetAsync(char * accessToken,
+bool DexManager::dexGetTrades (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData)
+	void(* handler)(std::list<Dex.TradeDTO>, Error, void* )
+	, void* userData)
 {
-	return dappsDexTradesHistoricalGetHelper(accessToken,
+	return dexGetTrades (historical)Helper(accessToken,
 	startBlock, endBlock, startDate, endDate, 
 	handler, userData, true);
 }
 
-bool DexManager::dappsDexTradesHistoricalGetSync(char * accessToken,
+bool DexManager::dexGetTrades (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData)
+	void(* handler)(std::list<Dex.TradeDTO>, Error, void* )
+	, void* userData)
 {
-	return dappsDexTradesHistoricalGetHelper(accessToken,
+	return dexGetTrades (historical)Helper(accessToken,
 	startBlock, endBlock, startDate, endDate, 
 	handler, userData, false);
 }
 
-static bool dappsDexUsersHistoricalGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+static bool dexGetUsers (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
+	void(* handler)(std::list<Dex.UserDTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<Dex.UserDTO>, Error, void* )> (voidHandler);
 	
-	void(* handler)(Error, void* ) = reinterpret_cast<void(*)(Error, void* )> (voidHandler);
 	JsonNode* pJson;
 	char * data = p_chunk.memory;
 
+	std::list<Dex.UserDTO> out;
 	
 
 	if (code >= 200 && code < 300) {
 		Error error(code, string("No Error"));
 
 
-		handler(error, userData);
-		return true;
 
+		pJson = json_from_string(data, NULL);
+		JsonArray * jsonarray = json_node_get_array (pJson);
+		guint length = json_array_get_length (jsonarray);
+		for(guint i = 0; i < length; i++){
+			JsonNode* myJson = json_array_get_element (jsonarray, i);
+			char * singlenodestr = json_to_string(myJson, false);
+			Dex.UserDTO singlemodel;
+			singlemodel.fromJson(singlenodestr);
+			out.push_front(singlemodel);
+			g_free(static_cast<gpointer>(singlenodestr));
+			json_node_free(myJson);
+		}
+		json_array_unref (jsonarray);
+		json_node_free(pJson);
 
 
 	} else {
@@ -1168,15 +1453,15 @@ static bool dappsDexUsersHistoricalGetProcessor(MemoryStruct_s p_chunk, long cod
 		} else {
 			error = Error(code, string("Unknown Error"));
 		}
-		handler(error, userData);
+		 handler(out, error, userData);
 		return false;
-	}
+			}
 }
 
-static bool dappsDexUsersHistoricalGetHelper(char * accessToken,
+static bool dexGetUsers (historical)Helper(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData, bool isAsync)
+	void(* handler)(std::list<Dex.UserDTO>, Error, void* )
+	, void* userData, bool isAsync)
 {
 
 	//TODO: maybe delete headerList after its used to free up space?
@@ -1242,7 +1527,7 @@ static bool dappsDexUsersHistoricalGetHelper(char * accessToken,
 	if(!isAsync){
 		NetClient::easycurl(DexManager::getBasePath(), url, myhttpmethod, queryParams,
 			mBody, headerList, p_chunk, &code, errormsg);
-		bool retval = dappsDexUsersHistoricalGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+		bool retval = dexGetUsers (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
 
 		curl_slist_free_all(headerList);
 		if (p_chunk) {
@@ -1260,7 +1545,7 @@ static bool dappsDexUsersHistoricalGetHelper(char * accessToken,
 		RequestInfo *requestInfo = NULL;
 
 		requestInfo = new(nothrow) RequestInfo (DexManager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dappsDexUsersHistoricalGetProcessor);;
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dexGetUsers (historical)Processor);;
 		if(requestInfo == NULL)
 			return false;
 
@@ -1272,43 +1557,57 @@ static bool dappsDexUsersHistoricalGetHelper(char * accessToken,
 
 
 
-bool DexManager::dappsDexUsersHistoricalGetAsync(char * accessToken,
+bool DexManager::dexGetUsers (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData)
+	void(* handler)(std::list<Dex.UserDTO>, Error, void* )
+	, void* userData)
 {
-	return dappsDexUsersHistoricalGetHelper(accessToken,
+	return dexGetUsers (historical)Helper(accessToken,
 	startBlock, endBlock, startDate, endDate, 
 	handler, userData, true);
 }
 
-bool DexManager::dappsDexUsersHistoricalGetSync(char * accessToken,
+bool DexManager::dexGetUsers (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData)
+	void(* handler)(std::list<Dex.UserDTO>, Error, void* )
+	, void* userData)
 {
-	return dappsDexUsersHistoricalGetHelper(accessToken,
+	return dexGetUsers (historical)Helper(accessToken,
 	startBlock, endBlock, startDate, endDate, 
 	handler, userData, false);
 }
 
-static bool dappsDexWithdrawHistoricalGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+static bool dexGetWithdraws (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
+	void(* handler)(std::list<Dex.WithdrawDTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<Dex.WithdrawDTO>, Error, void* )> (voidHandler);
 	
-	void(* handler)(Error, void* ) = reinterpret_cast<void(*)(Error, void* )> (voidHandler);
 	JsonNode* pJson;
 	char * data = p_chunk.memory;
 
+	std::list<Dex.WithdrawDTO> out;
 	
 
 	if (code >= 200 && code < 300) {
 		Error error(code, string("No Error"));
 
 
-		handler(error, userData);
-		return true;
 
+		pJson = json_from_string(data, NULL);
+		JsonArray * jsonarray = json_node_get_array (pJson);
+		guint length = json_array_get_length (jsonarray);
+		for(guint i = 0; i < length; i++){
+			JsonNode* myJson = json_array_get_element (jsonarray, i);
+			char * singlenodestr = json_to_string(myJson, false);
+			Dex.WithdrawDTO singlemodel;
+			singlemodel.fromJson(singlenodestr);
+			out.push_front(singlemodel);
+			g_free(static_cast<gpointer>(singlenodestr));
+			json_node_free(myJson);
+		}
+		json_array_unref (jsonarray);
+		json_node_free(pJson);
 
 
 	} else {
@@ -1320,15 +1619,15 @@ static bool dappsDexWithdrawHistoricalGetProcessor(MemoryStruct_s p_chunk, long 
 		} else {
 			error = Error(code, string("Unknown Error"));
 		}
-		handler(error, userData);
+		 handler(out, error, userData);
 		return false;
-	}
+			}
 }
 
-static bool dappsDexWithdrawHistoricalGetHelper(char * accessToken,
+static bool dexGetWithdraws (historical)Helper(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
-	
-	void(* handler)(Error, void* ) , void* userData, bool isAsync)
+	void(* handler)(std::list<Dex.WithdrawDTO>, Error, void* )
+	, void* userData, bool isAsync)
 {
 
 	//TODO: maybe delete headerList after its used to free up space?
@@ -1382,7 +1681,7 @@ static bool dappsDexWithdrawHistoricalGetHelper(char * accessToken,
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/dapps/dex/withdraw/historical");
+	string url("/dapps/dex/withdraws/historical");
 	int pos;
 
 
@@ -1401,7 +1700,7 @@ static bool dappsDexWithdrawHistoricalGetHelper(char * accessToken,
 	if(!isAsync){
 		NetClient::easycurl(DexManager::getBasePath(), url, myhttpmethod, queryParams,
 			mBody, headerList, p_chunk, &code, errormsg);
-		bool retval = dappsDexWithdrawHistoricalGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+		bool retval = dexGetWithdraws (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
 
 		curl_slist_free_all(headerList);
 		if (p_chunk) {
@@ -1419,7 +1718,7 @@ static bool dappsDexWithdrawHistoricalGetHelper(char * accessToken,
 		RequestInfo *requestInfo = NULL;
 
 		requestInfo = new(nothrow) RequestInfo (DexManager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dappsDexWithdrawHistoricalGetProcessor);;
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dexGetWithdraws (historical)Processor);;
 		if(requestInfo == NULL)
 			return false;
 
@@ -1431,43 +1730,57 @@ static bool dappsDexWithdrawHistoricalGetHelper(char * accessToken,
 
 
 
-bool DexManager::dappsDexWithdrawHistoricalGetAsync(char * accessToken,
+bool DexManager::dexGetWithdraws (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
-	
-	void(* handler)(Error, void* ) , void* userData)
+	void(* handler)(std::list<Dex.WithdrawDTO>, Error, void* )
+	, void* userData)
 {
-	return dappsDexWithdrawHistoricalGetHelper(accessToken,
+	return dexGetWithdraws (historical)Helper(accessToken,
 	startBlock, endBlock, startDate, endDate, tokenId, 
 	handler, userData, true);
 }
 
-bool DexManager::dappsDexWithdrawHistoricalGetSync(char * accessToken,
+bool DexManager::dexGetWithdraws (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
-	
-	void(* handler)(Error, void* ) , void* userData)
+	void(* handler)(std::list<Dex.WithdrawDTO>, Error, void* )
+	, void* userData)
 {
-	return dappsDexWithdrawHistoricalGetHelper(accessToken,
+	return dexGetWithdraws (historical)Helper(accessToken,
 	startBlock, endBlock, startDate, endDate, tokenId, 
 	handler, userData, false);
 }
 
-static bool dappsDexWithdrawRequestHistoricalGetProcessor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+static bool dexGetWithdrawsRequests (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
+	void(* handler)(std::list<Dex.WithdrawRequestDTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<Dex.WithdrawRequestDTO>, Error, void* )> (voidHandler);
 	
-	void(* handler)(Error, void* ) = reinterpret_cast<void(*)(Error, void* )> (voidHandler);
 	JsonNode* pJson;
 	char * data = p_chunk.memory;
 
+	std::list<Dex.WithdrawRequestDTO> out;
 	
 
 	if (code >= 200 && code < 300) {
 		Error error(code, string("No Error"));
 
 
-		handler(error, userData);
-		return true;
 
+		pJson = json_from_string(data, NULL);
+		JsonArray * jsonarray = json_node_get_array (pJson);
+		guint length = json_array_get_length (jsonarray);
+		for(guint i = 0; i < length; i++){
+			JsonNode* myJson = json_array_get_element (jsonarray, i);
+			char * singlenodestr = json_to_string(myJson, false);
+			Dex.WithdrawRequestDTO singlemodel;
+			singlemodel.fromJson(singlenodestr);
+			out.push_front(singlemodel);
+			g_free(static_cast<gpointer>(singlenodestr));
+			json_node_free(myJson);
+		}
+		json_array_unref (jsonarray);
+		json_node_free(pJson);
 
 
 	} else {
@@ -1479,15 +1792,15 @@ static bool dappsDexWithdrawRequestHistoricalGetProcessor(MemoryStruct_s p_chunk
 		} else {
 			error = Error(code, string("Unknown Error"));
 		}
-		handler(error, userData);
+		 handler(out, error, userData);
 		return false;
-	}
+			}
 }
 
-static bool dappsDexWithdrawRequestHistoricalGetHelper(char * accessToken,
+static bool dexGetWithdrawsRequests (historical)Helper(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
-	
-	void(* handler)(Error, void* ) , void* userData, bool isAsync)
+	void(* handler)(std::list<Dex.WithdrawRequestDTO>, Error, void* )
+	, void* userData, bool isAsync)
 {
 
 	//TODO: maybe delete headerList after its used to free up space?
@@ -1541,7 +1854,7 @@ static bool dappsDexWithdrawRequestHistoricalGetHelper(char * accessToken,
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/dapps/dex/withdrawRequest/historical");
+	string url("/dapps/dex/withdrawsRequests/historical");
 	int pos;
 
 
@@ -1560,7 +1873,7 @@ static bool dappsDexWithdrawRequestHistoricalGetHelper(char * accessToken,
 	if(!isAsync){
 		NetClient::easycurl(DexManager::getBasePath(), url, myhttpmethod, queryParams,
 			mBody, headerList, p_chunk, &code, errormsg);
-		bool retval = dappsDexWithdrawRequestHistoricalGetProcessor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+		bool retval = dexGetWithdrawsRequests (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
 
 		curl_slist_free_all(headerList);
 		if (p_chunk) {
@@ -1578,7 +1891,7 @@ static bool dappsDexWithdrawRequestHistoricalGetHelper(char * accessToken,
 		RequestInfo *requestInfo = NULL;
 
 		requestInfo = new(nothrow) RequestInfo (DexManager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dappsDexWithdrawRequestHistoricalGetProcessor);;
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dexGetWithdrawsRequests (historical)Processor);;
 		if(requestInfo == NULL)
 			return false;
 
@@ -1590,22 +1903,22 @@ static bool dappsDexWithdrawRequestHistoricalGetHelper(char * accessToken,
 
 
 
-bool DexManager::dappsDexWithdrawRequestHistoricalGetAsync(char * accessToken,
+bool DexManager::dexGetWithdrawsRequests (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
-	
-	void(* handler)(Error, void* ) , void* userData)
+	void(* handler)(std::list<Dex.WithdrawRequestDTO>, Error, void* )
+	, void* userData)
 {
-	return dappsDexWithdrawRequestHistoricalGetHelper(accessToken,
+	return dexGetWithdrawsRequests (historical)Helper(accessToken,
 	startBlock, endBlock, startDate, endDate, tokenId, 
 	handler, userData, true);
 }
 
-bool DexManager::dappsDexWithdrawRequestHistoricalGetSync(char * accessToken,
+bool DexManager::dexGetWithdrawsRequests (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
-	
-	void(* handler)(Error, void* ) , void* userData)
+	void(* handler)(std::list<Dex.WithdrawRequestDTO>, Error, void* )
+	, void* userData)
 {
-	return dappsDexWithdrawRequestHistoricalGetHelper(accessToken,
+	return dexGetWithdrawsRequests (historical)Helper(accessToken,
 	startBlock, endBlock, startDate, endDate, tokenId, 
 	handler, userData, false);
 }

@@ -20,6 +20,7 @@
 #include "UniswapV3.TokenHourDataV3DTO.h"
 #include "UniswapV3.TokenV3DTO.h"
 #include "UniswapV3.TokenV3DayDataDTO.h"
+#include "UniswapV3.TransactionV3DTO.h"
 #include "UniswapV3.UniswapDayDataV3DTO.h"
 #include "Error.h"
 
@@ -39,34 +40,34 @@ public:
 	UniswapV3Manager();
 	virtual ~UniswapV3Manager();
 
-/*! \brief GetBundles. *Synchronous*
+/*! \brief GetBundles (current). *Synchronous*
  *
- * 
+ * Gets bundles.
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsUniswapv3BundleCurrentGetSync(char * accessToken,
+bool uniswapV3GetBundles (current)Sync(char * accessToken,
 	
 	void(* handler)(std::list<UniswapV3.BundleV3DTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetBundles. *Asynchronous*
+/*! \brief GetBundles (current). *Asynchronous*
  *
- * 
+ * Gets bundles.
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsUniswapv3BundleCurrentGetAsync(char * accessToken,
+bool uniswapV3GetBundles (current)Async(char * accessToken,
 	
 	void(* handler)(std::list<UniswapV3.BundleV3DTO>, Error, void* )
 	, void* userData);
 
 
-/*! \brief . *Synchronous*
+/*! \brief GetBundles (historical). *Synchronous*
  *
- * 
+ * Gets bundles.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -75,14 +76,14 @@ bool dappsUniswapv3BundleCurrentGetAsync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsUniswapv3BundlesHistoricalGetSync(char * accessToken,
+bool uniswapV3GetBundles (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<UniswapV3.BundleV3DTO>, Error, void* )
+	, void* userData);
 
-/*! \brief . *Asynchronous*
+/*! \brief GetBundles (historical). *Asynchronous*
  *
- * 
+ * Gets bundles.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -91,42 +92,42 @@ bool dappsUniswapv3BundlesHistoricalGetSync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsUniswapv3BundlesHistoricalGetAsync(char * accessToken,
+bool uniswapV3GetBundles (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<UniswapV3.BundleV3DTO>, Error, void* )
+	, void* userData);
 
 
-/*! \brief GetBurns. *Synchronous*
+/*! \brief GetBurns (current). *Synchronous*
  *
- * 
- * \param filterPoolId Filter pool id
+ * Gets burns.
+ * \param filterPoolId 
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsUniswapv3BurnsCurrentGetSync(char * accessToken,
+bool uniswapV3GetBurns (current)Sync(char * accessToken,
 	std::string filterPoolId, 
 	void(* handler)(std::list<UniswapV3.BurnV3DTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetBurns. *Asynchronous*
+/*! \brief GetBurns (current). *Asynchronous*
  *
- * 
- * \param filterPoolId Filter pool id
+ * Gets burns.
+ * \param filterPoolId 
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsUniswapv3BurnsCurrentGetAsync(char * accessToken,
+bool uniswapV3GetBurns (current)Async(char * accessToken,
 	std::string filterPoolId, 
 	void(* handler)(std::list<UniswapV3.BurnV3DTO>, Error, void* )
 	, void* userData);
 
 
-/*! \brief . *Synchronous*
+/*! \brief GetBurns (historical). *Synchronous*
  *
- * 
+ * Gets burns.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -136,14 +137,14 @@ bool dappsUniswapv3BurnsCurrentGetAsync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsUniswapv3BurnsHistoricalGetSync(char * accessToken,
+bool uniswapV3GetBurns (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<UniswapV3.BurnV3DTO>, Error, void* )
+	, void* userData);
 
-/*! \brief . *Asynchronous*
+/*! \brief GetBurns (historical). *Asynchronous*
  *
- * 
+ * Gets burns.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -153,75 +154,40 @@ bool dappsUniswapv3BurnsHistoricalGetSync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsUniswapv3BurnsHistoricalGetAsync(char * accessToken,
+bool uniswapV3GetBurns (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
-
-
-/*! \brief . *Synchronous*
- *
- * 
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool dappsUniswapv3DayDataHistoricalGetSync(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData);
-
-/*! \brief . *Asynchronous*
- *
- * 
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool dappsUniswapv3DayDataHistoricalGetAsync(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData);
-
-
-/*! \brief GetFactory. *Synchronous*
- *
- * 
- * \param chainId  *Required*
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool dappsUniswapv3FactoryCurrentGetSync(char * accessToken,
-	std::string chainId, 
-	void(* handler)(std::list<UniswapV3.FactoryV3DTO>, Error, void* )
-	, void* userData);
-
-/*! \brief GetFactory. *Asynchronous*
- *
- * 
- * \param chainId  *Required*
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool dappsUniswapv3FactoryCurrentGetAsync(char * accessToken,
-	std::string chainId, 
-	void(* handler)(std::list<UniswapV3.FactoryV3DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV3.BurnV3DTO>, Error, void* )
 	, void* userData);
 
 
-/*! \brief . *Synchronous*
+/*! \brief GetDayData (current). *Synchronous*
  *
- * 
+ * Gets uniswapv3 day data.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool uniswapV3GetDayData (current)Sync(char * accessToken,
+	
+	void(* handler)(std::list<UniswapV3.UniswapDayDataV3DTO>, Error, void* )
+	, void* userData);
+
+/*! \brief GetDayData (current). *Asynchronous*
+ *
+ * Gets uniswapv3 day data.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool uniswapV3GetDayData (current)Async(char * accessToken,
+	
+	void(* handler)(std::list<UniswapV3.UniswapDayDataV3DTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief GetDayData (historical). *Synchronous*
+ *
+ * Gets uniswapv3 day data.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -230,14 +196,14 @@ bool dappsUniswapv3FactoryCurrentGetAsync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsUniswapv3FactoryHistoricalGetSync(char * accessToken,
+bool uniswapV3GetDayData (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<UniswapV3.UniswapDayDataV3DTO>, Error, void* )
+	, void* userData);
 
-/*! \brief . *Asynchronous*
+/*! \brief GetDayData (historical). *Asynchronous*
  *
- * 
+ * Gets uniswapv3 day data.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -246,42 +212,100 @@ bool dappsUniswapv3FactoryHistoricalGetSync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsUniswapv3FactoryHistoricalGetAsync(char * accessToken,
+bool uniswapV3GetDayData (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<UniswapV3.UniswapDayDataV3DTO>, Error, void* )
+	, void* userData);
 
 
-/*! \brief GetMints. *Synchronous*
+/*! \brief GetFactory (current). *Synchronous*
  *
- * 
- * \param filterPoolId Filter pool id
+ * Gets factory.
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsUniswapv3MintsCurrentGetSync(char * accessToken,
+bool uniswapV3GetFactory (current)Sync(char * accessToken,
+	
+	void(* handler)(std::list<UniswapV3.FactoryV3DTO>, Error, void* )
+	, void* userData);
+
+/*! \brief GetFactory (current). *Asynchronous*
+ *
+ * Gets factory.
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool uniswapV3GetFactory (current)Async(char * accessToken,
+	
+	void(* handler)(std::list<UniswapV3.FactoryV3DTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief GetFactory (historical). *Synchronous*
+ *
+ * Gets factory.
+ * \param startBlock 
+ * \param endBlock 
+ * \param startDate 
+ * \param endDate 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool uniswapV3GetFactory (historical)Sync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
+	void(* handler)(std::list<UniswapV3.FactoryV3DTO>, Error, void* )
+	, void* userData);
+
+/*! \brief GetFactory (historical). *Asynchronous*
+ *
+ * Gets factory.
+ * \param startBlock 
+ * \param endBlock 
+ * \param startDate 
+ * \param endDate 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool uniswapV3GetFactory (historical)Async(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
+	void(* handler)(std::list<UniswapV3.FactoryV3DTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief GetMints (current). *Synchronous*
+ *
+ * Gets mints.
+ * \param filterPoolId 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool uniswapV3GetMints (current)Sync(char * accessToken,
 	std::string filterPoolId, 
 	void(* handler)(std::list<UniswapV3.MintV3DTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetMints. *Asynchronous*
+/*! \brief GetMints (current). *Asynchronous*
  *
- * 
- * \param filterPoolId Filter pool id
+ * Gets mints.
+ * \param filterPoolId 
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsUniswapv3MintsCurrentGetAsync(char * accessToken,
+bool uniswapV3GetMints (current)Async(char * accessToken,
 	std::string filterPoolId, 
 	void(* handler)(std::list<UniswapV3.MintV3DTO>, Error, void* )
 	, void* userData);
 
 
-/*! \brief . *Synchronous*
+/*! \brief GetMints (historical). *Synchronous*
  *
- * 
+ * Gets mints.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -291,14 +315,14 @@ bool dappsUniswapv3MintsCurrentGetAsync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsUniswapv3MintsHistoricalGetSync(char * accessToken,
+bool uniswapV3GetMints (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<UniswapV3.MintV3DTO>, Error, void* )
+	, void* userData);
 
-/*! \brief . *Asynchronous*
+/*! \brief GetMints (historical). *Asynchronous*
  *
- * 
+ * Gets mints.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -308,139 +332,104 @@ bool dappsUniswapv3MintsHistoricalGetSync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsUniswapv3MintsHistoricalGetAsync(char * accessToken,
+bool uniswapV3GetMints (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<UniswapV3.MintV3DTO>, Error, void* )
+	, void* userData);
 
 
-/*! \brief . *Synchronous*
+/*! \brief GetPools (current) 🔥. *Synchronous*
  *
- * 
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param poolId 
+ * Gets pools.
+ * \param filterPoolId 
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsUniswapv3PoolDayDataHistoricalGetSync(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
-
-/*! \brief . *Asynchronous*
- *
- * 
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param poolId 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool dappsUniswapv3PoolDayDataHistoricalGetAsync(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
-
-
-/*! \brief . *Synchronous*
- *
- * 
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param poolId 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool dappsUniswapv3PoolHourDataHistoricalGetSync(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
-
-/*! \brief . *Asynchronous*
- *
- * 
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param poolId 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool dappsUniswapv3PoolHourDataHistoricalGetAsync(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
-
-
-/*! \brief GetPools. *Synchronous*
- *
- * 
- * \param filterPoolId Filter pool id
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool dappsUniswapv3PoolsCurrentGetSync(char * accessToken,
+bool uniswapV3GetPools (current)Sync(char * accessToken,
 	std::string filterPoolId, 
 	void(* handler)(std::list<UniswapV3.PoolV3DTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetPools. *Asynchronous*
+/*! \brief GetPools (current) 🔥. *Asynchronous*
  *
- * 
- * \param filterPoolId Filter pool id
+ * Gets pools.
+ * \param filterPoolId 
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsUniswapv3PoolsCurrentGetAsync(char * accessToken,
+bool uniswapV3GetPools (current)Async(char * accessToken,
 	std::string filterPoolId, 
 	void(* handler)(std::list<UniswapV3.PoolV3DTO>, Error, void* )
 	, void* userData);
 
 
-/*! \brief GetPoolsDayData. *Synchronous*
+/*! \brief GetPools (historical) 🔥. *Synchronous*
  *
- * 
- * \param filterPoolId Filter pool id
+ * Gets pools.
+ * \param startBlock 
+ * \param endBlock 
+ * \param startDate 
+ * \param endDate 
+ * \param poolId 
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsUniswapv3PoolsDayDataCurrentGetSync(char * accessToken,
+bool uniswapV3GetPools (historical)Sync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<UniswapV3.PoolV3DTO>, Error, void* )
+	, void* userData);
+
+/*! \brief GetPools (historical) 🔥. *Asynchronous*
+ *
+ * Gets pools.
+ * \param startBlock 
+ * \param endBlock 
+ * \param startDate 
+ * \param endDate 
+ * \param poolId 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool uniswapV3GetPools (historical)Async(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<UniswapV3.PoolV3DTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief GetPoolsDayData (current). *Synchronous*
+ *
+ * Gets pools day data.
+ * \param filterPoolId 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool uniswapV3GetPoolsDayData (current)Sync(char * accessToken,
 	std::string filterPoolId, 
 	void(* handler)(std::list<UniswapV3.PoolDayDataV3DTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetPoolsDayData. *Asynchronous*
+/*! \brief GetPoolsDayData (current). *Asynchronous*
  *
- * 
- * \param filterPoolId Filter pool id
+ * Gets pools day data.
+ * \param filterPoolId 
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsUniswapv3PoolsDayDataCurrentGetAsync(char * accessToken,
+bool uniswapV3GetPoolsDayData (current)Async(char * accessToken,
 	std::string filterPoolId, 
 	void(* handler)(std::list<UniswapV3.PoolDayDataV3DTO>, Error, void* )
 	, void* userData);
 
 
-/*! \brief . *Synchronous*
+/*! \brief GetPoolsDayData (historical). *Synchronous*
  *
- * 
+ * Gets pools day data.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -450,14 +439,14 @@ bool dappsUniswapv3PoolsDayDataCurrentGetAsync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsUniswapv3PoolsHistoricalGetSync(char * accessToken,
+bool uniswapV3GetPoolsDayData (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<UniswapV3.PoolDayDataV3DTO>, Error, void* )
+	, void* userData);
 
-/*! \brief . *Asynchronous*
+/*! \brief GetPoolsDayData (historical). *Asynchronous*
  *
- * 
+ * Gets pools day data.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -467,42 +456,42 @@ bool dappsUniswapv3PoolsHistoricalGetSync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsUniswapv3PoolsHistoricalGetAsync(char * accessToken,
+bool uniswapV3GetPoolsDayData (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<UniswapV3.PoolDayDataV3DTO>, Error, void* )
+	, void* userData);
 
 
-/*! \brief GetPoolsHourData. *Synchronous*
+/*! \brief GetPoolsHourData (current). *Synchronous*
  *
- * 
- * \param filterPoolId Filter pool id
+ * Gets pools hour data.
+ * \param filterPoolId 
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsUniswapv3PoolsHourDataCurrentGetSync(char * accessToken,
+bool uniswapV3GetPoolsHourData (current)Sync(char * accessToken,
 	std::string filterPoolId, 
 	void(* handler)(std::list<UniswapV3.PoolHourDataV3DTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetPoolsHourData. *Asynchronous*
+/*! \brief GetPoolsHourData (current). *Asynchronous*
  *
- * 
- * \param filterPoolId Filter pool id
+ * Gets pools hour data.
+ * \param filterPoolId 
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsUniswapv3PoolsHourDataCurrentGetAsync(char * accessToken,
+bool uniswapV3GetPoolsHourData (current)Async(char * accessToken,
 	std::string filterPoolId, 
 	void(* handler)(std::list<UniswapV3.PoolHourDataV3DTO>, Error, void* )
 	, void* userData);
 
 
-/*! \brief . *Synchronous*
+/*! \brief GetPoolsHourData (historical). *Synchronous*
  *
- * 
+ * Gets pools hour data.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -512,14 +501,14 @@ bool dappsUniswapv3PoolsHourDataCurrentGetAsync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsUniswapv3PositionSnapshotHistoricalGetSync(char * accessToken,
+bool uniswapV3GetPoolsHourData (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<UniswapV3.PoolHourDataV3DTO>, Error, void* )
+	, void* userData);
 
-/*! \brief . *Asynchronous*
+/*! \brief GetPoolsHourData (historical). *Asynchronous*
  *
- * 
+ * Gets pools hour data.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -529,69 +518,42 @@ bool dappsUniswapv3PositionSnapshotHistoricalGetSync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsUniswapv3PositionSnapshotHistoricalGetAsync(char * accessToken,
+bool uniswapV3GetPoolsHourData (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
-
-
-/*! \brief GetPositionSnapshot. *Synchronous*
- *
- * 
- * \param filterPoolId Filter pool id
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool dappsUniswapv3PositionSnapshotsCurrentGetSync(char * accessToken,
-	std::string filterPoolId, 
-	void(* handler)(std::list<UniswapV3.PositionSnapshotV3DTO>, Error, void* )
-	, void* userData);
-
-/*! \brief GetPositionSnapshot. *Asynchronous*
- *
- * 
- * \param filterPoolId Filter pool id
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool dappsUniswapv3PositionSnapshotsCurrentGetAsync(char * accessToken,
-	std::string filterPoolId, 
-	void(* handler)(std::list<UniswapV3.PositionSnapshotV3DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV3.PoolHourDataV3DTO>, Error, void* )
 	, void* userData);
 
 
-/*! \brief GetPositions. *Synchronous*
+/*! \brief GetPositions (current). *Synchronous*
  *
- * 
- * \param filterPoolId Filter pool id
+ * Gets positions.
+ * \param filterPoolId 
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsUniswapv3PositionsCurrentGetSync(char * accessToken,
+bool uniswapV3GetPositions (current)Sync(char * accessToken,
 	std::string filterPoolId, 
 	void(* handler)(std::list<UniswapV3.PositionV3DTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetPositions. *Asynchronous*
+/*! \brief GetPositions (current). *Asynchronous*
  *
- * 
- * \param filterPoolId Filter pool id
+ * Gets positions.
+ * \param filterPoolId 
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsUniswapv3PositionsCurrentGetAsync(char * accessToken,
+bool uniswapV3GetPositions (current)Async(char * accessToken,
 	std::string filterPoolId, 
 	void(* handler)(std::list<UniswapV3.PositionV3DTO>, Error, void* )
 	, void* userData);
 
 
-/*! \brief . *Synchronous*
+/*! \brief GetPositions (historical). *Synchronous*
  *
- * 
+ * Gets positions.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -601,14 +563,14 @@ bool dappsUniswapv3PositionsCurrentGetAsync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsUniswapv3PositionsHistoricalGetSync(char * accessToken,
+bool uniswapV3GetPositions (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<UniswapV3.PositionV3DTO>, Error, void* )
+	, void* userData);
 
-/*! \brief . *Asynchronous*
+/*! \brief GetPositions (historical). *Asynchronous*
  *
- * 
+ * Gets positions.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -618,42 +580,104 @@ bool dappsUniswapv3PositionsHistoricalGetSync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsUniswapv3PositionsHistoricalGetAsync(char * accessToken,
+bool uniswapV3GetPositions (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<UniswapV3.PositionV3DTO>, Error, void* )
+	, void* userData);
 
 
-/*! \brief GetSwaps. *Synchronous*
+/*! \brief GetPositionsSnaphots (historical). *Synchronous*
  *
- * 
- * \param filterPoolId Filter pool id
+ * Gets positions snapshots.
+ * \param startBlock 
+ * \param endBlock 
+ * \param startDate 
+ * \param endDate 
+ * \param poolId 
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsUniswapv3SwapsCurrentGetSync(char * accessToken,
+bool uniswapV3GetPositionsSnaphots (historical)Sync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<UniswapV3.PositionSnapshotV3DTO>, Error, void* )
+	, void* userData);
+
+/*! \brief GetPositionsSnaphots (historical). *Asynchronous*
+ *
+ * Gets positions snapshots.
+ * \param startBlock 
+ * \param endBlock 
+ * \param startDate 
+ * \param endDate 
+ * \param poolId 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool uniswapV3GetPositionsSnaphots (historical)Async(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<UniswapV3.PositionSnapshotV3DTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief GetPositionsSnapshots (current). *Synchronous*
+ *
+ * Gets positions snapshots.
+ * \param filterPoolId 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool uniswapV3GetPositionsSnapshots (current)Sync(char * accessToken,
+	std::string filterPoolId, 
+	void(* handler)(std::list<UniswapV3.PositionSnapshotV3DTO>, Error, void* )
+	, void* userData);
+
+/*! \brief GetPositionsSnapshots (current). *Asynchronous*
+ *
+ * Gets positions snapshots.
+ * \param filterPoolId 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool uniswapV3GetPositionsSnapshots (current)Async(char * accessToken,
+	std::string filterPoolId, 
+	void(* handler)(std::list<UniswapV3.PositionSnapshotV3DTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief GetSwaps (current) 🔥. *Synchronous*
+ *
+ * Gets swaps.
+ * \param filterPoolId 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool uniswapV3GetSwaps (current)Sync(char * accessToken,
 	std::string filterPoolId, 
 	void(* handler)(std::list<UniswapV3.SwapV3DTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetSwaps. *Asynchronous*
+/*! \brief GetSwaps (current) 🔥. *Asynchronous*
  *
- * 
- * \param filterPoolId Filter pool id
+ * Gets swaps.
+ * \param filterPoolId 
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsUniswapv3SwapsCurrentGetAsync(char * accessToken,
+bool uniswapV3GetSwaps (current)Async(char * accessToken,
 	std::string filterPoolId, 
 	void(* handler)(std::list<UniswapV3.SwapV3DTO>, Error, void* )
 	, void* userData);
 
 
-/*! \brief . *Synchronous*
+/*! \brief GetSwaps (historical) 🔥. *Synchronous*
  *
- * 
+ * Gets swaps.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -663,14 +687,14 @@ bool dappsUniswapv3SwapsCurrentGetAsync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsUniswapv3SwapsHistoricalGetSync(char * accessToken,
+bool uniswapV3GetSwaps (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<UniswapV3.SwapV3DTO>, Error, void* )
+	, void* userData);
 
-/*! \brief . *Asynchronous*
+/*! \brief GetSwaps (historical) 🔥. *Asynchronous*
  *
- * 
+ * Gets swaps.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -680,104 +704,42 @@ bool dappsUniswapv3SwapsHistoricalGetSync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsUniswapv3SwapsHistoricalGetAsync(char * accessToken,
+bool uniswapV3GetSwaps (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<UniswapV3.SwapV3DTO>, Error, void* )
+	, void* userData);
 
 
-/*! \brief . *Synchronous*
+/*! \brief GetTicks (current). *Synchronous*
  *
- * 
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param poolId 
+ * Gets ticks.
+ * \param filterPoolId 
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsUniswapv3TickDayDataHistoricalGetSync(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
-
-/*! \brief . *Asynchronous*
- *
- * 
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param poolId 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool dappsUniswapv3TickDayDataHistoricalGetAsync(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
-
-
-/*! \brief GetTicks. *Synchronous*
- *
- * 
- * \param filterPoolId Filter pool id
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool dappsUniswapv3TicksCurrentGetSync(char * accessToken,
+bool uniswapV3GetTicks (current)Sync(char * accessToken,
 	std::string filterPoolId, 
 	void(* handler)(std::list<UniswapV3.TickV3DTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetTicks. *Asynchronous*
+/*! \brief GetTicks (current). *Asynchronous*
  *
- * 
- * \param filterPoolId Filter pool id
+ * Gets ticks.
+ * \param filterPoolId 
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsUniswapv3TicksCurrentGetAsync(char * accessToken,
+bool uniswapV3GetTicks (current)Async(char * accessToken,
 	std::string filterPoolId, 
 	void(* handler)(std::list<UniswapV3.TickV3DTO>, Error, void* )
 	, void* userData);
 
 
-/*! \brief GetTicksDayData. *Synchronous*
+/*! \brief GetTicks (historical). *Synchronous*
  *
- * 
- * \param filterPoolId Filter pool id
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool dappsUniswapv3TicksDayDataCurrentGetSync(char * accessToken,
-	std::string filterPoolId, 
-	void(* handler)(std::list<UniswapV3.TickDayDataV3DTO>, Error, void* )
-	, void* userData);
-
-/*! \brief GetTicksDayData. *Asynchronous*
- *
- * 
- * \param filterPoolId Filter pool id
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool dappsUniswapv3TicksDayDataCurrentGetAsync(char * accessToken,
-	std::string filterPoolId, 
-	void(* handler)(std::list<UniswapV3.TickDayDataV3DTO>, Error, void* )
-	, void* userData);
-
-
-/*! \brief . *Synchronous*
- *
- * 
+ * Gets ticks.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -787,14 +749,14 @@ bool dappsUniswapv3TicksDayDataCurrentGetAsync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsUniswapv3TicksHistoricalGetSync(char * accessToken,
+bool uniswapV3GetTicks (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<UniswapV3.TickV3DTO>, Error, void* )
+	, void* userData);
 
-/*! \brief . *Asynchronous*
+/*! \brief GetTicks (historical). *Asynchronous*
  *
- * 
+ * Gets ticks.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -804,139 +766,104 @@ bool dappsUniswapv3TicksHistoricalGetSync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsUniswapv3TicksHistoricalGetAsync(char * accessToken,
+bool uniswapV3GetTicks (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<UniswapV3.TickV3DTO>, Error, void* )
+	, void* userData);
 
 
-/*! \brief . *Synchronous*
+/*! \brief GetTicksDayData (current). *Synchronous*
  *
- * 
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param tokenId 
+ * Gets ticks day data.
+ * \param filterPoolId 
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsUniswapv3TokenDayDataHistoricalGetSync(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+bool uniswapV3GetTicksDayData (current)Sync(char * accessToken,
+	std::string filterPoolId, 
+	void(* handler)(std::list<UniswapV3.TickDayDataV3DTO>, Error, void* )
+	, void* userData);
 
-/*! \brief . *Asynchronous*
+/*! \brief GetTicksDayData (current). *Asynchronous*
  *
- * 
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param tokenId 
+ * Gets ticks day data.
+ * \param filterPoolId 
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsUniswapv3TokenDayDataHistoricalGetAsync(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+bool uniswapV3GetTicksDayData (current)Async(char * accessToken,
+	std::string filterPoolId, 
+	void(* handler)(std::list<UniswapV3.TickDayDataV3DTO>, Error, void* )
+	, void* userData);
 
 
-/*! \brief . *Synchronous*
+/*! \brief GetTicksDayData (historical). *Synchronous*
  *
- * 
+ * Gets ticks day data.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
  * \param endDate 
- * \param tokenId 
+ * \param poolId 
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsUniswapv3TokenHourDataHistoricalGetSync(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+bool uniswapV3GetTicksDayData (historical)Sync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<UniswapV3.TickDayDataV3DTO>, Error, void* )
+	, void* userData);
 
-/*! \brief . *Asynchronous*
+/*! \brief GetTicksDayData (historical). *Asynchronous*
  *
- * 
+ * Gets ticks day data.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
  * \param endDate 
- * \param tokenId 
+ * \param poolId 
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsUniswapv3TokenHourDataHistoricalGetAsync(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+bool uniswapV3GetTicksDayData (historical)Async(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<UniswapV3.TickDayDataV3DTO>, Error, void* )
+	, void* userData);
 
 
-/*! \brief GetTokens. *Synchronous*
+/*! \brief GetTokens (current) 🔥. *Synchronous*
  *
- * 
+ * Gets tokens.
  * \param filterTokenId 
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsUniswapv3TokensCurrentGetSync(char * accessToken,
+bool uniswapV3GetTokens (current)Sync(char * accessToken,
 	std::string filterTokenId, 
 	void(* handler)(std::list<UniswapV3.TokenV3DTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetTokens. *Asynchronous*
+/*! \brief GetTokens (current) 🔥. *Asynchronous*
  *
- * 
+ * Gets tokens.
  * \param filterTokenId 
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsUniswapv3TokensCurrentGetAsync(char * accessToken,
+bool uniswapV3GetTokens (current)Async(char * accessToken,
 	std::string filterTokenId, 
 	void(* handler)(std::list<UniswapV3.TokenV3DTO>, Error, void* )
 	, void* userData);
 
 
-/*! \brief GetTokensDayData. *Synchronous*
+/*! \brief GetTokens (historical) 🔥. *Synchronous*
  *
- * 
- * \param filterTokenId 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool dappsUniswapv3TokensDayDataCurrentGetSync(char * accessToken,
-	std::string filterTokenId, 
-	void(* handler)(std::list<UniswapV3.TokenV3DayDataDTO>, Error, void* )
-	, void* userData);
-
-/*! \brief GetTokensDayData. *Asynchronous*
- *
- * 
- * \param filterTokenId 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool dappsUniswapv3TokensDayDataCurrentGetAsync(char * accessToken,
-	std::string filterTokenId, 
-	void(* handler)(std::list<UniswapV3.TokenV3DayDataDTO>, Error, void* )
-	, void* userData);
-
-
-/*! \brief . *Synchronous*
- *
- * 
+ * Gets tokens.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -946,14 +873,14 @@ bool dappsUniswapv3TokensDayDataCurrentGetAsync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsUniswapv3TokensHistoricalGetSync(char * accessToken,
+bool uniswapV3GetTokens (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<UniswapV3.TokenV3DTO>, Error, void* )
+	, void* userData);
 
-/*! \brief . *Asynchronous*
+/*! \brief GetTokens (historical) 🔥. *Asynchronous*
  *
- * 
+ * Gets tokens.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -963,42 +890,139 @@ bool dappsUniswapv3TokensHistoricalGetSync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsUniswapv3TokensHistoricalGetAsync(char * accessToken,
+bool uniswapV3GetTokens (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<UniswapV3.TokenV3DTO>, Error, void* )
+	, void* userData);
 
 
-/*! \brief GetTokensHourData. *Synchronous*
+/*! \brief GetTokensDayData (current). *Synchronous*
  *
- * 
+ * Gets tokens day data.
  * \param filterTokenId 
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsUniswapv3TokensHourDataCurrentGetSync(char * accessToken,
+bool uniswapV3GetTokensDayData (current)Sync(char * accessToken,
 	std::string filterTokenId, 
-	void(* handler)(std::list<UniswapV3.TokenHourDataV3DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV3.TokenV3DayDataDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetTokensHourData. *Asynchronous*
+/*! \brief GetTokensDayData (current). *Asynchronous*
  *
- * 
+ * Gets tokens day data.
  * \param filterTokenId 
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsUniswapv3TokensHourDataCurrentGetAsync(char * accessToken,
+bool uniswapV3GetTokensDayData (current)Async(char * accessToken,
+	std::string filterTokenId, 
+	void(* handler)(std::list<UniswapV3.TokenV3DayDataDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief GetTokensDayData (historical). *Synchronous*
+ *
+ * Gets tokens day data.
+ * \param startBlock 
+ * \param endBlock 
+ * \param startDate 
+ * \param endDate 
+ * \param tokenId 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool uniswapV3GetTokensDayData (historical)Sync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
+	void(* handler)(std::list<UniswapV3.TokenV3DayDataDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief GetTokensDayData (historical). *Asynchronous*
+ *
+ * Gets tokens day data.
+ * \param startBlock 
+ * \param endBlock 
+ * \param startDate 
+ * \param endDate 
+ * \param tokenId 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool uniswapV3GetTokensDayData (historical)Async(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
+	void(* handler)(std::list<UniswapV3.TokenV3DayDataDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief GetTokensHourData (current). *Synchronous*
+ *
+ * Gets tokens hour data.
+ * \param filterTokenId 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool uniswapV3GetTokensHourData (current)Sync(char * accessToken,
+	std::string filterTokenId, 
+	void(* handler)(std::list<UniswapV3.TokenHourDataV3DTO>, Error, void* )
+	, void* userData);
+
+/*! \brief GetTokensHourData (current). *Asynchronous*
+ *
+ * Gets tokens hour data.
+ * \param filterTokenId 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool uniswapV3GetTokensHourData (current)Async(char * accessToken,
 	std::string filterTokenId, 
 	void(* handler)(std::list<UniswapV3.TokenHourDataV3DTO>, Error, void* )
 	, void* userData);
 
 
-/*! \brief . *Synchronous*
+/*! \brief GetTokensHourData (historical). *Synchronous*
  *
- * 
+ * Gets tokens hour data.
+ * \param startBlock 
+ * \param endBlock 
+ * \param startDate 
+ * \param endDate 
+ * \param tokenId 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool uniswapV3GetTokensHourData (historical)Sync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
+	void(* handler)(std::list<UniswapV3.TokenHourDataV3DTO>, Error, void* )
+	, void* userData);
+
+/*! \brief GetTokensHourData (historical). *Asynchronous*
+ *
+ * Gets tokens hour data.
+ * \param startBlock 
+ * \param endBlock 
+ * \param startDate 
+ * \param endDate 
+ * \param tokenId 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool uniswapV3GetTokensHourData (historical)Async(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
+	void(* handler)(std::list<UniswapV3.TokenHourDataV3DTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief GetTransactions (historical). *Synchronous*
+ *
+ * Gets transactions.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -1007,14 +1031,14 @@ bool dappsUniswapv3TokensHourDataCurrentGetAsync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsUniswapv3TransactionsHistoricalGetSync(char * accessToken,
+bool uniswapV3GetTransactions (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData);
+	void(* handler)(std::list<UniswapV3.TransactionV3DTO>, Error, void* )
+	, void* userData);
 
-/*! \brief . *Asynchronous*
+/*! \brief GetTransactions (historical). *Asynchronous*
  *
- * 
+ * Gets transactions.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -1023,34 +1047,9 @@ bool dappsUniswapv3TransactionsHistoricalGetSync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dappsUniswapv3TransactionsHistoricalGetAsync(char * accessToken,
+bool uniswapV3GetTransactions (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
-	
-	void(* handler)(Error, void* ) , void* userData);
-
-
-/*! \brief GetUniswapDayData. *Synchronous*
- *
- * 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool dappsUniswapv3UniswapDayDataCurrentGetSync(char * accessToken,
-	
-	void(* handler)(std::list<UniswapV3.UniswapDayDataV3DTO>, Error, void* )
-	, void* userData);
-
-/*! \brief GetUniswapDayData. *Asynchronous*
- *
- * 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool dappsUniswapv3UniswapDayDataCurrentGetAsync(char * accessToken,
-	
-	void(* handler)(std::list<UniswapV3.UniswapDayDataV3DTO>, Error, void* )
+	void(* handler)(std::list<UniswapV3.TransactionV3DTO>, Error, void* )
 	, void* userData);
 
 

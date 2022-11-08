@@ -14,7 +14,8 @@
 #'
 #' @section Methods:
 #' \describe{
-#' \strong{ DappsUniswapv3BundleCurrentGet } \emph{ GetBundles }
+#' \strong{ UniswapV3GetBundlesCurrent } \emph{ GetBundles (current) }
+#' Gets bundles.
 #'
 #' \itemize{
 #' \item \emph{ @returnType } list( \link{UniswapV3.BundleV3DTO} ) \cr
@@ -29,25 +30,28 @@
 #' }
 #' }
 #'
-#' \strong{ DappsUniswapv3BundlesHistoricalGet } \emph{  }
+#' \strong{ UniswapV3GetBundlesHistorical } \emph{ GetBundles (historical) }
+#' Gets bundles.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
 #' \item \emph{ @param } end_block integer
 #' \item \emph{ @param } start_date character
 #' \item \emph{ @param } end_date character
+#' \item \emph{ @returnType } list( \link{UniswapV3.BundleV3DTO} ) \cr
 #'
 #'
-#' \item status code : 200 | Success
+#' \item status code : 200 | successful operation
 #'
-#'
+#' \item return type : array[UniswapV3BundleV3DTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
 #' }
 #' }
 #'
-#' \strong{ DappsUniswapv3BurnsCurrentGet } \emph{ GetBurns }
+#' \strong{ UniswapV3GetBurnsCurrent } \emph{ GetBurns (current) }
+#' Gets burns.
 #'
 #' \itemize{
 #' \item \emph{ @param } filter_pool_id character
@@ -63,7 +67,8 @@
 #' }
 #' }
 #'
-#' \strong{ DappsUniswapv3BurnsHistoricalGet } \emph{  }
+#' \strong{ UniswapV3GetBurnsHistorical } \emph{ GetBurns (historical) }
+#' Gets burns.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
@@ -71,39 +76,58 @@
 #' \item \emph{ @param } start_date character
 #' \item \emph{ @param } end_date character
 #' \item \emph{ @param } pool_id character
+#' \item \emph{ @returnType } list( \link{UniswapV3.BurnV3DTO} ) \cr
 #'
 #'
-#' \item status code : 200 | Success
+#' \item status code : 200 | successful operation
 #'
-#'
+#' \item return type : array[UniswapV3BurnV3DTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
 #' }
 #' }
 #'
-#' \strong{ DappsUniswapv3DayDataHistoricalGet } \emph{  }
+#' \strong{ UniswapV3GetDayDataCurrent } \emph{ GetDayData (current) }
+#' Gets uniswapv3 day data.
+#'
+#' \itemize{
+#' \item \emph{ @returnType } list( \link{UniswapV3.UniswapDayDataV3DTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[UniswapV3UniswapDayDataV3DTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ UniswapV3GetDayDataHistorical } \emph{ GetDayData (historical) }
+#' Gets uniswapv3 day data.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
 #' \item \emph{ @param } end_block integer
 #' \item \emph{ @param } start_date character
 #' \item \emph{ @param } end_date character
+#' \item \emph{ @returnType } list( \link{UniswapV3.UniswapDayDataV3DTO} ) \cr
 #'
 #'
-#' \item status code : 200 | Success
+#' \item status code : 200 | successful operation
 #'
-#'
+#' \item return type : array[UniswapV3UniswapDayDataV3DTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
 #' }
 #' }
 #'
-#' \strong{ DappsUniswapv3FactoryCurrentGet } \emph{ GetFactory }
+#' \strong{ UniswapV3GetFactoryCurrent } \emph{ GetFactory (current) }
+#' Gets factory.
 #'
 #' \itemize{
-#' \item \emph{ @param } chain_id character
 #' \item \emph{ @returnType } list( \link{UniswapV3.FactoryV3DTO} ) \cr
 #'
 #'
@@ -116,25 +140,28 @@
 #' }
 #' }
 #'
-#' \strong{ DappsUniswapv3FactoryHistoricalGet } \emph{  }
+#' \strong{ UniswapV3GetFactoryHistorical } \emph{ GetFactory (historical) }
+#' Gets factory.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
 #' \item \emph{ @param } end_block integer
 #' \item \emph{ @param } start_date character
 #' \item \emph{ @param } end_date character
+#' \item \emph{ @returnType } list( \link{UniswapV3.FactoryV3DTO} ) \cr
 #'
 #'
-#' \item status code : 200 | Success
+#' \item status code : 200 | successful operation
 #'
-#'
+#' \item return type : array[UniswapV3FactoryV3DTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
 #' }
 #' }
 #'
-#' \strong{ DappsUniswapv3MintsCurrentGet } \emph{ GetMints }
+#' \strong{ UniswapV3GetMintsCurrent } \emph{ GetMints (current) }
+#' Gets mints.
 #'
 #' \itemize{
 #' \item \emph{ @param } filter_pool_id character
@@ -150,7 +177,8 @@
 #' }
 #' }
 #'
-#' \strong{ DappsUniswapv3MintsHistoricalGet } \emph{  }
+#' \strong{ UniswapV3GetMintsHistorical } \emph{ GetMints (historical) }
+#' Gets mints.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
@@ -158,56 +186,20 @@
 #' \item \emph{ @param } start_date character
 #' \item \emph{ @param } end_date character
 #' \item \emph{ @param } pool_id character
+#' \item \emph{ @returnType } list( \link{UniswapV3.MintV3DTO} ) \cr
 #'
 #'
-#' \item status code : 200 | Success
+#' \item status code : 200 | successful operation
 #'
-#'
+#' \item return type : array[UniswapV3MintV3DTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
 #' }
 #' }
 #'
-#' \strong{ DappsUniswapv3PoolDayDataHistoricalGet } \emph{  }
-#'
-#' \itemize{
-#' \item \emph{ @param } start_block integer
-#' \item \emph{ @param } end_block integer
-#' \item \emph{ @param } start_date character
-#' \item \emph{ @param } end_date character
-#' \item \emph{ @param } pool_id character
-#'
-#'
-#' \item status code : 200 | Success
-#'
-#'
-#' \item response headers :
-#'
-#' \tabular{ll}{
-#' }
-#' }
-#'
-#' \strong{ DappsUniswapv3PoolHourDataHistoricalGet } \emph{  }
-#'
-#' \itemize{
-#' \item \emph{ @param } start_block integer
-#' \item \emph{ @param } end_block integer
-#' \item \emph{ @param } start_date character
-#' \item \emph{ @param } end_date character
-#' \item \emph{ @param } pool_id character
-#'
-#'
-#' \item status code : 200 | Success
-#'
-#'
-#' \item response headers :
-#'
-#' \tabular{ll}{
-#' }
-#' }
-#'
-#' \strong{ DappsUniswapv3PoolsCurrentGet } \emph{ GetPools }
+#' \strong{ UniswapV3GetPoolsCurrent } \emph{ GetPools (current) 🔥 }
+#' Gets pools.
 #'
 #' \itemize{
 #' \item \emph{ @param } filter_pool_id character
@@ -223,7 +215,8 @@
 #' }
 #' }
 #'
-#' \strong{ DappsUniswapv3PoolsDayDataCurrentGet } \emph{ GetPoolsDayData }
+#' \strong{ UniswapV3GetPoolsDayDataCurrent } \emph{ GetPoolsDayData (current) }
+#' Gets pools day data.
 #'
 #' \itemize{
 #' \item \emph{ @param } filter_pool_id character
@@ -239,7 +232,8 @@
 #' }
 #' }
 #'
-#' \strong{ DappsUniswapv3PoolsHistoricalGet } \emph{  }
+#' \strong{ UniswapV3GetPoolsDayDataHistorical } \emph{ GetPoolsDayData (historical) }
+#' Gets pools day data.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
@@ -247,18 +241,41 @@
 #' \item \emph{ @param } start_date character
 #' \item \emph{ @param } end_date character
 #' \item \emph{ @param } pool_id character
+#' \item \emph{ @returnType } list( \link{UniswapV3.PoolDayDataV3DTO} ) \cr
 #'
 #'
-#' \item status code : 200 | Success
+#' \item status code : 200 | successful operation
 #'
-#'
+#' \item return type : array[UniswapV3PoolDayDataV3DTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
 #' }
 #' }
 #'
-#' \strong{ DappsUniswapv3PoolsHourDataCurrentGet } \emph{ GetPoolsHourData }
+#' \strong{ UniswapV3GetPoolsHistorical } \emph{ GetPools (historical) 🔥 }
+#' Gets pools.
+#'
+#' \itemize{
+#' \item \emph{ @param } start_block integer
+#' \item \emph{ @param } end_block integer
+#' \item \emph{ @param } start_date character
+#' \item \emph{ @param } end_date character
+#' \item \emph{ @param } pool_id character
+#' \item \emph{ @returnType } list( \link{UniswapV3.PoolV3DTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[UniswapV3PoolV3DTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ UniswapV3GetPoolsHourDataCurrent } \emph{ GetPoolsHourData (current) }
+#' Gets pools hour data.
 #'
 #' \itemize{
 #' \item \emph{ @param } filter_pool_id character
@@ -274,7 +291,8 @@
 #' }
 #' }
 #'
-#' \strong{ DappsUniswapv3PositionSnapshotHistoricalGet } \emph{  }
+#' \strong{ UniswapV3GetPoolsHourDataHistorical } \emph{ GetPoolsHourData (historical) }
+#' Gets pools hour data.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
@@ -282,34 +300,20 @@
 #' \item \emph{ @param } start_date character
 #' \item \emph{ @param } end_date character
 #' \item \emph{ @param } pool_id character
-#'
-#'
-#' \item status code : 200 | Success
-#'
-#'
-#' \item response headers :
-#'
-#' \tabular{ll}{
-#' }
-#' }
-#'
-#' \strong{ DappsUniswapv3PositionSnapshotsCurrentGet } \emph{ GetPositionSnapshot }
-#'
-#' \itemize{
-#' \item \emph{ @param } filter_pool_id character
-#' \item \emph{ @returnType } list( \link{UniswapV3.PositionSnapshotV3DTO} ) \cr
+#' \item \emph{ @returnType } list( \link{UniswapV3.PoolHourDataV3DTO} ) \cr
 #'
 #'
 #' \item status code : 200 | successful operation
 #'
-#' \item return type : array[UniswapV3PositionSnapshotV3DTO]
+#' \item return type : array[UniswapV3PoolHourDataV3DTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
 #' }
 #' }
 #'
-#' \strong{ DappsUniswapv3PositionsCurrentGet } \emph{ GetPositions }
+#' \strong{ UniswapV3GetPositionsCurrent } \emph{ GetPositions (current) }
+#' Gets positions.
 #'
 #' \itemize{
 #' \item \emph{ @param } filter_pool_id character
@@ -325,7 +329,8 @@
 #' }
 #' }
 #'
-#' \strong{ DappsUniswapv3PositionsHistoricalGet } \emph{  }
+#' \strong{ UniswapV3GetPositionsHistorical } \emph{ GetPositions (historical) }
+#' Gets positions.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
@@ -333,18 +338,58 @@
 #' \item \emph{ @param } start_date character
 #' \item \emph{ @param } end_date character
 #' \item \emph{ @param } pool_id character
+#' \item \emph{ @returnType } list( \link{UniswapV3.PositionV3DTO} ) \cr
 #'
 #'
-#' \item status code : 200 | Success
+#' \item status code : 200 | successful operation
 #'
-#'
+#' \item return type : array[UniswapV3PositionV3DTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
 #' }
 #' }
 #'
-#' \strong{ DappsUniswapv3SwapsCurrentGet } \emph{ GetSwaps }
+#' \strong{ UniswapV3GetPositionsSnaphotsHistorical } \emph{ GetPositionsSnaphots (historical) }
+#' Gets positions snapshots.
+#'
+#' \itemize{
+#' \item \emph{ @param } start_block integer
+#' \item \emph{ @param } end_block integer
+#' \item \emph{ @param } start_date character
+#' \item \emph{ @param } end_date character
+#' \item \emph{ @param } pool_id character
+#' \item \emph{ @returnType } list( \link{UniswapV3.PositionSnapshotV3DTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[UniswapV3PositionSnapshotV3DTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ UniswapV3GetPositionsSnapshotsCurrent } \emph{ GetPositionsSnapshots (current) }
+#' Gets positions snapshots.
+#'
+#' \itemize{
+#' \item \emph{ @param } filter_pool_id character
+#' \item \emph{ @returnType } list( \link{UniswapV3.PositionSnapshotV3DTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[UniswapV3PositionSnapshotV3DTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ UniswapV3GetSwapsCurrent } \emph{ GetSwaps (current) 🔥 }
+#' Gets swaps.
 #'
 #' \itemize{
 #' \item \emph{ @param } filter_pool_id character
@@ -360,7 +405,8 @@
 #' }
 #' }
 #'
-#' \strong{ DappsUniswapv3SwapsHistoricalGet } \emph{  }
+#' \strong{ UniswapV3GetSwapsHistorical } \emph{ GetSwaps (historical) 🔥 }
+#' Gets swaps.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
@@ -368,37 +414,20 @@
 #' \item \emph{ @param } start_date character
 #' \item \emph{ @param } end_date character
 #' \item \emph{ @param } pool_id character
+#' \item \emph{ @returnType } list( \link{UniswapV3.SwapV3DTO} ) \cr
 #'
 #'
-#' \item status code : 200 | Success
+#' \item status code : 200 | successful operation
 #'
-#'
+#' \item return type : array[UniswapV3SwapV3DTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
 #' }
 #' }
 #'
-#' \strong{ DappsUniswapv3TickDayDataHistoricalGet } \emph{  }
-#'
-#' \itemize{
-#' \item \emph{ @param } start_block integer
-#' \item \emph{ @param } end_block integer
-#' \item \emph{ @param } start_date character
-#' \item \emph{ @param } end_date character
-#' \item \emph{ @param } pool_id character
-#'
-#'
-#' \item status code : 200 | Success
-#'
-#'
-#' \item response headers :
-#'
-#' \tabular{ll}{
-#' }
-#' }
-#'
-#' \strong{ DappsUniswapv3TicksCurrentGet } \emph{ GetTicks }
+#' \strong{ UniswapV3GetTicksCurrent } \emph{ GetTicks (current) }
+#' Gets ticks.
 #'
 #' \itemize{
 #' \item \emph{ @param } filter_pool_id character
@@ -414,7 +443,8 @@
 #' }
 #' }
 #'
-#' \strong{ DappsUniswapv3TicksDayDataCurrentGet } \emph{ GetTicksDayData }
+#' \strong{ UniswapV3GetTicksDayDataCurrent } \emph{ GetTicksDayData (current) }
+#' Gets ticks day data.
 #'
 #' \itemize{
 #' \item \emph{ @param } filter_pool_id character
@@ -430,7 +460,8 @@
 #' }
 #' }
 #'
-#' \strong{ DappsUniswapv3TicksHistoricalGet } \emph{  }
+#' \strong{ UniswapV3GetTicksDayDataHistorical } \emph{ GetTicksDayData (historical) }
+#' Gets ticks day data.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
@@ -438,56 +469,41 @@
 #' \item \emph{ @param } start_date character
 #' \item \emph{ @param } end_date character
 #' \item \emph{ @param } pool_id character
+#' \item \emph{ @returnType } list( \link{UniswapV3.TickDayDataV3DTO} ) \cr
 #'
 #'
-#' \item status code : 200 | Success
+#' \item status code : 200 | successful operation
 #'
-#'
+#' \item return type : array[UniswapV3TickDayDataV3DTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
 #' }
 #' }
 #'
-#' \strong{ DappsUniswapv3TokenDayDataHistoricalGet } \emph{  }
+#' \strong{ UniswapV3GetTicksHistorical } \emph{ GetTicks (historical) }
+#' Gets ticks.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
 #' \item \emph{ @param } end_block integer
 #' \item \emph{ @param } start_date character
 #' \item \emph{ @param } end_date character
-#' \item \emph{ @param } token_id character
+#' \item \emph{ @param } pool_id character
+#' \item \emph{ @returnType } list( \link{UniswapV3.TickV3DTO} ) \cr
 #'
 #'
-#' \item status code : 200 | Success
+#' \item status code : 200 | successful operation
 #'
-#'
+#' \item return type : array[UniswapV3TickV3DTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
 #' }
 #' }
 #'
-#' \strong{ DappsUniswapv3TokenHourDataHistoricalGet } \emph{  }
-#'
-#' \itemize{
-#' \item \emph{ @param } start_block integer
-#' \item \emph{ @param } end_block integer
-#' \item \emph{ @param } start_date character
-#' \item \emph{ @param } end_date character
-#' \item \emph{ @param } token_id character
-#'
-#'
-#' \item status code : 200 | Success
-#'
-#'
-#' \item response headers :
-#'
-#' \tabular{ll}{
-#' }
-#' }
-#'
-#' \strong{ DappsUniswapv3TokensCurrentGet } \emph{ GetTokens }
+#' \strong{ UniswapV3GetTokensCurrent } \emph{ GetTokens (current) 🔥 }
+#' Gets tokens.
 #'
 #' \itemize{
 #' \item \emph{ @param } filter_token_id character
@@ -503,7 +519,8 @@
 #' }
 #' }
 #'
-#' \strong{ DappsUniswapv3TokensDayDataCurrentGet } \emph{ GetTokensDayData }
+#' \strong{ UniswapV3GetTokensDayDataCurrent } \emph{ GetTokensDayData (current) }
+#' Gets tokens day data.
 #'
 #' \itemize{
 #' \item \emph{ @param } filter_token_id character
@@ -519,7 +536,8 @@
 #' }
 #' }
 #'
-#' \strong{ DappsUniswapv3TokensHistoricalGet } \emph{  }
+#' \strong{ UniswapV3GetTokensDayDataHistorical } \emph{ GetTokensDayData (historical) }
+#' Gets tokens day data.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
@@ -527,18 +545,41 @@
 #' \item \emph{ @param } start_date character
 #' \item \emph{ @param } end_date character
 #' \item \emph{ @param } token_id character
+#' \item \emph{ @returnType } list( \link{UniswapV3.TokenV3DayDataDTO} ) \cr
 #'
 #'
-#' \item status code : 200 | Success
+#' \item status code : 200 | successful operation
 #'
-#'
+#' \item return type : array[UniswapV3TokenV3DayDataDTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
 #' }
 #' }
 #'
-#' \strong{ DappsUniswapv3TokensHourDataCurrentGet } \emph{ GetTokensHourData }
+#' \strong{ UniswapV3GetTokensHistorical } \emph{ GetTokens (historical) 🔥 }
+#' Gets tokens.
+#'
+#' \itemize{
+#' \item \emph{ @param } start_block integer
+#' \item \emph{ @param } end_block integer
+#' \item \emph{ @param } start_date character
+#' \item \emph{ @param } end_date character
+#' \item \emph{ @param } token_id character
+#' \item \emph{ @returnType } list( \link{UniswapV3.TokenV3DTO} ) \cr
+#'
+#'
+#' \item status code : 200 | successful operation
+#'
+#' \item return type : array[UniswapV3TokenV3DTO]
+#' \item response headers :
+#'
+#' \tabular{ll}{
+#' }
+#' }
+#'
+#' \strong{ UniswapV3GetTokensHourDataCurrent } \emph{ GetTokensHourData (current) }
+#' Gets tokens hour data.
 #'
 #' \itemize{
 #' \item \emph{ @param } filter_token_id character
@@ -554,33 +595,41 @@
 #' }
 #' }
 #'
-#' \strong{ DappsUniswapv3TransactionsHistoricalGet } \emph{  }
+#' \strong{ UniswapV3GetTokensHourDataHistorical } \emph{ GetTokensHourData (historical) }
+#' Gets tokens hour data.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
 #' \item \emph{ @param } end_block integer
 #' \item \emph{ @param } start_date character
 #' \item \emph{ @param } end_date character
+#' \item \emph{ @param } token_id character
+#' \item \emph{ @returnType } list( \link{UniswapV3.TokenHourDataV3DTO} ) \cr
 #'
 #'
-#' \item status code : 200 | Success
+#' \item status code : 200 | successful operation
 #'
-#'
+#' \item return type : array[UniswapV3TokenHourDataV3DTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
 #' }
 #' }
 #'
-#' \strong{ DappsUniswapv3UniswapDayDataCurrentGet } \emph{ GetUniswapDayData }
+#' \strong{ UniswapV3GetTransactionsHistorical } \emph{ GetTransactions (historical) }
+#' Gets transactions.
 #'
 #' \itemize{
-#' \item \emph{ @returnType } list( \link{UniswapV3.UniswapDayDataV3DTO} ) \cr
+#' \item \emph{ @param } start_block integer
+#' \item \emph{ @param } end_block integer
+#' \item \emph{ @param } start_date character
+#' \item \emph{ @param } end_date character
+#' \item \emph{ @returnType } list( \link{UniswapV3.TransactionV3DTO} ) \cr
 #'
 #'
 #' \item status code : 200 | successful operation
 #'
-#' \item return type : array[UniswapV3UniswapDayDataV3DTO]
+#' \item return type : array[UniswapV3TransactionV3DTO]
 #' \item response headers :
 #'
 #' \tabular{ll}{
@@ -592,20 +641,20 @@
 #'
 #' @examples
 #' \dontrun{
-#' ####################  DappsUniswapv3BundleCurrentGet  ####################
+#' ####################  UniswapV3GetBundlesCurrent  ####################
 #'
 #' library(openapi)
 #'
-#' #GetBundles
+#' #GetBundles (current)
 #' api_instance <- UniswapV3Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-#' # result <- api_instance$DappsUniswapv3BundleCurrentGet(data_file = "result.txt")
-#' result <- api_instance$DappsUniswapv3BundleCurrentGet()
+#' # result <- api_instance$UniswapV3GetBundlesCurrent(data_file = "result.txt")
+#' result <- api_instance$UniswapV3GetBundlesCurrent()
 #' dput(result)
 #'
 #'
-#' ####################  DappsUniswapv3BundlesHistoricalGet  ####################
+#' ####################  UniswapV3GetBundlesHistorical  ####################
 #'
 #' library(openapi)
 #' var_start_block <- 56 # integer |  (Optional)
@@ -613,26 +662,30 @@
 #' var_start_date <- "start_date_example" # character |  (Optional)
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #'
-#' api_instance <- UniswapV3Api$new()
-#'
-#' api_instance$DappsUniswapv3BundlesHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
-#'
-#'
-#' ####################  DappsUniswapv3BurnsCurrentGet  ####################
-#'
-#' library(openapi)
-#' var_filter_pool_id <- "filter_pool_id_example" # character | Filter pool id (Optional)
-#'
-#' #GetBurns
+#' #GetBundles (historical)
 #' api_instance <- UniswapV3Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-#' # result <- api_instance$DappsUniswapv3BurnsCurrentGet(filter_pool_id = var_filter_pool_iddata_file = "result.txt")
-#' result <- api_instance$DappsUniswapv3BurnsCurrentGet(filter_pool_id = var_filter_pool_id)
+#' # result <- api_instance$UniswapV3GetBundlesHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_datedata_file = "result.txt")
+#' result <- api_instance$UniswapV3GetBundlesHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
 #' dput(result)
 #'
 #'
-#' ####################  DappsUniswapv3BurnsHistoricalGet  ####################
+#' ####################  UniswapV3GetBurnsCurrent  ####################
+#'
+#' library(openapi)
+#' var_filter_pool_id <- "filter_pool_id_example" # character |  (Optional)
+#'
+#' #GetBurns (current)
+#' api_instance <- UniswapV3Api$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$UniswapV3GetBurnsCurrent(filter_pool_id = var_filter_pool_iddata_file = "result.txt")
+#' result <- api_instance$UniswapV3GetBurnsCurrent(filter_pool_id = var_filter_pool_id)
+#' dput(result)
+#'
+#'
+#' ####################  UniswapV3GetBurnsHistorical  ####################
 #'
 #' library(openapi)
 #' var_start_block <- 56 # integer |  (Optional)
@@ -641,12 +694,29 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
+#' #GetBurns (historical)
 #' api_instance <- UniswapV3Api$new()
 #'
-#' api_instance$DappsUniswapv3BurnsHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$UniswapV3GetBurnsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+#' result <- api_instance$UniswapV3GetBurnsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+#' dput(result)
 #'
 #'
-#' ####################  DappsUniswapv3DayDataHistoricalGet  ####################
+#' ####################  UniswapV3GetDayDataCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #GetDayData (current)
+#' api_instance <- UniswapV3Api$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$UniswapV3GetDayDataCurrent(data_file = "result.txt")
+#' result <- api_instance$UniswapV3GetDayDataCurrent()
+#' dput(result)
+#'
+#'
+#' ####################  UniswapV3GetDayDataHistorical  ####################
 #'
 #' library(openapi)
 #' var_start_block <- 56 # integer |  (Optional)
@@ -654,26 +724,29 @@
 #' var_start_date <- "start_date_example" # character |  (Optional)
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #'
-#' api_instance <- UniswapV3Api$new()
-#'
-#' api_instance$DappsUniswapv3DayDataHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
-#'
-#'
-#' ####################  DappsUniswapv3FactoryCurrentGet  ####################
-#'
-#' library(openapi)
-#' var_chain_id <- "chain_id_example" # character | 
-#'
-#' #GetFactory
+#' #GetDayData (historical)
 #' api_instance <- UniswapV3Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-#' # result <- api_instance$DappsUniswapv3FactoryCurrentGet(var_chain_iddata_file = "result.txt")
-#' result <- api_instance$DappsUniswapv3FactoryCurrentGet(var_chain_id)
+#' # result <- api_instance$UniswapV3GetDayDataHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_datedata_file = "result.txt")
+#' result <- api_instance$UniswapV3GetDayDataHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
 #' dput(result)
 #'
 #'
-#' ####################  DappsUniswapv3FactoryHistoricalGet  ####################
+#' ####################  UniswapV3GetFactoryCurrent  ####################
+#'
+#' library(openapi)
+#'
+#' #GetFactory (current)
+#' api_instance <- UniswapV3Api$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$UniswapV3GetFactoryCurrent(data_file = "result.txt")
+#' result <- api_instance$UniswapV3GetFactoryCurrent()
+#' dput(result)
+#'
+#'
+#' ####################  UniswapV3GetFactoryHistorical  ####################
 #'
 #' library(openapi)
 #' var_start_block <- 56 # integer |  (Optional)
@@ -681,26 +754,30 @@
 #' var_start_date <- "start_date_example" # character |  (Optional)
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #'
-#' api_instance <- UniswapV3Api$new()
-#'
-#' api_instance$DappsUniswapv3FactoryHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
-#'
-#'
-#' ####################  DappsUniswapv3MintsCurrentGet  ####################
-#'
-#' library(openapi)
-#' var_filter_pool_id <- "filter_pool_id_example" # character | Filter pool id (Optional)
-#'
-#' #GetMints
+#' #GetFactory (historical)
 #' api_instance <- UniswapV3Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-#' # result <- api_instance$DappsUniswapv3MintsCurrentGet(filter_pool_id = var_filter_pool_iddata_file = "result.txt")
-#' result <- api_instance$DappsUniswapv3MintsCurrentGet(filter_pool_id = var_filter_pool_id)
+#' # result <- api_instance$UniswapV3GetFactoryHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_datedata_file = "result.txt")
+#' result <- api_instance$UniswapV3GetFactoryHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
 #' dput(result)
 #'
 #'
-#' ####################  DappsUniswapv3MintsHistoricalGet  ####################
+#' ####################  UniswapV3GetMintsCurrent  ####################
+#'
+#' library(openapi)
+#' var_filter_pool_id <- "filter_pool_id_example" # character |  (Optional)
+#'
+#' #GetMints (current)
+#' api_instance <- UniswapV3Api$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$UniswapV3GetMintsCurrent(filter_pool_id = var_filter_pool_iddata_file = "result.txt")
+#' result <- api_instance$UniswapV3GetMintsCurrent(filter_pool_id = var_filter_pool_id)
+#' dput(result)
+#'
+#'
+#' ####################  UniswapV3GetMintsHistorical  ####################
 #'
 #' library(openapi)
 #' var_start_block <- 56 # integer |  (Optional)
@@ -709,12 +786,44 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
+#' #GetMints (historical)
 #' api_instance <- UniswapV3Api$new()
 #'
-#' api_instance$DappsUniswapv3MintsHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$UniswapV3GetMintsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+#' result <- api_instance$UniswapV3GetMintsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+#' dput(result)
 #'
 #'
-#' ####################  DappsUniswapv3PoolDayDataHistoricalGet  ####################
+#' ####################  UniswapV3GetPoolsCurrent  ####################
+#'
+#' library(openapi)
+#' var_filter_pool_id <- "filter_pool_id_example" # character |  (Optional)
+#'
+#' #GetPools (current) 🔥
+#' api_instance <- UniswapV3Api$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$UniswapV3GetPoolsCurrent(filter_pool_id = var_filter_pool_iddata_file = "result.txt")
+#' result <- api_instance$UniswapV3GetPoolsCurrent(filter_pool_id = var_filter_pool_id)
+#' dput(result)
+#'
+#'
+#' ####################  UniswapV3GetPoolsDayDataCurrent  ####################
+#'
+#' library(openapi)
+#' var_filter_pool_id <- "filter_pool_id_example" # character |  (Optional)
+#'
+#' #GetPoolsDayData (current)
+#' api_instance <- UniswapV3Api$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$UniswapV3GetPoolsDayDataCurrent(filter_pool_id = var_filter_pool_iddata_file = "result.txt")
+#' result <- api_instance$UniswapV3GetPoolsDayDataCurrent(filter_pool_id = var_filter_pool_id)
+#' dput(result)
+#'
+#'
+#' ####################  UniswapV3GetPoolsDayDataHistorical  ####################
 #'
 #' library(openapi)
 #' var_start_block <- 56 # integer |  (Optional)
@@ -723,12 +832,16 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
+#' #GetPoolsDayData (historical)
 #' api_instance <- UniswapV3Api$new()
 #'
-#' api_instance$DappsUniswapv3PoolDayDataHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$UniswapV3GetPoolsDayDataHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+#' result <- api_instance$UniswapV3GetPoolsDayDataHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+#' dput(result)
 #'
 #'
-#' ####################  DappsUniswapv3PoolHourDataHistoricalGet  ####################
+#' ####################  UniswapV3GetPoolsHistorical  ####################
 #'
 #' library(openapi)
 #' var_start_block <- 56 # integer |  (Optional)
@@ -737,40 +850,30 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
-#' api_instance <- UniswapV3Api$new()
-#'
-#' api_instance$DappsUniswapv3PoolHourDataHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
-#'
-#'
-#' ####################  DappsUniswapv3PoolsCurrentGet  ####################
-#'
-#' library(openapi)
-#' var_filter_pool_id <- "filter_pool_id_example" # character | Filter pool id (Optional)
-#'
-#' #GetPools
+#' #GetPools (historical) 🔥
 #' api_instance <- UniswapV3Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-#' # result <- api_instance$DappsUniswapv3PoolsCurrentGet(filter_pool_id = var_filter_pool_iddata_file = "result.txt")
-#' result <- api_instance$DappsUniswapv3PoolsCurrentGet(filter_pool_id = var_filter_pool_id)
+#' # result <- api_instance$UniswapV3GetPoolsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+#' result <- api_instance$UniswapV3GetPoolsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
 #' dput(result)
 #'
 #'
-#' ####################  DappsUniswapv3PoolsDayDataCurrentGet  ####################
+#' ####################  UniswapV3GetPoolsHourDataCurrent  ####################
 #'
 #' library(openapi)
-#' var_filter_pool_id <- "filter_pool_id_example" # character | Filter pool id (Optional)
+#' var_filter_pool_id <- "filter_pool_id_example" # character |  (Optional)
 #'
-#' #GetPoolsDayData
+#' #GetPoolsHourData (current)
 #' api_instance <- UniswapV3Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-#' # result <- api_instance$DappsUniswapv3PoolsDayDataCurrentGet(filter_pool_id = var_filter_pool_iddata_file = "result.txt")
-#' result <- api_instance$DappsUniswapv3PoolsDayDataCurrentGet(filter_pool_id = var_filter_pool_id)
+#' # result <- api_instance$UniswapV3GetPoolsHourDataCurrent(filter_pool_id = var_filter_pool_iddata_file = "result.txt")
+#' result <- api_instance$UniswapV3GetPoolsHourDataCurrent(filter_pool_id = var_filter_pool_id)
 #' dput(result)
 #'
 #'
-#' ####################  DappsUniswapv3PoolsHistoricalGet  ####################
+#' ####################  UniswapV3GetPoolsHourDataHistorical  ####################
 #'
 #' library(openapi)
 #' var_start_block <- 56 # integer |  (Optional)
@@ -779,26 +882,30 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
-#' api_instance <- UniswapV3Api$new()
-#'
-#' api_instance$DappsUniswapv3PoolsHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
-#'
-#'
-#' ####################  DappsUniswapv3PoolsHourDataCurrentGet  ####################
-#'
-#' library(openapi)
-#' var_filter_pool_id <- "filter_pool_id_example" # character | Filter pool id (Optional)
-#'
-#' #GetPoolsHourData
+#' #GetPoolsHourData (historical)
 #' api_instance <- UniswapV3Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-#' # result <- api_instance$DappsUniswapv3PoolsHourDataCurrentGet(filter_pool_id = var_filter_pool_iddata_file = "result.txt")
-#' result <- api_instance$DappsUniswapv3PoolsHourDataCurrentGet(filter_pool_id = var_filter_pool_id)
+#' # result <- api_instance$UniswapV3GetPoolsHourDataHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+#' result <- api_instance$UniswapV3GetPoolsHourDataHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
 #' dput(result)
 #'
 #'
-#' ####################  DappsUniswapv3PositionSnapshotHistoricalGet  ####################
+#' ####################  UniswapV3GetPositionsCurrent  ####################
+#'
+#' library(openapi)
+#' var_filter_pool_id <- "filter_pool_id_example" # character |  (Optional)
+#'
+#' #GetPositions (current)
+#' api_instance <- UniswapV3Api$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$UniswapV3GetPositionsCurrent(filter_pool_id = var_filter_pool_iddata_file = "result.txt")
+#' result <- api_instance$UniswapV3GetPositionsCurrent(filter_pool_id = var_filter_pool_id)
+#' dput(result)
+#'
+#'
+#' ####################  UniswapV3GetPositionsHistorical  ####################
 #'
 #' library(openapi)
 #' var_start_block <- 56 # integer |  (Optional)
@@ -807,40 +914,16 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
-#' api_instance <- UniswapV3Api$new()
-#'
-#' api_instance$DappsUniswapv3PositionSnapshotHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
-#'
-#'
-#' ####################  DappsUniswapv3PositionSnapshotsCurrentGet  ####################
-#'
-#' library(openapi)
-#' var_filter_pool_id <- "filter_pool_id_example" # character | Filter pool id (Optional)
-#'
-#' #GetPositionSnapshot
+#' #GetPositions (historical)
 #' api_instance <- UniswapV3Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-#' # result <- api_instance$DappsUniswapv3PositionSnapshotsCurrentGet(filter_pool_id = var_filter_pool_iddata_file = "result.txt")
-#' result <- api_instance$DappsUniswapv3PositionSnapshotsCurrentGet(filter_pool_id = var_filter_pool_id)
+#' # result <- api_instance$UniswapV3GetPositionsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+#' result <- api_instance$UniswapV3GetPositionsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
 #' dput(result)
 #'
 #'
-#' ####################  DappsUniswapv3PositionsCurrentGet  ####################
-#'
-#' library(openapi)
-#' var_filter_pool_id <- "filter_pool_id_example" # character | Filter pool id (Optional)
-#'
-#' #GetPositions
-#' api_instance <- UniswapV3Api$new()
-#'
-#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-#' # result <- api_instance$DappsUniswapv3PositionsCurrentGet(filter_pool_id = var_filter_pool_iddata_file = "result.txt")
-#' result <- api_instance$DappsUniswapv3PositionsCurrentGet(filter_pool_id = var_filter_pool_id)
-#' dput(result)
-#'
-#'
-#' ####################  DappsUniswapv3PositionsHistoricalGet  ####################
+#' ####################  UniswapV3GetPositionsSnaphotsHistorical  ####################
 #'
 #' library(openapi)
 #' var_start_block <- 56 # integer |  (Optional)
@@ -849,26 +932,44 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
-#' api_instance <- UniswapV3Api$new()
-#'
-#' api_instance$DappsUniswapv3PositionsHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
-#'
-#'
-#' ####################  DappsUniswapv3SwapsCurrentGet  ####################
-#'
-#' library(openapi)
-#' var_filter_pool_id <- "filter_pool_id_example" # character | Filter pool id (Optional)
-#'
-#' #GetSwaps
+#' #GetPositionsSnaphots (historical)
 #' api_instance <- UniswapV3Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-#' # result <- api_instance$DappsUniswapv3SwapsCurrentGet(filter_pool_id = var_filter_pool_iddata_file = "result.txt")
-#' result <- api_instance$DappsUniswapv3SwapsCurrentGet(filter_pool_id = var_filter_pool_id)
+#' # result <- api_instance$UniswapV3GetPositionsSnaphotsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+#' result <- api_instance$UniswapV3GetPositionsSnaphotsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
 #' dput(result)
 #'
 #'
-#' ####################  DappsUniswapv3SwapsHistoricalGet  ####################
+#' ####################  UniswapV3GetPositionsSnapshotsCurrent  ####################
+#'
+#' library(openapi)
+#' var_filter_pool_id <- "filter_pool_id_example" # character |  (Optional)
+#'
+#' #GetPositionsSnapshots (current)
+#' api_instance <- UniswapV3Api$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$UniswapV3GetPositionsSnapshotsCurrent(filter_pool_id = var_filter_pool_iddata_file = "result.txt")
+#' result <- api_instance$UniswapV3GetPositionsSnapshotsCurrent(filter_pool_id = var_filter_pool_id)
+#' dput(result)
+#'
+#'
+#' ####################  UniswapV3GetSwapsCurrent  ####################
+#'
+#' library(openapi)
+#' var_filter_pool_id <- "filter_pool_id_example" # character |  (Optional)
+#'
+#' #GetSwaps (current) 🔥
+#' api_instance <- UniswapV3Api$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$UniswapV3GetSwapsCurrent(filter_pool_id = var_filter_pool_iddata_file = "result.txt")
+#' result <- api_instance$UniswapV3GetSwapsCurrent(filter_pool_id = var_filter_pool_id)
+#' dput(result)
+#'
+#'
+#' ####################  UniswapV3GetSwapsHistorical  ####################
 #'
 #' library(openapi)
 #' var_start_block <- 56 # integer |  (Optional)
@@ -877,12 +978,44 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
+#' #GetSwaps (historical) 🔥
 #' api_instance <- UniswapV3Api$new()
 #'
-#' api_instance$DappsUniswapv3SwapsHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$UniswapV3GetSwapsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+#' result <- api_instance$UniswapV3GetSwapsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+#' dput(result)
 #'
 #'
-#' ####################  DappsUniswapv3TickDayDataHistoricalGet  ####################
+#' ####################  UniswapV3GetTicksCurrent  ####################
+#'
+#' library(openapi)
+#' var_filter_pool_id <- "filter_pool_id_example" # character |  (Optional)
+#'
+#' #GetTicks (current)
+#' api_instance <- UniswapV3Api$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$UniswapV3GetTicksCurrent(filter_pool_id = var_filter_pool_iddata_file = "result.txt")
+#' result <- api_instance$UniswapV3GetTicksCurrent(filter_pool_id = var_filter_pool_id)
+#' dput(result)
+#'
+#'
+#' ####################  UniswapV3GetTicksDayDataCurrent  ####################
+#'
+#' library(openapi)
+#' var_filter_pool_id <- "filter_pool_id_example" # character |  (Optional)
+#'
+#' #GetTicksDayData (current)
+#' api_instance <- UniswapV3Api$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$UniswapV3GetTicksDayDataCurrent(filter_pool_id = var_filter_pool_iddata_file = "result.txt")
+#' result <- api_instance$UniswapV3GetTicksDayDataCurrent(filter_pool_id = var_filter_pool_id)
+#' dput(result)
+#'
+#'
+#' ####################  UniswapV3GetTicksDayDataHistorical  ####################
 #'
 #' library(openapi)
 #' var_start_block <- 56 # integer |  (Optional)
@@ -891,40 +1024,16 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
-#' api_instance <- UniswapV3Api$new()
-#'
-#' api_instance$DappsUniswapv3TickDayDataHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
-#'
-#'
-#' ####################  DappsUniswapv3TicksCurrentGet  ####################
-#'
-#' library(openapi)
-#' var_filter_pool_id <- "filter_pool_id_example" # character | Filter pool id (Optional)
-#'
-#' #GetTicks
+#' #GetTicksDayData (historical)
 #' api_instance <- UniswapV3Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-#' # result <- api_instance$DappsUniswapv3TicksCurrentGet(filter_pool_id = var_filter_pool_iddata_file = "result.txt")
-#' result <- api_instance$DappsUniswapv3TicksCurrentGet(filter_pool_id = var_filter_pool_id)
+#' # result <- api_instance$UniswapV3GetTicksDayDataHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+#' result <- api_instance$UniswapV3GetTicksDayDataHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
 #' dput(result)
 #'
 #'
-#' ####################  DappsUniswapv3TicksDayDataCurrentGet  ####################
-#'
-#' library(openapi)
-#' var_filter_pool_id <- "filter_pool_id_example" # character | Filter pool id (Optional)
-#'
-#' #GetTicksDayData
-#' api_instance <- UniswapV3Api$new()
-#'
-#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-#' # result <- api_instance$DappsUniswapv3TicksDayDataCurrentGet(filter_pool_id = var_filter_pool_iddata_file = "result.txt")
-#' result <- api_instance$DappsUniswapv3TicksDayDataCurrentGet(filter_pool_id = var_filter_pool_id)
-#' dput(result)
-#'
-#'
-#' ####################  DappsUniswapv3TicksHistoricalGet  ####################
+#' ####################  UniswapV3GetTicksHistorical  ####################
 #'
 #' library(openapi)
 #' var_start_block <- 56 # integer |  (Optional)
@@ -933,12 +1042,44 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
+#' #GetTicks (historical)
 #' api_instance <- UniswapV3Api$new()
 #'
-#' api_instance$DappsUniswapv3TicksHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$UniswapV3GetTicksHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+#' result <- api_instance$UniswapV3GetTicksHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+#' dput(result)
 #'
 #'
-#' ####################  DappsUniswapv3TokenDayDataHistoricalGet  ####################
+#' ####################  UniswapV3GetTokensCurrent  ####################
+#'
+#' library(openapi)
+#' var_filter_token_id <- "filter_token_id_example" # character |  (Optional)
+#'
+#' #GetTokens (current) 🔥
+#' api_instance <- UniswapV3Api$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$UniswapV3GetTokensCurrent(filter_token_id = var_filter_token_iddata_file = "result.txt")
+#' result <- api_instance$UniswapV3GetTokensCurrent(filter_token_id = var_filter_token_id)
+#' dput(result)
+#'
+#'
+#' ####################  UniswapV3GetTokensDayDataCurrent  ####################
+#'
+#' library(openapi)
+#' var_filter_token_id <- "filter_token_id_example" # character |  (Optional)
+#'
+#' #GetTokensDayData (current)
+#' api_instance <- UniswapV3Api$new()
+#'
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$UniswapV3GetTokensDayDataCurrent(filter_token_id = var_filter_token_iddata_file = "result.txt")
+#' result <- api_instance$UniswapV3GetTokensDayDataCurrent(filter_token_id = var_filter_token_id)
+#' dput(result)
+#'
+#'
+#' ####################  UniswapV3GetTokensDayDataHistorical  ####################
 #'
 #' library(openapi)
 #' var_start_block <- 56 # integer |  (Optional)
@@ -947,12 +1088,16 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_token_id <- "token_id_example" # character |  (Optional)
 #'
+#' #GetTokensDayData (historical)
 #' api_instance <- UniswapV3Api$new()
 #'
-#' api_instance$DappsUniswapv3TokenDayDataHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, token_id = var_token_id)
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$UniswapV3GetTokensDayDataHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, token_id = var_token_iddata_file = "result.txt")
+#' result <- api_instance$UniswapV3GetTokensDayDataHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, token_id = var_token_id)
+#' dput(result)
 #'
 #'
-#' ####################  DappsUniswapv3TokenHourDataHistoricalGet  ####################
+#' ####################  UniswapV3GetTokensHistorical  ####################
 #'
 #' library(openapi)
 #' var_start_block <- 56 # integer |  (Optional)
@@ -961,40 +1106,30 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_token_id <- "token_id_example" # character |  (Optional)
 #'
+#' #GetTokens (historical) 🔥
 #' api_instance <- UniswapV3Api$new()
 #'
-#' api_instance$DappsUniswapv3TokenHourDataHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, token_id = var_token_id)
+#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
+#' # result <- api_instance$UniswapV3GetTokensHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, token_id = var_token_iddata_file = "result.txt")
+#' result <- api_instance$UniswapV3GetTokensHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, token_id = var_token_id)
+#' dput(result)
 #'
 #'
-#' ####################  DappsUniswapv3TokensCurrentGet  ####################
+#' ####################  UniswapV3GetTokensHourDataCurrent  ####################
 #'
 #' library(openapi)
 #' var_filter_token_id <- "filter_token_id_example" # character |  (Optional)
 #'
-#' #GetTokens
+#' #GetTokensHourData (current)
 #' api_instance <- UniswapV3Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-#' # result <- api_instance$DappsUniswapv3TokensCurrentGet(filter_token_id = var_filter_token_iddata_file = "result.txt")
-#' result <- api_instance$DappsUniswapv3TokensCurrentGet(filter_token_id = var_filter_token_id)
+#' # result <- api_instance$UniswapV3GetTokensHourDataCurrent(filter_token_id = var_filter_token_iddata_file = "result.txt")
+#' result <- api_instance$UniswapV3GetTokensHourDataCurrent(filter_token_id = var_filter_token_id)
 #' dput(result)
 #'
 #'
-#' ####################  DappsUniswapv3TokensDayDataCurrentGet  ####################
-#'
-#' library(openapi)
-#' var_filter_token_id <- "filter_token_id_example" # character |  (Optional)
-#'
-#' #GetTokensDayData
-#' api_instance <- UniswapV3Api$new()
-#'
-#' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-#' # result <- api_instance$DappsUniswapv3TokensDayDataCurrentGet(filter_token_id = var_filter_token_iddata_file = "result.txt")
-#' result <- api_instance$DappsUniswapv3TokensDayDataCurrentGet(filter_token_id = var_filter_token_id)
-#' dput(result)
-#'
-#'
-#' ####################  DappsUniswapv3TokensHistoricalGet  ####################
+#' ####################  UniswapV3GetTokensHourDataHistorical  ####################
 #'
 #' library(openapi)
 #' var_start_block <- 56 # integer |  (Optional)
@@ -1003,26 +1138,16 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_token_id <- "token_id_example" # character |  (Optional)
 #'
-#' api_instance <- UniswapV3Api$new()
-#'
-#' api_instance$DappsUniswapv3TokensHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, token_id = var_token_id)
-#'
-#'
-#' ####################  DappsUniswapv3TokensHourDataCurrentGet  ####################
-#'
-#' library(openapi)
-#' var_filter_token_id <- "filter_token_id_example" # character |  (Optional)
-#'
-#' #GetTokensHourData
+#' #GetTokensHourData (historical)
 #' api_instance <- UniswapV3Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-#' # result <- api_instance$DappsUniswapv3TokensHourDataCurrentGet(filter_token_id = var_filter_token_iddata_file = "result.txt")
-#' result <- api_instance$DappsUniswapv3TokensHourDataCurrentGet(filter_token_id = var_filter_token_id)
+#' # result <- api_instance$UniswapV3GetTokensHourDataHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, token_id = var_token_iddata_file = "result.txt")
+#' result <- api_instance$UniswapV3GetTokensHourDataHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, token_id = var_token_id)
 #' dput(result)
 #'
 #'
-#' ####################  DappsUniswapv3TransactionsHistoricalGet  ####################
+#' ####################  UniswapV3GetTransactionsHistorical  ####################
 #'
 #' library(openapi)
 #' var_start_block <- 56 # integer |  (Optional)
@@ -1030,21 +1155,12 @@
 #' var_start_date <- "start_date_example" # character |  (Optional)
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #'
-#' api_instance <- UniswapV3Api$new()
-#'
-#' api_instance$DappsUniswapv3TransactionsHistoricalGet(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
-#'
-#'
-#' ####################  DappsUniswapv3UniswapDayDataCurrentGet  ####################
-#'
-#' library(openapi)
-#'
-#' #GetUniswapDayData
+#' #GetTransactions (historical)
 #' api_instance <- UniswapV3Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-#' # result <- api_instance$DappsUniswapv3UniswapDayDataCurrentGet(data_file = "result.txt")
-#' result <- api_instance$DappsUniswapv3UniswapDayDataCurrentGet()
+#' # result <- api_instance$UniswapV3GetTransactionsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_datedata_file = "result.txt")
+#' result <- api_instance$UniswapV3GetTransactionsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date)
 #' dput(result)
 #'
 #'
@@ -1070,17 +1186,17 @@ UniswapV3Api <- R6::R6Class(
         self$api_client <- ApiClient$new()
       }
     },
-    #' GetBundles
+    #' GetBundles (current)
     #'
     #' @description
-    #' GetBundles
+    #' GetBundles (current)
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[UniswapV3BundleV3DTO]
     #' @export
-    DappsUniswapv3BundleCurrentGet = function(data_file = NULL, ...) {
-      local_var_response <- self$DappsUniswapv3BundleCurrentGetWithHttpInfo(data_file = data_file, ...)
+    UniswapV3GetBundlesCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$UniswapV3GetBundlesCurrentWithHttpInfo(data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -1091,16 +1207,16 @@ UniswapV3Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetBundles
+    #' GetBundles (current)
     #'
     #' @description
-    #' GetBundles
+    #' GetBundles (current)
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[UniswapV3BundleV3DTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsUniswapv3BundleCurrentGetWithHttpInfo = function(data_file = NULL, ...) {
+    UniswapV3GetBundlesCurrentWithHttpInfo = function(data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -1110,7 +1226,7 @@ UniswapV3Api <- R6::R6Class(
       oauth_scopes <- NULL
       is_oauth <- FALSE
 
-      local_var_url_path <- "/dapps/uniswapv3/bundle/current"
+      local_var_url_path <- "/dapps/uniswapv3/bundles/current"
 
       # The Accept request HTTP header
       local_var_accepts <- list("text/plain", "application/json", "text/json")
@@ -1156,20 +1272,21 @@ UniswapV3Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' 
+    #' GetBundles (historical)
     #'
     #' @description
-    #' 
+    #' GetBundles (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return void
+    #' @return array[UniswapV3BundleV3DTO]
     #' @export
-    DappsUniswapv3BundlesHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
-      local_var_response <- self$DappsUniswapv3BundlesHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, ...)
+    UniswapV3GetBundlesHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, data_file = NULL, ...) {
+      local_var_response <- self$UniswapV3GetBundlesHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -1180,19 +1297,20 @@ UniswapV3Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' 
+    #' GetBundles (historical)
     #'
     #' @description
-    #' 
+    #' GetBundles (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
+    #' @return API response (array[UniswapV3BundleV3DTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsUniswapv3BundlesHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
+    UniswapV3GetBundlesHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -1217,7 +1335,7 @@ UniswapV3Api <- R6::R6Class(
       local_var_url_path <- "/dapps/uniswapv3/bundles/historical"
 
       # The Accept request HTTP header
-      local_var_accepts <- list()
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -1236,7 +1354,18 @@ UniswapV3Api <- R6::R6Class(
                                  ...)
 
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[UniswapV3BundleV3DTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
         local_var_resp
       } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
         ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
@@ -1249,18 +1378,18 @@ UniswapV3Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetBurns
+    #' GetBurns (current)
     #'
     #' @description
-    #' GetBurns
+    #' GetBurns (current)
     #'
-    #' @param filter_pool_id (optional) Filter pool id
+    #' @param filter_pool_id (optional) No description
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[UniswapV3BurnV3DTO]
     #' @export
-    DappsUniswapv3BurnsCurrentGet = function(filter_pool_id = NULL, data_file = NULL, ...) {
-      local_var_response <- self$DappsUniswapv3BurnsCurrentGetWithHttpInfo(filter_pool_id, data_file = data_file, ...)
+    UniswapV3GetBurnsCurrent = function(filter_pool_id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$UniswapV3GetBurnsCurrentWithHttpInfo(filter_pool_id, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -1271,17 +1400,17 @@ UniswapV3Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetBurns
+    #' GetBurns (current)
     #'
     #' @description
-    #' GetBurns
+    #' GetBurns (current)
     #'
-    #' @param filter_pool_id (optional) Filter pool id
+    #' @param filter_pool_id (optional) No description
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[UniswapV3BurnV3DTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsUniswapv3BurnsCurrentGetWithHttpInfo = function(filter_pool_id = NULL, data_file = NULL, ...) {
+    UniswapV3GetBurnsCurrentWithHttpInfo = function(filter_pool_id = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -1340,21 +1469,22 @@ UniswapV3Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' 
+    #' GetBurns (historical)
     #'
     #' @description
-    #' 
+    #' GetBurns (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return void
+    #' @return array[UniswapV3BurnV3DTO]
     #' @export
-    DappsUniswapv3BurnsHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
-      local_var_response <- self$DappsUniswapv3BurnsHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, ...)
+    UniswapV3GetBurnsHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$UniswapV3GetBurnsHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -1365,20 +1495,21 @@ UniswapV3Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' 
+    #' GetBurns (historical)
     #'
     #' @description
-    #' 
+    #' GetBurns (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
+    #' @return API response (array[UniswapV3BurnV3DTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsUniswapv3BurnsHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
+    UniswapV3GetBurnsHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -1406,7 +1537,7 @@ UniswapV3Api <- R6::R6Class(
       local_var_url_path <- "/dapps/uniswapv3/burns/historical"
 
       # The Accept request HTTP header
-      local_var_accepts <- list()
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -1425,7 +1556,18 @@ UniswapV3Api <- R6::R6Class(
                                  ...)
 
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[UniswapV3BurnV3DTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
         local_var_resp
       } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
         ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
@@ -1438,20 +1580,17 @@ UniswapV3Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' 
+    #' GetDayData (current)
     #'
     #' @description
-    #' 
+    #' GetDayData (current)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return void
+    #' @return array[UniswapV3UniswapDayDataV3DTO]
     #' @export
-    DappsUniswapv3DayDataHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
-      local_var_response <- self$DappsUniswapv3DayDataHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, ...)
+    UniswapV3GetDayDataCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$UniswapV3GetDayDataCurrentWithHttpInfo(data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -1462,19 +1601,110 @@ UniswapV3Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' 
+    #' GetDayData (current)
     #'
     #' @description
-    #' 
+    #' GetDayData (current)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
+    #' @return API response (array[UniswapV3UniswapDayDataV3DTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsUniswapv3DayDataHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
+    UniswapV3GetDayDataCurrentWithHttpInfo = function(data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+      local_var_url_path <- "/dapps/uniswapv3/dayData/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[UniswapV3UniswapDayDataV3DTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' GetDayData (historical)
+    #'
+    #' @description
+    #' GetDayData (historical)
+    #'
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[UniswapV3UniswapDayDataV3DTO]
+    #' @export
+    UniswapV3GetDayDataHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, data_file = NULL, ...) {
+      local_var_response <- self$UniswapV3GetDayDataHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' GetDayData (historical)
+    #'
+    #' @description
+    #' GetDayData (historical)
+    #'
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[UniswapV3UniswapDayDataV3DTO]) with additional information such as HTTP status code, headers
+    #' @export
+    UniswapV3GetDayDataHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -1499,7 +1729,7 @@ UniswapV3Api <- R6::R6Class(
       local_var_url_path <- "/dapps/uniswapv3/dayData/historical"
 
       # The Accept request HTTP header
-      local_var_accepts <- list()
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -1518,7 +1748,18 @@ UniswapV3Api <- R6::R6Class(
                                  ...)
 
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[UniswapV3UniswapDayDataV3DTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
         local_var_resp
       } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
         ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
@@ -1531,18 +1772,17 @@ UniswapV3Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetFactory
+    #' GetFactory (current)
     #'
     #' @description
-    #' GetFactory
+    #' GetFactory (current)
     #'
-    #' @param chain_id 
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[UniswapV3FactoryV3DTO]
     #' @export
-    DappsUniswapv3FactoryCurrentGet = function(chain_id, data_file = NULL, ...) {
-      local_var_response <- self$DappsUniswapv3FactoryCurrentGetWithHttpInfo(chain_id, data_file = data_file, ...)
+    UniswapV3GetFactoryCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$UniswapV3GetFactoryCurrentWithHttpInfo(data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -1553,17 +1793,16 @@ UniswapV3Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetFactory
+    #' GetFactory (current)
     #'
     #' @description
-    #' GetFactory
+    #' GetFactory (current)
     #'
-    #' @param chain_id 
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[UniswapV3FactoryV3DTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsUniswapv3FactoryCurrentGetWithHttpInfo = function(chain_id, data_file = NULL, ...) {
+    UniswapV3GetFactoryCurrentWithHttpInfo = function(data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -1573,16 +1812,7 @@ UniswapV3Api <- R6::R6Class(
       oauth_scopes <- NULL
       is_oauth <- FALSE
 
-      if (missing(`chain_id`)) {
-        stop("Missing required parameter `chain_id`.")
-      }
-
-
       local_var_url_path <- "/dapps/uniswapv3/factory/current"
-      if (!missing(`chain_id`)) {
-        local_var_url_path <- gsub("\\{chain_id\\}", URLencode(as.character(`chain_id`), reserved = TRUE), local_var_url_path)
-      }
-
 
       # The Accept request HTTP header
       local_var_accepts <- list("text/plain", "application/json", "text/json")
@@ -1628,20 +1858,21 @@ UniswapV3Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' 
+    #' GetFactory (historical)
     #'
     #' @description
-    #' 
+    #' GetFactory (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return void
+    #' @return array[UniswapV3FactoryV3DTO]
     #' @export
-    DappsUniswapv3FactoryHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
-      local_var_response <- self$DappsUniswapv3FactoryHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, ...)
+    UniswapV3GetFactoryHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, data_file = NULL, ...) {
+      local_var_response <- self$UniswapV3GetFactoryHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -1652,19 +1883,20 @@ UniswapV3Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' 
+    #' GetFactory (historical)
     #'
     #' @description
-    #' 
+    #' GetFactory (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
+    #' @return API response (array[UniswapV3FactoryV3DTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsUniswapv3FactoryHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
+    UniswapV3GetFactoryHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -1689,7 +1921,7 @@ UniswapV3Api <- R6::R6Class(
       local_var_url_path <- "/dapps/uniswapv3/factory/historical"
 
       # The Accept request HTTP header
-      local_var_accepts <- list()
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -1708,7 +1940,18 @@ UniswapV3Api <- R6::R6Class(
                                  ...)
 
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[UniswapV3FactoryV3DTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
         local_var_resp
       } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
         ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
@@ -1721,18 +1964,18 @@ UniswapV3Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetMints
+    #' GetMints (current)
     #'
     #' @description
-    #' GetMints
+    #' GetMints (current)
     #'
-    #' @param filter_pool_id (optional) Filter pool id
+    #' @param filter_pool_id (optional) No description
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[UniswapV3MintV3DTO]
     #' @export
-    DappsUniswapv3MintsCurrentGet = function(filter_pool_id = NULL, data_file = NULL, ...) {
-      local_var_response <- self$DappsUniswapv3MintsCurrentGetWithHttpInfo(filter_pool_id, data_file = data_file, ...)
+    UniswapV3GetMintsCurrent = function(filter_pool_id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$UniswapV3GetMintsCurrentWithHttpInfo(filter_pool_id, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -1743,17 +1986,17 @@ UniswapV3Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetMints
+    #' GetMints (current)
     #'
     #' @description
-    #' GetMints
+    #' GetMints (current)
     #'
-    #' @param filter_pool_id (optional) Filter pool id
+    #' @param filter_pool_id (optional) No description
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[UniswapV3MintV3DTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsUniswapv3MintsCurrentGetWithHttpInfo = function(filter_pool_id = NULL, data_file = NULL, ...) {
+    UniswapV3GetMintsCurrentWithHttpInfo = function(filter_pool_id = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -1812,21 +2055,22 @@ UniswapV3Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' 
+    #' GetMints (historical)
     #'
     #' @description
-    #' 
+    #' GetMints (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return void
+    #' @return array[UniswapV3MintV3DTO]
     #' @export
-    DappsUniswapv3MintsHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
-      local_var_response <- self$DappsUniswapv3MintsHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, ...)
+    UniswapV3GetMintsHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$UniswapV3GetMintsHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -1837,20 +2081,21 @@ UniswapV3Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' 
+    #' GetMints (historical)
     #'
     #' @description
-    #' 
+    #' GetMints (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
+    #' @return API response (array[UniswapV3MintV3DTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsUniswapv3MintsHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
+    UniswapV3GetMintsHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -1878,7 +2123,7 @@ UniswapV3Api <- R6::R6Class(
       local_var_url_path <- "/dapps/uniswapv3/mints/historical"
 
       # The Accept request HTTP header
-      local_var_accepts <- list()
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -1897,7 +2142,18 @@ UniswapV3Api <- R6::R6Class(
                                  ...)
 
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[UniswapV3MintV3DTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
         local_var_resp
       } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
         ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
@@ -1910,214 +2166,18 @@ UniswapV3Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' 
+    #' GetPools (current) 🔥
     #'
     #' @description
-    #' 
+    #' GetPools (current) 🔥
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
-    #' @param ... Other optional arguments
-    #' @return void
-    #' @export
-    DappsUniswapv3PoolDayDataHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
-      local_var_response <- self$DappsUniswapv3PoolDayDataHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, ...)
-      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
-        local_var_response$content
-      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
-        local_var_response
-      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
-        local_var_response
-      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
-        local_var_response
-      }
-    },
-    #' 
-    #'
-    #' @description
-    #' 
-    #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
-    #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
-    #' @export
-    DappsUniswapv3PoolDayDataHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
-      args <- list(...)
-      query_params <- list()
-      header_params <- c()
-      form_params <- list()
-      file_params <- list()
-      local_var_body <- NULL
-      oauth_scopes <- NULL
-      is_oauth <- FALSE
-
-
-
-
-
-
-      query_params[["startBlock"]] <- `start_block`
-
-      query_params[["endBlock"]] <- `end_block`
-
-      query_params[["startDate"]] <- `start_date`
-
-      query_params[["endDate"]] <- `end_date`
-
-      query_params[["poolId"]] <- `pool_id`
-
-      local_var_url_path <- "/dapps/uniswapv3/poolDayData/historical"
-
-      # The Accept request HTTP header
-      local_var_accepts <- list()
-
-      # The Content-Type representation header
-      local_var_content_types <- list()
-
-      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
-                                 method = "GET",
-                                 query_params = query_params,
-                                 header_params = header_params,
-                                 form_params = form_params,
-                                 file_params = file_params,
-                                 accepts = local_var_accepts,
-                                 content_types = local_var_content_types,
-                                 body = local_var_body,
-                                 is_oauth = is_oauth,
-                                 oauth_scopes = oauth_scopes,
-                                 ...)
-
-      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
-        local_var_resp
-      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
-        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
-      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
-        ApiResponse$new("API client error", local_var_resp)
-      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
-        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
-          local_var_resp$response <- "API server error"
-        }
-        local_var_resp
-      }
-    },
-    #' 
-    #'
-    #' @description
-    #' 
-    #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
-    #' @param ... Other optional arguments
-    #' @return void
-    #' @export
-    DappsUniswapv3PoolHourDataHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
-      local_var_response <- self$DappsUniswapv3PoolHourDataHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, ...)
-      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
-        local_var_response$content
-      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
-        local_var_response
-      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
-        local_var_response
-      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
-        local_var_response
-      }
-    },
-    #' 
-    #'
-    #' @description
-    #' 
-    #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
-    #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
-    #' @export
-    DappsUniswapv3PoolHourDataHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
-      args <- list(...)
-      query_params <- list()
-      header_params <- c()
-      form_params <- list()
-      file_params <- list()
-      local_var_body <- NULL
-      oauth_scopes <- NULL
-      is_oauth <- FALSE
-
-
-
-
-
-
-      query_params[["startBlock"]] <- `start_block`
-
-      query_params[["endBlock"]] <- `end_block`
-
-      query_params[["startDate"]] <- `start_date`
-
-      query_params[["endDate"]] <- `end_date`
-
-      query_params[["poolId"]] <- `pool_id`
-
-      local_var_url_path <- "/dapps/uniswapv3/poolHourData/historical"
-
-      # The Accept request HTTP header
-      local_var_accepts <- list()
-
-      # The Content-Type representation header
-      local_var_content_types <- list()
-
-      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
-                                 method = "GET",
-                                 query_params = query_params,
-                                 header_params = header_params,
-                                 form_params = form_params,
-                                 file_params = file_params,
-                                 accepts = local_var_accepts,
-                                 content_types = local_var_content_types,
-                                 body = local_var_body,
-                                 is_oauth = is_oauth,
-                                 oauth_scopes = oauth_scopes,
-                                 ...)
-
-      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
-        local_var_resp
-      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
-        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
-      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
-        ApiResponse$new("API client error", local_var_resp)
-      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
-        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
-          local_var_resp$response <- "API server error"
-        }
-        local_var_resp
-      }
-    },
-    #' GetPools
-    #'
-    #' @description
-    #' GetPools
-    #'
-    #' @param filter_pool_id (optional) Filter pool id
+    #' @param filter_pool_id (optional) No description
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[UniswapV3PoolV3DTO]
     #' @export
-    DappsUniswapv3PoolsCurrentGet = function(filter_pool_id = NULL, data_file = NULL, ...) {
-      local_var_response <- self$DappsUniswapv3PoolsCurrentGetWithHttpInfo(filter_pool_id, data_file = data_file, ...)
+    UniswapV3GetPoolsCurrent = function(filter_pool_id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$UniswapV3GetPoolsCurrentWithHttpInfo(filter_pool_id, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -2128,17 +2188,17 @@ UniswapV3Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetPools
+    #' GetPools (current) 🔥
     #'
     #' @description
-    #' GetPools
+    #' GetPools (current) 🔥
     #'
-    #' @param filter_pool_id (optional) Filter pool id
+    #' @param filter_pool_id (optional) No description
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[UniswapV3PoolV3DTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsUniswapv3PoolsCurrentGetWithHttpInfo = function(filter_pool_id = NULL, data_file = NULL, ...) {
+    UniswapV3GetPoolsCurrentWithHttpInfo = function(filter_pool_id = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -2197,18 +2257,18 @@ UniswapV3Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetPoolsDayData
+    #' GetPoolsDayData (current)
     #'
     #' @description
-    #' GetPoolsDayData
+    #' GetPoolsDayData (current)
     #'
-    #' @param filter_pool_id (optional) Filter pool id
+    #' @param filter_pool_id (optional) No description
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[UniswapV3PoolDayDataV3DTO]
     #' @export
-    DappsUniswapv3PoolsDayDataCurrentGet = function(filter_pool_id = NULL, data_file = NULL, ...) {
-      local_var_response <- self$DappsUniswapv3PoolsDayDataCurrentGetWithHttpInfo(filter_pool_id, data_file = data_file, ...)
+    UniswapV3GetPoolsDayDataCurrent = function(filter_pool_id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$UniswapV3GetPoolsDayDataCurrentWithHttpInfo(filter_pool_id, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -2219,17 +2279,17 @@ UniswapV3Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetPoolsDayData
+    #' GetPoolsDayData (current)
     #'
     #' @description
-    #' GetPoolsDayData
+    #' GetPoolsDayData (current)
     #'
-    #' @param filter_pool_id (optional) Filter pool id
+    #' @param filter_pool_id (optional) No description
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[UniswapV3PoolDayDataV3DTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsUniswapv3PoolsDayDataCurrentGetWithHttpInfo = function(filter_pool_id = NULL, data_file = NULL, ...) {
+    UniswapV3GetPoolsDayDataCurrentWithHttpInfo = function(filter_pool_id = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -2288,21 +2348,22 @@ UniswapV3Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' 
+    #' GetPoolsDayData (historical)
     #'
     #' @description
-    #' 
+    #' GetPoolsDayData (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return void
+    #' @return array[UniswapV3PoolDayDataV3DTO]
     #' @export
-    DappsUniswapv3PoolsHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
-      local_var_response <- self$DappsUniswapv3PoolsHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, ...)
+    UniswapV3GetPoolsDayDataHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$UniswapV3GetPoolsDayDataHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -2313,20 +2374,132 @@ UniswapV3Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' 
+    #' GetPoolsDayData (historical)
     #'
     #' @description
-    #' 
+    #' GetPoolsDayData (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
+    #' @return API response (array[UniswapV3PoolDayDataV3DTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsUniswapv3PoolsHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
+    UniswapV3GetPoolsDayDataHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+
+
+
+
+
+      query_params[["startBlock"]] <- `start_block`
+
+      query_params[["endBlock"]] <- `end_block`
+
+      query_params[["startDate"]] <- `start_date`
+
+      query_params[["endDate"]] <- `end_date`
+
+      query_params[["poolId"]] <- `pool_id`
+
+      local_var_url_path <- "/dapps/uniswapv3/poolsDayData/historical"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[UniswapV3PoolDayDataV3DTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' GetPools (historical) 🔥
+    #'
+    #' @description
+    #' GetPools (historical) 🔥
+    #'
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[UniswapV3PoolV3DTO]
+    #' @export
+    UniswapV3GetPoolsHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$UniswapV3GetPoolsHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' GetPools (historical) 🔥
+    #'
+    #' @description
+    #' GetPools (historical) 🔥
+    #'
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[UniswapV3PoolV3DTO]) with additional information such as HTTP status code, headers
+    #' @export
+    UniswapV3GetPoolsHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -2354,7 +2527,7 @@ UniswapV3Api <- R6::R6Class(
       local_var_url_path <- "/dapps/uniswapv3/pools/historical"
 
       # The Accept request HTTP header
-      local_var_accepts <- list()
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -2373,7 +2546,18 @@ UniswapV3Api <- R6::R6Class(
                                  ...)
 
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[UniswapV3PoolV3DTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
         local_var_resp
       } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
         ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
@@ -2386,18 +2570,18 @@ UniswapV3Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetPoolsHourData
+    #' GetPoolsHourData (current)
     #'
     #' @description
-    #' GetPoolsHourData
+    #' GetPoolsHourData (current)
     #'
-    #' @param filter_pool_id (optional) Filter pool id
+    #' @param filter_pool_id (optional) No description
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[UniswapV3PoolHourDataV3DTO]
     #' @export
-    DappsUniswapv3PoolsHourDataCurrentGet = function(filter_pool_id = NULL, data_file = NULL, ...) {
-      local_var_response <- self$DappsUniswapv3PoolsHourDataCurrentGetWithHttpInfo(filter_pool_id, data_file = data_file, ...)
+    UniswapV3GetPoolsHourDataCurrent = function(filter_pool_id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$UniswapV3GetPoolsHourDataCurrentWithHttpInfo(filter_pool_id, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -2408,17 +2592,17 @@ UniswapV3Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetPoolsHourData
+    #' GetPoolsHourData (current)
     #'
     #' @description
-    #' GetPoolsHourData
+    #' GetPoolsHourData (current)
     #'
-    #' @param filter_pool_id (optional) Filter pool id
+    #' @param filter_pool_id (optional) No description
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[UniswapV3PoolHourDataV3DTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsUniswapv3PoolsHourDataCurrentGetWithHttpInfo = function(filter_pool_id = NULL, data_file = NULL, ...) {
+    UniswapV3GetPoolsHourDataCurrentWithHttpInfo = function(filter_pool_id = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -2477,21 +2661,22 @@ UniswapV3Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' 
+    #' GetPoolsHourData (historical)
     #'
     #' @description
-    #' 
+    #' GetPoolsHourData (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return void
+    #' @return array[UniswapV3PoolHourDataV3DTO]
     #' @export
-    DappsUniswapv3PositionSnapshotHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
-      local_var_response <- self$DappsUniswapv3PositionSnapshotHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, ...)
+    UniswapV3GetPoolsHourDataHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$UniswapV3GetPoolsHourDataHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -2502,20 +2687,21 @@ UniswapV3Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' 
+    #' GetPoolsHourData (historical)
     #'
     #' @description
-    #' 
+    #' GetPoolsHourData (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
+    #' @return API response (array[UniswapV3PoolHourDataV3DTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsUniswapv3PositionSnapshotHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
+    UniswapV3GetPoolsHourDataHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -2540,87 +2726,7 @@ UniswapV3Api <- R6::R6Class(
 
       query_params[["poolId"]] <- `pool_id`
 
-      local_var_url_path <- "/dapps/uniswapv3/positionSnapshot/historical"
-
-      # The Accept request HTTP header
-      local_var_accepts <- list()
-
-      # The Content-Type representation header
-      local_var_content_types <- list()
-
-      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
-                                 method = "GET",
-                                 query_params = query_params,
-                                 header_params = header_params,
-                                 form_params = form_params,
-                                 file_params = file_params,
-                                 accepts = local_var_accepts,
-                                 content_types = local_var_content_types,
-                                 body = local_var_body,
-                                 is_oauth = is_oauth,
-                                 oauth_scopes = oauth_scopes,
-                                 ...)
-
-      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
-        local_var_resp
-      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
-        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
-      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
-        ApiResponse$new("API client error", local_var_resp)
-      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
-        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
-          local_var_resp$response <- "API server error"
-        }
-        local_var_resp
-      }
-    },
-    #' GetPositionSnapshot
-    #'
-    #' @description
-    #' GetPositionSnapshot
-    #'
-    #' @param filter_pool_id (optional) Filter pool id
-    #' @param data_file (optional) name of the data file to save the result
-    #' @param ... Other optional arguments
-    #' @return array[UniswapV3PositionSnapshotV3DTO]
-    #' @export
-    DappsUniswapv3PositionSnapshotsCurrentGet = function(filter_pool_id = NULL, data_file = NULL, ...) {
-      local_var_response <- self$DappsUniswapv3PositionSnapshotsCurrentGetWithHttpInfo(filter_pool_id, data_file = data_file, ...)
-      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
-        local_var_response$content
-      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
-        local_var_response
-      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
-        local_var_response
-      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
-        local_var_response
-      }
-    },
-    #' GetPositionSnapshot
-    #'
-    #' @description
-    #' GetPositionSnapshot
-    #'
-    #' @param filter_pool_id (optional) Filter pool id
-    #' @param data_file (optional) name of the data file to save the result
-    #' @param ... Other optional arguments
-    #' @return API response (array[UniswapV3PositionSnapshotV3DTO]) with additional information such as HTTP status code, headers
-    #' @export
-    DappsUniswapv3PositionSnapshotsCurrentGetWithHttpInfo = function(filter_pool_id = NULL, data_file = NULL, ...) {
-      args <- list(...)
-      query_params <- list()
-      header_params <- c()
-      form_params <- list()
-      file_params <- list()
-      local_var_body <- NULL
-      oauth_scopes <- NULL
-      is_oauth <- FALSE
-
-
-      query_params[["filter_pool_id"]] <- `filter_pool_id`
-
-      local_var_url_path <- "/dapps/uniswapv3/positionSnapshots/current"
+      local_var_url_path <- "/dapps/uniswapv3/poolsHourData/historical"
 
       # The Accept request HTTP header
       local_var_accepts <- list("text/plain", "application/json", "text/json")
@@ -2648,7 +2754,7 @@ UniswapV3Api <- R6::R6Class(
         }
 
         deserialized_resp_obj <- tryCatch(
-          self$api_client$deserialize(local_var_resp$response, "array[UniswapV3PositionSnapshotV3DTO]", loadNamespace("openapi")),
+          self$api_client$deserialize(local_var_resp$response, "array[UniswapV3PoolHourDataV3DTO]", loadNamespace("openapi")),
           error = function(e) {
             stop("Failed to deserialize response")
           }
@@ -2666,18 +2772,18 @@ UniswapV3Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetPositions
+    #' GetPositions (current)
     #'
     #' @description
-    #' GetPositions
+    #' GetPositions (current)
     #'
-    #' @param filter_pool_id (optional) Filter pool id
+    #' @param filter_pool_id (optional) No description
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[UniswapV3PositionV3DTO]
     #' @export
-    DappsUniswapv3PositionsCurrentGet = function(filter_pool_id = NULL, data_file = NULL, ...) {
-      local_var_response <- self$DappsUniswapv3PositionsCurrentGetWithHttpInfo(filter_pool_id, data_file = data_file, ...)
+    UniswapV3GetPositionsCurrent = function(filter_pool_id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$UniswapV3GetPositionsCurrentWithHttpInfo(filter_pool_id, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -2688,17 +2794,17 @@ UniswapV3Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetPositions
+    #' GetPositions (current)
     #'
     #' @description
-    #' GetPositions
+    #' GetPositions (current)
     #'
-    #' @param filter_pool_id (optional) Filter pool id
+    #' @param filter_pool_id (optional) No description
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[UniswapV3PositionV3DTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsUniswapv3PositionsCurrentGetWithHttpInfo = function(filter_pool_id = NULL, data_file = NULL, ...) {
+    UniswapV3GetPositionsCurrentWithHttpInfo = function(filter_pool_id = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -2757,21 +2863,22 @@ UniswapV3Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' 
+    #' GetPositions (historical)
     #'
     #' @description
-    #' 
+    #' GetPositions (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return void
+    #' @return array[UniswapV3PositionV3DTO]
     #' @export
-    DappsUniswapv3PositionsHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
-      local_var_response <- self$DappsUniswapv3PositionsHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, ...)
+    UniswapV3GetPositionsHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$UniswapV3GetPositionsHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -2782,20 +2889,21 @@ UniswapV3Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' 
+    #' GetPositions (historical)
     #'
     #' @description
-    #' 
+    #' GetPositions (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
+    #' @return API response (array[UniswapV3PositionV3DTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsUniswapv3PositionsHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
+    UniswapV3GetPositionsHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -2823,7 +2931,7 @@ UniswapV3Api <- R6::R6Class(
       local_var_url_path <- "/dapps/uniswapv3/positions/historical"
 
       # The Accept request HTTP header
-      local_var_accepts <- list()
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -2842,7 +2950,18 @@ UniswapV3Api <- R6::R6Class(
                                  ...)
 
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[UniswapV3PositionV3DTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
         local_var_resp
       } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
         ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
@@ -2855,18 +2974,22 @@ UniswapV3Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetSwaps
+    #' GetPositionsSnaphots (historical)
     #'
     #' @description
-    #' GetSwaps
+    #' GetPositionsSnaphots (historical)
     #'
-    #' @param filter_pool_id (optional) Filter pool id
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return array[UniswapV3SwapV3DTO]
+    #' @return array[UniswapV3PositionSnapshotV3DTO]
     #' @export
-    DappsUniswapv3SwapsCurrentGet = function(filter_pool_id = NULL, data_file = NULL, ...) {
-      local_var_response <- self$DappsUniswapv3SwapsCurrentGetWithHttpInfo(filter_pool_id, data_file = data_file, ...)
+    UniswapV3GetPositionsSnaphotsHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$UniswapV3GetPositionsSnaphotsHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -2877,17 +3000,215 @@ UniswapV3Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetSwaps
+    #' GetPositionsSnaphots (historical)
     #'
     #' @description
-    #' GetSwaps
+    #' GetPositionsSnaphots (historical)
     #'
-    #' @param filter_pool_id (optional) Filter pool id
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[UniswapV3PositionSnapshotV3DTO]) with additional information such as HTTP status code, headers
+    #' @export
+    UniswapV3GetPositionsSnaphotsHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+
+
+
+
+
+      query_params[["startBlock"]] <- `start_block`
+
+      query_params[["endBlock"]] <- `end_block`
+
+      query_params[["startDate"]] <- `start_date`
+
+      query_params[["endDate"]] <- `end_date`
+
+      query_params[["poolId"]] <- `pool_id`
+
+      local_var_url_path <- "/dapps/uniswapv3/positionsSnapshots/historical"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[UniswapV3PositionSnapshotV3DTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' GetPositionsSnapshots (current)
+    #'
+    #' @description
+    #' GetPositionsSnapshots (current)
+    #'
+    #' @param filter_pool_id (optional) No description
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[UniswapV3PositionSnapshotV3DTO]
+    #' @export
+    UniswapV3GetPositionsSnapshotsCurrent = function(filter_pool_id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$UniswapV3GetPositionsSnapshotsCurrentWithHttpInfo(filter_pool_id, data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' GetPositionsSnapshots (current)
+    #'
+    #' @description
+    #' GetPositionsSnapshots (current)
+    #'
+    #' @param filter_pool_id (optional) No description
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[UniswapV3PositionSnapshotV3DTO]) with additional information such as HTTP status code, headers
+    #' @export
+    UniswapV3GetPositionsSnapshotsCurrentWithHttpInfo = function(filter_pool_id = NULL, data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+
+      query_params[["filter_pool_id"]] <- `filter_pool_id`
+
+      local_var_url_path <- "/dapps/uniswapv3/positionSnapshots/current"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[UniswapV3PositionSnapshotV3DTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' GetSwaps (current) 🔥
+    #'
+    #' @description
+    #' GetSwaps (current) 🔥
+    #'
+    #' @param filter_pool_id (optional) No description
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[UniswapV3SwapV3DTO]
+    #' @export
+    UniswapV3GetSwapsCurrent = function(filter_pool_id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$UniswapV3GetSwapsCurrentWithHttpInfo(filter_pool_id, data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' GetSwaps (current) 🔥
+    #'
+    #' @description
+    #' GetSwaps (current) 🔥
+    #'
+    #' @param filter_pool_id (optional) No description
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[UniswapV3SwapV3DTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsUniswapv3SwapsCurrentGetWithHttpInfo = function(filter_pool_id = NULL, data_file = NULL, ...) {
+    UniswapV3GetSwapsCurrentWithHttpInfo = function(filter_pool_id = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -2946,21 +3267,22 @@ UniswapV3Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' 
+    #' GetSwaps (historical) 🔥
     #'
     #' @description
-    #' 
+    #' GetSwaps (historical) 🔥
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return void
+    #' @return array[UniswapV3SwapV3DTO]
     #' @export
-    DappsUniswapv3SwapsHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
-      local_var_response <- self$DappsUniswapv3SwapsHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, ...)
+    UniswapV3GetSwapsHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$UniswapV3GetSwapsHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -2971,20 +3293,21 @@ UniswapV3Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' 
+    #' GetSwaps (historical) 🔥
     #'
     #' @description
-    #' 
+    #' GetSwaps (historical) 🔥
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
+    #' @return API response (array[UniswapV3SwapV3DTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsUniswapv3SwapsHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
+    UniswapV3GetSwapsHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -3012,7 +3335,7 @@ UniswapV3Api <- R6::R6Class(
       local_var_url_path <- "/dapps/uniswapv3/swaps/historical"
 
       # The Accept request HTTP header
-      local_var_accepts <- list()
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -3031,7 +3354,18 @@ UniswapV3Api <- R6::R6Class(
                                  ...)
 
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[UniswapV3SwapV3DTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
         local_var_resp
       } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
         ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
@@ -3044,116 +3378,18 @@ UniswapV3Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' 
+    #' GetTicks (current)
     #'
     #' @description
-    #' 
+    #' GetTicks (current)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
-    #' @param ... Other optional arguments
-    #' @return void
-    #' @export
-    DappsUniswapv3TickDayDataHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
-      local_var_response <- self$DappsUniswapv3TickDayDataHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, ...)
-      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
-        local_var_response$content
-      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
-        local_var_response
-      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
-        local_var_response
-      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
-        local_var_response
-      }
-    },
-    #' 
-    #'
-    #' @description
-    #' 
-    #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
-    #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
-    #' @export
-    DappsUniswapv3TickDayDataHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
-      args <- list(...)
-      query_params <- list()
-      header_params <- c()
-      form_params <- list()
-      file_params <- list()
-      local_var_body <- NULL
-      oauth_scopes <- NULL
-      is_oauth <- FALSE
-
-
-
-
-
-
-      query_params[["startBlock"]] <- `start_block`
-
-      query_params[["endBlock"]] <- `end_block`
-
-      query_params[["startDate"]] <- `start_date`
-
-      query_params[["endDate"]] <- `end_date`
-
-      query_params[["poolId"]] <- `pool_id`
-
-      local_var_url_path <- "/dapps/uniswapv3/tickDayData/historical"
-
-      # The Accept request HTTP header
-      local_var_accepts <- list()
-
-      # The Content-Type representation header
-      local_var_content_types <- list()
-
-      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
-                                 method = "GET",
-                                 query_params = query_params,
-                                 header_params = header_params,
-                                 form_params = form_params,
-                                 file_params = file_params,
-                                 accepts = local_var_accepts,
-                                 content_types = local_var_content_types,
-                                 body = local_var_body,
-                                 is_oauth = is_oauth,
-                                 oauth_scopes = oauth_scopes,
-                                 ...)
-
-      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
-        local_var_resp
-      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
-        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
-      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
-        ApiResponse$new("API client error", local_var_resp)
-      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
-        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
-          local_var_resp$response <- "API server error"
-        }
-        local_var_resp
-      }
-    },
-    #' GetTicks
-    #'
-    #' @description
-    #' GetTicks
-    #'
-    #' @param filter_pool_id (optional) Filter pool id
+    #' @param filter_pool_id (optional) No description
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[UniswapV3TickV3DTO]
     #' @export
-    DappsUniswapv3TicksCurrentGet = function(filter_pool_id = NULL, data_file = NULL, ...) {
-      local_var_response <- self$DappsUniswapv3TicksCurrentGetWithHttpInfo(filter_pool_id, data_file = data_file, ...)
+    UniswapV3GetTicksCurrent = function(filter_pool_id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$UniswapV3GetTicksCurrentWithHttpInfo(filter_pool_id, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -3164,17 +3400,17 @@ UniswapV3Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetTicks
+    #' GetTicks (current)
     #'
     #' @description
-    #' GetTicks
+    #' GetTicks (current)
     #'
-    #' @param filter_pool_id (optional) Filter pool id
+    #' @param filter_pool_id (optional) No description
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[UniswapV3TickV3DTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsUniswapv3TicksCurrentGetWithHttpInfo = function(filter_pool_id = NULL, data_file = NULL, ...) {
+    UniswapV3GetTicksCurrentWithHttpInfo = function(filter_pool_id = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -3233,18 +3469,18 @@ UniswapV3Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetTicksDayData
+    #' GetTicksDayData (current)
     #'
     #' @description
-    #' GetTicksDayData
+    #' GetTicksDayData (current)
     #'
-    #' @param filter_pool_id (optional) Filter pool id
+    #' @param filter_pool_id (optional) No description
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[UniswapV3TickDayDataV3DTO]
     #' @export
-    DappsUniswapv3TicksDayDataCurrentGet = function(filter_pool_id = NULL, data_file = NULL, ...) {
-      local_var_response <- self$DappsUniswapv3TicksDayDataCurrentGetWithHttpInfo(filter_pool_id, data_file = data_file, ...)
+    UniswapV3GetTicksDayDataCurrent = function(filter_pool_id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$UniswapV3GetTicksDayDataCurrentWithHttpInfo(filter_pool_id, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -3255,17 +3491,17 @@ UniswapV3Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetTicksDayData
+    #' GetTicksDayData (current)
     #'
     #' @description
-    #' GetTicksDayData
+    #' GetTicksDayData (current)
     #'
-    #' @param filter_pool_id (optional) Filter pool id
+    #' @param filter_pool_id (optional) No description
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[UniswapV3TickDayDataV3DTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsUniswapv3TicksDayDataCurrentGetWithHttpInfo = function(filter_pool_id = NULL, data_file = NULL, ...) {
+    UniswapV3GetTicksDayDataCurrentWithHttpInfo = function(filter_pool_id = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -3324,21 +3560,22 @@ UniswapV3Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' 
+    #' GetTicksDayData (historical)
     #'
     #' @description
-    #' 
+    #' GetTicksDayData (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return void
+    #' @return array[UniswapV3TickDayDataV3DTO]
     #' @export
-    DappsUniswapv3TicksHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
-      local_var_response <- self$DappsUniswapv3TicksHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, ...)
+    UniswapV3GetTicksDayDataHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$UniswapV3GetTicksDayDataHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -3349,20 +3586,132 @@ UniswapV3Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' 
+    #' GetTicksDayData (historical)
     #'
     #' @description
-    #' 
+    #' GetTicksDayData (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param pool_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
+    #' @return API response (array[UniswapV3TickDayDataV3DTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsUniswapv3TicksHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, ...) {
+    UniswapV3GetTicksDayDataHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+
+
+
+
+
+      query_params[["startBlock"]] <- `start_block`
+
+      query_params[["endBlock"]] <- `end_block`
+
+      query_params[["startDate"]] <- `start_date`
+
+      query_params[["endDate"]] <- `end_date`
+
+      query_params[["poolId"]] <- `pool_id`
+
+      local_var_url_path <- "/dapps/uniswapv3/ticksDayData/historical"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[UniswapV3TickDayDataV3DTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' GetTicks (historical)
+    #'
+    #' @description
+    #' GetTicks (historical)
+    #'
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[UniswapV3TickV3DTO]
+    #' @export
+    UniswapV3GetTicksHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$UniswapV3GetTicksHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, pool_id, data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' GetTicks (historical)
+    #'
+    #' @description
+    #' GetTicks (historical)
+    #'
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param pool_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[UniswapV3TickV3DTO]) with additional information such as HTTP status code, headers
+    #' @export
+    UniswapV3GetTicksHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, pool_id = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -3390,7 +3739,7 @@ UniswapV3Api <- R6::R6Class(
       local_var_url_path <- "/dapps/uniswapv3/ticks/historical"
 
       # The Accept request HTTP header
-      local_var_accepts <- list()
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -3409,7 +3758,18 @@ UniswapV3Api <- R6::R6Class(
                                  ...)
 
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[UniswapV3TickV3DTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
         local_var_resp
       } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
         ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
@@ -3422,214 +3782,18 @@ UniswapV3Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' 
+    #' GetTokens (current) 🔥
     #'
     #' @description
-    #' 
-    #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param token_id (optional) No description
-    #' @param ... Other optional arguments
-    #' @return void
-    #' @export
-    DappsUniswapv3TokenDayDataHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, token_id = NULL, ...) {
-      local_var_response <- self$DappsUniswapv3TokenDayDataHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, token_id, ...)
-      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
-        local_var_response$content
-      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
-        local_var_response
-      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
-        local_var_response
-      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
-        local_var_response
-      }
-    },
-    #' 
-    #'
-    #' @description
-    #' 
-    #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param token_id (optional) No description
-    #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
-    #' @export
-    DappsUniswapv3TokenDayDataHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, token_id = NULL, ...) {
-      args <- list(...)
-      query_params <- list()
-      header_params <- c()
-      form_params <- list()
-      file_params <- list()
-      local_var_body <- NULL
-      oauth_scopes <- NULL
-      is_oauth <- FALSE
-
-
-
-
-
-
-      query_params[["startBlock"]] <- `start_block`
-
-      query_params[["endBlock"]] <- `end_block`
-
-      query_params[["startDate"]] <- `start_date`
-
-      query_params[["endDate"]] <- `end_date`
-
-      query_params[["tokenId"]] <- `token_id`
-
-      local_var_url_path <- "/dapps/uniswapv3/tokenDayData/historical"
-
-      # The Accept request HTTP header
-      local_var_accepts <- list()
-
-      # The Content-Type representation header
-      local_var_content_types <- list()
-
-      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
-                                 method = "GET",
-                                 query_params = query_params,
-                                 header_params = header_params,
-                                 form_params = form_params,
-                                 file_params = file_params,
-                                 accepts = local_var_accepts,
-                                 content_types = local_var_content_types,
-                                 body = local_var_body,
-                                 is_oauth = is_oauth,
-                                 oauth_scopes = oauth_scopes,
-                                 ...)
-
-      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
-        local_var_resp
-      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
-        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
-      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
-        ApiResponse$new("API client error", local_var_resp)
-      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
-        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
-          local_var_resp$response <- "API server error"
-        }
-        local_var_resp
-      }
-    },
-    #' 
-    #'
-    #' @description
-    #' 
-    #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param token_id (optional) No description
-    #' @param ... Other optional arguments
-    #' @return void
-    #' @export
-    DappsUniswapv3TokenHourDataHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, token_id = NULL, ...) {
-      local_var_response <- self$DappsUniswapv3TokenHourDataHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, token_id, ...)
-      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
-        local_var_response$content
-      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
-        local_var_response
-      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
-        local_var_response
-      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
-        local_var_response
-      }
-    },
-    #' 
-    #'
-    #' @description
-    #' 
-    #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param token_id (optional) No description
-    #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
-    #' @export
-    DappsUniswapv3TokenHourDataHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, token_id = NULL, ...) {
-      args <- list(...)
-      query_params <- list()
-      header_params <- c()
-      form_params <- list()
-      file_params <- list()
-      local_var_body <- NULL
-      oauth_scopes <- NULL
-      is_oauth <- FALSE
-
-
-
-
-
-
-      query_params[["startBlock"]] <- `start_block`
-
-      query_params[["endBlock"]] <- `end_block`
-
-      query_params[["startDate"]] <- `start_date`
-
-      query_params[["endDate"]] <- `end_date`
-
-      query_params[["tokenId"]] <- `token_id`
-
-      local_var_url_path <- "/dapps/uniswapv3/tokenHourData/historical"
-
-      # The Accept request HTTP header
-      local_var_accepts <- list()
-
-      # The Content-Type representation header
-      local_var_content_types <- list()
-
-      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
-                                 method = "GET",
-                                 query_params = query_params,
-                                 header_params = header_params,
-                                 form_params = form_params,
-                                 file_params = file_params,
-                                 accepts = local_var_accepts,
-                                 content_types = local_var_content_types,
-                                 body = local_var_body,
-                                 is_oauth = is_oauth,
-                                 oauth_scopes = oauth_scopes,
-                                 ...)
-
-      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
-        local_var_resp
-      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
-        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
-      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
-        ApiResponse$new("API client error", local_var_resp)
-      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
-        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
-          local_var_resp$response <- "API server error"
-        }
-        local_var_resp
-      }
-    },
-    #' GetTokens
-    #'
-    #' @description
-    #' GetTokens
+    #' GetTokens (current) 🔥
     #'
     #' @param filter_token_id (optional) No description
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[UniswapV3TokenV3DTO]
     #' @export
-    DappsUniswapv3TokensCurrentGet = function(filter_token_id = NULL, data_file = NULL, ...) {
-      local_var_response <- self$DappsUniswapv3TokensCurrentGetWithHttpInfo(filter_token_id, data_file = data_file, ...)
+    UniswapV3GetTokensCurrent = function(filter_token_id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$UniswapV3GetTokensCurrentWithHttpInfo(filter_token_id, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -3640,17 +3804,17 @@ UniswapV3Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetTokens
+    #' GetTokens (current) 🔥
     #'
     #' @description
-    #' GetTokens
+    #' GetTokens (current) 🔥
     #'
     #' @param filter_token_id (optional) No description
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[UniswapV3TokenV3DTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsUniswapv3TokensCurrentGetWithHttpInfo = function(filter_token_id = NULL, data_file = NULL, ...) {
+    UniswapV3GetTokensCurrentWithHttpInfo = function(filter_token_id = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -3709,18 +3873,18 @@ UniswapV3Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetTokensDayData
+    #' GetTokensDayData (current)
     #'
     #' @description
-    #' GetTokensDayData
+    #' GetTokensDayData (current)
     #'
     #' @param filter_token_id (optional) No description
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[UniswapV3TokenV3DayDataDTO]
     #' @export
-    DappsUniswapv3TokensDayDataCurrentGet = function(filter_token_id = NULL, data_file = NULL, ...) {
-      local_var_response <- self$DappsUniswapv3TokensDayDataCurrentGetWithHttpInfo(filter_token_id, data_file = data_file, ...)
+    UniswapV3GetTokensDayDataCurrent = function(filter_token_id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$UniswapV3GetTokensDayDataCurrentWithHttpInfo(filter_token_id, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -3731,17 +3895,17 @@ UniswapV3Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetTokensDayData
+    #' GetTokensDayData (current)
     #'
     #' @description
-    #' GetTokensDayData
+    #' GetTokensDayData (current)
     #'
     #' @param filter_token_id (optional) No description
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[UniswapV3TokenV3DayDataDTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsUniswapv3TokensDayDataCurrentGetWithHttpInfo = function(filter_token_id = NULL, data_file = NULL, ...) {
+    UniswapV3GetTokensDayDataCurrentWithHttpInfo = function(filter_token_id = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -3800,21 +3964,22 @@ UniswapV3Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' 
+    #' GetTokensDayData (historical)
     #'
     #' @description
-    #' 
+    #' GetTokensDayData (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param token_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param token_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return void
+    #' @return array[UniswapV3TokenV3DayDataDTO]
     #' @export
-    DappsUniswapv3TokensHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, token_id = NULL, ...) {
-      local_var_response <- self$DappsUniswapv3TokensHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, token_id, ...)
+    UniswapV3GetTokensDayDataHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, token_id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$UniswapV3GetTokensDayDataHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, token_id, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -3825,20 +3990,132 @@ UniswapV3Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' 
+    #' GetTokensDayData (historical)
     #'
     #' @description
-    #' 
+    #' GetTokensDayData (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
-    #' @param token_id (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param token_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
+    #' @return API response (array[UniswapV3TokenV3DayDataDTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsUniswapv3TokensHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, token_id = NULL, ...) {
+    UniswapV3GetTokensDayDataHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, token_id = NULL, data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+
+
+
+
+
+      query_params[["startBlock"]] <- `start_block`
+
+      query_params[["endBlock"]] <- `end_block`
+
+      query_params[["startDate"]] <- `start_date`
+
+      query_params[["endDate"]] <- `end_date`
+
+      query_params[["tokenId"]] <- `token_id`
+
+      local_var_url_path <- "/dapps/uniswapv3/tokensDayData/historical"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[UniswapV3TokenV3DayDataDTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' GetTokens (historical) 🔥
+    #'
+    #' @description
+    #' GetTokens (historical) 🔥
+    #'
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param token_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[UniswapV3TokenV3DTO]
+    #' @export
+    UniswapV3GetTokensHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, token_id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$UniswapV3GetTokensHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, token_id, data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' GetTokens (historical) 🔥
+    #'
+    #' @description
+    #' GetTokens (historical) 🔥
+    #'
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param token_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[UniswapV3TokenV3DTO]) with additional information such as HTTP status code, headers
+    #' @export
+    UniswapV3GetTokensHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, token_id = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -3866,7 +4143,7 @@ UniswapV3Api <- R6::R6Class(
       local_var_url_path <- "/dapps/uniswapv3/tokens/historical"
 
       # The Accept request HTTP header
-      local_var_accepts <- list()
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
 
       # The Content-Type representation header
       local_var_content_types <- list()
@@ -3885,7 +4162,18 @@ UniswapV3Api <- R6::R6Class(
                                  ...)
 
       if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[UniswapV3TokenV3DTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
         local_var_resp
       } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
         ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
@@ -3898,18 +4186,18 @@ UniswapV3Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetTokensHourData
+    #' GetTokensHourData (current)
     #'
     #' @description
-    #' GetTokensHourData
+    #' GetTokensHourData (current)
     #'
     #' @param filter_token_id (optional) No description
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[UniswapV3TokenHourDataV3DTO]
     #' @export
-    DappsUniswapv3TokensHourDataCurrentGet = function(filter_token_id = NULL, data_file = NULL, ...) {
-      local_var_response <- self$DappsUniswapv3TokensHourDataCurrentGetWithHttpInfo(filter_token_id, data_file = data_file, ...)
+    UniswapV3GetTokensHourDataCurrent = function(filter_token_id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$UniswapV3GetTokensHourDataCurrentWithHttpInfo(filter_token_id, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -3920,17 +4208,17 @@ UniswapV3Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetTokensHourData
+    #' GetTokensHourData (current)
     #'
     #' @description
-    #' GetTokensHourData
+    #' GetTokensHourData (current)
     #'
     #' @param filter_token_id (optional) No description
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[UniswapV3TokenHourDataV3DTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsUniswapv3TokensHourDataCurrentGetWithHttpInfo = function(filter_token_id = NULL, data_file = NULL, ...) {
+    UniswapV3GetTokensHourDataCurrentWithHttpInfo = function(filter_token_id = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -3989,20 +4277,22 @@ UniswapV3Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' 
+    #' GetTokensHourData (historical)
     #'
     #' @description
-    #' 
+    #' GetTokensHourData (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param token_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return void
+    #' @return array[UniswapV3TokenHourDataV3DTO]
     #' @export
-    DappsUniswapv3TransactionsHistoricalGet = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
-      local_var_response <- self$DappsUniswapv3TransactionsHistoricalGetWithHttpInfo(start_block, end_block, start_date, end_date, ...)
+    UniswapV3GetTokensHourDataHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, token_id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$UniswapV3GetTokensHourDataHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, token_id, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -4013,19 +4303,21 @@ UniswapV3Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' 
+    #' GetTokensHourData (historical)
     #'
     #' @description
-    #' 
+    #' GetTokensHourData (historical)
     #'
-    #' @param start_block (optional) No description
-    #' @param end_block (optional) No description
-    #' @param start_date (optional) No description
-    #' @param end_date (optional) No description
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param token_id (optional) 
+    #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
-    #' @return API response (void) with additional information such as HTTP status code, headers
+    #' @return API response (array[UniswapV3TokenHourDataV3DTO]) with additional information such as HTTP status code, headers
     #' @export
-    DappsUniswapv3TransactionsHistoricalGetWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, ...) {
+    UniswapV3GetTokensHourDataHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, token_id = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -4034,6 +4326,7 @@ UniswapV3Api <- R6::R6Class(
       local_var_body <- NULL
       oauth_scopes <- NULL
       is_oauth <- FALSE
+
 
 
 
@@ -4047,82 +4340,9 @@ UniswapV3Api <- R6::R6Class(
 
       query_params[["endDate"]] <- `end_date`
 
-      local_var_url_path <- "/dapps/uniswapv3/transactions/historical"
+      query_params[["tokenId"]] <- `token_id`
 
-      # The Accept request HTTP header
-      local_var_accepts <- list()
-
-      # The Content-Type representation header
-      local_var_content_types <- list()
-
-      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
-                                 method = "GET",
-                                 query_params = query_params,
-                                 header_params = header_params,
-                                 form_params = form_params,
-                                 file_params = file_params,
-                                 accepts = local_var_accepts,
-                                 content_types = local_var_content_types,
-                                 body = local_var_body,
-                                 is_oauth = is_oauth,
-                                 oauth_scopes = oauth_scopes,
-                                 ...)
-
-      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
-        local_var_resp$content <- NULL
-        local_var_resp
-      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
-        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
-      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
-        ApiResponse$new("API client error", local_var_resp)
-      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
-        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
-          local_var_resp$response <- "API server error"
-        }
-        local_var_resp
-      }
-    },
-    #' GetUniswapDayData
-    #'
-    #' @description
-    #' GetUniswapDayData
-    #'
-    #' @param data_file (optional) name of the data file to save the result
-    #' @param ... Other optional arguments
-    #' @return array[UniswapV3UniswapDayDataV3DTO]
-    #' @export
-    DappsUniswapv3UniswapDayDataCurrentGet = function(data_file = NULL, ...) {
-      local_var_response <- self$DappsUniswapv3UniswapDayDataCurrentGetWithHttpInfo(data_file = data_file, ...)
-      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
-        local_var_response$content
-      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
-        local_var_response
-      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
-        local_var_response
-      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
-        local_var_response
-      }
-    },
-    #' GetUniswapDayData
-    #'
-    #' @description
-    #' GetUniswapDayData
-    #'
-    #' @param data_file (optional) name of the data file to save the result
-    #' @param ... Other optional arguments
-    #' @return API response (array[UniswapV3UniswapDayDataV3DTO]) with additional information such as HTTP status code, headers
-    #' @export
-    DappsUniswapv3UniswapDayDataCurrentGetWithHttpInfo = function(data_file = NULL, ...) {
-      args <- list(...)
-      query_params <- list()
-      header_params <- c()
-      form_params <- list()
-      file_params <- list()
-      local_var_body <- NULL
-      oauth_scopes <- NULL
-      is_oauth <- FALSE
-
-      local_var_url_path <- "/dapps/uniswapv3/uniswapDayData/current"
+      local_var_url_path <- "/dapps/uniswapv3/tokensHourData/historical"
 
       # The Accept request HTTP header
       local_var_accepts <- list("text/plain", "application/json", "text/json")
@@ -4150,7 +4370,113 @@ UniswapV3Api <- R6::R6Class(
         }
 
         deserialized_resp_obj <- tryCatch(
-          self$api_client$deserialize(local_var_resp$response, "array[UniswapV3UniswapDayDataV3DTO]", loadNamespace("openapi")),
+          self$api_client$deserialize(local_var_resp$response, "array[UniswapV3TokenHourDataV3DTO]", loadNamespace("openapi")),
+          error = function(e) {
+            stop("Failed to deserialize response")
+          }
+        )
+        local_var_resp$content <- deserialized_resp_obj
+        local_var_resp
+      } else if (local_var_resp$status_code >= 300 && local_var_resp$status_code <= 399) {
+        ApiResponse$new(paste("Server returned ", local_var_resp$status_code, " response status code."), local_var_resp)
+      } else if (local_var_resp$status_code >= 400 && local_var_resp$status_code <= 499) {
+        ApiResponse$new("API client error", local_var_resp)
+      } else if (local_var_resp$status_code >= 500 && local_var_resp$status_code <= 599) {
+        if (is.null(local_var_resp$response) || local_var_resp$response == "") {
+          local_var_resp$response <- "API server error"
+        }
+        local_var_resp
+      }
+    },
+    #' GetTransactions (historical)
+    #'
+    #' @description
+    #' GetTransactions (historical)
+    #'
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return array[UniswapV3TransactionV3DTO]
+    #' @export
+    UniswapV3GetTransactionsHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, data_file = NULL, ...) {
+      local_var_response <- self$UniswapV3GetTransactionsHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, data_file = data_file, ...)
+      if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
+        local_var_response$content
+      } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
+        local_var_response
+      } else if (local_var_response$status_code >= 400 && local_var_response$status_code <= 499) {
+        local_var_response
+      } else if (local_var_response$status_code >= 500 && local_var_response$status_code <= 599) {
+        local_var_response
+      }
+    },
+    #' GetTransactions (historical)
+    #'
+    #' @description
+    #' GetTransactions (historical)
+    #'
+    #' @param start_block (optional) 
+    #' @param end_block (optional) 
+    #' @param start_date (optional) 
+    #' @param end_date (optional) 
+    #' @param data_file (optional) name of the data file to save the result
+    #' @param ... Other optional arguments
+    #' @return API response (array[UniswapV3TransactionV3DTO]) with additional information such as HTTP status code, headers
+    #' @export
+    UniswapV3GetTransactionsHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, data_file = NULL, ...) {
+      args <- list(...)
+      query_params <- list()
+      header_params <- c()
+      form_params <- list()
+      file_params <- list()
+      local_var_body <- NULL
+      oauth_scopes <- NULL
+      is_oauth <- FALSE
+
+
+
+
+
+      query_params[["startBlock"]] <- `start_block`
+
+      query_params[["endBlock"]] <- `end_block`
+
+      query_params[["startDate"]] <- `start_date`
+
+      query_params[["endDate"]] <- `end_date`
+
+      local_var_url_path <- "/dapps/uniswapv3/transactions/historical"
+
+      # The Accept request HTTP header
+      local_var_accepts <- list("text/plain", "application/json", "text/json")
+
+      # The Content-Type representation header
+      local_var_content_types <- list()
+
+      local_var_resp <- self$api_client$CallApi(url = paste0(self$api_client$base_path, local_var_url_path),
+                                 method = "GET",
+                                 query_params = query_params,
+                                 header_params = header_params,
+                                 form_params = form_params,
+                                 file_params = file_params,
+                                 accepts = local_var_accepts,
+                                 content_types = local_var_content_types,
+                                 body = local_var_body,
+                                 is_oauth = is_oauth,
+                                 oauth_scopes = oauth_scopes,
+                                 ...)
+
+      if (local_var_resp$status_code >= 200 && local_var_resp$status_code <= 299) {
+        # save response in a file
+        if (!is.null(data_file)) {
+          write(local_var_resp$response, data_file)
+        }
+
+        deserialized_resp_obj <- tryCatch(
+          self$api_client$deserialize(local_var_resp$response, "array[UniswapV3TransactionV3DTO]", loadNamespace("openapi")),
           error = function(e) {
             stop("Failed to deserialize response")
           }

@@ -22,7 +22,12 @@
 
 
 #include "CppRestOpenAPIClient/ApiClient.h"
-#include "CppRestOpenAPIClient/ModelBase.h"
+
+#include "CppRestOpenAPIClient/model/Cow_OrderDTO.h"
+#include "CppRestOpenAPIClient/model/Cow_SettlementDTO.h"
+#include "CppRestOpenAPIClient/model/Cow_TokenDTO.h"
+#include "CppRestOpenAPIClient/model/Cow_TradeDTO.h"
+#include "CppRestOpenAPIClient/model/Cow_UserDTO.h"
 #include <cpprest/details/basic_types.h>
 #include <boost/optional.hpp>
 
@@ -44,49 +49,49 @@ public:
     virtual ~CowApi();
 
     /// <summary>
-    /// 
+    /// GetOrders (historical)
     /// </summary>
     /// <remarks>
-    /// 
+    /// Gets orders.
     /// </remarks>
     /// <param name="startBlock"> (optional, default to 0L)</param>
     /// <param name="endBlock"> (optional, default to 0L)</param>
     /// <param name="startDate"> (optional, default to utility::datetime())</param>
     /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    pplx::task<void> dappsCowOrdersHistoricalGet(
+    pplx::task<std::vector<std::shared_ptr<Cow_OrderDTO>>> cow_GetOrders__historical(
         boost::optional<int64_t> startBlock,
         boost::optional<int64_t> endBlock,
         boost::optional<utility::datetime> startDate,
         boost::optional<utility::datetime> endDate
     ) const;
     /// <summary>
-    /// 
+    /// GetSettlements (historical)
     /// </summary>
     /// <remarks>
-    /// 
+    /// Gets settlements.
     /// </remarks>
     /// <param name="startBlock"> (optional, default to 0L)</param>
     /// <param name="endBlock"> (optional, default to 0L)</param>
     /// <param name="startDate"> (optional, default to utility::datetime())</param>
     /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    pplx::task<void> dappsCowSettlementHistoricalGet(
+    pplx::task<std::vector<std::shared_ptr<Cow_SettlementDTO>>> cow_GetSettlements__historical(
         boost::optional<int64_t> startBlock,
         boost::optional<int64_t> endBlock,
         boost::optional<utility::datetime> startDate,
         boost::optional<utility::datetime> endDate
     ) const;
     /// <summary>
-    /// 
+    /// GetTokens (historical) 🔥
     /// </summary>
     /// <remarks>
-    /// 
+    /// Gets tokens.
     /// </remarks>
     /// <param name="startBlock"> (optional, default to 0L)</param>
     /// <param name="endBlock"> (optional, default to 0L)</param>
     /// <param name="startDate"> (optional, default to utility::datetime())</param>
     /// <param name="endDate"> (optional, default to utility::datetime())</param>
     /// <param name="tokenId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<void> dappsCowTokensHistoricalGet(
+    pplx::task<std::vector<std::shared_ptr<Cow_TokenDTO>>> cow_GetTokens__historical(
         boost::optional<int64_t> startBlock,
         boost::optional<int64_t> endBlock,
         boost::optional<utility::datetime> startDate,
@@ -94,32 +99,32 @@ public:
         boost::optional<utility::string_t> tokenId
     ) const;
     /// <summary>
-    /// 
+    /// GetTrades (historical) 🔥
     /// </summary>
     /// <remarks>
-    /// 
+    /// Gets trades.
     /// </remarks>
     /// <param name="startBlock"> (optional, default to 0L)</param>
     /// <param name="endBlock"> (optional, default to 0L)</param>
     /// <param name="startDate"> (optional, default to utility::datetime())</param>
     /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    pplx::task<void> dappsCowTradesHistoricalGet(
+    pplx::task<std::vector<std::shared_ptr<Cow_TradeDTO>>> cow_GetTrades__historical(
         boost::optional<int64_t> startBlock,
         boost::optional<int64_t> endBlock,
         boost::optional<utility::datetime> startDate,
         boost::optional<utility::datetime> endDate
     ) const;
     /// <summary>
-    /// 
+    /// GetUsers (historical)
     /// </summary>
     /// <remarks>
-    /// 
+    /// Gets users.
     /// </remarks>
     /// <param name="startBlock"> (optional, default to 0L)</param>
     /// <param name="endBlock"> (optional, default to 0L)</param>
     /// <param name="startDate"> (optional, default to utility::datetime())</param>
     /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    pplx::task<void> dappsCowUsersHistoricalGet(
+    pplx::task<std::vector<std::shared_ptr<Cow_UserDTO>>> cow_GetUsers__historical(
         boost::optional<int64_t> startBlock,
         boost::optional<int64_t> endBlock,
         boost::optional<utility::datetime> startDate,

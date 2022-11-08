@@ -15,22 +15,29 @@ import type { Observable } from 'rxjs';
 import type { AjaxResponse } from 'rxjs/ajax';
 import { BaseAPI } from '../runtime';
 import type { OperationOpts, HttpQuery } from '../runtime';
+import type {
+    CowOrderDTO,
+    CowSettlementDTO,
+    CowTokenDTO,
+    CowTradeDTO,
+    CowUserDTO,
+} from '../models';
 
-export interface DappsCowOrdersHistoricalGetRequest {
+export interface CowGetOrdersHistoricalRequest {
     startBlock?: number;
     endBlock?: number;
     startDate?: string;
     endDate?: string;
 }
 
-export interface DappsCowSettlementHistoricalGetRequest {
+export interface CowGetSettlementsHistoricalRequest {
     startBlock?: number;
     endBlock?: number;
     startDate?: string;
     endDate?: string;
 }
 
-export interface DappsCowTokensHistoricalGetRequest {
+export interface CowGetTokensHistoricalRequest {
     startBlock?: number;
     endBlock?: number;
     startDate?: string;
@@ -38,14 +45,14 @@ export interface DappsCowTokensHistoricalGetRequest {
     tokenId?: string;
 }
 
-export interface DappsCowTradesHistoricalGetRequest {
+export interface CowGetTradesHistoricalRequest {
     startBlock?: number;
     endBlock?: number;
     startDate?: string;
     endDate?: string;
 }
 
-export interface DappsCowUsersHistoricalGetRequest {
+export interface CowGetUsersHistoricalRequest {
     startBlock?: number;
     endBlock?: number;
     startDate?: string;
@@ -58,10 +65,12 @@ export interface DappsCowUsersHistoricalGetRequest {
 export class CowApi extends BaseAPI {
 
     /**
+     * Gets orders.
+     * GetOrders (historical)
      */
-    dappsCowOrdersHistoricalGet({ startBlock, endBlock, startDate, endDate }: DappsCowOrdersHistoricalGetRequest): Observable<void>
-    dappsCowOrdersHistoricalGet({ startBlock, endBlock, startDate, endDate }: DappsCowOrdersHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
-    dappsCowOrdersHistoricalGet({ startBlock, endBlock, startDate, endDate }: DappsCowOrdersHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
+    cowGetOrdersHistorical({ startBlock, endBlock, startDate, endDate }: CowGetOrdersHistoricalRequest): Observable<Array<CowOrderDTO>>
+    cowGetOrdersHistorical({ startBlock, endBlock, startDate, endDate }: CowGetOrdersHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CowOrderDTO>>>
+    cowGetOrdersHistorical({ startBlock, endBlock, startDate, endDate }: CowGetOrdersHistoricalRequest, opts?: OperationOpts): Observable<Array<CowOrderDTO> | AjaxResponse<Array<CowOrderDTO>>> {
 
         const query: HttpQuery = {};
 
@@ -70,7 +79,7 @@ export class CowApi extends BaseAPI {
         if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
         if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
 
-        return this.request<void>({
+        return this.request<Array<CowOrderDTO>>({
             url: '/dapps/cow/orders/historical',
             method: 'GET',
             query,
@@ -78,10 +87,12 @@ export class CowApi extends BaseAPI {
     };
 
     /**
+     * Gets settlements.
+     * GetSettlements (historical)
      */
-    dappsCowSettlementHistoricalGet({ startBlock, endBlock, startDate, endDate }: DappsCowSettlementHistoricalGetRequest): Observable<void>
-    dappsCowSettlementHistoricalGet({ startBlock, endBlock, startDate, endDate }: DappsCowSettlementHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
-    dappsCowSettlementHistoricalGet({ startBlock, endBlock, startDate, endDate }: DappsCowSettlementHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
+    cowGetSettlementsHistorical({ startBlock, endBlock, startDate, endDate }: CowGetSettlementsHistoricalRequest): Observable<Array<CowSettlementDTO>>
+    cowGetSettlementsHistorical({ startBlock, endBlock, startDate, endDate }: CowGetSettlementsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CowSettlementDTO>>>
+    cowGetSettlementsHistorical({ startBlock, endBlock, startDate, endDate }: CowGetSettlementsHistoricalRequest, opts?: OperationOpts): Observable<Array<CowSettlementDTO> | AjaxResponse<Array<CowSettlementDTO>>> {
 
         const query: HttpQuery = {};
 
@@ -90,18 +101,20 @@ export class CowApi extends BaseAPI {
         if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
         if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
 
-        return this.request<void>({
-            url: '/dapps/cow/settlement/historical',
+        return this.request<Array<CowSettlementDTO>>({
+            url: '/dapps/cow/settlements/historical',
             method: 'GET',
             query,
         }, opts?.responseOpts);
     };
 
     /**
+     * Gets tokens.
+     * GetTokens (historical) 🔥
      */
-    dappsCowTokensHistoricalGet({ startBlock, endBlock, startDate, endDate, tokenId }: DappsCowTokensHistoricalGetRequest): Observable<void>
-    dappsCowTokensHistoricalGet({ startBlock, endBlock, startDate, endDate, tokenId }: DappsCowTokensHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
-    dappsCowTokensHistoricalGet({ startBlock, endBlock, startDate, endDate, tokenId }: DappsCowTokensHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
+    cowGetTokensHistorical({ startBlock, endBlock, startDate, endDate, tokenId }: CowGetTokensHistoricalRequest): Observable<Array<CowTokenDTO>>
+    cowGetTokensHistorical({ startBlock, endBlock, startDate, endDate, tokenId }: CowGetTokensHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CowTokenDTO>>>
+    cowGetTokensHistorical({ startBlock, endBlock, startDate, endDate, tokenId }: CowGetTokensHistoricalRequest, opts?: OperationOpts): Observable<Array<CowTokenDTO> | AjaxResponse<Array<CowTokenDTO>>> {
 
         const query: HttpQuery = {};
 
@@ -111,7 +124,7 @@ export class CowApi extends BaseAPI {
         if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
         if (tokenId != null) { query['tokenId'] = tokenId; }
 
-        return this.request<void>({
+        return this.request<Array<CowTokenDTO>>({
             url: '/dapps/cow/tokens/historical',
             method: 'GET',
             query,
@@ -119,10 +132,12 @@ export class CowApi extends BaseAPI {
     };
 
     /**
+     * Gets trades.
+     * GetTrades (historical) 🔥
      */
-    dappsCowTradesHistoricalGet({ startBlock, endBlock, startDate, endDate }: DappsCowTradesHistoricalGetRequest): Observable<void>
-    dappsCowTradesHistoricalGet({ startBlock, endBlock, startDate, endDate }: DappsCowTradesHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
-    dappsCowTradesHistoricalGet({ startBlock, endBlock, startDate, endDate }: DappsCowTradesHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
+    cowGetTradesHistorical({ startBlock, endBlock, startDate, endDate }: CowGetTradesHistoricalRequest): Observable<Array<CowTradeDTO>>
+    cowGetTradesHistorical({ startBlock, endBlock, startDate, endDate }: CowGetTradesHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CowTradeDTO>>>
+    cowGetTradesHistorical({ startBlock, endBlock, startDate, endDate }: CowGetTradesHistoricalRequest, opts?: OperationOpts): Observable<Array<CowTradeDTO> | AjaxResponse<Array<CowTradeDTO>>> {
 
         const query: HttpQuery = {};
 
@@ -131,7 +146,7 @@ export class CowApi extends BaseAPI {
         if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
         if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
 
-        return this.request<void>({
+        return this.request<Array<CowTradeDTO>>({
             url: '/dapps/cow/trades/historical',
             method: 'GET',
             query,
@@ -139,10 +154,12 @@ export class CowApi extends BaseAPI {
     };
 
     /**
+     * Gets users.
+     * GetUsers (historical)
      */
-    dappsCowUsersHistoricalGet({ startBlock, endBlock, startDate, endDate }: DappsCowUsersHistoricalGetRequest): Observable<void>
-    dappsCowUsersHistoricalGet({ startBlock, endBlock, startDate, endDate }: DappsCowUsersHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>>
-    dappsCowUsersHistoricalGet({ startBlock, endBlock, startDate, endDate }: DappsCowUsersHistoricalGetRequest, opts?: OperationOpts): Observable<void | AjaxResponse<void>> {
+    cowGetUsersHistorical({ startBlock, endBlock, startDate, endDate }: CowGetUsersHistoricalRequest): Observable<Array<CowUserDTO>>
+    cowGetUsersHistorical({ startBlock, endBlock, startDate, endDate }: CowGetUsersHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CowUserDTO>>>
+    cowGetUsersHistorical({ startBlock, endBlock, startDate, endDate }: CowGetUsersHistoricalRequest, opts?: OperationOpts): Observable<Array<CowUserDTO> | AjaxResponse<Array<CowUserDTO>>> {
 
         const query: HttpQuery = {};
 
@@ -151,7 +168,7 @@ export class CowApi extends BaseAPI {
         if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
         if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
 
-        return this.request<void>({
+        return this.request<Array<CowUserDTO>>({
             url: '/dapps/cow/users/historical',
             method: 'GET',
             query,

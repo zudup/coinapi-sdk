@@ -14,6 +14,17 @@
 package org.openapitools.client.api;
 
 import org.openapitools.client.ApiException;
+import org.openapitools.client.model.DexBatchDTO;
+import org.openapitools.client.model.DexDepositDTO;
+import org.openapitools.client.model.DexOrderDTO;
+import org.openapitools.client.model.DexPriceDTO;
+import org.openapitools.client.model.DexSolutionDTO;
+import org.openapitools.client.model.DexStatsDTO;
+import org.openapitools.client.model.DexTokenDTO;
+import org.openapitools.client.model.DexTradeDTO;
+import org.openapitools.client.model.DexUserDTO;
+import org.openapitools.client.model.DexWithdrawDTO;
+import org.openapitools.client.model.DexWithdrawRequestDTO;
 import java.time.OffsetDateTime;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -32,138 +43,196 @@ public class DexApiTest {
     private final DexApi api = new DexApi();
 
     /**
+     * GetBatches (historical)
+     *
+     * Gets batches.
+     *
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void dappsDexBatchHistoricalGetTest() throws ApiException {
+    public void dexGetBatchesHistoricalTest() throws ApiException {
         Long startBlock = null;
         Long endBlock = null;
         OffsetDateTime startDate = null;
         OffsetDateTime endDate = null;
-        api.dappsDexBatchHistoricalGet(startBlock, endBlock, startDate, endDate);
+        List<DexBatchDTO> response = api.dexGetBatchesHistorical(startBlock, endBlock, startDate, endDate);
         // TODO: test validations
     }
 
     /**
+     * GetDeposits (historical)
+     *
+     * Gets deposits.
+     *
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void dappsDexOrdersHistoricalGetTest() throws ApiException {
+    public void dexGetDepositsHistoricalTest() throws ApiException {
         Long startBlock = null;
         Long endBlock = null;
         OffsetDateTime startDate = null;
         OffsetDateTime endDate = null;
         String tokenId = null;
-        api.dappsDexOrdersHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId);
+        List<DexDepositDTO> response = api.dexGetDepositsHistorical(startBlock, endBlock, startDate, endDate, tokenId);
         // TODO: test validations
     }
 
     /**
+     * GetOrders (historical)
+     *
+     * Gets orders.
+     *
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void dappsDexPricesHistoricalGetTest() throws ApiException {
+    public void dexGetOrdersHistoricalTest() throws ApiException {
         Long startBlock = null;
         Long endBlock = null;
         OffsetDateTime startDate = null;
         OffsetDateTime endDate = null;
         String tokenId = null;
-        api.dappsDexPricesHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId);
+        List<DexOrderDTO> response = api.dexGetOrdersHistorical(startBlock, endBlock, startDate, endDate, tokenId);
         // TODO: test validations
     }
 
     /**
+     * GetPrices (historical)
+     *
+     * Gets prices.
+     *
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void dappsDexSolutionHistoricalGetTest() throws ApiException {
+    public void dexGetPricesHistoricalTest() throws ApiException {
         Long startBlock = null;
         Long endBlock = null;
         OffsetDateTime startDate = null;
         OffsetDateTime endDate = null;
         String tokenId = null;
-        api.dappsDexSolutionHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId);
+        List<DexPriceDTO> response = api.dexGetPricesHistorical(startBlock, endBlock, startDate, endDate, tokenId);
         // TODO: test validations
     }
 
     /**
+     * GetSolutions (historical)
+     *
+     * Gets solutions.
+     *
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void dappsDexStatsHistoricalGetTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        api.dappsDexStatsHistoricalGet(startBlock, endBlock, startDate, endDate);
-        // TODO: test validations
-    }
-
-    /**
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void dappsDexTokensHistoricalGetTest() throws ApiException {
+    public void dexGetSolutionsHistoricalTest() throws ApiException {
         Long startBlock = null;
         Long endBlock = null;
         OffsetDateTime startDate = null;
         OffsetDateTime endDate = null;
         String tokenId = null;
-        api.dappsDexTokensHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId);
+        List<DexSolutionDTO> response = api.dexGetSolutionsHistorical(startBlock, endBlock, startDate, endDate, tokenId);
         // TODO: test validations
     }
 
     /**
+     * GetStats (historical)
+     *
+     * Gets stats.
+     *
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void dappsDexTradesHistoricalGetTest() throws ApiException {
+    public void dexGetStatsHistoricalTest() throws ApiException {
         Long startBlock = null;
         Long endBlock = null;
         OffsetDateTime startDate = null;
         OffsetDateTime endDate = null;
-        api.dappsDexTradesHistoricalGet(startBlock, endBlock, startDate, endDate);
+        List<DexStatsDTO> response = api.dexGetStatsHistorical(startBlock, endBlock, startDate, endDate);
         // TODO: test validations
     }
 
     /**
+     * GetTokens (historical) 🔥
+     *
+     * Gets tokens.
+     *
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void dappsDexUsersHistoricalGetTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        api.dappsDexUsersHistoricalGet(startBlock, endBlock, startDate, endDate);
-        // TODO: test validations
-    }
-
-    /**
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void dappsDexWithdrawHistoricalGetTest() throws ApiException {
+    public void dexGetTokensHistoricalTest() throws ApiException {
         Long startBlock = null;
         Long endBlock = null;
         OffsetDateTime startDate = null;
         OffsetDateTime endDate = null;
         String tokenId = null;
-        api.dappsDexWithdrawHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId);
+        List<DexTokenDTO> response = api.dexGetTokensHistorical(startBlock, endBlock, startDate, endDate, tokenId);
         // TODO: test validations
     }
 
     /**
+     * GetTrades (historical) 🔥
+     *
+     * Gets trades.
+     *
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void dappsDexWithdrawRequestHistoricalGetTest() throws ApiException {
+    public void dexGetTradesHistoricalTest() throws ApiException {
+        Long startBlock = null;
+        Long endBlock = null;
+        OffsetDateTime startDate = null;
+        OffsetDateTime endDate = null;
+        List<DexTradeDTO> response = api.dexGetTradesHistorical(startBlock, endBlock, startDate, endDate);
+        // TODO: test validations
+    }
+
+    /**
+     * GetUsers (historical)
+     *
+     * Gets users.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void dexGetUsersHistoricalTest() throws ApiException {
+        Long startBlock = null;
+        Long endBlock = null;
+        OffsetDateTime startDate = null;
+        OffsetDateTime endDate = null;
+        List<DexUserDTO> response = api.dexGetUsersHistorical(startBlock, endBlock, startDate, endDate);
+        // TODO: test validations
+    }
+
+    /**
+     * GetWithdraws (historical)
+     *
+     * Gets withdraws.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void dexGetWithdrawsHistoricalTest() throws ApiException {
         Long startBlock = null;
         Long endBlock = null;
         OffsetDateTime startDate = null;
         OffsetDateTime endDate = null;
         String tokenId = null;
-        api.dappsDexWithdrawRequestHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId);
+        List<DexWithdrawDTO> response = api.dexGetWithdrawsHistorical(startBlock, endBlock, startDate, endDate, tokenId);
+        // TODO: test validations
+    }
+
+    /**
+     * GetWithdrawsRequests (historical)
+     *
+     * Gets withdraws requests.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void dexGetWithdrawsRequestsHistoricalTest() throws ApiException {
+        Long startBlock = null;
+        Long endBlock = null;
+        OffsetDateTime startDate = null;
+        OffsetDateTime endDate = null;
+        String tokenId = null;
+        List<DexWithdrawRequestDTO> response = api.dexGetWithdrawsRequestsHistorical(startBlock, endBlock, startDate, endDate, tokenId);
         // TODO: test validations
     }
 

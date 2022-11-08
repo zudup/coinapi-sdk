@@ -73,384 +73,384 @@ class CurveApiTest extends TestCase
     }
 
     /**
-     * Test case for dappsCurveAccountsHistoricalGet
+     * Test case for curveGetAccountsHistorical
      *
-     * .
+     * GetAccounts (historical).
      *
      */
-    public function testDappsCurveAccountsHistoricalGet()
+    public function testCurveGetAccountsHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsCurveAddLiquidityEventHistoricalGet
+     * Test case for curveGetAddLiquidityEventsHistorical
      *
-     * .
+     * GetAddLiquidityEvents (historical).
      *
      */
-    public function testDappsCurveAddLiquidityEventHistoricalGet()
+    public function testCurveGetAddLiquidityEventsHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsCurveAdminFeeChangeLogHistoricalGet
+     * Test case for curveGetAdminFeeChangeLogsHistorical
      *
-     * .
+     * GetAdminFeeChangeLogs (historical).
      *
      */
-    public function testDappsCurveAdminFeeChangeLogHistoricalGet()
+    public function testCurveGetAdminFeeChangeLogsHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsCurveAmplificationCoeffChangeLogHistoricalGet
+     * Test case for curveGetAmplificationCoeffChangeLogsHistorical
      *
-     * .
+     * GetAmplificationCoeffChangeLogs (historical).
      *
      */
-    public function testDappsCurveAmplificationCoeffChangeLogHistoricalGet()
+    public function testCurveGetAmplificationCoeffChangeLogsHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsCurveCoinsHistoricalGet
+     * Test case for curveGetCoinsHistorical
      *
-     * .
+     * GetCoins (historical).
      *
      */
-    public function testDappsCurveCoinsHistoricalGet()
+    public function testCurveGetCoinsHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsCurveContractsHistoricalGet
+     * Test case for curveGetContractsHistorical
      *
-     * .
+     * GetContracts (historical).
      *
      */
-    public function testDappsCurveContractsHistoricalGet()
+    public function testCurveGetContractsHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsCurveContractsVersionHistoricalGet
+     * Test case for curveGetContractsVersionsHistorical
      *
-     * .
+     * GetContractsVersions (historical).
      *
      */
-    public function testDappsCurveContractsVersionHistoricalGet()
+    public function testCurveGetContractsVersionsHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsCurveDailyVolumeHistoricalGet
+     * Test case for curveGetDailyVolumesHistorical
      *
-     * .
+     * GetDailyVolumes (historical).
      *
      */
-    public function testDappsCurveDailyVolumeHistoricalGet()
+    public function testCurveGetDailyVolumesHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsCurveFeeChangeLogHistoricalGet
+     * Test case for curveGetExchangesHistorical
      *
-     * .
+     * GetExchanges (historical) 🔥.
      *
      */
-    public function testDappsCurveFeeChangeLogHistoricalGet()
+    public function testCurveGetExchangesHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsCurveGaugeDepositHistoricalGet
+     * Test case for curveGetFeeChangeLogsHistorical
      *
-     * .
+     * GetFeeChangeLogs (historical).
      *
      */
-    public function testDappsCurveGaugeDepositHistoricalGet()
+    public function testCurveGetFeeChangeLogsHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsCurveGaugeHistoricalGet
+     * Test case for curveGetGaugesDepositsHistorical
      *
-     * .
+     * GetGaugesDeposits (historical).
      *
      */
-    public function testDappsCurveGaugeHistoricalGet()
+    public function testCurveGetGaugesDepositsHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsCurveGaugeLiquidityHistoricalGet
+     * Test case for curveGetGaugesHistorical
      *
-     * .
+     * GetGauges (historical).
      *
      */
-    public function testDappsCurveGaugeLiquidityHistoricalGet()
+    public function testCurveGetGaugesHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsCurveGaugeTotalWeightHistoricalGet
+     * Test case for curveGetGaugesLiquidityHistorical
      *
-     * .
+     * GetGaugesLiquidity (historical).
      *
      */
-    public function testDappsCurveGaugeTotalWeightHistoricalGet()
+    public function testCurveGetGaugesLiquidityHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsCurveGaugeTypeHistoricalGet
+     * Test case for curveGetGaugesTotalWeightsHistorical
      *
-     * .
+     * GetGaugesTotalWeights (historical).
      *
      */
-    public function testDappsCurveGaugeTypeHistoricalGet()
+    public function testCurveGetGaugesTotalWeightsHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsCurveGaugeTypeWeightHistoricalGet
+     * Test case for curveGetGaugesTypesHistorical
      *
-     * .
+     * GetGaugesTypes (historical).
      *
      */
-    public function testDappsCurveGaugeTypeWeightHistoricalGet()
+    public function testCurveGetGaugesTypesHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsCurveGaugeWeightHistoricalGet
+     * Test case for curveGetGaugesTypesWeightsHistorical
      *
-     * .
+     * GetGaugesTypesWeights (historical).
      *
      */
-    public function testDappsCurveGaugeWeightHistoricalGet()
+    public function testCurveGetGaugesTypesWeightsHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsCurveGaugeWeightVoteHistoricalGet
+     * Test case for curveGetGaugesWeightsHistorical
      *
-     * .
+     * GetGaugesWeights (historical).
      *
      */
-    public function testDappsCurveGaugeWeightVoteHistoricalGet()
+    public function testCurveGetGaugesWeightsHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsCurveGaugeWithdrawHistoricalGet
+     * Test case for curveGetGaugesWeightsVotesHistorical
      *
-     * .
+     * GetGaugesWeightsVotes (historical).
      *
      */
-    public function testDappsCurveGaugeWithdrawHistoricalGet()
+    public function testCurveGetGaugesWeightsVotesHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsCurveHourlyVolumeHistoricalGet
+     * Test case for curveGetGaugesWithdrawHistorical
      *
-     * .
+     * GetGaugesWithdraw (historical).
      *
      */
-    public function testDappsCurveHourlyVolumeHistoricalGet()
+    public function testCurveGetGaugesWithdrawHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsCurveLpTokenHistoricalGet
+     * Test case for curveGetHourlyVolumesHistorical
      *
-     * .
+     * GetHourlyVolumes (historical).
      *
      */
-    public function testDappsCurveLpTokenHistoricalGet()
+    public function testCurveGetHourlyVolumesHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsCurvePoolsHistoricalGet
+     * Test case for curveGetLpTokensHistorical
      *
-     * .
+     * GetLpTokens (historical).
      *
      */
-    public function testDappsCurvePoolsHistoricalGet()
+    public function testCurveGetLpTokensHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsCurveProposalsHistoricalGet
+     * Test case for curveGetPoolsHistorical
      *
-     * .
+     * GetPools (historical) 🔥.
      *
      */
-    public function testDappsCurveProposalsHistoricalGet()
+    public function testCurveGetPoolsHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsCurveProposalsVoteHistoricalGet
+     * Test case for curveGetProposalsHistorical
      *
-     * .
+     * GetProposals (historical).
      *
      */
-    public function testDappsCurveProposalsVoteHistoricalGet()
+    public function testCurveGetProposalsHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsCurveRemoveLiquidityEventHistoricalGet
+     * Test case for curveGetProposalsVotesHistorical
      *
-     * .
+     * GetProposalsVotes (historical).
      *
      */
-    public function testDappsCurveRemoveLiquidityEventHistoricalGet()
+    public function testCurveGetProposalsVotesHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsCurveRemoveLiquidityOneEventHistoricalGet
+     * Test case for curveGetRemoveLiquidityEventsHistorical
      *
-     * .
+     * GetRemoveLiquidityEvents (historical).
      *
      */
-    public function testDappsCurveRemoveLiquidityOneEventHistoricalGet()
+    public function testCurveGetRemoveLiquidityEventsHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsCurveSwapsHistoricalGet
+     * Test case for curveGetRemoveLiquidityOneEventsHistorical
      *
-     * .
+     * GetRemoveLiquidityOneEvents (historical).
      *
      */
-    public function testDappsCurveSwapsHistoricalGet()
+    public function testCurveGetRemoveLiquidityOneEventsHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsCurveSystemStateHistoricalGet
+     * Test case for curveGetSystemStatesHistorical
      *
-     * .
+     * GetSystemStates (historical).
      *
      */
-    public function testDappsCurveSystemStateHistoricalGet()
+    public function testCurveGetSystemStatesHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsCurveTokensHistoricalGet
+     * Test case for curveGetTokensHistorical
      *
-     * .
+     * GetTokens (historical) 🔥.
      *
      */
-    public function testDappsCurveTokensHistoricalGet()
+    public function testCurveGetTokensHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsCurveTransferOwnershipEventHistoricalGet
+     * Test case for curveGetTransferOwnershipEventsHistorical
      *
-     * .
+     * GetTransferOwnershipEvents (historical).
      *
      */
-    public function testDappsCurveTransferOwnershipEventHistoricalGet()
+    public function testCurveGetTransferOwnershipEventsHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsCurveUnderlyingCoinHistoricalGet
+     * Test case for curveGetUnderlyingCoinsHistorical
      *
-     * .
+     * GetUnderlyingCoins (historical).
      *
      */
-    public function testDappsCurveUnderlyingCoinHistoricalGet()
+    public function testCurveGetUnderlyingCoinsHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsCurveVotingAppHistoricalGet
+     * Test case for curveGetVotingAppsHistorical
      *
-     * .
+     * GetVotingApps (historical).
      *
      */
-    public function testDappsCurveVotingAppHistoricalGet()
+    public function testCurveGetVotingAppsHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for dappsCurveWeeklyVolumeHistoricalGet
+     * Test case for curveGetWeeklyVolumesHistorical
      *
-     * .
+     * GetWeeklyVolumes (historical).
      *
      */
-    public function testDappsCurveWeeklyVolumeHistoricalGet()
+    public function testCurveGetWeeklyVolumesHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

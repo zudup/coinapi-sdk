@@ -1,14 +1,25 @@
 package org.openapitools.api;
 
 import org.openapitools.api.ApiUtils
+import org.openapitools.model.DexBatchDTO
+import org.openapitools.model.DexDepositDTO
+import org.openapitools.model.DexOrderDTO
+import org.openapitools.model.DexPriceDTO
+import org.openapitools.model.DexSolutionDTO
+import org.openapitools.model.DexStatsDTO
+import org.openapitools.model.DexTokenDTO
+import org.openapitools.model.DexTradeDTO
+import org.openapitools.model.DexUserDTO
+import org.openapitools.model.DexWithdrawDTO
+import org.openapitools.model.DexWithdrawRequestDTO
 
 class DexApi {
     String basePath = "https://onchain.coinapi.io"
     String versionPath = ""
     ApiUtils apiUtils = new ApiUtils();
 
-    def dappsDexBatchHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/dex/batch/historical"
+    def dexGetBatchesHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/dex/batches/historical"
 
         // params
         def queryParams = [:]
@@ -34,12 +45,47 @@ class DexApi {
 
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "",
-                    null )
+                    "GET", "array",
+                    DexBatchDTO.class )
 
     }
 
-    def dappsDexOrdersHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId, Closure onSuccess, Closure onFailure)  {
+    def dexGetDepositsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/dex/deposits/historical"
+
+        // params
+        def queryParams = [:]
+        def headerParams = [:]
+        def bodyParams
+        def contentType
+
+
+        if (startBlock != null) {
+            queryParams.put("startBlock", startBlock)
+        }
+        if (endBlock != null) {
+            queryParams.put("endBlock", endBlock)
+        }
+        if (startDate != null) {
+            queryParams.put("startDate", startDate)
+        }
+        if (endDate != null) {
+            queryParams.put("endDate", endDate)
+        }
+        if (tokenId != null) {
+            queryParams.put("tokenId", tokenId)
+        }
+
+
+
+
+        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
+                    "GET", "array",
+                    DexDepositDTO.class )
+
+    }
+
+    def dexGetOrdersHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId, Closure onSuccess, Closure onFailure)  {
         String resourcePath = "/dapps/dex/orders/historical"
 
         // params
@@ -69,12 +115,12 @@ class DexApi {
 
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "",
-                    null )
+                    "GET", "array",
+                    DexOrderDTO.class )
 
     }
 
-    def dappsDexPricesHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId, Closure onSuccess, Closure onFailure)  {
+    def dexGetPricesHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId, Closure onSuccess, Closure onFailure)  {
         String resourcePath = "/dapps/dex/prices/historical"
 
         // params
@@ -104,13 +150,13 @@ class DexApi {
 
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "",
-                    null )
+                    "GET", "array",
+                    DexPriceDTO.class )
 
     }
 
-    def dappsDexSolutionHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/dex/solution/historical"
+    def dexGetSolutionsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/dex/solutions/historical"
 
         // params
         def queryParams = [:]
@@ -139,12 +185,12 @@ class DexApi {
 
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "",
-                    null )
+                    "GET", "array",
+                    DexSolutionDTO.class )
 
     }
 
-    def dappsDexStatsHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
+    def dexGetStatsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
         String resourcePath = "/dapps/dex/stats/historical"
 
         // params
@@ -171,12 +217,12 @@ class DexApi {
 
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "",
-                    null )
+                    "GET", "array",
+                    DexStatsDTO.class )
 
     }
 
-    def dappsDexTokensHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId, Closure onSuccess, Closure onFailure)  {
+    def dexGetTokensHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId, Closure onSuccess, Closure onFailure)  {
         String resourcePath = "/dapps/dex/tokens/historical"
 
         // params
@@ -206,12 +252,12 @@ class DexApi {
 
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "",
-                    null )
+                    "GET", "array",
+                    DexTokenDTO.class )
 
     }
 
-    def dappsDexTradesHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
+    def dexGetTradesHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
         String resourcePath = "/dapps/dex/trades/historical"
 
         // params
@@ -238,12 +284,12 @@ class DexApi {
 
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "",
-                    null )
+                    "GET", "array",
+                    DexTradeDTO.class )
 
     }
 
-    def dappsDexUsersHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
+    def dexGetUsersHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
         String resourcePath = "/dapps/dex/users/historical"
 
         // params
@@ -270,13 +316,13 @@ class DexApi {
 
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "",
-                    null )
+                    "GET", "array",
+                    DexUserDTO.class )
 
     }
 
-    def dappsDexWithdrawHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/dex/withdraw/historical"
+    def dexGetWithdrawsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/dex/withdraws/historical"
 
         // params
         def queryParams = [:]
@@ -305,13 +351,13 @@ class DexApi {
 
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "",
-                    null )
+                    "GET", "array",
+                    DexWithdrawDTO.class )
 
     }
 
-    def dappsDexWithdrawRequestHistoricalGet ( Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/dex/withdrawRequest/historical"
+    def dexGetWithdrawsRequestsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/dex/withdrawsRequests/historical"
 
         // params
         def queryParams = [:]
@@ -340,8 +386,8 @@ class DexApi {
 
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "",
-                    null )
+                    "GET", "array",
+                    DexWithdrawRequestDTO.class )
 
     }
 

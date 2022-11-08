@@ -7,81 +7,89 @@
 #
 
 Describe -tag 'PSOpenAPITools' -name 'DexApi' {
-    Context 'Invoke-DappsDexBatchHistoricalGet' {
-        It 'Test Invoke-DappsDexBatchHistoricalGet' {
-            #$TestResult = Invoke-DappsDexBatchHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
+    Context 'Invoke-DexGetBatchesHistorical' {
+        It 'Test Invoke-DexGetBatchesHistorical' {
+            #$TestResult = Invoke-DexGetBatchesHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsDexOrdersHistoricalGet' {
-        It 'Test Invoke-DappsDexOrdersHistoricalGet' {
-            #$TestResult = Invoke-DappsDexOrdersHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -TokenId "TEST_VALUE"
+    Context 'Invoke-DexGetDepositsHistorical' {
+        It 'Test Invoke-DexGetDepositsHistorical' {
+            #$TestResult = Invoke-DexGetDepositsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -TokenId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsDexPricesHistoricalGet' {
-        It 'Test Invoke-DappsDexPricesHistoricalGet' {
-            #$TestResult = Invoke-DappsDexPricesHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -TokenId "TEST_VALUE"
+    Context 'Invoke-DexGetOrdersHistorical' {
+        It 'Test Invoke-DexGetOrdersHistorical' {
+            #$TestResult = Invoke-DexGetOrdersHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -TokenId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsDexSolutionHistoricalGet' {
-        It 'Test Invoke-DappsDexSolutionHistoricalGet' {
-            #$TestResult = Invoke-DappsDexSolutionHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -TokenId "TEST_VALUE"
+    Context 'Invoke-DexGetPricesHistorical' {
+        It 'Test Invoke-DexGetPricesHistorical' {
+            #$TestResult = Invoke-DexGetPricesHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -TokenId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsDexStatsHistoricalGet' {
-        It 'Test Invoke-DappsDexStatsHistoricalGet' {
-            #$TestResult = Invoke-DappsDexStatsHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
+    Context 'Invoke-DexGetSolutionsHistorical' {
+        It 'Test Invoke-DexGetSolutionsHistorical' {
+            #$TestResult = Invoke-DexGetSolutionsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -TokenId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsDexTokensHistoricalGet' {
-        It 'Test Invoke-DappsDexTokensHistoricalGet' {
-            #$TestResult = Invoke-DappsDexTokensHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -TokenId "TEST_VALUE"
+    Context 'Invoke-DexGetStatsHistorical' {
+        It 'Test Invoke-DexGetStatsHistorical' {
+            #$TestResult = Invoke-DexGetStatsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsDexTradesHistoricalGet' {
-        It 'Test Invoke-DappsDexTradesHistoricalGet' {
-            #$TestResult = Invoke-DappsDexTradesHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
+    Context 'Invoke-DexGetTokensHistorical' {
+        It 'Test Invoke-DexGetTokensHistorical' {
+            #$TestResult = Invoke-DexGetTokensHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -TokenId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsDexUsersHistoricalGet' {
-        It 'Test Invoke-DappsDexUsersHistoricalGet' {
-            #$TestResult = Invoke-DappsDexUsersHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
+    Context 'Invoke-DexGetTradesHistorical' {
+        It 'Test Invoke-DexGetTradesHistorical' {
+            #$TestResult = Invoke-DexGetTradesHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsDexWithdrawHistoricalGet' {
-        It 'Test Invoke-DappsDexWithdrawHistoricalGet' {
-            #$TestResult = Invoke-DappsDexWithdrawHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -TokenId "TEST_VALUE"
+    Context 'Invoke-DexGetUsersHistorical' {
+        It 'Test Invoke-DexGetUsersHistorical' {
+            #$TestResult = Invoke-DexGetUsersHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
     }
 
-    Context 'Invoke-DappsDexWithdrawRequestHistoricalGet' {
-        It 'Test Invoke-DappsDexWithdrawRequestHistoricalGet' {
-            #$TestResult = Invoke-DappsDexWithdrawRequestHistoricalGet -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -TokenId "TEST_VALUE"
+    Context 'Invoke-DexGetWithdrawsRequestsHistorical' {
+        It 'Test Invoke-DexGetWithdrawsRequestsHistorical' {
+            #$TestResult = Invoke-DexGetWithdrawsRequestsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -TokenId "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-DexGetWithdrawsHistorical' {
+        It 'Test Invoke-DexGetWithdrawsHistorical' {
+            #$TestResult = Invoke-DexGetWithdrawsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -TokenId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }

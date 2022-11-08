@@ -5,137 +5,173 @@ context("Test DexApi")
 
 api_instance <- DexApi$new()
 
-test_that("DappsDexBatchHistoricalGet", {
-  # tests for DappsDexBatchHistoricalGet
+test_that("DexGetBatchesHistorical", {
+  # tests for DexGetBatchesHistorical
   # base path: https://onchain.coinapi.io
+  # GetBatches (historical)
+  # Gets batches.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
   # @param start_date character  (optional)
   # @param end_date character  (optional)
-  # @return [Void]
+  # @return [array[DexBatchDTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("DappsDexOrdersHistoricalGet", {
-  # tests for DappsDexOrdersHistoricalGet
+test_that("DexGetDepositsHistorical", {
+  # tests for DexGetDepositsHistorical
   # base path: https://onchain.coinapi.io
+  # GetDeposits (historical)
+  # Gets deposits.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
   # @param start_date character  (optional)
   # @param end_date character  (optional)
   # @param token_id character  (optional)
-  # @return [Void]
+  # @return [array[DexDepositDTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("DappsDexPricesHistoricalGet", {
-  # tests for DappsDexPricesHistoricalGet
+test_that("DexGetOrdersHistorical", {
+  # tests for DexGetOrdersHistorical
   # base path: https://onchain.coinapi.io
+  # GetOrders (historical)
+  # Gets orders.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
   # @param start_date character  (optional)
   # @param end_date character  (optional)
   # @param token_id character  (optional)
-  # @return [Void]
+  # @return [array[DexOrderDTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("DappsDexSolutionHistoricalGet", {
-  # tests for DappsDexSolutionHistoricalGet
+test_that("DexGetPricesHistorical", {
+  # tests for DexGetPricesHistorical
   # base path: https://onchain.coinapi.io
+  # GetPrices (historical)
+  # Gets prices.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
   # @param start_date character  (optional)
   # @param end_date character  (optional)
   # @param token_id character  (optional)
-  # @return [Void]
+  # @return [array[DexPriceDTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("DappsDexStatsHistoricalGet", {
-  # tests for DappsDexStatsHistoricalGet
+test_that("DexGetSolutionsHistorical", {
+  # tests for DexGetSolutionsHistorical
   # base path: https://onchain.coinapi.io
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @return [Void]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
-test_that("DappsDexTokensHistoricalGet", {
-  # tests for DappsDexTokensHistoricalGet
-  # base path: https://onchain.coinapi.io
+  # GetSolutions (historical)
+  # Gets solutions.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
   # @param start_date character  (optional)
   # @param end_date character  (optional)
   # @param token_id character  (optional)
-  # @return [Void]
+  # @return [array[DexSolutionDTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("DappsDexTradesHistoricalGet", {
-  # tests for DappsDexTradesHistoricalGet
+test_that("DexGetStatsHistorical", {
+  # tests for DexGetStatsHistorical
   # base path: https://onchain.coinapi.io
+  # GetStats (historical)
+  # Gets stats.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
   # @param start_date character  (optional)
   # @param end_date character  (optional)
-  # @return [Void]
+  # @return [array[DexStatsDTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("DappsDexUsersHistoricalGet", {
-  # tests for DappsDexUsersHistoricalGet
+test_that("DexGetTokensHistorical", {
+  # tests for DexGetTokensHistorical
   # base path: https://onchain.coinapi.io
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @return [Void]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
-test_that("DappsDexWithdrawHistoricalGet", {
-  # tests for DappsDexWithdrawHistoricalGet
-  # base path: https://onchain.coinapi.io
+  # GetTokens (historical) 🔥
+  # Gets tokens.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
   # @param start_date character  (optional)
   # @param end_date character  (optional)
   # @param token_id character  (optional)
-  # @return [Void]
+  # @return [array[DexTokenDTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("DappsDexWithdrawRequestHistoricalGet", {
-  # tests for DappsDexWithdrawRequestHistoricalGet
+test_that("DexGetTradesHistorical", {
+  # tests for DexGetTradesHistorical
   # base path: https://onchain.coinapi.io
+  # GetTrades (historical) 🔥
+  # Gets trades.
+  # @param start_block integer  (optional)
+  # @param end_block integer  (optional)
+  # @param start_date character  (optional)
+  # @param end_date character  (optional)
+  # @return [array[DexTradeDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("DexGetUsersHistorical", {
+  # tests for DexGetUsersHistorical
+  # base path: https://onchain.coinapi.io
+  # GetUsers (historical)
+  # Gets users.
+  # @param start_block integer  (optional)
+  # @param end_block integer  (optional)
+  # @param start_date character  (optional)
+  # @param end_date character  (optional)
+  # @return [array[DexUserDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("DexGetWithdrawsHistorical", {
+  # tests for DexGetWithdrawsHistorical
+  # base path: https://onchain.coinapi.io
+  # GetWithdraws (historical)
+  # Gets withdraws.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
   # @param start_date character  (optional)
   # @param end_date character  (optional)
   # @param token_id character  (optional)
-  # @return [Void]
+  # @return [array[DexWithdrawDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("DexGetWithdrawsRequestsHistorical", {
+  # tests for DexGetWithdrawsRequestsHistorical
+  # base path: https://onchain.coinapi.io
+  # GetWithdrawsRequests (historical)
+  # Gets withdraws requests.
+  # @param start_block integer  (optional)
+  # @param end_block integer  (optional)
+  # @param start_date character  (optional)
+  # @param end_date character  (optional)
+  # @param token_id character  (optional)
+  # @return [array[DexWithdrawRequestDTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")

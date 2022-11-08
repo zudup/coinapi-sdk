@@ -9,124 +9,32 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**dappsUniswapv2BundlesHistoricalGet**](UniswapV2Api.md#dappsuniswapv2bundleshistoricalget) | **GET** /dapps/uniswapv2/bundles/historical | 
-[**dappsUniswapv2BurnsHistoricalGet**](UniswapV2Api.md#dappsuniswapv2burnshistoricalget) | **GET** /dapps/uniswapv2/burns/historical | 
-[**dappsUniswapv2DayDataHistoricalGet**](UniswapV2Api.md#dappsuniswapv2daydatahistoricalget) | **GET** /dapps/uniswapv2/dayData/historical | 
-[**dappsUniswapv2FactoryHistoricalGet**](UniswapV2Api.md#dappsuniswapv2factoryhistoricalget) | **GET** /dapps/uniswapv2/factory/historical | 
-[**dappsUniswapv2LiquidityPositionHistoricalGet**](UniswapV2Api.md#dappsuniswapv2liquiditypositionhistoricalget) | **GET** /dapps/uniswapv2/liquidityPosition/historical | 
-[**dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet**](UniswapV2Api.md#dappsuniswapv2liquiditypositionsnapshotshistoricalget) | **GET** /dapps/uniswapv2/liquidityPositionSnapshots/historical | 
-[**dappsUniswapv2MintsHistoricalGet**](UniswapV2Api.md#dappsuniswapv2mintshistoricalget) | **GET** /dapps/uniswapv2/mints/historical | 
-[**dappsUniswapv2PoolDayDataHistoricalGet**](UniswapV2Api.md#dappsuniswapv2pooldaydatahistoricalget) | **GET** /dapps/uniswapv2/poolDayData/historical | 
-[**dappsUniswapv2PoolHourDataHistoricalGet**](UniswapV2Api.md#dappsuniswapv2poolhourdatahistoricalget) | **GET** /dapps/uniswapv2/poolHourData/historical | 
-[**dappsUniswapv2PoolsCurrentGet**](UniswapV2Api.md#dappsuniswapv2poolscurrentget) | **GET** /dapps/uniswapv2/pools/current | GetPools
-[**dappsUniswapv2PoolsHistoricalGet**](UniswapV2Api.md#dappsuniswapv2poolshistoricalget) | **GET** /dapps/uniswapv2/pools/historical | 
-[**dappsUniswapv2SwapsCurrentGet**](UniswapV2Api.md#dappsuniswapv2swapscurrentget) | **GET** /dapps/uniswapv2/swaps/current | GetSwaps
-[**dappsUniswapv2SwapsHistoricalGet**](UniswapV2Api.md#dappsuniswapv2swapshistoricalget) | **GET** /dapps/uniswapv2/swaps/historical | 
-[**dappsUniswapv2TokenDayDataHistoricalGet**](UniswapV2Api.md#dappsuniswapv2tokendaydatahistoricalget) | **GET** /dapps/uniswapv2/tokenDayData/historical | 
-[**dappsUniswapv2TokensCurrentGet**](UniswapV2Api.md#dappsuniswapv2tokenscurrentget) | **GET** /dapps/uniswapv2/tokens/current | GetTokens
-[**dappsUniswapv2TokensHistoricalGet**](UniswapV2Api.md#dappsuniswapv2tokenshistoricalget) | **GET** /dapps/uniswapv2/tokens/historical | 
-[**dappsUniswapv2TransactionsHistoricalGet**](UniswapV2Api.md#dappsuniswapv2transactionshistoricalget) | **GET** /dapps/uniswapv2/transactions/historical | 
-[**dappsUniswapv2UsersHistoricalGet**](UniswapV2Api.md#dappsuniswapv2usershistoricalget) | **GET** /dapps/uniswapv2/users/historical | 
+[**uniswapV2GetBundlesHistorical**](UniswapV2Api.md#uniswapv2getbundleshistorical) | **GET** /dapps/uniswapv2/bundles/historical | GetBundles (historical)
+[**uniswapV2GetBurnsHistorical**](UniswapV2Api.md#uniswapv2getburnshistorical) | **GET** /dapps/uniswapv2/burns/historical | GetBurns (historical)
+[**uniswapV2GetDayDataHistorical**](UniswapV2Api.md#uniswapv2getdaydatahistorical) | **GET** /dapps/uniswapv2/dayData/historical | GetDayData (historical)
+[**uniswapV2GetFactoryHistorical**](UniswapV2Api.md#uniswapv2getfactoryhistorical) | **GET** /dapps/uniswapv2/factory/historical | GetFactory (historical)
+[**uniswapV2GetLiquidityPositionsHistorical**](UniswapV2Api.md#uniswapv2getliquiditypositionshistorical) | **GET** /dapps/uniswapv2/liquidityPositions/historical | GetLiquidityPositions (historical)
+[**uniswapV2GetLiquidityPositionsSnapshotsHistorical**](UniswapV2Api.md#uniswapv2getliquiditypositionssnapshotshistorical) | **GET** /dapps/uniswapv2/liquidityPositionsSnapshots/historical | GetLiquidityPositionsSnapshots (historical)
+[**uniswapV2GetMintsHistorical**](UniswapV2Api.md#uniswapv2getmintshistorical) | **GET** /dapps/uniswapv2/mints/historical | GetMints (historical)
+[**uniswapV2GetPoolsCurrent**](UniswapV2Api.md#uniswapv2getpoolscurrent) | **GET** /dapps/uniswapv2/pools/current | GetPools (current) 🔥
+[**uniswapV2GetPoolsDayDataHistorical**](UniswapV2Api.md#uniswapv2getpoolsdaydatahistorical) | **GET** /dapps/uniswapv2/poolsDayData/historical | GetPoolsDayData (historical)
+[**uniswapV2GetPoolsHistorical**](UniswapV2Api.md#uniswapv2getpoolshistorical) | **GET** /dapps/uniswapv2/pools/historical | GetPools (historical) 🔥
+[**uniswapV2GetPoolsHourDataHistorical**](UniswapV2Api.md#uniswapv2getpoolshourdatahistorical) | **GET** /dapps/uniswapv2/poolsHourData/historical | GetPoolsHourData (historical)
+[**uniswapV2GetSwapsCurrent**](UniswapV2Api.md#uniswapv2getswapscurrent) | **GET** /dapps/uniswapv2/swaps/current | GetSwaps (current) 🔥
+[**uniswapV2GetSwapsHistorical**](UniswapV2Api.md#uniswapv2getswapshistorical) | **GET** /dapps/uniswapv2/swaps/historical | GetSwaps (historical) 🔥
+[**uniswapV2GetTokensCurrent**](UniswapV2Api.md#uniswapv2gettokenscurrent) | **GET** /dapps/uniswapv2/tokens/current | GetTokens (current) 🔥
+[**uniswapV2GetTokensDayDataHistorical**](UniswapV2Api.md#uniswapv2gettokensdaydatahistorical) | **GET** /dapps/uniswapv2/tokensDayData/historical | GetTokensDayData (historical)
+[**uniswapV2GetTokensHistorical**](UniswapV2Api.md#uniswapv2gettokenshistorical) | **GET** /dapps/uniswapv2/tokens/historical | GetTokens (historical) 🔥
+[**uniswapV2GetTransactionsHistorical**](UniswapV2Api.md#uniswapv2gettransactionshistorical) | **GET** /dapps/uniswapv2/transactions/historical | GetTransactions (historical)
+[**uniswapV2GetUsersHistorical**](UniswapV2Api.md#uniswapv2getusershistorical) | **GET** /dapps/uniswapv2/users/historical | GetUsers (historical)
 
 
-# **dappsUniswapv2BundlesHistoricalGet**
-> dappsUniswapv2BundlesHistoricalGet(startBlock, endBlock, startDate, endDate)
+# **uniswapV2GetBundlesHistorical**
+> BuiltList<UniswapV2BundleV2DTO> uniswapV2GetBundlesHistorical(startBlock, endBlock, startDate, endDate)
 
+GetBundles (historical)
 
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-
-final api = Openapi().getUniswapV2Api();
-final int startBlock = 789; // int | 
-final int endBlock = 789; // int | 
-final DateTime startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-final DateTime endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-
-try {
-    api.dappsUniswapv2BundlesHistoricalGet(startBlock, endBlock, startDate, endDate);
-} catch on DioError (e) {
-    print('Exception when calling UniswapV2Api->dappsUniswapv2BundlesHistoricalGet: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **int**|  | [optional] 
- **endBlock** | **int**|  | [optional] 
- **startDate** | **DateTime**|  | [optional] 
- **endDate** | **DateTime**|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **dappsUniswapv2BurnsHistoricalGet**
-> dappsUniswapv2BurnsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
-
-
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-
-final api = Openapi().getUniswapV2Api();
-final int startBlock = 789; // int | 
-final int endBlock = 789; // int | 
-final DateTime startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-final DateTime endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-final String poolId = poolId_example; // String | 
-
-try {
-    api.dappsUniswapv2BurnsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
-} catch on DioError (e) {
-    print('Exception when calling UniswapV2Api->dappsUniswapv2BurnsHistoricalGet: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **int**|  | [optional] 
- **endBlock** | **int**|  | [optional] 
- **startDate** | **DateTime**|  | [optional] 
- **endDate** | **DateTime**|  | [optional] 
- **poolId** | **String**|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **dappsUniswapv2DayDataHistoricalGet**
-> dappsUniswapv2DayDataHistoricalGet(startBlock, endBlock, startDate, endDate)
-
-
+Gets bundles.
 
 ### Example
 ```dart
@@ -139,339 +47,10 @@ final DateTime startDate = 2013-10-20T19:20:30+01:00; // DateTime |
 final DateTime endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
 
 try {
-    api.dappsUniswapv2DayDataHistoricalGet(startBlock, endBlock, startDate, endDate);
-} catch on DioError (e) {
-    print('Exception when calling UniswapV2Api->dappsUniswapv2DayDataHistoricalGet: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **int**|  | [optional] 
- **endBlock** | **int**|  | [optional] 
- **startDate** | **DateTime**|  | [optional] 
- **endDate** | **DateTime**|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **dappsUniswapv2FactoryHistoricalGet**
-> dappsUniswapv2FactoryHistoricalGet(startBlock, endBlock, startDate, endDate)
-
-
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-
-final api = Openapi().getUniswapV2Api();
-final int startBlock = 789; // int | 
-final int endBlock = 789; // int | 
-final DateTime startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-final DateTime endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-
-try {
-    api.dappsUniswapv2FactoryHistoricalGet(startBlock, endBlock, startDate, endDate);
-} catch on DioError (e) {
-    print('Exception when calling UniswapV2Api->dappsUniswapv2FactoryHistoricalGet: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **int**|  | [optional] 
- **endBlock** | **int**|  | [optional] 
- **startDate** | **DateTime**|  | [optional] 
- **endDate** | **DateTime**|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **dappsUniswapv2LiquidityPositionHistoricalGet**
-> dappsUniswapv2LiquidityPositionHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
-
-
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-
-final api = Openapi().getUniswapV2Api();
-final int startBlock = 789; // int | 
-final int endBlock = 789; // int | 
-final DateTime startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-final DateTime endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-final String poolId = poolId_example; // String | 
-
-try {
-    api.dappsUniswapv2LiquidityPositionHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
-} catch on DioError (e) {
-    print('Exception when calling UniswapV2Api->dappsUniswapv2LiquidityPositionHistoricalGet: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **int**|  | [optional] 
- **endBlock** | **int**|  | [optional] 
- **startDate** | **DateTime**|  | [optional] 
- **endDate** | **DateTime**|  | [optional] 
- **poolId** | **String**|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet**
-> dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
-
-
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-
-final api = Openapi().getUniswapV2Api();
-final int startBlock = 789; // int | 
-final int endBlock = 789; // int | 
-final DateTime startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-final DateTime endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-final String poolId = poolId_example; // String | 
-
-try {
-    api.dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
-} catch on DioError (e) {
-    print('Exception when calling UniswapV2Api->dappsUniswapv2LiquidityPositionSnapshotsHistoricalGet: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **int**|  | [optional] 
- **endBlock** | **int**|  | [optional] 
- **startDate** | **DateTime**|  | [optional] 
- **endDate** | **DateTime**|  | [optional] 
- **poolId** | **String**|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **dappsUniswapv2MintsHistoricalGet**
-> dappsUniswapv2MintsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
-
-
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-
-final api = Openapi().getUniswapV2Api();
-final int startBlock = 789; // int | 
-final int endBlock = 789; // int | 
-final DateTime startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-final DateTime endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-final String poolId = poolId_example; // String | 
-
-try {
-    api.dappsUniswapv2MintsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
-} catch on DioError (e) {
-    print('Exception when calling UniswapV2Api->dappsUniswapv2MintsHistoricalGet: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **int**|  | [optional] 
- **endBlock** | **int**|  | [optional] 
- **startDate** | **DateTime**|  | [optional] 
- **endDate** | **DateTime**|  | [optional] 
- **poolId** | **String**|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **dappsUniswapv2PoolDayDataHistoricalGet**
-> dappsUniswapv2PoolDayDataHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
-
-
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-
-final api = Openapi().getUniswapV2Api();
-final int startBlock = 789; // int | 
-final int endBlock = 789; // int | 
-final DateTime startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-final DateTime endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-final String poolId = poolId_example; // String | 
-
-try {
-    api.dappsUniswapv2PoolDayDataHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
-} catch on DioError (e) {
-    print('Exception when calling UniswapV2Api->dappsUniswapv2PoolDayDataHistoricalGet: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **int**|  | [optional] 
- **endBlock** | **int**|  | [optional] 
- **startDate** | **DateTime**|  | [optional] 
- **endDate** | **DateTime**|  | [optional] 
- **poolId** | **String**|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **dappsUniswapv2PoolHourDataHistoricalGet**
-> dappsUniswapv2PoolHourDataHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
-
-
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-
-final api = Openapi().getUniswapV2Api();
-final int startBlock = 789; // int | 
-final int endBlock = 789; // int | 
-final DateTime startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-final DateTime endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-final String poolId = poolId_example; // String | 
-
-try {
-    api.dappsUniswapv2PoolHourDataHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
-} catch on DioError (e) {
-    print('Exception when calling UniswapV2Api->dappsUniswapv2PoolHourDataHistoricalGet: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **int**|  | [optional] 
- **endBlock** | **int**|  | [optional] 
- **startDate** | **DateTime**|  | [optional] 
- **endDate** | **DateTime**|  | [optional] 
- **poolId** | **String**|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **dappsUniswapv2PoolsCurrentGet**
-> BuiltList<UniswapV2PairV2DTO> dappsUniswapv2PoolsCurrentGet(filterPoolId)
-
-GetPools
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-
-final api = Openapi().getUniswapV2Api();
-final String filterPoolId = filterPoolId_example; // String | Filter pool id
-
-try {
-    final response = api.dappsUniswapv2PoolsCurrentGet(filterPoolId);
+    final response = api.uniswapV2GetBundlesHistorical(startBlock, endBlock, startDate, endDate);
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling UniswapV2Api->dappsUniswapv2PoolsCurrentGet: $e\n');
+    print('Exception when calling UniswapV2Api->uniswapV2GetBundlesHistorical: $e\n');
 }
 ```
 
@@ -479,7 +58,355 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filterPoolId** | **String**| Filter pool id | [optional] 
+ **startBlock** | **int**|  | [optional] 
+ **endBlock** | **int**|  | [optional] 
+ **startDate** | **DateTime**|  | [optional] 
+ **endDate** | **DateTime**|  | [optional] 
+
+### Return type
+
+[**BuiltList&lt;UniswapV2BundleV2DTO&gt;**](UniswapV2BundleV2DTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **uniswapV2GetBurnsHistorical**
+> BuiltList<UniswapV2BurnV2DTO> uniswapV2GetBurnsHistorical(startBlock, endBlock, startDate, endDate, poolId)
+
+GetBurns (historical)
+
+Gets burns.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getUniswapV2Api();
+final int startBlock = 789; // int | 
+final int endBlock = 789; // int | 
+final DateTime startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final DateTime endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final String poolId = poolId_example; // String | 
+
+try {
+    final response = api.uniswapV2GetBurnsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling UniswapV2Api->uniswapV2GetBurnsHistorical: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int**|  | [optional] 
+ **endBlock** | **int**|  | [optional] 
+ **startDate** | **DateTime**|  | [optional] 
+ **endDate** | **DateTime**|  | [optional] 
+ **poolId** | **String**|  | [optional] 
+
+### Return type
+
+[**BuiltList&lt;UniswapV2BurnV2DTO&gt;**](UniswapV2BurnV2DTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **uniswapV2GetDayDataHistorical**
+> BuiltList<UniswapV2UniswapDayDataV2DTO> uniswapV2GetDayDataHistorical(startBlock, endBlock, startDate, endDate)
+
+GetDayData (historical)
+
+Gets uniswapv2 day data.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getUniswapV2Api();
+final int startBlock = 789; // int | 
+final int endBlock = 789; // int | 
+final DateTime startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final DateTime endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+
+try {
+    final response = api.uniswapV2GetDayDataHistorical(startBlock, endBlock, startDate, endDate);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling UniswapV2Api->uniswapV2GetDayDataHistorical: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int**|  | [optional] 
+ **endBlock** | **int**|  | [optional] 
+ **startDate** | **DateTime**|  | [optional] 
+ **endDate** | **DateTime**|  | [optional] 
+
+### Return type
+
+[**BuiltList&lt;UniswapV2UniswapDayDataV2DTO&gt;**](UniswapV2UniswapDayDataV2DTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **uniswapV2GetFactoryHistorical**
+> BuiltList<UniswapV2UniswapFactoryV2DTO> uniswapV2GetFactoryHistorical(startBlock, endBlock, startDate, endDate)
+
+GetFactory (historical)
+
+Gets factory.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getUniswapV2Api();
+final int startBlock = 789; // int | 
+final int endBlock = 789; // int | 
+final DateTime startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final DateTime endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+
+try {
+    final response = api.uniswapV2GetFactoryHistorical(startBlock, endBlock, startDate, endDate);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling UniswapV2Api->uniswapV2GetFactoryHistorical: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int**|  | [optional] 
+ **endBlock** | **int**|  | [optional] 
+ **startDate** | **DateTime**|  | [optional] 
+ **endDate** | **DateTime**|  | [optional] 
+
+### Return type
+
+[**BuiltList&lt;UniswapV2UniswapFactoryV2DTO&gt;**](UniswapV2UniswapFactoryV2DTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **uniswapV2GetLiquidityPositionsHistorical**
+> BuiltList<UniswapV2LiquidityPositionV2DTO> uniswapV2GetLiquidityPositionsHistorical(startBlock, endBlock, startDate, endDate, poolId)
+
+GetLiquidityPositions (historical)
+
+Gets liquidity positions.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getUniswapV2Api();
+final int startBlock = 789; // int | 
+final int endBlock = 789; // int | 
+final DateTime startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final DateTime endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final String poolId = poolId_example; // String | 
+
+try {
+    final response = api.uniswapV2GetLiquidityPositionsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling UniswapV2Api->uniswapV2GetLiquidityPositionsHistorical: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int**|  | [optional] 
+ **endBlock** | **int**|  | [optional] 
+ **startDate** | **DateTime**|  | [optional] 
+ **endDate** | **DateTime**|  | [optional] 
+ **poolId** | **String**|  | [optional] 
+
+### Return type
+
+[**BuiltList&lt;UniswapV2LiquidityPositionV2DTO&gt;**](UniswapV2LiquidityPositionV2DTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **uniswapV2GetLiquidityPositionsSnapshotsHistorical**
+> BuiltList<UniswapV2LiquidityPositionSnapshotV2DTO> uniswapV2GetLiquidityPositionsSnapshotsHistorical(startBlock, endBlock, startDate, endDate, poolId)
+
+GetLiquidityPositionsSnapshots (historical)
+
+Gets liquidity positions snapshots.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getUniswapV2Api();
+final int startBlock = 789; // int | 
+final int endBlock = 789; // int | 
+final DateTime startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final DateTime endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final String poolId = poolId_example; // String | 
+
+try {
+    final response = api.uniswapV2GetLiquidityPositionsSnapshotsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling UniswapV2Api->uniswapV2GetLiquidityPositionsSnapshotsHistorical: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int**|  | [optional] 
+ **endBlock** | **int**|  | [optional] 
+ **startDate** | **DateTime**|  | [optional] 
+ **endDate** | **DateTime**|  | [optional] 
+ **poolId** | **String**|  | [optional] 
+
+### Return type
+
+[**BuiltList&lt;UniswapV2LiquidityPositionSnapshotV2DTO&gt;**](UniswapV2LiquidityPositionSnapshotV2DTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **uniswapV2GetMintsHistorical**
+> BuiltList<UniswapV2MintV2DTO> uniswapV2GetMintsHistorical(startBlock, endBlock, startDate, endDate, poolId)
+
+GetMints (historical)
+
+Gets mints.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getUniswapV2Api();
+final int startBlock = 789; // int | 
+final int endBlock = 789; // int | 
+final DateTime startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final DateTime endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final String poolId = poolId_example; // String | 
+
+try {
+    final response = api.uniswapV2GetMintsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling UniswapV2Api->uniswapV2GetMintsHistorical: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int**|  | [optional] 
+ **endBlock** | **int**|  | [optional] 
+ **startDate** | **DateTime**|  | [optional] 
+ **endDate** | **DateTime**|  | [optional] 
+ **poolId** | **String**|  | [optional] 
+
+### Return type
+
+[**BuiltList&lt;UniswapV2MintV2DTO&gt;**](UniswapV2MintV2DTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **uniswapV2GetPoolsCurrent**
+> BuiltList<UniswapV2PairV2DTO> uniswapV2GetPoolsCurrent(filterPoolId)
+
+GetPools (current) 🔥
+
+Gets pools.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getUniswapV2Api();
+final String filterPoolId = filterPoolId_example; // String | 
+
+try {
+    final response = api.uniswapV2GetPoolsCurrent(filterPoolId);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling UniswapV2Api->uniswapV2GetPoolsCurrent: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **filterPoolId** | **String**|  | [optional] 
 
 ### Return type
 
@@ -496,10 +423,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dappsUniswapv2PoolsHistoricalGet**
-> dappsUniswapv2PoolsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+# **uniswapV2GetPoolsDayDataHistorical**
+> BuiltList<UniswapV2PairDayDataV2DTO> uniswapV2GetPoolsDayDataHistorical(startBlock, endBlock, startDate, endDate, poolId)
 
+GetPoolsDayData (historical)
 
+Gets pools day data.
 
 ### Example
 ```dart
@@ -513,9 +442,10 @@ final DateTime endDate = 2013-10-20T19:20:30+01:00; // DateTime |
 final String poolId = poolId_example; // String | 
 
 try {
-    api.dappsUniswapv2PoolsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+    final response = api.uniswapV2GetPoolsDayDataHistorical(startBlock, endBlock, startDate, endDate, poolId);
+    print(response);
 } catch on DioError (e) {
-    print('Exception when calling UniswapV2Api->dappsUniswapv2PoolsHistoricalGet: $e\n');
+    print('Exception when calling UniswapV2Api->uniswapV2GetPoolsDayDataHistorical: $e\n');
 }
 ```
 
@@ -531,7 +461,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**BuiltList&lt;UniswapV2PairDayDataV2DTO&gt;**](UniswapV2PairDayDataV2DTO.md)
 
 ### Authorization
 
@@ -540,14 +470,118 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dappsUniswapv2SwapsCurrentGet**
-> BuiltList<UniswapV2SwapV2DTO> dappsUniswapv2SwapsCurrentGet()
+# **uniswapV2GetPoolsHistorical**
+> BuiltList<UniswapV2PairV2DTO> uniswapV2GetPoolsHistorical(startBlock, endBlock, startDate, endDate, poolId)
 
-GetSwaps
+GetPools (historical) 🔥
+
+Gets pools.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getUniswapV2Api();
+final int startBlock = 789; // int | 
+final int endBlock = 789; // int | 
+final DateTime startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final DateTime endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final String poolId = poolId_example; // String | 
+
+try {
+    final response = api.uniswapV2GetPoolsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling UniswapV2Api->uniswapV2GetPoolsHistorical: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int**|  | [optional] 
+ **endBlock** | **int**|  | [optional] 
+ **startDate** | **DateTime**|  | [optional] 
+ **endDate** | **DateTime**|  | [optional] 
+ **poolId** | **String**|  | [optional] 
+
+### Return type
+
+[**BuiltList&lt;UniswapV2PairV2DTO&gt;**](UniswapV2PairV2DTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **uniswapV2GetPoolsHourDataHistorical**
+> BuiltList<UniswapV2PairHourDataV2DTO> uniswapV2GetPoolsHourDataHistorical(startBlock, endBlock, startDate, endDate, poolId)
+
+GetPoolsHourData (historical)
+
+Gets pools tracked each our.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getUniswapV2Api();
+final int startBlock = 789; // int | 
+final int endBlock = 789; // int | 
+final DateTime startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final DateTime endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final String poolId = poolId_example; // String | 
+
+try {
+    final response = api.uniswapV2GetPoolsHourDataHistorical(startBlock, endBlock, startDate, endDate, poolId);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling UniswapV2Api->uniswapV2GetPoolsHourDataHistorical: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int**|  | [optional] 
+ **endBlock** | **int**|  | [optional] 
+ **startDate** | **DateTime**|  | [optional] 
+ **endDate** | **DateTime**|  | [optional] 
+ **poolId** | **String**|  | [optional] 
+
+### Return type
+
+[**BuiltList&lt;UniswapV2PairHourDataV2DTO&gt;**](UniswapV2PairHourDataV2DTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **uniswapV2GetSwapsCurrent**
+> BuiltList<UniswapV2SwapV2DTO> uniswapV2GetSwapsCurrent()
+
+GetSwaps (current) 🔥
+
+Gets swaps.
 
 ### Example
 ```dart
@@ -556,10 +590,10 @@ import 'package:openapi/api.dart';
 final api = Openapi().getUniswapV2Api();
 
 try {
-    final response = api.dappsUniswapv2SwapsCurrentGet();
+    final response = api.uniswapV2GetSwapsCurrent();
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling UniswapV2Api->dappsUniswapv2SwapsCurrentGet: $e\n');
+    print('Exception when calling UniswapV2Api->uniswapV2GetSwapsCurrent: $e\n');
 }
 ```
 
@@ -581,10 +615,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dappsUniswapv2SwapsHistoricalGet**
-> dappsUniswapv2SwapsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId)
+# **uniswapV2GetSwapsHistorical**
+> BuiltList<UniswapV2SwapV2DTO> uniswapV2GetSwapsHistorical(startBlock, endBlock, startDate, endDate, poolId)
 
+GetSwaps (historical) 🔥
 
+Gets swaps.
 
 ### Example
 ```dart
@@ -598,9 +634,10 @@ final DateTime endDate = 2013-10-20T19:20:30+01:00; // DateTime |
 final String poolId = poolId_example; // String | 
 
 try {
-    api.dappsUniswapv2SwapsHistoricalGet(startBlock, endBlock, startDate, endDate, poolId);
+    final response = api.uniswapV2GetSwapsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+    print(response);
 } catch on DioError (e) {
-    print('Exception when calling UniswapV2Api->dappsUniswapv2SwapsHistoricalGet: $e\n');
+    print('Exception when calling UniswapV2Api->uniswapV2GetSwapsHistorical: $e\n');
 }
 ```
 
@@ -616,7 +653,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**BuiltList&lt;UniswapV2SwapV2DTO&gt;**](UniswapV2SwapV2DTO.md)
 
 ### Authorization
 
@@ -625,62 +662,16 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dappsUniswapv2TokenDayDataHistoricalGet**
-> dappsUniswapv2TokenDayDataHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId)
+# **uniswapV2GetTokensCurrent**
+> BuiltList<UniswapV2TokenV2DTO> uniswapV2GetTokensCurrent()
 
+GetTokens (current) 🔥
 
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-
-final api = Openapi().getUniswapV2Api();
-final int startBlock = 789; // int | 
-final int endBlock = 789; // int | 
-final DateTime startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-final DateTime endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-final String tokenId = tokenId_example; // String | 
-
-try {
-    api.dappsUniswapv2TokenDayDataHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId);
-} catch on DioError (e) {
-    print('Exception when calling UniswapV2Api->dappsUniswapv2TokenDayDataHistoricalGet: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **startBlock** | **int**|  | [optional] 
- **endBlock** | **int**|  | [optional] 
- **startDate** | **DateTime**|  | [optional] 
- **endDate** | **DateTime**|  | [optional] 
- **tokenId** | **String**|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **dappsUniswapv2TokensCurrentGet**
-> BuiltList<UniswapV2TokenV2DTO> dappsUniswapv2TokensCurrentGet()
-
-GetTokens
+Gets tokens.
 
 ### Example
 ```dart
@@ -689,10 +680,10 @@ import 'package:openapi/api.dart';
 final api = Openapi().getUniswapV2Api();
 
 try {
-    final response = api.dappsUniswapv2TokensCurrentGet();
+    final response = api.uniswapV2GetTokensCurrent();
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling UniswapV2Api->dappsUniswapv2TokensCurrentGet: $e\n');
+    print('Exception when calling UniswapV2Api->uniswapV2GetTokensCurrent: $e\n');
 }
 ```
 
@@ -714,10 +705,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dappsUniswapv2TokensHistoricalGet**
-> dappsUniswapv2TokensHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId)
+# **uniswapV2GetTokensDayDataHistorical**
+> BuiltList<UniswapV2TokenDayDataV2DTO> uniswapV2GetTokensDayDataHistorical(startBlock, endBlock, startDate, endDate, tokenId)
 
+GetTokensDayData (historical)
 
+Gets tokens day data.
 
 ### Example
 ```dart
@@ -731,9 +724,10 @@ final DateTime endDate = 2013-10-20T19:20:30+01:00; // DateTime |
 final String tokenId = tokenId_example; // String | 
 
 try {
-    api.dappsUniswapv2TokensHistoricalGet(startBlock, endBlock, startDate, endDate, tokenId);
+    final response = api.uniswapV2GetTokensDayDataHistorical(startBlock, endBlock, startDate, endDate, tokenId);
+    print(response);
 } catch on DioError (e) {
-    print('Exception when calling UniswapV2Api->dappsUniswapv2TokensHistoricalGet: $e\n');
+    print('Exception when calling UniswapV2Api->uniswapV2GetTokensDayDataHistorical: $e\n');
 }
 ```
 
@@ -749,7 +743,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**BuiltList&lt;UniswapV2TokenDayDataV2DTO&gt;**](UniswapV2TokenDayDataV2DTO.md)
 
 ### Authorization
 
@@ -758,14 +752,67 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dappsUniswapv2TransactionsHistoricalGet**
-> dappsUniswapv2TransactionsHistoricalGet(startBlock, endBlock, startDate, endDate)
+# **uniswapV2GetTokensHistorical**
+> BuiltList<UniswapV2TokenV2DTO> uniswapV2GetTokensHistorical(startBlock, endBlock, startDate, endDate, tokenId)
 
+GetTokens (historical) 🔥
 
+Gets tokens.
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getUniswapV2Api();
+final int startBlock = 789; // int | 
+final int endBlock = 789; // int | 
+final DateTime startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final DateTime endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final String tokenId = tokenId_example; // String | 
+
+try {
+    final response = api.uniswapV2GetTokensHistorical(startBlock, endBlock, startDate, endDate, tokenId);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling UniswapV2Api->uniswapV2GetTokensHistorical: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int**|  | [optional] 
+ **endBlock** | **int**|  | [optional] 
+ **startDate** | **DateTime**|  | [optional] 
+ **endDate** | **DateTime**|  | [optional] 
+ **tokenId** | **String**|  | [optional] 
+
+### Return type
+
+[**BuiltList&lt;UniswapV2TokenV2DTO&gt;**](UniswapV2TokenV2DTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **uniswapV2GetTransactionsHistorical**
+> BuiltList<UniswapV2TransactionV2DTO> uniswapV2GetTransactionsHistorical(startBlock, endBlock, startDate, endDate)
+
+GetTransactions (historical)
+
+Gets transactions.
 
 ### Example
 ```dart
@@ -778,9 +825,10 @@ final DateTime startDate = 2013-10-20T19:20:30+01:00; // DateTime |
 final DateTime endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
 
 try {
-    api.dappsUniswapv2TransactionsHistoricalGet(startBlock, endBlock, startDate, endDate);
+    final response = api.uniswapV2GetTransactionsHistorical(startBlock, endBlock, startDate, endDate);
+    print(response);
 } catch on DioError (e) {
-    print('Exception when calling UniswapV2Api->dappsUniswapv2TransactionsHistoricalGet: $e\n');
+    print('Exception when calling UniswapV2Api->uniswapV2GetTransactionsHistorical: $e\n');
 }
 ```
 
@@ -795,7 +843,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**BuiltList&lt;UniswapV2TransactionV2DTO&gt;**](UniswapV2TransactionV2DTO.md)
 
 ### Authorization
 
@@ -804,14 +852,16 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dappsUniswapv2UsersHistoricalGet**
-> dappsUniswapv2UsersHistoricalGet(startBlock, endBlock, startDate, endDate)
+# **uniswapV2GetUsersHistorical**
+> BuiltList<UniswapV2UserV2DTO> uniswapV2GetUsersHistorical(startBlock, endBlock, startDate, endDate)
 
+GetUsers (historical)
 
+Gets users.
 
 ### Example
 ```dart
@@ -824,9 +874,10 @@ final DateTime startDate = 2013-10-20T19:20:30+01:00; // DateTime |
 final DateTime endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
 
 try {
-    api.dappsUniswapv2UsersHistoricalGet(startBlock, endBlock, startDate, endDate);
+    final response = api.uniswapV2GetUsersHistorical(startBlock, endBlock, startDate, endDate);
+    print(response);
 } catch on DioError (e) {
-    print('Exception when calling UniswapV2Api->dappsUniswapv2UsersHistoricalGet: $e\n');
+    print('Exception when calling UniswapV2Api->uniswapV2GetUsersHistorical: $e\n');
 }
 ```
 
@@ -841,7 +892,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**BuiltList&lt;UniswapV2UserV2DTO&gt;**](UniswapV2UserV2DTO.md)
 
 ### Authorization
 
@@ -850,7 +901,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

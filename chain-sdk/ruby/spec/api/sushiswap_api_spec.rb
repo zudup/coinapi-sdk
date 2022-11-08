@@ -32,14 +32,36 @@ describe 'SushiswapApi' do
     end
   end
 
+  # unit tests for curve_get_exchanges__current
+  # GetExchanges (current) 🔥
+  # Gets exchanges.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<CurveExchangeDTO>]
+  describe 'curve_get_exchanges__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for dex_get_trades__current
+  # GetTrades (current) 🔥
+  # Gets trades.
+  # @param [Hash] opts the optional parameters
+  # @return [Array<DexTradeDTO>]
+  describe 'dex_get_trades__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
   # unit tests for sushiswap_get_bundles__historical
   # GetBundles (historical)
   # Gets bundles.
   # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block 
-  # @option opts [Integer] :end_block 
-  # @option opts [Time] :start_date 
-  # @option opts [Time] :end_date 
+  # @option opts [Integer] :start_block AAAAAAAAAA
+  # @option opts [Integer] :end_block BBBBBBBBBBBB
+  # @option opts [Time] :start_date CCCCCCCCC
+  # @option opts [Time] :end_date DDDDDDDDDDD
   # @return [Array<SushiswapBundleDTO>]
   describe 'sushiswap_get_bundles__historical test' do
     it 'should work' do
@@ -157,7 +179,7 @@ describe 'SushiswapApi' do
   end
 
   # unit tests for sushiswap_get_pools__current
-  # GetPools (current)
+  # GetPools (current) 🔥
   # Gets pools.
   # @param [Hash] opts the optional parameters
   # @return [Array<SushiswapPairDTO>]
@@ -168,14 +190,14 @@ describe 'SushiswapApi' do
   end
 
   # unit tests for sushiswap_get_pools__historical
-  # GetPools (historical)
+  # GetPools (historical) 🔥
   # Gets list of pools for given filters.
   # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block 
-  # @option opts [Integer] :end_block 
-  # @option opts [Time] :start_date 
-  # @option opts [Time] :end_date 
-  # @option opts [String] :pool_id 
+  # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  # @option opts [Time] :start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  # @option opts [Time] :end_date The end date of timeframe
+  # @option opts [String] :pool_id The pool address.
   # @return [Array<SushiswapPairDTO>]
   describe 'sushiswap_get_pools__historical test' do
     it 'should work' do
@@ -216,7 +238,7 @@ describe 'SushiswapApi' do
   end
 
   # unit tests for sushiswap_get_swaps__current
-  # GetSwaps (current)
+  # GetSwaps (current) 🔥
   # Gets swaps.
   # @param [Hash] opts the optional parameters
   # @return [Array<SushiswapSwapDTO>]
@@ -227,14 +249,14 @@ describe 'SushiswapApi' do
   end
 
   # unit tests for sushiswap_get_swaps__historical
-  # GetSwaps (historical)
+  # GetSwaps (historical) 🔥
   # Gets list of swaps for given filters.
   # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block 
-  # @option opts [Integer] :end_block 
-  # @option opts [Time] :start_date 
-  # @option opts [Time] :end_date 
-  # @option opts [String] :pool_id 
+  # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  # @option opts [Time] :start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  # @option opts [Time] :end_date The end date of timeframe
+  # @option opts [String] :pool_id The pool address.
   # @return [Array<SushiswapSwapDTO>]
   describe 'sushiswap_get_swaps__historical test' do
     it 'should work' do
@@ -243,7 +265,7 @@ describe 'SushiswapApi' do
   end
 
   # unit tests for sushiswap_get_tokens__current
-  # GetTokens (current)
+  # GetTokens (current) 🔥
   # Gets tokens.
   # @param [Hash] opts the optional parameters
   # @return [Array<SushiswapTokenDTO>]
@@ -254,14 +276,14 @@ describe 'SushiswapApi' do
   end
 
   # unit tests for sushiswap_get_tokens__historical
-  # GetTokens (historical)
+  # GetTokens (historical) 🔥
   # Gets list of tokens for given filters.
   # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block 
-  # @option opts [Integer] :end_block 
-  # @option opts [Time] :start_date 
-  # @option opts [Time] :end_date 
-  # @option opts [String] :token_id 
+  # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  # @option opts [Time] :start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  # @option opts [Time] :end_date The end date of timeframe
+  # @option opts [String] :token_id The token address.
   # @return [Array<SushiswapTokenDTO>]
   describe 'sushiswap_get_tokens__historical test' do
     it 'should work' do

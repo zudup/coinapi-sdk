@@ -15,225 +15,225 @@ Please update as you see appropriate
 ]]
 describe("curve_api", function()
   local openapiclient_curve_api = require "openapiclient.api.curve_api"
-  -- unit tests for dapps_curve_accounts_historical_get
-  describe("dapps_curve_accounts_historical_get test", function()
+  -- unit tests for curve_get_accounts__historical
+  describe("curve_get_accounts__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for dapps_curve_add_liquidity_event_historical_get
-  describe("dapps_curve_add_liquidity_event_historical_get test", function()
+  -- unit tests for curve_get_add_liquidity_events__historical
+  describe("curve_get_add_liquidity_events__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for dapps_curve_admin_fee_change_log_historical_get
-  describe("dapps_curve_admin_fee_change_log_historical_get test", function()
+  -- unit tests for curve_get_admin_fee_change_logs__historical
+  describe("curve_get_admin_fee_change_logs__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for dapps_curve_amplification_coeff_change_log_historical_get
-  describe("dapps_curve_amplification_coeff_change_log_historical_get test", function()
+  -- unit tests for curve_get_amplification_coeff_change_logs__historical
+  describe("curve_get_amplification_coeff_change_logs__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for dapps_curve_coins_historical_get
-  describe("dapps_curve_coins_historical_get test", function()
+  -- unit tests for curve_get_coins__historical
+  describe("curve_get_coins__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for dapps_curve_contracts_historical_get
-  describe("dapps_curve_contracts_historical_get test", function()
+  -- unit tests for curve_get_contracts__historical
+  describe("curve_get_contracts__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for dapps_curve_contracts_version_historical_get
-  describe("dapps_curve_contracts_version_historical_get test", function()
+  -- unit tests for curve_get_contracts_versions__historical
+  describe("curve_get_contracts_versions__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for dapps_curve_daily_volume_historical_get
-  describe("dapps_curve_daily_volume_historical_get test", function()
+  -- unit tests for curve_get_daily_volumes__historical
+  describe("curve_get_daily_volumes__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for dapps_curve_fee_change_log_historical_get
-  describe("dapps_curve_fee_change_log_historical_get test", function()
+  -- unit tests for curve_get_exchanges__historical
+  describe("curve_get_exchanges__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for dapps_curve_gauge_deposit_historical_get
-  describe("dapps_curve_gauge_deposit_historical_get test", function()
+  -- unit tests for curve_get_fee_change_logs__historical
+  describe("curve_get_fee_change_logs__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for dapps_curve_gauge_historical_get
-  describe("dapps_curve_gauge_historical_get test", function()
+  -- unit tests for curve_get_gauges__historical
+  describe("curve_get_gauges__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for dapps_curve_gauge_liquidity_historical_get
-  describe("dapps_curve_gauge_liquidity_historical_get test", function()
+  -- unit tests for curve_get_gauges_deposits__historical
+  describe("curve_get_gauges_deposits__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for dapps_curve_gauge_total_weight_historical_get
-  describe("dapps_curve_gauge_total_weight_historical_get test", function()
+  -- unit tests for curve_get_gauges_liquidity__historical
+  describe("curve_get_gauges_liquidity__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for dapps_curve_gauge_type_historical_get
-  describe("dapps_curve_gauge_type_historical_get test", function()
+  -- unit tests for curve_get_gauges_total_weights__historical
+  describe("curve_get_gauges_total_weights__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for dapps_curve_gauge_type_weight_historical_get
-  describe("dapps_curve_gauge_type_weight_historical_get test", function()
+  -- unit tests for curve_get_gauges_types__historical
+  describe("curve_get_gauges_types__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for dapps_curve_gauge_weight_historical_get
-  describe("dapps_curve_gauge_weight_historical_get test", function()
+  -- unit tests for curve_get_gauges_types_weights__historical
+  describe("curve_get_gauges_types_weights__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for dapps_curve_gauge_weight_vote_historical_get
-  describe("dapps_curve_gauge_weight_vote_historical_get test", function()
+  -- unit tests for curve_get_gauges_weights__historical
+  describe("curve_get_gauges_weights__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for dapps_curve_gauge_withdraw_historical_get
-  describe("dapps_curve_gauge_withdraw_historical_get test", function()
+  -- unit tests for curve_get_gauges_weights_votes__historical
+  describe("curve_get_gauges_weights_votes__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for dapps_curve_hourly_volume_historical_get
-  describe("dapps_curve_hourly_volume_historical_get test", function()
+  -- unit tests for curve_get_gauges_withdraw__historical
+  describe("curve_get_gauges_withdraw__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for dapps_curve_lp_token_historical_get
-  describe("dapps_curve_lp_token_historical_get test", function()
+  -- unit tests for curve_get_hourly_volumes__historical
+  describe("curve_get_hourly_volumes__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for dapps_curve_pools_historical_get
-  describe("dapps_curve_pools_historical_get test", function()
+  -- unit tests for curve_get_lp_tokens__historical
+  describe("curve_get_lp_tokens__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for dapps_curve_proposals_historical_get
-  describe("dapps_curve_proposals_historical_get test", function()
+  -- unit tests for curve_get_pools__historical
+  describe("curve_get_pools__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for dapps_curve_proposals_vote_historical_get
-  describe("dapps_curve_proposals_vote_historical_get test", function()
+  -- unit tests for curve_get_proposals__historical
+  describe("curve_get_proposals__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for dapps_curve_remove_liquidity_event_historical_get
-  describe("dapps_curve_remove_liquidity_event_historical_get test", function()
+  -- unit tests for curve_get_proposals_votes__historical
+  describe("curve_get_proposals_votes__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for dapps_curve_remove_liquidity_one_event_historical_get
-  describe("dapps_curve_remove_liquidity_one_event_historical_get test", function()
+  -- unit tests for curve_get_remove_liquidity_events__historical
+  describe("curve_get_remove_liquidity_events__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for dapps_curve_swaps_historical_get
-  describe("dapps_curve_swaps_historical_get test", function()
+  -- unit tests for curve_get_remove_liquidity_one_events__historical
+  describe("curve_get_remove_liquidity_one_events__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for dapps_curve_system_state_historical_get
-  describe("dapps_curve_system_state_historical_get test", function()
+  -- unit tests for curve_get_system_states__historical
+  describe("curve_get_system_states__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for dapps_curve_tokens_historical_get
-  describe("dapps_curve_tokens_historical_get test", function()
+  -- unit tests for curve_get_tokens__historical
+  describe("curve_get_tokens__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for dapps_curve_transfer_ownership_event_historical_get
-  describe("dapps_curve_transfer_ownership_event_historical_get test", function()
+  -- unit tests for curve_get_transfer_ownership_events__historical
+  describe("curve_get_transfer_ownership_events__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for dapps_curve_underlying_coin_historical_get
-  describe("dapps_curve_underlying_coin_historical_get test", function()
+  -- unit tests for curve_get_underlying_coins__historical
+  describe("curve_get_underlying_coins__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for dapps_curve_voting_app_historical_get
-  describe("dapps_curve_voting_app_historical_get test", function()
+  -- unit tests for curve_get_voting_apps__historical
+  describe("curve_get_voting_apps__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
   end)
 
-  -- unit tests for dapps_curve_weekly_volume_historical_get
-  describe("dapps_curve_weekly_volume_historical_get test", function()
+  -- unit tests for curve_get_weekly_volumes__historical
+  describe("curve_get_weekly_volumes__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)

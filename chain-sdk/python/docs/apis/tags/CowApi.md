@@ -5,23 +5,26 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**dapps_cow_orders_historical_get**](#dapps_cow_orders_historical_get) | **get** /dapps/cow/orders/historical | 
-[**dapps_cow_settlement_historical_get**](#dapps_cow_settlement_historical_get) | **get** /dapps/cow/settlement/historical | 
-[**dapps_cow_tokens_historical_get**](#dapps_cow_tokens_historical_get) | **get** /dapps/cow/tokens/historical | 
-[**dapps_cow_trades_historical_get**](#dapps_cow_trades_historical_get) | **get** /dapps/cow/trades/historical | 
-[**dapps_cow_users_historical_get**](#dapps_cow_users_historical_get) | **get** /dapps/cow/users/historical | 
+[**cow_get_orders__historical**](#cow_get_orders__historical) | **get** /dapps/cow/orders/historical | GetOrders (historical)
+[**cow_get_settlements__historical**](#cow_get_settlements__historical) | **get** /dapps/cow/settlements/historical | GetSettlements (historical)
+[**cow_get_tokens__historical**](#cow_get_tokens__historical) | **get** /dapps/cow/tokens/historical | GetTokens (historical) 🔥
+[**cow_get_trades__historical**](#cow_get_trades__historical) | **get** /dapps/cow/trades/historical | GetTrades (historical) 🔥
+[**cow_get_users__historical**](#cow_get_users__historical) | **get** /dapps/cow/users/historical | GetUsers (historical)
 
-# **dapps_cow_orders_historical_get**
-<a name="dapps_cow_orders_historical_get"></a>
-> dapps_cow_orders_historical_get()
+# **cow_get_orders__historical**
+<a name="cow_get_orders__historical"></a>
+> [CowOrderDTO] cow_get_orders__historical()
 
+GetOrders (historical)
 
+Gets orders.
 
 ### Example
 
 ```python
 import openapi_client
 from openapi_client.apis.tags import cow_api
+from openapi_client.model.cow_order_dto import CowOrderDTO
 from pprint import pprint
 # Defining the host is optional and defaults to https://onchain.coinapi.io
 # See configuration.py for a list of all supported configuration parameters.
@@ -42,17 +45,20 @@ with openapi_client.ApiClient(configuration) as api_client:
         'endDate': "1970-01-01T00:00:00.00Z",
     }
     try:
-        api_response = api_instance.dapps_cow_orders_historical_get(
+        # GetOrders (historical)
+        api_response = api_instance.cow_get_orders__historical(
             query_params=query_params,
         )
+        pprint(api_response)
     except openapi_client.ApiException as e:
-        print("Exception when calling CowApi->dapps_cow_orders_historical_get: %s\n" % e)
+        print("Exception when calling CowApi->cow_get_orders__historical: %s\n" % e)
 ```
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 query_params | RequestQueryParams | |
+accept_content_types | typing.Tuple[str] | default is ('text/plain', 'application/json', 'text/json', ) | Tells the server the content type(s) that are accepted by the client
 stream | bool | default is False | if True then the response.content will be streamed and loaded from a file like object. When downloading a file, set this to True to force the code to deserialize the content to a FileSchema file
 timeout | typing.Optional[typing.Union[int, typing.Tuple]] | default is None | the timeout used by the rest client
 skip_deserialization | bool | default is False | when True, headers and body will be unset and an instance of api_client.ApiResponseWithoutDeserialization will be returned
@@ -101,14 +107,50 @@ str, datetime,  | str,  |  | value must conform to RFC-3339 date-time
 Code | Class | Description
 ------------- | ------------- | -------------
 n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
-200 | [ApiResponseFor200](#dapps_cow_orders_historical_get.ApiResponseFor200) | Success
+200 | [ApiResponseFor200](#cow_get_orders__historical.ApiResponseFor200) | successful operation
 
-#### dapps_cow_orders_historical_get.ApiResponseFor200
+#### cow_get_orders__historical.ApiResponseFor200
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
-body | Unset | body was not defined |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
 headers | Unset | headers were not defined |
+
+# SchemaFor200ResponseBodyTextPlain
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**CowOrderDTO**]({{complexTypePrefix}}CowOrderDTO.md) | [**CowOrderDTO**]({{complexTypePrefix}}CowOrderDTO.md) | [**CowOrderDTO**]({{complexTypePrefix}}CowOrderDTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**CowOrderDTO**]({{complexTypePrefix}}CowOrderDTO.md) | [**CowOrderDTO**]({{complexTypePrefix}}CowOrderDTO.md) | [**CowOrderDTO**]({{complexTypePrefix}}CowOrderDTO.md) |  | 
+
+# SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**CowOrderDTO**]({{complexTypePrefix}}CowOrderDTO.md) | [**CowOrderDTO**]({{complexTypePrefix}}CowOrderDTO.md) | [**CowOrderDTO**]({{complexTypePrefix}}CowOrderDTO.md) |  | 
 
 ### Authorization
 
@@ -116,17 +158,20 @@ No authorization required
 
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
-# **dapps_cow_settlement_historical_get**
-<a name="dapps_cow_settlement_historical_get"></a>
-> dapps_cow_settlement_historical_get()
+# **cow_get_settlements__historical**
+<a name="cow_get_settlements__historical"></a>
+> [CowSettlementDTO] cow_get_settlements__historical()
 
+GetSettlements (historical)
 
+Gets settlements.
 
 ### Example
 
 ```python
 import openapi_client
 from openapi_client.apis.tags import cow_api
+from openapi_client.model.cow_settlement_dto import CowSettlementDTO
 from pprint import pprint
 # Defining the host is optional and defaults to https://onchain.coinapi.io
 # See configuration.py for a list of all supported configuration parameters.
@@ -147,17 +192,20 @@ with openapi_client.ApiClient(configuration) as api_client:
         'endDate': "1970-01-01T00:00:00.00Z",
     }
     try:
-        api_response = api_instance.dapps_cow_settlement_historical_get(
+        # GetSettlements (historical)
+        api_response = api_instance.cow_get_settlements__historical(
             query_params=query_params,
         )
+        pprint(api_response)
     except openapi_client.ApiException as e:
-        print("Exception when calling CowApi->dapps_cow_settlement_historical_get: %s\n" % e)
+        print("Exception when calling CowApi->cow_get_settlements__historical: %s\n" % e)
 ```
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 query_params | RequestQueryParams | |
+accept_content_types | typing.Tuple[str] | default is ('text/plain', 'application/json', 'text/json', ) | Tells the server the content type(s) that are accepted by the client
 stream | bool | default is False | if True then the response.content will be streamed and loaded from a file like object. When downloading a file, set this to True to force the code to deserialize the content to a FileSchema file
 timeout | typing.Optional[typing.Union[int, typing.Tuple]] | default is None | the timeout used by the rest client
 skip_deserialization | bool | default is False | when True, headers and body will be unset and an instance of api_client.ApiResponseWithoutDeserialization will be returned
@@ -206,14 +254,50 @@ str, datetime,  | str,  |  | value must conform to RFC-3339 date-time
 Code | Class | Description
 ------------- | ------------- | -------------
 n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
-200 | [ApiResponseFor200](#dapps_cow_settlement_historical_get.ApiResponseFor200) | Success
+200 | [ApiResponseFor200](#cow_get_settlements__historical.ApiResponseFor200) | successful operation
 
-#### dapps_cow_settlement_historical_get.ApiResponseFor200
+#### cow_get_settlements__historical.ApiResponseFor200
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
-body | Unset | body was not defined |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
 headers | Unset | headers were not defined |
+
+# SchemaFor200ResponseBodyTextPlain
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**CowSettlementDTO**]({{complexTypePrefix}}CowSettlementDTO.md) | [**CowSettlementDTO**]({{complexTypePrefix}}CowSettlementDTO.md) | [**CowSettlementDTO**]({{complexTypePrefix}}CowSettlementDTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**CowSettlementDTO**]({{complexTypePrefix}}CowSettlementDTO.md) | [**CowSettlementDTO**]({{complexTypePrefix}}CowSettlementDTO.md) | [**CowSettlementDTO**]({{complexTypePrefix}}CowSettlementDTO.md) |  | 
+
+# SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**CowSettlementDTO**]({{complexTypePrefix}}CowSettlementDTO.md) | [**CowSettlementDTO**]({{complexTypePrefix}}CowSettlementDTO.md) | [**CowSettlementDTO**]({{complexTypePrefix}}CowSettlementDTO.md) |  | 
 
 ### Authorization
 
@@ -221,17 +305,20 @@ No authorization required
 
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
-# **dapps_cow_tokens_historical_get**
-<a name="dapps_cow_tokens_historical_get"></a>
-> dapps_cow_tokens_historical_get()
+# **cow_get_tokens__historical**
+<a name="cow_get_tokens__historical"></a>
+> [CowTokenDTO] cow_get_tokens__historical()
 
+GetTokens (historical) 🔥
 
+Gets tokens.
 
 ### Example
 
 ```python
 import openapi_client
 from openapi_client.apis.tags import cow_api
+from openapi_client.model.cow_token_dto import CowTokenDTO
 from pprint import pprint
 # Defining the host is optional and defaults to https://onchain.coinapi.io
 # See configuration.py for a list of all supported configuration parameters.
@@ -253,17 +340,20 @@ with openapi_client.ApiClient(configuration) as api_client:
         'tokenId': "tokenId_example",
     }
     try:
-        api_response = api_instance.dapps_cow_tokens_historical_get(
+        # GetTokens (historical) 🔥
+        api_response = api_instance.cow_get_tokens__historical(
             query_params=query_params,
         )
+        pprint(api_response)
     except openapi_client.ApiException as e:
-        print("Exception when calling CowApi->dapps_cow_tokens_historical_get: %s\n" % e)
+        print("Exception when calling CowApi->cow_get_tokens__historical: %s\n" % e)
 ```
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 query_params | RequestQueryParams | |
+accept_content_types | typing.Tuple[str] | default is ('text/plain', 'application/json', 'text/json', ) | Tells the server the content type(s) that are accepted by the client
 stream | bool | default is False | if True then the response.content will be streamed and loaded from a file like object. When downloading a file, set this to True to force the code to deserialize the content to a FileSchema file
 timeout | typing.Optional[typing.Union[int, typing.Tuple]] | default is None | the timeout used by the rest client
 skip_deserialization | bool | default is False | when True, headers and body will be unset and an instance of api_client.ApiResponseWithoutDeserialization will be returned
@@ -320,14 +410,50 @@ str,  | str,  |  |
 Code | Class | Description
 ------------- | ------------- | -------------
 n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
-200 | [ApiResponseFor200](#dapps_cow_tokens_historical_get.ApiResponseFor200) | Success
+200 | [ApiResponseFor200](#cow_get_tokens__historical.ApiResponseFor200) | successful operation
 
-#### dapps_cow_tokens_historical_get.ApiResponseFor200
+#### cow_get_tokens__historical.ApiResponseFor200
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
-body | Unset | body was not defined |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
 headers | Unset | headers were not defined |
+
+# SchemaFor200ResponseBodyTextPlain
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**CowTokenDTO**]({{complexTypePrefix}}CowTokenDTO.md) | [**CowTokenDTO**]({{complexTypePrefix}}CowTokenDTO.md) | [**CowTokenDTO**]({{complexTypePrefix}}CowTokenDTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**CowTokenDTO**]({{complexTypePrefix}}CowTokenDTO.md) | [**CowTokenDTO**]({{complexTypePrefix}}CowTokenDTO.md) | [**CowTokenDTO**]({{complexTypePrefix}}CowTokenDTO.md) |  | 
+
+# SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**CowTokenDTO**]({{complexTypePrefix}}CowTokenDTO.md) | [**CowTokenDTO**]({{complexTypePrefix}}CowTokenDTO.md) | [**CowTokenDTO**]({{complexTypePrefix}}CowTokenDTO.md) |  | 
 
 ### Authorization
 
@@ -335,17 +461,20 @@ No authorization required
 
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
-# **dapps_cow_trades_historical_get**
-<a name="dapps_cow_trades_historical_get"></a>
-> dapps_cow_trades_historical_get()
+# **cow_get_trades__historical**
+<a name="cow_get_trades__historical"></a>
+> [CowTradeDTO] cow_get_trades__historical()
 
+GetTrades (historical) 🔥
 
+Gets trades.
 
 ### Example
 
 ```python
 import openapi_client
 from openapi_client.apis.tags import cow_api
+from openapi_client.model.cow_trade_dto import CowTradeDTO
 from pprint import pprint
 # Defining the host is optional and defaults to https://onchain.coinapi.io
 # See configuration.py for a list of all supported configuration parameters.
@@ -366,17 +495,20 @@ with openapi_client.ApiClient(configuration) as api_client:
         'endDate': "1970-01-01T00:00:00.00Z",
     }
     try:
-        api_response = api_instance.dapps_cow_trades_historical_get(
+        # GetTrades (historical) 🔥
+        api_response = api_instance.cow_get_trades__historical(
             query_params=query_params,
         )
+        pprint(api_response)
     except openapi_client.ApiException as e:
-        print("Exception when calling CowApi->dapps_cow_trades_historical_get: %s\n" % e)
+        print("Exception when calling CowApi->cow_get_trades__historical: %s\n" % e)
 ```
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 query_params | RequestQueryParams | |
+accept_content_types | typing.Tuple[str] | default is ('text/plain', 'application/json', 'text/json', ) | Tells the server the content type(s) that are accepted by the client
 stream | bool | default is False | if True then the response.content will be streamed and loaded from a file like object. When downloading a file, set this to True to force the code to deserialize the content to a FileSchema file
 timeout | typing.Optional[typing.Union[int, typing.Tuple]] | default is None | the timeout used by the rest client
 skip_deserialization | bool | default is False | when True, headers and body will be unset and an instance of api_client.ApiResponseWithoutDeserialization will be returned
@@ -425,14 +557,50 @@ str, datetime,  | str,  |  | value must conform to RFC-3339 date-time
 Code | Class | Description
 ------------- | ------------- | -------------
 n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
-200 | [ApiResponseFor200](#dapps_cow_trades_historical_get.ApiResponseFor200) | Success
+200 | [ApiResponseFor200](#cow_get_trades__historical.ApiResponseFor200) | successful operation
 
-#### dapps_cow_trades_historical_get.ApiResponseFor200
+#### cow_get_trades__historical.ApiResponseFor200
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
-body | Unset | body was not defined |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
 headers | Unset | headers were not defined |
+
+# SchemaFor200ResponseBodyTextPlain
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**CowTradeDTO**]({{complexTypePrefix}}CowTradeDTO.md) | [**CowTradeDTO**]({{complexTypePrefix}}CowTradeDTO.md) | [**CowTradeDTO**]({{complexTypePrefix}}CowTradeDTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**CowTradeDTO**]({{complexTypePrefix}}CowTradeDTO.md) | [**CowTradeDTO**]({{complexTypePrefix}}CowTradeDTO.md) | [**CowTradeDTO**]({{complexTypePrefix}}CowTradeDTO.md) |  | 
+
+# SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**CowTradeDTO**]({{complexTypePrefix}}CowTradeDTO.md) | [**CowTradeDTO**]({{complexTypePrefix}}CowTradeDTO.md) | [**CowTradeDTO**]({{complexTypePrefix}}CowTradeDTO.md) |  | 
 
 ### Authorization
 
@@ -440,17 +608,20 @@ No authorization required
 
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
-# **dapps_cow_users_historical_get**
-<a name="dapps_cow_users_historical_get"></a>
-> dapps_cow_users_historical_get()
+# **cow_get_users__historical**
+<a name="cow_get_users__historical"></a>
+> [CowUserDTO] cow_get_users__historical()
 
+GetUsers (historical)
 
+Gets users.
 
 ### Example
 
 ```python
 import openapi_client
 from openapi_client.apis.tags import cow_api
+from openapi_client.model.cow_user_dto import CowUserDTO
 from pprint import pprint
 # Defining the host is optional and defaults to https://onchain.coinapi.io
 # See configuration.py for a list of all supported configuration parameters.
@@ -471,17 +642,20 @@ with openapi_client.ApiClient(configuration) as api_client:
         'endDate': "1970-01-01T00:00:00.00Z",
     }
     try:
-        api_response = api_instance.dapps_cow_users_historical_get(
+        # GetUsers (historical)
+        api_response = api_instance.cow_get_users__historical(
             query_params=query_params,
         )
+        pprint(api_response)
     except openapi_client.ApiException as e:
-        print("Exception when calling CowApi->dapps_cow_users_historical_get: %s\n" % e)
+        print("Exception when calling CowApi->cow_get_users__historical: %s\n" % e)
 ```
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 query_params | RequestQueryParams | |
+accept_content_types | typing.Tuple[str] | default is ('text/plain', 'application/json', 'text/json', ) | Tells the server the content type(s) that are accepted by the client
 stream | bool | default is False | if True then the response.content will be streamed and loaded from a file like object. When downloading a file, set this to True to force the code to deserialize the content to a FileSchema file
 timeout | typing.Optional[typing.Union[int, typing.Tuple]] | default is None | the timeout used by the rest client
 skip_deserialization | bool | default is False | when True, headers and body will be unset and an instance of api_client.ApiResponseWithoutDeserialization will be returned
@@ -530,14 +704,50 @@ str, datetime,  | str,  |  | value must conform to RFC-3339 date-time
 Code | Class | Description
 ------------- | ------------- | -------------
 n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
-200 | [ApiResponseFor200](#dapps_cow_users_historical_get.ApiResponseFor200) | Success
+200 | [ApiResponseFor200](#cow_get_users__historical.ApiResponseFor200) | successful operation
 
-#### dapps_cow_users_historical_get.ApiResponseFor200
+#### cow_get_users__historical.ApiResponseFor200
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
-body | Unset | body was not defined |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
 headers | Unset | headers were not defined |
+
+# SchemaFor200ResponseBodyTextPlain
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**CowUserDTO**]({{complexTypePrefix}}CowUserDTO.md) | [**CowUserDTO**]({{complexTypePrefix}}CowUserDTO.md) | [**CowUserDTO**]({{complexTypePrefix}}CowUserDTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**CowUserDTO**]({{complexTypePrefix}}CowUserDTO.md) | [**CowUserDTO**]({{complexTypePrefix}}CowUserDTO.md) | [**CowUserDTO**]({{complexTypePrefix}}CowUserDTO.md) |  | 
+
+# SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**CowUserDTO**]({{complexTypePrefix}}CowUserDTO.md) | [**CowUserDTO**]({{complexTypePrefix}}CowUserDTO.md) | [**CowUserDTO**]({{complexTypePrefix}}CowUserDTO.md) |  | 
 
 ### Authorization
 

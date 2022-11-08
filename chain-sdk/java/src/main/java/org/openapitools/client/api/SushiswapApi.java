@@ -27,6 +27,8 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
+import org.openapitools.client.model.CurveExchangeDTO;
+import org.openapitools.client.model.DexTradeDTO;
 import java.time.OffsetDateTime;
 import org.openapitools.client.model.SushiswapBundleDTO;
 import org.openapitools.client.model.SushiswapBurnDTO;
@@ -90,11 +92,241 @@ public class SushiswapApi {
     }
 
     /**
+     * Build call for curveGetExchangesCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curveGetExchangesCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/sushiswap/exchanges/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call curveGetExchangesCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return curveGetExchangesCurrentCall(_callback);
+
+    }
+
+    /**
+     * GetExchanges (current) 🔥
+     * Gets exchanges.
+     * @return List&lt;CurveExchangeDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<CurveExchangeDTO> curveGetExchangesCurrent() throws ApiException {
+        ApiResponse<List<CurveExchangeDTO>> localVarResp = curveGetExchangesCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * GetExchanges (current) 🔥
+     * Gets exchanges.
+     * @return ApiResponse&lt;List&lt;CurveExchangeDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<CurveExchangeDTO>> curveGetExchangesCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = curveGetExchangesCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<CurveExchangeDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * GetExchanges (current) 🔥 (asynchronously)
+     * Gets exchanges.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call curveGetExchangesCurrentAsync(final ApiCallback<List<CurveExchangeDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = curveGetExchangesCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<CurveExchangeDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for dexGetTradesCurrent
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call dexGetTradesCurrentCall(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/dapps/sushiswap/trades/current";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "text/plain",
+            "application/json",
+            "text/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call dexGetTradesCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return dexGetTradesCurrentCall(_callback);
+
+    }
+
+    /**
+     * GetTrades (current) 🔥
+     * Gets trades.
+     * @return List&lt;DexTradeDTO&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<DexTradeDTO> dexGetTradesCurrent() throws ApiException {
+        ApiResponse<List<DexTradeDTO>> localVarResp = dexGetTradesCurrentWithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * GetTrades (current) 🔥
+     * Gets trades.
+     * @return ApiResponse&lt;List&lt;DexTradeDTO&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<DexTradeDTO>> dexGetTradesCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = dexGetTradesCurrentValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<List<DexTradeDTO>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * GetTrades (current) 🔥 (asynchronously)
+     * Gets trades.
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call dexGetTradesCurrentAsync(final ApiCallback<List<DexTradeDTO>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = dexGetTradesCurrentValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<List<DexTradeDTO>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
      * Build call for sushiswapGetBundlesHistorical
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
+     * @param startBlock AAAAAAAAAA (optional)
+     * @param endBlock BBBBBBBBBBBB (optional)
+     * @param startDate CCCCCCCCC (optional)
+     * @param endDate DDDDDDDDDDD (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -175,10 +407,10 @@ public class SushiswapApi {
     /**
      * GetBundles (historical)
      * Gets bundles.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
+     * @param startBlock AAAAAAAAAA (optional)
+     * @param endBlock BBBBBBBBBBBB (optional)
+     * @param startDate CCCCCCCCC (optional)
+     * @param endDate DDDDDDDDDDD (optional)
      * @return List&lt;SushiswapBundleDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -195,10 +427,10 @@ public class SushiswapApi {
     /**
      * GetBundles (historical)
      * Gets bundles.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
+     * @param startBlock AAAAAAAAAA (optional)
+     * @param endBlock BBBBBBBBBBBB (optional)
+     * @param startDate CCCCCCCCC (optional)
+     * @param endDate DDDDDDDDDDD (optional)
      * @return ApiResponse&lt;List&lt;SushiswapBundleDTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -216,10 +448,10 @@ public class SushiswapApi {
     /**
      * GetBundles (historical) (asynchronously)
      * Gets bundles.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
+     * @param startBlock AAAAAAAAAA (optional)
+     * @param endBlock BBBBBBBBBBBB (optional)
+     * @param startDate CCCCCCCCC (optional)
+     * @param endDate DDDDDDDDDDD (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1361,7 +1593,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetPools (current)
+     * GetPools (current) 🔥
      * Gets pools.
      * @return List&lt;SushiswapPairDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -1377,7 +1609,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetPools (current)
+     * GetPools (current) 🔥
      * Gets pools.
      * @return ApiResponse&lt;List&lt;SushiswapPairDTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -1394,7 +1626,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetPools (current) (asynchronously)
+     * GetPools (current) 🔥 (asynchronously)
      * Gets pools.
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
@@ -1569,11 +1801,11 @@ public class SushiswapApi {
     }
     /**
      * Build call for sushiswapGetPoolsHistorical
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param poolId  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe (optional)
+     * @param poolId The pool address. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -1656,13 +1888,13 @@ public class SushiswapApi {
     }
 
     /**
-     * GetPools (historical)
+     * GetPools (historical) 🔥
      * Gets list of pools for given filters.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param poolId  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe (optional)
+     * @param poolId The pool address. (optional)
      * @return List&lt;SushiswapPairDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1677,13 +1909,13 @@ public class SushiswapApi {
     }
 
     /**
-     * GetPools (historical)
+     * GetPools (historical) 🔥
      * Gets list of pools for given filters.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param poolId  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe (optional)
+     * @param poolId The pool address. (optional)
      * @return ApiResponse&lt;List&lt;SushiswapPairDTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1699,13 +1931,13 @@ public class SushiswapApi {
     }
 
     /**
-     * GetPools (historical) (asynchronously)
+     * GetPools (historical) 🔥 (asynchronously)
      * Gets list of pools for given filters.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param poolId  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe (optional)
+     * @param poolId The pool address. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1941,7 +2173,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetSwaps (current)
+     * GetSwaps (current) 🔥
      * Gets swaps.
      * @return List&lt;SushiswapSwapDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -1957,7 +2189,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetSwaps (current)
+     * GetSwaps (current) 🔥
      * Gets swaps.
      * @return ApiResponse&lt;List&lt;SushiswapSwapDTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -1974,7 +2206,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetSwaps (current) (asynchronously)
+     * GetSwaps (current) 🔥 (asynchronously)
      * Gets swaps.
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
@@ -1994,11 +2226,11 @@ public class SushiswapApi {
     }
     /**
      * Build call for sushiswapGetSwapsHistorical
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param poolId  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe (optional)
+     * @param poolId The pool address. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -2081,13 +2313,13 @@ public class SushiswapApi {
     }
 
     /**
-     * GetSwaps (historical)
+     * GetSwaps (historical) 🔥
      * Gets list of swaps for given filters.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param poolId  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe (optional)
+     * @param poolId The pool address. (optional)
      * @return List&lt;SushiswapSwapDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2102,13 +2334,13 @@ public class SushiswapApi {
     }
 
     /**
-     * GetSwaps (historical)
+     * GetSwaps (historical) 🔥
      * Gets list of swaps for given filters.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param poolId  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe (optional)
+     * @param poolId The pool address. (optional)
      * @return ApiResponse&lt;List&lt;SushiswapSwapDTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2124,13 +2356,13 @@ public class SushiswapApi {
     }
 
     /**
-     * GetSwaps (historical) (asynchronously)
+     * GetSwaps (historical) 🔥 (asynchronously)
      * Gets list of swaps for given filters.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param poolId  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe (optional)
+     * @param poolId The pool address. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -2211,7 +2443,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetTokens (current)
+     * GetTokens (current) 🔥
      * Gets tokens.
      * @return List&lt;SushiswapTokenDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -2227,7 +2459,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetTokens (current)
+     * GetTokens (current) 🔥
      * Gets tokens.
      * @return ApiResponse&lt;List&lt;SushiswapTokenDTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -2244,7 +2476,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetTokens (current) (asynchronously)
+     * GetTokens (current) 🔥 (asynchronously)
      * Gets tokens.
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
@@ -2419,11 +2651,11 @@ public class SushiswapApi {
     }
     /**
      * Build call for sushiswapGetTokensHistorical
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param tokenId  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe (optional)
+     * @param tokenId The token address. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -2506,13 +2738,13 @@ public class SushiswapApi {
     }
 
     /**
-     * GetTokens (historical)
+     * GetTokens (historical) 🔥
      * Gets list of tokens for given filters.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param tokenId  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe (optional)
+     * @param tokenId The token address. (optional)
      * @return List&lt;SushiswapTokenDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2527,13 +2759,13 @@ public class SushiswapApi {
     }
 
     /**
-     * GetTokens (historical)
+     * GetTokens (historical) 🔥
      * Gets list of tokens for given filters.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param tokenId  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe (optional)
+     * @param tokenId The token address. (optional)
      * @return ApiResponse&lt;List&lt;SushiswapTokenDTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2549,13 +2781,13 @@ public class SushiswapApi {
     }
 
     /**
-     * GetTokens (historical) (asynchronously)
+     * GetTokens (historical) 🔥 (asynchronously)
      * Gets list of tokens for given filters.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param tokenId  (optional)
+     * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param endDate The end date of timeframe (optional)
+     * @param tokenId The token address. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object

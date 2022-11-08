@@ -9,6 +9,8 @@ import 'package:dio/dio.dart';
 
 import 'package:built_collection/built_collection.dart';
 import 'package:openapi/src/api_util.dart';
+import 'package:openapi/src/model/curve_exchange_dto.dart';
+import 'package:openapi/src/model/dex_trade_dto.dart';
 import 'package:openapi/src/model/sushiswap_bundle_dto.dart';
 import 'package:openapi/src/model/sushiswap_burn_dto.dart';
 import 'package:openapi/src/model/sushiswap_day_data_dto.dart';
@@ -34,14 +36,158 @@ class SushiswapApi {
 
   const SushiswapApi(this._dio, this._serializers);
 
+  /// GetExchanges (current) 🔥
+  /// Gets exchanges.
+  ///
+  /// Parameters:
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [BuiltList<CurveExchangeDTO>] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<BuiltList<CurveExchangeDTO>>> curveGetExchangesCurrent({ 
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/dapps/sushiswap/exchanges/current';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    BuiltList<CurveExchangeDTO> _responseData;
+
+    try {
+      const _responseType = FullType(BuiltList, [FullType(CurveExchangeDTO)]);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as BuiltList<CurveExchangeDTO>;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<BuiltList<CurveExchangeDTO>>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// GetTrades (current) 🔥
+  /// Gets trades.
+  ///
+  /// Parameters:
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [BuiltList<DexTradeDTO>] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<BuiltList<DexTradeDTO>>> dexGetTradesCurrent({ 
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/dapps/sushiswap/trades/current';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    BuiltList<DexTradeDTO> _responseData;
+
+    try {
+      const _responseType = FullType(BuiltList, [FullType(DexTradeDTO)]);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as BuiltList<DexTradeDTO>;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<BuiltList<DexTradeDTO>>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
   /// GetBundles (historical)
   /// Gets bundles.
   ///
   /// Parameters:
-  /// * [startBlock] 
-  /// * [endBlock] 
-  /// * [startDate] 
-  /// * [endDate] 
+  /// * [startBlock] - AAAAAAAAAA
+  /// * [endBlock] - BBBBBBBBBBBB
+  /// * [startDate] - CCCCCCCCC
+  /// * [endDate] - DDDDDDDDDDD
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -126,11 +272,11 @@ class SushiswapApi {
   /// Gets burns.
   ///
   /// Parameters:
-  /// * [startBlock] 
-  /// * [endBlock] 
-  /// * [startDate] 
-  /// * [endDate] 
-  /// * [poolId] 
+  /// * [startBlock] - 
+  /// * [endBlock] - 
+  /// * [startDate] - 
+  /// * [endDate] - 
+  /// * [poolId] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -217,10 +363,10 @@ class SushiswapApi {
   /// Gets day data.
   ///
   /// Parameters:
-  /// * [startBlock] 
-  /// * [endBlock] 
-  /// * [startDate] 
-  /// * [endDate] 
+  /// * [startBlock] - 
+  /// * [endBlock] - 
+  /// * [startDate] - 
+  /// * [endDate] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -305,10 +451,10 @@ class SushiswapApi {
   /// Gets factory.
   ///
   /// Parameters:
-  /// * [startBlock] 
-  /// * [endBlock] 
-  /// * [startDate] 
-  /// * [endDate] 
+  /// * [startBlock] - 
+  /// * [endBlock] - 
+  /// * [startDate] - 
+  /// * [endDate] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -393,10 +539,10 @@ class SushiswapApi {
   /// Gets hour data.
   ///
   /// Parameters:
-  /// * [startBlock] 
-  /// * [endBlock] 
-  /// * [startDate] 
-  /// * [endDate] 
+  /// * [startBlock] - 
+  /// * [endBlock] - 
+  /// * [startDate] - 
+  /// * [endDate] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -481,11 +627,11 @@ class SushiswapApi {
   /// Gets liquidity position.
   ///
   /// Parameters:
-  /// * [startBlock] 
-  /// * [endBlock] 
-  /// * [startDate] 
-  /// * [endDate] 
-  /// * [poolId] 
+  /// * [startBlock] - 
+  /// * [endBlock] - 
+  /// * [startDate] - 
+  /// * [endDate] - 
+  /// * [poolId] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -572,11 +718,11 @@ class SushiswapApi {
   /// Gets liquidity position snapshot.
   ///
   /// Parameters:
-  /// * [startBlock] 
-  /// * [endBlock] 
-  /// * [startDate] 
-  /// * [endDate] 
-  /// * [poolId] 
+  /// * [startBlock] - 
+  /// * [endBlock] - 
+  /// * [startDate] - 
+  /// * [endDate] - 
+  /// * [poolId] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -663,11 +809,11 @@ class SushiswapApi {
   /// Gets mints.
   ///
   /// Parameters:
-  /// * [startBlock] 
-  /// * [endBlock] 
-  /// * [startDate] 
-  /// * [endDate] 
-  /// * [poolId] 
+  /// * [startBlock] - 
+  /// * [endBlock] - 
+  /// * [startDate] - 
+  /// * [endDate] - 
+  /// * [poolId] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -750,7 +896,7 @@ class SushiswapApi {
     );
   }
 
-  /// GetPools (current)
+  /// GetPools (current) 🔥
   /// Gets pools.
   ///
   /// Parameters:
@@ -826,11 +972,11 @@ class SushiswapApi {
   /// Gets pools day data.
   ///
   /// Parameters:
-  /// * [startBlock] 
-  /// * [endBlock] 
-  /// * [startDate] 
-  /// * [endDate] 
-  /// * [poolId] 
+  /// * [startBlock] - 
+  /// * [endBlock] - 
+  /// * [startDate] - 
+  /// * [endDate] - 
+  /// * [poolId] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -913,15 +1059,15 @@ class SushiswapApi {
     );
   }
 
-  /// GetPools (historical)
+  /// GetPools (historical) 🔥
   /// Gets list of pools for given filters.
   ///
   /// Parameters:
-  /// * [startBlock] 
-  /// * [endBlock] 
-  /// * [startDate] 
-  /// * [endDate] 
-  /// * [poolId] 
+  /// * [startBlock] - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  /// * [endBlock] - The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  /// * [startDate] - The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  /// * [endDate] - The end date of timeframe
+  /// * [poolId] - The pool address.
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -1008,11 +1154,11 @@ class SushiswapApi {
   /// Gets pools tracked each our.
   ///
   /// Parameters:
-  /// * [startBlock] 
-  /// * [endBlock] 
-  /// * [startDate] 
-  /// * [endDate] 
-  /// * [poolId] 
+  /// * [startBlock] - 
+  /// * [endBlock] - 
+  /// * [startDate] - 
+  /// * [endDate] - 
+  /// * [poolId] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -1095,7 +1241,7 @@ class SushiswapApi {
     );
   }
 
-  /// GetSwaps (current)
+  /// GetSwaps (current) 🔥
   /// Gets swaps.
   ///
   /// Parameters:
@@ -1167,15 +1313,15 @@ class SushiswapApi {
     );
   }
 
-  /// GetSwaps (historical)
+  /// GetSwaps (historical) 🔥
   /// Gets list of swaps for given filters.
   ///
   /// Parameters:
-  /// * [startBlock] 
-  /// * [endBlock] 
-  /// * [startDate] 
-  /// * [endDate] 
-  /// * [poolId] 
+  /// * [startBlock] - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  /// * [endBlock] - The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  /// * [startDate] - The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  /// * [endDate] - The end date of timeframe
+  /// * [poolId] - The pool address.
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -1258,7 +1404,7 @@ class SushiswapApi {
     );
   }
 
-  /// GetTokens (current)
+  /// GetTokens (current) 🔥
   /// Gets tokens.
   ///
   /// Parameters:
@@ -1334,11 +1480,11 @@ class SushiswapApi {
   /// Gets tokens day data.
   ///
   /// Parameters:
-  /// * [startBlock] 
-  /// * [endBlock] 
-  /// * [startDate] 
-  /// * [endDate] 
-  /// * [tokenId] 
+  /// * [startBlock] - 
+  /// * [endBlock] - 
+  /// * [startDate] - 
+  /// * [endDate] - 
+  /// * [tokenId] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -1421,15 +1567,15 @@ class SushiswapApi {
     );
   }
 
-  /// GetTokens (historical)
+  /// GetTokens (historical) 🔥
   /// Gets list of tokens for given filters.
   ///
   /// Parameters:
-  /// * [startBlock] 
-  /// * [endBlock] 
-  /// * [startDate] 
-  /// * [endDate] 
-  /// * [tokenId] 
+  /// * [startBlock] - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  /// * [endBlock] - The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  /// * [startDate] - The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  /// * [endDate] - The end date of timeframe
+  /// * [tokenId] - The token address.
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -1516,10 +1662,10 @@ class SushiswapApi {
   /// Gets transactions.
   ///
   /// Parameters:
-  /// * [startBlock] 
-  /// * [endBlock] 
-  /// * [startDate] 
-  /// * [endDate] 
+  /// * [startBlock] - 
+  /// * [endBlock] - 
+  /// * [startDate] - 
+  /// * [endDate] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -1604,10 +1750,10 @@ class SushiswapApi {
   /// Gets users.
   ///
   /// Parameters:
-  /// * [startBlock] 
-  /// * [endBlock] 
-  /// * [startDate] 
-  /// * [endDate] 
+  /// * [startBlock] - 
+  /// * [endBlock] - 
+  /// * [startDate] - 
+  /// * [endDate] - 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request

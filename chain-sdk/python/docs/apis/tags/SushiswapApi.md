@@ -5,6 +5,8 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**curve_get_exchanges__current**](#curve_get_exchanges__current) | **get** /dapps/sushiswap/exchanges/current | GetExchanges (current) 🔥
+[**dex_get_trades__current**](#dex_get_trades__current) | **get** /dapps/sushiswap/trades/current | GetTrades (current) 🔥
 [**sushiswap_get_bundles__historical**](#sushiswap_get_bundles__historical) | **get** /dapps/sushiswap/bundles/historical | GetBundles (historical)
 [**sushiswap_get_burns__historical**](#sushiswap_get_burns__historical) | **get** /dapps/sushiswap/burns/historical | GetBurns (historical)
 [**sushiswap_get_day_data__historical**](#sushiswap_get_day_data__historical) | **get** /dapps/sushiswap/dayData/historical | GetDayData (historical)
@@ -13,17 +15,203 @@ Method | HTTP request | Description
 [**sushiswap_get_liquidity_position__historical**](#sushiswap_get_liquidity_position__historical) | **get** /dapps/sushiswap/liquidityPosition/historical | GetLiquidityPosition (historical)
 [**sushiswap_get_liquidity_position_snapshot__historical**](#sushiswap_get_liquidity_position_snapshot__historical) | **get** /dapps/sushiswap/liquidityPositionSnapshots/historical | GetLiquidityPositionSnapshot (historical)
 [**sushiswap_get_mints__historical**](#sushiswap_get_mints__historical) | **get** /dapps/sushiswap/mints/historical | GetMints (historical)
-[**sushiswap_get_pools__current**](#sushiswap_get_pools__current) | **get** /dapps/sushiswap/pools/current | GetPools (current)
-[**sushiswap_get_pools__historical**](#sushiswap_get_pools__historical) | **get** /dapps/sushiswap/pools/historical | GetPools (historical)
+[**sushiswap_get_pools__current**](#sushiswap_get_pools__current) | **get** /dapps/sushiswap/pools/current | GetPools (current) 🔥
+[**sushiswap_get_pools__historical**](#sushiswap_get_pools__historical) | **get** /dapps/sushiswap/pools/historical | GetPools (historical) 🔥
 [**sushiswap_get_pools_day_data__historical**](#sushiswap_get_pools_day_data__historical) | **get** /dapps/sushiswap/poolsDayData/historical | GetPoolsDayData (historical)
 [**sushiswap_get_pools_hour_data__historical**](#sushiswap_get_pools_hour_data__historical) | **get** /dapps/sushiswap/poolsHourData/historical | GetPoolsHourData (historical)
-[**sushiswap_get_swaps__current**](#sushiswap_get_swaps__current) | **get** /dapps/sushiswap/swaps/current | GetSwaps (current)
-[**sushiswap_get_swaps__historical**](#sushiswap_get_swaps__historical) | **get** /dapps/sushiswap/swaps/historical | GetSwaps (historical)
-[**sushiswap_get_tokens__current**](#sushiswap_get_tokens__current) | **get** /dapps/sushiswap/tokens/current | GetTokens (current)
-[**sushiswap_get_tokens__historical**](#sushiswap_get_tokens__historical) | **get** /dapps/sushiswap/tokens/historical | GetTokens (historical)
+[**sushiswap_get_swaps__current**](#sushiswap_get_swaps__current) | **get** /dapps/sushiswap/swaps/current | GetSwaps (current) 🔥
+[**sushiswap_get_swaps__historical**](#sushiswap_get_swaps__historical) | **get** /dapps/sushiswap/swaps/historical | GetSwaps (historical) 🔥
+[**sushiswap_get_tokens__current**](#sushiswap_get_tokens__current) | **get** /dapps/sushiswap/tokens/current | GetTokens (current) 🔥
+[**sushiswap_get_tokens__historical**](#sushiswap_get_tokens__historical) | **get** /dapps/sushiswap/tokens/historical | GetTokens (historical) 🔥
 [**sushiswap_get_tokens_day_data__historical**](#sushiswap_get_tokens_day_data__historical) | **get** /dapps/sushiswap/tokensDayData/historical | GetTokensDayData (historical)
 [**sushiswap_get_transactions__historical**](#sushiswap_get_transactions__historical) | **get** /dapps/sushiswap/transactions/historical | GetTransactions (historical)
 [**sushiswap_get_users__historical**](#sushiswap_get_users__historical) | **get** /dapps/sushiswap/users/historical | GetUsers (historical)
+
+# **curve_get_exchanges__current**
+<a name="curve_get_exchanges__current"></a>
+> [CurveExchangeDTO] curve_get_exchanges__current()
+
+GetExchanges (current) 🔥
+
+Gets exchanges.
+
+### Example
+
+```python
+import openapi_client
+from openapi_client.apis.tags import sushiswap_api
+from openapi_client.model.curve_exchange_dto import CurveExchangeDTO
+from pprint import pprint
+# Defining the host is optional and defaults to https://onchain.coinapi.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = openapi_client.Configuration(
+    host = "https://onchain.coinapi.io"
+)
+
+# Enter a context with an instance of the API client
+with openapi_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = sushiswap_api.SushiswapApi(api_client)
+
+    # example, this endpoint has no required or optional parameters
+    try:
+        # GetExchanges (current) 🔥
+        api_response = api_instance.curve_get_exchanges__current()
+        pprint(api_response)
+    except openapi_client.ApiException as e:
+        print("Exception when calling SushiswapApi->curve_get_exchanges__current: %s\n" % e)
+```
+### Parameters
+This endpoint does not need any parameter.
+
+### Return Types, Responses
+
+Code | Class | Description
+------------- | ------------- | -------------
+n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
+200 | [ApiResponseFor200](#curve_get_exchanges__current.ApiResponseFor200) | successful operation
+
+#### curve_get_exchanges__current.ApiResponseFor200
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+response | urllib3.HTTPResponse | Raw response |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+headers | Unset | headers were not defined |
+
+# SchemaFor200ResponseBodyTextPlain
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**CurveExchangeDTO**]({{complexTypePrefix}}CurveExchangeDTO.md) | [**CurveExchangeDTO**]({{complexTypePrefix}}CurveExchangeDTO.md) | [**CurveExchangeDTO**]({{complexTypePrefix}}CurveExchangeDTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**CurveExchangeDTO**]({{complexTypePrefix}}CurveExchangeDTO.md) | [**CurveExchangeDTO**]({{complexTypePrefix}}CurveExchangeDTO.md) | [**CurveExchangeDTO**]({{complexTypePrefix}}CurveExchangeDTO.md) |  | 
+
+# SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**CurveExchangeDTO**]({{complexTypePrefix}}CurveExchangeDTO.md) | [**CurveExchangeDTO**]({{complexTypePrefix}}CurveExchangeDTO.md) | [**CurveExchangeDTO**]({{complexTypePrefix}}CurveExchangeDTO.md) |  | 
+
+### Authorization
+
+No authorization required
+
+[[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+
+# **dex_get_trades__current**
+<a name="dex_get_trades__current"></a>
+> [DexTradeDTO] dex_get_trades__current()
+
+GetTrades (current) 🔥
+
+Gets trades.
+
+### Example
+
+```python
+import openapi_client
+from openapi_client.apis.tags import sushiswap_api
+from openapi_client.model.dex_trade_dto import DexTradeDTO
+from pprint import pprint
+# Defining the host is optional and defaults to https://onchain.coinapi.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = openapi_client.Configuration(
+    host = "https://onchain.coinapi.io"
+)
+
+# Enter a context with an instance of the API client
+with openapi_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = sushiswap_api.SushiswapApi(api_client)
+
+    # example, this endpoint has no required or optional parameters
+    try:
+        # GetTrades (current) 🔥
+        api_response = api_instance.dex_get_trades__current()
+        pprint(api_response)
+    except openapi_client.ApiException as e:
+        print("Exception when calling SushiswapApi->dex_get_trades__current: %s\n" % e)
+```
+### Parameters
+This endpoint does not need any parameter.
+
+### Return Types, Responses
+
+Code | Class | Description
+------------- | ------------- | -------------
+n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
+200 | [ApiResponseFor200](#dex_get_trades__current.ApiResponseFor200) | successful operation
+
+#### dex_get_trades__current.ApiResponseFor200
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+response | urllib3.HTTPResponse | Raw response |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+headers | Unset | headers were not defined |
+
+# SchemaFor200ResponseBodyTextPlain
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**DexTradeDTO**]({{complexTypePrefix}}DexTradeDTO.md) | [**DexTradeDTO**]({{complexTypePrefix}}DexTradeDTO.md) | [**DexTradeDTO**]({{complexTypePrefix}}DexTradeDTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**DexTradeDTO**]({{complexTypePrefix}}DexTradeDTO.md) | [**DexTradeDTO**]({{complexTypePrefix}}DexTradeDTO.md) | [**DexTradeDTO**]({{complexTypePrefix}}DexTradeDTO.md) |  | 
+
+# SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**DexTradeDTO**]({{complexTypePrefix}}DexTradeDTO.md) | [**DexTradeDTO**]({{complexTypePrefix}}DexTradeDTO.md) | [**DexTradeDTO**]({{complexTypePrefix}}DexTradeDTO.md) |  | 
+
+### Authorization
+
+No authorization required
+
+[[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **sushiswap_get_bundles__historical**
 <a name="sushiswap_get_bundles__historical"></a>
@@ -1241,7 +1429,7 @@ No authorization required
 <a name="sushiswap_get_pools__current"></a>
 > [SushiswapPairDTO] sushiswap_get_pools__current()
 
-GetPools (current)
+GetPools (current) 🔥
 
 Gets pools.
 
@@ -1265,7 +1453,7 @@ with openapi_client.ApiClient(configuration) as api_client:
 
     # example, this endpoint has no required or optional parameters
     try:
-        # GetPools (current)
+        # GetPools (current) 🔥
         api_response = api_instance.sushiswap_get_pools__current()
         pprint(api_response)
     except openapi_client.ApiException as e:
@@ -1334,7 +1522,7 @@ No authorization required
 <a name="sushiswap_get_pools__historical"></a>
 > [SushiswapPairDTO] sushiswap_get_pools__historical()
 
-GetPools (historical)
+GetPools (historical) 🔥
 
 Gets list of pools for given filters.
 
@@ -1365,7 +1553,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'poolId': "poolId_example",
     }
     try:
-        # GetPools (historical)
+        # GetPools (historical) 🔥
         api_response = api_instance.sushiswap_get_pools__historical(
             query_params=query_params,
         )
@@ -1802,7 +1990,7 @@ No authorization required
 <a name="sushiswap_get_swaps__current"></a>
 > [SushiswapSwapDTO] sushiswap_get_swaps__current()
 
-GetSwaps (current)
+GetSwaps (current) 🔥
 
 Gets swaps.
 
@@ -1826,7 +2014,7 @@ with openapi_client.ApiClient(configuration) as api_client:
 
     # example, this endpoint has no required or optional parameters
     try:
-        # GetSwaps (current)
+        # GetSwaps (current) 🔥
         api_response = api_instance.sushiswap_get_swaps__current()
         pprint(api_response)
     except openapi_client.ApiException as e:
@@ -1895,7 +2083,7 @@ No authorization required
 <a name="sushiswap_get_swaps__historical"></a>
 > [SushiswapSwapDTO] sushiswap_get_swaps__historical()
 
-GetSwaps (historical)
+GetSwaps (historical) 🔥
 
 Gets list of swaps for given filters.
 
@@ -1926,7 +2114,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'poolId': "poolId_example",
     }
     try:
-        # GetSwaps (historical)
+        # GetSwaps (historical) 🔥
         api_response = api_instance.sushiswap_get_swaps__historical(
             query_params=query_params,
         )
@@ -2051,7 +2239,7 @@ No authorization required
 <a name="sushiswap_get_tokens__current"></a>
 > [SushiswapTokenDTO] sushiswap_get_tokens__current()
 
-GetTokens (current)
+GetTokens (current) 🔥
 
 Gets tokens.
 
@@ -2075,7 +2263,7 @@ with openapi_client.ApiClient(configuration) as api_client:
 
     # example, this endpoint has no required or optional parameters
     try:
-        # GetTokens (current)
+        # GetTokens (current) 🔥
         api_response = api_instance.sushiswap_get_tokens__current()
         pprint(api_response)
     except openapi_client.ApiException as e:
@@ -2144,7 +2332,7 @@ No authorization required
 <a name="sushiswap_get_tokens__historical"></a>
 > [SushiswapTokenDTO] sushiswap_get_tokens__historical()
 
-GetTokens (historical)
+GetTokens (historical) 🔥
 
 Gets list of tokens for given filters.
 
@@ -2175,7 +2363,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'tokenId': "tokenId_example",
     }
     try:
-        # GetTokens (historical)
+        # GetTokens (historical) 🔥
         api_response = api_instance.sushiswap_get_tokens__historical(
             query_params=query_params,
         )

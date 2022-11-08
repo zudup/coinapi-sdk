@@ -24,9 +24,9 @@ inherit
 feature -- API Access
 
 
-	dapps_cow_orders_historical_get (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME)
-			-- 
-			-- 
+	cow_get_orders_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME): detachable LIST [COW_ORDER_DTO]
+			-- GetOrders (historical)
+			-- Gets orders.
 			-- 
 			-- argument: start_block  (optional, default to null)
 			-- 
@@ -37,6 +37,7 @@ feature -- API Access
 			-- argument: end_date  (optional, default to null)
 			-- 
 			-- 
+			-- Result LIST [COW_ORDER_DTO]
 		require
 		local
   			l_path: STRING
@@ -53,20 +54,24 @@ feature -- API Access
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
 
 
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<>>)  as l_accept then
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
 				l_request.add_header(l_accept,"Accept");
 			end
 			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
 			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, agent serializer, Void)
+			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
 			if l_response.has_error then
 				last_error := l_response.error
+			elseif attached { LIST [COW_ORDER_DTO] } l_response.data ({ LIST [COW_ORDER_DTO] }) as l_data then
+				Result := l_data
+			else
+				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
 			end
 		end
 
-	dapps_cow_settlement_historical_get (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME)
-			-- 
-			-- 
+	cow_get_settlements_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME): detachable LIST [COW_SETTLEMENT_DTO]
+			-- GetSettlements (historical)
+			-- Gets settlements.
 			-- 
 			-- argument: start_block  (optional, default to null)
 			-- 
@@ -77,6 +82,7 @@ feature -- API Access
 			-- argument: end_date  (optional, default to null)
 			-- 
 			-- 
+			-- Result LIST [COW_SETTLEMENT_DTO]
 		require
 		local
   			l_path: STRING
@@ -86,27 +92,31 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/cow/settlement/historical"
+			l_path := "/dapps/cow/settlements/historical"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
 
 
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<>>)  as l_accept then
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
 				l_request.add_header(l_accept,"Accept");
 			end
 			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
 			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, agent serializer, Void)
+			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
 			if l_response.has_error then
 				last_error := l_response.error
+			elseif attached { LIST [COW_SETTLEMENT_DTO] } l_response.data ({ LIST [COW_SETTLEMENT_DTO] }) as l_data then
+				Result := l_data
+			else
+				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
 			end
 		end
 
-	dapps_cow_tokens_historical_get (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; token_id: STRING_32)
-			-- 
-			-- 
+	cow_get_tokens_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; token_id: STRING_32): detachable LIST [COW_TOKEN_DTO]
+			-- GetTokens (historical) 🔥
+			-- Gets tokens.
 			-- 
 			-- argument: start_block  (optional, default to null)
 			-- 
@@ -119,6 +129,7 @@ feature -- API Access
 			-- argument: token_id  (optional, default to null)
 			-- 
 			-- 
+			-- Result LIST [COW_TOKEN_DTO]
 		require
 		local
   			l_path: STRING
@@ -136,20 +147,24 @@ feature -- API Access
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "tokenId", token_id));
 
 
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<>>)  as l_accept then
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
 				l_request.add_header(l_accept,"Accept");
 			end
 			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
 			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, agent serializer, Void)
+			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
 			if l_response.has_error then
 				last_error := l_response.error
+			elseif attached { LIST [COW_TOKEN_DTO] } l_response.data ({ LIST [COW_TOKEN_DTO] }) as l_data then
+				Result := l_data
+			else
+				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
 			end
 		end
 
-	dapps_cow_trades_historical_get (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME)
-			-- 
-			-- 
+	cow_get_trades_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME): detachable LIST [COW_TRADE_DTO]
+			-- GetTrades (historical) 🔥
+			-- Gets trades.
 			-- 
 			-- argument: start_block  (optional, default to null)
 			-- 
@@ -160,6 +175,7 @@ feature -- API Access
 			-- argument: end_date  (optional, default to null)
 			-- 
 			-- 
+			-- Result LIST [COW_TRADE_DTO]
 		require
 		local
   			l_path: STRING
@@ -176,20 +192,24 @@ feature -- API Access
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
 
 
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<>>)  as l_accept then
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
 				l_request.add_header(l_accept,"Accept");
 			end
 			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
 			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, agent serializer, Void)
+			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
 			if l_response.has_error then
 				last_error := l_response.error
+			elseif attached { LIST [COW_TRADE_DTO] } l_response.data ({ LIST [COW_TRADE_DTO] }) as l_data then
+				Result := l_data
+			else
+				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
 			end
 		end
 
-	dapps_cow_users_historical_get (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME)
-			-- 
-			-- 
+	cow_get_users_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME): detachable LIST [COW_USER_DTO]
+			-- GetUsers (historical)
+			-- Gets users.
 			-- 
 			-- argument: start_block  (optional, default to null)
 			-- 
@@ -200,6 +220,7 @@ feature -- API Access
 			-- argument: end_date  (optional, default to null)
 			-- 
 			-- 
+			-- Result LIST [COW_USER_DTO]
 		require
 		local
   			l_path: STRING
@@ -216,14 +237,18 @@ feature -- API Access
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
 
 
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<>>)  as l_accept then
+			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
 				l_request.add_header(l_accept,"Accept");
 			end
 			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
 			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, agent serializer, Void)
+			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
 			if l_response.has_error then
 				last_error := l_response.error
+			elseif attached { LIST [COW_USER_DTO] } l_response.data ({ LIST [COW_USER_DTO] }) as l_data then
+				Result := l_data
+			else
+				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
 			end
 		end
 

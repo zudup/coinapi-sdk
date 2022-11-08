@@ -10,6 +10,8 @@ defmodule OnChainAPI.Api.Cow do
   import OnChainAPI.RequestBuilder
 
   @doc """
+  GetOrders (historical)
+  Gets orders.
 
   ### Parameters
 
@@ -22,11 +24,11 @@ defmodule OnChainAPI.Api.Cow do
 
   ### Returns
 
-  - `{:ok, nil}` on success
+  - `{:ok, [%CowOrderDto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec dapps_cow_orders_historical_get(Tesla.Env.client, keyword()) :: {:ok, nil} | {:error, Tesla.Env.t}
-  def dapps_cow_orders_historical_get(connection, opts \\ []) do
+  @spec cow_get_orders__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.CowOrderDto.t)} | {:error, Tesla.Env.t}
+  def cow_get_orders__historical(connection, opts \\ []) do
     optional_params = %{
       :startBlock => :query,
       :endBlock => :query,
@@ -44,11 +46,13 @@ defmodule OnChainAPI.Api.Cow do
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, false}
+      {200, [%OnChainAPI.Model.CowOrderDto{}]}
     ])
   end
 
   @doc """
+  GetSettlements (historical)
+  Gets settlements.
 
   ### Parameters
 
@@ -61,11 +65,11 @@ defmodule OnChainAPI.Api.Cow do
 
   ### Returns
 
-  - `{:ok, nil}` on success
+  - `{:ok, [%CowSettlementDto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec dapps_cow_settlement_historical_get(Tesla.Env.client, keyword()) :: {:ok, nil} | {:error, Tesla.Env.t}
-  def dapps_cow_settlement_historical_get(connection, opts \\ []) do
+  @spec cow_get_settlements__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.CowSettlementDto.t)} | {:error, Tesla.Env.t}
+  def cow_get_settlements__historical(connection, opts \\ []) do
     optional_params = %{
       :startBlock => :query,
       :endBlock => :query,
@@ -76,18 +80,20 @@ defmodule OnChainAPI.Api.Cow do
     request =
       %{}
       |> method(:get)
-      |> url("/dapps/cow/settlement/historical")
+      |> url("/dapps/cow/settlements/historical")
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, false}
+      {200, [%OnChainAPI.Model.CowSettlementDto{}]}
     ])
   end
 
   @doc """
+  GetTokens (historical) 🔥
+  Gets tokens.
 
   ### Parameters
 
@@ -101,11 +107,11 @@ defmodule OnChainAPI.Api.Cow do
 
   ### Returns
 
-  - `{:ok, nil}` on success
+  - `{:ok, [%CowTokenDto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec dapps_cow_tokens_historical_get(Tesla.Env.client, keyword()) :: {:ok, nil} | {:error, Tesla.Env.t}
-  def dapps_cow_tokens_historical_get(connection, opts \\ []) do
+  @spec cow_get_tokens__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.CowTokenDto.t)} | {:error, Tesla.Env.t}
+  def cow_get_tokens__historical(connection, opts \\ []) do
     optional_params = %{
       :startBlock => :query,
       :endBlock => :query,
@@ -124,11 +130,13 @@ defmodule OnChainAPI.Api.Cow do
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, false}
+      {200, [%OnChainAPI.Model.CowTokenDto{}]}
     ])
   end
 
   @doc """
+  GetTrades (historical) 🔥
+  Gets trades.
 
   ### Parameters
 
@@ -141,11 +149,11 @@ defmodule OnChainAPI.Api.Cow do
 
   ### Returns
 
-  - `{:ok, nil}` on success
+  - `{:ok, [%CowTradeDto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec dapps_cow_trades_historical_get(Tesla.Env.client, keyword()) :: {:ok, nil} | {:error, Tesla.Env.t}
-  def dapps_cow_trades_historical_get(connection, opts \\ []) do
+  @spec cow_get_trades__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.CowTradeDto.t)} | {:error, Tesla.Env.t}
+  def cow_get_trades__historical(connection, opts \\ []) do
     optional_params = %{
       :startBlock => :query,
       :endBlock => :query,
@@ -163,11 +171,13 @@ defmodule OnChainAPI.Api.Cow do
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, false}
+      {200, [%OnChainAPI.Model.CowTradeDto{}]}
     ])
   end
 
   @doc """
+  GetUsers (historical)
+  Gets users.
 
   ### Parameters
 
@@ -180,11 +190,11 @@ defmodule OnChainAPI.Api.Cow do
 
   ### Returns
 
-  - `{:ok, nil}` on success
+  - `{:ok, [%CowUserDto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec dapps_cow_users_historical_get(Tesla.Env.client, keyword()) :: {:ok, nil} | {:error, Tesla.Env.t}
-  def dapps_cow_users_historical_get(connection, opts \\ []) do
+  @spec cow_get_users__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.CowUserDto.t)} | {:error, Tesla.Env.t}
+  def cow_get_users__historical(connection, opts \\ []) do
     optional_params = %{
       :startBlock => :query,
       :endBlock => :query,
@@ -202,7 +212,7 @@ defmodule OnChainAPI.Api.Cow do
     connection
     |> Connection.request(request)
     |> evaluate_response([
-      {200, false}
+      {200, [%OnChainAPI.Model.CowUserDto{}]}
     ])
   end
 end
