@@ -54,7 +54,7 @@ import org.openapitools.client.JSON;
  * The order execution report message.
  */
 @ApiModel(description = "The order execution report message.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-08T11:09:29.443218Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-08T11:40:17.208132Z[Etc/UTC]")
 public class OrderExecutionReportAllOf {
   public static final String SERIALIZED_NAME_CLIENT_ORDER_ID_FORMAT_EXCHANGE = "client_order_id_format_exchange";
   @SerializedName(SERIALIZED_NAME_CLIENT_ORDER_ID_FORMAT_EXCHANGE)

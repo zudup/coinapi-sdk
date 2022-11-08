@@ -56,7 +56,7 @@ import org.openapitools.client.JSON;
  * The new order message.
  */
 @ApiModel(description = "The new order message.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-08T11:09:29.443218Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-08T11:40:17.208132Z[Etc/UTC]")
 public class OrderNewSingleRequest {
   public static final String SERIALIZED_NAME_EXCHANGE_ID = "exchange_id";
   @SerializedName(SERIALIZED_NAME_EXCHANGE_ID)
