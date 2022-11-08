@@ -60,7 +60,7 @@ export default class SushiswapApi {
      */
 
     /**
-     * GetExchanges (current) 🔥
+     * Exchanges (current) 🔥
      * Gets exchanges.
      * @param {module:api/SushiswapApi~curveGetExchangesCurrentCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/CurveExchangeDTO>}
@@ -97,7 +97,7 @@ export default class SushiswapApi {
      */
 
     /**
-     * GetTrades (current) 🔥
+     * Trades (current) 🔥
      * Gets trades.
      * @param {module:api/SushiswapApi~dexGetTradesCurrentCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/DexTradeDTO>}
@@ -134,7 +134,7 @@ export default class SushiswapApi {
      */
 
     /**
-     * GetBundles (historical)
+     * Bundles (historical)
      * Gets bundles.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock AAAAAAAAAA
@@ -181,7 +181,7 @@ export default class SushiswapApi {
      */
 
     /**
-     * GetBurns (historical)
+     * Burns (historical)
      * Gets burns.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -230,7 +230,7 @@ export default class SushiswapApi {
      */
 
     /**
-     * GetDayData (historical)
+     * DayData (historical)
      * Gets day data.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -277,7 +277,7 @@ export default class SushiswapApi {
      */
 
     /**
-     * GetFactory (historical)
+     * Factory (historical)
      * Gets factory.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -324,7 +324,7 @@ export default class SushiswapApi {
      */
 
     /**
-     * GetHourData (historical)
+     * HourData (historical)
      * Gets hour data.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -371,7 +371,7 @@ export default class SushiswapApi {
      */
 
     /**
-     * GetLiquidityPosition (historical)
+     * LiquidityPosition (historical)
      * Gets liquidity position.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -420,7 +420,7 @@ export default class SushiswapApi {
      */
 
     /**
-     * GetLiquidityPositionSnapshot (historical)
+     * LiquidityPositionSnapshot (historical)
      * Gets liquidity position snapshot.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -469,7 +469,7 @@ export default class SushiswapApi {
      */
 
     /**
-     * GetMints (historical)
+     * Mints (historical)
      * Gets mints.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -518,7 +518,7 @@ export default class SushiswapApi {
      */
 
     /**
-     * GetPools (current) 🔥
+     * Pools (current) 🔥
      * Gets pools.
      * @param {module:api/SushiswapApi~sushiswapGetPoolsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/SushiswapPairDTO>}
@@ -555,7 +555,7 @@ export default class SushiswapApi {
      */
 
     /**
-     * GetPoolsDayData (historical)
+     * PoolsDayData (historical)
      * Gets pools day data.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -604,7 +604,7 @@ export default class SushiswapApi {
      */
 
     /**
-     * GetPools (historical) 🔥
+     * Pools (historical) 🔥
      * Gets list of pools for given filters.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -653,7 +653,7 @@ export default class SushiswapApi {
      */
 
     /**
-     * GetPoolsHourData (historical)
+     * PoolsHourData (historical)
      * Gets pools tracked each our.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -702,7 +702,7 @@ export default class SushiswapApi {
      */
 
     /**
-     * GetSwaps (current) 🔥
+     * Swaps (current) 🔥
      * Gets swaps.
      * @param {module:api/SushiswapApi~sushiswapGetSwapsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/SushiswapSwapDTO>}
@@ -739,7 +739,7 @@ export default class SushiswapApi {
      */
 
     /**
-     * GetSwaps (historical) 🔥
+     * Swaps (historical) 🔥
      * Gets list of swaps for given filters.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -788,7 +788,7 @@ export default class SushiswapApi {
      */
 
     /**
-     * GetTokens (current) 🔥
+     * Tokens (current) 🔥
      * Gets tokens.
      * @param {module:api/SushiswapApi~sushiswapGetTokensCurrentCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/SushiswapTokenDTO>}
@@ -825,7 +825,7 @@ export default class SushiswapApi {
      */
 
     /**
-     * GetTokensDayData (historical)
+     * TokensDayData (historical)
      * Gets tokens day data.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -874,7 +874,7 @@ export default class SushiswapApi {
      */
 
     /**
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      * Gets list of tokens for given filters.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -923,7 +923,7 @@ export default class SushiswapApi {
      */
 
     /**
-     * GetTransactions (historical)
+     * Transactions (historical)
      * Gets transactions.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -970,7 +970,7 @@ export default class SushiswapApi {
      */
 
     /**
-     * GetUsers (historical)
+     * Users (historical)
      * Gets users.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 

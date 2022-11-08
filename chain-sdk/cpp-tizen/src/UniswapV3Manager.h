@@ -40,7 +40,7 @@ public:
 	UniswapV3Manager();
 	virtual ~UniswapV3Manager();
 
-/*! \brief GetBundles (current). *Synchronous*
+/*! \brief Bundles (current). *Synchronous*
  *
  * Gets bundles.
  * \param handler The callback function to be invoked on completion. *Required*
@@ -52,7 +52,7 @@ bool uniswapV3GetBundles (current)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV3.BundleV3DTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetBundles (current). *Asynchronous*
+/*! \brief Bundles (current). *Asynchronous*
  *
  * Gets bundles.
  * \param handler The callback function to be invoked on completion. *Required*
@@ -65,7 +65,7 @@ bool uniswapV3GetBundles (current)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetBundles (historical). *Synchronous*
+/*! \brief Bundles (historical). *Synchronous*
  *
  * Gets bundles.
  * \param startBlock 
@@ -81,7 +81,7 @@ bool uniswapV3GetBundles (historical)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV3.BundleV3DTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetBundles (historical). *Asynchronous*
+/*! \brief Bundles (historical). *Asynchronous*
  *
  * Gets bundles.
  * \param startBlock 
@@ -98,7 +98,7 @@ bool uniswapV3GetBundles (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetBurns (current). *Synchronous*
+/*! \brief Burns (current). *Synchronous*
  *
  * Gets burns.
  * \param filterPoolId 
@@ -111,7 +111,7 @@ bool uniswapV3GetBurns (current)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV3.BurnV3DTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetBurns (current). *Asynchronous*
+/*! \brief Burns (current). *Asynchronous*
  *
  * Gets burns.
  * \param filterPoolId 
@@ -125,7 +125,7 @@ bool uniswapV3GetBurns (current)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetBurns (historical). *Synchronous*
+/*! \brief Burns (historical). *Synchronous*
  *
  * Gets burns.
  * \param startBlock 
@@ -142,7 +142,7 @@ bool uniswapV3GetBurns (historical)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV3.BurnV3DTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetBurns (historical). *Asynchronous*
+/*! \brief Burns (historical). *Asynchronous*
  *
  * Gets burns.
  * \param startBlock 
@@ -160,7 +160,7 @@ bool uniswapV3GetBurns (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetDayData (current). *Synchronous*
+/*! \brief DayData (current). *Synchronous*
  *
  * Gets uniswapv3 day data.
  * \param handler The callback function to be invoked on completion. *Required*
@@ -172,7 +172,7 @@ bool uniswapV3GetDayData (current)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV3.UniswapDayDataV3DTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetDayData (current). *Asynchronous*
+/*! \brief DayData (current). *Asynchronous*
  *
  * Gets uniswapv3 day data.
  * \param handler The callback function to be invoked on completion. *Required*
@@ -185,7 +185,7 @@ bool uniswapV3GetDayData (current)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetDayData (historical). *Synchronous*
+/*! \brief DayData (historical). *Synchronous*
  *
  * Gets uniswapv3 day data.
  * \param startBlock 
@@ -201,7 +201,7 @@ bool uniswapV3GetDayData (historical)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV3.UniswapDayDataV3DTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetDayData (historical). *Asynchronous*
+/*! \brief DayData (historical). *Asynchronous*
  *
  * Gets uniswapv3 day data.
  * \param startBlock 
@@ -218,7 +218,7 @@ bool uniswapV3GetDayData (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetFactory (current). *Synchronous*
+/*! \brief Factory (current). *Synchronous*
  *
  * Gets factory.
  * \param handler The callback function to be invoked on completion. *Required*
@@ -230,7 +230,7 @@ bool uniswapV3GetFactory (current)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV3.FactoryV3DTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetFactory (current). *Asynchronous*
+/*! \brief Factory (current). *Asynchronous*
  *
  * Gets factory.
  * \param handler The callback function to be invoked on completion. *Required*
@@ -243,7 +243,7 @@ bool uniswapV3GetFactory (current)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetFactory (historical). *Synchronous*
+/*! \brief Factory (historical). *Synchronous*
  *
  * Gets factory.
  * \param startBlock 
@@ -259,7 +259,7 @@ bool uniswapV3GetFactory (historical)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV3.FactoryV3DTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetFactory (historical). *Asynchronous*
+/*! \brief Factory (historical). *Asynchronous*
  *
  * Gets factory.
  * \param startBlock 
@@ -276,7 +276,7 @@ bool uniswapV3GetFactory (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetMints (current). *Synchronous*
+/*! \brief Mints (current). *Synchronous*
  *
  * Gets mints.
  * \param filterPoolId 
@@ -289,7 +289,7 @@ bool uniswapV3GetMints (current)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV3.MintV3DTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetMints (current). *Asynchronous*
+/*! \brief Mints (current). *Asynchronous*
  *
  * Gets mints.
  * \param filterPoolId 
@@ -303,7 +303,7 @@ bool uniswapV3GetMints (current)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetMints (historical). *Synchronous*
+/*! \brief Mints (historical). *Synchronous*
  *
  * Gets mints.
  * \param startBlock 
@@ -320,7 +320,7 @@ bool uniswapV3GetMints (historical)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV3.MintV3DTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetMints (historical). *Asynchronous*
+/*! \brief Mints (historical). *Asynchronous*
  *
  * Gets mints.
  * \param startBlock 
@@ -338,7 +338,7 @@ bool uniswapV3GetMints (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetPools (current) 🔥. *Synchronous*
+/*! \brief Pools (current) 🔥. *Synchronous*
  *
  * Gets pools.
  * \param filterPoolId 
@@ -351,7 +351,7 @@ bool uniswapV3GetPools (current)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV3.PoolV3DTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetPools (current) 🔥. *Asynchronous*
+/*! \brief Pools (current) 🔥. *Asynchronous*
  *
  * Gets pools.
  * \param filterPoolId 
@@ -365,7 +365,7 @@ bool uniswapV3GetPools (current)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetPools (historical) 🔥. *Synchronous*
+/*! \brief Pools (historical) 🔥. *Synchronous*
  *
  * Gets pools.
  * \param startBlock 
@@ -382,7 +382,7 @@ bool uniswapV3GetPools (historical)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV3.PoolV3DTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetPools (historical) 🔥. *Asynchronous*
+/*! \brief Pools (historical) 🔥. *Asynchronous*
  *
  * Gets pools.
  * \param startBlock 
@@ -400,7 +400,7 @@ bool uniswapV3GetPools (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetPoolsDayData (current). *Synchronous*
+/*! \brief PoolsDayData (current). *Synchronous*
  *
  * Gets pools day data.
  * \param filterPoolId 
@@ -413,7 +413,7 @@ bool uniswapV3GetPoolsDayData (current)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV3.PoolDayDataV3DTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetPoolsDayData (current). *Asynchronous*
+/*! \brief PoolsDayData (current). *Asynchronous*
  *
  * Gets pools day data.
  * \param filterPoolId 
@@ -427,7 +427,7 @@ bool uniswapV3GetPoolsDayData (current)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetPoolsDayData (historical). *Synchronous*
+/*! \brief PoolsDayData (historical). *Synchronous*
  *
  * Gets pools day data.
  * \param startBlock 
@@ -444,7 +444,7 @@ bool uniswapV3GetPoolsDayData (historical)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV3.PoolDayDataV3DTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetPoolsDayData (historical). *Asynchronous*
+/*! \brief PoolsDayData (historical). *Asynchronous*
  *
  * Gets pools day data.
  * \param startBlock 
@@ -462,7 +462,7 @@ bool uniswapV3GetPoolsDayData (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetPoolsHourData (current). *Synchronous*
+/*! \brief PoolsHourData (current). *Synchronous*
  *
  * Gets pools hour data.
  * \param filterPoolId 
@@ -475,7 +475,7 @@ bool uniswapV3GetPoolsHourData (current)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV3.PoolHourDataV3DTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetPoolsHourData (current). *Asynchronous*
+/*! \brief PoolsHourData (current). *Asynchronous*
  *
  * Gets pools hour data.
  * \param filterPoolId 
@@ -489,7 +489,7 @@ bool uniswapV3GetPoolsHourData (current)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetPoolsHourData (historical). *Synchronous*
+/*! \brief PoolsHourData (historical). *Synchronous*
  *
  * Gets pools hour data.
  * \param startBlock 
@@ -506,7 +506,7 @@ bool uniswapV3GetPoolsHourData (historical)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV3.PoolHourDataV3DTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetPoolsHourData (historical). *Asynchronous*
+/*! \brief PoolsHourData (historical). *Asynchronous*
  *
  * Gets pools hour data.
  * \param startBlock 
@@ -524,7 +524,7 @@ bool uniswapV3GetPoolsHourData (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetPositions (current). *Synchronous*
+/*! \brief Positions (current). *Synchronous*
  *
  * Gets positions.
  * \param filterPoolId 
@@ -537,7 +537,7 @@ bool uniswapV3GetPositions (current)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV3.PositionV3DTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetPositions (current). *Asynchronous*
+/*! \brief Positions (current). *Asynchronous*
  *
  * Gets positions.
  * \param filterPoolId 
@@ -551,7 +551,7 @@ bool uniswapV3GetPositions (current)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetPositions (historical). *Synchronous*
+/*! \brief Positions (historical). *Synchronous*
  *
  * Gets positions.
  * \param startBlock 
@@ -568,7 +568,7 @@ bool uniswapV3GetPositions (historical)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV3.PositionV3DTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetPositions (historical). *Asynchronous*
+/*! \brief Positions (historical). *Asynchronous*
  *
  * Gets positions.
  * \param startBlock 
@@ -586,7 +586,7 @@ bool uniswapV3GetPositions (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetPositionsSnaphots (historical). *Synchronous*
+/*! \brief PositionsSnaphots (historical). *Synchronous*
  *
  * Gets positions snapshots.
  * \param startBlock 
@@ -603,7 +603,7 @@ bool uniswapV3GetPositionsSnaphots (historical)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV3.PositionSnapshotV3DTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetPositionsSnaphots (historical). *Asynchronous*
+/*! \brief PositionsSnaphots (historical). *Asynchronous*
  *
  * Gets positions snapshots.
  * \param startBlock 
@@ -621,7 +621,7 @@ bool uniswapV3GetPositionsSnaphots (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetPositionsSnapshots (current). *Synchronous*
+/*! \brief PositionsSnapshots (current). *Synchronous*
  *
  * Gets positions snapshots.
  * \param filterPoolId 
@@ -634,7 +634,7 @@ bool uniswapV3GetPositionsSnapshots (current)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV3.PositionSnapshotV3DTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetPositionsSnapshots (current). *Asynchronous*
+/*! \brief PositionsSnapshots (current). *Asynchronous*
  *
  * Gets positions snapshots.
  * \param filterPoolId 
@@ -648,7 +648,7 @@ bool uniswapV3GetPositionsSnapshots (current)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetSwaps (current) 🔥. *Synchronous*
+/*! \brief Swaps (current) 🔥. *Synchronous*
  *
  * Gets swaps.
  * \param filterPoolId 
@@ -661,7 +661,7 @@ bool uniswapV3GetSwaps (current)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV3.SwapV3DTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetSwaps (current) 🔥. *Asynchronous*
+/*! \brief Swaps (current) 🔥. *Asynchronous*
  *
  * Gets swaps.
  * \param filterPoolId 
@@ -675,7 +675,7 @@ bool uniswapV3GetSwaps (current)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetSwaps (historical) 🔥. *Synchronous*
+/*! \brief Swaps (historical) 🔥. *Synchronous*
  *
  * Gets swaps.
  * \param startBlock 
@@ -692,7 +692,7 @@ bool uniswapV3GetSwaps (historical)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV3.SwapV3DTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetSwaps (historical) 🔥. *Asynchronous*
+/*! \brief Swaps (historical) 🔥. *Asynchronous*
  *
  * Gets swaps.
  * \param startBlock 
@@ -710,7 +710,7 @@ bool uniswapV3GetSwaps (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetTicks (current). *Synchronous*
+/*! \brief Ticks (current). *Synchronous*
  *
  * Gets ticks.
  * \param filterPoolId 
@@ -723,7 +723,7 @@ bool uniswapV3GetTicks (current)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV3.TickV3DTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetTicks (current). *Asynchronous*
+/*! \brief Ticks (current). *Asynchronous*
  *
  * Gets ticks.
  * \param filterPoolId 
@@ -737,7 +737,7 @@ bool uniswapV3GetTicks (current)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetTicks (historical). *Synchronous*
+/*! \brief Ticks (historical). *Synchronous*
  *
  * Gets ticks.
  * \param startBlock 
@@ -754,7 +754,7 @@ bool uniswapV3GetTicks (historical)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV3.TickV3DTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetTicks (historical). *Asynchronous*
+/*! \brief Ticks (historical). *Asynchronous*
  *
  * Gets ticks.
  * \param startBlock 
@@ -772,7 +772,7 @@ bool uniswapV3GetTicks (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetTicksDayData (current). *Synchronous*
+/*! \brief TicksDayData (current). *Synchronous*
  *
  * Gets ticks day data.
  * \param filterPoolId 
@@ -785,7 +785,7 @@ bool uniswapV3GetTicksDayData (current)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV3.TickDayDataV3DTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetTicksDayData (current). *Asynchronous*
+/*! \brief TicksDayData (current). *Asynchronous*
  *
  * Gets ticks day data.
  * \param filterPoolId 
@@ -799,7 +799,7 @@ bool uniswapV3GetTicksDayData (current)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetTicksDayData (historical). *Synchronous*
+/*! \brief TicksDayData (historical). *Synchronous*
  *
  * Gets ticks day data.
  * \param startBlock 
@@ -816,7 +816,7 @@ bool uniswapV3GetTicksDayData (historical)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV3.TickDayDataV3DTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetTicksDayData (historical). *Asynchronous*
+/*! \brief TicksDayData (historical). *Asynchronous*
  *
  * Gets ticks day data.
  * \param startBlock 
@@ -834,7 +834,7 @@ bool uniswapV3GetTicksDayData (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetTokens (current) 🔥. *Synchronous*
+/*! \brief Tokens (current) 🔥. *Synchronous*
  *
  * Gets tokens.
  * \param filterTokenId 
@@ -847,7 +847,7 @@ bool uniswapV3GetTokens (current)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV3.TokenV3DTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetTokens (current) 🔥. *Asynchronous*
+/*! \brief Tokens (current) 🔥. *Asynchronous*
  *
  * Gets tokens.
  * \param filterTokenId 
@@ -861,7 +861,7 @@ bool uniswapV3GetTokens (current)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetTokens (historical) 🔥. *Synchronous*
+/*! \brief Tokens (historical) 🔥. *Synchronous*
  *
  * Gets tokens.
  * \param startBlock 
@@ -878,7 +878,7 @@ bool uniswapV3GetTokens (historical)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV3.TokenV3DTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetTokens (historical) 🔥. *Asynchronous*
+/*! \brief Tokens (historical) 🔥. *Asynchronous*
  *
  * Gets tokens.
  * \param startBlock 
@@ -896,7 +896,7 @@ bool uniswapV3GetTokens (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetTokensDayData (current). *Synchronous*
+/*! \brief TokensDayData (current). *Synchronous*
  *
  * Gets tokens day data.
  * \param filterTokenId 
@@ -909,7 +909,7 @@ bool uniswapV3GetTokensDayData (current)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV3.TokenV3DayDataDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetTokensDayData (current). *Asynchronous*
+/*! \brief TokensDayData (current). *Asynchronous*
  *
  * Gets tokens day data.
  * \param filterTokenId 
@@ -923,7 +923,7 @@ bool uniswapV3GetTokensDayData (current)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetTokensDayData (historical). *Synchronous*
+/*! \brief TokensDayData (historical). *Synchronous*
  *
  * Gets tokens day data.
  * \param startBlock 
@@ -940,7 +940,7 @@ bool uniswapV3GetTokensDayData (historical)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV3.TokenV3DayDataDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetTokensDayData (historical). *Asynchronous*
+/*! \brief TokensDayData (historical). *Asynchronous*
  *
  * Gets tokens day data.
  * \param startBlock 
@@ -958,7 +958,7 @@ bool uniswapV3GetTokensDayData (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetTokensHourData (current). *Synchronous*
+/*! \brief TokensHourData (current). *Synchronous*
  *
  * Gets tokens hour data.
  * \param filterTokenId 
@@ -971,7 +971,7 @@ bool uniswapV3GetTokensHourData (current)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV3.TokenHourDataV3DTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetTokensHourData (current). *Asynchronous*
+/*! \brief TokensHourData (current). *Asynchronous*
  *
  * Gets tokens hour data.
  * \param filterTokenId 
@@ -985,7 +985,7 @@ bool uniswapV3GetTokensHourData (current)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetTokensHourData (historical). *Synchronous*
+/*! \brief TokensHourData (historical). *Synchronous*
  *
  * Gets tokens hour data.
  * \param startBlock 
@@ -1002,7 +1002,7 @@ bool uniswapV3GetTokensHourData (historical)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV3.TokenHourDataV3DTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetTokensHourData (historical). *Asynchronous*
+/*! \brief TokensHourData (historical). *Asynchronous*
  *
  * Gets tokens hour data.
  * \param startBlock 
@@ -1020,7 +1020,7 @@ bool uniswapV3GetTokensHourData (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetTransactions (historical). *Synchronous*
+/*! \brief Transactions (historical). *Synchronous*
  *
  * Gets transactions.
  * \param startBlock 
@@ -1036,7 +1036,7 @@ bool uniswapV3GetTransactions (historical)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV3.TransactionV3DTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetTransactions (historical). *Asynchronous*
+/*! \brief Transactions (historical). *Asynchronous*
  *
  * Gets transactions.
  * \param startBlock 

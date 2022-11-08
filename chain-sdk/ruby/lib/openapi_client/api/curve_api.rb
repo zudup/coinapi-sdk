@@ -19,7 +19,7 @@ module OpenapiClient
     def initialize(api_client = ApiClient.default)
       @api_client = api_client
     end
-    # GetAccounts (historical)
+    # Accounts (historical)
     # Gets accounts.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -32,7 +32,7 @@ module OpenapiClient
       data
     end
 
-    # GetAccounts (historical)
+    # Accounts (historical)
     # Gets accounts.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -88,7 +88,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetAddLiquidityEvents (historical)
+    # AddLiquidityEvents (historical)
     # Gets add liquidity events.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -102,7 +102,7 @@ module OpenapiClient
       data
     end
 
-    # GetAddLiquidityEvents (historical)
+    # AddLiquidityEvents (historical)
     # Gets add liquidity events.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -160,7 +160,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetAdminFeeChangeLogs (historical)
+    # AdminFeeChangeLogs (historical)
     # Gets admin fee change logs.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -174,7 +174,7 @@ module OpenapiClient
       data
     end
 
-    # GetAdminFeeChangeLogs (historical)
+    # AdminFeeChangeLogs (historical)
     # Gets admin fee change logs.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -232,7 +232,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetAmplificationCoeffChangeLogs (historical)
+    # AmplificationCoeffChangeLogs (historical)
     # Gets amplification coeff change logs.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -246,7 +246,7 @@ module OpenapiClient
       data
     end
 
-    # GetAmplificationCoeffChangeLogs (historical)
+    # AmplificationCoeffChangeLogs (historical)
     # Gets amplification coeff change logs.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -304,7 +304,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetCoins (historical)
+    # Coins (historical)
     # Gets coins.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -318,7 +318,7 @@ module OpenapiClient
       data
     end
 
-    # GetCoins (historical)
+    # Coins (historical)
     # Gets coins.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -376,7 +376,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetContracts (historical)
+    # Contracts (historical)
     # Gets contracts.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -390,7 +390,7 @@ module OpenapiClient
       data
     end
 
-    # GetContracts (historical)
+    # Contracts (historical)
     # Gets contracts.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -448,7 +448,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetContractsVersions (historical)
+    # ContractsVersions (historical)
     # Gets contracts versions.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -462,7 +462,7 @@ module OpenapiClient
       data
     end
 
-    # GetContractsVersions (historical)
+    # ContractsVersions (historical)
     # Gets contracts versions.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -520,7 +520,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetDailyVolumes (historical)
+    # DailyVolumes (historical)
     # Gets daily volumes.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -534,7 +534,7 @@ module OpenapiClient
       data
     end
 
-    # GetDailyVolumes (historical)
+    # DailyVolumes (historical)
     # Gets daily volumes.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -592,7 +592,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetExchanges (historical) 🔥
+    # Exchanges (historical) 🔥
     # Gets exchanges.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -606,7 +606,7 @@ module OpenapiClient
       data
     end
 
-    # GetExchanges (historical) 🔥
+    # Exchanges (historical) 🔥
     # Gets exchanges.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -664,7 +664,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetFeeChangeLogs (historical)
+    # FeeChangeLogs (historical)
     # Gets fee change logs.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -678,7 +678,7 @@ module OpenapiClient
       data
     end
 
-    # GetFeeChangeLogs (historical)
+    # FeeChangeLogs (historical)
     # Gets fee change logs.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -736,7 +736,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetGauges (historical)
+    # Gauges (historical)
     # Gets gauges.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -750,7 +750,7 @@ module OpenapiClient
       data
     end
 
-    # GetGauges (historical)
+    # Gauges (historical)
     # Gets gauges.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -808,7 +808,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetGaugesDeposits (historical)
+    # GaugesDeposits (historical)
     # Gets gauges deposits.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -821,7 +821,7 @@ module OpenapiClient
       data
     end
 
-    # GetGaugesDeposits (historical)
+    # GaugesDeposits (historical)
     # Gets gauges deposits.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -877,7 +877,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetGaugesLiquidity (historical)
+    # GaugesLiquidity (historical)
     # Gets gauges liquidity.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -890,7 +890,7 @@ module OpenapiClient
       data
     end
 
-    # GetGaugesLiquidity (historical)
+    # GaugesLiquidity (historical)
     # Gets gauges liquidity.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -946,7 +946,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetGaugesTotalWeights (historical)
+    # GaugesTotalWeights (historical)
     # Gets gauges total weights.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -959,7 +959,7 @@ module OpenapiClient
       data
     end
 
-    # GetGaugesTotalWeights (historical)
+    # GaugesTotalWeights (historical)
     # Gets gauges total weights.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -1015,7 +1015,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetGaugesTypes (historical)
+    # GaugesTypes (historical)
     # Gets gauges types.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -1028,7 +1028,7 @@ module OpenapiClient
       data
     end
 
-    # GetGaugesTypes (historical)
+    # GaugesTypes (historical)
     # Gets gauges types.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -1084,7 +1084,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetGaugesTypesWeights (historical)
+    # GaugesTypesWeights (historical)
     # Gets gauges types weights.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -1097,7 +1097,7 @@ module OpenapiClient
       data
     end
 
-    # GetGaugesTypesWeights (historical)
+    # GaugesTypesWeights (historical)
     # Gets gauges types weights.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -1153,7 +1153,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetGaugesWeights (historical)
+    # GaugesWeights (historical)
     # Gets gauges weights.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -1166,7 +1166,7 @@ module OpenapiClient
       data
     end
 
-    # GetGaugesWeights (historical)
+    # GaugesWeights (historical)
     # Gets gauges weights.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -1222,7 +1222,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetGaugesWeightsVotes (historical)
+    # GaugesWeightsVotes (historical)
     # Gets gauges weights votes.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -1235,7 +1235,7 @@ module OpenapiClient
       data
     end
 
-    # GetGaugesWeightsVotes (historical)
+    # GaugesWeightsVotes (historical)
     # Gets gauges weights votes.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -1291,7 +1291,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetGaugesWithdraw (historical)
+    # GaugesWithdraw (historical)
     # Gets gauges withdraws.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -1304,7 +1304,7 @@ module OpenapiClient
       data
     end
 
-    # GetGaugesWithdraw (historical)
+    # GaugesWithdraw (historical)
     # Gets gauges withdraws.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -1360,7 +1360,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetHourlyVolumes (historical)
+    # HourlyVolumes (historical)
     # Gets hourly volumes.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -1374,7 +1374,7 @@ module OpenapiClient
       data
     end
 
-    # GetHourlyVolumes (historical)
+    # HourlyVolumes (historical)
     # Gets hourly volumes.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -1432,7 +1432,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetLpTokens (historical)
+    # LpTokens (historical)
     # Gets lp tokens.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -1446,7 +1446,7 @@ module OpenapiClient
       data
     end
 
-    # GetLpTokens (historical)
+    # LpTokens (historical)
     # Gets lp tokens.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -1504,7 +1504,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetPools (historical) 🔥
+    # Pools (historical) 🔥
     # Gets pools.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -1518,7 +1518,7 @@ module OpenapiClient
       data
     end
 
-    # GetPools (historical) 🔥
+    # Pools (historical) 🔥
     # Gets pools.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -1576,7 +1576,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetProposals (historical)
+    # Proposals (historical)
     # Gets proposals.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -1589,7 +1589,7 @@ module OpenapiClient
       data
     end
 
-    # GetProposals (historical)
+    # Proposals (historical)
     # Gets proposals.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -1645,7 +1645,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetProposalsVotes (historical)
+    # ProposalsVotes (historical)
     # Gets proposals votes.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -1658,7 +1658,7 @@ module OpenapiClient
       data
     end
 
-    # GetProposalsVotes (historical)
+    # ProposalsVotes (historical)
     # Gets proposals votes.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -1714,7 +1714,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetRemoveLiquidityEvents (historical)
+    # RemoveLiquidityEvents (historical)
     # Gets remove liquidity events.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -1728,7 +1728,7 @@ module OpenapiClient
       data
     end
 
-    # GetRemoveLiquidityEvents (historical)
+    # RemoveLiquidityEvents (historical)
     # Gets remove liquidity events.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -1786,7 +1786,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetRemoveLiquidityOneEvents (historical)
+    # RemoveLiquidityOneEvents (historical)
     # Gets remove liquidity one events.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -1800,7 +1800,7 @@ module OpenapiClient
       data
     end
 
-    # GetRemoveLiquidityOneEvents (historical)
+    # RemoveLiquidityOneEvents (historical)
     # Gets remove liquidity one events.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -1858,7 +1858,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetSystemStates (historical)
+    # SystemStates (historical)
     # Gets system states.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -1871,7 +1871,7 @@ module OpenapiClient
       data
     end
 
-    # GetSystemStates (historical)
+    # SystemStates (historical)
     # Gets system states.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -1927,7 +1927,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetTokens (historical) 🔥
+    # Tokens (historical) 🔥
     # Gets tokens.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -1941,7 +1941,7 @@ module OpenapiClient
       data
     end
 
-    # GetTokens (historical) 🔥
+    # Tokens (historical) 🔥
     # Gets tokens.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -1999,7 +1999,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetTransferOwnershipEvents (historical)
+    # TransferOwnershipEvents (historical)
     # Gets transfer ownership events.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -2013,7 +2013,7 @@ module OpenapiClient
       data
     end
 
-    # GetTransferOwnershipEvents (historical)
+    # TransferOwnershipEvents (historical)
     # Gets transfer ownership events.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -2071,7 +2071,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetUnderlyingCoins (historical)
+    # UnderlyingCoins (historical)
     # Gets underlying coins.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -2085,7 +2085,7 @@ module OpenapiClient
       data
     end
 
-    # GetUnderlyingCoins (historical)
+    # UnderlyingCoins (historical)
     # Gets underlying coins.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -2143,7 +2143,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetVotingApps (historical)
+    # VotingApps (historical)
     # Gets voting apps.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -2156,7 +2156,7 @@ module OpenapiClient
       data
     end
 
-    # GetVotingApps (historical)
+    # VotingApps (historical)
     # Gets voting apps.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -2212,7 +2212,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetWeeklyVolumes (historical)
+    # WeeklyVolumes (historical)
     # Gets weekly volumes.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -2226,7 +2226,7 @@ module OpenapiClient
       data
     end
 
-    # GetWeeklyVolumes (historical)
+    # WeeklyVolumes (historical)
     # Gets weekly volumes.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 

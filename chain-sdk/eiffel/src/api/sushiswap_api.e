@@ -25,7 +25,7 @@ feature -- API Access
 
 
 	curve_get_exchanges_current : detachable LIST [CURVE_EXCHANGE_DTO]
-			-- GetExchanges (current) 🔥
+			-- Exchanges (current) 🔥
 			-- Gets exchanges.
 			-- 
 			-- 
@@ -58,7 +58,7 @@ feature -- API Access
 		end
 
 	dex_get_trades_current : detachable LIST [DEX_TRADE_DTO]
-			-- GetTrades (current) 🔥
+			-- Trades (current) 🔥
 			-- Gets trades.
 			-- 
 			-- 
@@ -91,7 +91,7 @@ feature -- API Access
 		end
 
 	sushiswap_get_bundles_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME): detachable LIST [SUSHISWAP_BUNDLE_DTO]
-			-- GetBundles (historical)
+			-- Bundles (historical)
 			-- Gets bundles.
 			-- 
 			-- argument: start_block AAAAAAAAAA (optional, default to null)
@@ -136,7 +136,7 @@ feature -- API Access
 		end
 
 	sushiswap_get_burns_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [SUSHISWAP_BURN_DTO]
-			-- GetBurns (historical)
+			-- Burns (historical)
 			-- Gets burns.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -184,7 +184,7 @@ feature -- API Access
 		end
 
 	sushiswap_get_day_data_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME): detachable LIST [SUSHISWAP_DAY_DATA_DTO]
-			-- GetDayData (historical)
+			-- DayData (historical)
 			-- Gets day data.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -229,7 +229,7 @@ feature -- API Access
 		end
 
 	sushiswap_get_factory_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME): detachable LIST [SUSHISWAP_FACTORY_DTO]
-			-- GetFactory (historical)
+			-- Factory (historical)
 			-- Gets factory.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -274,7 +274,7 @@ feature -- API Access
 		end
 
 	sushiswap_get_hour_data_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME): detachable LIST [SUSHISWAP_HOUR_DATA_DTO]
-			-- GetHourData (historical)
+			-- HourData (historical)
 			-- Gets hour data.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -319,7 +319,7 @@ feature -- API Access
 		end
 
 	sushiswap_get_liquidity_position_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [SUSHISWAP_LIQUIDITY_POSITION_DTO]
-			-- GetLiquidityPosition (historical)
+			-- LiquidityPosition (historical)
 			-- Gets liquidity position.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -367,7 +367,7 @@ feature -- API Access
 		end
 
 	sushiswap_get_liquidity_position_snapshot_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [SUSHISWAP_LIQUIDITY_POSITION_SNAPSHOT_DTO]
-			-- GetLiquidityPositionSnapshot (historical)
+			-- LiquidityPositionSnapshot (historical)
 			-- Gets liquidity position snapshot.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -415,7 +415,7 @@ feature -- API Access
 		end
 
 	sushiswap_get_mints_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [SUSHISWAP_MINT_DTO]
-			-- GetMints (historical)
+			-- Mints (historical)
 			-- Gets mints.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -463,7 +463,7 @@ feature -- API Access
 		end
 
 	sushiswap_get_pools_current : detachable LIST [SUSHISWAP_PAIR_DTO]
-			-- GetPools (current) 🔥
+			-- Pools (current) 🔥
 			-- Gets pools.
 			-- 
 			-- 
@@ -496,7 +496,7 @@ feature -- API Access
 		end
 
 	sushiswap_get_pools_day_data_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [SUSHISWAP_PAIR_DAY_DATA_DTO]
-			-- GetPoolsDayData (historical)
+			-- PoolsDayData (historical)
 			-- Gets pools day data.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -544,7 +544,7 @@ feature -- API Access
 		end
 
 	sushiswap_get_pools_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [SUSHISWAP_PAIR_DTO]
-			-- GetPools (historical) 🔥
+			-- Pools (historical) 🔥
 			-- Gets list of pools for given filters.
 			-- 
 			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
@@ -592,7 +592,7 @@ feature -- API Access
 		end
 
 	sushiswap_get_pools_hour_data_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [SUSHISWAP_PAIR_HOUR_DATA_DTO]
-			-- GetPoolsHourData (historical)
+			-- PoolsHourData (historical)
 			-- Gets pools tracked each our.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -640,7 +640,7 @@ feature -- API Access
 		end
 
 	sushiswap_get_swaps_current : detachable LIST [SUSHISWAP_SWAP_DTO]
-			-- GetSwaps (current) 🔥
+			-- Swaps (current) 🔥
 			-- Gets swaps.
 			-- 
 			-- 
@@ -673,7 +673,7 @@ feature -- API Access
 		end
 
 	sushiswap_get_swaps_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [SUSHISWAP_SWAP_DTO]
-			-- GetSwaps (historical) 🔥
+			-- Swaps (historical) 🔥
 			-- Gets list of swaps for given filters.
 			-- 
 			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
@@ -721,7 +721,7 @@ feature -- API Access
 		end
 
 	sushiswap_get_tokens_current : detachable LIST [SUSHISWAP_TOKEN_DTO]
-			-- GetTokens (current) 🔥
+			-- Tokens (current) 🔥
 			-- Gets tokens.
 			-- 
 			-- 
@@ -754,7 +754,7 @@ feature -- API Access
 		end
 
 	sushiswap_get_tokens_day_data_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; token_id: STRING_32): detachable LIST [SUSHISWAP_TOKEN_DAY_DATA_DTO]
-			-- GetTokensDayData (historical)
+			-- TokensDayData (historical)
 			-- Gets tokens day data.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -802,7 +802,7 @@ feature -- API Access
 		end
 
 	sushiswap_get_tokens_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; token_id: STRING_32): detachable LIST [SUSHISWAP_TOKEN_DTO]
-			-- GetTokens (historical) 🔥
+			-- Tokens (historical) 🔥
 			-- Gets list of tokens for given filters.
 			-- 
 			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
@@ -850,7 +850,7 @@ feature -- API Access
 		end
 
 	sushiswap_get_transactions_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME): detachable LIST [SUSHISWAP_TRANSACTION_DTO]
-			-- GetTransactions (historical)
+			-- Transactions (historical)
 			-- Gets transactions.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -895,7 +895,7 @@ feature -- API Access
 		end
 
 	sushiswap_get_users_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME): detachable LIST [SUSHISWAP_USER_DTO]
-			-- GetUsers (historical)
+			-- Users (historical)
 			-- Gets users.
 			-- 
 			-- argument: start_block  (optional, default to null)

@@ -33,7 +33,7 @@ describe 'CurveApi' do
   end
 
   # unit tests for curve_get_accounts__historical
-  # GetAccounts (historical)
+  # Accounts (historical)
   # Gets accounts.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -48,7 +48,7 @@ describe 'CurveApi' do
   end
 
   # unit tests for curve_get_add_liquidity_events__historical
-  # GetAddLiquidityEvents (historical)
+  # AddLiquidityEvents (historical)
   # Gets add liquidity events.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -64,7 +64,7 @@ describe 'CurveApi' do
   end
 
   # unit tests for curve_get_admin_fee_change_logs__historical
-  # GetAdminFeeChangeLogs (historical)
+  # AdminFeeChangeLogs (historical)
   # Gets admin fee change logs.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -80,7 +80,7 @@ describe 'CurveApi' do
   end
 
   # unit tests for curve_get_amplification_coeff_change_logs__historical
-  # GetAmplificationCoeffChangeLogs (historical)
+  # AmplificationCoeffChangeLogs (historical)
   # Gets amplification coeff change logs.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -96,7 +96,7 @@ describe 'CurveApi' do
   end
 
   # unit tests for curve_get_coins__historical
-  # GetCoins (historical)
+  # Coins (historical)
   # Gets coins.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -112,7 +112,7 @@ describe 'CurveApi' do
   end
 
   # unit tests for curve_get_contracts__historical
-  # GetContracts (historical)
+  # Contracts (historical)
   # Gets contracts.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -128,7 +128,7 @@ describe 'CurveApi' do
   end
 
   # unit tests for curve_get_contracts_versions__historical
-  # GetContractsVersions (historical)
+  # ContractsVersions (historical)
   # Gets contracts versions.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -144,7 +144,7 @@ describe 'CurveApi' do
   end
 
   # unit tests for curve_get_daily_volumes__historical
-  # GetDailyVolumes (historical)
+  # DailyVolumes (historical)
   # Gets daily volumes.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -160,7 +160,7 @@ describe 'CurveApi' do
   end
 
   # unit tests for curve_get_exchanges__historical
-  # GetExchanges (historical) 🔥
+  # Exchanges (historical) 🔥
   # Gets exchanges.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -176,7 +176,7 @@ describe 'CurveApi' do
   end
 
   # unit tests for curve_get_fee_change_logs__historical
-  # GetFeeChangeLogs (historical)
+  # FeeChangeLogs (historical)
   # Gets fee change logs.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -192,7 +192,7 @@ describe 'CurveApi' do
   end
 
   # unit tests for curve_get_gauges__historical
-  # GetGauges (historical)
+  # Gauges (historical)
   # Gets gauges.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -208,7 +208,7 @@ describe 'CurveApi' do
   end
 
   # unit tests for curve_get_gauges_deposits__historical
-  # GetGaugesDeposits (historical)
+  # GaugesDeposits (historical)
   # Gets gauges deposits.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -223,7 +223,7 @@ describe 'CurveApi' do
   end
 
   # unit tests for curve_get_gauges_liquidity__historical
-  # GetGaugesLiquidity (historical)
+  # GaugesLiquidity (historical)
   # Gets gauges liquidity.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -238,7 +238,7 @@ describe 'CurveApi' do
   end
 
   # unit tests for curve_get_gauges_total_weights__historical
-  # GetGaugesTotalWeights (historical)
+  # GaugesTotalWeights (historical)
   # Gets gauges total weights.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -253,7 +253,7 @@ describe 'CurveApi' do
   end
 
   # unit tests for curve_get_gauges_types__historical
-  # GetGaugesTypes (historical)
+  # GaugesTypes (historical)
   # Gets gauges types.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -268,7 +268,7 @@ describe 'CurveApi' do
   end
 
   # unit tests for curve_get_gauges_types_weights__historical
-  # GetGaugesTypesWeights (historical)
+  # GaugesTypesWeights (historical)
   # Gets gauges types weights.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -283,7 +283,7 @@ describe 'CurveApi' do
   end
 
   # unit tests for curve_get_gauges_weights__historical
-  # GetGaugesWeights (historical)
+  # GaugesWeights (historical)
   # Gets gauges weights.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -298,7 +298,7 @@ describe 'CurveApi' do
   end
 
   # unit tests for curve_get_gauges_weights_votes__historical
-  # GetGaugesWeightsVotes (historical)
+  # GaugesWeightsVotes (historical)
   # Gets gauges weights votes.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -313,7 +313,7 @@ describe 'CurveApi' do
   end
 
   # unit tests for curve_get_gauges_withdraw__historical
-  # GetGaugesWithdraw (historical)
+  # GaugesWithdraw (historical)
   # Gets gauges withdraws.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -328,7 +328,7 @@ describe 'CurveApi' do
   end
 
   # unit tests for curve_get_hourly_volumes__historical
-  # GetHourlyVolumes (historical)
+  # HourlyVolumes (historical)
   # Gets hourly volumes.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -344,7 +344,7 @@ describe 'CurveApi' do
   end
 
   # unit tests for curve_get_lp_tokens__historical
-  # GetLpTokens (historical)
+  # LpTokens (historical)
   # Gets lp tokens.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -360,7 +360,7 @@ describe 'CurveApi' do
   end
 
   # unit tests for curve_get_pools__historical
-  # GetPools (historical) 🔥
+  # Pools (historical) 🔥
   # Gets pools.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -376,7 +376,7 @@ describe 'CurveApi' do
   end
 
   # unit tests for curve_get_proposals__historical
-  # GetProposals (historical)
+  # Proposals (historical)
   # Gets proposals.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -391,7 +391,7 @@ describe 'CurveApi' do
   end
 
   # unit tests for curve_get_proposals_votes__historical
-  # GetProposalsVotes (historical)
+  # ProposalsVotes (historical)
   # Gets proposals votes.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -406,7 +406,7 @@ describe 'CurveApi' do
   end
 
   # unit tests for curve_get_remove_liquidity_events__historical
-  # GetRemoveLiquidityEvents (historical)
+  # RemoveLiquidityEvents (historical)
   # Gets remove liquidity events.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -422,7 +422,7 @@ describe 'CurveApi' do
   end
 
   # unit tests for curve_get_remove_liquidity_one_events__historical
-  # GetRemoveLiquidityOneEvents (historical)
+  # RemoveLiquidityOneEvents (historical)
   # Gets remove liquidity one events.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -438,7 +438,7 @@ describe 'CurveApi' do
   end
 
   # unit tests for curve_get_system_states__historical
-  # GetSystemStates (historical)
+  # SystemStates (historical)
   # Gets system states.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -453,7 +453,7 @@ describe 'CurveApi' do
   end
 
   # unit tests for curve_get_tokens__historical
-  # GetTokens (historical) 🔥
+  # Tokens (historical) 🔥
   # Gets tokens.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -469,7 +469,7 @@ describe 'CurveApi' do
   end
 
   # unit tests for curve_get_transfer_ownership_events__historical
-  # GetTransferOwnershipEvents (historical)
+  # TransferOwnershipEvents (historical)
   # Gets transfer ownership events.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -485,7 +485,7 @@ describe 'CurveApi' do
   end
 
   # unit tests for curve_get_underlying_coins__historical
-  # GetUnderlyingCoins (historical)
+  # UnderlyingCoins (historical)
   # Gets underlying coins.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -501,7 +501,7 @@ describe 'CurveApi' do
   end
 
   # unit tests for curve_get_voting_apps__historical
-  # GetVotingApps (historical)
+  # VotingApps (historical)
   # Gets voting apps.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -516,7 +516,7 @@ describe 'CurveApi' do
   end
 
   # unit tests for curve_get_weekly_volumes__historical
-  # GetWeeklyVolumes (historical)
+  # WeeklyVolumes (historical)
   # Gets weekly volumes.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 

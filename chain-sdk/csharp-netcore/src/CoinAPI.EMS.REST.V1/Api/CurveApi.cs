@@ -28,7 +28,7 @@ namespace CoinAPI.EMS.REST.V1.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// GetAccounts (historical)
+        /// Accounts (historical)
         /// </summary>
         /// <remarks>
         /// Gets accounts.
@@ -43,7 +43,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         List<CurveAccountDTO> CurveGetAccountsHistorical(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), int operationIndex = 0);
 
         /// <summary>
-        /// GetAccounts (historical)
+        /// Accounts (historical)
         /// </summary>
         /// <remarks>
         /// Gets accounts.
@@ -57,7 +57,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>ApiResponse of List&lt;CurveAccountDTO&gt;</returns>
         ApiResponse<List<CurveAccountDTO>> CurveGetAccountsHistoricalWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), int operationIndex = 0);
         /// <summary>
-        /// GetAddLiquidityEvents (historical)
+        /// AddLiquidityEvents (historical)
         /// </summary>
         /// <remarks>
         /// Gets add liquidity events.
@@ -73,7 +73,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         List<CurveAddLiquidityEventDTO> CurveGetAddLiquidityEventsHistorical(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0);
 
         /// <summary>
-        /// GetAddLiquidityEvents (historical)
+        /// AddLiquidityEvents (historical)
         /// </summary>
         /// <remarks>
         /// Gets add liquidity events.
@@ -88,7 +88,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>ApiResponse of List&lt;CurveAddLiquidityEventDTO&gt;</returns>
         ApiResponse<List<CurveAddLiquidityEventDTO>> CurveGetAddLiquidityEventsHistoricalWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0);
         /// <summary>
-        /// GetAdminFeeChangeLogs (historical)
+        /// AdminFeeChangeLogs (historical)
         /// </summary>
         /// <remarks>
         /// Gets admin fee change logs.
@@ -104,7 +104,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         List<CurveAdminFeeChangeLogDTO> CurveGetAdminFeeChangeLogsHistorical(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0);
 
         /// <summary>
-        /// GetAdminFeeChangeLogs (historical)
+        /// AdminFeeChangeLogs (historical)
         /// </summary>
         /// <remarks>
         /// Gets admin fee change logs.
@@ -119,7 +119,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>ApiResponse of List&lt;CurveAdminFeeChangeLogDTO&gt;</returns>
         ApiResponse<List<CurveAdminFeeChangeLogDTO>> CurveGetAdminFeeChangeLogsHistoricalWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0);
         /// <summary>
-        /// GetAmplificationCoeffChangeLogs (historical)
+        /// AmplificationCoeffChangeLogs (historical)
         /// </summary>
         /// <remarks>
         /// Gets amplification coeff change logs.
@@ -135,7 +135,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         List<CurveAmplificationCoeffChangeLogDTO> CurveGetAmplificationCoeffChangeLogsHistorical(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0);
 
         /// <summary>
-        /// GetAmplificationCoeffChangeLogs (historical)
+        /// AmplificationCoeffChangeLogs (historical)
         /// </summary>
         /// <remarks>
         /// Gets amplification coeff change logs.
@@ -150,7 +150,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>ApiResponse of List&lt;CurveAmplificationCoeffChangeLogDTO&gt;</returns>
         ApiResponse<List<CurveAmplificationCoeffChangeLogDTO>> CurveGetAmplificationCoeffChangeLogsHistoricalWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0);
         /// <summary>
-        /// GetCoins (historical)
+        /// Coins (historical)
         /// </summary>
         /// <remarks>
         /// Gets coins.
@@ -166,7 +166,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         List<CurveCoinDTO> CurveGetCoinsHistorical(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0);
 
         /// <summary>
-        /// GetCoins (historical)
+        /// Coins (historical)
         /// </summary>
         /// <remarks>
         /// Gets coins.
@@ -181,7 +181,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>ApiResponse of List&lt;CurveCoinDTO&gt;</returns>
         ApiResponse<List<CurveCoinDTO>> CurveGetCoinsHistoricalWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0);
         /// <summary>
-        /// GetContracts (historical)
+        /// Contracts (historical)
         /// </summary>
         /// <remarks>
         /// Gets contracts.
@@ -197,7 +197,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         List<CurveContractDTO> CurveGetContractsHistorical(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0);
 
         /// <summary>
-        /// GetContracts (historical)
+        /// Contracts (historical)
         /// </summary>
         /// <remarks>
         /// Gets contracts.
@@ -212,7 +212,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>ApiResponse of List&lt;CurveContractDTO&gt;</returns>
         ApiResponse<List<CurveContractDTO>> CurveGetContractsHistoricalWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0);
         /// <summary>
-        /// GetContractsVersions (historical)
+        /// ContractsVersions (historical)
         /// </summary>
         /// <remarks>
         /// Gets contracts versions.
@@ -228,7 +228,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         List<CurveContractVersionDTO> CurveGetContractsVersionsHistorical(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0);
 
         /// <summary>
-        /// GetContractsVersions (historical)
+        /// ContractsVersions (historical)
         /// </summary>
         /// <remarks>
         /// Gets contracts versions.
@@ -243,7 +243,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>ApiResponse of List&lt;CurveContractVersionDTO&gt;</returns>
         ApiResponse<List<CurveContractVersionDTO>> CurveGetContractsVersionsHistoricalWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0);
         /// <summary>
-        /// GetDailyVolumes (historical)
+        /// DailyVolumes (historical)
         /// </summary>
         /// <remarks>
         /// Gets daily volumes.
@@ -259,7 +259,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         List<CurveDailyVolumeDTO> CurveGetDailyVolumesHistorical(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0);
 
         /// <summary>
-        /// GetDailyVolumes (historical)
+        /// DailyVolumes (historical)
         /// </summary>
         /// <remarks>
         /// Gets daily volumes.
@@ -274,7 +274,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>ApiResponse of List&lt;CurveDailyVolumeDTO&gt;</returns>
         ApiResponse<List<CurveDailyVolumeDTO>> CurveGetDailyVolumesHistoricalWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0);
         /// <summary>
-        /// GetExchanges (historical) 🔥
+        /// Exchanges (historical) 🔥
         /// </summary>
         /// <remarks>
         /// Gets exchanges.
@@ -290,7 +290,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         List<CurveExchangeDTO> CurveGetExchangesHistorical(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0);
 
         /// <summary>
-        /// GetExchanges (historical) 🔥
+        /// Exchanges (historical) 🔥
         /// </summary>
         /// <remarks>
         /// Gets exchanges.
@@ -305,7 +305,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>ApiResponse of List&lt;CurveExchangeDTO&gt;</returns>
         ApiResponse<List<CurveExchangeDTO>> CurveGetExchangesHistoricalWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0);
         /// <summary>
-        /// GetFeeChangeLogs (historical)
+        /// FeeChangeLogs (historical)
         /// </summary>
         /// <remarks>
         /// Gets fee change logs.
@@ -321,7 +321,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         List<CurveFeeChangeLogDTO> CurveGetFeeChangeLogsHistorical(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0);
 
         /// <summary>
-        /// GetFeeChangeLogs (historical)
+        /// FeeChangeLogs (historical)
         /// </summary>
         /// <remarks>
         /// Gets fee change logs.
@@ -336,7 +336,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>ApiResponse of List&lt;CurveFeeChangeLogDTO&gt;</returns>
         ApiResponse<List<CurveFeeChangeLogDTO>> CurveGetFeeChangeLogsHistoricalWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0);
         /// <summary>
-        /// GetGaugesDeposits (historical)
+        /// GaugesDeposits (historical)
         /// </summary>
         /// <remarks>
         /// Gets gauges deposits.
@@ -351,7 +351,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         List<CurveGaugeDepositDTO> CurveGetGaugesDepositsHistorical(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), int operationIndex = 0);
 
         /// <summary>
-        /// GetGaugesDeposits (historical)
+        /// GaugesDeposits (historical)
         /// </summary>
         /// <remarks>
         /// Gets gauges deposits.
@@ -365,7 +365,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>ApiResponse of List&lt;CurveGaugeDepositDTO&gt;</returns>
         ApiResponse<List<CurveGaugeDepositDTO>> CurveGetGaugesDepositsHistoricalWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), int operationIndex = 0);
         /// <summary>
-        /// GetGauges (historical)
+        /// Gauges (historical)
         /// </summary>
         /// <remarks>
         /// Gets gauges.
@@ -381,7 +381,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         List<CurveGaugeDTO> CurveGetGaugesHistorical(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0);
 
         /// <summary>
-        /// GetGauges (historical)
+        /// Gauges (historical)
         /// </summary>
         /// <remarks>
         /// Gets gauges.
@@ -396,7 +396,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>ApiResponse of List&lt;CurveGaugeDTO&gt;</returns>
         ApiResponse<List<CurveGaugeDTO>> CurveGetGaugesHistoricalWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0);
         /// <summary>
-        /// GetGaugesLiquidity (historical)
+        /// GaugesLiquidity (historical)
         /// </summary>
         /// <remarks>
         /// Gets gauges liquidity.
@@ -411,7 +411,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         List<CurveGaugeLiquidityDTO> CurveGetGaugesLiquidityHistorical(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), int operationIndex = 0);
 
         /// <summary>
-        /// GetGaugesLiquidity (historical)
+        /// GaugesLiquidity (historical)
         /// </summary>
         /// <remarks>
         /// Gets gauges liquidity.
@@ -425,7 +425,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>ApiResponse of List&lt;CurveGaugeLiquidityDTO&gt;</returns>
         ApiResponse<List<CurveGaugeLiquidityDTO>> CurveGetGaugesLiquidityHistoricalWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), int operationIndex = 0);
         /// <summary>
-        /// GetGaugesTotalWeights (historical)
+        /// GaugesTotalWeights (historical)
         /// </summary>
         /// <remarks>
         /// Gets gauges total weights.
@@ -440,7 +440,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         List<CurveGaugeTotalWeightDTO> CurveGetGaugesTotalWeightsHistorical(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), int operationIndex = 0);
 
         /// <summary>
-        /// GetGaugesTotalWeights (historical)
+        /// GaugesTotalWeights (historical)
         /// </summary>
         /// <remarks>
         /// Gets gauges total weights.
@@ -454,7 +454,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>ApiResponse of List&lt;CurveGaugeTotalWeightDTO&gt;</returns>
         ApiResponse<List<CurveGaugeTotalWeightDTO>> CurveGetGaugesTotalWeightsHistoricalWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), int operationIndex = 0);
         /// <summary>
-        /// GetGaugesTypes (historical)
+        /// GaugesTypes (historical)
         /// </summary>
         /// <remarks>
         /// Gets gauges types.
@@ -469,7 +469,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         List<CurveGaugeTypeDTO> CurveGetGaugesTypesHistorical(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), int operationIndex = 0);
 
         /// <summary>
-        /// GetGaugesTypes (historical)
+        /// GaugesTypes (historical)
         /// </summary>
         /// <remarks>
         /// Gets gauges types.
@@ -483,7 +483,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>ApiResponse of List&lt;CurveGaugeTypeDTO&gt;</returns>
         ApiResponse<List<CurveGaugeTypeDTO>> CurveGetGaugesTypesHistoricalWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), int operationIndex = 0);
         /// <summary>
-        /// GetGaugesTypesWeights (historical)
+        /// GaugesTypesWeights (historical)
         /// </summary>
         /// <remarks>
         /// Gets gauges types weights.
@@ -498,7 +498,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         List<CurveGaugeTypeWeightDTO> CurveGetGaugesTypesWeightsHistorical(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), int operationIndex = 0);
 
         /// <summary>
-        /// GetGaugesTypesWeights (historical)
+        /// GaugesTypesWeights (historical)
         /// </summary>
         /// <remarks>
         /// Gets gauges types weights.
@@ -512,7 +512,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>ApiResponse of List&lt;CurveGaugeTypeWeightDTO&gt;</returns>
         ApiResponse<List<CurveGaugeTypeWeightDTO>> CurveGetGaugesTypesWeightsHistoricalWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), int operationIndex = 0);
         /// <summary>
-        /// GetGaugesWeights (historical)
+        /// GaugesWeights (historical)
         /// </summary>
         /// <remarks>
         /// Gets gauges weights.
@@ -527,7 +527,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         List<CurveGaugeWeightDTO> CurveGetGaugesWeightsHistorical(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), int operationIndex = 0);
 
         /// <summary>
-        /// GetGaugesWeights (historical)
+        /// GaugesWeights (historical)
         /// </summary>
         /// <remarks>
         /// Gets gauges weights.
@@ -541,7 +541,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>ApiResponse of List&lt;CurveGaugeWeightDTO&gt;</returns>
         ApiResponse<List<CurveGaugeWeightDTO>> CurveGetGaugesWeightsHistoricalWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), int operationIndex = 0);
         /// <summary>
-        /// GetGaugesWeightsVotes (historical)
+        /// GaugesWeightsVotes (historical)
         /// </summary>
         /// <remarks>
         /// Gets gauges weights votes.
@@ -556,7 +556,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         List<CurveGaugeWeightVoteDTO> CurveGetGaugesWeightsVotesHistorical(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), int operationIndex = 0);
 
         /// <summary>
-        /// GetGaugesWeightsVotes (historical)
+        /// GaugesWeightsVotes (historical)
         /// </summary>
         /// <remarks>
         /// Gets gauges weights votes.
@@ -570,7 +570,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>ApiResponse of List&lt;CurveGaugeWeightVoteDTO&gt;</returns>
         ApiResponse<List<CurveGaugeWeightVoteDTO>> CurveGetGaugesWeightsVotesHistoricalWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), int operationIndex = 0);
         /// <summary>
-        /// GetGaugesWithdraw (historical)
+        /// GaugesWithdraw (historical)
         /// </summary>
         /// <remarks>
         /// Gets gauges withdraws.
@@ -585,7 +585,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         List<CurveGaugeWithdrawDTO> CurveGetGaugesWithdrawHistorical(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), int operationIndex = 0);
 
         /// <summary>
-        /// GetGaugesWithdraw (historical)
+        /// GaugesWithdraw (historical)
         /// </summary>
         /// <remarks>
         /// Gets gauges withdraws.
@@ -599,7 +599,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>ApiResponse of List&lt;CurveGaugeWithdrawDTO&gt;</returns>
         ApiResponse<List<CurveGaugeWithdrawDTO>> CurveGetGaugesWithdrawHistoricalWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), int operationIndex = 0);
         /// <summary>
-        /// GetHourlyVolumes (historical)
+        /// HourlyVolumes (historical)
         /// </summary>
         /// <remarks>
         /// Gets hourly volumes.
@@ -615,7 +615,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         List<CurveHourlyVolumeDTO> CurveGetHourlyVolumesHistorical(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0);
 
         /// <summary>
-        /// GetHourlyVolumes (historical)
+        /// HourlyVolumes (historical)
         /// </summary>
         /// <remarks>
         /// Gets hourly volumes.
@@ -630,7 +630,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>ApiResponse of List&lt;CurveHourlyVolumeDTO&gt;</returns>
         ApiResponse<List<CurveHourlyVolumeDTO>> CurveGetHourlyVolumesHistoricalWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0);
         /// <summary>
-        /// GetLpTokens (historical)
+        /// LpTokens (historical)
         /// </summary>
         /// <remarks>
         /// Gets lp tokens.
@@ -646,7 +646,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         List<CurveLpTokenDTO> CurveGetLpTokensHistorical(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0);
 
         /// <summary>
-        /// GetLpTokens (historical)
+        /// LpTokens (historical)
         /// </summary>
         /// <remarks>
         /// Gets lp tokens.
@@ -661,7 +661,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>ApiResponse of List&lt;CurveLpTokenDTO&gt;</returns>
         ApiResponse<List<CurveLpTokenDTO>> CurveGetLpTokensHistoricalWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0);
         /// <summary>
-        /// GetPools (historical) 🔥
+        /// Pools (historical) 🔥
         /// </summary>
         /// <remarks>
         /// Gets pools.
@@ -677,7 +677,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         List<CurvePoolDTO> CurveGetPoolsHistorical(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0);
 
         /// <summary>
-        /// GetPools (historical) 🔥
+        /// Pools (historical) 🔥
         /// </summary>
         /// <remarks>
         /// Gets pools.
@@ -692,7 +692,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>ApiResponse of List&lt;CurvePoolDTO&gt;</returns>
         ApiResponse<List<CurvePoolDTO>> CurveGetPoolsHistoricalWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0);
         /// <summary>
-        /// GetProposals (historical)
+        /// Proposals (historical)
         /// </summary>
         /// <remarks>
         /// Gets proposals.
@@ -707,7 +707,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         List<CurveProposalDTO> CurveGetProposalsHistorical(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), int operationIndex = 0);
 
         /// <summary>
-        /// GetProposals (historical)
+        /// Proposals (historical)
         /// </summary>
         /// <remarks>
         /// Gets proposals.
@@ -721,7 +721,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>ApiResponse of List&lt;CurveProposalDTO&gt;</returns>
         ApiResponse<List<CurveProposalDTO>> CurveGetProposalsHistoricalWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), int operationIndex = 0);
         /// <summary>
-        /// GetProposalsVotes (historical)
+        /// ProposalsVotes (historical)
         /// </summary>
         /// <remarks>
         /// Gets proposals votes.
@@ -736,7 +736,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         List<CurveProposalVoteDTO> CurveGetProposalsVotesHistorical(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), int operationIndex = 0);
 
         /// <summary>
-        /// GetProposalsVotes (historical)
+        /// ProposalsVotes (historical)
         /// </summary>
         /// <remarks>
         /// Gets proposals votes.
@@ -750,7 +750,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>ApiResponse of List&lt;CurveProposalVoteDTO&gt;</returns>
         ApiResponse<List<CurveProposalVoteDTO>> CurveGetProposalsVotesHistoricalWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), int operationIndex = 0);
         /// <summary>
-        /// GetRemoveLiquidityEvents (historical)
+        /// RemoveLiquidityEvents (historical)
         /// </summary>
         /// <remarks>
         /// Gets remove liquidity events.
@@ -766,7 +766,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         List<CurveRemoveLiquidityEventDTO> CurveGetRemoveLiquidityEventsHistorical(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0);
 
         /// <summary>
-        /// GetRemoveLiquidityEvents (historical)
+        /// RemoveLiquidityEvents (historical)
         /// </summary>
         /// <remarks>
         /// Gets remove liquidity events.
@@ -781,7 +781,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>ApiResponse of List&lt;CurveRemoveLiquidityEventDTO&gt;</returns>
         ApiResponse<List<CurveRemoveLiquidityEventDTO>> CurveGetRemoveLiquidityEventsHistoricalWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0);
         /// <summary>
-        /// GetRemoveLiquidityOneEvents (historical)
+        /// RemoveLiquidityOneEvents (historical)
         /// </summary>
         /// <remarks>
         /// Gets remove liquidity one events.
@@ -797,7 +797,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         List<CurveRemoveLiquidityOneEventDTO> CurveGetRemoveLiquidityOneEventsHistorical(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0);
 
         /// <summary>
-        /// GetRemoveLiquidityOneEvents (historical)
+        /// RemoveLiquidityOneEvents (historical)
         /// </summary>
         /// <remarks>
         /// Gets remove liquidity one events.
@@ -812,7 +812,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>ApiResponse of List&lt;CurveRemoveLiquidityOneEventDTO&gt;</returns>
         ApiResponse<List<CurveRemoveLiquidityOneEventDTO>> CurveGetRemoveLiquidityOneEventsHistoricalWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0);
         /// <summary>
-        /// GetSystemStates (historical)
+        /// SystemStates (historical)
         /// </summary>
         /// <remarks>
         /// Gets system states.
@@ -827,7 +827,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         List<CurveSystemStateDTO> CurveGetSystemStatesHistorical(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), int operationIndex = 0);
 
         /// <summary>
-        /// GetSystemStates (historical)
+        /// SystemStates (historical)
         /// </summary>
         /// <remarks>
         /// Gets system states.
@@ -841,7 +841,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>ApiResponse of List&lt;CurveSystemStateDTO&gt;</returns>
         ApiResponse<List<CurveSystemStateDTO>> CurveGetSystemStatesHistoricalWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), int operationIndex = 0);
         /// <summary>
-        /// GetTokens (historical) 🔥
+        /// Tokens (historical) 🔥
         /// </summary>
         /// <remarks>
         /// Gets tokens.
@@ -857,7 +857,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         List<CurveTokenDTO> CurveGetTokensHistorical(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string tokenId = default(string), int operationIndex = 0);
 
         /// <summary>
-        /// GetTokens (historical) 🔥
+        /// Tokens (historical) 🔥
         /// </summary>
         /// <remarks>
         /// Gets tokens.
@@ -872,7 +872,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>ApiResponse of List&lt;CurveTokenDTO&gt;</returns>
         ApiResponse<List<CurveTokenDTO>> CurveGetTokensHistoricalWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string tokenId = default(string), int operationIndex = 0);
         /// <summary>
-        /// GetTransferOwnershipEvents (historical)
+        /// TransferOwnershipEvents (historical)
         /// </summary>
         /// <remarks>
         /// Gets transfer ownership events.
@@ -888,7 +888,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         List<CurveTransferOwnershipEventDTO> CurveGetTransferOwnershipEventsHistorical(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0);
 
         /// <summary>
-        /// GetTransferOwnershipEvents (historical)
+        /// TransferOwnershipEvents (historical)
         /// </summary>
         /// <remarks>
         /// Gets transfer ownership events.
@@ -903,7 +903,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>ApiResponse of List&lt;CurveTransferOwnershipEventDTO&gt;</returns>
         ApiResponse<List<CurveTransferOwnershipEventDTO>> CurveGetTransferOwnershipEventsHistoricalWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0);
         /// <summary>
-        /// GetUnderlyingCoins (historical)
+        /// UnderlyingCoins (historical)
         /// </summary>
         /// <remarks>
         /// Gets underlying coins.
@@ -919,7 +919,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         List<CurveUnderlyingCoinDTO> CurveGetUnderlyingCoinsHistorical(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0);
 
         /// <summary>
-        /// GetUnderlyingCoins (historical)
+        /// UnderlyingCoins (historical)
         /// </summary>
         /// <remarks>
         /// Gets underlying coins.
@@ -934,7 +934,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>ApiResponse of List&lt;CurveUnderlyingCoinDTO&gt;</returns>
         ApiResponse<List<CurveUnderlyingCoinDTO>> CurveGetUnderlyingCoinsHistoricalWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0);
         /// <summary>
-        /// GetVotingApps (historical)
+        /// VotingApps (historical)
         /// </summary>
         /// <remarks>
         /// Gets voting apps.
@@ -949,7 +949,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         List<CurveVotingAppDTO> CurveGetVotingAppsHistorical(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), int operationIndex = 0);
 
         /// <summary>
-        /// GetVotingApps (historical)
+        /// VotingApps (historical)
         /// </summary>
         /// <remarks>
         /// Gets voting apps.
@@ -963,7 +963,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>ApiResponse of List&lt;CurveVotingAppDTO&gt;</returns>
         ApiResponse<List<CurveVotingAppDTO>> CurveGetVotingAppsHistoricalWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), int operationIndex = 0);
         /// <summary>
-        /// GetWeeklyVolumes (historical)
+        /// WeeklyVolumes (historical)
         /// </summary>
         /// <remarks>
         /// Gets weekly volumes.
@@ -979,7 +979,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         List<CurveWeeklyVolumeDTO> CurveGetWeeklyVolumesHistorical(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0);
 
         /// <summary>
-        /// GetWeeklyVolumes (historical)
+        /// WeeklyVolumes (historical)
         /// </summary>
         /// <remarks>
         /// Gets weekly volumes.
@@ -1003,7 +1003,7 @@ namespace CoinAPI.EMS.REST.V1.Api
     {
         #region Asynchronous Operations
         /// <summary>
-        /// GetAccounts (historical)
+        /// Accounts (historical)
         /// </summary>
         /// <remarks>
         /// Gets accounts.
@@ -1019,7 +1019,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         System.Threading.Tasks.Task<List<CurveAccountDTO>> CurveGetAccountsHistoricalAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// GetAccounts (historical)
+        /// Accounts (historical)
         /// </summary>
         /// <remarks>
         /// Gets accounts.
@@ -1034,7 +1034,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>Task of ApiResponse (List&lt;CurveAccountDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<CurveAccountDTO>>> CurveGetAccountsHistoricalWithHttpInfoAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// GetAddLiquidityEvents (historical)
+        /// AddLiquidityEvents (historical)
         /// </summary>
         /// <remarks>
         /// Gets add liquidity events.
@@ -1051,7 +1051,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         System.Threading.Tasks.Task<List<CurveAddLiquidityEventDTO>> CurveGetAddLiquidityEventsHistoricalAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// GetAddLiquidityEvents (historical)
+        /// AddLiquidityEvents (historical)
         /// </summary>
         /// <remarks>
         /// Gets add liquidity events.
@@ -1067,7 +1067,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>Task of ApiResponse (List&lt;CurveAddLiquidityEventDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<CurveAddLiquidityEventDTO>>> CurveGetAddLiquidityEventsHistoricalWithHttpInfoAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// GetAdminFeeChangeLogs (historical)
+        /// AdminFeeChangeLogs (historical)
         /// </summary>
         /// <remarks>
         /// Gets admin fee change logs.
@@ -1084,7 +1084,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         System.Threading.Tasks.Task<List<CurveAdminFeeChangeLogDTO>> CurveGetAdminFeeChangeLogsHistoricalAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// GetAdminFeeChangeLogs (historical)
+        /// AdminFeeChangeLogs (historical)
         /// </summary>
         /// <remarks>
         /// Gets admin fee change logs.
@@ -1100,7 +1100,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>Task of ApiResponse (List&lt;CurveAdminFeeChangeLogDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<CurveAdminFeeChangeLogDTO>>> CurveGetAdminFeeChangeLogsHistoricalWithHttpInfoAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// GetAmplificationCoeffChangeLogs (historical)
+        /// AmplificationCoeffChangeLogs (historical)
         /// </summary>
         /// <remarks>
         /// Gets amplification coeff change logs.
@@ -1117,7 +1117,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         System.Threading.Tasks.Task<List<CurveAmplificationCoeffChangeLogDTO>> CurveGetAmplificationCoeffChangeLogsHistoricalAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// GetAmplificationCoeffChangeLogs (historical)
+        /// AmplificationCoeffChangeLogs (historical)
         /// </summary>
         /// <remarks>
         /// Gets amplification coeff change logs.
@@ -1133,7 +1133,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>Task of ApiResponse (List&lt;CurveAmplificationCoeffChangeLogDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<CurveAmplificationCoeffChangeLogDTO>>> CurveGetAmplificationCoeffChangeLogsHistoricalWithHttpInfoAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// GetCoins (historical)
+        /// Coins (historical)
         /// </summary>
         /// <remarks>
         /// Gets coins.
@@ -1150,7 +1150,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         System.Threading.Tasks.Task<List<CurveCoinDTO>> CurveGetCoinsHistoricalAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// GetCoins (historical)
+        /// Coins (historical)
         /// </summary>
         /// <remarks>
         /// Gets coins.
@@ -1166,7 +1166,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>Task of ApiResponse (List&lt;CurveCoinDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<CurveCoinDTO>>> CurveGetCoinsHistoricalWithHttpInfoAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// GetContracts (historical)
+        /// Contracts (historical)
         /// </summary>
         /// <remarks>
         /// Gets contracts.
@@ -1183,7 +1183,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         System.Threading.Tasks.Task<List<CurveContractDTO>> CurveGetContractsHistoricalAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// GetContracts (historical)
+        /// Contracts (historical)
         /// </summary>
         /// <remarks>
         /// Gets contracts.
@@ -1199,7 +1199,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>Task of ApiResponse (List&lt;CurveContractDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<CurveContractDTO>>> CurveGetContractsHistoricalWithHttpInfoAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// GetContractsVersions (historical)
+        /// ContractsVersions (historical)
         /// </summary>
         /// <remarks>
         /// Gets contracts versions.
@@ -1216,7 +1216,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         System.Threading.Tasks.Task<List<CurveContractVersionDTO>> CurveGetContractsVersionsHistoricalAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// GetContractsVersions (historical)
+        /// ContractsVersions (historical)
         /// </summary>
         /// <remarks>
         /// Gets contracts versions.
@@ -1232,7 +1232,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>Task of ApiResponse (List&lt;CurveContractVersionDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<CurveContractVersionDTO>>> CurveGetContractsVersionsHistoricalWithHttpInfoAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// GetDailyVolumes (historical)
+        /// DailyVolumes (historical)
         /// </summary>
         /// <remarks>
         /// Gets daily volumes.
@@ -1249,7 +1249,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         System.Threading.Tasks.Task<List<CurveDailyVolumeDTO>> CurveGetDailyVolumesHistoricalAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// GetDailyVolumes (historical)
+        /// DailyVolumes (historical)
         /// </summary>
         /// <remarks>
         /// Gets daily volumes.
@@ -1265,7 +1265,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>Task of ApiResponse (List&lt;CurveDailyVolumeDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<CurveDailyVolumeDTO>>> CurveGetDailyVolumesHistoricalWithHttpInfoAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// GetExchanges (historical) 🔥
+        /// Exchanges (historical) 🔥
         /// </summary>
         /// <remarks>
         /// Gets exchanges.
@@ -1282,7 +1282,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         System.Threading.Tasks.Task<List<CurveExchangeDTO>> CurveGetExchangesHistoricalAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// GetExchanges (historical) 🔥
+        /// Exchanges (historical) 🔥
         /// </summary>
         /// <remarks>
         /// Gets exchanges.
@@ -1298,7 +1298,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>Task of ApiResponse (List&lt;CurveExchangeDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<CurveExchangeDTO>>> CurveGetExchangesHistoricalWithHttpInfoAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// GetFeeChangeLogs (historical)
+        /// FeeChangeLogs (historical)
         /// </summary>
         /// <remarks>
         /// Gets fee change logs.
@@ -1315,7 +1315,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         System.Threading.Tasks.Task<List<CurveFeeChangeLogDTO>> CurveGetFeeChangeLogsHistoricalAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// GetFeeChangeLogs (historical)
+        /// FeeChangeLogs (historical)
         /// </summary>
         /// <remarks>
         /// Gets fee change logs.
@@ -1331,7 +1331,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>Task of ApiResponse (List&lt;CurveFeeChangeLogDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<CurveFeeChangeLogDTO>>> CurveGetFeeChangeLogsHistoricalWithHttpInfoAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// GetGaugesDeposits (historical)
+        /// GaugesDeposits (historical)
         /// </summary>
         /// <remarks>
         /// Gets gauges deposits.
@@ -1347,7 +1347,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         System.Threading.Tasks.Task<List<CurveGaugeDepositDTO>> CurveGetGaugesDepositsHistoricalAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// GetGaugesDeposits (historical)
+        /// GaugesDeposits (historical)
         /// </summary>
         /// <remarks>
         /// Gets gauges deposits.
@@ -1362,7 +1362,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>Task of ApiResponse (List&lt;CurveGaugeDepositDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<CurveGaugeDepositDTO>>> CurveGetGaugesDepositsHistoricalWithHttpInfoAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// GetGauges (historical)
+        /// Gauges (historical)
         /// </summary>
         /// <remarks>
         /// Gets gauges.
@@ -1379,7 +1379,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         System.Threading.Tasks.Task<List<CurveGaugeDTO>> CurveGetGaugesHistoricalAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// GetGauges (historical)
+        /// Gauges (historical)
         /// </summary>
         /// <remarks>
         /// Gets gauges.
@@ -1395,7 +1395,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>Task of ApiResponse (List&lt;CurveGaugeDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<CurveGaugeDTO>>> CurveGetGaugesHistoricalWithHttpInfoAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// GetGaugesLiquidity (historical)
+        /// GaugesLiquidity (historical)
         /// </summary>
         /// <remarks>
         /// Gets gauges liquidity.
@@ -1411,7 +1411,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         System.Threading.Tasks.Task<List<CurveGaugeLiquidityDTO>> CurveGetGaugesLiquidityHistoricalAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// GetGaugesLiquidity (historical)
+        /// GaugesLiquidity (historical)
         /// </summary>
         /// <remarks>
         /// Gets gauges liquidity.
@@ -1426,7 +1426,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>Task of ApiResponse (List&lt;CurveGaugeLiquidityDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<CurveGaugeLiquidityDTO>>> CurveGetGaugesLiquidityHistoricalWithHttpInfoAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// GetGaugesTotalWeights (historical)
+        /// GaugesTotalWeights (historical)
         /// </summary>
         /// <remarks>
         /// Gets gauges total weights.
@@ -1442,7 +1442,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         System.Threading.Tasks.Task<List<CurveGaugeTotalWeightDTO>> CurveGetGaugesTotalWeightsHistoricalAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// GetGaugesTotalWeights (historical)
+        /// GaugesTotalWeights (historical)
         /// </summary>
         /// <remarks>
         /// Gets gauges total weights.
@@ -1457,7 +1457,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>Task of ApiResponse (List&lt;CurveGaugeTotalWeightDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<CurveGaugeTotalWeightDTO>>> CurveGetGaugesTotalWeightsHistoricalWithHttpInfoAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// GetGaugesTypes (historical)
+        /// GaugesTypes (historical)
         /// </summary>
         /// <remarks>
         /// Gets gauges types.
@@ -1473,7 +1473,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         System.Threading.Tasks.Task<List<CurveGaugeTypeDTO>> CurveGetGaugesTypesHistoricalAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// GetGaugesTypes (historical)
+        /// GaugesTypes (historical)
         /// </summary>
         /// <remarks>
         /// Gets gauges types.
@@ -1488,7 +1488,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>Task of ApiResponse (List&lt;CurveGaugeTypeDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<CurveGaugeTypeDTO>>> CurveGetGaugesTypesHistoricalWithHttpInfoAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// GetGaugesTypesWeights (historical)
+        /// GaugesTypesWeights (historical)
         /// </summary>
         /// <remarks>
         /// Gets gauges types weights.
@@ -1504,7 +1504,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         System.Threading.Tasks.Task<List<CurveGaugeTypeWeightDTO>> CurveGetGaugesTypesWeightsHistoricalAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// GetGaugesTypesWeights (historical)
+        /// GaugesTypesWeights (historical)
         /// </summary>
         /// <remarks>
         /// Gets gauges types weights.
@@ -1519,7 +1519,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>Task of ApiResponse (List&lt;CurveGaugeTypeWeightDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<CurveGaugeTypeWeightDTO>>> CurveGetGaugesTypesWeightsHistoricalWithHttpInfoAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// GetGaugesWeights (historical)
+        /// GaugesWeights (historical)
         /// </summary>
         /// <remarks>
         /// Gets gauges weights.
@@ -1535,7 +1535,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         System.Threading.Tasks.Task<List<CurveGaugeWeightDTO>> CurveGetGaugesWeightsHistoricalAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// GetGaugesWeights (historical)
+        /// GaugesWeights (historical)
         /// </summary>
         /// <remarks>
         /// Gets gauges weights.
@@ -1550,7 +1550,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>Task of ApiResponse (List&lt;CurveGaugeWeightDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<CurveGaugeWeightDTO>>> CurveGetGaugesWeightsHistoricalWithHttpInfoAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// GetGaugesWeightsVotes (historical)
+        /// GaugesWeightsVotes (historical)
         /// </summary>
         /// <remarks>
         /// Gets gauges weights votes.
@@ -1566,7 +1566,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         System.Threading.Tasks.Task<List<CurveGaugeWeightVoteDTO>> CurveGetGaugesWeightsVotesHistoricalAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// GetGaugesWeightsVotes (historical)
+        /// GaugesWeightsVotes (historical)
         /// </summary>
         /// <remarks>
         /// Gets gauges weights votes.
@@ -1581,7 +1581,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>Task of ApiResponse (List&lt;CurveGaugeWeightVoteDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<CurveGaugeWeightVoteDTO>>> CurveGetGaugesWeightsVotesHistoricalWithHttpInfoAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// GetGaugesWithdraw (historical)
+        /// GaugesWithdraw (historical)
         /// </summary>
         /// <remarks>
         /// Gets gauges withdraws.
@@ -1597,7 +1597,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         System.Threading.Tasks.Task<List<CurveGaugeWithdrawDTO>> CurveGetGaugesWithdrawHistoricalAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// GetGaugesWithdraw (historical)
+        /// GaugesWithdraw (historical)
         /// </summary>
         /// <remarks>
         /// Gets gauges withdraws.
@@ -1612,7 +1612,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>Task of ApiResponse (List&lt;CurveGaugeWithdrawDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<CurveGaugeWithdrawDTO>>> CurveGetGaugesWithdrawHistoricalWithHttpInfoAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// GetHourlyVolumes (historical)
+        /// HourlyVolumes (historical)
         /// </summary>
         /// <remarks>
         /// Gets hourly volumes.
@@ -1629,7 +1629,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         System.Threading.Tasks.Task<List<CurveHourlyVolumeDTO>> CurveGetHourlyVolumesHistoricalAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// GetHourlyVolumes (historical)
+        /// HourlyVolumes (historical)
         /// </summary>
         /// <remarks>
         /// Gets hourly volumes.
@@ -1645,7 +1645,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>Task of ApiResponse (List&lt;CurveHourlyVolumeDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<CurveHourlyVolumeDTO>>> CurveGetHourlyVolumesHistoricalWithHttpInfoAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// GetLpTokens (historical)
+        /// LpTokens (historical)
         /// </summary>
         /// <remarks>
         /// Gets lp tokens.
@@ -1662,7 +1662,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         System.Threading.Tasks.Task<List<CurveLpTokenDTO>> CurveGetLpTokensHistoricalAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// GetLpTokens (historical)
+        /// LpTokens (historical)
         /// </summary>
         /// <remarks>
         /// Gets lp tokens.
@@ -1678,7 +1678,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>Task of ApiResponse (List&lt;CurveLpTokenDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<CurveLpTokenDTO>>> CurveGetLpTokensHistoricalWithHttpInfoAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// GetPools (historical) 🔥
+        /// Pools (historical) 🔥
         /// </summary>
         /// <remarks>
         /// Gets pools.
@@ -1695,7 +1695,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         System.Threading.Tasks.Task<List<CurvePoolDTO>> CurveGetPoolsHistoricalAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// GetPools (historical) 🔥
+        /// Pools (historical) 🔥
         /// </summary>
         /// <remarks>
         /// Gets pools.
@@ -1711,7 +1711,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>Task of ApiResponse (List&lt;CurvePoolDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<CurvePoolDTO>>> CurveGetPoolsHistoricalWithHttpInfoAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// GetProposals (historical)
+        /// Proposals (historical)
         /// </summary>
         /// <remarks>
         /// Gets proposals.
@@ -1727,7 +1727,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         System.Threading.Tasks.Task<List<CurveProposalDTO>> CurveGetProposalsHistoricalAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// GetProposals (historical)
+        /// Proposals (historical)
         /// </summary>
         /// <remarks>
         /// Gets proposals.
@@ -1742,7 +1742,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>Task of ApiResponse (List&lt;CurveProposalDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<CurveProposalDTO>>> CurveGetProposalsHistoricalWithHttpInfoAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// GetProposalsVotes (historical)
+        /// ProposalsVotes (historical)
         /// </summary>
         /// <remarks>
         /// Gets proposals votes.
@@ -1758,7 +1758,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         System.Threading.Tasks.Task<List<CurveProposalVoteDTO>> CurveGetProposalsVotesHistoricalAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// GetProposalsVotes (historical)
+        /// ProposalsVotes (historical)
         /// </summary>
         /// <remarks>
         /// Gets proposals votes.
@@ -1773,7 +1773,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>Task of ApiResponse (List&lt;CurveProposalVoteDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<CurveProposalVoteDTO>>> CurveGetProposalsVotesHistoricalWithHttpInfoAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// GetRemoveLiquidityEvents (historical)
+        /// RemoveLiquidityEvents (historical)
         /// </summary>
         /// <remarks>
         /// Gets remove liquidity events.
@@ -1790,7 +1790,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         System.Threading.Tasks.Task<List<CurveRemoveLiquidityEventDTO>> CurveGetRemoveLiquidityEventsHistoricalAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// GetRemoveLiquidityEvents (historical)
+        /// RemoveLiquidityEvents (historical)
         /// </summary>
         /// <remarks>
         /// Gets remove liquidity events.
@@ -1806,7 +1806,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>Task of ApiResponse (List&lt;CurveRemoveLiquidityEventDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<CurveRemoveLiquidityEventDTO>>> CurveGetRemoveLiquidityEventsHistoricalWithHttpInfoAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// GetRemoveLiquidityOneEvents (historical)
+        /// RemoveLiquidityOneEvents (historical)
         /// </summary>
         /// <remarks>
         /// Gets remove liquidity one events.
@@ -1823,7 +1823,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         System.Threading.Tasks.Task<List<CurveRemoveLiquidityOneEventDTO>> CurveGetRemoveLiquidityOneEventsHistoricalAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// GetRemoveLiquidityOneEvents (historical)
+        /// RemoveLiquidityOneEvents (historical)
         /// </summary>
         /// <remarks>
         /// Gets remove liquidity one events.
@@ -1839,7 +1839,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>Task of ApiResponse (List&lt;CurveRemoveLiquidityOneEventDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<CurveRemoveLiquidityOneEventDTO>>> CurveGetRemoveLiquidityOneEventsHistoricalWithHttpInfoAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// GetSystemStates (historical)
+        /// SystemStates (historical)
         /// </summary>
         /// <remarks>
         /// Gets system states.
@@ -1855,7 +1855,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         System.Threading.Tasks.Task<List<CurveSystemStateDTO>> CurveGetSystemStatesHistoricalAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// GetSystemStates (historical)
+        /// SystemStates (historical)
         /// </summary>
         /// <remarks>
         /// Gets system states.
@@ -1870,7 +1870,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>Task of ApiResponse (List&lt;CurveSystemStateDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<CurveSystemStateDTO>>> CurveGetSystemStatesHistoricalWithHttpInfoAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// GetTokens (historical) 🔥
+        /// Tokens (historical) 🔥
         /// </summary>
         /// <remarks>
         /// Gets tokens.
@@ -1887,7 +1887,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         System.Threading.Tasks.Task<List<CurveTokenDTO>> CurveGetTokensHistoricalAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string tokenId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// GetTokens (historical) 🔥
+        /// Tokens (historical) 🔥
         /// </summary>
         /// <remarks>
         /// Gets tokens.
@@ -1903,7 +1903,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>Task of ApiResponse (List&lt;CurveTokenDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<CurveTokenDTO>>> CurveGetTokensHistoricalWithHttpInfoAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string tokenId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// GetTransferOwnershipEvents (historical)
+        /// TransferOwnershipEvents (historical)
         /// </summary>
         /// <remarks>
         /// Gets transfer ownership events.
@@ -1920,7 +1920,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         System.Threading.Tasks.Task<List<CurveTransferOwnershipEventDTO>> CurveGetTransferOwnershipEventsHistoricalAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// GetTransferOwnershipEvents (historical)
+        /// TransferOwnershipEvents (historical)
         /// </summary>
         /// <remarks>
         /// Gets transfer ownership events.
@@ -1936,7 +1936,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>Task of ApiResponse (List&lt;CurveTransferOwnershipEventDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<CurveTransferOwnershipEventDTO>>> CurveGetTransferOwnershipEventsHistoricalWithHttpInfoAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// GetUnderlyingCoins (historical)
+        /// UnderlyingCoins (historical)
         /// </summary>
         /// <remarks>
         /// Gets underlying coins.
@@ -1953,7 +1953,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         System.Threading.Tasks.Task<List<CurveUnderlyingCoinDTO>> CurveGetUnderlyingCoinsHistoricalAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// GetUnderlyingCoins (historical)
+        /// UnderlyingCoins (historical)
         /// </summary>
         /// <remarks>
         /// Gets underlying coins.
@@ -1969,7 +1969,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>Task of ApiResponse (List&lt;CurveUnderlyingCoinDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<CurveUnderlyingCoinDTO>>> CurveGetUnderlyingCoinsHistoricalWithHttpInfoAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// GetVotingApps (historical)
+        /// VotingApps (historical)
         /// </summary>
         /// <remarks>
         /// Gets voting apps.
@@ -1985,7 +1985,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         System.Threading.Tasks.Task<List<CurveVotingAppDTO>> CurveGetVotingAppsHistoricalAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// GetVotingApps (historical)
+        /// VotingApps (historical)
         /// </summary>
         /// <remarks>
         /// Gets voting apps.
@@ -2000,7 +2000,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>Task of ApiResponse (List&lt;CurveVotingAppDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<CurveVotingAppDTO>>> CurveGetVotingAppsHistoricalWithHttpInfoAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// GetWeeklyVolumes (historical)
+        /// WeeklyVolumes (historical)
         /// </summary>
         /// <remarks>
         /// Gets weekly volumes.
@@ -2017,7 +2017,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         System.Threading.Tasks.Task<List<CurveWeeklyVolumeDTO>> CurveGetWeeklyVolumesHistoricalAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string poolId = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// GetWeeklyVolumes (historical)
+        /// WeeklyVolumes (historical)
         /// </summary>
         /// <remarks>
         /// Gets weekly volumes.
@@ -2153,7 +2153,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetAccounts (historical) Gets accounts.
+        /// Accounts (historical) Gets accounts.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -2169,7 +2169,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetAccounts (historical) Gets accounts.
+        /// Accounts (historical) Gets accounts.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -2240,7 +2240,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetAccounts (historical) Gets accounts.
+        /// Accounts (historical) Gets accounts.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -2257,7 +2257,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetAccounts (historical) Gets accounts.
+        /// Accounts (historical) Gets accounts.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -2331,7 +2331,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetAddLiquidityEvents (historical) Gets add liquidity events.
+        /// AddLiquidityEvents (historical) Gets add liquidity events.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -2348,7 +2348,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetAddLiquidityEvents (historical) Gets add liquidity events.
+        /// AddLiquidityEvents (historical) Gets add liquidity events.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -2424,7 +2424,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetAddLiquidityEvents (historical) Gets add liquidity events.
+        /// AddLiquidityEvents (historical) Gets add liquidity events.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -2442,7 +2442,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetAddLiquidityEvents (historical) Gets add liquidity events.
+        /// AddLiquidityEvents (historical) Gets add liquidity events.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -2521,7 +2521,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetAdminFeeChangeLogs (historical) Gets admin fee change logs.
+        /// AdminFeeChangeLogs (historical) Gets admin fee change logs.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -2538,7 +2538,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetAdminFeeChangeLogs (historical) Gets admin fee change logs.
+        /// AdminFeeChangeLogs (historical) Gets admin fee change logs.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -2614,7 +2614,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetAdminFeeChangeLogs (historical) Gets admin fee change logs.
+        /// AdminFeeChangeLogs (historical) Gets admin fee change logs.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -2632,7 +2632,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetAdminFeeChangeLogs (historical) Gets admin fee change logs.
+        /// AdminFeeChangeLogs (historical) Gets admin fee change logs.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -2711,7 +2711,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetAmplificationCoeffChangeLogs (historical) Gets amplification coeff change logs.
+        /// AmplificationCoeffChangeLogs (historical) Gets amplification coeff change logs.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -2728,7 +2728,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetAmplificationCoeffChangeLogs (historical) Gets amplification coeff change logs.
+        /// AmplificationCoeffChangeLogs (historical) Gets amplification coeff change logs.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -2804,7 +2804,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetAmplificationCoeffChangeLogs (historical) Gets amplification coeff change logs.
+        /// AmplificationCoeffChangeLogs (historical) Gets amplification coeff change logs.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -2822,7 +2822,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetAmplificationCoeffChangeLogs (historical) Gets amplification coeff change logs.
+        /// AmplificationCoeffChangeLogs (historical) Gets amplification coeff change logs.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -2901,7 +2901,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetCoins (historical) Gets coins.
+        /// Coins (historical) Gets coins.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -2918,7 +2918,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetCoins (historical) Gets coins.
+        /// Coins (historical) Gets coins.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -2994,7 +2994,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetCoins (historical) Gets coins.
+        /// Coins (historical) Gets coins.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -3012,7 +3012,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetCoins (historical) Gets coins.
+        /// Coins (historical) Gets coins.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -3091,7 +3091,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetContracts (historical) Gets contracts.
+        /// Contracts (historical) Gets contracts.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -3108,7 +3108,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetContracts (historical) Gets contracts.
+        /// Contracts (historical) Gets contracts.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -3184,7 +3184,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetContracts (historical) Gets contracts.
+        /// Contracts (historical) Gets contracts.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -3202,7 +3202,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetContracts (historical) Gets contracts.
+        /// Contracts (historical) Gets contracts.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -3281,7 +3281,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetContractsVersions (historical) Gets contracts versions.
+        /// ContractsVersions (historical) Gets contracts versions.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -3298,7 +3298,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetContractsVersions (historical) Gets contracts versions.
+        /// ContractsVersions (historical) Gets contracts versions.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -3374,7 +3374,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetContractsVersions (historical) Gets contracts versions.
+        /// ContractsVersions (historical) Gets contracts versions.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -3392,7 +3392,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetContractsVersions (historical) Gets contracts versions.
+        /// ContractsVersions (historical) Gets contracts versions.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -3471,7 +3471,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetDailyVolumes (historical) Gets daily volumes.
+        /// DailyVolumes (historical) Gets daily volumes.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -3488,7 +3488,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetDailyVolumes (historical) Gets daily volumes.
+        /// DailyVolumes (historical) Gets daily volumes.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -3564,7 +3564,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetDailyVolumes (historical) Gets daily volumes.
+        /// DailyVolumes (historical) Gets daily volumes.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -3582,7 +3582,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetDailyVolumes (historical) Gets daily volumes.
+        /// DailyVolumes (historical) Gets daily volumes.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -3661,7 +3661,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetExchanges (historical) 🔥 Gets exchanges.
+        /// Exchanges (historical) 🔥 Gets exchanges.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -3678,7 +3678,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetExchanges (historical) 🔥 Gets exchanges.
+        /// Exchanges (historical) 🔥 Gets exchanges.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -3754,7 +3754,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetExchanges (historical) 🔥 Gets exchanges.
+        /// Exchanges (historical) 🔥 Gets exchanges.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -3772,7 +3772,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetExchanges (historical) 🔥 Gets exchanges.
+        /// Exchanges (historical) 🔥 Gets exchanges.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -3851,7 +3851,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetFeeChangeLogs (historical) Gets fee change logs.
+        /// FeeChangeLogs (historical) Gets fee change logs.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -3868,7 +3868,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetFeeChangeLogs (historical) Gets fee change logs.
+        /// FeeChangeLogs (historical) Gets fee change logs.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -3944,7 +3944,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetFeeChangeLogs (historical) Gets fee change logs.
+        /// FeeChangeLogs (historical) Gets fee change logs.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -3962,7 +3962,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetFeeChangeLogs (historical) Gets fee change logs.
+        /// FeeChangeLogs (historical) Gets fee change logs.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -4041,7 +4041,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetGaugesDeposits (historical) Gets gauges deposits.
+        /// GaugesDeposits (historical) Gets gauges deposits.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -4057,7 +4057,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetGaugesDeposits (historical) Gets gauges deposits.
+        /// GaugesDeposits (historical) Gets gauges deposits.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -4128,7 +4128,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetGaugesDeposits (historical) Gets gauges deposits.
+        /// GaugesDeposits (historical) Gets gauges deposits.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -4145,7 +4145,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetGaugesDeposits (historical) Gets gauges deposits.
+        /// GaugesDeposits (historical) Gets gauges deposits.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -4219,7 +4219,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetGauges (historical) Gets gauges.
+        /// Gauges (historical) Gets gauges.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -4236,7 +4236,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetGauges (historical) Gets gauges.
+        /// Gauges (historical) Gets gauges.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -4312,7 +4312,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetGauges (historical) Gets gauges.
+        /// Gauges (historical) Gets gauges.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -4330,7 +4330,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetGauges (historical) Gets gauges.
+        /// Gauges (historical) Gets gauges.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -4409,7 +4409,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetGaugesLiquidity (historical) Gets gauges liquidity.
+        /// GaugesLiquidity (historical) Gets gauges liquidity.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -4425,7 +4425,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetGaugesLiquidity (historical) Gets gauges liquidity.
+        /// GaugesLiquidity (historical) Gets gauges liquidity.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -4496,7 +4496,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetGaugesLiquidity (historical) Gets gauges liquidity.
+        /// GaugesLiquidity (historical) Gets gauges liquidity.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -4513,7 +4513,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetGaugesLiquidity (historical) Gets gauges liquidity.
+        /// GaugesLiquidity (historical) Gets gauges liquidity.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -4587,7 +4587,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetGaugesTotalWeights (historical) Gets gauges total weights.
+        /// GaugesTotalWeights (historical) Gets gauges total weights.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -4603,7 +4603,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetGaugesTotalWeights (historical) Gets gauges total weights.
+        /// GaugesTotalWeights (historical) Gets gauges total weights.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -4674,7 +4674,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetGaugesTotalWeights (historical) Gets gauges total weights.
+        /// GaugesTotalWeights (historical) Gets gauges total weights.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -4691,7 +4691,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetGaugesTotalWeights (historical) Gets gauges total weights.
+        /// GaugesTotalWeights (historical) Gets gauges total weights.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -4765,7 +4765,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetGaugesTypes (historical) Gets gauges types.
+        /// GaugesTypes (historical) Gets gauges types.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -4781,7 +4781,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetGaugesTypes (historical) Gets gauges types.
+        /// GaugesTypes (historical) Gets gauges types.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -4852,7 +4852,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetGaugesTypes (historical) Gets gauges types.
+        /// GaugesTypes (historical) Gets gauges types.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -4869,7 +4869,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetGaugesTypes (historical) Gets gauges types.
+        /// GaugesTypes (historical) Gets gauges types.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -4943,7 +4943,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetGaugesTypesWeights (historical) Gets gauges types weights.
+        /// GaugesTypesWeights (historical) Gets gauges types weights.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -4959,7 +4959,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetGaugesTypesWeights (historical) Gets gauges types weights.
+        /// GaugesTypesWeights (historical) Gets gauges types weights.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -5030,7 +5030,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetGaugesTypesWeights (historical) Gets gauges types weights.
+        /// GaugesTypesWeights (historical) Gets gauges types weights.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -5047,7 +5047,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetGaugesTypesWeights (historical) Gets gauges types weights.
+        /// GaugesTypesWeights (historical) Gets gauges types weights.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -5121,7 +5121,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetGaugesWeights (historical) Gets gauges weights.
+        /// GaugesWeights (historical) Gets gauges weights.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -5137,7 +5137,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetGaugesWeights (historical) Gets gauges weights.
+        /// GaugesWeights (historical) Gets gauges weights.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -5208,7 +5208,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetGaugesWeights (historical) Gets gauges weights.
+        /// GaugesWeights (historical) Gets gauges weights.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -5225,7 +5225,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetGaugesWeights (historical) Gets gauges weights.
+        /// GaugesWeights (historical) Gets gauges weights.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -5299,7 +5299,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetGaugesWeightsVotes (historical) Gets gauges weights votes.
+        /// GaugesWeightsVotes (historical) Gets gauges weights votes.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -5315,7 +5315,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetGaugesWeightsVotes (historical) Gets gauges weights votes.
+        /// GaugesWeightsVotes (historical) Gets gauges weights votes.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -5386,7 +5386,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetGaugesWeightsVotes (historical) Gets gauges weights votes.
+        /// GaugesWeightsVotes (historical) Gets gauges weights votes.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -5403,7 +5403,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetGaugesWeightsVotes (historical) Gets gauges weights votes.
+        /// GaugesWeightsVotes (historical) Gets gauges weights votes.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -5477,7 +5477,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetGaugesWithdraw (historical) Gets gauges withdraws.
+        /// GaugesWithdraw (historical) Gets gauges withdraws.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -5493,7 +5493,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetGaugesWithdraw (historical) Gets gauges withdraws.
+        /// GaugesWithdraw (historical) Gets gauges withdraws.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -5564,7 +5564,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetGaugesWithdraw (historical) Gets gauges withdraws.
+        /// GaugesWithdraw (historical) Gets gauges withdraws.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -5581,7 +5581,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetGaugesWithdraw (historical) Gets gauges withdraws.
+        /// GaugesWithdraw (historical) Gets gauges withdraws.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -5655,7 +5655,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetHourlyVolumes (historical) Gets hourly volumes.
+        /// HourlyVolumes (historical) Gets hourly volumes.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -5672,7 +5672,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetHourlyVolumes (historical) Gets hourly volumes.
+        /// HourlyVolumes (historical) Gets hourly volumes.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -5748,7 +5748,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetHourlyVolumes (historical) Gets hourly volumes.
+        /// HourlyVolumes (historical) Gets hourly volumes.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -5766,7 +5766,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetHourlyVolumes (historical) Gets hourly volumes.
+        /// HourlyVolumes (historical) Gets hourly volumes.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -5845,7 +5845,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetLpTokens (historical) Gets lp tokens.
+        /// LpTokens (historical) Gets lp tokens.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -5862,7 +5862,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetLpTokens (historical) Gets lp tokens.
+        /// LpTokens (historical) Gets lp tokens.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -5938,7 +5938,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetLpTokens (historical) Gets lp tokens.
+        /// LpTokens (historical) Gets lp tokens.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -5956,7 +5956,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetLpTokens (historical) Gets lp tokens.
+        /// LpTokens (historical) Gets lp tokens.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -6035,7 +6035,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetPools (historical) 🔥 Gets pools.
+        /// Pools (historical) 🔥 Gets pools.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -6052,7 +6052,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetPools (historical) 🔥 Gets pools.
+        /// Pools (historical) 🔥 Gets pools.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -6128,7 +6128,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetPools (historical) 🔥 Gets pools.
+        /// Pools (historical) 🔥 Gets pools.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -6146,7 +6146,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetPools (historical) 🔥 Gets pools.
+        /// Pools (historical) 🔥 Gets pools.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -6225,7 +6225,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetProposals (historical) Gets proposals.
+        /// Proposals (historical) Gets proposals.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -6241,7 +6241,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetProposals (historical) Gets proposals.
+        /// Proposals (historical) Gets proposals.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -6312,7 +6312,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetProposals (historical) Gets proposals.
+        /// Proposals (historical) Gets proposals.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -6329,7 +6329,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetProposals (historical) Gets proposals.
+        /// Proposals (historical) Gets proposals.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -6403,7 +6403,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetProposalsVotes (historical) Gets proposals votes.
+        /// ProposalsVotes (historical) Gets proposals votes.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -6419,7 +6419,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetProposalsVotes (historical) Gets proposals votes.
+        /// ProposalsVotes (historical) Gets proposals votes.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -6490,7 +6490,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetProposalsVotes (historical) Gets proposals votes.
+        /// ProposalsVotes (historical) Gets proposals votes.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -6507,7 +6507,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetProposalsVotes (historical) Gets proposals votes.
+        /// ProposalsVotes (historical) Gets proposals votes.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -6581,7 +6581,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetRemoveLiquidityEvents (historical) Gets remove liquidity events.
+        /// RemoveLiquidityEvents (historical) Gets remove liquidity events.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -6598,7 +6598,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetRemoveLiquidityEvents (historical) Gets remove liquidity events.
+        /// RemoveLiquidityEvents (historical) Gets remove liquidity events.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -6674,7 +6674,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetRemoveLiquidityEvents (historical) Gets remove liquidity events.
+        /// RemoveLiquidityEvents (historical) Gets remove liquidity events.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -6692,7 +6692,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetRemoveLiquidityEvents (historical) Gets remove liquidity events.
+        /// RemoveLiquidityEvents (historical) Gets remove liquidity events.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -6771,7 +6771,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetRemoveLiquidityOneEvents (historical) Gets remove liquidity one events.
+        /// RemoveLiquidityOneEvents (historical) Gets remove liquidity one events.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -6788,7 +6788,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetRemoveLiquidityOneEvents (historical) Gets remove liquidity one events.
+        /// RemoveLiquidityOneEvents (historical) Gets remove liquidity one events.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -6864,7 +6864,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetRemoveLiquidityOneEvents (historical) Gets remove liquidity one events.
+        /// RemoveLiquidityOneEvents (historical) Gets remove liquidity one events.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -6882,7 +6882,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetRemoveLiquidityOneEvents (historical) Gets remove liquidity one events.
+        /// RemoveLiquidityOneEvents (historical) Gets remove liquidity one events.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -6961,7 +6961,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetSystemStates (historical) Gets system states.
+        /// SystemStates (historical) Gets system states.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -6977,7 +6977,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetSystemStates (historical) Gets system states.
+        /// SystemStates (historical) Gets system states.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -7048,7 +7048,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetSystemStates (historical) Gets system states.
+        /// SystemStates (historical) Gets system states.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -7065,7 +7065,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetSystemStates (historical) Gets system states.
+        /// SystemStates (historical) Gets system states.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -7139,7 +7139,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetTokens (historical) 🔥 Gets tokens.
+        /// Tokens (historical) 🔥 Gets tokens.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -7156,7 +7156,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetTokens (historical) 🔥 Gets tokens.
+        /// Tokens (historical) 🔥 Gets tokens.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -7232,7 +7232,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetTokens (historical) 🔥 Gets tokens.
+        /// Tokens (historical) 🔥 Gets tokens.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -7250,7 +7250,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetTokens (historical) 🔥 Gets tokens.
+        /// Tokens (historical) 🔥 Gets tokens.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -7329,7 +7329,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetTransferOwnershipEvents (historical) Gets transfer ownership events.
+        /// TransferOwnershipEvents (historical) Gets transfer ownership events.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -7346,7 +7346,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetTransferOwnershipEvents (historical) Gets transfer ownership events.
+        /// TransferOwnershipEvents (historical) Gets transfer ownership events.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -7422,7 +7422,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetTransferOwnershipEvents (historical) Gets transfer ownership events.
+        /// TransferOwnershipEvents (historical) Gets transfer ownership events.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -7440,7 +7440,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetTransferOwnershipEvents (historical) Gets transfer ownership events.
+        /// TransferOwnershipEvents (historical) Gets transfer ownership events.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -7519,7 +7519,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetUnderlyingCoins (historical) Gets underlying coins.
+        /// UnderlyingCoins (historical) Gets underlying coins.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -7536,7 +7536,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetUnderlyingCoins (historical) Gets underlying coins.
+        /// UnderlyingCoins (historical) Gets underlying coins.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -7612,7 +7612,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetUnderlyingCoins (historical) Gets underlying coins.
+        /// UnderlyingCoins (historical) Gets underlying coins.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -7630,7 +7630,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetUnderlyingCoins (historical) Gets underlying coins.
+        /// UnderlyingCoins (historical) Gets underlying coins.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -7709,7 +7709,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetVotingApps (historical) Gets voting apps.
+        /// VotingApps (historical) Gets voting apps.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -7725,7 +7725,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetVotingApps (historical) Gets voting apps.
+        /// VotingApps (historical) Gets voting apps.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -7796,7 +7796,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetVotingApps (historical) Gets voting apps.
+        /// VotingApps (historical) Gets voting apps.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -7813,7 +7813,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetVotingApps (historical) Gets voting apps.
+        /// VotingApps (historical) Gets voting apps.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -7887,7 +7887,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetWeeklyVolumes (historical) Gets weekly volumes.
+        /// WeeklyVolumes (historical) Gets weekly volumes.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -7904,7 +7904,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetWeeklyVolumes (historical) Gets weekly volumes.
+        /// WeeklyVolumes (historical) Gets weekly volumes.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -7980,7 +7980,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetWeeklyVolumes (historical) Gets weekly volumes.
+        /// WeeklyVolumes (historical) Gets weekly volumes.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -7998,7 +7998,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GetWeeklyVolumes (historical) Gets weekly volumes.
+        /// WeeklyVolumes (historical) Gets weekly volumes.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>

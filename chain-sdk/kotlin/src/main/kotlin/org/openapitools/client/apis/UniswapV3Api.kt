@@ -62,7 +62,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetBundles (current)
+     * Bundles (current)
      * Gets bundles.
      * @return kotlin.collections.List<UniswapV3BundleV3DTO>
      * @throws IllegalStateException If the request is not correctly configured
@@ -92,7 +92,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetBundles (current)
+     * Bundles (current)
      * Gets bundles.
      * @return ApiResponse<kotlin.collections.List<UniswapV3BundleV3DTO>?>
      * @throws IllegalStateException If the request is not correctly configured
@@ -129,7 +129,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetBundles (historical)
+     * Bundles (historical)
      * Gets bundles.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -163,7 +163,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetBundles (historical)
+     * Bundles (historical)
      * Gets bundles.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -222,7 +222,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetBurns (current)
+     * Burns (current)
      * Gets burns.
      * @param filterPoolId  (optional)
      * @return kotlin.collections.List<UniswapV3BurnV3DTO>
@@ -253,7 +253,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetBurns (current)
+     * Burns (current)
      * Gets burns.
      * @param filterPoolId  (optional)
      * @return ApiResponse<kotlin.collections.List<UniswapV3BurnV3DTO>?>
@@ -297,7 +297,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetBurns (historical)
+     * Burns (historical)
      * Gets burns.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -332,7 +332,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetBurns (historical)
+     * Burns (historical)
      * Gets burns.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -396,7 +396,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetDayData (current)
+     * DayData (current)
      * Gets uniswapv3 day data.
      * @return kotlin.collections.List<UniswapV3UniswapDayDataV3DTO>
      * @throws IllegalStateException If the request is not correctly configured
@@ -426,7 +426,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetDayData (current)
+     * DayData (current)
      * Gets uniswapv3 day data.
      * @return ApiResponse<kotlin.collections.List<UniswapV3UniswapDayDataV3DTO>?>
      * @throws IllegalStateException If the request is not correctly configured
@@ -463,7 +463,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetDayData (historical)
+     * DayData (historical)
      * Gets uniswapv3 day data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -497,7 +497,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetDayData (historical)
+     * DayData (historical)
      * Gets uniswapv3 day data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -556,7 +556,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetFactory (current)
+     * Factory (current)
      * Gets factory.
      * @return kotlin.collections.List<UniswapV3FactoryV3DTO>
      * @throws IllegalStateException If the request is not correctly configured
@@ -586,7 +586,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetFactory (current)
+     * Factory (current)
      * Gets factory.
      * @return ApiResponse<kotlin.collections.List<UniswapV3FactoryV3DTO>?>
      * @throws IllegalStateException If the request is not correctly configured
@@ -623,7 +623,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetFactory (historical)
+     * Factory (historical)
      * Gets factory.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -657,7 +657,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetFactory (historical)
+     * Factory (historical)
      * Gets factory.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -716,7 +716,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetMints (current)
+     * Mints (current)
      * Gets mints.
      * @param filterPoolId  (optional)
      * @return kotlin.collections.List<UniswapV3MintV3DTO>
@@ -747,7 +747,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetMints (current)
+     * Mints (current)
      * Gets mints.
      * @param filterPoolId  (optional)
      * @return ApiResponse<kotlin.collections.List<UniswapV3MintV3DTO>?>
@@ -791,7 +791,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetMints (historical)
+     * Mints (historical)
      * Gets mints.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -826,7 +826,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetMints (historical)
+     * Mints (historical)
      * Gets mints.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -890,7 +890,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetPools (current) 🔥
+     * Pools (current) 🔥
      * Gets pools.
      * @param filterPoolId  (optional)
      * @return kotlin.collections.List<UniswapV3PoolV3DTO>
@@ -921,7 +921,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetPools (current) 🔥
+     * Pools (current) 🔥
      * Gets pools.
      * @param filterPoolId  (optional)
      * @return ApiResponse<kotlin.collections.List<UniswapV3PoolV3DTO>?>
@@ -965,7 +965,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetPoolsDayData (current)
+     * PoolsDayData (current)
      * Gets pools day data.
      * @param filterPoolId  (optional)
      * @return kotlin.collections.List<UniswapV3PoolDayDataV3DTO>
@@ -996,7 +996,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetPoolsDayData (current)
+     * PoolsDayData (current)
      * Gets pools day data.
      * @param filterPoolId  (optional)
      * @return ApiResponse<kotlin.collections.List<UniswapV3PoolDayDataV3DTO>?>
@@ -1040,7 +1040,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetPoolsDayData (historical)
+     * PoolsDayData (historical)
      * Gets pools day data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1075,7 +1075,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetPoolsDayData (historical)
+     * PoolsDayData (historical)
      * Gets pools day data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1139,7 +1139,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetPools (historical) 🔥
+     * Pools (historical) 🔥
      * Gets pools.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1174,7 +1174,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetPools (historical) 🔥
+     * Pools (historical) 🔥
      * Gets pools.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1238,7 +1238,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetPoolsHourData (current)
+     * PoolsHourData (current)
      * Gets pools hour data.
      * @param filterPoolId  (optional)
      * @return kotlin.collections.List<UniswapV3PoolHourDataV3DTO>
@@ -1269,7 +1269,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetPoolsHourData (current)
+     * PoolsHourData (current)
      * Gets pools hour data.
      * @param filterPoolId  (optional)
      * @return ApiResponse<kotlin.collections.List<UniswapV3PoolHourDataV3DTO>?>
@@ -1313,7 +1313,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetPoolsHourData (historical)
+     * PoolsHourData (historical)
      * Gets pools hour data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1348,7 +1348,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetPoolsHourData (historical)
+     * PoolsHourData (historical)
      * Gets pools hour data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1412,7 +1412,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetPositions (current)
+     * Positions (current)
      * Gets positions.
      * @param filterPoolId  (optional)
      * @return kotlin.collections.List<UniswapV3PositionV3DTO>
@@ -1443,7 +1443,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetPositions (current)
+     * Positions (current)
      * Gets positions.
      * @param filterPoolId  (optional)
      * @return ApiResponse<kotlin.collections.List<UniswapV3PositionV3DTO>?>
@@ -1487,7 +1487,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetPositions (historical)
+     * Positions (historical)
      * Gets positions.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1522,7 +1522,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetPositions (historical)
+     * Positions (historical)
      * Gets positions.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1586,7 +1586,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetPositionsSnaphots (historical)
+     * PositionsSnaphots (historical)
      * Gets positions snapshots.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1621,7 +1621,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetPositionsSnaphots (historical)
+     * PositionsSnaphots (historical)
      * Gets positions snapshots.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1685,7 +1685,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetPositionsSnapshots (current)
+     * PositionsSnapshots (current)
      * Gets positions snapshots.
      * @param filterPoolId  (optional)
      * @return kotlin.collections.List<UniswapV3PositionSnapshotV3DTO>
@@ -1716,7 +1716,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetPositionsSnapshots (current)
+     * PositionsSnapshots (current)
      * Gets positions snapshots.
      * @param filterPoolId  (optional)
      * @return ApiResponse<kotlin.collections.List<UniswapV3PositionSnapshotV3DTO>?>
@@ -1760,7 +1760,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetSwaps (current) 🔥
+     * Swaps (current) 🔥
      * Gets swaps.
      * @param filterPoolId  (optional)
      * @return kotlin.collections.List<UniswapV3SwapV3DTO>
@@ -1791,7 +1791,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetSwaps (current) 🔥
+     * Swaps (current) 🔥
      * Gets swaps.
      * @param filterPoolId  (optional)
      * @return ApiResponse<kotlin.collections.List<UniswapV3SwapV3DTO>?>
@@ -1835,7 +1835,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetSwaps (historical) 🔥
+     * Swaps (historical) 🔥
      * Gets swaps.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1870,7 +1870,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetSwaps (historical) 🔥
+     * Swaps (historical) 🔥
      * Gets swaps.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1934,7 +1934,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetTicks (current)
+     * Ticks (current)
      * Gets ticks.
      * @param filterPoolId  (optional)
      * @return kotlin.collections.List<UniswapV3TickV3DTO>
@@ -1965,7 +1965,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetTicks (current)
+     * Ticks (current)
      * Gets ticks.
      * @param filterPoolId  (optional)
      * @return ApiResponse<kotlin.collections.List<UniswapV3TickV3DTO>?>
@@ -2009,7 +2009,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetTicksDayData (current)
+     * TicksDayData (current)
      * Gets ticks day data.
      * @param filterPoolId  (optional)
      * @return kotlin.collections.List<UniswapV3TickDayDataV3DTO>
@@ -2040,7 +2040,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetTicksDayData (current)
+     * TicksDayData (current)
      * Gets ticks day data.
      * @param filterPoolId  (optional)
      * @return ApiResponse<kotlin.collections.List<UniswapV3TickDayDataV3DTO>?>
@@ -2084,7 +2084,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetTicksDayData (historical)
+     * TicksDayData (historical)
      * Gets ticks day data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2119,7 +2119,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetTicksDayData (historical)
+     * TicksDayData (historical)
      * Gets ticks day data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2183,7 +2183,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetTicks (historical)
+     * Ticks (historical)
      * Gets ticks.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2218,7 +2218,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetTicks (historical)
+     * Ticks (historical)
      * Gets ticks.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2282,7 +2282,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetTokens (current) 🔥
+     * Tokens (current) 🔥
      * Gets tokens.
      * @param filterTokenId  (optional)
      * @return kotlin.collections.List<UniswapV3TokenV3DTO>
@@ -2313,7 +2313,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetTokens (current) 🔥
+     * Tokens (current) 🔥
      * Gets tokens.
      * @param filterTokenId  (optional)
      * @return ApiResponse<kotlin.collections.List<UniswapV3TokenV3DTO>?>
@@ -2357,7 +2357,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetTokensDayData (current)
+     * TokensDayData (current)
      * Gets tokens day data.
      * @param filterTokenId  (optional)
      * @return kotlin.collections.List<UniswapV3TokenV3DayDataDTO>
@@ -2388,7 +2388,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetTokensDayData (current)
+     * TokensDayData (current)
      * Gets tokens day data.
      * @param filterTokenId  (optional)
      * @return ApiResponse<kotlin.collections.List<UniswapV3TokenV3DayDataDTO>?>
@@ -2432,7 +2432,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetTokensDayData (historical)
+     * TokensDayData (historical)
      * Gets tokens day data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2467,7 +2467,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetTokensDayData (historical)
+     * TokensDayData (historical)
      * Gets tokens day data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2531,7 +2531,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      * Gets tokens.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2566,7 +2566,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      * Gets tokens.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2630,7 +2630,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetTokensHourData (current)
+     * TokensHourData (current)
      * Gets tokens hour data.
      * @param filterTokenId  (optional)
      * @return kotlin.collections.List<UniswapV3TokenHourDataV3DTO>
@@ -2661,7 +2661,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetTokensHourData (current)
+     * TokensHourData (current)
      * Gets tokens hour data.
      * @param filterTokenId  (optional)
      * @return ApiResponse<kotlin.collections.List<UniswapV3TokenHourDataV3DTO>?>
@@ -2705,7 +2705,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetTokensHourData (historical)
+     * TokensHourData (historical)
      * Gets tokens hour data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2740,7 +2740,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetTokensHourData (historical)
+     * TokensHourData (historical)
      * Gets tokens hour data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2804,7 +2804,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetTransactions (historical)
+     * Transactions (historical)
      * Gets transactions.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2838,7 +2838,7 @@ class UniswapV3Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetTransactions (historical)
+     * Transactions (historical)
      * Gets transactions.
      * @param startBlock  (optional)
      * @param endBlock  (optional)

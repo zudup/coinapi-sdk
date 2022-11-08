@@ -63,7 +63,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetExchanges (current) 🔥
+     * Exchanges (current) 🔥
      * Gets exchanges.
      * @return kotlin.collections.List<CurveExchangeDTO>
      * @throws IllegalStateException If the request is not correctly configured
@@ -93,7 +93,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetExchanges (current) 🔥
+     * Exchanges (current) 🔥
      * Gets exchanges.
      * @return ApiResponse<kotlin.collections.List<CurveExchangeDTO>?>
      * @throws IllegalStateException If the request is not correctly configured
@@ -130,7 +130,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetTrades (current) 🔥
+     * Trades (current) 🔥
      * Gets trades.
      * @return kotlin.collections.List<DexTradeDTO>
      * @throws IllegalStateException If the request is not correctly configured
@@ -160,7 +160,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetTrades (current) 🔥
+     * Trades (current) 🔥
      * Gets trades.
      * @return ApiResponse<kotlin.collections.List<DexTradeDTO>?>
      * @throws IllegalStateException If the request is not correctly configured
@@ -197,7 +197,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetBundles (historical)
+     * Bundles (historical)
      * Gets bundles.
      * @param startBlock AAAAAAAAAA (optional)
      * @param endBlock BBBBBBBBBBBB (optional)
@@ -231,7 +231,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetBundles (historical)
+     * Bundles (historical)
      * Gets bundles.
      * @param startBlock AAAAAAAAAA (optional)
      * @param endBlock BBBBBBBBBBBB (optional)
@@ -290,7 +290,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetBurns (historical)
+     * Burns (historical)
      * Gets burns.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -325,7 +325,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetBurns (historical)
+     * Burns (historical)
      * Gets burns.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -389,7 +389,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetDayData (historical)
+     * DayData (historical)
      * Gets day data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -423,7 +423,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetDayData (historical)
+     * DayData (historical)
      * Gets day data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -482,7 +482,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetFactory (historical)
+     * Factory (historical)
      * Gets factory.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -516,7 +516,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetFactory (historical)
+     * Factory (historical)
      * Gets factory.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -575,7 +575,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetHourData (historical)
+     * HourData (historical)
      * Gets hour data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -609,7 +609,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetHourData (historical)
+     * HourData (historical)
      * Gets hour data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -668,7 +668,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetLiquidityPosition (historical)
+     * LiquidityPosition (historical)
      * Gets liquidity position.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -703,7 +703,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetLiquidityPosition (historical)
+     * LiquidityPosition (historical)
      * Gets liquidity position.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -767,7 +767,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetLiquidityPositionSnapshot (historical)
+     * LiquidityPositionSnapshot (historical)
      * Gets liquidity position snapshot.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -802,7 +802,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetLiquidityPositionSnapshot (historical)
+     * LiquidityPositionSnapshot (historical)
      * Gets liquidity position snapshot.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -866,7 +866,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetMints (historical)
+     * Mints (historical)
      * Gets mints.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -901,7 +901,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetMints (historical)
+     * Mints (historical)
      * Gets mints.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -965,7 +965,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetPools (current) 🔥
+     * Pools (current) 🔥
      * Gets pools.
      * @return kotlin.collections.List<SushiswapPairDTO>
      * @throws IllegalStateException If the request is not correctly configured
@@ -995,7 +995,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetPools (current) 🔥
+     * Pools (current) 🔥
      * Gets pools.
      * @return ApiResponse<kotlin.collections.List<SushiswapPairDTO>?>
      * @throws IllegalStateException If the request is not correctly configured
@@ -1032,7 +1032,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetPoolsDayData (historical)
+     * PoolsDayData (historical)
      * Gets pools day data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1067,7 +1067,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetPoolsDayData (historical)
+     * PoolsDayData (historical)
      * Gets pools day data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1131,7 +1131,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetPools (historical) 🔥
+     * Pools (historical) 🔥
      * Gets list of pools for given filters.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1166,7 +1166,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetPools (historical) 🔥
+     * Pools (historical) 🔥
      * Gets list of pools for given filters.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1230,7 +1230,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetPoolsHourData (historical)
+     * PoolsHourData (historical)
      * Gets pools tracked each our.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1265,7 +1265,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetPoolsHourData (historical)
+     * PoolsHourData (historical)
      * Gets pools tracked each our.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1329,7 +1329,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetSwaps (current) 🔥
+     * Swaps (current) 🔥
      * Gets swaps.
      * @return kotlin.collections.List<SushiswapSwapDTO>
      * @throws IllegalStateException If the request is not correctly configured
@@ -1359,7 +1359,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetSwaps (current) 🔥
+     * Swaps (current) 🔥
      * Gets swaps.
      * @return ApiResponse<kotlin.collections.List<SushiswapSwapDTO>?>
      * @throws IllegalStateException If the request is not correctly configured
@@ -1396,7 +1396,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetSwaps (historical) 🔥
+     * Swaps (historical) 🔥
      * Gets list of swaps for given filters.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1431,7 +1431,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetSwaps (historical) 🔥
+     * Swaps (historical) 🔥
      * Gets list of swaps for given filters.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1495,7 +1495,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetTokens (current) 🔥
+     * Tokens (current) 🔥
      * Gets tokens.
      * @return kotlin.collections.List<SushiswapTokenDTO>
      * @throws IllegalStateException If the request is not correctly configured
@@ -1525,7 +1525,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetTokens (current) 🔥
+     * Tokens (current) 🔥
      * Gets tokens.
      * @return ApiResponse<kotlin.collections.List<SushiswapTokenDTO>?>
      * @throws IllegalStateException If the request is not correctly configured
@@ -1562,7 +1562,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetTokensDayData (historical)
+     * TokensDayData (historical)
      * Gets tokens day data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1597,7 +1597,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetTokensDayData (historical)
+     * TokensDayData (historical)
      * Gets tokens day data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1661,7 +1661,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      * Gets list of tokens for given filters.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1696,7 +1696,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      * Gets list of tokens for given filters.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1760,7 +1760,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetTransactions (historical)
+     * Transactions (historical)
      * Gets transactions.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1794,7 +1794,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetTransactions (historical)
+     * Transactions (historical)
      * Gets transactions.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1853,7 +1853,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetUsers (historical)
+     * Users (historical)
      * Gets users.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1887,7 +1887,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * GetUsers (historical)
+     * Users (historical)
      * Gets users.
      * @param startBlock  (optional)
      * @param endBlock  (optional)

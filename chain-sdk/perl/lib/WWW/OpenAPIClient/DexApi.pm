@@ -51,7 +51,7 @@ sub new {
 #
 # dex_get_batches__historical
 #
-# GetBatches (historical)
+# Batches (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -81,7 +81,7 @@ sub new {
     },
     };
     __PACKAGE__->method_documentation->{ 'dex_get_batches__historical' } = {
-        summary => 'GetBatches (historical)',
+        summary => 'Batches (historical)',
         params => $params,
         returns => 'ARRAY[DexBatchDTO]',
         };
@@ -144,7 +144,7 @@ sub dex_get_batches__historical {
 #
 # dex_get_deposits__historical
 #
-# GetDeposits (historical)
+# Deposits (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -180,7 +180,7 @@ sub dex_get_batches__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'dex_get_deposits__historical' } = {
-        summary => 'GetDeposits (historical)',
+        summary => 'Deposits (historical)',
         params => $params,
         returns => 'ARRAY[DexDepositDTO]',
         };
@@ -248,7 +248,7 @@ sub dex_get_deposits__historical {
 #
 # dex_get_orders__historical
 #
-# GetOrders (historical)
+# Orders (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -284,7 +284,7 @@ sub dex_get_deposits__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'dex_get_orders__historical' } = {
-        summary => 'GetOrders (historical)',
+        summary => 'Orders (historical)',
         params => $params,
         returns => 'ARRAY[DexOrderDTO]',
         };
@@ -352,7 +352,7 @@ sub dex_get_orders__historical {
 #
 # dex_get_prices__historical
 #
-# GetPrices (historical)
+# Prices (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -388,7 +388,7 @@ sub dex_get_orders__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'dex_get_prices__historical' } = {
-        summary => 'GetPrices (historical)',
+        summary => 'Prices (historical)',
         params => $params,
         returns => 'ARRAY[DexPriceDTO]',
         };
@@ -456,7 +456,7 @@ sub dex_get_prices__historical {
 #
 # dex_get_solutions__historical
 #
-# GetSolutions (historical)
+# Solutions (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -492,7 +492,7 @@ sub dex_get_prices__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'dex_get_solutions__historical' } = {
-        summary => 'GetSolutions (historical)',
+        summary => 'Solutions (historical)',
         params => $params,
         returns => 'ARRAY[DexSolutionDTO]',
         };
@@ -560,7 +560,7 @@ sub dex_get_solutions__historical {
 #
 # dex_get_stats__historical
 #
-# GetStats (historical)
+# Stats (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -590,7 +590,7 @@ sub dex_get_solutions__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'dex_get_stats__historical' } = {
-        summary => 'GetStats (historical)',
+        summary => 'Stats (historical)',
         params => $params,
         returns => 'ARRAY[DexStatsDTO]',
         };
@@ -653,7 +653,7 @@ sub dex_get_stats__historical {
 #
 # dex_get_tokens__historical
 #
-# GetTokens (historical) 🔥
+# Tokens (historical) 🔥
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -689,7 +689,7 @@ sub dex_get_stats__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'dex_get_tokens__historical' } = {
-        summary => 'GetTokens (historical) 🔥',
+        summary => 'Tokens (historical) 🔥',
         params => $params,
         returns => 'ARRAY[DexTokenDTO]',
         };
@@ -757,7 +757,7 @@ sub dex_get_tokens__historical {
 #
 # dex_get_trades__historical
 #
-# GetTrades (historical) 🔥
+# Trades (historical) 🔥
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -787,7 +787,7 @@ sub dex_get_tokens__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'dex_get_trades__historical' } = {
-        summary => 'GetTrades (historical) 🔥',
+        summary => 'Trades (historical) 🔥',
         params => $params,
         returns => 'ARRAY[DexTradeDTO]',
         };
@@ -850,7 +850,7 @@ sub dex_get_trades__historical {
 #
 # dex_get_users__historical
 #
-# GetUsers (historical)
+# Users (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -880,7 +880,7 @@ sub dex_get_trades__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'dex_get_users__historical' } = {
-        summary => 'GetUsers (historical)',
+        summary => 'Users (historical)',
         params => $params,
         returns => 'ARRAY[DexUserDTO]',
         };
@@ -943,7 +943,7 @@ sub dex_get_users__historical {
 #
 # dex_get_withdraws__historical
 #
-# GetWithdraws (historical)
+# Withdraws (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -979,7 +979,7 @@ sub dex_get_users__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'dex_get_withdraws__historical' } = {
-        summary => 'GetWithdraws (historical)',
+        summary => 'Withdraws (historical)',
         params => $params,
         returns => 'ARRAY[DexWithdrawDTO]',
         };
@@ -1047,7 +1047,7 @@ sub dex_get_withdraws__historical {
 #
 # dex_get_withdraws_requests__historical
 #
-# GetWithdrawsRequests (historical)
+# WithdrawsRequests (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -1083,7 +1083,7 @@ sub dex_get_withdraws__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'dex_get_withdraws_requests__historical' } = {
-        summary => 'GetWithdrawsRequests (historical)',
+        summary => 'WithdrawsRequests (historical)',
         params => $params,
         returns => 'ARRAY[DexWithdrawRequestDTO]',
         };

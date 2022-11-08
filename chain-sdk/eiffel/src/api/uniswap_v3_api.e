@@ -25,7 +25,7 @@ feature -- API Access
 
 
 	uniswap_v3_get_bundles_current : detachable LIST [UNISWAP_V3_BUNDLE_V3_DTO]
-			-- GetBundles (current)
+			-- Bundles (current)
 			-- Gets bundles.
 			-- 
 			-- 
@@ -58,7 +58,7 @@ feature -- API Access
 		end
 
 	uniswap_v3_get_bundles_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME): detachable LIST [UNISWAP_V3_BUNDLE_V3_DTO]
-			-- GetBundles (historical)
+			-- Bundles (historical)
 			-- Gets bundles.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -103,7 +103,7 @@ feature -- API Access
 		end
 
 	uniswap_v3_get_burns_current (filter_pool_id: STRING_32): detachable LIST [UNISWAP_V3_BURN_V3_DTO]
-			-- GetBurns (current)
+			-- Burns (current)
 			-- Gets burns.
 			-- 
 			-- argument: filter_pool_id  (optional, default to null)
@@ -139,7 +139,7 @@ feature -- API Access
 		end
 
 	uniswap_v3_get_burns_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [UNISWAP_V3_BURN_V3_DTO]
-			-- GetBurns (historical)
+			-- Burns (historical)
 			-- Gets burns.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -187,7 +187,7 @@ feature -- API Access
 		end
 
 	uniswap_v3_get_day_data_current : detachable LIST [UNISWAP_V3_UNISWAP_DAY_DATA_V3_DTO]
-			-- GetDayData (current)
+			-- DayData (current)
 			-- Gets uniswapv3 day data.
 			-- 
 			-- 
@@ -220,7 +220,7 @@ feature -- API Access
 		end
 
 	uniswap_v3_get_day_data_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME): detachable LIST [UNISWAP_V3_UNISWAP_DAY_DATA_V3_DTO]
-			-- GetDayData (historical)
+			-- DayData (historical)
 			-- Gets uniswapv3 day data.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -265,7 +265,7 @@ feature -- API Access
 		end
 
 	uniswap_v3_get_factory_current : detachable LIST [UNISWAP_V3_FACTORY_V3_DTO]
-			-- GetFactory (current)
+			-- Factory (current)
 			-- Gets factory.
 			-- 
 			-- 
@@ -298,7 +298,7 @@ feature -- API Access
 		end
 
 	uniswap_v3_get_factory_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME): detachable LIST [UNISWAP_V3_FACTORY_V3_DTO]
-			-- GetFactory (historical)
+			-- Factory (historical)
 			-- Gets factory.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -343,7 +343,7 @@ feature -- API Access
 		end
 
 	uniswap_v3_get_mints_current (filter_pool_id: STRING_32): detachable LIST [UNISWAP_V3_MINT_V3_DTO]
-			-- GetMints (current)
+			-- Mints (current)
 			-- Gets mints.
 			-- 
 			-- argument: filter_pool_id  (optional, default to null)
@@ -379,7 +379,7 @@ feature -- API Access
 		end
 
 	uniswap_v3_get_mints_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [UNISWAP_V3_MINT_V3_DTO]
-			-- GetMints (historical)
+			-- Mints (historical)
 			-- Gets mints.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -427,7 +427,7 @@ feature -- API Access
 		end
 
 	uniswap_v3_get_pools_current (filter_pool_id: STRING_32): detachable LIST [UNISWAP_V3_POOL_V3_DTO]
-			-- GetPools (current) 🔥
+			-- Pools (current) 🔥
 			-- Gets pools.
 			-- 
 			-- argument: filter_pool_id  (optional, default to null)
@@ -463,7 +463,7 @@ feature -- API Access
 		end
 
 	uniswap_v3_get_pools_day_data_current (filter_pool_id: STRING_32): detachable LIST [UNISWAP_V3_POOL_DAY_DATA_V3_DTO]
-			-- GetPoolsDayData (current)
+			-- PoolsDayData (current)
 			-- Gets pools day data.
 			-- 
 			-- argument: filter_pool_id  (optional, default to null)
@@ -499,7 +499,7 @@ feature -- API Access
 		end
 
 	uniswap_v3_get_pools_day_data_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [UNISWAP_V3_POOL_DAY_DATA_V3_DTO]
-			-- GetPoolsDayData (historical)
+			-- PoolsDayData (historical)
 			-- Gets pools day data.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -547,7 +547,7 @@ feature -- API Access
 		end
 
 	uniswap_v3_get_pools_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [UNISWAP_V3_POOL_V3_DTO]
-			-- GetPools (historical) 🔥
+			-- Pools (historical) 🔥
 			-- Gets pools.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -595,7 +595,7 @@ feature -- API Access
 		end
 
 	uniswap_v3_get_pools_hour_data_current (filter_pool_id: STRING_32): detachable LIST [UNISWAP_V3_POOL_HOUR_DATA_V3_DTO]
-			-- GetPoolsHourData (current)
+			-- PoolsHourData (current)
 			-- Gets pools hour data.
 			-- 
 			-- argument: filter_pool_id  (optional, default to null)
@@ -631,7 +631,7 @@ feature -- API Access
 		end
 
 	uniswap_v3_get_pools_hour_data_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [UNISWAP_V3_POOL_HOUR_DATA_V3_DTO]
-			-- GetPoolsHourData (historical)
+			-- PoolsHourData (historical)
 			-- Gets pools hour data.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -679,7 +679,7 @@ feature -- API Access
 		end
 
 	uniswap_v3_get_positions_current (filter_pool_id: STRING_32): detachable LIST [UNISWAP_V3_POSITION_V3_DTO]
-			-- GetPositions (current)
+			-- Positions (current)
 			-- Gets positions.
 			-- 
 			-- argument: filter_pool_id  (optional, default to null)
@@ -715,7 +715,7 @@ feature -- API Access
 		end
 
 	uniswap_v3_get_positions_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [UNISWAP_V3_POSITION_V3_DTO]
-			-- GetPositions (historical)
+			-- Positions (historical)
 			-- Gets positions.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -763,7 +763,7 @@ feature -- API Access
 		end
 
 	uniswap_v3_get_positions_snaphots_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [UNISWAP_V3_POSITION_SNAPSHOT_V3_DTO]
-			-- GetPositionsSnaphots (historical)
+			-- PositionsSnaphots (historical)
 			-- Gets positions snapshots.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -811,7 +811,7 @@ feature -- API Access
 		end
 
 	uniswap_v3_get_positions_snapshots_current (filter_pool_id: STRING_32): detachable LIST [UNISWAP_V3_POSITION_SNAPSHOT_V3_DTO]
-			-- GetPositionsSnapshots (current)
+			-- PositionsSnapshots (current)
 			-- Gets positions snapshots.
 			-- 
 			-- argument: filter_pool_id  (optional, default to null)
@@ -847,7 +847,7 @@ feature -- API Access
 		end
 
 	uniswap_v3_get_swaps_current (filter_pool_id: STRING_32): detachable LIST [UNISWAP_V3_SWAP_V3_DTO]
-			-- GetSwaps (current) 🔥
+			-- Swaps (current) 🔥
 			-- Gets swaps.
 			-- 
 			-- argument: filter_pool_id  (optional, default to null)
@@ -883,7 +883,7 @@ feature -- API Access
 		end
 
 	uniswap_v3_get_swaps_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [UNISWAP_V3_SWAP_V3_DTO]
-			-- GetSwaps (historical) 🔥
+			-- Swaps (historical) 🔥
 			-- Gets swaps.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -931,7 +931,7 @@ feature -- API Access
 		end
 
 	uniswap_v3_get_ticks_current (filter_pool_id: STRING_32): detachable LIST [UNISWAP_V3_TICK_V3_DTO]
-			-- GetTicks (current)
+			-- Ticks (current)
 			-- Gets ticks.
 			-- 
 			-- argument: filter_pool_id  (optional, default to null)
@@ -967,7 +967,7 @@ feature -- API Access
 		end
 
 	uniswap_v3_get_ticks_day_data_current (filter_pool_id: STRING_32): detachable LIST [UNISWAP_V3_TICK_DAY_DATA_V3_DTO]
-			-- GetTicksDayData (current)
+			-- TicksDayData (current)
 			-- Gets ticks day data.
 			-- 
 			-- argument: filter_pool_id  (optional, default to null)
@@ -1003,7 +1003,7 @@ feature -- API Access
 		end
 
 	uniswap_v3_get_ticks_day_data_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [UNISWAP_V3_TICK_DAY_DATA_V3_DTO]
-			-- GetTicksDayData (historical)
+			-- TicksDayData (historical)
 			-- Gets ticks day data.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -1051,7 +1051,7 @@ feature -- API Access
 		end
 
 	uniswap_v3_get_ticks_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [UNISWAP_V3_TICK_V3_DTO]
-			-- GetTicks (historical)
+			-- Ticks (historical)
 			-- Gets ticks.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -1099,7 +1099,7 @@ feature -- API Access
 		end
 
 	uniswap_v3_get_tokens_current (filter_token_id: STRING_32): detachable LIST [UNISWAP_V3_TOKEN_V3_DTO]
-			-- GetTokens (current) 🔥
+			-- Tokens (current) 🔥
 			-- Gets tokens.
 			-- 
 			-- argument: filter_token_id  (optional, default to null)
@@ -1135,7 +1135,7 @@ feature -- API Access
 		end
 
 	uniswap_v3_get_tokens_day_data_current (filter_token_id: STRING_32): detachable LIST [UNISWAP_V3_TOKEN_V3_DAY_DATA_DTO]
-			-- GetTokensDayData (current)
+			-- TokensDayData (current)
 			-- Gets tokens day data.
 			-- 
 			-- argument: filter_token_id  (optional, default to null)
@@ -1171,7 +1171,7 @@ feature -- API Access
 		end
 
 	uniswap_v3_get_tokens_day_data_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; token_id: STRING_32): detachable LIST [UNISWAP_V3_TOKEN_V3_DAY_DATA_DTO]
-			-- GetTokensDayData (historical)
+			-- TokensDayData (historical)
 			-- Gets tokens day data.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -1219,7 +1219,7 @@ feature -- API Access
 		end
 
 	uniswap_v3_get_tokens_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; token_id: STRING_32): detachable LIST [UNISWAP_V3_TOKEN_V3_DTO]
-			-- GetTokens (historical) 🔥
+			-- Tokens (historical) 🔥
 			-- Gets tokens.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -1267,7 +1267,7 @@ feature -- API Access
 		end
 
 	uniswap_v3_get_tokens_hour_data_current (filter_token_id: STRING_32): detachable LIST [UNISWAP_V3_TOKEN_HOUR_DATA_V3_DTO]
-			-- GetTokensHourData (current)
+			-- TokensHourData (current)
 			-- Gets tokens hour data.
 			-- 
 			-- argument: filter_token_id  (optional, default to null)
@@ -1303,7 +1303,7 @@ feature -- API Access
 		end
 
 	uniswap_v3_get_tokens_hour_data_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; token_id: STRING_32): detachable LIST [UNISWAP_V3_TOKEN_HOUR_DATA_V3_DTO]
-			-- GetTokensHourData (historical)
+			-- TokensHourData (historical)
 			-- Gets tokens hour data.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -1351,7 +1351,7 @@ feature -- API Access
 		end
 
 	uniswap_v3_get_transactions_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME): detachable LIST [UNISWAP_V3_TRANSACTION_V3_DTO]
-			-- GetTransactions (historical)
+			-- Transactions (historical)
 			-- Gets transactions.
 			-- 
 			-- argument: start_block  (optional, default to null)

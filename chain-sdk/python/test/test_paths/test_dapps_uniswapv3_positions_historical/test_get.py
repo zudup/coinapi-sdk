@@ -21,7 +21,7 @@ from .. import ApiTestMixin
 class TestDappsUniswapv3PositionsHistorical(ApiTestMixin, unittest.TestCase):
     """
     DappsUniswapv3PositionsHistorical unit test stubs
-        GetPositions (historical)  # noqa: E501
+        Positions (historical)  # noqa: E501
     """
     _configuration = configuration.Configuration()
 

@@ -172,7 +172,7 @@ public class UniswapV2Api {
     }
 
     /**
-     * GetBundles (historical)
+     * Bundles (historical)
      * Gets bundles.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -192,7 +192,7 @@ public class UniswapV2Api {
     }
 
     /**
-     * GetBundles (historical)
+     * Bundles (historical)
      * Gets bundles.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -213,7 +213,7 @@ public class UniswapV2Api {
     }
 
     /**
-     * GetBundles (historical) (asynchronously)
+     * Bundles (historical) (asynchronously)
      * Gets bundles.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -324,7 +324,7 @@ public class UniswapV2Api {
     }
 
     /**
-     * GetBurns (historical)
+     * Burns (historical)
      * Gets burns.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -345,7 +345,7 @@ public class UniswapV2Api {
     }
 
     /**
-     * GetBurns (historical)
+     * Burns (historical)
      * Gets burns.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -367,7 +367,7 @@ public class UniswapV2Api {
     }
 
     /**
-     * GetBurns (historical) (asynchronously)
+     * Burns (historical) (asynchronously)
      * Gets burns.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -474,7 +474,7 @@ public class UniswapV2Api {
     }
 
     /**
-     * GetDayData (historical)
+     * DayData (historical)
      * Gets uniswapv2 day data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -494,7 +494,7 @@ public class UniswapV2Api {
     }
 
     /**
-     * GetDayData (historical)
+     * DayData (historical)
      * Gets uniswapv2 day data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -515,7 +515,7 @@ public class UniswapV2Api {
     }
 
     /**
-     * GetDayData (historical) (asynchronously)
+     * DayData (historical) (asynchronously)
      * Gets uniswapv2 day data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -621,7 +621,7 @@ public class UniswapV2Api {
     }
 
     /**
-     * GetFactory (historical)
+     * Factory (historical)
      * Gets factory.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -641,7 +641,7 @@ public class UniswapV2Api {
     }
 
     /**
-     * GetFactory (historical)
+     * Factory (historical)
      * Gets factory.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -662,7 +662,7 @@ public class UniswapV2Api {
     }
 
     /**
-     * GetFactory (historical) (asynchronously)
+     * Factory (historical) (asynchronously)
      * Gets factory.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -773,7 +773,7 @@ public class UniswapV2Api {
     }
 
     /**
-     * GetLiquidityPositions (historical)
+     * LiquidityPositions (historical)
      * Gets liquidity positions.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -794,7 +794,7 @@ public class UniswapV2Api {
     }
 
     /**
-     * GetLiquidityPositions (historical)
+     * LiquidityPositions (historical)
      * Gets liquidity positions.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -816,7 +816,7 @@ public class UniswapV2Api {
     }
 
     /**
-     * GetLiquidityPositions (historical) (asynchronously)
+     * LiquidityPositions (historical) (asynchronously)
      * Gets liquidity positions.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -928,7 +928,7 @@ public class UniswapV2Api {
     }
 
     /**
-     * GetLiquidityPositionsSnapshots (historical)
+     * LiquidityPositionsSnapshots (historical)
      * Gets liquidity positions snapshots.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -949,7 +949,7 @@ public class UniswapV2Api {
     }
 
     /**
-     * GetLiquidityPositionsSnapshots (historical)
+     * LiquidityPositionsSnapshots (historical)
      * Gets liquidity positions snapshots.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -971,7 +971,7 @@ public class UniswapV2Api {
     }
 
     /**
-     * GetLiquidityPositionsSnapshots (historical) (asynchronously)
+     * LiquidityPositionsSnapshots (historical) (asynchronously)
      * Gets liquidity positions snapshots.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1083,7 +1083,7 @@ public class UniswapV2Api {
     }
 
     /**
-     * GetMints (historical)
+     * Mints (historical)
      * Gets mints.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1104,7 +1104,7 @@ public class UniswapV2Api {
     }
 
     /**
-     * GetMints (historical)
+     * Mints (historical)
      * Gets mints.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1126,7 +1126,7 @@ public class UniswapV2Api {
     }
 
     /**
-     * GetMints (historical) (asynchronously)
+     * Mints (historical) (asynchronously)
      * Gets mints.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1218,7 +1218,7 @@ public class UniswapV2Api {
     }
 
     /**
-     * GetPools (current) 🔥
+     * Pools (current) 🔥
      * Gets pools.
      * @param filterPoolId  (optional)
      * @return List&lt;UniswapV2PairV2DTO&gt;
@@ -1235,7 +1235,7 @@ public class UniswapV2Api {
     }
 
     /**
-     * GetPools (current) 🔥
+     * Pools (current) 🔥
      * Gets pools.
      * @param filterPoolId  (optional)
      * @return ApiResponse&lt;List&lt;UniswapV2PairV2DTO&gt;&gt;
@@ -1253,7 +1253,7 @@ public class UniswapV2Api {
     }
 
     /**
-     * GetPools (current) 🔥 (asynchronously)
+     * Pools (current) 🔥 (asynchronously)
      * Gets pools.
      * @param filterPoolId  (optional)
      * @param _callback The callback to be executed when the API call finishes
@@ -1361,7 +1361,7 @@ public class UniswapV2Api {
     }
 
     /**
-     * GetPoolsDayData (historical)
+     * PoolsDayData (historical)
      * Gets pools day data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1382,7 +1382,7 @@ public class UniswapV2Api {
     }
 
     /**
-     * GetPoolsDayData (historical)
+     * PoolsDayData (historical)
      * Gets pools day data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1404,7 +1404,7 @@ public class UniswapV2Api {
     }
 
     /**
-     * GetPoolsDayData (historical) (asynchronously)
+     * PoolsDayData (historical) (asynchronously)
      * Gets pools day data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1516,7 +1516,7 @@ public class UniswapV2Api {
     }
 
     /**
-     * GetPools (historical) 🔥
+     * Pools (historical) 🔥
      * Gets pools.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1537,7 +1537,7 @@ public class UniswapV2Api {
     }
 
     /**
-     * GetPools (historical) 🔥
+     * Pools (historical) 🔥
      * Gets pools.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1559,7 +1559,7 @@ public class UniswapV2Api {
     }
 
     /**
-     * GetPools (historical) 🔥 (asynchronously)
+     * Pools (historical) 🔥 (asynchronously)
      * Gets pools.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1671,7 +1671,7 @@ public class UniswapV2Api {
     }
 
     /**
-     * GetPoolsHourData (historical)
+     * PoolsHourData (historical)
      * Gets pools tracked each our.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1692,7 +1692,7 @@ public class UniswapV2Api {
     }
 
     /**
-     * GetPoolsHourData (historical)
+     * PoolsHourData (historical)
      * Gets pools tracked each our.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1714,7 +1714,7 @@ public class UniswapV2Api {
     }
 
     /**
-     * GetPoolsHourData (historical) (asynchronously)
+     * PoolsHourData (historical) (asynchronously)
      * Gets pools tracked each our.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1801,7 +1801,7 @@ public class UniswapV2Api {
     }
 
     /**
-     * GetSwaps (current) 🔥
+     * Swaps (current) 🔥
      * Gets swaps.
      * @return List&lt;UniswapV2SwapV2DTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -1817,7 +1817,7 @@ public class UniswapV2Api {
     }
 
     /**
-     * GetSwaps (current) 🔥
+     * Swaps (current) 🔥
      * Gets swaps.
      * @return ApiResponse&lt;List&lt;UniswapV2SwapV2DTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -1834,7 +1834,7 @@ public class UniswapV2Api {
     }
 
     /**
-     * GetSwaps (current) 🔥 (asynchronously)
+     * Swaps (current) 🔥 (asynchronously)
      * Gets swaps.
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
@@ -1941,7 +1941,7 @@ public class UniswapV2Api {
     }
 
     /**
-     * GetSwaps (historical) 🔥
+     * Swaps (historical) 🔥
      * Gets swaps.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1962,7 +1962,7 @@ public class UniswapV2Api {
     }
 
     /**
-     * GetSwaps (historical) 🔥
+     * Swaps (historical) 🔥
      * Gets swaps.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1984,7 +1984,7 @@ public class UniswapV2Api {
     }
 
     /**
-     * GetSwaps (historical) 🔥 (asynchronously)
+     * Swaps (historical) 🔥 (asynchronously)
      * Gets swaps.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2071,7 +2071,7 @@ public class UniswapV2Api {
     }
 
     /**
-     * GetTokens (current) 🔥
+     * Tokens (current) 🔥
      * Gets tokens.
      * @return List&lt;UniswapV2TokenV2DTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -2087,7 +2087,7 @@ public class UniswapV2Api {
     }
 
     /**
-     * GetTokens (current) 🔥
+     * Tokens (current) 🔥
      * Gets tokens.
      * @return ApiResponse&lt;List&lt;UniswapV2TokenV2DTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -2104,7 +2104,7 @@ public class UniswapV2Api {
     }
 
     /**
-     * GetTokens (current) 🔥 (asynchronously)
+     * Tokens (current) 🔥 (asynchronously)
      * Gets tokens.
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
@@ -2211,7 +2211,7 @@ public class UniswapV2Api {
     }
 
     /**
-     * GetTokensDayData (historical)
+     * TokensDayData (historical)
      * Gets tokens day data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2232,7 +2232,7 @@ public class UniswapV2Api {
     }
 
     /**
-     * GetTokensDayData (historical)
+     * TokensDayData (historical)
      * Gets tokens day data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2254,7 +2254,7 @@ public class UniswapV2Api {
     }
 
     /**
-     * GetTokensDayData (historical) (asynchronously)
+     * TokensDayData (historical) (asynchronously)
      * Gets tokens day data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2366,7 +2366,7 @@ public class UniswapV2Api {
     }
 
     /**
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      * Gets tokens.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2387,7 +2387,7 @@ public class UniswapV2Api {
     }
 
     /**
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      * Gets tokens.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2409,7 +2409,7 @@ public class UniswapV2Api {
     }
 
     /**
-     * GetTokens (historical) 🔥 (asynchronously)
+     * Tokens (historical) 🔥 (asynchronously)
      * Gets tokens.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2516,7 +2516,7 @@ public class UniswapV2Api {
     }
 
     /**
-     * GetTransactions (historical)
+     * Transactions (historical)
      * Gets transactions.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2536,7 +2536,7 @@ public class UniswapV2Api {
     }
 
     /**
-     * GetTransactions (historical)
+     * Transactions (historical)
      * Gets transactions.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2557,7 +2557,7 @@ public class UniswapV2Api {
     }
 
     /**
-     * GetTransactions (historical) (asynchronously)
+     * Transactions (historical) (asynchronously)
      * Gets transactions.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2663,7 +2663,7 @@ public class UniswapV2Api {
     }
 
     /**
-     * GetUsers (historical)
+     * Users (historical)
      * Gets users.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2683,7 +2683,7 @@ public class UniswapV2Api {
     }
 
     /**
-     * GetUsers (historical)
+     * Users (historical)
      * Gets users.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2704,7 +2704,7 @@ public class UniswapV2Api {
     }
 
     /**
-     * GetUsers (historical) (asynchronously)
+     * Users (historical) (asynchronously)
      * Gets users.
      * @param startBlock  (optional)
      * @param endBlock  (optional)

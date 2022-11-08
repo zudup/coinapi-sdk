@@ -21,7 +21,7 @@ from .. import ApiTestMixin
 class TestDappsCurveUnderlyingCoinsHistorical(ApiTestMixin, unittest.TestCase):
     """
     DappsCurveUnderlyingCoinsHistorical unit test stubs
-        GetUnderlyingCoins (historical)  # noqa: E501
+        UnderlyingCoins (historical)  # noqa: E501
     """
     _configuration = configuration.Configuration()
 

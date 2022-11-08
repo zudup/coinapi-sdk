@@ -490,126 +490,126 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*CowApi* | [**cow_get_orders__historical**](docs/CowApi.md#cow_get_orders__historical) | **GET** /dapps/cow/orders/historical | GetOrders (historical)
-*CowApi* | [**cow_get_settlements__historical**](docs/CowApi.md#cow_get_settlements__historical) | **GET** /dapps/cow/settlements/historical | GetSettlements (historical)
-*CowApi* | [**cow_get_tokens__historical**](docs/CowApi.md#cow_get_tokens__historical) | **GET** /dapps/cow/tokens/historical | GetTokens (historical) 🔥
-*CowApi* | [**cow_get_trades__historical**](docs/CowApi.md#cow_get_trades__historical) | **GET** /dapps/cow/trades/historical | GetTrades (historical) 🔥
-*CowApi* | [**cow_get_users__historical**](docs/CowApi.md#cow_get_users__historical) | **GET** /dapps/cow/users/historical | GetUsers (historical)
-*CurveApi* | [**curve_get_accounts__historical**](docs/CurveApi.md#curve_get_accounts__historical) | **GET** /dapps/curve/accounts/historical | GetAccounts (historical)
-*CurveApi* | [**curve_get_add_liquidity_events__historical**](docs/CurveApi.md#curve_get_add_liquidity_events__historical) | **GET** /dapps/curve/addLiquidityEvents/historical | GetAddLiquidityEvents (historical)
-*CurveApi* | [**curve_get_admin_fee_change_logs__historical**](docs/CurveApi.md#curve_get_admin_fee_change_logs__historical) | **GET** /dapps/curve/adminFeeChangeLogs/historical | GetAdminFeeChangeLogs (historical)
-*CurveApi* | [**curve_get_amplification_coeff_change_logs__historical**](docs/CurveApi.md#curve_get_amplification_coeff_change_logs__historical) | **GET** /dapps/curve/amplificationCoeffChangeLogs/historical | GetAmplificationCoeffChangeLogs (historical)
-*CurveApi* | [**curve_get_coins__historical**](docs/CurveApi.md#curve_get_coins__historical) | **GET** /dapps/curve/coins/historical | GetCoins (historical)
-*CurveApi* | [**curve_get_contracts__historical**](docs/CurveApi.md#curve_get_contracts__historical) | **GET** /dapps/curve/contracts/historical | GetContracts (historical)
-*CurveApi* | [**curve_get_contracts_versions__historical**](docs/CurveApi.md#curve_get_contracts_versions__historical) | **GET** /dapps/curve/contractsVersions/historical | GetContractsVersions (historical)
-*CurveApi* | [**curve_get_daily_volumes__historical**](docs/CurveApi.md#curve_get_daily_volumes__historical) | **GET** /dapps/curve/dailyVolumes/historical | GetDailyVolumes (historical)
-*CurveApi* | [**curve_get_exchanges__historical**](docs/CurveApi.md#curve_get_exchanges__historical) | **GET** /dapps/curve/exchanges/historical | GetExchanges (historical) 🔥
-*CurveApi* | [**curve_get_fee_change_logs__historical**](docs/CurveApi.md#curve_get_fee_change_logs__historical) | **GET** /dapps/curve/feeChangeLogs/historical | GetFeeChangeLogs (historical)
-*CurveApi* | [**curve_get_gauges__historical**](docs/CurveApi.md#curve_get_gauges__historical) | **GET** /dapps/curve/gauges/historical | GetGauges (historical)
-*CurveApi* | [**curve_get_gauges_deposits__historical**](docs/CurveApi.md#curve_get_gauges_deposits__historical) | **GET** /dapps/curve/gaugesDeposits/historical | GetGaugesDeposits (historical)
-*CurveApi* | [**curve_get_gauges_liquidity__historical**](docs/CurveApi.md#curve_get_gauges_liquidity__historical) | **GET** /dapps/curve/gaugesLiquidity/historical | GetGaugesLiquidity (historical)
-*CurveApi* | [**curve_get_gauges_total_weights__historical**](docs/CurveApi.md#curve_get_gauges_total_weights__historical) | **GET** /dapps/curve/gaugesTotalWeights/historical | GetGaugesTotalWeights (historical)
-*CurveApi* | [**curve_get_gauges_types__historical**](docs/CurveApi.md#curve_get_gauges_types__historical) | **GET** /dapps/curve/gaugesTypes/historical | GetGaugesTypes (historical)
-*CurveApi* | [**curve_get_gauges_types_weights__historical**](docs/CurveApi.md#curve_get_gauges_types_weights__historical) | **GET** /dapps/curve/gaugesTypesWeights/historical | GetGaugesTypesWeights (historical)
-*CurveApi* | [**curve_get_gauges_weights__historical**](docs/CurveApi.md#curve_get_gauges_weights__historical) | **GET** /dapps/curve/gaugesWeights/historical | GetGaugesWeights (historical)
-*CurveApi* | [**curve_get_gauges_weights_votes__historical**](docs/CurveApi.md#curve_get_gauges_weights_votes__historical) | **GET** /dapps/curve/gaugesWeightsVotes/historical | GetGaugesWeightsVotes (historical)
-*CurveApi* | [**curve_get_gauges_withdraw__historical**](docs/CurveApi.md#curve_get_gauges_withdraw__historical) | **GET** /dapps/curve/gaugesWithdraws/historical | GetGaugesWithdraw (historical)
-*CurveApi* | [**curve_get_hourly_volumes__historical**](docs/CurveApi.md#curve_get_hourly_volumes__historical) | **GET** /dapps/curve/hourlyVolumes/historical | GetHourlyVolumes (historical)
-*CurveApi* | [**curve_get_lp_tokens__historical**](docs/CurveApi.md#curve_get_lp_tokens__historical) | **GET** /dapps/curve/lpTokens/historical | GetLpTokens (historical)
-*CurveApi* | [**curve_get_pools__historical**](docs/CurveApi.md#curve_get_pools__historical) | **GET** /dapps/curve/pools/historical | GetPools (historical) 🔥
-*CurveApi* | [**curve_get_proposals__historical**](docs/CurveApi.md#curve_get_proposals__historical) | **GET** /dapps/curve/proposals/historical | GetProposals (historical)
-*CurveApi* | [**curve_get_proposals_votes__historical**](docs/CurveApi.md#curve_get_proposals_votes__historical) | **GET** /dapps/curve/proposalsVotes/historical | GetProposalsVotes (historical)
-*CurveApi* | [**curve_get_remove_liquidity_events__historical**](docs/CurveApi.md#curve_get_remove_liquidity_events__historical) | **GET** /dapps/curve/removeLiquidityEvents/historical | GetRemoveLiquidityEvents (historical)
-*CurveApi* | [**curve_get_remove_liquidity_one_events__historical**](docs/CurveApi.md#curve_get_remove_liquidity_one_events__historical) | **GET** /dapps/curve/removeLiquidityOneEvents/historical | GetRemoveLiquidityOneEvents (historical)
-*CurveApi* | [**curve_get_system_states__historical**](docs/CurveApi.md#curve_get_system_states__historical) | **GET** /dapps/curve/systemStates/historical | GetSystemStates (historical)
-*CurveApi* | [**curve_get_tokens__historical**](docs/CurveApi.md#curve_get_tokens__historical) | **GET** /dapps/curve/tokens/historical | GetTokens (historical) 🔥
-*CurveApi* | [**curve_get_transfer_ownership_events__historical**](docs/CurveApi.md#curve_get_transfer_ownership_events__historical) | **GET** /dapps/curve/transferOwnershipEvents/historical | GetTransferOwnershipEvents (historical)
-*CurveApi* | [**curve_get_underlying_coins__historical**](docs/CurveApi.md#curve_get_underlying_coins__historical) | **GET** /dapps/curve/underlyingCoins/historical | GetUnderlyingCoins (historical)
-*CurveApi* | [**curve_get_voting_apps__historical**](docs/CurveApi.md#curve_get_voting_apps__historical) | **GET** /dapps/curve/votingApps/historical | GetVotingApps (historical)
-*CurveApi* | [**curve_get_weekly_volumes__historical**](docs/CurveApi.md#curve_get_weekly_volumes__historical) | **GET** /dapps/curve/weeklyVolumes/historical | GetWeeklyVolumes (historical)
-*DexApi* | [**dex_get_batches__historical**](docs/DexApi.md#dex_get_batches__historical) | **GET** /dapps/dex/batches/historical | GetBatches (historical)
-*DexApi* | [**dex_get_deposits__historical**](docs/DexApi.md#dex_get_deposits__historical) | **GET** /dapps/dex/deposits/historical | GetDeposits (historical)
-*DexApi* | [**dex_get_orders__historical**](docs/DexApi.md#dex_get_orders__historical) | **GET** /dapps/dex/orders/historical | GetOrders (historical)
-*DexApi* | [**dex_get_prices__historical**](docs/DexApi.md#dex_get_prices__historical) | **GET** /dapps/dex/prices/historical | GetPrices (historical)
-*DexApi* | [**dex_get_solutions__historical**](docs/DexApi.md#dex_get_solutions__historical) | **GET** /dapps/dex/solutions/historical | GetSolutions (historical)
-*DexApi* | [**dex_get_stats__historical**](docs/DexApi.md#dex_get_stats__historical) | **GET** /dapps/dex/stats/historical | GetStats (historical)
-*DexApi* | [**dex_get_tokens__historical**](docs/DexApi.md#dex_get_tokens__historical) | **GET** /dapps/dex/tokens/historical | GetTokens (historical) 🔥
-*DexApi* | [**dex_get_trades__historical**](docs/DexApi.md#dex_get_trades__historical) | **GET** /dapps/dex/trades/historical | GetTrades (historical) 🔥
-*DexApi* | [**dex_get_users__historical**](docs/DexApi.md#dex_get_users__historical) | **GET** /dapps/dex/users/historical | GetUsers (historical)
-*DexApi* | [**dex_get_withdraws__historical**](docs/DexApi.md#dex_get_withdraws__historical) | **GET** /dapps/dex/withdraws/historical | GetWithdraws (historical)
-*DexApi* | [**dex_get_withdraws_requests__historical**](docs/DexApi.md#dex_get_withdraws_requests__historical) | **GET** /dapps/dex/withdrawsRequests/historical | GetWithdrawsRequests (historical)
-*SushiswapApi* | [**curve_get_exchanges__current**](docs/SushiswapApi.md#curve_get_exchanges__current) | **GET** /dapps/sushiswap/exchanges/current | GetExchanges (current) 🔥
-*SushiswapApi* | [**dex_get_trades__current**](docs/SushiswapApi.md#dex_get_trades__current) | **GET** /dapps/sushiswap/trades/current | GetTrades (current) 🔥
-*SushiswapApi* | [**sushiswap_get_bundles__historical**](docs/SushiswapApi.md#sushiswap_get_bundles__historical) | **GET** /dapps/sushiswap/bundles/historical | GetBundles (historical)
-*SushiswapApi* | [**sushiswap_get_burns__historical**](docs/SushiswapApi.md#sushiswap_get_burns__historical) | **GET** /dapps/sushiswap/burns/historical | GetBurns (historical)
-*SushiswapApi* | [**sushiswap_get_day_data__historical**](docs/SushiswapApi.md#sushiswap_get_day_data__historical) | **GET** /dapps/sushiswap/dayData/historical | GetDayData (historical)
-*SushiswapApi* | [**sushiswap_get_factory__historical**](docs/SushiswapApi.md#sushiswap_get_factory__historical) | **GET** /dapps/sushiswap/factory/historical | GetFactory (historical)
-*SushiswapApi* | [**sushiswap_get_hour_data__historical**](docs/SushiswapApi.md#sushiswap_get_hour_data__historical) | **GET** /dapps/sushiswap/hourData/historical | GetHourData (historical)
-*SushiswapApi* | [**sushiswap_get_liquidity_position__historical**](docs/SushiswapApi.md#sushiswap_get_liquidity_position__historical) | **GET** /dapps/sushiswap/liquidityPosition/historical | GetLiquidityPosition (historical)
-*SushiswapApi* | [**sushiswap_get_liquidity_position_snapshot__historical**](docs/SushiswapApi.md#sushiswap_get_liquidity_position_snapshot__historical) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/historical | GetLiquidityPositionSnapshot (historical)
-*SushiswapApi* | [**sushiswap_get_mints__historical**](docs/SushiswapApi.md#sushiswap_get_mints__historical) | **GET** /dapps/sushiswap/mints/historical | GetMints (historical)
-*SushiswapApi* | [**sushiswap_get_pools__current**](docs/SushiswapApi.md#sushiswap_get_pools__current) | **GET** /dapps/sushiswap/pools/current | GetPools (current) 🔥
-*SushiswapApi* | [**sushiswap_get_pools__historical**](docs/SushiswapApi.md#sushiswap_get_pools__historical) | **GET** /dapps/sushiswap/pools/historical | GetPools (historical) 🔥
-*SushiswapApi* | [**sushiswap_get_pools_day_data__historical**](docs/SushiswapApi.md#sushiswap_get_pools_day_data__historical) | **GET** /dapps/sushiswap/poolsDayData/historical | GetPoolsDayData (historical)
-*SushiswapApi* | [**sushiswap_get_pools_hour_data__historical**](docs/SushiswapApi.md#sushiswap_get_pools_hour_data__historical) | **GET** /dapps/sushiswap/poolsHourData/historical | GetPoolsHourData (historical)
-*SushiswapApi* | [**sushiswap_get_swaps__current**](docs/SushiswapApi.md#sushiswap_get_swaps__current) | **GET** /dapps/sushiswap/swaps/current | GetSwaps (current) 🔥
-*SushiswapApi* | [**sushiswap_get_swaps__historical**](docs/SushiswapApi.md#sushiswap_get_swaps__historical) | **GET** /dapps/sushiswap/swaps/historical | GetSwaps (historical) 🔥
-*SushiswapApi* | [**sushiswap_get_tokens__current**](docs/SushiswapApi.md#sushiswap_get_tokens__current) | **GET** /dapps/sushiswap/tokens/current | GetTokens (current) 🔥
-*SushiswapApi* | [**sushiswap_get_tokens__historical**](docs/SushiswapApi.md#sushiswap_get_tokens__historical) | **GET** /dapps/sushiswap/tokens/historical | GetTokens (historical) 🔥
-*SushiswapApi* | [**sushiswap_get_tokens_day_data__historical**](docs/SushiswapApi.md#sushiswap_get_tokens_day_data__historical) | **GET** /dapps/sushiswap/tokensDayData/historical | GetTokensDayData (historical)
-*SushiswapApi* | [**sushiswap_get_transactions__historical**](docs/SushiswapApi.md#sushiswap_get_transactions__historical) | **GET** /dapps/sushiswap/transactions/historical | GetTransactions (historical)
-*SushiswapApi* | [**sushiswap_get_users__historical**](docs/SushiswapApi.md#sushiswap_get_users__historical) | **GET** /dapps/sushiswap/users/historical | GetUsers (historical)
-*UniswapV2Api* | [**uniswap_v2_get_bundles__historical**](docs/UniswapV2Api.md#uniswap_v2_get_bundles__historical) | **GET** /dapps/uniswapv2/bundles/historical | GetBundles (historical)
-*UniswapV2Api* | [**uniswap_v2_get_burns__historical**](docs/UniswapV2Api.md#uniswap_v2_get_burns__historical) | **GET** /dapps/uniswapv2/burns/historical | GetBurns (historical)
-*UniswapV2Api* | [**uniswap_v2_get_day_data__historical**](docs/UniswapV2Api.md#uniswap_v2_get_day_data__historical) | **GET** /dapps/uniswapv2/dayData/historical | GetDayData (historical)
-*UniswapV2Api* | [**uniswap_v2_get_factory__historical**](docs/UniswapV2Api.md#uniswap_v2_get_factory__historical) | **GET** /dapps/uniswapv2/factory/historical | GetFactory (historical)
-*UniswapV2Api* | [**uniswap_v2_get_liquidity_positions__historical**](docs/UniswapV2Api.md#uniswap_v2_get_liquidity_positions__historical) | **GET** /dapps/uniswapv2/liquidityPositions/historical | GetLiquidityPositions (historical)
-*UniswapV2Api* | [**uniswap_v2_get_liquidity_positions_snapshots__historical**](docs/UniswapV2Api.md#uniswap_v2_get_liquidity_positions_snapshots__historical) | **GET** /dapps/uniswapv2/liquidityPositionsSnapshots/historical | GetLiquidityPositionsSnapshots (historical)
-*UniswapV2Api* | [**uniswap_v2_get_mints__historical**](docs/UniswapV2Api.md#uniswap_v2_get_mints__historical) | **GET** /dapps/uniswapv2/mints/historical | GetMints (historical)
-*UniswapV2Api* | [**uniswap_v2_get_pools__current**](docs/UniswapV2Api.md#uniswap_v2_get_pools__current) | **GET** /dapps/uniswapv2/pools/current | GetPools (current) 🔥
-*UniswapV2Api* | [**uniswap_v2_get_pools__historical**](docs/UniswapV2Api.md#uniswap_v2_get_pools__historical) | **GET** /dapps/uniswapv2/pools/historical | GetPools (historical) 🔥
-*UniswapV2Api* | [**uniswap_v2_get_pools_day_data__historical**](docs/UniswapV2Api.md#uniswap_v2_get_pools_day_data__historical) | **GET** /dapps/uniswapv2/poolsDayData/historical | GetPoolsDayData (historical)
-*UniswapV2Api* | [**uniswap_v2_get_pools_hour_data__historical**](docs/UniswapV2Api.md#uniswap_v2_get_pools_hour_data__historical) | **GET** /dapps/uniswapv2/poolsHourData/historical | GetPoolsHourData (historical)
-*UniswapV2Api* | [**uniswap_v2_get_swaps__current**](docs/UniswapV2Api.md#uniswap_v2_get_swaps__current) | **GET** /dapps/uniswapv2/swaps/current | GetSwaps (current) 🔥
-*UniswapV2Api* | [**uniswap_v2_get_swaps__historical**](docs/UniswapV2Api.md#uniswap_v2_get_swaps__historical) | **GET** /dapps/uniswapv2/swaps/historical | GetSwaps (historical) 🔥
-*UniswapV2Api* | [**uniswap_v2_get_tokens__current**](docs/UniswapV2Api.md#uniswap_v2_get_tokens__current) | **GET** /dapps/uniswapv2/tokens/current | GetTokens (current) 🔥
-*UniswapV2Api* | [**uniswap_v2_get_tokens__historical**](docs/UniswapV2Api.md#uniswap_v2_get_tokens__historical) | **GET** /dapps/uniswapv2/tokens/historical | GetTokens (historical) 🔥
-*UniswapV2Api* | [**uniswap_v2_get_tokens_day_data__historical**](docs/UniswapV2Api.md#uniswap_v2_get_tokens_day_data__historical) | **GET** /dapps/uniswapv2/tokensDayData/historical | GetTokensDayData (historical)
-*UniswapV2Api* | [**uniswap_v2_get_transactions__historical**](docs/UniswapV2Api.md#uniswap_v2_get_transactions__historical) | **GET** /dapps/uniswapv2/transactions/historical | GetTransactions (historical)
-*UniswapV2Api* | [**uniswap_v2_get_users__historical**](docs/UniswapV2Api.md#uniswap_v2_get_users__historical) | **GET** /dapps/uniswapv2/users/historical | GetUsers (historical)
-*UniswapV3Api* | [**uniswap_v3_get_bundles__current**](docs/UniswapV3Api.md#uniswap_v3_get_bundles__current) | **GET** /dapps/uniswapv3/bundles/current | GetBundles (current)
-*UniswapV3Api* | [**uniswap_v3_get_bundles__historical**](docs/UniswapV3Api.md#uniswap_v3_get_bundles__historical) | **GET** /dapps/uniswapv3/bundles/historical | GetBundles (historical)
-*UniswapV3Api* | [**uniswap_v3_get_burns__current**](docs/UniswapV3Api.md#uniswap_v3_get_burns__current) | **GET** /dapps/uniswapv3/burns/current | GetBurns (current)
-*UniswapV3Api* | [**uniswap_v3_get_burns__historical**](docs/UniswapV3Api.md#uniswap_v3_get_burns__historical) | **GET** /dapps/uniswapv3/burns/historical | GetBurns (historical)
-*UniswapV3Api* | [**uniswap_v3_get_day_data__current**](docs/UniswapV3Api.md#uniswap_v3_get_day_data__current) | **GET** /dapps/uniswapv3/dayData/current | GetDayData (current)
-*UniswapV3Api* | [**uniswap_v3_get_day_data__historical**](docs/UniswapV3Api.md#uniswap_v3_get_day_data__historical) | **GET** /dapps/uniswapv3/dayData/historical | GetDayData (historical)
-*UniswapV3Api* | [**uniswap_v3_get_factory__current**](docs/UniswapV3Api.md#uniswap_v3_get_factory__current) | **GET** /dapps/uniswapv3/factory/current | GetFactory (current)
-*UniswapV3Api* | [**uniswap_v3_get_factory__historical**](docs/UniswapV3Api.md#uniswap_v3_get_factory__historical) | **GET** /dapps/uniswapv3/factory/historical | GetFactory (historical)
-*UniswapV3Api* | [**uniswap_v3_get_mints__current**](docs/UniswapV3Api.md#uniswap_v3_get_mints__current) | **GET** /dapps/uniswapv3/mints/current | GetMints (current)
-*UniswapV3Api* | [**uniswap_v3_get_mints__historical**](docs/UniswapV3Api.md#uniswap_v3_get_mints__historical) | **GET** /dapps/uniswapv3/mints/historical | GetMints (historical)
-*UniswapV3Api* | [**uniswap_v3_get_pools__current**](docs/UniswapV3Api.md#uniswap_v3_get_pools__current) | **GET** /dapps/uniswapv3/pools/current | GetPools (current) 🔥
-*UniswapV3Api* | [**uniswap_v3_get_pools__historical**](docs/UniswapV3Api.md#uniswap_v3_get_pools__historical) | **GET** /dapps/uniswapv3/pools/historical | GetPools (historical) 🔥
-*UniswapV3Api* | [**uniswap_v3_get_pools_day_data__current**](docs/UniswapV3Api.md#uniswap_v3_get_pools_day_data__current) | **GET** /dapps/uniswapv3/poolsDayData/current | GetPoolsDayData (current)
-*UniswapV3Api* | [**uniswap_v3_get_pools_day_data__historical**](docs/UniswapV3Api.md#uniswap_v3_get_pools_day_data__historical) | **GET** /dapps/uniswapv3/poolsDayData/historical | GetPoolsDayData (historical)
-*UniswapV3Api* | [**uniswap_v3_get_pools_hour_data__current**](docs/UniswapV3Api.md#uniswap_v3_get_pools_hour_data__current) | **GET** /dapps/uniswapv3/poolsHourData/current | GetPoolsHourData (current)
-*UniswapV3Api* | [**uniswap_v3_get_pools_hour_data__historical**](docs/UniswapV3Api.md#uniswap_v3_get_pools_hour_data__historical) | **GET** /dapps/uniswapv3/poolsHourData/historical | GetPoolsHourData (historical)
-*UniswapV3Api* | [**uniswap_v3_get_positions__current**](docs/UniswapV3Api.md#uniswap_v3_get_positions__current) | **GET** /dapps/uniswapv3/positions/current | GetPositions (current)
-*UniswapV3Api* | [**uniswap_v3_get_positions__historical**](docs/UniswapV3Api.md#uniswap_v3_get_positions__historical) | **GET** /dapps/uniswapv3/positions/historical | GetPositions (historical)
-*UniswapV3Api* | [**uniswap_v3_get_positions_snaphots__historical**](docs/UniswapV3Api.md#uniswap_v3_get_positions_snaphots__historical) | **GET** /dapps/uniswapv3/positionsSnapshots/historical | GetPositionsSnaphots (historical)
-*UniswapV3Api* | [**uniswap_v3_get_positions_snapshots__current**](docs/UniswapV3Api.md#uniswap_v3_get_positions_snapshots__current) | **GET** /dapps/uniswapv3/positionSnapshots/current | GetPositionsSnapshots (current)
-*UniswapV3Api* | [**uniswap_v3_get_swaps__current**](docs/UniswapV3Api.md#uniswap_v3_get_swaps__current) | **GET** /dapps/uniswapv3/swaps/current | GetSwaps (current) 🔥
-*UniswapV3Api* | [**uniswap_v3_get_swaps__historical**](docs/UniswapV3Api.md#uniswap_v3_get_swaps__historical) | **GET** /dapps/uniswapv3/swaps/historical | GetSwaps (historical) 🔥
-*UniswapV3Api* | [**uniswap_v3_get_ticks__current**](docs/UniswapV3Api.md#uniswap_v3_get_ticks__current) | **GET** /dapps/uniswapv3/ticks/current | GetTicks (current)
-*UniswapV3Api* | [**uniswap_v3_get_ticks__historical**](docs/UniswapV3Api.md#uniswap_v3_get_ticks__historical) | **GET** /dapps/uniswapv3/ticks/historical | GetTicks (historical)
-*UniswapV3Api* | [**uniswap_v3_get_ticks_day_data__current**](docs/UniswapV3Api.md#uniswap_v3_get_ticks_day_data__current) | **GET** /dapps/uniswapv3/ticksDayData/current | GetTicksDayData (current)
-*UniswapV3Api* | [**uniswap_v3_get_ticks_day_data__historical**](docs/UniswapV3Api.md#uniswap_v3_get_ticks_day_data__historical) | **GET** /dapps/uniswapv3/ticksDayData/historical | GetTicksDayData (historical)
-*UniswapV3Api* | [**uniswap_v3_get_tokens__current**](docs/UniswapV3Api.md#uniswap_v3_get_tokens__current) | **GET** /dapps/uniswapv3/tokens/current | GetTokens (current) 🔥
-*UniswapV3Api* | [**uniswap_v3_get_tokens__historical**](docs/UniswapV3Api.md#uniswap_v3_get_tokens__historical) | **GET** /dapps/uniswapv3/tokens/historical | GetTokens (historical) 🔥
-*UniswapV3Api* | [**uniswap_v3_get_tokens_day_data__current**](docs/UniswapV3Api.md#uniswap_v3_get_tokens_day_data__current) | **GET** /dapps/uniswapv3/tokensDayData/current | GetTokensDayData (current)
-*UniswapV3Api* | [**uniswap_v3_get_tokens_day_data__historical**](docs/UniswapV3Api.md#uniswap_v3_get_tokens_day_data__historical) | **GET** /dapps/uniswapv3/tokensDayData/historical | GetTokensDayData (historical)
-*UniswapV3Api* | [**uniswap_v3_get_tokens_hour_data__current**](docs/UniswapV3Api.md#uniswap_v3_get_tokens_hour_data__current) | **GET** /dapps/uniswapv3/tokensHourData/current | GetTokensHourData (current)
-*UniswapV3Api* | [**uniswap_v3_get_tokens_hour_data__historical**](docs/UniswapV3Api.md#uniswap_v3_get_tokens_hour_data__historical) | **GET** /dapps/uniswapv3/tokensHourData/historical | GetTokensHourData (historical)
-*UniswapV3Api* | [**uniswap_v3_get_transactions__historical**](docs/UniswapV3Api.md#uniswap_v3_get_transactions__historical) | **GET** /dapps/uniswapv3/transactions/historical | GetTransactions (historical)
+*CowApi* | [**cow_get_orders__historical**](docs/CowApi.md#cow_get_orders__historical) | **GET** /dapps/cow/orders/historical | Orders (historical)
+*CowApi* | [**cow_get_settlements__historical**](docs/CowApi.md#cow_get_settlements__historical) | **GET** /dapps/cow/settlements/historical | Settlements (historical)
+*CowApi* | [**cow_get_tokens__historical**](docs/CowApi.md#cow_get_tokens__historical) | **GET** /dapps/cow/tokens/historical | Tokens (historical) 🔥
+*CowApi* | [**cow_get_trades__historical**](docs/CowApi.md#cow_get_trades__historical) | **GET** /dapps/cow/trades/historical | Trades (historical) 🔥
+*CowApi* | [**cow_get_users__historical**](docs/CowApi.md#cow_get_users__historical) | **GET** /dapps/cow/users/historical | Users (historical)
+*CurveApi* | [**curve_get_accounts__historical**](docs/CurveApi.md#curve_get_accounts__historical) | **GET** /dapps/curve/accounts/historical | Accounts (historical)
+*CurveApi* | [**curve_get_add_liquidity_events__historical**](docs/CurveApi.md#curve_get_add_liquidity_events__historical) | **GET** /dapps/curve/addLiquidityEvents/historical | AddLiquidityEvents (historical)
+*CurveApi* | [**curve_get_admin_fee_change_logs__historical**](docs/CurveApi.md#curve_get_admin_fee_change_logs__historical) | **GET** /dapps/curve/adminFeeChangeLogs/historical | AdminFeeChangeLogs (historical)
+*CurveApi* | [**curve_get_amplification_coeff_change_logs__historical**](docs/CurveApi.md#curve_get_amplification_coeff_change_logs__historical) | **GET** /dapps/curve/amplificationCoeffChangeLogs/historical | AmplificationCoeffChangeLogs (historical)
+*CurveApi* | [**curve_get_coins__historical**](docs/CurveApi.md#curve_get_coins__historical) | **GET** /dapps/curve/coins/historical | Coins (historical)
+*CurveApi* | [**curve_get_contracts__historical**](docs/CurveApi.md#curve_get_contracts__historical) | **GET** /dapps/curve/contracts/historical | Contracts (historical)
+*CurveApi* | [**curve_get_contracts_versions__historical**](docs/CurveApi.md#curve_get_contracts_versions__historical) | **GET** /dapps/curve/contractsVersions/historical | ContractsVersions (historical)
+*CurveApi* | [**curve_get_daily_volumes__historical**](docs/CurveApi.md#curve_get_daily_volumes__historical) | **GET** /dapps/curve/dailyVolumes/historical | DailyVolumes (historical)
+*CurveApi* | [**curve_get_exchanges__historical**](docs/CurveApi.md#curve_get_exchanges__historical) | **GET** /dapps/curve/exchanges/historical | Exchanges (historical) 🔥
+*CurveApi* | [**curve_get_fee_change_logs__historical**](docs/CurveApi.md#curve_get_fee_change_logs__historical) | **GET** /dapps/curve/feeChangeLogs/historical | FeeChangeLogs (historical)
+*CurveApi* | [**curve_get_gauges__historical**](docs/CurveApi.md#curve_get_gauges__historical) | **GET** /dapps/curve/gauges/historical | Gauges (historical)
+*CurveApi* | [**curve_get_gauges_deposits__historical**](docs/CurveApi.md#curve_get_gauges_deposits__historical) | **GET** /dapps/curve/gaugesDeposits/historical | GaugesDeposits (historical)
+*CurveApi* | [**curve_get_gauges_liquidity__historical**](docs/CurveApi.md#curve_get_gauges_liquidity__historical) | **GET** /dapps/curve/gaugesLiquidity/historical | GaugesLiquidity (historical)
+*CurveApi* | [**curve_get_gauges_total_weights__historical**](docs/CurveApi.md#curve_get_gauges_total_weights__historical) | **GET** /dapps/curve/gaugesTotalWeights/historical | GaugesTotalWeights (historical)
+*CurveApi* | [**curve_get_gauges_types__historical**](docs/CurveApi.md#curve_get_gauges_types__historical) | **GET** /dapps/curve/gaugesTypes/historical | GaugesTypes (historical)
+*CurveApi* | [**curve_get_gauges_types_weights__historical**](docs/CurveApi.md#curve_get_gauges_types_weights__historical) | **GET** /dapps/curve/gaugesTypesWeights/historical | GaugesTypesWeights (historical)
+*CurveApi* | [**curve_get_gauges_weights__historical**](docs/CurveApi.md#curve_get_gauges_weights__historical) | **GET** /dapps/curve/gaugesWeights/historical | GaugesWeights (historical)
+*CurveApi* | [**curve_get_gauges_weights_votes__historical**](docs/CurveApi.md#curve_get_gauges_weights_votes__historical) | **GET** /dapps/curve/gaugesWeightsVotes/historical | GaugesWeightsVotes (historical)
+*CurveApi* | [**curve_get_gauges_withdraw__historical**](docs/CurveApi.md#curve_get_gauges_withdraw__historical) | **GET** /dapps/curve/gaugesWithdraws/historical | GaugesWithdraw (historical)
+*CurveApi* | [**curve_get_hourly_volumes__historical**](docs/CurveApi.md#curve_get_hourly_volumes__historical) | **GET** /dapps/curve/hourlyVolumes/historical | HourlyVolumes (historical)
+*CurveApi* | [**curve_get_lp_tokens__historical**](docs/CurveApi.md#curve_get_lp_tokens__historical) | **GET** /dapps/curve/lpTokens/historical | LpTokens (historical)
+*CurveApi* | [**curve_get_pools__historical**](docs/CurveApi.md#curve_get_pools__historical) | **GET** /dapps/curve/pools/historical | Pools (historical) 🔥
+*CurveApi* | [**curve_get_proposals__historical**](docs/CurveApi.md#curve_get_proposals__historical) | **GET** /dapps/curve/proposals/historical | Proposals (historical)
+*CurveApi* | [**curve_get_proposals_votes__historical**](docs/CurveApi.md#curve_get_proposals_votes__historical) | **GET** /dapps/curve/proposalsVotes/historical | ProposalsVotes (historical)
+*CurveApi* | [**curve_get_remove_liquidity_events__historical**](docs/CurveApi.md#curve_get_remove_liquidity_events__historical) | **GET** /dapps/curve/removeLiquidityEvents/historical | RemoveLiquidityEvents (historical)
+*CurveApi* | [**curve_get_remove_liquidity_one_events__historical**](docs/CurveApi.md#curve_get_remove_liquidity_one_events__historical) | **GET** /dapps/curve/removeLiquidityOneEvents/historical | RemoveLiquidityOneEvents (historical)
+*CurveApi* | [**curve_get_system_states__historical**](docs/CurveApi.md#curve_get_system_states__historical) | **GET** /dapps/curve/systemStates/historical | SystemStates (historical)
+*CurveApi* | [**curve_get_tokens__historical**](docs/CurveApi.md#curve_get_tokens__historical) | **GET** /dapps/curve/tokens/historical | Tokens (historical) 🔥
+*CurveApi* | [**curve_get_transfer_ownership_events__historical**](docs/CurveApi.md#curve_get_transfer_ownership_events__historical) | **GET** /dapps/curve/transferOwnershipEvents/historical | TransferOwnershipEvents (historical)
+*CurveApi* | [**curve_get_underlying_coins__historical**](docs/CurveApi.md#curve_get_underlying_coins__historical) | **GET** /dapps/curve/underlyingCoins/historical | UnderlyingCoins (historical)
+*CurveApi* | [**curve_get_voting_apps__historical**](docs/CurveApi.md#curve_get_voting_apps__historical) | **GET** /dapps/curve/votingApps/historical | VotingApps (historical)
+*CurveApi* | [**curve_get_weekly_volumes__historical**](docs/CurveApi.md#curve_get_weekly_volumes__historical) | **GET** /dapps/curve/weeklyVolumes/historical | WeeklyVolumes (historical)
+*DexApi* | [**dex_get_batches__historical**](docs/DexApi.md#dex_get_batches__historical) | **GET** /dapps/dex/batches/historical | Batches (historical)
+*DexApi* | [**dex_get_deposits__historical**](docs/DexApi.md#dex_get_deposits__historical) | **GET** /dapps/dex/deposits/historical | Deposits (historical)
+*DexApi* | [**dex_get_orders__historical**](docs/DexApi.md#dex_get_orders__historical) | **GET** /dapps/dex/orders/historical | Orders (historical)
+*DexApi* | [**dex_get_prices__historical**](docs/DexApi.md#dex_get_prices__historical) | **GET** /dapps/dex/prices/historical | Prices (historical)
+*DexApi* | [**dex_get_solutions__historical**](docs/DexApi.md#dex_get_solutions__historical) | **GET** /dapps/dex/solutions/historical | Solutions (historical)
+*DexApi* | [**dex_get_stats__historical**](docs/DexApi.md#dex_get_stats__historical) | **GET** /dapps/dex/stats/historical | Stats (historical)
+*DexApi* | [**dex_get_tokens__historical**](docs/DexApi.md#dex_get_tokens__historical) | **GET** /dapps/dex/tokens/historical | Tokens (historical) 🔥
+*DexApi* | [**dex_get_trades__historical**](docs/DexApi.md#dex_get_trades__historical) | **GET** /dapps/dex/trades/historical | Trades (historical) 🔥
+*DexApi* | [**dex_get_users__historical**](docs/DexApi.md#dex_get_users__historical) | **GET** /dapps/dex/users/historical | Users (historical)
+*DexApi* | [**dex_get_withdraws__historical**](docs/DexApi.md#dex_get_withdraws__historical) | **GET** /dapps/dex/withdraws/historical | Withdraws (historical)
+*DexApi* | [**dex_get_withdraws_requests__historical**](docs/DexApi.md#dex_get_withdraws_requests__historical) | **GET** /dapps/dex/withdrawsRequests/historical | WithdrawsRequests (historical)
+*SushiswapApi* | [**curve_get_exchanges__current**](docs/SushiswapApi.md#curve_get_exchanges__current) | **GET** /dapps/sushiswap/exchanges/current | Exchanges (current) 🔥
+*SushiswapApi* | [**dex_get_trades__current**](docs/SushiswapApi.md#dex_get_trades__current) | **GET** /dapps/sushiswap/trades/current | Trades (current) 🔥
+*SushiswapApi* | [**sushiswap_get_bundles__historical**](docs/SushiswapApi.md#sushiswap_get_bundles__historical) | **GET** /dapps/sushiswap/bundles/historical | Bundles (historical)
+*SushiswapApi* | [**sushiswap_get_burns__historical**](docs/SushiswapApi.md#sushiswap_get_burns__historical) | **GET** /dapps/sushiswap/burns/historical | Burns (historical)
+*SushiswapApi* | [**sushiswap_get_day_data__historical**](docs/SushiswapApi.md#sushiswap_get_day_data__historical) | **GET** /dapps/sushiswap/dayData/historical | DayData (historical)
+*SushiswapApi* | [**sushiswap_get_factory__historical**](docs/SushiswapApi.md#sushiswap_get_factory__historical) | **GET** /dapps/sushiswap/factory/historical | Factory (historical)
+*SushiswapApi* | [**sushiswap_get_hour_data__historical**](docs/SushiswapApi.md#sushiswap_get_hour_data__historical) | **GET** /dapps/sushiswap/hourData/historical | HourData (historical)
+*SushiswapApi* | [**sushiswap_get_liquidity_position__historical**](docs/SushiswapApi.md#sushiswap_get_liquidity_position__historical) | **GET** /dapps/sushiswap/liquidityPosition/historical | LiquidityPosition (historical)
+*SushiswapApi* | [**sushiswap_get_liquidity_position_snapshot__historical**](docs/SushiswapApi.md#sushiswap_get_liquidity_position_snapshot__historical) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/historical | LiquidityPositionSnapshot (historical)
+*SushiswapApi* | [**sushiswap_get_mints__historical**](docs/SushiswapApi.md#sushiswap_get_mints__historical) | **GET** /dapps/sushiswap/mints/historical | Mints (historical)
+*SushiswapApi* | [**sushiswap_get_pools__current**](docs/SushiswapApi.md#sushiswap_get_pools__current) | **GET** /dapps/sushiswap/pools/current | Pools (current) 🔥
+*SushiswapApi* | [**sushiswap_get_pools__historical**](docs/SushiswapApi.md#sushiswap_get_pools__historical) | **GET** /dapps/sushiswap/pools/historical | Pools (historical) 🔥
+*SushiswapApi* | [**sushiswap_get_pools_day_data__historical**](docs/SushiswapApi.md#sushiswap_get_pools_day_data__historical) | **GET** /dapps/sushiswap/poolsDayData/historical | PoolsDayData (historical)
+*SushiswapApi* | [**sushiswap_get_pools_hour_data__historical**](docs/SushiswapApi.md#sushiswap_get_pools_hour_data__historical) | **GET** /dapps/sushiswap/poolsHourData/historical | PoolsHourData (historical)
+*SushiswapApi* | [**sushiswap_get_swaps__current**](docs/SushiswapApi.md#sushiswap_get_swaps__current) | **GET** /dapps/sushiswap/swaps/current | Swaps (current) 🔥
+*SushiswapApi* | [**sushiswap_get_swaps__historical**](docs/SushiswapApi.md#sushiswap_get_swaps__historical) | **GET** /dapps/sushiswap/swaps/historical | Swaps (historical) 🔥
+*SushiswapApi* | [**sushiswap_get_tokens__current**](docs/SushiswapApi.md#sushiswap_get_tokens__current) | **GET** /dapps/sushiswap/tokens/current | Tokens (current) 🔥
+*SushiswapApi* | [**sushiswap_get_tokens__historical**](docs/SushiswapApi.md#sushiswap_get_tokens__historical) | **GET** /dapps/sushiswap/tokens/historical | Tokens (historical) 🔥
+*SushiswapApi* | [**sushiswap_get_tokens_day_data__historical**](docs/SushiswapApi.md#sushiswap_get_tokens_day_data__historical) | **GET** /dapps/sushiswap/tokensDayData/historical | TokensDayData (historical)
+*SushiswapApi* | [**sushiswap_get_transactions__historical**](docs/SushiswapApi.md#sushiswap_get_transactions__historical) | **GET** /dapps/sushiswap/transactions/historical | Transactions (historical)
+*SushiswapApi* | [**sushiswap_get_users__historical**](docs/SushiswapApi.md#sushiswap_get_users__historical) | **GET** /dapps/sushiswap/users/historical | Users (historical)
+*UniswapV2Api* | [**uniswap_v2_get_bundles__historical**](docs/UniswapV2Api.md#uniswap_v2_get_bundles__historical) | **GET** /dapps/uniswapv2/bundles/historical | Bundles (historical)
+*UniswapV2Api* | [**uniswap_v2_get_burns__historical**](docs/UniswapV2Api.md#uniswap_v2_get_burns__historical) | **GET** /dapps/uniswapv2/burns/historical | Burns (historical)
+*UniswapV2Api* | [**uniswap_v2_get_day_data__historical**](docs/UniswapV2Api.md#uniswap_v2_get_day_data__historical) | **GET** /dapps/uniswapv2/dayData/historical | DayData (historical)
+*UniswapV2Api* | [**uniswap_v2_get_factory__historical**](docs/UniswapV2Api.md#uniswap_v2_get_factory__historical) | **GET** /dapps/uniswapv2/factory/historical | Factory (historical)
+*UniswapV2Api* | [**uniswap_v2_get_liquidity_positions__historical**](docs/UniswapV2Api.md#uniswap_v2_get_liquidity_positions__historical) | **GET** /dapps/uniswapv2/liquidityPositions/historical | LiquidityPositions (historical)
+*UniswapV2Api* | [**uniswap_v2_get_liquidity_positions_snapshots__historical**](docs/UniswapV2Api.md#uniswap_v2_get_liquidity_positions_snapshots__historical) | **GET** /dapps/uniswapv2/liquidityPositionsSnapshots/historical | LiquidityPositionsSnapshots (historical)
+*UniswapV2Api* | [**uniswap_v2_get_mints__historical**](docs/UniswapV2Api.md#uniswap_v2_get_mints__historical) | **GET** /dapps/uniswapv2/mints/historical | Mints (historical)
+*UniswapV2Api* | [**uniswap_v2_get_pools__current**](docs/UniswapV2Api.md#uniswap_v2_get_pools__current) | **GET** /dapps/uniswapv2/pools/current | Pools (current) 🔥
+*UniswapV2Api* | [**uniswap_v2_get_pools__historical**](docs/UniswapV2Api.md#uniswap_v2_get_pools__historical) | **GET** /dapps/uniswapv2/pools/historical | Pools (historical) 🔥
+*UniswapV2Api* | [**uniswap_v2_get_pools_day_data__historical**](docs/UniswapV2Api.md#uniswap_v2_get_pools_day_data__historical) | **GET** /dapps/uniswapv2/poolsDayData/historical | PoolsDayData (historical)
+*UniswapV2Api* | [**uniswap_v2_get_pools_hour_data__historical**](docs/UniswapV2Api.md#uniswap_v2_get_pools_hour_data__historical) | **GET** /dapps/uniswapv2/poolsHourData/historical | PoolsHourData (historical)
+*UniswapV2Api* | [**uniswap_v2_get_swaps__current**](docs/UniswapV2Api.md#uniswap_v2_get_swaps__current) | **GET** /dapps/uniswapv2/swaps/current | Swaps (current) 🔥
+*UniswapV2Api* | [**uniswap_v2_get_swaps__historical**](docs/UniswapV2Api.md#uniswap_v2_get_swaps__historical) | **GET** /dapps/uniswapv2/swaps/historical | Swaps (historical) 🔥
+*UniswapV2Api* | [**uniswap_v2_get_tokens__current**](docs/UniswapV2Api.md#uniswap_v2_get_tokens__current) | **GET** /dapps/uniswapv2/tokens/current | Tokens (current) 🔥
+*UniswapV2Api* | [**uniswap_v2_get_tokens__historical**](docs/UniswapV2Api.md#uniswap_v2_get_tokens__historical) | **GET** /dapps/uniswapv2/tokens/historical | Tokens (historical) 🔥
+*UniswapV2Api* | [**uniswap_v2_get_tokens_day_data__historical**](docs/UniswapV2Api.md#uniswap_v2_get_tokens_day_data__historical) | **GET** /dapps/uniswapv2/tokensDayData/historical | TokensDayData (historical)
+*UniswapV2Api* | [**uniswap_v2_get_transactions__historical**](docs/UniswapV2Api.md#uniswap_v2_get_transactions__historical) | **GET** /dapps/uniswapv2/transactions/historical | Transactions (historical)
+*UniswapV2Api* | [**uniswap_v2_get_users__historical**](docs/UniswapV2Api.md#uniswap_v2_get_users__historical) | **GET** /dapps/uniswapv2/users/historical | Users (historical)
+*UniswapV3Api* | [**uniswap_v3_get_bundles__current**](docs/UniswapV3Api.md#uniswap_v3_get_bundles__current) | **GET** /dapps/uniswapv3/bundles/current | Bundles (current)
+*UniswapV3Api* | [**uniswap_v3_get_bundles__historical**](docs/UniswapV3Api.md#uniswap_v3_get_bundles__historical) | **GET** /dapps/uniswapv3/bundles/historical | Bundles (historical)
+*UniswapV3Api* | [**uniswap_v3_get_burns__current**](docs/UniswapV3Api.md#uniswap_v3_get_burns__current) | **GET** /dapps/uniswapv3/burns/current | Burns (current)
+*UniswapV3Api* | [**uniswap_v3_get_burns__historical**](docs/UniswapV3Api.md#uniswap_v3_get_burns__historical) | **GET** /dapps/uniswapv3/burns/historical | Burns (historical)
+*UniswapV3Api* | [**uniswap_v3_get_day_data__current**](docs/UniswapV3Api.md#uniswap_v3_get_day_data__current) | **GET** /dapps/uniswapv3/dayData/current | DayData (current)
+*UniswapV3Api* | [**uniswap_v3_get_day_data__historical**](docs/UniswapV3Api.md#uniswap_v3_get_day_data__historical) | **GET** /dapps/uniswapv3/dayData/historical | DayData (historical)
+*UniswapV3Api* | [**uniswap_v3_get_factory__current**](docs/UniswapV3Api.md#uniswap_v3_get_factory__current) | **GET** /dapps/uniswapv3/factory/current | Factory (current)
+*UniswapV3Api* | [**uniswap_v3_get_factory__historical**](docs/UniswapV3Api.md#uniswap_v3_get_factory__historical) | **GET** /dapps/uniswapv3/factory/historical | Factory (historical)
+*UniswapV3Api* | [**uniswap_v3_get_mints__current**](docs/UniswapV3Api.md#uniswap_v3_get_mints__current) | **GET** /dapps/uniswapv3/mints/current | Mints (current)
+*UniswapV3Api* | [**uniswap_v3_get_mints__historical**](docs/UniswapV3Api.md#uniswap_v3_get_mints__historical) | **GET** /dapps/uniswapv3/mints/historical | Mints (historical)
+*UniswapV3Api* | [**uniswap_v3_get_pools__current**](docs/UniswapV3Api.md#uniswap_v3_get_pools__current) | **GET** /dapps/uniswapv3/pools/current | Pools (current) 🔥
+*UniswapV3Api* | [**uniswap_v3_get_pools__historical**](docs/UniswapV3Api.md#uniswap_v3_get_pools__historical) | **GET** /dapps/uniswapv3/pools/historical | Pools (historical) 🔥
+*UniswapV3Api* | [**uniswap_v3_get_pools_day_data__current**](docs/UniswapV3Api.md#uniswap_v3_get_pools_day_data__current) | **GET** /dapps/uniswapv3/poolsDayData/current | PoolsDayData (current)
+*UniswapV3Api* | [**uniswap_v3_get_pools_day_data__historical**](docs/UniswapV3Api.md#uniswap_v3_get_pools_day_data__historical) | **GET** /dapps/uniswapv3/poolsDayData/historical | PoolsDayData (historical)
+*UniswapV3Api* | [**uniswap_v3_get_pools_hour_data__current**](docs/UniswapV3Api.md#uniswap_v3_get_pools_hour_data__current) | **GET** /dapps/uniswapv3/poolsHourData/current | PoolsHourData (current)
+*UniswapV3Api* | [**uniswap_v3_get_pools_hour_data__historical**](docs/UniswapV3Api.md#uniswap_v3_get_pools_hour_data__historical) | **GET** /dapps/uniswapv3/poolsHourData/historical | PoolsHourData (historical)
+*UniswapV3Api* | [**uniswap_v3_get_positions__current**](docs/UniswapV3Api.md#uniswap_v3_get_positions__current) | **GET** /dapps/uniswapv3/positions/current | Positions (current)
+*UniswapV3Api* | [**uniswap_v3_get_positions__historical**](docs/UniswapV3Api.md#uniswap_v3_get_positions__historical) | **GET** /dapps/uniswapv3/positions/historical | Positions (historical)
+*UniswapV3Api* | [**uniswap_v3_get_positions_snaphots__historical**](docs/UniswapV3Api.md#uniswap_v3_get_positions_snaphots__historical) | **GET** /dapps/uniswapv3/positionsSnapshots/historical | PositionsSnaphots (historical)
+*UniswapV3Api* | [**uniswap_v3_get_positions_snapshots__current**](docs/UniswapV3Api.md#uniswap_v3_get_positions_snapshots__current) | **GET** /dapps/uniswapv3/positionSnapshots/current | PositionsSnapshots (current)
+*UniswapV3Api* | [**uniswap_v3_get_swaps__current**](docs/UniswapV3Api.md#uniswap_v3_get_swaps__current) | **GET** /dapps/uniswapv3/swaps/current | Swaps (current) 🔥
+*UniswapV3Api* | [**uniswap_v3_get_swaps__historical**](docs/UniswapV3Api.md#uniswap_v3_get_swaps__historical) | **GET** /dapps/uniswapv3/swaps/historical | Swaps (historical) 🔥
+*UniswapV3Api* | [**uniswap_v3_get_ticks__current**](docs/UniswapV3Api.md#uniswap_v3_get_ticks__current) | **GET** /dapps/uniswapv3/ticks/current | Ticks (current)
+*UniswapV3Api* | [**uniswap_v3_get_ticks__historical**](docs/UniswapV3Api.md#uniswap_v3_get_ticks__historical) | **GET** /dapps/uniswapv3/ticks/historical | Ticks (historical)
+*UniswapV3Api* | [**uniswap_v3_get_ticks_day_data__current**](docs/UniswapV3Api.md#uniswap_v3_get_ticks_day_data__current) | **GET** /dapps/uniswapv3/ticksDayData/current | TicksDayData (current)
+*UniswapV3Api* | [**uniswap_v3_get_ticks_day_data__historical**](docs/UniswapV3Api.md#uniswap_v3_get_ticks_day_data__historical) | **GET** /dapps/uniswapv3/ticksDayData/historical | TicksDayData (historical)
+*UniswapV3Api* | [**uniswap_v3_get_tokens__current**](docs/UniswapV3Api.md#uniswap_v3_get_tokens__current) | **GET** /dapps/uniswapv3/tokens/current | Tokens (current) 🔥
+*UniswapV3Api* | [**uniswap_v3_get_tokens__historical**](docs/UniswapV3Api.md#uniswap_v3_get_tokens__historical) | **GET** /dapps/uniswapv3/tokens/historical | Tokens (historical) 🔥
+*UniswapV3Api* | [**uniswap_v3_get_tokens_day_data__current**](docs/UniswapV3Api.md#uniswap_v3_get_tokens_day_data__current) | **GET** /dapps/uniswapv3/tokensDayData/current | TokensDayData (current)
+*UniswapV3Api* | [**uniswap_v3_get_tokens_day_data__historical**](docs/UniswapV3Api.md#uniswap_v3_get_tokens_day_data__historical) | **GET** /dapps/uniswapv3/tokensDayData/historical | TokensDayData (historical)
+*UniswapV3Api* | [**uniswap_v3_get_tokens_hour_data__current**](docs/UniswapV3Api.md#uniswap_v3_get_tokens_hour_data__current) | **GET** /dapps/uniswapv3/tokensHourData/current | TokensHourData (current)
+*UniswapV3Api* | [**uniswap_v3_get_tokens_hour_data__historical**](docs/UniswapV3Api.md#uniswap_v3_get_tokens_hour_data__historical) | **GET** /dapps/uniswapv3/tokensHourData/historical | TokensHourData (historical)
+*UniswapV3Api* | [**uniswap_v3_get_transactions__historical**](docs/UniswapV3Api.md#uniswap_v3_get_transactions__historical) | **GET** /dapps/uniswapv3/transactions/historical | Transactions (historical)
 
 
 # DOCUMENTATION FOR MODELS

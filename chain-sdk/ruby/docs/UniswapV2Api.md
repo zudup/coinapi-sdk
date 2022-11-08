@@ -4,31 +4,31 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
-| [**uniswap_v2_get_bundles__historical**](UniswapV2Api.md#uniswap_v2_get_bundles__historical) | **GET** /dapps/uniswapv2/bundles/historical | GetBundles (historical) |
-| [**uniswap_v2_get_burns__historical**](UniswapV2Api.md#uniswap_v2_get_burns__historical) | **GET** /dapps/uniswapv2/burns/historical | GetBurns (historical) |
-| [**uniswap_v2_get_day_data__historical**](UniswapV2Api.md#uniswap_v2_get_day_data__historical) | **GET** /dapps/uniswapv2/dayData/historical | GetDayData (historical) |
-| [**uniswap_v2_get_factory__historical**](UniswapV2Api.md#uniswap_v2_get_factory__historical) | **GET** /dapps/uniswapv2/factory/historical | GetFactory (historical) |
-| [**uniswap_v2_get_liquidity_positions__historical**](UniswapV2Api.md#uniswap_v2_get_liquidity_positions__historical) | **GET** /dapps/uniswapv2/liquidityPositions/historical | GetLiquidityPositions (historical) |
-| [**uniswap_v2_get_liquidity_positions_snapshots__historical**](UniswapV2Api.md#uniswap_v2_get_liquidity_positions_snapshots__historical) | **GET** /dapps/uniswapv2/liquidityPositionsSnapshots/historical | GetLiquidityPositionsSnapshots (historical) |
-| [**uniswap_v2_get_mints__historical**](UniswapV2Api.md#uniswap_v2_get_mints__historical) | **GET** /dapps/uniswapv2/mints/historical | GetMints (historical) |
-| [**uniswap_v2_get_pools__current**](UniswapV2Api.md#uniswap_v2_get_pools__current) | **GET** /dapps/uniswapv2/pools/current | GetPools (current) 🔥 |
-| [**uniswap_v2_get_pools__historical**](UniswapV2Api.md#uniswap_v2_get_pools__historical) | **GET** /dapps/uniswapv2/pools/historical | GetPools (historical) 🔥 |
-| [**uniswap_v2_get_pools_day_data__historical**](UniswapV2Api.md#uniswap_v2_get_pools_day_data__historical) | **GET** /dapps/uniswapv2/poolsDayData/historical | GetPoolsDayData (historical) |
-| [**uniswap_v2_get_pools_hour_data__historical**](UniswapV2Api.md#uniswap_v2_get_pools_hour_data__historical) | **GET** /dapps/uniswapv2/poolsHourData/historical | GetPoolsHourData (historical) |
-| [**uniswap_v2_get_swaps__current**](UniswapV2Api.md#uniswap_v2_get_swaps__current) | **GET** /dapps/uniswapv2/swaps/current | GetSwaps (current) 🔥 |
-| [**uniswap_v2_get_swaps__historical**](UniswapV2Api.md#uniswap_v2_get_swaps__historical) | **GET** /dapps/uniswapv2/swaps/historical | GetSwaps (historical) 🔥 |
-| [**uniswap_v2_get_tokens__current**](UniswapV2Api.md#uniswap_v2_get_tokens__current) | **GET** /dapps/uniswapv2/tokens/current | GetTokens (current) 🔥 |
-| [**uniswap_v2_get_tokens__historical**](UniswapV2Api.md#uniswap_v2_get_tokens__historical) | **GET** /dapps/uniswapv2/tokens/historical | GetTokens (historical) 🔥 |
-| [**uniswap_v2_get_tokens_day_data__historical**](UniswapV2Api.md#uniswap_v2_get_tokens_day_data__historical) | **GET** /dapps/uniswapv2/tokensDayData/historical | GetTokensDayData (historical) |
-| [**uniswap_v2_get_transactions__historical**](UniswapV2Api.md#uniswap_v2_get_transactions__historical) | **GET** /dapps/uniswapv2/transactions/historical | GetTransactions (historical) |
-| [**uniswap_v2_get_users__historical**](UniswapV2Api.md#uniswap_v2_get_users__historical) | **GET** /dapps/uniswapv2/users/historical | GetUsers (historical) |
+| [**uniswap_v2_get_bundles__historical**](UniswapV2Api.md#uniswap_v2_get_bundles__historical) | **GET** /dapps/uniswapv2/bundles/historical | Bundles (historical) |
+| [**uniswap_v2_get_burns__historical**](UniswapV2Api.md#uniswap_v2_get_burns__historical) | **GET** /dapps/uniswapv2/burns/historical | Burns (historical) |
+| [**uniswap_v2_get_day_data__historical**](UniswapV2Api.md#uniswap_v2_get_day_data__historical) | **GET** /dapps/uniswapv2/dayData/historical | DayData (historical) |
+| [**uniswap_v2_get_factory__historical**](UniswapV2Api.md#uniswap_v2_get_factory__historical) | **GET** /dapps/uniswapv2/factory/historical | Factory (historical) |
+| [**uniswap_v2_get_liquidity_positions__historical**](UniswapV2Api.md#uniswap_v2_get_liquidity_positions__historical) | **GET** /dapps/uniswapv2/liquidityPositions/historical | LiquidityPositions (historical) |
+| [**uniswap_v2_get_liquidity_positions_snapshots__historical**](UniswapV2Api.md#uniswap_v2_get_liquidity_positions_snapshots__historical) | **GET** /dapps/uniswapv2/liquidityPositionsSnapshots/historical | LiquidityPositionsSnapshots (historical) |
+| [**uniswap_v2_get_mints__historical**](UniswapV2Api.md#uniswap_v2_get_mints__historical) | **GET** /dapps/uniswapv2/mints/historical | Mints (historical) |
+| [**uniswap_v2_get_pools__current**](UniswapV2Api.md#uniswap_v2_get_pools__current) | **GET** /dapps/uniswapv2/pools/current | Pools (current) 🔥 |
+| [**uniswap_v2_get_pools__historical**](UniswapV2Api.md#uniswap_v2_get_pools__historical) | **GET** /dapps/uniswapv2/pools/historical | Pools (historical) 🔥 |
+| [**uniswap_v2_get_pools_day_data__historical**](UniswapV2Api.md#uniswap_v2_get_pools_day_data__historical) | **GET** /dapps/uniswapv2/poolsDayData/historical | PoolsDayData (historical) |
+| [**uniswap_v2_get_pools_hour_data__historical**](UniswapV2Api.md#uniswap_v2_get_pools_hour_data__historical) | **GET** /dapps/uniswapv2/poolsHourData/historical | PoolsHourData (historical) |
+| [**uniswap_v2_get_swaps__current**](UniswapV2Api.md#uniswap_v2_get_swaps__current) | **GET** /dapps/uniswapv2/swaps/current | Swaps (current) 🔥 |
+| [**uniswap_v2_get_swaps__historical**](UniswapV2Api.md#uniswap_v2_get_swaps__historical) | **GET** /dapps/uniswapv2/swaps/historical | Swaps (historical) 🔥 |
+| [**uniswap_v2_get_tokens__current**](UniswapV2Api.md#uniswap_v2_get_tokens__current) | **GET** /dapps/uniswapv2/tokens/current | Tokens (current) 🔥 |
+| [**uniswap_v2_get_tokens__historical**](UniswapV2Api.md#uniswap_v2_get_tokens__historical) | **GET** /dapps/uniswapv2/tokens/historical | Tokens (historical) 🔥 |
+| [**uniswap_v2_get_tokens_day_data__historical**](UniswapV2Api.md#uniswap_v2_get_tokens_day_data__historical) | **GET** /dapps/uniswapv2/tokensDayData/historical | TokensDayData (historical) |
+| [**uniswap_v2_get_transactions__historical**](UniswapV2Api.md#uniswap_v2_get_transactions__historical) | **GET** /dapps/uniswapv2/transactions/historical | Transactions (historical) |
+| [**uniswap_v2_get_users__historical**](UniswapV2Api.md#uniswap_v2_get_users__historical) | **GET** /dapps/uniswapv2/users/historical | Users (historical) |
 
 
 ## uniswap_v2_get_bundles__historical
 
 > <Array<UniswapV2BundleV2DTO>> uniswap_v2_get_bundles__historical(opts)
 
-GetBundles (historical)
+Bundles (historical)
 
 Gets bundles.
 
@@ -47,7 +47,7 @@ opts = {
 }
 
 begin
-  # GetBundles (historical)
+  # Bundles (historical)
   result = api_instance.uniswap_v2_get_bundles__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -63,7 +63,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetBundles (historical)
+  # Bundles (historical)
   data, status_code, headers = api_instance.uniswap_v2_get_bundles__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -100,7 +100,7 @@ No authorization required
 
 > <Array<UniswapV2BurnV2DTO>> uniswap_v2_get_burns__historical(opts)
 
-GetBurns (historical)
+Burns (historical)
 
 Gets burns.
 
@@ -120,7 +120,7 @@ opts = {
 }
 
 begin
-  # GetBurns (historical)
+  # Burns (historical)
   result = api_instance.uniswap_v2_get_burns__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -136,7 +136,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetBurns (historical)
+  # Burns (historical)
   data, status_code, headers = api_instance.uniswap_v2_get_burns__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -174,7 +174,7 @@ No authorization required
 
 > <Array<UniswapV2UniswapDayDataV2DTO>> uniswap_v2_get_day_data__historical(opts)
 
-GetDayData (historical)
+DayData (historical)
 
 Gets uniswapv2 day data.
 
@@ -193,7 +193,7 @@ opts = {
 }
 
 begin
-  # GetDayData (historical)
+  # DayData (historical)
   result = api_instance.uniswap_v2_get_day_data__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -209,7 +209,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetDayData (historical)
+  # DayData (historical)
   data, status_code, headers = api_instance.uniswap_v2_get_day_data__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -246,7 +246,7 @@ No authorization required
 
 > <Array<UniswapV2UniswapFactoryV2DTO>> uniswap_v2_get_factory__historical(opts)
 
-GetFactory (historical)
+Factory (historical)
 
 Gets factory.
 
@@ -265,7 +265,7 @@ opts = {
 }
 
 begin
-  # GetFactory (historical)
+  # Factory (historical)
   result = api_instance.uniswap_v2_get_factory__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -281,7 +281,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetFactory (historical)
+  # Factory (historical)
   data, status_code, headers = api_instance.uniswap_v2_get_factory__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -318,7 +318,7 @@ No authorization required
 
 > <Array<UniswapV2LiquidityPositionV2DTO>> uniswap_v2_get_liquidity_positions__historical(opts)
 
-GetLiquidityPositions (historical)
+LiquidityPositions (historical)
 
 Gets liquidity positions.
 
@@ -338,7 +338,7 @@ opts = {
 }
 
 begin
-  # GetLiquidityPositions (historical)
+  # LiquidityPositions (historical)
   result = api_instance.uniswap_v2_get_liquidity_positions__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -354,7 +354,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetLiquidityPositions (historical)
+  # LiquidityPositions (historical)
   data, status_code, headers = api_instance.uniswap_v2_get_liquidity_positions__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -392,7 +392,7 @@ No authorization required
 
 > <Array<UniswapV2LiquidityPositionSnapshotV2DTO>> uniswap_v2_get_liquidity_positions_snapshots__historical(opts)
 
-GetLiquidityPositionsSnapshots (historical)
+LiquidityPositionsSnapshots (historical)
 
 Gets liquidity positions snapshots.
 
@@ -412,7 +412,7 @@ opts = {
 }
 
 begin
-  # GetLiquidityPositionsSnapshots (historical)
+  # LiquidityPositionsSnapshots (historical)
   result = api_instance.uniswap_v2_get_liquidity_positions_snapshots__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -428,7 +428,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetLiquidityPositionsSnapshots (historical)
+  # LiquidityPositionsSnapshots (historical)
   data, status_code, headers = api_instance.uniswap_v2_get_liquidity_positions_snapshots__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -466,7 +466,7 @@ No authorization required
 
 > <Array<UniswapV2MintV2DTO>> uniswap_v2_get_mints__historical(opts)
 
-GetMints (historical)
+Mints (historical)
 
 Gets mints.
 
@@ -486,7 +486,7 @@ opts = {
 }
 
 begin
-  # GetMints (historical)
+  # Mints (historical)
   result = api_instance.uniswap_v2_get_mints__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -502,7 +502,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetMints (historical)
+  # Mints (historical)
   data, status_code, headers = api_instance.uniswap_v2_get_mints__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -540,7 +540,7 @@ No authorization required
 
 > <Array<UniswapV2PairV2DTO>> uniswap_v2_get_pools__current(opts)
 
-GetPools (current) 🔥
+Pools (current) 🔥
 
 Gets pools.
 
@@ -556,7 +556,7 @@ opts = {
 }
 
 begin
-  # GetPools (current) 🔥
+  # Pools (current) 🔥
   result = api_instance.uniswap_v2_get_pools__current(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -572,7 +572,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetPools (current) 🔥
+  # Pools (current) 🔥
   data, status_code, headers = api_instance.uniswap_v2_get_pools__current_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -606,7 +606,7 @@ No authorization required
 
 > <Array<UniswapV2PairV2DTO>> uniswap_v2_get_pools__historical(opts)
 
-GetPools (historical) 🔥
+Pools (historical) 🔥
 
 Gets pools.
 
@@ -626,7 +626,7 @@ opts = {
 }
 
 begin
-  # GetPools (historical) 🔥
+  # Pools (historical) 🔥
   result = api_instance.uniswap_v2_get_pools__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -642,7 +642,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetPools (historical) 🔥
+  # Pools (historical) 🔥
   data, status_code, headers = api_instance.uniswap_v2_get_pools__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -680,7 +680,7 @@ No authorization required
 
 > <Array<UniswapV2PairDayDataV2DTO>> uniswap_v2_get_pools_day_data__historical(opts)
 
-GetPoolsDayData (historical)
+PoolsDayData (historical)
 
 Gets pools day data.
 
@@ -700,7 +700,7 @@ opts = {
 }
 
 begin
-  # GetPoolsDayData (historical)
+  # PoolsDayData (historical)
   result = api_instance.uniswap_v2_get_pools_day_data__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -716,7 +716,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetPoolsDayData (historical)
+  # PoolsDayData (historical)
   data, status_code, headers = api_instance.uniswap_v2_get_pools_day_data__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -754,7 +754,7 @@ No authorization required
 
 > <Array<UniswapV2PairHourDataV2DTO>> uniswap_v2_get_pools_hour_data__historical(opts)
 
-GetPoolsHourData (historical)
+PoolsHourData (historical)
 
 Gets pools tracked each our.
 
@@ -774,7 +774,7 @@ opts = {
 }
 
 begin
-  # GetPoolsHourData (historical)
+  # PoolsHourData (historical)
   result = api_instance.uniswap_v2_get_pools_hour_data__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -790,7 +790,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetPoolsHourData (historical)
+  # PoolsHourData (historical)
   data, status_code, headers = api_instance.uniswap_v2_get_pools_hour_data__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -828,7 +828,7 @@ No authorization required
 
 > <Array<UniswapV2SwapV2DTO>> uniswap_v2_get_swaps__current
 
-GetSwaps (current) 🔥
+Swaps (current) 🔥
 
 Gets swaps.
 
@@ -841,7 +841,7 @@ require 'openapi_client'
 api_instance = OpenapiClient::UniswapV2Api.new
 
 begin
-  # GetSwaps (current) 🔥
+  # Swaps (current) 🔥
   result = api_instance.uniswap_v2_get_swaps__current
   p result
 rescue OpenapiClient::ApiError => e
@@ -857,7 +857,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetSwaps (current) 🔥
+  # Swaps (current) 🔥
   data, status_code, headers = api_instance.uniswap_v2_get_swaps__current_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
@@ -889,7 +889,7 @@ No authorization required
 
 > <Array<UniswapV2SwapV2DTO>> uniswap_v2_get_swaps__historical(opts)
 
-GetSwaps (historical) 🔥
+Swaps (historical) 🔥
 
 Gets swaps.
 
@@ -909,7 +909,7 @@ opts = {
 }
 
 begin
-  # GetSwaps (historical) 🔥
+  # Swaps (historical) 🔥
   result = api_instance.uniswap_v2_get_swaps__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -925,7 +925,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetSwaps (historical) 🔥
+  # Swaps (historical) 🔥
   data, status_code, headers = api_instance.uniswap_v2_get_swaps__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -963,7 +963,7 @@ No authorization required
 
 > <Array<UniswapV2TokenV2DTO>> uniswap_v2_get_tokens__current
 
-GetTokens (current) 🔥
+Tokens (current) 🔥
 
 Gets tokens.
 
@@ -976,7 +976,7 @@ require 'openapi_client'
 api_instance = OpenapiClient::UniswapV2Api.new
 
 begin
-  # GetTokens (current) 🔥
+  # Tokens (current) 🔥
   result = api_instance.uniswap_v2_get_tokens__current
   p result
 rescue OpenapiClient::ApiError => e
@@ -992,7 +992,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetTokens (current) 🔥
+  # Tokens (current) 🔥
   data, status_code, headers = api_instance.uniswap_v2_get_tokens__current_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
@@ -1024,7 +1024,7 @@ No authorization required
 
 > <Array<UniswapV2TokenV2DTO>> uniswap_v2_get_tokens__historical(opts)
 
-GetTokens (historical) 🔥
+Tokens (historical) 🔥
 
 Gets tokens.
 
@@ -1044,7 +1044,7 @@ opts = {
 }
 
 begin
-  # GetTokens (historical) 🔥
+  # Tokens (historical) 🔥
   result = api_instance.uniswap_v2_get_tokens__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -1060,7 +1060,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetTokens (historical) 🔥
+  # Tokens (historical) 🔥
   data, status_code, headers = api_instance.uniswap_v2_get_tokens__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -1098,7 +1098,7 @@ No authorization required
 
 > <Array<UniswapV2TokenDayDataV2DTO>> uniswap_v2_get_tokens_day_data__historical(opts)
 
-GetTokensDayData (historical)
+TokensDayData (historical)
 
 Gets tokens day data.
 
@@ -1118,7 +1118,7 @@ opts = {
 }
 
 begin
-  # GetTokensDayData (historical)
+  # TokensDayData (historical)
   result = api_instance.uniswap_v2_get_tokens_day_data__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -1134,7 +1134,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetTokensDayData (historical)
+  # TokensDayData (historical)
   data, status_code, headers = api_instance.uniswap_v2_get_tokens_day_data__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -1172,7 +1172,7 @@ No authorization required
 
 > <Array<UniswapV2TransactionV2DTO>> uniswap_v2_get_transactions__historical(opts)
 
-GetTransactions (historical)
+Transactions (historical)
 
 Gets transactions.
 
@@ -1191,7 +1191,7 @@ opts = {
 }
 
 begin
-  # GetTransactions (historical)
+  # Transactions (historical)
   result = api_instance.uniswap_v2_get_transactions__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -1207,7 +1207,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetTransactions (historical)
+  # Transactions (historical)
   data, status_code, headers = api_instance.uniswap_v2_get_transactions__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -1244,7 +1244,7 @@ No authorization required
 
 > <Array<UniswapV2UserV2DTO>> uniswap_v2_get_users__historical(opts)
 
-GetUsers (historical)
+Users (historical)
 
 Gets users.
 
@@ -1263,7 +1263,7 @@ opts = {
 }
 
 begin
-  # GetUsers (historical)
+  # Users (historical)
   result = api_instance.uniswap_v2_get_users__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -1279,7 +1279,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetUsers (historical)
+  # Users (historical)
   data, status_code, headers = api_instance.uniswap_v2_get_users__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }

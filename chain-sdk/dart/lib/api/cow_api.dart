@@ -16,7 +16,7 @@ class CowApi {
 
   final ApiClient apiClient;
 
-  /// GetOrders (historical)
+  /// Orders (historical)
   ///
   /// Gets orders.
   ///
@@ -72,7 +72,7 @@ class CowApi {
     );
   }
 
-  /// GetOrders (historical)
+  /// Orders (historical)
   ///
   /// Gets orders.
   ///
@@ -106,7 +106,7 @@ class CowApi {
     return null;
   }
 
-  /// GetSettlements (historical)
+  /// Settlements (historical)
   ///
   /// Gets settlements.
   ///
@@ -162,7 +162,7 @@ class CowApi {
     );
   }
 
-  /// GetSettlements (historical)
+  /// Settlements (historical)
   ///
   /// Gets settlements.
   ///
@@ -196,7 +196,7 @@ class CowApi {
     return null;
   }
 
-  /// GetTokens (historical) 🔥
+  /// Tokens (historical) 🔥
   ///
   /// Gets tokens.
   ///
@@ -259,7 +259,7 @@ class CowApi {
     );
   }
 
-  /// GetTokens (historical) 🔥
+  /// Tokens (historical) 🔥
   ///
   /// Gets tokens.
   ///
@@ -297,7 +297,7 @@ class CowApi {
     return null;
   }
 
-  /// GetTrades (historical) 🔥
+  /// Trades (historical) 🔥
   ///
   /// Gets trades.
   ///
@@ -354,7 +354,7 @@ class CowApi {
     );
   }
 
-  /// GetTrades (historical) 🔥
+  /// Trades (historical) 🔥
   ///
   /// Gets trades.
   ///
@@ -389,7 +389,7 @@ class CowApi {
     return null;
   }
 
-  /// GetUsers (historical)
+  /// Users (historical)
   ///
   /// Gets users.
   ///
@@ -446,7 +446,7 @@ class CowApi {
     );
   }
 
-  /// GetUsers (historical)
+  /// Users (historical)
   ///
   /// Gets users.
   ///

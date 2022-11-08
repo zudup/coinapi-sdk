@@ -156,7 +156,7 @@ class DexApi
     /**
      * Operation dexGetBatchesHistorical
      *
-     * GetBatches (historical)
+     * Batches (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -177,7 +177,7 @@ class DexApi
     /**
      * Operation dexGetBatchesHistoricalWithHttpInfo
      *
-     * GetBatches (historical)
+     * Batches (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -280,7 +280,7 @@ class DexApi
     /**
      * Operation dexGetBatchesHistoricalAsync
      *
-     * GetBatches (historical)
+     * Batches (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -304,7 +304,7 @@ class DexApi
     /**
      * Operation dexGetBatchesHistoricalAsyncWithHttpInfo
      *
-     * GetBatches (historical)
+     * Batches (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -479,7 +479,7 @@ class DexApi
     /**
      * Operation dexGetDepositsHistorical
      *
-     * GetDeposits (historical)
+     * Deposits (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -501,7 +501,7 @@ class DexApi
     /**
      * Operation dexGetDepositsHistoricalWithHttpInfo
      *
-     * GetDeposits (historical)
+     * Deposits (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -605,7 +605,7 @@ class DexApi
     /**
      * Operation dexGetDepositsHistoricalAsync
      *
-     * GetDeposits (historical)
+     * Deposits (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -630,7 +630,7 @@ class DexApi
     /**
      * Operation dexGetDepositsHistoricalAsyncWithHttpInfo
      *
-     * GetDeposits (historical)
+     * Deposits (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -817,7 +817,7 @@ class DexApi
     /**
      * Operation dexGetOrdersHistorical
      *
-     * GetOrders (historical)
+     * Orders (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -839,7 +839,7 @@ class DexApi
     /**
      * Operation dexGetOrdersHistoricalWithHttpInfo
      *
-     * GetOrders (historical)
+     * Orders (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -943,7 +943,7 @@ class DexApi
     /**
      * Operation dexGetOrdersHistoricalAsync
      *
-     * GetOrders (historical)
+     * Orders (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -968,7 +968,7 @@ class DexApi
     /**
      * Operation dexGetOrdersHistoricalAsyncWithHttpInfo
      *
-     * GetOrders (historical)
+     * Orders (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -1155,7 +1155,7 @@ class DexApi
     /**
      * Operation dexGetPricesHistorical
      *
-     * GetPrices (historical)
+     * Prices (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -1177,7 +1177,7 @@ class DexApi
     /**
      * Operation dexGetPricesHistoricalWithHttpInfo
      *
-     * GetPrices (historical)
+     * Prices (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -1281,7 +1281,7 @@ class DexApi
     /**
      * Operation dexGetPricesHistoricalAsync
      *
-     * GetPrices (historical)
+     * Prices (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -1306,7 +1306,7 @@ class DexApi
     /**
      * Operation dexGetPricesHistoricalAsyncWithHttpInfo
      *
-     * GetPrices (historical)
+     * Prices (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -1493,7 +1493,7 @@ class DexApi
     /**
      * Operation dexGetSolutionsHistorical
      *
-     * GetSolutions (historical)
+     * Solutions (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -1515,7 +1515,7 @@ class DexApi
     /**
      * Operation dexGetSolutionsHistoricalWithHttpInfo
      *
-     * GetSolutions (historical)
+     * Solutions (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -1619,7 +1619,7 @@ class DexApi
     /**
      * Operation dexGetSolutionsHistoricalAsync
      *
-     * GetSolutions (historical)
+     * Solutions (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -1644,7 +1644,7 @@ class DexApi
     /**
      * Operation dexGetSolutionsHistoricalAsyncWithHttpInfo
      *
-     * GetSolutions (historical)
+     * Solutions (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -1831,7 +1831,7 @@ class DexApi
     /**
      * Operation dexGetStatsHistorical
      *
-     * GetStats (historical)
+     * Stats (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -1852,7 +1852,7 @@ class DexApi
     /**
      * Operation dexGetStatsHistoricalWithHttpInfo
      *
-     * GetStats (historical)
+     * Stats (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -1955,7 +1955,7 @@ class DexApi
     /**
      * Operation dexGetStatsHistoricalAsync
      *
-     * GetStats (historical)
+     * Stats (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -1979,7 +1979,7 @@ class DexApi
     /**
      * Operation dexGetStatsHistoricalAsyncWithHttpInfo
      *
-     * GetStats (historical)
+     * Stats (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -2154,7 +2154,7 @@ class DexApi
     /**
      * Operation dexGetTokensHistorical
      *
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -2176,7 +2176,7 @@ class DexApi
     /**
      * Operation dexGetTokensHistoricalWithHttpInfo
      *
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -2280,7 +2280,7 @@ class DexApi
     /**
      * Operation dexGetTokensHistoricalAsync
      *
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -2305,7 +2305,7 @@ class DexApi
     /**
      * Operation dexGetTokensHistoricalAsyncWithHttpInfo
      *
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -2492,7 +2492,7 @@ class DexApi
     /**
      * Operation dexGetTradesHistorical
      *
-     * GetTrades (historical) 🔥
+     * Trades (historical) 🔥
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -2513,7 +2513,7 @@ class DexApi
     /**
      * Operation dexGetTradesHistoricalWithHttpInfo
      *
-     * GetTrades (historical) 🔥
+     * Trades (historical) 🔥
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -2616,7 +2616,7 @@ class DexApi
     /**
      * Operation dexGetTradesHistoricalAsync
      *
-     * GetTrades (historical) 🔥
+     * Trades (historical) 🔥
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -2640,7 +2640,7 @@ class DexApi
     /**
      * Operation dexGetTradesHistoricalAsyncWithHttpInfo
      *
-     * GetTrades (historical) 🔥
+     * Trades (historical) 🔥
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -2815,7 +2815,7 @@ class DexApi
     /**
      * Operation dexGetUsersHistorical
      *
-     * GetUsers (historical)
+     * Users (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -2836,7 +2836,7 @@ class DexApi
     /**
      * Operation dexGetUsersHistoricalWithHttpInfo
      *
-     * GetUsers (historical)
+     * Users (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -2939,7 +2939,7 @@ class DexApi
     /**
      * Operation dexGetUsersHistoricalAsync
      *
-     * GetUsers (historical)
+     * Users (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -2963,7 +2963,7 @@ class DexApi
     /**
      * Operation dexGetUsersHistoricalAsyncWithHttpInfo
      *
-     * GetUsers (historical)
+     * Users (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -3138,7 +3138,7 @@ class DexApi
     /**
      * Operation dexGetWithdrawsHistorical
      *
-     * GetWithdraws (historical)
+     * Withdraws (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -3160,7 +3160,7 @@ class DexApi
     /**
      * Operation dexGetWithdrawsHistoricalWithHttpInfo
      *
-     * GetWithdraws (historical)
+     * Withdraws (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -3264,7 +3264,7 @@ class DexApi
     /**
      * Operation dexGetWithdrawsHistoricalAsync
      *
-     * GetWithdraws (historical)
+     * Withdraws (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -3289,7 +3289,7 @@ class DexApi
     /**
      * Operation dexGetWithdrawsHistoricalAsyncWithHttpInfo
      *
-     * GetWithdraws (historical)
+     * Withdraws (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -3476,7 +3476,7 @@ class DexApi
     /**
      * Operation dexGetWithdrawsRequestsHistorical
      *
-     * GetWithdrawsRequests (historical)
+     * WithdrawsRequests (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -3498,7 +3498,7 @@ class DexApi
     /**
      * Operation dexGetWithdrawsRequestsHistoricalWithHttpInfo
      *
-     * GetWithdrawsRequests (historical)
+     * WithdrawsRequests (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -3602,7 +3602,7 @@ class DexApi
     /**
      * Operation dexGetWithdrawsRequestsHistoricalAsync
      *
-     * GetWithdrawsRequests (historical)
+     * WithdrawsRequests (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -3627,7 +3627,7 @@ class DexApi
     /**
      * Operation dexGetWithdrawsRequestsHistoricalAsyncWithHttpInfo
      *
-     * GetWithdrawsRequests (historical)
+     * WithdrawsRequests (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)

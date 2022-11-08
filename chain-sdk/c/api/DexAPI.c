@@ -12,7 +12,7 @@
 }while(0)
 
 
-// GetBatches (historical)
+// Batches (historical)
 //
 // Gets batches.
 //
@@ -167,7 +167,7 @@ end:
 
 }
 
-// GetDeposits (historical)
+// Deposits (historical)
 //
 // Gets deposits.
 //
@@ -346,7 +346,7 @@ end:
 
 }
 
-// GetOrders (historical)
+// Orders (historical)
 //
 // Gets orders.
 //
@@ -525,7 +525,7 @@ end:
 
 }
 
-// GetPrices (historical)
+// Prices (historical)
 //
 // Gets prices.
 //
@@ -704,7 +704,7 @@ end:
 
 }
 
-// GetSolutions (historical)
+// Solutions (historical)
 //
 // Gets solutions.
 //
@@ -883,7 +883,7 @@ end:
 
 }
 
-// GetStats (historical)
+// Stats (historical)
 //
 // Gets stats.
 //
@@ -1038,7 +1038,7 @@ end:
 
 }
 
-// GetTokens (historical) 🔥
+// Tokens (historical) 🔥
 //
 // Gets tokens.
 //
@@ -1217,7 +1217,7 @@ end:
 
 }
 
-// GetTrades (historical) 🔥
+// Trades (historical) 🔥
 //
 // Gets trades.
 //
@@ -1372,7 +1372,7 @@ end:
 
 }
 
-// GetUsers (historical)
+// Users (historical)
 //
 // Gets users.
 //
@@ -1527,7 +1527,7 @@ end:
 
 }
 
-// GetWithdraws (historical)
+// Withdraws (historical)
 //
 // Gets withdraws.
 //
@@ -1706,7 +1706,7 @@ end:
 
 }
 
-// GetWithdrawsRequests (historical)
+// WithdrawsRequests (historical)
 //
 // Gets withdraws requests.
 //

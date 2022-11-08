@@ -39,7 +39,7 @@
 #include "../model/curve_weekly_volume_dto.h"
 
 
-// GetAccounts (historical)
+// Accounts (historical)
 //
 // Gets accounts.
 //
@@ -47,7 +47,7 @@ list_t*
 CurveAPI_curveGetAccountsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate );
 
 
-// GetAddLiquidityEvents (historical)
+// AddLiquidityEvents (historical)
 //
 // Gets add liquidity events.
 //
@@ -55,7 +55,7 @@ list_t*
 CurveAPI_curveGetAddLiquidityEventsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
 
 
-// GetAdminFeeChangeLogs (historical)
+// AdminFeeChangeLogs (historical)
 //
 // Gets admin fee change logs.
 //
@@ -63,7 +63,7 @@ list_t*
 CurveAPI_curveGetAdminFeeChangeLogsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
 
 
-// GetAmplificationCoeffChangeLogs (historical)
+// AmplificationCoeffChangeLogs (historical)
 //
 // Gets amplification coeff change logs.
 //
@@ -71,7 +71,7 @@ list_t*
 CurveAPI_curveGetAmplificationCoeffChangeLogsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
 
 
-// GetCoins (historical)
+// Coins (historical)
 //
 // Gets coins.
 //
@@ -79,7 +79,7 @@ list_t*
 CurveAPI_curveGetCoinsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
 
 
-// GetContracts (historical)
+// Contracts (historical)
 //
 // Gets contracts.
 //
@@ -87,7 +87,7 @@ list_t*
 CurveAPI_curveGetContractsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
 
 
-// GetContractsVersions (historical)
+// ContractsVersions (historical)
 //
 // Gets contracts versions.
 //
@@ -95,7 +95,7 @@ list_t*
 CurveAPI_curveGetContractsVersionsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
 
 
-// GetDailyVolumes (historical)
+// DailyVolumes (historical)
 //
 // Gets daily volumes.
 //
@@ -103,7 +103,7 @@ list_t*
 CurveAPI_curveGetDailyVolumesHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
 
 
-// GetExchanges (historical) 🔥
+// Exchanges (historical) 🔥
 //
 // Gets exchanges.
 //
@@ -111,7 +111,7 @@ list_t*
 CurveAPI_curveGetExchangesHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
 
 
-// GetFeeChangeLogs (historical)
+// FeeChangeLogs (historical)
 //
 // Gets fee change logs.
 //
@@ -119,7 +119,7 @@ list_t*
 CurveAPI_curveGetFeeChangeLogsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
 
 
-// GetGaugesDeposits (historical)
+// GaugesDeposits (historical)
 //
 // Gets gauges deposits.
 //
@@ -127,7 +127,7 @@ list_t*
 CurveAPI_curveGetGaugesDepositsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate );
 
 
-// GetGauges (historical)
+// Gauges (historical)
 //
 // Gets gauges.
 //
@@ -135,7 +135,7 @@ list_t*
 CurveAPI_curveGetGaugesHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
 
 
-// GetGaugesLiquidity (historical)
+// GaugesLiquidity (historical)
 //
 // Gets gauges liquidity.
 //
@@ -143,7 +143,7 @@ list_t*
 CurveAPI_curveGetGaugesLiquidityHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate );
 
 
-// GetGaugesTotalWeights (historical)
+// GaugesTotalWeights (historical)
 //
 // Gets gauges total weights.
 //
@@ -151,7 +151,7 @@ list_t*
 CurveAPI_curveGetGaugesTotalWeightsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate );
 
 
-// GetGaugesTypes (historical)
+// GaugesTypes (historical)
 //
 // Gets gauges types.
 //
@@ -159,7 +159,7 @@ list_t*
 CurveAPI_curveGetGaugesTypesHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate );
 
 
-// GetGaugesTypesWeights (historical)
+// GaugesTypesWeights (historical)
 //
 // Gets gauges types weights.
 //
@@ -167,7 +167,7 @@ list_t*
 CurveAPI_curveGetGaugesTypesWeightsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate );
 
 
-// GetGaugesWeights (historical)
+// GaugesWeights (historical)
 //
 // Gets gauges weights.
 //
@@ -175,7 +175,7 @@ list_t*
 CurveAPI_curveGetGaugesWeightsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate );
 
 
-// GetGaugesWeightsVotes (historical)
+// GaugesWeightsVotes (historical)
 //
 // Gets gauges weights votes.
 //
@@ -183,7 +183,7 @@ list_t*
 CurveAPI_curveGetGaugesWeightsVotesHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate );
 
 
-// GetGaugesWithdraw (historical)
+// GaugesWithdraw (historical)
 //
 // Gets gauges withdraws.
 //
@@ -191,7 +191,7 @@ list_t*
 CurveAPI_curveGetGaugesWithdrawHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate );
 
 
-// GetHourlyVolumes (historical)
+// HourlyVolumes (historical)
 //
 // Gets hourly volumes.
 //
@@ -199,7 +199,7 @@ list_t*
 CurveAPI_curveGetHourlyVolumesHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
 
 
-// GetLpTokens (historical)
+// LpTokens (historical)
 //
 // Gets lp tokens.
 //
@@ -207,7 +207,7 @@ list_t*
 CurveAPI_curveGetLpTokensHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
 
 
-// GetPools (historical) 🔥
+// Pools (historical) 🔥
 //
 // Gets pools.
 //
@@ -215,7 +215,7 @@ list_t*
 CurveAPI_curveGetPoolsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
 
 
-// GetProposals (historical)
+// Proposals (historical)
 //
 // Gets proposals.
 //
@@ -223,7 +223,7 @@ list_t*
 CurveAPI_curveGetProposalsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate );
 
 
-// GetProposalsVotes (historical)
+// ProposalsVotes (historical)
 //
 // Gets proposals votes.
 //
@@ -231,7 +231,7 @@ list_t*
 CurveAPI_curveGetProposalsVotesHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate );
 
 
-// GetRemoveLiquidityEvents (historical)
+// RemoveLiquidityEvents (historical)
 //
 // Gets remove liquidity events.
 //
@@ -239,7 +239,7 @@ list_t*
 CurveAPI_curveGetRemoveLiquidityEventsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
 
 
-// GetRemoveLiquidityOneEvents (historical)
+// RemoveLiquidityOneEvents (historical)
 //
 // Gets remove liquidity one events.
 //
@@ -247,7 +247,7 @@ list_t*
 CurveAPI_curveGetRemoveLiquidityOneEventsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
 
 
-// GetSystemStates (historical)
+// SystemStates (historical)
 //
 // Gets system states.
 //
@@ -255,7 +255,7 @@ list_t*
 CurveAPI_curveGetSystemStatesHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate );
 
 
-// GetTokens (historical) 🔥
+// Tokens (historical) 🔥
 //
 // Gets tokens.
 //
@@ -263,7 +263,7 @@ list_t*
 CurveAPI_curveGetTokensHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * tokenId );
 
 
-// GetTransferOwnershipEvents (historical)
+// TransferOwnershipEvents (historical)
 //
 // Gets transfer ownership events.
 //
@@ -271,7 +271,7 @@ list_t*
 CurveAPI_curveGetTransferOwnershipEventsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
 
 
-// GetUnderlyingCoins (historical)
+// UnderlyingCoins (historical)
 //
 // Gets underlying coins.
 //
@@ -279,7 +279,7 @@ list_t*
 CurveAPI_curveGetUnderlyingCoinsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
 
 
-// GetVotingApps (historical)
+// VotingApps (historical)
 //
 // Gets voting apps.
 //
@@ -287,7 +287,7 @@ list_t*
 CurveAPI_curveGetVotingAppsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate );
 
 
-// GetWeeklyVolumes (historical)
+// WeeklyVolumes (historical)
 //
 // Gets weekly volumes.
 //

@@ -21,7 +21,7 @@ from .. import ApiTestMixin
 class TestDappsSushiswapBundlesHistorical(ApiTestMixin, unittest.TestCase):
     """
     DappsSushiswapBundlesHistorical unit test stubs
-        GetBundles (historical)  # noqa: E501
+        Bundles (historical)  # noqa: E501
     """
     _configuration = configuration.Configuration()
 

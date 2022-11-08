@@ -14,7 +14,7 @@
 #'
 #' @section Methods:
 #' \describe{
-#' \strong{ UniswapV2GetBundlesHistorical } \emph{ GetBundles (historical) }
+#' \strong{ UniswapV2GetBundlesHistorical } \emph{ Bundles (historical) }
 #' Gets bundles.
 #'
 #' \itemize{
@@ -34,7 +34,7 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV2GetBurnsHistorical } \emph{ GetBurns (historical) }
+#' \strong{ UniswapV2GetBurnsHistorical } \emph{ Burns (historical) }
 #' Gets burns.
 #'
 #' \itemize{
@@ -55,7 +55,7 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV2GetDayDataHistorical } \emph{ GetDayData (historical) }
+#' \strong{ UniswapV2GetDayDataHistorical } \emph{ DayData (historical) }
 #' Gets uniswapv2 day data.
 #'
 #' \itemize{
@@ -75,7 +75,7 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV2GetFactoryHistorical } \emph{ GetFactory (historical) }
+#' \strong{ UniswapV2GetFactoryHistorical } \emph{ Factory (historical) }
 #' Gets factory.
 #'
 #' \itemize{
@@ -95,7 +95,7 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV2GetLiquidityPositionsHistorical } \emph{ GetLiquidityPositions (historical) }
+#' \strong{ UniswapV2GetLiquidityPositionsHistorical } \emph{ LiquidityPositions (historical) }
 #' Gets liquidity positions.
 #'
 #' \itemize{
@@ -116,7 +116,7 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV2GetLiquidityPositionsSnapshotsHistorical } \emph{ GetLiquidityPositionsSnapshots (historical) }
+#' \strong{ UniswapV2GetLiquidityPositionsSnapshotsHistorical } \emph{ LiquidityPositionsSnapshots (historical) }
 #' Gets liquidity positions snapshots.
 #'
 #' \itemize{
@@ -137,7 +137,7 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV2GetMintsHistorical } \emph{ GetMints (historical) }
+#' \strong{ UniswapV2GetMintsHistorical } \emph{ Mints (historical) }
 #' Gets mints.
 #'
 #' \itemize{
@@ -158,7 +158,7 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV2GetPoolsCurrent } \emph{ GetPools (current) 🔥 }
+#' \strong{ UniswapV2GetPoolsCurrent } \emph{ Pools (current) 🔥 }
 #' Gets pools.
 #'
 #' \itemize{
@@ -175,7 +175,7 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV2GetPoolsDayDataHistorical } \emph{ GetPoolsDayData (historical) }
+#' \strong{ UniswapV2GetPoolsDayDataHistorical } \emph{ PoolsDayData (historical) }
 #' Gets pools day data.
 #'
 #' \itemize{
@@ -196,7 +196,7 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV2GetPoolsHistorical } \emph{ GetPools (historical) 🔥 }
+#' \strong{ UniswapV2GetPoolsHistorical } \emph{ Pools (historical) 🔥 }
 #' Gets pools.
 #'
 #' \itemize{
@@ -217,7 +217,7 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV2GetPoolsHourDataHistorical } \emph{ GetPoolsHourData (historical) }
+#' \strong{ UniswapV2GetPoolsHourDataHistorical } \emph{ PoolsHourData (historical) }
 #' Gets pools tracked each our.
 #'
 #' \itemize{
@@ -238,7 +238,7 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV2GetSwapsCurrent } \emph{ GetSwaps (current) 🔥 }
+#' \strong{ UniswapV2GetSwapsCurrent } \emph{ Swaps (current) 🔥 }
 #' Gets swaps.
 #'
 #' \itemize{
@@ -254,7 +254,7 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV2GetSwapsHistorical } \emph{ GetSwaps (historical) 🔥 }
+#' \strong{ UniswapV2GetSwapsHistorical } \emph{ Swaps (historical) 🔥 }
 #' Gets swaps.
 #'
 #' \itemize{
@@ -275,7 +275,7 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV2GetTokensCurrent } \emph{ GetTokens (current) 🔥 }
+#' \strong{ UniswapV2GetTokensCurrent } \emph{ Tokens (current) 🔥 }
 #' Gets tokens.
 #'
 #' \itemize{
@@ -291,7 +291,7 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV2GetTokensDayDataHistorical } \emph{ GetTokensDayData (historical) }
+#' \strong{ UniswapV2GetTokensDayDataHistorical } \emph{ TokensDayData (historical) }
 #' Gets tokens day data.
 #'
 #' \itemize{
@@ -312,7 +312,7 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV2GetTokensHistorical } \emph{ GetTokens (historical) 🔥 }
+#' \strong{ UniswapV2GetTokensHistorical } \emph{ Tokens (historical) 🔥 }
 #' Gets tokens.
 #'
 #' \itemize{
@@ -333,7 +333,7 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV2GetTransactionsHistorical } \emph{ GetTransactions (historical) }
+#' \strong{ UniswapV2GetTransactionsHistorical } \emph{ Transactions (historical) }
 #' Gets transactions.
 #'
 #' \itemize{
@@ -353,7 +353,7 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV2GetUsersHistorical } \emph{ GetUsers (historical) }
+#' \strong{ UniswapV2GetUsersHistorical } \emph{ Users (historical) }
 #' Gets users.
 #'
 #' \itemize{
@@ -386,7 +386,7 @@
 #' var_start_date <- "start_date_example" # character |  (Optional)
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #'
-#' #GetBundles (historical)
+#' #Bundles (historical)
 #' api_instance <- UniswapV2Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -404,7 +404,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
-#' #GetBurns (historical)
+#' #Burns (historical)
 #' api_instance <- UniswapV2Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -421,7 +421,7 @@
 #' var_start_date <- "start_date_example" # character |  (Optional)
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #'
-#' #GetDayData (historical)
+#' #DayData (historical)
 #' api_instance <- UniswapV2Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -438,7 +438,7 @@
 #' var_start_date <- "start_date_example" # character |  (Optional)
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #'
-#' #GetFactory (historical)
+#' #Factory (historical)
 #' api_instance <- UniswapV2Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -456,7 +456,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
-#' #GetLiquidityPositions (historical)
+#' #LiquidityPositions (historical)
 #' api_instance <- UniswapV2Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -474,7 +474,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
-#' #GetLiquidityPositionsSnapshots (historical)
+#' #LiquidityPositionsSnapshots (historical)
 #' api_instance <- UniswapV2Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -492,7 +492,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
-#' #GetMints (historical)
+#' #Mints (historical)
 #' api_instance <- UniswapV2Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -506,7 +506,7 @@
 #' library(openapi)
 #' var_filter_pool_id <- "filter_pool_id_example" # character |  (Optional)
 #'
-#' #GetPools (current) 🔥
+#' #Pools (current) 🔥
 #' api_instance <- UniswapV2Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -524,7 +524,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
-#' #GetPoolsDayData (historical)
+#' #PoolsDayData (historical)
 #' api_instance <- UniswapV2Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -542,7 +542,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
-#' #GetPools (historical) 🔥
+#' #Pools (historical) 🔥
 #' api_instance <- UniswapV2Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -560,7 +560,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
-#' #GetPoolsHourData (historical)
+#' #PoolsHourData (historical)
 #' api_instance <- UniswapV2Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -573,7 +573,7 @@
 #'
 #' library(openapi)
 #'
-#' #GetSwaps (current) 🔥
+#' #Swaps (current) 🔥
 #' api_instance <- UniswapV2Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -591,7 +591,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
-#' #GetSwaps (historical) 🔥
+#' #Swaps (historical) 🔥
 #' api_instance <- UniswapV2Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -604,7 +604,7 @@
 #'
 #' library(openapi)
 #'
-#' #GetTokens (current) 🔥
+#' #Tokens (current) 🔥
 #' api_instance <- UniswapV2Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -622,7 +622,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_token_id <- "token_id_example" # character |  (Optional)
 #'
-#' #GetTokensDayData (historical)
+#' #TokensDayData (historical)
 #' api_instance <- UniswapV2Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -640,7 +640,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_token_id <- "token_id_example" # character |  (Optional)
 #'
-#' #GetTokens (historical) 🔥
+#' #Tokens (historical) 🔥
 #' api_instance <- UniswapV2Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -657,7 +657,7 @@
 #' var_start_date <- "start_date_example" # character |  (Optional)
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #'
-#' #GetTransactions (historical)
+#' #Transactions (historical)
 #' api_instance <- UniswapV2Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -674,7 +674,7 @@
 #' var_start_date <- "start_date_example" # character |  (Optional)
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #'
-#' #GetUsers (historical)
+#' #Users (historical)
 #' api_instance <- UniswapV2Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -705,10 +705,10 @@ UniswapV2Api <- R6::R6Class(
         self$api_client <- ApiClient$new()
       }
     },
-    #' GetBundles (historical)
+    #' Bundles (historical)
     #'
     #' @description
-    #' GetBundles (historical)
+    #' Bundles (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -730,10 +730,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetBundles (historical)
+    #' Bundles (historical)
     #'
     #' @description
-    #' GetBundles (historical)
+    #' Bundles (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -811,10 +811,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetBurns (historical)
+    #' Burns (historical)
     #'
     #' @description
-    #' GetBurns (historical)
+    #' Burns (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -837,10 +837,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetBurns (historical)
+    #' Burns (historical)
     #'
     #' @description
-    #' GetBurns (historical)
+    #' Burns (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -922,10 +922,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetDayData (historical)
+    #' DayData (historical)
     #'
     #' @description
-    #' GetDayData (historical)
+    #' DayData (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -947,10 +947,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetDayData (historical)
+    #' DayData (historical)
     #'
     #' @description
-    #' GetDayData (historical)
+    #' DayData (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -1028,10 +1028,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetFactory (historical)
+    #' Factory (historical)
     #'
     #' @description
-    #' GetFactory (historical)
+    #' Factory (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -1053,10 +1053,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetFactory (historical)
+    #' Factory (historical)
     #'
     #' @description
-    #' GetFactory (historical)
+    #' Factory (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -1134,10 +1134,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetLiquidityPositions (historical)
+    #' LiquidityPositions (historical)
     #'
     #' @description
-    #' GetLiquidityPositions (historical)
+    #' LiquidityPositions (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -1160,10 +1160,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetLiquidityPositions (historical)
+    #' LiquidityPositions (historical)
     #'
     #' @description
-    #' GetLiquidityPositions (historical)
+    #' LiquidityPositions (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -1245,10 +1245,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetLiquidityPositionsSnapshots (historical)
+    #' LiquidityPositionsSnapshots (historical)
     #'
     #' @description
-    #' GetLiquidityPositionsSnapshots (historical)
+    #' LiquidityPositionsSnapshots (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -1271,10 +1271,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetLiquidityPositionsSnapshots (historical)
+    #' LiquidityPositionsSnapshots (historical)
     #'
     #' @description
-    #' GetLiquidityPositionsSnapshots (historical)
+    #' LiquidityPositionsSnapshots (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -1356,10 +1356,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetMints (historical)
+    #' Mints (historical)
     #'
     #' @description
-    #' GetMints (historical)
+    #' Mints (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -1382,10 +1382,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetMints (historical)
+    #' Mints (historical)
     #'
     #' @description
-    #' GetMints (historical)
+    #' Mints (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -1467,10 +1467,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetPools (current) 🔥
+    #' Pools (current) 🔥
     #'
     #' @description
-    #' GetPools (current) 🔥
+    #' Pools (current) 🔥
     #'
     #' @param filter_pool_id (optional) No description
     #' @param data_file (optional) name of the data file to save the result
@@ -1489,10 +1489,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetPools (current) 🔥
+    #' Pools (current) 🔥
     #'
     #' @description
-    #' GetPools (current) 🔥
+    #' Pools (current) 🔥
     #'
     #' @param filter_pool_id (optional) No description
     #' @param data_file (optional) name of the data file to save the result
@@ -1558,10 +1558,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetPoolsDayData (historical)
+    #' PoolsDayData (historical)
     #'
     #' @description
-    #' GetPoolsDayData (historical)
+    #' PoolsDayData (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -1584,10 +1584,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetPoolsDayData (historical)
+    #' PoolsDayData (historical)
     #'
     #' @description
-    #' GetPoolsDayData (historical)
+    #' PoolsDayData (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -1669,10 +1669,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetPools (historical) 🔥
+    #' Pools (historical) 🔥
     #'
     #' @description
-    #' GetPools (historical) 🔥
+    #' Pools (historical) 🔥
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -1695,10 +1695,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetPools (historical) 🔥
+    #' Pools (historical) 🔥
     #'
     #' @description
-    #' GetPools (historical) 🔥
+    #' Pools (historical) 🔥
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -1780,10 +1780,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetPoolsHourData (historical)
+    #' PoolsHourData (historical)
     #'
     #' @description
-    #' GetPoolsHourData (historical)
+    #' PoolsHourData (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -1806,10 +1806,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetPoolsHourData (historical)
+    #' PoolsHourData (historical)
     #'
     #' @description
-    #' GetPoolsHourData (historical)
+    #' PoolsHourData (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -1891,10 +1891,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetSwaps (current) 🔥
+    #' Swaps (current) 🔥
     #'
     #' @description
-    #' GetSwaps (current) 🔥
+    #' Swaps (current) 🔥
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
@@ -1912,10 +1912,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetSwaps (current) 🔥
+    #' Swaps (current) 🔥
     #'
     #' @description
-    #' GetSwaps (current) 🔥
+    #' Swaps (current) 🔥
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
@@ -1977,10 +1977,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetSwaps (historical) 🔥
+    #' Swaps (historical) 🔥
     #'
     #' @description
-    #' GetSwaps (historical) 🔥
+    #' Swaps (historical) 🔥
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -2003,10 +2003,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetSwaps (historical) 🔥
+    #' Swaps (historical) 🔥
     #'
     #' @description
-    #' GetSwaps (historical) 🔥
+    #' Swaps (historical) 🔥
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -2088,10 +2088,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetTokens (current) 🔥
+    #' Tokens (current) 🔥
     #'
     #' @description
-    #' GetTokens (current) 🔥
+    #' Tokens (current) 🔥
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
@@ -2109,10 +2109,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetTokens (current) 🔥
+    #' Tokens (current) 🔥
     #'
     #' @description
-    #' GetTokens (current) 🔥
+    #' Tokens (current) 🔥
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
@@ -2174,10 +2174,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetTokensDayData (historical)
+    #' TokensDayData (historical)
     #'
     #' @description
-    #' GetTokensDayData (historical)
+    #' TokensDayData (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -2200,10 +2200,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetTokensDayData (historical)
+    #' TokensDayData (historical)
     #'
     #' @description
-    #' GetTokensDayData (historical)
+    #' TokensDayData (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -2285,10 +2285,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetTokens (historical) 🔥
+    #' Tokens (historical) 🔥
     #'
     #' @description
-    #' GetTokens (historical) 🔥
+    #' Tokens (historical) 🔥
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -2311,10 +2311,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetTokens (historical) 🔥
+    #' Tokens (historical) 🔥
     #'
     #' @description
-    #' GetTokens (historical) 🔥
+    #' Tokens (historical) 🔥
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -2396,10 +2396,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetTransactions (historical)
+    #' Transactions (historical)
     #'
     #' @description
-    #' GetTransactions (historical)
+    #' Transactions (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -2421,10 +2421,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetTransactions (historical)
+    #' Transactions (historical)
     #'
     #' @description
-    #' GetTransactions (historical)
+    #' Transactions (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -2502,10 +2502,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetUsers (historical)
+    #' Users (historical)
     #'
     #' @description
-    #' GetUsers (historical)
+    #' Users (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -2527,10 +2527,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetUsers (historical)
+    #' Users (historical)
     #'
     #' @description
-    #' GetUsers (historical)
+    #' Users (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 

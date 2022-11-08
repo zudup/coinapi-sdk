@@ -57,7 +57,7 @@ export default class UniswapV2Api {
      */
 
     /**
-     * GetBundles (historical)
+     * Bundles (historical)
      * Gets bundles.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -104,7 +104,7 @@ export default class UniswapV2Api {
      */
 
     /**
-     * GetBurns (historical)
+     * Burns (historical)
      * Gets burns.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -153,7 +153,7 @@ export default class UniswapV2Api {
      */
 
     /**
-     * GetDayData (historical)
+     * DayData (historical)
      * Gets uniswapv2 day data.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -200,7 +200,7 @@ export default class UniswapV2Api {
      */
 
     /**
-     * GetFactory (historical)
+     * Factory (historical)
      * Gets factory.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -247,7 +247,7 @@ export default class UniswapV2Api {
      */
 
     /**
-     * GetLiquidityPositions (historical)
+     * LiquidityPositions (historical)
      * Gets liquidity positions.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -296,7 +296,7 @@ export default class UniswapV2Api {
      */
 
     /**
-     * GetLiquidityPositionsSnapshots (historical)
+     * LiquidityPositionsSnapshots (historical)
      * Gets liquidity positions snapshots.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -345,7 +345,7 @@ export default class UniswapV2Api {
      */
 
     /**
-     * GetMints (historical)
+     * Mints (historical)
      * Gets mints.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -394,7 +394,7 @@ export default class UniswapV2Api {
      */
 
     /**
-     * GetPools (current) 🔥
+     * Pools (current) 🔥
      * Gets pools.
      * @param {Object} opts Optional parameters
      * @param {String} opts.filterPoolId 
@@ -435,7 +435,7 @@ export default class UniswapV2Api {
      */
 
     /**
-     * GetPoolsDayData (historical)
+     * PoolsDayData (historical)
      * Gets pools day data.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -484,7 +484,7 @@ export default class UniswapV2Api {
      */
 
     /**
-     * GetPools (historical) 🔥
+     * Pools (historical) 🔥
      * Gets pools.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -533,7 +533,7 @@ export default class UniswapV2Api {
      */
 
     /**
-     * GetPoolsHourData (historical)
+     * PoolsHourData (historical)
      * Gets pools tracked each our.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -582,7 +582,7 @@ export default class UniswapV2Api {
      */
 
     /**
-     * GetSwaps (current) 🔥
+     * Swaps (current) 🔥
      * Gets swaps.
      * @param {module:api/UniswapV2Api~uniswapV2GetSwapsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/UniswapV2SwapV2DTO>}
@@ -619,7 +619,7 @@ export default class UniswapV2Api {
      */
 
     /**
-     * GetSwaps (historical) 🔥
+     * Swaps (historical) 🔥
      * Gets swaps.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -668,7 +668,7 @@ export default class UniswapV2Api {
      */
 
     /**
-     * GetTokens (current) 🔥
+     * Tokens (current) 🔥
      * Gets tokens.
      * @param {module:api/UniswapV2Api~uniswapV2GetTokensCurrentCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/UniswapV2TokenV2DTO>}
@@ -705,7 +705,7 @@ export default class UniswapV2Api {
      */
 
     /**
-     * GetTokensDayData (historical)
+     * TokensDayData (historical)
      * Gets tokens day data.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -754,7 +754,7 @@ export default class UniswapV2Api {
      */
 
     /**
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      * Gets tokens.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -803,7 +803,7 @@ export default class UniswapV2Api {
      */
 
     /**
-     * GetTransactions (historical)
+     * Transactions (historical)
      * Gets transactions.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -850,7 +850,7 @@ export default class UniswapV2Api {
      */
 
     /**
-     * GetUsers (historical)
+     * Users (historical)
      * Gets users.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 

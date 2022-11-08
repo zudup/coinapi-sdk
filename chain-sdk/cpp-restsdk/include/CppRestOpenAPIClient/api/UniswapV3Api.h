@@ -61,7 +61,7 @@ public:
     virtual ~UniswapV3Api();
 
     /// <summary>
-    /// GetBundles (current)
+    /// Bundles (current)
     /// </summary>
     /// <remarks>
     /// Gets bundles.
@@ -69,7 +69,7 @@ public:
     pplx::task<std::vector<std::shared_ptr<UniswapV3_BundleV3DTO>>> uniswapV3_GetBundles__current(
     ) const;
     /// <summary>
-    /// GetBundles (historical)
+    /// Bundles (historical)
     /// </summary>
     /// <remarks>
     /// Gets bundles.
@@ -85,7 +85,7 @@ public:
         boost::optional<utility::datetime> endDate
     ) const;
     /// <summary>
-    /// GetBurns (current)
+    /// Burns (current)
     /// </summary>
     /// <remarks>
     /// Gets burns.
@@ -95,7 +95,7 @@ public:
         boost::optional<utility::string_t> filterPoolId
     ) const;
     /// <summary>
-    /// GetBurns (historical)
+    /// Burns (historical)
     /// </summary>
     /// <remarks>
     /// Gets burns.
@@ -113,7 +113,7 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// GetDayData (current)
+    /// DayData (current)
     /// </summary>
     /// <remarks>
     /// Gets uniswapv3 day data.
@@ -121,7 +121,7 @@ public:
     pplx::task<std::vector<std::shared_ptr<UniswapV3_UniswapDayDataV3DTO>>> uniswapV3_GetDayData__current(
     ) const;
     /// <summary>
-    /// GetDayData (historical)
+    /// DayData (historical)
     /// </summary>
     /// <remarks>
     /// Gets uniswapv3 day data.
@@ -137,7 +137,7 @@ public:
         boost::optional<utility::datetime> endDate
     ) const;
     /// <summary>
-    /// GetFactory (current)
+    /// Factory (current)
     /// </summary>
     /// <remarks>
     /// Gets factory.
@@ -145,7 +145,7 @@ public:
     pplx::task<std::vector<std::shared_ptr<UniswapV3_FactoryV3DTO>>> uniswapV3_GetFactory__current(
     ) const;
     /// <summary>
-    /// GetFactory (historical)
+    /// Factory (historical)
     /// </summary>
     /// <remarks>
     /// Gets factory.
@@ -161,7 +161,7 @@ public:
         boost::optional<utility::datetime> endDate
     ) const;
     /// <summary>
-    /// GetMints (current)
+    /// Mints (current)
     /// </summary>
     /// <remarks>
     /// Gets mints.
@@ -171,7 +171,7 @@ public:
         boost::optional<utility::string_t> filterPoolId
     ) const;
     /// <summary>
-    /// GetMints (historical)
+    /// Mints (historical)
     /// </summary>
     /// <remarks>
     /// Gets mints.
@@ -189,7 +189,7 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// GetPoolsDayData (current)
+    /// PoolsDayData (current)
     /// </summary>
     /// <remarks>
     /// Gets pools day data.
@@ -199,7 +199,7 @@ public:
         boost::optional<utility::string_t> filterPoolId
     ) const;
     /// <summary>
-    /// GetPoolsDayData (historical)
+    /// PoolsDayData (historical)
     /// </summary>
     /// <remarks>
     /// Gets pools day data.
@@ -217,7 +217,7 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// GetPoolsHourData (current)
+    /// PoolsHourData (current)
     /// </summary>
     /// <remarks>
     /// Gets pools hour data.
@@ -227,7 +227,7 @@ public:
         boost::optional<utility::string_t> filterPoolId
     ) const;
     /// <summary>
-    /// GetPoolsHourData (historical)
+    /// PoolsHourData (historical)
     /// </summary>
     /// <remarks>
     /// Gets pools hour data.
@@ -245,7 +245,7 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// GetPools (current) 🔥
+    /// Pools (current) 🔥
     /// </summary>
     /// <remarks>
     /// Gets pools.
@@ -255,7 +255,7 @@ public:
         boost::optional<utility::string_t> filterPoolId
     ) const;
     /// <summary>
-    /// GetPools (historical) 🔥
+    /// Pools (historical) 🔥
     /// </summary>
     /// <remarks>
     /// Gets pools.
@@ -273,7 +273,7 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// GetPositionsSnaphots (historical)
+    /// PositionsSnaphots (historical)
     /// </summary>
     /// <remarks>
     /// Gets positions snapshots.
@@ -291,7 +291,7 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// GetPositionsSnapshots (current)
+    /// PositionsSnapshots (current)
     /// </summary>
     /// <remarks>
     /// Gets positions snapshots.
@@ -301,7 +301,7 @@ public:
         boost::optional<utility::string_t> filterPoolId
     ) const;
     /// <summary>
-    /// GetPositions (current)
+    /// Positions (current)
     /// </summary>
     /// <remarks>
     /// Gets positions.
@@ -311,7 +311,7 @@ public:
         boost::optional<utility::string_t> filterPoolId
     ) const;
     /// <summary>
-    /// GetPositions (historical)
+    /// Positions (historical)
     /// </summary>
     /// <remarks>
     /// Gets positions.
@@ -329,7 +329,7 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// GetSwaps (current) 🔥
+    /// Swaps (current) 🔥
     /// </summary>
     /// <remarks>
     /// Gets swaps.
@@ -339,7 +339,7 @@ public:
         boost::optional<utility::string_t> filterPoolId
     ) const;
     /// <summary>
-    /// GetSwaps (historical) 🔥
+    /// Swaps (historical) 🔥
     /// </summary>
     /// <remarks>
     /// Gets swaps.
@@ -357,7 +357,7 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// GetTicksDayData (current)
+    /// TicksDayData (current)
     /// </summary>
     /// <remarks>
     /// Gets ticks day data.
@@ -367,7 +367,7 @@ public:
         boost::optional<utility::string_t> filterPoolId
     ) const;
     /// <summary>
-    /// GetTicksDayData (historical)
+    /// TicksDayData (historical)
     /// </summary>
     /// <remarks>
     /// Gets ticks day data.
@@ -385,7 +385,7 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// GetTicks (current)
+    /// Ticks (current)
     /// </summary>
     /// <remarks>
     /// Gets ticks.
@@ -395,7 +395,7 @@ public:
         boost::optional<utility::string_t> filterPoolId
     ) const;
     /// <summary>
-    /// GetTicks (historical)
+    /// Ticks (historical)
     /// </summary>
     /// <remarks>
     /// Gets ticks.
@@ -413,7 +413,7 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// GetTokensDayData (current)
+    /// TokensDayData (current)
     /// </summary>
     /// <remarks>
     /// Gets tokens day data.
@@ -423,7 +423,7 @@ public:
         boost::optional<utility::string_t> filterTokenId
     ) const;
     /// <summary>
-    /// GetTokensDayData (historical)
+    /// TokensDayData (historical)
     /// </summary>
     /// <remarks>
     /// Gets tokens day data.
@@ -441,7 +441,7 @@ public:
         boost::optional<utility::string_t> tokenId
     ) const;
     /// <summary>
-    /// GetTokensHourData (current)
+    /// TokensHourData (current)
     /// </summary>
     /// <remarks>
     /// Gets tokens hour data.
@@ -451,7 +451,7 @@ public:
         boost::optional<utility::string_t> filterTokenId
     ) const;
     /// <summary>
-    /// GetTokensHourData (historical)
+    /// TokensHourData (historical)
     /// </summary>
     /// <remarks>
     /// Gets tokens hour data.
@@ -469,7 +469,7 @@ public:
         boost::optional<utility::string_t> tokenId
     ) const;
     /// <summary>
-    /// GetTokens (current) 🔥
+    /// Tokens (current) 🔥
     /// </summary>
     /// <remarks>
     /// Gets tokens.
@@ -479,7 +479,7 @@ public:
         boost::optional<utility::string_t> filterTokenId
     ) const;
     /// <summary>
-    /// GetTokens (historical) 🔥
+    /// Tokens (historical) 🔥
     /// </summary>
     /// <remarks>
     /// Gets tokens.
@@ -497,7 +497,7 @@ public:
         boost::optional<utility::string_t> tokenId
     ) const;
     /// <summary>
-    /// GetTransactions (historical)
+    /// Transactions (historical)
     /// </summary>
     /// <remarks>
     /// Gets transactions.

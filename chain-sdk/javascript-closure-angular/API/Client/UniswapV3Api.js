@@ -60,7 +60,7 @@ API.Client.UniswapV3Api = function($http, $httpParamSerializer, $injector) {
 API.Client.UniswapV3Api.$inject = ['$http', '$httpParamSerializer', '$injector'];
 
 /**
- * GetBundles (current)
+ * Bundles (current)
  * Gets bundles.
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.UniswapV3.BundleV3DTO>>}
@@ -91,7 +91,7 @@ API.Client.UniswapV3Api.prototype.uniswapV3GetBundlesCurrent = function(opt_extr
 }
 
 /**
- * GetBundles (historical)
+ * Bundles (historical)
  * Gets bundles.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -142,7 +142,7 @@ API.Client.UniswapV3Api.prototype.uniswapV3GetBundlesHistorical = function(opt_s
 }
 
 /**
- * GetBurns (current)
+ * Burns (current)
  * Gets burns.
  * @param {!string=} opt_filterPoolId 
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
@@ -178,7 +178,7 @@ API.Client.UniswapV3Api.prototype.uniswapV3GetBurnsCurrent = function(opt_filter
 }
 
 /**
- * GetBurns (historical)
+ * Burns (historical)
  * Gets burns.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -234,7 +234,7 @@ API.Client.UniswapV3Api.prototype.uniswapV3GetBurnsHistorical = function(opt_sta
 }
 
 /**
- * GetDayData (current)
+ * DayData (current)
  * Gets uniswapv3 day data.
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.UniswapV3.UniswapDayDataV3DTO>>}
@@ -265,7 +265,7 @@ API.Client.UniswapV3Api.prototype.uniswapV3GetDayDataCurrent = function(opt_extr
 }
 
 /**
- * GetDayData (historical)
+ * DayData (historical)
  * Gets uniswapv3 day data.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -316,7 +316,7 @@ API.Client.UniswapV3Api.prototype.uniswapV3GetDayDataHistorical = function(opt_s
 }
 
 /**
- * GetFactory (current)
+ * Factory (current)
  * Gets factory.
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.UniswapV3.FactoryV3DTO>>}
@@ -347,7 +347,7 @@ API.Client.UniswapV3Api.prototype.uniswapV3GetFactoryCurrent = function(opt_extr
 }
 
 /**
- * GetFactory (historical)
+ * Factory (historical)
  * Gets factory.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -398,7 +398,7 @@ API.Client.UniswapV3Api.prototype.uniswapV3GetFactoryHistorical = function(opt_s
 }
 
 /**
- * GetMints (current)
+ * Mints (current)
  * Gets mints.
  * @param {!string=} opt_filterPoolId 
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
@@ -434,7 +434,7 @@ API.Client.UniswapV3Api.prototype.uniswapV3GetMintsCurrent = function(opt_filter
 }
 
 /**
- * GetMints (historical)
+ * Mints (historical)
  * Gets mints.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -490,7 +490,7 @@ API.Client.UniswapV3Api.prototype.uniswapV3GetMintsHistorical = function(opt_sta
 }
 
 /**
- * GetPools (current) 🔥
+ * Pools (current) 🔥
  * Gets pools.
  * @param {!string=} opt_filterPoolId 
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
@@ -526,7 +526,7 @@ API.Client.UniswapV3Api.prototype.uniswapV3GetPoolsCurrent = function(opt_filter
 }
 
 /**
- * GetPoolsDayData (current)
+ * PoolsDayData (current)
  * Gets pools day data.
  * @param {!string=} opt_filterPoolId 
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
@@ -562,7 +562,7 @@ API.Client.UniswapV3Api.prototype.uniswapV3GetPoolsDayDataCurrent = function(opt
 }
 
 /**
- * GetPoolsDayData (historical)
+ * PoolsDayData (historical)
  * Gets pools day data.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -618,7 +618,7 @@ API.Client.UniswapV3Api.prototype.uniswapV3GetPoolsDayDataHistorical = function(
 }
 
 /**
- * GetPools (historical) 🔥
+ * Pools (historical) 🔥
  * Gets pools.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -674,7 +674,7 @@ API.Client.UniswapV3Api.prototype.uniswapV3GetPoolsHistorical = function(opt_sta
 }
 
 /**
- * GetPoolsHourData (current)
+ * PoolsHourData (current)
  * Gets pools hour data.
  * @param {!string=} opt_filterPoolId 
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
@@ -710,7 +710,7 @@ API.Client.UniswapV3Api.prototype.uniswapV3GetPoolsHourDataCurrent = function(op
 }
 
 /**
- * GetPoolsHourData (historical)
+ * PoolsHourData (historical)
  * Gets pools hour data.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -766,7 +766,7 @@ API.Client.UniswapV3Api.prototype.uniswapV3GetPoolsHourDataHistorical = function
 }
 
 /**
- * GetPositions (current)
+ * Positions (current)
  * Gets positions.
  * @param {!string=} opt_filterPoolId 
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
@@ -802,7 +802,7 @@ API.Client.UniswapV3Api.prototype.uniswapV3GetPositionsCurrent = function(opt_fi
 }
 
 /**
- * GetPositions (historical)
+ * Positions (historical)
  * Gets positions.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -858,7 +858,7 @@ API.Client.UniswapV3Api.prototype.uniswapV3GetPositionsHistorical = function(opt
 }
 
 /**
- * GetPositionsSnaphots (historical)
+ * PositionsSnaphots (historical)
  * Gets positions snapshots.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -914,7 +914,7 @@ API.Client.UniswapV3Api.prototype.uniswapV3GetPositionsSnaphotsHistorical = func
 }
 
 /**
- * GetPositionsSnapshots (current)
+ * PositionsSnapshots (current)
  * Gets positions snapshots.
  * @param {!string=} opt_filterPoolId 
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
@@ -950,7 +950,7 @@ API.Client.UniswapV3Api.prototype.uniswapV3GetPositionsSnapshotsCurrent = functi
 }
 
 /**
- * GetSwaps (current) 🔥
+ * Swaps (current) 🔥
  * Gets swaps.
  * @param {!string=} opt_filterPoolId 
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
@@ -986,7 +986,7 @@ API.Client.UniswapV3Api.prototype.uniswapV3GetSwapsCurrent = function(opt_filter
 }
 
 /**
- * GetSwaps (historical) 🔥
+ * Swaps (historical) 🔥
  * Gets swaps.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -1042,7 +1042,7 @@ API.Client.UniswapV3Api.prototype.uniswapV3GetSwapsHistorical = function(opt_sta
 }
 
 /**
- * GetTicks (current)
+ * Ticks (current)
  * Gets ticks.
  * @param {!string=} opt_filterPoolId 
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
@@ -1078,7 +1078,7 @@ API.Client.UniswapV3Api.prototype.uniswapV3GetTicksCurrent = function(opt_filter
 }
 
 /**
- * GetTicksDayData (current)
+ * TicksDayData (current)
  * Gets ticks day data.
  * @param {!string=} opt_filterPoolId 
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
@@ -1114,7 +1114,7 @@ API.Client.UniswapV3Api.prototype.uniswapV3GetTicksDayDataCurrent = function(opt
 }
 
 /**
- * GetTicksDayData (historical)
+ * TicksDayData (historical)
  * Gets ticks day data.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -1170,7 +1170,7 @@ API.Client.UniswapV3Api.prototype.uniswapV3GetTicksDayDataHistorical = function(
 }
 
 /**
- * GetTicks (historical)
+ * Ticks (historical)
  * Gets ticks.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -1226,7 +1226,7 @@ API.Client.UniswapV3Api.prototype.uniswapV3GetTicksHistorical = function(opt_sta
 }
 
 /**
- * GetTokens (current) 🔥
+ * Tokens (current) 🔥
  * Gets tokens.
  * @param {!string=} opt_filterTokenId 
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
@@ -1262,7 +1262,7 @@ API.Client.UniswapV3Api.prototype.uniswapV3GetTokensCurrent = function(opt_filte
 }
 
 /**
- * GetTokensDayData (current)
+ * TokensDayData (current)
  * Gets tokens day data.
  * @param {!string=} opt_filterTokenId 
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
@@ -1298,7 +1298,7 @@ API.Client.UniswapV3Api.prototype.uniswapV3GetTokensDayDataCurrent = function(op
 }
 
 /**
- * GetTokensDayData (historical)
+ * TokensDayData (historical)
  * Gets tokens day data.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -1354,7 +1354,7 @@ API.Client.UniswapV3Api.prototype.uniswapV3GetTokensDayDataHistorical = function
 }
 
 /**
- * GetTokens (historical) 🔥
+ * Tokens (historical) 🔥
  * Gets tokens.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -1410,7 +1410,7 @@ API.Client.UniswapV3Api.prototype.uniswapV3GetTokensHistorical = function(opt_st
 }
 
 /**
- * GetTokensHourData (current)
+ * TokensHourData (current)
  * Gets tokens hour data.
  * @param {!string=} opt_filterTokenId 
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
@@ -1446,7 +1446,7 @@ API.Client.UniswapV3Api.prototype.uniswapV3GetTokensHourDataCurrent = function(o
 }
 
 /**
- * GetTokensHourData (historical)
+ * TokensHourData (historical)
  * Gets tokens hour data.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -1502,7 +1502,7 @@ API.Client.UniswapV3Api.prototype.uniswapV3GetTokensHourDataHistorical = functio
 }
 
 /**
- * GetTransactions (historical)
+ * Transactions (historical)
  * Gets transactions.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 

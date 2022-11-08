@@ -103,7 +103,7 @@ paths:
                   $ref: '#/components/schemas/Cow.TokenDTO'
                 type: array
           description: successful operation
-      summary: GetTokens (historical) 🔥
+      summary: Tokens (historical) 🔥
       tags:
       - Cow
   /dapps/cow/trades/historical:
@@ -166,7 +166,7 @@ paths:
                   $ref: '#/components/schemas/Cow.TradeDTO'
                 type: array
           description: successful operation
-      summary: GetTrades (historical) 🔥
+      summary: Trades (historical) 🔥
       tags:
       - Cow
   /dapps/curve/accounts/historical:
@@ -229,7 +229,7 @@ paths:
                   $ref: '#/components/schemas/Curve.AccountDTO'
                 type: array
           description: successful operation
-      summary: GetAccounts (historical)
+      summary: Accounts (historical)
       tags:
       - Curve
   /dapps/curve/addLiquidityEvents/historical:
@@ -299,7 +299,7 @@ paths:
                   $ref: '#/components/schemas/Curve.AddLiquidityEventDTO'
                 type: array
           description: successful operation
-      summary: GetAddLiquidityEvents (historical)
+      summary: AddLiquidityEvents (historical)
       tags:
       - Curve
   /dapps/curve/adminFeeChangeLogs/historical:
@@ -370,7 +370,7 @@ paths:
                   $ref: '#/components/schemas/Curve.AdminFeeChangeLogDTO'
                 type: array
           description: successful operation
-      summary: GetAdminFeeChangeLogs (historical)
+      summary: AdminFeeChangeLogs (historical)
       tags:
       - Curve
   /dapps/curve/amplificationCoeffChangeLogs/historical:
@@ -441,7 +441,7 @@ paths:
                   $ref: '#/components/schemas/Curve.AmplificationCoeffChangeLogDTO'
                 type: array
           description: successful operation
-      summary: GetAmplificationCoeffChangeLogs (historical)
+      summary: AmplificationCoeffChangeLogs (historical)
       tags:
       - Curve
   /dapps/dex/batches/historical:
@@ -504,7 +504,7 @@ paths:
                   $ref: '#/components/schemas/Dex.BatchDTO'
                 type: array
           description: successful operation
-      summary: GetBatches (historical)
+      summary: Batches (historical)
       tags:
       - Dex
   /dapps/uniswapv3/bundles/historical:
@@ -567,7 +567,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV3.BundleV3DTO'
                 type: array
           description: successful operation
-      summary: GetBundles (historical)
+      summary: Bundles (historical)
       tags:
       - UniswapV3
   /dapps/uniswapv2/bundles/historical:
@@ -630,7 +630,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV2.BundleV2DTO'
                 type: array
           description: successful operation
-      summary: GetBundles (historical)
+      summary: Bundles (historical)
       tags:
       - UniswapV2
   /dapps/sushiswap/bundles/historical:
@@ -693,7 +693,7 @@ paths:
                   $ref: '#/components/schemas/Sushiswap.BundleDTO'
                 type: array
           description: successful operation
-      summary: GetBundles (historical)
+      summary: Bundles (historical)
       tags:
       - Sushiswap
   /dapps/uniswapv3/bundles/current:
@@ -719,7 +719,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV3.BundleV3DTO'
                 type: array
           description: successful operation
-      summary: GetBundles (current)
+      summary: Bundles (current)
       tags:
       - UniswapV3
   /dapps/uniswapv3/burns/historical:
@@ -790,7 +790,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV3.BurnV3DTO'
                 type: array
           description: successful operation
-      summary: GetBurns (historical)
+      summary: Burns (historical)
       tags:
       - UniswapV3
   /dapps/uniswapv2/burns/historical:
@@ -861,7 +861,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV2.BurnV2DTO'
                 type: array
           description: successful operation
-      summary: GetBurns (historical)
+      summary: Burns (historical)
       tags:
       - UniswapV2
   /dapps/sushiswap/burns/historical:
@@ -932,7 +932,7 @@ paths:
                   $ref: '#/components/schemas/Sushiswap.BurnDTO'
                 type: array
           description: successful operation
-      summary: GetBurns (historical)
+      summary: Burns (historical)
       tags:
       - Sushiswap
   /dapps/uniswapv3/burns/current:
@@ -966,7 +966,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV3.BurnV3DTO'
                 type: array
           description: successful operation
-      summary: GetBurns (current)
+      summary: Burns (current)
       tags:
       - UniswapV3
   /dapps/curve/coins/historical:
@@ -1037,7 +1037,7 @@ paths:
                   $ref: '#/components/schemas/Curve.CoinDTO'
                 type: array
           description: successful operation
-      summary: GetCoins (historical)
+      summary: Coins (historical)
       tags:
       - Curve
   /dapps/curve/contracts/historical:
@@ -1108,7 +1108,7 @@ paths:
                   $ref: '#/components/schemas/Curve.ContractDTO'
                 type: array
           description: successful operation
-      summary: GetContracts (historical)
+      summary: Contracts (historical)
       tags:
       - Curve
   /dapps/curve/contractsVersions/historical:
@@ -1179,7 +1179,7 @@ paths:
                   $ref: '#/components/schemas/Curve.ContractVersionDTO'
                 type: array
           description: successful operation
-      summary: GetContractsVersions (historical)
+      summary: ContractsVersions (historical)
       tags:
       - Curve
   /dapps/curve/dailyVolumes/historical:
@@ -1250,7 +1250,7 @@ paths:
                   $ref: '#/components/schemas/Curve.DailyVolumeDTO'
                 type: array
           description: successful operation
-      summary: GetDailyVolumes (historical)
+      summary: DailyVolumes (historical)
       tags:
       - Curve
   /dapps/sushiswap/dayData/historical:
@@ -1313,7 +1313,7 @@ paths:
                   $ref: '#/components/schemas/Sushiswap.DayDataDTO'
                 type: array
           description: successful operation
-      summary: GetDayData (historical)
+      summary: DayData (historical)
       tags:
       - Sushiswap
   /dapps/dex/deposits/historical:
@@ -1384,7 +1384,7 @@ paths:
                   $ref: '#/components/schemas/Dex.DepositDTO'
                 type: array
           description: successful operation
-      summary: GetDeposits (historical)
+      summary: Deposits (historical)
       tags:
       - Dex
   /dapps/curve/exchanges/historical:
@@ -1455,7 +1455,7 @@ paths:
                   $ref: '#/components/schemas/Curve.ExchangeDTO'
                 type: array
           description: successful operation
-      summary: GetExchanges (historical) 🔥
+      summary: Exchanges (historical) 🔥
       tags:
       - Curve
   /dapps/sushiswap/exchanges/current:
@@ -1481,7 +1481,7 @@ paths:
                   $ref: '#/components/schemas/Curve.ExchangeDTO'
                 type: array
           description: successful operation
-      summary: GetExchanges (current) 🔥
+      summary: Exchanges (current) 🔥
       tags:
       - Sushiswap
   /dapps/uniswapv3/factory/historical:
@@ -1544,7 +1544,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV3.FactoryV3DTO'
                 type: array
           description: successful operation
-      summary: GetFactory (historical)
+      summary: Factory (historical)
       tags:
       - UniswapV3
   /dapps/uniswapv2/factory/historical:
@@ -1607,7 +1607,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV2.UniswapFactoryV2DTO'
                 type: array
           description: successful operation
-      summary: GetFactory (historical)
+      summary: Factory (historical)
       tags:
       - UniswapV2
   /dapps/sushiswap/factory/historical:
@@ -1670,7 +1670,7 @@ paths:
                   $ref: '#/components/schemas/Sushiswap.FactoryDTO'
                 type: array
           description: successful operation
-      summary: GetFactory (historical)
+      summary: Factory (historical)
       tags:
       - Sushiswap
   /dapps/uniswapv3/factory/current:
@@ -1696,7 +1696,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV3.FactoryV3DTO'
                 type: array
           description: successful operation
-      summary: GetFactory (current)
+      summary: Factory (current)
       tags:
       - UniswapV3
   /dapps/curve/feeChangeLogs/historical:
@@ -1767,7 +1767,7 @@ paths:
                   $ref: '#/components/schemas/Curve.FeeChangeLogDTO'
                 type: array
           description: successful operation
-      summary: GetFeeChangeLogs (historical)
+      summary: FeeChangeLogs (historical)
       tags:
       - Curve
   /dapps/curve/gauges/historical:
@@ -1838,7 +1838,7 @@ paths:
                   $ref: '#/components/schemas/Curve.GaugeDTO'
                 type: array
           description: successful operation
-      summary: GetGauges (historical)
+      summary: Gauges (historical)
       tags:
       - Curve
   /dapps/curve/gaugesDeposits/historical:
@@ -1901,7 +1901,7 @@ paths:
                   $ref: '#/components/schemas/Curve.GaugeDepositDTO'
                 type: array
           description: successful operation
-      summary: GetGaugesDeposits (historical)
+      summary: GaugesDeposits (historical)
       tags:
       - Curve
   /dapps/curve/gaugesLiquidity/historical:
@@ -1964,7 +1964,7 @@ paths:
                   $ref: '#/components/schemas/Curve.GaugeLiquidityDTO'
                 type: array
           description: successful operation
-      summary: GetGaugesLiquidity (historical)
+      summary: GaugesLiquidity (historical)
       tags:
       - Curve
   /dapps/curve/gaugesTotalWeights/historical:
@@ -2027,7 +2027,7 @@ paths:
                   $ref: '#/components/schemas/Curve.GaugeTotalWeightDTO'
                 type: array
           description: successful operation
-      summary: GetGaugesTotalWeights (historical)
+      summary: GaugesTotalWeights (historical)
       tags:
       - Curve
   /dapps/curve/gaugesTypes/historical:
@@ -2090,7 +2090,7 @@ paths:
                   $ref: '#/components/schemas/Curve.GaugeTypeDTO'
                 type: array
           description: successful operation
-      summary: GetGaugesTypes (historical)
+      summary: GaugesTypes (historical)
       tags:
       - Curve
   /dapps/curve/gaugesTypesWeights/historical:
@@ -2153,7 +2153,7 @@ paths:
                   $ref: '#/components/schemas/Curve.GaugeTypeWeightDTO'
                 type: array
           description: successful operation
-      summary: GetGaugesTypesWeights (historical)
+      summary: GaugesTypesWeights (historical)
       tags:
       - Curve
   /dapps/curve/gaugesWeights/historical:
@@ -2216,7 +2216,7 @@ paths:
                   $ref: '#/components/schemas/Curve.GaugeWeightDTO'
                 type: array
           description: successful operation
-      summary: GetGaugesWeights (historical)
+      summary: GaugesWeights (historical)
       tags:
       - Curve
   /dapps/curve/gaugesWeightsVotes/historical:
@@ -2279,7 +2279,7 @@ paths:
                   $ref: '#/components/schemas/Curve.GaugeWeightVoteDTO'
                 type: array
           description: successful operation
-      summary: GetGaugesWeightsVotes (historical)
+      summary: GaugesWeightsVotes (historical)
       tags:
       - Curve
   /dapps/curve/gaugesWithdraws/historical:
@@ -2342,7 +2342,7 @@ paths:
                   $ref: '#/components/schemas/Curve.GaugeWithdrawDTO'
                 type: array
           description: successful operation
-      summary: GetGaugesWithdraw (historical)
+      summary: GaugesWithdraw (historical)
       tags:
       - Curve
   /dapps/sushiswap/hourData/historical:
@@ -2405,7 +2405,7 @@ paths:
                   $ref: '#/components/schemas/Sushiswap.HourDataDTO'
                 type: array
           description: successful operation
-      summary: GetHourData (historical)
+      summary: HourData (historical)
       tags:
       - Sushiswap
   /dapps/curve/hourlyVolumes/historical:
@@ -2476,7 +2476,7 @@ paths:
                   $ref: '#/components/schemas/Curve.HourlyVolumeDTO'
                 type: array
           description: successful operation
-      summary: GetHourlyVolumes (historical)
+      summary: HourlyVolumes (historical)
       tags:
       - Curve
   /dapps/sushiswap/liquidityPosition/historical:
@@ -2547,7 +2547,7 @@ paths:
                   $ref: '#/components/schemas/Sushiswap.LiquidityPositionDTO'
                 type: array
           description: successful operation
-      summary: GetLiquidityPosition (historical)
+      summary: LiquidityPosition (historical)
       tags:
       - Sushiswap
   /dapps/uniswapv2/liquidityPositions/historical:
@@ -2618,7 +2618,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV2.LiquidityPositionV2DTO'
                 type: array
           description: successful operation
-      summary: GetLiquidityPositions (historical)
+      summary: LiquidityPositions (historical)
       tags:
       - UniswapV2
   /dapps/sushiswap/liquidityPositionSnapshots/historical:
@@ -2689,7 +2689,7 @@ paths:
                   $ref: '#/components/schemas/Sushiswap.LiquidityPositionSnapshotDTO'
                 type: array
           description: successful operation
-      summary: GetLiquidityPositionSnapshot (historical)
+      summary: LiquidityPositionSnapshot (historical)
       tags:
       - Sushiswap
   /dapps/uniswapv2/liquidityPositionsSnapshots/historical:
@@ -2760,7 +2760,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV2.LiquidityPositionSnapshotV2DTO'
                 type: array
           description: successful operation
-      summary: GetLiquidityPositionsSnapshots (historical)
+      summary: LiquidityPositionsSnapshots (historical)
       tags:
       - UniswapV2
   /dapps/curve/lpTokens/historical:
@@ -2831,7 +2831,7 @@ paths:
                   $ref: '#/components/schemas/Curve.LpTokenDTO'
                 type: array
           description: successful operation
-      summary: GetLpTokens (historical)
+      summary: LpTokens (historical)
       tags:
       - Curve
   /dapps/uniswapv3/mints/historical:
@@ -2902,7 +2902,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV3.MintV3DTO'
                 type: array
           description: successful operation
-      summary: GetMints (historical)
+      summary: Mints (historical)
       tags:
       - UniswapV3
   /dapps/uniswapv2/mints/historical:
@@ -2973,7 +2973,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV2.MintV2DTO'
                 type: array
           description: successful operation
-      summary: GetMints (historical)
+      summary: Mints (historical)
       tags:
       - UniswapV2
   /dapps/sushiswap/mints/historical:
@@ -3044,7 +3044,7 @@ paths:
                   $ref: '#/components/schemas/Sushiswap.MintDTO'
                 type: array
           description: successful operation
-      summary: GetMints (historical)
+      summary: Mints (historical)
       tags:
       - Sushiswap
   /dapps/uniswapv3/mints/current:
@@ -3078,7 +3078,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV3.MintV3DTO'
                 type: array
           description: successful operation
-      summary: GetMints (current)
+      summary: Mints (current)
       tags:
       - UniswapV3
   /dapps/dex/orders/historical:
@@ -3149,7 +3149,7 @@ paths:
                   $ref: '#/components/schemas/Dex.OrderDTO'
                 type: array
           description: successful operation
-      summary: GetOrders (historical)
+      summary: Orders (historical)
       tags:
       - Dex
   /dapps/cow/orders/historical:
@@ -3211,7 +3211,7 @@ paths:
                   $ref: '#/components/schemas/Cow.OrderDTO'
                 type: array
           description: successful operation
-      summary: GetOrders (historical)
+      summary: Orders (historical)
       tags:
       - Cow
   /dapps/uniswapv3/pools/historical:
@@ -3282,7 +3282,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV3.PoolV3DTO'
                 type: array
           description: successful operation
-      summary: GetPools (historical) 🔥
+      summary: Pools (historical) 🔥
       tags:
       - UniswapV3
   /dapps/uniswapv2/pools/historical:
@@ -3353,7 +3353,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV2.PairV2DTO'
                 type: array
           description: successful operation
-      summary: GetPools (historical) 🔥
+      summary: Pools (historical) 🔥
       tags:
       - UniswapV2
   /dapps/sushiswap/pools/historical:
@@ -3427,7 +3427,7 @@ paths:
                   $ref: '#/components/schemas/Sushiswap.PairDTO'
                 type: array
           description: successful operation
-      summary: GetPools (historical) 🔥
+      summary: Pools (historical) 🔥
       tags:
       - Sushiswap
   /dapps/curve/pools/historical:
@@ -3498,7 +3498,7 @@ paths:
                   $ref: '#/components/schemas/Curve.PoolDTO'
                 type: array
           description: successful operation
-      summary: GetPools (historical) 🔥
+      summary: Pools (historical) 🔥
       tags:
       - Curve
   /dapps/uniswapv3/pools/current:
@@ -3532,7 +3532,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV3.PoolV3DTO'
                 type: array
           description: successful operation
-      summary: GetPools (current) 🔥
+      summary: Pools (current) 🔥
       tags:
       - UniswapV3
   /dapps/uniswapv2/pools/current:
@@ -3566,7 +3566,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV2.PairV2DTO'
                 type: array
           description: successful operation
-      summary: GetPools (current) 🔥
+      summary: Pools (current) 🔥
       tags:
       - UniswapV2
   /dapps/sushiswap/pools/current:
@@ -3592,7 +3592,7 @@ paths:
                   $ref: '#/components/schemas/Sushiswap.PairDTO'
                 type: array
           description: successful operation
-      summary: GetPools (current) 🔥
+      summary: Pools (current) 🔥
       tags:
       - Sushiswap
   /dapps/uniswapv3/poolsDayData/historical:
@@ -3663,7 +3663,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV3.PoolDayDataV3DTO'
                 type: array
           description: successful operation
-      summary: GetPoolsDayData (historical)
+      summary: PoolsDayData (historical)
       tags:
       - UniswapV3
   /dapps/uniswapv2/poolsDayData/historical:
@@ -3734,7 +3734,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV2.PairDayDataV2DTO'
                 type: array
           description: successful operation
-      summary: GetPoolsDayData (historical)
+      summary: PoolsDayData (historical)
       tags:
       - UniswapV2
   /dapps/sushiswap/poolsDayData/historical:
@@ -3805,7 +3805,7 @@ paths:
                   $ref: '#/components/schemas/Sushiswap.PairDayDataDTO'
                 type: array
           description: successful operation
-      summary: GetPoolsDayData (historical)
+      summary: PoolsDayData (historical)
       tags:
       - Sushiswap
   /dapps/uniswapv3/poolsDayData/current:
@@ -3839,7 +3839,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV3.PoolDayDataV3DTO'
                 type: array
           description: successful operation
-      summary: GetPoolsDayData (current)
+      summary: PoolsDayData (current)
       tags:
       - UniswapV3
   /dapps/uniswapv3/poolsHourData/historical:
@@ -3910,7 +3910,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV3.PoolHourDataV3DTO'
                 type: array
           description: successful operation
-      summary: GetPoolsHourData (historical)
+      summary: PoolsHourData (historical)
       tags:
       - UniswapV3
   /dapps/uniswapv2/poolsHourData/historical:
@@ -3981,7 +3981,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV2.PairHourDataV2DTO'
                 type: array
           description: successful operation
-      summary: GetPoolsHourData (historical)
+      summary: PoolsHourData (historical)
       tags:
       - UniswapV2
   /dapps/sushiswap/poolsHourData/historical:
@@ -4052,7 +4052,7 @@ paths:
                   $ref: '#/components/schemas/Sushiswap.PairHourDataDTO'
                 type: array
           description: successful operation
-      summary: GetPoolsHourData (historical)
+      summary: PoolsHourData (historical)
       tags:
       - Sushiswap
   /dapps/uniswapv3/poolsHourData/current:
@@ -4086,7 +4086,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV3.PoolHourDataV3DTO'
                 type: array
           description: successful operation
-      summary: GetPoolsHourData (current)
+      summary: PoolsHourData (current)
       tags:
       - UniswapV3
   /dapps/uniswapv3/positions/historical:
@@ -4157,7 +4157,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV3.PositionV3DTO'
                 type: array
           description: successful operation
-      summary: GetPositions (historical)
+      summary: Positions (historical)
       tags:
       - UniswapV3
   /dapps/uniswapv3/positions/current:
@@ -4191,7 +4191,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV3.PositionV3DTO'
                 type: array
           description: successful operation
-      summary: GetPositions (current)
+      summary: Positions (current)
       tags:
       - UniswapV3
   /dapps/uniswapv3/positionSnapshots/current:
@@ -4225,7 +4225,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV3.PositionSnapshotV3DTO'
                 type: array
           description: successful operation
-      summary: GetPositionsSnapshots (current)
+      summary: PositionsSnapshots (current)
       tags:
       - UniswapV3
   /dapps/uniswapv3/positionsSnapshots/historical:
@@ -4296,7 +4296,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV3.PositionSnapshotV3DTO'
                 type: array
           description: successful operation
-      summary: GetPositionsSnaphots (historical)
+      summary: PositionsSnaphots (historical)
       tags:
       - UniswapV3
   /dapps/dex/prices/historical:
@@ -4367,7 +4367,7 @@ paths:
                   $ref: '#/components/schemas/Dex.PriceDTO'
                 type: array
           description: successful operation
-      summary: GetPrices (historical)
+      summary: Prices (historical)
       tags:
       - Dex
   /dapps/curve/proposals/historical:
@@ -4430,7 +4430,7 @@ paths:
                   $ref: '#/components/schemas/Curve.ProposalDTO'
                 type: array
           description: successful operation
-      summary: GetProposals (historical)
+      summary: Proposals (historical)
       tags:
       - Curve
   /dapps/curve/proposalsVotes/historical:
@@ -4493,7 +4493,7 @@ paths:
                   $ref: '#/components/schemas/Curve.ProposalVoteDTO'
                 type: array
           description: successful operation
-      summary: GetProposalsVotes (historical)
+      summary: ProposalsVotes (historical)
       tags:
       - Curve
   /dapps/curve/removeLiquidityEvents/historical:
@@ -4564,7 +4564,7 @@ paths:
                   $ref: '#/components/schemas/Curve.RemoveLiquidityEventDTO'
                 type: array
           description: successful operation
-      summary: GetRemoveLiquidityEvents (historical)
+      summary: RemoveLiquidityEvents (historical)
       tags:
       - Curve
   /dapps/curve/removeLiquidityOneEvents/historical:
@@ -4635,7 +4635,7 @@ paths:
                   $ref: '#/components/schemas/Curve.RemoveLiquidityOneEventDTO'
                 type: array
           description: successful operation
-      summary: GetRemoveLiquidityOneEvents (historical)
+      summary: RemoveLiquidityOneEvents (historical)
       tags:
       - Curve
   /dapps/cow/settlements/historical:
@@ -4697,7 +4697,7 @@ paths:
                   $ref: '#/components/schemas/Cow.SettlementDTO'
                 type: array
           description: successful operation
-      summary: GetSettlements (historical)
+      summary: Settlements (historical)
       tags:
       - Cow
   /dapps/dex/solutions/historical:
@@ -4768,7 +4768,7 @@ paths:
                   $ref: '#/components/schemas/Dex.SolutionDTO'
                 type: array
           description: successful operation
-      summary: GetSolutions (historical)
+      summary: Solutions (historical)
       tags:
       - Dex
   /dapps/dex/stats/historical:
@@ -4831,7 +4831,7 @@ paths:
                   $ref: '#/components/schemas/Dex.StatsDTO'
                 type: array
           description: successful operation
-      summary: GetStats (historical)
+      summary: Stats (historical)
       tags:
       - Dex
   /dapps/uniswapv3/swaps/historical:
@@ -4902,7 +4902,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV3.SwapV3DTO'
                 type: array
           description: successful operation
-      summary: GetSwaps (historical) 🔥
+      summary: Swaps (historical) 🔥
       tags:
       - UniswapV3
   /dapps/uniswapv2/swaps/historical:
@@ -4973,7 +4973,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV2.SwapV2DTO'
                 type: array
           description: successful operation
-      summary: GetSwaps (historical) 🔥
+      summary: Swaps (historical) 🔥
       tags:
       - UniswapV2
   /dapps/sushiswap/swaps/historical:
@@ -5047,7 +5047,7 @@ paths:
                   $ref: '#/components/schemas/Sushiswap.SwapDTO'
                 type: array
           description: successful operation
-      summary: GetSwaps (historical) 🔥
+      summary: Swaps (historical) 🔥
       tags:
       - Sushiswap
   /dapps/uniswapv3/swaps/current:
@@ -5081,7 +5081,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV3.SwapV3DTO'
                 type: array
           description: successful operation
-      summary: GetSwaps (current) 🔥
+      summary: Swaps (current) 🔥
       tags:
       - UniswapV3
   /dapps/uniswapv2/swaps/current:
@@ -5107,7 +5107,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV2.SwapV2DTO'
                 type: array
           description: successful operation
-      summary: GetSwaps (current) 🔥
+      summary: Swaps (current) 🔥
       tags:
       - UniswapV2
   /dapps/sushiswap/swaps/current:
@@ -5133,7 +5133,7 @@ paths:
                   $ref: '#/components/schemas/Sushiswap.SwapDTO'
                 type: array
           description: successful operation
-      summary: GetSwaps (current) 🔥
+      summary: Swaps (current) 🔥
       tags:
       - Sushiswap
   /dapps/curve/systemStates/historical:
@@ -5196,7 +5196,7 @@ paths:
                   $ref: '#/components/schemas/Curve.SystemStateDTO'
                 type: array
           description: successful operation
-      summary: GetSystemStates (historical)
+      summary: SystemStates (historical)
       tags:
       - Curve
   /dapps/uniswapv3/ticks/historical:
@@ -5267,7 +5267,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV3.TickV3DTO'
                 type: array
           description: successful operation
-      summary: GetTicks (historical)
+      summary: Ticks (historical)
       tags:
       - UniswapV3
   /dapps/uniswapv3/ticks/current:
@@ -5301,7 +5301,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV3.TickV3DTO'
                 type: array
           description: successful operation
-      summary: GetTicks (current)
+      summary: Ticks (current)
       tags:
       - UniswapV3
   /dapps/uniswapv3/ticksDayData/historical:
@@ -5372,7 +5372,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV3.TickDayDataV3DTO'
                 type: array
           description: successful operation
-      summary: GetTicksDayData (historical)
+      summary: TicksDayData (historical)
       tags:
       - UniswapV3
   /dapps/uniswapv3/ticksDayData/current:
@@ -5406,7 +5406,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV3.TickDayDataV3DTO'
                 type: array
           description: successful operation
-      summary: GetTicksDayData (current)
+      summary: TicksDayData (current)
       tags:
       - UniswapV3
   /dapps/uniswapv3/tokens/historical:
@@ -5477,7 +5477,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV3.TokenV3DTO'
                 type: array
           description: successful operation
-      summary: GetTokens (historical) 🔥
+      summary: Tokens (historical) 🔥
       tags:
       - UniswapV3
   /dapps/uniswapv2/tokens/historical:
@@ -5548,7 +5548,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV2.TokenV2DTO'
                 type: array
           description: successful operation
-      summary: GetTokens (historical) 🔥
+      summary: Tokens (historical) 🔥
       tags:
       - UniswapV2
   /dapps/sushiswap/tokens/historical:
@@ -5622,7 +5622,7 @@ paths:
                   $ref: '#/components/schemas/Sushiswap.TokenDTO'
                 type: array
           description: successful operation
-      summary: GetTokens (historical) 🔥
+      summary: Tokens (historical) 🔥
       tags:
       - Sushiswap
   /dapps/dex/tokens/historical:
@@ -5693,7 +5693,7 @@ paths:
                   $ref: '#/components/schemas/Dex.TokenDTO'
                 type: array
           description: successful operation
-      summary: GetTokens (historical) 🔥
+      summary: Tokens (historical) 🔥
       tags:
       - Dex
   /dapps/curve/tokens/historical:
@@ -5764,7 +5764,7 @@ paths:
                   $ref: '#/components/schemas/Curve.TokenDTO'
                 type: array
           description: successful operation
-      summary: GetTokens (historical) 🔥
+      summary: Tokens (historical) 🔥
       tags:
       - Curve
   /dapps/uniswapv3/tokens/current:
@@ -5798,7 +5798,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV3.TokenV3DTO'
                 type: array
           description: successful operation
-      summary: GetTokens (current) 🔥
+      summary: Tokens (current) 🔥
       tags:
       - UniswapV3
   /dapps/uniswapv2/tokens/current:
@@ -5824,7 +5824,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV2.TokenV2DTO'
                 type: array
           description: successful operation
-      summary: GetTokens (current) 🔥
+      summary: Tokens (current) 🔥
       tags:
       - UniswapV2
   /dapps/sushiswap/tokens/current:
@@ -5850,7 +5850,7 @@ paths:
                   $ref: '#/components/schemas/Sushiswap.TokenDTO'
                 type: array
           description: successful operation
-      summary: GetTokens (current) 🔥
+      summary: Tokens (current) 🔥
       tags:
       - Sushiswap
   /dapps/uniswapv3/tokensDayData/historical:
@@ -5921,7 +5921,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV3.TokenV3DayDataDTO'
                 type: array
           description: successful operation
-      summary: GetTokensDayData (historical)
+      summary: TokensDayData (historical)
       tags:
       - UniswapV3
   /dapps/uniswapv2/tokensDayData/historical:
@@ -5992,7 +5992,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV2.TokenDayDataV2DTO'
                 type: array
           description: successful operation
-      summary: GetTokensDayData (historical)
+      summary: TokensDayData (historical)
       tags:
       - UniswapV2
   /dapps/sushiswap/tokensDayData/historical:
@@ -6063,7 +6063,7 @@ paths:
                   $ref: '#/components/schemas/Sushiswap.TokenDayDataDTO'
                 type: array
           description: successful operation
-      summary: GetTokensDayData (historical)
+      summary: TokensDayData (historical)
       tags:
       - Sushiswap
   /dapps/uniswapv3/tokensDayData/current:
@@ -6097,7 +6097,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV3.TokenV3DayDataDTO'
                 type: array
           description: successful operation
-      summary: GetTokensDayData (current)
+      summary: TokensDayData (current)
       tags:
       - UniswapV3
   /dapps/uniswapv3/tokensHourData/historical:
@@ -6168,7 +6168,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV3.TokenHourDataV3DTO'
                 type: array
           description: successful operation
-      summary: GetTokensHourData (historical)
+      summary: TokensHourData (historical)
       tags:
       - UniswapV3
   /dapps/uniswapv3/tokensHourData/current:
@@ -6202,7 +6202,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV3.TokenHourDataV3DTO'
                 type: array
           description: successful operation
-      summary: GetTokensHourData (current)
+      summary: TokensHourData (current)
       tags:
       - UniswapV3
   /dapps/dex/trades/historical:
@@ -6265,7 +6265,7 @@ paths:
                   $ref: '#/components/schemas/Dex.TradeDTO'
                 type: array
           description: successful operation
-      summary: GetTrades (historical) 🔥
+      summary: Trades (historical) 🔥
       tags:
       - Dex
   /dapps/sushiswap/trades/current:
@@ -6291,7 +6291,7 @@ paths:
                   $ref: '#/components/schemas/Dex.TradeDTO'
                 type: array
           description: successful operation
-      summary: GetTrades (current) 🔥
+      summary: Trades (current) 🔥
       tags:
       - Sushiswap
   /dapps/uniswapv3/transactions/historical:
@@ -6354,7 +6354,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV3.TransactionV3DTO'
                 type: array
           description: successful operation
-      summary: GetTransactions (historical)
+      summary: Transactions (historical)
       tags:
       - UniswapV3
   /dapps/uniswapv2/transactions/historical:
@@ -6417,7 +6417,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV2.TransactionV2DTO'
                 type: array
           description: successful operation
-      summary: GetTransactions (historical)
+      summary: Transactions (historical)
       tags:
       - UniswapV2
   /dapps/sushiswap/transactions/historical:
@@ -6480,7 +6480,7 @@ paths:
                   $ref: '#/components/schemas/Sushiswap.TransactionDTO'
                 type: array
           description: successful operation
-      summary: GetTransactions (historical)
+      summary: Transactions (historical)
       tags:
       - Sushiswap
   /dapps/curve/transferOwnershipEvents/historical:
@@ -6551,7 +6551,7 @@ paths:
                   $ref: '#/components/schemas/Curve.TransferOwnershipEventDTO'
                 type: array
           description: successful operation
-      summary: GetTransferOwnershipEvents (historical)
+      summary: TransferOwnershipEvents (historical)
       tags:
       - Curve
   /dapps/curve/underlyingCoins/historical:
@@ -6622,7 +6622,7 @@ paths:
                   $ref: '#/components/schemas/Curve.UnderlyingCoinDTO'
                 type: array
           description: successful operation
-      summary: GetUnderlyingCoins (historical)
+      summary: UnderlyingCoins (historical)
       tags:
       - Curve
   /dapps/uniswapv3/dayData/historical:
@@ -6685,7 +6685,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV3.UniswapDayDataV3DTO'
                 type: array
           description: successful operation
-      summary: GetDayData (historical)
+      summary: DayData (historical)
       tags:
       - UniswapV3
   /dapps/uniswapv2/dayData/historical:
@@ -6748,7 +6748,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV2.UniswapDayDataV2DTO'
                 type: array
           description: successful operation
-      summary: GetDayData (historical)
+      summary: DayData (historical)
       tags:
       - UniswapV2
   /dapps/uniswapv3/dayData/current:
@@ -6774,7 +6774,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV3.UniswapDayDataV3DTO'
                 type: array
           description: successful operation
-      summary: GetDayData (current)
+      summary: DayData (current)
       tags:
       - UniswapV3
   /dapps/uniswapv2/users/historical:
@@ -6837,7 +6837,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV2.UserV2DTO'
                 type: array
           description: successful operation
-      summary: GetUsers (historical)
+      summary: Users (historical)
       tags:
       - UniswapV2
   /dapps/sushiswap/users/historical:
@@ -6900,7 +6900,7 @@ paths:
                   $ref: '#/components/schemas/Sushiswap.UserDTO'
                 type: array
           description: successful operation
-      summary: GetUsers (historical)
+      summary: Users (historical)
       tags:
       - Sushiswap
   /dapps/dex/users/historical:
@@ -6963,7 +6963,7 @@ paths:
                   $ref: '#/components/schemas/Dex.UserDTO'
                 type: array
           description: successful operation
-      summary: GetUsers (historical)
+      summary: Users (historical)
       tags:
       - Dex
   /dapps/cow/users/historical:
@@ -7026,7 +7026,7 @@ paths:
                   $ref: '#/components/schemas/Cow.UserDTO'
                 type: array
           description: successful operation
-      summary: GetUsers (historical)
+      summary: Users (historical)
       tags:
       - Cow
   /dapps/curve/votingApps/historical:
@@ -7089,7 +7089,7 @@ paths:
                   $ref: '#/components/schemas/Curve.VotingAppDTO'
                 type: array
           description: successful operation
-      summary: GetVotingApps (historical)
+      summary: VotingApps (historical)
       tags:
       - Curve
   /dapps/curve/weeklyVolumes/historical:
@@ -7160,7 +7160,7 @@ paths:
                   $ref: '#/components/schemas/Curve.WeeklyVolumeDTO'
                 type: array
           description: successful operation
-      summary: GetWeeklyVolumes (historical)
+      summary: WeeklyVolumes (historical)
       tags:
       - Curve
   /dapps/dex/withdraws/historical:
@@ -7231,7 +7231,7 @@ paths:
                   $ref: '#/components/schemas/Dex.WithdrawDTO'
                 type: array
           description: successful operation
-      summary: GetWithdraws (historical)
+      summary: Withdraws (historical)
       tags:
       - Dex
   /dapps/dex/withdrawsRequests/historical:
@@ -7302,7 +7302,7 @@ paths:
                   $ref: '#/components/schemas/Dex.WithdrawRequestDTO'
                 type: array
           description: successful operation
-      summary: GetWithdrawsRequests (historical)
+      summary: WithdrawsRequests (historical)
       tags:
       - Dex
 components:

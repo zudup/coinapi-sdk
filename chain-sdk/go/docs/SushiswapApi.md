@@ -4,27 +4,27 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CurveGetExchangesCurrent**](SushiswapApi.md#CurveGetExchangesCurrent) | **Get** /dapps/sushiswap/exchanges/current | GetExchanges (current) 🔥
-[**DexGetTradesCurrent**](SushiswapApi.md#DexGetTradesCurrent) | **Get** /dapps/sushiswap/trades/current | GetTrades (current) 🔥
-[**SushiswapGetBundlesHistorical**](SushiswapApi.md#SushiswapGetBundlesHistorical) | **Get** /dapps/sushiswap/bundles/historical | GetBundles (historical)
-[**SushiswapGetBurnsHistorical**](SushiswapApi.md#SushiswapGetBurnsHistorical) | **Get** /dapps/sushiswap/burns/historical | GetBurns (historical)
-[**SushiswapGetDayDataHistorical**](SushiswapApi.md#SushiswapGetDayDataHistorical) | **Get** /dapps/sushiswap/dayData/historical | GetDayData (historical)
-[**SushiswapGetFactoryHistorical**](SushiswapApi.md#SushiswapGetFactoryHistorical) | **Get** /dapps/sushiswap/factory/historical | GetFactory (historical)
-[**SushiswapGetHourDataHistorical**](SushiswapApi.md#SushiswapGetHourDataHistorical) | **Get** /dapps/sushiswap/hourData/historical | GetHourData (historical)
-[**SushiswapGetLiquidityPositionHistorical**](SushiswapApi.md#SushiswapGetLiquidityPositionHistorical) | **Get** /dapps/sushiswap/liquidityPosition/historical | GetLiquidityPosition (historical)
-[**SushiswapGetLiquidityPositionSnapshotHistorical**](SushiswapApi.md#SushiswapGetLiquidityPositionSnapshotHistorical) | **Get** /dapps/sushiswap/liquidityPositionSnapshots/historical | GetLiquidityPositionSnapshot (historical)
-[**SushiswapGetMintsHistorical**](SushiswapApi.md#SushiswapGetMintsHistorical) | **Get** /dapps/sushiswap/mints/historical | GetMints (historical)
-[**SushiswapGetPoolsCurrent**](SushiswapApi.md#SushiswapGetPoolsCurrent) | **Get** /dapps/sushiswap/pools/current | GetPools (current) 🔥
-[**SushiswapGetPoolsDayDataHistorical**](SushiswapApi.md#SushiswapGetPoolsDayDataHistorical) | **Get** /dapps/sushiswap/poolsDayData/historical | GetPoolsDayData (historical)
-[**SushiswapGetPoolsHistorical**](SushiswapApi.md#SushiswapGetPoolsHistorical) | **Get** /dapps/sushiswap/pools/historical | GetPools (historical) 🔥
-[**SushiswapGetPoolsHourDataHistorical**](SushiswapApi.md#SushiswapGetPoolsHourDataHistorical) | **Get** /dapps/sushiswap/poolsHourData/historical | GetPoolsHourData (historical)
-[**SushiswapGetSwapsCurrent**](SushiswapApi.md#SushiswapGetSwapsCurrent) | **Get** /dapps/sushiswap/swaps/current | GetSwaps (current) 🔥
-[**SushiswapGetSwapsHistorical**](SushiswapApi.md#SushiswapGetSwapsHistorical) | **Get** /dapps/sushiswap/swaps/historical | GetSwaps (historical) 🔥
-[**SushiswapGetTokensCurrent**](SushiswapApi.md#SushiswapGetTokensCurrent) | **Get** /dapps/sushiswap/tokens/current | GetTokens (current) 🔥
-[**SushiswapGetTokensDayDataHistorical**](SushiswapApi.md#SushiswapGetTokensDayDataHistorical) | **Get** /dapps/sushiswap/tokensDayData/historical | GetTokensDayData (historical)
-[**SushiswapGetTokensHistorical**](SushiswapApi.md#SushiswapGetTokensHistorical) | **Get** /dapps/sushiswap/tokens/historical | GetTokens (historical) 🔥
-[**SushiswapGetTransactionsHistorical**](SushiswapApi.md#SushiswapGetTransactionsHistorical) | **Get** /dapps/sushiswap/transactions/historical | GetTransactions (historical)
-[**SushiswapGetUsersHistorical**](SushiswapApi.md#SushiswapGetUsersHistorical) | **Get** /dapps/sushiswap/users/historical | GetUsers (historical)
+[**CurveGetExchangesCurrent**](SushiswapApi.md#CurveGetExchangesCurrent) | **Get** /dapps/sushiswap/exchanges/current | Exchanges (current) 🔥
+[**DexGetTradesCurrent**](SushiswapApi.md#DexGetTradesCurrent) | **Get** /dapps/sushiswap/trades/current | Trades (current) 🔥
+[**SushiswapGetBundlesHistorical**](SushiswapApi.md#SushiswapGetBundlesHistorical) | **Get** /dapps/sushiswap/bundles/historical | Bundles (historical)
+[**SushiswapGetBurnsHistorical**](SushiswapApi.md#SushiswapGetBurnsHistorical) | **Get** /dapps/sushiswap/burns/historical | Burns (historical)
+[**SushiswapGetDayDataHistorical**](SushiswapApi.md#SushiswapGetDayDataHistorical) | **Get** /dapps/sushiswap/dayData/historical | DayData (historical)
+[**SushiswapGetFactoryHistorical**](SushiswapApi.md#SushiswapGetFactoryHistorical) | **Get** /dapps/sushiswap/factory/historical | Factory (historical)
+[**SushiswapGetHourDataHistorical**](SushiswapApi.md#SushiswapGetHourDataHistorical) | **Get** /dapps/sushiswap/hourData/historical | HourData (historical)
+[**SushiswapGetLiquidityPositionHistorical**](SushiswapApi.md#SushiswapGetLiquidityPositionHistorical) | **Get** /dapps/sushiswap/liquidityPosition/historical | LiquidityPosition (historical)
+[**SushiswapGetLiquidityPositionSnapshotHistorical**](SushiswapApi.md#SushiswapGetLiquidityPositionSnapshotHistorical) | **Get** /dapps/sushiswap/liquidityPositionSnapshots/historical | LiquidityPositionSnapshot (historical)
+[**SushiswapGetMintsHistorical**](SushiswapApi.md#SushiswapGetMintsHistorical) | **Get** /dapps/sushiswap/mints/historical | Mints (historical)
+[**SushiswapGetPoolsCurrent**](SushiswapApi.md#SushiswapGetPoolsCurrent) | **Get** /dapps/sushiswap/pools/current | Pools (current) 🔥
+[**SushiswapGetPoolsDayDataHistorical**](SushiswapApi.md#SushiswapGetPoolsDayDataHistorical) | **Get** /dapps/sushiswap/poolsDayData/historical | PoolsDayData (historical)
+[**SushiswapGetPoolsHistorical**](SushiswapApi.md#SushiswapGetPoolsHistorical) | **Get** /dapps/sushiswap/pools/historical | Pools (historical) 🔥
+[**SushiswapGetPoolsHourDataHistorical**](SushiswapApi.md#SushiswapGetPoolsHourDataHistorical) | **Get** /dapps/sushiswap/poolsHourData/historical | PoolsHourData (historical)
+[**SushiswapGetSwapsCurrent**](SushiswapApi.md#SushiswapGetSwapsCurrent) | **Get** /dapps/sushiswap/swaps/current | Swaps (current) 🔥
+[**SushiswapGetSwapsHistorical**](SushiswapApi.md#SushiswapGetSwapsHistorical) | **Get** /dapps/sushiswap/swaps/historical | Swaps (historical) 🔥
+[**SushiswapGetTokensCurrent**](SushiswapApi.md#SushiswapGetTokensCurrent) | **Get** /dapps/sushiswap/tokens/current | Tokens (current) 🔥
+[**SushiswapGetTokensDayDataHistorical**](SushiswapApi.md#SushiswapGetTokensDayDataHistorical) | **Get** /dapps/sushiswap/tokensDayData/historical | TokensDayData (historical)
+[**SushiswapGetTokensHistorical**](SushiswapApi.md#SushiswapGetTokensHistorical) | **Get** /dapps/sushiswap/tokens/historical | Tokens (historical) 🔥
+[**SushiswapGetTransactionsHistorical**](SushiswapApi.md#SushiswapGetTransactionsHistorical) | **Get** /dapps/sushiswap/transactions/historical | Transactions (historical)
+[**SushiswapGetUsersHistorical**](SushiswapApi.md#SushiswapGetUsersHistorical) | **Get** /dapps/sushiswap/users/historical | Users (historical)
 
 
 
@@ -32,7 +32,7 @@ Method | HTTP request | Description
 
 > []CurveExchangeDTO CurveGetExchangesCurrent(ctx).Execute()
 
-GetExchanges (current) 🔥
+Exchanges (current) 🔥
 
 
 
@@ -93,7 +93,7 @@ No authorization required
 
 > []DexTradeDTO DexGetTradesCurrent(ctx).Execute()
 
-GetTrades (current) 🔥
+Trades (current) 🔥
 
 
 
@@ -154,7 +154,7 @@ No authorization required
 
 > []SushiswapBundleDTO SushiswapGetBundlesHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Execute()
 
-GetBundles (historical)
+Bundles (historical)
 
 
 
@@ -227,7 +227,7 @@ No authorization required
 
 > []SushiswapBurnDTO SushiswapGetBurnsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
 
-GetBurns (historical)
+Burns (historical)
 
 
 
@@ -302,7 +302,7 @@ No authorization required
 
 > []SushiswapDayDataDTO SushiswapGetDayDataHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Execute()
 
-GetDayData (historical)
+DayData (historical)
 
 
 
@@ -375,7 +375,7 @@ No authorization required
 
 > []SushiswapFactoryDTO SushiswapGetFactoryHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Execute()
 
-GetFactory (historical)
+Factory (historical)
 
 
 
@@ -448,7 +448,7 @@ No authorization required
 
 > []SushiswapHourDataDTO SushiswapGetHourDataHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Execute()
 
-GetHourData (historical)
+HourData (historical)
 
 
 
@@ -521,7 +521,7 @@ No authorization required
 
 > []SushiswapLiquidityPositionDTO SushiswapGetLiquidityPositionHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
 
-GetLiquidityPosition (historical)
+LiquidityPosition (historical)
 
 
 
@@ -596,7 +596,7 @@ No authorization required
 
 > []SushiswapLiquidityPositionSnapshotDTO SushiswapGetLiquidityPositionSnapshotHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
 
-GetLiquidityPositionSnapshot (historical)
+LiquidityPositionSnapshot (historical)
 
 
 
@@ -671,7 +671,7 @@ No authorization required
 
 > []SushiswapMintDTO SushiswapGetMintsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
 
-GetMints (historical)
+Mints (historical)
 
 
 
@@ -746,7 +746,7 @@ No authorization required
 
 > []SushiswapPairDTO SushiswapGetPoolsCurrent(ctx).Execute()
 
-GetPools (current) 🔥
+Pools (current) 🔥
 
 
 
@@ -807,7 +807,7 @@ No authorization required
 
 > []SushiswapPairDayDataDTO SushiswapGetPoolsDayDataHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
 
-GetPoolsDayData (historical)
+PoolsDayData (historical)
 
 
 
@@ -882,7 +882,7 @@ No authorization required
 
 > []SushiswapPairDTO SushiswapGetPoolsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
 
-GetPools (historical) 🔥
+Pools (historical) 🔥
 
 
 
@@ -957,7 +957,7 @@ No authorization required
 
 > []SushiswapPairHourDataDTO SushiswapGetPoolsHourDataHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
 
-GetPoolsHourData (historical)
+PoolsHourData (historical)
 
 
 
@@ -1032,7 +1032,7 @@ No authorization required
 
 > []SushiswapSwapDTO SushiswapGetSwapsCurrent(ctx).Execute()
 
-GetSwaps (current) 🔥
+Swaps (current) 🔥
 
 
 
@@ -1093,7 +1093,7 @@ No authorization required
 
 > []SushiswapSwapDTO SushiswapGetSwapsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
 
-GetSwaps (historical) 🔥
+Swaps (historical) 🔥
 
 
 
@@ -1168,7 +1168,7 @@ No authorization required
 
 > []SushiswapTokenDTO SushiswapGetTokensCurrent(ctx).Execute()
 
-GetTokens (current) 🔥
+Tokens (current) 🔥
 
 
 
@@ -1229,7 +1229,7 @@ No authorization required
 
 > []SushiswapTokenDayDataDTO SushiswapGetTokensDayDataHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).TokenId(tokenId).Execute()
 
-GetTokensDayData (historical)
+TokensDayData (historical)
 
 
 
@@ -1304,7 +1304,7 @@ No authorization required
 
 > []SushiswapTokenDTO SushiswapGetTokensHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).TokenId(tokenId).Execute()
 
-GetTokens (historical) 🔥
+Tokens (historical) 🔥
 
 
 
@@ -1379,7 +1379,7 @@ No authorization required
 
 > []SushiswapTransactionDTO SushiswapGetTransactionsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Execute()
 
-GetTransactions (historical)
+Transactions (historical)
 
 
 
@@ -1452,7 +1452,7 @@ No authorization required
 
 > []SushiswapUserDTO SushiswapGetUsersHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Execute()
 
-GetUsers (historical)
+Users (historical)
 
 
 

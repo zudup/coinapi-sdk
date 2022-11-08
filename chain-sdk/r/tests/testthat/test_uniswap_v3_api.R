@@ -8,7 +8,7 @@ api_instance <- UniswapV3Api$new()
 test_that("UniswapV3GetBundlesCurrent", {
   # tests for UniswapV3GetBundlesCurrent
   # base path: https://onchain.coinapi.io
-  # GetBundles (current)
+  # Bundles (current)
   # Gets bundles.
   # @return [array[UniswapV3BundleV3DTO]]
 
@@ -19,7 +19,7 @@ test_that("UniswapV3GetBundlesCurrent", {
 test_that("UniswapV3GetBundlesHistorical", {
   # tests for UniswapV3GetBundlesHistorical
   # base path: https://onchain.coinapi.io
-  # GetBundles (historical)
+  # Bundles (historical)
   # Gets bundles.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -34,7 +34,7 @@ test_that("UniswapV3GetBundlesHistorical", {
 test_that("UniswapV3GetBurnsCurrent", {
   # tests for UniswapV3GetBurnsCurrent
   # base path: https://onchain.coinapi.io
-  # GetBurns (current)
+  # Burns (current)
   # Gets burns.
   # @param filter_pool_id character  (optional)
   # @return [array[UniswapV3BurnV3DTO]]
@@ -46,7 +46,7 @@ test_that("UniswapV3GetBurnsCurrent", {
 test_that("UniswapV3GetBurnsHistorical", {
   # tests for UniswapV3GetBurnsHistorical
   # base path: https://onchain.coinapi.io
-  # GetBurns (historical)
+  # Burns (historical)
   # Gets burns.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -62,7 +62,7 @@ test_that("UniswapV3GetBurnsHistorical", {
 test_that("UniswapV3GetDayDataCurrent", {
   # tests for UniswapV3GetDayDataCurrent
   # base path: https://onchain.coinapi.io
-  # GetDayData (current)
+  # DayData (current)
   # Gets uniswapv3 day data.
   # @return [array[UniswapV3UniswapDayDataV3DTO]]
 
@@ -73,7 +73,7 @@ test_that("UniswapV3GetDayDataCurrent", {
 test_that("UniswapV3GetDayDataHistorical", {
   # tests for UniswapV3GetDayDataHistorical
   # base path: https://onchain.coinapi.io
-  # GetDayData (historical)
+  # DayData (historical)
   # Gets uniswapv3 day data.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -88,7 +88,7 @@ test_that("UniswapV3GetDayDataHistorical", {
 test_that("UniswapV3GetFactoryCurrent", {
   # tests for UniswapV3GetFactoryCurrent
   # base path: https://onchain.coinapi.io
-  # GetFactory (current)
+  # Factory (current)
   # Gets factory.
   # @return [array[UniswapV3FactoryV3DTO]]
 
@@ -99,7 +99,7 @@ test_that("UniswapV3GetFactoryCurrent", {
 test_that("UniswapV3GetFactoryHistorical", {
   # tests for UniswapV3GetFactoryHistorical
   # base path: https://onchain.coinapi.io
-  # GetFactory (historical)
+  # Factory (historical)
   # Gets factory.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -114,7 +114,7 @@ test_that("UniswapV3GetFactoryHistorical", {
 test_that("UniswapV3GetMintsCurrent", {
   # tests for UniswapV3GetMintsCurrent
   # base path: https://onchain.coinapi.io
-  # GetMints (current)
+  # Mints (current)
   # Gets mints.
   # @param filter_pool_id character  (optional)
   # @return [array[UniswapV3MintV3DTO]]
@@ -126,7 +126,7 @@ test_that("UniswapV3GetMintsCurrent", {
 test_that("UniswapV3GetMintsHistorical", {
   # tests for UniswapV3GetMintsHistorical
   # base path: https://onchain.coinapi.io
-  # GetMints (historical)
+  # Mints (historical)
   # Gets mints.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -142,7 +142,7 @@ test_that("UniswapV3GetMintsHistorical", {
 test_that("UniswapV3GetPoolsCurrent", {
   # tests for UniswapV3GetPoolsCurrent
   # base path: https://onchain.coinapi.io
-  # GetPools (current) 🔥
+  # Pools (current) 🔥
   # Gets pools.
   # @param filter_pool_id character  (optional)
   # @return [array[UniswapV3PoolV3DTO]]
@@ -154,7 +154,7 @@ test_that("UniswapV3GetPoolsCurrent", {
 test_that("UniswapV3GetPoolsDayDataCurrent", {
   # tests for UniswapV3GetPoolsDayDataCurrent
   # base path: https://onchain.coinapi.io
-  # GetPoolsDayData (current)
+  # PoolsDayData (current)
   # Gets pools day data.
   # @param filter_pool_id character  (optional)
   # @return [array[UniswapV3PoolDayDataV3DTO]]
@@ -166,7 +166,7 @@ test_that("UniswapV3GetPoolsDayDataCurrent", {
 test_that("UniswapV3GetPoolsDayDataHistorical", {
   # tests for UniswapV3GetPoolsDayDataHistorical
   # base path: https://onchain.coinapi.io
-  # GetPoolsDayData (historical)
+  # PoolsDayData (historical)
   # Gets pools day data.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -182,7 +182,7 @@ test_that("UniswapV3GetPoolsDayDataHistorical", {
 test_that("UniswapV3GetPoolsHistorical", {
   # tests for UniswapV3GetPoolsHistorical
   # base path: https://onchain.coinapi.io
-  # GetPools (historical) 🔥
+  # Pools (historical) 🔥
   # Gets pools.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -198,7 +198,7 @@ test_that("UniswapV3GetPoolsHistorical", {
 test_that("UniswapV3GetPoolsHourDataCurrent", {
   # tests for UniswapV3GetPoolsHourDataCurrent
   # base path: https://onchain.coinapi.io
-  # GetPoolsHourData (current)
+  # PoolsHourData (current)
   # Gets pools hour data.
   # @param filter_pool_id character  (optional)
   # @return [array[UniswapV3PoolHourDataV3DTO]]
@@ -210,7 +210,7 @@ test_that("UniswapV3GetPoolsHourDataCurrent", {
 test_that("UniswapV3GetPoolsHourDataHistorical", {
   # tests for UniswapV3GetPoolsHourDataHistorical
   # base path: https://onchain.coinapi.io
-  # GetPoolsHourData (historical)
+  # PoolsHourData (historical)
   # Gets pools hour data.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -226,7 +226,7 @@ test_that("UniswapV3GetPoolsHourDataHistorical", {
 test_that("UniswapV3GetPositionsCurrent", {
   # tests for UniswapV3GetPositionsCurrent
   # base path: https://onchain.coinapi.io
-  # GetPositions (current)
+  # Positions (current)
   # Gets positions.
   # @param filter_pool_id character  (optional)
   # @return [array[UniswapV3PositionV3DTO]]
@@ -238,7 +238,7 @@ test_that("UniswapV3GetPositionsCurrent", {
 test_that("UniswapV3GetPositionsHistorical", {
   # tests for UniswapV3GetPositionsHistorical
   # base path: https://onchain.coinapi.io
-  # GetPositions (historical)
+  # Positions (historical)
   # Gets positions.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -254,7 +254,7 @@ test_that("UniswapV3GetPositionsHistorical", {
 test_that("UniswapV3GetPositionsSnaphotsHistorical", {
   # tests for UniswapV3GetPositionsSnaphotsHistorical
   # base path: https://onchain.coinapi.io
-  # GetPositionsSnaphots (historical)
+  # PositionsSnaphots (historical)
   # Gets positions snapshots.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -270,7 +270,7 @@ test_that("UniswapV3GetPositionsSnaphotsHistorical", {
 test_that("UniswapV3GetPositionsSnapshotsCurrent", {
   # tests for UniswapV3GetPositionsSnapshotsCurrent
   # base path: https://onchain.coinapi.io
-  # GetPositionsSnapshots (current)
+  # PositionsSnapshots (current)
   # Gets positions snapshots.
   # @param filter_pool_id character  (optional)
   # @return [array[UniswapV3PositionSnapshotV3DTO]]
@@ -282,7 +282,7 @@ test_that("UniswapV3GetPositionsSnapshotsCurrent", {
 test_that("UniswapV3GetSwapsCurrent", {
   # tests for UniswapV3GetSwapsCurrent
   # base path: https://onchain.coinapi.io
-  # GetSwaps (current) 🔥
+  # Swaps (current) 🔥
   # Gets swaps.
   # @param filter_pool_id character  (optional)
   # @return [array[UniswapV3SwapV3DTO]]
@@ -294,7 +294,7 @@ test_that("UniswapV3GetSwapsCurrent", {
 test_that("UniswapV3GetSwapsHistorical", {
   # tests for UniswapV3GetSwapsHistorical
   # base path: https://onchain.coinapi.io
-  # GetSwaps (historical) 🔥
+  # Swaps (historical) 🔥
   # Gets swaps.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -310,7 +310,7 @@ test_that("UniswapV3GetSwapsHistorical", {
 test_that("UniswapV3GetTicksCurrent", {
   # tests for UniswapV3GetTicksCurrent
   # base path: https://onchain.coinapi.io
-  # GetTicks (current)
+  # Ticks (current)
   # Gets ticks.
   # @param filter_pool_id character  (optional)
   # @return [array[UniswapV3TickV3DTO]]
@@ -322,7 +322,7 @@ test_that("UniswapV3GetTicksCurrent", {
 test_that("UniswapV3GetTicksDayDataCurrent", {
   # tests for UniswapV3GetTicksDayDataCurrent
   # base path: https://onchain.coinapi.io
-  # GetTicksDayData (current)
+  # TicksDayData (current)
   # Gets ticks day data.
   # @param filter_pool_id character  (optional)
   # @return [array[UniswapV3TickDayDataV3DTO]]
@@ -334,7 +334,7 @@ test_that("UniswapV3GetTicksDayDataCurrent", {
 test_that("UniswapV3GetTicksDayDataHistorical", {
   # tests for UniswapV3GetTicksDayDataHistorical
   # base path: https://onchain.coinapi.io
-  # GetTicksDayData (historical)
+  # TicksDayData (historical)
   # Gets ticks day data.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -350,7 +350,7 @@ test_that("UniswapV3GetTicksDayDataHistorical", {
 test_that("UniswapV3GetTicksHistorical", {
   # tests for UniswapV3GetTicksHistorical
   # base path: https://onchain.coinapi.io
-  # GetTicks (historical)
+  # Ticks (historical)
   # Gets ticks.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -366,7 +366,7 @@ test_that("UniswapV3GetTicksHistorical", {
 test_that("UniswapV3GetTokensCurrent", {
   # tests for UniswapV3GetTokensCurrent
   # base path: https://onchain.coinapi.io
-  # GetTokens (current) 🔥
+  # Tokens (current) 🔥
   # Gets tokens.
   # @param filter_token_id character  (optional)
   # @return [array[UniswapV3TokenV3DTO]]
@@ -378,7 +378,7 @@ test_that("UniswapV3GetTokensCurrent", {
 test_that("UniswapV3GetTokensDayDataCurrent", {
   # tests for UniswapV3GetTokensDayDataCurrent
   # base path: https://onchain.coinapi.io
-  # GetTokensDayData (current)
+  # TokensDayData (current)
   # Gets tokens day data.
   # @param filter_token_id character  (optional)
   # @return [array[UniswapV3TokenV3DayDataDTO]]
@@ -390,7 +390,7 @@ test_that("UniswapV3GetTokensDayDataCurrent", {
 test_that("UniswapV3GetTokensDayDataHistorical", {
   # tests for UniswapV3GetTokensDayDataHistorical
   # base path: https://onchain.coinapi.io
-  # GetTokensDayData (historical)
+  # TokensDayData (historical)
   # Gets tokens day data.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -406,7 +406,7 @@ test_that("UniswapV3GetTokensDayDataHistorical", {
 test_that("UniswapV3GetTokensHistorical", {
   # tests for UniswapV3GetTokensHistorical
   # base path: https://onchain.coinapi.io
-  # GetTokens (historical) 🔥
+  # Tokens (historical) 🔥
   # Gets tokens.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -422,7 +422,7 @@ test_that("UniswapV3GetTokensHistorical", {
 test_that("UniswapV3GetTokensHourDataCurrent", {
   # tests for UniswapV3GetTokensHourDataCurrent
   # base path: https://onchain.coinapi.io
-  # GetTokensHourData (current)
+  # TokensHourData (current)
   # Gets tokens hour data.
   # @param filter_token_id character  (optional)
   # @return [array[UniswapV3TokenHourDataV3DTO]]
@@ -434,7 +434,7 @@ test_that("UniswapV3GetTokensHourDataCurrent", {
 test_that("UniswapV3GetTokensHourDataHistorical", {
   # tests for UniswapV3GetTokensHourDataHistorical
   # base path: https://onchain.coinapi.io
-  # GetTokensHourData (historical)
+  # TokensHourData (historical)
   # Gets tokens hour data.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -450,7 +450,7 @@ test_that("UniswapV3GetTokensHourDataHistorical", {
 test_that("UniswapV3GetTransactionsHistorical", {
   # tests for UniswapV3GetTransactionsHistorical
   # base path: https://onchain.coinapi.io
-  # GetTransactions (historical)
+  # Transactions (historical)
   # Gets transactions.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)

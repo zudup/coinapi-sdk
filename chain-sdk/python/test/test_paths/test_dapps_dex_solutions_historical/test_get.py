@@ -21,7 +21,7 @@ from .. import ApiTestMixin
 class TestDappsDexSolutionsHistorical(ApiTestMixin, unittest.TestCase):
     """
     DappsDexSolutionsHistorical unit test stubs
-        GetSolutions (historical)  # noqa: E501
+        Solutions (historical)  # noqa: E501
     """
     _configuration = configuration.Configuration()
 

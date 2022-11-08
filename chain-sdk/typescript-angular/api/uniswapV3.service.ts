@@ -124,7 +124,7 @@ export class UniswapV3Service {
     }
 
     /**
-     * GetBundles (current)
+     * Bundles (current)
      * Gets bundles.
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
@@ -181,7 +181,7 @@ export class UniswapV3Service {
     }
 
     /**
-     * GetBundles (historical)
+     * Bundles (historical)
      * Gets bundles.
      * @param startBlock 
      * @param endBlock 
@@ -261,7 +261,7 @@ export class UniswapV3Service {
     }
 
     /**
-     * GetBurns (current)
+     * Burns (current)
      * Gets burns.
      * @param filterPoolId 
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
@@ -326,7 +326,7 @@ export class UniswapV3Service {
     }
 
     /**
-     * GetBurns (historical)
+     * Burns (historical)
      * Gets burns.
      * @param startBlock 
      * @param endBlock 
@@ -411,7 +411,7 @@ export class UniswapV3Service {
     }
 
     /**
-     * GetDayData (current)
+     * DayData (current)
      * Gets uniswapv3 day data.
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
@@ -468,7 +468,7 @@ export class UniswapV3Service {
     }
 
     /**
-     * GetDayData (historical)
+     * DayData (historical)
      * Gets uniswapv3 day data.
      * @param startBlock 
      * @param endBlock 
@@ -548,7 +548,7 @@ export class UniswapV3Service {
     }
 
     /**
-     * GetFactory (current)
+     * Factory (current)
      * Gets factory.
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
@@ -605,7 +605,7 @@ export class UniswapV3Service {
     }
 
     /**
-     * GetFactory (historical)
+     * Factory (historical)
      * Gets factory.
      * @param startBlock 
      * @param endBlock 
@@ -685,7 +685,7 @@ export class UniswapV3Service {
     }
 
     /**
-     * GetMints (current)
+     * Mints (current)
      * Gets mints.
      * @param filterPoolId 
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
@@ -750,7 +750,7 @@ export class UniswapV3Service {
     }
 
     /**
-     * GetMints (historical)
+     * Mints (historical)
      * Gets mints.
      * @param startBlock 
      * @param endBlock 
@@ -835,7 +835,7 @@ export class UniswapV3Service {
     }
 
     /**
-     * GetPools (current) 🔥
+     * Pools (current) 🔥
      * Gets pools.
      * @param filterPoolId 
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
@@ -900,7 +900,7 @@ export class UniswapV3Service {
     }
 
     /**
-     * GetPoolsDayData (current)
+     * PoolsDayData (current)
      * Gets pools day data.
      * @param filterPoolId 
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
@@ -965,7 +965,7 @@ export class UniswapV3Service {
     }
 
     /**
-     * GetPoolsDayData (historical)
+     * PoolsDayData (historical)
      * Gets pools day data.
      * @param startBlock 
      * @param endBlock 
@@ -1050,7 +1050,7 @@ export class UniswapV3Service {
     }
 
     /**
-     * GetPools (historical) 🔥
+     * Pools (historical) 🔥
      * Gets pools.
      * @param startBlock 
      * @param endBlock 
@@ -1135,7 +1135,7 @@ export class UniswapV3Service {
     }
 
     /**
-     * GetPoolsHourData (current)
+     * PoolsHourData (current)
      * Gets pools hour data.
      * @param filterPoolId 
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
@@ -1200,7 +1200,7 @@ export class UniswapV3Service {
     }
 
     /**
-     * GetPoolsHourData (historical)
+     * PoolsHourData (historical)
      * Gets pools hour data.
      * @param startBlock 
      * @param endBlock 
@@ -1285,7 +1285,7 @@ export class UniswapV3Service {
     }
 
     /**
-     * GetPositions (current)
+     * Positions (current)
      * Gets positions.
      * @param filterPoolId 
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
@@ -1350,7 +1350,7 @@ export class UniswapV3Service {
     }
 
     /**
-     * GetPositions (historical)
+     * Positions (historical)
      * Gets positions.
      * @param startBlock 
      * @param endBlock 
@@ -1435,7 +1435,7 @@ export class UniswapV3Service {
     }
 
     /**
-     * GetPositionsSnaphots (historical)
+     * PositionsSnaphots (historical)
      * Gets positions snapshots.
      * @param startBlock 
      * @param endBlock 
@@ -1520,7 +1520,7 @@ export class UniswapV3Service {
     }
 
     /**
-     * GetPositionsSnapshots (current)
+     * PositionsSnapshots (current)
      * Gets positions snapshots.
      * @param filterPoolId 
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
@@ -1585,7 +1585,7 @@ export class UniswapV3Service {
     }
 
     /**
-     * GetSwaps (current) 🔥
+     * Swaps (current) 🔥
      * Gets swaps.
      * @param filterPoolId 
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
@@ -1650,7 +1650,7 @@ export class UniswapV3Service {
     }
 
     /**
-     * GetSwaps (historical) 🔥
+     * Swaps (historical) 🔥
      * Gets swaps.
      * @param startBlock 
      * @param endBlock 
@@ -1735,7 +1735,7 @@ export class UniswapV3Service {
     }
 
     /**
-     * GetTicks (current)
+     * Ticks (current)
      * Gets ticks.
      * @param filterPoolId 
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
@@ -1800,7 +1800,7 @@ export class UniswapV3Service {
     }
 
     /**
-     * GetTicksDayData (current)
+     * TicksDayData (current)
      * Gets ticks day data.
      * @param filterPoolId 
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
@@ -1865,7 +1865,7 @@ export class UniswapV3Service {
     }
 
     /**
-     * GetTicksDayData (historical)
+     * TicksDayData (historical)
      * Gets ticks day data.
      * @param startBlock 
      * @param endBlock 
@@ -1950,7 +1950,7 @@ export class UniswapV3Service {
     }
 
     /**
-     * GetTicks (historical)
+     * Ticks (historical)
      * Gets ticks.
      * @param startBlock 
      * @param endBlock 
@@ -2035,7 +2035,7 @@ export class UniswapV3Service {
     }
 
     /**
-     * GetTokens (current) 🔥
+     * Tokens (current) 🔥
      * Gets tokens.
      * @param filterTokenId 
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
@@ -2100,7 +2100,7 @@ export class UniswapV3Service {
     }
 
     /**
-     * GetTokensDayData (current)
+     * TokensDayData (current)
      * Gets tokens day data.
      * @param filterTokenId 
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
@@ -2165,7 +2165,7 @@ export class UniswapV3Service {
     }
 
     /**
-     * GetTokensDayData (historical)
+     * TokensDayData (historical)
      * Gets tokens day data.
      * @param startBlock 
      * @param endBlock 
@@ -2250,7 +2250,7 @@ export class UniswapV3Service {
     }
 
     /**
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      * Gets tokens.
      * @param startBlock 
      * @param endBlock 
@@ -2335,7 +2335,7 @@ export class UniswapV3Service {
     }
 
     /**
-     * GetTokensHourData (current)
+     * TokensHourData (current)
      * Gets tokens hour data.
      * @param filterTokenId 
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
@@ -2400,7 +2400,7 @@ export class UniswapV3Service {
     }
 
     /**
-     * GetTokensHourData (historical)
+     * TokensHourData (historical)
      * Gets tokens hour data.
      * @param startBlock 
      * @param endBlock 
@@ -2485,7 +2485,7 @@ export class UniswapV3Service {
     }
 
     /**
-     * GetTransactions (historical)
+     * Transactions (historical)
      * Gets transactions.
      * @param startBlock 
      * @param endBlock 

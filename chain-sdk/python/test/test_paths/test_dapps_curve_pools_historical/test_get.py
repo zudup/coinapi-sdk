@@ -21,7 +21,7 @@ from .. import ApiTestMixin
 class TestDappsCurvePoolsHistorical(ApiTestMixin, unittest.TestCase):
     """
     DappsCurvePoolsHistorical unit test stubs
-        GetPools (historical) 🔥  # noqa: E501
+        Pools (historical) 🔥  # noqa: E501
     """
     _configuration = configuration.Configuration()
 

@@ -9,23 +9,23 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**dex_get_batches__historical**](DexApi.md#dex_get_batches__historical) | **GET** /dapps/dex/batches/historical | GetBatches (historical)
-[**dex_get_deposits__historical**](DexApi.md#dex_get_deposits__historical) | **GET** /dapps/dex/deposits/historical | GetDeposits (historical)
-[**dex_get_orders__historical**](DexApi.md#dex_get_orders__historical) | **GET** /dapps/dex/orders/historical | GetOrders (historical)
-[**dex_get_prices__historical**](DexApi.md#dex_get_prices__historical) | **GET** /dapps/dex/prices/historical | GetPrices (historical)
-[**dex_get_solutions__historical**](DexApi.md#dex_get_solutions__historical) | **GET** /dapps/dex/solutions/historical | GetSolutions (historical)
-[**dex_get_stats__historical**](DexApi.md#dex_get_stats__historical) | **GET** /dapps/dex/stats/historical | GetStats (historical)
-[**dex_get_tokens__historical**](DexApi.md#dex_get_tokens__historical) | **GET** /dapps/dex/tokens/historical | GetTokens (historical) 🔥
-[**dex_get_trades__historical**](DexApi.md#dex_get_trades__historical) | **GET** /dapps/dex/trades/historical | GetTrades (historical) 🔥
-[**dex_get_users__historical**](DexApi.md#dex_get_users__historical) | **GET** /dapps/dex/users/historical | GetUsers (historical)
-[**dex_get_withdraws__historical**](DexApi.md#dex_get_withdraws__historical) | **GET** /dapps/dex/withdraws/historical | GetWithdraws (historical)
-[**dex_get_withdraws_requests__historical**](DexApi.md#dex_get_withdraws_requests__historical) | **GET** /dapps/dex/withdrawsRequests/historical | GetWithdrawsRequests (historical)
+[**dex_get_batches__historical**](DexApi.md#dex_get_batches__historical) | **GET** /dapps/dex/batches/historical | Batches (historical)
+[**dex_get_deposits__historical**](DexApi.md#dex_get_deposits__historical) | **GET** /dapps/dex/deposits/historical | Deposits (historical)
+[**dex_get_orders__historical**](DexApi.md#dex_get_orders__historical) | **GET** /dapps/dex/orders/historical | Orders (historical)
+[**dex_get_prices__historical**](DexApi.md#dex_get_prices__historical) | **GET** /dapps/dex/prices/historical | Prices (historical)
+[**dex_get_solutions__historical**](DexApi.md#dex_get_solutions__historical) | **GET** /dapps/dex/solutions/historical | Solutions (historical)
+[**dex_get_stats__historical**](DexApi.md#dex_get_stats__historical) | **GET** /dapps/dex/stats/historical | Stats (historical)
+[**dex_get_tokens__historical**](DexApi.md#dex_get_tokens__historical) | **GET** /dapps/dex/tokens/historical | Tokens (historical) 🔥
+[**dex_get_trades__historical**](DexApi.md#dex_get_trades__historical) | **GET** /dapps/dex/trades/historical | Trades (historical) 🔥
+[**dex_get_users__historical**](DexApi.md#dex_get_users__historical) | **GET** /dapps/dex/users/historical | Users (historical)
+[**dex_get_withdraws__historical**](DexApi.md#dex_get_withdraws__historical) | **GET** /dapps/dex/withdraws/historical | Withdraws (historical)
+[**dex_get_withdraws_requests__historical**](DexApi.md#dex_get_withdraws_requests__historical) | **GET** /dapps/dex/withdrawsRequests/historical | WithdrawsRequests (historical)
 
 
 # **dex_get_batches__historical**
 > ARRAY[DexBatchDTO] dex_get_batches__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date)
 
-GetBatches (historical)
+Batches (historical)
 
 Gets batches.
 
@@ -77,7 +77,7 @@ No authorization required
 # **dex_get_deposits__historical**
 > ARRAY[DexDepositDTO] dex_get_deposits__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, token_id => $token_id)
 
-GetDeposits (historical)
+Deposits (historical)
 
 Gets deposits.
 
@@ -131,7 +131,7 @@ No authorization required
 # **dex_get_orders__historical**
 > ARRAY[DexOrderDTO] dex_get_orders__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, token_id => $token_id)
 
-GetOrders (historical)
+Orders (historical)
 
 Gets orders.
 
@@ -185,7 +185,7 @@ No authorization required
 # **dex_get_prices__historical**
 > ARRAY[DexPriceDTO] dex_get_prices__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, token_id => $token_id)
 
-GetPrices (historical)
+Prices (historical)
 
 Gets prices.
 
@@ -239,7 +239,7 @@ No authorization required
 # **dex_get_solutions__historical**
 > ARRAY[DexSolutionDTO] dex_get_solutions__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, token_id => $token_id)
 
-GetSolutions (historical)
+Solutions (historical)
 
 Gets solutions.
 
@@ -293,7 +293,7 @@ No authorization required
 # **dex_get_stats__historical**
 > ARRAY[DexStatsDTO] dex_get_stats__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date)
 
-GetStats (historical)
+Stats (historical)
 
 Gets stats.
 
@@ -345,7 +345,7 @@ No authorization required
 # **dex_get_tokens__historical**
 > ARRAY[DexTokenDTO] dex_get_tokens__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, token_id => $token_id)
 
-GetTokens (historical) 🔥
+Tokens (historical) 🔥
 
 Gets tokens.
 
@@ -399,7 +399,7 @@ No authorization required
 # **dex_get_trades__historical**
 > ARRAY[DexTradeDTO] dex_get_trades__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date)
 
-GetTrades (historical) 🔥
+Trades (historical) 🔥
 
 Gets trades.
 
@@ -451,7 +451,7 @@ No authorization required
 # **dex_get_users__historical**
 > ARRAY[DexUserDTO] dex_get_users__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date)
 
-GetUsers (historical)
+Users (historical)
 
 Gets users.
 
@@ -503,7 +503,7 @@ No authorization required
 # **dex_get_withdraws__historical**
 > ARRAY[DexWithdrawDTO] dex_get_withdraws__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, token_id => $token_id)
 
-GetWithdraws (historical)
+Withdraws (historical)
 
 Gets withdraws.
 
@@ -557,7 +557,7 @@ No authorization required
 # **dex_get_withdraws_requests__historical**
 > ARRAY[DexWithdrawRequestDTO] dex_get_withdraws_requests__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, token_id => $token_id)
 
-GetWithdrawsRequests (historical)
+WithdrawsRequests (historical)
 
 Gets withdraws requests.
 

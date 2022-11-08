@@ -25,7 +25,7 @@ feature -- API Access
 
 
 	cow_get_orders_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME): detachable LIST [COW_ORDER_DTO]
-			-- GetOrders (historical)
+			-- Orders (historical)
 			-- Gets orders.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -70,7 +70,7 @@ feature -- API Access
 		end
 
 	cow_get_settlements_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME): detachable LIST [COW_SETTLEMENT_DTO]
-			-- GetSettlements (historical)
+			-- Settlements (historical)
 			-- Gets settlements.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -115,7 +115,7 @@ feature -- API Access
 		end
 
 	cow_get_tokens_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; token_id: STRING_32): detachable LIST [COW_TOKEN_DTO]
-			-- GetTokens (historical) 🔥
+			-- Tokens (historical) 🔥
 			-- Gets tokens.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -163,7 +163,7 @@ feature -- API Access
 		end
 
 	cow_get_trades_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME): detachable LIST [COW_TRADE_DTO]
-			-- GetTrades (historical) 🔥
+			-- Trades (historical) 🔥
 			-- Gets trades.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -208,7 +208,7 @@ feature -- API Access
 		end
 
 	cow_get_users_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME): detachable LIST [COW_USER_DTO]
-			-- GetUsers (historical)
+			-- Users (historical)
 			-- Gets users.
 			-- 
 			-- argument: start_block  (optional, default to null)

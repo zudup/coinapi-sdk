@@ -33,7 +33,7 @@ describe 'UniswapV3Api' do
   end
 
   # unit tests for uniswap_v3_get_bundles__current
-  # GetBundles (current)
+  # Bundles (current)
   # Gets bundles.
   # @param [Hash] opts the optional parameters
   # @return [Array<UniswapV3BundleV3DTO>]
@@ -44,7 +44,7 @@ describe 'UniswapV3Api' do
   end
 
   # unit tests for uniswap_v3_get_bundles__historical
-  # GetBundles (historical)
+  # Bundles (historical)
   # Gets bundles.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -59,7 +59,7 @@ describe 'UniswapV3Api' do
   end
 
   # unit tests for uniswap_v3_get_burns__current
-  # GetBurns (current)
+  # Burns (current)
   # Gets burns.
   # @param [Hash] opts the optional parameters
   # @option opts [String] :filter_pool_id 
@@ -71,7 +71,7 @@ describe 'UniswapV3Api' do
   end
 
   # unit tests for uniswap_v3_get_burns__historical
-  # GetBurns (historical)
+  # Burns (historical)
   # Gets burns.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -87,7 +87,7 @@ describe 'UniswapV3Api' do
   end
 
   # unit tests for uniswap_v3_get_day_data__current
-  # GetDayData (current)
+  # DayData (current)
   # Gets uniswapv3 day data.
   # @param [Hash] opts the optional parameters
   # @return [Array<UniswapV3UniswapDayDataV3DTO>]
@@ -98,7 +98,7 @@ describe 'UniswapV3Api' do
   end
 
   # unit tests for uniswap_v3_get_day_data__historical
-  # GetDayData (historical)
+  # DayData (historical)
   # Gets uniswapv3 day data.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -113,7 +113,7 @@ describe 'UniswapV3Api' do
   end
 
   # unit tests for uniswap_v3_get_factory__current
-  # GetFactory (current)
+  # Factory (current)
   # Gets factory.
   # @param [Hash] opts the optional parameters
   # @return [Array<UniswapV3FactoryV3DTO>]
@@ -124,7 +124,7 @@ describe 'UniswapV3Api' do
   end
 
   # unit tests for uniswap_v3_get_factory__historical
-  # GetFactory (historical)
+  # Factory (historical)
   # Gets factory.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -139,7 +139,7 @@ describe 'UniswapV3Api' do
   end
 
   # unit tests for uniswap_v3_get_mints__current
-  # GetMints (current)
+  # Mints (current)
   # Gets mints.
   # @param [Hash] opts the optional parameters
   # @option opts [String] :filter_pool_id 
@@ -151,7 +151,7 @@ describe 'UniswapV3Api' do
   end
 
   # unit tests for uniswap_v3_get_mints__historical
-  # GetMints (historical)
+  # Mints (historical)
   # Gets mints.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -167,7 +167,7 @@ describe 'UniswapV3Api' do
   end
 
   # unit tests for uniswap_v3_get_pools__current
-  # GetPools (current) 🔥
+  # Pools (current) 🔥
   # Gets pools.
   # @param [Hash] opts the optional parameters
   # @option opts [String] :filter_pool_id 
@@ -179,7 +179,7 @@ describe 'UniswapV3Api' do
   end
 
   # unit tests for uniswap_v3_get_pools__historical
-  # GetPools (historical) 🔥
+  # Pools (historical) 🔥
   # Gets pools.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -195,7 +195,7 @@ describe 'UniswapV3Api' do
   end
 
   # unit tests for uniswap_v3_get_pools_day_data__current
-  # GetPoolsDayData (current)
+  # PoolsDayData (current)
   # Gets pools day data.
   # @param [Hash] opts the optional parameters
   # @option opts [String] :filter_pool_id 
@@ -207,7 +207,7 @@ describe 'UniswapV3Api' do
   end
 
   # unit tests for uniswap_v3_get_pools_day_data__historical
-  # GetPoolsDayData (historical)
+  # PoolsDayData (historical)
   # Gets pools day data.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -223,7 +223,7 @@ describe 'UniswapV3Api' do
   end
 
   # unit tests for uniswap_v3_get_pools_hour_data__current
-  # GetPoolsHourData (current)
+  # PoolsHourData (current)
   # Gets pools hour data.
   # @param [Hash] opts the optional parameters
   # @option opts [String] :filter_pool_id 
@@ -235,7 +235,7 @@ describe 'UniswapV3Api' do
   end
 
   # unit tests for uniswap_v3_get_pools_hour_data__historical
-  # GetPoolsHourData (historical)
+  # PoolsHourData (historical)
   # Gets pools hour data.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -251,7 +251,7 @@ describe 'UniswapV3Api' do
   end
 
   # unit tests for uniswap_v3_get_positions__current
-  # GetPositions (current)
+  # Positions (current)
   # Gets positions.
   # @param [Hash] opts the optional parameters
   # @option opts [String] :filter_pool_id 
@@ -263,7 +263,7 @@ describe 'UniswapV3Api' do
   end
 
   # unit tests for uniswap_v3_get_positions__historical
-  # GetPositions (historical)
+  # Positions (historical)
   # Gets positions.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -279,7 +279,7 @@ describe 'UniswapV3Api' do
   end
 
   # unit tests for uniswap_v3_get_positions_snaphots__historical
-  # GetPositionsSnaphots (historical)
+  # PositionsSnaphots (historical)
   # Gets positions snapshots.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -295,7 +295,7 @@ describe 'UniswapV3Api' do
   end
 
   # unit tests for uniswap_v3_get_positions_snapshots__current
-  # GetPositionsSnapshots (current)
+  # PositionsSnapshots (current)
   # Gets positions snapshots.
   # @param [Hash] opts the optional parameters
   # @option opts [String] :filter_pool_id 
@@ -307,7 +307,7 @@ describe 'UniswapV3Api' do
   end
 
   # unit tests for uniswap_v3_get_swaps__current
-  # GetSwaps (current) 🔥
+  # Swaps (current) 🔥
   # Gets swaps.
   # @param [Hash] opts the optional parameters
   # @option opts [String] :filter_pool_id 
@@ -319,7 +319,7 @@ describe 'UniswapV3Api' do
   end
 
   # unit tests for uniswap_v3_get_swaps__historical
-  # GetSwaps (historical) 🔥
+  # Swaps (historical) 🔥
   # Gets swaps.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -335,7 +335,7 @@ describe 'UniswapV3Api' do
   end
 
   # unit tests for uniswap_v3_get_ticks__current
-  # GetTicks (current)
+  # Ticks (current)
   # Gets ticks.
   # @param [Hash] opts the optional parameters
   # @option opts [String] :filter_pool_id 
@@ -347,7 +347,7 @@ describe 'UniswapV3Api' do
   end
 
   # unit tests for uniswap_v3_get_ticks__historical
-  # GetTicks (historical)
+  # Ticks (historical)
   # Gets ticks.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -363,7 +363,7 @@ describe 'UniswapV3Api' do
   end
 
   # unit tests for uniswap_v3_get_ticks_day_data__current
-  # GetTicksDayData (current)
+  # TicksDayData (current)
   # Gets ticks day data.
   # @param [Hash] opts the optional parameters
   # @option opts [String] :filter_pool_id 
@@ -375,7 +375,7 @@ describe 'UniswapV3Api' do
   end
 
   # unit tests for uniswap_v3_get_ticks_day_data__historical
-  # GetTicksDayData (historical)
+  # TicksDayData (historical)
   # Gets ticks day data.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -391,7 +391,7 @@ describe 'UniswapV3Api' do
   end
 
   # unit tests for uniswap_v3_get_tokens__current
-  # GetTokens (current) 🔥
+  # Tokens (current) 🔥
   # Gets tokens.
   # @param [Hash] opts the optional parameters
   # @option opts [String] :filter_token_id 
@@ -403,7 +403,7 @@ describe 'UniswapV3Api' do
   end
 
   # unit tests for uniswap_v3_get_tokens__historical
-  # GetTokens (historical) 🔥
+  # Tokens (historical) 🔥
   # Gets tokens.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -419,7 +419,7 @@ describe 'UniswapV3Api' do
   end
 
   # unit tests for uniswap_v3_get_tokens_day_data__current
-  # GetTokensDayData (current)
+  # TokensDayData (current)
   # Gets tokens day data.
   # @param [Hash] opts the optional parameters
   # @option opts [String] :filter_token_id 
@@ -431,7 +431,7 @@ describe 'UniswapV3Api' do
   end
 
   # unit tests for uniswap_v3_get_tokens_day_data__historical
-  # GetTokensDayData (historical)
+  # TokensDayData (historical)
   # Gets tokens day data.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -447,7 +447,7 @@ describe 'UniswapV3Api' do
   end
 
   # unit tests for uniswap_v3_get_tokens_hour_data__current
-  # GetTokensHourData (current)
+  # TokensHourData (current)
   # Gets tokens hour data.
   # @param [Hash] opts the optional parameters
   # @option opts [String] :filter_token_id 
@@ -459,7 +459,7 @@ describe 'UniswapV3Api' do
   end
 
   # unit tests for uniswap_v3_get_tokens_hour_data__historical
-  # GetTokensHourData (historical)
+  # TokensHourData (historical)
   # Gets tokens hour data.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -475,7 +475,7 @@ describe 'UniswapV3Api' do
   end
 
   # unit tests for uniswap_v3_get_transactions__historical
-  # GetTransactions (historical)
+  # Transactions (historical)
   # Gets transactions.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 

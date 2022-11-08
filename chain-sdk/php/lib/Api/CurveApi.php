@@ -219,7 +219,7 @@ class CurveApi
     /**
      * Operation curveGetAccountsHistorical
      *
-     * GetAccounts (historical)
+     * Accounts (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -240,7 +240,7 @@ class CurveApi
     /**
      * Operation curveGetAccountsHistoricalWithHttpInfo
      *
-     * GetAccounts (historical)
+     * Accounts (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -343,7 +343,7 @@ class CurveApi
     /**
      * Operation curveGetAccountsHistoricalAsync
      *
-     * GetAccounts (historical)
+     * Accounts (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -367,7 +367,7 @@ class CurveApi
     /**
      * Operation curveGetAccountsHistoricalAsyncWithHttpInfo
      *
-     * GetAccounts (historical)
+     * Accounts (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -542,7 +542,7 @@ class CurveApi
     /**
      * Operation curveGetAddLiquidityEventsHistorical
      *
-     * GetAddLiquidityEvents (historical)
+     * AddLiquidityEvents (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -564,7 +564,7 @@ class CurveApi
     /**
      * Operation curveGetAddLiquidityEventsHistoricalWithHttpInfo
      *
-     * GetAddLiquidityEvents (historical)
+     * AddLiquidityEvents (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -668,7 +668,7 @@ class CurveApi
     /**
      * Operation curveGetAddLiquidityEventsHistoricalAsync
      *
-     * GetAddLiquidityEvents (historical)
+     * AddLiquidityEvents (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -693,7 +693,7 @@ class CurveApi
     /**
      * Operation curveGetAddLiquidityEventsHistoricalAsyncWithHttpInfo
      *
-     * GetAddLiquidityEvents (historical)
+     * AddLiquidityEvents (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -880,7 +880,7 @@ class CurveApi
     /**
      * Operation curveGetAdminFeeChangeLogsHistorical
      *
-     * GetAdminFeeChangeLogs (historical)
+     * AdminFeeChangeLogs (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -902,7 +902,7 @@ class CurveApi
     /**
      * Operation curveGetAdminFeeChangeLogsHistoricalWithHttpInfo
      *
-     * GetAdminFeeChangeLogs (historical)
+     * AdminFeeChangeLogs (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -1006,7 +1006,7 @@ class CurveApi
     /**
      * Operation curveGetAdminFeeChangeLogsHistoricalAsync
      *
-     * GetAdminFeeChangeLogs (historical)
+     * AdminFeeChangeLogs (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -1031,7 +1031,7 @@ class CurveApi
     /**
      * Operation curveGetAdminFeeChangeLogsHistoricalAsyncWithHttpInfo
      *
-     * GetAdminFeeChangeLogs (historical)
+     * AdminFeeChangeLogs (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -1218,7 +1218,7 @@ class CurveApi
     /**
      * Operation curveGetAmplificationCoeffChangeLogsHistorical
      *
-     * GetAmplificationCoeffChangeLogs (historical)
+     * AmplificationCoeffChangeLogs (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -1240,7 +1240,7 @@ class CurveApi
     /**
      * Operation curveGetAmplificationCoeffChangeLogsHistoricalWithHttpInfo
      *
-     * GetAmplificationCoeffChangeLogs (historical)
+     * AmplificationCoeffChangeLogs (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -1344,7 +1344,7 @@ class CurveApi
     /**
      * Operation curveGetAmplificationCoeffChangeLogsHistoricalAsync
      *
-     * GetAmplificationCoeffChangeLogs (historical)
+     * AmplificationCoeffChangeLogs (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -1369,7 +1369,7 @@ class CurveApi
     /**
      * Operation curveGetAmplificationCoeffChangeLogsHistoricalAsyncWithHttpInfo
      *
-     * GetAmplificationCoeffChangeLogs (historical)
+     * AmplificationCoeffChangeLogs (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -1556,7 +1556,7 @@ class CurveApi
     /**
      * Operation curveGetCoinsHistorical
      *
-     * GetCoins (historical)
+     * Coins (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -1578,7 +1578,7 @@ class CurveApi
     /**
      * Operation curveGetCoinsHistoricalWithHttpInfo
      *
-     * GetCoins (historical)
+     * Coins (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -1682,7 +1682,7 @@ class CurveApi
     /**
      * Operation curveGetCoinsHistoricalAsync
      *
-     * GetCoins (historical)
+     * Coins (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -1707,7 +1707,7 @@ class CurveApi
     /**
      * Operation curveGetCoinsHistoricalAsyncWithHttpInfo
      *
-     * GetCoins (historical)
+     * Coins (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -1894,7 +1894,7 @@ class CurveApi
     /**
      * Operation curveGetContractsHistorical
      *
-     * GetContracts (historical)
+     * Contracts (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -1916,7 +1916,7 @@ class CurveApi
     /**
      * Operation curveGetContractsHistoricalWithHttpInfo
      *
-     * GetContracts (historical)
+     * Contracts (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -2020,7 +2020,7 @@ class CurveApi
     /**
      * Operation curveGetContractsHistoricalAsync
      *
-     * GetContracts (historical)
+     * Contracts (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -2045,7 +2045,7 @@ class CurveApi
     /**
      * Operation curveGetContractsHistoricalAsyncWithHttpInfo
      *
-     * GetContracts (historical)
+     * Contracts (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -2232,7 +2232,7 @@ class CurveApi
     /**
      * Operation curveGetContractsVersionsHistorical
      *
-     * GetContractsVersions (historical)
+     * ContractsVersions (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -2254,7 +2254,7 @@ class CurveApi
     /**
      * Operation curveGetContractsVersionsHistoricalWithHttpInfo
      *
-     * GetContractsVersions (historical)
+     * ContractsVersions (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -2358,7 +2358,7 @@ class CurveApi
     /**
      * Operation curveGetContractsVersionsHistoricalAsync
      *
-     * GetContractsVersions (historical)
+     * ContractsVersions (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -2383,7 +2383,7 @@ class CurveApi
     /**
      * Operation curveGetContractsVersionsHistoricalAsyncWithHttpInfo
      *
-     * GetContractsVersions (historical)
+     * ContractsVersions (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -2570,7 +2570,7 @@ class CurveApi
     /**
      * Operation curveGetDailyVolumesHistorical
      *
-     * GetDailyVolumes (historical)
+     * DailyVolumes (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -2592,7 +2592,7 @@ class CurveApi
     /**
      * Operation curveGetDailyVolumesHistoricalWithHttpInfo
      *
-     * GetDailyVolumes (historical)
+     * DailyVolumes (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -2696,7 +2696,7 @@ class CurveApi
     /**
      * Operation curveGetDailyVolumesHistoricalAsync
      *
-     * GetDailyVolumes (historical)
+     * DailyVolumes (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -2721,7 +2721,7 @@ class CurveApi
     /**
      * Operation curveGetDailyVolumesHistoricalAsyncWithHttpInfo
      *
-     * GetDailyVolumes (historical)
+     * DailyVolumes (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -2908,7 +2908,7 @@ class CurveApi
     /**
      * Operation curveGetExchangesHistorical
      *
-     * GetExchanges (historical) 🔥
+     * Exchanges (historical) 🔥
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -2930,7 +2930,7 @@ class CurveApi
     /**
      * Operation curveGetExchangesHistoricalWithHttpInfo
      *
-     * GetExchanges (historical) 🔥
+     * Exchanges (historical) 🔥
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -3034,7 +3034,7 @@ class CurveApi
     /**
      * Operation curveGetExchangesHistoricalAsync
      *
-     * GetExchanges (historical) 🔥
+     * Exchanges (historical) 🔥
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -3059,7 +3059,7 @@ class CurveApi
     /**
      * Operation curveGetExchangesHistoricalAsyncWithHttpInfo
      *
-     * GetExchanges (historical) 🔥
+     * Exchanges (historical) 🔥
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -3246,7 +3246,7 @@ class CurveApi
     /**
      * Operation curveGetFeeChangeLogsHistorical
      *
-     * GetFeeChangeLogs (historical)
+     * FeeChangeLogs (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -3268,7 +3268,7 @@ class CurveApi
     /**
      * Operation curveGetFeeChangeLogsHistoricalWithHttpInfo
      *
-     * GetFeeChangeLogs (historical)
+     * FeeChangeLogs (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -3372,7 +3372,7 @@ class CurveApi
     /**
      * Operation curveGetFeeChangeLogsHistoricalAsync
      *
-     * GetFeeChangeLogs (historical)
+     * FeeChangeLogs (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -3397,7 +3397,7 @@ class CurveApi
     /**
      * Operation curveGetFeeChangeLogsHistoricalAsyncWithHttpInfo
      *
-     * GetFeeChangeLogs (historical)
+     * FeeChangeLogs (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -3584,7 +3584,7 @@ class CurveApi
     /**
      * Operation curveGetGaugesDepositsHistorical
      *
-     * GetGaugesDeposits (historical)
+     * GaugesDeposits (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -3605,7 +3605,7 @@ class CurveApi
     /**
      * Operation curveGetGaugesDepositsHistoricalWithHttpInfo
      *
-     * GetGaugesDeposits (historical)
+     * GaugesDeposits (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -3708,7 +3708,7 @@ class CurveApi
     /**
      * Operation curveGetGaugesDepositsHistoricalAsync
      *
-     * GetGaugesDeposits (historical)
+     * GaugesDeposits (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -3732,7 +3732,7 @@ class CurveApi
     /**
      * Operation curveGetGaugesDepositsHistoricalAsyncWithHttpInfo
      *
-     * GetGaugesDeposits (historical)
+     * GaugesDeposits (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -3907,7 +3907,7 @@ class CurveApi
     /**
      * Operation curveGetGaugesHistorical
      *
-     * GetGauges (historical)
+     * Gauges (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -3929,7 +3929,7 @@ class CurveApi
     /**
      * Operation curveGetGaugesHistoricalWithHttpInfo
      *
-     * GetGauges (historical)
+     * Gauges (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -4033,7 +4033,7 @@ class CurveApi
     /**
      * Operation curveGetGaugesHistoricalAsync
      *
-     * GetGauges (historical)
+     * Gauges (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -4058,7 +4058,7 @@ class CurveApi
     /**
      * Operation curveGetGaugesHistoricalAsyncWithHttpInfo
      *
-     * GetGauges (historical)
+     * Gauges (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -4245,7 +4245,7 @@ class CurveApi
     /**
      * Operation curveGetGaugesLiquidityHistorical
      *
-     * GetGaugesLiquidity (historical)
+     * GaugesLiquidity (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -4266,7 +4266,7 @@ class CurveApi
     /**
      * Operation curveGetGaugesLiquidityHistoricalWithHttpInfo
      *
-     * GetGaugesLiquidity (historical)
+     * GaugesLiquidity (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -4369,7 +4369,7 @@ class CurveApi
     /**
      * Operation curveGetGaugesLiquidityHistoricalAsync
      *
-     * GetGaugesLiquidity (historical)
+     * GaugesLiquidity (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -4393,7 +4393,7 @@ class CurveApi
     /**
      * Operation curveGetGaugesLiquidityHistoricalAsyncWithHttpInfo
      *
-     * GetGaugesLiquidity (historical)
+     * GaugesLiquidity (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -4568,7 +4568,7 @@ class CurveApi
     /**
      * Operation curveGetGaugesTotalWeightsHistorical
      *
-     * GetGaugesTotalWeights (historical)
+     * GaugesTotalWeights (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -4589,7 +4589,7 @@ class CurveApi
     /**
      * Operation curveGetGaugesTotalWeightsHistoricalWithHttpInfo
      *
-     * GetGaugesTotalWeights (historical)
+     * GaugesTotalWeights (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -4692,7 +4692,7 @@ class CurveApi
     /**
      * Operation curveGetGaugesTotalWeightsHistoricalAsync
      *
-     * GetGaugesTotalWeights (historical)
+     * GaugesTotalWeights (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -4716,7 +4716,7 @@ class CurveApi
     /**
      * Operation curveGetGaugesTotalWeightsHistoricalAsyncWithHttpInfo
      *
-     * GetGaugesTotalWeights (historical)
+     * GaugesTotalWeights (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -4891,7 +4891,7 @@ class CurveApi
     /**
      * Operation curveGetGaugesTypesHistorical
      *
-     * GetGaugesTypes (historical)
+     * GaugesTypes (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -4912,7 +4912,7 @@ class CurveApi
     /**
      * Operation curveGetGaugesTypesHistoricalWithHttpInfo
      *
-     * GetGaugesTypes (historical)
+     * GaugesTypes (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -5015,7 +5015,7 @@ class CurveApi
     /**
      * Operation curveGetGaugesTypesHistoricalAsync
      *
-     * GetGaugesTypes (historical)
+     * GaugesTypes (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -5039,7 +5039,7 @@ class CurveApi
     /**
      * Operation curveGetGaugesTypesHistoricalAsyncWithHttpInfo
      *
-     * GetGaugesTypes (historical)
+     * GaugesTypes (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -5214,7 +5214,7 @@ class CurveApi
     /**
      * Operation curveGetGaugesTypesWeightsHistorical
      *
-     * GetGaugesTypesWeights (historical)
+     * GaugesTypesWeights (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -5235,7 +5235,7 @@ class CurveApi
     /**
      * Operation curveGetGaugesTypesWeightsHistoricalWithHttpInfo
      *
-     * GetGaugesTypesWeights (historical)
+     * GaugesTypesWeights (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -5338,7 +5338,7 @@ class CurveApi
     /**
      * Operation curveGetGaugesTypesWeightsHistoricalAsync
      *
-     * GetGaugesTypesWeights (historical)
+     * GaugesTypesWeights (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -5362,7 +5362,7 @@ class CurveApi
     /**
      * Operation curveGetGaugesTypesWeightsHistoricalAsyncWithHttpInfo
      *
-     * GetGaugesTypesWeights (historical)
+     * GaugesTypesWeights (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -5537,7 +5537,7 @@ class CurveApi
     /**
      * Operation curveGetGaugesWeightsHistorical
      *
-     * GetGaugesWeights (historical)
+     * GaugesWeights (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -5558,7 +5558,7 @@ class CurveApi
     /**
      * Operation curveGetGaugesWeightsHistoricalWithHttpInfo
      *
-     * GetGaugesWeights (historical)
+     * GaugesWeights (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -5661,7 +5661,7 @@ class CurveApi
     /**
      * Operation curveGetGaugesWeightsHistoricalAsync
      *
-     * GetGaugesWeights (historical)
+     * GaugesWeights (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -5685,7 +5685,7 @@ class CurveApi
     /**
      * Operation curveGetGaugesWeightsHistoricalAsyncWithHttpInfo
      *
-     * GetGaugesWeights (historical)
+     * GaugesWeights (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -5860,7 +5860,7 @@ class CurveApi
     /**
      * Operation curveGetGaugesWeightsVotesHistorical
      *
-     * GetGaugesWeightsVotes (historical)
+     * GaugesWeightsVotes (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -5881,7 +5881,7 @@ class CurveApi
     /**
      * Operation curveGetGaugesWeightsVotesHistoricalWithHttpInfo
      *
-     * GetGaugesWeightsVotes (historical)
+     * GaugesWeightsVotes (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -5984,7 +5984,7 @@ class CurveApi
     /**
      * Operation curveGetGaugesWeightsVotesHistoricalAsync
      *
-     * GetGaugesWeightsVotes (historical)
+     * GaugesWeightsVotes (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -6008,7 +6008,7 @@ class CurveApi
     /**
      * Operation curveGetGaugesWeightsVotesHistoricalAsyncWithHttpInfo
      *
-     * GetGaugesWeightsVotes (historical)
+     * GaugesWeightsVotes (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -6183,7 +6183,7 @@ class CurveApi
     /**
      * Operation curveGetGaugesWithdrawHistorical
      *
-     * GetGaugesWithdraw (historical)
+     * GaugesWithdraw (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -6204,7 +6204,7 @@ class CurveApi
     /**
      * Operation curveGetGaugesWithdrawHistoricalWithHttpInfo
      *
-     * GetGaugesWithdraw (historical)
+     * GaugesWithdraw (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -6307,7 +6307,7 @@ class CurveApi
     /**
      * Operation curveGetGaugesWithdrawHistoricalAsync
      *
-     * GetGaugesWithdraw (historical)
+     * GaugesWithdraw (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -6331,7 +6331,7 @@ class CurveApi
     /**
      * Operation curveGetGaugesWithdrawHistoricalAsyncWithHttpInfo
      *
-     * GetGaugesWithdraw (historical)
+     * GaugesWithdraw (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -6506,7 +6506,7 @@ class CurveApi
     /**
      * Operation curveGetHourlyVolumesHistorical
      *
-     * GetHourlyVolumes (historical)
+     * HourlyVolumes (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -6528,7 +6528,7 @@ class CurveApi
     /**
      * Operation curveGetHourlyVolumesHistoricalWithHttpInfo
      *
-     * GetHourlyVolumes (historical)
+     * HourlyVolumes (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -6632,7 +6632,7 @@ class CurveApi
     /**
      * Operation curveGetHourlyVolumesHistoricalAsync
      *
-     * GetHourlyVolumes (historical)
+     * HourlyVolumes (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -6657,7 +6657,7 @@ class CurveApi
     /**
      * Operation curveGetHourlyVolumesHistoricalAsyncWithHttpInfo
      *
-     * GetHourlyVolumes (historical)
+     * HourlyVolumes (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -6844,7 +6844,7 @@ class CurveApi
     /**
      * Operation curveGetLpTokensHistorical
      *
-     * GetLpTokens (historical)
+     * LpTokens (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -6866,7 +6866,7 @@ class CurveApi
     /**
      * Operation curveGetLpTokensHistoricalWithHttpInfo
      *
-     * GetLpTokens (historical)
+     * LpTokens (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -6970,7 +6970,7 @@ class CurveApi
     /**
      * Operation curveGetLpTokensHistoricalAsync
      *
-     * GetLpTokens (historical)
+     * LpTokens (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -6995,7 +6995,7 @@ class CurveApi
     /**
      * Operation curveGetLpTokensHistoricalAsyncWithHttpInfo
      *
-     * GetLpTokens (historical)
+     * LpTokens (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -7182,7 +7182,7 @@ class CurveApi
     /**
      * Operation curveGetPoolsHistorical
      *
-     * GetPools (historical) 🔥
+     * Pools (historical) 🔥
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -7204,7 +7204,7 @@ class CurveApi
     /**
      * Operation curveGetPoolsHistoricalWithHttpInfo
      *
-     * GetPools (historical) 🔥
+     * Pools (historical) 🔥
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -7308,7 +7308,7 @@ class CurveApi
     /**
      * Operation curveGetPoolsHistoricalAsync
      *
-     * GetPools (historical) 🔥
+     * Pools (historical) 🔥
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -7333,7 +7333,7 @@ class CurveApi
     /**
      * Operation curveGetPoolsHistoricalAsyncWithHttpInfo
      *
-     * GetPools (historical) 🔥
+     * Pools (historical) 🔥
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -7520,7 +7520,7 @@ class CurveApi
     /**
      * Operation curveGetProposalsHistorical
      *
-     * GetProposals (historical)
+     * Proposals (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -7541,7 +7541,7 @@ class CurveApi
     /**
      * Operation curveGetProposalsHistoricalWithHttpInfo
      *
-     * GetProposals (historical)
+     * Proposals (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -7644,7 +7644,7 @@ class CurveApi
     /**
      * Operation curveGetProposalsHistoricalAsync
      *
-     * GetProposals (historical)
+     * Proposals (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -7668,7 +7668,7 @@ class CurveApi
     /**
      * Operation curveGetProposalsHistoricalAsyncWithHttpInfo
      *
-     * GetProposals (historical)
+     * Proposals (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -7843,7 +7843,7 @@ class CurveApi
     /**
      * Operation curveGetProposalsVotesHistorical
      *
-     * GetProposalsVotes (historical)
+     * ProposalsVotes (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -7864,7 +7864,7 @@ class CurveApi
     /**
      * Operation curveGetProposalsVotesHistoricalWithHttpInfo
      *
-     * GetProposalsVotes (historical)
+     * ProposalsVotes (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -7967,7 +7967,7 @@ class CurveApi
     /**
      * Operation curveGetProposalsVotesHistoricalAsync
      *
-     * GetProposalsVotes (historical)
+     * ProposalsVotes (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -7991,7 +7991,7 @@ class CurveApi
     /**
      * Operation curveGetProposalsVotesHistoricalAsyncWithHttpInfo
      *
-     * GetProposalsVotes (historical)
+     * ProposalsVotes (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -8166,7 +8166,7 @@ class CurveApi
     /**
      * Operation curveGetRemoveLiquidityEventsHistorical
      *
-     * GetRemoveLiquidityEvents (historical)
+     * RemoveLiquidityEvents (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -8188,7 +8188,7 @@ class CurveApi
     /**
      * Operation curveGetRemoveLiquidityEventsHistoricalWithHttpInfo
      *
-     * GetRemoveLiquidityEvents (historical)
+     * RemoveLiquidityEvents (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -8292,7 +8292,7 @@ class CurveApi
     /**
      * Operation curveGetRemoveLiquidityEventsHistoricalAsync
      *
-     * GetRemoveLiquidityEvents (historical)
+     * RemoveLiquidityEvents (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -8317,7 +8317,7 @@ class CurveApi
     /**
      * Operation curveGetRemoveLiquidityEventsHistoricalAsyncWithHttpInfo
      *
-     * GetRemoveLiquidityEvents (historical)
+     * RemoveLiquidityEvents (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -8504,7 +8504,7 @@ class CurveApi
     /**
      * Operation curveGetRemoveLiquidityOneEventsHistorical
      *
-     * GetRemoveLiquidityOneEvents (historical)
+     * RemoveLiquidityOneEvents (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -8526,7 +8526,7 @@ class CurveApi
     /**
      * Operation curveGetRemoveLiquidityOneEventsHistoricalWithHttpInfo
      *
-     * GetRemoveLiquidityOneEvents (historical)
+     * RemoveLiquidityOneEvents (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -8630,7 +8630,7 @@ class CurveApi
     /**
      * Operation curveGetRemoveLiquidityOneEventsHistoricalAsync
      *
-     * GetRemoveLiquidityOneEvents (historical)
+     * RemoveLiquidityOneEvents (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -8655,7 +8655,7 @@ class CurveApi
     /**
      * Operation curveGetRemoveLiquidityOneEventsHistoricalAsyncWithHttpInfo
      *
-     * GetRemoveLiquidityOneEvents (historical)
+     * RemoveLiquidityOneEvents (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -8842,7 +8842,7 @@ class CurveApi
     /**
      * Operation curveGetSystemStatesHistorical
      *
-     * GetSystemStates (historical)
+     * SystemStates (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -8863,7 +8863,7 @@ class CurveApi
     /**
      * Operation curveGetSystemStatesHistoricalWithHttpInfo
      *
-     * GetSystemStates (historical)
+     * SystemStates (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -8966,7 +8966,7 @@ class CurveApi
     /**
      * Operation curveGetSystemStatesHistoricalAsync
      *
-     * GetSystemStates (historical)
+     * SystemStates (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -8990,7 +8990,7 @@ class CurveApi
     /**
      * Operation curveGetSystemStatesHistoricalAsyncWithHttpInfo
      *
-     * GetSystemStates (historical)
+     * SystemStates (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -9165,7 +9165,7 @@ class CurveApi
     /**
      * Operation curveGetTokensHistorical
      *
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -9187,7 +9187,7 @@ class CurveApi
     /**
      * Operation curveGetTokensHistoricalWithHttpInfo
      *
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -9291,7 +9291,7 @@ class CurveApi
     /**
      * Operation curveGetTokensHistoricalAsync
      *
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -9316,7 +9316,7 @@ class CurveApi
     /**
      * Operation curveGetTokensHistoricalAsyncWithHttpInfo
      *
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -9503,7 +9503,7 @@ class CurveApi
     /**
      * Operation curveGetTransferOwnershipEventsHistorical
      *
-     * GetTransferOwnershipEvents (historical)
+     * TransferOwnershipEvents (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -9525,7 +9525,7 @@ class CurveApi
     /**
      * Operation curveGetTransferOwnershipEventsHistoricalWithHttpInfo
      *
-     * GetTransferOwnershipEvents (historical)
+     * TransferOwnershipEvents (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -9629,7 +9629,7 @@ class CurveApi
     /**
      * Operation curveGetTransferOwnershipEventsHistoricalAsync
      *
-     * GetTransferOwnershipEvents (historical)
+     * TransferOwnershipEvents (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -9654,7 +9654,7 @@ class CurveApi
     /**
      * Operation curveGetTransferOwnershipEventsHistoricalAsyncWithHttpInfo
      *
-     * GetTransferOwnershipEvents (historical)
+     * TransferOwnershipEvents (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -9841,7 +9841,7 @@ class CurveApi
     /**
      * Operation curveGetUnderlyingCoinsHistorical
      *
-     * GetUnderlyingCoins (historical)
+     * UnderlyingCoins (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -9863,7 +9863,7 @@ class CurveApi
     /**
      * Operation curveGetUnderlyingCoinsHistoricalWithHttpInfo
      *
-     * GetUnderlyingCoins (historical)
+     * UnderlyingCoins (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -9967,7 +9967,7 @@ class CurveApi
     /**
      * Operation curveGetUnderlyingCoinsHistoricalAsync
      *
-     * GetUnderlyingCoins (historical)
+     * UnderlyingCoins (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -9992,7 +9992,7 @@ class CurveApi
     /**
      * Operation curveGetUnderlyingCoinsHistoricalAsyncWithHttpInfo
      *
-     * GetUnderlyingCoins (historical)
+     * UnderlyingCoins (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -10179,7 +10179,7 @@ class CurveApi
     /**
      * Operation curveGetVotingAppsHistorical
      *
-     * GetVotingApps (historical)
+     * VotingApps (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -10200,7 +10200,7 @@ class CurveApi
     /**
      * Operation curveGetVotingAppsHistoricalWithHttpInfo
      *
-     * GetVotingApps (historical)
+     * VotingApps (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -10303,7 +10303,7 @@ class CurveApi
     /**
      * Operation curveGetVotingAppsHistoricalAsync
      *
-     * GetVotingApps (historical)
+     * VotingApps (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -10327,7 +10327,7 @@ class CurveApi
     /**
      * Operation curveGetVotingAppsHistoricalAsyncWithHttpInfo
      *
-     * GetVotingApps (historical)
+     * VotingApps (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -10502,7 +10502,7 @@ class CurveApi
     /**
      * Operation curveGetWeeklyVolumesHistorical
      *
-     * GetWeeklyVolumes (historical)
+     * WeeklyVolumes (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -10524,7 +10524,7 @@ class CurveApi
     /**
      * Operation curveGetWeeklyVolumesHistoricalWithHttpInfo
      *
-     * GetWeeklyVolumes (historical)
+     * WeeklyVolumes (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -10628,7 +10628,7 @@ class CurveApi
     /**
      * Operation curveGetWeeklyVolumesHistoricalAsync
      *
-     * GetWeeklyVolumes (historical)
+     * WeeklyVolumes (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -10653,7 +10653,7 @@ class CurveApi
     /**
      * Operation curveGetWeeklyVolumesHistoricalAsyncWithHttpInfo
      *
-     * GetWeeklyVolumes (historical)
+     * WeeklyVolumes (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)

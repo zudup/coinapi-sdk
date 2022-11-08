@@ -25,7 +25,7 @@ feature -- API Access
 
 
 	curve_get_accounts_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME): detachable LIST [CURVE_ACCOUNT_DTO]
-			-- GetAccounts (historical)
+			-- Accounts (historical)
 			-- Gets accounts.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -70,7 +70,7 @@ feature -- API Access
 		end
 
 	curve_get_add_liquidity_events_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [CURVE_ADD_LIQUIDITY_EVENT_DTO]
-			-- GetAddLiquidityEvents (historical)
+			-- AddLiquidityEvents (historical)
 			-- Gets add liquidity events.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -118,7 +118,7 @@ feature -- API Access
 		end
 
 	curve_get_admin_fee_change_logs_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [CURVE_ADMIN_FEE_CHANGE_LOG_DTO]
-			-- GetAdminFeeChangeLogs (historical)
+			-- AdminFeeChangeLogs (historical)
 			-- Gets admin fee change logs.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -166,7 +166,7 @@ feature -- API Access
 		end
 
 	curve_get_amplification_coeff_change_logs_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [CURVE_AMPLIFICATION_COEFF_CHANGE_LOG_DTO]
-			-- GetAmplificationCoeffChangeLogs (historical)
+			-- AmplificationCoeffChangeLogs (historical)
 			-- Gets amplification coeff change logs.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -214,7 +214,7 @@ feature -- API Access
 		end
 
 	curve_get_coins_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [CURVE_COIN_DTO]
-			-- GetCoins (historical)
+			-- Coins (historical)
 			-- Gets coins.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -262,7 +262,7 @@ feature -- API Access
 		end
 
 	curve_get_contracts_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [CURVE_CONTRACT_DTO]
-			-- GetContracts (historical)
+			-- Contracts (historical)
 			-- Gets contracts.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -310,7 +310,7 @@ feature -- API Access
 		end
 
 	curve_get_contracts_versions_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [CURVE_CONTRACT_VERSION_DTO]
-			-- GetContractsVersions (historical)
+			-- ContractsVersions (historical)
 			-- Gets contracts versions.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -358,7 +358,7 @@ feature -- API Access
 		end
 
 	curve_get_daily_volumes_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [CURVE_DAILY_VOLUME_DTO]
-			-- GetDailyVolumes (historical)
+			-- DailyVolumes (historical)
 			-- Gets daily volumes.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -406,7 +406,7 @@ feature -- API Access
 		end
 
 	curve_get_exchanges_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [CURVE_EXCHANGE_DTO]
-			-- GetExchanges (historical) 🔥
+			-- Exchanges (historical) 🔥
 			-- Gets exchanges.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -454,7 +454,7 @@ feature -- API Access
 		end
 
 	curve_get_fee_change_logs_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [CURVE_FEE_CHANGE_LOG_DTO]
-			-- GetFeeChangeLogs (historical)
+			-- FeeChangeLogs (historical)
 			-- Gets fee change logs.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -502,7 +502,7 @@ feature -- API Access
 		end
 
 	curve_get_gauges_deposits_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME): detachable LIST [CURVE_GAUGE_DEPOSIT_DTO]
-			-- GetGaugesDeposits (historical)
+			-- GaugesDeposits (historical)
 			-- Gets gauges deposits.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -547,7 +547,7 @@ feature -- API Access
 		end
 
 	curve_get_gauges_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [CURVE_GAUGE_DTO]
-			-- GetGauges (historical)
+			-- Gauges (historical)
 			-- Gets gauges.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -595,7 +595,7 @@ feature -- API Access
 		end
 
 	curve_get_gauges_liquidity_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME): detachable LIST [CURVE_GAUGE_LIQUIDITY_DTO]
-			-- GetGaugesLiquidity (historical)
+			-- GaugesLiquidity (historical)
 			-- Gets gauges liquidity.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -640,7 +640,7 @@ feature -- API Access
 		end
 
 	curve_get_gauges_total_weights_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME): detachable LIST [CURVE_GAUGE_TOTAL_WEIGHT_DTO]
-			-- GetGaugesTotalWeights (historical)
+			-- GaugesTotalWeights (historical)
 			-- Gets gauges total weights.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -685,7 +685,7 @@ feature -- API Access
 		end
 
 	curve_get_gauges_types_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME): detachable LIST [CURVE_GAUGE_TYPE_DTO]
-			-- GetGaugesTypes (historical)
+			-- GaugesTypes (historical)
 			-- Gets gauges types.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -730,7 +730,7 @@ feature -- API Access
 		end
 
 	curve_get_gauges_types_weights_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME): detachable LIST [CURVE_GAUGE_TYPE_WEIGHT_DTO]
-			-- GetGaugesTypesWeights (historical)
+			-- GaugesTypesWeights (historical)
 			-- Gets gauges types weights.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -775,7 +775,7 @@ feature -- API Access
 		end
 
 	curve_get_gauges_weights_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME): detachable LIST [CURVE_GAUGE_WEIGHT_DTO]
-			-- GetGaugesWeights (historical)
+			-- GaugesWeights (historical)
 			-- Gets gauges weights.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -820,7 +820,7 @@ feature -- API Access
 		end
 
 	curve_get_gauges_weights_votes_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME): detachable LIST [CURVE_GAUGE_WEIGHT_VOTE_DTO]
-			-- GetGaugesWeightsVotes (historical)
+			-- GaugesWeightsVotes (historical)
 			-- Gets gauges weights votes.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -865,7 +865,7 @@ feature -- API Access
 		end
 
 	curve_get_gauges_withdraw_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME): detachable LIST [CURVE_GAUGE_WITHDRAW_DTO]
-			-- GetGaugesWithdraw (historical)
+			-- GaugesWithdraw (historical)
 			-- Gets gauges withdraws.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -910,7 +910,7 @@ feature -- API Access
 		end
 
 	curve_get_hourly_volumes_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [CURVE_HOURLY_VOLUME_DTO]
-			-- GetHourlyVolumes (historical)
+			-- HourlyVolumes (historical)
 			-- Gets hourly volumes.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -958,7 +958,7 @@ feature -- API Access
 		end
 
 	curve_get_lp_tokens_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [CURVE_LP_TOKEN_DTO]
-			-- GetLpTokens (historical)
+			-- LpTokens (historical)
 			-- Gets lp tokens.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -1006,7 +1006,7 @@ feature -- API Access
 		end
 
 	curve_get_pools_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [CURVE_POOL_DTO]
-			-- GetPools (historical) 🔥
+			-- Pools (historical) 🔥
 			-- Gets pools.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -1054,7 +1054,7 @@ feature -- API Access
 		end
 
 	curve_get_proposals_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME): detachable LIST [CURVE_PROPOSAL_DTO]
-			-- GetProposals (historical)
+			-- Proposals (historical)
 			-- Gets proposals.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -1099,7 +1099,7 @@ feature -- API Access
 		end
 
 	curve_get_proposals_votes_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME): detachable LIST [CURVE_PROPOSAL_VOTE_DTO]
-			-- GetProposalsVotes (historical)
+			-- ProposalsVotes (historical)
 			-- Gets proposals votes.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -1144,7 +1144,7 @@ feature -- API Access
 		end
 
 	curve_get_remove_liquidity_events_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [CURVE_REMOVE_LIQUIDITY_EVENT_DTO]
-			-- GetRemoveLiquidityEvents (historical)
+			-- RemoveLiquidityEvents (historical)
 			-- Gets remove liquidity events.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -1192,7 +1192,7 @@ feature -- API Access
 		end
 
 	curve_get_remove_liquidity_one_events_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [CURVE_REMOVE_LIQUIDITY_ONE_EVENT_DTO]
-			-- GetRemoveLiquidityOneEvents (historical)
+			-- RemoveLiquidityOneEvents (historical)
 			-- Gets remove liquidity one events.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -1240,7 +1240,7 @@ feature -- API Access
 		end
 
 	curve_get_system_states_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME): detachable LIST [CURVE_SYSTEM_STATE_DTO]
-			-- GetSystemStates (historical)
+			-- SystemStates (historical)
 			-- Gets system states.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -1285,7 +1285,7 @@ feature -- API Access
 		end
 
 	curve_get_tokens_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; token_id: STRING_32): detachable LIST [CURVE_TOKEN_DTO]
-			-- GetTokens (historical) 🔥
+			-- Tokens (historical) 🔥
 			-- Gets tokens.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -1333,7 +1333,7 @@ feature -- API Access
 		end
 
 	curve_get_transfer_ownership_events_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [CURVE_TRANSFER_OWNERSHIP_EVENT_DTO]
-			-- GetTransferOwnershipEvents (historical)
+			-- TransferOwnershipEvents (historical)
 			-- Gets transfer ownership events.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -1381,7 +1381,7 @@ feature -- API Access
 		end
 
 	curve_get_underlying_coins_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [CURVE_UNDERLYING_COIN_DTO]
-			-- GetUnderlyingCoins (historical)
+			-- UnderlyingCoins (historical)
 			-- Gets underlying coins.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -1429,7 +1429,7 @@ feature -- API Access
 		end
 
 	curve_get_voting_apps_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME): detachable LIST [CURVE_VOTING_APP_DTO]
-			-- GetVotingApps (historical)
+			-- VotingApps (historical)
 			-- Gets voting apps.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -1474,7 +1474,7 @@ feature -- API Access
 		end
 
 	curve_get_weekly_volumes_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [CURVE_WEEKLY_VOLUME_DTO]
-			-- GetWeeklyVolumes (historical)
+			-- WeeklyVolumes (historical)
 			-- Gets weekly volumes.
 			-- 
 			-- argument: start_block  (optional, default to null)

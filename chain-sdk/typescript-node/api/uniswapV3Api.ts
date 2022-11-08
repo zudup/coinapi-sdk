@@ -104,7 +104,7 @@ export class UniswapV3Api {
 
     /**
      * Gets bundles.
-     * @summary GetBundles (current)
+     * @summary Bundles (current)
      */
     public async uniswapV3GetBundlesCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV3BundleV3DTO>;  }> {
         const localVarPath = this.basePath + '/dapps/uniswapv3/bundles/current';
@@ -166,7 +166,7 @@ export class UniswapV3Api {
     }
     /**
      * Gets bundles.
-     * @summary GetBundles (historical)
+     * @summary Bundles (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -248,7 +248,7 @@ export class UniswapV3Api {
     }
     /**
      * Gets burns.
-     * @summary GetBurns (current)
+     * @summary Burns (current)
      * @param filterPoolId 
      */
     public async uniswapV3GetBurnsCurrent (filterPoolId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV3BurnV3DTO>;  }> {
@@ -315,7 +315,7 @@ export class UniswapV3Api {
     }
     /**
      * Gets burns.
-     * @summary GetBurns (historical)
+     * @summary Burns (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -402,7 +402,7 @@ export class UniswapV3Api {
     }
     /**
      * Gets uniswapv3 day data.
-     * @summary GetDayData (current)
+     * @summary DayData (current)
      */
     public async uniswapV3GetDayDataCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV3UniswapDayDataV3DTO>;  }> {
         const localVarPath = this.basePath + '/dapps/uniswapv3/dayData/current';
@@ -464,7 +464,7 @@ export class UniswapV3Api {
     }
     /**
      * Gets uniswapv3 day data.
-     * @summary GetDayData (historical)
+     * @summary DayData (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -546,7 +546,7 @@ export class UniswapV3Api {
     }
     /**
      * Gets factory.
-     * @summary GetFactory (current)
+     * @summary Factory (current)
      */
     public async uniswapV3GetFactoryCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV3FactoryV3DTO>;  }> {
         const localVarPath = this.basePath + '/dapps/uniswapv3/factory/current';
@@ -608,7 +608,7 @@ export class UniswapV3Api {
     }
     /**
      * Gets factory.
-     * @summary GetFactory (historical)
+     * @summary Factory (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -690,7 +690,7 @@ export class UniswapV3Api {
     }
     /**
      * Gets mints.
-     * @summary GetMints (current)
+     * @summary Mints (current)
      * @param filterPoolId 
      */
     public async uniswapV3GetMintsCurrent (filterPoolId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV3MintV3DTO>;  }> {
@@ -757,7 +757,7 @@ export class UniswapV3Api {
     }
     /**
      * Gets mints.
-     * @summary GetMints (historical)
+     * @summary Mints (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -844,7 +844,7 @@ export class UniswapV3Api {
     }
     /**
      * Gets pools.
-     * @summary GetPools (current) 🔥
+     * @summary Pools (current) 🔥
      * @param filterPoolId 
      */
     public async uniswapV3GetPoolsCurrent (filterPoolId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV3PoolV3DTO>;  }> {
@@ -911,7 +911,7 @@ export class UniswapV3Api {
     }
     /**
      * Gets pools day data.
-     * @summary GetPoolsDayData (current)
+     * @summary PoolsDayData (current)
      * @param filterPoolId 
      */
     public async uniswapV3GetPoolsDayDataCurrent (filterPoolId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV3PoolDayDataV3DTO>;  }> {
@@ -978,7 +978,7 @@ export class UniswapV3Api {
     }
     /**
      * Gets pools day data.
-     * @summary GetPoolsDayData (historical)
+     * @summary PoolsDayData (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -1065,7 +1065,7 @@ export class UniswapV3Api {
     }
     /**
      * Gets pools.
-     * @summary GetPools (historical) 🔥
+     * @summary Pools (historical) 🔥
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -1152,7 +1152,7 @@ export class UniswapV3Api {
     }
     /**
      * Gets pools hour data.
-     * @summary GetPoolsHourData (current)
+     * @summary PoolsHourData (current)
      * @param filterPoolId 
      */
     public async uniswapV3GetPoolsHourDataCurrent (filterPoolId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV3PoolHourDataV3DTO>;  }> {
@@ -1219,7 +1219,7 @@ export class UniswapV3Api {
     }
     /**
      * Gets pools hour data.
-     * @summary GetPoolsHourData (historical)
+     * @summary PoolsHourData (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -1306,7 +1306,7 @@ export class UniswapV3Api {
     }
     /**
      * Gets positions.
-     * @summary GetPositions (current)
+     * @summary Positions (current)
      * @param filterPoolId 
      */
     public async uniswapV3GetPositionsCurrent (filterPoolId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV3PositionV3DTO>;  }> {
@@ -1373,7 +1373,7 @@ export class UniswapV3Api {
     }
     /**
      * Gets positions.
-     * @summary GetPositions (historical)
+     * @summary Positions (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -1460,7 +1460,7 @@ export class UniswapV3Api {
     }
     /**
      * Gets positions snapshots.
-     * @summary GetPositionsSnaphots (historical)
+     * @summary PositionsSnaphots (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -1547,7 +1547,7 @@ export class UniswapV3Api {
     }
     /**
      * Gets positions snapshots.
-     * @summary GetPositionsSnapshots (current)
+     * @summary PositionsSnapshots (current)
      * @param filterPoolId 
      */
     public async uniswapV3GetPositionsSnapshotsCurrent (filterPoolId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV3PositionSnapshotV3DTO>;  }> {
@@ -1614,7 +1614,7 @@ export class UniswapV3Api {
     }
     /**
      * Gets swaps.
-     * @summary GetSwaps (current) 🔥
+     * @summary Swaps (current) 🔥
      * @param filterPoolId 
      */
     public async uniswapV3GetSwapsCurrent (filterPoolId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV3SwapV3DTO>;  }> {
@@ -1681,7 +1681,7 @@ export class UniswapV3Api {
     }
     /**
      * Gets swaps.
-     * @summary GetSwaps (historical) 🔥
+     * @summary Swaps (historical) 🔥
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -1768,7 +1768,7 @@ export class UniswapV3Api {
     }
     /**
      * Gets ticks.
-     * @summary GetTicks (current)
+     * @summary Ticks (current)
      * @param filterPoolId 
      */
     public async uniswapV3GetTicksCurrent (filterPoolId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV3TickV3DTO>;  }> {
@@ -1835,7 +1835,7 @@ export class UniswapV3Api {
     }
     /**
      * Gets ticks day data.
-     * @summary GetTicksDayData (current)
+     * @summary TicksDayData (current)
      * @param filterPoolId 
      */
     public async uniswapV3GetTicksDayDataCurrent (filterPoolId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV3TickDayDataV3DTO>;  }> {
@@ -1902,7 +1902,7 @@ export class UniswapV3Api {
     }
     /**
      * Gets ticks day data.
-     * @summary GetTicksDayData (historical)
+     * @summary TicksDayData (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -1989,7 +1989,7 @@ export class UniswapV3Api {
     }
     /**
      * Gets ticks.
-     * @summary GetTicks (historical)
+     * @summary Ticks (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -2076,7 +2076,7 @@ export class UniswapV3Api {
     }
     /**
      * Gets tokens.
-     * @summary GetTokens (current) 🔥
+     * @summary Tokens (current) 🔥
      * @param filterTokenId 
      */
     public async uniswapV3GetTokensCurrent (filterTokenId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV3TokenV3DTO>;  }> {
@@ -2143,7 +2143,7 @@ export class UniswapV3Api {
     }
     /**
      * Gets tokens day data.
-     * @summary GetTokensDayData (current)
+     * @summary TokensDayData (current)
      * @param filterTokenId 
      */
     public async uniswapV3GetTokensDayDataCurrent (filterTokenId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV3TokenV3DayDataDTO>;  }> {
@@ -2210,7 +2210,7 @@ export class UniswapV3Api {
     }
     /**
      * Gets tokens day data.
-     * @summary GetTokensDayData (historical)
+     * @summary TokensDayData (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -2297,7 +2297,7 @@ export class UniswapV3Api {
     }
     /**
      * Gets tokens.
-     * @summary GetTokens (historical) 🔥
+     * @summary Tokens (historical) 🔥
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -2384,7 +2384,7 @@ export class UniswapV3Api {
     }
     /**
      * Gets tokens hour data.
-     * @summary GetTokensHourData (current)
+     * @summary TokensHourData (current)
      * @param filterTokenId 
      */
     public async uniswapV3GetTokensHourDataCurrent (filterTokenId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV3TokenHourDataV3DTO>;  }> {
@@ -2451,7 +2451,7 @@ export class UniswapV3Api {
     }
     /**
      * Gets tokens hour data.
-     * @summary GetTokensHourData (historical)
+     * @summary TokensHourData (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -2538,7 +2538,7 @@ export class UniswapV3Api {
     }
     /**
      * Gets transactions.
-     * @summary GetTransactions (historical)
+     * @summary Transactions (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 

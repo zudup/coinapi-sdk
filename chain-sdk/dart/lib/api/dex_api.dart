@@ -16,7 +16,7 @@ class DexApi {
 
   final ApiClient apiClient;
 
-  /// GetBatches (historical)
+  /// Batches (historical)
   ///
   /// Gets batches.
   ///
@@ -73,7 +73,7 @@ class DexApi {
     );
   }
 
-  /// GetBatches (historical)
+  /// Batches (historical)
   ///
   /// Gets batches.
   ///
@@ -108,7 +108,7 @@ class DexApi {
     return null;
   }
 
-  /// GetDeposits (historical)
+  /// Deposits (historical)
   ///
   /// Gets deposits.
   ///
@@ -171,7 +171,7 @@ class DexApi {
     );
   }
 
-  /// GetDeposits (historical)
+  /// Deposits (historical)
   ///
   /// Gets deposits.
   ///
@@ -209,7 +209,7 @@ class DexApi {
     return null;
   }
 
-  /// GetOrders (historical)
+  /// Orders (historical)
   ///
   /// Gets orders.
   ///
@@ -272,7 +272,7 @@ class DexApi {
     );
   }
 
-  /// GetOrders (historical)
+  /// Orders (historical)
   ///
   /// Gets orders.
   ///
@@ -310,7 +310,7 @@ class DexApi {
     return null;
   }
 
-  /// GetPrices (historical)
+  /// Prices (historical)
   ///
   /// Gets prices.
   ///
@@ -373,7 +373,7 @@ class DexApi {
     );
   }
 
-  /// GetPrices (historical)
+  /// Prices (historical)
   ///
   /// Gets prices.
   ///
@@ -411,7 +411,7 @@ class DexApi {
     return null;
   }
 
-  /// GetSolutions (historical)
+  /// Solutions (historical)
   ///
   /// Gets solutions.
   ///
@@ -474,7 +474,7 @@ class DexApi {
     );
   }
 
-  /// GetSolutions (historical)
+  /// Solutions (historical)
   ///
   /// Gets solutions.
   ///
@@ -512,7 +512,7 @@ class DexApi {
     return null;
   }
 
-  /// GetStats (historical)
+  /// Stats (historical)
   ///
   /// Gets stats.
   ///
@@ -569,7 +569,7 @@ class DexApi {
     );
   }
 
-  /// GetStats (historical)
+  /// Stats (historical)
   ///
   /// Gets stats.
   ///
@@ -604,7 +604,7 @@ class DexApi {
     return null;
   }
 
-  /// GetTokens (historical) 🔥
+  /// Tokens (historical) 🔥
   ///
   /// Gets tokens.
   ///
@@ -667,7 +667,7 @@ class DexApi {
     );
   }
 
-  /// GetTokens (historical) 🔥
+  /// Tokens (historical) 🔥
   ///
   /// Gets tokens.
   ///
@@ -705,7 +705,7 @@ class DexApi {
     return null;
   }
 
-  /// GetTrades (historical) 🔥
+  /// Trades (historical) 🔥
   ///
   /// Gets trades.
   ///
@@ -762,7 +762,7 @@ class DexApi {
     );
   }
 
-  /// GetTrades (historical) 🔥
+  /// Trades (historical) 🔥
   ///
   /// Gets trades.
   ///
@@ -797,7 +797,7 @@ class DexApi {
     return null;
   }
 
-  /// GetUsers (historical)
+  /// Users (historical)
   ///
   /// Gets users.
   ///
@@ -854,7 +854,7 @@ class DexApi {
     );
   }
 
-  /// GetUsers (historical)
+  /// Users (historical)
   ///
   /// Gets users.
   ///
@@ -889,7 +889,7 @@ class DexApi {
     return null;
   }
 
-  /// GetWithdraws (historical)
+  /// Withdraws (historical)
   ///
   /// Gets withdraws.
   ///
@@ -952,7 +952,7 @@ class DexApi {
     );
   }
 
-  /// GetWithdraws (historical)
+  /// Withdraws (historical)
   ///
   /// Gets withdraws.
   ///
@@ -990,7 +990,7 @@ class DexApi {
     return null;
   }
 
-  /// GetWithdrawsRequests (historical)
+  /// WithdrawsRequests (historical)
   ///
   /// Gets withdraws requests.
   ///
@@ -1053,7 +1053,7 @@ class DexApi {
     );
   }
 
-  /// GetWithdrawsRequests (historical)
+  /// WithdrawsRequests (historical)
   ///
   /// Gets withdraws requests.
   ///

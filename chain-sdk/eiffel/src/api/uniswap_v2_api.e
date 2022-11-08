@@ -25,7 +25,7 @@ feature -- API Access
 
 
 	uniswap_v2_get_bundles_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME): detachable LIST [UNISWAP_V2_BUNDLE_V2_DTO]
-			-- GetBundles (historical)
+			-- Bundles (historical)
 			-- Gets bundles.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -70,7 +70,7 @@ feature -- API Access
 		end
 
 	uniswap_v2_get_burns_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [UNISWAP_V2_BURN_V2_DTO]
-			-- GetBurns (historical)
+			-- Burns (historical)
 			-- Gets burns.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -118,7 +118,7 @@ feature -- API Access
 		end
 
 	uniswap_v2_get_day_data_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME): detachable LIST [UNISWAP_V2_UNISWAP_DAY_DATA_V2_DTO]
-			-- GetDayData (historical)
+			-- DayData (historical)
 			-- Gets uniswapv2 day data.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -163,7 +163,7 @@ feature -- API Access
 		end
 
 	uniswap_v2_get_factory_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME): detachable LIST [UNISWAP_V2_UNISWAP_FACTORY_V2_DTO]
-			-- GetFactory (historical)
+			-- Factory (historical)
 			-- Gets factory.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -208,7 +208,7 @@ feature -- API Access
 		end
 
 	uniswap_v2_get_liquidity_positions_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [UNISWAP_V2_LIQUIDITY_POSITION_V2_DTO]
-			-- GetLiquidityPositions (historical)
+			-- LiquidityPositions (historical)
 			-- Gets liquidity positions.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -256,7 +256,7 @@ feature -- API Access
 		end
 
 	uniswap_v2_get_liquidity_positions_snapshots_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [UNISWAP_V2_LIQUIDITY_POSITION_SNAPSHOT_V2_DTO]
-			-- GetLiquidityPositionsSnapshots (historical)
+			-- LiquidityPositionsSnapshots (historical)
 			-- Gets liquidity positions snapshots.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -304,7 +304,7 @@ feature -- API Access
 		end
 
 	uniswap_v2_get_mints_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [UNISWAP_V2_MINT_V2_DTO]
-			-- GetMints (historical)
+			-- Mints (historical)
 			-- Gets mints.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -352,7 +352,7 @@ feature -- API Access
 		end
 
 	uniswap_v2_get_pools_current (filter_pool_id: STRING_32): detachable LIST [UNISWAP_V2_PAIR_V2_DTO]
-			-- GetPools (current) 🔥
+			-- Pools (current) 🔥
 			-- Gets pools.
 			-- 
 			-- argument: filter_pool_id  (optional, default to null)
@@ -388,7 +388,7 @@ feature -- API Access
 		end
 
 	uniswap_v2_get_pools_day_data_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [UNISWAP_V2_PAIR_DAY_DATA_V2_DTO]
-			-- GetPoolsDayData (historical)
+			-- PoolsDayData (historical)
 			-- Gets pools day data.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -436,7 +436,7 @@ feature -- API Access
 		end
 
 	uniswap_v2_get_pools_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [UNISWAP_V2_PAIR_V2_DTO]
-			-- GetPools (historical) 🔥
+			-- Pools (historical) 🔥
 			-- Gets pools.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -484,7 +484,7 @@ feature -- API Access
 		end
 
 	uniswap_v2_get_pools_hour_data_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [UNISWAP_V2_PAIR_HOUR_DATA_V2_DTO]
-			-- GetPoolsHourData (historical)
+			-- PoolsHourData (historical)
 			-- Gets pools tracked each our.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -532,7 +532,7 @@ feature -- API Access
 		end
 
 	uniswap_v2_get_swaps_current : detachable LIST [UNISWAP_V2_SWAP_V2_DTO]
-			-- GetSwaps (current) 🔥
+			-- Swaps (current) 🔥
 			-- Gets swaps.
 			-- 
 			-- 
@@ -565,7 +565,7 @@ feature -- API Access
 		end
 
 	uniswap_v2_get_swaps_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [UNISWAP_V2_SWAP_V2_DTO]
-			-- GetSwaps (historical) 🔥
+			-- Swaps (historical) 🔥
 			-- Gets swaps.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -613,7 +613,7 @@ feature -- API Access
 		end
 
 	uniswap_v2_get_tokens_current : detachable LIST [UNISWAP_V2_TOKEN_V2_DTO]
-			-- GetTokens (current) 🔥
+			-- Tokens (current) 🔥
 			-- Gets tokens.
 			-- 
 			-- 
@@ -646,7 +646,7 @@ feature -- API Access
 		end
 
 	uniswap_v2_get_tokens_day_data_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; token_id: STRING_32): detachable LIST [UNISWAP_V2_TOKEN_DAY_DATA_V2_DTO]
-			-- GetTokensDayData (historical)
+			-- TokensDayData (historical)
 			-- Gets tokens day data.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -694,7 +694,7 @@ feature -- API Access
 		end
 
 	uniswap_v2_get_tokens_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; token_id: STRING_32): detachable LIST [UNISWAP_V2_TOKEN_V2_DTO]
-			-- GetTokens (historical) 🔥
+			-- Tokens (historical) 🔥
 			-- Gets tokens.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -742,7 +742,7 @@ feature -- API Access
 		end
 
 	uniswap_v2_get_transactions_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME): detachable LIST [UNISWAP_V2_TRANSACTION_V2_DTO]
-			-- GetTransactions (historical)
+			-- Transactions (historical)
 			-- Gets transactions.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -787,7 +787,7 @@ feature -- API Access
 		end
 
 	uniswap_v2_get_users_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME): detachable LIST [UNISWAP_V2_USER_V2_DTO]
-			-- GetUsers (historical)
+			-- Users (historical)
 			-- Gets users.
 			-- 
 			-- argument: start_block  (optional, default to null)

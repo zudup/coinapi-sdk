@@ -12,7 +12,7 @@
 }while(0)
 
 
-// GetBundles (historical)
+// Bundles (historical)
 //
 // Gets bundles.
 //
@@ -167,7 +167,7 @@ end:
 
 }
 
-// GetBurns (historical)
+// Burns (historical)
 //
 // Gets burns.
 //
@@ -346,7 +346,7 @@ end:
 
 }
 
-// GetDayData (historical)
+// DayData (historical)
 //
 // Gets uniswapv2 day data.
 //
@@ -501,7 +501,7 @@ end:
 
 }
 
-// GetFactory (historical)
+// Factory (historical)
 //
 // Gets factory.
 //
@@ -656,7 +656,7 @@ end:
 
 }
 
-// GetLiquidityPositions (historical)
+// LiquidityPositions (historical)
 //
 // Gets liquidity positions.
 //
@@ -835,7 +835,7 @@ end:
 
 }
 
-// GetLiquidityPositionsSnapshots (historical)
+// LiquidityPositionsSnapshots (historical)
 //
 // Gets liquidity positions snapshots.
 //
@@ -1014,7 +1014,7 @@ end:
 
 }
 
-// GetMints (historical)
+// Mints (historical)
 //
 // Gets mints.
 //
@@ -1193,7 +1193,7 @@ end:
 
 }
 
-// GetPools (current) 🔥
+// Pools (current) 🔥
 //
 // Gets pools.
 //
@@ -1292,7 +1292,7 @@ end:
 
 }
 
-// GetPoolsDayData (historical)
+// PoolsDayData (historical)
 //
 // Gets pools day data.
 //
@@ -1471,7 +1471,7 @@ end:
 
 }
 
-// GetPools (historical) 🔥
+// Pools (historical) 🔥
 //
 // Gets pools.
 //
@@ -1650,7 +1650,7 @@ end:
 
 }
 
-// GetPoolsHourData (historical)
+// PoolsHourData (historical)
 //
 // Gets pools tracked each our.
 //
@@ -1829,7 +1829,7 @@ end:
 
 }
 
-// GetSwaps (current) 🔥
+// Swaps (current) 🔥
 //
 // Gets swaps.
 //
@@ -1904,7 +1904,7 @@ end:
 
 }
 
-// GetSwaps (historical) 🔥
+// Swaps (historical) 🔥
 //
 // Gets swaps.
 //
@@ -2083,7 +2083,7 @@ end:
 
 }
 
-// GetTokens (current) 🔥
+// Tokens (current) 🔥
 //
 // Gets tokens.
 //
@@ -2158,7 +2158,7 @@ end:
 
 }
 
-// GetTokensDayData (historical)
+// TokensDayData (historical)
 //
 // Gets tokens day data.
 //
@@ -2337,7 +2337,7 @@ end:
 
 }
 
-// GetTokens (historical) 🔥
+// Tokens (historical) 🔥
 //
 // Gets tokens.
 //
@@ -2516,7 +2516,7 @@ end:
 
 }
 
-// GetTransactions (historical)
+// Transactions (historical)
 //
 // Gets transactions.
 //
@@ -2671,7 +2671,7 @@ end:
 
 }
 
-// GetUsers (historical)
+// Users (historical)
 //
 // Gets users.
 //

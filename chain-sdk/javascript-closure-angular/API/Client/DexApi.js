@@ -54,7 +54,7 @@ API.Client.DexApi = function($http, $httpParamSerializer, $injector) {
 API.Client.DexApi.$inject = ['$http', '$httpParamSerializer', '$injector'];
 
 /**
- * GetBatches (historical)
+ * Batches (historical)
  * Gets batches.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -105,7 +105,7 @@ API.Client.DexApi.prototype.dexGetBatchesHistorical = function(opt_startBlock, o
 }
 
 /**
- * GetDeposits (historical)
+ * Deposits (historical)
  * Gets deposits.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -161,7 +161,7 @@ API.Client.DexApi.prototype.dexGetDepositsHistorical = function(opt_startBlock, 
 }
 
 /**
- * GetOrders (historical)
+ * Orders (historical)
  * Gets orders.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -217,7 +217,7 @@ API.Client.DexApi.prototype.dexGetOrdersHistorical = function(opt_startBlock, op
 }
 
 /**
- * GetPrices (historical)
+ * Prices (historical)
  * Gets prices.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -273,7 +273,7 @@ API.Client.DexApi.prototype.dexGetPricesHistorical = function(opt_startBlock, op
 }
 
 /**
- * GetSolutions (historical)
+ * Solutions (historical)
  * Gets solutions.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -329,7 +329,7 @@ API.Client.DexApi.prototype.dexGetSolutionsHistorical = function(opt_startBlock,
 }
 
 /**
- * GetStats (historical)
+ * Stats (historical)
  * Gets stats.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -380,7 +380,7 @@ API.Client.DexApi.prototype.dexGetStatsHistorical = function(opt_startBlock, opt
 }
 
 /**
- * GetTokens (historical) 🔥
+ * Tokens (historical) 🔥
  * Gets tokens.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -436,7 +436,7 @@ API.Client.DexApi.prototype.dexGetTokensHistorical = function(opt_startBlock, op
 }
 
 /**
- * GetTrades (historical) 🔥
+ * Trades (historical) 🔥
  * Gets trades.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -487,7 +487,7 @@ API.Client.DexApi.prototype.dexGetTradesHistorical = function(opt_startBlock, op
 }
 
 /**
- * GetUsers (historical)
+ * Users (historical)
  * Gets users.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -538,7 +538,7 @@ API.Client.DexApi.prototype.dexGetUsersHistorical = function(opt_startBlock, opt
 }
 
 /**
- * GetWithdraws (historical)
+ * Withdraws (historical)
  * Gets withdraws.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -594,7 +594,7 @@ API.Client.DexApi.prototype.dexGetWithdrawsHistorical = function(opt_startBlock,
 }
 
 /**
- * GetWithdrawsRequests (historical)
+ * WithdrawsRequests (historical)
  * Gets withdraws requests.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 

@@ -21,7 +21,7 @@ from .. import ApiTestMixin
 class TestDappsSushiswapTransactionsHistorical(ApiTestMixin, unittest.TestCase):
     """
     DappsSushiswapTransactionsHistorical unit test stubs
-        GetTransactions (historical)  # noqa: E501
+        Transactions (historical)  # noqa: E501
     """
     _configuration = configuration.Configuration()
 

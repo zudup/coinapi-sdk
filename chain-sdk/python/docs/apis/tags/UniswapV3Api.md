@@ -5,45 +5,45 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**uniswap_v3_get_bundles__current**](#uniswap_v3_get_bundles__current) | **get** /dapps/uniswapv3/bundles/current | GetBundles (current)
-[**uniswap_v3_get_bundles__historical**](#uniswap_v3_get_bundles__historical) | **get** /dapps/uniswapv3/bundles/historical | GetBundles (historical)
-[**uniswap_v3_get_burns__current**](#uniswap_v3_get_burns__current) | **get** /dapps/uniswapv3/burns/current | GetBurns (current)
-[**uniswap_v3_get_burns__historical**](#uniswap_v3_get_burns__historical) | **get** /dapps/uniswapv3/burns/historical | GetBurns (historical)
-[**uniswap_v3_get_day_data__current**](#uniswap_v3_get_day_data__current) | **get** /dapps/uniswapv3/dayData/current | GetDayData (current)
-[**uniswap_v3_get_day_data__historical**](#uniswap_v3_get_day_data__historical) | **get** /dapps/uniswapv3/dayData/historical | GetDayData (historical)
-[**uniswap_v3_get_factory__current**](#uniswap_v3_get_factory__current) | **get** /dapps/uniswapv3/factory/current | GetFactory (current)
-[**uniswap_v3_get_factory__historical**](#uniswap_v3_get_factory__historical) | **get** /dapps/uniswapv3/factory/historical | GetFactory (historical)
-[**uniswap_v3_get_mints__current**](#uniswap_v3_get_mints__current) | **get** /dapps/uniswapv3/mints/current | GetMints (current)
-[**uniswap_v3_get_mints__historical**](#uniswap_v3_get_mints__historical) | **get** /dapps/uniswapv3/mints/historical | GetMints (historical)
-[**uniswap_v3_get_pools__current**](#uniswap_v3_get_pools__current) | **get** /dapps/uniswapv3/pools/current | GetPools (current) 🔥
-[**uniswap_v3_get_pools__historical**](#uniswap_v3_get_pools__historical) | **get** /dapps/uniswapv3/pools/historical | GetPools (historical) 🔥
-[**uniswap_v3_get_pools_day_data__current**](#uniswap_v3_get_pools_day_data__current) | **get** /dapps/uniswapv3/poolsDayData/current | GetPoolsDayData (current)
-[**uniswap_v3_get_pools_day_data__historical**](#uniswap_v3_get_pools_day_data__historical) | **get** /dapps/uniswapv3/poolsDayData/historical | GetPoolsDayData (historical)
-[**uniswap_v3_get_pools_hour_data__current**](#uniswap_v3_get_pools_hour_data__current) | **get** /dapps/uniswapv3/poolsHourData/current | GetPoolsHourData (current)
-[**uniswap_v3_get_pools_hour_data__historical**](#uniswap_v3_get_pools_hour_data__historical) | **get** /dapps/uniswapv3/poolsHourData/historical | GetPoolsHourData (historical)
-[**uniswap_v3_get_positions__current**](#uniswap_v3_get_positions__current) | **get** /dapps/uniswapv3/positions/current | GetPositions (current)
-[**uniswap_v3_get_positions__historical**](#uniswap_v3_get_positions__historical) | **get** /dapps/uniswapv3/positions/historical | GetPositions (historical)
-[**uniswap_v3_get_positions_snaphots__historical**](#uniswap_v3_get_positions_snaphots__historical) | **get** /dapps/uniswapv3/positionsSnapshots/historical | GetPositionsSnaphots (historical)
-[**uniswap_v3_get_positions_snapshots__current**](#uniswap_v3_get_positions_snapshots__current) | **get** /dapps/uniswapv3/positionSnapshots/current | GetPositionsSnapshots (current)
-[**uniswap_v3_get_swaps__current**](#uniswap_v3_get_swaps__current) | **get** /dapps/uniswapv3/swaps/current | GetSwaps (current) 🔥
-[**uniswap_v3_get_swaps__historical**](#uniswap_v3_get_swaps__historical) | **get** /dapps/uniswapv3/swaps/historical | GetSwaps (historical) 🔥
-[**uniswap_v3_get_ticks__current**](#uniswap_v3_get_ticks__current) | **get** /dapps/uniswapv3/ticks/current | GetTicks (current)
-[**uniswap_v3_get_ticks__historical**](#uniswap_v3_get_ticks__historical) | **get** /dapps/uniswapv3/ticks/historical | GetTicks (historical)
-[**uniswap_v3_get_ticks_day_data__current**](#uniswap_v3_get_ticks_day_data__current) | **get** /dapps/uniswapv3/ticksDayData/current | GetTicksDayData (current)
-[**uniswap_v3_get_ticks_day_data__historical**](#uniswap_v3_get_ticks_day_data__historical) | **get** /dapps/uniswapv3/ticksDayData/historical | GetTicksDayData (historical)
-[**uniswap_v3_get_tokens__current**](#uniswap_v3_get_tokens__current) | **get** /dapps/uniswapv3/tokens/current | GetTokens (current) 🔥
-[**uniswap_v3_get_tokens__historical**](#uniswap_v3_get_tokens__historical) | **get** /dapps/uniswapv3/tokens/historical | GetTokens (historical) 🔥
-[**uniswap_v3_get_tokens_day_data__current**](#uniswap_v3_get_tokens_day_data__current) | **get** /dapps/uniswapv3/tokensDayData/current | GetTokensDayData (current)
-[**uniswap_v3_get_tokens_day_data__historical**](#uniswap_v3_get_tokens_day_data__historical) | **get** /dapps/uniswapv3/tokensDayData/historical | GetTokensDayData (historical)
-[**uniswap_v3_get_tokens_hour_data__current**](#uniswap_v3_get_tokens_hour_data__current) | **get** /dapps/uniswapv3/tokensHourData/current | GetTokensHourData (current)
-[**uniswap_v3_get_tokens_hour_data__historical**](#uniswap_v3_get_tokens_hour_data__historical) | **get** /dapps/uniswapv3/tokensHourData/historical | GetTokensHourData (historical)
-[**uniswap_v3_get_transactions__historical**](#uniswap_v3_get_transactions__historical) | **get** /dapps/uniswapv3/transactions/historical | GetTransactions (historical)
+[**uniswap_v3_get_bundles__current**](#uniswap_v3_get_bundles__current) | **get** /dapps/uniswapv3/bundles/current | Bundles (current)
+[**uniswap_v3_get_bundles__historical**](#uniswap_v3_get_bundles__historical) | **get** /dapps/uniswapv3/bundles/historical | Bundles (historical)
+[**uniswap_v3_get_burns__current**](#uniswap_v3_get_burns__current) | **get** /dapps/uniswapv3/burns/current | Burns (current)
+[**uniswap_v3_get_burns__historical**](#uniswap_v3_get_burns__historical) | **get** /dapps/uniswapv3/burns/historical | Burns (historical)
+[**uniswap_v3_get_day_data__current**](#uniswap_v3_get_day_data__current) | **get** /dapps/uniswapv3/dayData/current | DayData (current)
+[**uniswap_v3_get_day_data__historical**](#uniswap_v3_get_day_data__historical) | **get** /dapps/uniswapv3/dayData/historical | DayData (historical)
+[**uniswap_v3_get_factory__current**](#uniswap_v3_get_factory__current) | **get** /dapps/uniswapv3/factory/current | Factory (current)
+[**uniswap_v3_get_factory__historical**](#uniswap_v3_get_factory__historical) | **get** /dapps/uniswapv3/factory/historical | Factory (historical)
+[**uniswap_v3_get_mints__current**](#uniswap_v3_get_mints__current) | **get** /dapps/uniswapv3/mints/current | Mints (current)
+[**uniswap_v3_get_mints__historical**](#uniswap_v3_get_mints__historical) | **get** /dapps/uniswapv3/mints/historical | Mints (historical)
+[**uniswap_v3_get_pools__current**](#uniswap_v3_get_pools__current) | **get** /dapps/uniswapv3/pools/current | Pools (current) 🔥
+[**uniswap_v3_get_pools__historical**](#uniswap_v3_get_pools__historical) | **get** /dapps/uniswapv3/pools/historical | Pools (historical) 🔥
+[**uniswap_v3_get_pools_day_data__current**](#uniswap_v3_get_pools_day_data__current) | **get** /dapps/uniswapv3/poolsDayData/current | PoolsDayData (current)
+[**uniswap_v3_get_pools_day_data__historical**](#uniswap_v3_get_pools_day_data__historical) | **get** /dapps/uniswapv3/poolsDayData/historical | PoolsDayData (historical)
+[**uniswap_v3_get_pools_hour_data__current**](#uniswap_v3_get_pools_hour_data__current) | **get** /dapps/uniswapv3/poolsHourData/current | PoolsHourData (current)
+[**uniswap_v3_get_pools_hour_data__historical**](#uniswap_v3_get_pools_hour_data__historical) | **get** /dapps/uniswapv3/poolsHourData/historical | PoolsHourData (historical)
+[**uniswap_v3_get_positions__current**](#uniswap_v3_get_positions__current) | **get** /dapps/uniswapv3/positions/current | Positions (current)
+[**uniswap_v3_get_positions__historical**](#uniswap_v3_get_positions__historical) | **get** /dapps/uniswapv3/positions/historical | Positions (historical)
+[**uniswap_v3_get_positions_snaphots__historical**](#uniswap_v3_get_positions_snaphots__historical) | **get** /dapps/uniswapv3/positionsSnapshots/historical | PositionsSnaphots (historical)
+[**uniswap_v3_get_positions_snapshots__current**](#uniswap_v3_get_positions_snapshots__current) | **get** /dapps/uniswapv3/positionSnapshots/current | PositionsSnapshots (current)
+[**uniswap_v3_get_swaps__current**](#uniswap_v3_get_swaps__current) | **get** /dapps/uniswapv3/swaps/current | Swaps (current) 🔥
+[**uniswap_v3_get_swaps__historical**](#uniswap_v3_get_swaps__historical) | **get** /dapps/uniswapv3/swaps/historical | Swaps (historical) 🔥
+[**uniswap_v3_get_ticks__current**](#uniswap_v3_get_ticks__current) | **get** /dapps/uniswapv3/ticks/current | Ticks (current)
+[**uniswap_v3_get_ticks__historical**](#uniswap_v3_get_ticks__historical) | **get** /dapps/uniswapv3/ticks/historical | Ticks (historical)
+[**uniswap_v3_get_ticks_day_data__current**](#uniswap_v3_get_ticks_day_data__current) | **get** /dapps/uniswapv3/ticksDayData/current | TicksDayData (current)
+[**uniswap_v3_get_ticks_day_data__historical**](#uniswap_v3_get_ticks_day_data__historical) | **get** /dapps/uniswapv3/ticksDayData/historical | TicksDayData (historical)
+[**uniswap_v3_get_tokens__current**](#uniswap_v3_get_tokens__current) | **get** /dapps/uniswapv3/tokens/current | Tokens (current) 🔥
+[**uniswap_v3_get_tokens__historical**](#uniswap_v3_get_tokens__historical) | **get** /dapps/uniswapv3/tokens/historical | Tokens (historical) 🔥
+[**uniswap_v3_get_tokens_day_data__current**](#uniswap_v3_get_tokens_day_data__current) | **get** /dapps/uniswapv3/tokensDayData/current | TokensDayData (current)
+[**uniswap_v3_get_tokens_day_data__historical**](#uniswap_v3_get_tokens_day_data__historical) | **get** /dapps/uniswapv3/tokensDayData/historical | TokensDayData (historical)
+[**uniswap_v3_get_tokens_hour_data__current**](#uniswap_v3_get_tokens_hour_data__current) | **get** /dapps/uniswapv3/tokensHourData/current | TokensHourData (current)
+[**uniswap_v3_get_tokens_hour_data__historical**](#uniswap_v3_get_tokens_hour_data__historical) | **get** /dapps/uniswapv3/tokensHourData/historical | TokensHourData (historical)
+[**uniswap_v3_get_transactions__historical**](#uniswap_v3_get_transactions__historical) | **get** /dapps/uniswapv3/transactions/historical | Transactions (historical)
 
 # **uniswap_v3_get_bundles__current**
 <a name="uniswap_v3_get_bundles__current"></a>
 > [UniswapV3BundleV3DTO] uniswap_v3_get_bundles__current()
 
-GetBundles (current)
+Bundles (current)
 
 Gets bundles.
 
@@ -67,7 +67,7 @@ with openapi_client.ApiClient(configuration) as api_client:
 
     # example, this endpoint has no required or optional parameters
     try:
-        # GetBundles (current)
+        # Bundles (current)
         api_response = api_instance.uniswap_v3_get_bundles__current()
         pprint(api_response)
     except openapi_client.ApiException as e:
@@ -136,7 +136,7 @@ No authorization required
 <a name="uniswap_v3_get_bundles__historical"></a>
 > [UniswapV3BundleV3DTO] uniswap_v3_get_bundles__historical()
 
-GetBundles (historical)
+Bundles (historical)
 
 Gets bundles.
 
@@ -166,7 +166,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'endDate': "1970-01-01T00:00:00.00Z",
     }
     try:
-        # GetBundles (historical)
+        # Bundles (historical)
         api_response = api_instance.uniswap_v3_get_bundles__historical(
             query_params=query_params,
         )
@@ -283,7 +283,7 @@ No authorization required
 <a name="uniswap_v3_get_burns__current"></a>
 > [UniswapV3BurnV3DTO] uniswap_v3_get_burns__current()
 
-GetBurns (current)
+Burns (current)
 
 Gets burns.
 
@@ -310,7 +310,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'filter_pool_id': "filter_pool_id_example",
     }
     try:
-        # GetBurns (current)
+        # Burns (current)
         api_response = api_instance.uniswap_v3_get_burns__current(
             query_params=query_params,
         )
@@ -403,7 +403,7 @@ No authorization required
 <a name="uniswap_v3_get_burns__historical"></a>
 > [UniswapV3BurnV3DTO] uniswap_v3_get_burns__historical()
 
-GetBurns (historical)
+Burns (historical)
 
 Gets burns.
 
@@ -434,7 +434,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'poolId': "poolId_example",
     }
     try:
-        # GetBurns (historical)
+        # Burns (historical)
         api_response = api_instance.uniswap_v3_get_burns__historical(
             query_params=query_params,
         )
@@ -559,7 +559,7 @@ No authorization required
 <a name="uniswap_v3_get_day_data__current"></a>
 > [UniswapV3UniswapDayDataV3DTO] uniswap_v3_get_day_data__current()
 
-GetDayData (current)
+DayData (current)
 
 Gets uniswapv3 day data.
 
@@ -583,7 +583,7 @@ with openapi_client.ApiClient(configuration) as api_client:
 
     # example, this endpoint has no required or optional parameters
     try:
-        # GetDayData (current)
+        # DayData (current)
         api_response = api_instance.uniswap_v3_get_day_data__current()
         pprint(api_response)
     except openapi_client.ApiException as e:
@@ -652,7 +652,7 @@ No authorization required
 <a name="uniswap_v3_get_day_data__historical"></a>
 > [UniswapV3UniswapDayDataV3DTO] uniswap_v3_get_day_data__historical()
 
-GetDayData (historical)
+DayData (historical)
 
 Gets uniswapv3 day data.
 
@@ -682,7 +682,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'endDate': "1970-01-01T00:00:00.00Z",
     }
     try:
-        # GetDayData (historical)
+        # DayData (historical)
         api_response = api_instance.uniswap_v3_get_day_data__historical(
             query_params=query_params,
         )
@@ -799,7 +799,7 @@ No authorization required
 <a name="uniswap_v3_get_factory__current"></a>
 > [UniswapV3FactoryV3DTO] uniswap_v3_get_factory__current()
 
-GetFactory (current)
+Factory (current)
 
 Gets factory.
 
@@ -823,7 +823,7 @@ with openapi_client.ApiClient(configuration) as api_client:
 
     # example, this endpoint has no required or optional parameters
     try:
-        # GetFactory (current)
+        # Factory (current)
         api_response = api_instance.uniswap_v3_get_factory__current()
         pprint(api_response)
     except openapi_client.ApiException as e:
@@ -892,7 +892,7 @@ No authorization required
 <a name="uniswap_v3_get_factory__historical"></a>
 > [UniswapV3FactoryV3DTO] uniswap_v3_get_factory__historical()
 
-GetFactory (historical)
+Factory (historical)
 
 Gets factory.
 
@@ -922,7 +922,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'endDate': "1970-01-01T00:00:00.00Z",
     }
     try:
-        # GetFactory (historical)
+        # Factory (historical)
         api_response = api_instance.uniswap_v3_get_factory__historical(
             query_params=query_params,
         )
@@ -1039,7 +1039,7 @@ No authorization required
 <a name="uniswap_v3_get_mints__current"></a>
 > [UniswapV3MintV3DTO] uniswap_v3_get_mints__current()
 
-GetMints (current)
+Mints (current)
 
 Gets mints.
 
@@ -1066,7 +1066,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'filter_pool_id': "filter_pool_id_example",
     }
     try:
-        # GetMints (current)
+        # Mints (current)
         api_response = api_instance.uniswap_v3_get_mints__current(
             query_params=query_params,
         )
@@ -1159,7 +1159,7 @@ No authorization required
 <a name="uniswap_v3_get_mints__historical"></a>
 > [UniswapV3MintV3DTO] uniswap_v3_get_mints__historical()
 
-GetMints (historical)
+Mints (historical)
 
 Gets mints.
 
@@ -1190,7 +1190,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'poolId': "poolId_example",
     }
     try:
-        # GetMints (historical)
+        # Mints (historical)
         api_response = api_instance.uniswap_v3_get_mints__historical(
             query_params=query_params,
         )
@@ -1315,7 +1315,7 @@ No authorization required
 <a name="uniswap_v3_get_pools__current"></a>
 > [UniswapV3PoolV3DTO] uniswap_v3_get_pools__current()
 
-GetPools (current) 🔥
+Pools (current) 🔥
 
 Gets pools.
 
@@ -1342,7 +1342,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'filter_pool_id': "filter_pool_id_example",
     }
     try:
-        # GetPools (current) 🔥
+        # Pools (current) 🔥
         api_response = api_instance.uniswap_v3_get_pools__current(
             query_params=query_params,
         )
@@ -1435,7 +1435,7 @@ No authorization required
 <a name="uniswap_v3_get_pools__historical"></a>
 > [UniswapV3PoolV3DTO] uniswap_v3_get_pools__historical()
 
-GetPools (historical) 🔥
+Pools (historical) 🔥
 
 Gets pools.
 
@@ -1466,7 +1466,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'poolId': "poolId_example",
     }
     try:
-        # GetPools (historical) 🔥
+        # Pools (historical) 🔥
         api_response = api_instance.uniswap_v3_get_pools__historical(
             query_params=query_params,
         )
@@ -1591,7 +1591,7 @@ No authorization required
 <a name="uniswap_v3_get_pools_day_data__current"></a>
 > [UniswapV3PoolDayDataV3DTO] uniswap_v3_get_pools_day_data__current()
 
-GetPoolsDayData (current)
+PoolsDayData (current)
 
 Gets pools day data.
 
@@ -1618,7 +1618,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'filter_pool_id': "filter_pool_id_example",
     }
     try:
-        # GetPoolsDayData (current)
+        # PoolsDayData (current)
         api_response = api_instance.uniswap_v3_get_pools_day_data__current(
             query_params=query_params,
         )
@@ -1711,7 +1711,7 @@ No authorization required
 <a name="uniswap_v3_get_pools_day_data__historical"></a>
 > [UniswapV3PoolDayDataV3DTO] uniswap_v3_get_pools_day_data__historical()
 
-GetPoolsDayData (historical)
+PoolsDayData (historical)
 
 Gets pools day data.
 
@@ -1742,7 +1742,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'poolId': "poolId_example",
     }
     try:
-        # GetPoolsDayData (historical)
+        # PoolsDayData (historical)
         api_response = api_instance.uniswap_v3_get_pools_day_data__historical(
             query_params=query_params,
         )
@@ -1867,7 +1867,7 @@ No authorization required
 <a name="uniswap_v3_get_pools_hour_data__current"></a>
 > [UniswapV3PoolHourDataV3DTO] uniswap_v3_get_pools_hour_data__current()
 
-GetPoolsHourData (current)
+PoolsHourData (current)
 
 Gets pools hour data.
 
@@ -1894,7 +1894,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'filter_pool_id': "filter_pool_id_example",
     }
     try:
-        # GetPoolsHourData (current)
+        # PoolsHourData (current)
         api_response = api_instance.uniswap_v3_get_pools_hour_data__current(
             query_params=query_params,
         )
@@ -1987,7 +1987,7 @@ No authorization required
 <a name="uniswap_v3_get_pools_hour_data__historical"></a>
 > [UniswapV3PoolHourDataV3DTO] uniswap_v3_get_pools_hour_data__historical()
 
-GetPoolsHourData (historical)
+PoolsHourData (historical)
 
 Gets pools hour data.
 
@@ -2018,7 +2018,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'poolId': "poolId_example",
     }
     try:
-        # GetPoolsHourData (historical)
+        # PoolsHourData (historical)
         api_response = api_instance.uniswap_v3_get_pools_hour_data__historical(
             query_params=query_params,
         )
@@ -2143,7 +2143,7 @@ No authorization required
 <a name="uniswap_v3_get_positions__current"></a>
 > [UniswapV3PositionV3DTO] uniswap_v3_get_positions__current()
 
-GetPositions (current)
+Positions (current)
 
 Gets positions.
 
@@ -2170,7 +2170,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'filter_pool_id': "filter_pool_id_example",
     }
     try:
-        # GetPositions (current)
+        # Positions (current)
         api_response = api_instance.uniswap_v3_get_positions__current(
             query_params=query_params,
         )
@@ -2263,7 +2263,7 @@ No authorization required
 <a name="uniswap_v3_get_positions__historical"></a>
 > [UniswapV3PositionV3DTO] uniswap_v3_get_positions__historical()
 
-GetPositions (historical)
+Positions (historical)
 
 Gets positions.
 
@@ -2294,7 +2294,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'poolId': "poolId_example",
     }
     try:
-        # GetPositions (historical)
+        # Positions (historical)
         api_response = api_instance.uniswap_v3_get_positions__historical(
             query_params=query_params,
         )
@@ -2419,7 +2419,7 @@ No authorization required
 <a name="uniswap_v3_get_positions_snaphots__historical"></a>
 > [UniswapV3PositionSnapshotV3DTO] uniswap_v3_get_positions_snaphots__historical()
 
-GetPositionsSnaphots (historical)
+PositionsSnaphots (historical)
 
 Gets positions snapshots.
 
@@ -2450,7 +2450,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'poolId': "poolId_example",
     }
     try:
-        # GetPositionsSnaphots (historical)
+        # PositionsSnaphots (historical)
         api_response = api_instance.uniswap_v3_get_positions_snaphots__historical(
             query_params=query_params,
         )
@@ -2575,7 +2575,7 @@ No authorization required
 <a name="uniswap_v3_get_positions_snapshots__current"></a>
 > [UniswapV3PositionSnapshotV3DTO] uniswap_v3_get_positions_snapshots__current()
 
-GetPositionsSnapshots (current)
+PositionsSnapshots (current)
 
 Gets positions snapshots.
 
@@ -2602,7 +2602,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'filter_pool_id': "filter_pool_id_example",
     }
     try:
-        # GetPositionsSnapshots (current)
+        # PositionsSnapshots (current)
         api_response = api_instance.uniswap_v3_get_positions_snapshots__current(
             query_params=query_params,
         )
@@ -2695,7 +2695,7 @@ No authorization required
 <a name="uniswap_v3_get_swaps__current"></a>
 > [UniswapV3SwapV3DTO] uniswap_v3_get_swaps__current()
 
-GetSwaps (current) 🔥
+Swaps (current) 🔥
 
 Gets swaps.
 
@@ -2722,7 +2722,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'filter_pool_id': "filter_pool_id_example",
     }
     try:
-        # GetSwaps (current) 🔥
+        # Swaps (current) 🔥
         api_response = api_instance.uniswap_v3_get_swaps__current(
             query_params=query_params,
         )
@@ -2815,7 +2815,7 @@ No authorization required
 <a name="uniswap_v3_get_swaps__historical"></a>
 > [UniswapV3SwapV3DTO] uniswap_v3_get_swaps__historical()
 
-GetSwaps (historical) 🔥
+Swaps (historical) 🔥
 
 Gets swaps.
 
@@ -2846,7 +2846,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'poolId': "poolId_example",
     }
     try:
-        # GetSwaps (historical) 🔥
+        # Swaps (historical) 🔥
         api_response = api_instance.uniswap_v3_get_swaps__historical(
             query_params=query_params,
         )
@@ -2971,7 +2971,7 @@ No authorization required
 <a name="uniswap_v3_get_ticks__current"></a>
 > [UniswapV3TickV3DTO] uniswap_v3_get_ticks__current()
 
-GetTicks (current)
+Ticks (current)
 
 Gets ticks.
 
@@ -2998,7 +2998,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'filter_pool_id': "filter_pool_id_example",
     }
     try:
-        # GetTicks (current)
+        # Ticks (current)
         api_response = api_instance.uniswap_v3_get_ticks__current(
             query_params=query_params,
         )
@@ -3091,7 +3091,7 @@ No authorization required
 <a name="uniswap_v3_get_ticks__historical"></a>
 > [UniswapV3TickV3DTO] uniswap_v3_get_ticks__historical()
 
-GetTicks (historical)
+Ticks (historical)
 
 Gets ticks.
 
@@ -3122,7 +3122,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'poolId': "poolId_example",
     }
     try:
-        # GetTicks (historical)
+        # Ticks (historical)
         api_response = api_instance.uniswap_v3_get_ticks__historical(
             query_params=query_params,
         )
@@ -3247,7 +3247,7 @@ No authorization required
 <a name="uniswap_v3_get_ticks_day_data__current"></a>
 > [UniswapV3TickDayDataV3DTO] uniswap_v3_get_ticks_day_data__current()
 
-GetTicksDayData (current)
+TicksDayData (current)
 
 Gets ticks day data.
 
@@ -3274,7 +3274,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'filter_pool_id': "filter_pool_id_example",
     }
     try:
-        # GetTicksDayData (current)
+        # TicksDayData (current)
         api_response = api_instance.uniswap_v3_get_ticks_day_data__current(
             query_params=query_params,
         )
@@ -3367,7 +3367,7 @@ No authorization required
 <a name="uniswap_v3_get_ticks_day_data__historical"></a>
 > [UniswapV3TickDayDataV3DTO] uniswap_v3_get_ticks_day_data__historical()
 
-GetTicksDayData (historical)
+TicksDayData (historical)
 
 Gets ticks day data.
 
@@ -3398,7 +3398,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'poolId': "poolId_example",
     }
     try:
-        # GetTicksDayData (historical)
+        # TicksDayData (historical)
         api_response = api_instance.uniswap_v3_get_ticks_day_data__historical(
             query_params=query_params,
         )
@@ -3523,7 +3523,7 @@ No authorization required
 <a name="uniswap_v3_get_tokens__current"></a>
 > [UniswapV3TokenV3DTO] uniswap_v3_get_tokens__current()
 
-GetTokens (current) 🔥
+Tokens (current) 🔥
 
 Gets tokens.
 
@@ -3550,7 +3550,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'filter_token_id': "filter_token_id_example",
     }
     try:
-        # GetTokens (current) 🔥
+        # Tokens (current) 🔥
         api_response = api_instance.uniswap_v3_get_tokens__current(
             query_params=query_params,
         )
@@ -3643,7 +3643,7 @@ No authorization required
 <a name="uniswap_v3_get_tokens__historical"></a>
 > [UniswapV3TokenV3DTO] uniswap_v3_get_tokens__historical()
 
-GetTokens (historical) 🔥
+Tokens (historical) 🔥
 
 Gets tokens.
 
@@ -3674,7 +3674,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'tokenId': "tokenId_example",
     }
     try:
-        # GetTokens (historical) 🔥
+        # Tokens (historical) 🔥
         api_response = api_instance.uniswap_v3_get_tokens__historical(
             query_params=query_params,
         )
@@ -3799,7 +3799,7 @@ No authorization required
 <a name="uniswap_v3_get_tokens_day_data__current"></a>
 > [UniswapV3TokenV3DayDataDTO] uniswap_v3_get_tokens_day_data__current()
 
-GetTokensDayData (current)
+TokensDayData (current)
 
 Gets tokens day data.
 
@@ -3826,7 +3826,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'filter_token_id': "filter_token_id_example",
     }
     try:
-        # GetTokensDayData (current)
+        # TokensDayData (current)
         api_response = api_instance.uniswap_v3_get_tokens_day_data__current(
             query_params=query_params,
         )
@@ -3919,7 +3919,7 @@ No authorization required
 <a name="uniswap_v3_get_tokens_day_data__historical"></a>
 > [UniswapV3TokenV3DayDataDTO] uniswap_v3_get_tokens_day_data__historical()
 
-GetTokensDayData (historical)
+TokensDayData (historical)
 
 Gets tokens day data.
 
@@ -3950,7 +3950,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'tokenId': "tokenId_example",
     }
     try:
-        # GetTokensDayData (historical)
+        # TokensDayData (historical)
         api_response = api_instance.uniswap_v3_get_tokens_day_data__historical(
             query_params=query_params,
         )
@@ -4075,7 +4075,7 @@ No authorization required
 <a name="uniswap_v3_get_tokens_hour_data__current"></a>
 > [UniswapV3TokenHourDataV3DTO] uniswap_v3_get_tokens_hour_data__current()
 
-GetTokensHourData (current)
+TokensHourData (current)
 
 Gets tokens hour data.
 
@@ -4102,7 +4102,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'filter_token_id': "filter_token_id_example",
     }
     try:
-        # GetTokensHourData (current)
+        # TokensHourData (current)
         api_response = api_instance.uniswap_v3_get_tokens_hour_data__current(
             query_params=query_params,
         )
@@ -4195,7 +4195,7 @@ No authorization required
 <a name="uniswap_v3_get_tokens_hour_data__historical"></a>
 > [UniswapV3TokenHourDataV3DTO] uniswap_v3_get_tokens_hour_data__historical()
 
-GetTokensHourData (historical)
+TokensHourData (historical)
 
 Gets tokens hour data.
 
@@ -4226,7 +4226,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'tokenId': "tokenId_example",
     }
     try:
-        # GetTokensHourData (historical)
+        # TokensHourData (historical)
         api_response = api_instance.uniswap_v3_get_tokens_hour_data__historical(
             query_params=query_params,
         )
@@ -4351,7 +4351,7 @@ No authorization required
 <a name="uniswap_v3_get_transactions__historical"></a>
 > [UniswapV3TransactionV3DTO] uniswap_v3_get_transactions__historical()
 
-GetTransactions (historical)
+Transactions (historical)
 
 Gets transactions.
 
@@ -4381,7 +4381,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'endDate': "1970-01-01T00:00:00.00Z",
     }
     try:
-        # GetTransactions (historical)
+        # Transactions (historical)
         api_response = api_instance.uniswap_v3_get_transactions__historical(
             query_params=query_params,
         )

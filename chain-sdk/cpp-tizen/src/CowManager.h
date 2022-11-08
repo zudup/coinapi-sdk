@@ -28,7 +28,7 @@ public:
 	CowManager();
 	virtual ~CowManager();
 
-/*! \brief GetOrders (historical). *Synchronous*
+/*! \brief Orders (historical). *Synchronous*
  *
  * Gets orders.
  * \param startBlock 
@@ -44,7 +44,7 @@ bool cowGetOrders (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Cow.OrderDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetOrders (historical). *Asynchronous*
+/*! \brief Orders (historical). *Asynchronous*
  *
  * Gets orders.
  * \param startBlock 
@@ -61,7 +61,7 @@ bool cowGetOrders (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetSettlements (historical). *Synchronous*
+/*! \brief Settlements (historical). *Synchronous*
  *
  * Gets settlements.
  * \param startBlock 
@@ -77,7 +77,7 @@ bool cowGetSettlements (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Cow.SettlementDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetSettlements (historical). *Asynchronous*
+/*! \brief Settlements (historical). *Asynchronous*
  *
  * Gets settlements.
  * \param startBlock 
@@ -94,7 +94,7 @@ bool cowGetSettlements (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetTokens (historical) 🔥. *Synchronous*
+/*! \brief Tokens (historical) 🔥. *Synchronous*
  *
  * Gets tokens.
  * \param startBlock 
@@ -111,7 +111,7 @@ bool cowGetTokens (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Cow.TokenDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetTokens (historical) 🔥. *Asynchronous*
+/*! \brief Tokens (historical) 🔥. *Asynchronous*
  *
  * Gets tokens.
  * \param startBlock 
@@ -129,7 +129,7 @@ bool cowGetTokens (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetTrades (historical) 🔥. *Synchronous*
+/*! \brief Trades (historical) 🔥. *Synchronous*
  *
  * Gets trades.
  * \param startBlock 
@@ -145,7 +145,7 @@ bool cowGetTrades (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Cow.TradeDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetTrades (historical) 🔥. *Asynchronous*
+/*! \brief Trades (historical) 🔥. *Asynchronous*
  *
  * Gets trades.
  * \param startBlock 
@@ -162,7 +162,7 @@ bool cowGetTrades (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetUsers (historical). *Synchronous*
+/*! \brief Users (historical). *Synchronous*
  *
  * Gets users.
  * \param startBlock 
@@ -178,7 +178,7 @@ bool cowGetUsers (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Cow.UserDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetUsers (historical). *Asynchronous*
+/*! \brief Users (historical). *Asynchronous*
  *
  * Gets users.
  * \param startBlock 

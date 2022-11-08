@@ -4,17 +4,17 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**DexGetBatchesHistorical**](DexApi.md#DexGetBatchesHistorical) | **Get** /dapps/dex/batches/historical | GetBatches (historical)
-[**DexGetDepositsHistorical**](DexApi.md#DexGetDepositsHistorical) | **Get** /dapps/dex/deposits/historical | GetDeposits (historical)
-[**DexGetOrdersHistorical**](DexApi.md#DexGetOrdersHistorical) | **Get** /dapps/dex/orders/historical | GetOrders (historical)
-[**DexGetPricesHistorical**](DexApi.md#DexGetPricesHistorical) | **Get** /dapps/dex/prices/historical | GetPrices (historical)
-[**DexGetSolutionsHistorical**](DexApi.md#DexGetSolutionsHistorical) | **Get** /dapps/dex/solutions/historical | GetSolutions (historical)
-[**DexGetStatsHistorical**](DexApi.md#DexGetStatsHistorical) | **Get** /dapps/dex/stats/historical | GetStats (historical)
-[**DexGetTokensHistorical**](DexApi.md#DexGetTokensHistorical) | **Get** /dapps/dex/tokens/historical | GetTokens (historical) 🔥
-[**DexGetTradesHistorical**](DexApi.md#DexGetTradesHistorical) | **Get** /dapps/dex/trades/historical | GetTrades (historical) 🔥
-[**DexGetUsersHistorical**](DexApi.md#DexGetUsersHistorical) | **Get** /dapps/dex/users/historical | GetUsers (historical)
-[**DexGetWithdrawsHistorical**](DexApi.md#DexGetWithdrawsHistorical) | **Get** /dapps/dex/withdraws/historical | GetWithdraws (historical)
-[**DexGetWithdrawsRequestsHistorical**](DexApi.md#DexGetWithdrawsRequestsHistorical) | **Get** /dapps/dex/withdrawsRequests/historical | GetWithdrawsRequests (historical)
+[**DexGetBatchesHistorical**](DexApi.md#DexGetBatchesHistorical) | **Get** /dapps/dex/batches/historical | Batches (historical)
+[**DexGetDepositsHistorical**](DexApi.md#DexGetDepositsHistorical) | **Get** /dapps/dex/deposits/historical | Deposits (historical)
+[**DexGetOrdersHistorical**](DexApi.md#DexGetOrdersHistorical) | **Get** /dapps/dex/orders/historical | Orders (historical)
+[**DexGetPricesHistorical**](DexApi.md#DexGetPricesHistorical) | **Get** /dapps/dex/prices/historical | Prices (historical)
+[**DexGetSolutionsHistorical**](DexApi.md#DexGetSolutionsHistorical) | **Get** /dapps/dex/solutions/historical | Solutions (historical)
+[**DexGetStatsHistorical**](DexApi.md#DexGetStatsHistorical) | **Get** /dapps/dex/stats/historical | Stats (historical)
+[**DexGetTokensHistorical**](DexApi.md#DexGetTokensHistorical) | **Get** /dapps/dex/tokens/historical | Tokens (historical) 🔥
+[**DexGetTradesHistorical**](DexApi.md#DexGetTradesHistorical) | **Get** /dapps/dex/trades/historical | Trades (historical) 🔥
+[**DexGetUsersHistorical**](DexApi.md#DexGetUsersHistorical) | **Get** /dapps/dex/users/historical | Users (historical)
+[**DexGetWithdrawsHistorical**](DexApi.md#DexGetWithdrawsHistorical) | **Get** /dapps/dex/withdraws/historical | Withdraws (historical)
+[**DexGetWithdrawsRequestsHistorical**](DexApi.md#DexGetWithdrawsRequestsHistorical) | **Get** /dapps/dex/withdrawsRequests/historical | WithdrawsRequests (historical)
 
 
 
@@ -22,7 +22,7 @@ Method | HTTP request | Description
 
 > []DexBatchDTO DexGetBatchesHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Execute()
 
-GetBatches (historical)
+Batches (historical)
 
 
 
@@ -95,7 +95,7 @@ No authorization required
 
 > []DexDepositDTO DexGetDepositsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).TokenId(tokenId).Execute()
 
-GetDeposits (historical)
+Deposits (historical)
 
 
 
@@ -170,7 +170,7 @@ No authorization required
 
 > []DexOrderDTO DexGetOrdersHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).TokenId(tokenId).Execute()
 
-GetOrders (historical)
+Orders (historical)
 
 
 
@@ -245,7 +245,7 @@ No authorization required
 
 > []DexPriceDTO DexGetPricesHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).TokenId(tokenId).Execute()
 
-GetPrices (historical)
+Prices (historical)
 
 
 
@@ -320,7 +320,7 @@ No authorization required
 
 > []DexSolutionDTO DexGetSolutionsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).TokenId(tokenId).Execute()
 
-GetSolutions (historical)
+Solutions (historical)
 
 
 
@@ -395,7 +395,7 @@ No authorization required
 
 > []DexStatsDTO DexGetStatsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Execute()
 
-GetStats (historical)
+Stats (historical)
 
 
 
@@ -468,7 +468,7 @@ No authorization required
 
 > []DexTokenDTO DexGetTokensHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).TokenId(tokenId).Execute()
 
-GetTokens (historical) 🔥
+Tokens (historical) 🔥
 
 
 
@@ -543,7 +543,7 @@ No authorization required
 
 > []DexTradeDTO DexGetTradesHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Execute()
 
-GetTrades (historical) 🔥
+Trades (historical) 🔥
 
 
 
@@ -616,7 +616,7 @@ No authorization required
 
 > []DexUserDTO DexGetUsersHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Execute()
 
-GetUsers (historical)
+Users (historical)
 
 
 
@@ -689,7 +689,7 @@ No authorization required
 
 > []DexWithdrawDTO DexGetWithdrawsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).TokenId(tokenId).Execute()
 
-GetWithdraws (historical)
+Withdraws (historical)
 
 
 
@@ -764,7 +764,7 @@ No authorization required
 
 > []DexWithdrawRequestDTO DexGetWithdrawsRequestsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).TokenId(tokenId).Execute()
 
-GetWithdrawsRequests (historical)
+WithdrawsRequests (historical)
 
 
 

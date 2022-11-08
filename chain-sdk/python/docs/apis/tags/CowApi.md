@@ -5,17 +5,17 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**cow_get_orders__historical**](#cow_get_orders__historical) | **get** /dapps/cow/orders/historical | GetOrders (historical)
-[**cow_get_settlements__historical**](#cow_get_settlements__historical) | **get** /dapps/cow/settlements/historical | GetSettlements (historical)
-[**cow_get_tokens__historical**](#cow_get_tokens__historical) | **get** /dapps/cow/tokens/historical | GetTokens (historical) 🔥
-[**cow_get_trades__historical**](#cow_get_trades__historical) | **get** /dapps/cow/trades/historical | GetTrades (historical) 🔥
-[**cow_get_users__historical**](#cow_get_users__historical) | **get** /dapps/cow/users/historical | GetUsers (historical)
+[**cow_get_orders__historical**](#cow_get_orders__historical) | **get** /dapps/cow/orders/historical | Orders (historical)
+[**cow_get_settlements__historical**](#cow_get_settlements__historical) | **get** /dapps/cow/settlements/historical | Settlements (historical)
+[**cow_get_tokens__historical**](#cow_get_tokens__historical) | **get** /dapps/cow/tokens/historical | Tokens (historical) 🔥
+[**cow_get_trades__historical**](#cow_get_trades__historical) | **get** /dapps/cow/trades/historical | Trades (historical) 🔥
+[**cow_get_users__historical**](#cow_get_users__historical) | **get** /dapps/cow/users/historical | Users (historical)
 
 # **cow_get_orders__historical**
 <a name="cow_get_orders__historical"></a>
 > [CowOrderDTO] cow_get_orders__historical()
 
-GetOrders (historical)
+Orders (historical)
 
 Gets orders.
 
@@ -45,7 +45,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'endDate': "1970-01-01T00:00:00.00Z",
     }
     try:
-        # GetOrders (historical)
+        # Orders (historical)
         api_response = api_instance.cow_get_orders__historical(
             query_params=query_params,
         )
@@ -162,7 +162,7 @@ No authorization required
 <a name="cow_get_settlements__historical"></a>
 > [CowSettlementDTO] cow_get_settlements__historical()
 
-GetSettlements (historical)
+Settlements (historical)
 
 Gets settlements.
 
@@ -192,7 +192,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'endDate': "1970-01-01T00:00:00.00Z",
     }
     try:
-        # GetSettlements (historical)
+        # Settlements (historical)
         api_response = api_instance.cow_get_settlements__historical(
             query_params=query_params,
         )
@@ -309,7 +309,7 @@ No authorization required
 <a name="cow_get_tokens__historical"></a>
 > [CowTokenDTO] cow_get_tokens__historical()
 
-GetTokens (historical) 🔥
+Tokens (historical) 🔥
 
 Gets tokens.
 
@@ -340,7 +340,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'tokenId': "tokenId_example",
     }
     try:
-        # GetTokens (historical) 🔥
+        # Tokens (historical) 🔥
         api_response = api_instance.cow_get_tokens__historical(
             query_params=query_params,
         )
@@ -465,7 +465,7 @@ No authorization required
 <a name="cow_get_trades__historical"></a>
 > [CowTradeDTO] cow_get_trades__historical()
 
-GetTrades (historical) 🔥
+Trades (historical) 🔥
 
 Gets trades.
 
@@ -495,7 +495,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'endDate': "1970-01-01T00:00:00.00Z",
     }
     try:
-        # GetTrades (historical) 🔥
+        # Trades (historical) 🔥
         api_response = api_instance.cow_get_trades__historical(
             query_params=query_params,
         )
@@ -612,7 +612,7 @@ No authorization required
 <a name="cow_get_users__historical"></a>
 > [CowUserDTO] cow_get_users__historical()
 
-GetUsers (historical)
+Users (historical)
 
 Gets users.
 
@@ -642,7 +642,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         'endDate': "1970-01-01T00:00:00.00Z",
     }
     try:
-        # GetUsers (historical)
+        # Users (historical)
         api_response = api_instance.cow_get_users__historical(
             query_params=query_params,
         )

@@ -26,7 +26,7 @@ public class OASUniswapV2Api {
     }
 
     /**
-     * GetBundles (historical)
+     * Bundles (historical)
      * Gets bundles.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -58,7 +58,7 @@ public class OASUniswapV2Api {
         );
     }
     /**
-     * GetBurns (historical)
+     * Burns (historical)
      * Gets burns.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -92,7 +92,7 @@ public class OASUniswapV2Api {
         );
     }
     /**
-     * GetDayData (historical)
+     * DayData (historical)
      * Gets uniswapv2 day data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -124,7 +124,7 @@ public class OASUniswapV2Api {
         );
     }
     /**
-     * GetFactory (historical)
+     * Factory (historical)
      * Gets factory.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -156,7 +156,7 @@ public class OASUniswapV2Api {
         );
     }
     /**
-     * GetLiquidityPositions (historical)
+     * LiquidityPositions (historical)
      * Gets liquidity positions.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -190,7 +190,7 @@ public class OASUniswapV2Api {
         );
     }
     /**
-     * GetLiquidityPositionsSnapshots (historical)
+     * LiquidityPositionsSnapshots (historical)
      * Gets liquidity positions snapshots.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -224,7 +224,7 @@ public class OASUniswapV2Api {
         );
     }
     /**
-     * GetMints (historical)
+     * Mints (historical)
      * Gets mints.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -258,7 +258,7 @@ public class OASUniswapV2Api {
         );
     }
     /**
-     * GetPools (current) 🔥
+     * Pools (current) 🔥
      * Gets pools.
      * @param filterPoolId  (optional)
      * @return List<OASUniswapV2PairV2DTO>
@@ -284,7 +284,7 @@ public class OASUniswapV2Api {
         );
     }
     /**
-     * GetPoolsDayData (historical)
+     * PoolsDayData (historical)
      * Gets pools day data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -318,7 +318,7 @@ public class OASUniswapV2Api {
         );
     }
     /**
-     * GetPools (historical) 🔥
+     * Pools (historical) 🔥
      * Gets pools.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -352,7 +352,7 @@ public class OASUniswapV2Api {
         );
     }
     /**
-     * GetPoolsHourData (historical)
+     * PoolsHourData (historical)
      * Gets pools tracked each our.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -386,7 +386,7 @@ public class OASUniswapV2Api {
         );
     }
     /**
-     * GetSwaps (current) 🔥
+     * Swaps (current) 🔥
      * Gets swaps.
      * @return List<OASUniswapV2SwapV2DTO>
      * @throws OAS.ApiException if fails to make API call
@@ -407,7 +407,7 @@ public class OASUniswapV2Api {
         );
     }
     /**
-     * GetSwaps (historical) 🔥
+     * Swaps (historical) 🔥
      * Gets swaps.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -441,7 +441,7 @@ public class OASUniswapV2Api {
         );
     }
     /**
-     * GetTokens (current) 🔥
+     * Tokens (current) 🔥
      * Gets tokens.
      * @return List<OASUniswapV2TokenV2DTO>
      * @throws OAS.ApiException if fails to make API call
@@ -462,7 +462,7 @@ public class OASUniswapV2Api {
         );
     }
     /**
-     * GetTokensDayData (historical)
+     * TokensDayData (historical)
      * Gets tokens day data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -496,7 +496,7 @@ public class OASUniswapV2Api {
         );
     }
     /**
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      * Gets tokens.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -530,7 +530,7 @@ public class OASUniswapV2Api {
         );
     }
     /**
-     * GetTransactions (historical)
+     * Transactions (historical)
      * Gets transactions.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -562,7 +562,7 @@ public class OASUniswapV2Api {
         );
     }
     /**
-     * GetUsers (historical)
+     * Users (historical)
      * Gets users.
      * @param startBlock  (optional)
      * @param endBlock  (optional)

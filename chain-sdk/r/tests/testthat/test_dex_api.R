@@ -8,7 +8,7 @@ api_instance <- DexApi$new()
 test_that("DexGetBatchesHistorical", {
   # tests for DexGetBatchesHistorical
   # base path: https://onchain.coinapi.io
-  # GetBatches (historical)
+  # Batches (historical)
   # Gets batches.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -23,7 +23,7 @@ test_that("DexGetBatchesHistorical", {
 test_that("DexGetDepositsHistorical", {
   # tests for DexGetDepositsHistorical
   # base path: https://onchain.coinapi.io
-  # GetDeposits (historical)
+  # Deposits (historical)
   # Gets deposits.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -39,7 +39,7 @@ test_that("DexGetDepositsHistorical", {
 test_that("DexGetOrdersHistorical", {
   # tests for DexGetOrdersHistorical
   # base path: https://onchain.coinapi.io
-  # GetOrders (historical)
+  # Orders (historical)
   # Gets orders.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -55,7 +55,7 @@ test_that("DexGetOrdersHistorical", {
 test_that("DexGetPricesHistorical", {
   # tests for DexGetPricesHistorical
   # base path: https://onchain.coinapi.io
-  # GetPrices (historical)
+  # Prices (historical)
   # Gets prices.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -71,7 +71,7 @@ test_that("DexGetPricesHistorical", {
 test_that("DexGetSolutionsHistorical", {
   # tests for DexGetSolutionsHistorical
   # base path: https://onchain.coinapi.io
-  # GetSolutions (historical)
+  # Solutions (historical)
   # Gets solutions.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -87,7 +87,7 @@ test_that("DexGetSolutionsHistorical", {
 test_that("DexGetStatsHistorical", {
   # tests for DexGetStatsHistorical
   # base path: https://onchain.coinapi.io
-  # GetStats (historical)
+  # Stats (historical)
   # Gets stats.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -102,7 +102,7 @@ test_that("DexGetStatsHistorical", {
 test_that("DexGetTokensHistorical", {
   # tests for DexGetTokensHistorical
   # base path: https://onchain.coinapi.io
-  # GetTokens (historical) 🔥
+  # Tokens (historical) 🔥
   # Gets tokens.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -118,7 +118,7 @@ test_that("DexGetTokensHistorical", {
 test_that("DexGetTradesHistorical", {
   # tests for DexGetTradesHistorical
   # base path: https://onchain.coinapi.io
-  # GetTrades (historical) 🔥
+  # Trades (historical) 🔥
   # Gets trades.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -133,7 +133,7 @@ test_that("DexGetTradesHistorical", {
 test_that("DexGetUsersHistorical", {
   # tests for DexGetUsersHistorical
   # base path: https://onchain.coinapi.io
-  # GetUsers (historical)
+  # Users (historical)
   # Gets users.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -148,7 +148,7 @@ test_that("DexGetUsersHistorical", {
 test_that("DexGetWithdrawsHistorical", {
   # tests for DexGetWithdrawsHistorical
   # base path: https://onchain.coinapi.io
-  # GetWithdraws (historical)
+  # Withdraws (historical)
   # Gets withdraws.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -164,7 +164,7 @@ test_that("DexGetWithdrawsHistorical", {
 test_that("DexGetWithdrawsRequestsHistorical", {
   # tests for DexGetWithdrawsRequestsHistorical
   # base path: https://onchain.coinapi.io
-  # GetWithdrawsRequests (historical)
+  # WithdrawsRequests (historical)
   # Gets withdraws requests.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)

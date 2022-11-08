@@ -62,7 +62,7 @@ public:
     virtual ~SushiswapApi();
 
     /// <summary>
-    /// GetExchanges (current) 🔥
+    /// Exchanges (current) 🔥
     /// </summary>
     /// <remarks>
     /// Gets exchanges.
@@ -70,7 +70,7 @@ public:
     pplx::task<std::vector<std::shared_ptr<Curve_ExchangeDTO>>> curve_GetExchanges__current(
     ) const;
     /// <summary>
-    /// GetTrades (current) 🔥
+    /// Trades (current) 🔥
     /// </summary>
     /// <remarks>
     /// Gets trades.
@@ -78,7 +78,7 @@ public:
     pplx::task<std::vector<std::shared_ptr<Dex_TradeDTO>>> dex_GetTrades__current(
     ) const;
     /// <summary>
-    /// GetBundles (historical)
+    /// Bundles (historical)
     /// </summary>
     /// <remarks>
     /// Gets bundles.
@@ -94,7 +94,7 @@ public:
         boost::optional<utility::datetime> endDate
     ) const;
     /// <summary>
-    /// GetBurns (historical)
+    /// Burns (historical)
     /// </summary>
     /// <remarks>
     /// Gets burns.
@@ -112,7 +112,7 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// GetDayData (historical)
+    /// DayData (historical)
     /// </summary>
     /// <remarks>
     /// Gets day data.
@@ -128,7 +128,7 @@ public:
         boost::optional<utility::datetime> endDate
     ) const;
     /// <summary>
-    /// GetFactory (historical)
+    /// Factory (historical)
     /// </summary>
     /// <remarks>
     /// Gets factory.
@@ -144,7 +144,7 @@ public:
         boost::optional<utility::datetime> endDate
     ) const;
     /// <summary>
-    /// GetHourData (historical)
+    /// HourData (historical)
     /// </summary>
     /// <remarks>
     /// Gets hour data.
@@ -160,7 +160,7 @@ public:
         boost::optional<utility::datetime> endDate
     ) const;
     /// <summary>
-    /// GetLiquidityPositionSnapshot (historical)
+    /// LiquidityPositionSnapshot (historical)
     /// </summary>
     /// <remarks>
     /// Gets liquidity position snapshot.
@@ -178,7 +178,7 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// GetLiquidityPosition (historical)
+    /// LiquidityPosition (historical)
     /// </summary>
     /// <remarks>
     /// Gets liquidity position.
@@ -196,7 +196,7 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// GetMints (historical)
+    /// Mints (historical)
     /// </summary>
     /// <remarks>
     /// Gets mints.
@@ -214,7 +214,7 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// GetPoolsDayData (historical)
+    /// PoolsDayData (historical)
     /// </summary>
     /// <remarks>
     /// Gets pools day data.
@@ -232,7 +232,7 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// GetPoolsHourData (historical)
+    /// PoolsHourData (historical)
     /// </summary>
     /// <remarks>
     /// Gets pools tracked each our.
@@ -250,7 +250,7 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// GetPools (current) 🔥
+    /// Pools (current) 🔥
     /// </summary>
     /// <remarks>
     /// Gets pools.
@@ -258,7 +258,7 @@ public:
     pplx::task<std::vector<std::shared_ptr<Sushiswap_PairDTO>>> sushiswap_GetPools__current(
     ) const;
     /// <summary>
-    /// GetPools (historical) 🔥
+    /// Pools (historical) 🔥
     /// </summary>
     /// <remarks>
     /// Gets list of pools for given filters.
@@ -276,7 +276,7 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// GetSwaps (current) 🔥
+    /// Swaps (current) 🔥
     /// </summary>
     /// <remarks>
     /// Gets swaps.
@@ -284,7 +284,7 @@ public:
     pplx::task<std::vector<std::shared_ptr<Sushiswap_SwapDTO>>> sushiswap_GetSwaps__current(
     ) const;
     /// <summary>
-    /// GetSwaps (historical) 🔥
+    /// Swaps (historical) 🔥
     /// </summary>
     /// <remarks>
     /// Gets list of swaps for given filters.
@@ -302,7 +302,7 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// GetTokensDayData (historical)
+    /// TokensDayData (historical)
     /// </summary>
     /// <remarks>
     /// Gets tokens day data.
@@ -320,7 +320,7 @@ public:
         boost::optional<utility::string_t> tokenId
     ) const;
     /// <summary>
-    /// GetTokens (current) 🔥
+    /// Tokens (current) 🔥
     /// </summary>
     /// <remarks>
     /// Gets tokens.
@@ -328,7 +328,7 @@ public:
     pplx::task<std::vector<std::shared_ptr<Sushiswap_TokenDTO>>> sushiswap_GetTokens__current(
     ) const;
     /// <summary>
-    /// GetTokens (historical) 🔥
+    /// Tokens (historical) 🔥
     /// </summary>
     /// <remarks>
     /// Gets list of tokens for given filters.
@@ -346,7 +346,7 @@ public:
         boost::optional<utility::string_t> tokenId
     ) const;
     /// <summary>
-    /// GetTransactions (historical)
+    /// Transactions (historical)
     /// </summary>
     /// <remarks>
     /// Gets transactions.
@@ -362,7 +362,7 @@ public:
         boost::optional<utility::datetime> endDate
     ) const;
     /// <summary>
-    /// GetUsers (historical)
+    /// Users (historical)
     /// </summary>
     /// <remarks>
     /// Gets users.

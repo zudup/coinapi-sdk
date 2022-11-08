@@ -33,7 +33,7 @@ describe 'DexApi' do
   end
 
   # unit tests for dex_get_batches__historical
-  # GetBatches (historical)
+  # Batches (historical)
   # Gets batches.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -48,7 +48,7 @@ describe 'DexApi' do
   end
 
   # unit tests for dex_get_deposits__historical
-  # GetDeposits (historical)
+  # Deposits (historical)
   # Gets deposits.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -64,7 +64,7 @@ describe 'DexApi' do
   end
 
   # unit tests for dex_get_orders__historical
-  # GetOrders (historical)
+  # Orders (historical)
   # Gets orders.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -80,7 +80,7 @@ describe 'DexApi' do
   end
 
   # unit tests for dex_get_prices__historical
-  # GetPrices (historical)
+  # Prices (historical)
   # Gets prices.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -96,7 +96,7 @@ describe 'DexApi' do
   end
 
   # unit tests for dex_get_solutions__historical
-  # GetSolutions (historical)
+  # Solutions (historical)
   # Gets solutions.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -112,7 +112,7 @@ describe 'DexApi' do
   end
 
   # unit tests for dex_get_stats__historical
-  # GetStats (historical)
+  # Stats (historical)
   # Gets stats.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -127,7 +127,7 @@ describe 'DexApi' do
   end
 
   # unit tests for dex_get_tokens__historical
-  # GetTokens (historical) 🔥
+  # Tokens (historical) 🔥
   # Gets tokens.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -143,7 +143,7 @@ describe 'DexApi' do
   end
 
   # unit tests for dex_get_trades__historical
-  # GetTrades (historical) 🔥
+  # Trades (historical) 🔥
   # Gets trades.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -158,7 +158,7 @@ describe 'DexApi' do
   end
 
   # unit tests for dex_get_users__historical
-  # GetUsers (historical)
+  # Users (historical)
   # Gets users.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -173,7 +173,7 @@ describe 'DexApi' do
   end
 
   # unit tests for dex_get_withdraws__historical
-  # GetWithdraws (historical)
+  # Withdraws (historical)
   # Gets withdraws.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -189,7 +189,7 @@ describe 'DexApi' do
   end
 
   # unit tests for dex_get_withdraws_requests__historical
-  # GetWithdrawsRequests (historical)
+  # WithdrawsRequests (historical)
   # Gets withdraws requests.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 

@@ -155,7 +155,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetExchanges (current) 🔥
+     * Exchanges (current) 🔥
      * Gets exchanges.
      * @return List&lt;CurveExchangeDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -171,7 +171,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetExchanges (current) 🔥
+     * Exchanges (current) 🔥
      * Gets exchanges.
      * @return ApiResponse&lt;List&lt;CurveExchangeDTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -188,7 +188,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetExchanges (current) 🔥 (asynchronously)
+     * Exchanges (current) 🔥 (asynchronously)
      * Gets exchanges.
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
@@ -270,7 +270,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetTrades (current) 🔥
+     * Trades (current) 🔥
      * Gets trades.
      * @return List&lt;DexTradeDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -286,7 +286,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetTrades (current) 🔥
+     * Trades (current) 🔥
      * Gets trades.
      * @return ApiResponse&lt;List&lt;DexTradeDTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -303,7 +303,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetTrades (current) 🔥 (asynchronously)
+     * Trades (current) 🔥 (asynchronously)
      * Gets trades.
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
@@ -405,7 +405,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetBundles (historical)
+     * Bundles (historical)
      * Gets bundles.
      * @param startBlock AAAAAAAAAA (optional)
      * @param endBlock BBBBBBBBBBBB (optional)
@@ -425,7 +425,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetBundles (historical)
+     * Bundles (historical)
      * Gets bundles.
      * @param startBlock AAAAAAAAAA (optional)
      * @param endBlock BBBBBBBBBBBB (optional)
@@ -446,7 +446,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetBundles (historical) (asynchronously)
+     * Bundles (historical) (asynchronously)
      * Gets bundles.
      * @param startBlock AAAAAAAAAA (optional)
      * @param endBlock BBBBBBBBBBBB (optional)
@@ -557,7 +557,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetBurns (historical)
+     * Burns (historical)
      * Gets burns.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -578,7 +578,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetBurns (historical)
+     * Burns (historical)
      * Gets burns.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -600,7 +600,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetBurns (historical) (asynchronously)
+     * Burns (historical) (asynchronously)
      * Gets burns.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -707,7 +707,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetDayData (historical)
+     * DayData (historical)
      * Gets day data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -727,7 +727,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetDayData (historical)
+     * DayData (historical)
      * Gets day data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -748,7 +748,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetDayData (historical) (asynchronously)
+     * DayData (historical) (asynchronously)
      * Gets day data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -854,7 +854,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetFactory (historical)
+     * Factory (historical)
      * Gets factory.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -874,7 +874,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetFactory (historical)
+     * Factory (historical)
      * Gets factory.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -895,7 +895,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetFactory (historical) (asynchronously)
+     * Factory (historical) (asynchronously)
      * Gets factory.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1001,7 +1001,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetHourData (historical)
+     * HourData (historical)
      * Gets hour data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1021,7 +1021,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetHourData (historical)
+     * HourData (historical)
      * Gets hour data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1042,7 +1042,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetHourData (historical) (asynchronously)
+     * HourData (historical) (asynchronously)
      * Gets hour data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1153,7 +1153,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetLiquidityPosition (historical)
+     * LiquidityPosition (historical)
      * Gets liquidity position.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1174,7 +1174,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetLiquidityPosition (historical)
+     * LiquidityPosition (historical)
      * Gets liquidity position.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1196,7 +1196,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetLiquidityPosition (historical) (asynchronously)
+     * LiquidityPosition (historical) (asynchronously)
      * Gets liquidity position.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1308,7 +1308,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetLiquidityPositionSnapshot (historical)
+     * LiquidityPositionSnapshot (historical)
      * Gets liquidity position snapshot.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1329,7 +1329,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetLiquidityPositionSnapshot (historical)
+     * LiquidityPositionSnapshot (historical)
      * Gets liquidity position snapshot.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1351,7 +1351,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetLiquidityPositionSnapshot (historical) (asynchronously)
+     * LiquidityPositionSnapshot (historical) (asynchronously)
      * Gets liquidity position snapshot.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1463,7 +1463,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetMints (historical)
+     * Mints (historical)
      * Gets mints.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1484,7 +1484,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetMints (historical)
+     * Mints (historical)
      * Gets mints.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1506,7 +1506,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetMints (historical) (asynchronously)
+     * Mints (historical) (asynchronously)
      * Gets mints.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1593,7 +1593,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetPools (current) 🔥
+     * Pools (current) 🔥
      * Gets pools.
      * @return List&lt;SushiswapPairDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -1609,7 +1609,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetPools (current) 🔥
+     * Pools (current) 🔥
      * Gets pools.
      * @return ApiResponse&lt;List&lt;SushiswapPairDTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -1626,7 +1626,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetPools (current) 🔥 (asynchronously)
+     * Pools (current) 🔥 (asynchronously)
      * Gets pools.
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
@@ -1733,7 +1733,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetPoolsDayData (historical)
+     * PoolsDayData (historical)
      * Gets pools day data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1754,7 +1754,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetPoolsDayData (historical)
+     * PoolsDayData (historical)
      * Gets pools day data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1776,7 +1776,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetPoolsDayData (historical) (asynchronously)
+     * PoolsDayData (historical) (asynchronously)
      * Gets pools day data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1888,7 +1888,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetPools (historical) 🔥
+     * Pools (historical) 🔥
      * Gets list of pools for given filters.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1909,7 +1909,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetPools (historical) 🔥
+     * Pools (historical) 🔥
      * Gets list of pools for given filters.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1931,7 +1931,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetPools (historical) 🔥 (asynchronously)
+     * Pools (historical) 🔥 (asynchronously)
      * Gets list of pools for given filters.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2043,7 +2043,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetPoolsHourData (historical)
+     * PoolsHourData (historical)
      * Gets pools tracked each our.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2064,7 +2064,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetPoolsHourData (historical)
+     * PoolsHourData (historical)
      * Gets pools tracked each our.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2086,7 +2086,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetPoolsHourData (historical) (asynchronously)
+     * PoolsHourData (historical) (asynchronously)
      * Gets pools tracked each our.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2173,7 +2173,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetSwaps (current) 🔥
+     * Swaps (current) 🔥
      * Gets swaps.
      * @return List&lt;SushiswapSwapDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -2189,7 +2189,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetSwaps (current) 🔥
+     * Swaps (current) 🔥
      * Gets swaps.
      * @return ApiResponse&lt;List&lt;SushiswapSwapDTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -2206,7 +2206,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetSwaps (current) 🔥 (asynchronously)
+     * Swaps (current) 🔥 (asynchronously)
      * Gets swaps.
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
@@ -2313,7 +2313,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetSwaps (historical) 🔥
+     * Swaps (historical) 🔥
      * Gets list of swaps for given filters.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2334,7 +2334,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetSwaps (historical) 🔥
+     * Swaps (historical) 🔥
      * Gets list of swaps for given filters.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2356,7 +2356,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetSwaps (historical) 🔥 (asynchronously)
+     * Swaps (historical) 🔥 (asynchronously)
      * Gets list of swaps for given filters.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2443,7 +2443,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetTokens (current) 🔥
+     * Tokens (current) 🔥
      * Gets tokens.
      * @return List&lt;SushiswapTokenDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -2459,7 +2459,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetTokens (current) 🔥
+     * Tokens (current) 🔥
      * Gets tokens.
      * @return ApiResponse&lt;List&lt;SushiswapTokenDTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -2476,7 +2476,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetTokens (current) 🔥 (asynchronously)
+     * Tokens (current) 🔥 (asynchronously)
      * Gets tokens.
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
@@ -2583,7 +2583,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetTokensDayData (historical)
+     * TokensDayData (historical)
      * Gets tokens day data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2604,7 +2604,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetTokensDayData (historical)
+     * TokensDayData (historical)
      * Gets tokens day data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2626,7 +2626,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetTokensDayData (historical) (asynchronously)
+     * TokensDayData (historical) (asynchronously)
      * Gets tokens day data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2738,7 +2738,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      * Gets list of tokens for given filters.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2759,7 +2759,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      * Gets list of tokens for given filters.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2781,7 +2781,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetTokens (historical) 🔥 (asynchronously)
+     * Tokens (historical) 🔥 (asynchronously)
      * Gets list of tokens for given filters.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2888,7 +2888,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetTransactions (historical)
+     * Transactions (historical)
      * Gets transactions.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2908,7 +2908,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetTransactions (historical)
+     * Transactions (historical)
      * Gets transactions.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2929,7 +2929,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetTransactions (historical) (asynchronously)
+     * Transactions (historical) (asynchronously)
      * Gets transactions.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -3035,7 +3035,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetUsers (historical)
+     * Users (historical)
      * Gets users.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -3055,7 +3055,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetUsers (historical)
+     * Users (historical)
      * Gets users.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -3076,7 +3076,7 @@ public class SushiswapApi {
     }
 
     /**
-     * GetUsers (historical) (asynchronously)
+     * Users (historical) (asynchronously)
      * Gets users.
      * @param startBlock  (optional)
      * @param endBlock  (optional)

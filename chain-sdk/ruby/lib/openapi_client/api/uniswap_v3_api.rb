@@ -19,7 +19,7 @@ module OpenapiClient
     def initialize(api_client = ApiClient.default)
       @api_client = api_client
     end
-    # GetBundles (current)
+    # Bundles (current)
     # Gets bundles.
     # @param [Hash] opts the optional parameters
     # @return [Array<UniswapV3BundleV3DTO>]
@@ -28,7 +28,7 @@ module OpenapiClient
       data
     end
 
-    # GetBundles (current)
+    # Bundles (current)
     # Gets bundles.
     # @param [Hash] opts the optional parameters
     # @return [Array<(Array<UniswapV3BundleV3DTO>, Integer, Hash)>] Array<UniswapV3BundleV3DTO> data, response status code and response headers
@@ -76,7 +76,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetBundles (historical)
+    # Bundles (historical)
     # Gets bundles.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -89,7 +89,7 @@ module OpenapiClient
       data
     end
 
-    # GetBundles (historical)
+    # Bundles (historical)
     # Gets bundles.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -145,7 +145,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetBurns (current)
+    # Burns (current)
     # Gets burns.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :filter_pool_id 
@@ -155,7 +155,7 @@ module OpenapiClient
       data
     end
 
-    # GetBurns (current)
+    # Burns (current)
     # Gets burns.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :filter_pool_id 
@@ -205,7 +205,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetBurns (historical)
+    # Burns (historical)
     # Gets burns.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -219,7 +219,7 @@ module OpenapiClient
       data
     end
 
-    # GetBurns (historical)
+    # Burns (historical)
     # Gets burns.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -277,7 +277,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetDayData (current)
+    # DayData (current)
     # Gets uniswapv3 day data.
     # @param [Hash] opts the optional parameters
     # @return [Array<UniswapV3UniswapDayDataV3DTO>]
@@ -286,7 +286,7 @@ module OpenapiClient
       data
     end
 
-    # GetDayData (current)
+    # DayData (current)
     # Gets uniswapv3 day data.
     # @param [Hash] opts the optional parameters
     # @return [Array<(Array<UniswapV3UniswapDayDataV3DTO>, Integer, Hash)>] Array<UniswapV3UniswapDayDataV3DTO> data, response status code and response headers
@@ -334,7 +334,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetDayData (historical)
+    # DayData (historical)
     # Gets uniswapv3 day data.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -347,7 +347,7 @@ module OpenapiClient
       data
     end
 
-    # GetDayData (historical)
+    # DayData (historical)
     # Gets uniswapv3 day data.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -403,7 +403,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetFactory (current)
+    # Factory (current)
     # Gets factory.
     # @param [Hash] opts the optional parameters
     # @return [Array<UniswapV3FactoryV3DTO>]
@@ -412,7 +412,7 @@ module OpenapiClient
       data
     end
 
-    # GetFactory (current)
+    # Factory (current)
     # Gets factory.
     # @param [Hash] opts the optional parameters
     # @return [Array<(Array<UniswapV3FactoryV3DTO>, Integer, Hash)>] Array<UniswapV3FactoryV3DTO> data, response status code and response headers
@@ -460,7 +460,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetFactory (historical)
+    # Factory (historical)
     # Gets factory.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -473,7 +473,7 @@ module OpenapiClient
       data
     end
 
-    # GetFactory (historical)
+    # Factory (historical)
     # Gets factory.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -529,7 +529,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetMints (current)
+    # Mints (current)
     # Gets mints.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :filter_pool_id 
@@ -539,7 +539,7 @@ module OpenapiClient
       data
     end
 
-    # GetMints (current)
+    # Mints (current)
     # Gets mints.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :filter_pool_id 
@@ -589,7 +589,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetMints (historical)
+    # Mints (historical)
     # Gets mints.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -603,7 +603,7 @@ module OpenapiClient
       data
     end
 
-    # GetMints (historical)
+    # Mints (historical)
     # Gets mints.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -661,7 +661,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetPools (current) 🔥
+    # Pools (current) 🔥
     # Gets pools.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :filter_pool_id 
@@ -671,7 +671,7 @@ module OpenapiClient
       data
     end
 
-    # GetPools (current) 🔥
+    # Pools (current) 🔥
     # Gets pools.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :filter_pool_id 
@@ -721,7 +721,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetPools (historical) 🔥
+    # Pools (historical) 🔥
     # Gets pools.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -735,7 +735,7 @@ module OpenapiClient
       data
     end
 
-    # GetPools (historical) 🔥
+    # Pools (historical) 🔥
     # Gets pools.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -793,7 +793,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetPoolsDayData (current)
+    # PoolsDayData (current)
     # Gets pools day data.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :filter_pool_id 
@@ -803,7 +803,7 @@ module OpenapiClient
       data
     end
 
-    # GetPoolsDayData (current)
+    # PoolsDayData (current)
     # Gets pools day data.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :filter_pool_id 
@@ -853,7 +853,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetPoolsDayData (historical)
+    # PoolsDayData (historical)
     # Gets pools day data.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -867,7 +867,7 @@ module OpenapiClient
       data
     end
 
-    # GetPoolsDayData (historical)
+    # PoolsDayData (historical)
     # Gets pools day data.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -925,7 +925,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetPoolsHourData (current)
+    # PoolsHourData (current)
     # Gets pools hour data.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :filter_pool_id 
@@ -935,7 +935,7 @@ module OpenapiClient
       data
     end
 
-    # GetPoolsHourData (current)
+    # PoolsHourData (current)
     # Gets pools hour data.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :filter_pool_id 
@@ -985,7 +985,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetPoolsHourData (historical)
+    # PoolsHourData (historical)
     # Gets pools hour data.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -999,7 +999,7 @@ module OpenapiClient
       data
     end
 
-    # GetPoolsHourData (historical)
+    # PoolsHourData (historical)
     # Gets pools hour data.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -1057,7 +1057,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetPositions (current)
+    # Positions (current)
     # Gets positions.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :filter_pool_id 
@@ -1067,7 +1067,7 @@ module OpenapiClient
       data
     end
 
-    # GetPositions (current)
+    # Positions (current)
     # Gets positions.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :filter_pool_id 
@@ -1117,7 +1117,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetPositions (historical)
+    # Positions (historical)
     # Gets positions.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -1131,7 +1131,7 @@ module OpenapiClient
       data
     end
 
-    # GetPositions (historical)
+    # Positions (historical)
     # Gets positions.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -1189,7 +1189,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetPositionsSnaphots (historical)
+    # PositionsSnaphots (historical)
     # Gets positions snapshots.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -1203,7 +1203,7 @@ module OpenapiClient
       data
     end
 
-    # GetPositionsSnaphots (historical)
+    # PositionsSnaphots (historical)
     # Gets positions snapshots.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -1261,7 +1261,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetPositionsSnapshots (current)
+    # PositionsSnapshots (current)
     # Gets positions snapshots.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :filter_pool_id 
@@ -1271,7 +1271,7 @@ module OpenapiClient
       data
     end
 
-    # GetPositionsSnapshots (current)
+    # PositionsSnapshots (current)
     # Gets positions snapshots.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :filter_pool_id 
@@ -1321,7 +1321,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetSwaps (current) 🔥
+    # Swaps (current) 🔥
     # Gets swaps.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :filter_pool_id 
@@ -1331,7 +1331,7 @@ module OpenapiClient
       data
     end
 
-    # GetSwaps (current) 🔥
+    # Swaps (current) 🔥
     # Gets swaps.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :filter_pool_id 
@@ -1381,7 +1381,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetSwaps (historical) 🔥
+    # Swaps (historical) 🔥
     # Gets swaps.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -1395,7 +1395,7 @@ module OpenapiClient
       data
     end
 
-    # GetSwaps (historical) 🔥
+    # Swaps (historical) 🔥
     # Gets swaps.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -1453,7 +1453,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetTicks (current)
+    # Ticks (current)
     # Gets ticks.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :filter_pool_id 
@@ -1463,7 +1463,7 @@ module OpenapiClient
       data
     end
 
-    # GetTicks (current)
+    # Ticks (current)
     # Gets ticks.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :filter_pool_id 
@@ -1513,7 +1513,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetTicks (historical)
+    # Ticks (historical)
     # Gets ticks.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -1527,7 +1527,7 @@ module OpenapiClient
       data
     end
 
-    # GetTicks (historical)
+    # Ticks (historical)
     # Gets ticks.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -1585,7 +1585,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetTicksDayData (current)
+    # TicksDayData (current)
     # Gets ticks day data.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :filter_pool_id 
@@ -1595,7 +1595,7 @@ module OpenapiClient
       data
     end
 
-    # GetTicksDayData (current)
+    # TicksDayData (current)
     # Gets ticks day data.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :filter_pool_id 
@@ -1645,7 +1645,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetTicksDayData (historical)
+    # TicksDayData (historical)
     # Gets ticks day data.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -1659,7 +1659,7 @@ module OpenapiClient
       data
     end
 
-    # GetTicksDayData (historical)
+    # TicksDayData (historical)
     # Gets ticks day data.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -1717,7 +1717,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetTokens (current) 🔥
+    # Tokens (current) 🔥
     # Gets tokens.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :filter_token_id 
@@ -1727,7 +1727,7 @@ module OpenapiClient
       data
     end
 
-    # GetTokens (current) 🔥
+    # Tokens (current) 🔥
     # Gets tokens.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :filter_token_id 
@@ -1777,7 +1777,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetTokens (historical) 🔥
+    # Tokens (historical) 🔥
     # Gets tokens.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -1791,7 +1791,7 @@ module OpenapiClient
       data
     end
 
-    # GetTokens (historical) 🔥
+    # Tokens (historical) 🔥
     # Gets tokens.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -1849,7 +1849,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetTokensDayData (current)
+    # TokensDayData (current)
     # Gets tokens day data.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :filter_token_id 
@@ -1859,7 +1859,7 @@ module OpenapiClient
       data
     end
 
-    # GetTokensDayData (current)
+    # TokensDayData (current)
     # Gets tokens day data.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :filter_token_id 
@@ -1909,7 +1909,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetTokensDayData (historical)
+    # TokensDayData (historical)
     # Gets tokens day data.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -1923,7 +1923,7 @@ module OpenapiClient
       data
     end
 
-    # GetTokensDayData (historical)
+    # TokensDayData (historical)
     # Gets tokens day data.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -1981,7 +1981,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetTokensHourData (current)
+    # TokensHourData (current)
     # Gets tokens hour data.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :filter_token_id 
@@ -1991,7 +1991,7 @@ module OpenapiClient
       data
     end
 
-    # GetTokensHourData (current)
+    # TokensHourData (current)
     # Gets tokens hour data.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :filter_token_id 
@@ -2041,7 +2041,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetTokensHourData (historical)
+    # TokensHourData (historical)
     # Gets tokens hour data.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -2055,7 +2055,7 @@ module OpenapiClient
       data
     end
 
-    # GetTokensHourData (historical)
+    # TokensHourData (historical)
     # Gets tokens hour data.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -2113,7 +2113,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetTransactions (historical)
+    # Transactions (historical)
     # Gets transactions.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -2126,7 +2126,7 @@ module OpenapiClient
       data
     end
 
-    # GetTransactions (historical)
+    # Transactions (historical)
     # Gets transactions.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 

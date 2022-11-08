@@ -35,7 +35,7 @@ class UniswapV3Api {
 
   const UniswapV3Api(this._dio, this._serializers);
 
-  /// GetBundles (current)
+  /// Bundles (current)
   /// Gets bundles.
   ///
   /// Parameters:
@@ -107,7 +107,7 @@ class UniswapV3Api {
     );
   }
 
-  /// GetBundles (historical)
+  /// Bundles (historical)
   /// Gets bundles.
   ///
   /// Parameters:
@@ -195,7 +195,7 @@ class UniswapV3Api {
     );
   }
 
-  /// GetBurns (current)
+  /// Burns (current)
   /// Gets burns.
   ///
   /// Parameters:
@@ -274,7 +274,7 @@ class UniswapV3Api {
     );
   }
 
-  /// GetBurns (historical)
+  /// Burns (historical)
   /// Gets burns.
   ///
   /// Parameters:
@@ -365,7 +365,7 @@ class UniswapV3Api {
     );
   }
 
-  /// GetDayData (current)
+  /// DayData (current)
   /// Gets uniswapv3 day data.
   ///
   /// Parameters:
@@ -437,7 +437,7 @@ class UniswapV3Api {
     );
   }
 
-  /// GetDayData (historical)
+  /// DayData (historical)
   /// Gets uniswapv3 day data.
   ///
   /// Parameters:
@@ -525,7 +525,7 @@ class UniswapV3Api {
     );
   }
 
-  /// GetFactory (current)
+  /// Factory (current)
   /// Gets factory.
   ///
   /// Parameters:
@@ -597,7 +597,7 @@ class UniswapV3Api {
     );
   }
 
-  /// GetFactory (historical)
+  /// Factory (historical)
   /// Gets factory.
   ///
   /// Parameters:
@@ -685,7 +685,7 @@ class UniswapV3Api {
     );
   }
 
-  /// GetMints (current)
+  /// Mints (current)
   /// Gets mints.
   ///
   /// Parameters:
@@ -764,7 +764,7 @@ class UniswapV3Api {
     );
   }
 
-  /// GetMints (historical)
+  /// Mints (historical)
   /// Gets mints.
   ///
   /// Parameters:
@@ -855,7 +855,7 @@ class UniswapV3Api {
     );
   }
 
-  /// GetPools (current) 🔥
+  /// Pools (current) 🔥
   /// Gets pools.
   ///
   /// Parameters:
@@ -934,7 +934,7 @@ class UniswapV3Api {
     );
   }
 
-  /// GetPoolsDayData (current)
+  /// PoolsDayData (current)
   /// Gets pools day data.
   ///
   /// Parameters:
@@ -1013,7 +1013,7 @@ class UniswapV3Api {
     );
   }
 
-  /// GetPoolsDayData (historical)
+  /// PoolsDayData (historical)
   /// Gets pools day data.
   ///
   /// Parameters:
@@ -1104,7 +1104,7 @@ class UniswapV3Api {
     );
   }
 
-  /// GetPools (historical) 🔥
+  /// Pools (historical) 🔥
   /// Gets pools.
   ///
   /// Parameters:
@@ -1195,7 +1195,7 @@ class UniswapV3Api {
     );
   }
 
-  /// GetPoolsHourData (current)
+  /// PoolsHourData (current)
   /// Gets pools hour data.
   ///
   /// Parameters:
@@ -1274,7 +1274,7 @@ class UniswapV3Api {
     );
   }
 
-  /// GetPoolsHourData (historical)
+  /// PoolsHourData (historical)
   /// Gets pools hour data.
   ///
   /// Parameters:
@@ -1365,7 +1365,7 @@ class UniswapV3Api {
     );
   }
 
-  /// GetPositions (current)
+  /// Positions (current)
   /// Gets positions.
   ///
   /// Parameters:
@@ -1444,7 +1444,7 @@ class UniswapV3Api {
     );
   }
 
-  /// GetPositions (historical)
+  /// Positions (historical)
   /// Gets positions.
   ///
   /// Parameters:
@@ -1535,7 +1535,7 @@ class UniswapV3Api {
     );
   }
 
-  /// GetPositionsSnaphots (historical)
+  /// PositionsSnaphots (historical)
   /// Gets positions snapshots.
   ///
   /// Parameters:
@@ -1626,7 +1626,7 @@ class UniswapV3Api {
     );
   }
 
-  /// GetPositionsSnapshots (current)
+  /// PositionsSnapshots (current)
   /// Gets positions snapshots.
   ///
   /// Parameters:
@@ -1705,7 +1705,7 @@ class UniswapV3Api {
     );
   }
 
-  /// GetSwaps (current) 🔥
+  /// Swaps (current) 🔥
   /// Gets swaps.
   ///
   /// Parameters:
@@ -1784,7 +1784,7 @@ class UniswapV3Api {
     );
   }
 
-  /// GetSwaps (historical) 🔥
+  /// Swaps (historical) 🔥
   /// Gets swaps.
   ///
   /// Parameters:
@@ -1875,7 +1875,7 @@ class UniswapV3Api {
     );
   }
 
-  /// GetTicks (current)
+  /// Ticks (current)
   /// Gets ticks.
   ///
   /// Parameters:
@@ -1954,7 +1954,7 @@ class UniswapV3Api {
     );
   }
 
-  /// GetTicksDayData (current)
+  /// TicksDayData (current)
   /// Gets ticks day data.
   ///
   /// Parameters:
@@ -2033,7 +2033,7 @@ class UniswapV3Api {
     );
   }
 
-  /// GetTicksDayData (historical)
+  /// TicksDayData (historical)
   /// Gets ticks day data.
   ///
   /// Parameters:
@@ -2124,7 +2124,7 @@ class UniswapV3Api {
     );
   }
 
-  /// GetTicks (historical)
+  /// Ticks (historical)
   /// Gets ticks.
   ///
   /// Parameters:
@@ -2215,7 +2215,7 @@ class UniswapV3Api {
     );
   }
 
-  /// GetTokens (current) 🔥
+  /// Tokens (current) 🔥
   /// Gets tokens.
   ///
   /// Parameters:
@@ -2294,7 +2294,7 @@ class UniswapV3Api {
     );
   }
 
-  /// GetTokensDayData (current)
+  /// TokensDayData (current)
   /// Gets tokens day data.
   ///
   /// Parameters:
@@ -2373,7 +2373,7 @@ class UniswapV3Api {
     );
   }
 
-  /// GetTokensDayData (historical)
+  /// TokensDayData (historical)
   /// Gets tokens day data.
   ///
   /// Parameters:
@@ -2464,7 +2464,7 @@ class UniswapV3Api {
     );
   }
 
-  /// GetTokens (historical) 🔥
+  /// Tokens (historical) 🔥
   /// Gets tokens.
   ///
   /// Parameters:
@@ -2555,7 +2555,7 @@ class UniswapV3Api {
     );
   }
 
-  /// GetTokensHourData (current)
+  /// TokensHourData (current)
   /// Gets tokens hour data.
   ///
   /// Parameters:
@@ -2634,7 +2634,7 @@ class UniswapV3Api {
     );
   }
 
-  /// GetTokensHourData (historical)
+  /// TokensHourData (historical)
   /// Gets tokens hour data.
   ///
   /// Parameters:
@@ -2725,7 +2725,7 @@ class UniswapV3Api {
     );
   }
 
-  /// GetTransactions (historical)
+  /// Transactions (historical)
   /// Gets transactions.
   ///
   /// Parameters:

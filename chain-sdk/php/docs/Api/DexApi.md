@@ -4,17 +4,17 @@ All URIs are relative to https://onchain.coinapi.io, except if the operation def
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**dexGetBatchesHistorical()**](DexApi.md#dexGetBatchesHistorical) | **GET** /dapps/dex/batches/historical | GetBatches (historical) |
-| [**dexGetDepositsHistorical()**](DexApi.md#dexGetDepositsHistorical) | **GET** /dapps/dex/deposits/historical | GetDeposits (historical) |
-| [**dexGetOrdersHistorical()**](DexApi.md#dexGetOrdersHistorical) | **GET** /dapps/dex/orders/historical | GetOrders (historical) |
-| [**dexGetPricesHistorical()**](DexApi.md#dexGetPricesHistorical) | **GET** /dapps/dex/prices/historical | GetPrices (historical) |
-| [**dexGetSolutionsHistorical()**](DexApi.md#dexGetSolutionsHistorical) | **GET** /dapps/dex/solutions/historical | GetSolutions (historical) |
-| [**dexGetStatsHistorical()**](DexApi.md#dexGetStatsHistorical) | **GET** /dapps/dex/stats/historical | GetStats (historical) |
-| [**dexGetTokensHistorical()**](DexApi.md#dexGetTokensHistorical) | **GET** /dapps/dex/tokens/historical | GetTokens (historical) 🔥 |
-| [**dexGetTradesHistorical()**](DexApi.md#dexGetTradesHistorical) | **GET** /dapps/dex/trades/historical | GetTrades (historical) 🔥 |
-| [**dexGetUsersHistorical()**](DexApi.md#dexGetUsersHistorical) | **GET** /dapps/dex/users/historical | GetUsers (historical) |
-| [**dexGetWithdrawsHistorical()**](DexApi.md#dexGetWithdrawsHistorical) | **GET** /dapps/dex/withdraws/historical | GetWithdraws (historical) |
-| [**dexGetWithdrawsRequestsHistorical()**](DexApi.md#dexGetWithdrawsRequestsHistorical) | **GET** /dapps/dex/withdrawsRequests/historical | GetWithdrawsRequests (historical) |
+| [**dexGetBatchesHistorical()**](DexApi.md#dexGetBatchesHistorical) | **GET** /dapps/dex/batches/historical | Batches (historical) |
+| [**dexGetDepositsHistorical()**](DexApi.md#dexGetDepositsHistorical) | **GET** /dapps/dex/deposits/historical | Deposits (historical) |
+| [**dexGetOrdersHistorical()**](DexApi.md#dexGetOrdersHistorical) | **GET** /dapps/dex/orders/historical | Orders (historical) |
+| [**dexGetPricesHistorical()**](DexApi.md#dexGetPricesHistorical) | **GET** /dapps/dex/prices/historical | Prices (historical) |
+| [**dexGetSolutionsHistorical()**](DexApi.md#dexGetSolutionsHistorical) | **GET** /dapps/dex/solutions/historical | Solutions (historical) |
+| [**dexGetStatsHistorical()**](DexApi.md#dexGetStatsHistorical) | **GET** /dapps/dex/stats/historical | Stats (historical) |
+| [**dexGetTokensHistorical()**](DexApi.md#dexGetTokensHistorical) | **GET** /dapps/dex/tokens/historical | Tokens (historical) 🔥 |
+| [**dexGetTradesHistorical()**](DexApi.md#dexGetTradesHistorical) | **GET** /dapps/dex/trades/historical | Trades (historical) 🔥 |
+| [**dexGetUsersHistorical()**](DexApi.md#dexGetUsersHistorical) | **GET** /dapps/dex/users/historical | Users (historical) |
+| [**dexGetWithdrawsHistorical()**](DexApi.md#dexGetWithdrawsHistorical) | **GET** /dapps/dex/withdraws/historical | Withdraws (historical) |
+| [**dexGetWithdrawsRequestsHistorical()**](DexApi.md#dexGetWithdrawsRequestsHistorical) | **GET** /dapps/dex/withdrawsRequests/historical | WithdrawsRequests (historical) |
 
 
 ## `dexGetBatchesHistorical()`
@@ -23,7 +23,7 @@ All URIs are relative to https://onchain.coinapi.io, except if the operation def
 dexGetBatchesHistorical($start_block, $end_block, $start_date, $end_date): \OpenAPI\Client\Model\DexBatchDTO[]
 ```
 
-GetBatches (historical)
+Batches (historical)
 
 Gets batches.
 
@@ -85,7 +85,7 @@ No authorization required
 dexGetDepositsHistorical($start_block, $end_block, $start_date, $end_date, $token_id): \OpenAPI\Client\Model\DexDepositDTO[]
 ```
 
-GetDeposits (historical)
+Deposits (historical)
 
 Gets deposits.
 
@@ -149,7 +149,7 @@ No authorization required
 dexGetOrdersHistorical($start_block, $end_block, $start_date, $end_date, $token_id): \OpenAPI\Client\Model\DexOrderDTO[]
 ```
 
-GetOrders (historical)
+Orders (historical)
 
 Gets orders.
 
@@ -213,7 +213,7 @@ No authorization required
 dexGetPricesHistorical($start_block, $end_block, $start_date, $end_date, $token_id): \OpenAPI\Client\Model\DexPriceDTO[]
 ```
 
-GetPrices (historical)
+Prices (historical)
 
 Gets prices.
 
@@ -277,7 +277,7 @@ No authorization required
 dexGetSolutionsHistorical($start_block, $end_block, $start_date, $end_date, $token_id): \OpenAPI\Client\Model\DexSolutionDTO[]
 ```
 
-GetSolutions (historical)
+Solutions (historical)
 
 Gets solutions.
 
@@ -341,7 +341,7 @@ No authorization required
 dexGetStatsHistorical($start_block, $end_block, $start_date, $end_date): \OpenAPI\Client\Model\DexStatsDTO[]
 ```
 
-GetStats (historical)
+Stats (historical)
 
 Gets stats.
 
@@ -403,7 +403,7 @@ No authorization required
 dexGetTokensHistorical($start_block, $end_block, $start_date, $end_date, $token_id): \OpenAPI\Client\Model\DexTokenDTO[]
 ```
 
-GetTokens (historical) 🔥
+Tokens (historical) 🔥
 
 Gets tokens.
 
@@ -467,7 +467,7 @@ No authorization required
 dexGetTradesHistorical($start_block, $end_block, $start_date, $end_date): \OpenAPI\Client\Model\DexTradeDTO[]
 ```
 
-GetTrades (historical) 🔥
+Trades (historical) 🔥
 
 Gets trades.
 
@@ -529,7 +529,7 @@ No authorization required
 dexGetUsersHistorical($start_block, $end_block, $start_date, $end_date): \OpenAPI\Client\Model\DexUserDTO[]
 ```
 
-GetUsers (historical)
+Users (historical)
 
 Gets users.
 
@@ -591,7 +591,7 @@ No authorization required
 dexGetWithdrawsHistorical($start_block, $end_block, $start_date, $end_date, $token_id): \OpenAPI\Client\Model\DexWithdrawDTO[]
 ```
 
-GetWithdraws (historical)
+Withdraws (historical)
 
 Gets withdraws.
 
@@ -655,7 +655,7 @@ No authorization required
 dexGetWithdrawsRequestsHistorical($start_block, $end_block, $start_date, $end_date, $token_id): \OpenAPI\Client\Model\DexWithdrawRequestDTO[]
 ```
 
-GetWithdrawsRequests (historical)
+WithdrawsRequests (historical)
 
 Gets withdraws requests.
 

@@ -21,7 +21,7 @@ from .. import ApiTestMixin
 class TestDappsDexOrdersHistorical(ApiTestMixin, unittest.TestCase):
     """
     DappsDexOrdersHistorical unit test stubs
-        GetOrders (historical)  # noqa: E501
+        Orders (historical)  # noqa: E501
     """
     _configuration = configuration.Configuration()
 

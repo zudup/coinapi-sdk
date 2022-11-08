@@ -12,7 +12,7 @@
 }while(0)
 
 
-// GetOrders (historical)
+// Orders (historical)
 //
 // Gets orders.
 //
@@ -167,7 +167,7 @@ end:
 
 }
 
-// GetSettlements (historical)
+// Settlements (historical)
 //
 // Gets settlements.
 //
@@ -322,7 +322,7 @@ end:
 
 }
 
-// GetTokens (historical) 🔥
+// Tokens (historical) 🔥
 //
 // Gets tokens.
 //
@@ -501,7 +501,7 @@ end:
 
 }
 
-// GetTrades (historical) 🔥
+// Trades (historical) 🔥
 //
 // Gets trades.
 //
@@ -656,7 +656,7 @@ end:
 
 }
 
-// GetUsers (historical)
+// Users (historical)
 //
 // Gets users.
 //

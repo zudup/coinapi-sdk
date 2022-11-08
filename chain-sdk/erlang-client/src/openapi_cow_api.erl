@@ -8,7 +8,7 @@
 
 -define(BASE_URL, <<"">>).
 
-%% @doc GetOrders (historical)
+%% @doc Orders (historical)
 %% Gets orders.
 -spec cow_get_orders_(historical)(ctx:ctx()) -> {ok, [openapi_cow_order_dto:openapi_cow_order_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 cow_get_orders_(historical)(Ctx) ->
@@ -29,7 +29,7 @@ cow_get_orders_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc GetSettlements (historical)
+%% @doc Settlements (historical)
 %% Gets settlements.
 -spec cow_get_settlements_(historical)(ctx:ctx()) -> {ok, [openapi_cow_settlement_dto:openapi_cow_settlement_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 cow_get_settlements_(historical)(Ctx) ->
@@ -50,7 +50,7 @@ cow_get_settlements_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc GetTokens (historical) 🔥
+%% @doc Tokens (historical) 🔥
 %% Gets tokens.
 -spec cow_get_tokens_(historical)(ctx:ctx()) -> {ok, [openapi_cow_token_dto:openapi_cow_token_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 cow_get_tokens_(historical)(Ctx) ->
@@ -71,7 +71,7 @@ cow_get_tokens_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc GetTrades (historical) 🔥
+%% @doc Trades (historical) 🔥
 %% Gets trades.
 -spec cow_get_trades_(historical)(ctx:ctx()) -> {ok, [openapi_cow_trade_dto:openapi_cow_trade_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 cow_get_trades_(historical)(Ctx) ->
@@ -92,7 +92,7 @@ cow_get_trades_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc GetUsers (historical)
+%% @doc Users (historical)
 %% Gets users.
 -spec cow_get_users_(historical)(ctx:ctx()) -> {ok, [openapi_cow_user_dto:openapi_cow_user_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 cow_get_users_(historical)(Ctx) ->

@@ -49,7 +49,7 @@ public:
     virtual ~CowApi();
 
     /// <summary>
-    /// GetOrders (historical)
+    /// Orders (historical)
     /// </summary>
     /// <remarks>
     /// Gets orders.
@@ -65,7 +65,7 @@ public:
         boost::optional<utility::datetime> endDate
     ) const;
     /// <summary>
-    /// GetSettlements (historical)
+    /// Settlements (historical)
     /// </summary>
     /// <remarks>
     /// Gets settlements.
@@ -81,7 +81,7 @@ public:
         boost::optional<utility::datetime> endDate
     ) const;
     /// <summary>
-    /// GetTokens (historical) 🔥
+    /// Tokens (historical) 🔥
     /// </summary>
     /// <remarks>
     /// Gets tokens.
@@ -99,7 +99,7 @@ public:
         boost::optional<utility::string_t> tokenId
     ) const;
     /// <summary>
-    /// GetTrades (historical) 🔥
+    /// Trades (historical) 🔥
     /// </summary>
     /// <remarks>
     /// Gets trades.
@@ -115,7 +115,7 @@ public:
         boost::optional<utility::datetime> endDate
     ) const;
     /// <summary>
-    /// GetUsers (historical)
+    /// Users (historical)
     /// </summary>
     /// <remarks>
     /// Gets users.

@@ -4,45 +4,45 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
-| [**curve_get_accounts__historical**](CurveApi.md#curve_get_accounts__historical) | **GET** /dapps/curve/accounts/historical | GetAccounts (historical) |
-| [**curve_get_add_liquidity_events__historical**](CurveApi.md#curve_get_add_liquidity_events__historical) | **GET** /dapps/curve/addLiquidityEvents/historical | GetAddLiquidityEvents (historical) |
-| [**curve_get_admin_fee_change_logs__historical**](CurveApi.md#curve_get_admin_fee_change_logs__historical) | **GET** /dapps/curve/adminFeeChangeLogs/historical | GetAdminFeeChangeLogs (historical) |
-| [**curve_get_amplification_coeff_change_logs__historical**](CurveApi.md#curve_get_amplification_coeff_change_logs__historical) | **GET** /dapps/curve/amplificationCoeffChangeLogs/historical | GetAmplificationCoeffChangeLogs (historical) |
-| [**curve_get_coins__historical**](CurveApi.md#curve_get_coins__historical) | **GET** /dapps/curve/coins/historical | GetCoins (historical) |
-| [**curve_get_contracts__historical**](CurveApi.md#curve_get_contracts__historical) | **GET** /dapps/curve/contracts/historical | GetContracts (historical) |
-| [**curve_get_contracts_versions__historical**](CurveApi.md#curve_get_contracts_versions__historical) | **GET** /dapps/curve/contractsVersions/historical | GetContractsVersions (historical) |
-| [**curve_get_daily_volumes__historical**](CurveApi.md#curve_get_daily_volumes__historical) | **GET** /dapps/curve/dailyVolumes/historical | GetDailyVolumes (historical) |
-| [**curve_get_exchanges__historical**](CurveApi.md#curve_get_exchanges__historical) | **GET** /dapps/curve/exchanges/historical | GetExchanges (historical) 🔥 |
-| [**curve_get_fee_change_logs__historical**](CurveApi.md#curve_get_fee_change_logs__historical) | **GET** /dapps/curve/feeChangeLogs/historical | GetFeeChangeLogs (historical) |
-| [**curve_get_gauges__historical**](CurveApi.md#curve_get_gauges__historical) | **GET** /dapps/curve/gauges/historical | GetGauges (historical) |
-| [**curve_get_gauges_deposits__historical**](CurveApi.md#curve_get_gauges_deposits__historical) | **GET** /dapps/curve/gaugesDeposits/historical | GetGaugesDeposits (historical) |
-| [**curve_get_gauges_liquidity__historical**](CurveApi.md#curve_get_gauges_liquidity__historical) | **GET** /dapps/curve/gaugesLiquidity/historical | GetGaugesLiquidity (historical) |
-| [**curve_get_gauges_total_weights__historical**](CurveApi.md#curve_get_gauges_total_weights__historical) | **GET** /dapps/curve/gaugesTotalWeights/historical | GetGaugesTotalWeights (historical) |
-| [**curve_get_gauges_types__historical**](CurveApi.md#curve_get_gauges_types__historical) | **GET** /dapps/curve/gaugesTypes/historical | GetGaugesTypes (historical) |
-| [**curve_get_gauges_types_weights__historical**](CurveApi.md#curve_get_gauges_types_weights__historical) | **GET** /dapps/curve/gaugesTypesWeights/historical | GetGaugesTypesWeights (historical) |
-| [**curve_get_gauges_weights__historical**](CurveApi.md#curve_get_gauges_weights__historical) | **GET** /dapps/curve/gaugesWeights/historical | GetGaugesWeights (historical) |
-| [**curve_get_gauges_weights_votes__historical**](CurveApi.md#curve_get_gauges_weights_votes__historical) | **GET** /dapps/curve/gaugesWeightsVotes/historical | GetGaugesWeightsVotes (historical) |
-| [**curve_get_gauges_withdraw__historical**](CurveApi.md#curve_get_gauges_withdraw__historical) | **GET** /dapps/curve/gaugesWithdraws/historical | GetGaugesWithdraw (historical) |
-| [**curve_get_hourly_volumes__historical**](CurveApi.md#curve_get_hourly_volumes__historical) | **GET** /dapps/curve/hourlyVolumes/historical | GetHourlyVolumes (historical) |
-| [**curve_get_lp_tokens__historical**](CurveApi.md#curve_get_lp_tokens__historical) | **GET** /dapps/curve/lpTokens/historical | GetLpTokens (historical) |
-| [**curve_get_pools__historical**](CurveApi.md#curve_get_pools__historical) | **GET** /dapps/curve/pools/historical | GetPools (historical) 🔥 |
-| [**curve_get_proposals__historical**](CurveApi.md#curve_get_proposals__historical) | **GET** /dapps/curve/proposals/historical | GetProposals (historical) |
-| [**curve_get_proposals_votes__historical**](CurveApi.md#curve_get_proposals_votes__historical) | **GET** /dapps/curve/proposalsVotes/historical | GetProposalsVotes (historical) |
-| [**curve_get_remove_liquidity_events__historical**](CurveApi.md#curve_get_remove_liquidity_events__historical) | **GET** /dapps/curve/removeLiquidityEvents/historical | GetRemoveLiquidityEvents (historical) |
-| [**curve_get_remove_liquidity_one_events__historical**](CurveApi.md#curve_get_remove_liquidity_one_events__historical) | **GET** /dapps/curve/removeLiquidityOneEvents/historical | GetRemoveLiquidityOneEvents (historical) |
-| [**curve_get_system_states__historical**](CurveApi.md#curve_get_system_states__historical) | **GET** /dapps/curve/systemStates/historical | GetSystemStates (historical) |
-| [**curve_get_tokens__historical**](CurveApi.md#curve_get_tokens__historical) | **GET** /dapps/curve/tokens/historical | GetTokens (historical) 🔥 |
-| [**curve_get_transfer_ownership_events__historical**](CurveApi.md#curve_get_transfer_ownership_events__historical) | **GET** /dapps/curve/transferOwnershipEvents/historical | GetTransferOwnershipEvents (historical) |
-| [**curve_get_underlying_coins__historical**](CurveApi.md#curve_get_underlying_coins__historical) | **GET** /dapps/curve/underlyingCoins/historical | GetUnderlyingCoins (historical) |
-| [**curve_get_voting_apps__historical**](CurveApi.md#curve_get_voting_apps__historical) | **GET** /dapps/curve/votingApps/historical | GetVotingApps (historical) |
-| [**curve_get_weekly_volumes__historical**](CurveApi.md#curve_get_weekly_volumes__historical) | **GET** /dapps/curve/weeklyVolumes/historical | GetWeeklyVolumes (historical) |
+| [**curve_get_accounts__historical**](CurveApi.md#curve_get_accounts__historical) | **GET** /dapps/curve/accounts/historical | Accounts (historical) |
+| [**curve_get_add_liquidity_events__historical**](CurveApi.md#curve_get_add_liquidity_events__historical) | **GET** /dapps/curve/addLiquidityEvents/historical | AddLiquidityEvents (historical) |
+| [**curve_get_admin_fee_change_logs__historical**](CurveApi.md#curve_get_admin_fee_change_logs__historical) | **GET** /dapps/curve/adminFeeChangeLogs/historical | AdminFeeChangeLogs (historical) |
+| [**curve_get_amplification_coeff_change_logs__historical**](CurveApi.md#curve_get_amplification_coeff_change_logs__historical) | **GET** /dapps/curve/amplificationCoeffChangeLogs/historical | AmplificationCoeffChangeLogs (historical) |
+| [**curve_get_coins__historical**](CurveApi.md#curve_get_coins__historical) | **GET** /dapps/curve/coins/historical | Coins (historical) |
+| [**curve_get_contracts__historical**](CurveApi.md#curve_get_contracts__historical) | **GET** /dapps/curve/contracts/historical | Contracts (historical) |
+| [**curve_get_contracts_versions__historical**](CurveApi.md#curve_get_contracts_versions__historical) | **GET** /dapps/curve/contractsVersions/historical | ContractsVersions (historical) |
+| [**curve_get_daily_volumes__historical**](CurveApi.md#curve_get_daily_volumes__historical) | **GET** /dapps/curve/dailyVolumes/historical | DailyVolumes (historical) |
+| [**curve_get_exchanges__historical**](CurveApi.md#curve_get_exchanges__historical) | **GET** /dapps/curve/exchanges/historical | Exchanges (historical) 🔥 |
+| [**curve_get_fee_change_logs__historical**](CurveApi.md#curve_get_fee_change_logs__historical) | **GET** /dapps/curve/feeChangeLogs/historical | FeeChangeLogs (historical) |
+| [**curve_get_gauges__historical**](CurveApi.md#curve_get_gauges__historical) | **GET** /dapps/curve/gauges/historical | Gauges (historical) |
+| [**curve_get_gauges_deposits__historical**](CurveApi.md#curve_get_gauges_deposits__historical) | **GET** /dapps/curve/gaugesDeposits/historical | GaugesDeposits (historical) |
+| [**curve_get_gauges_liquidity__historical**](CurveApi.md#curve_get_gauges_liquidity__historical) | **GET** /dapps/curve/gaugesLiquidity/historical | GaugesLiquidity (historical) |
+| [**curve_get_gauges_total_weights__historical**](CurveApi.md#curve_get_gauges_total_weights__historical) | **GET** /dapps/curve/gaugesTotalWeights/historical | GaugesTotalWeights (historical) |
+| [**curve_get_gauges_types__historical**](CurveApi.md#curve_get_gauges_types__historical) | **GET** /dapps/curve/gaugesTypes/historical | GaugesTypes (historical) |
+| [**curve_get_gauges_types_weights__historical**](CurveApi.md#curve_get_gauges_types_weights__historical) | **GET** /dapps/curve/gaugesTypesWeights/historical | GaugesTypesWeights (historical) |
+| [**curve_get_gauges_weights__historical**](CurveApi.md#curve_get_gauges_weights__historical) | **GET** /dapps/curve/gaugesWeights/historical | GaugesWeights (historical) |
+| [**curve_get_gauges_weights_votes__historical**](CurveApi.md#curve_get_gauges_weights_votes__historical) | **GET** /dapps/curve/gaugesWeightsVotes/historical | GaugesWeightsVotes (historical) |
+| [**curve_get_gauges_withdraw__historical**](CurveApi.md#curve_get_gauges_withdraw__historical) | **GET** /dapps/curve/gaugesWithdraws/historical | GaugesWithdraw (historical) |
+| [**curve_get_hourly_volumes__historical**](CurveApi.md#curve_get_hourly_volumes__historical) | **GET** /dapps/curve/hourlyVolumes/historical | HourlyVolumes (historical) |
+| [**curve_get_lp_tokens__historical**](CurveApi.md#curve_get_lp_tokens__historical) | **GET** /dapps/curve/lpTokens/historical | LpTokens (historical) |
+| [**curve_get_pools__historical**](CurveApi.md#curve_get_pools__historical) | **GET** /dapps/curve/pools/historical | Pools (historical) 🔥 |
+| [**curve_get_proposals__historical**](CurveApi.md#curve_get_proposals__historical) | **GET** /dapps/curve/proposals/historical | Proposals (historical) |
+| [**curve_get_proposals_votes__historical**](CurveApi.md#curve_get_proposals_votes__historical) | **GET** /dapps/curve/proposalsVotes/historical | ProposalsVotes (historical) |
+| [**curve_get_remove_liquidity_events__historical**](CurveApi.md#curve_get_remove_liquidity_events__historical) | **GET** /dapps/curve/removeLiquidityEvents/historical | RemoveLiquidityEvents (historical) |
+| [**curve_get_remove_liquidity_one_events__historical**](CurveApi.md#curve_get_remove_liquidity_one_events__historical) | **GET** /dapps/curve/removeLiquidityOneEvents/historical | RemoveLiquidityOneEvents (historical) |
+| [**curve_get_system_states__historical**](CurveApi.md#curve_get_system_states__historical) | **GET** /dapps/curve/systemStates/historical | SystemStates (historical) |
+| [**curve_get_tokens__historical**](CurveApi.md#curve_get_tokens__historical) | **GET** /dapps/curve/tokens/historical | Tokens (historical) 🔥 |
+| [**curve_get_transfer_ownership_events__historical**](CurveApi.md#curve_get_transfer_ownership_events__historical) | **GET** /dapps/curve/transferOwnershipEvents/historical | TransferOwnershipEvents (historical) |
+| [**curve_get_underlying_coins__historical**](CurveApi.md#curve_get_underlying_coins__historical) | **GET** /dapps/curve/underlyingCoins/historical | UnderlyingCoins (historical) |
+| [**curve_get_voting_apps__historical**](CurveApi.md#curve_get_voting_apps__historical) | **GET** /dapps/curve/votingApps/historical | VotingApps (historical) |
+| [**curve_get_weekly_volumes__historical**](CurveApi.md#curve_get_weekly_volumes__historical) | **GET** /dapps/curve/weeklyVolumes/historical | WeeklyVolumes (historical) |
 
 
 ## curve_get_accounts__historical
 
 > <Array<CurveAccountDTO>> curve_get_accounts__historical(opts)
 
-GetAccounts (historical)
+Accounts (historical)
 
 Gets accounts.
 
@@ -61,7 +61,7 @@ opts = {
 }
 
 begin
-  # GetAccounts (historical)
+  # Accounts (historical)
   result = api_instance.curve_get_accounts__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -77,7 +77,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetAccounts (historical)
+  # Accounts (historical)
   data, status_code, headers = api_instance.curve_get_accounts__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -114,7 +114,7 @@ No authorization required
 
 > <Array<CurveAddLiquidityEventDTO>> curve_get_add_liquidity_events__historical(opts)
 
-GetAddLiquidityEvents (historical)
+AddLiquidityEvents (historical)
 
 Gets add liquidity events.
 
@@ -134,7 +134,7 @@ opts = {
 }
 
 begin
-  # GetAddLiquidityEvents (historical)
+  # AddLiquidityEvents (historical)
   result = api_instance.curve_get_add_liquidity_events__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -150,7 +150,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetAddLiquidityEvents (historical)
+  # AddLiquidityEvents (historical)
   data, status_code, headers = api_instance.curve_get_add_liquidity_events__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -188,7 +188,7 @@ No authorization required
 
 > <Array<CurveAdminFeeChangeLogDTO>> curve_get_admin_fee_change_logs__historical(opts)
 
-GetAdminFeeChangeLogs (historical)
+AdminFeeChangeLogs (historical)
 
 Gets admin fee change logs.
 
@@ -208,7 +208,7 @@ opts = {
 }
 
 begin
-  # GetAdminFeeChangeLogs (historical)
+  # AdminFeeChangeLogs (historical)
   result = api_instance.curve_get_admin_fee_change_logs__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -224,7 +224,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetAdminFeeChangeLogs (historical)
+  # AdminFeeChangeLogs (historical)
   data, status_code, headers = api_instance.curve_get_admin_fee_change_logs__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -262,7 +262,7 @@ No authorization required
 
 > <Array<CurveAmplificationCoeffChangeLogDTO>> curve_get_amplification_coeff_change_logs__historical(opts)
 
-GetAmplificationCoeffChangeLogs (historical)
+AmplificationCoeffChangeLogs (historical)
 
 Gets amplification coeff change logs.
 
@@ -282,7 +282,7 @@ opts = {
 }
 
 begin
-  # GetAmplificationCoeffChangeLogs (historical)
+  # AmplificationCoeffChangeLogs (historical)
   result = api_instance.curve_get_amplification_coeff_change_logs__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -298,7 +298,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetAmplificationCoeffChangeLogs (historical)
+  # AmplificationCoeffChangeLogs (historical)
   data, status_code, headers = api_instance.curve_get_amplification_coeff_change_logs__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -336,7 +336,7 @@ No authorization required
 
 > <Array<CurveCoinDTO>> curve_get_coins__historical(opts)
 
-GetCoins (historical)
+Coins (historical)
 
 Gets coins.
 
@@ -356,7 +356,7 @@ opts = {
 }
 
 begin
-  # GetCoins (historical)
+  # Coins (historical)
   result = api_instance.curve_get_coins__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -372,7 +372,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetCoins (historical)
+  # Coins (historical)
   data, status_code, headers = api_instance.curve_get_coins__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -410,7 +410,7 @@ No authorization required
 
 > <Array<CurveContractDTO>> curve_get_contracts__historical(opts)
 
-GetContracts (historical)
+Contracts (historical)
 
 Gets contracts.
 
@@ -430,7 +430,7 @@ opts = {
 }
 
 begin
-  # GetContracts (historical)
+  # Contracts (historical)
   result = api_instance.curve_get_contracts__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -446,7 +446,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetContracts (historical)
+  # Contracts (historical)
   data, status_code, headers = api_instance.curve_get_contracts__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -484,7 +484,7 @@ No authorization required
 
 > <Array<CurveContractVersionDTO>> curve_get_contracts_versions__historical(opts)
 
-GetContractsVersions (historical)
+ContractsVersions (historical)
 
 Gets contracts versions.
 
@@ -504,7 +504,7 @@ opts = {
 }
 
 begin
-  # GetContractsVersions (historical)
+  # ContractsVersions (historical)
   result = api_instance.curve_get_contracts_versions__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -520,7 +520,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetContractsVersions (historical)
+  # ContractsVersions (historical)
   data, status_code, headers = api_instance.curve_get_contracts_versions__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -558,7 +558,7 @@ No authorization required
 
 > <Array<CurveDailyVolumeDTO>> curve_get_daily_volumes__historical(opts)
 
-GetDailyVolumes (historical)
+DailyVolumes (historical)
 
 Gets daily volumes.
 
@@ -578,7 +578,7 @@ opts = {
 }
 
 begin
-  # GetDailyVolumes (historical)
+  # DailyVolumes (historical)
   result = api_instance.curve_get_daily_volumes__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -594,7 +594,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetDailyVolumes (historical)
+  # DailyVolumes (historical)
   data, status_code, headers = api_instance.curve_get_daily_volumes__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -632,7 +632,7 @@ No authorization required
 
 > <Array<CurveExchangeDTO>> curve_get_exchanges__historical(opts)
 
-GetExchanges (historical) 🔥
+Exchanges (historical) 🔥
 
 Gets exchanges.
 
@@ -652,7 +652,7 @@ opts = {
 }
 
 begin
-  # GetExchanges (historical) 🔥
+  # Exchanges (historical) 🔥
   result = api_instance.curve_get_exchanges__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -668,7 +668,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetExchanges (historical) 🔥
+  # Exchanges (historical) 🔥
   data, status_code, headers = api_instance.curve_get_exchanges__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -706,7 +706,7 @@ No authorization required
 
 > <Array<CurveFeeChangeLogDTO>> curve_get_fee_change_logs__historical(opts)
 
-GetFeeChangeLogs (historical)
+FeeChangeLogs (historical)
 
 Gets fee change logs.
 
@@ -726,7 +726,7 @@ opts = {
 }
 
 begin
-  # GetFeeChangeLogs (historical)
+  # FeeChangeLogs (historical)
   result = api_instance.curve_get_fee_change_logs__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -742,7 +742,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetFeeChangeLogs (historical)
+  # FeeChangeLogs (historical)
   data, status_code, headers = api_instance.curve_get_fee_change_logs__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -780,7 +780,7 @@ No authorization required
 
 > <Array<CurveGaugeDTO>> curve_get_gauges__historical(opts)
 
-GetGauges (historical)
+Gauges (historical)
 
 Gets gauges.
 
@@ -800,7 +800,7 @@ opts = {
 }
 
 begin
-  # GetGauges (historical)
+  # Gauges (historical)
   result = api_instance.curve_get_gauges__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -816,7 +816,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetGauges (historical)
+  # Gauges (historical)
   data, status_code, headers = api_instance.curve_get_gauges__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -854,7 +854,7 @@ No authorization required
 
 > <Array<CurveGaugeDepositDTO>> curve_get_gauges_deposits__historical(opts)
 
-GetGaugesDeposits (historical)
+GaugesDeposits (historical)
 
 Gets gauges deposits.
 
@@ -873,7 +873,7 @@ opts = {
 }
 
 begin
-  # GetGaugesDeposits (historical)
+  # GaugesDeposits (historical)
   result = api_instance.curve_get_gauges_deposits__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -889,7 +889,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetGaugesDeposits (historical)
+  # GaugesDeposits (historical)
   data, status_code, headers = api_instance.curve_get_gauges_deposits__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -926,7 +926,7 @@ No authorization required
 
 > <Array<CurveGaugeLiquidityDTO>> curve_get_gauges_liquidity__historical(opts)
 
-GetGaugesLiquidity (historical)
+GaugesLiquidity (historical)
 
 Gets gauges liquidity.
 
@@ -945,7 +945,7 @@ opts = {
 }
 
 begin
-  # GetGaugesLiquidity (historical)
+  # GaugesLiquidity (historical)
   result = api_instance.curve_get_gauges_liquidity__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -961,7 +961,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetGaugesLiquidity (historical)
+  # GaugesLiquidity (historical)
   data, status_code, headers = api_instance.curve_get_gauges_liquidity__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -998,7 +998,7 @@ No authorization required
 
 > <Array<CurveGaugeTotalWeightDTO>> curve_get_gauges_total_weights__historical(opts)
 
-GetGaugesTotalWeights (historical)
+GaugesTotalWeights (historical)
 
 Gets gauges total weights.
 
@@ -1017,7 +1017,7 @@ opts = {
 }
 
 begin
-  # GetGaugesTotalWeights (historical)
+  # GaugesTotalWeights (historical)
   result = api_instance.curve_get_gauges_total_weights__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -1033,7 +1033,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetGaugesTotalWeights (historical)
+  # GaugesTotalWeights (historical)
   data, status_code, headers = api_instance.curve_get_gauges_total_weights__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -1070,7 +1070,7 @@ No authorization required
 
 > <Array<CurveGaugeTypeDTO>> curve_get_gauges_types__historical(opts)
 
-GetGaugesTypes (historical)
+GaugesTypes (historical)
 
 Gets gauges types.
 
@@ -1089,7 +1089,7 @@ opts = {
 }
 
 begin
-  # GetGaugesTypes (historical)
+  # GaugesTypes (historical)
   result = api_instance.curve_get_gauges_types__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -1105,7 +1105,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetGaugesTypes (historical)
+  # GaugesTypes (historical)
   data, status_code, headers = api_instance.curve_get_gauges_types__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -1142,7 +1142,7 @@ No authorization required
 
 > <Array<CurveGaugeTypeWeightDTO>> curve_get_gauges_types_weights__historical(opts)
 
-GetGaugesTypesWeights (historical)
+GaugesTypesWeights (historical)
 
 Gets gauges types weights.
 
@@ -1161,7 +1161,7 @@ opts = {
 }
 
 begin
-  # GetGaugesTypesWeights (historical)
+  # GaugesTypesWeights (historical)
   result = api_instance.curve_get_gauges_types_weights__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -1177,7 +1177,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetGaugesTypesWeights (historical)
+  # GaugesTypesWeights (historical)
   data, status_code, headers = api_instance.curve_get_gauges_types_weights__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -1214,7 +1214,7 @@ No authorization required
 
 > <Array<CurveGaugeWeightDTO>> curve_get_gauges_weights__historical(opts)
 
-GetGaugesWeights (historical)
+GaugesWeights (historical)
 
 Gets gauges weights.
 
@@ -1233,7 +1233,7 @@ opts = {
 }
 
 begin
-  # GetGaugesWeights (historical)
+  # GaugesWeights (historical)
   result = api_instance.curve_get_gauges_weights__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -1249,7 +1249,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetGaugesWeights (historical)
+  # GaugesWeights (historical)
   data, status_code, headers = api_instance.curve_get_gauges_weights__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -1286,7 +1286,7 @@ No authorization required
 
 > <Array<CurveGaugeWeightVoteDTO>> curve_get_gauges_weights_votes__historical(opts)
 
-GetGaugesWeightsVotes (historical)
+GaugesWeightsVotes (historical)
 
 Gets gauges weights votes.
 
@@ -1305,7 +1305,7 @@ opts = {
 }
 
 begin
-  # GetGaugesWeightsVotes (historical)
+  # GaugesWeightsVotes (historical)
   result = api_instance.curve_get_gauges_weights_votes__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -1321,7 +1321,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetGaugesWeightsVotes (historical)
+  # GaugesWeightsVotes (historical)
   data, status_code, headers = api_instance.curve_get_gauges_weights_votes__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -1358,7 +1358,7 @@ No authorization required
 
 > <Array<CurveGaugeWithdrawDTO>> curve_get_gauges_withdraw__historical(opts)
 
-GetGaugesWithdraw (historical)
+GaugesWithdraw (historical)
 
 Gets gauges withdraws.
 
@@ -1377,7 +1377,7 @@ opts = {
 }
 
 begin
-  # GetGaugesWithdraw (historical)
+  # GaugesWithdraw (historical)
   result = api_instance.curve_get_gauges_withdraw__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -1393,7 +1393,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetGaugesWithdraw (historical)
+  # GaugesWithdraw (historical)
   data, status_code, headers = api_instance.curve_get_gauges_withdraw__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -1430,7 +1430,7 @@ No authorization required
 
 > <Array<CurveHourlyVolumeDTO>> curve_get_hourly_volumes__historical(opts)
 
-GetHourlyVolumes (historical)
+HourlyVolumes (historical)
 
 Gets hourly volumes.
 
@@ -1450,7 +1450,7 @@ opts = {
 }
 
 begin
-  # GetHourlyVolumes (historical)
+  # HourlyVolumes (historical)
   result = api_instance.curve_get_hourly_volumes__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -1466,7 +1466,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetHourlyVolumes (historical)
+  # HourlyVolumes (historical)
   data, status_code, headers = api_instance.curve_get_hourly_volumes__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -1504,7 +1504,7 @@ No authorization required
 
 > <Array<CurveLpTokenDTO>> curve_get_lp_tokens__historical(opts)
 
-GetLpTokens (historical)
+LpTokens (historical)
 
 Gets lp tokens.
 
@@ -1524,7 +1524,7 @@ opts = {
 }
 
 begin
-  # GetLpTokens (historical)
+  # LpTokens (historical)
   result = api_instance.curve_get_lp_tokens__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -1540,7 +1540,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetLpTokens (historical)
+  # LpTokens (historical)
   data, status_code, headers = api_instance.curve_get_lp_tokens__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -1578,7 +1578,7 @@ No authorization required
 
 > <Array<CurvePoolDTO>> curve_get_pools__historical(opts)
 
-GetPools (historical) 🔥
+Pools (historical) 🔥
 
 Gets pools.
 
@@ -1598,7 +1598,7 @@ opts = {
 }
 
 begin
-  # GetPools (historical) 🔥
+  # Pools (historical) 🔥
   result = api_instance.curve_get_pools__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -1614,7 +1614,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetPools (historical) 🔥
+  # Pools (historical) 🔥
   data, status_code, headers = api_instance.curve_get_pools__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -1652,7 +1652,7 @@ No authorization required
 
 > <Array<CurveProposalDTO>> curve_get_proposals__historical(opts)
 
-GetProposals (historical)
+Proposals (historical)
 
 Gets proposals.
 
@@ -1671,7 +1671,7 @@ opts = {
 }
 
 begin
-  # GetProposals (historical)
+  # Proposals (historical)
   result = api_instance.curve_get_proposals__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -1687,7 +1687,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetProposals (historical)
+  # Proposals (historical)
   data, status_code, headers = api_instance.curve_get_proposals__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -1724,7 +1724,7 @@ No authorization required
 
 > <Array<CurveProposalVoteDTO>> curve_get_proposals_votes__historical(opts)
 
-GetProposalsVotes (historical)
+ProposalsVotes (historical)
 
 Gets proposals votes.
 
@@ -1743,7 +1743,7 @@ opts = {
 }
 
 begin
-  # GetProposalsVotes (historical)
+  # ProposalsVotes (historical)
   result = api_instance.curve_get_proposals_votes__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -1759,7 +1759,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetProposalsVotes (historical)
+  # ProposalsVotes (historical)
   data, status_code, headers = api_instance.curve_get_proposals_votes__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -1796,7 +1796,7 @@ No authorization required
 
 > <Array<CurveRemoveLiquidityEventDTO>> curve_get_remove_liquidity_events__historical(opts)
 
-GetRemoveLiquidityEvents (historical)
+RemoveLiquidityEvents (historical)
 
 Gets remove liquidity events.
 
@@ -1816,7 +1816,7 @@ opts = {
 }
 
 begin
-  # GetRemoveLiquidityEvents (historical)
+  # RemoveLiquidityEvents (historical)
   result = api_instance.curve_get_remove_liquidity_events__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -1832,7 +1832,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetRemoveLiquidityEvents (historical)
+  # RemoveLiquidityEvents (historical)
   data, status_code, headers = api_instance.curve_get_remove_liquidity_events__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -1870,7 +1870,7 @@ No authorization required
 
 > <Array<CurveRemoveLiquidityOneEventDTO>> curve_get_remove_liquidity_one_events__historical(opts)
 
-GetRemoveLiquidityOneEvents (historical)
+RemoveLiquidityOneEvents (historical)
 
 Gets remove liquidity one events.
 
@@ -1890,7 +1890,7 @@ opts = {
 }
 
 begin
-  # GetRemoveLiquidityOneEvents (historical)
+  # RemoveLiquidityOneEvents (historical)
   result = api_instance.curve_get_remove_liquidity_one_events__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -1906,7 +1906,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetRemoveLiquidityOneEvents (historical)
+  # RemoveLiquidityOneEvents (historical)
   data, status_code, headers = api_instance.curve_get_remove_liquidity_one_events__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -1944,7 +1944,7 @@ No authorization required
 
 > <Array<CurveSystemStateDTO>> curve_get_system_states__historical(opts)
 
-GetSystemStates (historical)
+SystemStates (historical)
 
 Gets system states.
 
@@ -1963,7 +1963,7 @@ opts = {
 }
 
 begin
-  # GetSystemStates (historical)
+  # SystemStates (historical)
   result = api_instance.curve_get_system_states__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -1979,7 +1979,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetSystemStates (historical)
+  # SystemStates (historical)
   data, status_code, headers = api_instance.curve_get_system_states__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -2016,7 +2016,7 @@ No authorization required
 
 > <Array<CurveTokenDTO>> curve_get_tokens__historical(opts)
 
-GetTokens (historical) 🔥
+Tokens (historical) 🔥
 
 Gets tokens.
 
@@ -2036,7 +2036,7 @@ opts = {
 }
 
 begin
-  # GetTokens (historical) 🔥
+  # Tokens (historical) 🔥
   result = api_instance.curve_get_tokens__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -2052,7 +2052,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetTokens (historical) 🔥
+  # Tokens (historical) 🔥
   data, status_code, headers = api_instance.curve_get_tokens__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -2090,7 +2090,7 @@ No authorization required
 
 > <Array<CurveTransferOwnershipEventDTO>> curve_get_transfer_ownership_events__historical(opts)
 
-GetTransferOwnershipEvents (historical)
+TransferOwnershipEvents (historical)
 
 Gets transfer ownership events.
 
@@ -2110,7 +2110,7 @@ opts = {
 }
 
 begin
-  # GetTransferOwnershipEvents (historical)
+  # TransferOwnershipEvents (historical)
   result = api_instance.curve_get_transfer_ownership_events__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -2126,7 +2126,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetTransferOwnershipEvents (historical)
+  # TransferOwnershipEvents (historical)
   data, status_code, headers = api_instance.curve_get_transfer_ownership_events__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -2164,7 +2164,7 @@ No authorization required
 
 > <Array<CurveUnderlyingCoinDTO>> curve_get_underlying_coins__historical(opts)
 
-GetUnderlyingCoins (historical)
+UnderlyingCoins (historical)
 
 Gets underlying coins.
 
@@ -2184,7 +2184,7 @@ opts = {
 }
 
 begin
-  # GetUnderlyingCoins (historical)
+  # UnderlyingCoins (historical)
   result = api_instance.curve_get_underlying_coins__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -2200,7 +2200,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetUnderlyingCoins (historical)
+  # UnderlyingCoins (historical)
   data, status_code, headers = api_instance.curve_get_underlying_coins__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -2238,7 +2238,7 @@ No authorization required
 
 > <Array<CurveVotingAppDTO>> curve_get_voting_apps__historical(opts)
 
-GetVotingApps (historical)
+VotingApps (historical)
 
 Gets voting apps.
 
@@ -2257,7 +2257,7 @@ opts = {
 }
 
 begin
-  # GetVotingApps (historical)
+  # VotingApps (historical)
   result = api_instance.curve_get_voting_apps__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -2273,7 +2273,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetVotingApps (historical)
+  # VotingApps (historical)
   data, status_code, headers = api_instance.curve_get_voting_apps__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -2310,7 +2310,7 @@ No authorization required
 
 > <Array<CurveWeeklyVolumeDTO>> curve_get_weekly_volumes__historical(opts)
 
-GetWeeklyVolumes (historical)
+WeeklyVolumes (historical)
 
 Gets weekly volumes.
 
@@ -2330,7 +2330,7 @@ opts = {
 }
 
 begin
-  # GetWeeklyVolumes (historical)
+  # WeeklyVolumes (historical)
   result = api_instance.curve_get_weekly_volumes__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -2346,7 +2346,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetWeeklyVolumes (historical)
+  # WeeklyVolumes (historical)
   data, status_code, headers = api_instance.curve_get_weekly_volumes__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }

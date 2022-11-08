@@ -4,18 +4,18 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Feature | HTTP request | Description
 ------------- | ------------- | -------------
-[**cow_get_orders_historical**](COW_API.md#cow_get_orders_historical) | **Get** /dapps/cow/orders/historical | GetOrders (historical)
-[**cow_get_settlements_historical**](COW_API.md#cow_get_settlements_historical) | **Get** /dapps/cow/settlements/historical | GetSettlements (historical)
-[**cow_get_tokens_historical**](COW_API.md#cow_get_tokens_historical) | **Get** /dapps/cow/tokens/historical | GetTokens (historical) 🔥
-[**cow_get_trades_historical**](COW_API.md#cow_get_trades_historical) | **Get** /dapps/cow/trades/historical | GetTrades (historical) 🔥
-[**cow_get_users_historical**](COW_API.md#cow_get_users_historical) | **Get** /dapps/cow/users/historical | GetUsers (historical)
+[**cow_get_orders_historical**](COW_API.md#cow_get_orders_historical) | **Get** /dapps/cow/orders/historical | Orders (historical)
+[**cow_get_settlements_historical**](COW_API.md#cow_get_settlements_historical) | **Get** /dapps/cow/settlements/historical | Settlements (historical)
+[**cow_get_tokens_historical**](COW_API.md#cow_get_tokens_historical) | **Get** /dapps/cow/tokens/historical | Tokens (historical) 🔥
+[**cow_get_trades_historical**](COW_API.md#cow_get_trades_historical) | **Get** /dapps/cow/trades/historical | Trades (historical) 🔥
+[**cow_get_users_historical**](COW_API.md#cow_get_users_historical) | **Get** /dapps/cow/users/historical | Users (historical)
 
 
 # **cow_get_orders_historical**
 > cow_get_orders_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ): detachable LIST [COW_ORDER_DTO]
 
 
-GetOrders (historical)
+Orders (historical)
 
 Gets orders.
 
@@ -48,7 +48,7 @@ No authorization required
 > cow_get_settlements_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ): detachable LIST [COW_SETTLEMENT_DTO]
 
 
-GetSettlements (historical)
+Settlements (historical)
 
 Gets settlements.
 
@@ -81,7 +81,7 @@ No authorization required
 > cow_get_tokens_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; token_id:  detachable STRING_32 ): detachable LIST [COW_TOKEN_DTO]
 
 
-GetTokens (historical) 🔥
+Tokens (historical) 🔥
 
 Gets tokens.
 
@@ -115,7 +115,7 @@ No authorization required
 > cow_get_trades_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ): detachable LIST [COW_TRADE_DTO]
 
 
-GetTrades (historical) 🔥
+Trades (historical) 🔥
 
 Gets trades.
 
@@ -148,7 +148,7 @@ No authorization required
 > cow_get_users_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ): detachable LIST [COW_USER_DTO]
 
 
-GetUsers (historical)
+Users (historical)
 
 Gets users.
 

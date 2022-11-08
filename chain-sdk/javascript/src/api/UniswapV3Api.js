@@ -59,7 +59,7 @@ export default class UniswapV3Api {
      */
 
     /**
-     * GetBundles (current)
+     * Bundles (current)
      * Gets bundles.
      * @param {module:api/UniswapV3Api~uniswapV3GetBundlesCurrentCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/UniswapV3BundleV3DTO>}
@@ -96,7 +96,7 @@ export default class UniswapV3Api {
      */
 
     /**
-     * GetBundles (historical)
+     * Bundles (historical)
      * Gets bundles.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -143,7 +143,7 @@ export default class UniswapV3Api {
      */
 
     /**
-     * GetBurns (current)
+     * Burns (current)
      * Gets burns.
      * @param {Object} opts Optional parameters
      * @param {String} opts.filterPoolId 
@@ -184,7 +184,7 @@ export default class UniswapV3Api {
      */
 
     /**
-     * GetBurns (historical)
+     * Burns (historical)
      * Gets burns.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -233,7 +233,7 @@ export default class UniswapV3Api {
      */
 
     /**
-     * GetDayData (current)
+     * DayData (current)
      * Gets uniswapv3 day data.
      * @param {module:api/UniswapV3Api~uniswapV3GetDayDataCurrentCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/UniswapV3UniswapDayDataV3DTO>}
@@ -270,7 +270,7 @@ export default class UniswapV3Api {
      */
 
     /**
-     * GetDayData (historical)
+     * DayData (historical)
      * Gets uniswapv3 day data.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -317,7 +317,7 @@ export default class UniswapV3Api {
      */
 
     /**
-     * GetFactory (current)
+     * Factory (current)
      * Gets factory.
      * @param {module:api/UniswapV3Api~uniswapV3GetFactoryCurrentCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/UniswapV3FactoryV3DTO>}
@@ -354,7 +354,7 @@ export default class UniswapV3Api {
      */
 
     /**
-     * GetFactory (historical)
+     * Factory (historical)
      * Gets factory.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -401,7 +401,7 @@ export default class UniswapV3Api {
      */
 
     /**
-     * GetMints (current)
+     * Mints (current)
      * Gets mints.
      * @param {Object} opts Optional parameters
      * @param {String} opts.filterPoolId 
@@ -442,7 +442,7 @@ export default class UniswapV3Api {
      */
 
     /**
-     * GetMints (historical)
+     * Mints (historical)
      * Gets mints.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -491,7 +491,7 @@ export default class UniswapV3Api {
      */
 
     /**
-     * GetPools (current) 🔥
+     * Pools (current) 🔥
      * Gets pools.
      * @param {Object} opts Optional parameters
      * @param {String} opts.filterPoolId 
@@ -532,7 +532,7 @@ export default class UniswapV3Api {
      */
 
     /**
-     * GetPoolsDayData (current)
+     * PoolsDayData (current)
      * Gets pools day data.
      * @param {Object} opts Optional parameters
      * @param {String} opts.filterPoolId 
@@ -573,7 +573,7 @@ export default class UniswapV3Api {
      */
 
     /**
-     * GetPoolsDayData (historical)
+     * PoolsDayData (historical)
      * Gets pools day data.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -622,7 +622,7 @@ export default class UniswapV3Api {
      */
 
     /**
-     * GetPools (historical) 🔥
+     * Pools (historical) 🔥
      * Gets pools.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -671,7 +671,7 @@ export default class UniswapV3Api {
      */
 
     /**
-     * GetPoolsHourData (current)
+     * PoolsHourData (current)
      * Gets pools hour data.
      * @param {Object} opts Optional parameters
      * @param {String} opts.filterPoolId 
@@ -712,7 +712,7 @@ export default class UniswapV3Api {
      */
 
     /**
-     * GetPoolsHourData (historical)
+     * PoolsHourData (historical)
      * Gets pools hour data.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -761,7 +761,7 @@ export default class UniswapV3Api {
      */
 
     /**
-     * GetPositions (current)
+     * Positions (current)
      * Gets positions.
      * @param {Object} opts Optional parameters
      * @param {String} opts.filterPoolId 
@@ -802,7 +802,7 @@ export default class UniswapV3Api {
      */
 
     /**
-     * GetPositions (historical)
+     * Positions (historical)
      * Gets positions.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -851,7 +851,7 @@ export default class UniswapV3Api {
      */
 
     /**
-     * GetPositionsSnaphots (historical)
+     * PositionsSnaphots (historical)
      * Gets positions snapshots.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -900,7 +900,7 @@ export default class UniswapV3Api {
      */
 
     /**
-     * GetPositionsSnapshots (current)
+     * PositionsSnapshots (current)
      * Gets positions snapshots.
      * @param {Object} opts Optional parameters
      * @param {String} opts.filterPoolId 
@@ -941,7 +941,7 @@ export default class UniswapV3Api {
      */
 
     /**
-     * GetSwaps (current) 🔥
+     * Swaps (current) 🔥
      * Gets swaps.
      * @param {Object} opts Optional parameters
      * @param {String} opts.filterPoolId 
@@ -982,7 +982,7 @@ export default class UniswapV3Api {
      */
 
     /**
-     * GetSwaps (historical) 🔥
+     * Swaps (historical) 🔥
      * Gets swaps.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -1031,7 +1031,7 @@ export default class UniswapV3Api {
      */
 
     /**
-     * GetTicks (current)
+     * Ticks (current)
      * Gets ticks.
      * @param {Object} opts Optional parameters
      * @param {String} opts.filterPoolId 
@@ -1072,7 +1072,7 @@ export default class UniswapV3Api {
      */
 
     /**
-     * GetTicksDayData (current)
+     * TicksDayData (current)
      * Gets ticks day data.
      * @param {Object} opts Optional parameters
      * @param {String} opts.filterPoolId 
@@ -1113,7 +1113,7 @@ export default class UniswapV3Api {
      */
 
     /**
-     * GetTicksDayData (historical)
+     * TicksDayData (historical)
      * Gets ticks day data.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -1162,7 +1162,7 @@ export default class UniswapV3Api {
      */
 
     /**
-     * GetTicks (historical)
+     * Ticks (historical)
      * Gets ticks.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -1211,7 +1211,7 @@ export default class UniswapV3Api {
      */
 
     /**
-     * GetTokens (current) 🔥
+     * Tokens (current) 🔥
      * Gets tokens.
      * @param {Object} opts Optional parameters
      * @param {String} opts.filterTokenId 
@@ -1252,7 +1252,7 @@ export default class UniswapV3Api {
      */
 
     /**
-     * GetTokensDayData (current)
+     * TokensDayData (current)
      * Gets tokens day data.
      * @param {Object} opts Optional parameters
      * @param {String} opts.filterTokenId 
@@ -1293,7 +1293,7 @@ export default class UniswapV3Api {
      */
 
     /**
-     * GetTokensDayData (historical)
+     * TokensDayData (historical)
      * Gets tokens day data.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -1342,7 +1342,7 @@ export default class UniswapV3Api {
      */
 
     /**
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      * Gets tokens.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -1391,7 +1391,7 @@ export default class UniswapV3Api {
      */
 
     /**
-     * GetTokensHourData (current)
+     * TokensHourData (current)
      * Gets tokens hour data.
      * @param {Object} opts Optional parameters
      * @param {String} opts.filterTokenId 
@@ -1432,7 +1432,7 @@ export default class UniswapV3Api {
      */
 
     /**
-     * GetTokensHourData (historical)
+     * TokensHourData (historical)
      * Gets tokens hour data.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -1481,7 +1481,7 @@ export default class UniswapV3Api {
      */
 
     /**
-     * GetTransactions (historical)
+     * Transactions (historical)
      * Gets transactions.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 

@@ -43,7 +43,7 @@ public class DexApiTest {
     private final DexApi api = new DexApi();
 
     /**
-     * GetBatches (historical)
+     * Batches (historical)
      *
      * Gets batches.
      *
@@ -60,7 +60,7 @@ public class DexApiTest {
     }
 
     /**
-     * GetDeposits (historical)
+     * Deposits (historical)
      *
      * Gets deposits.
      *
@@ -78,7 +78,7 @@ public class DexApiTest {
     }
 
     /**
-     * GetOrders (historical)
+     * Orders (historical)
      *
      * Gets orders.
      *
@@ -96,7 +96,7 @@ public class DexApiTest {
     }
 
     /**
-     * GetPrices (historical)
+     * Prices (historical)
      *
      * Gets prices.
      *
@@ -114,7 +114,7 @@ public class DexApiTest {
     }
 
     /**
-     * GetSolutions (historical)
+     * Solutions (historical)
      *
      * Gets solutions.
      *
@@ -132,7 +132,7 @@ public class DexApiTest {
     }
 
     /**
-     * GetStats (historical)
+     * Stats (historical)
      *
      * Gets stats.
      *
@@ -149,7 +149,7 @@ public class DexApiTest {
     }
 
     /**
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      *
      * Gets tokens.
      *
@@ -167,7 +167,7 @@ public class DexApiTest {
     }
 
     /**
-     * GetTrades (historical) 🔥
+     * Trades (historical) 🔥
      *
      * Gets trades.
      *
@@ -184,7 +184,7 @@ public class DexApiTest {
     }
 
     /**
-     * GetUsers (historical)
+     * Users (historical)
      *
      * Gets users.
      *
@@ -201,7 +201,7 @@ public class DexApiTest {
     }
 
     /**
-     * GetWithdraws (historical)
+     * Withdraws (historical)
      *
      * Gets withdraws.
      *
@@ -219,7 +219,7 @@ public class DexApiTest {
     }
 
     /**
-     * GetWithdrawsRequests (historical)
+     * WithdrawsRequests (historical)
      *
      * Gets withdraws requests.
      *

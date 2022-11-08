@@ -33,7 +33,7 @@ class UniswapV2Api {
 
   const UniswapV2Api(this._dio, this._serializers);
 
-  /// GetBundles (historical)
+  /// Bundles (historical)
   /// Gets bundles.
   ///
   /// Parameters:
@@ -121,7 +121,7 @@ class UniswapV2Api {
     );
   }
 
-  /// GetBurns (historical)
+  /// Burns (historical)
   /// Gets burns.
   ///
   /// Parameters:
@@ -212,7 +212,7 @@ class UniswapV2Api {
     );
   }
 
-  /// GetDayData (historical)
+  /// DayData (historical)
   /// Gets uniswapv2 day data.
   ///
   /// Parameters:
@@ -300,7 +300,7 @@ class UniswapV2Api {
     );
   }
 
-  /// GetFactory (historical)
+  /// Factory (historical)
   /// Gets factory.
   ///
   /// Parameters:
@@ -388,7 +388,7 @@ class UniswapV2Api {
     );
   }
 
-  /// GetLiquidityPositions (historical)
+  /// LiquidityPositions (historical)
   /// Gets liquidity positions.
   ///
   /// Parameters:
@@ -479,7 +479,7 @@ class UniswapV2Api {
     );
   }
 
-  /// GetLiquidityPositionsSnapshots (historical)
+  /// LiquidityPositionsSnapshots (historical)
   /// Gets liquidity positions snapshots.
   ///
   /// Parameters:
@@ -570,7 +570,7 @@ class UniswapV2Api {
     );
   }
 
-  /// GetMints (historical)
+  /// Mints (historical)
   /// Gets mints.
   ///
   /// Parameters:
@@ -661,7 +661,7 @@ class UniswapV2Api {
     );
   }
 
-  /// GetPools (current) 🔥
+  /// Pools (current) 🔥
   /// Gets pools.
   ///
   /// Parameters:
@@ -740,7 +740,7 @@ class UniswapV2Api {
     );
   }
 
-  /// GetPoolsDayData (historical)
+  /// PoolsDayData (historical)
   /// Gets pools day data.
   ///
   /// Parameters:
@@ -831,7 +831,7 @@ class UniswapV2Api {
     );
   }
 
-  /// GetPools (historical) 🔥
+  /// Pools (historical) 🔥
   /// Gets pools.
   ///
   /// Parameters:
@@ -922,7 +922,7 @@ class UniswapV2Api {
     );
   }
 
-  /// GetPoolsHourData (historical)
+  /// PoolsHourData (historical)
   /// Gets pools tracked each our.
   ///
   /// Parameters:
@@ -1013,7 +1013,7 @@ class UniswapV2Api {
     );
   }
 
-  /// GetSwaps (current) 🔥
+  /// Swaps (current) 🔥
   /// Gets swaps.
   ///
   /// Parameters:
@@ -1085,7 +1085,7 @@ class UniswapV2Api {
     );
   }
 
-  /// GetSwaps (historical) 🔥
+  /// Swaps (historical) 🔥
   /// Gets swaps.
   ///
   /// Parameters:
@@ -1176,7 +1176,7 @@ class UniswapV2Api {
     );
   }
 
-  /// GetTokens (current) 🔥
+  /// Tokens (current) 🔥
   /// Gets tokens.
   ///
   /// Parameters:
@@ -1248,7 +1248,7 @@ class UniswapV2Api {
     );
   }
 
-  /// GetTokensDayData (historical)
+  /// TokensDayData (historical)
   /// Gets tokens day data.
   ///
   /// Parameters:
@@ -1339,7 +1339,7 @@ class UniswapV2Api {
     );
   }
 
-  /// GetTokens (historical) 🔥
+  /// Tokens (historical) 🔥
   /// Gets tokens.
   ///
   /// Parameters:
@@ -1430,7 +1430,7 @@ class UniswapV2Api {
     );
   }
 
-  /// GetTransactions (historical)
+  /// Transactions (historical)
   /// Gets transactions.
   ///
   /// Parameters:
@@ -1518,7 +1518,7 @@ class UniswapV2Api {
     );
   }
 
-  /// GetUsers (historical)
+  /// Users (historical)
   /// Gets users.
   ///
   /// Parameters:

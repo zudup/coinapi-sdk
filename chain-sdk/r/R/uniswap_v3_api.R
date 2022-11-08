@@ -14,7 +14,7 @@
 #'
 #' @section Methods:
 #' \describe{
-#' \strong{ UniswapV3GetBundlesCurrent } \emph{ GetBundles (current) }
+#' \strong{ UniswapV3GetBundlesCurrent } \emph{ Bundles (current) }
 #' Gets bundles.
 #'
 #' \itemize{
@@ -30,7 +30,7 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV3GetBundlesHistorical } \emph{ GetBundles (historical) }
+#' \strong{ UniswapV3GetBundlesHistorical } \emph{ Bundles (historical) }
 #' Gets bundles.
 #'
 #' \itemize{
@@ -50,7 +50,7 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV3GetBurnsCurrent } \emph{ GetBurns (current) }
+#' \strong{ UniswapV3GetBurnsCurrent } \emph{ Burns (current) }
 #' Gets burns.
 #'
 #' \itemize{
@@ -67,7 +67,7 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV3GetBurnsHistorical } \emph{ GetBurns (historical) }
+#' \strong{ UniswapV3GetBurnsHistorical } \emph{ Burns (historical) }
 #' Gets burns.
 #'
 #' \itemize{
@@ -88,7 +88,7 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV3GetDayDataCurrent } \emph{ GetDayData (current) }
+#' \strong{ UniswapV3GetDayDataCurrent } \emph{ DayData (current) }
 #' Gets uniswapv3 day data.
 #'
 #' \itemize{
@@ -104,7 +104,7 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV3GetDayDataHistorical } \emph{ GetDayData (historical) }
+#' \strong{ UniswapV3GetDayDataHistorical } \emph{ DayData (historical) }
 #' Gets uniswapv3 day data.
 #'
 #' \itemize{
@@ -124,7 +124,7 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV3GetFactoryCurrent } \emph{ GetFactory (current) }
+#' \strong{ UniswapV3GetFactoryCurrent } \emph{ Factory (current) }
 #' Gets factory.
 #'
 #' \itemize{
@@ -140,7 +140,7 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV3GetFactoryHistorical } \emph{ GetFactory (historical) }
+#' \strong{ UniswapV3GetFactoryHistorical } \emph{ Factory (historical) }
 #' Gets factory.
 #'
 #' \itemize{
@@ -160,7 +160,7 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV3GetMintsCurrent } \emph{ GetMints (current) }
+#' \strong{ UniswapV3GetMintsCurrent } \emph{ Mints (current) }
 #' Gets mints.
 #'
 #' \itemize{
@@ -177,7 +177,7 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV3GetMintsHistorical } \emph{ GetMints (historical) }
+#' \strong{ UniswapV3GetMintsHistorical } \emph{ Mints (historical) }
 #' Gets mints.
 #'
 #' \itemize{
@@ -198,7 +198,7 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV3GetPoolsCurrent } \emph{ GetPools (current) 🔥 }
+#' \strong{ UniswapV3GetPoolsCurrent } \emph{ Pools (current) 🔥 }
 #' Gets pools.
 #'
 #' \itemize{
@@ -215,7 +215,7 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV3GetPoolsDayDataCurrent } \emph{ GetPoolsDayData (current) }
+#' \strong{ UniswapV3GetPoolsDayDataCurrent } \emph{ PoolsDayData (current) }
 #' Gets pools day data.
 #'
 #' \itemize{
@@ -232,7 +232,7 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV3GetPoolsDayDataHistorical } \emph{ GetPoolsDayData (historical) }
+#' \strong{ UniswapV3GetPoolsDayDataHistorical } \emph{ PoolsDayData (historical) }
 #' Gets pools day data.
 #'
 #' \itemize{
@@ -253,7 +253,7 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV3GetPoolsHistorical } \emph{ GetPools (historical) 🔥 }
+#' \strong{ UniswapV3GetPoolsHistorical } \emph{ Pools (historical) 🔥 }
 #' Gets pools.
 #'
 #' \itemize{
@@ -274,7 +274,7 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV3GetPoolsHourDataCurrent } \emph{ GetPoolsHourData (current) }
+#' \strong{ UniswapV3GetPoolsHourDataCurrent } \emph{ PoolsHourData (current) }
 #' Gets pools hour data.
 #'
 #' \itemize{
@@ -291,7 +291,7 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV3GetPoolsHourDataHistorical } \emph{ GetPoolsHourData (historical) }
+#' \strong{ UniswapV3GetPoolsHourDataHistorical } \emph{ PoolsHourData (historical) }
 #' Gets pools hour data.
 #'
 #' \itemize{
@@ -312,7 +312,7 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV3GetPositionsCurrent } \emph{ GetPositions (current) }
+#' \strong{ UniswapV3GetPositionsCurrent } \emph{ Positions (current) }
 #' Gets positions.
 #'
 #' \itemize{
@@ -329,7 +329,7 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV3GetPositionsHistorical } \emph{ GetPositions (historical) }
+#' \strong{ UniswapV3GetPositionsHistorical } \emph{ Positions (historical) }
 #' Gets positions.
 #'
 #' \itemize{
@@ -350,7 +350,7 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV3GetPositionsSnaphotsHistorical } \emph{ GetPositionsSnaphots (historical) }
+#' \strong{ UniswapV3GetPositionsSnaphotsHistorical } \emph{ PositionsSnaphots (historical) }
 #' Gets positions snapshots.
 #'
 #' \itemize{
@@ -371,7 +371,7 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV3GetPositionsSnapshotsCurrent } \emph{ GetPositionsSnapshots (current) }
+#' \strong{ UniswapV3GetPositionsSnapshotsCurrent } \emph{ PositionsSnapshots (current) }
 #' Gets positions snapshots.
 #'
 #' \itemize{
@@ -388,7 +388,7 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV3GetSwapsCurrent } \emph{ GetSwaps (current) 🔥 }
+#' \strong{ UniswapV3GetSwapsCurrent } \emph{ Swaps (current) 🔥 }
 #' Gets swaps.
 #'
 #' \itemize{
@@ -405,7 +405,7 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV3GetSwapsHistorical } \emph{ GetSwaps (historical) 🔥 }
+#' \strong{ UniswapV3GetSwapsHistorical } \emph{ Swaps (historical) 🔥 }
 #' Gets swaps.
 #'
 #' \itemize{
@@ -426,7 +426,7 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV3GetTicksCurrent } \emph{ GetTicks (current) }
+#' \strong{ UniswapV3GetTicksCurrent } \emph{ Ticks (current) }
 #' Gets ticks.
 #'
 #' \itemize{
@@ -443,7 +443,7 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV3GetTicksDayDataCurrent } \emph{ GetTicksDayData (current) }
+#' \strong{ UniswapV3GetTicksDayDataCurrent } \emph{ TicksDayData (current) }
 #' Gets ticks day data.
 #'
 #' \itemize{
@@ -460,7 +460,7 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV3GetTicksDayDataHistorical } \emph{ GetTicksDayData (historical) }
+#' \strong{ UniswapV3GetTicksDayDataHistorical } \emph{ TicksDayData (historical) }
 #' Gets ticks day data.
 #'
 #' \itemize{
@@ -481,7 +481,7 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV3GetTicksHistorical } \emph{ GetTicks (historical) }
+#' \strong{ UniswapV3GetTicksHistorical } \emph{ Ticks (historical) }
 #' Gets ticks.
 #'
 #' \itemize{
@@ -502,7 +502,7 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV3GetTokensCurrent } \emph{ GetTokens (current) 🔥 }
+#' \strong{ UniswapV3GetTokensCurrent } \emph{ Tokens (current) 🔥 }
 #' Gets tokens.
 #'
 #' \itemize{
@@ -519,7 +519,7 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV3GetTokensDayDataCurrent } \emph{ GetTokensDayData (current) }
+#' \strong{ UniswapV3GetTokensDayDataCurrent } \emph{ TokensDayData (current) }
 #' Gets tokens day data.
 #'
 #' \itemize{
@@ -536,7 +536,7 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV3GetTokensDayDataHistorical } \emph{ GetTokensDayData (historical) }
+#' \strong{ UniswapV3GetTokensDayDataHistorical } \emph{ TokensDayData (historical) }
 #' Gets tokens day data.
 #'
 #' \itemize{
@@ -557,7 +557,7 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV3GetTokensHistorical } \emph{ GetTokens (historical) 🔥 }
+#' \strong{ UniswapV3GetTokensHistorical } \emph{ Tokens (historical) 🔥 }
 #' Gets tokens.
 #'
 #' \itemize{
@@ -578,7 +578,7 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV3GetTokensHourDataCurrent } \emph{ GetTokensHourData (current) }
+#' \strong{ UniswapV3GetTokensHourDataCurrent } \emph{ TokensHourData (current) }
 #' Gets tokens hour data.
 #'
 #' \itemize{
@@ -595,7 +595,7 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV3GetTokensHourDataHistorical } \emph{ GetTokensHourData (historical) }
+#' \strong{ UniswapV3GetTokensHourDataHistorical } \emph{ TokensHourData (historical) }
 #' Gets tokens hour data.
 #'
 #' \itemize{
@@ -616,7 +616,7 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV3GetTransactionsHistorical } \emph{ GetTransactions (historical) }
+#' \strong{ UniswapV3GetTransactionsHistorical } \emph{ Transactions (historical) }
 #' Gets transactions.
 #'
 #' \itemize{
@@ -645,7 +645,7 @@
 #'
 #' library(openapi)
 #'
-#' #GetBundles (current)
+#' #Bundles (current)
 #' api_instance <- UniswapV3Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -662,7 +662,7 @@
 #' var_start_date <- "start_date_example" # character |  (Optional)
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #'
-#' #GetBundles (historical)
+#' #Bundles (historical)
 #' api_instance <- UniswapV3Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -676,7 +676,7 @@
 #' library(openapi)
 #' var_filter_pool_id <- "filter_pool_id_example" # character |  (Optional)
 #'
-#' #GetBurns (current)
+#' #Burns (current)
 #' api_instance <- UniswapV3Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -694,7 +694,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
-#' #GetBurns (historical)
+#' #Burns (historical)
 #' api_instance <- UniswapV3Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -707,7 +707,7 @@
 #'
 #' library(openapi)
 #'
-#' #GetDayData (current)
+#' #DayData (current)
 #' api_instance <- UniswapV3Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -724,7 +724,7 @@
 #' var_start_date <- "start_date_example" # character |  (Optional)
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #'
-#' #GetDayData (historical)
+#' #DayData (historical)
 #' api_instance <- UniswapV3Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -737,7 +737,7 @@
 #'
 #' library(openapi)
 #'
-#' #GetFactory (current)
+#' #Factory (current)
 #' api_instance <- UniswapV3Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -754,7 +754,7 @@
 #' var_start_date <- "start_date_example" # character |  (Optional)
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #'
-#' #GetFactory (historical)
+#' #Factory (historical)
 #' api_instance <- UniswapV3Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -768,7 +768,7 @@
 #' library(openapi)
 #' var_filter_pool_id <- "filter_pool_id_example" # character |  (Optional)
 #'
-#' #GetMints (current)
+#' #Mints (current)
 #' api_instance <- UniswapV3Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -786,7 +786,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
-#' #GetMints (historical)
+#' #Mints (historical)
 #' api_instance <- UniswapV3Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -800,7 +800,7 @@
 #' library(openapi)
 #' var_filter_pool_id <- "filter_pool_id_example" # character |  (Optional)
 #'
-#' #GetPools (current) 🔥
+#' #Pools (current) 🔥
 #' api_instance <- UniswapV3Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -814,7 +814,7 @@
 #' library(openapi)
 #' var_filter_pool_id <- "filter_pool_id_example" # character |  (Optional)
 #'
-#' #GetPoolsDayData (current)
+#' #PoolsDayData (current)
 #' api_instance <- UniswapV3Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -832,7 +832,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
-#' #GetPoolsDayData (historical)
+#' #PoolsDayData (historical)
 #' api_instance <- UniswapV3Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -850,7 +850,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
-#' #GetPools (historical) 🔥
+#' #Pools (historical) 🔥
 #' api_instance <- UniswapV3Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -864,7 +864,7 @@
 #' library(openapi)
 #' var_filter_pool_id <- "filter_pool_id_example" # character |  (Optional)
 #'
-#' #GetPoolsHourData (current)
+#' #PoolsHourData (current)
 #' api_instance <- UniswapV3Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -882,7 +882,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
-#' #GetPoolsHourData (historical)
+#' #PoolsHourData (historical)
 #' api_instance <- UniswapV3Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -896,7 +896,7 @@
 #' library(openapi)
 #' var_filter_pool_id <- "filter_pool_id_example" # character |  (Optional)
 #'
-#' #GetPositions (current)
+#' #Positions (current)
 #' api_instance <- UniswapV3Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -914,7 +914,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
-#' #GetPositions (historical)
+#' #Positions (historical)
 #' api_instance <- UniswapV3Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -932,7 +932,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
-#' #GetPositionsSnaphots (historical)
+#' #PositionsSnaphots (historical)
 #' api_instance <- UniswapV3Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -946,7 +946,7 @@
 #' library(openapi)
 #' var_filter_pool_id <- "filter_pool_id_example" # character |  (Optional)
 #'
-#' #GetPositionsSnapshots (current)
+#' #PositionsSnapshots (current)
 #' api_instance <- UniswapV3Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -960,7 +960,7 @@
 #' library(openapi)
 #' var_filter_pool_id <- "filter_pool_id_example" # character |  (Optional)
 #'
-#' #GetSwaps (current) 🔥
+#' #Swaps (current) 🔥
 #' api_instance <- UniswapV3Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -978,7 +978,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
-#' #GetSwaps (historical) 🔥
+#' #Swaps (historical) 🔥
 #' api_instance <- UniswapV3Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -992,7 +992,7 @@
 #' library(openapi)
 #' var_filter_pool_id <- "filter_pool_id_example" # character |  (Optional)
 #'
-#' #GetTicks (current)
+#' #Ticks (current)
 #' api_instance <- UniswapV3Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -1006,7 +1006,7 @@
 #' library(openapi)
 #' var_filter_pool_id <- "filter_pool_id_example" # character |  (Optional)
 #'
-#' #GetTicksDayData (current)
+#' #TicksDayData (current)
 #' api_instance <- UniswapV3Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -1024,7 +1024,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
-#' #GetTicksDayData (historical)
+#' #TicksDayData (historical)
 #' api_instance <- UniswapV3Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -1042,7 +1042,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
-#' #GetTicks (historical)
+#' #Ticks (historical)
 #' api_instance <- UniswapV3Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -1056,7 +1056,7 @@
 #' library(openapi)
 #' var_filter_token_id <- "filter_token_id_example" # character |  (Optional)
 #'
-#' #GetTokens (current) 🔥
+#' #Tokens (current) 🔥
 #' api_instance <- UniswapV3Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -1070,7 +1070,7 @@
 #' library(openapi)
 #' var_filter_token_id <- "filter_token_id_example" # character |  (Optional)
 #'
-#' #GetTokensDayData (current)
+#' #TokensDayData (current)
 #' api_instance <- UniswapV3Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -1088,7 +1088,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_token_id <- "token_id_example" # character |  (Optional)
 #'
-#' #GetTokensDayData (historical)
+#' #TokensDayData (historical)
 #' api_instance <- UniswapV3Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -1106,7 +1106,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_token_id <- "token_id_example" # character |  (Optional)
 #'
-#' #GetTokens (historical) 🔥
+#' #Tokens (historical) 🔥
 #' api_instance <- UniswapV3Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -1120,7 +1120,7 @@
 #' library(openapi)
 #' var_filter_token_id <- "filter_token_id_example" # character |  (Optional)
 #'
-#' #GetTokensHourData (current)
+#' #TokensHourData (current)
 #' api_instance <- UniswapV3Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -1138,7 +1138,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_token_id <- "token_id_example" # character |  (Optional)
 #'
-#' #GetTokensHourData (historical)
+#' #TokensHourData (historical)
 #' api_instance <- UniswapV3Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -1155,7 +1155,7 @@
 #' var_start_date <- "start_date_example" # character |  (Optional)
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #'
-#' #GetTransactions (historical)
+#' #Transactions (historical)
 #' api_instance <- UniswapV3Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -1186,10 +1186,10 @@ UniswapV3Api <- R6::R6Class(
         self$api_client <- ApiClient$new()
       }
     },
-    #' GetBundles (current)
+    #' Bundles (current)
     #'
     #' @description
-    #' GetBundles (current)
+    #' Bundles (current)
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
@@ -1207,10 +1207,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetBundles (current)
+    #' Bundles (current)
     #'
     #' @description
-    #' GetBundles (current)
+    #' Bundles (current)
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
@@ -1272,10 +1272,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetBundles (historical)
+    #' Bundles (historical)
     #'
     #' @description
-    #' GetBundles (historical)
+    #' Bundles (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -1297,10 +1297,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetBundles (historical)
+    #' Bundles (historical)
     #'
     #' @description
-    #' GetBundles (historical)
+    #' Bundles (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -1378,10 +1378,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetBurns (current)
+    #' Burns (current)
     #'
     #' @description
-    #' GetBurns (current)
+    #' Burns (current)
     #'
     #' @param filter_pool_id (optional) No description
     #' @param data_file (optional) name of the data file to save the result
@@ -1400,10 +1400,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetBurns (current)
+    #' Burns (current)
     #'
     #' @description
-    #' GetBurns (current)
+    #' Burns (current)
     #'
     #' @param filter_pool_id (optional) No description
     #' @param data_file (optional) name of the data file to save the result
@@ -1469,10 +1469,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetBurns (historical)
+    #' Burns (historical)
     #'
     #' @description
-    #' GetBurns (historical)
+    #' Burns (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -1495,10 +1495,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetBurns (historical)
+    #' Burns (historical)
     #'
     #' @description
-    #' GetBurns (historical)
+    #' Burns (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -1580,10 +1580,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetDayData (current)
+    #' DayData (current)
     #'
     #' @description
-    #' GetDayData (current)
+    #' DayData (current)
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
@@ -1601,10 +1601,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetDayData (current)
+    #' DayData (current)
     #'
     #' @description
-    #' GetDayData (current)
+    #' DayData (current)
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
@@ -1666,10 +1666,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetDayData (historical)
+    #' DayData (historical)
     #'
     #' @description
-    #' GetDayData (historical)
+    #' DayData (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -1691,10 +1691,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetDayData (historical)
+    #' DayData (historical)
     #'
     #' @description
-    #' GetDayData (historical)
+    #' DayData (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -1772,10 +1772,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetFactory (current)
+    #' Factory (current)
     #'
     #' @description
-    #' GetFactory (current)
+    #' Factory (current)
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
@@ -1793,10 +1793,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetFactory (current)
+    #' Factory (current)
     #'
     #' @description
-    #' GetFactory (current)
+    #' Factory (current)
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
@@ -1858,10 +1858,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetFactory (historical)
+    #' Factory (historical)
     #'
     #' @description
-    #' GetFactory (historical)
+    #' Factory (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -1883,10 +1883,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetFactory (historical)
+    #' Factory (historical)
     #'
     #' @description
-    #' GetFactory (historical)
+    #' Factory (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -1964,10 +1964,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetMints (current)
+    #' Mints (current)
     #'
     #' @description
-    #' GetMints (current)
+    #' Mints (current)
     #'
     #' @param filter_pool_id (optional) No description
     #' @param data_file (optional) name of the data file to save the result
@@ -1986,10 +1986,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetMints (current)
+    #' Mints (current)
     #'
     #' @description
-    #' GetMints (current)
+    #' Mints (current)
     #'
     #' @param filter_pool_id (optional) No description
     #' @param data_file (optional) name of the data file to save the result
@@ -2055,10 +2055,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetMints (historical)
+    #' Mints (historical)
     #'
     #' @description
-    #' GetMints (historical)
+    #' Mints (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -2081,10 +2081,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetMints (historical)
+    #' Mints (historical)
     #'
     #' @description
-    #' GetMints (historical)
+    #' Mints (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -2166,10 +2166,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetPools (current) 🔥
+    #' Pools (current) 🔥
     #'
     #' @description
-    #' GetPools (current) 🔥
+    #' Pools (current) 🔥
     #'
     #' @param filter_pool_id (optional) No description
     #' @param data_file (optional) name of the data file to save the result
@@ -2188,10 +2188,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetPools (current) 🔥
+    #' Pools (current) 🔥
     #'
     #' @description
-    #' GetPools (current) 🔥
+    #' Pools (current) 🔥
     #'
     #' @param filter_pool_id (optional) No description
     #' @param data_file (optional) name of the data file to save the result
@@ -2257,10 +2257,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetPoolsDayData (current)
+    #' PoolsDayData (current)
     #'
     #' @description
-    #' GetPoolsDayData (current)
+    #' PoolsDayData (current)
     #'
     #' @param filter_pool_id (optional) No description
     #' @param data_file (optional) name of the data file to save the result
@@ -2279,10 +2279,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetPoolsDayData (current)
+    #' PoolsDayData (current)
     #'
     #' @description
-    #' GetPoolsDayData (current)
+    #' PoolsDayData (current)
     #'
     #' @param filter_pool_id (optional) No description
     #' @param data_file (optional) name of the data file to save the result
@@ -2348,10 +2348,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetPoolsDayData (historical)
+    #' PoolsDayData (historical)
     #'
     #' @description
-    #' GetPoolsDayData (historical)
+    #' PoolsDayData (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -2374,10 +2374,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetPoolsDayData (historical)
+    #' PoolsDayData (historical)
     #'
     #' @description
-    #' GetPoolsDayData (historical)
+    #' PoolsDayData (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -2459,10 +2459,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetPools (historical) 🔥
+    #' Pools (historical) 🔥
     #'
     #' @description
-    #' GetPools (historical) 🔥
+    #' Pools (historical) 🔥
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -2485,10 +2485,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetPools (historical) 🔥
+    #' Pools (historical) 🔥
     #'
     #' @description
-    #' GetPools (historical) 🔥
+    #' Pools (historical) 🔥
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -2570,10 +2570,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetPoolsHourData (current)
+    #' PoolsHourData (current)
     #'
     #' @description
-    #' GetPoolsHourData (current)
+    #' PoolsHourData (current)
     #'
     #' @param filter_pool_id (optional) No description
     #' @param data_file (optional) name of the data file to save the result
@@ -2592,10 +2592,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetPoolsHourData (current)
+    #' PoolsHourData (current)
     #'
     #' @description
-    #' GetPoolsHourData (current)
+    #' PoolsHourData (current)
     #'
     #' @param filter_pool_id (optional) No description
     #' @param data_file (optional) name of the data file to save the result
@@ -2661,10 +2661,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetPoolsHourData (historical)
+    #' PoolsHourData (historical)
     #'
     #' @description
-    #' GetPoolsHourData (historical)
+    #' PoolsHourData (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -2687,10 +2687,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetPoolsHourData (historical)
+    #' PoolsHourData (historical)
     #'
     #' @description
-    #' GetPoolsHourData (historical)
+    #' PoolsHourData (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -2772,10 +2772,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetPositions (current)
+    #' Positions (current)
     #'
     #' @description
-    #' GetPositions (current)
+    #' Positions (current)
     #'
     #' @param filter_pool_id (optional) No description
     #' @param data_file (optional) name of the data file to save the result
@@ -2794,10 +2794,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetPositions (current)
+    #' Positions (current)
     #'
     #' @description
-    #' GetPositions (current)
+    #' Positions (current)
     #'
     #' @param filter_pool_id (optional) No description
     #' @param data_file (optional) name of the data file to save the result
@@ -2863,10 +2863,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetPositions (historical)
+    #' Positions (historical)
     #'
     #' @description
-    #' GetPositions (historical)
+    #' Positions (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -2889,10 +2889,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetPositions (historical)
+    #' Positions (historical)
     #'
     #' @description
-    #' GetPositions (historical)
+    #' Positions (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -2974,10 +2974,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetPositionsSnaphots (historical)
+    #' PositionsSnaphots (historical)
     #'
     #' @description
-    #' GetPositionsSnaphots (historical)
+    #' PositionsSnaphots (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -3000,10 +3000,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetPositionsSnaphots (historical)
+    #' PositionsSnaphots (historical)
     #'
     #' @description
-    #' GetPositionsSnaphots (historical)
+    #' PositionsSnaphots (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -3085,10 +3085,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetPositionsSnapshots (current)
+    #' PositionsSnapshots (current)
     #'
     #' @description
-    #' GetPositionsSnapshots (current)
+    #' PositionsSnapshots (current)
     #'
     #' @param filter_pool_id (optional) No description
     #' @param data_file (optional) name of the data file to save the result
@@ -3107,10 +3107,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetPositionsSnapshots (current)
+    #' PositionsSnapshots (current)
     #'
     #' @description
-    #' GetPositionsSnapshots (current)
+    #' PositionsSnapshots (current)
     #'
     #' @param filter_pool_id (optional) No description
     #' @param data_file (optional) name of the data file to save the result
@@ -3176,10 +3176,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetSwaps (current) 🔥
+    #' Swaps (current) 🔥
     #'
     #' @description
-    #' GetSwaps (current) 🔥
+    #' Swaps (current) 🔥
     #'
     #' @param filter_pool_id (optional) No description
     #' @param data_file (optional) name of the data file to save the result
@@ -3198,10 +3198,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetSwaps (current) 🔥
+    #' Swaps (current) 🔥
     #'
     #' @description
-    #' GetSwaps (current) 🔥
+    #' Swaps (current) 🔥
     #'
     #' @param filter_pool_id (optional) No description
     #' @param data_file (optional) name of the data file to save the result
@@ -3267,10 +3267,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetSwaps (historical) 🔥
+    #' Swaps (historical) 🔥
     #'
     #' @description
-    #' GetSwaps (historical) 🔥
+    #' Swaps (historical) 🔥
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -3293,10 +3293,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetSwaps (historical) 🔥
+    #' Swaps (historical) 🔥
     #'
     #' @description
-    #' GetSwaps (historical) 🔥
+    #' Swaps (historical) 🔥
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -3378,10 +3378,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetTicks (current)
+    #' Ticks (current)
     #'
     #' @description
-    #' GetTicks (current)
+    #' Ticks (current)
     #'
     #' @param filter_pool_id (optional) No description
     #' @param data_file (optional) name of the data file to save the result
@@ -3400,10 +3400,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetTicks (current)
+    #' Ticks (current)
     #'
     #' @description
-    #' GetTicks (current)
+    #' Ticks (current)
     #'
     #' @param filter_pool_id (optional) No description
     #' @param data_file (optional) name of the data file to save the result
@@ -3469,10 +3469,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetTicksDayData (current)
+    #' TicksDayData (current)
     #'
     #' @description
-    #' GetTicksDayData (current)
+    #' TicksDayData (current)
     #'
     #' @param filter_pool_id (optional) No description
     #' @param data_file (optional) name of the data file to save the result
@@ -3491,10 +3491,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetTicksDayData (current)
+    #' TicksDayData (current)
     #'
     #' @description
-    #' GetTicksDayData (current)
+    #' TicksDayData (current)
     #'
     #' @param filter_pool_id (optional) No description
     #' @param data_file (optional) name of the data file to save the result
@@ -3560,10 +3560,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetTicksDayData (historical)
+    #' TicksDayData (historical)
     #'
     #' @description
-    #' GetTicksDayData (historical)
+    #' TicksDayData (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -3586,10 +3586,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetTicksDayData (historical)
+    #' TicksDayData (historical)
     #'
     #' @description
-    #' GetTicksDayData (historical)
+    #' TicksDayData (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -3671,10 +3671,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetTicks (historical)
+    #' Ticks (historical)
     #'
     #' @description
-    #' GetTicks (historical)
+    #' Ticks (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -3697,10 +3697,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetTicks (historical)
+    #' Ticks (historical)
     #'
     #' @description
-    #' GetTicks (historical)
+    #' Ticks (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -3782,10 +3782,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetTokens (current) 🔥
+    #' Tokens (current) 🔥
     #'
     #' @description
-    #' GetTokens (current) 🔥
+    #' Tokens (current) 🔥
     #'
     #' @param filter_token_id (optional) No description
     #' @param data_file (optional) name of the data file to save the result
@@ -3804,10 +3804,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetTokens (current) 🔥
+    #' Tokens (current) 🔥
     #'
     #' @description
-    #' GetTokens (current) 🔥
+    #' Tokens (current) 🔥
     #'
     #' @param filter_token_id (optional) No description
     #' @param data_file (optional) name of the data file to save the result
@@ -3873,10 +3873,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetTokensDayData (current)
+    #' TokensDayData (current)
     #'
     #' @description
-    #' GetTokensDayData (current)
+    #' TokensDayData (current)
     #'
     #' @param filter_token_id (optional) No description
     #' @param data_file (optional) name of the data file to save the result
@@ -3895,10 +3895,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetTokensDayData (current)
+    #' TokensDayData (current)
     #'
     #' @description
-    #' GetTokensDayData (current)
+    #' TokensDayData (current)
     #'
     #' @param filter_token_id (optional) No description
     #' @param data_file (optional) name of the data file to save the result
@@ -3964,10 +3964,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetTokensDayData (historical)
+    #' TokensDayData (historical)
     #'
     #' @description
-    #' GetTokensDayData (historical)
+    #' TokensDayData (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -3990,10 +3990,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetTokensDayData (historical)
+    #' TokensDayData (historical)
     #'
     #' @description
-    #' GetTokensDayData (historical)
+    #' TokensDayData (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -4075,10 +4075,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetTokens (historical) 🔥
+    #' Tokens (historical) 🔥
     #'
     #' @description
-    #' GetTokens (historical) 🔥
+    #' Tokens (historical) 🔥
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -4101,10 +4101,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetTokens (historical) 🔥
+    #' Tokens (historical) 🔥
     #'
     #' @description
-    #' GetTokens (historical) 🔥
+    #' Tokens (historical) 🔥
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -4186,10 +4186,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetTokensHourData (current)
+    #' TokensHourData (current)
     #'
     #' @description
-    #' GetTokensHourData (current)
+    #' TokensHourData (current)
     #'
     #' @param filter_token_id (optional) No description
     #' @param data_file (optional) name of the data file to save the result
@@ -4208,10 +4208,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetTokensHourData (current)
+    #' TokensHourData (current)
     #'
     #' @description
-    #' GetTokensHourData (current)
+    #' TokensHourData (current)
     #'
     #' @param filter_token_id (optional) No description
     #' @param data_file (optional) name of the data file to save the result
@@ -4277,10 +4277,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetTokensHourData (historical)
+    #' TokensHourData (historical)
     #'
     #' @description
-    #' GetTokensHourData (historical)
+    #' TokensHourData (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -4303,10 +4303,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetTokensHourData (historical)
+    #' TokensHourData (historical)
     #'
     #' @description
-    #' GetTokensHourData (historical)
+    #' TokensHourData (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -4388,10 +4388,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetTransactions (historical)
+    #' Transactions (historical)
     #'
     #' @description
-    #' GetTransactions (historical)
+    #' Transactions (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -4413,10 +4413,10 @@ UniswapV3Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetTransactions (historical)
+    #' Transactions (historical)
     #'
     #' @description
-    #' GetTransactions (historical)
+    #' Transactions (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 

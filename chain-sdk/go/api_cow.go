@@ -61,7 +61,7 @@ func (r ApiCowGetOrdersHistoricalRequest) Execute() ([]CowOrderDTO, *http.Respon
 }
 
 /*
-CowGetOrdersHistorical GetOrders (historical)
+CowGetOrdersHistorical Orders (historical)
 
 Gets orders.
 
@@ -199,7 +199,7 @@ func (r ApiCowGetSettlementsHistoricalRequest) Execute() ([]CowSettlementDTO, *h
 }
 
 /*
-CowGetSettlementsHistorical GetSettlements (historical)
+CowGetSettlementsHistorical Settlements (historical)
 
 Gets settlements.
 
@@ -345,7 +345,7 @@ func (r ApiCowGetTokensHistoricalRequest) Execute() ([]CowTokenDTO, *http.Respon
 }
 
 /*
-CowGetTokensHistorical GetTokens (historical) 🔥
+CowGetTokensHistorical Tokens (historical) 🔥
 
 Gets tokens.
 
@@ -487,7 +487,7 @@ func (r ApiCowGetTradesHistoricalRequest) Execute() ([]CowTradeDTO, *http.Respon
 }
 
 /*
-CowGetTradesHistorical GetTrades (historical) 🔥
+CowGetTradesHistorical Trades (historical) 🔥
 
 Gets trades.
 
@@ -626,7 +626,7 @@ func (r ApiCowGetUsersHistoricalRequest) Execute() ([]CowUserDTO, *http.Response
 }
 
 /*
-CowGetUsersHistorical GetUsers (historical)
+CowGetUsersHistorical Users (historical)
 
 Gets users.
 

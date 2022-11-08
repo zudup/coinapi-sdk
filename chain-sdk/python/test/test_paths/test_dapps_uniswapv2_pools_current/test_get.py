@@ -21,7 +21,7 @@ from .. import ApiTestMixin
 class TestDappsUniswapv2PoolsCurrent(ApiTestMixin, unittest.TestCase):
     """
     DappsUniswapv2PoolsCurrent unit test stubs
-        GetPools (current) 🔥  # noqa: E501
+        Pools (current) 🔥  # noqa: E501
     """
     _configuration = configuration.Configuration()
 

@@ -10,7 +10,7 @@ defmodule OnChainAPI.Api.Sushiswap do
   import OnChainAPI.RequestBuilder
 
   @doc """
-  GetExchanges (current) 🔥
+  Exchanges (current) 🔥
   Gets exchanges.
 
   ### Parameters
@@ -39,7 +39,7 @@ defmodule OnChainAPI.Api.Sushiswap do
   end
 
   @doc """
-  GetTrades (current) 🔥
+  Trades (current) 🔥
   Gets trades.
 
   ### Parameters
@@ -68,7 +68,7 @@ defmodule OnChainAPI.Api.Sushiswap do
   end
 
   @doc """
-  GetBundles (historical)
+  Bundles (historical)
   Gets bundles.
 
   ### Parameters
@@ -109,7 +109,7 @@ defmodule OnChainAPI.Api.Sushiswap do
   end
 
   @doc """
-  GetBurns (historical)
+  Burns (historical)
   Gets burns.
 
   ### Parameters
@@ -152,7 +152,7 @@ defmodule OnChainAPI.Api.Sushiswap do
   end
 
   @doc """
-  GetDayData (historical)
+  DayData (historical)
   Gets day data.
 
   ### Parameters
@@ -193,7 +193,7 @@ defmodule OnChainAPI.Api.Sushiswap do
   end
 
   @doc """
-  GetFactory (historical)
+  Factory (historical)
   Gets factory.
 
   ### Parameters
@@ -234,7 +234,7 @@ defmodule OnChainAPI.Api.Sushiswap do
   end
 
   @doc """
-  GetHourData (historical)
+  HourData (historical)
   Gets hour data.
 
   ### Parameters
@@ -275,7 +275,7 @@ defmodule OnChainAPI.Api.Sushiswap do
   end
 
   @doc """
-  GetLiquidityPosition (historical)
+  LiquidityPosition (historical)
   Gets liquidity position.
 
   ### Parameters
@@ -318,7 +318,7 @@ defmodule OnChainAPI.Api.Sushiswap do
   end
 
   @doc """
-  GetLiquidityPositionSnapshot (historical)
+  LiquidityPositionSnapshot (historical)
   Gets liquidity position snapshot.
 
   ### Parameters
@@ -361,7 +361,7 @@ defmodule OnChainAPI.Api.Sushiswap do
   end
 
   @doc """
-  GetMints (historical)
+  Mints (historical)
   Gets mints.
 
   ### Parameters
@@ -404,7 +404,7 @@ defmodule OnChainAPI.Api.Sushiswap do
   end
 
   @doc """
-  GetPools (current) 🔥
+  Pools (current) 🔥
   Gets pools.
 
   ### Parameters
@@ -433,7 +433,7 @@ defmodule OnChainAPI.Api.Sushiswap do
   end
 
   @doc """
-  GetPools (historical) 🔥
+  Pools (historical) 🔥
   Gets list of pools for given filters.
 
   ### Parameters
@@ -476,7 +476,7 @@ defmodule OnChainAPI.Api.Sushiswap do
   end
 
   @doc """
-  GetPoolsDayData (historical)
+  PoolsDayData (historical)
   Gets pools day data.
 
   ### Parameters
@@ -519,7 +519,7 @@ defmodule OnChainAPI.Api.Sushiswap do
   end
 
   @doc """
-  GetPoolsHourData (historical)
+  PoolsHourData (historical)
   Gets pools tracked each our.
 
   ### Parameters
@@ -562,7 +562,7 @@ defmodule OnChainAPI.Api.Sushiswap do
   end
 
   @doc """
-  GetSwaps (current) 🔥
+  Swaps (current) 🔥
   Gets swaps.
 
   ### Parameters
@@ -591,7 +591,7 @@ defmodule OnChainAPI.Api.Sushiswap do
   end
 
   @doc """
-  GetSwaps (historical) 🔥
+  Swaps (historical) 🔥
   Gets list of swaps for given filters.
 
   ### Parameters
@@ -634,7 +634,7 @@ defmodule OnChainAPI.Api.Sushiswap do
   end
 
   @doc """
-  GetTokens (current) 🔥
+  Tokens (current) 🔥
   Gets tokens.
 
   ### Parameters
@@ -663,7 +663,7 @@ defmodule OnChainAPI.Api.Sushiswap do
   end
 
   @doc """
-  GetTokens (historical) 🔥
+  Tokens (historical) 🔥
   Gets list of tokens for given filters.
 
   ### Parameters
@@ -706,7 +706,7 @@ defmodule OnChainAPI.Api.Sushiswap do
   end
 
   @doc """
-  GetTokensDayData (historical)
+  TokensDayData (historical)
   Gets tokens day data.
 
   ### Parameters
@@ -749,7 +749,7 @@ defmodule OnChainAPI.Api.Sushiswap do
   end
 
   @doc """
-  GetTransactions (historical)
+  Transactions (historical)
   Gets transactions.
 
   ### Parameters
@@ -790,7 +790,7 @@ defmodule OnChainAPI.Api.Sushiswap do
   end
 
   @doc """
-  GetUsers (historical)
+  Users (historical)
   Gets users.
 
   ### Parameters

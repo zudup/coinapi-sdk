@@ -77,7 +77,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GetAccounts (historical)
+     * Accounts (historical)
      * Gets accounts.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -111,7 +111,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GetAccounts (historical)
+     * Accounts (historical)
      * Gets accounts.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -170,7 +170,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GetAddLiquidityEvents (historical)
+     * AddLiquidityEvents (historical)
      * Gets add liquidity events.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -205,7 +205,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GetAddLiquidityEvents (historical)
+     * AddLiquidityEvents (historical)
      * Gets add liquidity events.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -269,7 +269,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GetAdminFeeChangeLogs (historical)
+     * AdminFeeChangeLogs (historical)
      * Gets admin fee change logs.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -304,7 +304,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GetAdminFeeChangeLogs (historical)
+     * AdminFeeChangeLogs (historical)
      * Gets admin fee change logs.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -368,7 +368,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GetAmplificationCoeffChangeLogs (historical)
+     * AmplificationCoeffChangeLogs (historical)
      * Gets amplification coeff change logs.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -403,7 +403,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GetAmplificationCoeffChangeLogs (historical)
+     * AmplificationCoeffChangeLogs (historical)
      * Gets amplification coeff change logs.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -467,7 +467,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GetCoins (historical)
+     * Coins (historical)
      * Gets coins.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -502,7 +502,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GetCoins (historical)
+     * Coins (historical)
      * Gets coins.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -566,7 +566,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GetContracts (historical)
+     * Contracts (historical)
      * Gets contracts.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -601,7 +601,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GetContracts (historical)
+     * Contracts (historical)
      * Gets contracts.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -665,7 +665,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GetContractsVersions (historical)
+     * ContractsVersions (historical)
      * Gets contracts versions.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -700,7 +700,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GetContractsVersions (historical)
+     * ContractsVersions (historical)
      * Gets contracts versions.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -764,7 +764,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GetDailyVolumes (historical)
+     * DailyVolumes (historical)
      * Gets daily volumes.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -799,7 +799,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GetDailyVolumes (historical)
+     * DailyVolumes (historical)
      * Gets daily volumes.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -863,7 +863,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GetExchanges (historical) 🔥
+     * Exchanges (historical) 🔥
      * Gets exchanges.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -898,7 +898,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GetExchanges (historical) 🔥
+     * Exchanges (historical) 🔥
      * Gets exchanges.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -962,7 +962,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GetFeeChangeLogs (historical)
+     * FeeChangeLogs (historical)
      * Gets fee change logs.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -997,7 +997,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GetFeeChangeLogs (historical)
+     * FeeChangeLogs (historical)
      * Gets fee change logs.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1061,7 +1061,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GetGaugesDeposits (historical)
+     * GaugesDeposits (historical)
      * Gets gauges deposits.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1095,7 +1095,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GetGaugesDeposits (historical)
+     * GaugesDeposits (historical)
      * Gets gauges deposits.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1154,7 +1154,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GetGauges (historical)
+     * Gauges (historical)
      * Gets gauges.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1189,7 +1189,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GetGauges (historical)
+     * Gauges (historical)
      * Gets gauges.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1253,7 +1253,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GetGaugesLiquidity (historical)
+     * GaugesLiquidity (historical)
      * Gets gauges liquidity.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1287,7 +1287,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GetGaugesLiquidity (historical)
+     * GaugesLiquidity (historical)
      * Gets gauges liquidity.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1346,7 +1346,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GetGaugesTotalWeights (historical)
+     * GaugesTotalWeights (historical)
      * Gets gauges total weights.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1380,7 +1380,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GetGaugesTotalWeights (historical)
+     * GaugesTotalWeights (historical)
      * Gets gauges total weights.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1439,7 +1439,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GetGaugesTypes (historical)
+     * GaugesTypes (historical)
      * Gets gauges types.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1473,7 +1473,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GetGaugesTypes (historical)
+     * GaugesTypes (historical)
      * Gets gauges types.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1532,7 +1532,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GetGaugesTypesWeights (historical)
+     * GaugesTypesWeights (historical)
      * Gets gauges types weights.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1566,7 +1566,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GetGaugesTypesWeights (historical)
+     * GaugesTypesWeights (historical)
      * Gets gauges types weights.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1625,7 +1625,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GetGaugesWeights (historical)
+     * GaugesWeights (historical)
      * Gets gauges weights.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1659,7 +1659,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GetGaugesWeights (historical)
+     * GaugesWeights (historical)
      * Gets gauges weights.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1718,7 +1718,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GetGaugesWeightsVotes (historical)
+     * GaugesWeightsVotes (historical)
      * Gets gauges weights votes.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1752,7 +1752,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GetGaugesWeightsVotes (historical)
+     * GaugesWeightsVotes (historical)
      * Gets gauges weights votes.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1811,7 +1811,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GetGaugesWithdraw (historical)
+     * GaugesWithdraw (historical)
      * Gets gauges withdraws.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1845,7 +1845,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GetGaugesWithdraw (historical)
+     * GaugesWithdraw (historical)
      * Gets gauges withdraws.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1904,7 +1904,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GetHourlyVolumes (historical)
+     * HourlyVolumes (historical)
      * Gets hourly volumes.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1939,7 +1939,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GetHourlyVolumes (historical)
+     * HourlyVolumes (historical)
      * Gets hourly volumes.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2003,7 +2003,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GetLpTokens (historical)
+     * LpTokens (historical)
      * Gets lp tokens.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2038,7 +2038,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GetLpTokens (historical)
+     * LpTokens (historical)
      * Gets lp tokens.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2102,7 +2102,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GetPools (historical) 🔥
+     * Pools (historical) 🔥
      * Gets pools.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2137,7 +2137,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GetPools (historical) 🔥
+     * Pools (historical) 🔥
      * Gets pools.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2201,7 +2201,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GetProposals (historical)
+     * Proposals (historical)
      * Gets proposals.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2235,7 +2235,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GetProposals (historical)
+     * Proposals (historical)
      * Gets proposals.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2294,7 +2294,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GetProposalsVotes (historical)
+     * ProposalsVotes (historical)
      * Gets proposals votes.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2328,7 +2328,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GetProposalsVotes (historical)
+     * ProposalsVotes (historical)
      * Gets proposals votes.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2387,7 +2387,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GetRemoveLiquidityEvents (historical)
+     * RemoveLiquidityEvents (historical)
      * Gets remove liquidity events.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2422,7 +2422,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GetRemoveLiquidityEvents (historical)
+     * RemoveLiquidityEvents (historical)
      * Gets remove liquidity events.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2486,7 +2486,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GetRemoveLiquidityOneEvents (historical)
+     * RemoveLiquidityOneEvents (historical)
      * Gets remove liquidity one events.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2521,7 +2521,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GetRemoveLiquidityOneEvents (historical)
+     * RemoveLiquidityOneEvents (historical)
      * Gets remove liquidity one events.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2585,7 +2585,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GetSystemStates (historical)
+     * SystemStates (historical)
      * Gets system states.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2619,7 +2619,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GetSystemStates (historical)
+     * SystemStates (historical)
      * Gets system states.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2678,7 +2678,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      * Gets tokens.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2713,7 +2713,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      * Gets tokens.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2777,7 +2777,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GetTransferOwnershipEvents (historical)
+     * TransferOwnershipEvents (historical)
      * Gets transfer ownership events.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2812,7 +2812,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GetTransferOwnershipEvents (historical)
+     * TransferOwnershipEvents (historical)
      * Gets transfer ownership events.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2876,7 +2876,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GetUnderlyingCoins (historical)
+     * UnderlyingCoins (historical)
      * Gets underlying coins.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2911,7 +2911,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GetUnderlyingCoins (historical)
+     * UnderlyingCoins (historical)
      * Gets underlying coins.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2975,7 +2975,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GetVotingApps (historical)
+     * VotingApps (historical)
      * Gets voting apps.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -3009,7 +3009,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GetVotingApps (historical)
+     * VotingApps (historical)
      * Gets voting apps.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -3068,7 +3068,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GetWeeklyVolumes (historical)
+     * WeeklyVolumes (historical)
      * Gets weekly volumes.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -3103,7 +3103,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GetWeeklyVolumes (historical)
+     * WeeklyVolumes (historical)
      * Gets weekly volumes.
      * @param startBlock  (optional)
      * @param endBlock  (optional)

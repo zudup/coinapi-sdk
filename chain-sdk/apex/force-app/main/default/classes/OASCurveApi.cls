@@ -26,7 +26,7 @@ public class OASCurveApi {
     }
 
     /**
-     * GetAccounts (historical)
+     * Accounts (historical)
      * Gets accounts.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -58,7 +58,7 @@ public class OASCurveApi {
         );
     }
     /**
-     * GetAddLiquidityEvents (historical)
+     * AddLiquidityEvents (historical)
      * Gets add liquidity events.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -92,7 +92,7 @@ public class OASCurveApi {
         );
     }
     /**
-     * GetAdminFeeChangeLogs (historical)
+     * AdminFeeChangeLogs (historical)
      * Gets admin fee change logs.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -126,7 +126,7 @@ public class OASCurveApi {
         );
     }
     /**
-     * GetAmplificationCoeffChangeLogs (historical)
+     * AmplificationCoeffChangeLogs (historical)
      * Gets amplification coeff change logs.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -160,7 +160,7 @@ public class OASCurveApi {
         );
     }
     /**
-     * GetCoins (historical)
+     * Coins (historical)
      * Gets coins.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -194,7 +194,7 @@ public class OASCurveApi {
         );
     }
     /**
-     * GetContracts (historical)
+     * Contracts (historical)
      * Gets contracts.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -228,7 +228,7 @@ public class OASCurveApi {
         );
     }
     /**
-     * GetContractsVersions (historical)
+     * ContractsVersions (historical)
      * Gets contracts versions.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -262,7 +262,7 @@ public class OASCurveApi {
         );
     }
     /**
-     * GetDailyVolumes (historical)
+     * DailyVolumes (historical)
      * Gets daily volumes.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -296,7 +296,7 @@ public class OASCurveApi {
         );
     }
     /**
-     * GetExchanges (historical) 🔥
+     * Exchanges (historical) 🔥
      * Gets exchanges.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -330,7 +330,7 @@ public class OASCurveApi {
         );
     }
     /**
-     * GetFeeChangeLogs (historical)
+     * FeeChangeLogs (historical)
      * Gets fee change logs.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -364,7 +364,7 @@ public class OASCurveApi {
         );
     }
     /**
-     * GetGaugesDeposits (historical)
+     * GaugesDeposits (historical)
      * Gets gauges deposits.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -396,7 +396,7 @@ public class OASCurveApi {
         );
     }
     /**
-     * GetGauges (historical)
+     * Gauges (historical)
      * Gets gauges.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -430,7 +430,7 @@ public class OASCurveApi {
         );
     }
     /**
-     * GetGaugesLiquidity (historical)
+     * GaugesLiquidity (historical)
      * Gets gauges liquidity.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -462,7 +462,7 @@ public class OASCurveApi {
         );
     }
     /**
-     * GetGaugesTotalWeights (historical)
+     * GaugesTotalWeights (historical)
      * Gets gauges total weights.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -494,7 +494,7 @@ public class OASCurveApi {
         );
     }
     /**
-     * GetGaugesTypes (historical)
+     * GaugesTypes (historical)
      * Gets gauges types.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -526,7 +526,7 @@ public class OASCurveApi {
         );
     }
     /**
-     * GetGaugesTypesWeights (historical)
+     * GaugesTypesWeights (historical)
      * Gets gauges types weights.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -558,7 +558,7 @@ public class OASCurveApi {
         );
     }
     /**
-     * GetGaugesWeights (historical)
+     * GaugesWeights (historical)
      * Gets gauges weights.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -590,7 +590,7 @@ public class OASCurveApi {
         );
     }
     /**
-     * GetGaugesWeightsVotes (historical)
+     * GaugesWeightsVotes (historical)
      * Gets gauges weights votes.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -622,7 +622,7 @@ public class OASCurveApi {
         );
     }
     /**
-     * GetGaugesWithdraw (historical)
+     * GaugesWithdraw (historical)
      * Gets gauges withdraws.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -654,7 +654,7 @@ public class OASCurveApi {
         );
     }
     /**
-     * GetHourlyVolumes (historical)
+     * HourlyVolumes (historical)
      * Gets hourly volumes.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -688,7 +688,7 @@ public class OASCurveApi {
         );
     }
     /**
-     * GetLpTokens (historical)
+     * LpTokens (historical)
      * Gets lp tokens.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -722,7 +722,7 @@ public class OASCurveApi {
         );
     }
     /**
-     * GetPools (historical) 🔥
+     * Pools (historical) 🔥
      * Gets pools.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -756,7 +756,7 @@ public class OASCurveApi {
         );
     }
     /**
-     * GetProposals (historical)
+     * Proposals (historical)
      * Gets proposals.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -788,7 +788,7 @@ public class OASCurveApi {
         );
     }
     /**
-     * GetProposalsVotes (historical)
+     * ProposalsVotes (historical)
      * Gets proposals votes.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -820,7 +820,7 @@ public class OASCurveApi {
         );
     }
     /**
-     * GetRemoveLiquidityEvents (historical)
+     * RemoveLiquidityEvents (historical)
      * Gets remove liquidity events.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -854,7 +854,7 @@ public class OASCurveApi {
         );
     }
     /**
-     * GetRemoveLiquidityOneEvents (historical)
+     * RemoveLiquidityOneEvents (historical)
      * Gets remove liquidity one events.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -888,7 +888,7 @@ public class OASCurveApi {
         );
     }
     /**
-     * GetSystemStates (historical)
+     * SystemStates (historical)
      * Gets system states.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -920,7 +920,7 @@ public class OASCurveApi {
         );
     }
     /**
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      * Gets tokens.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -954,7 +954,7 @@ public class OASCurveApi {
         );
     }
     /**
-     * GetTransferOwnershipEvents (historical)
+     * TransferOwnershipEvents (historical)
      * Gets transfer ownership events.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -988,7 +988,7 @@ public class OASCurveApi {
         );
     }
     /**
-     * GetUnderlyingCoins (historical)
+     * UnderlyingCoins (historical)
      * Gets underlying coins.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1022,7 +1022,7 @@ public class OASCurveApi {
         );
     }
     /**
-     * GetVotingApps (historical)
+     * VotingApps (historical)
      * Gets voting apps.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1054,7 +1054,7 @@ public class OASCurveApi {
         );
     }
     /**
-     * GetWeeklyVolumes (historical)
+     * WeeklyVolumes (historical)
      * Gets weekly volumes.
      * @param startBlock  (optional)
      * @param endBlock  (optional)

@@ -189,7 +189,7 @@ public class CurveApi {
     }
 
     /**
-     * GetAccounts (historical)
+     * Accounts (historical)
      * Gets accounts.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -209,7 +209,7 @@ public class CurveApi {
     }
 
     /**
-     * GetAccounts (historical)
+     * Accounts (historical)
      * Gets accounts.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -230,7 +230,7 @@ public class CurveApi {
     }
 
     /**
-     * GetAccounts (historical) (asynchronously)
+     * Accounts (historical) (asynchronously)
      * Gets accounts.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -341,7 +341,7 @@ public class CurveApi {
     }
 
     /**
-     * GetAddLiquidityEvents (historical)
+     * AddLiquidityEvents (historical)
      * Gets add liquidity events.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -362,7 +362,7 @@ public class CurveApi {
     }
 
     /**
-     * GetAddLiquidityEvents (historical)
+     * AddLiquidityEvents (historical)
      * Gets add liquidity events.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -384,7 +384,7 @@ public class CurveApi {
     }
 
     /**
-     * GetAddLiquidityEvents (historical) (asynchronously)
+     * AddLiquidityEvents (historical) (asynchronously)
      * Gets add liquidity events.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -496,7 +496,7 @@ public class CurveApi {
     }
 
     /**
-     * GetAdminFeeChangeLogs (historical)
+     * AdminFeeChangeLogs (historical)
      * Gets admin fee change logs.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -517,7 +517,7 @@ public class CurveApi {
     }
 
     /**
-     * GetAdminFeeChangeLogs (historical)
+     * AdminFeeChangeLogs (historical)
      * Gets admin fee change logs.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -539,7 +539,7 @@ public class CurveApi {
     }
 
     /**
-     * GetAdminFeeChangeLogs (historical) (asynchronously)
+     * AdminFeeChangeLogs (historical) (asynchronously)
      * Gets admin fee change logs.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -651,7 +651,7 @@ public class CurveApi {
     }
 
     /**
-     * GetAmplificationCoeffChangeLogs (historical)
+     * AmplificationCoeffChangeLogs (historical)
      * Gets amplification coeff change logs.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -672,7 +672,7 @@ public class CurveApi {
     }
 
     /**
-     * GetAmplificationCoeffChangeLogs (historical)
+     * AmplificationCoeffChangeLogs (historical)
      * Gets amplification coeff change logs.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -694,7 +694,7 @@ public class CurveApi {
     }
 
     /**
-     * GetAmplificationCoeffChangeLogs (historical) (asynchronously)
+     * AmplificationCoeffChangeLogs (historical) (asynchronously)
      * Gets amplification coeff change logs.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -806,7 +806,7 @@ public class CurveApi {
     }
 
     /**
-     * GetCoins (historical)
+     * Coins (historical)
      * Gets coins.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -827,7 +827,7 @@ public class CurveApi {
     }
 
     /**
-     * GetCoins (historical)
+     * Coins (historical)
      * Gets coins.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -849,7 +849,7 @@ public class CurveApi {
     }
 
     /**
-     * GetCoins (historical) (asynchronously)
+     * Coins (historical) (asynchronously)
      * Gets coins.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -961,7 +961,7 @@ public class CurveApi {
     }
 
     /**
-     * GetContracts (historical)
+     * Contracts (historical)
      * Gets contracts.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -982,7 +982,7 @@ public class CurveApi {
     }
 
     /**
-     * GetContracts (historical)
+     * Contracts (historical)
      * Gets contracts.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1004,7 +1004,7 @@ public class CurveApi {
     }
 
     /**
-     * GetContracts (historical) (asynchronously)
+     * Contracts (historical) (asynchronously)
      * Gets contracts.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1116,7 +1116,7 @@ public class CurveApi {
     }
 
     /**
-     * GetContractsVersions (historical)
+     * ContractsVersions (historical)
      * Gets contracts versions.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1137,7 +1137,7 @@ public class CurveApi {
     }
 
     /**
-     * GetContractsVersions (historical)
+     * ContractsVersions (historical)
      * Gets contracts versions.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1159,7 +1159,7 @@ public class CurveApi {
     }
 
     /**
-     * GetContractsVersions (historical) (asynchronously)
+     * ContractsVersions (historical) (asynchronously)
      * Gets contracts versions.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1271,7 +1271,7 @@ public class CurveApi {
     }
 
     /**
-     * GetDailyVolumes (historical)
+     * DailyVolumes (historical)
      * Gets daily volumes.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1292,7 +1292,7 @@ public class CurveApi {
     }
 
     /**
-     * GetDailyVolumes (historical)
+     * DailyVolumes (historical)
      * Gets daily volumes.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1314,7 +1314,7 @@ public class CurveApi {
     }
 
     /**
-     * GetDailyVolumes (historical) (asynchronously)
+     * DailyVolumes (historical) (asynchronously)
      * Gets daily volumes.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1426,7 +1426,7 @@ public class CurveApi {
     }
 
     /**
-     * GetExchanges (historical) 🔥
+     * Exchanges (historical) 🔥
      * Gets exchanges.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1447,7 +1447,7 @@ public class CurveApi {
     }
 
     /**
-     * GetExchanges (historical) 🔥
+     * Exchanges (historical) 🔥
      * Gets exchanges.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1469,7 +1469,7 @@ public class CurveApi {
     }
 
     /**
-     * GetExchanges (historical) 🔥 (asynchronously)
+     * Exchanges (historical) 🔥 (asynchronously)
      * Gets exchanges.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1581,7 +1581,7 @@ public class CurveApi {
     }
 
     /**
-     * GetFeeChangeLogs (historical)
+     * FeeChangeLogs (historical)
      * Gets fee change logs.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1602,7 +1602,7 @@ public class CurveApi {
     }
 
     /**
-     * GetFeeChangeLogs (historical)
+     * FeeChangeLogs (historical)
      * Gets fee change logs.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1624,7 +1624,7 @@ public class CurveApi {
     }
 
     /**
-     * GetFeeChangeLogs (historical) (asynchronously)
+     * FeeChangeLogs (historical) (asynchronously)
      * Gets fee change logs.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1731,7 +1731,7 @@ public class CurveApi {
     }
 
     /**
-     * GetGaugesDeposits (historical)
+     * GaugesDeposits (historical)
      * Gets gauges deposits.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1751,7 +1751,7 @@ public class CurveApi {
     }
 
     /**
-     * GetGaugesDeposits (historical)
+     * GaugesDeposits (historical)
      * Gets gauges deposits.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1772,7 +1772,7 @@ public class CurveApi {
     }
 
     /**
-     * GetGaugesDeposits (historical) (asynchronously)
+     * GaugesDeposits (historical) (asynchronously)
      * Gets gauges deposits.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1883,7 +1883,7 @@ public class CurveApi {
     }
 
     /**
-     * GetGauges (historical)
+     * Gauges (historical)
      * Gets gauges.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1904,7 +1904,7 @@ public class CurveApi {
     }
 
     /**
-     * GetGauges (historical)
+     * Gauges (historical)
      * Gets gauges.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1926,7 +1926,7 @@ public class CurveApi {
     }
 
     /**
-     * GetGauges (historical) (asynchronously)
+     * Gauges (historical) (asynchronously)
      * Gets gauges.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2033,7 +2033,7 @@ public class CurveApi {
     }
 
     /**
-     * GetGaugesLiquidity (historical)
+     * GaugesLiquidity (historical)
      * Gets gauges liquidity.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2053,7 +2053,7 @@ public class CurveApi {
     }
 
     /**
-     * GetGaugesLiquidity (historical)
+     * GaugesLiquidity (historical)
      * Gets gauges liquidity.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2074,7 +2074,7 @@ public class CurveApi {
     }
 
     /**
-     * GetGaugesLiquidity (historical) (asynchronously)
+     * GaugesLiquidity (historical) (asynchronously)
      * Gets gauges liquidity.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2180,7 +2180,7 @@ public class CurveApi {
     }
 
     /**
-     * GetGaugesTotalWeights (historical)
+     * GaugesTotalWeights (historical)
      * Gets gauges total weights.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2200,7 +2200,7 @@ public class CurveApi {
     }
 
     /**
-     * GetGaugesTotalWeights (historical)
+     * GaugesTotalWeights (historical)
      * Gets gauges total weights.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2221,7 +2221,7 @@ public class CurveApi {
     }
 
     /**
-     * GetGaugesTotalWeights (historical) (asynchronously)
+     * GaugesTotalWeights (historical) (asynchronously)
      * Gets gauges total weights.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2327,7 +2327,7 @@ public class CurveApi {
     }
 
     /**
-     * GetGaugesTypes (historical)
+     * GaugesTypes (historical)
      * Gets gauges types.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2347,7 +2347,7 @@ public class CurveApi {
     }
 
     /**
-     * GetGaugesTypes (historical)
+     * GaugesTypes (historical)
      * Gets gauges types.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2368,7 +2368,7 @@ public class CurveApi {
     }
 
     /**
-     * GetGaugesTypes (historical) (asynchronously)
+     * GaugesTypes (historical) (asynchronously)
      * Gets gauges types.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2474,7 +2474,7 @@ public class CurveApi {
     }
 
     /**
-     * GetGaugesTypesWeights (historical)
+     * GaugesTypesWeights (historical)
      * Gets gauges types weights.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2494,7 +2494,7 @@ public class CurveApi {
     }
 
     /**
-     * GetGaugesTypesWeights (historical)
+     * GaugesTypesWeights (historical)
      * Gets gauges types weights.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2515,7 +2515,7 @@ public class CurveApi {
     }
 
     /**
-     * GetGaugesTypesWeights (historical) (asynchronously)
+     * GaugesTypesWeights (historical) (asynchronously)
      * Gets gauges types weights.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2621,7 +2621,7 @@ public class CurveApi {
     }
 
     /**
-     * GetGaugesWeights (historical)
+     * GaugesWeights (historical)
      * Gets gauges weights.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2641,7 +2641,7 @@ public class CurveApi {
     }
 
     /**
-     * GetGaugesWeights (historical)
+     * GaugesWeights (historical)
      * Gets gauges weights.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2662,7 +2662,7 @@ public class CurveApi {
     }
 
     /**
-     * GetGaugesWeights (historical) (asynchronously)
+     * GaugesWeights (historical) (asynchronously)
      * Gets gauges weights.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2768,7 +2768,7 @@ public class CurveApi {
     }
 
     /**
-     * GetGaugesWeightsVotes (historical)
+     * GaugesWeightsVotes (historical)
      * Gets gauges weights votes.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2788,7 +2788,7 @@ public class CurveApi {
     }
 
     /**
-     * GetGaugesWeightsVotes (historical)
+     * GaugesWeightsVotes (historical)
      * Gets gauges weights votes.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2809,7 +2809,7 @@ public class CurveApi {
     }
 
     /**
-     * GetGaugesWeightsVotes (historical) (asynchronously)
+     * GaugesWeightsVotes (historical) (asynchronously)
      * Gets gauges weights votes.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2915,7 +2915,7 @@ public class CurveApi {
     }
 
     /**
-     * GetGaugesWithdraw (historical)
+     * GaugesWithdraw (historical)
      * Gets gauges withdraws.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2935,7 +2935,7 @@ public class CurveApi {
     }
 
     /**
-     * GetGaugesWithdraw (historical)
+     * GaugesWithdraw (historical)
      * Gets gauges withdraws.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2956,7 +2956,7 @@ public class CurveApi {
     }
 
     /**
-     * GetGaugesWithdraw (historical) (asynchronously)
+     * GaugesWithdraw (historical) (asynchronously)
      * Gets gauges withdraws.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -3067,7 +3067,7 @@ public class CurveApi {
     }
 
     /**
-     * GetHourlyVolumes (historical)
+     * HourlyVolumes (historical)
      * Gets hourly volumes.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -3088,7 +3088,7 @@ public class CurveApi {
     }
 
     /**
-     * GetHourlyVolumes (historical)
+     * HourlyVolumes (historical)
      * Gets hourly volumes.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -3110,7 +3110,7 @@ public class CurveApi {
     }
 
     /**
-     * GetHourlyVolumes (historical) (asynchronously)
+     * HourlyVolumes (historical) (asynchronously)
      * Gets hourly volumes.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -3222,7 +3222,7 @@ public class CurveApi {
     }
 
     /**
-     * GetLpTokens (historical)
+     * LpTokens (historical)
      * Gets lp tokens.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -3243,7 +3243,7 @@ public class CurveApi {
     }
 
     /**
-     * GetLpTokens (historical)
+     * LpTokens (historical)
      * Gets lp tokens.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -3265,7 +3265,7 @@ public class CurveApi {
     }
 
     /**
-     * GetLpTokens (historical) (asynchronously)
+     * LpTokens (historical) (asynchronously)
      * Gets lp tokens.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -3377,7 +3377,7 @@ public class CurveApi {
     }
 
     /**
-     * GetPools (historical) 🔥
+     * Pools (historical) 🔥
      * Gets pools.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -3398,7 +3398,7 @@ public class CurveApi {
     }
 
     /**
-     * GetPools (historical) 🔥
+     * Pools (historical) 🔥
      * Gets pools.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -3420,7 +3420,7 @@ public class CurveApi {
     }
 
     /**
-     * GetPools (historical) 🔥 (asynchronously)
+     * Pools (historical) 🔥 (asynchronously)
      * Gets pools.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -3527,7 +3527,7 @@ public class CurveApi {
     }
 
     /**
-     * GetProposals (historical)
+     * Proposals (historical)
      * Gets proposals.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -3547,7 +3547,7 @@ public class CurveApi {
     }
 
     /**
-     * GetProposals (historical)
+     * Proposals (historical)
      * Gets proposals.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -3568,7 +3568,7 @@ public class CurveApi {
     }
 
     /**
-     * GetProposals (historical) (asynchronously)
+     * Proposals (historical) (asynchronously)
      * Gets proposals.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -3674,7 +3674,7 @@ public class CurveApi {
     }
 
     /**
-     * GetProposalsVotes (historical)
+     * ProposalsVotes (historical)
      * Gets proposals votes.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -3694,7 +3694,7 @@ public class CurveApi {
     }
 
     /**
-     * GetProposalsVotes (historical)
+     * ProposalsVotes (historical)
      * Gets proposals votes.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -3715,7 +3715,7 @@ public class CurveApi {
     }
 
     /**
-     * GetProposalsVotes (historical) (asynchronously)
+     * ProposalsVotes (historical) (asynchronously)
      * Gets proposals votes.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -3826,7 +3826,7 @@ public class CurveApi {
     }
 
     /**
-     * GetRemoveLiquidityEvents (historical)
+     * RemoveLiquidityEvents (historical)
      * Gets remove liquidity events.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -3847,7 +3847,7 @@ public class CurveApi {
     }
 
     /**
-     * GetRemoveLiquidityEvents (historical)
+     * RemoveLiquidityEvents (historical)
      * Gets remove liquidity events.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -3869,7 +3869,7 @@ public class CurveApi {
     }
 
     /**
-     * GetRemoveLiquidityEvents (historical) (asynchronously)
+     * RemoveLiquidityEvents (historical) (asynchronously)
      * Gets remove liquidity events.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -3981,7 +3981,7 @@ public class CurveApi {
     }
 
     /**
-     * GetRemoveLiquidityOneEvents (historical)
+     * RemoveLiquidityOneEvents (historical)
      * Gets remove liquidity one events.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -4002,7 +4002,7 @@ public class CurveApi {
     }
 
     /**
-     * GetRemoveLiquidityOneEvents (historical)
+     * RemoveLiquidityOneEvents (historical)
      * Gets remove liquidity one events.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -4024,7 +4024,7 @@ public class CurveApi {
     }
 
     /**
-     * GetRemoveLiquidityOneEvents (historical) (asynchronously)
+     * RemoveLiquidityOneEvents (historical) (asynchronously)
      * Gets remove liquidity one events.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -4131,7 +4131,7 @@ public class CurveApi {
     }
 
     /**
-     * GetSystemStates (historical)
+     * SystemStates (historical)
      * Gets system states.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -4151,7 +4151,7 @@ public class CurveApi {
     }
 
     /**
-     * GetSystemStates (historical)
+     * SystemStates (historical)
      * Gets system states.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -4172,7 +4172,7 @@ public class CurveApi {
     }
 
     /**
-     * GetSystemStates (historical) (asynchronously)
+     * SystemStates (historical) (asynchronously)
      * Gets system states.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -4283,7 +4283,7 @@ public class CurveApi {
     }
 
     /**
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      * Gets tokens.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -4304,7 +4304,7 @@ public class CurveApi {
     }
 
     /**
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      * Gets tokens.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -4326,7 +4326,7 @@ public class CurveApi {
     }
 
     /**
-     * GetTokens (historical) 🔥 (asynchronously)
+     * Tokens (historical) 🔥 (asynchronously)
      * Gets tokens.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -4438,7 +4438,7 @@ public class CurveApi {
     }
 
     /**
-     * GetTransferOwnershipEvents (historical)
+     * TransferOwnershipEvents (historical)
      * Gets transfer ownership events.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -4459,7 +4459,7 @@ public class CurveApi {
     }
 
     /**
-     * GetTransferOwnershipEvents (historical)
+     * TransferOwnershipEvents (historical)
      * Gets transfer ownership events.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -4481,7 +4481,7 @@ public class CurveApi {
     }
 
     /**
-     * GetTransferOwnershipEvents (historical) (asynchronously)
+     * TransferOwnershipEvents (historical) (asynchronously)
      * Gets transfer ownership events.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -4593,7 +4593,7 @@ public class CurveApi {
     }
 
     /**
-     * GetUnderlyingCoins (historical)
+     * UnderlyingCoins (historical)
      * Gets underlying coins.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -4614,7 +4614,7 @@ public class CurveApi {
     }
 
     /**
-     * GetUnderlyingCoins (historical)
+     * UnderlyingCoins (historical)
      * Gets underlying coins.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -4636,7 +4636,7 @@ public class CurveApi {
     }
 
     /**
-     * GetUnderlyingCoins (historical) (asynchronously)
+     * UnderlyingCoins (historical) (asynchronously)
      * Gets underlying coins.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -4743,7 +4743,7 @@ public class CurveApi {
     }
 
     /**
-     * GetVotingApps (historical)
+     * VotingApps (historical)
      * Gets voting apps.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -4763,7 +4763,7 @@ public class CurveApi {
     }
 
     /**
-     * GetVotingApps (historical)
+     * VotingApps (historical)
      * Gets voting apps.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -4784,7 +4784,7 @@ public class CurveApi {
     }
 
     /**
-     * GetVotingApps (historical) (asynchronously)
+     * VotingApps (historical) (asynchronously)
      * Gets voting apps.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -4895,7 +4895,7 @@ public class CurveApi {
     }
 
     /**
-     * GetWeeklyVolumes (historical)
+     * WeeklyVolumes (historical)
      * Gets weekly volumes.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -4916,7 +4916,7 @@ public class CurveApi {
     }
 
     /**
-     * GetWeeklyVolumes (historical)
+     * WeeklyVolumes (historical)
      * Gets weekly volumes.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -4938,7 +4938,7 @@ public class CurveApi {
     }
 
     /**
-     * GetWeeklyVolumes (historical) (asynchronously)
+     * WeeklyVolumes (historical) (asynchronously)
      * Gets weekly volumes.
      * @param startBlock  (optional)
      * @param endBlock  (optional)

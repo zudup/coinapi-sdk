@@ -17,7 +17,7 @@ void main() {
   // final instance = CurveApi();
 
   group('tests for CurveApi', () {
-    // GetAccounts (historical)
+    // Accounts (historical)
     //
     // Gets accounts.
     //
@@ -26,7 +26,7 @@ void main() {
       // TODO
     });
 
-    // GetAddLiquidityEvents (historical)
+    // AddLiquidityEvents (historical)
     //
     // Gets add liquidity events.
     //
@@ -35,7 +35,7 @@ void main() {
       // TODO
     });
 
-    // GetAdminFeeChangeLogs (historical)
+    // AdminFeeChangeLogs (historical)
     //
     // Gets admin fee change logs.
     //
@@ -44,7 +44,7 @@ void main() {
       // TODO
     });
 
-    // GetAmplificationCoeffChangeLogs (historical)
+    // AmplificationCoeffChangeLogs (historical)
     //
     // Gets amplification coeff change logs.
     //
@@ -53,7 +53,7 @@ void main() {
       // TODO
     });
 
-    // GetCoins (historical)
+    // Coins (historical)
     //
     // Gets coins.
     //
@@ -62,7 +62,7 @@ void main() {
       // TODO
     });
 
-    // GetContracts (historical)
+    // Contracts (historical)
     //
     // Gets contracts.
     //
@@ -71,7 +71,7 @@ void main() {
       // TODO
     });
 
-    // GetContractsVersions (historical)
+    // ContractsVersions (historical)
     //
     // Gets contracts versions.
     //
@@ -80,7 +80,7 @@ void main() {
       // TODO
     });
 
-    // GetDailyVolumes (historical)
+    // DailyVolumes (historical)
     //
     // Gets daily volumes.
     //
@@ -89,7 +89,7 @@ void main() {
       // TODO
     });
 
-    // GetExchanges (historical) 🔥
+    // Exchanges (historical) 🔥
     //
     // Gets exchanges.
     //
@@ -98,7 +98,7 @@ void main() {
       // TODO
     });
 
-    // GetFeeChangeLogs (historical)
+    // FeeChangeLogs (historical)
     //
     // Gets fee change logs.
     //
@@ -107,7 +107,7 @@ void main() {
       // TODO
     });
 
-    // GetGaugesDeposits (historical)
+    // GaugesDeposits (historical)
     //
     // Gets gauges deposits.
     //
@@ -116,7 +116,7 @@ void main() {
       // TODO
     });
 
-    // GetGauges (historical)
+    // Gauges (historical)
     //
     // Gets gauges.
     //
@@ -125,7 +125,7 @@ void main() {
       // TODO
     });
 
-    // GetGaugesLiquidity (historical)
+    // GaugesLiquidity (historical)
     //
     // Gets gauges liquidity.
     //
@@ -134,7 +134,7 @@ void main() {
       // TODO
     });
 
-    // GetGaugesTotalWeights (historical)
+    // GaugesTotalWeights (historical)
     //
     // Gets gauges total weights.
     //
@@ -143,7 +143,7 @@ void main() {
       // TODO
     });
 
-    // GetGaugesTypes (historical)
+    // GaugesTypes (historical)
     //
     // Gets gauges types.
     //
@@ -152,7 +152,7 @@ void main() {
       // TODO
     });
 
-    // GetGaugesTypesWeights (historical)
+    // GaugesTypesWeights (historical)
     //
     // Gets gauges types weights.
     //
@@ -161,7 +161,7 @@ void main() {
       // TODO
     });
 
-    // GetGaugesWeights (historical)
+    // GaugesWeights (historical)
     //
     // Gets gauges weights.
     //
@@ -170,7 +170,7 @@ void main() {
       // TODO
     });
 
-    // GetGaugesWeightsVotes (historical)
+    // GaugesWeightsVotes (historical)
     //
     // Gets gauges weights votes.
     //
@@ -179,7 +179,7 @@ void main() {
       // TODO
     });
 
-    // GetGaugesWithdraw (historical)
+    // GaugesWithdraw (historical)
     //
     // Gets gauges withdraws.
     //
@@ -188,7 +188,7 @@ void main() {
       // TODO
     });
 
-    // GetHourlyVolumes (historical)
+    // HourlyVolumes (historical)
     //
     // Gets hourly volumes.
     //
@@ -197,7 +197,7 @@ void main() {
       // TODO
     });
 
-    // GetLpTokens (historical)
+    // LpTokens (historical)
     //
     // Gets lp tokens.
     //
@@ -206,7 +206,7 @@ void main() {
       // TODO
     });
 
-    // GetPools (historical) 🔥
+    // Pools (historical) 🔥
     //
     // Gets pools.
     //
@@ -215,7 +215,7 @@ void main() {
       // TODO
     });
 
-    // GetProposals (historical)
+    // Proposals (historical)
     //
     // Gets proposals.
     //
@@ -224,7 +224,7 @@ void main() {
       // TODO
     });
 
-    // GetProposalsVotes (historical)
+    // ProposalsVotes (historical)
     //
     // Gets proposals votes.
     //
@@ -233,7 +233,7 @@ void main() {
       // TODO
     });
 
-    // GetRemoveLiquidityEvents (historical)
+    // RemoveLiquidityEvents (historical)
     //
     // Gets remove liquidity events.
     //
@@ -242,7 +242,7 @@ void main() {
       // TODO
     });
 
-    // GetRemoveLiquidityOneEvents (historical)
+    // RemoveLiquidityOneEvents (historical)
     //
     // Gets remove liquidity one events.
     //
@@ -251,7 +251,7 @@ void main() {
       // TODO
     });
 
-    // GetSystemStates (historical)
+    // SystemStates (historical)
     //
     // Gets system states.
     //
@@ -260,7 +260,7 @@ void main() {
       // TODO
     });
 
-    // GetTokens (historical) 🔥
+    // Tokens (historical) 🔥
     //
     // Gets tokens.
     //
@@ -269,7 +269,7 @@ void main() {
       // TODO
     });
 
-    // GetTransferOwnershipEvents (historical)
+    // TransferOwnershipEvents (historical)
     //
     // Gets transfer ownership events.
     //
@@ -278,7 +278,7 @@ void main() {
       // TODO
     });
 
-    // GetUnderlyingCoins (historical)
+    // UnderlyingCoins (historical)
     //
     // Gets underlying coins.
     //
@@ -287,7 +287,7 @@ void main() {
       // TODO
     });
 
-    // GetVotingApps (historical)
+    // VotingApps (historical)
     //
     // Gets voting apps.
     //
@@ -296,7 +296,7 @@ void main() {
       // TODO
     });
 
-    // GetWeeklyVolumes (historical)
+    // WeeklyVolumes (historical)
     //
     // Gets weekly volumes.
     //

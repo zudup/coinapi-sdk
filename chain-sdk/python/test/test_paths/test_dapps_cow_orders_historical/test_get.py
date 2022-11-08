@@ -21,7 +21,7 @@ from .. import ApiTestMixin
 class TestDappsCowOrdersHistorical(ApiTestMixin, unittest.TestCase):
     """
     DappsCowOrdersHistorical unit test stubs
-        GetOrders (historical)  # noqa: E501
+        Orders (historical)  # noqa: E501
     """
     _configuration = configuration.Configuration()
 

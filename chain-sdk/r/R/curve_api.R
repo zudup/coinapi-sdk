@@ -14,7 +14,7 @@
 #'
 #' @section Methods:
 #' \describe{
-#' \strong{ CurveGetAccountsHistorical } \emph{ GetAccounts (historical) }
+#' \strong{ CurveGetAccountsHistorical } \emph{ Accounts (historical) }
 #' Gets accounts.
 #'
 #' \itemize{
@@ -34,7 +34,7 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGetAddLiquidityEventsHistorical } \emph{ GetAddLiquidityEvents (historical) }
+#' \strong{ CurveGetAddLiquidityEventsHistorical } \emph{ AddLiquidityEvents (historical) }
 #' Gets add liquidity events.
 #'
 #' \itemize{
@@ -55,7 +55,7 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGetAdminFeeChangeLogsHistorical } \emph{ GetAdminFeeChangeLogs (historical) }
+#' \strong{ CurveGetAdminFeeChangeLogsHistorical } \emph{ AdminFeeChangeLogs (historical) }
 #' Gets admin fee change logs.
 #'
 #' \itemize{
@@ -76,7 +76,7 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGetAmplificationCoeffChangeLogsHistorical } \emph{ GetAmplificationCoeffChangeLogs (historical) }
+#' \strong{ CurveGetAmplificationCoeffChangeLogsHistorical } \emph{ AmplificationCoeffChangeLogs (historical) }
 #' Gets amplification coeff change logs.
 #'
 #' \itemize{
@@ -97,7 +97,7 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGetCoinsHistorical } \emph{ GetCoins (historical) }
+#' \strong{ CurveGetCoinsHistorical } \emph{ Coins (historical) }
 #' Gets coins.
 #'
 #' \itemize{
@@ -118,7 +118,7 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGetContractsHistorical } \emph{ GetContracts (historical) }
+#' \strong{ CurveGetContractsHistorical } \emph{ Contracts (historical) }
 #' Gets contracts.
 #'
 #' \itemize{
@@ -139,7 +139,7 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGetContractsVersionsHistorical } \emph{ GetContractsVersions (historical) }
+#' \strong{ CurveGetContractsVersionsHistorical } \emph{ ContractsVersions (historical) }
 #' Gets contracts versions.
 #'
 #' \itemize{
@@ -160,7 +160,7 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGetDailyVolumesHistorical } \emph{ GetDailyVolumes (historical) }
+#' \strong{ CurveGetDailyVolumesHistorical } \emph{ DailyVolumes (historical) }
 #' Gets daily volumes.
 #'
 #' \itemize{
@@ -181,7 +181,7 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGetExchangesHistorical } \emph{ GetExchanges (historical) 🔥 }
+#' \strong{ CurveGetExchangesHistorical } \emph{ Exchanges (historical) 🔥 }
 #' Gets exchanges.
 #'
 #' \itemize{
@@ -202,7 +202,7 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGetFeeChangeLogsHistorical } \emph{ GetFeeChangeLogs (historical) }
+#' \strong{ CurveGetFeeChangeLogsHistorical } \emph{ FeeChangeLogs (historical) }
 #' Gets fee change logs.
 #'
 #' \itemize{
@@ -223,7 +223,7 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGetGaugesDepositsHistorical } \emph{ GetGaugesDeposits (historical) }
+#' \strong{ CurveGetGaugesDepositsHistorical } \emph{ GaugesDeposits (historical) }
 #' Gets gauges deposits.
 #'
 #' \itemize{
@@ -243,7 +243,7 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGetGaugesHistorical } \emph{ GetGauges (historical) }
+#' \strong{ CurveGetGaugesHistorical } \emph{ Gauges (historical) }
 #' Gets gauges.
 #'
 #' \itemize{
@@ -264,7 +264,7 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGetGaugesLiquidityHistorical } \emph{ GetGaugesLiquidity (historical) }
+#' \strong{ CurveGetGaugesLiquidityHistorical } \emph{ GaugesLiquidity (historical) }
 #' Gets gauges liquidity.
 #'
 #' \itemize{
@@ -284,7 +284,7 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGetGaugesTotalWeightsHistorical } \emph{ GetGaugesTotalWeights (historical) }
+#' \strong{ CurveGetGaugesTotalWeightsHistorical } \emph{ GaugesTotalWeights (historical) }
 #' Gets gauges total weights.
 #'
 #' \itemize{
@@ -304,7 +304,7 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGetGaugesTypesHistorical } \emph{ GetGaugesTypes (historical) }
+#' \strong{ CurveGetGaugesTypesHistorical } \emph{ GaugesTypes (historical) }
 #' Gets gauges types.
 #'
 #' \itemize{
@@ -324,7 +324,7 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGetGaugesTypesWeightsHistorical } \emph{ GetGaugesTypesWeights (historical) }
+#' \strong{ CurveGetGaugesTypesWeightsHistorical } \emph{ GaugesTypesWeights (historical) }
 #' Gets gauges types weights.
 #'
 #' \itemize{
@@ -344,7 +344,7 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGetGaugesWeightsHistorical } \emph{ GetGaugesWeights (historical) }
+#' \strong{ CurveGetGaugesWeightsHistorical } \emph{ GaugesWeights (historical) }
 #' Gets gauges weights.
 #'
 #' \itemize{
@@ -364,7 +364,7 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGetGaugesWeightsVotesHistorical } \emph{ GetGaugesWeightsVotes (historical) }
+#' \strong{ CurveGetGaugesWeightsVotesHistorical } \emph{ GaugesWeightsVotes (historical) }
 #' Gets gauges weights votes.
 #'
 #' \itemize{
@@ -384,7 +384,7 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGetGaugesWithdrawHistorical } \emph{ GetGaugesWithdraw (historical) }
+#' \strong{ CurveGetGaugesWithdrawHistorical } \emph{ GaugesWithdraw (historical) }
 #' Gets gauges withdraws.
 #'
 #' \itemize{
@@ -404,7 +404,7 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGetHourlyVolumesHistorical } \emph{ GetHourlyVolumes (historical) }
+#' \strong{ CurveGetHourlyVolumesHistorical } \emph{ HourlyVolumes (historical) }
 #' Gets hourly volumes.
 #'
 #' \itemize{
@@ -425,7 +425,7 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGetLpTokensHistorical } \emph{ GetLpTokens (historical) }
+#' \strong{ CurveGetLpTokensHistorical } \emph{ LpTokens (historical) }
 #' Gets lp tokens.
 #'
 #' \itemize{
@@ -446,7 +446,7 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGetPoolsHistorical } \emph{ GetPools (historical) 🔥 }
+#' \strong{ CurveGetPoolsHistorical } \emph{ Pools (historical) 🔥 }
 #' Gets pools.
 #'
 #' \itemize{
@@ -467,7 +467,7 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGetProposalsHistorical } \emph{ GetProposals (historical) }
+#' \strong{ CurveGetProposalsHistorical } \emph{ Proposals (historical) }
 #' Gets proposals.
 #'
 #' \itemize{
@@ -487,7 +487,7 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGetProposalsVotesHistorical } \emph{ GetProposalsVotes (historical) }
+#' \strong{ CurveGetProposalsVotesHistorical } \emph{ ProposalsVotes (historical) }
 #' Gets proposals votes.
 #'
 #' \itemize{
@@ -507,7 +507,7 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGetRemoveLiquidityEventsHistorical } \emph{ GetRemoveLiquidityEvents (historical) }
+#' \strong{ CurveGetRemoveLiquidityEventsHistorical } \emph{ RemoveLiquidityEvents (historical) }
 #' Gets remove liquidity events.
 #'
 #' \itemize{
@@ -528,7 +528,7 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGetRemoveLiquidityOneEventsHistorical } \emph{ GetRemoveLiquidityOneEvents (historical) }
+#' \strong{ CurveGetRemoveLiquidityOneEventsHistorical } \emph{ RemoveLiquidityOneEvents (historical) }
 #' Gets remove liquidity one events.
 #'
 #' \itemize{
@@ -549,7 +549,7 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGetSystemStatesHistorical } \emph{ GetSystemStates (historical) }
+#' \strong{ CurveGetSystemStatesHistorical } \emph{ SystemStates (historical) }
 #' Gets system states.
 #'
 #' \itemize{
@@ -569,7 +569,7 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGetTokensHistorical } \emph{ GetTokens (historical) 🔥 }
+#' \strong{ CurveGetTokensHistorical } \emph{ Tokens (historical) 🔥 }
 #' Gets tokens.
 #'
 #' \itemize{
@@ -590,7 +590,7 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGetTransferOwnershipEventsHistorical } \emph{ GetTransferOwnershipEvents (historical) }
+#' \strong{ CurveGetTransferOwnershipEventsHistorical } \emph{ TransferOwnershipEvents (historical) }
 #' Gets transfer ownership events.
 #'
 #' \itemize{
@@ -611,7 +611,7 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGetUnderlyingCoinsHistorical } \emph{ GetUnderlyingCoins (historical) }
+#' \strong{ CurveGetUnderlyingCoinsHistorical } \emph{ UnderlyingCoins (historical) }
 #' Gets underlying coins.
 #'
 #' \itemize{
@@ -632,7 +632,7 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGetVotingAppsHistorical } \emph{ GetVotingApps (historical) }
+#' \strong{ CurveGetVotingAppsHistorical } \emph{ VotingApps (historical) }
 #' Gets voting apps.
 #'
 #' \itemize{
@@ -652,7 +652,7 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGetWeeklyVolumesHistorical } \emph{ GetWeeklyVolumes (historical) }
+#' \strong{ CurveGetWeeklyVolumesHistorical } \emph{ WeeklyVolumes (historical) }
 #' Gets weekly volumes.
 #'
 #' \itemize{
@@ -686,7 +686,7 @@
 #' var_start_date <- "start_date_example" # character |  (Optional)
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #'
-#' #GetAccounts (historical)
+#' #Accounts (historical)
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -704,7 +704,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
-#' #GetAddLiquidityEvents (historical)
+#' #AddLiquidityEvents (historical)
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -722,7 +722,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
-#' #GetAdminFeeChangeLogs (historical)
+#' #AdminFeeChangeLogs (historical)
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -740,7 +740,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
-#' #GetAmplificationCoeffChangeLogs (historical)
+#' #AmplificationCoeffChangeLogs (historical)
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -758,7 +758,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
-#' #GetCoins (historical)
+#' #Coins (historical)
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -776,7 +776,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
-#' #GetContracts (historical)
+#' #Contracts (historical)
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -794,7 +794,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
-#' #GetContractsVersions (historical)
+#' #ContractsVersions (historical)
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -812,7 +812,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
-#' #GetDailyVolumes (historical)
+#' #DailyVolumes (historical)
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -830,7 +830,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
-#' #GetExchanges (historical) 🔥
+#' #Exchanges (historical) 🔥
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -848,7 +848,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
-#' #GetFeeChangeLogs (historical)
+#' #FeeChangeLogs (historical)
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -865,7 +865,7 @@
 #' var_start_date <- "start_date_example" # character |  (Optional)
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #'
-#' #GetGaugesDeposits (historical)
+#' #GaugesDeposits (historical)
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -883,7 +883,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
-#' #GetGauges (historical)
+#' #Gauges (historical)
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -900,7 +900,7 @@
 #' var_start_date <- "start_date_example" # character |  (Optional)
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #'
-#' #GetGaugesLiquidity (historical)
+#' #GaugesLiquidity (historical)
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -917,7 +917,7 @@
 #' var_start_date <- "start_date_example" # character |  (Optional)
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #'
-#' #GetGaugesTotalWeights (historical)
+#' #GaugesTotalWeights (historical)
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -934,7 +934,7 @@
 #' var_start_date <- "start_date_example" # character |  (Optional)
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #'
-#' #GetGaugesTypes (historical)
+#' #GaugesTypes (historical)
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -951,7 +951,7 @@
 #' var_start_date <- "start_date_example" # character |  (Optional)
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #'
-#' #GetGaugesTypesWeights (historical)
+#' #GaugesTypesWeights (historical)
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -968,7 +968,7 @@
 #' var_start_date <- "start_date_example" # character |  (Optional)
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #'
-#' #GetGaugesWeights (historical)
+#' #GaugesWeights (historical)
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -985,7 +985,7 @@
 #' var_start_date <- "start_date_example" # character |  (Optional)
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #'
-#' #GetGaugesWeightsVotes (historical)
+#' #GaugesWeightsVotes (historical)
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -1002,7 +1002,7 @@
 #' var_start_date <- "start_date_example" # character |  (Optional)
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #'
-#' #GetGaugesWithdraw (historical)
+#' #GaugesWithdraw (historical)
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -1020,7 +1020,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
-#' #GetHourlyVolumes (historical)
+#' #HourlyVolumes (historical)
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -1038,7 +1038,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
-#' #GetLpTokens (historical)
+#' #LpTokens (historical)
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -1056,7 +1056,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
-#' #GetPools (historical) 🔥
+#' #Pools (historical) 🔥
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -1073,7 +1073,7 @@
 #' var_start_date <- "start_date_example" # character |  (Optional)
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #'
-#' #GetProposals (historical)
+#' #Proposals (historical)
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -1090,7 +1090,7 @@
 #' var_start_date <- "start_date_example" # character |  (Optional)
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #'
-#' #GetProposalsVotes (historical)
+#' #ProposalsVotes (historical)
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -1108,7 +1108,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
-#' #GetRemoveLiquidityEvents (historical)
+#' #RemoveLiquidityEvents (historical)
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -1126,7 +1126,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
-#' #GetRemoveLiquidityOneEvents (historical)
+#' #RemoveLiquidityOneEvents (historical)
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -1143,7 +1143,7 @@
 #' var_start_date <- "start_date_example" # character |  (Optional)
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #'
-#' #GetSystemStates (historical)
+#' #SystemStates (historical)
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -1161,7 +1161,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_token_id <- "token_id_example" # character |  (Optional)
 #'
-#' #GetTokens (historical) 🔥
+#' #Tokens (historical) 🔥
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -1179,7 +1179,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
-#' #GetTransferOwnershipEvents (historical)
+#' #TransferOwnershipEvents (historical)
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -1197,7 +1197,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
-#' #GetUnderlyingCoins (historical)
+#' #UnderlyingCoins (historical)
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -1214,7 +1214,7 @@
 #' var_start_date <- "start_date_example" # character |  (Optional)
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #'
-#' #GetVotingApps (historical)
+#' #VotingApps (historical)
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -1232,7 +1232,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
-#' #GetWeeklyVolumes (historical)
+#' #WeeklyVolumes (historical)
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -1263,10 +1263,10 @@ CurveApi <- R6::R6Class(
         self$api_client <- ApiClient$new()
       }
     },
-    #' GetAccounts (historical)
+    #' Accounts (historical)
     #'
     #' @description
-    #' GetAccounts (historical)
+    #' Accounts (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -1288,10 +1288,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetAccounts (historical)
+    #' Accounts (historical)
     #'
     #' @description
-    #' GetAccounts (historical)
+    #' Accounts (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -1369,10 +1369,10 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetAddLiquidityEvents (historical)
+    #' AddLiquidityEvents (historical)
     #'
     #' @description
-    #' GetAddLiquidityEvents (historical)
+    #' AddLiquidityEvents (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -1395,10 +1395,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetAddLiquidityEvents (historical)
+    #' AddLiquidityEvents (historical)
     #'
     #' @description
-    #' GetAddLiquidityEvents (historical)
+    #' AddLiquidityEvents (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -1480,10 +1480,10 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetAdminFeeChangeLogs (historical)
+    #' AdminFeeChangeLogs (historical)
     #'
     #' @description
-    #' GetAdminFeeChangeLogs (historical)
+    #' AdminFeeChangeLogs (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -1506,10 +1506,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetAdminFeeChangeLogs (historical)
+    #' AdminFeeChangeLogs (historical)
     #'
     #' @description
-    #' GetAdminFeeChangeLogs (historical)
+    #' AdminFeeChangeLogs (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -1591,10 +1591,10 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetAmplificationCoeffChangeLogs (historical)
+    #' AmplificationCoeffChangeLogs (historical)
     #'
     #' @description
-    #' GetAmplificationCoeffChangeLogs (historical)
+    #' AmplificationCoeffChangeLogs (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -1617,10 +1617,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetAmplificationCoeffChangeLogs (historical)
+    #' AmplificationCoeffChangeLogs (historical)
     #'
     #' @description
-    #' GetAmplificationCoeffChangeLogs (historical)
+    #' AmplificationCoeffChangeLogs (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -1702,10 +1702,10 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetCoins (historical)
+    #' Coins (historical)
     #'
     #' @description
-    #' GetCoins (historical)
+    #' Coins (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -1728,10 +1728,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetCoins (historical)
+    #' Coins (historical)
     #'
     #' @description
-    #' GetCoins (historical)
+    #' Coins (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -1813,10 +1813,10 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetContracts (historical)
+    #' Contracts (historical)
     #'
     #' @description
-    #' GetContracts (historical)
+    #' Contracts (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -1839,10 +1839,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetContracts (historical)
+    #' Contracts (historical)
     #'
     #' @description
-    #' GetContracts (historical)
+    #' Contracts (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -1924,10 +1924,10 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetContractsVersions (historical)
+    #' ContractsVersions (historical)
     #'
     #' @description
-    #' GetContractsVersions (historical)
+    #' ContractsVersions (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -1950,10 +1950,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetContractsVersions (historical)
+    #' ContractsVersions (historical)
     #'
     #' @description
-    #' GetContractsVersions (historical)
+    #' ContractsVersions (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -2035,10 +2035,10 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetDailyVolumes (historical)
+    #' DailyVolumes (historical)
     #'
     #' @description
-    #' GetDailyVolumes (historical)
+    #' DailyVolumes (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -2061,10 +2061,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetDailyVolumes (historical)
+    #' DailyVolumes (historical)
     #'
     #' @description
-    #' GetDailyVolumes (historical)
+    #' DailyVolumes (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -2146,10 +2146,10 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetExchanges (historical) 🔥
+    #' Exchanges (historical) 🔥
     #'
     #' @description
-    #' GetExchanges (historical) 🔥
+    #' Exchanges (historical) 🔥
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -2172,10 +2172,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetExchanges (historical) 🔥
+    #' Exchanges (historical) 🔥
     #'
     #' @description
-    #' GetExchanges (historical) 🔥
+    #' Exchanges (historical) 🔥
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -2257,10 +2257,10 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetFeeChangeLogs (historical)
+    #' FeeChangeLogs (historical)
     #'
     #' @description
-    #' GetFeeChangeLogs (historical)
+    #' FeeChangeLogs (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -2283,10 +2283,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetFeeChangeLogs (historical)
+    #' FeeChangeLogs (historical)
     #'
     #' @description
-    #' GetFeeChangeLogs (historical)
+    #' FeeChangeLogs (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -2368,10 +2368,10 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetGaugesDeposits (historical)
+    #' GaugesDeposits (historical)
     #'
     #' @description
-    #' GetGaugesDeposits (historical)
+    #' GaugesDeposits (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -2393,10 +2393,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetGaugesDeposits (historical)
+    #' GaugesDeposits (historical)
     #'
     #' @description
-    #' GetGaugesDeposits (historical)
+    #' GaugesDeposits (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -2474,10 +2474,10 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetGauges (historical)
+    #' Gauges (historical)
     #'
     #' @description
-    #' GetGauges (historical)
+    #' Gauges (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -2500,10 +2500,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetGauges (historical)
+    #' Gauges (historical)
     #'
     #' @description
-    #' GetGauges (historical)
+    #' Gauges (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -2585,10 +2585,10 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetGaugesLiquidity (historical)
+    #' GaugesLiquidity (historical)
     #'
     #' @description
-    #' GetGaugesLiquidity (historical)
+    #' GaugesLiquidity (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -2610,10 +2610,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetGaugesLiquidity (historical)
+    #' GaugesLiquidity (historical)
     #'
     #' @description
-    #' GetGaugesLiquidity (historical)
+    #' GaugesLiquidity (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -2691,10 +2691,10 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetGaugesTotalWeights (historical)
+    #' GaugesTotalWeights (historical)
     #'
     #' @description
-    #' GetGaugesTotalWeights (historical)
+    #' GaugesTotalWeights (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -2716,10 +2716,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetGaugesTotalWeights (historical)
+    #' GaugesTotalWeights (historical)
     #'
     #' @description
-    #' GetGaugesTotalWeights (historical)
+    #' GaugesTotalWeights (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -2797,10 +2797,10 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetGaugesTypes (historical)
+    #' GaugesTypes (historical)
     #'
     #' @description
-    #' GetGaugesTypes (historical)
+    #' GaugesTypes (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -2822,10 +2822,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetGaugesTypes (historical)
+    #' GaugesTypes (historical)
     #'
     #' @description
-    #' GetGaugesTypes (historical)
+    #' GaugesTypes (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -2903,10 +2903,10 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetGaugesTypesWeights (historical)
+    #' GaugesTypesWeights (historical)
     #'
     #' @description
-    #' GetGaugesTypesWeights (historical)
+    #' GaugesTypesWeights (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -2928,10 +2928,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetGaugesTypesWeights (historical)
+    #' GaugesTypesWeights (historical)
     #'
     #' @description
-    #' GetGaugesTypesWeights (historical)
+    #' GaugesTypesWeights (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -3009,10 +3009,10 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetGaugesWeights (historical)
+    #' GaugesWeights (historical)
     #'
     #' @description
-    #' GetGaugesWeights (historical)
+    #' GaugesWeights (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -3034,10 +3034,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetGaugesWeights (historical)
+    #' GaugesWeights (historical)
     #'
     #' @description
-    #' GetGaugesWeights (historical)
+    #' GaugesWeights (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -3115,10 +3115,10 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetGaugesWeightsVotes (historical)
+    #' GaugesWeightsVotes (historical)
     #'
     #' @description
-    #' GetGaugesWeightsVotes (historical)
+    #' GaugesWeightsVotes (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -3140,10 +3140,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetGaugesWeightsVotes (historical)
+    #' GaugesWeightsVotes (historical)
     #'
     #' @description
-    #' GetGaugesWeightsVotes (historical)
+    #' GaugesWeightsVotes (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -3221,10 +3221,10 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetGaugesWithdraw (historical)
+    #' GaugesWithdraw (historical)
     #'
     #' @description
-    #' GetGaugesWithdraw (historical)
+    #' GaugesWithdraw (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -3246,10 +3246,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetGaugesWithdraw (historical)
+    #' GaugesWithdraw (historical)
     #'
     #' @description
-    #' GetGaugesWithdraw (historical)
+    #' GaugesWithdraw (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -3327,10 +3327,10 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetHourlyVolumes (historical)
+    #' HourlyVolumes (historical)
     #'
     #' @description
-    #' GetHourlyVolumes (historical)
+    #' HourlyVolumes (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -3353,10 +3353,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetHourlyVolumes (historical)
+    #' HourlyVolumes (historical)
     #'
     #' @description
-    #' GetHourlyVolumes (historical)
+    #' HourlyVolumes (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -3438,10 +3438,10 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetLpTokens (historical)
+    #' LpTokens (historical)
     #'
     #' @description
-    #' GetLpTokens (historical)
+    #' LpTokens (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -3464,10 +3464,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetLpTokens (historical)
+    #' LpTokens (historical)
     #'
     #' @description
-    #' GetLpTokens (historical)
+    #' LpTokens (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -3549,10 +3549,10 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetPools (historical) 🔥
+    #' Pools (historical) 🔥
     #'
     #' @description
-    #' GetPools (historical) 🔥
+    #' Pools (historical) 🔥
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -3575,10 +3575,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetPools (historical) 🔥
+    #' Pools (historical) 🔥
     #'
     #' @description
-    #' GetPools (historical) 🔥
+    #' Pools (historical) 🔥
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -3660,10 +3660,10 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetProposals (historical)
+    #' Proposals (historical)
     #'
     #' @description
-    #' GetProposals (historical)
+    #' Proposals (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -3685,10 +3685,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetProposals (historical)
+    #' Proposals (historical)
     #'
     #' @description
-    #' GetProposals (historical)
+    #' Proposals (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -3766,10 +3766,10 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetProposalsVotes (historical)
+    #' ProposalsVotes (historical)
     #'
     #' @description
-    #' GetProposalsVotes (historical)
+    #' ProposalsVotes (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -3791,10 +3791,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetProposalsVotes (historical)
+    #' ProposalsVotes (historical)
     #'
     #' @description
-    #' GetProposalsVotes (historical)
+    #' ProposalsVotes (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -3872,10 +3872,10 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetRemoveLiquidityEvents (historical)
+    #' RemoveLiquidityEvents (historical)
     #'
     #' @description
-    #' GetRemoveLiquidityEvents (historical)
+    #' RemoveLiquidityEvents (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -3898,10 +3898,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetRemoveLiquidityEvents (historical)
+    #' RemoveLiquidityEvents (historical)
     #'
     #' @description
-    #' GetRemoveLiquidityEvents (historical)
+    #' RemoveLiquidityEvents (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -3983,10 +3983,10 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetRemoveLiquidityOneEvents (historical)
+    #' RemoveLiquidityOneEvents (historical)
     #'
     #' @description
-    #' GetRemoveLiquidityOneEvents (historical)
+    #' RemoveLiquidityOneEvents (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -4009,10 +4009,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetRemoveLiquidityOneEvents (historical)
+    #' RemoveLiquidityOneEvents (historical)
     #'
     #' @description
-    #' GetRemoveLiquidityOneEvents (historical)
+    #' RemoveLiquidityOneEvents (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -4094,10 +4094,10 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetSystemStates (historical)
+    #' SystemStates (historical)
     #'
     #' @description
-    #' GetSystemStates (historical)
+    #' SystemStates (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -4119,10 +4119,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetSystemStates (historical)
+    #' SystemStates (historical)
     #'
     #' @description
-    #' GetSystemStates (historical)
+    #' SystemStates (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -4200,10 +4200,10 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetTokens (historical) 🔥
+    #' Tokens (historical) 🔥
     #'
     #' @description
-    #' GetTokens (historical) 🔥
+    #' Tokens (historical) 🔥
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -4226,10 +4226,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetTokens (historical) 🔥
+    #' Tokens (historical) 🔥
     #'
     #' @description
-    #' GetTokens (historical) 🔥
+    #' Tokens (historical) 🔥
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -4311,10 +4311,10 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetTransferOwnershipEvents (historical)
+    #' TransferOwnershipEvents (historical)
     #'
     #' @description
-    #' GetTransferOwnershipEvents (historical)
+    #' TransferOwnershipEvents (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -4337,10 +4337,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetTransferOwnershipEvents (historical)
+    #' TransferOwnershipEvents (historical)
     #'
     #' @description
-    #' GetTransferOwnershipEvents (historical)
+    #' TransferOwnershipEvents (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -4422,10 +4422,10 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetUnderlyingCoins (historical)
+    #' UnderlyingCoins (historical)
     #'
     #' @description
-    #' GetUnderlyingCoins (historical)
+    #' UnderlyingCoins (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -4448,10 +4448,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetUnderlyingCoins (historical)
+    #' UnderlyingCoins (historical)
     #'
     #' @description
-    #' GetUnderlyingCoins (historical)
+    #' UnderlyingCoins (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -4533,10 +4533,10 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetVotingApps (historical)
+    #' VotingApps (historical)
     #'
     #' @description
-    #' GetVotingApps (historical)
+    #' VotingApps (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -4558,10 +4558,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetVotingApps (historical)
+    #' VotingApps (historical)
     #'
     #' @description
-    #' GetVotingApps (historical)
+    #' VotingApps (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -4639,10 +4639,10 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetWeeklyVolumes (historical)
+    #' WeeklyVolumes (historical)
     #'
     #' @description
-    #' GetWeeklyVolumes (historical)
+    #' WeeklyVolumes (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -4665,10 +4665,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetWeeklyVolumes (historical)
+    #' WeeklyVolumes (historical)
     #'
     #' @description
-    #' GetWeeklyVolumes (historical)
+    #' WeeklyVolumes (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 

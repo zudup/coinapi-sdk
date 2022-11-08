@@ -9027,7 +9027,7 @@ export const CowApiFetchParamCreator = function (configuration?: Configuration) 
     return {
         /**
          * Gets orders.
-         * @summary GetOrders (historical)
+         * @summary Orders (historical)
          * @throws {RequiredError}
          */
         cowGetOrdersHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
@@ -9065,7 +9065,7 @@ export const CowApiFetchParamCreator = function (configuration?: Configuration) 
         },
         /**
          * Gets settlements.
-         * @summary GetSettlements (historical)
+         * @summary Settlements (historical)
          * @throws {RequiredError}
          */
         cowGetSettlementsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
@@ -9103,7 +9103,7 @@ export const CowApiFetchParamCreator = function (configuration?: Configuration) 
         },
         /**
          * Gets tokens.
-         * @summary GetTokens (historical) 🔥
+         * @summary Tokens (historical) 🔥
          * @throws {RequiredError}
          */
         cowGetTokensHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options: RequestOptions): FetchArgs {
@@ -9145,7 +9145,7 @@ export const CowApiFetchParamCreator = function (configuration?: Configuration) 
         },
         /**
          * Gets trades.
-         * @summary GetTrades (historical) 🔥
+         * @summary Trades (historical) 🔥
          * @throws {RequiredError}
          */
         cowGetTradesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
@@ -9183,7 +9183,7 @@ export const CowApiFetchParamCreator = function (configuration?: Configuration) 
         },
         /**
          * Gets users.
-         * @summary GetUsers (historical)
+         * @summary Users (historical)
          * @throws {RequiredError}
          */
         cowGetUsersHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
@@ -9243,7 +9243,7 @@ export const CowApi = function(configuration?: Configuration, fetch: FetchAPI = 
     return {
         /**
          * Gets orders.
-         * @summary GetOrders (historical)
+         * @summary Orders (historical)
          * @throws {RequiredError}
          */
         cowGetOrdersHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Array<CowOrderDTO>> {
@@ -9258,7 +9258,7 @@ export const CowApi = function(configuration?: Configuration, fetch: FetchAPI = 
         },
         /**
          * Gets settlements.
-         * @summary GetSettlements (historical)
+         * @summary Settlements (historical)
          * @throws {RequiredError}
          */
         cowGetSettlementsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Array<CowSettlementDTO>> {
@@ -9273,7 +9273,7 @@ export const CowApi = function(configuration?: Configuration, fetch: FetchAPI = 
         },
         /**
          * Gets tokens.
-         * @summary GetTokens (historical) 🔥
+         * @summary Tokens (historical) 🔥
          * @throws {RequiredError}
          */
         cowGetTokensHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions = {}): Promise<Array<CowTokenDTO>> {
@@ -9288,7 +9288,7 @@ export const CowApi = function(configuration?: Configuration, fetch: FetchAPI = 
         },
         /**
          * Gets trades.
-         * @summary GetTrades (historical) 🔥
+         * @summary Trades (historical) 🔥
          * @throws {RequiredError}
          */
         cowGetTradesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Array<CowTradeDTO>> {
@@ -9303,7 +9303,7 @@ export const CowApi = function(configuration?: Configuration, fetch: FetchAPI = 
         },
         /**
          * Gets users.
-         * @summary GetUsers (historical)
+         * @summary Users (historical)
          * @throws {RequiredError}
          */
         cowGetUsersHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Array<CowUserDTO>> {
@@ -9328,7 +9328,7 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
     return {
         /**
          * Gets accounts.
-         * @summary GetAccounts (historical)
+         * @summary Accounts (historical)
          * @throws {RequiredError}
          */
         curveGetAccountsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
@@ -9366,7 +9366,7 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
         },
         /**
          * Gets add liquidity events.
-         * @summary GetAddLiquidityEvents (historical)
+         * @summary AddLiquidityEvents (historical)
          * @throws {RequiredError}
          */
         curveGetAddLiquidityEventsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
@@ -9408,7 +9408,7 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
         },
         /**
          * Gets admin fee change logs.
-         * @summary GetAdminFeeChangeLogs (historical)
+         * @summary AdminFeeChangeLogs (historical)
          * @throws {RequiredError}
          */
         curveGetAdminFeeChangeLogsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
@@ -9450,7 +9450,7 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
         },
         /**
          * Gets amplification coeff change logs.
-         * @summary GetAmplificationCoeffChangeLogs (historical)
+         * @summary AmplificationCoeffChangeLogs (historical)
          * @throws {RequiredError}
          */
         curveGetAmplificationCoeffChangeLogsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
@@ -9492,7 +9492,7 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
         },
         /**
          * Gets coins.
-         * @summary GetCoins (historical)
+         * @summary Coins (historical)
          * @throws {RequiredError}
          */
         curveGetCoinsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
@@ -9534,7 +9534,7 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
         },
         /**
          * Gets contracts.
-         * @summary GetContracts (historical)
+         * @summary Contracts (historical)
          * @throws {RequiredError}
          */
         curveGetContractsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
@@ -9576,7 +9576,7 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
         },
         /**
          * Gets contracts versions.
-         * @summary GetContractsVersions (historical)
+         * @summary ContractsVersions (historical)
          * @throws {RequiredError}
          */
         curveGetContractsVersionsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
@@ -9618,7 +9618,7 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
         },
         /**
          * Gets daily volumes.
-         * @summary GetDailyVolumes (historical)
+         * @summary DailyVolumes (historical)
          * @throws {RequiredError}
          */
         curveGetDailyVolumesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
@@ -9660,7 +9660,7 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
         },
         /**
          * Gets exchanges.
-         * @summary GetExchanges (historical) 🔥
+         * @summary Exchanges (historical) 🔥
          * @throws {RequiredError}
          */
         curveGetExchangesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
@@ -9702,7 +9702,7 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
         },
         /**
          * Gets fee change logs.
-         * @summary GetFeeChangeLogs (historical)
+         * @summary FeeChangeLogs (historical)
          * @throws {RequiredError}
          */
         curveGetFeeChangeLogsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
@@ -9744,7 +9744,7 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
         },
         /**
          * Gets gauges deposits.
-         * @summary GetGaugesDeposits (historical)
+         * @summary GaugesDeposits (historical)
          * @throws {RequiredError}
          */
         curveGetGaugesDepositsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
@@ -9782,7 +9782,7 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
         },
         /**
          * Gets gauges.
-         * @summary GetGauges (historical)
+         * @summary Gauges (historical)
          * @throws {RequiredError}
          */
         curveGetGaugesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
@@ -9824,7 +9824,7 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
         },
         /**
          * Gets gauges liquidity.
-         * @summary GetGaugesLiquidity (historical)
+         * @summary GaugesLiquidity (historical)
          * @throws {RequiredError}
          */
         curveGetGaugesLiquidityHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
@@ -9862,7 +9862,7 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
         },
         /**
          * Gets gauges total weights.
-         * @summary GetGaugesTotalWeights (historical)
+         * @summary GaugesTotalWeights (historical)
          * @throws {RequiredError}
          */
         curveGetGaugesTotalWeightsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
@@ -9900,7 +9900,7 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
         },
         /**
          * Gets gauges types.
-         * @summary GetGaugesTypes (historical)
+         * @summary GaugesTypes (historical)
          * @throws {RequiredError}
          */
         curveGetGaugesTypesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
@@ -9938,7 +9938,7 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
         },
         /**
          * Gets gauges types weights.
-         * @summary GetGaugesTypesWeights (historical)
+         * @summary GaugesTypesWeights (historical)
          * @throws {RequiredError}
          */
         curveGetGaugesTypesWeightsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
@@ -9976,7 +9976,7 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
         },
         /**
          * Gets gauges weights.
-         * @summary GetGaugesWeights (historical)
+         * @summary GaugesWeights (historical)
          * @throws {RequiredError}
          */
         curveGetGaugesWeightsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
@@ -10014,7 +10014,7 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
         },
         /**
          * Gets gauges weights votes.
-         * @summary GetGaugesWeightsVotes (historical)
+         * @summary GaugesWeightsVotes (historical)
          * @throws {RequiredError}
          */
         curveGetGaugesWeightsVotesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
@@ -10052,7 +10052,7 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
         },
         /**
          * Gets gauges withdraws.
-         * @summary GetGaugesWithdraw (historical)
+         * @summary GaugesWithdraw (historical)
          * @throws {RequiredError}
          */
         curveGetGaugesWithdrawHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
@@ -10090,7 +10090,7 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
         },
         /**
          * Gets hourly volumes.
-         * @summary GetHourlyVolumes (historical)
+         * @summary HourlyVolumes (historical)
          * @throws {RequiredError}
          */
         curveGetHourlyVolumesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
@@ -10132,7 +10132,7 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
         },
         /**
          * Gets lp tokens.
-         * @summary GetLpTokens (historical)
+         * @summary LpTokens (historical)
          * @throws {RequiredError}
          */
         curveGetLpTokensHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
@@ -10174,7 +10174,7 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
         },
         /**
          * Gets pools.
-         * @summary GetPools (historical) 🔥
+         * @summary Pools (historical) 🔥
          * @throws {RequiredError}
          */
         curveGetPoolsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
@@ -10216,7 +10216,7 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
         },
         /**
          * Gets proposals.
-         * @summary GetProposals (historical)
+         * @summary Proposals (historical)
          * @throws {RequiredError}
          */
         curveGetProposalsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
@@ -10254,7 +10254,7 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
         },
         /**
          * Gets proposals votes.
-         * @summary GetProposalsVotes (historical)
+         * @summary ProposalsVotes (historical)
          * @throws {RequiredError}
          */
         curveGetProposalsVotesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
@@ -10292,7 +10292,7 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
         },
         /**
          * Gets remove liquidity events.
-         * @summary GetRemoveLiquidityEvents (historical)
+         * @summary RemoveLiquidityEvents (historical)
          * @throws {RequiredError}
          */
         curveGetRemoveLiquidityEventsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
@@ -10334,7 +10334,7 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
         },
         /**
          * Gets remove liquidity one events.
-         * @summary GetRemoveLiquidityOneEvents (historical)
+         * @summary RemoveLiquidityOneEvents (historical)
          * @throws {RequiredError}
          */
         curveGetRemoveLiquidityOneEventsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
@@ -10376,7 +10376,7 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
         },
         /**
          * Gets system states.
-         * @summary GetSystemStates (historical)
+         * @summary SystemStates (historical)
          * @throws {RequiredError}
          */
         curveGetSystemStatesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
@@ -10414,7 +10414,7 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
         },
         /**
          * Gets tokens.
-         * @summary GetTokens (historical) 🔥
+         * @summary Tokens (historical) 🔥
          * @throws {RequiredError}
          */
         curveGetTokensHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options: RequestOptions): FetchArgs {
@@ -10456,7 +10456,7 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
         },
         /**
          * Gets transfer ownership events.
-         * @summary GetTransferOwnershipEvents (historical)
+         * @summary TransferOwnershipEvents (historical)
          * @throws {RequiredError}
          */
         curveGetTransferOwnershipEventsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
@@ -10498,7 +10498,7 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
         },
         /**
          * Gets underlying coins.
-         * @summary GetUnderlyingCoins (historical)
+         * @summary UnderlyingCoins (historical)
          * @throws {RequiredError}
          */
         curveGetUnderlyingCoinsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
@@ -10540,7 +10540,7 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
         },
         /**
          * Gets voting apps.
-         * @summary GetVotingApps (historical)
+         * @summary VotingApps (historical)
          * @throws {RequiredError}
          */
         curveGetVotingAppsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
@@ -10578,7 +10578,7 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
         },
         /**
          * Gets weekly volumes.
-         * @summary GetWeeklyVolumes (historical)
+         * @summary WeeklyVolumes (historical)
          * @throws {RequiredError}
          */
         curveGetWeeklyVolumesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
@@ -10696,7 +10696,7 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
     return {
         /**
          * Gets accounts.
-         * @summary GetAccounts (historical)
+         * @summary Accounts (historical)
          * @throws {RequiredError}
          */
         curveGetAccountsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Array<CurveAccountDTO>> {
@@ -10711,7 +10711,7 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
         },
         /**
          * Gets add liquidity events.
-         * @summary GetAddLiquidityEvents (historical)
+         * @summary AddLiquidityEvents (historical)
          * @throws {RequiredError}
          */
         curveGetAddLiquidityEventsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<CurveAddLiquidityEventDTO>> {
@@ -10726,7 +10726,7 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
         },
         /**
          * Gets admin fee change logs.
-         * @summary GetAdminFeeChangeLogs (historical)
+         * @summary AdminFeeChangeLogs (historical)
          * @throws {RequiredError}
          */
         curveGetAdminFeeChangeLogsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<CurveAdminFeeChangeLogDTO>> {
@@ -10741,7 +10741,7 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
         },
         /**
          * Gets amplification coeff change logs.
-         * @summary GetAmplificationCoeffChangeLogs (historical)
+         * @summary AmplificationCoeffChangeLogs (historical)
          * @throws {RequiredError}
          */
         curveGetAmplificationCoeffChangeLogsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<CurveAmplificationCoeffChangeLogDTO>> {
@@ -10756,7 +10756,7 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
         },
         /**
          * Gets coins.
-         * @summary GetCoins (historical)
+         * @summary Coins (historical)
          * @throws {RequiredError}
          */
         curveGetCoinsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<CurveCoinDTO>> {
@@ -10771,7 +10771,7 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
         },
         /**
          * Gets contracts.
-         * @summary GetContracts (historical)
+         * @summary Contracts (historical)
          * @throws {RequiredError}
          */
         curveGetContractsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<CurveContractDTO>> {
@@ -10786,7 +10786,7 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
         },
         /**
          * Gets contracts versions.
-         * @summary GetContractsVersions (historical)
+         * @summary ContractsVersions (historical)
          * @throws {RequiredError}
          */
         curveGetContractsVersionsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<CurveContractVersionDTO>> {
@@ -10801,7 +10801,7 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
         },
         /**
          * Gets daily volumes.
-         * @summary GetDailyVolumes (historical)
+         * @summary DailyVolumes (historical)
          * @throws {RequiredError}
          */
         curveGetDailyVolumesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<CurveDailyVolumeDTO>> {
@@ -10816,7 +10816,7 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
         },
         /**
          * Gets exchanges.
-         * @summary GetExchanges (historical) 🔥
+         * @summary Exchanges (historical) 🔥
          * @throws {RequiredError}
          */
         curveGetExchangesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<CurveExchangeDTO>> {
@@ -10831,7 +10831,7 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
         },
         /**
          * Gets fee change logs.
-         * @summary GetFeeChangeLogs (historical)
+         * @summary FeeChangeLogs (historical)
          * @throws {RequiredError}
          */
         curveGetFeeChangeLogsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<CurveFeeChangeLogDTO>> {
@@ -10846,7 +10846,7 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
         },
         /**
          * Gets gauges deposits.
-         * @summary GetGaugesDeposits (historical)
+         * @summary GaugesDeposits (historical)
          * @throws {RequiredError}
          */
         curveGetGaugesDepositsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Array<CurveGaugeDepositDTO>> {
@@ -10861,7 +10861,7 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
         },
         /**
          * Gets gauges.
-         * @summary GetGauges (historical)
+         * @summary Gauges (historical)
          * @throws {RequiredError}
          */
         curveGetGaugesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<CurveGaugeDTO>> {
@@ -10876,7 +10876,7 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
         },
         /**
          * Gets gauges liquidity.
-         * @summary GetGaugesLiquidity (historical)
+         * @summary GaugesLiquidity (historical)
          * @throws {RequiredError}
          */
         curveGetGaugesLiquidityHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Array<CurveGaugeLiquidityDTO>> {
@@ -10891,7 +10891,7 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
         },
         /**
          * Gets gauges total weights.
-         * @summary GetGaugesTotalWeights (historical)
+         * @summary GaugesTotalWeights (historical)
          * @throws {RequiredError}
          */
         curveGetGaugesTotalWeightsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Array<CurveGaugeTotalWeightDTO>> {
@@ -10906,7 +10906,7 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
         },
         /**
          * Gets gauges types.
-         * @summary GetGaugesTypes (historical)
+         * @summary GaugesTypes (historical)
          * @throws {RequiredError}
          */
         curveGetGaugesTypesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Array<CurveGaugeTypeDTO>> {
@@ -10921,7 +10921,7 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
         },
         /**
          * Gets gauges types weights.
-         * @summary GetGaugesTypesWeights (historical)
+         * @summary GaugesTypesWeights (historical)
          * @throws {RequiredError}
          */
         curveGetGaugesTypesWeightsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Array<CurveGaugeTypeWeightDTO>> {
@@ -10936,7 +10936,7 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
         },
         /**
          * Gets gauges weights.
-         * @summary GetGaugesWeights (historical)
+         * @summary GaugesWeights (historical)
          * @throws {RequiredError}
          */
         curveGetGaugesWeightsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Array<CurveGaugeWeightDTO>> {
@@ -10951,7 +10951,7 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
         },
         /**
          * Gets gauges weights votes.
-         * @summary GetGaugesWeightsVotes (historical)
+         * @summary GaugesWeightsVotes (historical)
          * @throws {RequiredError}
          */
         curveGetGaugesWeightsVotesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Array<CurveGaugeWeightVoteDTO>> {
@@ -10966,7 +10966,7 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
         },
         /**
          * Gets gauges withdraws.
-         * @summary GetGaugesWithdraw (historical)
+         * @summary GaugesWithdraw (historical)
          * @throws {RequiredError}
          */
         curveGetGaugesWithdrawHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Array<CurveGaugeWithdrawDTO>> {
@@ -10981,7 +10981,7 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
         },
         /**
          * Gets hourly volumes.
-         * @summary GetHourlyVolumes (historical)
+         * @summary HourlyVolumes (historical)
          * @throws {RequiredError}
          */
         curveGetHourlyVolumesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<CurveHourlyVolumeDTO>> {
@@ -10996,7 +10996,7 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
         },
         /**
          * Gets lp tokens.
-         * @summary GetLpTokens (historical)
+         * @summary LpTokens (historical)
          * @throws {RequiredError}
          */
         curveGetLpTokensHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<CurveLpTokenDTO>> {
@@ -11011,7 +11011,7 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
         },
         /**
          * Gets pools.
-         * @summary GetPools (historical) 🔥
+         * @summary Pools (historical) 🔥
          * @throws {RequiredError}
          */
         curveGetPoolsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<CurvePoolDTO>> {
@@ -11026,7 +11026,7 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
         },
         /**
          * Gets proposals.
-         * @summary GetProposals (historical)
+         * @summary Proposals (historical)
          * @throws {RequiredError}
          */
         curveGetProposalsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Array<CurveProposalDTO>> {
@@ -11041,7 +11041,7 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
         },
         /**
          * Gets proposals votes.
-         * @summary GetProposalsVotes (historical)
+         * @summary ProposalsVotes (historical)
          * @throws {RequiredError}
          */
         curveGetProposalsVotesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Array<CurveProposalVoteDTO>> {
@@ -11056,7 +11056,7 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
         },
         /**
          * Gets remove liquidity events.
-         * @summary GetRemoveLiquidityEvents (historical)
+         * @summary RemoveLiquidityEvents (historical)
          * @throws {RequiredError}
          */
         curveGetRemoveLiquidityEventsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<CurveRemoveLiquidityEventDTO>> {
@@ -11071,7 +11071,7 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
         },
         /**
          * Gets remove liquidity one events.
-         * @summary GetRemoveLiquidityOneEvents (historical)
+         * @summary RemoveLiquidityOneEvents (historical)
          * @throws {RequiredError}
          */
         curveGetRemoveLiquidityOneEventsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<CurveRemoveLiquidityOneEventDTO>> {
@@ -11086,7 +11086,7 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
         },
         /**
          * Gets system states.
-         * @summary GetSystemStates (historical)
+         * @summary SystemStates (historical)
          * @throws {RequiredError}
          */
         curveGetSystemStatesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Array<CurveSystemStateDTO>> {
@@ -11101,7 +11101,7 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
         },
         /**
          * Gets tokens.
-         * @summary GetTokens (historical) 🔥
+         * @summary Tokens (historical) 🔥
          * @throws {RequiredError}
          */
         curveGetTokensHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions = {}): Promise<Array<CurveTokenDTO>> {
@@ -11116,7 +11116,7 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
         },
         /**
          * Gets transfer ownership events.
-         * @summary GetTransferOwnershipEvents (historical)
+         * @summary TransferOwnershipEvents (historical)
          * @throws {RequiredError}
          */
         curveGetTransferOwnershipEventsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<CurveTransferOwnershipEventDTO>> {
@@ -11131,7 +11131,7 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
         },
         /**
          * Gets underlying coins.
-         * @summary GetUnderlyingCoins (historical)
+         * @summary UnderlyingCoins (historical)
          * @throws {RequiredError}
          */
         curveGetUnderlyingCoinsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<CurveUnderlyingCoinDTO>> {
@@ -11146,7 +11146,7 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
         },
         /**
          * Gets voting apps.
-         * @summary GetVotingApps (historical)
+         * @summary VotingApps (historical)
          * @throws {RequiredError}
          */
         curveGetVotingAppsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Array<CurveVotingAppDTO>> {
@@ -11161,7 +11161,7 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
         },
         /**
          * Gets weekly volumes.
-         * @summary GetWeeklyVolumes (historical)
+         * @summary WeeklyVolumes (historical)
          * @throws {RequiredError}
          */
         curveGetWeeklyVolumesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<CurveWeeklyVolumeDTO>> {
@@ -11186,7 +11186,7 @@ export const DexApiFetchParamCreator = function (configuration?: Configuration) 
     return {
         /**
          * Gets batches.
-         * @summary GetBatches (historical)
+         * @summary Batches (historical)
          * @throws {RequiredError}
          */
         dexGetBatchesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
@@ -11224,7 +11224,7 @@ export const DexApiFetchParamCreator = function (configuration?: Configuration) 
         },
         /**
          * Gets deposits.
-         * @summary GetDeposits (historical)
+         * @summary Deposits (historical)
          * @throws {RequiredError}
          */
         dexGetDepositsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options: RequestOptions): FetchArgs {
@@ -11266,7 +11266,7 @@ export const DexApiFetchParamCreator = function (configuration?: Configuration) 
         },
         /**
          * Gets orders.
-         * @summary GetOrders (historical)
+         * @summary Orders (historical)
          * @throws {RequiredError}
          */
         dexGetOrdersHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options: RequestOptions): FetchArgs {
@@ -11308,7 +11308,7 @@ export const DexApiFetchParamCreator = function (configuration?: Configuration) 
         },
         /**
          * Gets prices.
-         * @summary GetPrices (historical)
+         * @summary Prices (historical)
          * @throws {RequiredError}
          */
         dexGetPricesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options: RequestOptions): FetchArgs {
@@ -11350,7 +11350,7 @@ export const DexApiFetchParamCreator = function (configuration?: Configuration) 
         },
         /**
          * Gets solutions.
-         * @summary GetSolutions (historical)
+         * @summary Solutions (historical)
          * @throws {RequiredError}
          */
         dexGetSolutionsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options: RequestOptions): FetchArgs {
@@ -11392,7 +11392,7 @@ export const DexApiFetchParamCreator = function (configuration?: Configuration) 
         },
         /**
          * Gets stats.
-         * @summary GetStats (historical)
+         * @summary Stats (historical)
          * @throws {RequiredError}
          */
         dexGetStatsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
@@ -11430,7 +11430,7 @@ export const DexApiFetchParamCreator = function (configuration?: Configuration) 
         },
         /**
          * Gets tokens.
-         * @summary GetTokens (historical) 🔥
+         * @summary Tokens (historical) 🔥
          * @throws {RequiredError}
          */
         dexGetTokensHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options: RequestOptions): FetchArgs {
@@ -11472,7 +11472,7 @@ export const DexApiFetchParamCreator = function (configuration?: Configuration) 
         },
         /**
          * Gets trades.
-         * @summary GetTrades (historical) 🔥
+         * @summary Trades (historical) 🔥
          * @throws {RequiredError}
          */
         dexGetTradesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
@@ -11510,7 +11510,7 @@ export const DexApiFetchParamCreator = function (configuration?: Configuration) 
         },
         /**
          * Gets users.
-         * @summary GetUsers (historical)
+         * @summary Users (historical)
          * @throws {RequiredError}
          */
         dexGetUsersHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
@@ -11548,7 +11548,7 @@ export const DexApiFetchParamCreator = function (configuration?: Configuration) 
         },
         /**
          * Gets withdraws.
-         * @summary GetWithdraws (historical)
+         * @summary Withdraws (historical)
          * @throws {RequiredError}
          */
         dexGetWithdrawsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options: RequestOptions): FetchArgs {
@@ -11590,7 +11590,7 @@ export const DexApiFetchParamCreator = function (configuration?: Configuration) 
         },
         /**
          * Gets withdraws requests.
-         * @summary GetWithdrawsRequests (historical)
+         * @summary WithdrawsRequests (historical)
          * @throws {RequiredError}
          */
         dexGetWithdrawsRequestsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options: RequestOptions): FetchArgs {
@@ -11666,7 +11666,7 @@ export const DexApi = function(configuration?: Configuration, fetch: FetchAPI = 
     return {
         /**
          * Gets batches.
-         * @summary GetBatches (historical)
+         * @summary Batches (historical)
          * @throws {RequiredError}
          */
         dexGetBatchesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Array<DexBatchDTO>> {
@@ -11681,7 +11681,7 @@ export const DexApi = function(configuration?: Configuration, fetch: FetchAPI = 
         },
         /**
          * Gets deposits.
-         * @summary GetDeposits (historical)
+         * @summary Deposits (historical)
          * @throws {RequiredError}
          */
         dexGetDepositsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions = {}): Promise<Array<DexDepositDTO>> {
@@ -11696,7 +11696,7 @@ export const DexApi = function(configuration?: Configuration, fetch: FetchAPI = 
         },
         /**
          * Gets orders.
-         * @summary GetOrders (historical)
+         * @summary Orders (historical)
          * @throws {RequiredError}
          */
         dexGetOrdersHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions = {}): Promise<Array<DexOrderDTO>> {
@@ -11711,7 +11711,7 @@ export const DexApi = function(configuration?: Configuration, fetch: FetchAPI = 
         },
         /**
          * Gets prices.
-         * @summary GetPrices (historical)
+         * @summary Prices (historical)
          * @throws {RequiredError}
          */
         dexGetPricesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions = {}): Promise<Array<DexPriceDTO>> {
@@ -11726,7 +11726,7 @@ export const DexApi = function(configuration?: Configuration, fetch: FetchAPI = 
         },
         /**
          * Gets solutions.
-         * @summary GetSolutions (historical)
+         * @summary Solutions (historical)
          * @throws {RequiredError}
          */
         dexGetSolutionsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions = {}): Promise<Array<DexSolutionDTO>> {
@@ -11741,7 +11741,7 @@ export const DexApi = function(configuration?: Configuration, fetch: FetchAPI = 
         },
         /**
          * Gets stats.
-         * @summary GetStats (historical)
+         * @summary Stats (historical)
          * @throws {RequiredError}
          */
         dexGetStatsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Array<DexStatsDTO>> {
@@ -11756,7 +11756,7 @@ export const DexApi = function(configuration?: Configuration, fetch: FetchAPI = 
         },
         /**
          * Gets tokens.
-         * @summary GetTokens (historical) 🔥
+         * @summary Tokens (historical) 🔥
          * @throws {RequiredError}
          */
         dexGetTokensHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions = {}): Promise<Array<DexTokenDTO>> {
@@ -11771,7 +11771,7 @@ export const DexApi = function(configuration?: Configuration, fetch: FetchAPI = 
         },
         /**
          * Gets trades.
-         * @summary GetTrades (historical) 🔥
+         * @summary Trades (historical) 🔥
          * @throws {RequiredError}
          */
         dexGetTradesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Array<DexTradeDTO>> {
@@ -11786,7 +11786,7 @@ export const DexApi = function(configuration?: Configuration, fetch: FetchAPI = 
         },
         /**
          * Gets users.
-         * @summary GetUsers (historical)
+         * @summary Users (historical)
          * @throws {RequiredError}
          */
         dexGetUsersHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Array<DexUserDTO>> {
@@ -11801,7 +11801,7 @@ export const DexApi = function(configuration?: Configuration, fetch: FetchAPI = 
         },
         /**
          * Gets withdraws.
-         * @summary GetWithdraws (historical)
+         * @summary Withdraws (historical)
          * @throws {RequiredError}
          */
         dexGetWithdrawsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions = {}): Promise<Array<DexWithdrawDTO>> {
@@ -11816,7 +11816,7 @@ export const DexApi = function(configuration?: Configuration, fetch: FetchAPI = 
         },
         /**
          * Gets withdraws requests.
-         * @summary GetWithdrawsRequests (historical)
+         * @summary WithdrawsRequests (historical)
          * @throws {RequiredError}
          */
         dexGetWithdrawsRequestsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions = {}): Promise<Array<DexWithdrawRequestDTO>> {
@@ -11841,7 +11841,7 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
     return {
         /**
          * Gets exchanges.
-         * @summary GetExchanges (current) 🔥
+         * @summary Exchanges (current) 🔥
          * @throws {RequiredError}
          */
         curveGetExchangesCurrent(options: RequestOptions): FetchArgs {
@@ -11863,7 +11863,7 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets trades.
-         * @summary GetTrades (current) 🔥
+         * @summary Trades (current) 🔥
          * @throws {RequiredError}
          */
         dexGetTradesCurrent(options: RequestOptions): FetchArgs {
@@ -11885,7 +11885,7 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets bundles.
-         * @summary GetBundles (historical)
+         * @summary Bundles (historical)
          * @throws {RequiredError}
          */
         sushiswapGetBundlesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
@@ -11923,7 +11923,7 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets burns.
-         * @summary GetBurns (historical)
+         * @summary Burns (historical)
          * @throws {RequiredError}
          */
         sushiswapGetBurnsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
@@ -11965,7 +11965,7 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets day data.
-         * @summary GetDayData (historical)
+         * @summary DayData (historical)
          * @throws {RequiredError}
          */
         sushiswapGetDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
@@ -12003,7 +12003,7 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets factory.
-         * @summary GetFactory (historical)
+         * @summary Factory (historical)
          * @throws {RequiredError}
          */
         sushiswapGetFactoryHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
@@ -12041,7 +12041,7 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets hour data.
-         * @summary GetHourData (historical)
+         * @summary HourData (historical)
          * @throws {RequiredError}
          */
         sushiswapGetHourDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
@@ -12079,7 +12079,7 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets liquidity position.
-         * @summary GetLiquidityPosition (historical)
+         * @summary LiquidityPosition (historical)
          * @throws {RequiredError}
          */
         sushiswapGetLiquidityPositionHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
@@ -12121,7 +12121,7 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets liquidity position snapshot.
-         * @summary GetLiquidityPositionSnapshot (historical)
+         * @summary LiquidityPositionSnapshot (historical)
          * @throws {RequiredError}
          */
         sushiswapGetLiquidityPositionSnapshotHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
@@ -12163,7 +12163,7 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets mints.
-         * @summary GetMints (historical)
+         * @summary Mints (historical)
          * @throws {RequiredError}
          */
         sushiswapGetMintsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
@@ -12205,7 +12205,7 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets pools.
-         * @summary GetPools (current) 🔥
+         * @summary Pools (current) 🔥
          * @throws {RequiredError}
          */
         sushiswapGetPoolsCurrent(options: RequestOptions): FetchArgs {
@@ -12227,7 +12227,7 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets pools day data.
-         * @summary GetPoolsDayData (historical)
+         * @summary PoolsDayData (historical)
          * @throws {RequiredError}
          */
         sushiswapGetPoolsDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
@@ -12269,7 +12269,7 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets list of pools for given filters.
-         * @summary GetPools (historical) 🔥
+         * @summary Pools (historical) 🔥
          * @throws {RequiredError}
          */
         sushiswapGetPoolsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
@@ -12311,7 +12311,7 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets pools tracked each our.
-         * @summary GetPoolsHourData (historical)
+         * @summary PoolsHourData (historical)
          * @throws {RequiredError}
          */
         sushiswapGetPoolsHourDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
@@ -12353,7 +12353,7 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets swaps.
-         * @summary GetSwaps (current) 🔥
+         * @summary Swaps (current) 🔥
          * @throws {RequiredError}
          */
         sushiswapGetSwapsCurrent(options: RequestOptions): FetchArgs {
@@ -12375,7 +12375,7 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets list of swaps for given filters.
-         * @summary GetSwaps (historical) 🔥
+         * @summary Swaps (historical) 🔥
          * @throws {RequiredError}
          */
         sushiswapGetSwapsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
@@ -12417,7 +12417,7 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets tokens.
-         * @summary GetTokens (current) 🔥
+         * @summary Tokens (current) 🔥
          * @throws {RequiredError}
          */
         sushiswapGetTokensCurrent(options: RequestOptions): FetchArgs {
@@ -12439,7 +12439,7 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets tokens day data.
-         * @summary GetTokensDayData (historical)
+         * @summary TokensDayData (historical)
          * @throws {RequiredError}
          */
         sushiswapGetTokensDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options: RequestOptions): FetchArgs {
@@ -12481,7 +12481,7 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets list of tokens for given filters.
-         * @summary GetTokens (historical) 🔥
+         * @summary Tokens (historical) 🔥
          * @throws {RequiredError}
          */
         sushiswapGetTokensHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options: RequestOptions): FetchArgs {
@@ -12523,7 +12523,7 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets transactions.
-         * @summary GetTransactions (historical)
+         * @summary Transactions (historical)
          * @throws {RequiredError}
          */
         sushiswapGetTransactionsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
@@ -12561,7 +12561,7 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets users.
-         * @summary GetUsers (historical)
+         * @summary Users (historical)
          * @throws {RequiredError}
          */
         sushiswapGetUsersHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
@@ -12653,7 +12653,7 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
     return {
         /**
          * Gets exchanges.
-         * @summary GetExchanges (current) 🔥
+         * @summary Exchanges (current) 🔥
          * @throws {RequiredError}
          */
         curveGetExchangesCurrent(options?: RequestOptions = {}): Promise<Array<CurveExchangeDTO>> {
@@ -12668,7 +12668,7 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets trades.
-         * @summary GetTrades (current) 🔥
+         * @summary Trades (current) 🔥
          * @throws {RequiredError}
          */
         dexGetTradesCurrent(options?: RequestOptions = {}): Promise<Array<DexTradeDTO>> {
@@ -12683,7 +12683,7 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets bundles.
-         * @summary GetBundles (historical)
+         * @summary Bundles (historical)
          * @throws {RequiredError}
          */
         sushiswapGetBundlesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Array<SushiswapBundleDTO>> {
@@ -12698,7 +12698,7 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets burns.
-         * @summary GetBurns (historical)
+         * @summary Burns (historical)
          * @throws {RequiredError}
          */
         sushiswapGetBurnsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<SushiswapBurnDTO>> {
@@ -12713,7 +12713,7 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets day data.
-         * @summary GetDayData (historical)
+         * @summary DayData (historical)
          * @throws {RequiredError}
          */
         sushiswapGetDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Array<SushiswapDayDataDTO>> {
@@ -12728,7 +12728,7 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets factory.
-         * @summary GetFactory (historical)
+         * @summary Factory (historical)
          * @throws {RequiredError}
          */
         sushiswapGetFactoryHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Array<SushiswapFactoryDTO>> {
@@ -12743,7 +12743,7 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets hour data.
-         * @summary GetHourData (historical)
+         * @summary HourData (historical)
          * @throws {RequiredError}
          */
         sushiswapGetHourDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Array<SushiswapHourDataDTO>> {
@@ -12758,7 +12758,7 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets liquidity position.
-         * @summary GetLiquidityPosition (historical)
+         * @summary LiquidityPosition (historical)
          * @throws {RequiredError}
          */
         sushiswapGetLiquidityPositionHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<SushiswapLiquidityPositionDTO>> {
@@ -12773,7 +12773,7 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets liquidity position snapshot.
-         * @summary GetLiquidityPositionSnapshot (historical)
+         * @summary LiquidityPositionSnapshot (historical)
          * @throws {RequiredError}
          */
         sushiswapGetLiquidityPositionSnapshotHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<SushiswapLiquidityPositionSnapshotDTO>> {
@@ -12788,7 +12788,7 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets mints.
-         * @summary GetMints (historical)
+         * @summary Mints (historical)
          * @throws {RequiredError}
          */
         sushiswapGetMintsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<SushiswapMintDTO>> {
@@ -12803,7 +12803,7 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets pools.
-         * @summary GetPools (current) 🔥
+         * @summary Pools (current) 🔥
          * @throws {RequiredError}
          */
         sushiswapGetPoolsCurrent(options?: RequestOptions = {}): Promise<Array<SushiswapPairDTO>> {
@@ -12818,7 +12818,7 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets pools day data.
-         * @summary GetPoolsDayData (historical)
+         * @summary PoolsDayData (historical)
          * @throws {RequiredError}
          */
         sushiswapGetPoolsDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<SushiswapPairDayDataDTO>> {
@@ -12833,7 +12833,7 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets list of pools for given filters.
-         * @summary GetPools (historical) 🔥
+         * @summary Pools (historical) 🔥
          * @throws {RequiredError}
          */
         sushiswapGetPoolsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<SushiswapPairDTO>> {
@@ -12848,7 +12848,7 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets pools tracked each our.
-         * @summary GetPoolsHourData (historical)
+         * @summary PoolsHourData (historical)
          * @throws {RequiredError}
          */
         sushiswapGetPoolsHourDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<SushiswapPairHourDataDTO>> {
@@ -12863,7 +12863,7 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets swaps.
-         * @summary GetSwaps (current) 🔥
+         * @summary Swaps (current) 🔥
          * @throws {RequiredError}
          */
         sushiswapGetSwapsCurrent(options?: RequestOptions = {}): Promise<Array<SushiswapSwapDTO>> {
@@ -12878,7 +12878,7 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets list of swaps for given filters.
-         * @summary GetSwaps (historical) 🔥
+         * @summary Swaps (historical) 🔥
          * @throws {RequiredError}
          */
         sushiswapGetSwapsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<SushiswapSwapDTO>> {
@@ -12893,7 +12893,7 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets tokens.
-         * @summary GetTokens (current) 🔥
+         * @summary Tokens (current) 🔥
          * @throws {RequiredError}
          */
         sushiswapGetTokensCurrent(options?: RequestOptions = {}): Promise<Array<SushiswapTokenDTO>> {
@@ -12908,7 +12908,7 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets tokens day data.
-         * @summary GetTokensDayData (historical)
+         * @summary TokensDayData (historical)
          * @throws {RequiredError}
          */
         sushiswapGetTokensDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions = {}): Promise<Array<SushiswapTokenDayDataDTO>> {
@@ -12923,7 +12923,7 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets list of tokens for given filters.
-         * @summary GetTokens (historical) 🔥
+         * @summary Tokens (historical) 🔥
          * @throws {RequiredError}
          */
         sushiswapGetTokensHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions = {}): Promise<Array<SushiswapTokenDTO>> {
@@ -12938,7 +12938,7 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets transactions.
-         * @summary GetTransactions (historical)
+         * @summary Transactions (historical)
          * @throws {RequiredError}
          */
         sushiswapGetTransactionsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Array<SushiswapTransactionDTO>> {
@@ -12953,7 +12953,7 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets users.
-         * @summary GetUsers (historical)
+         * @summary Users (historical)
          * @throws {RequiredError}
          */
         sushiswapGetUsersHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Array<SushiswapUserDTO>> {
@@ -12978,7 +12978,7 @@ export const UniswapV2ApiFetchParamCreator = function (configuration?: Configura
     return {
         /**
          * Gets bundles.
-         * @summary GetBundles (historical)
+         * @summary Bundles (historical)
          * @throws {RequiredError}
          */
         uniswapV2GetBundlesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
@@ -13016,7 +13016,7 @@ export const UniswapV2ApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets burns.
-         * @summary GetBurns (historical)
+         * @summary Burns (historical)
          * @throws {RequiredError}
          */
         uniswapV2GetBurnsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
@@ -13058,7 +13058,7 @@ export const UniswapV2ApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets uniswapv2 day data.
-         * @summary GetDayData (historical)
+         * @summary DayData (historical)
          * @throws {RequiredError}
          */
         uniswapV2GetDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
@@ -13096,7 +13096,7 @@ export const UniswapV2ApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets factory.
-         * @summary GetFactory (historical)
+         * @summary Factory (historical)
          * @throws {RequiredError}
          */
         uniswapV2GetFactoryHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
@@ -13134,7 +13134,7 @@ export const UniswapV2ApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets liquidity positions.
-         * @summary GetLiquidityPositions (historical)
+         * @summary LiquidityPositions (historical)
          * @throws {RequiredError}
          */
         uniswapV2GetLiquidityPositionsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
@@ -13176,7 +13176,7 @@ export const UniswapV2ApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets liquidity positions snapshots.
-         * @summary GetLiquidityPositionsSnapshots (historical)
+         * @summary LiquidityPositionsSnapshots (historical)
          * @throws {RequiredError}
          */
         uniswapV2GetLiquidityPositionsSnapshotsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
@@ -13218,7 +13218,7 @@ export const UniswapV2ApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets mints.
-         * @summary GetMints (historical)
+         * @summary Mints (historical)
          * @throws {RequiredError}
          */
         uniswapV2GetMintsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
@@ -13260,7 +13260,7 @@ export const UniswapV2ApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets pools.
-         * @summary GetPools (current) 🔥
+         * @summary Pools (current) 🔥
          * @throws {RequiredError}
          */
         uniswapV2GetPoolsCurrent(filterPoolId?: string, options: RequestOptions): FetchArgs {
@@ -13286,7 +13286,7 @@ export const UniswapV2ApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets pools day data.
-         * @summary GetPoolsDayData (historical)
+         * @summary PoolsDayData (historical)
          * @throws {RequiredError}
          */
         uniswapV2GetPoolsDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
@@ -13328,7 +13328,7 @@ export const UniswapV2ApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets pools.
-         * @summary GetPools (historical) 🔥
+         * @summary Pools (historical) 🔥
          * @throws {RequiredError}
          */
         uniswapV2GetPoolsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
@@ -13370,7 +13370,7 @@ export const UniswapV2ApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets pools tracked each our.
-         * @summary GetPoolsHourData (historical)
+         * @summary PoolsHourData (historical)
          * @throws {RequiredError}
          */
         uniswapV2GetPoolsHourDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
@@ -13412,7 +13412,7 @@ export const UniswapV2ApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets swaps.
-         * @summary GetSwaps (current) 🔥
+         * @summary Swaps (current) 🔥
          * @throws {RequiredError}
          */
         uniswapV2GetSwapsCurrent(options: RequestOptions): FetchArgs {
@@ -13434,7 +13434,7 @@ export const UniswapV2ApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets swaps.
-         * @summary GetSwaps (historical) 🔥
+         * @summary Swaps (historical) 🔥
          * @throws {RequiredError}
          */
         uniswapV2GetSwapsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
@@ -13476,7 +13476,7 @@ export const UniswapV2ApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets tokens.
-         * @summary GetTokens (current) 🔥
+         * @summary Tokens (current) 🔥
          * @throws {RequiredError}
          */
         uniswapV2GetTokensCurrent(options: RequestOptions): FetchArgs {
@@ -13498,7 +13498,7 @@ export const UniswapV2ApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets tokens day data.
-         * @summary GetTokensDayData (historical)
+         * @summary TokensDayData (historical)
          * @throws {RequiredError}
          */
         uniswapV2GetTokensDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options: RequestOptions): FetchArgs {
@@ -13540,7 +13540,7 @@ export const UniswapV2ApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets tokens.
-         * @summary GetTokens (historical) 🔥
+         * @summary Tokens (historical) 🔥
          * @throws {RequiredError}
          */
         uniswapV2GetTokensHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options: RequestOptions): FetchArgs {
@@ -13582,7 +13582,7 @@ export const UniswapV2ApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets transactions.
-         * @summary GetTransactions (historical)
+         * @summary Transactions (historical)
          * @throws {RequiredError}
          */
         uniswapV2GetTransactionsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
@@ -13620,7 +13620,7 @@ export const UniswapV2ApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets users.
-         * @summary GetUsers (historical)
+         * @summary Users (historical)
          * @throws {RequiredError}
          */
         uniswapV2GetUsersHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
@@ -13706,7 +13706,7 @@ export const UniswapV2Api = function(configuration?: Configuration, fetch: Fetch
     return {
         /**
          * Gets bundles.
-         * @summary GetBundles (historical)
+         * @summary Bundles (historical)
          * @throws {RequiredError}
          */
         uniswapV2GetBundlesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Array<UniswapV2BundleV2DTO>> {
@@ -13721,7 +13721,7 @@ export const UniswapV2Api = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets burns.
-         * @summary GetBurns (historical)
+         * @summary Burns (historical)
          * @throws {RequiredError}
          */
         uniswapV2GetBurnsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2BurnV2DTO>> {
@@ -13736,7 +13736,7 @@ export const UniswapV2Api = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets uniswapv2 day data.
-         * @summary GetDayData (historical)
+         * @summary DayData (historical)
          * @throws {RequiredError}
          */
         uniswapV2GetDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Array<UniswapV2UniswapDayDataV2DTO>> {
@@ -13751,7 +13751,7 @@ export const UniswapV2Api = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets factory.
-         * @summary GetFactory (historical)
+         * @summary Factory (historical)
          * @throws {RequiredError}
          */
         uniswapV2GetFactoryHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Array<UniswapV2UniswapFactoryV2DTO>> {
@@ -13766,7 +13766,7 @@ export const UniswapV2Api = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets liquidity positions.
-         * @summary GetLiquidityPositions (historical)
+         * @summary LiquidityPositions (historical)
          * @throws {RequiredError}
          */
         uniswapV2GetLiquidityPositionsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2LiquidityPositionV2DTO>> {
@@ -13781,7 +13781,7 @@ export const UniswapV2Api = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets liquidity positions snapshots.
-         * @summary GetLiquidityPositionsSnapshots (historical)
+         * @summary LiquidityPositionsSnapshots (historical)
          * @throws {RequiredError}
          */
         uniswapV2GetLiquidityPositionsSnapshotsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2LiquidityPositionSnapshotV2DTO>> {
@@ -13796,7 +13796,7 @@ export const UniswapV2Api = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets mints.
-         * @summary GetMints (historical)
+         * @summary Mints (historical)
          * @throws {RequiredError}
          */
         uniswapV2GetMintsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2MintV2DTO>> {
@@ -13811,7 +13811,7 @@ export const UniswapV2Api = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets pools.
-         * @summary GetPools (current) 🔥
+         * @summary Pools (current) 🔥
          * @throws {RequiredError}
          */
         uniswapV2GetPoolsCurrent(filterPoolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2PairV2DTO>> {
@@ -13826,7 +13826,7 @@ export const UniswapV2Api = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets pools day data.
-         * @summary GetPoolsDayData (historical)
+         * @summary PoolsDayData (historical)
          * @throws {RequiredError}
          */
         uniswapV2GetPoolsDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2PairDayDataV2DTO>> {
@@ -13841,7 +13841,7 @@ export const UniswapV2Api = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets pools.
-         * @summary GetPools (historical) 🔥
+         * @summary Pools (historical) 🔥
          * @throws {RequiredError}
          */
         uniswapV2GetPoolsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2PairV2DTO>> {
@@ -13856,7 +13856,7 @@ export const UniswapV2Api = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets pools tracked each our.
-         * @summary GetPoolsHourData (historical)
+         * @summary PoolsHourData (historical)
          * @throws {RequiredError}
          */
         uniswapV2GetPoolsHourDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2PairHourDataV2DTO>> {
@@ -13871,7 +13871,7 @@ export const UniswapV2Api = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets swaps.
-         * @summary GetSwaps (current) 🔥
+         * @summary Swaps (current) 🔥
          * @throws {RequiredError}
          */
         uniswapV2GetSwapsCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV2SwapV2DTO>> {
@@ -13886,7 +13886,7 @@ export const UniswapV2Api = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets swaps.
-         * @summary GetSwaps (historical) 🔥
+         * @summary Swaps (historical) 🔥
          * @throws {RequiredError}
          */
         uniswapV2GetSwapsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2SwapV2DTO>> {
@@ -13901,7 +13901,7 @@ export const UniswapV2Api = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets tokens.
-         * @summary GetTokens (current) 🔥
+         * @summary Tokens (current) 🔥
          * @throws {RequiredError}
          */
         uniswapV2GetTokensCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV2TokenV2DTO>> {
@@ -13916,7 +13916,7 @@ export const UniswapV2Api = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets tokens day data.
-         * @summary GetTokensDayData (historical)
+         * @summary TokensDayData (historical)
          * @throws {RequiredError}
          */
         uniswapV2GetTokensDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2TokenDayDataV2DTO>> {
@@ -13931,7 +13931,7 @@ export const UniswapV2Api = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets tokens.
-         * @summary GetTokens (historical) 🔥
+         * @summary Tokens (historical) 🔥
          * @throws {RequiredError}
          */
         uniswapV2GetTokensHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2TokenV2DTO>> {
@@ -13946,7 +13946,7 @@ export const UniswapV2Api = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets transactions.
-         * @summary GetTransactions (historical)
+         * @summary Transactions (historical)
          * @throws {RequiredError}
          */
         uniswapV2GetTransactionsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Array<UniswapV2TransactionV2DTO>> {
@@ -13961,7 +13961,7 @@ export const UniswapV2Api = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets users.
-         * @summary GetUsers (historical)
+         * @summary Users (historical)
          * @throws {RequiredError}
          */
         uniswapV2GetUsersHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Array<UniswapV2UserV2DTO>> {
@@ -13986,7 +13986,7 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
     return {
         /**
          * Gets bundles.
-         * @summary GetBundles (current)
+         * @summary Bundles (current)
          * @throws {RequiredError}
          */
         uniswapV3GetBundlesCurrent(options: RequestOptions): FetchArgs {
@@ -14008,7 +14008,7 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets bundles.
-         * @summary GetBundles (historical)
+         * @summary Bundles (historical)
          * @throws {RequiredError}
          */
         uniswapV3GetBundlesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
@@ -14046,7 +14046,7 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets burns.
-         * @summary GetBurns (current)
+         * @summary Burns (current)
          * @throws {RequiredError}
          */
         uniswapV3GetBurnsCurrent(filterPoolId?: string, options: RequestOptions): FetchArgs {
@@ -14072,7 +14072,7 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets burns.
-         * @summary GetBurns (historical)
+         * @summary Burns (historical)
          * @throws {RequiredError}
          */
         uniswapV3GetBurnsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
@@ -14114,7 +14114,7 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets uniswapv3 day data.
-         * @summary GetDayData (current)
+         * @summary DayData (current)
          * @throws {RequiredError}
          */
         uniswapV3GetDayDataCurrent(options: RequestOptions): FetchArgs {
@@ -14136,7 +14136,7 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets uniswapv3 day data.
-         * @summary GetDayData (historical)
+         * @summary DayData (historical)
          * @throws {RequiredError}
          */
         uniswapV3GetDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
@@ -14174,7 +14174,7 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets factory.
-         * @summary GetFactory (current)
+         * @summary Factory (current)
          * @throws {RequiredError}
          */
         uniswapV3GetFactoryCurrent(options: RequestOptions): FetchArgs {
@@ -14196,7 +14196,7 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets factory.
-         * @summary GetFactory (historical)
+         * @summary Factory (historical)
          * @throws {RequiredError}
          */
         uniswapV3GetFactoryHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
@@ -14234,7 +14234,7 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets mints.
-         * @summary GetMints (current)
+         * @summary Mints (current)
          * @throws {RequiredError}
          */
         uniswapV3GetMintsCurrent(filterPoolId?: string, options: RequestOptions): FetchArgs {
@@ -14260,7 +14260,7 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets mints.
-         * @summary GetMints (historical)
+         * @summary Mints (historical)
          * @throws {RequiredError}
          */
         uniswapV3GetMintsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
@@ -14302,7 +14302,7 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets pools.
-         * @summary GetPools (current) 🔥
+         * @summary Pools (current) 🔥
          * @throws {RequiredError}
          */
         uniswapV3GetPoolsCurrent(filterPoolId?: string, options: RequestOptions): FetchArgs {
@@ -14328,7 +14328,7 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets pools day data.
-         * @summary GetPoolsDayData (current)
+         * @summary PoolsDayData (current)
          * @throws {RequiredError}
          */
         uniswapV3GetPoolsDayDataCurrent(filterPoolId?: string, options: RequestOptions): FetchArgs {
@@ -14354,7 +14354,7 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets pools day data.
-         * @summary GetPoolsDayData (historical)
+         * @summary PoolsDayData (historical)
          * @throws {RequiredError}
          */
         uniswapV3GetPoolsDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
@@ -14396,7 +14396,7 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets pools.
-         * @summary GetPools (historical) 🔥
+         * @summary Pools (historical) 🔥
          * @throws {RequiredError}
          */
         uniswapV3GetPoolsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
@@ -14438,7 +14438,7 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets pools hour data.
-         * @summary GetPoolsHourData (current)
+         * @summary PoolsHourData (current)
          * @throws {RequiredError}
          */
         uniswapV3GetPoolsHourDataCurrent(filterPoolId?: string, options: RequestOptions): FetchArgs {
@@ -14464,7 +14464,7 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets pools hour data.
-         * @summary GetPoolsHourData (historical)
+         * @summary PoolsHourData (historical)
          * @throws {RequiredError}
          */
         uniswapV3GetPoolsHourDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
@@ -14506,7 +14506,7 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets positions.
-         * @summary GetPositions (current)
+         * @summary Positions (current)
          * @throws {RequiredError}
          */
         uniswapV3GetPositionsCurrent(filterPoolId?: string, options: RequestOptions): FetchArgs {
@@ -14532,7 +14532,7 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets positions.
-         * @summary GetPositions (historical)
+         * @summary Positions (historical)
          * @throws {RequiredError}
          */
         uniswapV3GetPositionsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
@@ -14574,7 +14574,7 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets positions snapshots.
-         * @summary GetPositionsSnaphots (historical)
+         * @summary PositionsSnaphots (historical)
          * @throws {RequiredError}
          */
         uniswapV3GetPositionsSnaphotsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
@@ -14616,7 +14616,7 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets positions snapshots.
-         * @summary GetPositionsSnapshots (current)
+         * @summary PositionsSnapshots (current)
          * @throws {RequiredError}
          */
         uniswapV3GetPositionsSnapshotsCurrent(filterPoolId?: string, options: RequestOptions): FetchArgs {
@@ -14642,7 +14642,7 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets swaps.
-         * @summary GetSwaps (current) 🔥
+         * @summary Swaps (current) 🔥
          * @throws {RequiredError}
          */
         uniswapV3GetSwapsCurrent(filterPoolId?: string, options: RequestOptions): FetchArgs {
@@ -14668,7 +14668,7 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets swaps.
-         * @summary GetSwaps (historical) 🔥
+         * @summary Swaps (historical) 🔥
          * @throws {RequiredError}
          */
         uniswapV3GetSwapsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
@@ -14710,7 +14710,7 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets ticks.
-         * @summary GetTicks (current)
+         * @summary Ticks (current)
          * @throws {RequiredError}
          */
         uniswapV3GetTicksCurrent(filterPoolId?: string, options: RequestOptions): FetchArgs {
@@ -14736,7 +14736,7 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets ticks day data.
-         * @summary GetTicksDayData (current)
+         * @summary TicksDayData (current)
          * @throws {RequiredError}
          */
         uniswapV3GetTicksDayDataCurrent(filterPoolId?: string, options: RequestOptions): FetchArgs {
@@ -14762,7 +14762,7 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets ticks day data.
-         * @summary GetTicksDayData (historical)
+         * @summary TicksDayData (historical)
          * @throws {RequiredError}
          */
         uniswapV3GetTicksDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
@@ -14804,7 +14804,7 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets ticks.
-         * @summary GetTicks (historical)
+         * @summary Ticks (historical)
          * @throws {RequiredError}
          */
         uniswapV3GetTicksHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
@@ -14846,7 +14846,7 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets tokens.
-         * @summary GetTokens (current) 🔥
+         * @summary Tokens (current) 🔥
          * @throws {RequiredError}
          */
         uniswapV3GetTokensCurrent(filterTokenId?: string, options: RequestOptions): FetchArgs {
@@ -14872,7 +14872,7 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets tokens day data.
-         * @summary GetTokensDayData (current)
+         * @summary TokensDayData (current)
          * @throws {RequiredError}
          */
         uniswapV3GetTokensDayDataCurrent(filterTokenId?: string, options: RequestOptions): FetchArgs {
@@ -14898,7 +14898,7 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets tokens day data.
-         * @summary GetTokensDayData (historical)
+         * @summary TokensDayData (historical)
          * @throws {RequiredError}
          */
         uniswapV3GetTokensDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options: RequestOptions): FetchArgs {
@@ -14940,7 +14940,7 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets tokens.
-         * @summary GetTokens (historical) 🔥
+         * @summary Tokens (historical) 🔥
          * @throws {RequiredError}
          */
         uniswapV3GetTokensHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options: RequestOptions): FetchArgs {
@@ -14982,7 +14982,7 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets tokens hour data.
-         * @summary GetTokensHourData (current)
+         * @summary TokensHourData (current)
          * @throws {RequiredError}
          */
         uniswapV3GetTokensHourDataCurrent(filterTokenId?: string, options: RequestOptions): FetchArgs {
@@ -15008,7 +15008,7 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets tokens hour data.
-         * @summary GetTokensHourData (historical)
+         * @summary TokensHourData (historical)
          * @throws {RequiredError}
          */
         uniswapV3GetTokensHourDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options: RequestOptions): FetchArgs {
@@ -15050,7 +15050,7 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
         },
         /**
          * Gets transactions.
-         * @summary GetTransactions (historical)
+         * @summary Transactions (historical)
          * @throws {RequiredError}
          */
         uniswapV3GetTransactionsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
@@ -15166,7 +15166,7 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
     return {
         /**
          * Gets bundles.
-         * @summary GetBundles (current)
+         * @summary Bundles (current)
          * @throws {RequiredError}
          */
         uniswapV3GetBundlesCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV3BundleV3DTO>> {
@@ -15181,7 +15181,7 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets bundles.
-         * @summary GetBundles (historical)
+         * @summary Bundles (historical)
          * @throws {RequiredError}
          */
         uniswapV3GetBundlesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Array<UniswapV3BundleV3DTO>> {
@@ -15196,7 +15196,7 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets burns.
-         * @summary GetBurns (current)
+         * @summary Burns (current)
          * @throws {RequiredError}
          */
         uniswapV3GetBurnsCurrent(filterPoolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3BurnV3DTO>> {
@@ -15211,7 +15211,7 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets burns.
-         * @summary GetBurns (historical)
+         * @summary Burns (historical)
          * @throws {RequiredError}
          */
         uniswapV3GetBurnsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3BurnV3DTO>> {
@@ -15226,7 +15226,7 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets uniswapv3 day data.
-         * @summary GetDayData (current)
+         * @summary DayData (current)
          * @throws {RequiredError}
          */
         uniswapV3GetDayDataCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV3UniswapDayDataV3DTO>> {
@@ -15241,7 +15241,7 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets uniswapv3 day data.
-         * @summary GetDayData (historical)
+         * @summary DayData (historical)
          * @throws {RequiredError}
          */
         uniswapV3GetDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Array<UniswapV3UniswapDayDataV3DTO>> {
@@ -15256,7 +15256,7 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets factory.
-         * @summary GetFactory (current)
+         * @summary Factory (current)
          * @throws {RequiredError}
          */
         uniswapV3GetFactoryCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV3FactoryV3DTO>> {
@@ -15271,7 +15271,7 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets factory.
-         * @summary GetFactory (historical)
+         * @summary Factory (historical)
          * @throws {RequiredError}
          */
         uniswapV3GetFactoryHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Array<UniswapV3FactoryV3DTO>> {
@@ -15286,7 +15286,7 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets mints.
-         * @summary GetMints (current)
+         * @summary Mints (current)
          * @throws {RequiredError}
          */
         uniswapV3GetMintsCurrent(filterPoolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3MintV3DTO>> {
@@ -15301,7 +15301,7 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets mints.
-         * @summary GetMints (historical)
+         * @summary Mints (historical)
          * @throws {RequiredError}
          */
         uniswapV3GetMintsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3MintV3DTO>> {
@@ -15316,7 +15316,7 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets pools.
-         * @summary GetPools (current) 🔥
+         * @summary Pools (current) 🔥
          * @throws {RequiredError}
          */
         uniswapV3GetPoolsCurrent(filterPoolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3PoolV3DTO>> {
@@ -15331,7 +15331,7 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets pools day data.
-         * @summary GetPoolsDayData (current)
+         * @summary PoolsDayData (current)
          * @throws {RequiredError}
          */
         uniswapV3GetPoolsDayDataCurrent(filterPoolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3PoolDayDataV3DTO>> {
@@ -15346,7 +15346,7 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets pools day data.
-         * @summary GetPoolsDayData (historical)
+         * @summary PoolsDayData (historical)
          * @throws {RequiredError}
          */
         uniswapV3GetPoolsDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3PoolDayDataV3DTO>> {
@@ -15361,7 +15361,7 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets pools.
-         * @summary GetPools (historical) 🔥
+         * @summary Pools (historical) 🔥
          * @throws {RequiredError}
          */
         uniswapV3GetPoolsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3PoolV3DTO>> {
@@ -15376,7 +15376,7 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets pools hour data.
-         * @summary GetPoolsHourData (current)
+         * @summary PoolsHourData (current)
          * @throws {RequiredError}
          */
         uniswapV3GetPoolsHourDataCurrent(filterPoolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3PoolHourDataV3DTO>> {
@@ -15391,7 +15391,7 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets pools hour data.
-         * @summary GetPoolsHourData (historical)
+         * @summary PoolsHourData (historical)
          * @throws {RequiredError}
          */
         uniswapV3GetPoolsHourDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3PoolHourDataV3DTO>> {
@@ -15406,7 +15406,7 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets positions.
-         * @summary GetPositions (current)
+         * @summary Positions (current)
          * @throws {RequiredError}
          */
         uniswapV3GetPositionsCurrent(filterPoolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3PositionV3DTO>> {
@@ -15421,7 +15421,7 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets positions.
-         * @summary GetPositions (historical)
+         * @summary Positions (historical)
          * @throws {RequiredError}
          */
         uniswapV3GetPositionsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3PositionV3DTO>> {
@@ -15436,7 +15436,7 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets positions snapshots.
-         * @summary GetPositionsSnaphots (historical)
+         * @summary PositionsSnaphots (historical)
          * @throws {RequiredError}
          */
         uniswapV3GetPositionsSnaphotsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3PositionSnapshotV3DTO>> {
@@ -15451,7 +15451,7 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets positions snapshots.
-         * @summary GetPositionsSnapshots (current)
+         * @summary PositionsSnapshots (current)
          * @throws {RequiredError}
          */
         uniswapV3GetPositionsSnapshotsCurrent(filterPoolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3PositionSnapshotV3DTO>> {
@@ -15466,7 +15466,7 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets swaps.
-         * @summary GetSwaps (current) 🔥
+         * @summary Swaps (current) 🔥
          * @throws {RequiredError}
          */
         uniswapV3GetSwapsCurrent(filterPoolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3SwapV3DTO>> {
@@ -15481,7 +15481,7 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets swaps.
-         * @summary GetSwaps (historical) 🔥
+         * @summary Swaps (historical) 🔥
          * @throws {RequiredError}
          */
         uniswapV3GetSwapsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3SwapV3DTO>> {
@@ -15496,7 +15496,7 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets ticks.
-         * @summary GetTicks (current)
+         * @summary Ticks (current)
          * @throws {RequiredError}
          */
         uniswapV3GetTicksCurrent(filterPoolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3TickV3DTO>> {
@@ -15511,7 +15511,7 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets ticks day data.
-         * @summary GetTicksDayData (current)
+         * @summary TicksDayData (current)
          * @throws {RequiredError}
          */
         uniswapV3GetTicksDayDataCurrent(filterPoolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3TickDayDataV3DTO>> {
@@ -15526,7 +15526,7 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets ticks day data.
-         * @summary GetTicksDayData (historical)
+         * @summary TicksDayData (historical)
          * @throws {RequiredError}
          */
         uniswapV3GetTicksDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3TickDayDataV3DTO>> {
@@ -15541,7 +15541,7 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets ticks.
-         * @summary GetTicks (historical)
+         * @summary Ticks (historical)
          * @throws {RequiredError}
          */
         uniswapV3GetTicksHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3TickV3DTO>> {
@@ -15556,7 +15556,7 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets tokens.
-         * @summary GetTokens (current) 🔥
+         * @summary Tokens (current) 🔥
          * @throws {RequiredError}
          */
         uniswapV3GetTokensCurrent(filterTokenId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3TokenV3DTO>> {
@@ -15571,7 +15571,7 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets tokens day data.
-         * @summary GetTokensDayData (current)
+         * @summary TokensDayData (current)
          * @throws {RequiredError}
          */
         uniswapV3GetTokensDayDataCurrent(filterTokenId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3TokenV3DayDataDTO>> {
@@ -15586,7 +15586,7 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets tokens day data.
-         * @summary GetTokensDayData (historical)
+         * @summary TokensDayData (historical)
          * @throws {RequiredError}
          */
         uniswapV3GetTokensDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3TokenV3DayDataDTO>> {
@@ -15601,7 +15601,7 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets tokens.
-         * @summary GetTokens (historical) 🔥
+         * @summary Tokens (historical) 🔥
          * @throws {RequiredError}
          */
         uniswapV3GetTokensHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3TokenV3DTO>> {
@@ -15616,7 +15616,7 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets tokens hour data.
-         * @summary GetTokensHourData (current)
+         * @summary TokensHourData (current)
          * @throws {RequiredError}
          */
         uniswapV3GetTokensHourDataCurrent(filterTokenId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3TokenHourDataV3DTO>> {
@@ -15631,7 +15631,7 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets tokens hour data.
-         * @summary GetTokensHourData (historical)
+         * @summary TokensHourData (historical)
          * @throws {RequiredError}
          */
         uniswapV3GetTokensHourDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3TokenHourDataV3DTO>> {
@@ -15646,7 +15646,7 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
         },
         /**
          * Gets transactions.
-         * @summary GetTransactions (historical)
+         * @summary Transactions (historical)
          * @throws {RequiredError}
          */
         uniswapV3GetTransactionsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Array<UniswapV3TransactionV3DTO>> {

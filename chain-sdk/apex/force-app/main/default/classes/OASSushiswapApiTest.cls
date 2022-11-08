@@ -1,7 +1,7 @@
 @isTest
 private class OASSushiswapApiTest {
     /**
-     * GetExchanges (current) 🔥
+     * Exchanges (current) 🔥
      *
      * Gets exchanges.
      */
@@ -43,7 +43,7 @@ private class OASSushiswapApiTest {
     }
 
     /**
-     * GetTrades (current) 🔥
+     * Trades (current) 🔥
      *
      * Gets trades.
      */
@@ -85,7 +85,7 @@ private class OASSushiswapApiTest {
     }
 
     /**
-     * GetBundles (historical)
+     * Bundles (historical)
      *
      * Gets bundles.
      */
@@ -134,7 +134,7 @@ private class OASSushiswapApiTest {
     }
 
     /**
-     * GetBurns (historical)
+     * Burns (historical)
      *
      * Gets burns.
      */
@@ -184,7 +184,7 @@ private class OASSushiswapApiTest {
     }
 
     /**
-     * GetDayData (historical)
+     * DayData (historical)
      *
      * Gets day data.
      */
@@ -233,7 +233,7 @@ private class OASSushiswapApiTest {
     }
 
     /**
-     * GetFactory (historical)
+     * Factory (historical)
      *
      * Gets factory.
      */
@@ -282,7 +282,7 @@ private class OASSushiswapApiTest {
     }
 
     /**
-     * GetHourData (historical)
+     * HourData (historical)
      *
      * Gets hour data.
      */
@@ -331,7 +331,7 @@ private class OASSushiswapApiTest {
     }
 
     /**
-     * GetLiquidityPosition (historical)
+     * LiquidityPosition (historical)
      *
      * Gets liquidity position.
      */
@@ -381,7 +381,7 @@ private class OASSushiswapApiTest {
     }
 
     /**
-     * GetLiquidityPositionSnapshot (historical)
+     * LiquidityPositionSnapshot (historical)
      *
      * Gets liquidity position snapshot.
      */
@@ -431,7 +431,7 @@ private class OASSushiswapApiTest {
     }
 
     /**
-     * GetMints (historical)
+     * Mints (historical)
      *
      * Gets mints.
      */
@@ -481,7 +481,7 @@ private class OASSushiswapApiTest {
     }
 
     /**
-     * GetPools (current) 🔥
+     * Pools (current) 🔥
      *
      * Gets pools.
      */
@@ -523,7 +523,7 @@ private class OASSushiswapApiTest {
     }
 
     /**
-     * GetPoolsDayData (historical)
+     * PoolsDayData (historical)
      *
      * Gets pools day data.
      */
@@ -573,7 +573,7 @@ private class OASSushiswapApiTest {
     }
 
     /**
-     * GetPools (historical) 🔥
+     * Pools (historical) 🔥
      *
      * Gets list of pools for given filters.
      */
@@ -623,7 +623,7 @@ private class OASSushiswapApiTest {
     }
 
     /**
-     * GetPoolsHourData (historical)
+     * PoolsHourData (historical)
      *
      * Gets pools tracked each our.
      */
@@ -673,7 +673,7 @@ private class OASSushiswapApiTest {
     }
 
     /**
-     * GetSwaps (current) 🔥
+     * Swaps (current) 🔥
      *
      * Gets swaps.
      */
@@ -715,7 +715,7 @@ private class OASSushiswapApiTest {
     }
 
     /**
-     * GetSwaps (historical) 🔥
+     * Swaps (historical) 🔥
      *
      * Gets list of swaps for given filters.
      */
@@ -765,7 +765,7 @@ private class OASSushiswapApiTest {
     }
 
     /**
-     * GetTokens (current) 🔥
+     * Tokens (current) 🔥
      *
      * Gets tokens.
      */
@@ -807,7 +807,7 @@ private class OASSushiswapApiTest {
     }
 
     /**
-     * GetTokensDayData (historical)
+     * TokensDayData (historical)
      *
      * Gets tokens day data.
      */
@@ -857,7 +857,7 @@ private class OASSushiswapApiTest {
     }
 
     /**
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      *
      * Gets list of tokens for given filters.
      */
@@ -907,7 +907,7 @@ private class OASSushiswapApiTest {
     }
 
     /**
-     * GetTransactions (historical)
+     * Transactions (historical)
      *
      * Gets transactions.
      */
@@ -956,7 +956,7 @@ private class OASSushiswapApiTest {
     }
 
     /**
-     * GetUsers (historical)
+     * Users (historical)
      *
      * Gets users.
      */

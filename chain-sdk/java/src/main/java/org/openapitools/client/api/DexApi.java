@@ -168,7 +168,7 @@ public class DexApi {
     }
 
     /**
-     * GetBatches (historical)
+     * Batches (historical)
      * Gets batches.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -188,7 +188,7 @@ public class DexApi {
     }
 
     /**
-     * GetBatches (historical)
+     * Batches (historical)
      * Gets batches.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -209,7 +209,7 @@ public class DexApi {
     }
 
     /**
-     * GetBatches (historical) (asynchronously)
+     * Batches (historical) (asynchronously)
      * Gets batches.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -320,7 +320,7 @@ public class DexApi {
     }
 
     /**
-     * GetDeposits (historical)
+     * Deposits (historical)
      * Gets deposits.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -341,7 +341,7 @@ public class DexApi {
     }
 
     /**
-     * GetDeposits (historical)
+     * Deposits (historical)
      * Gets deposits.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -363,7 +363,7 @@ public class DexApi {
     }
 
     /**
-     * GetDeposits (historical) (asynchronously)
+     * Deposits (historical) (asynchronously)
      * Gets deposits.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -475,7 +475,7 @@ public class DexApi {
     }
 
     /**
-     * GetOrders (historical)
+     * Orders (historical)
      * Gets orders.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -496,7 +496,7 @@ public class DexApi {
     }
 
     /**
-     * GetOrders (historical)
+     * Orders (historical)
      * Gets orders.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -518,7 +518,7 @@ public class DexApi {
     }
 
     /**
-     * GetOrders (historical) (asynchronously)
+     * Orders (historical) (asynchronously)
      * Gets orders.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -630,7 +630,7 @@ public class DexApi {
     }
 
     /**
-     * GetPrices (historical)
+     * Prices (historical)
      * Gets prices.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -651,7 +651,7 @@ public class DexApi {
     }
 
     /**
-     * GetPrices (historical)
+     * Prices (historical)
      * Gets prices.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -673,7 +673,7 @@ public class DexApi {
     }
 
     /**
-     * GetPrices (historical) (asynchronously)
+     * Prices (historical) (asynchronously)
      * Gets prices.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -785,7 +785,7 @@ public class DexApi {
     }
 
     /**
-     * GetSolutions (historical)
+     * Solutions (historical)
      * Gets solutions.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -806,7 +806,7 @@ public class DexApi {
     }
 
     /**
-     * GetSolutions (historical)
+     * Solutions (historical)
      * Gets solutions.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -828,7 +828,7 @@ public class DexApi {
     }
 
     /**
-     * GetSolutions (historical) (asynchronously)
+     * Solutions (historical) (asynchronously)
      * Gets solutions.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -935,7 +935,7 @@ public class DexApi {
     }
 
     /**
-     * GetStats (historical)
+     * Stats (historical)
      * Gets stats.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -955,7 +955,7 @@ public class DexApi {
     }
 
     /**
-     * GetStats (historical)
+     * Stats (historical)
      * Gets stats.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -976,7 +976,7 @@ public class DexApi {
     }
 
     /**
-     * GetStats (historical) (asynchronously)
+     * Stats (historical) (asynchronously)
      * Gets stats.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1087,7 +1087,7 @@ public class DexApi {
     }
 
     /**
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      * Gets tokens.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1108,7 +1108,7 @@ public class DexApi {
     }
 
     /**
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      * Gets tokens.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1130,7 +1130,7 @@ public class DexApi {
     }
 
     /**
-     * GetTokens (historical) 🔥 (asynchronously)
+     * Tokens (historical) 🔥 (asynchronously)
      * Gets tokens.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1237,7 +1237,7 @@ public class DexApi {
     }
 
     /**
-     * GetTrades (historical) 🔥
+     * Trades (historical) 🔥
      * Gets trades.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1257,7 +1257,7 @@ public class DexApi {
     }
 
     /**
-     * GetTrades (historical) 🔥
+     * Trades (historical) 🔥
      * Gets trades.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1278,7 +1278,7 @@ public class DexApi {
     }
 
     /**
-     * GetTrades (historical) 🔥 (asynchronously)
+     * Trades (historical) 🔥 (asynchronously)
      * Gets trades.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1384,7 +1384,7 @@ public class DexApi {
     }
 
     /**
-     * GetUsers (historical)
+     * Users (historical)
      * Gets users.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1404,7 +1404,7 @@ public class DexApi {
     }
 
     /**
-     * GetUsers (historical)
+     * Users (historical)
      * Gets users.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1425,7 +1425,7 @@ public class DexApi {
     }
 
     /**
-     * GetUsers (historical) (asynchronously)
+     * Users (historical) (asynchronously)
      * Gets users.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1536,7 +1536,7 @@ public class DexApi {
     }
 
     /**
-     * GetWithdraws (historical)
+     * Withdraws (historical)
      * Gets withdraws.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1557,7 +1557,7 @@ public class DexApi {
     }
 
     /**
-     * GetWithdraws (historical)
+     * Withdraws (historical)
      * Gets withdraws.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1579,7 +1579,7 @@ public class DexApi {
     }
 
     /**
-     * GetWithdraws (historical) (asynchronously)
+     * Withdraws (historical) (asynchronously)
      * Gets withdraws.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1691,7 +1691,7 @@ public class DexApi {
     }
 
     /**
-     * GetWithdrawsRequests (historical)
+     * WithdrawsRequests (historical)
      * Gets withdraws requests.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1712,7 +1712,7 @@ public class DexApi {
     }
 
     /**
-     * GetWithdrawsRequests (historical)
+     * WithdrawsRequests (historical)
      * Gets withdraws requests.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1734,7 +1734,7 @@ public class DexApi {
     }
 
     /**
-     * GetWithdrawsRequests (historical) (asynchronously)
+     * WithdrawsRequests (historical) (asynchronously)
      * Gets withdraws requests.
      * @param startBlock  (optional)
      * @param endBlock  (optional)

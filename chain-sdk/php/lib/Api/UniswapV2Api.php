@@ -177,7 +177,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetBundlesHistorical
      *
-     * GetBundles (historical)
+     * Bundles (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -198,7 +198,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetBundlesHistoricalWithHttpInfo
      *
-     * GetBundles (historical)
+     * Bundles (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -301,7 +301,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetBundlesHistoricalAsync
      *
-     * GetBundles (historical)
+     * Bundles (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -325,7 +325,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetBundlesHistoricalAsyncWithHttpInfo
      *
-     * GetBundles (historical)
+     * Bundles (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -500,7 +500,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetBurnsHistorical
      *
-     * GetBurns (historical)
+     * Burns (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -522,7 +522,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetBurnsHistoricalWithHttpInfo
      *
-     * GetBurns (historical)
+     * Burns (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -626,7 +626,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetBurnsHistoricalAsync
      *
-     * GetBurns (historical)
+     * Burns (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -651,7 +651,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetBurnsHistoricalAsyncWithHttpInfo
      *
-     * GetBurns (historical)
+     * Burns (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -838,7 +838,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetDayDataHistorical
      *
-     * GetDayData (historical)
+     * DayData (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -859,7 +859,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetDayDataHistoricalWithHttpInfo
      *
-     * GetDayData (historical)
+     * DayData (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -962,7 +962,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetDayDataHistoricalAsync
      *
-     * GetDayData (historical)
+     * DayData (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -986,7 +986,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetDayDataHistoricalAsyncWithHttpInfo
      *
-     * GetDayData (historical)
+     * DayData (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -1161,7 +1161,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetFactoryHistorical
      *
-     * GetFactory (historical)
+     * Factory (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -1182,7 +1182,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetFactoryHistoricalWithHttpInfo
      *
-     * GetFactory (historical)
+     * Factory (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -1285,7 +1285,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetFactoryHistoricalAsync
      *
-     * GetFactory (historical)
+     * Factory (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -1309,7 +1309,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetFactoryHistoricalAsyncWithHttpInfo
      *
-     * GetFactory (historical)
+     * Factory (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -1484,7 +1484,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetLiquidityPositionsHistorical
      *
-     * GetLiquidityPositions (historical)
+     * LiquidityPositions (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -1506,7 +1506,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetLiquidityPositionsHistoricalWithHttpInfo
      *
-     * GetLiquidityPositions (historical)
+     * LiquidityPositions (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -1610,7 +1610,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetLiquidityPositionsHistoricalAsync
      *
-     * GetLiquidityPositions (historical)
+     * LiquidityPositions (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -1635,7 +1635,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetLiquidityPositionsHistoricalAsyncWithHttpInfo
      *
-     * GetLiquidityPositions (historical)
+     * LiquidityPositions (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -1822,7 +1822,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetLiquidityPositionsSnapshotsHistorical
      *
-     * GetLiquidityPositionsSnapshots (historical)
+     * LiquidityPositionsSnapshots (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -1844,7 +1844,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetLiquidityPositionsSnapshotsHistoricalWithHttpInfo
      *
-     * GetLiquidityPositionsSnapshots (historical)
+     * LiquidityPositionsSnapshots (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -1948,7 +1948,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetLiquidityPositionsSnapshotsHistoricalAsync
      *
-     * GetLiquidityPositionsSnapshots (historical)
+     * LiquidityPositionsSnapshots (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -1973,7 +1973,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetLiquidityPositionsSnapshotsHistoricalAsyncWithHttpInfo
      *
-     * GetLiquidityPositionsSnapshots (historical)
+     * LiquidityPositionsSnapshots (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -2160,7 +2160,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetMintsHistorical
      *
-     * GetMints (historical)
+     * Mints (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -2182,7 +2182,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetMintsHistoricalWithHttpInfo
      *
-     * GetMints (historical)
+     * Mints (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -2286,7 +2286,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetMintsHistoricalAsync
      *
-     * GetMints (historical)
+     * Mints (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -2311,7 +2311,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetMintsHistoricalAsyncWithHttpInfo
      *
-     * GetMints (historical)
+     * Mints (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -2498,7 +2498,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetPoolsCurrent
      *
-     * GetPools (current) 🔥
+     * Pools (current) 🔥
      *
      * @param  string $filter_pool_id filter_pool_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetPoolsCurrent'] to see the possible values for this operation
@@ -2516,7 +2516,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetPoolsCurrentWithHttpInfo
      *
-     * GetPools (current) 🔥
+     * Pools (current) 🔥
      *
      * @param  string $filter_pool_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetPoolsCurrent'] to see the possible values for this operation
@@ -2616,7 +2616,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetPoolsCurrentAsync
      *
-     * GetPools (current) 🔥
+     * Pools (current) 🔥
      *
      * @param  string $filter_pool_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetPoolsCurrent'] to see the possible values for this operation
@@ -2637,7 +2637,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetPoolsCurrentAsyncWithHttpInfo
      *
-     * GetPools (current) 🔥
+     * Pools (current) 🔥
      *
      * @param  string $filter_pool_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetPoolsCurrent'] to see the possible values for this operation
@@ -2776,7 +2776,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetPoolsDayDataHistorical
      *
-     * GetPoolsDayData (historical)
+     * PoolsDayData (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -2798,7 +2798,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetPoolsDayDataHistoricalWithHttpInfo
      *
-     * GetPoolsDayData (historical)
+     * PoolsDayData (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -2902,7 +2902,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetPoolsDayDataHistoricalAsync
      *
-     * GetPoolsDayData (historical)
+     * PoolsDayData (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -2927,7 +2927,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetPoolsDayDataHistoricalAsyncWithHttpInfo
      *
-     * GetPoolsDayData (historical)
+     * PoolsDayData (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -3114,7 +3114,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetPoolsHistorical
      *
-     * GetPools (historical) 🔥
+     * Pools (historical) 🔥
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -3136,7 +3136,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetPoolsHistoricalWithHttpInfo
      *
-     * GetPools (historical) 🔥
+     * Pools (historical) 🔥
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -3240,7 +3240,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetPoolsHistoricalAsync
      *
-     * GetPools (historical) 🔥
+     * Pools (historical) 🔥
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -3265,7 +3265,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetPoolsHistoricalAsyncWithHttpInfo
      *
-     * GetPools (historical) 🔥
+     * Pools (historical) 🔥
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -3452,7 +3452,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetPoolsHourDataHistorical
      *
-     * GetPoolsHourData (historical)
+     * PoolsHourData (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -3474,7 +3474,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetPoolsHourDataHistoricalWithHttpInfo
      *
-     * GetPoolsHourData (historical)
+     * PoolsHourData (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -3578,7 +3578,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetPoolsHourDataHistoricalAsync
      *
-     * GetPoolsHourData (historical)
+     * PoolsHourData (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -3603,7 +3603,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetPoolsHourDataHistoricalAsyncWithHttpInfo
      *
-     * GetPoolsHourData (historical)
+     * PoolsHourData (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -3790,7 +3790,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetSwapsCurrent
      *
-     * GetSwaps (current) 🔥
+     * Swaps (current) 🔥
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetSwapsCurrent'] to see the possible values for this operation
      *
@@ -3807,7 +3807,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetSwapsCurrentWithHttpInfo
      *
-     * GetSwaps (current) 🔥
+     * Swaps (current) 🔥
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetSwapsCurrent'] to see the possible values for this operation
      *
@@ -3906,7 +3906,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetSwapsCurrentAsync
      *
-     * GetSwaps (current) 🔥
+     * Swaps (current) 🔥
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetSwapsCurrent'] to see the possible values for this operation
      *
@@ -3926,7 +3926,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetSwapsCurrentAsyncWithHttpInfo
      *
-     * GetSwaps (current) 🔥
+     * Swaps (current) 🔥
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetSwapsCurrent'] to see the possible values for this operation
      *
@@ -4053,7 +4053,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetSwapsHistorical
      *
-     * GetSwaps (historical) 🔥
+     * Swaps (historical) 🔥
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -4075,7 +4075,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetSwapsHistoricalWithHttpInfo
      *
-     * GetSwaps (historical) 🔥
+     * Swaps (historical) 🔥
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -4179,7 +4179,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetSwapsHistoricalAsync
      *
-     * GetSwaps (historical) 🔥
+     * Swaps (historical) 🔥
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -4204,7 +4204,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetSwapsHistoricalAsyncWithHttpInfo
      *
-     * GetSwaps (historical) 🔥
+     * Swaps (historical) 🔥
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -4391,7 +4391,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetTokensCurrent
      *
-     * GetTokens (current) 🔥
+     * Tokens (current) 🔥
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetTokensCurrent'] to see the possible values for this operation
      *
@@ -4408,7 +4408,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetTokensCurrentWithHttpInfo
      *
-     * GetTokens (current) 🔥
+     * Tokens (current) 🔥
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetTokensCurrent'] to see the possible values for this operation
      *
@@ -4507,7 +4507,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetTokensCurrentAsync
      *
-     * GetTokens (current) 🔥
+     * Tokens (current) 🔥
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetTokensCurrent'] to see the possible values for this operation
      *
@@ -4527,7 +4527,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetTokensCurrentAsyncWithHttpInfo
      *
-     * GetTokens (current) 🔥
+     * Tokens (current) 🔥
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetTokensCurrent'] to see the possible values for this operation
      *
@@ -4654,7 +4654,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetTokensDayDataHistorical
      *
-     * GetTokensDayData (historical)
+     * TokensDayData (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -4676,7 +4676,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetTokensDayDataHistoricalWithHttpInfo
      *
-     * GetTokensDayData (historical)
+     * TokensDayData (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -4780,7 +4780,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetTokensDayDataHistoricalAsync
      *
-     * GetTokensDayData (historical)
+     * TokensDayData (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -4805,7 +4805,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetTokensDayDataHistoricalAsyncWithHttpInfo
      *
-     * GetTokensDayData (historical)
+     * TokensDayData (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -4992,7 +4992,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetTokensHistorical
      *
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -5014,7 +5014,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetTokensHistoricalWithHttpInfo
      *
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -5118,7 +5118,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetTokensHistoricalAsync
      *
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -5143,7 +5143,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetTokensHistoricalAsyncWithHttpInfo
      *
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -5330,7 +5330,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetTransactionsHistorical
      *
-     * GetTransactions (historical)
+     * Transactions (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -5351,7 +5351,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetTransactionsHistoricalWithHttpInfo
      *
-     * GetTransactions (historical)
+     * Transactions (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -5454,7 +5454,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetTransactionsHistoricalAsync
      *
-     * GetTransactions (historical)
+     * Transactions (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -5478,7 +5478,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetTransactionsHistoricalAsyncWithHttpInfo
      *
-     * GetTransactions (historical)
+     * Transactions (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -5653,7 +5653,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetUsersHistorical
      *
-     * GetUsers (historical)
+     * Users (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -5674,7 +5674,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetUsersHistoricalWithHttpInfo
      *
-     * GetUsers (historical)
+     * Users (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -5777,7 +5777,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetUsersHistoricalAsync
      *
-     * GetUsers (historical)
+     * Users (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -5801,7 +5801,7 @@ class UniswapV2Api
     /**
      * Operation uniswapV2GetUsersHistoricalAsyncWithHttpInfo
      *
-     * GetUsers (historical)
+     * Users (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)

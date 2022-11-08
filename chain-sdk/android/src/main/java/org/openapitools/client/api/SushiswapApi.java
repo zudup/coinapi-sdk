@@ -74,7 +74,7 @@ public class SushiswapApi {
   }
 
   /**
-  * GetExchanges (current) 🔥
+  * Exchanges (current) 🔥
   * Gets exchanges.
    * @return List<CurveExchangeDTO>
   */
@@ -130,7 +130,7 @@ public class SushiswapApi {
   }
 
       /**
-   * GetExchanges (current) 🔥
+   * Exchanges (current) 🔥
    * Gets exchanges.
 
   */
@@ -190,7 +190,7 @@ public class SushiswapApi {
     }
   }
   /**
-  * GetTrades (current) 🔥
+  * Trades (current) 🔥
   * Gets trades.
    * @return List<DexTradeDTO>
   */
@@ -246,7 +246,7 @@ public class SushiswapApi {
   }
 
       /**
-   * GetTrades (current) 🔥
+   * Trades (current) 🔥
    * Gets trades.
 
   */
@@ -306,7 +306,7 @@ public class SushiswapApi {
     }
   }
   /**
-  * GetBundles (historical)
+  * Bundles (historical)
   * Gets bundles.
    * @param startBlock AAAAAAAAAA
    * @param endBlock BBBBBBBBBBBB
@@ -370,7 +370,7 @@ public class SushiswapApi {
   }
 
       /**
-   * GetBundles (historical)
+   * Bundles (historical)
    * Gets bundles.
    * @param startBlock AAAAAAAAAA   * @param endBlock BBBBBBBBBBBB   * @param startDate CCCCCCCCC   * @param endDate DDDDDDDDDDD
   */
@@ -434,7 +434,7 @@ public class SushiswapApi {
     }
   }
   /**
-  * GetBurns (historical)
+  * Burns (historical)
   * Gets burns.
    * @param startBlock 
    * @param endBlock 
@@ -500,7 +500,7 @@ public class SushiswapApi {
   }
 
       /**
-   * GetBurns (historical)
+   * Burns (historical)
    * Gets burns.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param poolId 
   */
@@ -565,7 +565,7 @@ public class SushiswapApi {
     }
   }
   /**
-  * GetDayData (historical)
+  * DayData (historical)
   * Gets day data.
    * @param startBlock 
    * @param endBlock 
@@ -629,7 +629,7 @@ public class SushiswapApi {
   }
 
       /**
-   * GetDayData (historical)
+   * DayData (historical)
    * Gets day data.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate 
   */
@@ -693,7 +693,7 @@ public class SushiswapApi {
     }
   }
   /**
-  * GetFactory (historical)
+  * Factory (historical)
   * Gets factory.
    * @param startBlock 
    * @param endBlock 
@@ -757,7 +757,7 @@ public class SushiswapApi {
   }
 
       /**
-   * GetFactory (historical)
+   * Factory (historical)
    * Gets factory.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate 
   */
@@ -821,7 +821,7 @@ public class SushiswapApi {
     }
   }
   /**
-  * GetHourData (historical)
+  * HourData (historical)
   * Gets hour data.
    * @param startBlock 
    * @param endBlock 
@@ -885,7 +885,7 @@ public class SushiswapApi {
   }
 
       /**
-   * GetHourData (historical)
+   * HourData (historical)
    * Gets hour data.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate 
   */
@@ -949,7 +949,7 @@ public class SushiswapApi {
     }
   }
   /**
-  * GetLiquidityPosition (historical)
+  * LiquidityPosition (historical)
   * Gets liquidity position.
    * @param startBlock 
    * @param endBlock 
@@ -1015,7 +1015,7 @@ public class SushiswapApi {
   }
 
       /**
-   * GetLiquidityPosition (historical)
+   * LiquidityPosition (historical)
    * Gets liquidity position.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param poolId 
   */
@@ -1080,7 +1080,7 @@ public class SushiswapApi {
     }
   }
   /**
-  * GetLiquidityPositionSnapshot (historical)
+  * LiquidityPositionSnapshot (historical)
   * Gets liquidity position snapshot.
    * @param startBlock 
    * @param endBlock 
@@ -1146,7 +1146,7 @@ public class SushiswapApi {
   }
 
       /**
-   * GetLiquidityPositionSnapshot (historical)
+   * LiquidityPositionSnapshot (historical)
    * Gets liquidity position snapshot.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param poolId 
   */
@@ -1211,7 +1211,7 @@ public class SushiswapApi {
     }
   }
   /**
-  * GetMints (historical)
+  * Mints (historical)
   * Gets mints.
    * @param startBlock 
    * @param endBlock 
@@ -1277,7 +1277,7 @@ public class SushiswapApi {
   }
 
       /**
-   * GetMints (historical)
+   * Mints (historical)
    * Gets mints.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param poolId 
   */
@@ -1342,7 +1342,7 @@ public class SushiswapApi {
     }
   }
   /**
-  * GetPools (current) 🔥
+  * Pools (current) 🔥
   * Gets pools.
    * @return List<SushiswapPairDTO>
   */
@@ -1398,7 +1398,7 @@ public class SushiswapApi {
   }
 
       /**
-   * GetPools (current) 🔥
+   * Pools (current) 🔥
    * Gets pools.
 
   */
@@ -1458,7 +1458,7 @@ public class SushiswapApi {
     }
   }
   /**
-  * GetPoolsDayData (historical)
+  * PoolsDayData (historical)
   * Gets pools day data.
    * @param startBlock 
    * @param endBlock 
@@ -1524,7 +1524,7 @@ public class SushiswapApi {
   }
 
       /**
-   * GetPoolsDayData (historical)
+   * PoolsDayData (historical)
    * Gets pools day data.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param poolId 
   */
@@ -1589,7 +1589,7 @@ public class SushiswapApi {
     }
   }
   /**
-  * GetPools (historical) 🔥
+  * Pools (historical) 🔥
   * Gets list of pools for given filters.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1655,7 +1655,7 @@ public class SushiswapApi {
   }
 
       /**
-   * GetPools (historical) 🔥
+   * Pools (historical) 🔥
    * Gets list of pools for given filters.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe   * @param poolId The pool address.
   */
@@ -1720,7 +1720,7 @@ public class SushiswapApi {
     }
   }
   /**
-  * GetPoolsHourData (historical)
+  * PoolsHourData (historical)
   * Gets pools tracked each our.
    * @param startBlock 
    * @param endBlock 
@@ -1786,7 +1786,7 @@ public class SushiswapApi {
   }
 
       /**
-   * GetPoolsHourData (historical)
+   * PoolsHourData (historical)
    * Gets pools tracked each our.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param poolId 
   */
@@ -1851,7 +1851,7 @@ public class SushiswapApi {
     }
   }
   /**
-  * GetSwaps (current) 🔥
+  * Swaps (current) 🔥
   * Gets swaps.
    * @return List<SushiswapSwapDTO>
   */
@@ -1907,7 +1907,7 @@ public class SushiswapApi {
   }
 
       /**
-   * GetSwaps (current) 🔥
+   * Swaps (current) 🔥
    * Gets swaps.
 
   */
@@ -1967,7 +1967,7 @@ public class SushiswapApi {
     }
   }
   /**
-  * GetSwaps (historical) 🔥
+  * Swaps (historical) 🔥
   * Gets list of swaps for given filters.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2033,7 +2033,7 @@ public class SushiswapApi {
   }
 
       /**
-   * GetSwaps (historical) 🔥
+   * Swaps (historical) 🔥
    * Gets list of swaps for given filters.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe   * @param poolId The pool address.
   */
@@ -2098,7 +2098,7 @@ public class SushiswapApi {
     }
   }
   /**
-  * GetTokens (current) 🔥
+  * Tokens (current) 🔥
   * Gets tokens.
    * @return List<SushiswapTokenDTO>
   */
@@ -2154,7 +2154,7 @@ public class SushiswapApi {
   }
 
       /**
-   * GetTokens (current) 🔥
+   * Tokens (current) 🔥
    * Gets tokens.
 
   */
@@ -2214,7 +2214,7 @@ public class SushiswapApi {
     }
   }
   /**
-  * GetTokensDayData (historical)
+  * TokensDayData (historical)
   * Gets tokens day data.
    * @param startBlock 
    * @param endBlock 
@@ -2280,7 +2280,7 @@ public class SushiswapApi {
   }
 
       /**
-   * GetTokensDayData (historical)
+   * TokensDayData (historical)
    * Gets tokens day data.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param tokenId 
   */
@@ -2345,7 +2345,7 @@ public class SushiswapApi {
     }
   }
   /**
-  * GetTokens (historical) 🔥
+  * Tokens (historical) 🔥
   * Gets list of tokens for given filters.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2411,7 +2411,7 @@ public class SushiswapApi {
   }
 
       /**
-   * GetTokens (historical) 🔥
+   * Tokens (historical) 🔥
    * Gets list of tokens for given filters.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe   * @param tokenId The token address.
   */
@@ -2476,7 +2476,7 @@ public class SushiswapApi {
     }
   }
   /**
-  * GetTransactions (historical)
+  * Transactions (historical)
   * Gets transactions.
    * @param startBlock 
    * @param endBlock 
@@ -2540,7 +2540,7 @@ public class SushiswapApi {
   }
 
       /**
-   * GetTransactions (historical)
+   * Transactions (historical)
    * Gets transactions.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate 
   */
@@ -2604,7 +2604,7 @@ public class SushiswapApi {
     }
   }
   /**
-  * GetUsers (historical)
+  * Users (historical)
   * Gets users.
    * @param startBlock 
    * @param endBlock 
@@ -2668,7 +2668,7 @@ public class SushiswapApi {
   }
 
       /**
-   * GetUsers (historical)
+   * Users (historical)
    * Gets users.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate 
   */

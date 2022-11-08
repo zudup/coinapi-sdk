@@ -48,7 +48,7 @@ export class CurveApi {
 
     /**
      * Gets accounts.
-     * @summary GetAccounts (historical)
+     * @summary Accounts (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -122,7 +122,7 @@ export class CurveApi {
 
     /**
      * Gets add liquidity events.
-     * @summary GetAddLiquidityEvents (historical)
+     * @summary AddLiquidityEvents (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -200,7 +200,7 @@ export class CurveApi {
 
     /**
      * Gets admin fee change logs.
-     * @summary GetAdminFeeChangeLogs (historical)
+     * @summary AdminFeeChangeLogs (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -278,7 +278,7 @@ export class CurveApi {
 
     /**
      * Gets amplification coeff change logs.
-     * @summary GetAmplificationCoeffChangeLogs (historical)
+     * @summary AmplificationCoeffChangeLogs (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -356,7 +356,7 @@ export class CurveApi {
 
     /**
      * Gets coins.
-     * @summary GetCoins (historical)
+     * @summary Coins (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -434,7 +434,7 @@ export class CurveApi {
 
     /**
      * Gets contracts.
-     * @summary GetContracts (historical)
+     * @summary Contracts (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -512,7 +512,7 @@ export class CurveApi {
 
     /**
      * Gets contracts versions.
-     * @summary GetContractsVersions (historical)
+     * @summary ContractsVersions (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -590,7 +590,7 @@ export class CurveApi {
 
     /**
      * Gets daily volumes.
-     * @summary GetDailyVolumes (historical)
+     * @summary DailyVolumes (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -668,7 +668,7 @@ export class CurveApi {
 
     /**
      * Gets exchanges.
-     * @summary GetExchanges (historical) 🔥
+     * @summary Exchanges (historical) 🔥
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -746,7 +746,7 @@ export class CurveApi {
 
     /**
      * Gets fee change logs.
-     * @summary GetFeeChangeLogs (historical)
+     * @summary FeeChangeLogs (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -824,7 +824,7 @@ export class CurveApi {
 
     /**
      * Gets gauges deposits.
-     * @summary GetGaugesDeposits (historical)
+     * @summary GaugesDeposits (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -898,7 +898,7 @@ export class CurveApi {
 
     /**
      * Gets gauges.
-     * @summary GetGauges (historical)
+     * @summary Gauges (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -976,7 +976,7 @@ export class CurveApi {
 
     /**
      * Gets gauges liquidity.
-     * @summary GetGaugesLiquidity (historical)
+     * @summary GaugesLiquidity (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -1050,7 +1050,7 @@ export class CurveApi {
 
     /**
      * Gets gauges total weights.
-     * @summary GetGaugesTotalWeights (historical)
+     * @summary GaugesTotalWeights (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -1124,7 +1124,7 @@ export class CurveApi {
 
     /**
      * Gets gauges types.
-     * @summary GetGaugesTypes (historical)
+     * @summary GaugesTypes (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -1198,7 +1198,7 @@ export class CurveApi {
 
     /**
      * Gets gauges types weights.
-     * @summary GetGaugesTypesWeights (historical)
+     * @summary GaugesTypesWeights (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -1272,7 +1272,7 @@ export class CurveApi {
 
     /**
      * Gets gauges weights.
-     * @summary GetGaugesWeights (historical)
+     * @summary GaugesWeights (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -1346,7 +1346,7 @@ export class CurveApi {
 
     /**
      * Gets gauges weights votes.
-     * @summary GetGaugesWeightsVotes (historical)
+     * @summary GaugesWeightsVotes (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -1420,7 +1420,7 @@ export class CurveApi {
 
     /**
      * Gets gauges withdraws.
-     * @summary GetGaugesWithdraw (historical)
+     * @summary GaugesWithdraw (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -1494,7 +1494,7 @@ export class CurveApi {
 
     /**
      * Gets hourly volumes.
-     * @summary GetHourlyVolumes (historical)
+     * @summary HourlyVolumes (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -1572,7 +1572,7 @@ export class CurveApi {
 
     /**
      * Gets lp tokens.
-     * @summary GetLpTokens (historical)
+     * @summary LpTokens (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -1650,7 +1650,7 @@ export class CurveApi {
 
     /**
      * Gets pools.
-     * @summary GetPools (historical) 🔥
+     * @summary Pools (historical) 🔥
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -1728,7 +1728,7 @@ export class CurveApi {
 
     /**
      * Gets proposals.
-     * @summary GetProposals (historical)
+     * @summary Proposals (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -1802,7 +1802,7 @@ export class CurveApi {
 
     /**
      * Gets proposals votes.
-     * @summary GetProposalsVotes (historical)
+     * @summary ProposalsVotes (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -1876,7 +1876,7 @@ export class CurveApi {
 
     /**
      * Gets remove liquidity events.
-     * @summary GetRemoveLiquidityEvents (historical)
+     * @summary RemoveLiquidityEvents (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -1954,7 +1954,7 @@ export class CurveApi {
 
     /**
      * Gets remove liquidity one events.
-     * @summary GetRemoveLiquidityOneEvents (historical)
+     * @summary RemoveLiquidityOneEvents (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -2032,7 +2032,7 @@ export class CurveApi {
 
     /**
      * Gets system states.
-     * @summary GetSystemStates (historical)
+     * @summary SystemStates (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -2106,7 +2106,7 @@ export class CurveApi {
 
     /**
      * Gets tokens.
-     * @summary GetTokens (historical) 🔥
+     * @summary Tokens (historical) 🔥
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -2184,7 +2184,7 @@ export class CurveApi {
 
     /**
      * Gets transfer ownership events.
-     * @summary GetTransferOwnershipEvents (historical)
+     * @summary TransferOwnershipEvents (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -2262,7 +2262,7 @@ export class CurveApi {
 
     /**
      * Gets underlying coins.
-     * @summary GetUnderlyingCoins (historical)
+     * @summary UnderlyingCoins (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -2340,7 +2340,7 @@ export class CurveApi {
 
     /**
      * Gets voting apps.
-     * @summary GetVotingApps (historical)
+     * @summary VotingApps (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -2414,7 +2414,7 @@ export class CurveApi {
 
     /**
      * Gets weekly volumes.
-     * @summary GetWeeklyVolumes (historical)
+     * @summary WeeklyVolumes (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 

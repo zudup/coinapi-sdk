@@ -61,7 +61,7 @@ API.Client.SushiswapApi = function($http, $httpParamSerializer, $injector) {
 API.Client.SushiswapApi.$inject = ['$http', '$httpParamSerializer', '$injector'];
 
 /**
- * GetExchanges (current) 🔥
+ * Exchanges (current) 🔥
  * Gets exchanges.
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.Curve.ExchangeDTO>>}
@@ -92,7 +92,7 @@ API.Client.SushiswapApi.prototype.curveGetExchangesCurrent = function(opt_extraH
 }
 
 /**
- * GetTrades (current) 🔥
+ * Trades (current) 🔥
  * Gets trades.
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.Dex.TradeDTO>>}
@@ -123,7 +123,7 @@ API.Client.SushiswapApi.prototype.dexGetTradesCurrent = function(opt_extraHttpRe
 }
 
 /**
- * GetBundles (historical)
+ * Bundles (historical)
  * Gets bundles.
  * @param {!number=} opt_startBlock AAAAAAAAAA
  * @param {!number=} opt_endBlock BBBBBBBBBBBB
@@ -174,7 +174,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetBundlesHistorical = function(opt_s
 }
 
 /**
- * GetBurns (historical)
+ * Burns (historical)
  * Gets burns.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -230,7 +230,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetBurnsHistorical = function(opt_sta
 }
 
 /**
- * GetDayData (historical)
+ * DayData (historical)
  * Gets day data.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -281,7 +281,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetDayDataHistorical = function(opt_s
 }
 
 /**
- * GetFactory (historical)
+ * Factory (historical)
  * Gets factory.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -332,7 +332,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetFactoryHistorical = function(opt_s
 }
 
 /**
- * GetHourData (historical)
+ * HourData (historical)
  * Gets hour data.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -383,7 +383,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetHourDataHistorical = function(opt_
 }
 
 /**
- * GetLiquidityPosition (historical)
+ * LiquidityPosition (historical)
  * Gets liquidity position.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -439,7 +439,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetLiquidityPositionHistorical = func
 }
 
 /**
- * GetLiquidityPositionSnapshot (historical)
+ * LiquidityPositionSnapshot (historical)
  * Gets liquidity position snapshot.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -495,7 +495,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetLiquidityPositionSnapshotHistorica
 }
 
 /**
- * GetMints (historical)
+ * Mints (historical)
  * Gets mints.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -551,7 +551,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetMintsHistorical = function(opt_sta
 }
 
 /**
- * GetPools (current) 🔥
+ * Pools (current) 🔥
  * Gets pools.
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.Sushiswap.PairDTO>>}
@@ -582,7 +582,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetPoolsCurrent = function(opt_extraH
 }
 
 /**
- * GetPoolsDayData (historical)
+ * PoolsDayData (historical)
  * Gets pools day data.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -638,7 +638,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetPoolsDayDataHistorical = function(
 }
 
 /**
- * GetPools (historical) 🔥
+ * Pools (historical) 🔥
  * Gets list of pools for given filters.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -694,7 +694,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetPoolsHistorical = function(opt_sta
 }
 
 /**
- * GetPoolsHourData (historical)
+ * PoolsHourData (historical)
  * Gets pools tracked each our.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -750,7 +750,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetPoolsHourDataHistorical = function
 }
 
 /**
- * GetSwaps (current) 🔥
+ * Swaps (current) 🔥
  * Gets swaps.
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.Sushiswap.SwapDTO>>}
@@ -781,7 +781,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetSwapsCurrent = function(opt_extraH
 }
 
 /**
- * GetSwaps (historical) 🔥
+ * Swaps (historical) 🔥
  * Gets list of swaps for given filters.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -837,7 +837,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetSwapsHistorical = function(opt_sta
 }
 
 /**
- * GetTokens (current) 🔥
+ * Tokens (current) 🔥
  * Gets tokens.
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.Sushiswap.TokenDTO>>}
@@ -868,7 +868,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetTokensCurrent = function(opt_extra
 }
 
 /**
- * GetTokensDayData (historical)
+ * TokensDayData (historical)
  * Gets tokens day data.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -924,7 +924,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetTokensDayDataHistorical = function
 }
 
 /**
- * GetTokens (historical) 🔥
+ * Tokens (historical) 🔥
  * Gets list of tokens for given filters.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -980,7 +980,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetTokensHistorical = function(opt_st
 }
 
 /**
- * GetTransactions (historical)
+ * Transactions (historical)
  * Gets transactions.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -1031,7 +1031,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetTransactionsHistorical = function(
 }
 
 /**
- * GetUsers (historical)
+ * Users (historical)
  * Gets users.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 

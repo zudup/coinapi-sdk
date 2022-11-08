@@ -62,7 +62,7 @@ import qualified Prelude as P
 
 -- | @GET \/dapps\/sushiswap\/exchanges\/current@
 -- 
--- GetExchanges (current) 🔥
+-- Exchanges (current) 🔥
 -- 
 -- Gets exchanges.
 -- 
@@ -85,7 +85,7 @@ instance Produces CurveGetExchangesCurrent MimePlainText
 
 -- | @GET \/dapps\/sushiswap\/trades\/current@
 -- 
--- GetTrades (current) 🔥
+-- Trades (current) 🔥
 -- 
 -- Gets trades.
 -- 
@@ -108,7 +108,7 @@ instance Produces DexGetTradesCurrent MimePlainText
 
 -- | @GET \/dapps\/sushiswap\/bundles\/historical@
 -- 
--- GetBundles (historical)
+-- Bundles (historical)
 -- 
 -- Gets bundles.
 -- 
@@ -151,7 +151,7 @@ instance Produces SushiswapGetBundlesHistorical MimePlainText
 
 -- | @GET \/dapps\/sushiswap\/burns\/historical@
 -- 
--- GetBurns (historical)
+-- Burns (historical)
 -- 
 -- Gets burns.
 -- 
@@ -199,7 +199,7 @@ instance Produces SushiswapGetBurnsHistorical MimePlainText
 
 -- | @GET \/dapps\/sushiswap\/dayData\/historical@
 -- 
--- GetDayData (historical)
+-- DayData (historical)
 -- 
 -- Gets day data.
 -- 
@@ -242,7 +242,7 @@ instance Produces SushiswapGetDayDataHistorical MimePlainText
 
 -- | @GET \/dapps\/sushiswap\/factory\/historical@
 -- 
--- GetFactory (historical)
+-- Factory (historical)
 -- 
 -- Gets factory.
 -- 
@@ -285,7 +285,7 @@ instance Produces SushiswapGetFactoryHistorical MimePlainText
 
 -- | @GET \/dapps\/sushiswap\/hourData\/historical@
 -- 
--- GetHourData (historical)
+-- HourData (historical)
 -- 
 -- Gets hour data.
 -- 
@@ -328,7 +328,7 @@ instance Produces SushiswapGetHourDataHistorical MimePlainText
 
 -- | @GET \/dapps\/sushiswap\/liquidityPosition\/historical@
 -- 
--- GetLiquidityPosition (historical)
+-- LiquidityPosition (historical)
 -- 
 -- Gets liquidity position.
 -- 
@@ -376,7 +376,7 @@ instance Produces SushiswapGetLiquidityPositionHistorical MimePlainText
 
 -- | @GET \/dapps\/sushiswap\/liquidityPositionSnapshots\/historical@
 -- 
--- GetLiquidityPositionSnapshot (historical)
+-- LiquidityPositionSnapshot (historical)
 -- 
 -- Gets liquidity position snapshot.
 -- 
@@ -424,7 +424,7 @@ instance Produces SushiswapGetLiquidityPositionSnapshotHistorical MimePlainText
 
 -- | @GET \/dapps\/sushiswap\/mints\/historical@
 -- 
--- GetMints (historical)
+-- Mints (historical)
 -- 
 -- Gets mints.
 -- 
@@ -472,7 +472,7 @@ instance Produces SushiswapGetMintsHistorical MimePlainText
 
 -- | @GET \/dapps\/sushiswap\/pools\/current@
 -- 
--- GetPools (current) 🔥
+-- Pools (current) 🔥
 -- 
 -- Gets pools.
 -- 
@@ -495,7 +495,7 @@ instance Produces SushiswapGetPoolsCurrent MimePlainText
 
 -- | @GET \/dapps\/sushiswap\/poolsDayData\/historical@
 -- 
--- GetPoolsDayData (historical)
+-- PoolsDayData (historical)
 -- 
 -- Gets pools day data.
 -- 
@@ -543,7 +543,7 @@ instance Produces SushiswapGetPoolsDayDataHistorical MimePlainText
 
 -- | @GET \/dapps\/sushiswap\/pools\/historical@
 -- 
--- GetPools (historical) 🔥
+-- Pools (historical) 🔥
 -- 
 -- Gets list of pools for given filters.
 -- 
@@ -591,7 +591,7 @@ instance Produces SushiswapGetPoolsHistorical MimePlainText
 
 -- | @GET \/dapps\/sushiswap\/poolsHourData\/historical@
 -- 
--- GetPoolsHourData (historical)
+-- PoolsHourData (historical)
 -- 
 -- Gets pools tracked each our.
 -- 
@@ -639,7 +639,7 @@ instance Produces SushiswapGetPoolsHourDataHistorical MimePlainText
 
 -- | @GET \/dapps\/sushiswap\/swaps\/current@
 -- 
--- GetSwaps (current) 🔥
+-- Swaps (current) 🔥
 -- 
 -- Gets swaps.
 -- 
@@ -662,7 +662,7 @@ instance Produces SushiswapGetSwapsCurrent MimePlainText
 
 -- | @GET \/dapps\/sushiswap\/swaps\/historical@
 -- 
--- GetSwaps (historical) 🔥
+-- Swaps (historical) 🔥
 -- 
 -- Gets list of swaps for given filters.
 -- 
@@ -710,7 +710,7 @@ instance Produces SushiswapGetSwapsHistorical MimePlainText
 
 -- | @GET \/dapps\/sushiswap\/tokens\/current@
 -- 
--- GetTokens (current) 🔥
+-- Tokens (current) 🔥
 -- 
 -- Gets tokens.
 -- 
@@ -733,7 +733,7 @@ instance Produces SushiswapGetTokensCurrent MimePlainText
 
 -- | @GET \/dapps\/sushiswap\/tokensDayData\/historical@
 -- 
--- GetTokensDayData (historical)
+-- TokensDayData (historical)
 -- 
 -- Gets tokens day data.
 -- 
@@ -781,7 +781,7 @@ instance Produces SushiswapGetTokensDayDataHistorical MimePlainText
 
 -- | @GET \/dapps\/sushiswap\/tokens\/historical@
 -- 
--- GetTokens (historical) 🔥
+-- Tokens (historical) 🔥
 -- 
 -- Gets list of tokens for given filters.
 -- 
@@ -829,7 +829,7 @@ instance Produces SushiswapGetTokensHistorical MimePlainText
 
 -- | @GET \/dapps\/sushiswap\/transactions\/historical@
 -- 
--- GetTransactions (historical)
+-- Transactions (historical)
 -- 
 -- Gets transactions.
 -- 
@@ -872,7 +872,7 @@ instance Produces SushiswapGetTransactionsHistorical MimePlainText
 
 -- | @GET \/dapps\/sushiswap\/users\/historical@
 -- 
--- GetUsers (historical)
+-- Users (historical)
 -- 
 -- Gets users.
 -- 

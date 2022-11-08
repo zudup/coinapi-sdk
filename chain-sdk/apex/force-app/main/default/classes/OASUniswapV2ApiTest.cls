@@ -1,7 +1,7 @@
 @isTest
 private class OASUniswapV2ApiTest {
     /**
-     * GetBundles (historical)
+     * Bundles (historical)
      *
      * Gets bundles.
      */
@@ -50,7 +50,7 @@ private class OASUniswapV2ApiTest {
     }
 
     /**
-     * GetBurns (historical)
+     * Burns (historical)
      *
      * Gets burns.
      */
@@ -100,7 +100,7 @@ private class OASUniswapV2ApiTest {
     }
 
     /**
-     * GetDayData (historical)
+     * DayData (historical)
      *
      * Gets uniswapv2 day data.
      */
@@ -149,7 +149,7 @@ private class OASUniswapV2ApiTest {
     }
 
     /**
-     * GetFactory (historical)
+     * Factory (historical)
      *
      * Gets factory.
      */
@@ -198,7 +198,7 @@ private class OASUniswapV2ApiTest {
     }
 
     /**
-     * GetLiquidityPositions (historical)
+     * LiquidityPositions (historical)
      *
      * Gets liquidity positions.
      */
@@ -248,7 +248,7 @@ private class OASUniswapV2ApiTest {
     }
 
     /**
-     * GetLiquidityPositionsSnapshots (historical)
+     * LiquidityPositionsSnapshots (historical)
      *
      * Gets liquidity positions snapshots.
      */
@@ -298,7 +298,7 @@ private class OASUniswapV2ApiTest {
     }
 
     /**
-     * GetMints (historical)
+     * Mints (historical)
      *
      * Gets mints.
      */
@@ -348,7 +348,7 @@ private class OASUniswapV2ApiTest {
     }
 
     /**
-     * GetPools (current) 🔥
+     * Pools (current) 🔥
      *
      * Gets pools.
      */
@@ -394,7 +394,7 @@ private class OASUniswapV2ApiTest {
     }
 
     /**
-     * GetPoolsDayData (historical)
+     * PoolsDayData (historical)
      *
      * Gets pools day data.
      */
@@ -444,7 +444,7 @@ private class OASUniswapV2ApiTest {
     }
 
     /**
-     * GetPools (historical) 🔥
+     * Pools (historical) 🔥
      *
      * Gets pools.
      */
@@ -494,7 +494,7 @@ private class OASUniswapV2ApiTest {
     }
 
     /**
-     * GetPoolsHourData (historical)
+     * PoolsHourData (historical)
      *
      * Gets pools tracked each our.
      */
@@ -544,7 +544,7 @@ private class OASUniswapV2ApiTest {
     }
 
     /**
-     * GetSwaps (current) 🔥
+     * Swaps (current) 🔥
      *
      * Gets swaps.
      */
@@ -586,7 +586,7 @@ private class OASUniswapV2ApiTest {
     }
 
     /**
-     * GetSwaps (historical) 🔥
+     * Swaps (historical) 🔥
      *
      * Gets swaps.
      */
@@ -636,7 +636,7 @@ private class OASUniswapV2ApiTest {
     }
 
     /**
-     * GetTokens (current) 🔥
+     * Tokens (current) 🔥
      *
      * Gets tokens.
      */
@@ -678,7 +678,7 @@ private class OASUniswapV2ApiTest {
     }
 
     /**
-     * GetTokensDayData (historical)
+     * TokensDayData (historical)
      *
      * Gets tokens day data.
      */
@@ -728,7 +728,7 @@ private class OASUniswapV2ApiTest {
     }
 
     /**
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      *
      * Gets tokens.
      */
@@ -778,7 +778,7 @@ private class OASUniswapV2ApiTest {
     }
 
     /**
-     * GetTransactions (historical)
+     * Transactions (historical)
      *
      * Gets transactions.
      */
@@ -827,7 +827,7 @@ private class OASUniswapV2ApiTest {
     }
 
     /**
-     * GetUsers (historical)
+     * Users (historical)
      *
      * Gets users.
      */

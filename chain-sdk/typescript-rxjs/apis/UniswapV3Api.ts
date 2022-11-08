@@ -226,7 +226,7 @@ export class UniswapV3Api extends BaseAPI {
 
     /**
      * Gets bundles.
-     * GetBundles (current)
+     * Bundles (current)
      */
     uniswapV3GetBundlesCurrent(): Observable<Array<UniswapV3BundleV3DTO>>
     uniswapV3GetBundlesCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3BundleV3DTO>>>
@@ -239,7 +239,7 @@ export class UniswapV3Api extends BaseAPI {
 
     /**
      * Gets bundles.
-     * GetBundles (historical)
+     * Bundles (historical)
      */
     uniswapV3GetBundlesHistorical({ startBlock, endBlock, startDate, endDate }: UniswapV3GetBundlesHistoricalRequest): Observable<Array<UniswapV3BundleV3DTO>>
     uniswapV3GetBundlesHistorical({ startBlock, endBlock, startDate, endDate }: UniswapV3GetBundlesHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3BundleV3DTO>>>
@@ -261,7 +261,7 @@ export class UniswapV3Api extends BaseAPI {
 
     /**
      * Gets burns.
-     * GetBurns (current)
+     * Burns (current)
      */
     uniswapV3GetBurnsCurrent({ filterPoolId }: UniswapV3GetBurnsCurrentRequest): Observable<Array<UniswapV3BurnV3DTO>>
     uniswapV3GetBurnsCurrent({ filterPoolId }: UniswapV3GetBurnsCurrentRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3BurnV3DTO>>>
@@ -280,7 +280,7 @@ export class UniswapV3Api extends BaseAPI {
 
     /**
      * Gets burns.
-     * GetBurns (historical)
+     * Burns (historical)
      */
     uniswapV3GetBurnsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: UniswapV3GetBurnsHistoricalRequest): Observable<Array<UniswapV3BurnV3DTO>>
     uniswapV3GetBurnsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: UniswapV3GetBurnsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3BurnV3DTO>>>
@@ -303,7 +303,7 @@ export class UniswapV3Api extends BaseAPI {
 
     /**
      * Gets uniswapv3 day data.
-     * GetDayData (current)
+     * DayData (current)
      */
     uniswapV3GetDayDataCurrent(): Observable<Array<UniswapV3UniswapDayDataV3DTO>>
     uniswapV3GetDayDataCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3UniswapDayDataV3DTO>>>
@@ -316,7 +316,7 @@ export class UniswapV3Api extends BaseAPI {
 
     /**
      * Gets uniswapv3 day data.
-     * GetDayData (historical)
+     * DayData (historical)
      */
     uniswapV3GetDayDataHistorical({ startBlock, endBlock, startDate, endDate }: UniswapV3GetDayDataHistoricalRequest): Observable<Array<UniswapV3UniswapDayDataV3DTO>>
     uniswapV3GetDayDataHistorical({ startBlock, endBlock, startDate, endDate }: UniswapV3GetDayDataHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3UniswapDayDataV3DTO>>>
@@ -338,7 +338,7 @@ export class UniswapV3Api extends BaseAPI {
 
     /**
      * Gets factory.
-     * GetFactory (current)
+     * Factory (current)
      */
     uniswapV3GetFactoryCurrent(): Observable<Array<UniswapV3FactoryV3DTO>>
     uniswapV3GetFactoryCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3FactoryV3DTO>>>
@@ -351,7 +351,7 @@ export class UniswapV3Api extends BaseAPI {
 
     /**
      * Gets factory.
-     * GetFactory (historical)
+     * Factory (historical)
      */
     uniswapV3GetFactoryHistorical({ startBlock, endBlock, startDate, endDate }: UniswapV3GetFactoryHistoricalRequest): Observable<Array<UniswapV3FactoryV3DTO>>
     uniswapV3GetFactoryHistorical({ startBlock, endBlock, startDate, endDate }: UniswapV3GetFactoryHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3FactoryV3DTO>>>
@@ -373,7 +373,7 @@ export class UniswapV3Api extends BaseAPI {
 
     /**
      * Gets mints.
-     * GetMints (current)
+     * Mints (current)
      */
     uniswapV3GetMintsCurrent({ filterPoolId }: UniswapV3GetMintsCurrentRequest): Observable<Array<UniswapV3MintV3DTO>>
     uniswapV3GetMintsCurrent({ filterPoolId }: UniswapV3GetMintsCurrentRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3MintV3DTO>>>
@@ -392,7 +392,7 @@ export class UniswapV3Api extends BaseAPI {
 
     /**
      * Gets mints.
-     * GetMints (historical)
+     * Mints (historical)
      */
     uniswapV3GetMintsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: UniswapV3GetMintsHistoricalRequest): Observable<Array<UniswapV3MintV3DTO>>
     uniswapV3GetMintsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: UniswapV3GetMintsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3MintV3DTO>>>
@@ -415,7 +415,7 @@ export class UniswapV3Api extends BaseAPI {
 
     /**
      * Gets pools.
-     * GetPools (current) 🔥
+     * Pools (current) 🔥
      */
     uniswapV3GetPoolsCurrent({ filterPoolId }: UniswapV3GetPoolsCurrentRequest): Observable<Array<UniswapV3PoolV3DTO>>
     uniswapV3GetPoolsCurrent({ filterPoolId }: UniswapV3GetPoolsCurrentRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3PoolV3DTO>>>
@@ -434,7 +434,7 @@ export class UniswapV3Api extends BaseAPI {
 
     /**
      * Gets pools day data.
-     * GetPoolsDayData (current)
+     * PoolsDayData (current)
      */
     uniswapV3GetPoolsDayDataCurrent({ filterPoolId }: UniswapV3GetPoolsDayDataCurrentRequest): Observable<Array<UniswapV3PoolDayDataV3DTO>>
     uniswapV3GetPoolsDayDataCurrent({ filterPoolId }: UniswapV3GetPoolsDayDataCurrentRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3PoolDayDataV3DTO>>>
@@ -453,7 +453,7 @@ export class UniswapV3Api extends BaseAPI {
 
     /**
      * Gets pools day data.
-     * GetPoolsDayData (historical)
+     * PoolsDayData (historical)
      */
     uniswapV3GetPoolsDayDataHistorical({ startBlock, endBlock, startDate, endDate, poolId }: UniswapV3GetPoolsDayDataHistoricalRequest): Observable<Array<UniswapV3PoolDayDataV3DTO>>
     uniswapV3GetPoolsDayDataHistorical({ startBlock, endBlock, startDate, endDate, poolId }: UniswapV3GetPoolsDayDataHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3PoolDayDataV3DTO>>>
@@ -476,7 +476,7 @@ export class UniswapV3Api extends BaseAPI {
 
     /**
      * Gets pools.
-     * GetPools (historical) 🔥
+     * Pools (historical) 🔥
      */
     uniswapV3GetPoolsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: UniswapV3GetPoolsHistoricalRequest): Observable<Array<UniswapV3PoolV3DTO>>
     uniswapV3GetPoolsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: UniswapV3GetPoolsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3PoolV3DTO>>>
@@ -499,7 +499,7 @@ export class UniswapV3Api extends BaseAPI {
 
     /**
      * Gets pools hour data.
-     * GetPoolsHourData (current)
+     * PoolsHourData (current)
      */
     uniswapV3GetPoolsHourDataCurrent({ filterPoolId }: UniswapV3GetPoolsHourDataCurrentRequest): Observable<Array<UniswapV3PoolHourDataV3DTO>>
     uniswapV3GetPoolsHourDataCurrent({ filterPoolId }: UniswapV3GetPoolsHourDataCurrentRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3PoolHourDataV3DTO>>>
@@ -518,7 +518,7 @@ export class UniswapV3Api extends BaseAPI {
 
     /**
      * Gets pools hour data.
-     * GetPoolsHourData (historical)
+     * PoolsHourData (historical)
      */
     uniswapV3GetPoolsHourDataHistorical({ startBlock, endBlock, startDate, endDate, poolId }: UniswapV3GetPoolsHourDataHistoricalRequest): Observable<Array<UniswapV3PoolHourDataV3DTO>>
     uniswapV3GetPoolsHourDataHistorical({ startBlock, endBlock, startDate, endDate, poolId }: UniswapV3GetPoolsHourDataHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3PoolHourDataV3DTO>>>
@@ -541,7 +541,7 @@ export class UniswapV3Api extends BaseAPI {
 
     /**
      * Gets positions.
-     * GetPositions (current)
+     * Positions (current)
      */
     uniswapV3GetPositionsCurrent({ filterPoolId }: UniswapV3GetPositionsCurrentRequest): Observable<Array<UniswapV3PositionV3DTO>>
     uniswapV3GetPositionsCurrent({ filterPoolId }: UniswapV3GetPositionsCurrentRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3PositionV3DTO>>>
@@ -560,7 +560,7 @@ export class UniswapV3Api extends BaseAPI {
 
     /**
      * Gets positions.
-     * GetPositions (historical)
+     * Positions (historical)
      */
     uniswapV3GetPositionsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: UniswapV3GetPositionsHistoricalRequest): Observable<Array<UniswapV3PositionV3DTO>>
     uniswapV3GetPositionsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: UniswapV3GetPositionsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3PositionV3DTO>>>
@@ -583,7 +583,7 @@ export class UniswapV3Api extends BaseAPI {
 
     /**
      * Gets positions snapshots.
-     * GetPositionsSnaphots (historical)
+     * PositionsSnaphots (historical)
      */
     uniswapV3GetPositionsSnaphotsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: UniswapV3GetPositionsSnaphotsHistoricalRequest): Observable<Array<UniswapV3PositionSnapshotV3DTO>>
     uniswapV3GetPositionsSnaphotsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: UniswapV3GetPositionsSnaphotsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3PositionSnapshotV3DTO>>>
@@ -606,7 +606,7 @@ export class UniswapV3Api extends BaseAPI {
 
     /**
      * Gets positions snapshots.
-     * GetPositionsSnapshots (current)
+     * PositionsSnapshots (current)
      */
     uniswapV3GetPositionsSnapshotsCurrent({ filterPoolId }: UniswapV3GetPositionsSnapshotsCurrentRequest): Observable<Array<UniswapV3PositionSnapshotV3DTO>>
     uniswapV3GetPositionsSnapshotsCurrent({ filterPoolId }: UniswapV3GetPositionsSnapshotsCurrentRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3PositionSnapshotV3DTO>>>
@@ -625,7 +625,7 @@ export class UniswapV3Api extends BaseAPI {
 
     /**
      * Gets swaps.
-     * GetSwaps (current) 🔥
+     * Swaps (current) 🔥
      */
     uniswapV3GetSwapsCurrent({ filterPoolId }: UniswapV3GetSwapsCurrentRequest): Observable<Array<UniswapV3SwapV3DTO>>
     uniswapV3GetSwapsCurrent({ filterPoolId }: UniswapV3GetSwapsCurrentRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3SwapV3DTO>>>
@@ -644,7 +644,7 @@ export class UniswapV3Api extends BaseAPI {
 
     /**
      * Gets swaps.
-     * GetSwaps (historical) 🔥
+     * Swaps (historical) 🔥
      */
     uniswapV3GetSwapsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: UniswapV3GetSwapsHistoricalRequest): Observable<Array<UniswapV3SwapV3DTO>>
     uniswapV3GetSwapsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: UniswapV3GetSwapsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3SwapV3DTO>>>
@@ -667,7 +667,7 @@ export class UniswapV3Api extends BaseAPI {
 
     /**
      * Gets ticks.
-     * GetTicks (current)
+     * Ticks (current)
      */
     uniswapV3GetTicksCurrent({ filterPoolId }: UniswapV3GetTicksCurrentRequest): Observable<Array<UniswapV3TickV3DTO>>
     uniswapV3GetTicksCurrent({ filterPoolId }: UniswapV3GetTicksCurrentRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3TickV3DTO>>>
@@ -686,7 +686,7 @@ export class UniswapV3Api extends BaseAPI {
 
     /**
      * Gets ticks day data.
-     * GetTicksDayData (current)
+     * TicksDayData (current)
      */
     uniswapV3GetTicksDayDataCurrent({ filterPoolId }: UniswapV3GetTicksDayDataCurrentRequest): Observable<Array<UniswapV3TickDayDataV3DTO>>
     uniswapV3GetTicksDayDataCurrent({ filterPoolId }: UniswapV3GetTicksDayDataCurrentRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3TickDayDataV3DTO>>>
@@ -705,7 +705,7 @@ export class UniswapV3Api extends BaseAPI {
 
     /**
      * Gets ticks day data.
-     * GetTicksDayData (historical)
+     * TicksDayData (historical)
      */
     uniswapV3GetTicksDayDataHistorical({ startBlock, endBlock, startDate, endDate, poolId }: UniswapV3GetTicksDayDataHistoricalRequest): Observable<Array<UniswapV3TickDayDataV3DTO>>
     uniswapV3GetTicksDayDataHistorical({ startBlock, endBlock, startDate, endDate, poolId }: UniswapV3GetTicksDayDataHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3TickDayDataV3DTO>>>
@@ -728,7 +728,7 @@ export class UniswapV3Api extends BaseAPI {
 
     /**
      * Gets ticks.
-     * GetTicks (historical)
+     * Ticks (historical)
      */
     uniswapV3GetTicksHistorical({ startBlock, endBlock, startDate, endDate, poolId }: UniswapV3GetTicksHistoricalRequest): Observable<Array<UniswapV3TickV3DTO>>
     uniswapV3GetTicksHistorical({ startBlock, endBlock, startDate, endDate, poolId }: UniswapV3GetTicksHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3TickV3DTO>>>
@@ -751,7 +751,7 @@ export class UniswapV3Api extends BaseAPI {
 
     /**
      * Gets tokens.
-     * GetTokens (current) 🔥
+     * Tokens (current) 🔥
      */
     uniswapV3GetTokensCurrent({ filterTokenId }: UniswapV3GetTokensCurrentRequest): Observable<Array<UniswapV3TokenV3DTO>>
     uniswapV3GetTokensCurrent({ filterTokenId }: UniswapV3GetTokensCurrentRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3TokenV3DTO>>>
@@ -770,7 +770,7 @@ export class UniswapV3Api extends BaseAPI {
 
     /**
      * Gets tokens day data.
-     * GetTokensDayData (current)
+     * TokensDayData (current)
      */
     uniswapV3GetTokensDayDataCurrent({ filterTokenId }: UniswapV3GetTokensDayDataCurrentRequest): Observable<Array<UniswapV3TokenV3DayDataDTO>>
     uniswapV3GetTokensDayDataCurrent({ filterTokenId }: UniswapV3GetTokensDayDataCurrentRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3TokenV3DayDataDTO>>>
@@ -789,7 +789,7 @@ export class UniswapV3Api extends BaseAPI {
 
     /**
      * Gets tokens day data.
-     * GetTokensDayData (historical)
+     * TokensDayData (historical)
      */
     uniswapV3GetTokensDayDataHistorical({ startBlock, endBlock, startDate, endDate, tokenId }: UniswapV3GetTokensDayDataHistoricalRequest): Observable<Array<UniswapV3TokenV3DayDataDTO>>
     uniswapV3GetTokensDayDataHistorical({ startBlock, endBlock, startDate, endDate, tokenId }: UniswapV3GetTokensDayDataHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3TokenV3DayDataDTO>>>
@@ -812,7 +812,7 @@ export class UniswapV3Api extends BaseAPI {
 
     /**
      * Gets tokens.
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      */
     uniswapV3GetTokensHistorical({ startBlock, endBlock, startDate, endDate, tokenId }: UniswapV3GetTokensHistoricalRequest): Observable<Array<UniswapV3TokenV3DTO>>
     uniswapV3GetTokensHistorical({ startBlock, endBlock, startDate, endDate, tokenId }: UniswapV3GetTokensHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3TokenV3DTO>>>
@@ -835,7 +835,7 @@ export class UniswapV3Api extends BaseAPI {
 
     /**
      * Gets tokens hour data.
-     * GetTokensHourData (current)
+     * TokensHourData (current)
      */
     uniswapV3GetTokensHourDataCurrent({ filterTokenId }: UniswapV3GetTokensHourDataCurrentRequest): Observable<Array<UniswapV3TokenHourDataV3DTO>>
     uniswapV3GetTokensHourDataCurrent({ filterTokenId }: UniswapV3GetTokensHourDataCurrentRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3TokenHourDataV3DTO>>>
@@ -854,7 +854,7 @@ export class UniswapV3Api extends BaseAPI {
 
     /**
      * Gets tokens hour data.
-     * GetTokensHourData (historical)
+     * TokensHourData (historical)
      */
     uniswapV3GetTokensHourDataHistorical({ startBlock, endBlock, startDate, endDate, tokenId }: UniswapV3GetTokensHourDataHistoricalRequest): Observable<Array<UniswapV3TokenHourDataV3DTO>>
     uniswapV3GetTokensHourDataHistorical({ startBlock, endBlock, startDate, endDate, tokenId }: UniswapV3GetTokensHourDataHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3TokenHourDataV3DTO>>>
@@ -877,7 +877,7 @@ export class UniswapV3Api extends BaseAPI {
 
     /**
      * Gets transactions.
-     * GetTransactions (historical)
+     * Transactions (historical)
      */
     uniswapV3GetTransactionsHistorical({ startBlock, endBlock, startDate, endDate }: UniswapV3GetTransactionsHistoricalRequest): Observable<Array<UniswapV3TransactionV3DTO>>
     uniswapV3GetTransactionsHistorical({ startBlock, endBlock, startDate, endDate }: UniswapV3GetTransactionsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<UniswapV3TransactionV3DTO>>>

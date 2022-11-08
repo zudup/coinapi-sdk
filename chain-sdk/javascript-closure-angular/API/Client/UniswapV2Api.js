@@ -58,7 +58,7 @@ API.Client.UniswapV2Api = function($http, $httpParamSerializer, $injector) {
 API.Client.UniswapV2Api.$inject = ['$http', '$httpParamSerializer', '$injector'];
 
 /**
- * GetBundles (historical)
+ * Bundles (historical)
  * Gets bundles.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -109,7 +109,7 @@ API.Client.UniswapV2Api.prototype.uniswapV2GetBundlesHistorical = function(opt_s
 }
 
 /**
- * GetBurns (historical)
+ * Burns (historical)
  * Gets burns.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -165,7 +165,7 @@ API.Client.UniswapV2Api.prototype.uniswapV2GetBurnsHistorical = function(opt_sta
 }
 
 /**
- * GetDayData (historical)
+ * DayData (historical)
  * Gets uniswapv2 day data.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -216,7 +216,7 @@ API.Client.UniswapV2Api.prototype.uniswapV2GetDayDataHistorical = function(opt_s
 }
 
 /**
- * GetFactory (historical)
+ * Factory (historical)
  * Gets factory.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -267,7 +267,7 @@ API.Client.UniswapV2Api.prototype.uniswapV2GetFactoryHistorical = function(opt_s
 }
 
 /**
- * GetLiquidityPositions (historical)
+ * LiquidityPositions (historical)
  * Gets liquidity positions.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -323,7 +323,7 @@ API.Client.UniswapV2Api.prototype.uniswapV2GetLiquidityPositionsHistorical = fun
 }
 
 /**
- * GetLiquidityPositionsSnapshots (historical)
+ * LiquidityPositionsSnapshots (historical)
  * Gets liquidity positions snapshots.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -379,7 +379,7 @@ API.Client.UniswapV2Api.prototype.uniswapV2GetLiquidityPositionsSnapshotsHistori
 }
 
 /**
- * GetMints (historical)
+ * Mints (historical)
  * Gets mints.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -435,7 +435,7 @@ API.Client.UniswapV2Api.prototype.uniswapV2GetMintsHistorical = function(opt_sta
 }
 
 /**
- * GetPools (current) 🔥
+ * Pools (current) 🔥
  * Gets pools.
  * @param {!string=} opt_filterPoolId 
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
@@ -471,7 +471,7 @@ API.Client.UniswapV2Api.prototype.uniswapV2GetPoolsCurrent = function(opt_filter
 }
 
 /**
- * GetPoolsDayData (historical)
+ * PoolsDayData (historical)
  * Gets pools day data.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -527,7 +527,7 @@ API.Client.UniswapV2Api.prototype.uniswapV2GetPoolsDayDataHistorical = function(
 }
 
 /**
- * GetPools (historical) 🔥
+ * Pools (historical) 🔥
  * Gets pools.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -583,7 +583,7 @@ API.Client.UniswapV2Api.prototype.uniswapV2GetPoolsHistorical = function(opt_sta
 }
 
 /**
- * GetPoolsHourData (historical)
+ * PoolsHourData (historical)
  * Gets pools tracked each our.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -639,7 +639,7 @@ API.Client.UniswapV2Api.prototype.uniswapV2GetPoolsHourDataHistorical = function
 }
 
 /**
- * GetSwaps (current) 🔥
+ * Swaps (current) 🔥
  * Gets swaps.
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.UniswapV2.SwapV2DTO>>}
@@ -670,7 +670,7 @@ API.Client.UniswapV2Api.prototype.uniswapV2GetSwapsCurrent = function(opt_extraH
 }
 
 /**
- * GetSwaps (historical) 🔥
+ * Swaps (historical) 🔥
  * Gets swaps.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -726,7 +726,7 @@ API.Client.UniswapV2Api.prototype.uniswapV2GetSwapsHistorical = function(opt_sta
 }
 
 /**
- * GetTokens (current) 🔥
+ * Tokens (current) 🔥
  * Gets tokens.
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.UniswapV2.TokenV2DTO>>}
@@ -757,7 +757,7 @@ API.Client.UniswapV2Api.prototype.uniswapV2GetTokensCurrent = function(opt_extra
 }
 
 /**
- * GetTokensDayData (historical)
+ * TokensDayData (historical)
  * Gets tokens day data.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -813,7 +813,7 @@ API.Client.UniswapV2Api.prototype.uniswapV2GetTokensDayDataHistorical = function
 }
 
 /**
- * GetTokens (historical) 🔥
+ * Tokens (historical) 🔥
  * Gets tokens.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -869,7 +869,7 @@ API.Client.UniswapV2Api.prototype.uniswapV2GetTokensHistorical = function(opt_st
 }
 
 /**
- * GetTransactions (historical)
+ * Transactions (historical)
  * Gets transactions.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -920,7 +920,7 @@ API.Client.UniswapV2Api.prototype.uniswapV2GetTransactionsHistorical = function(
 }
 
 /**
- * GetUsers (historical)
+ * Users (historical)
  * Gets users.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 

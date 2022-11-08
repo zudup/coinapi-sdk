@@ -1866,151 +1866,151 @@ EOF
     echo ""
     echo -e "${BOLD}${WHITE}[cow]${OFF}"
 read -r -d '' ops <<EOF
-  ${CYAN}cowGetOrdersHistorical${OFF};GetOrders (historical)
-  ${CYAN}cowGetSettlementsHistorical${OFF};GetSettlements (historical)
-  ${CYAN}cowGetTokensHistorical${OFF};GetTokens (historical) 🔥
-  ${CYAN}cowGetTradesHistorical${OFF};GetTrades (historical) 🔥
-  ${CYAN}cowGetUsersHistorical${OFF};GetUsers (historical)
+  ${CYAN}cowGetOrdersHistorical${OFF};Orders (historical)
+  ${CYAN}cowGetSettlementsHistorical${OFF};Settlements (historical)
+  ${CYAN}cowGetTokensHistorical${OFF};Tokens (historical) 🔥
+  ${CYAN}cowGetTradesHistorical${OFF};Trades (historical) 🔥
+  ${CYAN}cowGetUsersHistorical${OFF};Users (historical)
 EOF
 echo "  $ops" | column -t -s ';'
     echo ""
     echo -e "${BOLD}${WHITE}[curve]${OFF}"
 read -r -d '' ops <<EOF
-  ${CYAN}curveGetAccountsHistorical${OFF};GetAccounts (historical)
-  ${CYAN}curveGetAddLiquidityEventsHistorical${OFF};GetAddLiquidityEvents (historical)
-  ${CYAN}curveGetAdminFeeChangeLogsHistorical${OFF};GetAdminFeeChangeLogs (historical)
-  ${CYAN}curveGetAmplificationCoeffChangeLogsHistorical${OFF};GetAmplificationCoeffChangeLogs (historical)
-  ${CYAN}curveGetCoinsHistorical${OFF};GetCoins (historical)
-  ${CYAN}curveGetContractsHistorical${OFF};GetContracts (historical)
-  ${CYAN}curveGetContractsVersionsHistorical${OFF};GetContractsVersions (historical)
-  ${CYAN}curveGetDailyVolumesHistorical${OFF};GetDailyVolumes (historical)
-  ${CYAN}curveGetExchangesHistorical${OFF};GetExchanges (historical) 🔥
-  ${CYAN}curveGetFeeChangeLogsHistorical${OFF};GetFeeChangeLogs (historical)
-  ${CYAN}curveGetGaugesDepositsHistorical${OFF};GetGaugesDeposits (historical)
-  ${CYAN}curveGetGaugesHistorical${OFF};GetGauges (historical)
-  ${CYAN}curveGetGaugesLiquidityHistorical${OFF};GetGaugesLiquidity (historical)
-  ${CYAN}curveGetGaugesTotalWeightsHistorical${OFF};GetGaugesTotalWeights (historical)
-  ${CYAN}curveGetGaugesTypesHistorical${OFF};GetGaugesTypes (historical)
-  ${CYAN}curveGetGaugesTypesWeightsHistorical${OFF};GetGaugesTypesWeights (historical)
-  ${CYAN}curveGetGaugesWeightsHistorical${OFF};GetGaugesWeights (historical)
-  ${CYAN}curveGetGaugesWeightsVotesHistorical${OFF};GetGaugesWeightsVotes (historical)
-  ${CYAN}curveGetGaugesWithdrawHistorical${OFF};GetGaugesWithdraw (historical)
-  ${CYAN}curveGetHourlyVolumesHistorical${OFF};GetHourlyVolumes (historical)
-  ${CYAN}curveGetLpTokensHistorical${OFF};GetLpTokens (historical)
-  ${CYAN}curveGetPoolsHistorical${OFF};GetPools (historical) 🔥
-  ${CYAN}curveGetProposalsHistorical${OFF};GetProposals (historical)
-  ${CYAN}curveGetProposalsVotesHistorical${OFF};GetProposalsVotes (historical)
-  ${CYAN}curveGetRemoveLiquidityEventsHistorical${OFF};GetRemoveLiquidityEvents (historical)
-  ${CYAN}curveGetRemoveLiquidityOneEventsHistorical${OFF};GetRemoveLiquidityOneEvents (historical)
-  ${CYAN}curveGetSystemStatesHistorical${OFF};GetSystemStates (historical)
-  ${CYAN}curveGetTokensHistorical${OFF};GetTokens (historical) 🔥
-  ${CYAN}curveGetTransferOwnershipEventsHistorical${OFF};GetTransferOwnershipEvents (historical)
-  ${CYAN}curveGetUnderlyingCoinsHistorical${OFF};GetUnderlyingCoins (historical)
-  ${CYAN}curveGetVotingAppsHistorical${OFF};GetVotingApps (historical)
-  ${CYAN}curveGetWeeklyVolumesHistorical${OFF};GetWeeklyVolumes (historical)
+  ${CYAN}curveGetAccountsHistorical${OFF};Accounts (historical)
+  ${CYAN}curveGetAddLiquidityEventsHistorical${OFF};AddLiquidityEvents (historical)
+  ${CYAN}curveGetAdminFeeChangeLogsHistorical${OFF};AdminFeeChangeLogs (historical)
+  ${CYAN}curveGetAmplificationCoeffChangeLogsHistorical${OFF};AmplificationCoeffChangeLogs (historical)
+  ${CYAN}curveGetCoinsHistorical${OFF};Coins (historical)
+  ${CYAN}curveGetContractsHistorical${OFF};Contracts (historical)
+  ${CYAN}curveGetContractsVersionsHistorical${OFF};ContractsVersions (historical)
+  ${CYAN}curveGetDailyVolumesHistorical${OFF};DailyVolumes (historical)
+  ${CYAN}curveGetExchangesHistorical${OFF};Exchanges (historical) 🔥
+  ${CYAN}curveGetFeeChangeLogsHistorical${OFF};FeeChangeLogs (historical)
+  ${CYAN}curveGetGaugesDepositsHistorical${OFF};GaugesDeposits (historical)
+  ${CYAN}curveGetGaugesHistorical${OFF};Gauges (historical)
+  ${CYAN}curveGetGaugesLiquidityHistorical${OFF};GaugesLiquidity (historical)
+  ${CYAN}curveGetGaugesTotalWeightsHistorical${OFF};GaugesTotalWeights (historical)
+  ${CYAN}curveGetGaugesTypesHistorical${OFF};GaugesTypes (historical)
+  ${CYAN}curveGetGaugesTypesWeightsHistorical${OFF};GaugesTypesWeights (historical)
+  ${CYAN}curveGetGaugesWeightsHistorical${OFF};GaugesWeights (historical)
+  ${CYAN}curveGetGaugesWeightsVotesHistorical${OFF};GaugesWeightsVotes (historical)
+  ${CYAN}curveGetGaugesWithdrawHistorical${OFF};GaugesWithdraw (historical)
+  ${CYAN}curveGetHourlyVolumesHistorical${OFF};HourlyVolumes (historical)
+  ${CYAN}curveGetLpTokensHistorical${OFF};LpTokens (historical)
+  ${CYAN}curveGetPoolsHistorical${OFF};Pools (historical) 🔥
+  ${CYAN}curveGetProposalsHistorical${OFF};Proposals (historical)
+  ${CYAN}curveGetProposalsVotesHistorical${OFF};ProposalsVotes (historical)
+  ${CYAN}curveGetRemoveLiquidityEventsHistorical${OFF};RemoveLiquidityEvents (historical)
+  ${CYAN}curveGetRemoveLiquidityOneEventsHistorical${OFF};RemoveLiquidityOneEvents (historical)
+  ${CYAN}curveGetSystemStatesHistorical${OFF};SystemStates (historical)
+  ${CYAN}curveGetTokensHistorical${OFF};Tokens (historical) 🔥
+  ${CYAN}curveGetTransferOwnershipEventsHistorical${OFF};TransferOwnershipEvents (historical)
+  ${CYAN}curveGetUnderlyingCoinsHistorical${OFF};UnderlyingCoins (historical)
+  ${CYAN}curveGetVotingAppsHistorical${OFF};VotingApps (historical)
+  ${CYAN}curveGetWeeklyVolumesHistorical${OFF};WeeklyVolumes (historical)
 EOF
 echo "  $ops" | column -t -s ';'
     echo ""
     echo -e "${BOLD}${WHITE}[dex]${OFF}"
 read -r -d '' ops <<EOF
-  ${CYAN}dexGetBatchesHistorical${OFF};GetBatches (historical)
-  ${CYAN}dexGetDepositsHistorical${OFF};GetDeposits (historical)
-  ${CYAN}dexGetOrdersHistorical${OFF};GetOrders (historical)
-  ${CYAN}dexGetPricesHistorical${OFF};GetPrices (historical)
-  ${CYAN}dexGetSolutionsHistorical${OFF};GetSolutions (historical)
-  ${CYAN}dexGetStatsHistorical${OFF};GetStats (historical)
-  ${CYAN}dexGetTokensHistorical${OFF};GetTokens (historical) 🔥
-  ${CYAN}dexGetTradesHistorical${OFF};GetTrades (historical) 🔥
-  ${CYAN}dexGetUsersHistorical${OFF};GetUsers (historical)
-  ${CYAN}dexGetWithdrawsHistorical${OFF};GetWithdraws (historical)
-  ${CYAN}dexGetWithdrawsRequestsHistorical${OFF};GetWithdrawsRequests (historical)
+  ${CYAN}dexGetBatchesHistorical${OFF};Batches (historical)
+  ${CYAN}dexGetDepositsHistorical${OFF};Deposits (historical)
+  ${CYAN}dexGetOrdersHistorical${OFF};Orders (historical)
+  ${CYAN}dexGetPricesHistorical${OFF};Prices (historical)
+  ${CYAN}dexGetSolutionsHistorical${OFF};Solutions (historical)
+  ${CYAN}dexGetStatsHistorical${OFF};Stats (historical)
+  ${CYAN}dexGetTokensHistorical${OFF};Tokens (historical) 🔥
+  ${CYAN}dexGetTradesHistorical${OFF};Trades (historical) 🔥
+  ${CYAN}dexGetUsersHistorical${OFF};Users (historical)
+  ${CYAN}dexGetWithdrawsHistorical${OFF};Withdraws (historical)
+  ${CYAN}dexGetWithdrawsRequestsHistorical${OFF};WithdrawsRequests (historical)
 EOF
 echo "  $ops" | column -t -s ';'
     echo ""
     echo -e "${BOLD}${WHITE}[sushiswap]${OFF}"
 read -r -d '' ops <<EOF
-  ${CYAN}curveGetExchangesCurrent${OFF};GetExchanges (current) 🔥
-  ${CYAN}dexGetTradesCurrent${OFF};GetTrades (current) 🔥
-  ${CYAN}sushiswapGetBundlesHistorical${OFF};GetBundles (historical)
-  ${CYAN}sushiswapGetBurnsHistorical${OFF};GetBurns (historical)
-  ${CYAN}sushiswapGetDayDataHistorical${OFF};GetDayData (historical)
-  ${CYAN}sushiswapGetFactoryHistorical${OFF};GetFactory (historical)
-  ${CYAN}sushiswapGetHourDataHistorical${OFF};GetHourData (historical)
-  ${CYAN}sushiswapGetLiquidityPositionHistorical${OFF};GetLiquidityPosition (historical)
-  ${CYAN}sushiswapGetLiquidityPositionSnapshotHistorical${OFF};GetLiquidityPositionSnapshot (historical)
-  ${CYAN}sushiswapGetMintsHistorical${OFF};GetMints (historical)
-  ${CYAN}sushiswapGetPoolsCurrent${OFF};GetPools (current) 🔥
-  ${CYAN}sushiswapGetPoolsDayDataHistorical${OFF};GetPoolsDayData (historical)
-  ${CYAN}sushiswapGetPoolsHistorical${OFF};GetPools (historical) 🔥
-  ${CYAN}sushiswapGetPoolsHourDataHistorical${OFF};GetPoolsHourData (historical)
-  ${CYAN}sushiswapGetSwapsCurrent${OFF};GetSwaps (current) 🔥
-  ${CYAN}sushiswapGetSwapsHistorical${OFF};GetSwaps (historical) 🔥
-  ${CYAN}sushiswapGetTokensCurrent${OFF};GetTokens (current) 🔥
-  ${CYAN}sushiswapGetTokensDayDataHistorical${OFF};GetTokensDayData (historical)
-  ${CYAN}sushiswapGetTokensHistorical${OFF};GetTokens (historical) 🔥
-  ${CYAN}sushiswapGetTransactionsHistorical${OFF};GetTransactions (historical)
-  ${CYAN}sushiswapGetUsersHistorical${OFF};GetUsers (historical)
+  ${CYAN}curveGetExchangesCurrent${OFF};Exchanges (current) 🔥
+  ${CYAN}dexGetTradesCurrent${OFF};Trades (current) 🔥
+  ${CYAN}sushiswapGetBundlesHistorical${OFF};Bundles (historical)
+  ${CYAN}sushiswapGetBurnsHistorical${OFF};Burns (historical)
+  ${CYAN}sushiswapGetDayDataHistorical${OFF};DayData (historical)
+  ${CYAN}sushiswapGetFactoryHistorical${OFF};Factory (historical)
+  ${CYAN}sushiswapGetHourDataHistorical${OFF};HourData (historical)
+  ${CYAN}sushiswapGetLiquidityPositionHistorical${OFF};LiquidityPosition (historical)
+  ${CYAN}sushiswapGetLiquidityPositionSnapshotHistorical${OFF};LiquidityPositionSnapshot (historical)
+  ${CYAN}sushiswapGetMintsHistorical${OFF};Mints (historical)
+  ${CYAN}sushiswapGetPoolsCurrent${OFF};Pools (current) 🔥
+  ${CYAN}sushiswapGetPoolsDayDataHistorical${OFF};PoolsDayData (historical)
+  ${CYAN}sushiswapGetPoolsHistorical${OFF};Pools (historical) 🔥
+  ${CYAN}sushiswapGetPoolsHourDataHistorical${OFF};PoolsHourData (historical)
+  ${CYAN}sushiswapGetSwapsCurrent${OFF};Swaps (current) 🔥
+  ${CYAN}sushiswapGetSwapsHistorical${OFF};Swaps (historical) 🔥
+  ${CYAN}sushiswapGetTokensCurrent${OFF};Tokens (current) 🔥
+  ${CYAN}sushiswapGetTokensDayDataHistorical${OFF};TokensDayData (historical)
+  ${CYAN}sushiswapGetTokensHistorical${OFF};Tokens (historical) 🔥
+  ${CYAN}sushiswapGetTransactionsHistorical${OFF};Transactions (historical)
+  ${CYAN}sushiswapGetUsersHistorical${OFF};Users (historical)
 EOF
 echo "  $ops" | column -t -s ';'
     echo ""
     echo -e "${BOLD}${WHITE}[uniswapV2]${OFF}"
 read -r -d '' ops <<EOF
-  ${CYAN}uniswapV2GetBundlesHistorical${OFF};GetBundles (historical)
-  ${CYAN}uniswapV2GetBurnsHistorical${OFF};GetBurns (historical)
-  ${CYAN}uniswapV2GetDayDataHistorical${OFF};GetDayData (historical)
-  ${CYAN}uniswapV2GetFactoryHistorical${OFF};GetFactory (historical)
-  ${CYAN}uniswapV2GetLiquidityPositionsHistorical${OFF};GetLiquidityPositions (historical)
-  ${CYAN}uniswapV2GetLiquidityPositionsSnapshotsHistorical${OFF};GetLiquidityPositionsSnapshots (historical)
-  ${CYAN}uniswapV2GetMintsHistorical${OFF};GetMints (historical)
-  ${CYAN}uniswapV2GetPoolsCurrent${OFF};GetPools (current) 🔥
-  ${CYAN}uniswapV2GetPoolsDayDataHistorical${OFF};GetPoolsDayData (historical)
-  ${CYAN}uniswapV2GetPoolsHistorical${OFF};GetPools (historical) 🔥
-  ${CYAN}uniswapV2GetPoolsHourDataHistorical${OFF};GetPoolsHourData (historical)
-  ${CYAN}uniswapV2GetSwapsCurrent${OFF};GetSwaps (current) 🔥
-  ${CYAN}uniswapV2GetSwapsHistorical${OFF};GetSwaps (historical) 🔥
-  ${CYAN}uniswapV2GetTokensCurrent${OFF};GetTokens (current) 🔥
-  ${CYAN}uniswapV2GetTokensDayDataHistorical${OFF};GetTokensDayData (historical)
-  ${CYAN}uniswapV2GetTokensHistorical${OFF};GetTokens (historical) 🔥
-  ${CYAN}uniswapV2GetTransactionsHistorical${OFF};GetTransactions (historical)
-  ${CYAN}uniswapV2GetUsersHistorical${OFF};GetUsers (historical)
+  ${CYAN}uniswapV2GetBundlesHistorical${OFF};Bundles (historical)
+  ${CYAN}uniswapV2GetBurnsHistorical${OFF};Burns (historical)
+  ${CYAN}uniswapV2GetDayDataHistorical${OFF};DayData (historical)
+  ${CYAN}uniswapV2GetFactoryHistorical${OFF};Factory (historical)
+  ${CYAN}uniswapV2GetLiquidityPositionsHistorical${OFF};LiquidityPositions (historical)
+  ${CYAN}uniswapV2GetLiquidityPositionsSnapshotsHistorical${OFF};LiquidityPositionsSnapshots (historical)
+  ${CYAN}uniswapV2GetMintsHistorical${OFF};Mints (historical)
+  ${CYAN}uniswapV2GetPoolsCurrent${OFF};Pools (current) 🔥
+  ${CYAN}uniswapV2GetPoolsDayDataHistorical${OFF};PoolsDayData (historical)
+  ${CYAN}uniswapV2GetPoolsHistorical${OFF};Pools (historical) 🔥
+  ${CYAN}uniswapV2GetPoolsHourDataHistorical${OFF};PoolsHourData (historical)
+  ${CYAN}uniswapV2GetSwapsCurrent${OFF};Swaps (current) 🔥
+  ${CYAN}uniswapV2GetSwapsHistorical${OFF};Swaps (historical) 🔥
+  ${CYAN}uniswapV2GetTokensCurrent${OFF};Tokens (current) 🔥
+  ${CYAN}uniswapV2GetTokensDayDataHistorical${OFF};TokensDayData (historical)
+  ${CYAN}uniswapV2GetTokensHistorical${OFF};Tokens (historical) 🔥
+  ${CYAN}uniswapV2GetTransactionsHistorical${OFF};Transactions (historical)
+  ${CYAN}uniswapV2GetUsersHistorical${OFF};Users (historical)
 EOF
 echo "  $ops" | column -t -s ';'
     echo ""
     echo -e "${BOLD}${WHITE}[uniswapV3]${OFF}"
 read -r -d '' ops <<EOF
-  ${CYAN}uniswapV3GetBundlesCurrent${OFF};GetBundles (current)
-  ${CYAN}uniswapV3GetBundlesHistorical${OFF};GetBundles (historical)
-  ${CYAN}uniswapV3GetBurnsCurrent${OFF};GetBurns (current)
-  ${CYAN}uniswapV3GetBurnsHistorical${OFF};GetBurns (historical)
-  ${CYAN}uniswapV3GetDayDataCurrent${OFF};GetDayData (current)
-  ${CYAN}uniswapV3GetDayDataHistorical${OFF};GetDayData (historical)
-  ${CYAN}uniswapV3GetFactoryCurrent${OFF};GetFactory (current)
-  ${CYAN}uniswapV3GetFactoryHistorical${OFF};GetFactory (historical)
-  ${CYAN}uniswapV3GetMintsCurrent${OFF};GetMints (current)
-  ${CYAN}uniswapV3GetMintsHistorical${OFF};GetMints (historical)
-  ${CYAN}uniswapV3GetPoolsCurrent${OFF};GetPools (current) 🔥
-  ${CYAN}uniswapV3GetPoolsDayDataCurrent${OFF};GetPoolsDayData (current)
-  ${CYAN}uniswapV3GetPoolsDayDataHistorical${OFF};GetPoolsDayData (historical)
-  ${CYAN}uniswapV3GetPoolsHistorical${OFF};GetPools (historical) 🔥
-  ${CYAN}uniswapV3GetPoolsHourDataCurrent${OFF};GetPoolsHourData (current)
-  ${CYAN}uniswapV3GetPoolsHourDataHistorical${OFF};GetPoolsHourData (historical)
-  ${CYAN}uniswapV3GetPositionsCurrent${OFF};GetPositions (current)
-  ${CYAN}uniswapV3GetPositionsHistorical${OFF};GetPositions (historical)
-  ${CYAN}uniswapV3GetPositionsSnaphotsHistorical${OFF};GetPositionsSnaphots (historical)
-  ${CYAN}uniswapV3GetPositionsSnapshotsCurrent${OFF};GetPositionsSnapshots (current)
-  ${CYAN}uniswapV3GetSwapsCurrent${OFF};GetSwaps (current) 🔥
-  ${CYAN}uniswapV3GetSwapsHistorical${OFF};GetSwaps (historical) 🔥
-  ${CYAN}uniswapV3GetTicksCurrent${OFF};GetTicks (current)
-  ${CYAN}uniswapV3GetTicksDayDataCurrent${OFF};GetTicksDayData (current)
-  ${CYAN}uniswapV3GetTicksDayDataHistorical${OFF};GetTicksDayData (historical)
-  ${CYAN}uniswapV3GetTicksHistorical${OFF};GetTicks (historical)
-  ${CYAN}uniswapV3GetTokensCurrent${OFF};GetTokens (current) 🔥
-  ${CYAN}uniswapV3GetTokensDayDataCurrent${OFF};GetTokensDayData (current)
-  ${CYAN}uniswapV3GetTokensDayDataHistorical${OFF};GetTokensDayData (historical)
-  ${CYAN}uniswapV3GetTokensHistorical${OFF};GetTokens (historical) 🔥
-  ${CYAN}uniswapV3GetTokensHourDataCurrent${OFF};GetTokensHourData (current)
-  ${CYAN}uniswapV3GetTokensHourDataHistorical${OFF};GetTokensHourData (historical)
-  ${CYAN}uniswapV3GetTransactionsHistorical${OFF};GetTransactions (historical)
+  ${CYAN}uniswapV3GetBundlesCurrent${OFF};Bundles (current)
+  ${CYAN}uniswapV3GetBundlesHistorical${OFF};Bundles (historical)
+  ${CYAN}uniswapV3GetBurnsCurrent${OFF};Burns (current)
+  ${CYAN}uniswapV3GetBurnsHistorical${OFF};Burns (historical)
+  ${CYAN}uniswapV3GetDayDataCurrent${OFF};DayData (current)
+  ${CYAN}uniswapV3GetDayDataHistorical${OFF};DayData (historical)
+  ${CYAN}uniswapV3GetFactoryCurrent${OFF};Factory (current)
+  ${CYAN}uniswapV3GetFactoryHistorical${OFF};Factory (historical)
+  ${CYAN}uniswapV3GetMintsCurrent${OFF};Mints (current)
+  ${CYAN}uniswapV3GetMintsHistorical${OFF};Mints (historical)
+  ${CYAN}uniswapV3GetPoolsCurrent${OFF};Pools (current) 🔥
+  ${CYAN}uniswapV3GetPoolsDayDataCurrent${OFF};PoolsDayData (current)
+  ${CYAN}uniswapV3GetPoolsDayDataHistorical${OFF};PoolsDayData (historical)
+  ${CYAN}uniswapV3GetPoolsHistorical${OFF};Pools (historical) 🔥
+  ${CYAN}uniswapV3GetPoolsHourDataCurrent${OFF};PoolsHourData (current)
+  ${CYAN}uniswapV3GetPoolsHourDataHistorical${OFF};PoolsHourData (historical)
+  ${CYAN}uniswapV3GetPositionsCurrent${OFF};Positions (current)
+  ${CYAN}uniswapV3GetPositionsHistorical${OFF};Positions (historical)
+  ${CYAN}uniswapV3GetPositionsSnaphotsHistorical${OFF};PositionsSnaphots (historical)
+  ${CYAN}uniswapV3GetPositionsSnapshotsCurrent${OFF};PositionsSnapshots (current)
+  ${CYAN}uniswapV3GetSwapsCurrent${OFF};Swaps (current) 🔥
+  ${CYAN}uniswapV3GetSwapsHistorical${OFF};Swaps (historical) 🔥
+  ${CYAN}uniswapV3GetTicksCurrent${OFF};Ticks (current)
+  ${CYAN}uniswapV3GetTicksDayDataCurrent${OFF};TicksDayData (current)
+  ${CYAN}uniswapV3GetTicksDayDataHistorical${OFF};TicksDayData (historical)
+  ${CYAN}uniswapV3GetTicksHistorical${OFF};Ticks (historical)
+  ${CYAN}uniswapV3GetTokensCurrent${OFF};Tokens (current) 🔥
+  ${CYAN}uniswapV3GetTokensDayDataCurrent${OFF};TokensDayData (current)
+  ${CYAN}uniswapV3GetTokensDayDataHistorical${OFF};TokensDayData (historical)
+  ${CYAN}uniswapV3GetTokensHistorical${OFF};Tokens (historical) 🔥
+  ${CYAN}uniswapV3GetTokensHourDataCurrent${OFF};TokensHourData (current)
+  ${CYAN}uniswapV3GetTokensHourDataHistorical${OFF};TokensHourData (historical)
+  ${CYAN}uniswapV3GetTransactionsHistorical${OFF};Transactions (historical)
 EOF
 echo "  $ops" | column -t -s ';'
     echo ""
@@ -2073,7 +2073,7 @@ print_version() {
 ##############################################################################
 print_cowGetOrdersHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}cowGetOrdersHistorical - GetOrders (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}cowGetOrdersHistorical - Orders (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets orders." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -2098,7 +2098,7 @@ print_cowGetOrdersHistorical_help() {
 ##############################################################################
 print_cowGetSettlementsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}cowGetSettlementsHistorical - GetSettlements (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}cowGetSettlementsHistorical - Settlements (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets settlements." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -2123,7 +2123,7 @@ print_cowGetSettlementsHistorical_help() {
 ##############################################################################
 print_cowGetTokensHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}cowGetTokensHistorical - GetTokens (historical) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}cowGetTokensHistorical - Tokens (historical) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets tokens." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -2150,7 +2150,7 @@ print_cowGetTokensHistorical_help() {
 ##############################################################################
 print_cowGetTradesHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}cowGetTradesHistorical - GetTrades (historical) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}cowGetTradesHistorical - Trades (historical) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets trades." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -2175,7 +2175,7 @@ print_cowGetTradesHistorical_help() {
 ##############################################################################
 print_cowGetUsersHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}cowGetUsersHistorical - GetUsers (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}cowGetUsersHistorical - Users (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets users." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -2200,7 +2200,7 @@ print_cowGetUsersHistorical_help() {
 ##############################################################################
 print_curveGetAccountsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}curveGetAccountsHistorical - GetAccounts (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}curveGetAccountsHistorical - Accounts (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets accounts." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -2225,7 +2225,7 @@ print_curveGetAccountsHistorical_help() {
 ##############################################################################
 print_curveGetAddLiquidityEventsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}curveGetAddLiquidityEventsHistorical - GetAddLiquidityEvents (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}curveGetAddLiquidityEventsHistorical - AddLiquidityEvents (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets add liquidity events." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -2252,7 +2252,7 @@ print_curveGetAddLiquidityEventsHistorical_help() {
 ##############################################################################
 print_curveGetAdminFeeChangeLogsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}curveGetAdminFeeChangeLogsHistorical - GetAdminFeeChangeLogs (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}curveGetAdminFeeChangeLogsHistorical - AdminFeeChangeLogs (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets admin fee change logs." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -2279,7 +2279,7 @@ print_curveGetAdminFeeChangeLogsHistorical_help() {
 ##############################################################################
 print_curveGetAmplificationCoeffChangeLogsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}curveGetAmplificationCoeffChangeLogsHistorical - GetAmplificationCoeffChangeLogs (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}curveGetAmplificationCoeffChangeLogsHistorical - AmplificationCoeffChangeLogs (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets amplification coeff change logs." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -2306,7 +2306,7 @@ print_curveGetAmplificationCoeffChangeLogsHistorical_help() {
 ##############################################################################
 print_curveGetCoinsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}curveGetCoinsHistorical - GetCoins (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}curveGetCoinsHistorical - Coins (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets coins." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -2333,7 +2333,7 @@ print_curveGetCoinsHistorical_help() {
 ##############################################################################
 print_curveGetContractsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}curveGetContractsHistorical - GetContracts (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}curveGetContractsHistorical - Contracts (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets contracts." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -2360,7 +2360,7 @@ print_curveGetContractsHistorical_help() {
 ##############################################################################
 print_curveGetContractsVersionsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}curveGetContractsVersionsHistorical - GetContractsVersions (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}curveGetContractsVersionsHistorical - ContractsVersions (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets contracts versions." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -2387,7 +2387,7 @@ print_curveGetContractsVersionsHistorical_help() {
 ##############################################################################
 print_curveGetDailyVolumesHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}curveGetDailyVolumesHistorical - GetDailyVolumes (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}curveGetDailyVolumesHistorical - DailyVolumes (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets daily volumes." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -2414,7 +2414,7 @@ print_curveGetDailyVolumesHistorical_help() {
 ##############################################################################
 print_curveGetExchangesHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}curveGetExchangesHistorical - GetExchanges (historical) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}curveGetExchangesHistorical - Exchanges (historical) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets exchanges." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -2441,7 +2441,7 @@ print_curveGetExchangesHistorical_help() {
 ##############################################################################
 print_curveGetFeeChangeLogsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}curveGetFeeChangeLogsHistorical - GetFeeChangeLogs (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}curveGetFeeChangeLogsHistorical - FeeChangeLogs (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets fee change logs." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -2468,7 +2468,7 @@ print_curveGetFeeChangeLogsHistorical_help() {
 ##############################################################################
 print_curveGetGaugesDepositsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}curveGetGaugesDepositsHistorical - GetGaugesDeposits (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}curveGetGaugesDepositsHistorical - GaugesDeposits (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets gauges deposits." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -2493,7 +2493,7 @@ print_curveGetGaugesDepositsHistorical_help() {
 ##############################################################################
 print_curveGetGaugesHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}curveGetGaugesHistorical - GetGauges (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}curveGetGaugesHistorical - Gauges (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets gauges." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -2520,7 +2520,7 @@ print_curveGetGaugesHistorical_help() {
 ##############################################################################
 print_curveGetGaugesLiquidityHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}curveGetGaugesLiquidityHistorical - GetGaugesLiquidity (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}curveGetGaugesLiquidityHistorical - GaugesLiquidity (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets gauges liquidity." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -2545,7 +2545,7 @@ print_curveGetGaugesLiquidityHistorical_help() {
 ##############################################################################
 print_curveGetGaugesTotalWeightsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}curveGetGaugesTotalWeightsHistorical - GetGaugesTotalWeights (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}curveGetGaugesTotalWeightsHistorical - GaugesTotalWeights (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets gauges total weights." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -2570,7 +2570,7 @@ print_curveGetGaugesTotalWeightsHistorical_help() {
 ##############################################################################
 print_curveGetGaugesTypesHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}curveGetGaugesTypesHistorical - GetGaugesTypes (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}curveGetGaugesTypesHistorical - GaugesTypes (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets gauges types." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -2595,7 +2595,7 @@ print_curveGetGaugesTypesHistorical_help() {
 ##############################################################################
 print_curveGetGaugesTypesWeightsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}curveGetGaugesTypesWeightsHistorical - GetGaugesTypesWeights (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}curveGetGaugesTypesWeightsHistorical - GaugesTypesWeights (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets gauges types weights." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -2620,7 +2620,7 @@ print_curveGetGaugesTypesWeightsHistorical_help() {
 ##############################################################################
 print_curveGetGaugesWeightsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}curveGetGaugesWeightsHistorical - GetGaugesWeights (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}curveGetGaugesWeightsHistorical - GaugesWeights (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets gauges weights." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -2645,7 +2645,7 @@ print_curveGetGaugesWeightsHistorical_help() {
 ##############################################################################
 print_curveGetGaugesWeightsVotesHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}curveGetGaugesWeightsVotesHistorical - GetGaugesWeightsVotes (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}curveGetGaugesWeightsVotesHistorical - GaugesWeightsVotes (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets gauges weights votes." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -2670,7 +2670,7 @@ print_curveGetGaugesWeightsVotesHistorical_help() {
 ##############################################################################
 print_curveGetGaugesWithdrawHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}curveGetGaugesWithdrawHistorical - GetGaugesWithdraw (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}curveGetGaugesWithdrawHistorical - GaugesWithdraw (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets gauges withdraws." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -2695,7 +2695,7 @@ print_curveGetGaugesWithdrawHistorical_help() {
 ##############################################################################
 print_curveGetHourlyVolumesHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}curveGetHourlyVolumesHistorical - GetHourlyVolumes (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}curveGetHourlyVolumesHistorical - HourlyVolumes (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets hourly volumes." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -2722,7 +2722,7 @@ print_curveGetHourlyVolumesHistorical_help() {
 ##############################################################################
 print_curveGetLpTokensHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}curveGetLpTokensHistorical - GetLpTokens (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}curveGetLpTokensHistorical - LpTokens (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets lp tokens." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -2749,7 +2749,7 @@ print_curveGetLpTokensHistorical_help() {
 ##############################################################################
 print_curveGetPoolsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}curveGetPoolsHistorical - GetPools (historical) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}curveGetPoolsHistorical - Pools (historical) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets pools." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -2776,7 +2776,7 @@ print_curveGetPoolsHistorical_help() {
 ##############################################################################
 print_curveGetProposalsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}curveGetProposalsHistorical - GetProposals (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}curveGetProposalsHistorical - Proposals (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets proposals." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -2801,7 +2801,7 @@ print_curveGetProposalsHistorical_help() {
 ##############################################################################
 print_curveGetProposalsVotesHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}curveGetProposalsVotesHistorical - GetProposalsVotes (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}curveGetProposalsVotesHistorical - ProposalsVotes (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets proposals votes." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -2826,7 +2826,7 @@ print_curveGetProposalsVotesHistorical_help() {
 ##############################################################################
 print_curveGetRemoveLiquidityEventsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}curveGetRemoveLiquidityEventsHistorical - GetRemoveLiquidityEvents (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}curveGetRemoveLiquidityEventsHistorical - RemoveLiquidityEvents (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets remove liquidity events." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -2853,7 +2853,7 @@ print_curveGetRemoveLiquidityEventsHistorical_help() {
 ##############################################################################
 print_curveGetRemoveLiquidityOneEventsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}curveGetRemoveLiquidityOneEventsHistorical - GetRemoveLiquidityOneEvents (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}curveGetRemoveLiquidityOneEventsHistorical - RemoveLiquidityOneEvents (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets remove liquidity one events." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -2880,7 +2880,7 @@ print_curveGetRemoveLiquidityOneEventsHistorical_help() {
 ##############################################################################
 print_curveGetSystemStatesHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}curveGetSystemStatesHistorical - GetSystemStates (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}curveGetSystemStatesHistorical - SystemStates (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets system states." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -2905,7 +2905,7 @@ print_curveGetSystemStatesHistorical_help() {
 ##############################################################################
 print_curveGetTokensHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}curveGetTokensHistorical - GetTokens (historical) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}curveGetTokensHistorical - Tokens (historical) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets tokens." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -2932,7 +2932,7 @@ print_curveGetTokensHistorical_help() {
 ##############################################################################
 print_curveGetTransferOwnershipEventsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}curveGetTransferOwnershipEventsHistorical - GetTransferOwnershipEvents (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}curveGetTransferOwnershipEventsHistorical - TransferOwnershipEvents (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets transfer ownership events." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -2959,7 +2959,7 @@ print_curveGetTransferOwnershipEventsHistorical_help() {
 ##############################################################################
 print_curveGetUnderlyingCoinsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}curveGetUnderlyingCoinsHistorical - GetUnderlyingCoins (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}curveGetUnderlyingCoinsHistorical - UnderlyingCoins (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets underlying coins." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -2986,7 +2986,7 @@ print_curveGetUnderlyingCoinsHistorical_help() {
 ##############################################################################
 print_curveGetVotingAppsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}curveGetVotingAppsHistorical - GetVotingApps (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}curveGetVotingAppsHistorical - VotingApps (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets voting apps." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -3011,7 +3011,7 @@ print_curveGetVotingAppsHistorical_help() {
 ##############################################################################
 print_curveGetWeeklyVolumesHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}curveGetWeeklyVolumesHistorical - GetWeeklyVolumes (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}curveGetWeeklyVolumesHistorical - WeeklyVolumes (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets weekly volumes." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -3038,7 +3038,7 @@ print_curveGetWeeklyVolumesHistorical_help() {
 ##############################################################################
 print_dexGetBatchesHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dexGetBatchesHistorical - GetBatches (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}dexGetBatchesHistorical - Batches (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets batches." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -3063,7 +3063,7 @@ print_dexGetBatchesHistorical_help() {
 ##############################################################################
 print_dexGetDepositsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dexGetDepositsHistorical - GetDeposits (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}dexGetDepositsHistorical - Deposits (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets deposits." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -3090,7 +3090,7 @@ print_dexGetDepositsHistorical_help() {
 ##############################################################################
 print_dexGetOrdersHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dexGetOrdersHistorical - GetOrders (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}dexGetOrdersHistorical - Orders (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets orders." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -3117,7 +3117,7 @@ print_dexGetOrdersHistorical_help() {
 ##############################################################################
 print_dexGetPricesHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dexGetPricesHistorical - GetPrices (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}dexGetPricesHistorical - Prices (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets prices." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -3144,7 +3144,7 @@ print_dexGetPricesHistorical_help() {
 ##############################################################################
 print_dexGetSolutionsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dexGetSolutionsHistorical - GetSolutions (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}dexGetSolutionsHistorical - Solutions (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets solutions." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -3171,7 +3171,7 @@ print_dexGetSolutionsHistorical_help() {
 ##############################################################################
 print_dexGetStatsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dexGetStatsHistorical - GetStats (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}dexGetStatsHistorical - Stats (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets stats." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -3196,7 +3196,7 @@ print_dexGetStatsHistorical_help() {
 ##############################################################################
 print_dexGetTokensHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dexGetTokensHistorical - GetTokens (historical) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}dexGetTokensHistorical - Tokens (historical) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets tokens." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -3223,7 +3223,7 @@ print_dexGetTokensHistorical_help() {
 ##############################################################################
 print_dexGetTradesHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dexGetTradesHistorical - GetTrades (historical) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}dexGetTradesHistorical - Trades (historical) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets trades." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -3248,7 +3248,7 @@ print_dexGetTradesHistorical_help() {
 ##############################################################################
 print_dexGetUsersHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dexGetUsersHistorical - GetUsers (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}dexGetUsersHistorical - Users (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets users." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -3273,7 +3273,7 @@ print_dexGetUsersHistorical_help() {
 ##############################################################################
 print_dexGetWithdrawsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dexGetWithdrawsHistorical - GetWithdraws (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}dexGetWithdrawsHistorical - Withdraws (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets withdraws." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -3300,7 +3300,7 @@ print_dexGetWithdrawsHistorical_help() {
 ##############################################################################
 print_dexGetWithdrawsRequestsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dexGetWithdrawsRequestsHistorical - GetWithdrawsRequests (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}dexGetWithdrawsRequestsHistorical - WithdrawsRequests (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets withdraws requests." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -3327,7 +3327,7 @@ print_dexGetWithdrawsRequestsHistorical_help() {
 ##############################################################################
 print_curveGetExchangesCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}curveGetExchangesCurrent - GetExchanges (current) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}curveGetExchangesCurrent - Exchanges (current) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets exchanges." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -3343,7 +3343,7 @@ print_curveGetExchangesCurrent_help() {
 ##############################################################################
 print_dexGetTradesCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dexGetTradesCurrent - GetTrades (current) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}dexGetTradesCurrent - Trades (current) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets trades." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -3359,7 +3359,7 @@ print_dexGetTradesCurrent_help() {
 ##############################################################################
 print_sushiswapGetBundlesHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}sushiswapGetBundlesHistorical - GetBundles (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}sushiswapGetBundlesHistorical - Bundles (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets bundles." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -3384,7 +3384,7 @@ print_sushiswapGetBundlesHistorical_help() {
 ##############################################################################
 print_sushiswapGetBurnsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}sushiswapGetBurnsHistorical - GetBurns (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}sushiswapGetBurnsHistorical - Burns (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets burns." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -3411,7 +3411,7 @@ print_sushiswapGetBurnsHistorical_help() {
 ##############################################################################
 print_sushiswapGetDayDataHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}sushiswapGetDayDataHistorical - GetDayData (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}sushiswapGetDayDataHistorical - DayData (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets day data." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -3436,7 +3436,7 @@ print_sushiswapGetDayDataHistorical_help() {
 ##############################################################################
 print_sushiswapGetFactoryHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}sushiswapGetFactoryHistorical - GetFactory (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}sushiswapGetFactoryHistorical - Factory (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets factory." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -3461,7 +3461,7 @@ print_sushiswapGetFactoryHistorical_help() {
 ##############################################################################
 print_sushiswapGetHourDataHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}sushiswapGetHourDataHistorical - GetHourData (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}sushiswapGetHourDataHistorical - HourData (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets hour data." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -3486,7 +3486,7 @@ print_sushiswapGetHourDataHistorical_help() {
 ##############################################################################
 print_sushiswapGetLiquidityPositionHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}sushiswapGetLiquidityPositionHistorical - GetLiquidityPosition (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}sushiswapGetLiquidityPositionHistorical - LiquidityPosition (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets liquidity position." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -3513,7 +3513,7 @@ print_sushiswapGetLiquidityPositionHistorical_help() {
 ##############################################################################
 print_sushiswapGetLiquidityPositionSnapshotHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}sushiswapGetLiquidityPositionSnapshotHistorical - GetLiquidityPositionSnapshot (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}sushiswapGetLiquidityPositionSnapshotHistorical - LiquidityPositionSnapshot (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets liquidity position snapshot." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -3540,7 +3540,7 @@ print_sushiswapGetLiquidityPositionSnapshotHistorical_help() {
 ##############################################################################
 print_sushiswapGetMintsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}sushiswapGetMintsHistorical - GetMints (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}sushiswapGetMintsHistorical - Mints (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets mints." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -3567,7 +3567,7 @@ print_sushiswapGetMintsHistorical_help() {
 ##############################################################################
 print_sushiswapGetPoolsCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}sushiswapGetPoolsCurrent - GetPools (current) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}sushiswapGetPoolsCurrent - Pools (current) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets pools." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -3583,7 +3583,7 @@ print_sushiswapGetPoolsCurrent_help() {
 ##############################################################################
 print_sushiswapGetPoolsDayDataHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}sushiswapGetPoolsDayDataHistorical - GetPoolsDayData (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}sushiswapGetPoolsDayDataHistorical - PoolsDayData (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets pools day data." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -3610,7 +3610,7 @@ print_sushiswapGetPoolsDayDataHistorical_help() {
 ##############################################################################
 print_sushiswapGetPoolsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}sushiswapGetPoolsHistorical - GetPools (historical) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}sushiswapGetPoolsHistorical - Pools (historical) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets list of pools for given filters." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -3637,7 +3637,7 @@ print_sushiswapGetPoolsHistorical_help() {
 ##############################################################################
 print_sushiswapGetPoolsHourDataHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}sushiswapGetPoolsHourDataHistorical - GetPoolsHourData (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}sushiswapGetPoolsHourDataHistorical - PoolsHourData (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets pools tracked each our." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -3664,7 +3664,7 @@ print_sushiswapGetPoolsHourDataHistorical_help() {
 ##############################################################################
 print_sushiswapGetSwapsCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}sushiswapGetSwapsCurrent - GetSwaps (current) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}sushiswapGetSwapsCurrent - Swaps (current) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets swaps." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -3680,7 +3680,7 @@ print_sushiswapGetSwapsCurrent_help() {
 ##############################################################################
 print_sushiswapGetSwapsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}sushiswapGetSwapsHistorical - GetSwaps (historical) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}sushiswapGetSwapsHistorical - Swaps (historical) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets list of swaps for given filters." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -3707,7 +3707,7 @@ print_sushiswapGetSwapsHistorical_help() {
 ##############################################################################
 print_sushiswapGetTokensCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}sushiswapGetTokensCurrent - GetTokens (current) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}sushiswapGetTokensCurrent - Tokens (current) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets tokens." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -3723,7 +3723,7 @@ print_sushiswapGetTokensCurrent_help() {
 ##############################################################################
 print_sushiswapGetTokensDayDataHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}sushiswapGetTokensDayDataHistorical - GetTokensDayData (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}sushiswapGetTokensDayDataHistorical - TokensDayData (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets tokens day data." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -3750,7 +3750,7 @@ print_sushiswapGetTokensDayDataHistorical_help() {
 ##############################################################################
 print_sushiswapGetTokensHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}sushiswapGetTokensHistorical - GetTokens (historical) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}sushiswapGetTokensHistorical - Tokens (historical) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets list of tokens for given filters." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -3777,7 +3777,7 @@ print_sushiswapGetTokensHistorical_help() {
 ##############################################################################
 print_sushiswapGetTransactionsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}sushiswapGetTransactionsHistorical - GetTransactions (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}sushiswapGetTransactionsHistorical - Transactions (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets transactions." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -3802,7 +3802,7 @@ print_sushiswapGetTransactionsHistorical_help() {
 ##############################################################################
 print_sushiswapGetUsersHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}sushiswapGetUsersHistorical - GetUsers (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}sushiswapGetUsersHistorical - Users (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets users." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -3827,7 +3827,7 @@ print_sushiswapGetUsersHistorical_help() {
 ##############################################################################
 print_uniswapV2GetBundlesHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV2GetBundlesHistorical - GetBundles (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV2GetBundlesHistorical - Bundles (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets bundles." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -3852,7 +3852,7 @@ print_uniswapV2GetBundlesHistorical_help() {
 ##############################################################################
 print_uniswapV2GetBurnsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV2GetBurnsHistorical - GetBurns (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV2GetBurnsHistorical - Burns (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets burns." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -3879,7 +3879,7 @@ print_uniswapV2GetBurnsHistorical_help() {
 ##############################################################################
 print_uniswapV2GetDayDataHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV2GetDayDataHistorical - GetDayData (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV2GetDayDataHistorical - DayData (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets uniswapv2 day data." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -3904,7 +3904,7 @@ print_uniswapV2GetDayDataHistorical_help() {
 ##############################################################################
 print_uniswapV2GetFactoryHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV2GetFactoryHistorical - GetFactory (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV2GetFactoryHistorical - Factory (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets factory." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -3929,7 +3929,7 @@ print_uniswapV2GetFactoryHistorical_help() {
 ##############################################################################
 print_uniswapV2GetLiquidityPositionsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV2GetLiquidityPositionsHistorical - GetLiquidityPositions (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV2GetLiquidityPositionsHistorical - LiquidityPositions (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets liquidity positions." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -3956,7 +3956,7 @@ print_uniswapV2GetLiquidityPositionsHistorical_help() {
 ##############################################################################
 print_uniswapV2GetLiquidityPositionsSnapshotsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV2GetLiquidityPositionsSnapshotsHistorical - GetLiquidityPositionsSnapshots (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV2GetLiquidityPositionsSnapshotsHistorical - LiquidityPositionsSnapshots (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets liquidity positions snapshots." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -3983,7 +3983,7 @@ print_uniswapV2GetLiquidityPositionsSnapshotsHistorical_help() {
 ##############################################################################
 print_uniswapV2GetMintsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV2GetMintsHistorical - GetMints (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV2GetMintsHistorical - Mints (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets mints." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -4010,7 +4010,7 @@ print_uniswapV2GetMintsHistorical_help() {
 ##############################################################################
 print_uniswapV2GetPoolsCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV2GetPoolsCurrent - GetPools (current) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV2GetPoolsCurrent - Pools (current) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets pools." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -4029,7 +4029,7 @@ print_uniswapV2GetPoolsCurrent_help() {
 ##############################################################################
 print_uniswapV2GetPoolsDayDataHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV2GetPoolsDayDataHistorical - GetPoolsDayData (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV2GetPoolsDayDataHistorical - PoolsDayData (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets pools day data." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -4056,7 +4056,7 @@ print_uniswapV2GetPoolsDayDataHistorical_help() {
 ##############################################################################
 print_uniswapV2GetPoolsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV2GetPoolsHistorical - GetPools (historical) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV2GetPoolsHistorical - Pools (historical) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets pools." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -4083,7 +4083,7 @@ print_uniswapV2GetPoolsHistorical_help() {
 ##############################################################################
 print_uniswapV2GetPoolsHourDataHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV2GetPoolsHourDataHistorical - GetPoolsHourData (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV2GetPoolsHourDataHistorical - PoolsHourData (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets pools tracked each our." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -4110,7 +4110,7 @@ print_uniswapV2GetPoolsHourDataHistorical_help() {
 ##############################################################################
 print_uniswapV2GetSwapsCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV2GetSwapsCurrent - GetSwaps (current) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV2GetSwapsCurrent - Swaps (current) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets swaps." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -4126,7 +4126,7 @@ print_uniswapV2GetSwapsCurrent_help() {
 ##############################################################################
 print_uniswapV2GetSwapsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV2GetSwapsHistorical - GetSwaps (historical) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV2GetSwapsHistorical - Swaps (historical) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets swaps." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -4153,7 +4153,7 @@ print_uniswapV2GetSwapsHistorical_help() {
 ##############################################################################
 print_uniswapV2GetTokensCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV2GetTokensCurrent - GetTokens (current) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV2GetTokensCurrent - Tokens (current) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets tokens." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -4169,7 +4169,7 @@ print_uniswapV2GetTokensCurrent_help() {
 ##############################################################################
 print_uniswapV2GetTokensDayDataHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV2GetTokensDayDataHistorical - GetTokensDayData (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV2GetTokensDayDataHistorical - TokensDayData (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets tokens day data." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -4196,7 +4196,7 @@ print_uniswapV2GetTokensDayDataHistorical_help() {
 ##############################################################################
 print_uniswapV2GetTokensHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV2GetTokensHistorical - GetTokens (historical) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV2GetTokensHistorical - Tokens (historical) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets tokens." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -4223,7 +4223,7 @@ print_uniswapV2GetTokensHistorical_help() {
 ##############################################################################
 print_uniswapV2GetTransactionsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV2GetTransactionsHistorical - GetTransactions (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV2GetTransactionsHistorical - Transactions (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets transactions." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -4248,7 +4248,7 @@ print_uniswapV2GetTransactionsHistorical_help() {
 ##############################################################################
 print_uniswapV2GetUsersHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV2GetUsersHistorical - GetUsers (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV2GetUsersHistorical - Users (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets users." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -4273,7 +4273,7 @@ print_uniswapV2GetUsersHistorical_help() {
 ##############################################################################
 print_uniswapV3GetBundlesCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV3GetBundlesCurrent - GetBundles (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3GetBundlesCurrent - Bundles (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets bundles." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -4289,7 +4289,7 @@ print_uniswapV3GetBundlesCurrent_help() {
 ##############################################################################
 print_uniswapV3GetBundlesHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV3GetBundlesHistorical - GetBundles (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3GetBundlesHistorical - Bundles (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets bundles." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -4314,7 +4314,7 @@ print_uniswapV3GetBundlesHistorical_help() {
 ##############################################################################
 print_uniswapV3GetBurnsCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV3GetBurnsCurrent - GetBurns (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3GetBurnsCurrent - Burns (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets burns." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -4333,7 +4333,7 @@ print_uniswapV3GetBurnsCurrent_help() {
 ##############################################################################
 print_uniswapV3GetBurnsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV3GetBurnsHistorical - GetBurns (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3GetBurnsHistorical - Burns (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets burns." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -4360,7 +4360,7 @@ print_uniswapV3GetBurnsHistorical_help() {
 ##############################################################################
 print_uniswapV3GetDayDataCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV3GetDayDataCurrent - GetDayData (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3GetDayDataCurrent - DayData (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets uniswapv3 day data." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -4376,7 +4376,7 @@ print_uniswapV3GetDayDataCurrent_help() {
 ##############################################################################
 print_uniswapV3GetDayDataHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV3GetDayDataHistorical - GetDayData (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3GetDayDataHistorical - DayData (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets uniswapv3 day data." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -4401,7 +4401,7 @@ print_uniswapV3GetDayDataHistorical_help() {
 ##############################################################################
 print_uniswapV3GetFactoryCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV3GetFactoryCurrent - GetFactory (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3GetFactoryCurrent - Factory (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets factory." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -4417,7 +4417,7 @@ print_uniswapV3GetFactoryCurrent_help() {
 ##############################################################################
 print_uniswapV3GetFactoryHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV3GetFactoryHistorical - GetFactory (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3GetFactoryHistorical - Factory (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets factory." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -4442,7 +4442,7 @@ print_uniswapV3GetFactoryHistorical_help() {
 ##############################################################################
 print_uniswapV3GetMintsCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV3GetMintsCurrent - GetMints (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3GetMintsCurrent - Mints (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets mints." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -4461,7 +4461,7 @@ print_uniswapV3GetMintsCurrent_help() {
 ##############################################################################
 print_uniswapV3GetMintsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV3GetMintsHistorical - GetMints (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3GetMintsHistorical - Mints (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets mints." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -4488,7 +4488,7 @@ print_uniswapV3GetMintsHistorical_help() {
 ##############################################################################
 print_uniswapV3GetPoolsCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV3GetPoolsCurrent - GetPools (current) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3GetPoolsCurrent - Pools (current) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets pools." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -4507,7 +4507,7 @@ print_uniswapV3GetPoolsCurrent_help() {
 ##############################################################################
 print_uniswapV3GetPoolsDayDataCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV3GetPoolsDayDataCurrent - GetPoolsDayData (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3GetPoolsDayDataCurrent - PoolsDayData (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets pools day data." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -4526,7 +4526,7 @@ print_uniswapV3GetPoolsDayDataCurrent_help() {
 ##############################################################################
 print_uniswapV3GetPoolsDayDataHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV3GetPoolsDayDataHistorical - GetPoolsDayData (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3GetPoolsDayDataHistorical - PoolsDayData (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets pools day data." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -4553,7 +4553,7 @@ print_uniswapV3GetPoolsDayDataHistorical_help() {
 ##############################################################################
 print_uniswapV3GetPoolsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV3GetPoolsHistorical - GetPools (historical) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3GetPoolsHistorical - Pools (historical) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets pools." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -4580,7 +4580,7 @@ print_uniswapV3GetPoolsHistorical_help() {
 ##############################################################################
 print_uniswapV3GetPoolsHourDataCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV3GetPoolsHourDataCurrent - GetPoolsHourData (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3GetPoolsHourDataCurrent - PoolsHourData (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets pools hour data." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -4599,7 +4599,7 @@ print_uniswapV3GetPoolsHourDataCurrent_help() {
 ##############################################################################
 print_uniswapV3GetPoolsHourDataHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV3GetPoolsHourDataHistorical - GetPoolsHourData (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3GetPoolsHourDataHistorical - PoolsHourData (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets pools hour data." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -4626,7 +4626,7 @@ print_uniswapV3GetPoolsHourDataHistorical_help() {
 ##############################################################################
 print_uniswapV3GetPositionsCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV3GetPositionsCurrent - GetPositions (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3GetPositionsCurrent - Positions (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets positions." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -4645,7 +4645,7 @@ print_uniswapV3GetPositionsCurrent_help() {
 ##############################################################################
 print_uniswapV3GetPositionsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV3GetPositionsHistorical - GetPositions (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3GetPositionsHistorical - Positions (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets positions." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -4672,7 +4672,7 @@ print_uniswapV3GetPositionsHistorical_help() {
 ##############################################################################
 print_uniswapV3GetPositionsSnaphotsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV3GetPositionsSnaphotsHistorical - GetPositionsSnaphots (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3GetPositionsSnaphotsHistorical - PositionsSnaphots (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets positions snapshots." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -4699,7 +4699,7 @@ print_uniswapV3GetPositionsSnaphotsHistorical_help() {
 ##############################################################################
 print_uniswapV3GetPositionsSnapshotsCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV3GetPositionsSnapshotsCurrent - GetPositionsSnapshots (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3GetPositionsSnapshotsCurrent - PositionsSnapshots (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets positions snapshots." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -4718,7 +4718,7 @@ print_uniswapV3GetPositionsSnapshotsCurrent_help() {
 ##############################################################################
 print_uniswapV3GetSwapsCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV3GetSwapsCurrent - GetSwaps (current) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3GetSwapsCurrent - Swaps (current) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets swaps." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -4737,7 +4737,7 @@ print_uniswapV3GetSwapsCurrent_help() {
 ##############################################################################
 print_uniswapV3GetSwapsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV3GetSwapsHistorical - GetSwaps (historical) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3GetSwapsHistorical - Swaps (historical) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets swaps." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -4764,7 +4764,7 @@ print_uniswapV3GetSwapsHistorical_help() {
 ##############################################################################
 print_uniswapV3GetTicksCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV3GetTicksCurrent - GetTicks (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3GetTicksCurrent - Ticks (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets ticks." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -4783,7 +4783,7 @@ print_uniswapV3GetTicksCurrent_help() {
 ##############################################################################
 print_uniswapV3GetTicksDayDataCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV3GetTicksDayDataCurrent - GetTicksDayData (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3GetTicksDayDataCurrent - TicksDayData (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets ticks day data." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -4802,7 +4802,7 @@ print_uniswapV3GetTicksDayDataCurrent_help() {
 ##############################################################################
 print_uniswapV3GetTicksDayDataHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV3GetTicksDayDataHistorical - GetTicksDayData (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3GetTicksDayDataHistorical - TicksDayData (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets ticks day data." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -4829,7 +4829,7 @@ print_uniswapV3GetTicksDayDataHistorical_help() {
 ##############################################################################
 print_uniswapV3GetTicksHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV3GetTicksHistorical - GetTicks (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3GetTicksHistorical - Ticks (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets ticks." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -4856,7 +4856,7 @@ print_uniswapV3GetTicksHistorical_help() {
 ##############################################################################
 print_uniswapV3GetTokensCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV3GetTokensCurrent - GetTokens (current) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3GetTokensCurrent - Tokens (current) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets tokens." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -4875,7 +4875,7 @@ print_uniswapV3GetTokensCurrent_help() {
 ##############################################################################
 print_uniswapV3GetTokensDayDataCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV3GetTokensDayDataCurrent - GetTokensDayData (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3GetTokensDayDataCurrent - TokensDayData (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets tokens day data." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -4894,7 +4894,7 @@ print_uniswapV3GetTokensDayDataCurrent_help() {
 ##############################################################################
 print_uniswapV3GetTokensDayDataHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV3GetTokensDayDataHistorical - GetTokensDayData (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3GetTokensDayDataHistorical - TokensDayData (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets tokens day data." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -4921,7 +4921,7 @@ print_uniswapV3GetTokensDayDataHistorical_help() {
 ##############################################################################
 print_uniswapV3GetTokensHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV3GetTokensHistorical - GetTokens (historical) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3GetTokensHistorical - Tokens (historical) 🔥${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets tokens." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -4948,7 +4948,7 @@ print_uniswapV3GetTokensHistorical_help() {
 ##############################################################################
 print_uniswapV3GetTokensHourDataCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV3GetTokensHourDataCurrent - GetTokensHourData (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3GetTokensHourDataCurrent - TokensHourData (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets tokens hour data." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -4967,7 +4967,7 @@ print_uniswapV3GetTokensHourDataCurrent_help() {
 ##############################################################################
 print_uniswapV3GetTokensHourDataHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV3GetTokensHourDataHistorical - GetTokensHourData (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3GetTokensHourDataHistorical - TokensHourData (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets tokens hour data." | paste -sd' ' | fold -sw 80
     echo -e ""
@@ -4994,7 +4994,7 @@ print_uniswapV3GetTokensHourDataHistorical_help() {
 ##############################################################################
 print_uniswapV3GetTransactionsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV3GetTransactionsHistorical - GetTransactions (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3GetTransactionsHistorical - Transactions (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Gets transactions." | paste -sd' ' | fold -sw 80
     echo -e ""

@@ -4,53 +4,53 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Invoke-UniswapV3GetBundlesCurrent**](UniswapV3Api.md#Invoke-UniswapV3GetBundlesCurrent) | **GET** /dapps/uniswapv3/bundles/current | GetBundles (current)
-[**Invoke-UniswapV3GetBundlesHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetBundlesHistorical) | **GET** /dapps/uniswapv3/bundles/historical | GetBundles (historical)
-[**Invoke-UniswapV3GetBurnsCurrent**](UniswapV3Api.md#Invoke-UniswapV3GetBurnsCurrent) | **GET** /dapps/uniswapv3/burns/current | GetBurns (current)
-[**Invoke-UniswapV3GetBurnsHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetBurnsHistorical) | **GET** /dapps/uniswapv3/burns/historical | GetBurns (historical)
-[**Invoke-UniswapV3GetDayDataCurrent**](UniswapV3Api.md#Invoke-UniswapV3GetDayDataCurrent) | **GET** /dapps/uniswapv3/dayData/current | GetDayData (current)
-[**Invoke-UniswapV3GetDayDataHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetDayDataHistorical) | **GET** /dapps/uniswapv3/dayData/historical | GetDayData (historical)
-[**Invoke-UniswapV3GetFactoryCurrent**](UniswapV3Api.md#Invoke-UniswapV3GetFactoryCurrent) | **GET** /dapps/uniswapv3/factory/current | GetFactory (current)
-[**Invoke-UniswapV3GetFactoryHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetFactoryHistorical) | **GET** /dapps/uniswapv3/factory/historical | GetFactory (historical)
-[**Invoke-UniswapV3GetMintsCurrent**](UniswapV3Api.md#Invoke-UniswapV3GetMintsCurrent) | **GET** /dapps/uniswapv3/mints/current | GetMints (current)
-[**Invoke-UniswapV3GetMintsHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetMintsHistorical) | **GET** /dapps/uniswapv3/mints/historical | GetMints (historical)
-[**Invoke-UniswapV3GetPoolsDayDataCurrent**](UniswapV3Api.md#Invoke-UniswapV3GetPoolsDayDataCurrent) | **GET** /dapps/uniswapv3/poolsDayData/current | GetPoolsDayData (current)
-[**Invoke-UniswapV3GetPoolsDayDataHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetPoolsDayDataHistorical) | **GET** /dapps/uniswapv3/poolsDayData/historical | GetPoolsDayData (historical)
-[**Invoke-UniswapV3GetPoolsHourDataCurrent**](UniswapV3Api.md#Invoke-UniswapV3GetPoolsHourDataCurrent) | **GET** /dapps/uniswapv3/poolsHourData/current | GetPoolsHourData (current)
-[**Invoke-UniswapV3GetPoolsHourDataHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetPoolsHourDataHistorical) | **GET** /dapps/uniswapv3/poolsHourData/historical | GetPoolsHourData (historical)
-[**Invoke-UniswapV3GetPoolsCurrent**](UniswapV3Api.md#Invoke-UniswapV3GetPoolsCurrent) | **GET** /dapps/uniswapv3/pools/current | GetPools (current) 🔥
-[**Invoke-UniswapV3GetPoolsHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetPoolsHistorical) | **GET** /dapps/uniswapv3/pools/historical | GetPools (historical) 🔥
-[**Invoke-UniswapV3GetPositionsSnaphotsHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetPositionsSnaphotsHistorical) | **GET** /dapps/uniswapv3/positionsSnapshots/historical | GetPositionsSnaphots (historical)
-[**Invoke-UniswapV3GetPositionsSnapshotsCurrent**](UniswapV3Api.md#Invoke-UniswapV3GetPositionsSnapshotsCurrent) | **GET** /dapps/uniswapv3/positionSnapshots/current | GetPositionsSnapshots (current)
-[**Invoke-UniswapV3GetPositionsCurrent**](UniswapV3Api.md#Invoke-UniswapV3GetPositionsCurrent) | **GET** /dapps/uniswapv3/positions/current | GetPositions (current)
-[**Invoke-UniswapV3GetPositionsHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetPositionsHistorical) | **GET** /dapps/uniswapv3/positions/historical | GetPositions (historical)
-[**Invoke-UniswapV3GetSwapsCurrent**](UniswapV3Api.md#Invoke-UniswapV3GetSwapsCurrent) | **GET** /dapps/uniswapv3/swaps/current | GetSwaps (current) 🔥
-[**Invoke-UniswapV3GetSwapsHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetSwapsHistorical) | **GET** /dapps/uniswapv3/swaps/historical | GetSwaps (historical) 🔥
-[**Invoke-UniswapV3GetTicksDayDataCurrent**](UniswapV3Api.md#Invoke-UniswapV3GetTicksDayDataCurrent) | **GET** /dapps/uniswapv3/ticksDayData/current | GetTicksDayData (current)
-[**Invoke-UniswapV3GetTicksDayDataHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetTicksDayDataHistorical) | **GET** /dapps/uniswapv3/ticksDayData/historical | GetTicksDayData (historical)
-[**Invoke-UniswapV3GetTicksCurrent**](UniswapV3Api.md#Invoke-UniswapV3GetTicksCurrent) | **GET** /dapps/uniswapv3/ticks/current | GetTicks (current)
-[**Invoke-UniswapV3GetTicksHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetTicksHistorical) | **GET** /dapps/uniswapv3/ticks/historical | GetTicks (historical)
-[**Invoke-UniswapV3GetTokensDayDataCurrent**](UniswapV3Api.md#Invoke-UniswapV3GetTokensDayDataCurrent) | **GET** /dapps/uniswapv3/tokensDayData/current | GetTokensDayData (current)
-[**Invoke-UniswapV3GetTokensDayDataHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetTokensDayDataHistorical) | **GET** /dapps/uniswapv3/tokensDayData/historical | GetTokensDayData (historical)
-[**Invoke-UniswapV3GetTokensHourDataCurrent**](UniswapV3Api.md#Invoke-UniswapV3GetTokensHourDataCurrent) | **GET** /dapps/uniswapv3/tokensHourData/current | GetTokensHourData (current)
-[**Invoke-UniswapV3GetTokensHourDataHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetTokensHourDataHistorical) | **GET** /dapps/uniswapv3/tokensHourData/historical | GetTokensHourData (historical)
-[**Invoke-UniswapV3GetTokensCurrent**](UniswapV3Api.md#Invoke-UniswapV3GetTokensCurrent) | **GET** /dapps/uniswapv3/tokens/current | GetTokens (current) 🔥
-[**Invoke-UniswapV3GetTokensHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetTokensHistorical) | **GET** /dapps/uniswapv3/tokens/historical | GetTokens (historical) 🔥
-[**Invoke-UniswapV3GetTransactionsHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetTransactionsHistorical) | **GET** /dapps/uniswapv3/transactions/historical | GetTransactions (historical)
+[**Invoke-UniswapV3GetBundlesCurrent**](UniswapV3Api.md#Invoke-UniswapV3GetBundlesCurrent) | **GET** /dapps/uniswapv3/bundles/current | Bundles (current)
+[**Invoke-UniswapV3GetBundlesHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetBundlesHistorical) | **GET** /dapps/uniswapv3/bundles/historical | Bundles (historical)
+[**Invoke-UniswapV3GetBurnsCurrent**](UniswapV3Api.md#Invoke-UniswapV3GetBurnsCurrent) | **GET** /dapps/uniswapv3/burns/current | Burns (current)
+[**Invoke-UniswapV3GetBurnsHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetBurnsHistorical) | **GET** /dapps/uniswapv3/burns/historical | Burns (historical)
+[**Invoke-UniswapV3GetDayDataCurrent**](UniswapV3Api.md#Invoke-UniswapV3GetDayDataCurrent) | **GET** /dapps/uniswapv3/dayData/current | DayData (current)
+[**Invoke-UniswapV3GetDayDataHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetDayDataHistorical) | **GET** /dapps/uniswapv3/dayData/historical | DayData (historical)
+[**Invoke-UniswapV3GetFactoryCurrent**](UniswapV3Api.md#Invoke-UniswapV3GetFactoryCurrent) | **GET** /dapps/uniswapv3/factory/current | Factory (current)
+[**Invoke-UniswapV3GetFactoryHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetFactoryHistorical) | **GET** /dapps/uniswapv3/factory/historical | Factory (historical)
+[**Invoke-UniswapV3GetMintsCurrent**](UniswapV3Api.md#Invoke-UniswapV3GetMintsCurrent) | **GET** /dapps/uniswapv3/mints/current | Mints (current)
+[**Invoke-UniswapV3GetMintsHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetMintsHistorical) | **GET** /dapps/uniswapv3/mints/historical | Mints (historical)
+[**Invoke-UniswapV3GetPoolsDayDataCurrent**](UniswapV3Api.md#Invoke-UniswapV3GetPoolsDayDataCurrent) | **GET** /dapps/uniswapv3/poolsDayData/current | PoolsDayData (current)
+[**Invoke-UniswapV3GetPoolsDayDataHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetPoolsDayDataHistorical) | **GET** /dapps/uniswapv3/poolsDayData/historical | PoolsDayData (historical)
+[**Invoke-UniswapV3GetPoolsHourDataCurrent**](UniswapV3Api.md#Invoke-UniswapV3GetPoolsHourDataCurrent) | **GET** /dapps/uniswapv3/poolsHourData/current | PoolsHourData (current)
+[**Invoke-UniswapV3GetPoolsHourDataHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetPoolsHourDataHistorical) | **GET** /dapps/uniswapv3/poolsHourData/historical | PoolsHourData (historical)
+[**Invoke-UniswapV3GetPoolsCurrent**](UniswapV3Api.md#Invoke-UniswapV3GetPoolsCurrent) | **GET** /dapps/uniswapv3/pools/current | Pools (current) 🔥
+[**Invoke-UniswapV3GetPoolsHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetPoolsHistorical) | **GET** /dapps/uniswapv3/pools/historical | Pools (historical) 🔥
+[**Invoke-UniswapV3GetPositionsSnaphotsHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetPositionsSnaphotsHistorical) | **GET** /dapps/uniswapv3/positionsSnapshots/historical | PositionsSnaphots (historical)
+[**Invoke-UniswapV3GetPositionsSnapshotsCurrent**](UniswapV3Api.md#Invoke-UniswapV3GetPositionsSnapshotsCurrent) | **GET** /dapps/uniswapv3/positionSnapshots/current | PositionsSnapshots (current)
+[**Invoke-UniswapV3GetPositionsCurrent**](UniswapV3Api.md#Invoke-UniswapV3GetPositionsCurrent) | **GET** /dapps/uniswapv3/positions/current | Positions (current)
+[**Invoke-UniswapV3GetPositionsHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetPositionsHistorical) | **GET** /dapps/uniswapv3/positions/historical | Positions (historical)
+[**Invoke-UniswapV3GetSwapsCurrent**](UniswapV3Api.md#Invoke-UniswapV3GetSwapsCurrent) | **GET** /dapps/uniswapv3/swaps/current | Swaps (current) 🔥
+[**Invoke-UniswapV3GetSwapsHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetSwapsHistorical) | **GET** /dapps/uniswapv3/swaps/historical | Swaps (historical) 🔥
+[**Invoke-UniswapV3GetTicksDayDataCurrent**](UniswapV3Api.md#Invoke-UniswapV3GetTicksDayDataCurrent) | **GET** /dapps/uniswapv3/ticksDayData/current | TicksDayData (current)
+[**Invoke-UniswapV3GetTicksDayDataHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetTicksDayDataHistorical) | **GET** /dapps/uniswapv3/ticksDayData/historical | TicksDayData (historical)
+[**Invoke-UniswapV3GetTicksCurrent**](UniswapV3Api.md#Invoke-UniswapV3GetTicksCurrent) | **GET** /dapps/uniswapv3/ticks/current | Ticks (current)
+[**Invoke-UniswapV3GetTicksHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetTicksHistorical) | **GET** /dapps/uniswapv3/ticks/historical | Ticks (historical)
+[**Invoke-UniswapV3GetTokensDayDataCurrent**](UniswapV3Api.md#Invoke-UniswapV3GetTokensDayDataCurrent) | **GET** /dapps/uniswapv3/tokensDayData/current | TokensDayData (current)
+[**Invoke-UniswapV3GetTokensDayDataHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetTokensDayDataHistorical) | **GET** /dapps/uniswapv3/tokensDayData/historical | TokensDayData (historical)
+[**Invoke-UniswapV3GetTokensHourDataCurrent**](UniswapV3Api.md#Invoke-UniswapV3GetTokensHourDataCurrent) | **GET** /dapps/uniswapv3/tokensHourData/current | TokensHourData (current)
+[**Invoke-UniswapV3GetTokensHourDataHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetTokensHourDataHistorical) | **GET** /dapps/uniswapv3/tokensHourData/historical | TokensHourData (historical)
+[**Invoke-UniswapV3GetTokensCurrent**](UniswapV3Api.md#Invoke-UniswapV3GetTokensCurrent) | **GET** /dapps/uniswapv3/tokens/current | Tokens (current) 🔥
+[**Invoke-UniswapV3GetTokensHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetTokensHistorical) | **GET** /dapps/uniswapv3/tokens/historical | Tokens (historical) 🔥
+[**Invoke-UniswapV3GetTransactionsHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetTransactionsHistorical) | **GET** /dapps/uniswapv3/transactions/historical | Transactions (historical)
 
 
 <a name="Invoke-UniswapV3GetBundlesCurrent"></a>
 # **Invoke-UniswapV3GetBundlesCurrent**
 > UniswapV3BundleV3DTO[] Invoke-UniswapV3GetBundlesCurrent<br>
 
-GetBundles (current)
+Bundles (current)
 
 Gets bundles.
 
 ### Example
 ```powershell
 
-# GetBundles (current)
+# Bundles (current)
 try {
     $Result = Invoke-UniswapV3GetBundlesCurrent
 } catch {
@@ -85,7 +85,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 
-GetBundles (historical)
+Bundles (historical)
 
 Gets bundles.
 
@@ -96,7 +96,7 @@ $EndBlock = 789 # Int64 |  (optional)
 $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 
-# GetBundles (historical)
+# Bundles (historical)
 try {
     $Result = Invoke-UniswapV3GetBundlesHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
 } catch {
@@ -134,7 +134,7 @@ No authorization required
 > UniswapV3BurnV3DTO[] Invoke-UniswapV3GetBurnsCurrent<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-FilterPoolId] <String><br>
 
-GetBurns (current)
+Burns (current)
 
 Gets burns.
 
@@ -142,7 +142,7 @@ Gets burns.
 ```powershell
 $FilterPoolId = "MyFilterPoolId" # String |  (optional)
 
-# GetBurns (current)
+# Burns (current)
 try {
     $Result = Invoke-UniswapV3GetBurnsCurrent -FilterPoolId $FilterPoolId
 } catch {
@@ -181,7 +181,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
 
-GetBurns (historical)
+Burns (historical)
 
 Gets burns.
 
@@ -193,7 +193,7 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $PoolId = "MyPoolId" # String |  (optional)
 
-# GetBurns (historical)
+# Burns (historical)
 try {
     $Result = Invoke-UniswapV3GetBurnsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
 } catch {
@@ -231,14 +231,14 @@ No authorization required
 # **Invoke-UniswapV3GetDayDataCurrent**
 > UniswapV3UniswapDayDataV3DTO[] Invoke-UniswapV3GetDayDataCurrent<br>
 
-GetDayData (current)
+DayData (current)
 
 Gets uniswapv3 day data.
 
 ### Example
 ```powershell
 
-# GetDayData (current)
+# DayData (current)
 try {
     $Result = Invoke-UniswapV3GetDayDataCurrent
 } catch {
@@ -273,7 +273,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 
-GetDayData (historical)
+DayData (historical)
 
 Gets uniswapv3 day data.
 
@@ -284,7 +284,7 @@ $EndBlock = 789 # Int64 |  (optional)
 $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 
-# GetDayData (historical)
+# DayData (historical)
 try {
     $Result = Invoke-UniswapV3GetDayDataHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
 } catch {
@@ -321,14 +321,14 @@ No authorization required
 # **Invoke-UniswapV3GetFactoryCurrent**
 > UniswapV3FactoryV3DTO[] Invoke-UniswapV3GetFactoryCurrent<br>
 
-GetFactory (current)
+Factory (current)
 
 Gets factory.
 
 ### Example
 ```powershell
 
-# GetFactory (current)
+# Factory (current)
 try {
     $Result = Invoke-UniswapV3GetFactoryCurrent
 } catch {
@@ -363,7 +363,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 
-GetFactory (historical)
+Factory (historical)
 
 Gets factory.
 
@@ -374,7 +374,7 @@ $EndBlock = 789 # Int64 |  (optional)
 $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 
-# GetFactory (historical)
+# Factory (historical)
 try {
     $Result = Invoke-UniswapV3GetFactoryHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
 } catch {
@@ -412,7 +412,7 @@ No authorization required
 > UniswapV3MintV3DTO[] Invoke-UniswapV3GetMintsCurrent<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-FilterPoolId] <String><br>
 
-GetMints (current)
+Mints (current)
 
 Gets mints.
 
@@ -420,7 +420,7 @@ Gets mints.
 ```powershell
 $FilterPoolId = "MyFilterPoolId" # String |  (optional)
 
-# GetMints (current)
+# Mints (current)
 try {
     $Result = Invoke-UniswapV3GetMintsCurrent -FilterPoolId $FilterPoolId
 } catch {
@@ -459,7 +459,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
 
-GetMints (historical)
+Mints (historical)
 
 Gets mints.
 
@@ -471,7 +471,7 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $PoolId = "MyPoolId" # String |  (optional)
 
-# GetMints (historical)
+# Mints (historical)
 try {
     $Result = Invoke-UniswapV3GetMintsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
 } catch {
@@ -510,7 +510,7 @@ No authorization required
 > UniswapV3PoolDayDataV3DTO[] Invoke-UniswapV3GetPoolsDayDataCurrent<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-FilterPoolId] <String><br>
 
-GetPoolsDayData (current)
+PoolsDayData (current)
 
 Gets pools day data.
 
@@ -518,7 +518,7 @@ Gets pools day data.
 ```powershell
 $FilterPoolId = "MyFilterPoolId" # String |  (optional)
 
-# GetPoolsDayData (current)
+# PoolsDayData (current)
 try {
     $Result = Invoke-UniswapV3GetPoolsDayDataCurrent -FilterPoolId $FilterPoolId
 } catch {
@@ -557,7 +557,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
 
-GetPoolsDayData (historical)
+PoolsDayData (historical)
 
 Gets pools day data.
 
@@ -569,7 +569,7 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $PoolId = "MyPoolId" # String |  (optional)
 
-# GetPoolsDayData (historical)
+# PoolsDayData (historical)
 try {
     $Result = Invoke-UniswapV3GetPoolsDayDataHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
 } catch {
@@ -608,7 +608,7 @@ No authorization required
 > UniswapV3PoolHourDataV3DTO[] Invoke-UniswapV3GetPoolsHourDataCurrent<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-FilterPoolId] <String><br>
 
-GetPoolsHourData (current)
+PoolsHourData (current)
 
 Gets pools hour data.
 
@@ -616,7 +616,7 @@ Gets pools hour data.
 ```powershell
 $FilterPoolId = "MyFilterPoolId" # String |  (optional)
 
-# GetPoolsHourData (current)
+# PoolsHourData (current)
 try {
     $Result = Invoke-UniswapV3GetPoolsHourDataCurrent -FilterPoolId $FilterPoolId
 } catch {
@@ -655,7 +655,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
 
-GetPoolsHourData (historical)
+PoolsHourData (historical)
 
 Gets pools hour data.
 
@@ -667,7 +667,7 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $PoolId = "MyPoolId" # String |  (optional)
 
-# GetPoolsHourData (historical)
+# PoolsHourData (historical)
 try {
     $Result = Invoke-UniswapV3GetPoolsHourDataHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
 } catch {
@@ -706,7 +706,7 @@ No authorization required
 > UniswapV3PoolV3DTO[] Invoke-UniswapV3GetPoolsCurrent<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-FilterPoolId] <String><br>
 
-GetPools (current) 🔥
+Pools (current) 🔥
 
 Gets pools.
 
@@ -714,7 +714,7 @@ Gets pools.
 ```powershell
 $FilterPoolId = "MyFilterPoolId" # String |  (optional)
 
-# GetPools (current) 🔥
+# Pools (current) 🔥
 try {
     $Result = Invoke-UniswapV3GetPoolsCurrent -FilterPoolId $FilterPoolId
 } catch {
@@ -753,7 +753,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
 
-GetPools (historical) 🔥
+Pools (historical) 🔥
 
 Gets pools.
 
@@ -765,7 +765,7 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $PoolId = "MyPoolId" # String |  (optional)
 
-# GetPools (historical) 🔥
+# Pools (historical) 🔥
 try {
     $Result = Invoke-UniswapV3GetPoolsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
 } catch {
@@ -808,7 +808,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
 
-GetPositionsSnaphots (historical)
+PositionsSnaphots (historical)
 
 Gets positions snapshots.
 
@@ -820,7 +820,7 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $PoolId = "MyPoolId" # String |  (optional)
 
-# GetPositionsSnaphots (historical)
+# PositionsSnaphots (historical)
 try {
     $Result = Invoke-UniswapV3GetPositionsSnaphotsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
 } catch {
@@ -859,7 +859,7 @@ No authorization required
 > UniswapV3PositionSnapshotV3DTO[] Invoke-UniswapV3GetPositionsSnapshotsCurrent<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-FilterPoolId] <String><br>
 
-GetPositionsSnapshots (current)
+PositionsSnapshots (current)
 
 Gets positions snapshots.
 
@@ -867,7 +867,7 @@ Gets positions snapshots.
 ```powershell
 $FilterPoolId = "MyFilterPoolId" # String |  (optional)
 
-# GetPositionsSnapshots (current)
+# PositionsSnapshots (current)
 try {
     $Result = Invoke-UniswapV3GetPositionsSnapshotsCurrent -FilterPoolId $FilterPoolId
 } catch {
@@ -902,7 +902,7 @@ No authorization required
 > UniswapV3PositionV3DTO[] Invoke-UniswapV3GetPositionsCurrent<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-FilterPoolId] <String><br>
 
-GetPositions (current)
+Positions (current)
 
 Gets positions.
 
@@ -910,7 +910,7 @@ Gets positions.
 ```powershell
 $FilterPoolId = "MyFilterPoolId" # String |  (optional)
 
-# GetPositions (current)
+# Positions (current)
 try {
     $Result = Invoke-UniswapV3GetPositionsCurrent -FilterPoolId $FilterPoolId
 } catch {
@@ -949,7 +949,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
 
-GetPositions (historical)
+Positions (historical)
 
 Gets positions.
 
@@ -961,7 +961,7 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $PoolId = "MyPoolId" # String |  (optional)
 
-# GetPositions (historical)
+# Positions (historical)
 try {
     $Result = Invoke-UniswapV3GetPositionsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
 } catch {
@@ -1000,7 +1000,7 @@ No authorization required
 > UniswapV3SwapV3DTO[] Invoke-UniswapV3GetSwapsCurrent<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-FilterPoolId] <String><br>
 
-GetSwaps (current) 🔥
+Swaps (current) 🔥
 
 Gets swaps.
 
@@ -1008,7 +1008,7 @@ Gets swaps.
 ```powershell
 $FilterPoolId = "MyFilterPoolId" # String |  (optional)
 
-# GetSwaps (current) 🔥
+# Swaps (current) 🔥
 try {
     $Result = Invoke-UniswapV3GetSwapsCurrent -FilterPoolId $FilterPoolId
 } catch {
@@ -1047,7 +1047,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
 
-GetSwaps (historical) 🔥
+Swaps (historical) 🔥
 
 Gets swaps.
 
@@ -1059,7 +1059,7 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $PoolId = "MyPoolId" # String |  (optional)
 
-# GetSwaps (historical) 🔥
+# Swaps (historical) 🔥
 try {
     $Result = Invoke-UniswapV3GetSwapsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
 } catch {
@@ -1098,7 +1098,7 @@ No authorization required
 > UniswapV3TickDayDataV3DTO[] Invoke-UniswapV3GetTicksDayDataCurrent<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-FilterPoolId] <String><br>
 
-GetTicksDayData (current)
+TicksDayData (current)
 
 Gets ticks day data.
 
@@ -1106,7 +1106,7 @@ Gets ticks day data.
 ```powershell
 $FilterPoolId = "MyFilterPoolId" # String |  (optional)
 
-# GetTicksDayData (current)
+# TicksDayData (current)
 try {
     $Result = Invoke-UniswapV3GetTicksDayDataCurrent -FilterPoolId $FilterPoolId
 } catch {
@@ -1145,7 +1145,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
 
-GetTicksDayData (historical)
+TicksDayData (historical)
 
 Gets ticks day data.
 
@@ -1157,7 +1157,7 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $PoolId = "MyPoolId" # String |  (optional)
 
-# GetTicksDayData (historical)
+# TicksDayData (historical)
 try {
     $Result = Invoke-UniswapV3GetTicksDayDataHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
 } catch {
@@ -1196,7 +1196,7 @@ No authorization required
 > UniswapV3TickV3DTO[] Invoke-UniswapV3GetTicksCurrent<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-FilterPoolId] <String><br>
 
-GetTicks (current)
+Ticks (current)
 
 Gets ticks.
 
@@ -1204,7 +1204,7 @@ Gets ticks.
 ```powershell
 $FilterPoolId = "MyFilterPoolId" # String |  (optional)
 
-# GetTicks (current)
+# Ticks (current)
 try {
     $Result = Invoke-UniswapV3GetTicksCurrent -FilterPoolId $FilterPoolId
 } catch {
@@ -1243,7 +1243,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
 
-GetTicks (historical)
+Ticks (historical)
 
 Gets ticks.
 
@@ -1255,7 +1255,7 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $PoolId = "MyPoolId" # String |  (optional)
 
-# GetTicks (historical)
+# Ticks (historical)
 try {
     $Result = Invoke-UniswapV3GetTicksHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
 } catch {
@@ -1294,7 +1294,7 @@ No authorization required
 > UniswapV3TokenV3DayDataDTO[] Invoke-UniswapV3GetTokensDayDataCurrent<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-FilterTokenId] <String><br>
 
-GetTokensDayData (current)
+TokensDayData (current)
 
 Gets tokens day data.
 
@@ -1302,7 +1302,7 @@ Gets tokens day data.
 ```powershell
 $FilterTokenId = "MyFilterTokenId" # String |  (optional)
 
-# GetTokensDayData (current)
+# TokensDayData (current)
 try {
     $Result = Invoke-UniswapV3GetTokensDayDataCurrent -FilterTokenId $FilterTokenId
 } catch {
@@ -1341,7 +1341,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-TokenId] <String><br>
 
-GetTokensDayData (historical)
+TokensDayData (historical)
 
 Gets tokens day data.
 
@@ -1353,7 +1353,7 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $TokenId = "MyTokenId" # String |  (optional)
 
-# GetTokensDayData (historical)
+# TokensDayData (historical)
 try {
     $Result = Invoke-UniswapV3GetTokensDayDataHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -TokenId $TokenId
 } catch {
@@ -1392,7 +1392,7 @@ No authorization required
 > UniswapV3TokenHourDataV3DTO[] Invoke-UniswapV3GetTokensHourDataCurrent<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-FilterTokenId] <String><br>
 
-GetTokensHourData (current)
+TokensHourData (current)
 
 Gets tokens hour data.
 
@@ -1400,7 +1400,7 @@ Gets tokens hour data.
 ```powershell
 $FilterTokenId = "MyFilterTokenId" # String |  (optional)
 
-# GetTokensHourData (current)
+# TokensHourData (current)
 try {
     $Result = Invoke-UniswapV3GetTokensHourDataCurrent -FilterTokenId $FilterTokenId
 } catch {
@@ -1439,7 +1439,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-TokenId] <String><br>
 
-GetTokensHourData (historical)
+TokensHourData (historical)
 
 Gets tokens hour data.
 
@@ -1451,7 +1451,7 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $TokenId = "MyTokenId" # String |  (optional)
 
-# GetTokensHourData (historical)
+# TokensHourData (historical)
 try {
     $Result = Invoke-UniswapV3GetTokensHourDataHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -TokenId $TokenId
 } catch {
@@ -1490,7 +1490,7 @@ No authorization required
 > UniswapV3TokenV3DTO[] Invoke-UniswapV3GetTokensCurrent<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-FilterTokenId] <String><br>
 
-GetTokens (current) 🔥
+Tokens (current) 🔥
 
 Gets tokens.
 
@@ -1498,7 +1498,7 @@ Gets tokens.
 ```powershell
 $FilterTokenId = "MyFilterTokenId" # String |  (optional)
 
-# GetTokens (current) 🔥
+# Tokens (current) 🔥
 try {
     $Result = Invoke-UniswapV3GetTokensCurrent -FilterTokenId $FilterTokenId
 } catch {
@@ -1537,7 +1537,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-TokenId] <String><br>
 
-GetTokens (historical) 🔥
+Tokens (historical) 🔥
 
 Gets tokens.
 
@@ -1549,7 +1549,7 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $TokenId = "MyTokenId" # String |  (optional)
 
-# GetTokens (historical) 🔥
+# Tokens (historical) 🔥
 try {
     $Result = Invoke-UniswapV3GetTokensHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -TokenId $TokenId
 } catch {
@@ -1591,7 +1591,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 
-GetTransactions (historical)
+Transactions (historical)
 
 Gets transactions.
 
@@ -1602,7 +1602,7 @@ $EndBlock = 789 # Int64 |  (optional)
 $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 
-# GetTransactions (historical)
+# Transactions (historical)
 try {
     $Result = Invoke-UniswapV3GetTransactionsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
 } catch {

@@ -12,7 +12,7 @@
 }while(0)
 
 
-// GetExchanges (current) 🔥
+// Exchanges (current) 🔥
 //
 // Gets exchanges.
 //
@@ -87,7 +87,7 @@ end:
 
 }
 
-// GetTrades (current) 🔥
+// Trades (current) 🔥
 //
 // Gets trades.
 //
@@ -162,7 +162,7 @@ end:
 
 }
 
-// GetBundles (historical)
+// Bundles (historical)
 //
 // Gets bundles.
 //
@@ -317,7 +317,7 @@ end:
 
 }
 
-// GetBurns (historical)
+// Burns (historical)
 //
 // Gets burns.
 //
@@ -496,7 +496,7 @@ end:
 
 }
 
-// GetDayData (historical)
+// DayData (historical)
 //
 // Gets day data.
 //
@@ -651,7 +651,7 @@ end:
 
 }
 
-// GetFactory (historical)
+// Factory (historical)
 //
 // Gets factory.
 //
@@ -806,7 +806,7 @@ end:
 
 }
 
-// GetHourData (historical)
+// HourData (historical)
 //
 // Gets hour data.
 //
@@ -961,7 +961,7 @@ end:
 
 }
 
-// GetLiquidityPosition (historical)
+// LiquidityPosition (historical)
 //
 // Gets liquidity position.
 //
@@ -1140,7 +1140,7 @@ end:
 
 }
 
-// GetLiquidityPositionSnapshot (historical)
+// LiquidityPositionSnapshot (historical)
 //
 // Gets liquidity position snapshot.
 //
@@ -1319,7 +1319,7 @@ end:
 
 }
 
-// GetMints (historical)
+// Mints (historical)
 //
 // Gets mints.
 //
@@ -1498,7 +1498,7 @@ end:
 
 }
 
-// GetPools (current) 🔥
+// Pools (current) 🔥
 //
 // Gets pools.
 //
@@ -1573,7 +1573,7 @@ end:
 
 }
 
-// GetPoolsDayData (historical)
+// PoolsDayData (historical)
 //
 // Gets pools day data.
 //
@@ -1752,7 +1752,7 @@ end:
 
 }
 
-// GetPools (historical) 🔥
+// Pools (historical) 🔥
 //
 // Gets list of pools for given filters.
 //
@@ -1931,7 +1931,7 @@ end:
 
 }
 
-// GetPoolsHourData (historical)
+// PoolsHourData (historical)
 //
 // Gets pools tracked each our.
 //
@@ -2110,7 +2110,7 @@ end:
 
 }
 
-// GetSwaps (current) 🔥
+// Swaps (current) 🔥
 //
 // Gets swaps.
 //
@@ -2185,7 +2185,7 @@ end:
 
 }
 
-// GetSwaps (historical) 🔥
+// Swaps (historical) 🔥
 //
 // Gets list of swaps for given filters.
 //
@@ -2364,7 +2364,7 @@ end:
 
 }
 
-// GetTokens (current) 🔥
+// Tokens (current) 🔥
 //
 // Gets tokens.
 //
@@ -2439,7 +2439,7 @@ end:
 
 }
 
-// GetTokensDayData (historical)
+// TokensDayData (historical)
 //
 // Gets tokens day data.
 //
@@ -2618,7 +2618,7 @@ end:
 
 }
 
-// GetTokens (historical) 🔥
+// Tokens (historical) 🔥
 //
 // Gets list of tokens for given filters.
 //
@@ -2797,7 +2797,7 @@ end:
 
 }
 
-// GetTransactions (historical)
+// Transactions (historical)
 //
 // Gets transactions.
 //
@@ -2952,7 +2952,7 @@ end:
 
 }
 
-// GetUsers (historical)
+// Users (historical)
 //
 // Gets users.
 //

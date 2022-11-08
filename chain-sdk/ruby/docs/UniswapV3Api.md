@@ -4,46 +4,46 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
-| [**uniswap_v3_get_bundles__current**](UniswapV3Api.md#uniswap_v3_get_bundles__current) | **GET** /dapps/uniswapv3/bundles/current | GetBundles (current) |
-| [**uniswap_v3_get_bundles__historical**](UniswapV3Api.md#uniswap_v3_get_bundles__historical) | **GET** /dapps/uniswapv3/bundles/historical | GetBundles (historical) |
-| [**uniswap_v3_get_burns__current**](UniswapV3Api.md#uniswap_v3_get_burns__current) | **GET** /dapps/uniswapv3/burns/current | GetBurns (current) |
-| [**uniswap_v3_get_burns__historical**](UniswapV3Api.md#uniswap_v3_get_burns__historical) | **GET** /dapps/uniswapv3/burns/historical | GetBurns (historical) |
-| [**uniswap_v3_get_day_data__current**](UniswapV3Api.md#uniswap_v3_get_day_data__current) | **GET** /dapps/uniswapv3/dayData/current | GetDayData (current) |
-| [**uniswap_v3_get_day_data__historical**](UniswapV3Api.md#uniswap_v3_get_day_data__historical) | **GET** /dapps/uniswapv3/dayData/historical | GetDayData (historical) |
-| [**uniswap_v3_get_factory__current**](UniswapV3Api.md#uniswap_v3_get_factory__current) | **GET** /dapps/uniswapv3/factory/current | GetFactory (current) |
-| [**uniswap_v3_get_factory__historical**](UniswapV3Api.md#uniswap_v3_get_factory__historical) | **GET** /dapps/uniswapv3/factory/historical | GetFactory (historical) |
-| [**uniswap_v3_get_mints__current**](UniswapV3Api.md#uniswap_v3_get_mints__current) | **GET** /dapps/uniswapv3/mints/current | GetMints (current) |
-| [**uniswap_v3_get_mints__historical**](UniswapV3Api.md#uniswap_v3_get_mints__historical) | **GET** /dapps/uniswapv3/mints/historical | GetMints (historical) |
-| [**uniswap_v3_get_pools__current**](UniswapV3Api.md#uniswap_v3_get_pools__current) | **GET** /dapps/uniswapv3/pools/current | GetPools (current) 🔥 |
-| [**uniswap_v3_get_pools__historical**](UniswapV3Api.md#uniswap_v3_get_pools__historical) | **GET** /dapps/uniswapv3/pools/historical | GetPools (historical) 🔥 |
-| [**uniswap_v3_get_pools_day_data__current**](UniswapV3Api.md#uniswap_v3_get_pools_day_data__current) | **GET** /dapps/uniswapv3/poolsDayData/current | GetPoolsDayData (current) |
-| [**uniswap_v3_get_pools_day_data__historical**](UniswapV3Api.md#uniswap_v3_get_pools_day_data__historical) | **GET** /dapps/uniswapv3/poolsDayData/historical | GetPoolsDayData (historical) |
-| [**uniswap_v3_get_pools_hour_data__current**](UniswapV3Api.md#uniswap_v3_get_pools_hour_data__current) | **GET** /dapps/uniswapv3/poolsHourData/current | GetPoolsHourData (current) |
-| [**uniswap_v3_get_pools_hour_data__historical**](UniswapV3Api.md#uniswap_v3_get_pools_hour_data__historical) | **GET** /dapps/uniswapv3/poolsHourData/historical | GetPoolsHourData (historical) |
-| [**uniswap_v3_get_positions__current**](UniswapV3Api.md#uniswap_v3_get_positions__current) | **GET** /dapps/uniswapv3/positions/current | GetPositions (current) |
-| [**uniswap_v3_get_positions__historical**](UniswapV3Api.md#uniswap_v3_get_positions__historical) | **GET** /dapps/uniswapv3/positions/historical | GetPositions (historical) |
-| [**uniswap_v3_get_positions_snaphots__historical**](UniswapV3Api.md#uniswap_v3_get_positions_snaphots__historical) | **GET** /dapps/uniswapv3/positionsSnapshots/historical | GetPositionsSnaphots (historical) |
-| [**uniswap_v3_get_positions_snapshots__current**](UniswapV3Api.md#uniswap_v3_get_positions_snapshots__current) | **GET** /dapps/uniswapv3/positionSnapshots/current | GetPositionsSnapshots (current) |
-| [**uniswap_v3_get_swaps__current**](UniswapV3Api.md#uniswap_v3_get_swaps__current) | **GET** /dapps/uniswapv3/swaps/current | GetSwaps (current) 🔥 |
-| [**uniswap_v3_get_swaps__historical**](UniswapV3Api.md#uniswap_v3_get_swaps__historical) | **GET** /dapps/uniswapv3/swaps/historical | GetSwaps (historical) 🔥 |
-| [**uniswap_v3_get_ticks__current**](UniswapV3Api.md#uniswap_v3_get_ticks__current) | **GET** /dapps/uniswapv3/ticks/current | GetTicks (current) |
-| [**uniswap_v3_get_ticks__historical**](UniswapV3Api.md#uniswap_v3_get_ticks__historical) | **GET** /dapps/uniswapv3/ticks/historical | GetTicks (historical) |
-| [**uniswap_v3_get_ticks_day_data__current**](UniswapV3Api.md#uniswap_v3_get_ticks_day_data__current) | **GET** /dapps/uniswapv3/ticksDayData/current | GetTicksDayData (current) |
-| [**uniswap_v3_get_ticks_day_data__historical**](UniswapV3Api.md#uniswap_v3_get_ticks_day_data__historical) | **GET** /dapps/uniswapv3/ticksDayData/historical | GetTicksDayData (historical) |
-| [**uniswap_v3_get_tokens__current**](UniswapV3Api.md#uniswap_v3_get_tokens__current) | **GET** /dapps/uniswapv3/tokens/current | GetTokens (current) 🔥 |
-| [**uniswap_v3_get_tokens__historical**](UniswapV3Api.md#uniswap_v3_get_tokens__historical) | **GET** /dapps/uniswapv3/tokens/historical | GetTokens (historical) 🔥 |
-| [**uniswap_v3_get_tokens_day_data__current**](UniswapV3Api.md#uniswap_v3_get_tokens_day_data__current) | **GET** /dapps/uniswapv3/tokensDayData/current | GetTokensDayData (current) |
-| [**uniswap_v3_get_tokens_day_data__historical**](UniswapV3Api.md#uniswap_v3_get_tokens_day_data__historical) | **GET** /dapps/uniswapv3/tokensDayData/historical | GetTokensDayData (historical) |
-| [**uniswap_v3_get_tokens_hour_data__current**](UniswapV3Api.md#uniswap_v3_get_tokens_hour_data__current) | **GET** /dapps/uniswapv3/tokensHourData/current | GetTokensHourData (current) |
-| [**uniswap_v3_get_tokens_hour_data__historical**](UniswapV3Api.md#uniswap_v3_get_tokens_hour_data__historical) | **GET** /dapps/uniswapv3/tokensHourData/historical | GetTokensHourData (historical) |
-| [**uniswap_v3_get_transactions__historical**](UniswapV3Api.md#uniswap_v3_get_transactions__historical) | **GET** /dapps/uniswapv3/transactions/historical | GetTransactions (historical) |
+| [**uniswap_v3_get_bundles__current**](UniswapV3Api.md#uniswap_v3_get_bundles__current) | **GET** /dapps/uniswapv3/bundles/current | Bundles (current) |
+| [**uniswap_v3_get_bundles__historical**](UniswapV3Api.md#uniswap_v3_get_bundles__historical) | **GET** /dapps/uniswapv3/bundles/historical | Bundles (historical) |
+| [**uniswap_v3_get_burns__current**](UniswapV3Api.md#uniswap_v3_get_burns__current) | **GET** /dapps/uniswapv3/burns/current | Burns (current) |
+| [**uniswap_v3_get_burns__historical**](UniswapV3Api.md#uniswap_v3_get_burns__historical) | **GET** /dapps/uniswapv3/burns/historical | Burns (historical) |
+| [**uniswap_v3_get_day_data__current**](UniswapV3Api.md#uniswap_v3_get_day_data__current) | **GET** /dapps/uniswapv3/dayData/current | DayData (current) |
+| [**uniswap_v3_get_day_data__historical**](UniswapV3Api.md#uniswap_v3_get_day_data__historical) | **GET** /dapps/uniswapv3/dayData/historical | DayData (historical) |
+| [**uniswap_v3_get_factory__current**](UniswapV3Api.md#uniswap_v3_get_factory__current) | **GET** /dapps/uniswapv3/factory/current | Factory (current) |
+| [**uniswap_v3_get_factory__historical**](UniswapV3Api.md#uniswap_v3_get_factory__historical) | **GET** /dapps/uniswapv3/factory/historical | Factory (historical) |
+| [**uniswap_v3_get_mints__current**](UniswapV3Api.md#uniswap_v3_get_mints__current) | **GET** /dapps/uniswapv3/mints/current | Mints (current) |
+| [**uniswap_v3_get_mints__historical**](UniswapV3Api.md#uniswap_v3_get_mints__historical) | **GET** /dapps/uniswapv3/mints/historical | Mints (historical) |
+| [**uniswap_v3_get_pools__current**](UniswapV3Api.md#uniswap_v3_get_pools__current) | **GET** /dapps/uniswapv3/pools/current | Pools (current) 🔥 |
+| [**uniswap_v3_get_pools__historical**](UniswapV3Api.md#uniswap_v3_get_pools__historical) | **GET** /dapps/uniswapv3/pools/historical | Pools (historical) 🔥 |
+| [**uniswap_v3_get_pools_day_data__current**](UniswapV3Api.md#uniswap_v3_get_pools_day_data__current) | **GET** /dapps/uniswapv3/poolsDayData/current | PoolsDayData (current) |
+| [**uniswap_v3_get_pools_day_data__historical**](UniswapV3Api.md#uniswap_v3_get_pools_day_data__historical) | **GET** /dapps/uniswapv3/poolsDayData/historical | PoolsDayData (historical) |
+| [**uniswap_v3_get_pools_hour_data__current**](UniswapV3Api.md#uniswap_v3_get_pools_hour_data__current) | **GET** /dapps/uniswapv3/poolsHourData/current | PoolsHourData (current) |
+| [**uniswap_v3_get_pools_hour_data__historical**](UniswapV3Api.md#uniswap_v3_get_pools_hour_data__historical) | **GET** /dapps/uniswapv3/poolsHourData/historical | PoolsHourData (historical) |
+| [**uniswap_v3_get_positions__current**](UniswapV3Api.md#uniswap_v3_get_positions__current) | **GET** /dapps/uniswapv3/positions/current | Positions (current) |
+| [**uniswap_v3_get_positions__historical**](UniswapV3Api.md#uniswap_v3_get_positions__historical) | **GET** /dapps/uniswapv3/positions/historical | Positions (historical) |
+| [**uniswap_v3_get_positions_snaphots__historical**](UniswapV3Api.md#uniswap_v3_get_positions_snaphots__historical) | **GET** /dapps/uniswapv3/positionsSnapshots/historical | PositionsSnaphots (historical) |
+| [**uniswap_v3_get_positions_snapshots__current**](UniswapV3Api.md#uniswap_v3_get_positions_snapshots__current) | **GET** /dapps/uniswapv3/positionSnapshots/current | PositionsSnapshots (current) |
+| [**uniswap_v3_get_swaps__current**](UniswapV3Api.md#uniswap_v3_get_swaps__current) | **GET** /dapps/uniswapv3/swaps/current | Swaps (current) 🔥 |
+| [**uniswap_v3_get_swaps__historical**](UniswapV3Api.md#uniswap_v3_get_swaps__historical) | **GET** /dapps/uniswapv3/swaps/historical | Swaps (historical) 🔥 |
+| [**uniswap_v3_get_ticks__current**](UniswapV3Api.md#uniswap_v3_get_ticks__current) | **GET** /dapps/uniswapv3/ticks/current | Ticks (current) |
+| [**uniswap_v3_get_ticks__historical**](UniswapV3Api.md#uniswap_v3_get_ticks__historical) | **GET** /dapps/uniswapv3/ticks/historical | Ticks (historical) |
+| [**uniswap_v3_get_ticks_day_data__current**](UniswapV3Api.md#uniswap_v3_get_ticks_day_data__current) | **GET** /dapps/uniswapv3/ticksDayData/current | TicksDayData (current) |
+| [**uniswap_v3_get_ticks_day_data__historical**](UniswapV3Api.md#uniswap_v3_get_ticks_day_data__historical) | **GET** /dapps/uniswapv3/ticksDayData/historical | TicksDayData (historical) |
+| [**uniswap_v3_get_tokens__current**](UniswapV3Api.md#uniswap_v3_get_tokens__current) | **GET** /dapps/uniswapv3/tokens/current | Tokens (current) 🔥 |
+| [**uniswap_v3_get_tokens__historical**](UniswapV3Api.md#uniswap_v3_get_tokens__historical) | **GET** /dapps/uniswapv3/tokens/historical | Tokens (historical) 🔥 |
+| [**uniswap_v3_get_tokens_day_data__current**](UniswapV3Api.md#uniswap_v3_get_tokens_day_data__current) | **GET** /dapps/uniswapv3/tokensDayData/current | TokensDayData (current) |
+| [**uniswap_v3_get_tokens_day_data__historical**](UniswapV3Api.md#uniswap_v3_get_tokens_day_data__historical) | **GET** /dapps/uniswapv3/tokensDayData/historical | TokensDayData (historical) |
+| [**uniswap_v3_get_tokens_hour_data__current**](UniswapV3Api.md#uniswap_v3_get_tokens_hour_data__current) | **GET** /dapps/uniswapv3/tokensHourData/current | TokensHourData (current) |
+| [**uniswap_v3_get_tokens_hour_data__historical**](UniswapV3Api.md#uniswap_v3_get_tokens_hour_data__historical) | **GET** /dapps/uniswapv3/tokensHourData/historical | TokensHourData (historical) |
+| [**uniswap_v3_get_transactions__historical**](UniswapV3Api.md#uniswap_v3_get_transactions__historical) | **GET** /dapps/uniswapv3/transactions/historical | Transactions (historical) |
 
 
 ## uniswap_v3_get_bundles__current
 
 > <Array<UniswapV3BundleV3DTO>> uniswap_v3_get_bundles__current
 
-GetBundles (current)
+Bundles (current)
 
 Gets bundles.
 
@@ -56,7 +56,7 @@ require 'openapi_client'
 api_instance = OpenapiClient::UniswapV3Api.new
 
 begin
-  # GetBundles (current)
+  # Bundles (current)
   result = api_instance.uniswap_v3_get_bundles__current
   p result
 rescue OpenapiClient::ApiError => e
@@ -72,7 +72,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetBundles (current)
+  # Bundles (current)
   data, status_code, headers = api_instance.uniswap_v3_get_bundles__current_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
@@ -104,7 +104,7 @@ No authorization required
 
 > <Array<UniswapV3BundleV3DTO>> uniswap_v3_get_bundles__historical(opts)
 
-GetBundles (historical)
+Bundles (historical)
 
 Gets bundles.
 
@@ -123,7 +123,7 @@ opts = {
 }
 
 begin
-  # GetBundles (historical)
+  # Bundles (historical)
   result = api_instance.uniswap_v3_get_bundles__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -139,7 +139,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetBundles (historical)
+  # Bundles (historical)
   data, status_code, headers = api_instance.uniswap_v3_get_bundles__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -176,7 +176,7 @@ No authorization required
 
 > <Array<UniswapV3BurnV3DTO>> uniswap_v3_get_burns__current(opts)
 
-GetBurns (current)
+Burns (current)
 
 Gets burns.
 
@@ -192,7 +192,7 @@ opts = {
 }
 
 begin
-  # GetBurns (current)
+  # Burns (current)
   result = api_instance.uniswap_v3_get_burns__current(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -208,7 +208,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetBurns (current)
+  # Burns (current)
   data, status_code, headers = api_instance.uniswap_v3_get_burns__current_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -242,7 +242,7 @@ No authorization required
 
 > <Array<UniswapV3BurnV3DTO>> uniswap_v3_get_burns__historical(opts)
 
-GetBurns (historical)
+Burns (historical)
 
 Gets burns.
 
@@ -262,7 +262,7 @@ opts = {
 }
 
 begin
-  # GetBurns (historical)
+  # Burns (historical)
   result = api_instance.uniswap_v3_get_burns__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -278,7 +278,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetBurns (historical)
+  # Burns (historical)
   data, status_code, headers = api_instance.uniswap_v3_get_burns__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -316,7 +316,7 @@ No authorization required
 
 > <Array<UniswapV3UniswapDayDataV3DTO>> uniswap_v3_get_day_data__current
 
-GetDayData (current)
+DayData (current)
 
 Gets uniswapv3 day data.
 
@@ -329,7 +329,7 @@ require 'openapi_client'
 api_instance = OpenapiClient::UniswapV3Api.new
 
 begin
-  # GetDayData (current)
+  # DayData (current)
   result = api_instance.uniswap_v3_get_day_data__current
   p result
 rescue OpenapiClient::ApiError => e
@@ -345,7 +345,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetDayData (current)
+  # DayData (current)
   data, status_code, headers = api_instance.uniswap_v3_get_day_data__current_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
@@ -377,7 +377,7 @@ No authorization required
 
 > <Array<UniswapV3UniswapDayDataV3DTO>> uniswap_v3_get_day_data__historical(opts)
 
-GetDayData (historical)
+DayData (historical)
 
 Gets uniswapv3 day data.
 
@@ -396,7 +396,7 @@ opts = {
 }
 
 begin
-  # GetDayData (historical)
+  # DayData (historical)
   result = api_instance.uniswap_v3_get_day_data__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -412,7 +412,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetDayData (historical)
+  # DayData (historical)
   data, status_code, headers = api_instance.uniswap_v3_get_day_data__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -449,7 +449,7 @@ No authorization required
 
 > <Array<UniswapV3FactoryV3DTO>> uniswap_v3_get_factory__current
 
-GetFactory (current)
+Factory (current)
 
 Gets factory.
 
@@ -462,7 +462,7 @@ require 'openapi_client'
 api_instance = OpenapiClient::UniswapV3Api.new
 
 begin
-  # GetFactory (current)
+  # Factory (current)
   result = api_instance.uniswap_v3_get_factory__current
   p result
 rescue OpenapiClient::ApiError => e
@@ -478,7 +478,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetFactory (current)
+  # Factory (current)
   data, status_code, headers = api_instance.uniswap_v3_get_factory__current_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
@@ -510,7 +510,7 @@ No authorization required
 
 > <Array<UniswapV3FactoryV3DTO>> uniswap_v3_get_factory__historical(opts)
 
-GetFactory (historical)
+Factory (historical)
 
 Gets factory.
 
@@ -529,7 +529,7 @@ opts = {
 }
 
 begin
-  # GetFactory (historical)
+  # Factory (historical)
   result = api_instance.uniswap_v3_get_factory__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -545,7 +545,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetFactory (historical)
+  # Factory (historical)
   data, status_code, headers = api_instance.uniswap_v3_get_factory__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -582,7 +582,7 @@ No authorization required
 
 > <Array<UniswapV3MintV3DTO>> uniswap_v3_get_mints__current(opts)
 
-GetMints (current)
+Mints (current)
 
 Gets mints.
 
@@ -598,7 +598,7 @@ opts = {
 }
 
 begin
-  # GetMints (current)
+  # Mints (current)
   result = api_instance.uniswap_v3_get_mints__current(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -614,7 +614,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetMints (current)
+  # Mints (current)
   data, status_code, headers = api_instance.uniswap_v3_get_mints__current_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -648,7 +648,7 @@ No authorization required
 
 > <Array<UniswapV3MintV3DTO>> uniswap_v3_get_mints__historical(opts)
 
-GetMints (historical)
+Mints (historical)
 
 Gets mints.
 
@@ -668,7 +668,7 @@ opts = {
 }
 
 begin
-  # GetMints (historical)
+  # Mints (historical)
   result = api_instance.uniswap_v3_get_mints__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -684,7 +684,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetMints (historical)
+  # Mints (historical)
   data, status_code, headers = api_instance.uniswap_v3_get_mints__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -722,7 +722,7 @@ No authorization required
 
 > <Array<UniswapV3PoolV3DTO>> uniswap_v3_get_pools__current(opts)
 
-GetPools (current) 🔥
+Pools (current) 🔥
 
 Gets pools.
 
@@ -738,7 +738,7 @@ opts = {
 }
 
 begin
-  # GetPools (current) 🔥
+  # Pools (current) 🔥
   result = api_instance.uniswap_v3_get_pools__current(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -754,7 +754,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetPools (current) 🔥
+  # Pools (current) 🔥
   data, status_code, headers = api_instance.uniswap_v3_get_pools__current_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -788,7 +788,7 @@ No authorization required
 
 > <Array<UniswapV3PoolV3DTO>> uniswap_v3_get_pools__historical(opts)
 
-GetPools (historical) 🔥
+Pools (historical) 🔥
 
 Gets pools.
 
@@ -808,7 +808,7 @@ opts = {
 }
 
 begin
-  # GetPools (historical) 🔥
+  # Pools (historical) 🔥
   result = api_instance.uniswap_v3_get_pools__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -824,7 +824,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetPools (historical) 🔥
+  # Pools (historical) 🔥
   data, status_code, headers = api_instance.uniswap_v3_get_pools__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -862,7 +862,7 @@ No authorization required
 
 > <Array<UniswapV3PoolDayDataV3DTO>> uniswap_v3_get_pools_day_data__current(opts)
 
-GetPoolsDayData (current)
+PoolsDayData (current)
 
 Gets pools day data.
 
@@ -878,7 +878,7 @@ opts = {
 }
 
 begin
-  # GetPoolsDayData (current)
+  # PoolsDayData (current)
   result = api_instance.uniswap_v3_get_pools_day_data__current(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -894,7 +894,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetPoolsDayData (current)
+  # PoolsDayData (current)
   data, status_code, headers = api_instance.uniswap_v3_get_pools_day_data__current_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -928,7 +928,7 @@ No authorization required
 
 > <Array<UniswapV3PoolDayDataV3DTO>> uniswap_v3_get_pools_day_data__historical(opts)
 
-GetPoolsDayData (historical)
+PoolsDayData (historical)
 
 Gets pools day data.
 
@@ -948,7 +948,7 @@ opts = {
 }
 
 begin
-  # GetPoolsDayData (historical)
+  # PoolsDayData (historical)
   result = api_instance.uniswap_v3_get_pools_day_data__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -964,7 +964,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetPoolsDayData (historical)
+  # PoolsDayData (historical)
   data, status_code, headers = api_instance.uniswap_v3_get_pools_day_data__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -1002,7 +1002,7 @@ No authorization required
 
 > <Array<UniswapV3PoolHourDataV3DTO>> uniswap_v3_get_pools_hour_data__current(opts)
 
-GetPoolsHourData (current)
+PoolsHourData (current)
 
 Gets pools hour data.
 
@@ -1018,7 +1018,7 @@ opts = {
 }
 
 begin
-  # GetPoolsHourData (current)
+  # PoolsHourData (current)
   result = api_instance.uniswap_v3_get_pools_hour_data__current(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -1034,7 +1034,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetPoolsHourData (current)
+  # PoolsHourData (current)
   data, status_code, headers = api_instance.uniswap_v3_get_pools_hour_data__current_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -1068,7 +1068,7 @@ No authorization required
 
 > <Array<UniswapV3PoolHourDataV3DTO>> uniswap_v3_get_pools_hour_data__historical(opts)
 
-GetPoolsHourData (historical)
+PoolsHourData (historical)
 
 Gets pools hour data.
 
@@ -1088,7 +1088,7 @@ opts = {
 }
 
 begin
-  # GetPoolsHourData (historical)
+  # PoolsHourData (historical)
   result = api_instance.uniswap_v3_get_pools_hour_data__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -1104,7 +1104,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetPoolsHourData (historical)
+  # PoolsHourData (historical)
   data, status_code, headers = api_instance.uniswap_v3_get_pools_hour_data__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -1142,7 +1142,7 @@ No authorization required
 
 > <Array<UniswapV3PositionV3DTO>> uniswap_v3_get_positions__current(opts)
 
-GetPositions (current)
+Positions (current)
 
 Gets positions.
 
@@ -1158,7 +1158,7 @@ opts = {
 }
 
 begin
-  # GetPositions (current)
+  # Positions (current)
   result = api_instance.uniswap_v3_get_positions__current(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -1174,7 +1174,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetPositions (current)
+  # Positions (current)
   data, status_code, headers = api_instance.uniswap_v3_get_positions__current_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -1208,7 +1208,7 @@ No authorization required
 
 > <Array<UniswapV3PositionV3DTO>> uniswap_v3_get_positions__historical(opts)
 
-GetPositions (historical)
+Positions (historical)
 
 Gets positions.
 
@@ -1228,7 +1228,7 @@ opts = {
 }
 
 begin
-  # GetPositions (historical)
+  # Positions (historical)
   result = api_instance.uniswap_v3_get_positions__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -1244,7 +1244,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetPositions (historical)
+  # Positions (historical)
   data, status_code, headers = api_instance.uniswap_v3_get_positions__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -1282,7 +1282,7 @@ No authorization required
 
 > <Array<UniswapV3PositionSnapshotV3DTO>> uniswap_v3_get_positions_snaphots__historical(opts)
 
-GetPositionsSnaphots (historical)
+PositionsSnaphots (historical)
 
 Gets positions snapshots.
 
@@ -1302,7 +1302,7 @@ opts = {
 }
 
 begin
-  # GetPositionsSnaphots (historical)
+  # PositionsSnaphots (historical)
   result = api_instance.uniswap_v3_get_positions_snaphots__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -1318,7 +1318,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetPositionsSnaphots (historical)
+  # PositionsSnaphots (historical)
   data, status_code, headers = api_instance.uniswap_v3_get_positions_snaphots__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -1356,7 +1356,7 @@ No authorization required
 
 > <Array<UniswapV3PositionSnapshotV3DTO>> uniswap_v3_get_positions_snapshots__current(opts)
 
-GetPositionsSnapshots (current)
+PositionsSnapshots (current)
 
 Gets positions snapshots.
 
@@ -1372,7 +1372,7 @@ opts = {
 }
 
 begin
-  # GetPositionsSnapshots (current)
+  # PositionsSnapshots (current)
   result = api_instance.uniswap_v3_get_positions_snapshots__current(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -1388,7 +1388,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetPositionsSnapshots (current)
+  # PositionsSnapshots (current)
   data, status_code, headers = api_instance.uniswap_v3_get_positions_snapshots__current_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -1422,7 +1422,7 @@ No authorization required
 
 > <Array<UniswapV3SwapV3DTO>> uniswap_v3_get_swaps__current(opts)
 
-GetSwaps (current) 🔥
+Swaps (current) 🔥
 
 Gets swaps.
 
@@ -1438,7 +1438,7 @@ opts = {
 }
 
 begin
-  # GetSwaps (current) 🔥
+  # Swaps (current) 🔥
   result = api_instance.uniswap_v3_get_swaps__current(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -1454,7 +1454,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetSwaps (current) 🔥
+  # Swaps (current) 🔥
   data, status_code, headers = api_instance.uniswap_v3_get_swaps__current_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -1488,7 +1488,7 @@ No authorization required
 
 > <Array<UniswapV3SwapV3DTO>> uniswap_v3_get_swaps__historical(opts)
 
-GetSwaps (historical) 🔥
+Swaps (historical) 🔥
 
 Gets swaps.
 
@@ -1508,7 +1508,7 @@ opts = {
 }
 
 begin
-  # GetSwaps (historical) 🔥
+  # Swaps (historical) 🔥
   result = api_instance.uniswap_v3_get_swaps__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -1524,7 +1524,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetSwaps (historical) 🔥
+  # Swaps (historical) 🔥
   data, status_code, headers = api_instance.uniswap_v3_get_swaps__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -1562,7 +1562,7 @@ No authorization required
 
 > <Array<UniswapV3TickV3DTO>> uniswap_v3_get_ticks__current(opts)
 
-GetTicks (current)
+Ticks (current)
 
 Gets ticks.
 
@@ -1578,7 +1578,7 @@ opts = {
 }
 
 begin
-  # GetTicks (current)
+  # Ticks (current)
   result = api_instance.uniswap_v3_get_ticks__current(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -1594,7 +1594,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetTicks (current)
+  # Ticks (current)
   data, status_code, headers = api_instance.uniswap_v3_get_ticks__current_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -1628,7 +1628,7 @@ No authorization required
 
 > <Array<UniswapV3TickV3DTO>> uniswap_v3_get_ticks__historical(opts)
 
-GetTicks (historical)
+Ticks (historical)
 
 Gets ticks.
 
@@ -1648,7 +1648,7 @@ opts = {
 }
 
 begin
-  # GetTicks (historical)
+  # Ticks (historical)
   result = api_instance.uniswap_v3_get_ticks__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -1664,7 +1664,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetTicks (historical)
+  # Ticks (historical)
   data, status_code, headers = api_instance.uniswap_v3_get_ticks__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -1702,7 +1702,7 @@ No authorization required
 
 > <Array<UniswapV3TickDayDataV3DTO>> uniswap_v3_get_ticks_day_data__current(opts)
 
-GetTicksDayData (current)
+TicksDayData (current)
 
 Gets ticks day data.
 
@@ -1718,7 +1718,7 @@ opts = {
 }
 
 begin
-  # GetTicksDayData (current)
+  # TicksDayData (current)
   result = api_instance.uniswap_v3_get_ticks_day_data__current(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -1734,7 +1734,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetTicksDayData (current)
+  # TicksDayData (current)
   data, status_code, headers = api_instance.uniswap_v3_get_ticks_day_data__current_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -1768,7 +1768,7 @@ No authorization required
 
 > <Array<UniswapV3TickDayDataV3DTO>> uniswap_v3_get_ticks_day_data__historical(opts)
 
-GetTicksDayData (historical)
+TicksDayData (historical)
 
 Gets ticks day data.
 
@@ -1788,7 +1788,7 @@ opts = {
 }
 
 begin
-  # GetTicksDayData (historical)
+  # TicksDayData (historical)
   result = api_instance.uniswap_v3_get_ticks_day_data__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -1804,7 +1804,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetTicksDayData (historical)
+  # TicksDayData (historical)
   data, status_code, headers = api_instance.uniswap_v3_get_ticks_day_data__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -1842,7 +1842,7 @@ No authorization required
 
 > <Array<UniswapV3TokenV3DTO>> uniswap_v3_get_tokens__current(opts)
 
-GetTokens (current) 🔥
+Tokens (current) 🔥
 
 Gets tokens.
 
@@ -1858,7 +1858,7 @@ opts = {
 }
 
 begin
-  # GetTokens (current) 🔥
+  # Tokens (current) 🔥
   result = api_instance.uniswap_v3_get_tokens__current(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -1874,7 +1874,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetTokens (current) 🔥
+  # Tokens (current) 🔥
   data, status_code, headers = api_instance.uniswap_v3_get_tokens__current_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -1908,7 +1908,7 @@ No authorization required
 
 > <Array<UniswapV3TokenV3DTO>> uniswap_v3_get_tokens__historical(opts)
 
-GetTokens (historical) 🔥
+Tokens (historical) 🔥
 
 Gets tokens.
 
@@ -1928,7 +1928,7 @@ opts = {
 }
 
 begin
-  # GetTokens (historical) 🔥
+  # Tokens (historical) 🔥
   result = api_instance.uniswap_v3_get_tokens__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -1944,7 +1944,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetTokens (historical) 🔥
+  # Tokens (historical) 🔥
   data, status_code, headers = api_instance.uniswap_v3_get_tokens__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -1982,7 +1982,7 @@ No authorization required
 
 > <Array<UniswapV3TokenV3DayDataDTO>> uniswap_v3_get_tokens_day_data__current(opts)
 
-GetTokensDayData (current)
+TokensDayData (current)
 
 Gets tokens day data.
 
@@ -1998,7 +1998,7 @@ opts = {
 }
 
 begin
-  # GetTokensDayData (current)
+  # TokensDayData (current)
   result = api_instance.uniswap_v3_get_tokens_day_data__current(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -2014,7 +2014,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetTokensDayData (current)
+  # TokensDayData (current)
   data, status_code, headers = api_instance.uniswap_v3_get_tokens_day_data__current_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -2048,7 +2048,7 @@ No authorization required
 
 > <Array<UniswapV3TokenV3DayDataDTO>> uniswap_v3_get_tokens_day_data__historical(opts)
 
-GetTokensDayData (historical)
+TokensDayData (historical)
 
 Gets tokens day data.
 
@@ -2068,7 +2068,7 @@ opts = {
 }
 
 begin
-  # GetTokensDayData (historical)
+  # TokensDayData (historical)
   result = api_instance.uniswap_v3_get_tokens_day_data__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -2084,7 +2084,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetTokensDayData (historical)
+  # TokensDayData (historical)
   data, status_code, headers = api_instance.uniswap_v3_get_tokens_day_data__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -2122,7 +2122,7 @@ No authorization required
 
 > <Array<UniswapV3TokenHourDataV3DTO>> uniswap_v3_get_tokens_hour_data__current(opts)
 
-GetTokensHourData (current)
+TokensHourData (current)
 
 Gets tokens hour data.
 
@@ -2138,7 +2138,7 @@ opts = {
 }
 
 begin
-  # GetTokensHourData (current)
+  # TokensHourData (current)
   result = api_instance.uniswap_v3_get_tokens_hour_data__current(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -2154,7 +2154,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetTokensHourData (current)
+  # TokensHourData (current)
   data, status_code, headers = api_instance.uniswap_v3_get_tokens_hour_data__current_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -2188,7 +2188,7 @@ No authorization required
 
 > <Array<UniswapV3TokenHourDataV3DTO>> uniswap_v3_get_tokens_hour_data__historical(opts)
 
-GetTokensHourData (historical)
+TokensHourData (historical)
 
 Gets tokens hour data.
 
@@ -2208,7 +2208,7 @@ opts = {
 }
 
 begin
-  # GetTokensHourData (historical)
+  # TokensHourData (historical)
   result = api_instance.uniswap_v3_get_tokens_hour_data__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -2224,7 +2224,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetTokensHourData (historical)
+  # TokensHourData (historical)
   data, status_code, headers = api_instance.uniswap_v3_get_tokens_hour_data__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -2262,7 +2262,7 @@ No authorization required
 
 > <Array<UniswapV3TransactionV3DTO>> uniswap_v3_get_transactions__historical(opts)
 
-GetTransactions (historical)
+Transactions (historical)
 
 Gets transactions.
 
@@ -2281,7 +2281,7 @@ opts = {
 }
 
 begin
-  # GetTransactions (historical)
+  # Transactions (historical)
   result = api_instance.uniswap_v3_get_transactions__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -2297,7 +2297,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetTransactions (historical)
+  # Transactions (historical)
   data, status_code, headers = api_instance.uniswap_v3_get_transactions__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }

@@ -21,7 +21,7 @@ from .. import ApiTestMixin
 class TestDappsCurveTransferOwnershipEventsHistorical(ApiTestMixin, unittest.TestCase):
     """
     DappsCurveTransferOwnershipEventsHistorical unit test stubs
-        GetTransferOwnershipEvents (historical)  # noqa: E501
+        TransferOwnershipEvents (historical)  # noqa: E501
     """
     _configuration = configuration.Configuration()
 

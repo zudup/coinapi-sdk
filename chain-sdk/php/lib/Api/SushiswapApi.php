@@ -186,7 +186,7 @@ class SushiswapApi
     /**
      * Operation curveGetExchangesCurrent
      *
-     * GetExchanges (current) 🔥
+     * Exchanges (current) 🔥
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetExchangesCurrent'] to see the possible values for this operation
      *
@@ -203,7 +203,7 @@ class SushiswapApi
     /**
      * Operation curveGetExchangesCurrentWithHttpInfo
      *
-     * GetExchanges (current) 🔥
+     * Exchanges (current) 🔥
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetExchangesCurrent'] to see the possible values for this operation
      *
@@ -302,7 +302,7 @@ class SushiswapApi
     /**
      * Operation curveGetExchangesCurrentAsync
      *
-     * GetExchanges (current) 🔥
+     * Exchanges (current) 🔥
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetExchangesCurrent'] to see the possible values for this operation
      *
@@ -322,7 +322,7 @@ class SushiswapApi
     /**
      * Operation curveGetExchangesCurrentAsyncWithHttpInfo
      *
-     * GetExchanges (current) 🔥
+     * Exchanges (current) 🔥
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetExchangesCurrent'] to see the possible values for this operation
      *
@@ -449,7 +449,7 @@ class SushiswapApi
     /**
      * Operation dexGetTradesCurrent
      *
-     * GetTrades (current) 🔥
+     * Trades (current) 🔥
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetTradesCurrent'] to see the possible values for this operation
      *
@@ -466,7 +466,7 @@ class SushiswapApi
     /**
      * Operation dexGetTradesCurrentWithHttpInfo
      *
-     * GetTrades (current) 🔥
+     * Trades (current) 🔥
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetTradesCurrent'] to see the possible values for this operation
      *
@@ -565,7 +565,7 @@ class SushiswapApi
     /**
      * Operation dexGetTradesCurrentAsync
      *
-     * GetTrades (current) 🔥
+     * Trades (current) 🔥
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetTradesCurrent'] to see the possible values for this operation
      *
@@ -585,7 +585,7 @@ class SushiswapApi
     /**
      * Operation dexGetTradesCurrentAsyncWithHttpInfo
      *
-     * GetTrades (current) 🔥
+     * Trades (current) 🔥
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetTradesCurrent'] to see the possible values for this operation
      *
@@ -712,7 +712,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetBundlesHistorical
      *
-     * GetBundles (historical)
+     * Bundles (historical)
      *
      * @param  int $start_block AAAAAAAAAA (optional)
      * @param  int $end_block BBBBBBBBBBBB (optional)
@@ -733,7 +733,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetBundlesHistoricalWithHttpInfo
      *
-     * GetBundles (historical)
+     * Bundles (historical)
      *
      * @param  int $start_block AAAAAAAAAA (optional)
      * @param  int $end_block BBBBBBBBBBBB (optional)
@@ -836,7 +836,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetBundlesHistoricalAsync
      *
-     * GetBundles (historical)
+     * Bundles (historical)
      *
      * @param  int $start_block AAAAAAAAAA (optional)
      * @param  int $end_block BBBBBBBBBBBB (optional)
@@ -860,7 +860,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetBundlesHistoricalAsyncWithHttpInfo
      *
-     * GetBundles (historical)
+     * Bundles (historical)
      *
      * @param  int $start_block AAAAAAAAAA (optional)
      * @param  int $end_block BBBBBBBBBBBB (optional)
@@ -1035,7 +1035,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetBurnsHistorical
      *
-     * GetBurns (historical)
+     * Burns (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -1057,7 +1057,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetBurnsHistoricalWithHttpInfo
      *
-     * GetBurns (historical)
+     * Burns (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -1161,7 +1161,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetBurnsHistoricalAsync
      *
-     * GetBurns (historical)
+     * Burns (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -1186,7 +1186,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetBurnsHistoricalAsyncWithHttpInfo
      *
-     * GetBurns (historical)
+     * Burns (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -1373,7 +1373,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetDayDataHistorical
      *
-     * GetDayData (historical)
+     * DayData (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -1394,7 +1394,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetDayDataHistoricalWithHttpInfo
      *
-     * GetDayData (historical)
+     * DayData (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -1497,7 +1497,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetDayDataHistoricalAsync
      *
-     * GetDayData (historical)
+     * DayData (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -1521,7 +1521,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetDayDataHistoricalAsyncWithHttpInfo
      *
-     * GetDayData (historical)
+     * DayData (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -1696,7 +1696,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetFactoryHistorical
      *
-     * GetFactory (historical)
+     * Factory (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -1717,7 +1717,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetFactoryHistoricalWithHttpInfo
      *
-     * GetFactory (historical)
+     * Factory (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -1820,7 +1820,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetFactoryHistoricalAsync
      *
-     * GetFactory (historical)
+     * Factory (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -1844,7 +1844,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetFactoryHistoricalAsyncWithHttpInfo
      *
-     * GetFactory (historical)
+     * Factory (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -2019,7 +2019,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetHourDataHistorical
      *
-     * GetHourData (historical)
+     * HourData (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -2040,7 +2040,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetHourDataHistoricalWithHttpInfo
      *
-     * GetHourData (historical)
+     * HourData (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -2143,7 +2143,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetHourDataHistoricalAsync
      *
-     * GetHourData (historical)
+     * HourData (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -2167,7 +2167,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetHourDataHistoricalAsyncWithHttpInfo
      *
-     * GetHourData (historical)
+     * HourData (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -2342,7 +2342,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetLiquidityPositionHistorical
      *
-     * GetLiquidityPosition (historical)
+     * LiquidityPosition (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -2364,7 +2364,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetLiquidityPositionHistoricalWithHttpInfo
      *
-     * GetLiquidityPosition (historical)
+     * LiquidityPosition (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -2468,7 +2468,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetLiquidityPositionHistoricalAsync
      *
-     * GetLiquidityPosition (historical)
+     * LiquidityPosition (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -2493,7 +2493,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetLiquidityPositionHistoricalAsyncWithHttpInfo
      *
-     * GetLiquidityPosition (historical)
+     * LiquidityPosition (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -2680,7 +2680,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetLiquidityPositionSnapshotHistorical
      *
-     * GetLiquidityPositionSnapshot (historical)
+     * LiquidityPositionSnapshot (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -2702,7 +2702,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetLiquidityPositionSnapshotHistoricalWithHttpInfo
      *
-     * GetLiquidityPositionSnapshot (historical)
+     * LiquidityPositionSnapshot (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -2806,7 +2806,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetLiquidityPositionSnapshotHistoricalAsync
      *
-     * GetLiquidityPositionSnapshot (historical)
+     * LiquidityPositionSnapshot (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -2831,7 +2831,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetLiquidityPositionSnapshotHistoricalAsyncWithHttpInfo
      *
-     * GetLiquidityPositionSnapshot (historical)
+     * LiquidityPositionSnapshot (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -3018,7 +3018,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetMintsHistorical
      *
-     * GetMints (historical)
+     * Mints (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -3040,7 +3040,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetMintsHistoricalWithHttpInfo
      *
-     * GetMints (historical)
+     * Mints (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -3144,7 +3144,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetMintsHistoricalAsync
      *
-     * GetMints (historical)
+     * Mints (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -3169,7 +3169,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetMintsHistoricalAsyncWithHttpInfo
      *
-     * GetMints (historical)
+     * Mints (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -3356,7 +3356,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetPoolsCurrent
      *
-     * GetPools (current) 🔥
+     * Pools (current) 🔥
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetPoolsCurrent'] to see the possible values for this operation
      *
@@ -3373,7 +3373,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetPoolsCurrentWithHttpInfo
      *
-     * GetPools (current) 🔥
+     * Pools (current) 🔥
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetPoolsCurrent'] to see the possible values for this operation
      *
@@ -3472,7 +3472,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetPoolsCurrentAsync
      *
-     * GetPools (current) 🔥
+     * Pools (current) 🔥
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetPoolsCurrent'] to see the possible values for this operation
      *
@@ -3492,7 +3492,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetPoolsCurrentAsyncWithHttpInfo
      *
-     * GetPools (current) 🔥
+     * Pools (current) 🔥
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetPoolsCurrent'] to see the possible values for this operation
      *
@@ -3619,7 +3619,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetPoolsDayDataHistorical
      *
-     * GetPoolsDayData (historical)
+     * PoolsDayData (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -3641,7 +3641,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetPoolsDayDataHistoricalWithHttpInfo
      *
-     * GetPoolsDayData (historical)
+     * PoolsDayData (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -3745,7 +3745,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetPoolsDayDataHistoricalAsync
      *
-     * GetPoolsDayData (historical)
+     * PoolsDayData (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -3770,7 +3770,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetPoolsDayDataHistoricalAsyncWithHttpInfo
      *
-     * GetPoolsDayData (historical)
+     * PoolsDayData (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -3957,7 +3957,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetPoolsHistorical
      *
-     * GetPools (historical) 🔥
+     * Pools (historical) 🔥
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -3979,7 +3979,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetPoolsHistoricalWithHttpInfo
      *
-     * GetPools (historical) 🔥
+     * Pools (historical) 🔥
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -4083,7 +4083,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetPoolsHistoricalAsync
      *
-     * GetPools (historical) 🔥
+     * Pools (historical) 🔥
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -4108,7 +4108,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetPoolsHistoricalAsyncWithHttpInfo
      *
-     * GetPools (historical) 🔥
+     * Pools (historical) 🔥
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -4295,7 +4295,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetPoolsHourDataHistorical
      *
-     * GetPoolsHourData (historical)
+     * PoolsHourData (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -4317,7 +4317,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetPoolsHourDataHistoricalWithHttpInfo
      *
-     * GetPoolsHourData (historical)
+     * PoolsHourData (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -4421,7 +4421,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetPoolsHourDataHistoricalAsync
      *
-     * GetPoolsHourData (historical)
+     * PoolsHourData (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -4446,7 +4446,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetPoolsHourDataHistoricalAsyncWithHttpInfo
      *
-     * GetPoolsHourData (historical)
+     * PoolsHourData (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -4633,7 +4633,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetSwapsCurrent
      *
-     * GetSwaps (current) 🔥
+     * Swaps (current) 🔥
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetSwapsCurrent'] to see the possible values for this operation
      *
@@ -4650,7 +4650,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetSwapsCurrentWithHttpInfo
      *
-     * GetSwaps (current) 🔥
+     * Swaps (current) 🔥
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetSwapsCurrent'] to see the possible values for this operation
      *
@@ -4749,7 +4749,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetSwapsCurrentAsync
      *
-     * GetSwaps (current) 🔥
+     * Swaps (current) 🔥
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetSwapsCurrent'] to see the possible values for this operation
      *
@@ -4769,7 +4769,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetSwapsCurrentAsyncWithHttpInfo
      *
-     * GetSwaps (current) 🔥
+     * Swaps (current) 🔥
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetSwapsCurrent'] to see the possible values for this operation
      *
@@ -4896,7 +4896,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetSwapsHistorical
      *
-     * GetSwaps (historical) 🔥
+     * Swaps (historical) 🔥
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -4918,7 +4918,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetSwapsHistoricalWithHttpInfo
      *
-     * GetSwaps (historical) 🔥
+     * Swaps (historical) 🔥
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -5022,7 +5022,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetSwapsHistoricalAsync
      *
-     * GetSwaps (historical) 🔥
+     * Swaps (historical) 🔥
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -5047,7 +5047,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetSwapsHistoricalAsyncWithHttpInfo
      *
-     * GetSwaps (historical) 🔥
+     * Swaps (historical) 🔥
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -5234,7 +5234,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetTokensCurrent
      *
-     * GetTokens (current) 🔥
+     * Tokens (current) 🔥
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetTokensCurrent'] to see the possible values for this operation
      *
@@ -5251,7 +5251,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetTokensCurrentWithHttpInfo
      *
-     * GetTokens (current) 🔥
+     * Tokens (current) 🔥
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetTokensCurrent'] to see the possible values for this operation
      *
@@ -5350,7 +5350,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetTokensCurrentAsync
      *
-     * GetTokens (current) 🔥
+     * Tokens (current) 🔥
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetTokensCurrent'] to see the possible values for this operation
      *
@@ -5370,7 +5370,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetTokensCurrentAsyncWithHttpInfo
      *
-     * GetTokens (current) 🔥
+     * Tokens (current) 🔥
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sushiswapGetTokensCurrent'] to see the possible values for this operation
      *
@@ -5497,7 +5497,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetTokensDayDataHistorical
      *
-     * GetTokensDayData (historical)
+     * TokensDayData (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -5519,7 +5519,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetTokensDayDataHistoricalWithHttpInfo
      *
-     * GetTokensDayData (historical)
+     * TokensDayData (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -5623,7 +5623,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetTokensDayDataHistoricalAsync
      *
-     * GetTokensDayData (historical)
+     * TokensDayData (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -5648,7 +5648,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetTokensDayDataHistoricalAsyncWithHttpInfo
      *
-     * GetTokensDayData (historical)
+     * TokensDayData (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -5835,7 +5835,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetTokensHistorical
      *
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -5857,7 +5857,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetTokensHistoricalWithHttpInfo
      *
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -5961,7 +5961,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetTokensHistoricalAsync
      *
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -5986,7 +5986,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetTokensHistoricalAsyncWithHttpInfo
      *
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -6173,7 +6173,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetTransactionsHistorical
      *
-     * GetTransactions (historical)
+     * Transactions (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -6194,7 +6194,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetTransactionsHistoricalWithHttpInfo
      *
-     * GetTransactions (historical)
+     * Transactions (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -6297,7 +6297,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetTransactionsHistoricalAsync
      *
-     * GetTransactions (historical)
+     * Transactions (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -6321,7 +6321,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetTransactionsHistoricalAsyncWithHttpInfo
      *
-     * GetTransactions (historical)
+     * Transactions (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -6496,7 +6496,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetUsersHistorical
      *
-     * GetUsers (historical)
+     * Users (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -6517,7 +6517,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetUsersHistoricalWithHttpInfo
      *
-     * GetUsers (historical)
+     * Users (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -6620,7 +6620,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetUsersHistoricalAsync
      *
-     * GetUsers (historical)
+     * Users (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -6644,7 +6644,7 @@ class SushiswapApi
     /**
      * Operation sushiswapGetUsersHistoricalAsyncWithHttpInfo
      *
-     * GetUsers (historical)
+     * Users (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)

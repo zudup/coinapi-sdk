@@ -21,7 +21,7 @@ from .. import ApiTestMixin
 class TestDappsUniswapv3DayDataCurrent(ApiTestMixin, unittest.TestCase):
     """
     DappsUniswapv3DayDataCurrent unit test stubs
-        GetDayData (current)  # noqa: E501
+        DayData (current)  # noqa: E501
     """
     _configuration = configuration.Configuration()
 

@@ -100,7 +100,7 @@ export class CowService {
     }
 
     /**
-     * GetOrders (historical)
+     * Orders (historical)
      * Gets orders.
      * @param startBlock 
      * @param endBlock 
@@ -180,7 +180,7 @@ export class CowService {
     }
 
     /**
-     * GetSettlements (historical)
+     * Settlements (historical)
      * Gets settlements.
      * @param startBlock 
      * @param endBlock 
@@ -260,7 +260,7 @@ export class CowService {
     }
 
     /**
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      * Gets tokens.
      * @param startBlock 
      * @param endBlock 
@@ -345,7 +345,7 @@ export class CowService {
     }
 
     /**
-     * GetTrades (historical) 🔥
+     * Trades (historical) 🔥
      * Gets trades.
      * @param startBlock 
      * @param endBlock 
@@ -425,7 +425,7 @@ export class CowService {
     }
 
     /**
-     * GetUsers (historical)
+     * Users (historical)
      * Gets users.
      * @param startBlock 
      * @param endBlock 

@@ -56,7 +56,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * GetBatches (historical)
+     * Batches (historical)
      * Gets batches.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -90,7 +90,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * GetBatches (historical)
+     * Batches (historical)
      * Gets batches.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -149,7 +149,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * GetDeposits (historical)
+     * Deposits (historical)
      * Gets deposits.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -184,7 +184,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * GetDeposits (historical)
+     * Deposits (historical)
      * Gets deposits.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -248,7 +248,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * GetOrders (historical)
+     * Orders (historical)
      * Gets orders.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -283,7 +283,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * GetOrders (historical)
+     * Orders (historical)
      * Gets orders.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -347,7 +347,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * GetPrices (historical)
+     * Prices (historical)
      * Gets prices.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -382,7 +382,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * GetPrices (historical)
+     * Prices (historical)
      * Gets prices.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -446,7 +446,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * GetSolutions (historical)
+     * Solutions (historical)
      * Gets solutions.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -481,7 +481,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * GetSolutions (historical)
+     * Solutions (historical)
      * Gets solutions.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -545,7 +545,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * GetStats (historical)
+     * Stats (historical)
      * Gets stats.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -579,7 +579,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * GetStats (historical)
+     * Stats (historical)
      * Gets stats.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -638,7 +638,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      * Gets tokens.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -673,7 +673,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      * Gets tokens.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -737,7 +737,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * GetTrades (historical) 🔥
+     * Trades (historical) 🔥
      * Gets trades.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -771,7 +771,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * GetTrades (historical) 🔥
+     * Trades (historical) 🔥
      * Gets trades.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -830,7 +830,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * GetUsers (historical)
+     * Users (historical)
      * Gets users.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -864,7 +864,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * GetUsers (historical)
+     * Users (historical)
      * Gets users.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -923,7 +923,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * GetWithdraws (historical)
+     * Withdraws (historical)
      * Gets withdraws.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -958,7 +958,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * GetWithdraws (historical)
+     * Withdraws (historical)
      * Gets withdraws.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1022,7 +1022,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * GetWithdrawsRequests (historical)
+     * WithdrawsRequests (historical)
      * Gets withdraws requests.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1057,7 +1057,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * GetWithdrawsRequests (historical)
+     * WithdrawsRequests (historical)
      * Gets withdraws requests.
      * @param startBlock  (optional)
      * @param endBlock  (optional)

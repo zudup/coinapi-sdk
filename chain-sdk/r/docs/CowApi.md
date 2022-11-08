@@ -4,17 +4,17 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CowGetOrdersHistorical**](CowApi.md#CowGetOrdersHistorical) | **GET** /dapps/cow/orders/historical | GetOrders (historical)
-[**CowGetSettlementsHistorical**](CowApi.md#CowGetSettlementsHistorical) | **GET** /dapps/cow/settlements/historical | GetSettlements (historical)
-[**CowGetTokensHistorical**](CowApi.md#CowGetTokensHistorical) | **GET** /dapps/cow/tokens/historical | GetTokens (historical) 🔥
-[**CowGetTradesHistorical**](CowApi.md#CowGetTradesHistorical) | **GET** /dapps/cow/trades/historical | GetTrades (historical) 🔥
-[**CowGetUsersHistorical**](CowApi.md#CowGetUsersHistorical) | **GET** /dapps/cow/users/historical | GetUsers (historical)
+[**CowGetOrdersHistorical**](CowApi.md#CowGetOrdersHistorical) | **GET** /dapps/cow/orders/historical | Orders (historical)
+[**CowGetSettlementsHistorical**](CowApi.md#CowGetSettlementsHistorical) | **GET** /dapps/cow/settlements/historical | Settlements (historical)
+[**CowGetTokensHistorical**](CowApi.md#CowGetTokensHistorical) | **GET** /dapps/cow/tokens/historical | Tokens (historical) 🔥
+[**CowGetTradesHistorical**](CowApi.md#CowGetTradesHistorical) | **GET** /dapps/cow/trades/historical | Trades (historical) 🔥
+[**CowGetUsersHistorical**](CowApi.md#CowGetUsersHistorical) | **GET** /dapps/cow/users/historical | Users (historical)
 
 
 # **CowGetOrdersHistorical**
 > array[CowOrderDTO] CowGetOrdersHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date)
 
-GetOrders (historical)
+Orders (historical)
 
 Gets orders.
 
@@ -22,7 +22,7 @@ Gets orders.
 ```R
 library(openapi)
 
-# GetOrders (historical)
+# Orders (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -67,7 +67,7 @@ No authorization required
 # **CowGetSettlementsHistorical**
 > array[CowSettlementDTO] CowGetSettlementsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date)
 
-GetSettlements (historical)
+Settlements (historical)
 
 Gets settlements.
 
@@ -75,7 +75,7 @@ Gets settlements.
 ```R
 library(openapi)
 
-# GetSettlements (historical)
+# Settlements (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -120,7 +120,7 @@ No authorization required
 # **CowGetTokensHistorical**
 > array[CowTokenDTO] CowGetTokensHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, token_id = var.token_id)
 
-GetTokens (historical) 🔥
+Tokens (historical) 🔥
 
 Gets tokens.
 
@@ -128,7 +128,7 @@ Gets tokens.
 ```R
 library(openapi)
 
-# GetTokens (historical) 🔥
+# Tokens (historical) 🔥
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -175,7 +175,7 @@ No authorization required
 # **CowGetTradesHistorical**
 > array[CowTradeDTO] CowGetTradesHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date)
 
-GetTrades (historical) 🔥
+Trades (historical) 🔥
 
 Gets trades.
 
@@ -183,7 +183,7 @@ Gets trades.
 ```R
 library(openapi)
 
-# GetTrades (historical) 🔥
+# Trades (historical) 🔥
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -228,7 +228,7 @@ No authorization required
 # **CowGetUsersHistorical**
 > array[CowUserDTO] CowGetUsersHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date)
 
-GetUsers (historical)
+Users (historical)
 
 Gets users.
 
@@ -236,7 +236,7 @@ Gets users.
 ```R
 library(openapi)
 
-# GetUsers (historical)
+# Users (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)

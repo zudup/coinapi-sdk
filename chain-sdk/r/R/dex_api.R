@@ -14,7 +14,7 @@
 #'
 #' @section Methods:
 #' \describe{
-#' \strong{ DexGetBatchesHistorical } \emph{ GetBatches (historical) }
+#' \strong{ DexGetBatchesHistorical } \emph{ Batches (historical) }
 #' Gets batches.
 #'
 #' \itemize{
@@ -34,7 +34,7 @@
 #' }
 #' }
 #'
-#' \strong{ DexGetDepositsHistorical } \emph{ GetDeposits (historical) }
+#' \strong{ DexGetDepositsHistorical } \emph{ Deposits (historical) }
 #' Gets deposits.
 #'
 #' \itemize{
@@ -55,7 +55,7 @@
 #' }
 #' }
 #'
-#' \strong{ DexGetOrdersHistorical } \emph{ GetOrders (historical) }
+#' \strong{ DexGetOrdersHistorical } \emph{ Orders (historical) }
 #' Gets orders.
 #'
 #' \itemize{
@@ -76,7 +76,7 @@
 #' }
 #' }
 #'
-#' \strong{ DexGetPricesHistorical } \emph{ GetPrices (historical) }
+#' \strong{ DexGetPricesHistorical } \emph{ Prices (historical) }
 #' Gets prices.
 #'
 #' \itemize{
@@ -97,7 +97,7 @@
 #' }
 #' }
 #'
-#' \strong{ DexGetSolutionsHistorical } \emph{ GetSolutions (historical) }
+#' \strong{ DexGetSolutionsHistorical } \emph{ Solutions (historical) }
 #' Gets solutions.
 #'
 #' \itemize{
@@ -118,7 +118,7 @@
 #' }
 #' }
 #'
-#' \strong{ DexGetStatsHistorical } \emph{ GetStats (historical) }
+#' \strong{ DexGetStatsHistorical } \emph{ Stats (historical) }
 #' Gets stats.
 #'
 #' \itemize{
@@ -138,7 +138,7 @@
 #' }
 #' }
 #'
-#' \strong{ DexGetTokensHistorical } \emph{ GetTokens (historical) 🔥 }
+#' \strong{ DexGetTokensHistorical } \emph{ Tokens (historical) 🔥 }
 #' Gets tokens.
 #'
 #' \itemize{
@@ -159,7 +159,7 @@
 #' }
 #' }
 #'
-#' \strong{ DexGetTradesHistorical } \emph{ GetTrades (historical) 🔥 }
+#' \strong{ DexGetTradesHistorical } \emph{ Trades (historical) 🔥 }
 #' Gets trades.
 #'
 #' \itemize{
@@ -179,7 +179,7 @@
 #' }
 #' }
 #'
-#' \strong{ DexGetUsersHistorical } \emph{ GetUsers (historical) }
+#' \strong{ DexGetUsersHistorical } \emph{ Users (historical) }
 #' Gets users.
 #'
 #' \itemize{
@@ -199,7 +199,7 @@
 #' }
 #' }
 #'
-#' \strong{ DexGetWithdrawsHistorical } \emph{ GetWithdraws (historical) }
+#' \strong{ DexGetWithdrawsHistorical } \emph{ Withdraws (historical) }
 #' Gets withdraws.
 #'
 #' \itemize{
@@ -220,7 +220,7 @@
 #' }
 #' }
 #'
-#' \strong{ DexGetWithdrawsRequestsHistorical } \emph{ GetWithdrawsRequests (historical) }
+#' \strong{ DexGetWithdrawsRequestsHistorical } \emph{ WithdrawsRequests (historical) }
 #' Gets withdraws requests.
 #'
 #' \itemize{
@@ -254,7 +254,7 @@
 #' var_start_date <- "start_date_example" # character |  (Optional)
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #'
-#' #GetBatches (historical)
+#' #Batches (historical)
 #' api_instance <- DexApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -272,7 +272,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_token_id <- "token_id_example" # character |  (Optional)
 #'
-#' #GetDeposits (historical)
+#' #Deposits (historical)
 #' api_instance <- DexApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -290,7 +290,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_token_id <- "token_id_example" # character |  (Optional)
 #'
-#' #GetOrders (historical)
+#' #Orders (historical)
 #' api_instance <- DexApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -308,7 +308,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_token_id <- "token_id_example" # character |  (Optional)
 #'
-#' #GetPrices (historical)
+#' #Prices (historical)
 #' api_instance <- DexApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -326,7 +326,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_token_id <- "token_id_example" # character |  (Optional)
 #'
-#' #GetSolutions (historical)
+#' #Solutions (historical)
 #' api_instance <- DexApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -343,7 +343,7 @@
 #' var_start_date <- "start_date_example" # character |  (Optional)
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #'
-#' #GetStats (historical)
+#' #Stats (historical)
 #' api_instance <- DexApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -361,7 +361,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_token_id <- "token_id_example" # character |  (Optional)
 #'
-#' #GetTokens (historical) 🔥
+#' #Tokens (historical) 🔥
 #' api_instance <- DexApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -378,7 +378,7 @@
 #' var_start_date <- "start_date_example" # character |  (Optional)
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #'
-#' #GetTrades (historical) 🔥
+#' #Trades (historical) 🔥
 #' api_instance <- DexApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -395,7 +395,7 @@
 #' var_start_date <- "start_date_example" # character |  (Optional)
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #'
-#' #GetUsers (historical)
+#' #Users (historical)
 #' api_instance <- DexApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -413,7 +413,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_token_id <- "token_id_example" # character |  (Optional)
 #'
-#' #GetWithdraws (historical)
+#' #Withdraws (historical)
 #' api_instance <- DexApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -431,7 +431,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_token_id <- "token_id_example" # character |  (Optional)
 #'
-#' #GetWithdrawsRequests (historical)
+#' #WithdrawsRequests (historical)
 #' api_instance <- DexApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -462,10 +462,10 @@ DexApi <- R6::R6Class(
         self$api_client <- ApiClient$new()
       }
     },
-    #' GetBatches (historical)
+    #' Batches (historical)
     #'
     #' @description
-    #' GetBatches (historical)
+    #' Batches (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -487,10 +487,10 @@ DexApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetBatches (historical)
+    #' Batches (historical)
     #'
     #' @description
-    #' GetBatches (historical)
+    #' Batches (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -568,10 +568,10 @@ DexApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetDeposits (historical)
+    #' Deposits (historical)
     #'
     #' @description
-    #' GetDeposits (historical)
+    #' Deposits (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -594,10 +594,10 @@ DexApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetDeposits (historical)
+    #' Deposits (historical)
     #'
     #' @description
-    #' GetDeposits (historical)
+    #' Deposits (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -679,10 +679,10 @@ DexApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetOrders (historical)
+    #' Orders (historical)
     #'
     #' @description
-    #' GetOrders (historical)
+    #' Orders (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -705,10 +705,10 @@ DexApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetOrders (historical)
+    #' Orders (historical)
     #'
     #' @description
-    #' GetOrders (historical)
+    #' Orders (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -790,10 +790,10 @@ DexApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetPrices (historical)
+    #' Prices (historical)
     #'
     #' @description
-    #' GetPrices (historical)
+    #' Prices (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -816,10 +816,10 @@ DexApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetPrices (historical)
+    #' Prices (historical)
     #'
     #' @description
-    #' GetPrices (historical)
+    #' Prices (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -901,10 +901,10 @@ DexApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetSolutions (historical)
+    #' Solutions (historical)
     #'
     #' @description
-    #' GetSolutions (historical)
+    #' Solutions (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -927,10 +927,10 @@ DexApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetSolutions (historical)
+    #' Solutions (historical)
     #'
     #' @description
-    #' GetSolutions (historical)
+    #' Solutions (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -1012,10 +1012,10 @@ DexApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetStats (historical)
+    #' Stats (historical)
     #'
     #' @description
-    #' GetStats (historical)
+    #' Stats (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -1037,10 +1037,10 @@ DexApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetStats (historical)
+    #' Stats (historical)
     #'
     #' @description
-    #' GetStats (historical)
+    #' Stats (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -1118,10 +1118,10 @@ DexApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetTokens (historical) 🔥
+    #' Tokens (historical) 🔥
     #'
     #' @description
-    #' GetTokens (historical) 🔥
+    #' Tokens (historical) 🔥
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -1144,10 +1144,10 @@ DexApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetTokens (historical) 🔥
+    #' Tokens (historical) 🔥
     #'
     #' @description
-    #' GetTokens (historical) 🔥
+    #' Tokens (historical) 🔥
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -1229,10 +1229,10 @@ DexApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetTrades (historical) 🔥
+    #' Trades (historical) 🔥
     #'
     #' @description
-    #' GetTrades (historical) 🔥
+    #' Trades (historical) 🔥
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -1254,10 +1254,10 @@ DexApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetTrades (historical) 🔥
+    #' Trades (historical) 🔥
     #'
     #' @description
-    #' GetTrades (historical) 🔥
+    #' Trades (historical) 🔥
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -1335,10 +1335,10 @@ DexApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetUsers (historical)
+    #' Users (historical)
     #'
     #' @description
-    #' GetUsers (historical)
+    #' Users (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -1360,10 +1360,10 @@ DexApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetUsers (historical)
+    #' Users (historical)
     #'
     #' @description
-    #' GetUsers (historical)
+    #' Users (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -1441,10 +1441,10 @@ DexApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetWithdraws (historical)
+    #' Withdraws (historical)
     #'
     #' @description
-    #' GetWithdraws (historical)
+    #' Withdraws (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -1467,10 +1467,10 @@ DexApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetWithdraws (historical)
+    #' Withdraws (historical)
     #'
     #' @description
-    #' GetWithdraws (historical)
+    #' Withdraws (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -1552,10 +1552,10 @@ DexApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetWithdrawsRequests (historical)
+    #' WithdrawsRequests (historical)
     #'
     #' @description
-    #' GetWithdrawsRequests (historical)
+    #' WithdrawsRequests (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -1578,10 +1578,10 @@ DexApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetWithdrawsRequests (historical)
+    #' WithdrawsRequests (historical)
     #'
     #' @description
-    #' GetWithdrawsRequests (historical)
+    #' WithdrawsRequests (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 

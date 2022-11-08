@@ -26,7 +26,7 @@ public class OASUniswapV3Api {
     }
 
     /**
-     * GetBundles (current)
+     * Bundles (current)
      * Gets bundles.
      * @return List<OASUniswapV3BundleV3DTO>
      * @throws OAS.ApiException if fails to make API call
@@ -47,7 +47,7 @@ public class OASUniswapV3Api {
         );
     }
     /**
-     * GetBundles (historical)
+     * Bundles (historical)
      * Gets bundles.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -79,7 +79,7 @@ public class OASUniswapV3Api {
         );
     }
     /**
-     * GetBurns (current)
+     * Burns (current)
      * Gets burns.
      * @param filterPoolId  (optional)
      * @return List<OASUniswapV3BurnV3DTO>
@@ -105,7 +105,7 @@ public class OASUniswapV3Api {
         );
     }
     /**
-     * GetBurns (historical)
+     * Burns (historical)
      * Gets burns.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -139,7 +139,7 @@ public class OASUniswapV3Api {
         );
     }
     /**
-     * GetDayData (current)
+     * DayData (current)
      * Gets uniswapv3 day data.
      * @return List<OASUniswapV3UniswapDayDataV3DTO>
      * @throws OAS.ApiException if fails to make API call
@@ -160,7 +160,7 @@ public class OASUniswapV3Api {
         );
     }
     /**
-     * GetDayData (historical)
+     * DayData (historical)
      * Gets uniswapv3 day data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -192,7 +192,7 @@ public class OASUniswapV3Api {
         );
     }
     /**
-     * GetFactory (current)
+     * Factory (current)
      * Gets factory.
      * @return List<OASUniswapV3FactoryV3DTO>
      * @throws OAS.ApiException if fails to make API call
@@ -213,7 +213,7 @@ public class OASUniswapV3Api {
         );
     }
     /**
-     * GetFactory (historical)
+     * Factory (historical)
      * Gets factory.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -245,7 +245,7 @@ public class OASUniswapV3Api {
         );
     }
     /**
-     * GetMints (current)
+     * Mints (current)
      * Gets mints.
      * @param filterPoolId  (optional)
      * @return List<OASUniswapV3MintV3DTO>
@@ -271,7 +271,7 @@ public class OASUniswapV3Api {
         );
     }
     /**
-     * GetMints (historical)
+     * Mints (historical)
      * Gets mints.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -305,7 +305,7 @@ public class OASUniswapV3Api {
         );
     }
     /**
-     * GetPools (current) 🔥
+     * Pools (current) 🔥
      * Gets pools.
      * @param filterPoolId  (optional)
      * @return List<OASUniswapV3PoolV3DTO>
@@ -331,7 +331,7 @@ public class OASUniswapV3Api {
         );
     }
     /**
-     * GetPoolsDayData (current)
+     * PoolsDayData (current)
      * Gets pools day data.
      * @param filterPoolId  (optional)
      * @return List<OASUniswapV3PoolDayDataV3DTO>
@@ -357,7 +357,7 @@ public class OASUniswapV3Api {
         );
     }
     /**
-     * GetPoolsDayData (historical)
+     * PoolsDayData (historical)
      * Gets pools day data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -391,7 +391,7 @@ public class OASUniswapV3Api {
         );
     }
     /**
-     * GetPools (historical) 🔥
+     * Pools (historical) 🔥
      * Gets pools.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -425,7 +425,7 @@ public class OASUniswapV3Api {
         );
     }
     /**
-     * GetPoolsHourData (current)
+     * PoolsHourData (current)
      * Gets pools hour data.
      * @param filterPoolId  (optional)
      * @return List<OASUniswapV3PoolHourDataV3DTO>
@@ -451,7 +451,7 @@ public class OASUniswapV3Api {
         );
     }
     /**
-     * GetPoolsHourData (historical)
+     * PoolsHourData (historical)
      * Gets pools hour data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -485,7 +485,7 @@ public class OASUniswapV3Api {
         );
     }
     /**
-     * GetPositions (current)
+     * Positions (current)
      * Gets positions.
      * @param filterPoolId  (optional)
      * @return List<OASUniswapV3PositionV3DTO>
@@ -511,7 +511,7 @@ public class OASUniswapV3Api {
         );
     }
     /**
-     * GetPositions (historical)
+     * Positions (historical)
      * Gets positions.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -545,7 +545,7 @@ public class OASUniswapV3Api {
         );
     }
     /**
-     * GetPositionsSnaphots (historical)
+     * PositionsSnaphots (historical)
      * Gets positions snapshots.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -579,7 +579,7 @@ public class OASUniswapV3Api {
         );
     }
     /**
-     * GetPositionsSnapshots (current)
+     * PositionsSnapshots (current)
      * Gets positions snapshots.
      * @param filterPoolId  (optional)
      * @return List<OASUniswapV3PositionSnapshotV3DTO>
@@ -605,7 +605,7 @@ public class OASUniswapV3Api {
         );
     }
     /**
-     * GetSwaps (current) 🔥
+     * Swaps (current) 🔥
      * Gets swaps.
      * @param filterPoolId  (optional)
      * @return List<OASUniswapV3SwapV3DTO>
@@ -631,7 +631,7 @@ public class OASUniswapV3Api {
         );
     }
     /**
-     * GetSwaps (historical) 🔥
+     * Swaps (historical) 🔥
      * Gets swaps.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -665,7 +665,7 @@ public class OASUniswapV3Api {
         );
     }
     /**
-     * GetTicks (current)
+     * Ticks (current)
      * Gets ticks.
      * @param filterPoolId  (optional)
      * @return List<OASUniswapV3TickV3DTO>
@@ -691,7 +691,7 @@ public class OASUniswapV3Api {
         );
     }
     /**
-     * GetTicksDayData (current)
+     * TicksDayData (current)
      * Gets ticks day data.
      * @param filterPoolId  (optional)
      * @return List<OASUniswapV3TickDayDataV3DTO>
@@ -717,7 +717,7 @@ public class OASUniswapV3Api {
         );
     }
     /**
-     * GetTicksDayData (historical)
+     * TicksDayData (historical)
      * Gets ticks day data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -751,7 +751,7 @@ public class OASUniswapV3Api {
         );
     }
     /**
-     * GetTicks (historical)
+     * Ticks (historical)
      * Gets ticks.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -785,7 +785,7 @@ public class OASUniswapV3Api {
         );
     }
     /**
-     * GetTokens (current) 🔥
+     * Tokens (current) 🔥
      * Gets tokens.
      * @param filterTokenId  (optional)
      * @return List<OASUniswapV3TokenV3DTO>
@@ -811,7 +811,7 @@ public class OASUniswapV3Api {
         );
     }
     /**
-     * GetTokensDayData (current)
+     * TokensDayData (current)
      * Gets tokens day data.
      * @param filterTokenId  (optional)
      * @return List<OASUniswapV3TokenV3DayDataDTO>
@@ -837,7 +837,7 @@ public class OASUniswapV3Api {
         );
     }
     /**
-     * GetTokensDayData (historical)
+     * TokensDayData (historical)
      * Gets tokens day data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -871,7 +871,7 @@ public class OASUniswapV3Api {
         );
     }
     /**
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      * Gets tokens.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -905,7 +905,7 @@ public class OASUniswapV3Api {
         );
     }
     /**
-     * GetTokensHourData (current)
+     * TokensHourData (current)
      * Gets tokens hour data.
      * @param filterTokenId  (optional)
      * @return List<OASUniswapV3TokenHourDataV3DTO>
@@ -931,7 +931,7 @@ public class OASUniswapV3Api {
         );
     }
     /**
-     * GetTokensHourData (historical)
+     * TokensHourData (historical)
      * Gets tokens hour data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -965,7 +965,7 @@ public class OASUniswapV3Api {
         );
     }
     /**
-     * GetTransactions (historical)
+     * Transactions (historical)
      * Gets transactions.
      * @param startBlock  (optional)
      * @param endBlock  (optional)

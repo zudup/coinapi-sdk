@@ -48,7 +48,7 @@ export class DexApi {
 
     /**
      * Gets batches.
-     * @summary GetBatches (historical)
+     * @summary Batches (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -122,7 +122,7 @@ export class DexApi {
 
     /**
      * Gets deposits.
-     * @summary GetDeposits (historical)
+     * @summary Deposits (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -200,7 +200,7 @@ export class DexApi {
 
     /**
      * Gets orders.
-     * @summary GetOrders (historical)
+     * @summary Orders (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -278,7 +278,7 @@ export class DexApi {
 
     /**
      * Gets prices.
-     * @summary GetPrices (historical)
+     * @summary Prices (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -356,7 +356,7 @@ export class DexApi {
 
     /**
      * Gets solutions.
-     * @summary GetSolutions (historical)
+     * @summary Solutions (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -434,7 +434,7 @@ export class DexApi {
 
     /**
      * Gets stats.
-     * @summary GetStats (historical)
+     * @summary Stats (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -508,7 +508,7 @@ export class DexApi {
 
     /**
      * Gets tokens.
-     * @summary GetTokens (historical) 🔥
+     * @summary Tokens (historical) 🔥
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -586,7 +586,7 @@ export class DexApi {
 
     /**
      * Gets trades.
-     * @summary GetTrades (historical) 🔥
+     * @summary Trades (historical) 🔥
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -660,7 +660,7 @@ export class DexApi {
 
     /**
      * Gets users.
-     * @summary GetUsers (historical)
+     * @summary Users (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -734,7 +734,7 @@ export class DexApi {
 
     /**
      * Gets withdraws.
-     * @summary GetWithdraws (historical)
+     * @summary Withdraws (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -812,7 +812,7 @@ export class DexApi {
 
     /**
      * Gets withdraws requests.
-     * @summary GetWithdrawsRequests (historical)
+     * @summary WithdrawsRequests (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 

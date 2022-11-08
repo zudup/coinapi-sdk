@@ -12,7 +12,7 @@
 }while(0)
 
 
-// GetAccounts (historical)
+// Accounts (historical)
 //
 // Gets accounts.
 //
@@ -167,7 +167,7 @@ end:
 
 }
 
-// GetAddLiquidityEvents (historical)
+// AddLiquidityEvents (historical)
 //
 // Gets add liquidity events.
 //
@@ -346,7 +346,7 @@ end:
 
 }
 
-// GetAdminFeeChangeLogs (historical)
+// AdminFeeChangeLogs (historical)
 //
 // Gets admin fee change logs.
 //
@@ -525,7 +525,7 @@ end:
 
 }
 
-// GetAmplificationCoeffChangeLogs (historical)
+// AmplificationCoeffChangeLogs (historical)
 //
 // Gets amplification coeff change logs.
 //
@@ -704,7 +704,7 @@ end:
 
 }
 
-// GetCoins (historical)
+// Coins (historical)
 //
 // Gets coins.
 //
@@ -883,7 +883,7 @@ end:
 
 }
 
-// GetContracts (historical)
+// Contracts (historical)
 //
 // Gets contracts.
 //
@@ -1062,7 +1062,7 @@ end:
 
 }
 
-// GetContractsVersions (historical)
+// ContractsVersions (historical)
 //
 // Gets contracts versions.
 //
@@ -1241,7 +1241,7 @@ end:
 
 }
 
-// GetDailyVolumes (historical)
+// DailyVolumes (historical)
 //
 // Gets daily volumes.
 //
@@ -1420,7 +1420,7 @@ end:
 
 }
 
-// GetExchanges (historical) 🔥
+// Exchanges (historical) 🔥
 //
 // Gets exchanges.
 //
@@ -1599,7 +1599,7 @@ end:
 
 }
 
-// GetFeeChangeLogs (historical)
+// FeeChangeLogs (historical)
 //
 // Gets fee change logs.
 //
@@ -1778,7 +1778,7 @@ end:
 
 }
 
-// GetGaugesDeposits (historical)
+// GaugesDeposits (historical)
 //
 // Gets gauges deposits.
 //
@@ -1933,7 +1933,7 @@ end:
 
 }
 
-// GetGauges (historical)
+// Gauges (historical)
 //
 // Gets gauges.
 //
@@ -2112,7 +2112,7 @@ end:
 
 }
 
-// GetGaugesLiquidity (historical)
+// GaugesLiquidity (historical)
 //
 // Gets gauges liquidity.
 //
@@ -2267,7 +2267,7 @@ end:
 
 }
 
-// GetGaugesTotalWeights (historical)
+// GaugesTotalWeights (historical)
 //
 // Gets gauges total weights.
 //
@@ -2422,7 +2422,7 @@ end:
 
 }
 
-// GetGaugesTypes (historical)
+// GaugesTypes (historical)
 //
 // Gets gauges types.
 //
@@ -2577,7 +2577,7 @@ end:
 
 }
 
-// GetGaugesTypesWeights (historical)
+// GaugesTypesWeights (historical)
 //
 // Gets gauges types weights.
 //
@@ -2732,7 +2732,7 @@ end:
 
 }
 
-// GetGaugesWeights (historical)
+// GaugesWeights (historical)
 //
 // Gets gauges weights.
 //
@@ -2887,7 +2887,7 @@ end:
 
 }
 
-// GetGaugesWeightsVotes (historical)
+// GaugesWeightsVotes (historical)
 //
 // Gets gauges weights votes.
 //
@@ -3042,7 +3042,7 @@ end:
 
 }
 
-// GetGaugesWithdraw (historical)
+// GaugesWithdraw (historical)
 //
 // Gets gauges withdraws.
 //
@@ -3197,7 +3197,7 @@ end:
 
 }
 
-// GetHourlyVolumes (historical)
+// HourlyVolumes (historical)
 //
 // Gets hourly volumes.
 //
@@ -3376,7 +3376,7 @@ end:
 
 }
 
-// GetLpTokens (historical)
+// LpTokens (historical)
 //
 // Gets lp tokens.
 //
@@ -3555,7 +3555,7 @@ end:
 
 }
 
-// GetPools (historical) 🔥
+// Pools (historical) 🔥
 //
 // Gets pools.
 //
@@ -3734,7 +3734,7 @@ end:
 
 }
 
-// GetProposals (historical)
+// Proposals (historical)
 //
 // Gets proposals.
 //
@@ -3889,7 +3889,7 @@ end:
 
 }
 
-// GetProposalsVotes (historical)
+// ProposalsVotes (historical)
 //
 // Gets proposals votes.
 //
@@ -4044,7 +4044,7 @@ end:
 
 }
 
-// GetRemoveLiquidityEvents (historical)
+// RemoveLiquidityEvents (historical)
 //
 // Gets remove liquidity events.
 //
@@ -4223,7 +4223,7 @@ end:
 
 }
 
-// GetRemoveLiquidityOneEvents (historical)
+// RemoveLiquidityOneEvents (historical)
 //
 // Gets remove liquidity one events.
 //
@@ -4402,7 +4402,7 @@ end:
 
 }
 
-// GetSystemStates (historical)
+// SystemStates (historical)
 //
 // Gets system states.
 //
@@ -4557,7 +4557,7 @@ end:
 
 }
 
-// GetTokens (historical) 🔥
+// Tokens (historical) 🔥
 //
 // Gets tokens.
 //
@@ -4736,7 +4736,7 @@ end:
 
 }
 
-// GetTransferOwnershipEvents (historical)
+// TransferOwnershipEvents (historical)
 //
 // Gets transfer ownership events.
 //
@@ -4915,7 +4915,7 @@ end:
 
 }
 
-// GetUnderlyingCoins (historical)
+// UnderlyingCoins (historical)
 //
 // Gets underlying coins.
 //
@@ -5094,7 +5094,7 @@ end:
 
 }
 
-// GetVotingApps (historical)
+// VotingApps (historical)
 //
 // Gets voting apps.
 //
@@ -5249,7 +5249,7 @@ end:
 
 }
 
-// GetWeeklyVolumes (historical)
+// WeeklyVolumes (historical)
 //
 // Gets weekly volumes.
 //

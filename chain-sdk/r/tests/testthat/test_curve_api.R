@@ -8,7 +8,7 @@ api_instance <- CurveApi$new()
 test_that("CurveGetAccountsHistorical", {
   # tests for CurveGetAccountsHistorical
   # base path: https://onchain.coinapi.io
-  # GetAccounts (historical)
+  # Accounts (historical)
   # Gets accounts.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -23,7 +23,7 @@ test_that("CurveGetAccountsHistorical", {
 test_that("CurveGetAddLiquidityEventsHistorical", {
   # tests for CurveGetAddLiquidityEventsHistorical
   # base path: https://onchain.coinapi.io
-  # GetAddLiquidityEvents (historical)
+  # AddLiquidityEvents (historical)
   # Gets add liquidity events.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -39,7 +39,7 @@ test_that("CurveGetAddLiquidityEventsHistorical", {
 test_that("CurveGetAdminFeeChangeLogsHistorical", {
   # tests for CurveGetAdminFeeChangeLogsHistorical
   # base path: https://onchain.coinapi.io
-  # GetAdminFeeChangeLogs (historical)
+  # AdminFeeChangeLogs (historical)
   # Gets admin fee change logs.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -55,7 +55,7 @@ test_that("CurveGetAdminFeeChangeLogsHistorical", {
 test_that("CurveGetAmplificationCoeffChangeLogsHistorical", {
   # tests for CurveGetAmplificationCoeffChangeLogsHistorical
   # base path: https://onchain.coinapi.io
-  # GetAmplificationCoeffChangeLogs (historical)
+  # AmplificationCoeffChangeLogs (historical)
   # Gets amplification coeff change logs.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -71,7 +71,7 @@ test_that("CurveGetAmplificationCoeffChangeLogsHistorical", {
 test_that("CurveGetCoinsHistorical", {
   # tests for CurveGetCoinsHistorical
   # base path: https://onchain.coinapi.io
-  # GetCoins (historical)
+  # Coins (historical)
   # Gets coins.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -87,7 +87,7 @@ test_that("CurveGetCoinsHistorical", {
 test_that("CurveGetContractsHistorical", {
   # tests for CurveGetContractsHistorical
   # base path: https://onchain.coinapi.io
-  # GetContracts (historical)
+  # Contracts (historical)
   # Gets contracts.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -103,7 +103,7 @@ test_that("CurveGetContractsHistorical", {
 test_that("CurveGetContractsVersionsHistorical", {
   # tests for CurveGetContractsVersionsHistorical
   # base path: https://onchain.coinapi.io
-  # GetContractsVersions (historical)
+  # ContractsVersions (historical)
   # Gets contracts versions.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -119,7 +119,7 @@ test_that("CurveGetContractsVersionsHistorical", {
 test_that("CurveGetDailyVolumesHistorical", {
   # tests for CurveGetDailyVolumesHistorical
   # base path: https://onchain.coinapi.io
-  # GetDailyVolumes (historical)
+  # DailyVolumes (historical)
   # Gets daily volumes.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -135,7 +135,7 @@ test_that("CurveGetDailyVolumesHistorical", {
 test_that("CurveGetExchangesHistorical", {
   # tests for CurveGetExchangesHistorical
   # base path: https://onchain.coinapi.io
-  # GetExchanges (historical) 🔥
+  # Exchanges (historical) 🔥
   # Gets exchanges.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -151,7 +151,7 @@ test_that("CurveGetExchangesHistorical", {
 test_that("CurveGetFeeChangeLogsHistorical", {
   # tests for CurveGetFeeChangeLogsHistorical
   # base path: https://onchain.coinapi.io
-  # GetFeeChangeLogs (historical)
+  # FeeChangeLogs (historical)
   # Gets fee change logs.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -167,7 +167,7 @@ test_that("CurveGetFeeChangeLogsHistorical", {
 test_that("CurveGetGaugesDepositsHistorical", {
   # tests for CurveGetGaugesDepositsHistorical
   # base path: https://onchain.coinapi.io
-  # GetGaugesDeposits (historical)
+  # GaugesDeposits (historical)
   # Gets gauges deposits.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -182,7 +182,7 @@ test_that("CurveGetGaugesDepositsHistorical", {
 test_that("CurveGetGaugesHistorical", {
   # tests for CurveGetGaugesHistorical
   # base path: https://onchain.coinapi.io
-  # GetGauges (historical)
+  # Gauges (historical)
   # Gets gauges.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -198,7 +198,7 @@ test_that("CurveGetGaugesHistorical", {
 test_that("CurveGetGaugesLiquidityHistorical", {
   # tests for CurveGetGaugesLiquidityHistorical
   # base path: https://onchain.coinapi.io
-  # GetGaugesLiquidity (historical)
+  # GaugesLiquidity (historical)
   # Gets gauges liquidity.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -213,7 +213,7 @@ test_that("CurveGetGaugesLiquidityHistorical", {
 test_that("CurveGetGaugesTotalWeightsHistorical", {
   # tests for CurveGetGaugesTotalWeightsHistorical
   # base path: https://onchain.coinapi.io
-  # GetGaugesTotalWeights (historical)
+  # GaugesTotalWeights (historical)
   # Gets gauges total weights.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -228,7 +228,7 @@ test_that("CurveGetGaugesTotalWeightsHistorical", {
 test_that("CurveGetGaugesTypesHistorical", {
   # tests for CurveGetGaugesTypesHistorical
   # base path: https://onchain.coinapi.io
-  # GetGaugesTypes (historical)
+  # GaugesTypes (historical)
   # Gets gauges types.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -243,7 +243,7 @@ test_that("CurveGetGaugesTypesHistorical", {
 test_that("CurveGetGaugesTypesWeightsHistorical", {
   # tests for CurveGetGaugesTypesWeightsHistorical
   # base path: https://onchain.coinapi.io
-  # GetGaugesTypesWeights (historical)
+  # GaugesTypesWeights (historical)
   # Gets gauges types weights.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -258,7 +258,7 @@ test_that("CurveGetGaugesTypesWeightsHistorical", {
 test_that("CurveGetGaugesWeightsHistorical", {
   # tests for CurveGetGaugesWeightsHistorical
   # base path: https://onchain.coinapi.io
-  # GetGaugesWeights (historical)
+  # GaugesWeights (historical)
   # Gets gauges weights.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -273,7 +273,7 @@ test_that("CurveGetGaugesWeightsHistorical", {
 test_that("CurveGetGaugesWeightsVotesHistorical", {
   # tests for CurveGetGaugesWeightsVotesHistorical
   # base path: https://onchain.coinapi.io
-  # GetGaugesWeightsVotes (historical)
+  # GaugesWeightsVotes (historical)
   # Gets gauges weights votes.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -288,7 +288,7 @@ test_that("CurveGetGaugesWeightsVotesHistorical", {
 test_that("CurveGetGaugesWithdrawHistorical", {
   # tests for CurveGetGaugesWithdrawHistorical
   # base path: https://onchain.coinapi.io
-  # GetGaugesWithdraw (historical)
+  # GaugesWithdraw (historical)
   # Gets gauges withdraws.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -303,7 +303,7 @@ test_that("CurveGetGaugesWithdrawHistorical", {
 test_that("CurveGetHourlyVolumesHistorical", {
   # tests for CurveGetHourlyVolumesHistorical
   # base path: https://onchain.coinapi.io
-  # GetHourlyVolumes (historical)
+  # HourlyVolumes (historical)
   # Gets hourly volumes.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -319,7 +319,7 @@ test_that("CurveGetHourlyVolumesHistorical", {
 test_that("CurveGetLpTokensHistorical", {
   # tests for CurveGetLpTokensHistorical
   # base path: https://onchain.coinapi.io
-  # GetLpTokens (historical)
+  # LpTokens (historical)
   # Gets lp tokens.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -335,7 +335,7 @@ test_that("CurveGetLpTokensHistorical", {
 test_that("CurveGetPoolsHistorical", {
   # tests for CurveGetPoolsHistorical
   # base path: https://onchain.coinapi.io
-  # GetPools (historical) 🔥
+  # Pools (historical) 🔥
   # Gets pools.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -351,7 +351,7 @@ test_that("CurveGetPoolsHistorical", {
 test_that("CurveGetProposalsHistorical", {
   # tests for CurveGetProposalsHistorical
   # base path: https://onchain.coinapi.io
-  # GetProposals (historical)
+  # Proposals (historical)
   # Gets proposals.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -366,7 +366,7 @@ test_that("CurveGetProposalsHistorical", {
 test_that("CurveGetProposalsVotesHistorical", {
   # tests for CurveGetProposalsVotesHistorical
   # base path: https://onchain.coinapi.io
-  # GetProposalsVotes (historical)
+  # ProposalsVotes (historical)
   # Gets proposals votes.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -381,7 +381,7 @@ test_that("CurveGetProposalsVotesHistorical", {
 test_that("CurveGetRemoveLiquidityEventsHistorical", {
   # tests for CurveGetRemoveLiquidityEventsHistorical
   # base path: https://onchain.coinapi.io
-  # GetRemoveLiquidityEvents (historical)
+  # RemoveLiquidityEvents (historical)
   # Gets remove liquidity events.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -397,7 +397,7 @@ test_that("CurveGetRemoveLiquidityEventsHistorical", {
 test_that("CurveGetRemoveLiquidityOneEventsHistorical", {
   # tests for CurveGetRemoveLiquidityOneEventsHistorical
   # base path: https://onchain.coinapi.io
-  # GetRemoveLiquidityOneEvents (historical)
+  # RemoveLiquidityOneEvents (historical)
   # Gets remove liquidity one events.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -413,7 +413,7 @@ test_that("CurveGetRemoveLiquidityOneEventsHistorical", {
 test_that("CurveGetSystemStatesHistorical", {
   # tests for CurveGetSystemStatesHistorical
   # base path: https://onchain.coinapi.io
-  # GetSystemStates (historical)
+  # SystemStates (historical)
   # Gets system states.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -428,7 +428,7 @@ test_that("CurveGetSystemStatesHistorical", {
 test_that("CurveGetTokensHistorical", {
   # tests for CurveGetTokensHistorical
   # base path: https://onchain.coinapi.io
-  # GetTokens (historical) 🔥
+  # Tokens (historical) 🔥
   # Gets tokens.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -444,7 +444,7 @@ test_that("CurveGetTokensHistorical", {
 test_that("CurveGetTransferOwnershipEventsHistorical", {
   # tests for CurveGetTransferOwnershipEventsHistorical
   # base path: https://onchain.coinapi.io
-  # GetTransferOwnershipEvents (historical)
+  # TransferOwnershipEvents (historical)
   # Gets transfer ownership events.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -460,7 +460,7 @@ test_that("CurveGetTransferOwnershipEventsHistorical", {
 test_that("CurveGetUnderlyingCoinsHistorical", {
   # tests for CurveGetUnderlyingCoinsHistorical
   # base path: https://onchain.coinapi.io
-  # GetUnderlyingCoins (historical)
+  # UnderlyingCoins (historical)
   # Gets underlying coins.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -476,7 +476,7 @@ test_that("CurveGetUnderlyingCoinsHistorical", {
 test_that("CurveGetVotingAppsHistorical", {
   # tests for CurveGetVotingAppsHistorical
   # base path: https://onchain.coinapi.io
-  # GetVotingApps (historical)
+  # VotingApps (historical)
   # Gets voting apps.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -491,7 +491,7 @@ test_that("CurveGetVotingAppsHistorical", {
 test_that("CurveGetWeeklyVolumesHistorical", {
   # tests for CurveGetWeeklyVolumesHistorical
   # base path: https://onchain.coinapi.io
-  # GetWeeklyVolumes (historical)
+  # WeeklyVolumes (historical)
   # Gets weekly volumes.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)

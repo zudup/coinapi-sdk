@@ -51,7 +51,7 @@ sub new {
 #
 # cow_get_orders__historical
 #
-# GetOrders (historical)
+# Orders (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -81,7 +81,7 @@ sub new {
     },
     };
     __PACKAGE__->method_documentation->{ 'cow_get_orders__historical' } = {
-        summary => 'GetOrders (historical)',
+        summary => 'Orders (historical)',
         params => $params,
         returns => 'ARRAY[CowOrderDTO]',
         };
@@ -144,7 +144,7 @@ sub cow_get_orders__historical {
 #
 # cow_get_settlements__historical
 #
-# GetSettlements (historical)
+# Settlements (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -174,7 +174,7 @@ sub cow_get_orders__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'cow_get_settlements__historical' } = {
-        summary => 'GetSettlements (historical)',
+        summary => 'Settlements (historical)',
         params => $params,
         returns => 'ARRAY[CowSettlementDTO]',
         };
@@ -237,7 +237,7 @@ sub cow_get_settlements__historical {
 #
 # cow_get_tokens__historical
 #
-# GetTokens (historical) 🔥
+# Tokens (historical) 🔥
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -273,7 +273,7 @@ sub cow_get_settlements__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'cow_get_tokens__historical' } = {
-        summary => 'GetTokens (historical) 🔥',
+        summary => 'Tokens (historical) 🔥',
         params => $params,
         returns => 'ARRAY[CowTokenDTO]',
         };
@@ -341,7 +341,7 @@ sub cow_get_tokens__historical {
 #
 # cow_get_trades__historical
 #
-# GetTrades (historical) 🔥
+# Trades (historical) 🔥
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -371,7 +371,7 @@ sub cow_get_tokens__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'cow_get_trades__historical' } = {
-        summary => 'GetTrades (historical) 🔥',
+        summary => 'Trades (historical) 🔥',
         params => $params,
         returns => 'ARRAY[CowTradeDTO]',
         };
@@ -434,7 +434,7 @@ sub cow_get_trades__historical {
 #
 # cow_get_users__historical
 #
-# GetUsers (historical)
+# Users (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -464,7 +464,7 @@ sub cow_get_trades__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'cow_get_users__historical' } = {
-        summary => 'GetUsers (historical)',
+        summary => 'Users (historical)',
         params => $params,
         returns => 'ARRAY[CowUserDTO]',
         };

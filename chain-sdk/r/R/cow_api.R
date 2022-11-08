@@ -14,7 +14,7 @@
 #'
 #' @section Methods:
 #' \describe{
-#' \strong{ CowGetOrdersHistorical } \emph{ GetOrders (historical) }
+#' \strong{ CowGetOrdersHistorical } \emph{ Orders (historical) }
 #' Gets orders.
 #'
 #' \itemize{
@@ -34,7 +34,7 @@
 #' }
 #' }
 #'
-#' \strong{ CowGetSettlementsHistorical } \emph{ GetSettlements (historical) }
+#' \strong{ CowGetSettlementsHistorical } \emph{ Settlements (historical) }
 #' Gets settlements.
 #'
 #' \itemize{
@@ -54,7 +54,7 @@
 #' }
 #' }
 #'
-#' \strong{ CowGetTokensHistorical } \emph{ GetTokens (historical) 🔥 }
+#' \strong{ CowGetTokensHistorical } \emph{ Tokens (historical) 🔥 }
 #' Gets tokens.
 #'
 #' \itemize{
@@ -75,7 +75,7 @@
 #' }
 #' }
 #'
-#' \strong{ CowGetTradesHistorical } \emph{ GetTrades (historical) 🔥 }
+#' \strong{ CowGetTradesHistorical } \emph{ Trades (historical) 🔥 }
 #' Gets trades.
 #'
 #' \itemize{
@@ -95,7 +95,7 @@
 #' }
 #' }
 #'
-#' \strong{ CowGetUsersHistorical } \emph{ GetUsers (historical) }
+#' \strong{ CowGetUsersHistorical } \emph{ Users (historical) }
 #' Gets users.
 #'
 #' \itemize{
@@ -128,7 +128,7 @@
 #' var_start_date <- "start_date_example" # character |  (Optional)
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #'
-#' #GetOrders (historical)
+#' #Orders (historical)
 #' api_instance <- CowApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -145,7 +145,7 @@
 #' var_start_date <- "start_date_example" # character |  (Optional)
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #'
-#' #GetSettlements (historical)
+#' #Settlements (historical)
 #' api_instance <- CowApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -163,7 +163,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_token_id <- "token_id_example" # character |  (Optional)
 #'
-#' #GetTokens (historical) 🔥
+#' #Tokens (historical) 🔥
 #' api_instance <- CowApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -180,7 +180,7 @@
 #' var_start_date <- "start_date_example" # character |  (Optional)
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #'
-#' #GetTrades (historical) 🔥
+#' #Trades (historical) 🔥
 #' api_instance <- CowApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -197,7 +197,7 @@
 #' var_start_date <- "start_date_example" # character |  (Optional)
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #'
-#' #GetUsers (historical)
+#' #Users (historical)
 #' api_instance <- CowApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -228,10 +228,10 @@ CowApi <- R6::R6Class(
         self$api_client <- ApiClient$new()
       }
     },
-    #' GetOrders (historical)
+    #' Orders (historical)
     #'
     #' @description
-    #' GetOrders (historical)
+    #' Orders (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -253,10 +253,10 @@ CowApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetOrders (historical)
+    #' Orders (historical)
     #'
     #' @description
-    #' GetOrders (historical)
+    #' Orders (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -334,10 +334,10 @@ CowApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetSettlements (historical)
+    #' Settlements (historical)
     #'
     #' @description
-    #' GetSettlements (historical)
+    #' Settlements (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -359,10 +359,10 @@ CowApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetSettlements (historical)
+    #' Settlements (historical)
     #'
     #' @description
-    #' GetSettlements (historical)
+    #' Settlements (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -440,10 +440,10 @@ CowApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetTokens (historical) 🔥
+    #' Tokens (historical) 🔥
     #'
     #' @description
-    #' GetTokens (historical) 🔥
+    #' Tokens (historical) 🔥
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -466,10 +466,10 @@ CowApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetTokens (historical) 🔥
+    #' Tokens (historical) 🔥
     #'
     #' @description
-    #' GetTokens (historical) 🔥
+    #' Tokens (historical) 🔥
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -551,10 +551,10 @@ CowApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetTrades (historical) 🔥
+    #' Trades (historical) 🔥
     #'
     #' @description
-    #' GetTrades (historical) 🔥
+    #' Trades (historical) 🔥
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -576,10 +576,10 @@ CowApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetTrades (historical) 🔥
+    #' Trades (historical) 🔥
     #'
     #' @description
-    #' GetTrades (historical) 🔥
+    #' Trades (historical) 🔥
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -657,10 +657,10 @@ CowApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetUsers (historical)
+    #' Users (historical)
     #'
     #' @description
-    #' GetUsers (historical)
+    #' Users (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -682,10 +682,10 @@ CowApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetUsers (historical)
+    #' Users (historical)
     #'
     #' @description
-    #' GetUsers (historical)
+    #' Users (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 

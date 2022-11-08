@@ -9,7 +9,7 @@
 <#
 .SYNOPSIS
 
-GetOrders (historical)
+Orders (historical)
 
 .DESCRIPTION
 
@@ -124,7 +124,7 @@ function Invoke-CowGetOrdersHistorical {
 <#
 .SYNOPSIS
 
-GetSettlements (historical)
+Settlements (historical)
 
 .DESCRIPTION
 
@@ -239,7 +239,7 @@ function Invoke-CowGetSettlementsHistorical {
 <#
 .SYNOPSIS
 
-GetTokens (historical) 🔥
+Tokens (historical) 🔥
 
 .DESCRIPTION
 
@@ -364,7 +364,7 @@ function Invoke-CowGetTokensHistorical {
 <#
 .SYNOPSIS
 
-GetTrades (historical) 🔥
+Trades (historical) 🔥
 
 .DESCRIPTION
 
@@ -479,7 +479,7 @@ function Invoke-CowGetTradesHistorical {
 <#
 .SYNOPSIS
 
-GetUsers (historical)
+Users (historical)
 
 .DESCRIPTION
 

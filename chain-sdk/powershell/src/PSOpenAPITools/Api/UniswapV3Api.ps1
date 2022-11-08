@@ -9,7 +9,7 @@
 <#
 .SYNOPSIS
 
-GetBundles (current)
+Bundles (current)
 
 .DESCRIPTION
 
@@ -84,7 +84,7 @@ function Invoke-UniswapV3GetBundlesCurrent {
 <#
 .SYNOPSIS
 
-GetBundles (historical)
+Bundles (historical)
 
 .DESCRIPTION
 
@@ -199,7 +199,7 @@ function Invoke-UniswapV3GetBundlesHistorical {
 <#
 .SYNOPSIS
 
-GetBurns (current)
+Burns (current)
 
 .DESCRIPTION
 
@@ -284,7 +284,7 @@ function Invoke-UniswapV3GetBurnsCurrent {
 <#
 .SYNOPSIS
 
-GetBurns (historical)
+Burns (historical)
 
 .DESCRIPTION
 
@@ -409,7 +409,7 @@ function Invoke-UniswapV3GetBurnsHistorical {
 <#
 .SYNOPSIS
 
-GetDayData (current)
+DayData (current)
 
 .DESCRIPTION
 
@@ -484,7 +484,7 @@ function Invoke-UniswapV3GetDayDataCurrent {
 <#
 .SYNOPSIS
 
-GetDayData (historical)
+DayData (historical)
 
 .DESCRIPTION
 
@@ -599,7 +599,7 @@ function Invoke-UniswapV3GetDayDataHistorical {
 <#
 .SYNOPSIS
 
-GetFactory (current)
+Factory (current)
 
 .DESCRIPTION
 
@@ -674,7 +674,7 @@ function Invoke-UniswapV3GetFactoryCurrent {
 <#
 .SYNOPSIS
 
-GetFactory (historical)
+Factory (historical)
 
 .DESCRIPTION
 
@@ -789,7 +789,7 @@ function Invoke-UniswapV3GetFactoryHistorical {
 <#
 .SYNOPSIS
 
-GetMints (current)
+Mints (current)
 
 .DESCRIPTION
 
@@ -874,7 +874,7 @@ function Invoke-UniswapV3GetMintsCurrent {
 <#
 .SYNOPSIS
 
-GetMints (historical)
+Mints (historical)
 
 .DESCRIPTION
 
@@ -999,7 +999,7 @@ function Invoke-UniswapV3GetMintsHistorical {
 <#
 .SYNOPSIS
 
-GetPoolsDayData (current)
+PoolsDayData (current)
 
 .DESCRIPTION
 
@@ -1084,7 +1084,7 @@ function Invoke-UniswapV3GetPoolsDayDataCurrent {
 <#
 .SYNOPSIS
 
-GetPoolsDayData (historical)
+PoolsDayData (historical)
 
 .DESCRIPTION
 
@@ -1209,7 +1209,7 @@ function Invoke-UniswapV3GetPoolsDayDataHistorical {
 <#
 .SYNOPSIS
 
-GetPoolsHourData (current)
+PoolsHourData (current)
 
 .DESCRIPTION
 
@@ -1294,7 +1294,7 @@ function Invoke-UniswapV3GetPoolsHourDataCurrent {
 <#
 .SYNOPSIS
 
-GetPoolsHourData (historical)
+PoolsHourData (historical)
 
 .DESCRIPTION
 
@@ -1419,7 +1419,7 @@ function Invoke-UniswapV3GetPoolsHourDataHistorical {
 <#
 .SYNOPSIS
 
-GetPools (current) 🔥
+Pools (current) 🔥
 
 .DESCRIPTION
 
@@ -1504,7 +1504,7 @@ function Invoke-UniswapV3GetPoolsCurrent {
 <#
 .SYNOPSIS
 
-GetPools (historical) 🔥
+Pools (historical) 🔥
 
 .DESCRIPTION
 
@@ -1629,7 +1629,7 @@ function Invoke-UniswapV3GetPoolsHistorical {
 <#
 .SYNOPSIS
 
-GetPositionsSnaphots (historical)
+PositionsSnaphots (historical)
 
 .DESCRIPTION
 
@@ -1754,7 +1754,7 @@ function Invoke-UniswapV3GetPositionsSnaphotsHistorical {
 <#
 .SYNOPSIS
 
-GetPositionsSnapshots (current)
+PositionsSnapshots (current)
 
 .DESCRIPTION
 
@@ -1839,7 +1839,7 @@ function Invoke-UniswapV3GetPositionsSnapshotsCurrent {
 <#
 .SYNOPSIS
 
-GetPositions (current)
+Positions (current)
 
 .DESCRIPTION
 
@@ -1924,7 +1924,7 @@ function Invoke-UniswapV3GetPositionsCurrent {
 <#
 .SYNOPSIS
 
-GetPositions (historical)
+Positions (historical)
 
 .DESCRIPTION
 
@@ -2049,7 +2049,7 @@ function Invoke-UniswapV3GetPositionsHistorical {
 <#
 .SYNOPSIS
 
-GetSwaps (current) 🔥
+Swaps (current) 🔥
 
 .DESCRIPTION
 
@@ -2134,7 +2134,7 @@ function Invoke-UniswapV3GetSwapsCurrent {
 <#
 .SYNOPSIS
 
-GetSwaps (historical) 🔥
+Swaps (historical) 🔥
 
 .DESCRIPTION
 
@@ -2259,7 +2259,7 @@ function Invoke-UniswapV3GetSwapsHistorical {
 <#
 .SYNOPSIS
 
-GetTicksDayData (current)
+TicksDayData (current)
 
 .DESCRIPTION
 
@@ -2344,7 +2344,7 @@ function Invoke-UniswapV3GetTicksDayDataCurrent {
 <#
 .SYNOPSIS
 
-GetTicksDayData (historical)
+TicksDayData (historical)
 
 .DESCRIPTION
 
@@ -2469,7 +2469,7 @@ function Invoke-UniswapV3GetTicksDayDataHistorical {
 <#
 .SYNOPSIS
 
-GetTicks (current)
+Ticks (current)
 
 .DESCRIPTION
 
@@ -2554,7 +2554,7 @@ function Invoke-UniswapV3GetTicksCurrent {
 <#
 .SYNOPSIS
 
-GetTicks (historical)
+Ticks (historical)
 
 .DESCRIPTION
 
@@ -2679,7 +2679,7 @@ function Invoke-UniswapV3GetTicksHistorical {
 <#
 .SYNOPSIS
 
-GetTokensDayData (current)
+TokensDayData (current)
 
 .DESCRIPTION
 
@@ -2764,7 +2764,7 @@ function Invoke-UniswapV3GetTokensDayDataCurrent {
 <#
 .SYNOPSIS
 
-GetTokensDayData (historical)
+TokensDayData (historical)
 
 .DESCRIPTION
 
@@ -2889,7 +2889,7 @@ function Invoke-UniswapV3GetTokensDayDataHistorical {
 <#
 .SYNOPSIS
 
-GetTokensHourData (current)
+TokensHourData (current)
 
 .DESCRIPTION
 
@@ -2974,7 +2974,7 @@ function Invoke-UniswapV3GetTokensHourDataCurrent {
 <#
 .SYNOPSIS
 
-GetTokensHourData (historical)
+TokensHourData (historical)
 
 .DESCRIPTION
 
@@ -3099,7 +3099,7 @@ function Invoke-UniswapV3GetTokensHourDataHistorical {
 <#
 .SYNOPSIS
 
-GetTokens (current) 🔥
+Tokens (current) 🔥
 
 .DESCRIPTION
 
@@ -3184,7 +3184,7 @@ function Invoke-UniswapV3GetTokensCurrent {
 <#
 .SYNOPSIS
 
-GetTokens (historical) 🔥
+Tokens (historical) 🔥
 
 .DESCRIPTION
 
@@ -3309,7 +3309,7 @@ function Invoke-UniswapV3GetTokensHistorical {
 <#
 .SYNOPSIS
 
-GetTransactions (historical)
+Transactions (historical)
 
 .DESCRIPTION
 

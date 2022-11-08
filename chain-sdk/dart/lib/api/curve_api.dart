@@ -16,7 +16,7 @@ class CurveApi {
 
   final ApiClient apiClient;
 
-  /// GetAccounts (historical)
+  /// Accounts (historical)
   ///
   /// Gets accounts.
   ///
@@ -73,7 +73,7 @@ class CurveApi {
     );
   }
 
-  /// GetAccounts (historical)
+  /// Accounts (historical)
   ///
   /// Gets accounts.
   ///
@@ -108,7 +108,7 @@ class CurveApi {
     return null;
   }
 
-  /// GetAddLiquidityEvents (historical)
+  /// AddLiquidityEvents (historical)
   ///
   /// Gets add liquidity events.
   ///
@@ -170,7 +170,7 @@ class CurveApi {
     );
   }
 
-  /// GetAddLiquidityEvents (historical)
+  /// AddLiquidityEvents (historical)
   ///
   /// Gets add liquidity events.
   ///
@@ -207,7 +207,7 @@ class CurveApi {
     return null;
   }
 
-  /// GetAdminFeeChangeLogs (historical)
+  /// AdminFeeChangeLogs (historical)
   ///
   /// Gets admin fee change logs.
   ///
@@ -270,7 +270,7 @@ class CurveApi {
     );
   }
 
-  /// GetAdminFeeChangeLogs (historical)
+  /// AdminFeeChangeLogs (historical)
   ///
   /// Gets admin fee change logs.
   ///
@@ -308,7 +308,7 @@ class CurveApi {
     return null;
   }
 
-  /// GetAmplificationCoeffChangeLogs (historical)
+  /// AmplificationCoeffChangeLogs (historical)
   ///
   /// Gets amplification coeff change logs.
   ///
@@ -371,7 +371,7 @@ class CurveApi {
     );
   }
 
-  /// GetAmplificationCoeffChangeLogs (historical)
+  /// AmplificationCoeffChangeLogs (historical)
   ///
   /// Gets amplification coeff change logs.
   ///
@@ -409,7 +409,7 @@ class CurveApi {
     return null;
   }
 
-  /// GetCoins (historical)
+  /// Coins (historical)
   ///
   /// Gets coins.
   ///
@@ -472,7 +472,7 @@ class CurveApi {
     );
   }
 
-  /// GetCoins (historical)
+  /// Coins (historical)
   ///
   /// Gets coins.
   ///
@@ -510,7 +510,7 @@ class CurveApi {
     return null;
   }
 
-  /// GetContracts (historical)
+  /// Contracts (historical)
   ///
   /// Gets contracts.
   ///
@@ -573,7 +573,7 @@ class CurveApi {
     );
   }
 
-  /// GetContracts (historical)
+  /// Contracts (historical)
   ///
   /// Gets contracts.
   ///
@@ -611,7 +611,7 @@ class CurveApi {
     return null;
   }
 
-  /// GetContractsVersions (historical)
+  /// ContractsVersions (historical)
   ///
   /// Gets contracts versions.
   ///
@@ -674,7 +674,7 @@ class CurveApi {
     );
   }
 
-  /// GetContractsVersions (historical)
+  /// ContractsVersions (historical)
   ///
   /// Gets contracts versions.
   ///
@@ -712,7 +712,7 @@ class CurveApi {
     return null;
   }
 
-  /// GetDailyVolumes (historical)
+  /// DailyVolumes (historical)
   ///
   /// Gets daily volumes.
   ///
@@ -775,7 +775,7 @@ class CurveApi {
     );
   }
 
-  /// GetDailyVolumes (historical)
+  /// DailyVolumes (historical)
   ///
   /// Gets daily volumes.
   ///
@@ -813,7 +813,7 @@ class CurveApi {
     return null;
   }
 
-  /// GetExchanges (historical) 🔥
+  /// Exchanges (historical) 🔥
   ///
   /// Gets exchanges.
   ///
@@ -876,7 +876,7 @@ class CurveApi {
     );
   }
 
-  /// GetExchanges (historical) 🔥
+  /// Exchanges (historical) 🔥
   ///
   /// Gets exchanges.
   ///
@@ -914,7 +914,7 @@ class CurveApi {
     return null;
   }
 
-  /// GetFeeChangeLogs (historical)
+  /// FeeChangeLogs (historical)
   ///
   /// Gets fee change logs.
   ///
@@ -977,7 +977,7 @@ class CurveApi {
     );
   }
 
-  /// GetFeeChangeLogs (historical)
+  /// FeeChangeLogs (historical)
   ///
   /// Gets fee change logs.
   ///
@@ -1015,7 +1015,7 @@ class CurveApi {
     return null;
   }
 
-  /// GetGaugesDeposits (historical)
+  /// GaugesDeposits (historical)
   ///
   /// Gets gauges deposits.
   ///
@@ -1072,7 +1072,7 @@ class CurveApi {
     );
   }
 
-  /// GetGaugesDeposits (historical)
+  /// GaugesDeposits (historical)
   ///
   /// Gets gauges deposits.
   ///
@@ -1107,7 +1107,7 @@ class CurveApi {
     return null;
   }
 
-  /// GetGauges (historical)
+  /// Gauges (historical)
   ///
   /// Gets gauges.
   ///
@@ -1170,7 +1170,7 @@ class CurveApi {
     );
   }
 
-  /// GetGauges (historical)
+  /// Gauges (historical)
   ///
   /// Gets gauges.
   ///
@@ -1208,7 +1208,7 @@ class CurveApi {
     return null;
   }
 
-  /// GetGaugesLiquidity (historical)
+  /// GaugesLiquidity (historical)
   ///
   /// Gets gauges liquidity.
   ///
@@ -1265,7 +1265,7 @@ class CurveApi {
     );
   }
 
-  /// GetGaugesLiquidity (historical)
+  /// GaugesLiquidity (historical)
   ///
   /// Gets gauges liquidity.
   ///
@@ -1300,7 +1300,7 @@ class CurveApi {
     return null;
   }
 
-  /// GetGaugesTotalWeights (historical)
+  /// GaugesTotalWeights (historical)
   ///
   /// Gets gauges total weights.
   ///
@@ -1357,7 +1357,7 @@ class CurveApi {
     );
   }
 
-  /// GetGaugesTotalWeights (historical)
+  /// GaugesTotalWeights (historical)
   ///
   /// Gets gauges total weights.
   ///
@@ -1392,7 +1392,7 @@ class CurveApi {
     return null;
   }
 
-  /// GetGaugesTypes (historical)
+  /// GaugesTypes (historical)
   ///
   /// Gets gauges types.
   ///
@@ -1449,7 +1449,7 @@ class CurveApi {
     );
   }
 
-  /// GetGaugesTypes (historical)
+  /// GaugesTypes (historical)
   ///
   /// Gets gauges types.
   ///
@@ -1484,7 +1484,7 @@ class CurveApi {
     return null;
   }
 
-  /// GetGaugesTypesWeights (historical)
+  /// GaugesTypesWeights (historical)
   ///
   /// Gets gauges types weights.
   ///
@@ -1541,7 +1541,7 @@ class CurveApi {
     );
   }
 
-  /// GetGaugesTypesWeights (historical)
+  /// GaugesTypesWeights (historical)
   ///
   /// Gets gauges types weights.
   ///
@@ -1576,7 +1576,7 @@ class CurveApi {
     return null;
   }
 
-  /// GetGaugesWeights (historical)
+  /// GaugesWeights (historical)
   ///
   /// Gets gauges weights.
   ///
@@ -1633,7 +1633,7 @@ class CurveApi {
     );
   }
 
-  /// GetGaugesWeights (historical)
+  /// GaugesWeights (historical)
   ///
   /// Gets gauges weights.
   ///
@@ -1668,7 +1668,7 @@ class CurveApi {
     return null;
   }
 
-  /// GetGaugesWeightsVotes (historical)
+  /// GaugesWeightsVotes (historical)
   ///
   /// Gets gauges weights votes.
   ///
@@ -1725,7 +1725,7 @@ class CurveApi {
     );
   }
 
-  /// GetGaugesWeightsVotes (historical)
+  /// GaugesWeightsVotes (historical)
   ///
   /// Gets gauges weights votes.
   ///
@@ -1760,7 +1760,7 @@ class CurveApi {
     return null;
   }
 
-  /// GetGaugesWithdraw (historical)
+  /// GaugesWithdraw (historical)
   ///
   /// Gets gauges withdraws.
   ///
@@ -1817,7 +1817,7 @@ class CurveApi {
     );
   }
 
-  /// GetGaugesWithdraw (historical)
+  /// GaugesWithdraw (historical)
   ///
   /// Gets gauges withdraws.
   ///
@@ -1852,7 +1852,7 @@ class CurveApi {
     return null;
   }
 
-  /// GetHourlyVolumes (historical)
+  /// HourlyVolumes (historical)
   ///
   /// Gets hourly volumes.
   ///
@@ -1915,7 +1915,7 @@ class CurveApi {
     );
   }
 
-  /// GetHourlyVolumes (historical)
+  /// HourlyVolumes (historical)
   ///
   /// Gets hourly volumes.
   ///
@@ -1953,7 +1953,7 @@ class CurveApi {
     return null;
   }
 
-  /// GetLpTokens (historical)
+  /// LpTokens (historical)
   ///
   /// Gets lp tokens.
   ///
@@ -2016,7 +2016,7 @@ class CurveApi {
     );
   }
 
-  /// GetLpTokens (historical)
+  /// LpTokens (historical)
   ///
   /// Gets lp tokens.
   ///
@@ -2054,7 +2054,7 @@ class CurveApi {
     return null;
   }
 
-  /// GetPools (historical) 🔥
+  /// Pools (historical) 🔥
   ///
   /// Gets pools.
   ///
@@ -2117,7 +2117,7 @@ class CurveApi {
     );
   }
 
-  /// GetPools (historical) 🔥
+  /// Pools (historical) 🔥
   ///
   /// Gets pools.
   ///
@@ -2155,7 +2155,7 @@ class CurveApi {
     return null;
   }
 
-  /// GetProposals (historical)
+  /// Proposals (historical)
   ///
   /// Gets proposals.
   ///
@@ -2212,7 +2212,7 @@ class CurveApi {
     );
   }
 
-  /// GetProposals (historical)
+  /// Proposals (historical)
   ///
   /// Gets proposals.
   ///
@@ -2247,7 +2247,7 @@ class CurveApi {
     return null;
   }
 
-  /// GetProposalsVotes (historical)
+  /// ProposalsVotes (historical)
   ///
   /// Gets proposals votes.
   ///
@@ -2304,7 +2304,7 @@ class CurveApi {
     );
   }
 
-  /// GetProposalsVotes (historical)
+  /// ProposalsVotes (historical)
   ///
   /// Gets proposals votes.
   ///
@@ -2339,7 +2339,7 @@ class CurveApi {
     return null;
   }
 
-  /// GetRemoveLiquidityEvents (historical)
+  /// RemoveLiquidityEvents (historical)
   ///
   /// Gets remove liquidity events.
   ///
@@ -2402,7 +2402,7 @@ class CurveApi {
     );
   }
 
-  /// GetRemoveLiquidityEvents (historical)
+  /// RemoveLiquidityEvents (historical)
   ///
   /// Gets remove liquidity events.
   ///
@@ -2440,7 +2440,7 @@ class CurveApi {
     return null;
   }
 
-  /// GetRemoveLiquidityOneEvents (historical)
+  /// RemoveLiquidityOneEvents (historical)
   ///
   /// Gets remove liquidity one events.
   ///
@@ -2503,7 +2503,7 @@ class CurveApi {
     );
   }
 
-  /// GetRemoveLiquidityOneEvents (historical)
+  /// RemoveLiquidityOneEvents (historical)
   ///
   /// Gets remove liquidity one events.
   ///
@@ -2541,7 +2541,7 @@ class CurveApi {
     return null;
   }
 
-  /// GetSystemStates (historical)
+  /// SystemStates (historical)
   ///
   /// Gets system states.
   ///
@@ -2598,7 +2598,7 @@ class CurveApi {
     );
   }
 
-  /// GetSystemStates (historical)
+  /// SystemStates (historical)
   ///
   /// Gets system states.
   ///
@@ -2633,7 +2633,7 @@ class CurveApi {
     return null;
   }
 
-  /// GetTokens (historical) 🔥
+  /// Tokens (historical) 🔥
   ///
   /// Gets tokens.
   ///
@@ -2696,7 +2696,7 @@ class CurveApi {
     );
   }
 
-  /// GetTokens (historical) 🔥
+  /// Tokens (historical) 🔥
   ///
   /// Gets tokens.
   ///
@@ -2734,7 +2734,7 @@ class CurveApi {
     return null;
   }
 
-  /// GetTransferOwnershipEvents (historical)
+  /// TransferOwnershipEvents (historical)
   ///
   /// Gets transfer ownership events.
   ///
@@ -2797,7 +2797,7 @@ class CurveApi {
     );
   }
 
-  /// GetTransferOwnershipEvents (historical)
+  /// TransferOwnershipEvents (historical)
   ///
   /// Gets transfer ownership events.
   ///
@@ -2835,7 +2835,7 @@ class CurveApi {
     return null;
   }
 
-  /// GetUnderlyingCoins (historical)
+  /// UnderlyingCoins (historical)
   ///
   /// Gets underlying coins.
   ///
@@ -2898,7 +2898,7 @@ class CurveApi {
     );
   }
 
-  /// GetUnderlyingCoins (historical)
+  /// UnderlyingCoins (historical)
   ///
   /// Gets underlying coins.
   ///
@@ -2936,7 +2936,7 @@ class CurveApi {
     return null;
   }
 
-  /// GetVotingApps (historical)
+  /// VotingApps (historical)
   ///
   /// Gets voting apps.
   ///
@@ -2993,7 +2993,7 @@ class CurveApi {
     );
   }
 
-  /// GetVotingApps (historical)
+  /// VotingApps (historical)
   ///
   /// Gets voting apps.
   ///
@@ -3028,7 +3028,7 @@ class CurveApi {
     return null;
   }
 
-  /// GetWeeklyVolumes (historical)
+  /// WeeklyVolumes (historical)
   ///
   /// Gets weekly volumes.
   ///
@@ -3091,7 +3091,7 @@ class CurveApi {
     );
   }
 
-  /// GetWeeklyVolumes (historical)
+  /// WeeklyVolumes (historical)
   ///
   /// Gets weekly volumes.
   ///

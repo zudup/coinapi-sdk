@@ -47,7 +47,7 @@ export default class CowApi {
      */
 
     /**
-     * GetOrders (historical)
+     * Orders (historical)
      * Gets orders.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -94,7 +94,7 @@ export default class CowApi {
      */
 
     /**
-     * GetSettlements (historical)
+     * Settlements (historical)
      * Gets settlements.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -141,7 +141,7 @@ export default class CowApi {
      */
 
     /**
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      * Gets tokens.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -190,7 +190,7 @@ export default class CowApi {
      */
 
     /**
-     * GetTrades (historical) 🔥
+     * Trades (historical) 🔥
      * Gets trades.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -237,7 +237,7 @@ export default class CowApi {
      */
 
     /**
-     * GetUsers (historical)
+     * Users (historical)
      * Gets users.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 

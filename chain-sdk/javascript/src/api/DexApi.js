@@ -53,7 +53,7 @@ export default class DexApi {
      */
 
     /**
-     * GetBatches (historical)
+     * Batches (historical)
      * Gets batches.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -100,7 +100,7 @@ export default class DexApi {
      */
 
     /**
-     * GetDeposits (historical)
+     * Deposits (historical)
      * Gets deposits.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -149,7 +149,7 @@ export default class DexApi {
      */
 
     /**
-     * GetOrders (historical)
+     * Orders (historical)
      * Gets orders.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -198,7 +198,7 @@ export default class DexApi {
      */
 
     /**
-     * GetPrices (historical)
+     * Prices (historical)
      * Gets prices.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -247,7 +247,7 @@ export default class DexApi {
      */
 
     /**
-     * GetSolutions (historical)
+     * Solutions (historical)
      * Gets solutions.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -296,7 +296,7 @@ export default class DexApi {
      */
 
     /**
-     * GetStats (historical)
+     * Stats (historical)
      * Gets stats.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -343,7 +343,7 @@ export default class DexApi {
      */
 
     /**
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      * Gets tokens.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -392,7 +392,7 @@ export default class DexApi {
      */
 
     /**
-     * GetTrades (historical) 🔥
+     * Trades (historical) 🔥
      * Gets trades.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -439,7 +439,7 @@ export default class DexApi {
      */
 
     /**
-     * GetUsers (historical)
+     * Users (historical)
      * Gets users.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -486,7 +486,7 @@ export default class DexApi {
      */
 
     /**
-     * GetWithdraws (historical)
+     * Withdraws (historical)
      * Gets withdraws.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -535,7 +535,7 @@ export default class DexApi {
      */
 
     /**
-     * GetWithdrawsRequests (historical)
+     * WithdrawsRequests (historical)
      * Gets withdraws requests.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 

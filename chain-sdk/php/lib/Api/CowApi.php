@@ -138,7 +138,7 @@ class CowApi
     /**
      * Operation cowGetOrdersHistorical
      *
-     * GetOrders (historical)
+     * Orders (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -159,7 +159,7 @@ class CowApi
     /**
      * Operation cowGetOrdersHistoricalWithHttpInfo
      *
-     * GetOrders (historical)
+     * Orders (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -262,7 +262,7 @@ class CowApi
     /**
      * Operation cowGetOrdersHistoricalAsync
      *
-     * GetOrders (historical)
+     * Orders (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -286,7 +286,7 @@ class CowApi
     /**
      * Operation cowGetOrdersHistoricalAsyncWithHttpInfo
      *
-     * GetOrders (historical)
+     * Orders (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -461,7 +461,7 @@ class CowApi
     /**
      * Operation cowGetSettlementsHistorical
      *
-     * GetSettlements (historical)
+     * Settlements (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -482,7 +482,7 @@ class CowApi
     /**
      * Operation cowGetSettlementsHistoricalWithHttpInfo
      *
-     * GetSettlements (historical)
+     * Settlements (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -585,7 +585,7 @@ class CowApi
     /**
      * Operation cowGetSettlementsHistoricalAsync
      *
-     * GetSettlements (historical)
+     * Settlements (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -609,7 +609,7 @@ class CowApi
     /**
      * Operation cowGetSettlementsHistoricalAsyncWithHttpInfo
      *
-     * GetSettlements (historical)
+     * Settlements (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -784,7 +784,7 @@ class CowApi
     /**
      * Operation cowGetTokensHistorical
      *
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -806,7 +806,7 @@ class CowApi
     /**
      * Operation cowGetTokensHistoricalWithHttpInfo
      *
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -910,7 +910,7 @@ class CowApi
     /**
      * Operation cowGetTokensHistoricalAsync
      *
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -935,7 +935,7 @@ class CowApi
     /**
      * Operation cowGetTokensHistoricalAsyncWithHttpInfo
      *
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -1122,7 +1122,7 @@ class CowApi
     /**
      * Operation cowGetTradesHistorical
      *
-     * GetTrades (historical) 🔥
+     * Trades (historical) 🔥
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -1143,7 +1143,7 @@ class CowApi
     /**
      * Operation cowGetTradesHistoricalWithHttpInfo
      *
-     * GetTrades (historical) 🔥
+     * Trades (historical) 🔥
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -1246,7 +1246,7 @@ class CowApi
     /**
      * Operation cowGetTradesHistoricalAsync
      *
-     * GetTrades (historical) 🔥
+     * Trades (historical) 🔥
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -1270,7 +1270,7 @@ class CowApi
     /**
      * Operation cowGetTradesHistoricalAsyncWithHttpInfo
      *
-     * GetTrades (historical) 🔥
+     * Trades (historical) 🔥
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -1445,7 +1445,7 @@ class CowApi
     /**
      * Operation cowGetUsersHistorical
      *
-     * GetUsers (historical)
+     * Users (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -1466,7 +1466,7 @@ class CowApi
     /**
      * Operation cowGetUsersHistoricalWithHttpInfo
      *
-     * GetUsers (historical)
+     * Users (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -1569,7 +1569,7 @@ class CowApi
     /**
      * Operation cowGetUsersHistoricalAsync
      *
-     * GetUsers (historical)
+     * Users (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -1593,7 +1593,7 @@ class CowApi
     /**
      * Operation cowGetUsersHistoricalAsyncWithHttpInfo
      *
-     * GetUsers (historical)
+     * Users (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)

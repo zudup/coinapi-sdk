@@ -21,7 +21,7 @@ from .. import ApiTestMixin
 class TestDappsCurveAddLiquidityEventsHistorical(ApiTestMixin, unittest.TestCase):
     """
     DappsCurveAddLiquidityEventsHistorical unit test stubs
-        GetAddLiquidityEvents (historical)  # noqa: E501
+        AddLiquidityEvents (historical)  # noqa: E501
     """
     _configuration = configuration.Configuration()
 

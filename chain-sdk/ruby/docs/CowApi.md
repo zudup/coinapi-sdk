@@ -4,18 +4,18 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
-| [**cow_get_orders__historical**](CowApi.md#cow_get_orders__historical) | **GET** /dapps/cow/orders/historical | GetOrders (historical) |
-| [**cow_get_settlements__historical**](CowApi.md#cow_get_settlements__historical) | **GET** /dapps/cow/settlements/historical | GetSettlements (historical) |
-| [**cow_get_tokens__historical**](CowApi.md#cow_get_tokens__historical) | **GET** /dapps/cow/tokens/historical | GetTokens (historical) 🔥 |
-| [**cow_get_trades__historical**](CowApi.md#cow_get_trades__historical) | **GET** /dapps/cow/trades/historical | GetTrades (historical) 🔥 |
-| [**cow_get_users__historical**](CowApi.md#cow_get_users__historical) | **GET** /dapps/cow/users/historical | GetUsers (historical) |
+| [**cow_get_orders__historical**](CowApi.md#cow_get_orders__historical) | **GET** /dapps/cow/orders/historical | Orders (historical) |
+| [**cow_get_settlements__historical**](CowApi.md#cow_get_settlements__historical) | **GET** /dapps/cow/settlements/historical | Settlements (historical) |
+| [**cow_get_tokens__historical**](CowApi.md#cow_get_tokens__historical) | **GET** /dapps/cow/tokens/historical | Tokens (historical) 🔥 |
+| [**cow_get_trades__historical**](CowApi.md#cow_get_trades__historical) | **GET** /dapps/cow/trades/historical | Trades (historical) 🔥 |
+| [**cow_get_users__historical**](CowApi.md#cow_get_users__historical) | **GET** /dapps/cow/users/historical | Users (historical) |
 
 
 ## cow_get_orders__historical
 
 > <Array<CowOrderDTO>> cow_get_orders__historical(opts)
 
-GetOrders (historical)
+Orders (historical)
 
 Gets orders.
 
@@ -34,7 +34,7 @@ opts = {
 }
 
 begin
-  # GetOrders (historical)
+  # Orders (historical)
   result = api_instance.cow_get_orders__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -50,7 +50,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetOrders (historical)
+  # Orders (historical)
   data, status_code, headers = api_instance.cow_get_orders__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -87,7 +87,7 @@ No authorization required
 
 > <Array<CowSettlementDTO>> cow_get_settlements__historical(opts)
 
-GetSettlements (historical)
+Settlements (historical)
 
 Gets settlements.
 
@@ -106,7 +106,7 @@ opts = {
 }
 
 begin
-  # GetSettlements (historical)
+  # Settlements (historical)
   result = api_instance.cow_get_settlements__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -122,7 +122,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetSettlements (historical)
+  # Settlements (historical)
   data, status_code, headers = api_instance.cow_get_settlements__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -159,7 +159,7 @@ No authorization required
 
 > <Array<CowTokenDTO>> cow_get_tokens__historical(opts)
 
-GetTokens (historical) 🔥
+Tokens (historical) 🔥
 
 Gets tokens.
 
@@ -179,7 +179,7 @@ opts = {
 }
 
 begin
-  # GetTokens (historical) 🔥
+  # Tokens (historical) 🔥
   result = api_instance.cow_get_tokens__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -195,7 +195,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetTokens (historical) 🔥
+  # Tokens (historical) 🔥
   data, status_code, headers = api_instance.cow_get_tokens__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -233,7 +233,7 @@ No authorization required
 
 > <Array<CowTradeDTO>> cow_get_trades__historical(opts)
 
-GetTrades (historical) 🔥
+Trades (historical) 🔥
 
 Gets trades.
 
@@ -252,7 +252,7 @@ opts = {
 }
 
 begin
-  # GetTrades (historical) 🔥
+  # Trades (historical) 🔥
   result = api_instance.cow_get_trades__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -268,7 +268,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetTrades (historical) 🔥
+  # Trades (historical) 🔥
   data, status_code, headers = api_instance.cow_get_trades__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
@@ -305,7 +305,7 @@ No authorization required
 
 > <Array<CowUserDTO>> cow_get_users__historical(opts)
 
-GetUsers (historical)
+Users (historical)
 
 Gets users.
 
@@ -324,7 +324,7 @@ opts = {
 }
 
 begin
-  # GetUsers (historical)
+  # Users (historical)
   result = api_instance.cow_get_users__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
@@ -340,7 +340,7 @@ This returns an Array which contains the response data, status code and headers.
 
 ```ruby
 begin
-  # GetUsers (historical)
+  # Users (historical)
   data, status_code, headers = api_instance.cow_get_users__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }

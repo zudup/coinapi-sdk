@@ -21,7 +21,7 @@ from .. import ApiTestMixin
 class TestDappsCurveGaugesWithdrawsHistorical(ApiTestMixin, unittest.TestCase):
     """
     DappsCurveGaugesWithdrawsHistorical unit test stubs
-        GetGaugesWithdraw (historical)  # noqa: E501
+        GaugesWithdraw (historical)  # noqa: E501
     """
     _configuration = configuration.Configuration()
 

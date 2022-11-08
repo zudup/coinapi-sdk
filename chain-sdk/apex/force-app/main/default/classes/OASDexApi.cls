@@ -26,7 +26,7 @@ public class OASDexApi {
     }
 
     /**
-     * GetBatches (historical)
+     * Batches (historical)
      * Gets batches.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -58,7 +58,7 @@ public class OASDexApi {
         );
     }
     /**
-     * GetDeposits (historical)
+     * Deposits (historical)
      * Gets deposits.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -92,7 +92,7 @@ public class OASDexApi {
         );
     }
     /**
-     * GetOrders (historical)
+     * Orders (historical)
      * Gets orders.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -126,7 +126,7 @@ public class OASDexApi {
         );
     }
     /**
-     * GetPrices (historical)
+     * Prices (historical)
      * Gets prices.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -160,7 +160,7 @@ public class OASDexApi {
         );
     }
     /**
-     * GetSolutions (historical)
+     * Solutions (historical)
      * Gets solutions.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -194,7 +194,7 @@ public class OASDexApi {
         );
     }
     /**
-     * GetStats (historical)
+     * Stats (historical)
      * Gets stats.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -226,7 +226,7 @@ public class OASDexApi {
         );
     }
     /**
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      * Gets tokens.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -260,7 +260,7 @@ public class OASDexApi {
         );
     }
     /**
-     * GetTrades (historical) 🔥
+     * Trades (historical) 🔥
      * Gets trades.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -292,7 +292,7 @@ public class OASDexApi {
         );
     }
     /**
-     * GetUsers (historical)
+     * Users (historical)
      * Gets users.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -324,7 +324,7 @@ public class OASDexApi {
         );
     }
     /**
-     * GetWithdraws (historical)
+     * Withdraws (historical)
      * Gets withdraws.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -358,7 +358,7 @@ public class OASDexApi {
         );
     }
     /**
-     * GetWithdrawsRequests (historical)
+     * WithdrawsRequests (historical)
      * Gets withdraws requests.
      * @param startBlock  (optional)
      * @param endBlock  (optional)

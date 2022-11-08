@@ -75,7 +75,7 @@ class CowApiTest extends TestCase
     /**
      * Test case for cowGetOrdersHistorical
      *
-     * GetOrders (historical).
+     * Orders (historical).
      *
      */
     public function testCowGetOrdersHistorical()
@@ -87,7 +87,7 @@ class CowApiTest extends TestCase
     /**
      * Test case for cowGetSettlementsHistorical
      *
-     * GetSettlements (historical).
+     * Settlements (historical).
      *
      */
     public function testCowGetSettlementsHistorical()
@@ -99,7 +99,7 @@ class CowApiTest extends TestCase
     /**
      * Test case for cowGetTokensHistorical
      *
-     * GetTokens (historical) 🔥.
+     * Tokens (historical) 🔥.
      *
      */
     public function testCowGetTokensHistorical()
@@ -111,7 +111,7 @@ class CowApiTest extends TestCase
     /**
      * Test case for cowGetTradesHistorical
      *
-     * GetTrades (historical) 🔥.
+     * Trades (historical) 🔥.
      *
      */
     public function testCowGetTradesHistorical()
@@ -123,7 +123,7 @@ class CowApiTest extends TestCase
     /**
      * Test case for cowGetUsersHistorical
      *
-     * GetUsers (historical).
+     * Users (historical).
      *
      */
     public function testCowGetUsersHistorical()

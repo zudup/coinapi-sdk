@@ -21,7 +21,7 @@ from .. import ApiTestMixin
 class TestDappsSushiswapHourDataHistorical(ApiTestMixin, unittest.TestCase):
     """
     DappsSushiswapHourDataHistorical unit test stubs
-        GetHourData (historical)  # noqa: E501
+        HourData (historical)  # noqa: E501
     """
     _configuration = configuration.Configuration()
 

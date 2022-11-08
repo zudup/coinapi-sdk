@@ -21,7 +21,7 @@ from .. import ApiTestMixin
 class TestDappsUniswapv3BundlesCurrent(ApiTestMixin, unittest.TestCase):
     """
     DappsUniswapv3BundlesCurrent unit test stubs
-        GetBundles (current)  # noqa: E501
+        Bundles (current)  # noqa: E501
     """
     _configuration = configuration.Configuration()
 

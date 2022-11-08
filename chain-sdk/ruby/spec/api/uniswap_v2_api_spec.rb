@@ -33,7 +33,7 @@ describe 'UniswapV2Api' do
   end
 
   # unit tests for uniswap_v2_get_bundles__historical
-  # GetBundles (historical)
+  # Bundles (historical)
   # Gets bundles.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -48,7 +48,7 @@ describe 'UniswapV2Api' do
   end
 
   # unit tests for uniswap_v2_get_burns__historical
-  # GetBurns (historical)
+  # Burns (historical)
   # Gets burns.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -64,7 +64,7 @@ describe 'UniswapV2Api' do
   end
 
   # unit tests for uniswap_v2_get_day_data__historical
-  # GetDayData (historical)
+  # DayData (historical)
   # Gets uniswapv2 day data.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -79,7 +79,7 @@ describe 'UniswapV2Api' do
   end
 
   # unit tests for uniswap_v2_get_factory__historical
-  # GetFactory (historical)
+  # Factory (historical)
   # Gets factory.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -94,7 +94,7 @@ describe 'UniswapV2Api' do
   end
 
   # unit tests for uniswap_v2_get_liquidity_positions__historical
-  # GetLiquidityPositions (historical)
+  # LiquidityPositions (historical)
   # Gets liquidity positions.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -110,7 +110,7 @@ describe 'UniswapV2Api' do
   end
 
   # unit tests for uniswap_v2_get_liquidity_positions_snapshots__historical
-  # GetLiquidityPositionsSnapshots (historical)
+  # LiquidityPositionsSnapshots (historical)
   # Gets liquidity positions snapshots.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -126,7 +126,7 @@ describe 'UniswapV2Api' do
   end
 
   # unit tests for uniswap_v2_get_mints__historical
-  # GetMints (historical)
+  # Mints (historical)
   # Gets mints.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -142,7 +142,7 @@ describe 'UniswapV2Api' do
   end
 
   # unit tests for uniswap_v2_get_pools__current
-  # GetPools (current) 🔥
+  # Pools (current) 🔥
   # Gets pools.
   # @param [Hash] opts the optional parameters
   # @option opts [String] :filter_pool_id 
@@ -154,7 +154,7 @@ describe 'UniswapV2Api' do
   end
 
   # unit tests for uniswap_v2_get_pools__historical
-  # GetPools (historical) 🔥
+  # Pools (historical) 🔥
   # Gets pools.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -170,7 +170,7 @@ describe 'UniswapV2Api' do
   end
 
   # unit tests for uniswap_v2_get_pools_day_data__historical
-  # GetPoolsDayData (historical)
+  # PoolsDayData (historical)
   # Gets pools day data.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -186,7 +186,7 @@ describe 'UniswapV2Api' do
   end
 
   # unit tests for uniswap_v2_get_pools_hour_data__historical
-  # GetPoolsHourData (historical)
+  # PoolsHourData (historical)
   # Gets pools tracked each our.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -202,7 +202,7 @@ describe 'UniswapV2Api' do
   end
 
   # unit tests for uniswap_v2_get_swaps__current
-  # GetSwaps (current) 🔥
+  # Swaps (current) 🔥
   # Gets swaps.
   # @param [Hash] opts the optional parameters
   # @return [Array<UniswapV2SwapV2DTO>]
@@ -213,7 +213,7 @@ describe 'UniswapV2Api' do
   end
 
   # unit tests for uniswap_v2_get_swaps__historical
-  # GetSwaps (historical) 🔥
+  # Swaps (historical) 🔥
   # Gets swaps.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -229,7 +229,7 @@ describe 'UniswapV2Api' do
   end
 
   # unit tests for uniswap_v2_get_tokens__current
-  # GetTokens (current) 🔥
+  # Tokens (current) 🔥
   # Gets tokens.
   # @param [Hash] opts the optional parameters
   # @return [Array<UniswapV2TokenV2DTO>]
@@ -240,7 +240,7 @@ describe 'UniswapV2Api' do
   end
 
   # unit tests for uniswap_v2_get_tokens__historical
-  # GetTokens (historical) 🔥
+  # Tokens (historical) 🔥
   # Gets tokens.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -256,7 +256,7 @@ describe 'UniswapV2Api' do
   end
 
   # unit tests for uniswap_v2_get_tokens_day_data__historical
-  # GetTokensDayData (historical)
+  # TokensDayData (historical)
   # Gets tokens day data.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -272,7 +272,7 @@ describe 'UniswapV2Api' do
   end
 
   # unit tests for uniswap_v2_get_transactions__historical
-  # GetTransactions (historical)
+  # Transactions (historical)
   # Gets transactions.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -287,7 +287,7 @@ describe 'UniswapV2Api' do
   end
 
   # unit tests for uniswap_v2_get_users__historical
-  # GetUsers (historical)
+  # Users (historical)
   # Gets users.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 

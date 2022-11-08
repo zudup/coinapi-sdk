@@ -8,7 +8,7 @@ api_instance <- CowApi$new()
 test_that("CowGetOrdersHistorical", {
   # tests for CowGetOrdersHistorical
   # base path: https://onchain.coinapi.io
-  # GetOrders (historical)
+  # Orders (historical)
   # Gets orders.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -23,7 +23,7 @@ test_that("CowGetOrdersHistorical", {
 test_that("CowGetSettlementsHistorical", {
   # tests for CowGetSettlementsHistorical
   # base path: https://onchain.coinapi.io
-  # GetSettlements (historical)
+  # Settlements (historical)
   # Gets settlements.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -38,7 +38,7 @@ test_that("CowGetSettlementsHistorical", {
 test_that("CowGetTokensHistorical", {
   # tests for CowGetTokensHistorical
   # base path: https://onchain.coinapi.io
-  # GetTokens (historical) 🔥
+  # Tokens (historical) 🔥
   # Gets tokens.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -54,7 +54,7 @@ test_that("CowGetTokensHistorical", {
 test_that("CowGetTradesHistorical", {
   # tests for CowGetTradesHistorical
   # base path: https://onchain.coinapi.io
-  # GetTrades (historical) 🔥
+  # Trades (historical) 🔥
   # Gets trades.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -69,7 +69,7 @@ test_that("CowGetTradesHistorical", {
 test_that("CowGetUsersHistorical", {
   # tests for CowGetUsersHistorical
   # base path: https://onchain.coinapi.io
-  # GetUsers (historical)
+  # Users (historical)
   # Gets users.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)

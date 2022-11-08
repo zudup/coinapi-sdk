@@ -120,7 +120,7 @@ export class UniswapV2Service {
     }
 
     /**
-     * GetBundles (historical)
+     * Bundles (historical)
      * Gets bundles.
      * @param startBlock 
      * @param endBlock 
@@ -200,7 +200,7 @@ export class UniswapV2Service {
     }
 
     /**
-     * GetBurns (historical)
+     * Burns (historical)
      * Gets burns.
      * @param startBlock 
      * @param endBlock 
@@ -285,7 +285,7 @@ export class UniswapV2Service {
     }
 
     /**
-     * GetDayData (historical)
+     * DayData (historical)
      * Gets uniswapv2 day data.
      * @param startBlock 
      * @param endBlock 
@@ -365,7 +365,7 @@ export class UniswapV2Service {
     }
 
     /**
-     * GetFactory (historical)
+     * Factory (historical)
      * Gets factory.
      * @param startBlock 
      * @param endBlock 
@@ -445,7 +445,7 @@ export class UniswapV2Service {
     }
 
     /**
-     * GetLiquidityPositions (historical)
+     * LiquidityPositions (historical)
      * Gets liquidity positions.
      * @param startBlock 
      * @param endBlock 
@@ -530,7 +530,7 @@ export class UniswapV2Service {
     }
 
     /**
-     * GetLiquidityPositionsSnapshots (historical)
+     * LiquidityPositionsSnapshots (historical)
      * Gets liquidity positions snapshots.
      * @param startBlock 
      * @param endBlock 
@@ -615,7 +615,7 @@ export class UniswapV2Service {
     }
 
     /**
-     * GetMints (historical)
+     * Mints (historical)
      * Gets mints.
      * @param startBlock 
      * @param endBlock 
@@ -700,7 +700,7 @@ export class UniswapV2Service {
     }
 
     /**
-     * GetPools (current) 🔥
+     * Pools (current) 🔥
      * Gets pools.
      * @param filterPoolId 
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
@@ -765,7 +765,7 @@ export class UniswapV2Service {
     }
 
     /**
-     * GetPoolsDayData (historical)
+     * PoolsDayData (historical)
      * Gets pools day data.
      * @param startBlock 
      * @param endBlock 
@@ -850,7 +850,7 @@ export class UniswapV2Service {
     }
 
     /**
-     * GetPools (historical) 🔥
+     * Pools (historical) 🔥
      * Gets pools.
      * @param startBlock 
      * @param endBlock 
@@ -935,7 +935,7 @@ export class UniswapV2Service {
     }
 
     /**
-     * GetPoolsHourData (historical)
+     * PoolsHourData (historical)
      * Gets pools tracked each our.
      * @param startBlock 
      * @param endBlock 
@@ -1020,7 +1020,7 @@ export class UniswapV2Service {
     }
 
     /**
-     * GetSwaps (current) 🔥
+     * Swaps (current) 🔥
      * Gets swaps.
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
@@ -1077,7 +1077,7 @@ export class UniswapV2Service {
     }
 
     /**
-     * GetSwaps (historical) 🔥
+     * Swaps (historical) 🔥
      * Gets swaps.
      * @param startBlock 
      * @param endBlock 
@@ -1162,7 +1162,7 @@ export class UniswapV2Service {
     }
 
     /**
-     * GetTokens (current) 🔥
+     * Tokens (current) 🔥
      * Gets tokens.
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
@@ -1219,7 +1219,7 @@ export class UniswapV2Service {
     }
 
     /**
-     * GetTokensDayData (historical)
+     * TokensDayData (historical)
      * Gets tokens day data.
      * @param startBlock 
      * @param endBlock 
@@ -1304,7 +1304,7 @@ export class UniswapV2Service {
     }
 
     /**
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      * Gets tokens.
      * @param startBlock 
      * @param endBlock 
@@ -1389,7 +1389,7 @@ export class UniswapV2Service {
     }
 
     /**
-     * GetTransactions (historical)
+     * Transactions (historical)
      * Gets transactions.
      * @param startBlock 
      * @param endBlock 
@@ -1469,7 +1469,7 @@ export class UniswapV2Service {
     }
 
     /**
-     * GetUsers (historical)
+     * Users (historical)
      * Gets users.
      * @param startBlock 
      * @param endBlock 

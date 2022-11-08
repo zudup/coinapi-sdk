@@ -51,7 +51,7 @@ sub new {
 #
 # curve_get_accounts__historical
 #
-# GetAccounts (historical)
+# Accounts (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -81,7 +81,7 @@ sub new {
     },
     };
     __PACKAGE__->method_documentation->{ 'curve_get_accounts__historical' } = {
-        summary => 'GetAccounts (historical)',
+        summary => 'Accounts (historical)',
         params => $params,
         returns => 'ARRAY[CurveAccountDTO]',
         };
@@ -144,7 +144,7 @@ sub curve_get_accounts__historical {
 #
 # curve_get_add_liquidity_events__historical
 #
-# GetAddLiquidityEvents (historical)
+# AddLiquidityEvents (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -180,7 +180,7 @@ sub curve_get_accounts__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'curve_get_add_liquidity_events__historical' } = {
-        summary => 'GetAddLiquidityEvents (historical)',
+        summary => 'AddLiquidityEvents (historical)',
         params => $params,
         returns => 'ARRAY[CurveAddLiquidityEventDTO]',
         };
@@ -248,7 +248,7 @@ sub curve_get_add_liquidity_events__historical {
 #
 # curve_get_admin_fee_change_logs__historical
 #
-# GetAdminFeeChangeLogs (historical)
+# AdminFeeChangeLogs (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -284,7 +284,7 @@ sub curve_get_add_liquidity_events__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'curve_get_admin_fee_change_logs__historical' } = {
-        summary => 'GetAdminFeeChangeLogs (historical)',
+        summary => 'AdminFeeChangeLogs (historical)',
         params => $params,
         returns => 'ARRAY[CurveAdminFeeChangeLogDTO]',
         };
@@ -352,7 +352,7 @@ sub curve_get_admin_fee_change_logs__historical {
 #
 # curve_get_amplification_coeff_change_logs__historical
 #
-# GetAmplificationCoeffChangeLogs (historical)
+# AmplificationCoeffChangeLogs (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -388,7 +388,7 @@ sub curve_get_admin_fee_change_logs__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'curve_get_amplification_coeff_change_logs__historical' } = {
-        summary => 'GetAmplificationCoeffChangeLogs (historical)',
+        summary => 'AmplificationCoeffChangeLogs (historical)',
         params => $params,
         returns => 'ARRAY[CurveAmplificationCoeffChangeLogDTO]',
         };
@@ -456,7 +456,7 @@ sub curve_get_amplification_coeff_change_logs__historical {
 #
 # curve_get_coins__historical
 #
-# GetCoins (historical)
+# Coins (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -492,7 +492,7 @@ sub curve_get_amplification_coeff_change_logs__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'curve_get_coins__historical' } = {
-        summary => 'GetCoins (historical)',
+        summary => 'Coins (historical)',
         params => $params,
         returns => 'ARRAY[CurveCoinDTO]',
         };
@@ -560,7 +560,7 @@ sub curve_get_coins__historical {
 #
 # curve_get_contracts__historical
 #
-# GetContracts (historical)
+# Contracts (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -596,7 +596,7 @@ sub curve_get_coins__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'curve_get_contracts__historical' } = {
-        summary => 'GetContracts (historical)',
+        summary => 'Contracts (historical)',
         params => $params,
         returns => 'ARRAY[CurveContractDTO]',
         };
@@ -664,7 +664,7 @@ sub curve_get_contracts__historical {
 #
 # curve_get_contracts_versions__historical
 #
-# GetContractsVersions (historical)
+# ContractsVersions (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -700,7 +700,7 @@ sub curve_get_contracts__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'curve_get_contracts_versions__historical' } = {
-        summary => 'GetContractsVersions (historical)',
+        summary => 'ContractsVersions (historical)',
         params => $params,
         returns => 'ARRAY[CurveContractVersionDTO]',
         };
@@ -768,7 +768,7 @@ sub curve_get_contracts_versions__historical {
 #
 # curve_get_daily_volumes__historical
 #
-# GetDailyVolumes (historical)
+# DailyVolumes (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -804,7 +804,7 @@ sub curve_get_contracts_versions__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'curve_get_daily_volumes__historical' } = {
-        summary => 'GetDailyVolumes (historical)',
+        summary => 'DailyVolumes (historical)',
         params => $params,
         returns => 'ARRAY[CurveDailyVolumeDTO]',
         };
@@ -872,7 +872,7 @@ sub curve_get_daily_volumes__historical {
 #
 # curve_get_exchanges__historical
 #
-# GetExchanges (historical) 🔥
+# Exchanges (historical) 🔥
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -908,7 +908,7 @@ sub curve_get_daily_volumes__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'curve_get_exchanges__historical' } = {
-        summary => 'GetExchanges (historical) 🔥',
+        summary => 'Exchanges (historical) 🔥',
         params => $params,
         returns => 'ARRAY[CurveExchangeDTO]',
         };
@@ -976,7 +976,7 @@ sub curve_get_exchanges__historical {
 #
 # curve_get_fee_change_logs__historical
 #
-# GetFeeChangeLogs (historical)
+# FeeChangeLogs (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -1012,7 +1012,7 @@ sub curve_get_exchanges__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'curve_get_fee_change_logs__historical' } = {
-        summary => 'GetFeeChangeLogs (historical)',
+        summary => 'FeeChangeLogs (historical)',
         params => $params,
         returns => 'ARRAY[CurveFeeChangeLogDTO]',
         };
@@ -1080,7 +1080,7 @@ sub curve_get_fee_change_logs__historical {
 #
 # curve_get_gauges__historical
 #
-# GetGauges (historical)
+# Gauges (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -1116,7 +1116,7 @@ sub curve_get_fee_change_logs__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'curve_get_gauges__historical' } = {
-        summary => 'GetGauges (historical)',
+        summary => 'Gauges (historical)',
         params => $params,
         returns => 'ARRAY[CurveGaugeDTO]',
         };
@@ -1184,7 +1184,7 @@ sub curve_get_gauges__historical {
 #
 # curve_get_gauges_deposits__historical
 #
-# GetGaugesDeposits (historical)
+# GaugesDeposits (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -1214,7 +1214,7 @@ sub curve_get_gauges__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'curve_get_gauges_deposits__historical' } = {
-        summary => 'GetGaugesDeposits (historical)',
+        summary => 'GaugesDeposits (historical)',
         params => $params,
         returns => 'ARRAY[CurveGaugeDepositDTO]',
         };
@@ -1277,7 +1277,7 @@ sub curve_get_gauges_deposits__historical {
 #
 # curve_get_gauges_liquidity__historical
 #
-# GetGaugesLiquidity (historical)
+# GaugesLiquidity (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -1307,7 +1307,7 @@ sub curve_get_gauges_deposits__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'curve_get_gauges_liquidity__historical' } = {
-        summary => 'GetGaugesLiquidity (historical)',
+        summary => 'GaugesLiquidity (historical)',
         params => $params,
         returns => 'ARRAY[CurveGaugeLiquidityDTO]',
         };
@@ -1370,7 +1370,7 @@ sub curve_get_gauges_liquidity__historical {
 #
 # curve_get_gauges_total_weights__historical
 #
-# GetGaugesTotalWeights (historical)
+# GaugesTotalWeights (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -1400,7 +1400,7 @@ sub curve_get_gauges_liquidity__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'curve_get_gauges_total_weights__historical' } = {
-        summary => 'GetGaugesTotalWeights (historical)',
+        summary => 'GaugesTotalWeights (historical)',
         params => $params,
         returns => 'ARRAY[CurveGaugeTotalWeightDTO]',
         };
@@ -1463,7 +1463,7 @@ sub curve_get_gauges_total_weights__historical {
 #
 # curve_get_gauges_types__historical
 #
-# GetGaugesTypes (historical)
+# GaugesTypes (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -1493,7 +1493,7 @@ sub curve_get_gauges_total_weights__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'curve_get_gauges_types__historical' } = {
-        summary => 'GetGaugesTypes (historical)',
+        summary => 'GaugesTypes (historical)',
         params => $params,
         returns => 'ARRAY[CurveGaugeTypeDTO]',
         };
@@ -1556,7 +1556,7 @@ sub curve_get_gauges_types__historical {
 #
 # curve_get_gauges_types_weights__historical
 #
-# GetGaugesTypesWeights (historical)
+# GaugesTypesWeights (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -1586,7 +1586,7 @@ sub curve_get_gauges_types__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'curve_get_gauges_types_weights__historical' } = {
-        summary => 'GetGaugesTypesWeights (historical)',
+        summary => 'GaugesTypesWeights (historical)',
         params => $params,
         returns => 'ARRAY[CurveGaugeTypeWeightDTO]',
         };
@@ -1649,7 +1649,7 @@ sub curve_get_gauges_types_weights__historical {
 #
 # curve_get_gauges_weights__historical
 #
-# GetGaugesWeights (historical)
+# GaugesWeights (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -1679,7 +1679,7 @@ sub curve_get_gauges_types_weights__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'curve_get_gauges_weights__historical' } = {
-        summary => 'GetGaugesWeights (historical)',
+        summary => 'GaugesWeights (historical)',
         params => $params,
         returns => 'ARRAY[CurveGaugeWeightDTO]',
         };
@@ -1742,7 +1742,7 @@ sub curve_get_gauges_weights__historical {
 #
 # curve_get_gauges_weights_votes__historical
 #
-# GetGaugesWeightsVotes (historical)
+# GaugesWeightsVotes (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -1772,7 +1772,7 @@ sub curve_get_gauges_weights__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'curve_get_gauges_weights_votes__historical' } = {
-        summary => 'GetGaugesWeightsVotes (historical)',
+        summary => 'GaugesWeightsVotes (historical)',
         params => $params,
         returns => 'ARRAY[CurveGaugeWeightVoteDTO]',
         };
@@ -1835,7 +1835,7 @@ sub curve_get_gauges_weights_votes__historical {
 #
 # curve_get_gauges_withdraw__historical
 #
-# GetGaugesWithdraw (historical)
+# GaugesWithdraw (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -1865,7 +1865,7 @@ sub curve_get_gauges_weights_votes__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'curve_get_gauges_withdraw__historical' } = {
-        summary => 'GetGaugesWithdraw (historical)',
+        summary => 'GaugesWithdraw (historical)',
         params => $params,
         returns => 'ARRAY[CurveGaugeWithdrawDTO]',
         };
@@ -1928,7 +1928,7 @@ sub curve_get_gauges_withdraw__historical {
 #
 # curve_get_hourly_volumes__historical
 #
-# GetHourlyVolumes (historical)
+# HourlyVolumes (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -1964,7 +1964,7 @@ sub curve_get_gauges_withdraw__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'curve_get_hourly_volumes__historical' } = {
-        summary => 'GetHourlyVolumes (historical)',
+        summary => 'HourlyVolumes (historical)',
         params => $params,
         returns => 'ARRAY[CurveHourlyVolumeDTO]',
         };
@@ -2032,7 +2032,7 @@ sub curve_get_hourly_volumes__historical {
 #
 # curve_get_lp_tokens__historical
 #
-# GetLpTokens (historical)
+# LpTokens (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -2068,7 +2068,7 @@ sub curve_get_hourly_volumes__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'curve_get_lp_tokens__historical' } = {
-        summary => 'GetLpTokens (historical)',
+        summary => 'LpTokens (historical)',
         params => $params,
         returns => 'ARRAY[CurveLpTokenDTO]',
         };
@@ -2136,7 +2136,7 @@ sub curve_get_lp_tokens__historical {
 #
 # curve_get_pools__historical
 #
-# GetPools (historical) 🔥
+# Pools (historical) 🔥
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -2172,7 +2172,7 @@ sub curve_get_lp_tokens__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'curve_get_pools__historical' } = {
-        summary => 'GetPools (historical) 🔥',
+        summary => 'Pools (historical) 🔥',
         params => $params,
         returns => 'ARRAY[CurvePoolDTO]',
         };
@@ -2240,7 +2240,7 @@ sub curve_get_pools__historical {
 #
 # curve_get_proposals__historical
 #
-# GetProposals (historical)
+# Proposals (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -2270,7 +2270,7 @@ sub curve_get_pools__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'curve_get_proposals__historical' } = {
-        summary => 'GetProposals (historical)',
+        summary => 'Proposals (historical)',
         params => $params,
         returns => 'ARRAY[CurveProposalDTO]',
         };
@@ -2333,7 +2333,7 @@ sub curve_get_proposals__historical {
 #
 # curve_get_proposals_votes__historical
 #
-# GetProposalsVotes (historical)
+# ProposalsVotes (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -2363,7 +2363,7 @@ sub curve_get_proposals__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'curve_get_proposals_votes__historical' } = {
-        summary => 'GetProposalsVotes (historical)',
+        summary => 'ProposalsVotes (historical)',
         params => $params,
         returns => 'ARRAY[CurveProposalVoteDTO]',
         };
@@ -2426,7 +2426,7 @@ sub curve_get_proposals_votes__historical {
 #
 # curve_get_remove_liquidity_events__historical
 #
-# GetRemoveLiquidityEvents (historical)
+# RemoveLiquidityEvents (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -2462,7 +2462,7 @@ sub curve_get_proposals_votes__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'curve_get_remove_liquidity_events__historical' } = {
-        summary => 'GetRemoveLiquidityEvents (historical)',
+        summary => 'RemoveLiquidityEvents (historical)',
         params => $params,
         returns => 'ARRAY[CurveRemoveLiquidityEventDTO]',
         };
@@ -2530,7 +2530,7 @@ sub curve_get_remove_liquidity_events__historical {
 #
 # curve_get_remove_liquidity_one_events__historical
 #
-# GetRemoveLiquidityOneEvents (historical)
+# RemoveLiquidityOneEvents (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -2566,7 +2566,7 @@ sub curve_get_remove_liquidity_events__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'curve_get_remove_liquidity_one_events__historical' } = {
-        summary => 'GetRemoveLiquidityOneEvents (historical)',
+        summary => 'RemoveLiquidityOneEvents (historical)',
         params => $params,
         returns => 'ARRAY[CurveRemoveLiquidityOneEventDTO]',
         };
@@ -2634,7 +2634,7 @@ sub curve_get_remove_liquidity_one_events__historical {
 #
 # curve_get_system_states__historical
 #
-# GetSystemStates (historical)
+# SystemStates (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -2664,7 +2664,7 @@ sub curve_get_remove_liquidity_one_events__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'curve_get_system_states__historical' } = {
-        summary => 'GetSystemStates (historical)',
+        summary => 'SystemStates (historical)',
         params => $params,
         returns => 'ARRAY[CurveSystemStateDTO]',
         };
@@ -2727,7 +2727,7 @@ sub curve_get_system_states__historical {
 #
 # curve_get_tokens__historical
 #
-# GetTokens (historical) 🔥
+# Tokens (historical) 🔥
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -2763,7 +2763,7 @@ sub curve_get_system_states__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'curve_get_tokens__historical' } = {
-        summary => 'GetTokens (historical) 🔥',
+        summary => 'Tokens (historical) 🔥',
         params => $params,
         returns => 'ARRAY[CurveTokenDTO]',
         };
@@ -2831,7 +2831,7 @@ sub curve_get_tokens__historical {
 #
 # curve_get_transfer_ownership_events__historical
 #
-# GetTransferOwnershipEvents (historical)
+# TransferOwnershipEvents (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -2867,7 +2867,7 @@ sub curve_get_tokens__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'curve_get_transfer_ownership_events__historical' } = {
-        summary => 'GetTransferOwnershipEvents (historical)',
+        summary => 'TransferOwnershipEvents (historical)',
         params => $params,
         returns => 'ARRAY[CurveTransferOwnershipEventDTO]',
         };
@@ -2935,7 +2935,7 @@ sub curve_get_transfer_ownership_events__historical {
 #
 # curve_get_underlying_coins__historical
 #
-# GetUnderlyingCoins (historical)
+# UnderlyingCoins (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -2971,7 +2971,7 @@ sub curve_get_transfer_ownership_events__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'curve_get_underlying_coins__historical' } = {
-        summary => 'GetUnderlyingCoins (historical)',
+        summary => 'UnderlyingCoins (historical)',
         params => $params,
         returns => 'ARRAY[CurveUnderlyingCoinDTO]',
         };
@@ -3039,7 +3039,7 @@ sub curve_get_underlying_coins__historical {
 #
 # curve_get_voting_apps__historical
 #
-# GetVotingApps (historical)
+# VotingApps (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -3069,7 +3069,7 @@ sub curve_get_underlying_coins__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'curve_get_voting_apps__historical' } = {
-        summary => 'GetVotingApps (historical)',
+        summary => 'VotingApps (historical)',
         params => $params,
         returns => 'ARRAY[CurveVotingAppDTO]',
         };
@@ -3132,7 +3132,7 @@ sub curve_get_voting_apps__historical {
 #
 # curve_get_weekly_volumes__historical
 #
-# GetWeeklyVolumes (historical)
+# WeeklyVolumes (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -3168,7 +3168,7 @@ sub curve_get_voting_apps__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'curve_get_weekly_volumes__historical' } = {
-        summary => 'GetWeeklyVolumes (historical)',
+        summary => 'WeeklyVolumes (historical)',
         params => $params,
         returns => 'ARRAY[CurveWeeklyVolumeDTO]',
         };

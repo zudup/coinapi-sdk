@@ -21,7 +21,7 @@ from .. import ApiTestMixin
 class TestDappsCurveAccountsHistorical(ApiTestMixin, unittest.TestCase):
     """
     DappsCurveAccountsHistorical unit test stubs
-        GetAccounts (historical)  # noqa: E501
+        Accounts (historical)  # noqa: E501
     """
     _configuration = configuration.Configuration()
 

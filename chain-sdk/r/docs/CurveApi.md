@@ -4,44 +4,44 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CurveGetAccountsHistorical**](CurveApi.md#CurveGetAccountsHistorical) | **GET** /dapps/curve/accounts/historical | GetAccounts (historical)
-[**CurveGetAddLiquidityEventsHistorical**](CurveApi.md#CurveGetAddLiquidityEventsHistorical) | **GET** /dapps/curve/addLiquidityEvents/historical | GetAddLiquidityEvents (historical)
-[**CurveGetAdminFeeChangeLogsHistorical**](CurveApi.md#CurveGetAdminFeeChangeLogsHistorical) | **GET** /dapps/curve/adminFeeChangeLogs/historical | GetAdminFeeChangeLogs (historical)
-[**CurveGetAmplificationCoeffChangeLogsHistorical**](CurveApi.md#CurveGetAmplificationCoeffChangeLogsHistorical) | **GET** /dapps/curve/amplificationCoeffChangeLogs/historical | GetAmplificationCoeffChangeLogs (historical)
-[**CurveGetCoinsHistorical**](CurveApi.md#CurveGetCoinsHistorical) | **GET** /dapps/curve/coins/historical | GetCoins (historical)
-[**CurveGetContractsHistorical**](CurveApi.md#CurveGetContractsHistorical) | **GET** /dapps/curve/contracts/historical | GetContracts (historical)
-[**CurveGetContractsVersionsHistorical**](CurveApi.md#CurveGetContractsVersionsHistorical) | **GET** /dapps/curve/contractsVersions/historical | GetContractsVersions (historical)
-[**CurveGetDailyVolumesHistorical**](CurveApi.md#CurveGetDailyVolumesHistorical) | **GET** /dapps/curve/dailyVolumes/historical | GetDailyVolumes (historical)
-[**CurveGetExchangesHistorical**](CurveApi.md#CurveGetExchangesHistorical) | **GET** /dapps/curve/exchanges/historical | GetExchanges (historical) 🔥
-[**CurveGetFeeChangeLogsHistorical**](CurveApi.md#CurveGetFeeChangeLogsHistorical) | **GET** /dapps/curve/feeChangeLogs/historical | GetFeeChangeLogs (historical)
-[**CurveGetGaugesDepositsHistorical**](CurveApi.md#CurveGetGaugesDepositsHistorical) | **GET** /dapps/curve/gaugesDeposits/historical | GetGaugesDeposits (historical)
-[**CurveGetGaugesHistorical**](CurveApi.md#CurveGetGaugesHistorical) | **GET** /dapps/curve/gauges/historical | GetGauges (historical)
-[**CurveGetGaugesLiquidityHistorical**](CurveApi.md#CurveGetGaugesLiquidityHistorical) | **GET** /dapps/curve/gaugesLiquidity/historical | GetGaugesLiquidity (historical)
-[**CurveGetGaugesTotalWeightsHistorical**](CurveApi.md#CurveGetGaugesTotalWeightsHistorical) | **GET** /dapps/curve/gaugesTotalWeights/historical | GetGaugesTotalWeights (historical)
-[**CurveGetGaugesTypesHistorical**](CurveApi.md#CurveGetGaugesTypesHistorical) | **GET** /dapps/curve/gaugesTypes/historical | GetGaugesTypes (historical)
-[**CurveGetGaugesTypesWeightsHistorical**](CurveApi.md#CurveGetGaugesTypesWeightsHistorical) | **GET** /dapps/curve/gaugesTypesWeights/historical | GetGaugesTypesWeights (historical)
-[**CurveGetGaugesWeightsHistorical**](CurveApi.md#CurveGetGaugesWeightsHistorical) | **GET** /dapps/curve/gaugesWeights/historical | GetGaugesWeights (historical)
-[**CurveGetGaugesWeightsVotesHistorical**](CurveApi.md#CurveGetGaugesWeightsVotesHistorical) | **GET** /dapps/curve/gaugesWeightsVotes/historical | GetGaugesWeightsVotes (historical)
-[**CurveGetGaugesWithdrawHistorical**](CurveApi.md#CurveGetGaugesWithdrawHistorical) | **GET** /dapps/curve/gaugesWithdraws/historical | GetGaugesWithdraw (historical)
-[**CurveGetHourlyVolumesHistorical**](CurveApi.md#CurveGetHourlyVolumesHistorical) | **GET** /dapps/curve/hourlyVolumes/historical | GetHourlyVolumes (historical)
-[**CurveGetLpTokensHistorical**](CurveApi.md#CurveGetLpTokensHistorical) | **GET** /dapps/curve/lpTokens/historical | GetLpTokens (historical)
-[**CurveGetPoolsHistorical**](CurveApi.md#CurveGetPoolsHistorical) | **GET** /dapps/curve/pools/historical | GetPools (historical) 🔥
-[**CurveGetProposalsHistorical**](CurveApi.md#CurveGetProposalsHistorical) | **GET** /dapps/curve/proposals/historical | GetProposals (historical)
-[**CurveGetProposalsVotesHistorical**](CurveApi.md#CurveGetProposalsVotesHistorical) | **GET** /dapps/curve/proposalsVotes/historical | GetProposalsVotes (historical)
-[**CurveGetRemoveLiquidityEventsHistorical**](CurveApi.md#CurveGetRemoveLiquidityEventsHistorical) | **GET** /dapps/curve/removeLiquidityEvents/historical | GetRemoveLiquidityEvents (historical)
-[**CurveGetRemoveLiquidityOneEventsHistorical**](CurveApi.md#CurveGetRemoveLiquidityOneEventsHistorical) | **GET** /dapps/curve/removeLiquidityOneEvents/historical | GetRemoveLiquidityOneEvents (historical)
-[**CurveGetSystemStatesHistorical**](CurveApi.md#CurveGetSystemStatesHistorical) | **GET** /dapps/curve/systemStates/historical | GetSystemStates (historical)
-[**CurveGetTokensHistorical**](CurveApi.md#CurveGetTokensHistorical) | **GET** /dapps/curve/tokens/historical | GetTokens (historical) 🔥
-[**CurveGetTransferOwnershipEventsHistorical**](CurveApi.md#CurveGetTransferOwnershipEventsHistorical) | **GET** /dapps/curve/transferOwnershipEvents/historical | GetTransferOwnershipEvents (historical)
-[**CurveGetUnderlyingCoinsHistorical**](CurveApi.md#CurveGetUnderlyingCoinsHistorical) | **GET** /dapps/curve/underlyingCoins/historical | GetUnderlyingCoins (historical)
-[**CurveGetVotingAppsHistorical**](CurveApi.md#CurveGetVotingAppsHistorical) | **GET** /dapps/curve/votingApps/historical | GetVotingApps (historical)
-[**CurveGetWeeklyVolumesHistorical**](CurveApi.md#CurveGetWeeklyVolumesHistorical) | **GET** /dapps/curve/weeklyVolumes/historical | GetWeeklyVolumes (historical)
+[**CurveGetAccountsHistorical**](CurveApi.md#CurveGetAccountsHistorical) | **GET** /dapps/curve/accounts/historical | Accounts (historical)
+[**CurveGetAddLiquidityEventsHistorical**](CurveApi.md#CurveGetAddLiquidityEventsHistorical) | **GET** /dapps/curve/addLiquidityEvents/historical | AddLiquidityEvents (historical)
+[**CurveGetAdminFeeChangeLogsHistorical**](CurveApi.md#CurveGetAdminFeeChangeLogsHistorical) | **GET** /dapps/curve/adminFeeChangeLogs/historical | AdminFeeChangeLogs (historical)
+[**CurveGetAmplificationCoeffChangeLogsHistorical**](CurveApi.md#CurveGetAmplificationCoeffChangeLogsHistorical) | **GET** /dapps/curve/amplificationCoeffChangeLogs/historical | AmplificationCoeffChangeLogs (historical)
+[**CurveGetCoinsHistorical**](CurveApi.md#CurveGetCoinsHistorical) | **GET** /dapps/curve/coins/historical | Coins (historical)
+[**CurveGetContractsHistorical**](CurveApi.md#CurveGetContractsHistorical) | **GET** /dapps/curve/contracts/historical | Contracts (historical)
+[**CurveGetContractsVersionsHistorical**](CurveApi.md#CurveGetContractsVersionsHistorical) | **GET** /dapps/curve/contractsVersions/historical | ContractsVersions (historical)
+[**CurveGetDailyVolumesHistorical**](CurveApi.md#CurveGetDailyVolumesHistorical) | **GET** /dapps/curve/dailyVolumes/historical | DailyVolumes (historical)
+[**CurveGetExchangesHistorical**](CurveApi.md#CurveGetExchangesHistorical) | **GET** /dapps/curve/exchanges/historical | Exchanges (historical) 🔥
+[**CurveGetFeeChangeLogsHistorical**](CurveApi.md#CurveGetFeeChangeLogsHistorical) | **GET** /dapps/curve/feeChangeLogs/historical | FeeChangeLogs (historical)
+[**CurveGetGaugesDepositsHistorical**](CurveApi.md#CurveGetGaugesDepositsHistorical) | **GET** /dapps/curve/gaugesDeposits/historical | GaugesDeposits (historical)
+[**CurveGetGaugesHistorical**](CurveApi.md#CurveGetGaugesHistorical) | **GET** /dapps/curve/gauges/historical | Gauges (historical)
+[**CurveGetGaugesLiquidityHistorical**](CurveApi.md#CurveGetGaugesLiquidityHistorical) | **GET** /dapps/curve/gaugesLiquidity/historical | GaugesLiquidity (historical)
+[**CurveGetGaugesTotalWeightsHistorical**](CurveApi.md#CurveGetGaugesTotalWeightsHistorical) | **GET** /dapps/curve/gaugesTotalWeights/historical | GaugesTotalWeights (historical)
+[**CurveGetGaugesTypesHistorical**](CurveApi.md#CurveGetGaugesTypesHistorical) | **GET** /dapps/curve/gaugesTypes/historical | GaugesTypes (historical)
+[**CurveGetGaugesTypesWeightsHistorical**](CurveApi.md#CurveGetGaugesTypesWeightsHistorical) | **GET** /dapps/curve/gaugesTypesWeights/historical | GaugesTypesWeights (historical)
+[**CurveGetGaugesWeightsHistorical**](CurveApi.md#CurveGetGaugesWeightsHistorical) | **GET** /dapps/curve/gaugesWeights/historical | GaugesWeights (historical)
+[**CurveGetGaugesWeightsVotesHistorical**](CurveApi.md#CurveGetGaugesWeightsVotesHistorical) | **GET** /dapps/curve/gaugesWeightsVotes/historical | GaugesWeightsVotes (historical)
+[**CurveGetGaugesWithdrawHistorical**](CurveApi.md#CurveGetGaugesWithdrawHistorical) | **GET** /dapps/curve/gaugesWithdraws/historical | GaugesWithdraw (historical)
+[**CurveGetHourlyVolumesHistorical**](CurveApi.md#CurveGetHourlyVolumesHistorical) | **GET** /dapps/curve/hourlyVolumes/historical | HourlyVolumes (historical)
+[**CurveGetLpTokensHistorical**](CurveApi.md#CurveGetLpTokensHistorical) | **GET** /dapps/curve/lpTokens/historical | LpTokens (historical)
+[**CurveGetPoolsHistorical**](CurveApi.md#CurveGetPoolsHistorical) | **GET** /dapps/curve/pools/historical | Pools (historical) 🔥
+[**CurveGetProposalsHistorical**](CurveApi.md#CurveGetProposalsHistorical) | **GET** /dapps/curve/proposals/historical | Proposals (historical)
+[**CurveGetProposalsVotesHistorical**](CurveApi.md#CurveGetProposalsVotesHistorical) | **GET** /dapps/curve/proposalsVotes/historical | ProposalsVotes (historical)
+[**CurveGetRemoveLiquidityEventsHistorical**](CurveApi.md#CurveGetRemoveLiquidityEventsHistorical) | **GET** /dapps/curve/removeLiquidityEvents/historical | RemoveLiquidityEvents (historical)
+[**CurveGetRemoveLiquidityOneEventsHistorical**](CurveApi.md#CurveGetRemoveLiquidityOneEventsHistorical) | **GET** /dapps/curve/removeLiquidityOneEvents/historical | RemoveLiquidityOneEvents (historical)
+[**CurveGetSystemStatesHistorical**](CurveApi.md#CurveGetSystemStatesHistorical) | **GET** /dapps/curve/systemStates/historical | SystemStates (historical)
+[**CurveGetTokensHistorical**](CurveApi.md#CurveGetTokensHistorical) | **GET** /dapps/curve/tokens/historical | Tokens (historical) 🔥
+[**CurveGetTransferOwnershipEventsHistorical**](CurveApi.md#CurveGetTransferOwnershipEventsHistorical) | **GET** /dapps/curve/transferOwnershipEvents/historical | TransferOwnershipEvents (historical)
+[**CurveGetUnderlyingCoinsHistorical**](CurveApi.md#CurveGetUnderlyingCoinsHistorical) | **GET** /dapps/curve/underlyingCoins/historical | UnderlyingCoins (historical)
+[**CurveGetVotingAppsHistorical**](CurveApi.md#CurveGetVotingAppsHistorical) | **GET** /dapps/curve/votingApps/historical | VotingApps (historical)
+[**CurveGetWeeklyVolumesHistorical**](CurveApi.md#CurveGetWeeklyVolumesHistorical) | **GET** /dapps/curve/weeklyVolumes/historical | WeeklyVolumes (historical)
 
 
 # **CurveGetAccountsHistorical**
 > array[CurveAccountDTO] CurveGetAccountsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date)
 
-GetAccounts (historical)
+Accounts (historical)
 
 Gets accounts.
 
@@ -49,7 +49,7 @@ Gets accounts.
 ```R
 library(openapi)
 
-# GetAccounts (historical)
+# Accounts (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -94,7 +94,7 @@ No authorization required
 # **CurveGetAddLiquidityEventsHistorical**
 > array[CurveAddLiquidityEventDTO] CurveGetAddLiquidityEventsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
 
-GetAddLiquidityEvents (historical)
+AddLiquidityEvents (historical)
 
 Gets add liquidity events.
 
@@ -102,7 +102,7 @@ Gets add liquidity events.
 ```R
 library(openapi)
 
-# GetAddLiquidityEvents (historical)
+# AddLiquidityEvents (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -149,7 +149,7 @@ No authorization required
 # **CurveGetAdminFeeChangeLogsHistorical**
 > array[CurveAdminFeeChangeLogDTO] CurveGetAdminFeeChangeLogsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
 
-GetAdminFeeChangeLogs (historical)
+AdminFeeChangeLogs (historical)
 
 Gets admin fee change logs.
 
@@ -157,7 +157,7 @@ Gets admin fee change logs.
 ```R
 library(openapi)
 
-# GetAdminFeeChangeLogs (historical)
+# AdminFeeChangeLogs (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -204,7 +204,7 @@ No authorization required
 # **CurveGetAmplificationCoeffChangeLogsHistorical**
 > array[CurveAmplificationCoeffChangeLogDTO] CurveGetAmplificationCoeffChangeLogsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
 
-GetAmplificationCoeffChangeLogs (historical)
+AmplificationCoeffChangeLogs (historical)
 
 Gets amplification coeff change logs.
 
@@ -212,7 +212,7 @@ Gets amplification coeff change logs.
 ```R
 library(openapi)
 
-# GetAmplificationCoeffChangeLogs (historical)
+# AmplificationCoeffChangeLogs (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -259,7 +259,7 @@ No authorization required
 # **CurveGetCoinsHistorical**
 > array[CurveCoinDTO] CurveGetCoinsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
 
-GetCoins (historical)
+Coins (historical)
 
 Gets coins.
 
@@ -267,7 +267,7 @@ Gets coins.
 ```R
 library(openapi)
 
-# GetCoins (historical)
+# Coins (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -314,7 +314,7 @@ No authorization required
 # **CurveGetContractsHistorical**
 > array[CurveContractDTO] CurveGetContractsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
 
-GetContracts (historical)
+Contracts (historical)
 
 Gets contracts.
 
@@ -322,7 +322,7 @@ Gets contracts.
 ```R
 library(openapi)
 
-# GetContracts (historical)
+# Contracts (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -369,7 +369,7 @@ No authorization required
 # **CurveGetContractsVersionsHistorical**
 > array[CurveContractVersionDTO] CurveGetContractsVersionsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
 
-GetContractsVersions (historical)
+ContractsVersions (historical)
 
 Gets contracts versions.
 
@@ -377,7 +377,7 @@ Gets contracts versions.
 ```R
 library(openapi)
 
-# GetContractsVersions (historical)
+# ContractsVersions (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -424,7 +424,7 @@ No authorization required
 # **CurveGetDailyVolumesHistorical**
 > array[CurveDailyVolumeDTO] CurveGetDailyVolumesHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
 
-GetDailyVolumes (historical)
+DailyVolumes (historical)
 
 Gets daily volumes.
 
@@ -432,7 +432,7 @@ Gets daily volumes.
 ```R
 library(openapi)
 
-# GetDailyVolumes (historical)
+# DailyVolumes (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -479,7 +479,7 @@ No authorization required
 # **CurveGetExchangesHistorical**
 > array[CurveExchangeDTO] CurveGetExchangesHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
 
-GetExchanges (historical) 🔥
+Exchanges (historical) 🔥
 
 Gets exchanges.
 
@@ -487,7 +487,7 @@ Gets exchanges.
 ```R
 library(openapi)
 
-# GetExchanges (historical) 🔥
+# Exchanges (historical) 🔥
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -534,7 +534,7 @@ No authorization required
 # **CurveGetFeeChangeLogsHistorical**
 > array[CurveFeeChangeLogDTO] CurveGetFeeChangeLogsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
 
-GetFeeChangeLogs (historical)
+FeeChangeLogs (historical)
 
 Gets fee change logs.
 
@@ -542,7 +542,7 @@ Gets fee change logs.
 ```R
 library(openapi)
 
-# GetFeeChangeLogs (historical)
+# FeeChangeLogs (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -589,7 +589,7 @@ No authorization required
 # **CurveGetGaugesDepositsHistorical**
 > array[CurveGaugeDepositDTO] CurveGetGaugesDepositsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date)
 
-GetGaugesDeposits (historical)
+GaugesDeposits (historical)
 
 Gets gauges deposits.
 
@@ -597,7 +597,7 @@ Gets gauges deposits.
 ```R
 library(openapi)
 
-# GetGaugesDeposits (historical)
+# GaugesDeposits (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -642,7 +642,7 @@ No authorization required
 # **CurveGetGaugesHistorical**
 > array[CurveGaugeDTO] CurveGetGaugesHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
 
-GetGauges (historical)
+Gauges (historical)
 
 Gets gauges.
 
@@ -650,7 +650,7 @@ Gets gauges.
 ```R
 library(openapi)
 
-# GetGauges (historical)
+# Gauges (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -697,7 +697,7 @@ No authorization required
 # **CurveGetGaugesLiquidityHistorical**
 > array[CurveGaugeLiquidityDTO] CurveGetGaugesLiquidityHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date)
 
-GetGaugesLiquidity (historical)
+GaugesLiquidity (historical)
 
 Gets gauges liquidity.
 
@@ -705,7 +705,7 @@ Gets gauges liquidity.
 ```R
 library(openapi)
 
-# GetGaugesLiquidity (historical)
+# GaugesLiquidity (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -750,7 +750,7 @@ No authorization required
 # **CurveGetGaugesTotalWeightsHistorical**
 > array[CurveGaugeTotalWeightDTO] CurveGetGaugesTotalWeightsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date)
 
-GetGaugesTotalWeights (historical)
+GaugesTotalWeights (historical)
 
 Gets gauges total weights.
 
@@ -758,7 +758,7 @@ Gets gauges total weights.
 ```R
 library(openapi)
 
-# GetGaugesTotalWeights (historical)
+# GaugesTotalWeights (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -803,7 +803,7 @@ No authorization required
 # **CurveGetGaugesTypesHistorical**
 > array[CurveGaugeTypeDTO] CurveGetGaugesTypesHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date)
 
-GetGaugesTypes (historical)
+GaugesTypes (historical)
 
 Gets gauges types.
 
@@ -811,7 +811,7 @@ Gets gauges types.
 ```R
 library(openapi)
 
-# GetGaugesTypes (historical)
+# GaugesTypes (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -856,7 +856,7 @@ No authorization required
 # **CurveGetGaugesTypesWeightsHistorical**
 > array[CurveGaugeTypeWeightDTO] CurveGetGaugesTypesWeightsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date)
 
-GetGaugesTypesWeights (historical)
+GaugesTypesWeights (historical)
 
 Gets gauges types weights.
 
@@ -864,7 +864,7 @@ Gets gauges types weights.
 ```R
 library(openapi)
 
-# GetGaugesTypesWeights (historical)
+# GaugesTypesWeights (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -909,7 +909,7 @@ No authorization required
 # **CurveGetGaugesWeightsHistorical**
 > array[CurveGaugeWeightDTO] CurveGetGaugesWeightsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date)
 
-GetGaugesWeights (historical)
+GaugesWeights (historical)
 
 Gets gauges weights.
 
@@ -917,7 +917,7 @@ Gets gauges weights.
 ```R
 library(openapi)
 
-# GetGaugesWeights (historical)
+# GaugesWeights (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -962,7 +962,7 @@ No authorization required
 # **CurveGetGaugesWeightsVotesHistorical**
 > array[CurveGaugeWeightVoteDTO] CurveGetGaugesWeightsVotesHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date)
 
-GetGaugesWeightsVotes (historical)
+GaugesWeightsVotes (historical)
 
 Gets gauges weights votes.
 
@@ -970,7 +970,7 @@ Gets gauges weights votes.
 ```R
 library(openapi)
 
-# GetGaugesWeightsVotes (historical)
+# GaugesWeightsVotes (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -1015,7 +1015,7 @@ No authorization required
 # **CurveGetGaugesWithdrawHistorical**
 > array[CurveGaugeWithdrawDTO] CurveGetGaugesWithdrawHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date)
 
-GetGaugesWithdraw (historical)
+GaugesWithdraw (historical)
 
 Gets gauges withdraws.
 
@@ -1023,7 +1023,7 @@ Gets gauges withdraws.
 ```R
 library(openapi)
 
-# GetGaugesWithdraw (historical)
+# GaugesWithdraw (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -1068,7 +1068,7 @@ No authorization required
 # **CurveGetHourlyVolumesHistorical**
 > array[CurveHourlyVolumeDTO] CurveGetHourlyVolumesHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
 
-GetHourlyVolumes (historical)
+HourlyVolumes (historical)
 
 Gets hourly volumes.
 
@@ -1076,7 +1076,7 @@ Gets hourly volumes.
 ```R
 library(openapi)
 
-# GetHourlyVolumes (historical)
+# HourlyVolumes (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -1123,7 +1123,7 @@ No authorization required
 # **CurveGetLpTokensHistorical**
 > array[CurveLpTokenDTO] CurveGetLpTokensHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
 
-GetLpTokens (historical)
+LpTokens (historical)
 
 Gets lp tokens.
 
@@ -1131,7 +1131,7 @@ Gets lp tokens.
 ```R
 library(openapi)
 
-# GetLpTokens (historical)
+# LpTokens (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -1178,7 +1178,7 @@ No authorization required
 # **CurveGetPoolsHistorical**
 > array[CurvePoolDTO] CurveGetPoolsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
 
-GetPools (historical) 🔥
+Pools (historical) 🔥
 
 Gets pools.
 
@@ -1186,7 +1186,7 @@ Gets pools.
 ```R
 library(openapi)
 
-# GetPools (historical) 🔥
+# Pools (historical) 🔥
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -1233,7 +1233,7 @@ No authorization required
 # **CurveGetProposalsHistorical**
 > array[CurveProposalDTO] CurveGetProposalsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date)
 
-GetProposals (historical)
+Proposals (historical)
 
 Gets proposals.
 
@@ -1241,7 +1241,7 @@ Gets proposals.
 ```R
 library(openapi)
 
-# GetProposals (historical)
+# Proposals (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -1286,7 +1286,7 @@ No authorization required
 # **CurveGetProposalsVotesHistorical**
 > array[CurveProposalVoteDTO] CurveGetProposalsVotesHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date)
 
-GetProposalsVotes (historical)
+ProposalsVotes (historical)
 
 Gets proposals votes.
 
@@ -1294,7 +1294,7 @@ Gets proposals votes.
 ```R
 library(openapi)
 
-# GetProposalsVotes (historical)
+# ProposalsVotes (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -1339,7 +1339,7 @@ No authorization required
 # **CurveGetRemoveLiquidityEventsHistorical**
 > array[CurveRemoveLiquidityEventDTO] CurveGetRemoveLiquidityEventsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
 
-GetRemoveLiquidityEvents (historical)
+RemoveLiquidityEvents (historical)
 
 Gets remove liquidity events.
 
@@ -1347,7 +1347,7 @@ Gets remove liquidity events.
 ```R
 library(openapi)
 
-# GetRemoveLiquidityEvents (historical)
+# RemoveLiquidityEvents (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -1394,7 +1394,7 @@ No authorization required
 # **CurveGetRemoveLiquidityOneEventsHistorical**
 > array[CurveRemoveLiquidityOneEventDTO] CurveGetRemoveLiquidityOneEventsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
 
-GetRemoveLiquidityOneEvents (historical)
+RemoveLiquidityOneEvents (historical)
 
 Gets remove liquidity one events.
 
@@ -1402,7 +1402,7 @@ Gets remove liquidity one events.
 ```R
 library(openapi)
 
-# GetRemoveLiquidityOneEvents (historical)
+# RemoveLiquidityOneEvents (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -1449,7 +1449,7 @@ No authorization required
 # **CurveGetSystemStatesHistorical**
 > array[CurveSystemStateDTO] CurveGetSystemStatesHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date)
 
-GetSystemStates (historical)
+SystemStates (historical)
 
 Gets system states.
 
@@ -1457,7 +1457,7 @@ Gets system states.
 ```R
 library(openapi)
 
-# GetSystemStates (historical)
+# SystemStates (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -1502,7 +1502,7 @@ No authorization required
 # **CurveGetTokensHistorical**
 > array[CurveTokenDTO] CurveGetTokensHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, token_id = var.token_id)
 
-GetTokens (historical) 🔥
+Tokens (historical) 🔥
 
 Gets tokens.
 
@@ -1510,7 +1510,7 @@ Gets tokens.
 ```R
 library(openapi)
 
-# GetTokens (historical) 🔥
+# Tokens (historical) 🔥
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -1557,7 +1557,7 @@ No authorization required
 # **CurveGetTransferOwnershipEventsHistorical**
 > array[CurveTransferOwnershipEventDTO] CurveGetTransferOwnershipEventsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
 
-GetTransferOwnershipEvents (historical)
+TransferOwnershipEvents (historical)
 
 Gets transfer ownership events.
 
@@ -1565,7 +1565,7 @@ Gets transfer ownership events.
 ```R
 library(openapi)
 
-# GetTransferOwnershipEvents (historical)
+# TransferOwnershipEvents (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -1612,7 +1612,7 @@ No authorization required
 # **CurveGetUnderlyingCoinsHistorical**
 > array[CurveUnderlyingCoinDTO] CurveGetUnderlyingCoinsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
 
-GetUnderlyingCoins (historical)
+UnderlyingCoins (historical)
 
 Gets underlying coins.
 
@@ -1620,7 +1620,7 @@ Gets underlying coins.
 ```R
 library(openapi)
 
-# GetUnderlyingCoins (historical)
+# UnderlyingCoins (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -1667,7 +1667,7 @@ No authorization required
 # **CurveGetVotingAppsHistorical**
 > array[CurveVotingAppDTO] CurveGetVotingAppsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date)
 
-GetVotingApps (historical)
+VotingApps (historical)
 
 Gets voting apps.
 
@@ -1675,7 +1675,7 @@ Gets voting apps.
 ```R
 library(openapi)
 
-# GetVotingApps (historical)
+# VotingApps (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -1720,7 +1720,7 @@ No authorization required
 # **CurveGetWeeklyVolumesHistorical**
 > array[CurveWeeklyVolumeDTO] CurveGetWeeklyVolumesHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
 
-GetWeeklyVolumes (historical)
+WeeklyVolumes (historical)
 
 Gets weekly volumes.
 
@@ -1728,7 +1728,7 @@ Gets weekly volumes.
 ```R
 library(openapi)
 
-# GetWeeklyVolumes (historical)
+# WeeklyVolumes (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)

@@ -7,7 +7,7 @@ void main() {
   final instance = Openapi().getUniswapV2Api();
 
   group(UniswapV2Api, () {
-    // GetBundles (historical)
+    // Bundles (historical)
     //
     // Gets bundles.
     //
@@ -16,7 +16,7 @@ void main() {
       // TODO
     });
 
-    // GetBurns (historical)
+    // Burns (historical)
     //
     // Gets burns.
     //
@@ -25,7 +25,7 @@ void main() {
       // TODO
     });
 
-    // GetDayData (historical)
+    // DayData (historical)
     //
     // Gets uniswapv2 day data.
     //
@@ -34,7 +34,7 @@ void main() {
       // TODO
     });
 
-    // GetFactory (historical)
+    // Factory (historical)
     //
     // Gets factory.
     //
@@ -43,7 +43,7 @@ void main() {
       // TODO
     });
 
-    // GetLiquidityPositions (historical)
+    // LiquidityPositions (historical)
     //
     // Gets liquidity positions.
     //
@@ -52,7 +52,7 @@ void main() {
       // TODO
     });
 
-    // GetLiquidityPositionsSnapshots (historical)
+    // LiquidityPositionsSnapshots (historical)
     //
     // Gets liquidity positions snapshots.
     //
@@ -61,7 +61,7 @@ void main() {
       // TODO
     });
 
-    // GetMints (historical)
+    // Mints (historical)
     //
     // Gets mints.
     //
@@ -70,7 +70,7 @@ void main() {
       // TODO
     });
 
-    // GetPools (current) 🔥
+    // Pools (current) 🔥
     //
     // Gets pools.
     //
@@ -79,7 +79,7 @@ void main() {
       // TODO
     });
 
-    // GetPoolsDayData (historical)
+    // PoolsDayData (historical)
     //
     // Gets pools day data.
     //
@@ -88,7 +88,7 @@ void main() {
       // TODO
     });
 
-    // GetPools (historical) 🔥
+    // Pools (historical) 🔥
     //
     // Gets pools.
     //
@@ -97,7 +97,7 @@ void main() {
       // TODO
     });
 
-    // GetPoolsHourData (historical)
+    // PoolsHourData (historical)
     //
     // Gets pools tracked each our.
     //
@@ -106,7 +106,7 @@ void main() {
       // TODO
     });
 
-    // GetSwaps (current) 🔥
+    // Swaps (current) 🔥
     //
     // Gets swaps.
     //
@@ -115,7 +115,7 @@ void main() {
       // TODO
     });
 
-    // GetSwaps (historical) 🔥
+    // Swaps (historical) 🔥
     //
     // Gets swaps.
     //
@@ -124,7 +124,7 @@ void main() {
       // TODO
     });
 
-    // GetTokens (current) 🔥
+    // Tokens (current) 🔥
     //
     // Gets tokens.
     //
@@ -133,7 +133,7 @@ void main() {
       // TODO
     });
 
-    // GetTokensDayData (historical)
+    // TokensDayData (historical)
     //
     // Gets tokens day data.
     //
@@ -142,7 +142,7 @@ void main() {
       // TODO
     });
 
-    // GetTokens (historical) 🔥
+    // Tokens (historical) 🔥
     //
     // Gets tokens.
     //
@@ -151,7 +151,7 @@ void main() {
       // TODO
     });
 
-    // GetTransactions (historical)
+    // Transactions (historical)
     //
     // Gets transactions.
     //
@@ -160,7 +160,7 @@ void main() {
       // TODO
     });
 
-    // GetUsers (historical)
+    // Users (historical)
     //
     // Gets users.
     //

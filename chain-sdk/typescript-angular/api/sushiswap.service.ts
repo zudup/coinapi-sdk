@@ -126,7 +126,7 @@ export class SushiswapService {
     }
 
     /**
-     * GetExchanges (current) 🔥
+     * Exchanges (current) 🔥
      * Gets exchanges.
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
@@ -183,7 +183,7 @@ export class SushiswapService {
     }
 
     /**
-     * GetTrades (current) 🔥
+     * Trades (current) 🔥
      * Gets trades.
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
@@ -240,7 +240,7 @@ export class SushiswapService {
     }
 
     /**
-     * GetBundles (historical)
+     * Bundles (historical)
      * Gets bundles.
      * @param startBlock AAAAAAAAAA
      * @param endBlock BBBBBBBBBBBB
@@ -320,7 +320,7 @@ export class SushiswapService {
     }
 
     /**
-     * GetBurns (historical)
+     * Burns (historical)
      * Gets burns.
      * @param startBlock 
      * @param endBlock 
@@ -405,7 +405,7 @@ export class SushiswapService {
     }
 
     /**
-     * GetDayData (historical)
+     * DayData (historical)
      * Gets day data.
      * @param startBlock 
      * @param endBlock 
@@ -485,7 +485,7 @@ export class SushiswapService {
     }
 
     /**
-     * GetFactory (historical)
+     * Factory (historical)
      * Gets factory.
      * @param startBlock 
      * @param endBlock 
@@ -565,7 +565,7 @@ export class SushiswapService {
     }
 
     /**
-     * GetHourData (historical)
+     * HourData (historical)
      * Gets hour data.
      * @param startBlock 
      * @param endBlock 
@@ -645,7 +645,7 @@ export class SushiswapService {
     }
 
     /**
-     * GetLiquidityPosition (historical)
+     * LiquidityPosition (historical)
      * Gets liquidity position.
      * @param startBlock 
      * @param endBlock 
@@ -730,7 +730,7 @@ export class SushiswapService {
     }
 
     /**
-     * GetLiquidityPositionSnapshot (historical)
+     * LiquidityPositionSnapshot (historical)
      * Gets liquidity position snapshot.
      * @param startBlock 
      * @param endBlock 
@@ -815,7 +815,7 @@ export class SushiswapService {
     }
 
     /**
-     * GetMints (historical)
+     * Mints (historical)
      * Gets mints.
      * @param startBlock 
      * @param endBlock 
@@ -900,7 +900,7 @@ export class SushiswapService {
     }
 
     /**
-     * GetPools (current) 🔥
+     * Pools (current) 🔥
      * Gets pools.
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
@@ -957,7 +957,7 @@ export class SushiswapService {
     }
 
     /**
-     * GetPoolsDayData (historical)
+     * PoolsDayData (historical)
      * Gets pools day data.
      * @param startBlock 
      * @param endBlock 
@@ -1042,7 +1042,7 @@ export class SushiswapService {
     }
 
     /**
-     * GetPools (historical) 🔥
+     * Pools (historical) 🔥
      * Gets list of pools for given filters.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1127,7 +1127,7 @@ export class SushiswapService {
     }
 
     /**
-     * GetPoolsHourData (historical)
+     * PoolsHourData (historical)
      * Gets pools tracked each our.
      * @param startBlock 
      * @param endBlock 
@@ -1212,7 +1212,7 @@ export class SushiswapService {
     }
 
     /**
-     * GetSwaps (current) 🔥
+     * Swaps (current) 🔥
      * Gets swaps.
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
@@ -1269,7 +1269,7 @@ export class SushiswapService {
     }
 
     /**
-     * GetSwaps (historical) 🔥
+     * Swaps (historical) 🔥
      * Gets list of swaps for given filters.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1354,7 +1354,7 @@ export class SushiswapService {
     }
 
     /**
-     * GetTokens (current) 🔥
+     * Tokens (current) 🔥
      * Gets tokens.
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
@@ -1411,7 +1411,7 @@ export class SushiswapService {
     }
 
     /**
-     * GetTokensDayData (historical)
+     * TokensDayData (historical)
      * Gets tokens day data.
      * @param startBlock 
      * @param endBlock 
@@ -1496,7 +1496,7 @@ export class SushiswapService {
     }
 
     /**
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      * Gets list of tokens for given filters.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1581,7 +1581,7 @@ export class SushiswapService {
     }
 
     /**
-     * GetTransactions (historical)
+     * Transactions (historical)
      * Gets transactions.
      * @param startBlock 
      * @param endBlock 
@@ -1661,7 +1661,7 @@ export class SushiswapService {
     }
 
     /**
-     * GetUsers (historical)
+     * Users (historical)
      * Gets users.
      * @param startBlock 
      * @param endBlock 

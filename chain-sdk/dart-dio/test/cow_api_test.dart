@@ -7,7 +7,7 @@ void main() {
   final instance = Openapi().getCowApi();
 
   group(CowApi, () {
-    // GetOrders (historical)
+    // Orders (historical)
     //
     // Gets orders.
     //
@@ -16,7 +16,7 @@ void main() {
       // TODO
     });
 
-    // GetSettlements (historical)
+    // Settlements (historical)
     //
     // Gets settlements.
     //
@@ -25,7 +25,7 @@ void main() {
       // TODO
     });
 
-    // GetTokens (historical) 🔥
+    // Tokens (historical) 🔥
     //
     // Gets tokens.
     //
@@ -34,7 +34,7 @@ void main() {
       // TODO
     });
 
-    // GetTrades (historical) 🔥
+    // Trades (historical) 🔥
     //
     // Gets trades.
     //
@@ -43,7 +43,7 @@ void main() {
       // TODO
     });
 
-    // GetUsers (historical)
+    // Users (historical)
     //
     // Gets users.
     //

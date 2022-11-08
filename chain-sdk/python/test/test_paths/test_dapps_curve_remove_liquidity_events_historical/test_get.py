@@ -21,7 +21,7 @@ from .. import ApiTestMixin
 class TestDappsCurveRemoveLiquidityEventsHistorical(ApiTestMixin, unittest.TestCase):
     """
     DappsCurveRemoveLiquidityEventsHistorical unit test stubs
-        GetRemoveLiquidityEvents (historical)  # noqa: E501
+        RemoveLiquidityEvents (historical)  # noqa: E501
     """
     _configuration = configuration.Configuration()
 

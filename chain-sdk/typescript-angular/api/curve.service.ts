@@ -154,7 +154,7 @@ export class CurveService {
     }
 
     /**
-     * GetAccounts (historical)
+     * Accounts (historical)
      * Gets accounts.
      * @param startBlock 
      * @param endBlock 
@@ -234,7 +234,7 @@ export class CurveService {
     }
 
     /**
-     * GetAddLiquidityEvents (historical)
+     * AddLiquidityEvents (historical)
      * Gets add liquidity events.
      * @param startBlock 
      * @param endBlock 
@@ -319,7 +319,7 @@ export class CurveService {
     }
 
     /**
-     * GetAdminFeeChangeLogs (historical)
+     * AdminFeeChangeLogs (historical)
      * Gets admin fee change logs.
      * @param startBlock 
      * @param endBlock 
@@ -404,7 +404,7 @@ export class CurveService {
     }
 
     /**
-     * GetAmplificationCoeffChangeLogs (historical)
+     * AmplificationCoeffChangeLogs (historical)
      * Gets amplification coeff change logs.
      * @param startBlock 
      * @param endBlock 
@@ -489,7 +489,7 @@ export class CurveService {
     }
 
     /**
-     * GetCoins (historical)
+     * Coins (historical)
      * Gets coins.
      * @param startBlock 
      * @param endBlock 
@@ -574,7 +574,7 @@ export class CurveService {
     }
 
     /**
-     * GetContracts (historical)
+     * Contracts (historical)
      * Gets contracts.
      * @param startBlock 
      * @param endBlock 
@@ -659,7 +659,7 @@ export class CurveService {
     }
 
     /**
-     * GetContractsVersions (historical)
+     * ContractsVersions (historical)
      * Gets contracts versions.
      * @param startBlock 
      * @param endBlock 
@@ -744,7 +744,7 @@ export class CurveService {
     }
 
     /**
-     * GetDailyVolumes (historical)
+     * DailyVolumes (historical)
      * Gets daily volumes.
      * @param startBlock 
      * @param endBlock 
@@ -829,7 +829,7 @@ export class CurveService {
     }
 
     /**
-     * GetExchanges (historical) 🔥
+     * Exchanges (historical) 🔥
      * Gets exchanges.
      * @param startBlock 
      * @param endBlock 
@@ -914,7 +914,7 @@ export class CurveService {
     }
 
     /**
-     * GetFeeChangeLogs (historical)
+     * FeeChangeLogs (historical)
      * Gets fee change logs.
      * @param startBlock 
      * @param endBlock 
@@ -999,7 +999,7 @@ export class CurveService {
     }
 
     /**
-     * GetGaugesDeposits (historical)
+     * GaugesDeposits (historical)
      * Gets gauges deposits.
      * @param startBlock 
      * @param endBlock 
@@ -1079,7 +1079,7 @@ export class CurveService {
     }
 
     /**
-     * GetGauges (historical)
+     * Gauges (historical)
      * Gets gauges.
      * @param startBlock 
      * @param endBlock 
@@ -1164,7 +1164,7 @@ export class CurveService {
     }
 
     /**
-     * GetGaugesLiquidity (historical)
+     * GaugesLiquidity (historical)
      * Gets gauges liquidity.
      * @param startBlock 
      * @param endBlock 
@@ -1244,7 +1244,7 @@ export class CurveService {
     }
 
     /**
-     * GetGaugesTotalWeights (historical)
+     * GaugesTotalWeights (historical)
      * Gets gauges total weights.
      * @param startBlock 
      * @param endBlock 
@@ -1324,7 +1324,7 @@ export class CurveService {
     }
 
     /**
-     * GetGaugesTypes (historical)
+     * GaugesTypes (historical)
      * Gets gauges types.
      * @param startBlock 
      * @param endBlock 
@@ -1404,7 +1404,7 @@ export class CurveService {
     }
 
     /**
-     * GetGaugesTypesWeights (historical)
+     * GaugesTypesWeights (historical)
      * Gets gauges types weights.
      * @param startBlock 
      * @param endBlock 
@@ -1484,7 +1484,7 @@ export class CurveService {
     }
 
     /**
-     * GetGaugesWeights (historical)
+     * GaugesWeights (historical)
      * Gets gauges weights.
      * @param startBlock 
      * @param endBlock 
@@ -1564,7 +1564,7 @@ export class CurveService {
     }
 
     /**
-     * GetGaugesWeightsVotes (historical)
+     * GaugesWeightsVotes (historical)
      * Gets gauges weights votes.
      * @param startBlock 
      * @param endBlock 
@@ -1644,7 +1644,7 @@ export class CurveService {
     }
 
     /**
-     * GetGaugesWithdraw (historical)
+     * GaugesWithdraw (historical)
      * Gets gauges withdraws.
      * @param startBlock 
      * @param endBlock 
@@ -1724,7 +1724,7 @@ export class CurveService {
     }
 
     /**
-     * GetHourlyVolumes (historical)
+     * HourlyVolumes (historical)
      * Gets hourly volumes.
      * @param startBlock 
      * @param endBlock 
@@ -1809,7 +1809,7 @@ export class CurveService {
     }
 
     /**
-     * GetLpTokens (historical)
+     * LpTokens (historical)
      * Gets lp tokens.
      * @param startBlock 
      * @param endBlock 
@@ -1894,7 +1894,7 @@ export class CurveService {
     }
 
     /**
-     * GetPools (historical) 🔥
+     * Pools (historical) 🔥
      * Gets pools.
      * @param startBlock 
      * @param endBlock 
@@ -1979,7 +1979,7 @@ export class CurveService {
     }
 
     /**
-     * GetProposals (historical)
+     * Proposals (historical)
      * Gets proposals.
      * @param startBlock 
      * @param endBlock 
@@ -2059,7 +2059,7 @@ export class CurveService {
     }
 
     /**
-     * GetProposalsVotes (historical)
+     * ProposalsVotes (historical)
      * Gets proposals votes.
      * @param startBlock 
      * @param endBlock 
@@ -2139,7 +2139,7 @@ export class CurveService {
     }
 
     /**
-     * GetRemoveLiquidityEvents (historical)
+     * RemoveLiquidityEvents (historical)
      * Gets remove liquidity events.
      * @param startBlock 
      * @param endBlock 
@@ -2224,7 +2224,7 @@ export class CurveService {
     }
 
     /**
-     * GetRemoveLiquidityOneEvents (historical)
+     * RemoveLiquidityOneEvents (historical)
      * Gets remove liquidity one events.
      * @param startBlock 
      * @param endBlock 
@@ -2309,7 +2309,7 @@ export class CurveService {
     }
 
     /**
-     * GetSystemStates (historical)
+     * SystemStates (historical)
      * Gets system states.
      * @param startBlock 
      * @param endBlock 
@@ -2389,7 +2389,7 @@ export class CurveService {
     }
 
     /**
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      * Gets tokens.
      * @param startBlock 
      * @param endBlock 
@@ -2474,7 +2474,7 @@ export class CurveService {
     }
 
     /**
-     * GetTransferOwnershipEvents (historical)
+     * TransferOwnershipEvents (historical)
      * Gets transfer ownership events.
      * @param startBlock 
      * @param endBlock 
@@ -2559,7 +2559,7 @@ export class CurveService {
     }
 
     /**
-     * GetUnderlyingCoins (historical)
+     * UnderlyingCoins (historical)
      * Gets underlying coins.
      * @param startBlock 
      * @param endBlock 
@@ -2644,7 +2644,7 @@ export class CurveService {
     }
 
     /**
-     * GetVotingApps (historical)
+     * VotingApps (historical)
      * Gets voting apps.
      * @param startBlock 
      * @param endBlock 
@@ -2724,7 +2724,7 @@ export class CurveService {
     }
 
     /**
-     * GetWeeklyVolumes (historical)
+     * WeeklyVolumes (historical)
      * Gets weekly volumes.
      * @param startBlock 
      * @param endBlock 

@@ -37,7 +37,7 @@
 
 -define(BASE_URL, "").
 
-%% @doc GetBundles (current)
+%% @doc Bundles (current)
 %% Gets bundles.
 -spec uniswap_v3_get_bundles_(current)() ->
   openapi_utils:response().
@@ -48,7 +48,7 @@ uniswap_v3_get_bundles_(current)() ->
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path]).
 
-%% @doc GetBundles (historical)
+%% @doc Bundles (historical)
 %% Gets bundles.
 -spec uniswap_v3_get_bundles_(historical)() ->
   openapi_utils:response().
@@ -60,7 +60,7 @@ uniswap_v3_get_bundles_(historical)() ->
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path, <<"?">>, QueryString]).
 
-%% @doc GetBurns (current)
+%% @doc Burns (current)
 %% Gets burns.
 -spec uniswap_v3_get_burns_(current)() ->
   openapi_utils:response().
@@ -72,7 +72,7 @@ uniswap_v3_get_burns_(current)() ->
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path, <<"?">>, QueryString]).
 
-%% @doc GetBurns (historical)
+%% @doc Burns (historical)
 %% Gets burns.
 -spec uniswap_v3_get_burns_(historical)() ->
   openapi_utils:response().
@@ -84,7 +84,7 @@ uniswap_v3_get_burns_(historical)() ->
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path, <<"?">>, QueryString]).
 
-%% @doc GetDayData (current)
+%% @doc DayData (current)
 %% Gets uniswapv3 day data.
 -spec uniswap_v3_get_day_data_(current)() ->
   openapi_utils:response().
@@ -95,7 +95,7 @@ uniswap_v3_get_day_data_(current)() ->
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path]).
 
-%% @doc GetDayData (historical)
+%% @doc DayData (historical)
 %% Gets uniswapv3 day data.
 -spec uniswap_v3_get_day_data_(historical)() ->
   openapi_utils:response().
@@ -107,7 +107,7 @@ uniswap_v3_get_day_data_(historical)() ->
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path, <<"?">>, QueryString]).
 
-%% @doc GetFactory (current)
+%% @doc Factory (current)
 %% Gets factory.
 -spec uniswap_v3_get_factory_(current)() ->
   openapi_utils:response().
@@ -118,7 +118,7 @@ uniswap_v3_get_factory_(current)() ->
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path]).
 
-%% @doc GetFactory (historical)
+%% @doc Factory (historical)
 %% Gets factory.
 -spec uniswap_v3_get_factory_(historical)() ->
   openapi_utils:response().
@@ -130,7 +130,7 @@ uniswap_v3_get_factory_(historical)() ->
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path, <<"?">>, QueryString]).
 
-%% @doc GetMints (current)
+%% @doc Mints (current)
 %% Gets mints.
 -spec uniswap_v3_get_mints_(current)() ->
   openapi_utils:response().
@@ -142,7 +142,7 @@ uniswap_v3_get_mints_(current)() ->
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path, <<"?">>, QueryString]).
 
-%% @doc GetMints (historical)
+%% @doc Mints (historical)
 %% Gets mints.
 -spec uniswap_v3_get_mints_(historical)() ->
   openapi_utils:response().
@@ -154,7 +154,7 @@ uniswap_v3_get_mints_(historical)() ->
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path, <<"?">>, QueryString]).
 
-%% @doc GetPools (current) 🔥
+%% @doc Pools (current) 🔥
 %% Gets pools.
 -spec uniswap_v3_get_pools_(current)() ->
   openapi_utils:response().
@@ -166,7 +166,7 @@ uniswap_v3_get_pools_(current)() ->
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path, <<"?">>, QueryString]).
 
-%% @doc GetPools (historical) 🔥
+%% @doc Pools (historical) 🔥
 %% Gets pools.
 -spec uniswap_v3_get_pools_(historical)() ->
   openapi_utils:response().
@@ -178,7 +178,7 @@ uniswap_v3_get_pools_(historical)() ->
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path, <<"?">>, QueryString]).
 
-%% @doc GetPoolsDayData (current)
+%% @doc PoolsDayData (current)
 %% Gets pools day data.
 -spec uniswap_v3_get_pools_day_data_(current)() ->
   openapi_utils:response().
@@ -190,7 +190,7 @@ uniswap_v3_get_pools_day_data_(current)() ->
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path, <<"?">>, QueryString]).
 
-%% @doc GetPoolsDayData (historical)
+%% @doc PoolsDayData (historical)
 %% Gets pools day data.
 -spec uniswap_v3_get_pools_day_data_(historical)() ->
   openapi_utils:response().
@@ -202,7 +202,7 @@ uniswap_v3_get_pools_day_data_(historical)() ->
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path, <<"?">>, QueryString]).
 
-%% @doc GetPoolsHourData (current)
+%% @doc PoolsHourData (current)
 %% Gets pools hour data.
 -spec uniswap_v3_get_pools_hour_data_(current)() ->
   openapi_utils:response().
@@ -214,7 +214,7 @@ uniswap_v3_get_pools_hour_data_(current)() ->
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path, <<"?">>, QueryString]).
 
-%% @doc GetPoolsHourData (historical)
+%% @doc PoolsHourData (historical)
 %% Gets pools hour data.
 -spec uniswap_v3_get_pools_hour_data_(historical)() ->
   openapi_utils:response().
@@ -226,7 +226,7 @@ uniswap_v3_get_pools_hour_data_(historical)() ->
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path, <<"?">>, QueryString]).
 
-%% @doc GetPositions (current)
+%% @doc Positions (current)
 %% Gets positions.
 -spec uniswap_v3_get_positions_(current)() ->
   openapi_utils:response().
@@ -238,7 +238,7 @@ uniswap_v3_get_positions_(current)() ->
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path, <<"?">>, QueryString]).
 
-%% @doc GetPositions (historical)
+%% @doc Positions (historical)
 %% Gets positions.
 -spec uniswap_v3_get_positions_(historical)() ->
   openapi_utils:response().
@@ -250,7 +250,7 @@ uniswap_v3_get_positions_(historical)() ->
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path, <<"?">>, QueryString]).
 
-%% @doc GetPositionsSnaphots (historical)
+%% @doc PositionsSnaphots (historical)
 %% Gets positions snapshots.
 -spec uniswap_v3_get_positions_snaphots_(historical)() ->
   openapi_utils:response().
@@ -262,7 +262,7 @@ uniswap_v3_get_positions_snaphots_(historical)() ->
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path, <<"?">>, QueryString]).
 
-%% @doc GetPositionsSnapshots (current)
+%% @doc PositionsSnapshots (current)
 %% Gets positions snapshots.
 -spec uniswap_v3_get_positions_snapshots_(current)() ->
   openapi_utils:response().
@@ -274,7 +274,7 @@ uniswap_v3_get_positions_snapshots_(current)() ->
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path, <<"?">>, QueryString]).
 
-%% @doc GetSwaps (current) 🔥
+%% @doc Swaps (current) 🔥
 %% Gets swaps.
 -spec uniswap_v3_get_swaps_(current)() ->
   openapi_utils:response().
@@ -286,7 +286,7 @@ uniswap_v3_get_swaps_(current)() ->
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path, <<"?">>, QueryString]).
 
-%% @doc GetSwaps (historical) 🔥
+%% @doc Swaps (historical) 🔥
 %% Gets swaps.
 -spec uniswap_v3_get_swaps_(historical)() ->
   openapi_utils:response().
@@ -298,7 +298,7 @@ uniswap_v3_get_swaps_(historical)() ->
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path, <<"?">>, QueryString]).
 
-%% @doc GetTicks (current)
+%% @doc Ticks (current)
 %% Gets ticks.
 -spec uniswap_v3_get_ticks_(current)() ->
   openapi_utils:response().
@@ -310,7 +310,7 @@ uniswap_v3_get_ticks_(current)() ->
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path, <<"?">>, QueryString]).
 
-%% @doc GetTicks (historical)
+%% @doc Ticks (historical)
 %% Gets ticks.
 -spec uniswap_v3_get_ticks_(historical)() ->
   openapi_utils:response().
@@ -322,7 +322,7 @@ uniswap_v3_get_ticks_(historical)() ->
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path, <<"?">>, QueryString]).
 
-%% @doc GetTicksDayData (current)
+%% @doc TicksDayData (current)
 %% Gets ticks day data.
 -spec uniswap_v3_get_ticks_day_data_(current)() ->
   openapi_utils:response().
@@ -334,7 +334,7 @@ uniswap_v3_get_ticks_day_data_(current)() ->
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path, <<"?">>, QueryString]).
 
-%% @doc GetTicksDayData (historical)
+%% @doc TicksDayData (historical)
 %% Gets ticks day data.
 -spec uniswap_v3_get_ticks_day_data_(historical)() ->
   openapi_utils:response().
@@ -346,7 +346,7 @@ uniswap_v3_get_ticks_day_data_(historical)() ->
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path, <<"?">>, QueryString]).
 
-%% @doc GetTokens (current) 🔥
+%% @doc Tokens (current) 🔥
 %% Gets tokens.
 -spec uniswap_v3_get_tokens_(current)() ->
   openapi_utils:response().
@@ -358,7 +358,7 @@ uniswap_v3_get_tokens_(current)() ->
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path, <<"?">>, QueryString]).
 
-%% @doc GetTokens (historical) 🔥
+%% @doc Tokens (historical) 🔥
 %% Gets tokens.
 -spec uniswap_v3_get_tokens_(historical)() ->
   openapi_utils:response().
@@ -370,7 +370,7 @@ uniswap_v3_get_tokens_(historical)() ->
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path, <<"?">>, QueryString]).
 
-%% @doc GetTokensDayData (current)
+%% @doc TokensDayData (current)
 %% Gets tokens day data.
 -spec uniswap_v3_get_tokens_day_data_(current)() ->
   openapi_utils:response().
@@ -382,7 +382,7 @@ uniswap_v3_get_tokens_day_data_(current)() ->
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path, <<"?">>, QueryString]).
 
-%% @doc GetTokensDayData (historical)
+%% @doc TokensDayData (historical)
 %% Gets tokens day data.
 -spec uniswap_v3_get_tokens_day_data_(historical)() ->
   openapi_utils:response().
@@ -394,7 +394,7 @@ uniswap_v3_get_tokens_day_data_(historical)() ->
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path, <<"?">>, QueryString]).
 
-%% @doc GetTokensHourData (current)
+%% @doc TokensHourData (current)
 %% Gets tokens hour data.
 -spec uniswap_v3_get_tokens_hour_data_(current)() ->
   openapi_utils:response().
@@ -406,7 +406,7 @@ uniswap_v3_get_tokens_hour_data_(current)() ->
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path, <<"?">>, QueryString]).
 
-%% @doc GetTokensHourData (historical)
+%% @doc TokensHourData (historical)
 %% Gets tokens hour data.
 -spec uniswap_v3_get_tokens_hour_data_(historical)() ->
   openapi_utils:response().
@@ -418,7 +418,7 @@ uniswap_v3_get_tokens_hour_data_(historical)() ->
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path, <<"?">>, QueryString]).
 
-%% @doc GetTransactions (historical)
+%% @doc Transactions (historical)
 %% Gets transactions.
 -spec uniswap_v3_get_transactions_(historical)() ->
   openapi_utils:response().

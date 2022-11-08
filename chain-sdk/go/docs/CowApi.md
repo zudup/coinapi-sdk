@@ -4,11 +4,11 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CowGetOrdersHistorical**](CowApi.md#CowGetOrdersHistorical) | **Get** /dapps/cow/orders/historical | GetOrders (historical)
-[**CowGetSettlementsHistorical**](CowApi.md#CowGetSettlementsHistorical) | **Get** /dapps/cow/settlements/historical | GetSettlements (historical)
-[**CowGetTokensHistorical**](CowApi.md#CowGetTokensHistorical) | **Get** /dapps/cow/tokens/historical | GetTokens (historical) 🔥
-[**CowGetTradesHistorical**](CowApi.md#CowGetTradesHistorical) | **Get** /dapps/cow/trades/historical | GetTrades (historical) 🔥
-[**CowGetUsersHistorical**](CowApi.md#CowGetUsersHistorical) | **Get** /dapps/cow/users/historical | GetUsers (historical)
+[**CowGetOrdersHistorical**](CowApi.md#CowGetOrdersHistorical) | **Get** /dapps/cow/orders/historical | Orders (historical)
+[**CowGetSettlementsHistorical**](CowApi.md#CowGetSettlementsHistorical) | **Get** /dapps/cow/settlements/historical | Settlements (historical)
+[**CowGetTokensHistorical**](CowApi.md#CowGetTokensHistorical) | **Get** /dapps/cow/tokens/historical | Tokens (historical) 🔥
+[**CowGetTradesHistorical**](CowApi.md#CowGetTradesHistorical) | **Get** /dapps/cow/trades/historical | Trades (historical) 🔥
+[**CowGetUsersHistorical**](CowApi.md#CowGetUsersHistorical) | **Get** /dapps/cow/users/historical | Users (historical)
 
 
 
@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 > []CowOrderDTO CowGetOrdersHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Execute()
 
-GetOrders (historical)
+Orders (historical)
 
 
 
@@ -89,7 +89,7 @@ No authorization required
 
 > []CowSettlementDTO CowGetSettlementsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Execute()
 
-GetSettlements (historical)
+Settlements (historical)
 
 
 
@@ -162,7 +162,7 @@ No authorization required
 
 > []CowTokenDTO CowGetTokensHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).TokenId(tokenId).Execute()
 
-GetTokens (historical) 🔥
+Tokens (historical) 🔥
 
 
 
@@ -237,7 +237,7 @@ No authorization required
 
 > []CowTradeDTO CowGetTradesHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Execute()
 
-GetTrades (historical) 🔥
+Trades (historical) 🔥
 
 
 
@@ -310,7 +310,7 @@ No authorization required
 
 > []CowUserDTO CowGetUsersHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Execute()
 
-GetUsers (historical)
+Users (historical)
 
 
 

@@ -10,7 +10,7 @@ defmodule OnChainAPI.Api.UniswapV3 do
   import OnChainAPI.RequestBuilder
 
   @doc """
-  GetBundles (current)
+  Bundles (current)
   Gets bundles.
 
   ### Parameters
@@ -39,7 +39,7 @@ defmodule OnChainAPI.Api.UniswapV3 do
   end
 
   @doc """
-  GetBundles (historical)
+  Bundles (historical)
   Gets bundles.
 
   ### Parameters
@@ -80,7 +80,7 @@ defmodule OnChainAPI.Api.UniswapV3 do
   end
 
   @doc """
-  GetBurns (current)
+  Burns (current)
   Gets burns.
 
   ### Parameters
@@ -115,7 +115,7 @@ defmodule OnChainAPI.Api.UniswapV3 do
   end
 
   @doc """
-  GetBurns (historical)
+  Burns (historical)
   Gets burns.
 
   ### Parameters
@@ -158,7 +158,7 @@ defmodule OnChainAPI.Api.UniswapV3 do
   end
 
   @doc """
-  GetDayData (current)
+  DayData (current)
   Gets uniswapv3 day data.
 
   ### Parameters
@@ -187,7 +187,7 @@ defmodule OnChainAPI.Api.UniswapV3 do
   end
 
   @doc """
-  GetDayData (historical)
+  DayData (historical)
   Gets uniswapv3 day data.
 
   ### Parameters
@@ -228,7 +228,7 @@ defmodule OnChainAPI.Api.UniswapV3 do
   end
 
   @doc """
-  GetFactory (current)
+  Factory (current)
   Gets factory.
 
   ### Parameters
@@ -257,7 +257,7 @@ defmodule OnChainAPI.Api.UniswapV3 do
   end
 
   @doc """
-  GetFactory (historical)
+  Factory (historical)
   Gets factory.
 
   ### Parameters
@@ -298,7 +298,7 @@ defmodule OnChainAPI.Api.UniswapV3 do
   end
 
   @doc """
-  GetMints (current)
+  Mints (current)
   Gets mints.
 
   ### Parameters
@@ -333,7 +333,7 @@ defmodule OnChainAPI.Api.UniswapV3 do
   end
 
   @doc """
-  GetMints (historical)
+  Mints (historical)
   Gets mints.
 
   ### Parameters
@@ -376,7 +376,7 @@ defmodule OnChainAPI.Api.UniswapV3 do
   end
 
   @doc """
-  GetPools (current) 🔥
+  Pools (current) 🔥
   Gets pools.
 
   ### Parameters
@@ -411,7 +411,7 @@ defmodule OnChainAPI.Api.UniswapV3 do
   end
 
   @doc """
-  GetPools (historical) 🔥
+  Pools (historical) 🔥
   Gets pools.
 
   ### Parameters
@@ -454,7 +454,7 @@ defmodule OnChainAPI.Api.UniswapV3 do
   end
 
   @doc """
-  GetPoolsDayData (current)
+  PoolsDayData (current)
   Gets pools day data.
 
   ### Parameters
@@ -489,7 +489,7 @@ defmodule OnChainAPI.Api.UniswapV3 do
   end
 
   @doc """
-  GetPoolsDayData (historical)
+  PoolsDayData (historical)
   Gets pools day data.
 
   ### Parameters
@@ -532,7 +532,7 @@ defmodule OnChainAPI.Api.UniswapV3 do
   end
 
   @doc """
-  GetPoolsHourData (current)
+  PoolsHourData (current)
   Gets pools hour data.
 
   ### Parameters
@@ -567,7 +567,7 @@ defmodule OnChainAPI.Api.UniswapV3 do
   end
 
   @doc """
-  GetPoolsHourData (historical)
+  PoolsHourData (historical)
   Gets pools hour data.
 
   ### Parameters
@@ -610,7 +610,7 @@ defmodule OnChainAPI.Api.UniswapV3 do
   end
 
   @doc """
-  GetPositions (current)
+  Positions (current)
   Gets positions.
 
   ### Parameters
@@ -645,7 +645,7 @@ defmodule OnChainAPI.Api.UniswapV3 do
   end
 
   @doc """
-  GetPositions (historical)
+  Positions (historical)
   Gets positions.
 
   ### Parameters
@@ -688,7 +688,7 @@ defmodule OnChainAPI.Api.UniswapV3 do
   end
 
   @doc """
-  GetPositionsSnaphots (historical)
+  PositionsSnaphots (historical)
   Gets positions snapshots.
 
   ### Parameters
@@ -731,7 +731,7 @@ defmodule OnChainAPI.Api.UniswapV3 do
   end
 
   @doc """
-  GetPositionsSnapshots (current)
+  PositionsSnapshots (current)
   Gets positions snapshots.
 
   ### Parameters
@@ -766,7 +766,7 @@ defmodule OnChainAPI.Api.UniswapV3 do
   end
 
   @doc """
-  GetSwaps (current) 🔥
+  Swaps (current) 🔥
   Gets swaps.
 
   ### Parameters
@@ -801,7 +801,7 @@ defmodule OnChainAPI.Api.UniswapV3 do
   end
 
   @doc """
-  GetSwaps (historical) 🔥
+  Swaps (historical) 🔥
   Gets swaps.
 
   ### Parameters
@@ -844,7 +844,7 @@ defmodule OnChainAPI.Api.UniswapV3 do
   end
 
   @doc """
-  GetTicks (current)
+  Ticks (current)
   Gets ticks.
 
   ### Parameters
@@ -879,7 +879,7 @@ defmodule OnChainAPI.Api.UniswapV3 do
   end
 
   @doc """
-  GetTicks (historical)
+  Ticks (historical)
   Gets ticks.
 
   ### Parameters
@@ -922,7 +922,7 @@ defmodule OnChainAPI.Api.UniswapV3 do
   end
 
   @doc """
-  GetTicksDayData (current)
+  TicksDayData (current)
   Gets ticks day data.
 
   ### Parameters
@@ -957,7 +957,7 @@ defmodule OnChainAPI.Api.UniswapV3 do
   end
 
   @doc """
-  GetTicksDayData (historical)
+  TicksDayData (historical)
   Gets ticks day data.
 
   ### Parameters
@@ -1000,7 +1000,7 @@ defmodule OnChainAPI.Api.UniswapV3 do
   end
 
   @doc """
-  GetTokens (current) 🔥
+  Tokens (current) 🔥
   Gets tokens.
 
   ### Parameters
@@ -1035,7 +1035,7 @@ defmodule OnChainAPI.Api.UniswapV3 do
   end
 
   @doc """
-  GetTokens (historical) 🔥
+  Tokens (historical) 🔥
   Gets tokens.
 
   ### Parameters
@@ -1078,7 +1078,7 @@ defmodule OnChainAPI.Api.UniswapV3 do
   end
 
   @doc """
-  GetTokensDayData (current)
+  TokensDayData (current)
   Gets tokens day data.
 
   ### Parameters
@@ -1113,7 +1113,7 @@ defmodule OnChainAPI.Api.UniswapV3 do
   end
 
   @doc """
-  GetTokensDayData (historical)
+  TokensDayData (historical)
   Gets tokens day data.
 
   ### Parameters
@@ -1156,7 +1156,7 @@ defmodule OnChainAPI.Api.UniswapV3 do
   end
 
   @doc """
-  GetTokensHourData (current)
+  TokensHourData (current)
   Gets tokens hour data.
 
   ### Parameters
@@ -1191,7 +1191,7 @@ defmodule OnChainAPI.Api.UniswapV3 do
   end
 
   @doc """
-  GetTokensHourData (historical)
+  TokensHourData (historical)
   Gets tokens hour data.
 
   ### Parameters
@@ -1234,7 +1234,7 @@ defmodule OnChainAPI.Api.UniswapV3 do
   end
 
   @doc """
-  GetTransactions (historical)
+  Transactions (historical)
   Gets transactions.
 
   ### Parameters

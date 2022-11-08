@@ -4,43 +4,43 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CurveAPI_curveGetAccountsHistorical**](CurveAPI.md#CurveAPI_curveGetAccountsHistorical) | **GET** /dapps/curve/accounts/historical | GetAccounts (historical)
-[**CurveAPI_curveGetAddLiquidityEventsHistorical**](CurveAPI.md#CurveAPI_curveGetAddLiquidityEventsHistorical) | **GET** /dapps/curve/addLiquidityEvents/historical | GetAddLiquidityEvents (historical)
-[**CurveAPI_curveGetAdminFeeChangeLogsHistorical**](CurveAPI.md#CurveAPI_curveGetAdminFeeChangeLogsHistorical) | **GET** /dapps/curve/adminFeeChangeLogs/historical | GetAdminFeeChangeLogs (historical)
-[**CurveAPI_curveGetAmplificationCoeffChangeLogsHistorical**](CurveAPI.md#CurveAPI_curveGetAmplificationCoeffChangeLogsHistorical) | **GET** /dapps/curve/amplificationCoeffChangeLogs/historical | GetAmplificationCoeffChangeLogs (historical)
-[**CurveAPI_curveGetCoinsHistorical**](CurveAPI.md#CurveAPI_curveGetCoinsHistorical) | **GET** /dapps/curve/coins/historical | GetCoins (historical)
-[**CurveAPI_curveGetContractsHistorical**](CurveAPI.md#CurveAPI_curveGetContractsHistorical) | **GET** /dapps/curve/contracts/historical | GetContracts (historical)
-[**CurveAPI_curveGetContractsVersionsHistorical**](CurveAPI.md#CurveAPI_curveGetContractsVersionsHistorical) | **GET** /dapps/curve/contractsVersions/historical | GetContractsVersions (historical)
-[**CurveAPI_curveGetDailyVolumesHistorical**](CurveAPI.md#CurveAPI_curveGetDailyVolumesHistorical) | **GET** /dapps/curve/dailyVolumes/historical | GetDailyVolumes (historical)
-[**CurveAPI_curveGetExchangesHistorical**](CurveAPI.md#CurveAPI_curveGetExchangesHistorical) | **GET** /dapps/curve/exchanges/historical | GetExchanges (historical) 🔥
-[**CurveAPI_curveGetFeeChangeLogsHistorical**](CurveAPI.md#CurveAPI_curveGetFeeChangeLogsHistorical) | **GET** /dapps/curve/feeChangeLogs/historical | GetFeeChangeLogs (historical)
-[**CurveAPI_curveGetGaugesDepositsHistorical**](CurveAPI.md#CurveAPI_curveGetGaugesDepositsHistorical) | **GET** /dapps/curve/gaugesDeposits/historical | GetGaugesDeposits (historical)
-[**CurveAPI_curveGetGaugesHistorical**](CurveAPI.md#CurveAPI_curveGetGaugesHistorical) | **GET** /dapps/curve/gauges/historical | GetGauges (historical)
-[**CurveAPI_curveGetGaugesLiquidityHistorical**](CurveAPI.md#CurveAPI_curveGetGaugesLiquidityHistorical) | **GET** /dapps/curve/gaugesLiquidity/historical | GetGaugesLiquidity (historical)
-[**CurveAPI_curveGetGaugesTotalWeightsHistorical**](CurveAPI.md#CurveAPI_curveGetGaugesTotalWeightsHistorical) | **GET** /dapps/curve/gaugesTotalWeights/historical | GetGaugesTotalWeights (historical)
-[**CurveAPI_curveGetGaugesTypesHistorical**](CurveAPI.md#CurveAPI_curveGetGaugesTypesHistorical) | **GET** /dapps/curve/gaugesTypes/historical | GetGaugesTypes (historical)
-[**CurveAPI_curveGetGaugesTypesWeightsHistorical**](CurveAPI.md#CurveAPI_curveGetGaugesTypesWeightsHistorical) | **GET** /dapps/curve/gaugesTypesWeights/historical | GetGaugesTypesWeights (historical)
-[**CurveAPI_curveGetGaugesWeightsHistorical**](CurveAPI.md#CurveAPI_curveGetGaugesWeightsHistorical) | **GET** /dapps/curve/gaugesWeights/historical | GetGaugesWeights (historical)
-[**CurveAPI_curveGetGaugesWeightsVotesHistorical**](CurveAPI.md#CurveAPI_curveGetGaugesWeightsVotesHistorical) | **GET** /dapps/curve/gaugesWeightsVotes/historical | GetGaugesWeightsVotes (historical)
-[**CurveAPI_curveGetGaugesWithdrawHistorical**](CurveAPI.md#CurveAPI_curveGetGaugesWithdrawHistorical) | **GET** /dapps/curve/gaugesWithdraws/historical | GetGaugesWithdraw (historical)
-[**CurveAPI_curveGetHourlyVolumesHistorical**](CurveAPI.md#CurveAPI_curveGetHourlyVolumesHistorical) | **GET** /dapps/curve/hourlyVolumes/historical | GetHourlyVolumes (historical)
-[**CurveAPI_curveGetLpTokensHistorical**](CurveAPI.md#CurveAPI_curveGetLpTokensHistorical) | **GET** /dapps/curve/lpTokens/historical | GetLpTokens (historical)
-[**CurveAPI_curveGetPoolsHistorical**](CurveAPI.md#CurveAPI_curveGetPoolsHistorical) | **GET** /dapps/curve/pools/historical | GetPools (historical) 🔥
-[**CurveAPI_curveGetProposalsHistorical**](CurveAPI.md#CurveAPI_curveGetProposalsHistorical) | **GET** /dapps/curve/proposals/historical | GetProposals (historical)
-[**CurveAPI_curveGetProposalsVotesHistorical**](CurveAPI.md#CurveAPI_curveGetProposalsVotesHistorical) | **GET** /dapps/curve/proposalsVotes/historical | GetProposalsVotes (historical)
-[**CurveAPI_curveGetRemoveLiquidityEventsHistorical**](CurveAPI.md#CurveAPI_curveGetRemoveLiquidityEventsHistorical) | **GET** /dapps/curve/removeLiquidityEvents/historical | GetRemoveLiquidityEvents (historical)
-[**CurveAPI_curveGetRemoveLiquidityOneEventsHistorical**](CurveAPI.md#CurveAPI_curveGetRemoveLiquidityOneEventsHistorical) | **GET** /dapps/curve/removeLiquidityOneEvents/historical | GetRemoveLiquidityOneEvents (historical)
-[**CurveAPI_curveGetSystemStatesHistorical**](CurveAPI.md#CurveAPI_curveGetSystemStatesHistorical) | **GET** /dapps/curve/systemStates/historical | GetSystemStates (historical)
-[**CurveAPI_curveGetTokensHistorical**](CurveAPI.md#CurveAPI_curveGetTokensHistorical) | **GET** /dapps/curve/tokens/historical | GetTokens (historical) 🔥
-[**CurveAPI_curveGetTransferOwnershipEventsHistorical**](CurveAPI.md#CurveAPI_curveGetTransferOwnershipEventsHistorical) | **GET** /dapps/curve/transferOwnershipEvents/historical | GetTransferOwnershipEvents (historical)
-[**CurveAPI_curveGetUnderlyingCoinsHistorical**](CurveAPI.md#CurveAPI_curveGetUnderlyingCoinsHistorical) | **GET** /dapps/curve/underlyingCoins/historical | GetUnderlyingCoins (historical)
-[**CurveAPI_curveGetVotingAppsHistorical**](CurveAPI.md#CurveAPI_curveGetVotingAppsHistorical) | **GET** /dapps/curve/votingApps/historical | GetVotingApps (historical)
-[**CurveAPI_curveGetWeeklyVolumesHistorical**](CurveAPI.md#CurveAPI_curveGetWeeklyVolumesHistorical) | **GET** /dapps/curve/weeklyVolumes/historical | GetWeeklyVolumes (historical)
+[**CurveAPI_curveGetAccountsHistorical**](CurveAPI.md#CurveAPI_curveGetAccountsHistorical) | **GET** /dapps/curve/accounts/historical | Accounts (historical)
+[**CurveAPI_curveGetAddLiquidityEventsHistorical**](CurveAPI.md#CurveAPI_curveGetAddLiquidityEventsHistorical) | **GET** /dapps/curve/addLiquidityEvents/historical | AddLiquidityEvents (historical)
+[**CurveAPI_curveGetAdminFeeChangeLogsHistorical**](CurveAPI.md#CurveAPI_curveGetAdminFeeChangeLogsHistorical) | **GET** /dapps/curve/adminFeeChangeLogs/historical | AdminFeeChangeLogs (historical)
+[**CurveAPI_curveGetAmplificationCoeffChangeLogsHistorical**](CurveAPI.md#CurveAPI_curveGetAmplificationCoeffChangeLogsHistorical) | **GET** /dapps/curve/amplificationCoeffChangeLogs/historical | AmplificationCoeffChangeLogs (historical)
+[**CurveAPI_curveGetCoinsHistorical**](CurveAPI.md#CurveAPI_curveGetCoinsHistorical) | **GET** /dapps/curve/coins/historical | Coins (historical)
+[**CurveAPI_curveGetContractsHistorical**](CurveAPI.md#CurveAPI_curveGetContractsHistorical) | **GET** /dapps/curve/contracts/historical | Contracts (historical)
+[**CurveAPI_curveGetContractsVersionsHistorical**](CurveAPI.md#CurveAPI_curveGetContractsVersionsHistorical) | **GET** /dapps/curve/contractsVersions/historical | ContractsVersions (historical)
+[**CurveAPI_curveGetDailyVolumesHistorical**](CurveAPI.md#CurveAPI_curveGetDailyVolumesHistorical) | **GET** /dapps/curve/dailyVolumes/historical | DailyVolumes (historical)
+[**CurveAPI_curveGetExchangesHistorical**](CurveAPI.md#CurveAPI_curveGetExchangesHistorical) | **GET** /dapps/curve/exchanges/historical | Exchanges (historical) 🔥
+[**CurveAPI_curveGetFeeChangeLogsHistorical**](CurveAPI.md#CurveAPI_curveGetFeeChangeLogsHistorical) | **GET** /dapps/curve/feeChangeLogs/historical | FeeChangeLogs (historical)
+[**CurveAPI_curveGetGaugesDepositsHistorical**](CurveAPI.md#CurveAPI_curveGetGaugesDepositsHistorical) | **GET** /dapps/curve/gaugesDeposits/historical | GaugesDeposits (historical)
+[**CurveAPI_curveGetGaugesHistorical**](CurveAPI.md#CurveAPI_curveGetGaugesHistorical) | **GET** /dapps/curve/gauges/historical | Gauges (historical)
+[**CurveAPI_curveGetGaugesLiquidityHistorical**](CurveAPI.md#CurveAPI_curveGetGaugesLiquidityHistorical) | **GET** /dapps/curve/gaugesLiquidity/historical | GaugesLiquidity (historical)
+[**CurveAPI_curveGetGaugesTotalWeightsHistorical**](CurveAPI.md#CurveAPI_curveGetGaugesTotalWeightsHistorical) | **GET** /dapps/curve/gaugesTotalWeights/historical | GaugesTotalWeights (historical)
+[**CurveAPI_curveGetGaugesTypesHistorical**](CurveAPI.md#CurveAPI_curveGetGaugesTypesHistorical) | **GET** /dapps/curve/gaugesTypes/historical | GaugesTypes (historical)
+[**CurveAPI_curveGetGaugesTypesWeightsHistorical**](CurveAPI.md#CurveAPI_curveGetGaugesTypesWeightsHistorical) | **GET** /dapps/curve/gaugesTypesWeights/historical | GaugesTypesWeights (historical)
+[**CurveAPI_curveGetGaugesWeightsHistorical**](CurveAPI.md#CurveAPI_curveGetGaugesWeightsHistorical) | **GET** /dapps/curve/gaugesWeights/historical | GaugesWeights (historical)
+[**CurveAPI_curveGetGaugesWeightsVotesHistorical**](CurveAPI.md#CurveAPI_curveGetGaugesWeightsVotesHistorical) | **GET** /dapps/curve/gaugesWeightsVotes/historical | GaugesWeightsVotes (historical)
+[**CurveAPI_curveGetGaugesWithdrawHistorical**](CurveAPI.md#CurveAPI_curveGetGaugesWithdrawHistorical) | **GET** /dapps/curve/gaugesWithdraws/historical | GaugesWithdraw (historical)
+[**CurveAPI_curveGetHourlyVolumesHistorical**](CurveAPI.md#CurveAPI_curveGetHourlyVolumesHistorical) | **GET** /dapps/curve/hourlyVolumes/historical | HourlyVolumes (historical)
+[**CurveAPI_curveGetLpTokensHistorical**](CurveAPI.md#CurveAPI_curveGetLpTokensHistorical) | **GET** /dapps/curve/lpTokens/historical | LpTokens (historical)
+[**CurveAPI_curveGetPoolsHistorical**](CurveAPI.md#CurveAPI_curveGetPoolsHistorical) | **GET** /dapps/curve/pools/historical | Pools (historical) 🔥
+[**CurveAPI_curveGetProposalsHistorical**](CurveAPI.md#CurveAPI_curveGetProposalsHistorical) | **GET** /dapps/curve/proposals/historical | Proposals (historical)
+[**CurveAPI_curveGetProposalsVotesHistorical**](CurveAPI.md#CurveAPI_curveGetProposalsVotesHistorical) | **GET** /dapps/curve/proposalsVotes/historical | ProposalsVotes (historical)
+[**CurveAPI_curveGetRemoveLiquidityEventsHistorical**](CurveAPI.md#CurveAPI_curveGetRemoveLiquidityEventsHistorical) | **GET** /dapps/curve/removeLiquidityEvents/historical | RemoveLiquidityEvents (historical)
+[**CurveAPI_curveGetRemoveLiquidityOneEventsHistorical**](CurveAPI.md#CurveAPI_curveGetRemoveLiquidityOneEventsHistorical) | **GET** /dapps/curve/removeLiquidityOneEvents/historical | RemoveLiquidityOneEvents (historical)
+[**CurveAPI_curveGetSystemStatesHistorical**](CurveAPI.md#CurveAPI_curveGetSystemStatesHistorical) | **GET** /dapps/curve/systemStates/historical | SystemStates (historical)
+[**CurveAPI_curveGetTokensHistorical**](CurveAPI.md#CurveAPI_curveGetTokensHistorical) | **GET** /dapps/curve/tokens/historical | Tokens (historical) 🔥
+[**CurveAPI_curveGetTransferOwnershipEventsHistorical**](CurveAPI.md#CurveAPI_curveGetTransferOwnershipEventsHistorical) | **GET** /dapps/curve/transferOwnershipEvents/historical | TransferOwnershipEvents (historical)
+[**CurveAPI_curveGetUnderlyingCoinsHistorical**](CurveAPI.md#CurveAPI_curveGetUnderlyingCoinsHistorical) | **GET** /dapps/curve/underlyingCoins/historical | UnderlyingCoins (historical)
+[**CurveAPI_curveGetVotingAppsHistorical**](CurveAPI.md#CurveAPI_curveGetVotingAppsHistorical) | **GET** /dapps/curve/votingApps/historical | VotingApps (historical)
+[**CurveAPI_curveGetWeeklyVolumesHistorical**](CurveAPI.md#CurveAPI_curveGetWeeklyVolumesHistorical) | **GET** /dapps/curve/weeklyVolumes/historical | WeeklyVolumes (historical)
 
 
 # **CurveAPI_curveGetAccountsHistorical**
 ```c
-// GetAccounts (historical)
+// Accounts (historical)
 //
 // Gets accounts.
 //
@@ -74,7 +74,7 @@ No authorization required
 
 # **CurveAPI_curveGetAddLiquidityEventsHistorical**
 ```c
-// GetAddLiquidityEvents (historical)
+// AddLiquidityEvents (historical)
 //
 // Gets add liquidity events.
 //
@@ -109,7 +109,7 @@ No authorization required
 
 # **CurveAPI_curveGetAdminFeeChangeLogsHistorical**
 ```c
-// GetAdminFeeChangeLogs (historical)
+// AdminFeeChangeLogs (historical)
 //
 // Gets admin fee change logs.
 //
@@ -144,7 +144,7 @@ No authorization required
 
 # **CurveAPI_curveGetAmplificationCoeffChangeLogsHistorical**
 ```c
-// GetAmplificationCoeffChangeLogs (historical)
+// AmplificationCoeffChangeLogs (historical)
 //
 // Gets amplification coeff change logs.
 //
@@ -179,7 +179,7 @@ No authorization required
 
 # **CurveAPI_curveGetCoinsHistorical**
 ```c
-// GetCoins (historical)
+// Coins (historical)
 //
 // Gets coins.
 //
@@ -214,7 +214,7 @@ No authorization required
 
 # **CurveAPI_curveGetContractsHistorical**
 ```c
-// GetContracts (historical)
+// Contracts (historical)
 //
 // Gets contracts.
 //
@@ -249,7 +249,7 @@ No authorization required
 
 # **CurveAPI_curveGetContractsVersionsHistorical**
 ```c
-// GetContractsVersions (historical)
+// ContractsVersions (historical)
 //
 // Gets contracts versions.
 //
@@ -284,7 +284,7 @@ No authorization required
 
 # **CurveAPI_curveGetDailyVolumesHistorical**
 ```c
-// GetDailyVolumes (historical)
+// DailyVolumes (historical)
 //
 // Gets daily volumes.
 //
@@ -319,7 +319,7 @@ No authorization required
 
 # **CurveAPI_curveGetExchangesHistorical**
 ```c
-// GetExchanges (historical) 🔥
+// Exchanges (historical) 🔥
 //
 // Gets exchanges.
 //
@@ -354,7 +354,7 @@ No authorization required
 
 # **CurveAPI_curveGetFeeChangeLogsHistorical**
 ```c
-// GetFeeChangeLogs (historical)
+// FeeChangeLogs (historical)
 //
 // Gets fee change logs.
 //
@@ -389,7 +389,7 @@ No authorization required
 
 # **CurveAPI_curveGetGaugesDepositsHistorical**
 ```c
-// GetGaugesDeposits (historical)
+// GaugesDeposits (historical)
 //
 // Gets gauges deposits.
 //
@@ -423,7 +423,7 @@ No authorization required
 
 # **CurveAPI_curveGetGaugesHistorical**
 ```c
-// GetGauges (historical)
+// Gauges (historical)
 //
 // Gets gauges.
 //
@@ -458,7 +458,7 @@ No authorization required
 
 # **CurveAPI_curveGetGaugesLiquidityHistorical**
 ```c
-// GetGaugesLiquidity (historical)
+// GaugesLiquidity (historical)
 //
 // Gets gauges liquidity.
 //
@@ -492,7 +492,7 @@ No authorization required
 
 # **CurveAPI_curveGetGaugesTotalWeightsHistorical**
 ```c
-// GetGaugesTotalWeights (historical)
+// GaugesTotalWeights (historical)
 //
 // Gets gauges total weights.
 //
@@ -526,7 +526,7 @@ No authorization required
 
 # **CurveAPI_curveGetGaugesTypesHistorical**
 ```c
-// GetGaugesTypes (historical)
+// GaugesTypes (historical)
 //
 // Gets gauges types.
 //
@@ -560,7 +560,7 @@ No authorization required
 
 # **CurveAPI_curveGetGaugesTypesWeightsHistorical**
 ```c
-// GetGaugesTypesWeights (historical)
+// GaugesTypesWeights (historical)
 //
 // Gets gauges types weights.
 //
@@ -594,7 +594,7 @@ No authorization required
 
 # **CurveAPI_curveGetGaugesWeightsHistorical**
 ```c
-// GetGaugesWeights (historical)
+// GaugesWeights (historical)
 //
 // Gets gauges weights.
 //
@@ -628,7 +628,7 @@ No authorization required
 
 # **CurveAPI_curveGetGaugesWeightsVotesHistorical**
 ```c
-// GetGaugesWeightsVotes (historical)
+// GaugesWeightsVotes (historical)
 //
 // Gets gauges weights votes.
 //
@@ -662,7 +662,7 @@ No authorization required
 
 # **CurveAPI_curveGetGaugesWithdrawHistorical**
 ```c
-// GetGaugesWithdraw (historical)
+// GaugesWithdraw (historical)
 //
 // Gets gauges withdraws.
 //
@@ -696,7 +696,7 @@ No authorization required
 
 # **CurveAPI_curveGetHourlyVolumesHistorical**
 ```c
-// GetHourlyVolumes (historical)
+// HourlyVolumes (historical)
 //
 // Gets hourly volumes.
 //
@@ -731,7 +731,7 @@ No authorization required
 
 # **CurveAPI_curveGetLpTokensHistorical**
 ```c
-// GetLpTokens (historical)
+// LpTokens (historical)
 //
 // Gets lp tokens.
 //
@@ -766,7 +766,7 @@ No authorization required
 
 # **CurveAPI_curveGetPoolsHistorical**
 ```c
-// GetPools (historical) 🔥
+// Pools (historical) 🔥
 //
 // Gets pools.
 //
@@ -801,7 +801,7 @@ No authorization required
 
 # **CurveAPI_curveGetProposalsHistorical**
 ```c
-// GetProposals (historical)
+// Proposals (historical)
 //
 // Gets proposals.
 //
@@ -835,7 +835,7 @@ No authorization required
 
 # **CurveAPI_curveGetProposalsVotesHistorical**
 ```c
-// GetProposalsVotes (historical)
+// ProposalsVotes (historical)
 //
 // Gets proposals votes.
 //
@@ -869,7 +869,7 @@ No authorization required
 
 # **CurveAPI_curveGetRemoveLiquidityEventsHistorical**
 ```c
-// GetRemoveLiquidityEvents (historical)
+// RemoveLiquidityEvents (historical)
 //
 // Gets remove liquidity events.
 //
@@ -904,7 +904,7 @@ No authorization required
 
 # **CurveAPI_curveGetRemoveLiquidityOneEventsHistorical**
 ```c
-// GetRemoveLiquidityOneEvents (historical)
+// RemoveLiquidityOneEvents (historical)
 //
 // Gets remove liquidity one events.
 //
@@ -939,7 +939,7 @@ No authorization required
 
 # **CurveAPI_curveGetSystemStatesHistorical**
 ```c
-// GetSystemStates (historical)
+// SystemStates (historical)
 //
 // Gets system states.
 //
@@ -973,7 +973,7 @@ No authorization required
 
 # **CurveAPI_curveGetTokensHistorical**
 ```c
-// GetTokens (historical) 🔥
+// Tokens (historical) 🔥
 //
 // Gets tokens.
 //
@@ -1008,7 +1008,7 @@ No authorization required
 
 # **CurveAPI_curveGetTransferOwnershipEventsHistorical**
 ```c
-// GetTransferOwnershipEvents (historical)
+// TransferOwnershipEvents (historical)
 //
 // Gets transfer ownership events.
 //
@@ -1043,7 +1043,7 @@ No authorization required
 
 # **CurveAPI_curveGetUnderlyingCoinsHistorical**
 ```c
-// GetUnderlyingCoins (historical)
+// UnderlyingCoins (historical)
 //
 // Gets underlying coins.
 //
@@ -1078,7 +1078,7 @@ No authorization required
 
 # **CurveAPI_curveGetVotingAppsHistorical**
 ```c
-// GetVotingApps (historical)
+// VotingApps (historical)
 //
 // Gets voting apps.
 //
@@ -1112,7 +1112,7 @@ No authorization required
 
 # **CurveAPI_curveGetWeeklyVolumesHistorical**
 ```c
-// GetWeeklyVolumes (historical)
+// WeeklyVolumes (historical)
 //
 // Gets weekly volumes.
 //

@@ -76,7 +76,7 @@ public:
     virtual ~CurveApi();
 
     /// <summary>
-    /// GetAccounts (historical)
+    /// Accounts (historical)
     /// </summary>
     /// <remarks>
     /// Gets accounts.
@@ -92,7 +92,7 @@ public:
         boost::optional<utility::datetime> endDate
     ) const;
     /// <summary>
-    /// GetAddLiquidityEvents (historical)
+    /// AddLiquidityEvents (historical)
     /// </summary>
     /// <remarks>
     /// Gets add liquidity events.
@@ -110,7 +110,7 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// GetAdminFeeChangeLogs (historical)
+    /// AdminFeeChangeLogs (historical)
     /// </summary>
     /// <remarks>
     /// Gets admin fee change logs.
@@ -128,7 +128,7 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// GetAmplificationCoeffChangeLogs (historical)
+    /// AmplificationCoeffChangeLogs (historical)
     /// </summary>
     /// <remarks>
     /// Gets amplification coeff change logs.
@@ -146,7 +146,7 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// GetCoins (historical)
+    /// Coins (historical)
     /// </summary>
     /// <remarks>
     /// Gets coins.
@@ -164,7 +164,7 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// GetContractsVersions (historical)
+    /// ContractsVersions (historical)
     /// </summary>
     /// <remarks>
     /// Gets contracts versions.
@@ -182,7 +182,7 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// GetContracts (historical)
+    /// Contracts (historical)
     /// </summary>
     /// <remarks>
     /// Gets contracts.
@@ -200,7 +200,7 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// GetDailyVolumes (historical)
+    /// DailyVolumes (historical)
     /// </summary>
     /// <remarks>
     /// Gets daily volumes.
@@ -218,7 +218,7 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// GetExchanges (historical) 🔥
+    /// Exchanges (historical) 🔥
     /// </summary>
     /// <remarks>
     /// Gets exchanges.
@@ -236,7 +236,7 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// GetFeeChangeLogs (historical)
+    /// FeeChangeLogs (historical)
     /// </summary>
     /// <remarks>
     /// Gets fee change logs.
@@ -254,7 +254,7 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// GetGaugesDeposits (historical)
+    /// GaugesDeposits (historical)
     /// </summary>
     /// <remarks>
     /// Gets gauges deposits.
@@ -270,7 +270,7 @@ public:
         boost::optional<utility::datetime> endDate
     ) const;
     /// <summary>
-    /// GetGaugesLiquidity (historical)
+    /// GaugesLiquidity (historical)
     /// </summary>
     /// <remarks>
     /// Gets gauges liquidity.
@@ -286,7 +286,7 @@ public:
         boost::optional<utility::datetime> endDate
     ) const;
     /// <summary>
-    /// GetGaugesTotalWeights (historical)
+    /// GaugesTotalWeights (historical)
     /// </summary>
     /// <remarks>
     /// Gets gauges total weights.
@@ -302,7 +302,7 @@ public:
         boost::optional<utility::datetime> endDate
     ) const;
     /// <summary>
-    /// GetGaugesTypesWeights (historical)
+    /// GaugesTypesWeights (historical)
     /// </summary>
     /// <remarks>
     /// Gets gauges types weights.
@@ -318,7 +318,7 @@ public:
         boost::optional<utility::datetime> endDate
     ) const;
     /// <summary>
-    /// GetGaugesTypes (historical)
+    /// GaugesTypes (historical)
     /// </summary>
     /// <remarks>
     /// Gets gauges types.
@@ -334,7 +334,7 @@ public:
         boost::optional<utility::datetime> endDate
     ) const;
     /// <summary>
-    /// GetGaugesWeightsVotes (historical)
+    /// GaugesWeightsVotes (historical)
     /// </summary>
     /// <remarks>
     /// Gets gauges weights votes.
@@ -350,7 +350,7 @@ public:
         boost::optional<utility::datetime> endDate
     ) const;
     /// <summary>
-    /// GetGaugesWeights (historical)
+    /// GaugesWeights (historical)
     /// </summary>
     /// <remarks>
     /// Gets gauges weights.
@@ -366,7 +366,7 @@ public:
         boost::optional<utility::datetime> endDate
     ) const;
     /// <summary>
-    /// GetGaugesWithdraw (historical)
+    /// GaugesWithdraw (historical)
     /// </summary>
     /// <remarks>
     /// Gets gauges withdraws.
@@ -382,7 +382,7 @@ public:
         boost::optional<utility::datetime> endDate
     ) const;
     /// <summary>
-    /// GetGauges (historical)
+    /// Gauges (historical)
     /// </summary>
     /// <remarks>
     /// Gets gauges.
@@ -400,7 +400,7 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// GetHourlyVolumes (historical)
+    /// HourlyVolumes (historical)
     /// </summary>
     /// <remarks>
     /// Gets hourly volumes.
@@ -418,7 +418,7 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// GetLpTokens (historical)
+    /// LpTokens (historical)
     /// </summary>
     /// <remarks>
     /// Gets lp tokens.
@@ -436,7 +436,7 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// GetPools (historical) 🔥
+    /// Pools (historical) 🔥
     /// </summary>
     /// <remarks>
     /// Gets pools.
@@ -454,7 +454,7 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// GetProposalsVotes (historical)
+    /// ProposalsVotes (historical)
     /// </summary>
     /// <remarks>
     /// Gets proposals votes.
@@ -470,7 +470,7 @@ public:
         boost::optional<utility::datetime> endDate
     ) const;
     /// <summary>
-    /// GetProposals (historical)
+    /// Proposals (historical)
     /// </summary>
     /// <remarks>
     /// Gets proposals.
@@ -486,7 +486,7 @@ public:
         boost::optional<utility::datetime> endDate
     ) const;
     /// <summary>
-    /// GetRemoveLiquidityEvents (historical)
+    /// RemoveLiquidityEvents (historical)
     /// </summary>
     /// <remarks>
     /// Gets remove liquidity events.
@@ -504,7 +504,7 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// GetRemoveLiquidityOneEvents (historical)
+    /// RemoveLiquidityOneEvents (historical)
     /// </summary>
     /// <remarks>
     /// Gets remove liquidity one events.
@@ -522,7 +522,7 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// GetSystemStates (historical)
+    /// SystemStates (historical)
     /// </summary>
     /// <remarks>
     /// Gets system states.
@@ -538,7 +538,7 @@ public:
         boost::optional<utility::datetime> endDate
     ) const;
     /// <summary>
-    /// GetTokens (historical) 🔥
+    /// Tokens (historical) 🔥
     /// </summary>
     /// <remarks>
     /// Gets tokens.
@@ -556,7 +556,7 @@ public:
         boost::optional<utility::string_t> tokenId
     ) const;
     /// <summary>
-    /// GetTransferOwnershipEvents (historical)
+    /// TransferOwnershipEvents (historical)
     /// </summary>
     /// <remarks>
     /// Gets transfer ownership events.
@@ -574,7 +574,7 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// GetUnderlyingCoins (historical)
+    /// UnderlyingCoins (historical)
     /// </summary>
     /// <remarks>
     /// Gets underlying coins.
@@ -592,7 +592,7 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// GetVotingApps (historical)
+    /// VotingApps (historical)
     /// </summary>
     /// <remarks>
     /// Gets voting apps.
@@ -608,7 +608,7 @@ public:
         boost::optional<utility::datetime> endDate
     ) const;
     /// <summary>
-    /// GetWeeklyVolumes (historical)
+    /// WeeklyVolumes (historical)
     /// </summary>
     /// <remarks>
     /// Gets weekly volumes.

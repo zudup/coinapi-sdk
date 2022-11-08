@@ -4,17 +4,17 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Invoke-DexGetBatchesHistorical**](DexApi.md#Invoke-DexGetBatchesHistorical) | **GET** /dapps/dex/batches/historical | GetBatches (historical)
-[**Invoke-DexGetDepositsHistorical**](DexApi.md#Invoke-DexGetDepositsHistorical) | **GET** /dapps/dex/deposits/historical | GetDeposits (historical)
-[**Invoke-DexGetOrdersHistorical**](DexApi.md#Invoke-DexGetOrdersHistorical) | **GET** /dapps/dex/orders/historical | GetOrders (historical)
-[**Invoke-DexGetPricesHistorical**](DexApi.md#Invoke-DexGetPricesHistorical) | **GET** /dapps/dex/prices/historical | GetPrices (historical)
-[**Invoke-DexGetSolutionsHistorical**](DexApi.md#Invoke-DexGetSolutionsHistorical) | **GET** /dapps/dex/solutions/historical | GetSolutions (historical)
-[**Invoke-DexGetStatsHistorical**](DexApi.md#Invoke-DexGetStatsHistorical) | **GET** /dapps/dex/stats/historical | GetStats (historical)
-[**Invoke-DexGetTokensHistorical**](DexApi.md#Invoke-DexGetTokensHistorical) | **GET** /dapps/dex/tokens/historical | GetTokens (historical) 🔥
-[**Invoke-DexGetTradesHistorical**](DexApi.md#Invoke-DexGetTradesHistorical) | **GET** /dapps/dex/trades/historical | GetTrades (historical) 🔥
-[**Invoke-DexGetUsersHistorical**](DexApi.md#Invoke-DexGetUsersHistorical) | **GET** /dapps/dex/users/historical | GetUsers (historical)
-[**Invoke-DexGetWithdrawsRequestsHistorical**](DexApi.md#Invoke-DexGetWithdrawsRequestsHistorical) | **GET** /dapps/dex/withdrawsRequests/historical | GetWithdrawsRequests (historical)
-[**Invoke-DexGetWithdrawsHistorical**](DexApi.md#Invoke-DexGetWithdrawsHistorical) | **GET** /dapps/dex/withdraws/historical | GetWithdraws (historical)
+[**Invoke-DexGetBatchesHistorical**](DexApi.md#Invoke-DexGetBatchesHistorical) | **GET** /dapps/dex/batches/historical | Batches (historical)
+[**Invoke-DexGetDepositsHistorical**](DexApi.md#Invoke-DexGetDepositsHistorical) | **GET** /dapps/dex/deposits/historical | Deposits (historical)
+[**Invoke-DexGetOrdersHistorical**](DexApi.md#Invoke-DexGetOrdersHistorical) | **GET** /dapps/dex/orders/historical | Orders (historical)
+[**Invoke-DexGetPricesHistorical**](DexApi.md#Invoke-DexGetPricesHistorical) | **GET** /dapps/dex/prices/historical | Prices (historical)
+[**Invoke-DexGetSolutionsHistorical**](DexApi.md#Invoke-DexGetSolutionsHistorical) | **GET** /dapps/dex/solutions/historical | Solutions (historical)
+[**Invoke-DexGetStatsHistorical**](DexApi.md#Invoke-DexGetStatsHistorical) | **GET** /dapps/dex/stats/historical | Stats (historical)
+[**Invoke-DexGetTokensHistorical**](DexApi.md#Invoke-DexGetTokensHistorical) | **GET** /dapps/dex/tokens/historical | Tokens (historical) 🔥
+[**Invoke-DexGetTradesHistorical**](DexApi.md#Invoke-DexGetTradesHistorical) | **GET** /dapps/dex/trades/historical | Trades (historical) 🔥
+[**Invoke-DexGetUsersHistorical**](DexApi.md#Invoke-DexGetUsersHistorical) | **GET** /dapps/dex/users/historical | Users (historical)
+[**Invoke-DexGetWithdrawsRequestsHistorical**](DexApi.md#Invoke-DexGetWithdrawsRequestsHistorical) | **GET** /dapps/dex/withdrawsRequests/historical | WithdrawsRequests (historical)
+[**Invoke-DexGetWithdrawsHistorical**](DexApi.md#Invoke-DexGetWithdrawsHistorical) | **GET** /dapps/dex/withdraws/historical | Withdraws (historical)
 
 
 <a name="Invoke-DexGetBatchesHistorical"></a>
@@ -25,7 +25,7 @@ Method | HTTP request | Description
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 
-GetBatches (historical)
+Batches (historical)
 
 Gets batches.
 
@@ -36,7 +36,7 @@ $EndBlock = 789 # Int64 |  (optional)
 $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 
-# GetBatches (historical)
+# Batches (historical)
 try {
     $Result = Invoke-DexGetBatchesHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
 } catch {
@@ -78,7 +78,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-TokenId] <String><br>
 
-GetDeposits (historical)
+Deposits (historical)
 
 Gets deposits.
 
@@ -90,7 +90,7 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $TokenId = "MyTokenId" # String |  (optional)
 
-# GetDeposits (historical)
+# Deposits (historical)
 try {
     $Result = Invoke-DexGetDepositsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -TokenId $TokenId
 } catch {
@@ -133,7 +133,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-TokenId] <String><br>
 
-GetOrders (historical)
+Orders (historical)
 
 Gets orders.
 
@@ -145,7 +145,7 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $TokenId = "MyTokenId" # String |  (optional)
 
-# GetOrders (historical)
+# Orders (historical)
 try {
     $Result = Invoke-DexGetOrdersHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -TokenId $TokenId
 } catch {
@@ -188,7 +188,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-TokenId] <String><br>
 
-GetPrices (historical)
+Prices (historical)
 
 Gets prices.
 
@@ -200,7 +200,7 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $TokenId = "MyTokenId" # String |  (optional)
 
-# GetPrices (historical)
+# Prices (historical)
 try {
     $Result = Invoke-DexGetPricesHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -TokenId $TokenId
 } catch {
@@ -243,7 +243,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-TokenId] <String><br>
 
-GetSolutions (historical)
+Solutions (historical)
 
 Gets solutions.
 
@@ -255,7 +255,7 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $TokenId = "MyTokenId" # String |  (optional)
 
-# GetSolutions (historical)
+# Solutions (historical)
 try {
     $Result = Invoke-DexGetSolutionsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -TokenId $TokenId
 } catch {
@@ -297,7 +297,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 
-GetStats (historical)
+Stats (historical)
 
 Gets stats.
 
@@ -308,7 +308,7 @@ $EndBlock = 789 # Int64 |  (optional)
 $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 
-# GetStats (historical)
+# Stats (historical)
 try {
     $Result = Invoke-DexGetStatsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
 } catch {
@@ -350,7 +350,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-TokenId] <String><br>
 
-GetTokens (historical) 🔥
+Tokens (historical) 🔥
 
 Gets tokens.
 
@@ -362,7 +362,7 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $TokenId = "MyTokenId" # String |  (optional)
 
-# GetTokens (historical) 🔥
+# Tokens (historical) 🔥
 try {
     $Result = Invoke-DexGetTokensHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -TokenId $TokenId
 } catch {
@@ -404,7 +404,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 
-GetTrades (historical) 🔥
+Trades (historical) 🔥
 
 Gets trades.
 
@@ -415,7 +415,7 @@ $EndBlock = 789 # Int64 |  (optional)
 $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 
-# GetTrades (historical) 🔥
+# Trades (historical) 🔥
 try {
     $Result = Invoke-DexGetTradesHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
 } catch {
@@ -456,7 +456,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 
-GetUsers (historical)
+Users (historical)
 
 Gets users.
 
@@ -467,7 +467,7 @@ $EndBlock = 789 # Int64 |  (optional)
 $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 
-# GetUsers (historical)
+# Users (historical)
 try {
     $Result = Invoke-DexGetUsersHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
 } catch {
@@ -509,7 +509,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-TokenId] <String><br>
 
-GetWithdrawsRequests (historical)
+WithdrawsRequests (historical)
 
 Gets withdraws requests.
 
@@ -521,7 +521,7 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $TokenId = "MyTokenId" # String |  (optional)
 
-# GetWithdrawsRequests (historical)
+# WithdrawsRequests (historical)
 try {
     $Result = Invoke-DexGetWithdrawsRequestsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -TokenId $TokenId
 } catch {
@@ -564,7 +564,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-TokenId] <String><br>
 
-GetWithdraws (historical)
+Withdraws (historical)
 
 Gets withdraws.
 
@@ -576,7 +576,7 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $TokenId = "MyTokenId" # String |  (optional)
 
-# GetWithdraws (historical)
+# Withdraws (historical)
 try {
     $Result = Invoke-DexGetWithdrawsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -TokenId $TokenId
 } catch {

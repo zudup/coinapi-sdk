@@ -21,7 +21,7 @@ from .. import ApiTestMixin
 class TestDappsUniswapv2PoolsHistorical(ApiTestMixin, unittest.TestCase):
     """
     DappsUniswapv2PoolsHistorical unit test stubs
-        GetPools (historical) 🔥  # noqa: E501
+        Pools (historical) 🔥  # noqa: E501
     """
     _configuration = configuration.Configuration()
 

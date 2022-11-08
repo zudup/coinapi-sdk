@@ -25,7 +25,7 @@ feature -- API Access
 
 
 	dex_get_batches_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME): detachable LIST [DEX_BATCH_DTO]
-			-- GetBatches (historical)
+			-- Batches (historical)
 			-- Gets batches.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -70,7 +70,7 @@ feature -- API Access
 		end
 
 	dex_get_deposits_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; token_id: STRING_32): detachable LIST [DEX_DEPOSIT_DTO]
-			-- GetDeposits (historical)
+			-- Deposits (historical)
 			-- Gets deposits.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -118,7 +118,7 @@ feature -- API Access
 		end
 
 	dex_get_orders_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; token_id: STRING_32): detachable LIST [DEX_ORDER_DTO]
-			-- GetOrders (historical)
+			-- Orders (historical)
 			-- Gets orders.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -166,7 +166,7 @@ feature -- API Access
 		end
 
 	dex_get_prices_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; token_id: STRING_32): detachable LIST [DEX_PRICE_DTO]
-			-- GetPrices (historical)
+			-- Prices (historical)
 			-- Gets prices.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -214,7 +214,7 @@ feature -- API Access
 		end
 
 	dex_get_solutions_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; token_id: STRING_32): detachable LIST [DEX_SOLUTION_DTO]
-			-- GetSolutions (historical)
+			-- Solutions (historical)
 			-- Gets solutions.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -262,7 +262,7 @@ feature -- API Access
 		end
 
 	dex_get_stats_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME): detachable LIST [DEX_STATS_DTO]
-			-- GetStats (historical)
+			-- Stats (historical)
 			-- Gets stats.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -307,7 +307,7 @@ feature -- API Access
 		end
 
 	dex_get_tokens_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; token_id: STRING_32): detachable LIST [DEX_TOKEN_DTO]
-			-- GetTokens (historical) 🔥
+			-- Tokens (historical) 🔥
 			-- Gets tokens.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -355,7 +355,7 @@ feature -- API Access
 		end
 
 	dex_get_trades_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME): detachable LIST [DEX_TRADE_DTO]
-			-- GetTrades (historical) 🔥
+			-- Trades (historical) 🔥
 			-- Gets trades.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -400,7 +400,7 @@ feature -- API Access
 		end
 
 	dex_get_users_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME): detachable LIST [DEX_USER_DTO]
-			-- GetUsers (historical)
+			-- Users (historical)
 			-- Gets users.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -445,7 +445,7 @@ feature -- API Access
 		end
 
 	dex_get_withdraws_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; token_id: STRING_32): detachable LIST [DEX_WITHDRAW_DTO]
-			-- GetWithdraws (historical)
+			-- Withdraws (historical)
 			-- Gets withdraws.
 			-- 
 			-- argument: start_block  (optional, default to null)
@@ -493,7 +493,7 @@ feature -- API Access
 		end
 
 	dex_get_withdraws_requests_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; token_id: STRING_32): detachable LIST [DEX_WITHDRAW_REQUEST_DTO]
-			-- GetWithdrawsRequests (historical)
+			-- WithdrawsRequests (historical)
 			-- Gets withdraws requests.
 			-- 
 			-- argument: start_block  (optional, default to null)

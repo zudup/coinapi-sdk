@@ -4,38 +4,38 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Invoke-CurveGetAccountsHistorical**](CurveApi.md#Invoke-CurveGetAccountsHistorical) | **GET** /dapps/curve/accounts/historical | GetAccounts (historical)
-[**Invoke-CurveGetAddLiquidityEventsHistorical**](CurveApi.md#Invoke-CurveGetAddLiquidityEventsHistorical) | **GET** /dapps/curve/addLiquidityEvents/historical | GetAddLiquidityEvents (historical)
-[**Invoke-CurveGetAdminFeeChangeLogsHistorical**](CurveApi.md#Invoke-CurveGetAdminFeeChangeLogsHistorical) | **GET** /dapps/curve/adminFeeChangeLogs/historical | GetAdminFeeChangeLogs (historical)
-[**Invoke-CurveGetAmplificationCoeffChangeLogsHistorical**](CurveApi.md#Invoke-CurveGetAmplificationCoeffChangeLogsHistorical) | **GET** /dapps/curve/amplificationCoeffChangeLogs/historical | GetAmplificationCoeffChangeLogs (historical)
-[**Invoke-CurveGetCoinsHistorical**](CurveApi.md#Invoke-CurveGetCoinsHistorical) | **GET** /dapps/curve/coins/historical | GetCoins (historical)
-[**Invoke-CurveGetContractsVersionsHistorical**](CurveApi.md#Invoke-CurveGetContractsVersionsHistorical) | **GET** /dapps/curve/contractsVersions/historical | GetContractsVersions (historical)
-[**Invoke-CurveGetContractsHistorical**](CurveApi.md#Invoke-CurveGetContractsHistorical) | **GET** /dapps/curve/contracts/historical | GetContracts (historical)
-[**Invoke-CurveGetDailyVolumesHistorical**](CurveApi.md#Invoke-CurveGetDailyVolumesHistorical) | **GET** /dapps/curve/dailyVolumes/historical | GetDailyVolumes (historical)
-[**Invoke-CurveGetExchangesHistorical**](CurveApi.md#Invoke-CurveGetExchangesHistorical) | **GET** /dapps/curve/exchanges/historical | GetExchanges (historical) 🔥
-[**Invoke-CurveGetFeeChangeLogsHistorical**](CurveApi.md#Invoke-CurveGetFeeChangeLogsHistorical) | **GET** /dapps/curve/feeChangeLogs/historical | GetFeeChangeLogs (historical)
-[**Invoke-CurveGetGaugesDepositsHistorical**](CurveApi.md#Invoke-CurveGetGaugesDepositsHistorical) | **GET** /dapps/curve/gaugesDeposits/historical | GetGaugesDeposits (historical)
-[**Invoke-CurveGetGaugesLiquidityHistorical**](CurveApi.md#Invoke-CurveGetGaugesLiquidityHistorical) | **GET** /dapps/curve/gaugesLiquidity/historical | GetGaugesLiquidity (historical)
-[**Invoke-CurveGetGaugesTotalWeightsHistorical**](CurveApi.md#Invoke-CurveGetGaugesTotalWeightsHistorical) | **GET** /dapps/curve/gaugesTotalWeights/historical | GetGaugesTotalWeights (historical)
-[**Invoke-CurveGetGaugesTypesWeightsHistorical**](CurveApi.md#Invoke-CurveGetGaugesTypesWeightsHistorical) | **GET** /dapps/curve/gaugesTypesWeights/historical | GetGaugesTypesWeights (historical)
-[**Invoke-CurveGetGaugesTypesHistorical**](CurveApi.md#Invoke-CurveGetGaugesTypesHistorical) | **GET** /dapps/curve/gaugesTypes/historical | GetGaugesTypes (historical)
-[**Invoke-CurveGetGaugesWeightsVotesHistorical**](CurveApi.md#Invoke-CurveGetGaugesWeightsVotesHistorical) | **GET** /dapps/curve/gaugesWeightsVotes/historical | GetGaugesWeightsVotes (historical)
-[**Invoke-CurveGetGaugesWeightsHistorical**](CurveApi.md#Invoke-CurveGetGaugesWeightsHistorical) | **GET** /dapps/curve/gaugesWeights/historical | GetGaugesWeights (historical)
-[**Invoke-CurveGetGaugesWithdrawHistorical**](CurveApi.md#Invoke-CurveGetGaugesWithdrawHistorical) | **GET** /dapps/curve/gaugesWithdraws/historical | GetGaugesWithdraw (historical)
-[**Invoke-CurveGetGaugesHistorical**](CurveApi.md#Invoke-CurveGetGaugesHistorical) | **GET** /dapps/curve/gauges/historical | GetGauges (historical)
-[**Invoke-CurveGetHourlyVolumesHistorical**](CurveApi.md#Invoke-CurveGetHourlyVolumesHistorical) | **GET** /dapps/curve/hourlyVolumes/historical | GetHourlyVolumes (historical)
-[**Invoke-CurveGetLpTokensHistorical**](CurveApi.md#Invoke-CurveGetLpTokensHistorical) | **GET** /dapps/curve/lpTokens/historical | GetLpTokens (historical)
-[**Invoke-CurveGetPoolsHistorical**](CurveApi.md#Invoke-CurveGetPoolsHistorical) | **GET** /dapps/curve/pools/historical | GetPools (historical) 🔥
-[**Invoke-CurveGetProposalsVotesHistorical**](CurveApi.md#Invoke-CurveGetProposalsVotesHistorical) | **GET** /dapps/curve/proposalsVotes/historical | GetProposalsVotes (historical)
-[**Invoke-CurveGetProposalsHistorical**](CurveApi.md#Invoke-CurveGetProposalsHistorical) | **GET** /dapps/curve/proposals/historical | GetProposals (historical)
-[**Invoke-CurveGetRemoveLiquidityEventsHistorical**](CurveApi.md#Invoke-CurveGetRemoveLiquidityEventsHistorical) | **GET** /dapps/curve/removeLiquidityEvents/historical | GetRemoveLiquidityEvents (historical)
-[**Invoke-CurveGetRemoveLiquidityOneEventsHistorical**](CurveApi.md#Invoke-CurveGetRemoveLiquidityOneEventsHistorical) | **GET** /dapps/curve/removeLiquidityOneEvents/historical | GetRemoveLiquidityOneEvents (historical)
-[**Invoke-CurveGetSystemStatesHistorical**](CurveApi.md#Invoke-CurveGetSystemStatesHistorical) | **GET** /dapps/curve/systemStates/historical | GetSystemStates (historical)
-[**Invoke-CurveGetTokensHistorical**](CurveApi.md#Invoke-CurveGetTokensHistorical) | **GET** /dapps/curve/tokens/historical | GetTokens (historical) 🔥
-[**Invoke-CurveGetTransferOwnershipEventsHistorical**](CurveApi.md#Invoke-CurveGetTransferOwnershipEventsHistorical) | **GET** /dapps/curve/transferOwnershipEvents/historical | GetTransferOwnershipEvents (historical)
-[**Invoke-CurveGetUnderlyingCoinsHistorical**](CurveApi.md#Invoke-CurveGetUnderlyingCoinsHistorical) | **GET** /dapps/curve/underlyingCoins/historical | GetUnderlyingCoins (historical)
-[**Invoke-CurveGetVotingAppsHistorical**](CurveApi.md#Invoke-CurveGetVotingAppsHistorical) | **GET** /dapps/curve/votingApps/historical | GetVotingApps (historical)
-[**Invoke-CurveGetWeeklyVolumesHistorical**](CurveApi.md#Invoke-CurveGetWeeklyVolumesHistorical) | **GET** /dapps/curve/weeklyVolumes/historical | GetWeeklyVolumes (historical)
+[**Invoke-CurveGetAccountsHistorical**](CurveApi.md#Invoke-CurveGetAccountsHistorical) | **GET** /dapps/curve/accounts/historical | Accounts (historical)
+[**Invoke-CurveGetAddLiquidityEventsHistorical**](CurveApi.md#Invoke-CurveGetAddLiquidityEventsHistorical) | **GET** /dapps/curve/addLiquidityEvents/historical | AddLiquidityEvents (historical)
+[**Invoke-CurveGetAdminFeeChangeLogsHistorical**](CurveApi.md#Invoke-CurveGetAdminFeeChangeLogsHistorical) | **GET** /dapps/curve/adminFeeChangeLogs/historical | AdminFeeChangeLogs (historical)
+[**Invoke-CurveGetAmplificationCoeffChangeLogsHistorical**](CurveApi.md#Invoke-CurveGetAmplificationCoeffChangeLogsHistorical) | **GET** /dapps/curve/amplificationCoeffChangeLogs/historical | AmplificationCoeffChangeLogs (historical)
+[**Invoke-CurveGetCoinsHistorical**](CurveApi.md#Invoke-CurveGetCoinsHistorical) | **GET** /dapps/curve/coins/historical | Coins (historical)
+[**Invoke-CurveGetContractsVersionsHistorical**](CurveApi.md#Invoke-CurveGetContractsVersionsHistorical) | **GET** /dapps/curve/contractsVersions/historical | ContractsVersions (historical)
+[**Invoke-CurveGetContractsHistorical**](CurveApi.md#Invoke-CurveGetContractsHistorical) | **GET** /dapps/curve/contracts/historical | Contracts (historical)
+[**Invoke-CurveGetDailyVolumesHistorical**](CurveApi.md#Invoke-CurveGetDailyVolumesHistorical) | **GET** /dapps/curve/dailyVolumes/historical | DailyVolumes (historical)
+[**Invoke-CurveGetExchangesHistorical**](CurveApi.md#Invoke-CurveGetExchangesHistorical) | **GET** /dapps/curve/exchanges/historical | Exchanges (historical) 🔥
+[**Invoke-CurveGetFeeChangeLogsHistorical**](CurveApi.md#Invoke-CurveGetFeeChangeLogsHistorical) | **GET** /dapps/curve/feeChangeLogs/historical | FeeChangeLogs (historical)
+[**Invoke-CurveGetGaugesDepositsHistorical**](CurveApi.md#Invoke-CurveGetGaugesDepositsHistorical) | **GET** /dapps/curve/gaugesDeposits/historical | GaugesDeposits (historical)
+[**Invoke-CurveGetGaugesLiquidityHistorical**](CurveApi.md#Invoke-CurveGetGaugesLiquidityHistorical) | **GET** /dapps/curve/gaugesLiquidity/historical | GaugesLiquidity (historical)
+[**Invoke-CurveGetGaugesTotalWeightsHistorical**](CurveApi.md#Invoke-CurveGetGaugesTotalWeightsHistorical) | **GET** /dapps/curve/gaugesTotalWeights/historical | GaugesTotalWeights (historical)
+[**Invoke-CurveGetGaugesTypesWeightsHistorical**](CurveApi.md#Invoke-CurveGetGaugesTypesWeightsHistorical) | **GET** /dapps/curve/gaugesTypesWeights/historical | GaugesTypesWeights (historical)
+[**Invoke-CurveGetGaugesTypesHistorical**](CurveApi.md#Invoke-CurveGetGaugesTypesHistorical) | **GET** /dapps/curve/gaugesTypes/historical | GaugesTypes (historical)
+[**Invoke-CurveGetGaugesWeightsVotesHistorical**](CurveApi.md#Invoke-CurveGetGaugesWeightsVotesHistorical) | **GET** /dapps/curve/gaugesWeightsVotes/historical | GaugesWeightsVotes (historical)
+[**Invoke-CurveGetGaugesWeightsHistorical**](CurveApi.md#Invoke-CurveGetGaugesWeightsHistorical) | **GET** /dapps/curve/gaugesWeights/historical | GaugesWeights (historical)
+[**Invoke-CurveGetGaugesWithdrawHistorical**](CurveApi.md#Invoke-CurveGetGaugesWithdrawHistorical) | **GET** /dapps/curve/gaugesWithdraws/historical | GaugesWithdraw (historical)
+[**Invoke-CurveGetGaugesHistorical**](CurveApi.md#Invoke-CurveGetGaugesHistorical) | **GET** /dapps/curve/gauges/historical | Gauges (historical)
+[**Invoke-CurveGetHourlyVolumesHistorical**](CurveApi.md#Invoke-CurveGetHourlyVolumesHistorical) | **GET** /dapps/curve/hourlyVolumes/historical | HourlyVolumes (historical)
+[**Invoke-CurveGetLpTokensHistorical**](CurveApi.md#Invoke-CurveGetLpTokensHistorical) | **GET** /dapps/curve/lpTokens/historical | LpTokens (historical)
+[**Invoke-CurveGetPoolsHistorical**](CurveApi.md#Invoke-CurveGetPoolsHistorical) | **GET** /dapps/curve/pools/historical | Pools (historical) 🔥
+[**Invoke-CurveGetProposalsVotesHistorical**](CurveApi.md#Invoke-CurveGetProposalsVotesHistorical) | **GET** /dapps/curve/proposalsVotes/historical | ProposalsVotes (historical)
+[**Invoke-CurveGetProposalsHistorical**](CurveApi.md#Invoke-CurveGetProposalsHistorical) | **GET** /dapps/curve/proposals/historical | Proposals (historical)
+[**Invoke-CurveGetRemoveLiquidityEventsHistorical**](CurveApi.md#Invoke-CurveGetRemoveLiquidityEventsHistorical) | **GET** /dapps/curve/removeLiquidityEvents/historical | RemoveLiquidityEvents (historical)
+[**Invoke-CurveGetRemoveLiquidityOneEventsHistorical**](CurveApi.md#Invoke-CurveGetRemoveLiquidityOneEventsHistorical) | **GET** /dapps/curve/removeLiquidityOneEvents/historical | RemoveLiquidityOneEvents (historical)
+[**Invoke-CurveGetSystemStatesHistorical**](CurveApi.md#Invoke-CurveGetSystemStatesHistorical) | **GET** /dapps/curve/systemStates/historical | SystemStates (historical)
+[**Invoke-CurveGetTokensHistorical**](CurveApi.md#Invoke-CurveGetTokensHistorical) | **GET** /dapps/curve/tokens/historical | Tokens (historical) 🔥
+[**Invoke-CurveGetTransferOwnershipEventsHistorical**](CurveApi.md#Invoke-CurveGetTransferOwnershipEventsHistorical) | **GET** /dapps/curve/transferOwnershipEvents/historical | TransferOwnershipEvents (historical)
+[**Invoke-CurveGetUnderlyingCoinsHistorical**](CurveApi.md#Invoke-CurveGetUnderlyingCoinsHistorical) | **GET** /dapps/curve/underlyingCoins/historical | UnderlyingCoins (historical)
+[**Invoke-CurveGetVotingAppsHistorical**](CurveApi.md#Invoke-CurveGetVotingAppsHistorical) | **GET** /dapps/curve/votingApps/historical | VotingApps (historical)
+[**Invoke-CurveGetWeeklyVolumesHistorical**](CurveApi.md#Invoke-CurveGetWeeklyVolumesHistorical) | **GET** /dapps/curve/weeklyVolumes/historical | WeeklyVolumes (historical)
 
 
 <a name="Invoke-CurveGetAccountsHistorical"></a>
@@ -46,7 +46,7 @@ Method | HTTP request | Description
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 
-GetAccounts (historical)
+Accounts (historical)
 
 Gets accounts.
 
@@ -57,7 +57,7 @@ $EndBlock = 789 # Int64 |  (optional)
 $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 
-# GetAccounts (historical)
+# Accounts (historical)
 try {
     $Result = Invoke-CurveGetAccountsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
 } catch {
@@ -99,7 +99,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
 
-GetAddLiquidityEvents (historical)
+AddLiquidityEvents (historical)
 
 Gets add liquidity events.
 
@@ -111,7 +111,7 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $PoolId = "MyPoolId" # String |  (optional)
 
-# GetAddLiquidityEvents (historical)
+# AddLiquidityEvents (historical)
 try {
     $Result = Invoke-CurveGetAddLiquidityEventsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
 } catch {
@@ -154,7 +154,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
 
-GetAdminFeeChangeLogs (historical)
+AdminFeeChangeLogs (historical)
 
 Gets admin fee change logs.
 
@@ -166,7 +166,7 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $PoolId = "MyPoolId" # String |  (optional)
 
-# GetAdminFeeChangeLogs (historical)
+# AdminFeeChangeLogs (historical)
 try {
     $Result = Invoke-CurveGetAdminFeeChangeLogsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
 } catch {
@@ -209,7 +209,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
 
-GetAmplificationCoeffChangeLogs (historical)
+AmplificationCoeffChangeLogs (historical)
 
 Gets amplification coeff change logs.
 
@@ -221,7 +221,7 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $PoolId = "MyPoolId" # String |  (optional)
 
-# GetAmplificationCoeffChangeLogs (historical)
+# AmplificationCoeffChangeLogs (historical)
 try {
     $Result = Invoke-CurveGetAmplificationCoeffChangeLogsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
 } catch {
@@ -264,7 +264,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
 
-GetCoins (historical)
+Coins (historical)
 
 Gets coins.
 
@@ -276,7 +276,7 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $PoolId = "MyPoolId" # String |  (optional)
 
-# GetCoins (historical)
+# Coins (historical)
 try {
     $Result = Invoke-CurveGetCoinsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
 } catch {
@@ -319,7 +319,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
 
-GetContractsVersions (historical)
+ContractsVersions (historical)
 
 Gets contracts versions.
 
@@ -331,7 +331,7 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $PoolId = "MyPoolId" # String |  (optional)
 
-# GetContractsVersions (historical)
+# ContractsVersions (historical)
 try {
     $Result = Invoke-CurveGetContractsVersionsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
 } catch {
@@ -374,7 +374,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
 
-GetContracts (historical)
+Contracts (historical)
 
 Gets contracts.
 
@@ -386,7 +386,7 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $PoolId = "MyPoolId" # String |  (optional)
 
-# GetContracts (historical)
+# Contracts (historical)
 try {
     $Result = Invoke-CurveGetContractsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
 } catch {
@@ -429,7 +429,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
 
-GetDailyVolumes (historical)
+DailyVolumes (historical)
 
 Gets daily volumes.
 
@@ -441,7 +441,7 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $PoolId = "MyPoolId" # String |  (optional)
 
-# GetDailyVolumes (historical)
+# DailyVolumes (historical)
 try {
     $Result = Invoke-CurveGetDailyVolumesHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
 } catch {
@@ -484,7 +484,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
 
-GetExchanges (historical) 🔥
+Exchanges (historical) 🔥
 
 Gets exchanges.
 
@@ -496,7 +496,7 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $PoolId = "MyPoolId" # String |  (optional)
 
-# GetExchanges (historical) 🔥
+# Exchanges (historical) 🔥
 try {
     $Result = Invoke-CurveGetExchangesHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
 } catch {
@@ -539,7 +539,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
 
-GetFeeChangeLogs (historical)
+FeeChangeLogs (historical)
 
 Gets fee change logs.
 
@@ -551,7 +551,7 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $PoolId = "MyPoolId" # String |  (optional)
 
-# GetFeeChangeLogs (historical)
+# FeeChangeLogs (historical)
 try {
     $Result = Invoke-CurveGetFeeChangeLogsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
 } catch {
@@ -593,7 +593,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 
-GetGaugesDeposits (historical)
+GaugesDeposits (historical)
 
 Gets gauges deposits.
 
@@ -604,7 +604,7 @@ $EndBlock = 789 # Int64 |  (optional)
 $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 
-# GetGaugesDeposits (historical)
+# GaugesDeposits (historical)
 try {
     $Result = Invoke-CurveGetGaugesDepositsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
 } catch {
@@ -645,7 +645,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 
-GetGaugesLiquidity (historical)
+GaugesLiquidity (historical)
 
 Gets gauges liquidity.
 
@@ -656,7 +656,7 @@ $EndBlock = 789 # Int64 |  (optional)
 $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 
-# GetGaugesLiquidity (historical)
+# GaugesLiquidity (historical)
 try {
     $Result = Invoke-CurveGetGaugesLiquidityHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
 } catch {
@@ -697,7 +697,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 
-GetGaugesTotalWeights (historical)
+GaugesTotalWeights (historical)
 
 Gets gauges total weights.
 
@@ -708,7 +708,7 @@ $EndBlock = 789 # Int64 |  (optional)
 $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 
-# GetGaugesTotalWeights (historical)
+# GaugesTotalWeights (historical)
 try {
     $Result = Invoke-CurveGetGaugesTotalWeightsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
 } catch {
@@ -749,7 +749,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 
-GetGaugesTypesWeights (historical)
+GaugesTypesWeights (historical)
 
 Gets gauges types weights.
 
@@ -760,7 +760,7 @@ $EndBlock = 789 # Int64 |  (optional)
 $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 
-# GetGaugesTypesWeights (historical)
+# GaugesTypesWeights (historical)
 try {
     $Result = Invoke-CurveGetGaugesTypesWeightsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
 } catch {
@@ -801,7 +801,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 
-GetGaugesTypes (historical)
+GaugesTypes (historical)
 
 Gets gauges types.
 
@@ -812,7 +812,7 @@ $EndBlock = 789 # Int64 |  (optional)
 $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 
-# GetGaugesTypes (historical)
+# GaugesTypes (historical)
 try {
     $Result = Invoke-CurveGetGaugesTypesHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
 } catch {
@@ -853,7 +853,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 
-GetGaugesWeightsVotes (historical)
+GaugesWeightsVotes (historical)
 
 Gets gauges weights votes.
 
@@ -864,7 +864,7 @@ $EndBlock = 789 # Int64 |  (optional)
 $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 
-# GetGaugesWeightsVotes (historical)
+# GaugesWeightsVotes (historical)
 try {
     $Result = Invoke-CurveGetGaugesWeightsVotesHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
 } catch {
@@ -905,7 +905,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 
-GetGaugesWeights (historical)
+GaugesWeights (historical)
 
 Gets gauges weights.
 
@@ -916,7 +916,7 @@ $EndBlock = 789 # Int64 |  (optional)
 $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 
-# GetGaugesWeights (historical)
+# GaugesWeights (historical)
 try {
     $Result = Invoke-CurveGetGaugesWeightsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
 } catch {
@@ -957,7 +957,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 
-GetGaugesWithdraw (historical)
+GaugesWithdraw (historical)
 
 Gets gauges withdraws.
 
@@ -968,7 +968,7 @@ $EndBlock = 789 # Int64 |  (optional)
 $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 
-# GetGaugesWithdraw (historical)
+# GaugesWithdraw (historical)
 try {
     $Result = Invoke-CurveGetGaugesWithdrawHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
 } catch {
@@ -1010,7 +1010,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
 
-GetGauges (historical)
+Gauges (historical)
 
 Gets gauges.
 
@@ -1022,7 +1022,7 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $PoolId = "MyPoolId" # String |  (optional)
 
-# GetGauges (historical)
+# Gauges (historical)
 try {
     $Result = Invoke-CurveGetGaugesHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
 } catch {
@@ -1065,7 +1065,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
 
-GetHourlyVolumes (historical)
+HourlyVolumes (historical)
 
 Gets hourly volumes.
 
@@ -1077,7 +1077,7 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $PoolId = "MyPoolId" # String |  (optional)
 
-# GetHourlyVolumes (historical)
+# HourlyVolumes (historical)
 try {
     $Result = Invoke-CurveGetHourlyVolumesHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
 } catch {
@@ -1120,7 +1120,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
 
-GetLpTokens (historical)
+LpTokens (historical)
 
 Gets lp tokens.
 
@@ -1132,7 +1132,7 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $PoolId = "MyPoolId" # String |  (optional)
 
-# GetLpTokens (historical)
+# LpTokens (historical)
 try {
     $Result = Invoke-CurveGetLpTokensHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
 } catch {
@@ -1175,7 +1175,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
 
-GetPools (historical) 🔥
+Pools (historical) 🔥
 
 Gets pools.
 
@@ -1187,7 +1187,7 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $PoolId = "MyPoolId" # String |  (optional)
 
-# GetPools (historical) 🔥
+# Pools (historical) 🔥
 try {
     $Result = Invoke-CurveGetPoolsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
 } catch {
@@ -1229,7 +1229,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 
-GetProposalsVotes (historical)
+ProposalsVotes (historical)
 
 Gets proposals votes.
 
@@ -1240,7 +1240,7 @@ $EndBlock = 789 # Int64 |  (optional)
 $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 
-# GetProposalsVotes (historical)
+# ProposalsVotes (historical)
 try {
     $Result = Invoke-CurveGetProposalsVotesHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
 } catch {
@@ -1281,7 +1281,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 
-GetProposals (historical)
+Proposals (historical)
 
 Gets proposals.
 
@@ -1292,7 +1292,7 @@ $EndBlock = 789 # Int64 |  (optional)
 $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 
-# GetProposals (historical)
+# Proposals (historical)
 try {
     $Result = Invoke-CurveGetProposalsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
 } catch {
@@ -1334,7 +1334,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
 
-GetRemoveLiquidityEvents (historical)
+RemoveLiquidityEvents (historical)
 
 Gets remove liquidity events.
 
@@ -1346,7 +1346,7 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $PoolId = "MyPoolId" # String |  (optional)
 
-# GetRemoveLiquidityEvents (historical)
+# RemoveLiquidityEvents (historical)
 try {
     $Result = Invoke-CurveGetRemoveLiquidityEventsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
 } catch {
@@ -1389,7 +1389,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
 
-GetRemoveLiquidityOneEvents (historical)
+RemoveLiquidityOneEvents (historical)
 
 Gets remove liquidity one events.
 
@@ -1401,7 +1401,7 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $PoolId = "MyPoolId" # String |  (optional)
 
-# GetRemoveLiquidityOneEvents (historical)
+# RemoveLiquidityOneEvents (historical)
 try {
     $Result = Invoke-CurveGetRemoveLiquidityOneEventsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
 } catch {
@@ -1443,7 +1443,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 
-GetSystemStates (historical)
+SystemStates (historical)
 
 Gets system states.
 
@@ -1454,7 +1454,7 @@ $EndBlock = 789 # Int64 |  (optional)
 $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 
-# GetSystemStates (historical)
+# SystemStates (historical)
 try {
     $Result = Invoke-CurveGetSystemStatesHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
 } catch {
@@ -1496,7 +1496,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-TokenId] <String><br>
 
-GetTokens (historical) 🔥
+Tokens (historical) 🔥
 
 Gets tokens.
 
@@ -1508,7 +1508,7 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $TokenId = "MyTokenId" # String |  (optional)
 
-# GetTokens (historical) 🔥
+# Tokens (historical) 🔥
 try {
     $Result = Invoke-CurveGetTokensHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -TokenId $TokenId
 } catch {
@@ -1551,7 +1551,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
 
-GetTransferOwnershipEvents (historical)
+TransferOwnershipEvents (historical)
 
 Gets transfer ownership events.
 
@@ -1563,7 +1563,7 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $PoolId = "MyPoolId" # String |  (optional)
 
-# GetTransferOwnershipEvents (historical)
+# TransferOwnershipEvents (historical)
 try {
     $Result = Invoke-CurveGetTransferOwnershipEventsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
 } catch {
@@ -1606,7 +1606,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
 
-GetUnderlyingCoins (historical)
+UnderlyingCoins (historical)
 
 Gets underlying coins.
 
@@ -1618,7 +1618,7 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $PoolId = "MyPoolId" # String |  (optional)
 
-# GetUnderlyingCoins (historical)
+# UnderlyingCoins (historical)
 try {
     $Result = Invoke-CurveGetUnderlyingCoinsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
 } catch {
@@ -1660,7 +1660,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 
-GetVotingApps (historical)
+VotingApps (historical)
 
 Gets voting apps.
 
@@ -1671,7 +1671,7 @@ $EndBlock = 789 # Int64 |  (optional)
 $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 
-# GetVotingApps (historical)
+# VotingApps (historical)
 try {
     $Result = Invoke-CurveGetVotingAppsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
 } catch {
@@ -1713,7 +1713,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
 
-GetWeeklyVolumes (historical)
+WeeklyVolumes (historical)
 
 Gets weekly volumes.
 
@@ -1725,7 +1725,7 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $PoolId = "MyPoolId" # String |  (optional)
 
-# GetWeeklyVolumes (historical)
+# WeeklyVolumes (historical)
 try {
     $Result = Invoke-CurveGetWeeklyVolumesHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
 } catch {

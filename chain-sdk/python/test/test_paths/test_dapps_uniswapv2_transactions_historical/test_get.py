@@ -21,7 +21,7 @@ from .. import ApiTestMixin
 class TestDappsUniswapv2TransactionsHistorical(ApiTestMixin, unittest.TestCase):
     """
     DappsUniswapv2TransactionsHistorical unit test stubs
-        GetTransactions (historical)  # noqa: E501
+        Transactions (historical)  # noqa: E501
     """
     _configuration = configuration.Configuration()
 

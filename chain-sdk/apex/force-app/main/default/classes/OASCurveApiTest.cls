@@ -1,7 +1,7 @@
 @isTest
 private class OASCurveApiTest {
     /**
-     * GetAccounts (historical)
+     * Accounts (historical)
      *
      * Gets accounts.
      */
@@ -50,7 +50,7 @@ private class OASCurveApiTest {
     }
 
     /**
-     * GetAddLiquidityEvents (historical)
+     * AddLiquidityEvents (historical)
      *
      * Gets add liquidity events.
      */
@@ -100,7 +100,7 @@ private class OASCurveApiTest {
     }
 
     /**
-     * GetAdminFeeChangeLogs (historical)
+     * AdminFeeChangeLogs (historical)
      *
      * Gets admin fee change logs.
      */
@@ -150,7 +150,7 @@ private class OASCurveApiTest {
     }
 
     /**
-     * GetAmplificationCoeffChangeLogs (historical)
+     * AmplificationCoeffChangeLogs (historical)
      *
      * Gets amplification coeff change logs.
      */
@@ -200,7 +200,7 @@ private class OASCurveApiTest {
     }
 
     /**
-     * GetCoins (historical)
+     * Coins (historical)
      *
      * Gets coins.
      */
@@ -250,7 +250,7 @@ private class OASCurveApiTest {
     }
 
     /**
-     * GetContracts (historical)
+     * Contracts (historical)
      *
      * Gets contracts.
      */
@@ -300,7 +300,7 @@ private class OASCurveApiTest {
     }
 
     /**
-     * GetContractsVersions (historical)
+     * ContractsVersions (historical)
      *
      * Gets contracts versions.
      */
@@ -350,7 +350,7 @@ private class OASCurveApiTest {
     }
 
     /**
-     * GetDailyVolumes (historical)
+     * DailyVolumes (historical)
      *
      * Gets daily volumes.
      */
@@ -400,7 +400,7 @@ private class OASCurveApiTest {
     }
 
     /**
-     * GetExchanges (historical) 🔥
+     * Exchanges (historical) 🔥
      *
      * Gets exchanges.
      */
@@ -450,7 +450,7 @@ private class OASCurveApiTest {
     }
 
     /**
-     * GetFeeChangeLogs (historical)
+     * FeeChangeLogs (historical)
      *
      * Gets fee change logs.
      */
@@ -500,7 +500,7 @@ private class OASCurveApiTest {
     }
 
     /**
-     * GetGaugesDeposits (historical)
+     * GaugesDeposits (historical)
      *
      * Gets gauges deposits.
      */
@@ -549,7 +549,7 @@ private class OASCurveApiTest {
     }
 
     /**
-     * GetGauges (historical)
+     * Gauges (historical)
      *
      * Gets gauges.
      */
@@ -599,7 +599,7 @@ private class OASCurveApiTest {
     }
 
     /**
-     * GetGaugesLiquidity (historical)
+     * GaugesLiquidity (historical)
      *
      * Gets gauges liquidity.
      */
@@ -648,7 +648,7 @@ private class OASCurveApiTest {
     }
 
     /**
-     * GetGaugesTotalWeights (historical)
+     * GaugesTotalWeights (historical)
      *
      * Gets gauges total weights.
      */
@@ -697,7 +697,7 @@ private class OASCurveApiTest {
     }
 
     /**
-     * GetGaugesTypes (historical)
+     * GaugesTypes (historical)
      *
      * Gets gauges types.
      */
@@ -746,7 +746,7 @@ private class OASCurveApiTest {
     }
 
     /**
-     * GetGaugesTypesWeights (historical)
+     * GaugesTypesWeights (historical)
      *
      * Gets gauges types weights.
      */
@@ -795,7 +795,7 @@ private class OASCurveApiTest {
     }
 
     /**
-     * GetGaugesWeights (historical)
+     * GaugesWeights (historical)
      *
      * Gets gauges weights.
      */
@@ -844,7 +844,7 @@ private class OASCurveApiTest {
     }
 
     /**
-     * GetGaugesWeightsVotes (historical)
+     * GaugesWeightsVotes (historical)
      *
      * Gets gauges weights votes.
      */
@@ -893,7 +893,7 @@ private class OASCurveApiTest {
     }
 
     /**
-     * GetGaugesWithdraw (historical)
+     * GaugesWithdraw (historical)
      *
      * Gets gauges withdraws.
      */
@@ -942,7 +942,7 @@ private class OASCurveApiTest {
     }
 
     /**
-     * GetHourlyVolumes (historical)
+     * HourlyVolumes (historical)
      *
      * Gets hourly volumes.
      */
@@ -992,7 +992,7 @@ private class OASCurveApiTest {
     }
 
     /**
-     * GetLpTokens (historical)
+     * LpTokens (historical)
      *
      * Gets lp tokens.
      */
@@ -1042,7 +1042,7 @@ private class OASCurveApiTest {
     }
 
     /**
-     * GetPools (historical) 🔥
+     * Pools (historical) 🔥
      *
      * Gets pools.
      */
@@ -1092,7 +1092,7 @@ private class OASCurveApiTest {
     }
 
     /**
-     * GetProposals (historical)
+     * Proposals (historical)
      *
      * Gets proposals.
      */
@@ -1141,7 +1141,7 @@ private class OASCurveApiTest {
     }
 
     /**
-     * GetProposalsVotes (historical)
+     * ProposalsVotes (historical)
      *
      * Gets proposals votes.
      */
@@ -1190,7 +1190,7 @@ private class OASCurveApiTest {
     }
 
     /**
-     * GetRemoveLiquidityEvents (historical)
+     * RemoveLiquidityEvents (historical)
      *
      * Gets remove liquidity events.
      */
@@ -1240,7 +1240,7 @@ private class OASCurveApiTest {
     }
 
     /**
-     * GetRemoveLiquidityOneEvents (historical)
+     * RemoveLiquidityOneEvents (historical)
      *
      * Gets remove liquidity one events.
      */
@@ -1290,7 +1290,7 @@ private class OASCurveApiTest {
     }
 
     /**
-     * GetSystemStates (historical)
+     * SystemStates (historical)
      *
      * Gets system states.
      */
@@ -1339,7 +1339,7 @@ private class OASCurveApiTest {
     }
 
     /**
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      *
      * Gets tokens.
      */
@@ -1389,7 +1389,7 @@ private class OASCurveApiTest {
     }
 
     /**
-     * GetTransferOwnershipEvents (historical)
+     * TransferOwnershipEvents (historical)
      *
      * Gets transfer ownership events.
      */
@@ -1439,7 +1439,7 @@ private class OASCurveApiTest {
     }
 
     /**
-     * GetUnderlyingCoins (historical)
+     * UnderlyingCoins (historical)
      *
      * Gets underlying coins.
      */
@@ -1489,7 +1489,7 @@ private class OASCurveApiTest {
     }
 
     /**
-     * GetVotingApps (historical)
+     * VotingApps (historical)
      *
      * Gets voting apps.
      */
@@ -1538,7 +1538,7 @@ private class OASCurveApiTest {
     }
 
     /**
-     * GetWeeklyVolumes (historical)
+     * WeeklyVolumes (historical)
      *
      * Gets weekly volumes.
      */

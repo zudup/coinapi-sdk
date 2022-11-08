@@ -47,7 +47,7 @@ public class UniswapV2ApiTest {
     private final UniswapV2Api api = new UniswapV2Api();
 
     /**
-     * GetBundles (historical)
+     * Bundles (historical)
      *
      * Gets bundles.
      *
@@ -64,7 +64,7 @@ public class UniswapV2ApiTest {
     }
 
     /**
-     * GetBurns (historical)
+     * Burns (historical)
      *
      * Gets burns.
      *
@@ -82,7 +82,7 @@ public class UniswapV2ApiTest {
     }
 
     /**
-     * GetDayData (historical)
+     * DayData (historical)
      *
      * Gets uniswapv2 day data.
      *
@@ -99,7 +99,7 @@ public class UniswapV2ApiTest {
     }
 
     /**
-     * GetFactory (historical)
+     * Factory (historical)
      *
      * Gets factory.
      *
@@ -116,7 +116,7 @@ public class UniswapV2ApiTest {
     }
 
     /**
-     * GetLiquidityPositions (historical)
+     * LiquidityPositions (historical)
      *
      * Gets liquidity positions.
      *
@@ -134,7 +134,7 @@ public class UniswapV2ApiTest {
     }
 
     /**
-     * GetLiquidityPositionsSnapshots (historical)
+     * LiquidityPositionsSnapshots (historical)
      *
      * Gets liquidity positions snapshots.
      *
@@ -152,7 +152,7 @@ public class UniswapV2ApiTest {
     }
 
     /**
-     * GetMints (historical)
+     * Mints (historical)
      *
      * Gets mints.
      *
@@ -170,7 +170,7 @@ public class UniswapV2ApiTest {
     }
 
     /**
-     * GetPools (current) 🔥
+     * Pools (current) 🔥
      *
      * Gets pools.
      *
@@ -184,7 +184,7 @@ public class UniswapV2ApiTest {
     }
 
     /**
-     * GetPoolsDayData (historical)
+     * PoolsDayData (historical)
      *
      * Gets pools day data.
      *
@@ -202,7 +202,7 @@ public class UniswapV2ApiTest {
     }
 
     /**
-     * GetPools (historical) 🔥
+     * Pools (historical) 🔥
      *
      * Gets pools.
      *
@@ -220,7 +220,7 @@ public class UniswapV2ApiTest {
     }
 
     /**
-     * GetPoolsHourData (historical)
+     * PoolsHourData (historical)
      *
      * Gets pools tracked each our.
      *
@@ -238,7 +238,7 @@ public class UniswapV2ApiTest {
     }
 
     /**
-     * GetSwaps (current) 🔥
+     * Swaps (current) 🔥
      *
      * Gets swaps.
      *
@@ -251,7 +251,7 @@ public class UniswapV2ApiTest {
     }
 
     /**
-     * GetSwaps (historical) 🔥
+     * Swaps (historical) 🔥
      *
      * Gets swaps.
      *
@@ -269,7 +269,7 @@ public class UniswapV2ApiTest {
     }
 
     /**
-     * GetTokens (current) 🔥
+     * Tokens (current) 🔥
      *
      * Gets tokens.
      *
@@ -282,7 +282,7 @@ public class UniswapV2ApiTest {
     }
 
     /**
-     * GetTokensDayData (historical)
+     * TokensDayData (historical)
      *
      * Gets tokens day data.
      *
@@ -300,7 +300,7 @@ public class UniswapV2ApiTest {
     }
 
     /**
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      *
      * Gets tokens.
      *
@@ -318,7 +318,7 @@ public class UniswapV2ApiTest {
     }
 
     /**
-     * GetTransactions (historical)
+     * Transactions (historical)
      *
      * Gets transactions.
      *
@@ -335,7 +335,7 @@ public class UniswapV2ApiTest {
     }
 
     /**
-     * GetUsers (historical)
+     * Users (historical)
      *
      * Gets users.
      *

@@ -48,7 +48,7 @@ export class CowApi {
 
     /**
      * Gets orders.
-     * @summary GetOrders (historical)
+     * @summary Orders (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -122,7 +122,7 @@ export class CowApi {
 
     /**
      * Gets settlements.
-     * @summary GetSettlements (historical)
+     * @summary Settlements (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -196,7 +196,7 @@ export class CowApi {
 
     /**
      * Gets tokens.
-     * @summary GetTokens (historical) 🔥
+     * @summary Tokens (historical) 🔥
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -274,7 +274,7 @@ export class CowApi {
 
     /**
      * Gets trades.
-     * @summary GetTrades (historical) 🔥
+     * @summary Trades (historical) 🔥
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -348,7 +348,7 @@ export class CowApi {
 
     /**
      * Gets users.
-     * @summary GetUsers (historical)
+     * @summary Users (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 

@@ -51,13 +51,13 @@ sub new {
 #
 # curve_get_exchanges__current
 #
-# GetExchanges (current) 🔥
+# Exchanges (current) 🔥
 #
 {
     my $params = {
     };
     __PACKAGE__->method_documentation->{ 'curve_get_exchanges__current' } = {
-        summary => 'GetExchanges (current) 🔥',
+        summary => 'Exchanges (current) 🔥',
         params => $params,
         returns => 'ARRAY[CurveExchangeDTO]',
         };
@@ -100,13 +100,13 @@ sub curve_get_exchanges__current {
 #
 # dex_get_trades__current
 #
-# GetTrades (current) 🔥
+# Trades (current) 🔥
 #
 {
     my $params = {
     };
     __PACKAGE__->method_documentation->{ 'dex_get_trades__current' } = {
-        summary => 'GetTrades (current) 🔥',
+        summary => 'Trades (current) 🔥',
         params => $params,
         returns => 'ARRAY[DexTradeDTO]',
         };
@@ -149,7 +149,7 @@ sub dex_get_trades__current {
 #
 # sushiswap_get_bundles__historical
 #
-# GetBundles (historical)
+# Bundles (historical)
 #
 # @param int $start_block AAAAAAAAAA (optional)
 # @param int $end_block BBBBBBBBBBBB (optional)
@@ -179,7 +179,7 @@ sub dex_get_trades__current {
     },
     };
     __PACKAGE__->method_documentation->{ 'sushiswap_get_bundles__historical' } = {
-        summary => 'GetBundles (historical)',
+        summary => 'Bundles (historical)',
         params => $params,
         returns => 'ARRAY[SushiswapBundleDTO]',
         };
@@ -242,7 +242,7 @@ sub sushiswap_get_bundles__historical {
 #
 # sushiswap_get_burns__historical
 #
-# GetBurns (historical)
+# Burns (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -278,7 +278,7 @@ sub sushiswap_get_bundles__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'sushiswap_get_burns__historical' } = {
-        summary => 'GetBurns (historical)',
+        summary => 'Burns (historical)',
         params => $params,
         returns => 'ARRAY[SushiswapBurnDTO]',
         };
@@ -346,7 +346,7 @@ sub sushiswap_get_burns__historical {
 #
 # sushiswap_get_day_data__historical
 #
-# GetDayData (historical)
+# DayData (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -376,7 +376,7 @@ sub sushiswap_get_burns__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'sushiswap_get_day_data__historical' } = {
-        summary => 'GetDayData (historical)',
+        summary => 'DayData (historical)',
         params => $params,
         returns => 'ARRAY[SushiswapDayDataDTO]',
         };
@@ -439,7 +439,7 @@ sub sushiswap_get_day_data__historical {
 #
 # sushiswap_get_factory__historical
 #
-# GetFactory (historical)
+# Factory (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -469,7 +469,7 @@ sub sushiswap_get_day_data__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'sushiswap_get_factory__historical' } = {
-        summary => 'GetFactory (historical)',
+        summary => 'Factory (historical)',
         params => $params,
         returns => 'ARRAY[SushiswapFactoryDTO]',
         };
@@ -532,7 +532,7 @@ sub sushiswap_get_factory__historical {
 #
 # sushiswap_get_hour_data__historical
 #
-# GetHourData (historical)
+# HourData (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -562,7 +562,7 @@ sub sushiswap_get_factory__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'sushiswap_get_hour_data__historical' } = {
-        summary => 'GetHourData (historical)',
+        summary => 'HourData (historical)',
         params => $params,
         returns => 'ARRAY[SushiswapHourDataDTO]',
         };
@@ -625,7 +625,7 @@ sub sushiswap_get_hour_data__historical {
 #
 # sushiswap_get_liquidity_position__historical
 #
-# GetLiquidityPosition (historical)
+# LiquidityPosition (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -661,7 +661,7 @@ sub sushiswap_get_hour_data__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'sushiswap_get_liquidity_position__historical' } = {
-        summary => 'GetLiquidityPosition (historical)',
+        summary => 'LiquidityPosition (historical)',
         params => $params,
         returns => 'ARRAY[SushiswapLiquidityPositionDTO]',
         };
@@ -729,7 +729,7 @@ sub sushiswap_get_liquidity_position__historical {
 #
 # sushiswap_get_liquidity_position_snapshot__historical
 #
-# GetLiquidityPositionSnapshot (historical)
+# LiquidityPositionSnapshot (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -765,7 +765,7 @@ sub sushiswap_get_liquidity_position__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'sushiswap_get_liquidity_position_snapshot__historical' } = {
-        summary => 'GetLiquidityPositionSnapshot (historical)',
+        summary => 'LiquidityPositionSnapshot (historical)',
         params => $params,
         returns => 'ARRAY[SushiswapLiquidityPositionSnapshotDTO]',
         };
@@ -833,7 +833,7 @@ sub sushiswap_get_liquidity_position_snapshot__historical {
 #
 # sushiswap_get_mints__historical
 #
-# GetMints (historical)
+# Mints (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -869,7 +869,7 @@ sub sushiswap_get_liquidity_position_snapshot__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'sushiswap_get_mints__historical' } = {
-        summary => 'GetMints (historical)',
+        summary => 'Mints (historical)',
         params => $params,
         returns => 'ARRAY[SushiswapMintDTO]',
         };
@@ -937,13 +937,13 @@ sub sushiswap_get_mints__historical {
 #
 # sushiswap_get_pools__current
 #
-# GetPools (current) 🔥
+# Pools (current) 🔥
 #
 {
     my $params = {
     };
     __PACKAGE__->method_documentation->{ 'sushiswap_get_pools__current' } = {
-        summary => 'GetPools (current) 🔥',
+        summary => 'Pools (current) 🔥',
         params => $params,
         returns => 'ARRAY[SushiswapPairDTO]',
         };
@@ -986,7 +986,7 @@ sub sushiswap_get_pools__current {
 #
 # sushiswap_get_pools__historical
 #
-# GetPools (historical) 🔥
+# Pools (historical) 🔥
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1022,7 +1022,7 @@ sub sushiswap_get_pools__current {
     },
     };
     __PACKAGE__->method_documentation->{ 'sushiswap_get_pools__historical' } = {
-        summary => 'GetPools (historical) 🔥',
+        summary => 'Pools (historical) 🔥',
         params => $params,
         returns => 'ARRAY[SushiswapPairDTO]',
         };
@@ -1090,7 +1090,7 @@ sub sushiswap_get_pools__historical {
 #
 # sushiswap_get_pools_day_data__historical
 #
-# GetPoolsDayData (historical)
+# PoolsDayData (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -1126,7 +1126,7 @@ sub sushiswap_get_pools__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'sushiswap_get_pools_day_data__historical' } = {
-        summary => 'GetPoolsDayData (historical)',
+        summary => 'PoolsDayData (historical)',
         params => $params,
         returns => 'ARRAY[SushiswapPairDayDataDTO]',
         };
@@ -1194,7 +1194,7 @@ sub sushiswap_get_pools_day_data__historical {
 #
 # sushiswap_get_pools_hour_data__historical
 #
-# GetPoolsHourData (historical)
+# PoolsHourData (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -1230,7 +1230,7 @@ sub sushiswap_get_pools_day_data__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'sushiswap_get_pools_hour_data__historical' } = {
-        summary => 'GetPoolsHourData (historical)',
+        summary => 'PoolsHourData (historical)',
         params => $params,
         returns => 'ARRAY[SushiswapPairHourDataDTO]',
         };
@@ -1298,13 +1298,13 @@ sub sushiswap_get_pools_hour_data__historical {
 #
 # sushiswap_get_swaps__current
 #
-# GetSwaps (current) 🔥
+# Swaps (current) 🔥
 #
 {
     my $params = {
     };
     __PACKAGE__->method_documentation->{ 'sushiswap_get_swaps__current' } = {
-        summary => 'GetSwaps (current) 🔥',
+        summary => 'Swaps (current) 🔥',
         params => $params,
         returns => 'ARRAY[SushiswapSwapDTO]',
         };
@@ -1347,7 +1347,7 @@ sub sushiswap_get_swaps__current {
 #
 # sushiswap_get_swaps__historical
 #
-# GetSwaps (historical) 🔥
+# Swaps (historical) 🔥
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1383,7 +1383,7 @@ sub sushiswap_get_swaps__current {
     },
     };
     __PACKAGE__->method_documentation->{ 'sushiswap_get_swaps__historical' } = {
-        summary => 'GetSwaps (historical) 🔥',
+        summary => 'Swaps (historical) 🔥',
         params => $params,
         returns => 'ARRAY[SushiswapSwapDTO]',
         };
@@ -1451,13 +1451,13 @@ sub sushiswap_get_swaps__historical {
 #
 # sushiswap_get_tokens__current
 #
-# GetTokens (current) 🔥
+# Tokens (current) 🔥
 #
 {
     my $params = {
     };
     __PACKAGE__->method_documentation->{ 'sushiswap_get_tokens__current' } = {
-        summary => 'GetTokens (current) 🔥',
+        summary => 'Tokens (current) 🔥',
         params => $params,
         returns => 'ARRAY[SushiswapTokenDTO]',
         };
@@ -1500,7 +1500,7 @@ sub sushiswap_get_tokens__current {
 #
 # sushiswap_get_tokens__historical
 #
-# GetTokens (historical) 🔥
+# Tokens (historical) 🔥
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1536,7 +1536,7 @@ sub sushiswap_get_tokens__current {
     },
     };
     __PACKAGE__->method_documentation->{ 'sushiswap_get_tokens__historical' } = {
-        summary => 'GetTokens (historical) 🔥',
+        summary => 'Tokens (historical) 🔥',
         params => $params,
         returns => 'ARRAY[SushiswapTokenDTO]',
         };
@@ -1604,7 +1604,7 @@ sub sushiswap_get_tokens__historical {
 #
 # sushiswap_get_tokens_day_data__historical
 #
-# GetTokensDayData (historical)
+# TokensDayData (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -1640,7 +1640,7 @@ sub sushiswap_get_tokens__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'sushiswap_get_tokens_day_data__historical' } = {
-        summary => 'GetTokensDayData (historical)',
+        summary => 'TokensDayData (historical)',
         params => $params,
         returns => 'ARRAY[SushiswapTokenDayDataDTO]',
         };
@@ -1708,7 +1708,7 @@ sub sushiswap_get_tokens_day_data__historical {
 #
 # sushiswap_get_transactions__historical
 #
-# GetTransactions (historical)
+# Transactions (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -1738,7 +1738,7 @@ sub sushiswap_get_tokens_day_data__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'sushiswap_get_transactions__historical' } = {
-        summary => 'GetTransactions (historical)',
+        summary => 'Transactions (historical)',
         params => $params,
         returns => 'ARRAY[SushiswapTransactionDTO]',
         };
@@ -1801,7 +1801,7 @@ sub sushiswap_get_transactions__historical {
 #
 # sushiswap_get_users__historical
 #
-# GetUsers (historical)
+# Users (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -1831,7 +1831,7 @@ sub sushiswap_get_transactions__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'sushiswap_get_users__historical' } = {
-        summary => 'GetUsers (historical)',
+        summary => 'Users (historical)',
         params => $params,
         returns => 'ARRAY[SushiswapUserDTO]',
         };

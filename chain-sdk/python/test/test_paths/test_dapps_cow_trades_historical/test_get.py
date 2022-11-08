@@ -21,7 +21,7 @@ from .. import ApiTestMixin
 class TestDappsCowTradesHistorical(ApiTestMixin, unittest.TestCase):
     """
     DappsCowTradesHistorical unit test stubs
-        GetTrades (historical) 🔥  # noqa: E501
+        Trades (historical) 🔥  # noqa: E501
     """
     _configuration = configuration.Configuration()
 

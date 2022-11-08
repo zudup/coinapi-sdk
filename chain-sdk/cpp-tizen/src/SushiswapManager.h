@@ -41,7 +41,7 @@ public:
 	SushiswapManager();
 	virtual ~SushiswapManager();
 
-/*! \brief GetExchanges (current) 🔥. *Synchronous*
+/*! \brief Exchanges (current) 🔥. *Synchronous*
  *
  * Gets exchanges.
  * \param handler The callback function to be invoked on completion. *Required*
@@ -53,7 +53,7 @@ bool curveGetExchanges (current)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.ExchangeDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetExchanges (current) 🔥. *Asynchronous*
+/*! \brief Exchanges (current) 🔥. *Asynchronous*
  *
  * Gets exchanges.
  * \param handler The callback function to be invoked on completion. *Required*
@@ -66,7 +66,7 @@ bool curveGetExchanges (current)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetTrades (current) 🔥. *Synchronous*
+/*! \brief Trades (current) 🔥. *Synchronous*
  *
  * Gets trades.
  * \param handler The callback function to be invoked on completion. *Required*
@@ -78,7 +78,7 @@ bool dexGetTrades (current)Sync(char * accessToken,
 	void(* handler)(std::list<Dex.TradeDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetTrades (current) 🔥. *Asynchronous*
+/*! \brief Trades (current) 🔥. *Asynchronous*
  *
  * Gets trades.
  * \param handler The callback function to be invoked on completion. *Required*
@@ -91,7 +91,7 @@ bool dexGetTrades (current)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetBundles (historical). *Synchronous*
+/*! \brief Bundles (historical). *Synchronous*
  *
  * Gets bundles.
  * \param startBlock AAAAAAAAAA
@@ -107,7 +107,7 @@ bool sushiswapGetBundles (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Sushiswap.BundleDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetBundles (historical). *Asynchronous*
+/*! \brief Bundles (historical). *Asynchronous*
  *
  * Gets bundles.
  * \param startBlock AAAAAAAAAA
@@ -124,7 +124,7 @@ bool sushiswapGetBundles (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetBurns (historical). *Synchronous*
+/*! \brief Burns (historical). *Synchronous*
  *
  * Gets burns.
  * \param startBlock 
@@ -141,7 +141,7 @@ bool sushiswapGetBurns (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Sushiswap.BurnDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetBurns (historical). *Asynchronous*
+/*! \brief Burns (historical). *Asynchronous*
  *
  * Gets burns.
  * \param startBlock 
@@ -159,7 +159,7 @@ bool sushiswapGetBurns (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetDayData (historical). *Synchronous*
+/*! \brief DayData (historical). *Synchronous*
  *
  * Gets day data.
  * \param startBlock 
@@ -175,7 +175,7 @@ bool sushiswapGetDayData (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Sushiswap.DayDataDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetDayData (historical). *Asynchronous*
+/*! \brief DayData (historical). *Asynchronous*
  *
  * Gets day data.
  * \param startBlock 
@@ -192,7 +192,7 @@ bool sushiswapGetDayData (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetFactory (historical). *Synchronous*
+/*! \brief Factory (historical). *Synchronous*
  *
  * Gets factory.
  * \param startBlock 
@@ -208,7 +208,7 @@ bool sushiswapGetFactory (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Sushiswap.FactoryDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetFactory (historical). *Asynchronous*
+/*! \brief Factory (historical). *Asynchronous*
  *
  * Gets factory.
  * \param startBlock 
@@ -225,7 +225,7 @@ bool sushiswapGetFactory (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetHourData (historical). *Synchronous*
+/*! \brief HourData (historical). *Synchronous*
  *
  * Gets hour data.
  * \param startBlock 
@@ -241,7 +241,7 @@ bool sushiswapGetHourData (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Sushiswap.HourDataDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetHourData (historical). *Asynchronous*
+/*! \brief HourData (historical). *Asynchronous*
  *
  * Gets hour data.
  * \param startBlock 
@@ -258,7 +258,7 @@ bool sushiswapGetHourData (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetLiquidityPosition (historical). *Synchronous*
+/*! \brief LiquidityPosition (historical). *Synchronous*
  *
  * Gets liquidity position.
  * \param startBlock 
@@ -275,7 +275,7 @@ bool sushiswapGetLiquidityPosition (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Sushiswap.LiquidityPositionDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetLiquidityPosition (historical). *Asynchronous*
+/*! \brief LiquidityPosition (historical). *Asynchronous*
  *
  * Gets liquidity position.
  * \param startBlock 
@@ -293,7 +293,7 @@ bool sushiswapGetLiquidityPosition (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetLiquidityPositionSnapshot (historical). *Synchronous*
+/*! \brief LiquidityPositionSnapshot (historical). *Synchronous*
  *
  * Gets liquidity position snapshot.
  * \param startBlock 
@@ -310,7 +310,7 @@ bool sushiswapGetLiquidityPositionSnapshot (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Sushiswap.LiquidityPositionSnapshotDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetLiquidityPositionSnapshot (historical). *Asynchronous*
+/*! \brief LiquidityPositionSnapshot (historical). *Asynchronous*
  *
  * Gets liquidity position snapshot.
  * \param startBlock 
@@ -328,7 +328,7 @@ bool sushiswapGetLiquidityPositionSnapshot (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetMints (historical). *Synchronous*
+/*! \brief Mints (historical). *Synchronous*
  *
  * Gets mints.
  * \param startBlock 
@@ -345,7 +345,7 @@ bool sushiswapGetMints (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Sushiswap.MintDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetMints (historical). *Asynchronous*
+/*! \brief Mints (historical). *Asynchronous*
  *
  * Gets mints.
  * \param startBlock 
@@ -363,7 +363,7 @@ bool sushiswapGetMints (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetPools (current) 🔥. *Synchronous*
+/*! \brief Pools (current) 🔥. *Synchronous*
  *
  * Gets pools.
  * \param handler The callback function to be invoked on completion. *Required*
@@ -375,7 +375,7 @@ bool sushiswapGetPools (current)Sync(char * accessToken,
 	void(* handler)(std::list<Sushiswap.PairDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetPools (current) 🔥. *Asynchronous*
+/*! \brief Pools (current) 🔥. *Asynchronous*
  *
  * Gets pools.
  * \param handler The callback function to be invoked on completion. *Required*
@@ -388,7 +388,7 @@ bool sushiswapGetPools (current)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetPools (historical) 🔥. *Synchronous*
+/*! \brief Pools (historical) 🔥. *Synchronous*
  *
  * Gets list of pools for given filters.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -405,7 +405,7 @@ bool sushiswapGetPools (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Sushiswap.PairDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetPools (historical) 🔥. *Asynchronous*
+/*! \brief Pools (historical) 🔥. *Asynchronous*
  *
  * Gets list of pools for given filters.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -423,7 +423,7 @@ bool sushiswapGetPools (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetPoolsDayData (historical). *Synchronous*
+/*! \brief PoolsDayData (historical). *Synchronous*
  *
  * Gets pools day data.
  * \param startBlock 
@@ -440,7 +440,7 @@ bool sushiswapGetPoolsDayData (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Sushiswap.PairDayDataDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetPoolsDayData (historical). *Asynchronous*
+/*! \brief PoolsDayData (historical). *Asynchronous*
  *
  * Gets pools day data.
  * \param startBlock 
@@ -458,7 +458,7 @@ bool sushiswapGetPoolsDayData (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetPoolsHourData (historical). *Synchronous*
+/*! \brief PoolsHourData (historical). *Synchronous*
  *
  * Gets pools tracked each our.
  * \param startBlock 
@@ -475,7 +475,7 @@ bool sushiswapGetPoolsHourData (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Sushiswap.PairHourDataDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetPoolsHourData (historical). *Asynchronous*
+/*! \brief PoolsHourData (historical). *Asynchronous*
  *
  * Gets pools tracked each our.
  * \param startBlock 
@@ -493,7 +493,7 @@ bool sushiswapGetPoolsHourData (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetSwaps (current) 🔥. *Synchronous*
+/*! \brief Swaps (current) 🔥. *Synchronous*
  *
  * Gets swaps.
  * \param handler The callback function to be invoked on completion. *Required*
@@ -505,7 +505,7 @@ bool sushiswapGetSwaps (current)Sync(char * accessToken,
 	void(* handler)(std::list<Sushiswap.SwapDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetSwaps (current) 🔥. *Asynchronous*
+/*! \brief Swaps (current) 🔥. *Asynchronous*
  *
  * Gets swaps.
  * \param handler The callback function to be invoked on completion. *Required*
@@ -518,7 +518,7 @@ bool sushiswapGetSwaps (current)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetSwaps (historical) 🔥. *Synchronous*
+/*! \brief Swaps (historical) 🔥. *Synchronous*
  *
  * Gets list of swaps for given filters.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -535,7 +535,7 @@ bool sushiswapGetSwaps (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Sushiswap.SwapDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetSwaps (historical) 🔥. *Asynchronous*
+/*! \brief Swaps (historical) 🔥. *Asynchronous*
  *
  * Gets list of swaps for given filters.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -553,7 +553,7 @@ bool sushiswapGetSwaps (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetTokens (current) 🔥. *Synchronous*
+/*! \brief Tokens (current) 🔥. *Synchronous*
  *
  * Gets tokens.
  * \param handler The callback function to be invoked on completion. *Required*
@@ -565,7 +565,7 @@ bool sushiswapGetTokens (current)Sync(char * accessToken,
 	void(* handler)(std::list<Sushiswap.TokenDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetTokens (current) 🔥. *Asynchronous*
+/*! \brief Tokens (current) 🔥. *Asynchronous*
  *
  * Gets tokens.
  * \param handler The callback function to be invoked on completion. *Required*
@@ -578,7 +578,7 @@ bool sushiswapGetTokens (current)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetTokens (historical) 🔥. *Synchronous*
+/*! \brief Tokens (historical) 🔥. *Synchronous*
  *
  * Gets list of tokens for given filters.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -595,7 +595,7 @@ bool sushiswapGetTokens (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Sushiswap.TokenDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetTokens (historical) 🔥. *Asynchronous*
+/*! \brief Tokens (historical) 🔥. *Asynchronous*
  *
  * Gets list of tokens for given filters.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -613,7 +613,7 @@ bool sushiswapGetTokens (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetTokensDayData (historical). *Synchronous*
+/*! \brief TokensDayData (historical). *Synchronous*
  *
  * Gets tokens day data.
  * \param startBlock 
@@ -630,7 +630,7 @@ bool sushiswapGetTokensDayData (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Sushiswap.TokenDayDataDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetTokensDayData (historical). *Asynchronous*
+/*! \brief TokensDayData (historical). *Asynchronous*
  *
  * Gets tokens day data.
  * \param startBlock 
@@ -648,7 +648,7 @@ bool sushiswapGetTokensDayData (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetTransactions (historical). *Synchronous*
+/*! \brief Transactions (historical). *Synchronous*
  *
  * Gets transactions.
  * \param startBlock 
@@ -664,7 +664,7 @@ bool sushiswapGetTransactions (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Sushiswap.TransactionDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetTransactions (historical). *Asynchronous*
+/*! \brief Transactions (historical). *Asynchronous*
  *
  * Gets transactions.
  * \param startBlock 
@@ -681,7 +681,7 @@ bool sushiswapGetTransactions (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetUsers (historical). *Synchronous*
+/*! \brief Users (historical). *Synchronous*
  *
  * Gets users.
  * \param startBlock 
@@ -697,7 +697,7 @@ bool sushiswapGetUsers (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Sushiswap.UserDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetUsers (historical). *Asynchronous*
+/*! \brief Users (historical). *Asynchronous*
  *
  * Gets users.
  * \param startBlock 

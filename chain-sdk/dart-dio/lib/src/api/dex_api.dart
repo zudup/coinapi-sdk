@@ -29,7 +29,7 @@ class DexApi {
 
   const DexApi(this._dio, this._serializers);
 
-  /// GetBatches (historical)
+  /// Batches (historical)
   /// Gets batches.
   ///
   /// Parameters:
@@ -117,7 +117,7 @@ class DexApi {
     );
   }
 
-  /// GetDeposits (historical)
+  /// Deposits (historical)
   /// Gets deposits.
   ///
   /// Parameters:
@@ -208,7 +208,7 @@ class DexApi {
     );
   }
 
-  /// GetOrders (historical)
+  /// Orders (historical)
   /// Gets orders.
   ///
   /// Parameters:
@@ -299,7 +299,7 @@ class DexApi {
     );
   }
 
-  /// GetPrices (historical)
+  /// Prices (historical)
   /// Gets prices.
   ///
   /// Parameters:
@@ -390,7 +390,7 @@ class DexApi {
     );
   }
 
-  /// GetSolutions (historical)
+  /// Solutions (historical)
   /// Gets solutions.
   ///
   /// Parameters:
@@ -481,7 +481,7 @@ class DexApi {
     );
   }
 
-  /// GetStats (historical)
+  /// Stats (historical)
   /// Gets stats.
   ///
   /// Parameters:
@@ -569,7 +569,7 @@ class DexApi {
     );
   }
 
-  /// GetTokens (historical) 🔥
+  /// Tokens (historical) 🔥
   /// Gets tokens.
   ///
   /// Parameters:
@@ -660,7 +660,7 @@ class DexApi {
     );
   }
 
-  /// GetTrades (historical) 🔥
+  /// Trades (historical) 🔥
   /// Gets trades.
   ///
   /// Parameters:
@@ -748,7 +748,7 @@ class DexApi {
     );
   }
 
-  /// GetUsers (historical)
+  /// Users (historical)
   /// Gets users.
   ///
   /// Parameters:
@@ -836,7 +836,7 @@ class DexApi {
     );
   }
 
-  /// GetWithdraws (historical)
+  /// Withdraws (historical)
   /// Gets withdraws.
   ///
   /// Parameters:
@@ -927,7 +927,7 @@ class DexApi {
     );
   }
 
-  /// GetWithdrawsRequests (historical)
+  /// WithdrawsRequests (historical)
   /// Gets withdraws requests.
   ///
   /// Parameters:

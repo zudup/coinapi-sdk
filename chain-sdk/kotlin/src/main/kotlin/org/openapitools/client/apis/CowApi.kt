@@ -50,7 +50,7 @@ class CowApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * GetOrders (historical)
+     * Orders (historical)
      * Gets orders.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -84,7 +84,7 @@ class CowApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * GetOrders (historical)
+     * Orders (historical)
      * Gets orders.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -143,7 +143,7 @@ class CowApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * GetSettlements (historical)
+     * Settlements (historical)
      * Gets settlements.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -177,7 +177,7 @@ class CowApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * GetSettlements (historical)
+     * Settlements (historical)
      * Gets settlements.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -236,7 +236,7 @@ class CowApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      * Gets tokens.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -271,7 +271,7 @@ class CowApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      * Gets tokens.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -335,7 +335,7 @@ class CowApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * GetTrades (historical) 🔥
+     * Trades (historical) 🔥
      * Gets trades.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -369,7 +369,7 @@ class CowApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * GetTrades (historical) 🔥
+     * Trades (historical) 🔥
      * Gets trades.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -428,7 +428,7 @@ class CowApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * GetUsers (historical)
+     * Users (historical)
      * Gets users.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -462,7 +462,7 @@ class CowApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * GetUsers (historical)
+     * Users (historical)
      * Gets users.
      * @param startBlock  (optional)
      * @param endBlock  (optional)

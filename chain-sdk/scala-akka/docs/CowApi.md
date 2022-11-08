@@ -4,16 +4,16 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**cowGetOrdersHistorical**](CowApi.md#cowGetOrdersHistorical) | **GET** /dapps/cow/orders/historical | GetOrders (historical)
-[**cowGetOrdersHistoricalWithHttpInfo**](CowApi.md#cowGetOrdersHistoricalWithHttpInfo) | **GET** /dapps/cow/orders/historical | GetOrders (historical)
-[**cowGetSettlementsHistorical**](CowApi.md#cowGetSettlementsHistorical) | **GET** /dapps/cow/settlements/historical | GetSettlements (historical)
-[**cowGetSettlementsHistoricalWithHttpInfo**](CowApi.md#cowGetSettlementsHistoricalWithHttpInfo) | **GET** /dapps/cow/settlements/historical | GetSettlements (historical)
-[**cowGetTokensHistorical**](CowApi.md#cowGetTokensHistorical) | **GET** /dapps/cow/tokens/historical | GetTokens (historical) 🔥
-[**cowGetTokensHistoricalWithHttpInfo**](CowApi.md#cowGetTokensHistoricalWithHttpInfo) | **GET** /dapps/cow/tokens/historical | GetTokens (historical) 🔥
-[**cowGetTradesHistorical**](CowApi.md#cowGetTradesHistorical) | **GET** /dapps/cow/trades/historical | GetTrades (historical) 🔥
-[**cowGetTradesHistoricalWithHttpInfo**](CowApi.md#cowGetTradesHistoricalWithHttpInfo) | **GET** /dapps/cow/trades/historical | GetTrades (historical) 🔥
-[**cowGetUsersHistorical**](CowApi.md#cowGetUsersHistorical) | **GET** /dapps/cow/users/historical | GetUsers (historical)
-[**cowGetUsersHistoricalWithHttpInfo**](CowApi.md#cowGetUsersHistoricalWithHttpInfo) | **GET** /dapps/cow/users/historical | GetUsers (historical)
+[**cowGetOrdersHistorical**](CowApi.md#cowGetOrdersHistorical) | **GET** /dapps/cow/orders/historical | Orders (historical)
+[**cowGetOrdersHistoricalWithHttpInfo**](CowApi.md#cowGetOrdersHistoricalWithHttpInfo) | **GET** /dapps/cow/orders/historical | Orders (historical)
+[**cowGetSettlementsHistorical**](CowApi.md#cowGetSettlementsHistorical) | **GET** /dapps/cow/settlements/historical | Settlements (historical)
+[**cowGetSettlementsHistoricalWithHttpInfo**](CowApi.md#cowGetSettlementsHistoricalWithHttpInfo) | **GET** /dapps/cow/settlements/historical | Settlements (historical)
+[**cowGetTokensHistorical**](CowApi.md#cowGetTokensHistorical) | **GET** /dapps/cow/tokens/historical | Tokens (historical) 🔥
+[**cowGetTokensHistoricalWithHttpInfo**](CowApi.md#cowGetTokensHistoricalWithHttpInfo) | **GET** /dapps/cow/tokens/historical | Tokens (historical) 🔥
+[**cowGetTradesHistorical**](CowApi.md#cowGetTradesHistorical) | **GET** /dapps/cow/trades/historical | Trades (historical) 🔥
+[**cowGetTradesHistoricalWithHttpInfo**](CowApi.md#cowGetTradesHistoricalWithHttpInfo) | **GET** /dapps/cow/trades/historical | Trades (historical) 🔥
+[**cowGetUsersHistorical**](CowApi.md#cowGetUsersHistorical) | **GET** /dapps/cow/users/historical | Users (historical)
+[**cowGetUsersHistoricalWithHttpInfo**](CowApi.md#cowGetUsersHistoricalWithHttpInfo) | **GET** /dapps/cow/users/historical | Users (historical)
 
 
 
@@ -21,7 +21,7 @@ Method | HTTP request | Description
 
 > cowGetOrdersHistorical(cowGetOrdersHistoricalRequest): ApiRequest[Seq[OrderDTO]]
 
-GetOrders (historical)
+Orders (historical)
 
 Gets orders.
 
@@ -111,7 +111,7 @@ No authorization required
 
 > cowGetSettlementsHistorical(cowGetSettlementsHistoricalRequest): ApiRequest[Seq[SettlementDTO]]
 
-GetSettlements (historical)
+Settlements (historical)
 
 Gets settlements.
 
@@ -201,7 +201,7 @@ No authorization required
 
 > cowGetTokensHistorical(cowGetTokensHistoricalRequest): ApiRequest[Seq[TokenDTO]]
 
-GetTokens (historical) 🔥
+Tokens (historical) 🔥
 
 Gets tokens.
 
@@ -294,7 +294,7 @@ No authorization required
 
 > cowGetTradesHistorical(cowGetTradesHistoricalRequest): ApiRequest[Seq[TradeDTO]]
 
-GetTrades (historical) 🔥
+Trades (historical) 🔥
 
 Gets trades.
 
@@ -384,7 +384,7 @@ No authorization required
 
 > cowGetUsersHistorical(cowGetUsersHistoricalRequest): ApiRequest[Seq[UserDTO]]
 
-GetUsers (historical)
+Users (historical)
 
 Gets users.
 

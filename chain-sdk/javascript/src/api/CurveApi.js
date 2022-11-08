@@ -74,7 +74,7 @@ export default class CurveApi {
      */
 
     /**
-     * GetAccounts (historical)
+     * Accounts (historical)
      * Gets accounts.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -121,7 +121,7 @@ export default class CurveApi {
      */
 
     /**
-     * GetAddLiquidityEvents (historical)
+     * AddLiquidityEvents (historical)
      * Gets add liquidity events.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -170,7 +170,7 @@ export default class CurveApi {
      */
 
     /**
-     * GetAdminFeeChangeLogs (historical)
+     * AdminFeeChangeLogs (historical)
      * Gets admin fee change logs.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -219,7 +219,7 @@ export default class CurveApi {
      */
 
     /**
-     * GetAmplificationCoeffChangeLogs (historical)
+     * AmplificationCoeffChangeLogs (historical)
      * Gets amplification coeff change logs.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -268,7 +268,7 @@ export default class CurveApi {
      */
 
     /**
-     * GetCoins (historical)
+     * Coins (historical)
      * Gets coins.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -317,7 +317,7 @@ export default class CurveApi {
      */
 
     /**
-     * GetContracts (historical)
+     * Contracts (historical)
      * Gets contracts.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -366,7 +366,7 @@ export default class CurveApi {
      */
 
     /**
-     * GetContractsVersions (historical)
+     * ContractsVersions (historical)
      * Gets contracts versions.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -415,7 +415,7 @@ export default class CurveApi {
      */
 
     /**
-     * GetDailyVolumes (historical)
+     * DailyVolumes (historical)
      * Gets daily volumes.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -464,7 +464,7 @@ export default class CurveApi {
      */
 
     /**
-     * GetExchanges (historical) 🔥
+     * Exchanges (historical) 🔥
      * Gets exchanges.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -513,7 +513,7 @@ export default class CurveApi {
      */
 
     /**
-     * GetFeeChangeLogs (historical)
+     * FeeChangeLogs (historical)
      * Gets fee change logs.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -562,7 +562,7 @@ export default class CurveApi {
      */
 
     /**
-     * GetGaugesDeposits (historical)
+     * GaugesDeposits (historical)
      * Gets gauges deposits.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -609,7 +609,7 @@ export default class CurveApi {
      */
 
     /**
-     * GetGauges (historical)
+     * Gauges (historical)
      * Gets gauges.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -658,7 +658,7 @@ export default class CurveApi {
      */
 
     /**
-     * GetGaugesLiquidity (historical)
+     * GaugesLiquidity (historical)
      * Gets gauges liquidity.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -705,7 +705,7 @@ export default class CurveApi {
      */
 
     /**
-     * GetGaugesTotalWeights (historical)
+     * GaugesTotalWeights (historical)
      * Gets gauges total weights.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -752,7 +752,7 @@ export default class CurveApi {
      */
 
     /**
-     * GetGaugesTypes (historical)
+     * GaugesTypes (historical)
      * Gets gauges types.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -799,7 +799,7 @@ export default class CurveApi {
      */
 
     /**
-     * GetGaugesTypesWeights (historical)
+     * GaugesTypesWeights (historical)
      * Gets gauges types weights.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -846,7 +846,7 @@ export default class CurveApi {
      */
 
     /**
-     * GetGaugesWeights (historical)
+     * GaugesWeights (historical)
      * Gets gauges weights.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -893,7 +893,7 @@ export default class CurveApi {
      */
 
     /**
-     * GetGaugesWeightsVotes (historical)
+     * GaugesWeightsVotes (historical)
      * Gets gauges weights votes.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -940,7 +940,7 @@ export default class CurveApi {
      */
 
     /**
-     * GetGaugesWithdraw (historical)
+     * GaugesWithdraw (historical)
      * Gets gauges withdraws.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -987,7 +987,7 @@ export default class CurveApi {
      */
 
     /**
-     * GetHourlyVolumes (historical)
+     * HourlyVolumes (historical)
      * Gets hourly volumes.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -1036,7 +1036,7 @@ export default class CurveApi {
      */
 
     /**
-     * GetLpTokens (historical)
+     * LpTokens (historical)
      * Gets lp tokens.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -1085,7 +1085,7 @@ export default class CurveApi {
      */
 
     /**
-     * GetPools (historical) 🔥
+     * Pools (historical) 🔥
      * Gets pools.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -1134,7 +1134,7 @@ export default class CurveApi {
      */
 
     /**
-     * GetProposals (historical)
+     * Proposals (historical)
      * Gets proposals.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -1181,7 +1181,7 @@ export default class CurveApi {
      */
 
     /**
-     * GetProposalsVotes (historical)
+     * ProposalsVotes (historical)
      * Gets proposals votes.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -1228,7 +1228,7 @@ export default class CurveApi {
      */
 
     /**
-     * GetRemoveLiquidityEvents (historical)
+     * RemoveLiquidityEvents (historical)
      * Gets remove liquidity events.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -1277,7 +1277,7 @@ export default class CurveApi {
      */
 
     /**
-     * GetRemoveLiquidityOneEvents (historical)
+     * RemoveLiquidityOneEvents (historical)
      * Gets remove liquidity one events.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -1326,7 +1326,7 @@ export default class CurveApi {
      */
 
     /**
-     * GetSystemStates (historical)
+     * SystemStates (historical)
      * Gets system states.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -1373,7 +1373,7 @@ export default class CurveApi {
      */
 
     /**
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      * Gets tokens.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -1422,7 +1422,7 @@ export default class CurveApi {
      */
 
     /**
-     * GetTransferOwnershipEvents (historical)
+     * TransferOwnershipEvents (historical)
      * Gets transfer ownership events.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -1471,7 +1471,7 @@ export default class CurveApi {
      */
 
     /**
-     * GetUnderlyingCoins (historical)
+     * UnderlyingCoins (historical)
      * Gets underlying coins.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -1520,7 +1520,7 @@ export default class CurveApi {
      */
 
     /**
-     * GetVotingApps (historical)
+     * VotingApps (historical)
      * Gets voting apps.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 
@@ -1567,7 +1567,7 @@ export default class CurveApi {
      */
 
     /**
-     * GetWeeklyVolumes (historical)
+     * WeeklyVolumes (historical)
      * Gets weekly volumes.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock 

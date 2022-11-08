@@ -67,7 +67,7 @@ public class DexApi {
   }
 
   /**
-  * GetBatches (historical)
+  * Batches (historical)
   * Gets batches.
    * @param startBlock 
    * @param endBlock 
@@ -131,7 +131,7 @@ public class DexApi {
   }
 
       /**
-   * GetBatches (historical)
+   * Batches (historical)
    * Gets batches.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate 
   */
@@ -195,7 +195,7 @@ public class DexApi {
     }
   }
   /**
-  * GetDeposits (historical)
+  * Deposits (historical)
   * Gets deposits.
    * @param startBlock 
    * @param endBlock 
@@ -261,7 +261,7 @@ public class DexApi {
   }
 
       /**
-   * GetDeposits (historical)
+   * Deposits (historical)
    * Gets deposits.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param tokenId 
   */
@@ -326,7 +326,7 @@ public class DexApi {
     }
   }
   /**
-  * GetOrders (historical)
+  * Orders (historical)
   * Gets orders.
    * @param startBlock 
    * @param endBlock 
@@ -392,7 +392,7 @@ public class DexApi {
   }
 
       /**
-   * GetOrders (historical)
+   * Orders (historical)
    * Gets orders.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param tokenId 
   */
@@ -457,7 +457,7 @@ public class DexApi {
     }
   }
   /**
-  * GetPrices (historical)
+  * Prices (historical)
   * Gets prices.
    * @param startBlock 
    * @param endBlock 
@@ -523,7 +523,7 @@ public class DexApi {
   }
 
       /**
-   * GetPrices (historical)
+   * Prices (historical)
    * Gets prices.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param tokenId 
   */
@@ -588,7 +588,7 @@ public class DexApi {
     }
   }
   /**
-  * GetSolutions (historical)
+  * Solutions (historical)
   * Gets solutions.
    * @param startBlock 
    * @param endBlock 
@@ -654,7 +654,7 @@ public class DexApi {
   }
 
       /**
-   * GetSolutions (historical)
+   * Solutions (historical)
    * Gets solutions.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param tokenId 
   */
@@ -719,7 +719,7 @@ public class DexApi {
     }
   }
   /**
-  * GetStats (historical)
+  * Stats (historical)
   * Gets stats.
    * @param startBlock 
    * @param endBlock 
@@ -783,7 +783,7 @@ public class DexApi {
   }
 
       /**
-   * GetStats (historical)
+   * Stats (historical)
    * Gets stats.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate 
   */
@@ -847,7 +847,7 @@ public class DexApi {
     }
   }
   /**
-  * GetTokens (historical) 🔥
+  * Tokens (historical) 🔥
   * Gets tokens.
    * @param startBlock 
    * @param endBlock 
@@ -913,7 +913,7 @@ public class DexApi {
   }
 
       /**
-   * GetTokens (historical) 🔥
+   * Tokens (historical) 🔥
    * Gets tokens.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param tokenId 
   */
@@ -978,7 +978,7 @@ public class DexApi {
     }
   }
   /**
-  * GetTrades (historical) 🔥
+  * Trades (historical) 🔥
   * Gets trades.
    * @param startBlock 
    * @param endBlock 
@@ -1042,7 +1042,7 @@ public class DexApi {
   }
 
       /**
-   * GetTrades (historical) 🔥
+   * Trades (historical) 🔥
    * Gets trades.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate 
   */
@@ -1106,7 +1106,7 @@ public class DexApi {
     }
   }
   /**
-  * GetUsers (historical)
+  * Users (historical)
   * Gets users.
    * @param startBlock 
    * @param endBlock 
@@ -1170,7 +1170,7 @@ public class DexApi {
   }
 
       /**
-   * GetUsers (historical)
+   * Users (historical)
    * Gets users.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate 
   */
@@ -1234,7 +1234,7 @@ public class DexApi {
     }
   }
   /**
-  * GetWithdraws (historical)
+  * Withdraws (historical)
   * Gets withdraws.
    * @param startBlock 
    * @param endBlock 
@@ -1300,7 +1300,7 @@ public class DexApi {
   }
 
       /**
-   * GetWithdraws (historical)
+   * Withdraws (historical)
    * Gets withdraws.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param tokenId 
   */
@@ -1365,7 +1365,7 @@ public class DexApi {
     }
   }
   /**
-  * GetWithdrawsRequests (historical)
+  * WithdrawsRequests (historical)
   * Gets withdraws requests.
    * @param startBlock 
    * @param endBlock 
@@ -1431,7 +1431,7 @@ public class DexApi {
   }
 
       /**
-   * GetWithdrawsRequests (historical)
+   * WithdrawsRequests (historical)
    * Gets withdraws requests.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param tokenId 
   */

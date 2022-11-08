@@ -59,7 +59,7 @@ public:
     virtual ~UniswapV2Api();
 
     /// <summary>
-    /// GetBundles (historical)
+    /// Bundles (historical)
     /// </summary>
     /// <remarks>
     /// Gets bundles.
@@ -75,7 +75,7 @@ public:
         boost::optional<utility::datetime> endDate
     ) const;
     /// <summary>
-    /// GetBurns (historical)
+    /// Burns (historical)
     /// </summary>
     /// <remarks>
     /// Gets burns.
@@ -93,7 +93,7 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// GetDayData (historical)
+    /// DayData (historical)
     /// </summary>
     /// <remarks>
     /// Gets uniswapv2 day data.
@@ -109,7 +109,7 @@ public:
         boost::optional<utility::datetime> endDate
     ) const;
     /// <summary>
-    /// GetFactory (historical)
+    /// Factory (historical)
     /// </summary>
     /// <remarks>
     /// Gets factory.
@@ -125,7 +125,7 @@ public:
         boost::optional<utility::datetime> endDate
     ) const;
     /// <summary>
-    /// GetLiquidityPositionsSnapshots (historical)
+    /// LiquidityPositionsSnapshots (historical)
     /// </summary>
     /// <remarks>
     /// Gets liquidity positions snapshots.
@@ -143,7 +143,7 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// GetLiquidityPositions (historical)
+    /// LiquidityPositions (historical)
     /// </summary>
     /// <remarks>
     /// Gets liquidity positions.
@@ -161,7 +161,7 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// GetMints (historical)
+    /// Mints (historical)
     /// </summary>
     /// <remarks>
     /// Gets mints.
@@ -179,7 +179,7 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// GetPoolsDayData (historical)
+    /// PoolsDayData (historical)
     /// </summary>
     /// <remarks>
     /// Gets pools day data.
@@ -197,7 +197,7 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// GetPoolsHourData (historical)
+    /// PoolsHourData (historical)
     /// </summary>
     /// <remarks>
     /// Gets pools tracked each our.
@@ -215,7 +215,7 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// GetPools (current) 🔥
+    /// Pools (current) 🔥
     /// </summary>
     /// <remarks>
     /// Gets pools.
@@ -225,7 +225,7 @@ public:
         boost::optional<utility::string_t> filterPoolId
     ) const;
     /// <summary>
-    /// GetPools (historical) 🔥
+    /// Pools (historical) 🔥
     /// </summary>
     /// <remarks>
     /// Gets pools.
@@ -243,7 +243,7 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// GetSwaps (current) 🔥
+    /// Swaps (current) 🔥
     /// </summary>
     /// <remarks>
     /// Gets swaps.
@@ -251,7 +251,7 @@ public:
     pplx::task<std::vector<std::shared_ptr<UniswapV2_SwapV2DTO>>> uniswapV2_GetSwaps__current(
     ) const;
     /// <summary>
-    /// GetSwaps (historical) 🔥
+    /// Swaps (historical) 🔥
     /// </summary>
     /// <remarks>
     /// Gets swaps.
@@ -269,7 +269,7 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// GetTokensDayData (historical)
+    /// TokensDayData (historical)
     /// </summary>
     /// <remarks>
     /// Gets tokens day data.
@@ -287,7 +287,7 @@ public:
         boost::optional<utility::string_t> tokenId
     ) const;
     /// <summary>
-    /// GetTokens (current) 🔥
+    /// Tokens (current) 🔥
     /// </summary>
     /// <remarks>
     /// Gets tokens.
@@ -295,7 +295,7 @@ public:
     pplx::task<std::vector<std::shared_ptr<UniswapV2_TokenV2DTO>>> uniswapV2_GetTokens__current(
     ) const;
     /// <summary>
-    /// GetTokens (historical) 🔥
+    /// Tokens (historical) 🔥
     /// </summary>
     /// <remarks>
     /// Gets tokens.
@@ -313,7 +313,7 @@ public:
         boost::optional<utility::string_t> tokenId
     ) const;
     /// <summary>
-    /// GetTransactions (historical)
+    /// Transactions (historical)
     /// </summary>
     /// <remarks>
     /// Gets transactions.
@@ -329,7 +329,7 @@ public:
         boost::optional<utility::datetime> endDate
     ) const;
     /// <summary>
-    /// GetUsers (historical)
+    /// Users (historical)
     /// </summary>
     /// <remarks>
     /// Gets users.

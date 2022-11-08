@@ -4,24 +4,24 @@ All URIs are relative to https://onchain.coinapi.io, except if the operation def
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**uniswapV2GetBundlesHistorical()**](UniswapV2Api.md#uniswapV2GetBundlesHistorical) | **GET** /dapps/uniswapv2/bundles/historical | GetBundles (historical) |
-| [**uniswapV2GetBurnsHistorical()**](UniswapV2Api.md#uniswapV2GetBurnsHistorical) | **GET** /dapps/uniswapv2/burns/historical | GetBurns (historical) |
-| [**uniswapV2GetDayDataHistorical()**](UniswapV2Api.md#uniswapV2GetDayDataHistorical) | **GET** /dapps/uniswapv2/dayData/historical | GetDayData (historical) |
-| [**uniswapV2GetFactoryHistorical()**](UniswapV2Api.md#uniswapV2GetFactoryHistorical) | **GET** /dapps/uniswapv2/factory/historical | GetFactory (historical) |
-| [**uniswapV2GetLiquidityPositionsHistorical()**](UniswapV2Api.md#uniswapV2GetLiquidityPositionsHistorical) | **GET** /dapps/uniswapv2/liquidityPositions/historical | GetLiquidityPositions (historical) |
-| [**uniswapV2GetLiquidityPositionsSnapshotsHistorical()**](UniswapV2Api.md#uniswapV2GetLiquidityPositionsSnapshotsHistorical) | **GET** /dapps/uniswapv2/liquidityPositionsSnapshots/historical | GetLiquidityPositionsSnapshots (historical) |
-| [**uniswapV2GetMintsHistorical()**](UniswapV2Api.md#uniswapV2GetMintsHistorical) | **GET** /dapps/uniswapv2/mints/historical | GetMints (historical) |
-| [**uniswapV2GetPoolsCurrent()**](UniswapV2Api.md#uniswapV2GetPoolsCurrent) | **GET** /dapps/uniswapv2/pools/current | GetPools (current) 🔥 |
-| [**uniswapV2GetPoolsDayDataHistorical()**](UniswapV2Api.md#uniswapV2GetPoolsDayDataHistorical) | **GET** /dapps/uniswapv2/poolsDayData/historical | GetPoolsDayData (historical) |
-| [**uniswapV2GetPoolsHistorical()**](UniswapV2Api.md#uniswapV2GetPoolsHistorical) | **GET** /dapps/uniswapv2/pools/historical | GetPools (historical) 🔥 |
-| [**uniswapV2GetPoolsHourDataHistorical()**](UniswapV2Api.md#uniswapV2GetPoolsHourDataHistorical) | **GET** /dapps/uniswapv2/poolsHourData/historical | GetPoolsHourData (historical) |
-| [**uniswapV2GetSwapsCurrent()**](UniswapV2Api.md#uniswapV2GetSwapsCurrent) | **GET** /dapps/uniswapv2/swaps/current | GetSwaps (current) 🔥 |
-| [**uniswapV2GetSwapsHistorical()**](UniswapV2Api.md#uniswapV2GetSwapsHistorical) | **GET** /dapps/uniswapv2/swaps/historical | GetSwaps (historical) 🔥 |
-| [**uniswapV2GetTokensCurrent()**](UniswapV2Api.md#uniswapV2GetTokensCurrent) | **GET** /dapps/uniswapv2/tokens/current | GetTokens (current) 🔥 |
-| [**uniswapV2GetTokensDayDataHistorical()**](UniswapV2Api.md#uniswapV2GetTokensDayDataHistorical) | **GET** /dapps/uniswapv2/tokensDayData/historical | GetTokensDayData (historical) |
-| [**uniswapV2GetTokensHistorical()**](UniswapV2Api.md#uniswapV2GetTokensHistorical) | **GET** /dapps/uniswapv2/tokens/historical | GetTokens (historical) 🔥 |
-| [**uniswapV2GetTransactionsHistorical()**](UniswapV2Api.md#uniswapV2GetTransactionsHistorical) | **GET** /dapps/uniswapv2/transactions/historical | GetTransactions (historical) |
-| [**uniswapV2GetUsersHistorical()**](UniswapV2Api.md#uniswapV2GetUsersHistorical) | **GET** /dapps/uniswapv2/users/historical | GetUsers (historical) |
+| [**uniswapV2GetBundlesHistorical()**](UniswapV2Api.md#uniswapV2GetBundlesHistorical) | **GET** /dapps/uniswapv2/bundles/historical | Bundles (historical) |
+| [**uniswapV2GetBurnsHistorical()**](UniswapV2Api.md#uniswapV2GetBurnsHistorical) | **GET** /dapps/uniswapv2/burns/historical | Burns (historical) |
+| [**uniswapV2GetDayDataHistorical()**](UniswapV2Api.md#uniswapV2GetDayDataHistorical) | **GET** /dapps/uniswapv2/dayData/historical | DayData (historical) |
+| [**uniswapV2GetFactoryHistorical()**](UniswapV2Api.md#uniswapV2GetFactoryHistorical) | **GET** /dapps/uniswapv2/factory/historical | Factory (historical) |
+| [**uniswapV2GetLiquidityPositionsHistorical()**](UniswapV2Api.md#uniswapV2GetLiquidityPositionsHistorical) | **GET** /dapps/uniswapv2/liquidityPositions/historical | LiquidityPositions (historical) |
+| [**uniswapV2GetLiquidityPositionsSnapshotsHistorical()**](UniswapV2Api.md#uniswapV2GetLiquidityPositionsSnapshotsHistorical) | **GET** /dapps/uniswapv2/liquidityPositionsSnapshots/historical | LiquidityPositionsSnapshots (historical) |
+| [**uniswapV2GetMintsHistorical()**](UniswapV2Api.md#uniswapV2GetMintsHistorical) | **GET** /dapps/uniswapv2/mints/historical | Mints (historical) |
+| [**uniswapV2GetPoolsCurrent()**](UniswapV2Api.md#uniswapV2GetPoolsCurrent) | **GET** /dapps/uniswapv2/pools/current | Pools (current) 🔥 |
+| [**uniswapV2GetPoolsDayDataHistorical()**](UniswapV2Api.md#uniswapV2GetPoolsDayDataHistorical) | **GET** /dapps/uniswapv2/poolsDayData/historical | PoolsDayData (historical) |
+| [**uniswapV2GetPoolsHistorical()**](UniswapV2Api.md#uniswapV2GetPoolsHistorical) | **GET** /dapps/uniswapv2/pools/historical | Pools (historical) 🔥 |
+| [**uniswapV2GetPoolsHourDataHistorical()**](UniswapV2Api.md#uniswapV2GetPoolsHourDataHistorical) | **GET** /dapps/uniswapv2/poolsHourData/historical | PoolsHourData (historical) |
+| [**uniswapV2GetSwapsCurrent()**](UniswapV2Api.md#uniswapV2GetSwapsCurrent) | **GET** /dapps/uniswapv2/swaps/current | Swaps (current) 🔥 |
+| [**uniswapV2GetSwapsHistorical()**](UniswapV2Api.md#uniswapV2GetSwapsHistorical) | **GET** /dapps/uniswapv2/swaps/historical | Swaps (historical) 🔥 |
+| [**uniswapV2GetTokensCurrent()**](UniswapV2Api.md#uniswapV2GetTokensCurrent) | **GET** /dapps/uniswapv2/tokens/current | Tokens (current) 🔥 |
+| [**uniswapV2GetTokensDayDataHistorical()**](UniswapV2Api.md#uniswapV2GetTokensDayDataHistorical) | **GET** /dapps/uniswapv2/tokensDayData/historical | TokensDayData (historical) |
+| [**uniswapV2GetTokensHistorical()**](UniswapV2Api.md#uniswapV2GetTokensHistorical) | **GET** /dapps/uniswapv2/tokens/historical | Tokens (historical) 🔥 |
+| [**uniswapV2GetTransactionsHistorical()**](UniswapV2Api.md#uniswapV2GetTransactionsHistorical) | **GET** /dapps/uniswapv2/transactions/historical | Transactions (historical) |
+| [**uniswapV2GetUsersHistorical()**](UniswapV2Api.md#uniswapV2GetUsersHistorical) | **GET** /dapps/uniswapv2/users/historical | Users (historical) |
 
 
 ## `uniswapV2GetBundlesHistorical()`
@@ -30,7 +30,7 @@ All URIs are relative to https://onchain.coinapi.io, except if the operation def
 uniswapV2GetBundlesHistorical($start_block, $end_block, $start_date, $end_date): \OpenAPI\Client\Model\UniswapV2BundleV2DTO[]
 ```
 
-GetBundles (historical)
+Bundles (historical)
 
 Gets bundles.
 
@@ -92,7 +92,7 @@ No authorization required
 uniswapV2GetBurnsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id): \OpenAPI\Client\Model\UniswapV2BurnV2DTO[]
 ```
 
-GetBurns (historical)
+Burns (historical)
 
 Gets burns.
 
@@ -156,7 +156,7 @@ No authorization required
 uniswapV2GetDayDataHistorical($start_block, $end_block, $start_date, $end_date): \OpenAPI\Client\Model\UniswapV2UniswapDayDataV2DTO[]
 ```
 
-GetDayData (historical)
+DayData (historical)
 
 Gets uniswapv2 day data.
 
@@ -218,7 +218,7 @@ No authorization required
 uniswapV2GetFactoryHistorical($start_block, $end_block, $start_date, $end_date): \OpenAPI\Client\Model\UniswapV2UniswapFactoryV2DTO[]
 ```
 
-GetFactory (historical)
+Factory (historical)
 
 Gets factory.
 
@@ -280,7 +280,7 @@ No authorization required
 uniswapV2GetLiquidityPositionsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id): \OpenAPI\Client\Model\UniswapV2LiquidityPositionV2DTO[]
 ```
 
-GetLiquidityPositions (historical)
+LiquidityPositions (historical)
 
 Gets liquidity positions.
 
@@ -344,7 +344,7 @@ No authorization required
 uniswapV2GetLiquidityPositionsSnapshotsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id): \OpenAPI\Client\Model\UniswapV2LiquidityPositionSnapshotV2DTO[]
 ```
 
-GetLiquidityPositionsSnapshots (historical)
+LiquidityPositionsSnapshots (historical)
 
 Gets liquidity positions snapshots.
 
@@ -408,7 +408,7 @@ No authorization required
 uniswapV2GetMintsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id): \OpenAPI\Client\Model\UniswapV2MintV2DTO[]
 ```
 
-GetMints (historical)
+Mints (historical)
 
 Gets mints.
 
@@ -472,7 +472,7 @@ No authorization required
 uniswapV2GetPoolsCurrent($filter_pool_id): \OpenAPI\Client\Model\UniswapV2PairV2DTO[]
 ```
 
-GetPools (current) 🔥
+Pools (current) 🔥
 
 Gets pools.
 
@@ -528,7 +528,7 @@ No authorization required
 uniswapV2GetPoolsDayDataHistorical($start_block, $end_block, $start_date, $end_date, $pool_id): \OpenAPI\Client\Model\UniswapV2PairDayDataV2DTO[]
 ```
 
-GetPoolsDayData (historical)
+PoolsDayData (historical)
 
 Gets pools day data.
 
@@ -592,7 +592,7 @@ No authorization required
 uniswapV2GetPoolsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id): \OpenAPI\Client\Model\UniswapV2PairV2DTO[]
 ```
 
-GetPools (historical) 🔥
+Pools (historical) 🔥
 
 Gets pools.
 
@@ -656,7 +656,7 @@ No authorization required
 uniswapV2GetPoolsHourDataHistorical($start_block, $end_block, $start_date, $end_date, $pool_id): \OpenAPI\Client\Model\UniswapV2PairHourDataV2DTO[]
 ```
 
-GetPoolsHourData (historical)
+PoolsHourData (historical)
 
 Gets pools tracked each our.
 
@@ -720,7 +720,7 @@ No authorization required
 uniswapV2GetSwapsCurrent(): \OpenAPI\Client\Model\UniswapV2SwapV2DTO[]
 ```
 
-GetSwaps (current) 🔥
+Swaps (current) 🔥
 
 Gets swaps.
 
@@ -773,7 +773,7 @@ No authorization required
 uniswapV2GetSwapsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id): \OpenAPI\Client\Model\UniswapV2SwapV2DTO[]
 ```
 
-GetSwaps (historical) 🔥
+Swaps (historical) 🔥
 
 Gets swaps.
 
@@ -837,7 +837,7 @@ No authorization required
 uniswapV2GetTokensCurrent(): \OpenAPI\Client\Model\UniswapV2TokenV2DTO[]
 ```
 
-GetTokens (current) 🔥
+Tokens (current) 🔥
 
 Gets tokens.
 
@@ -890,7 +890,7 @@ No authorization required
 uniswapV2GetTokensDayDataHistorical($start_block, $end_block, $start_date, $end_date, $token_id): \OpenAPI\Client\Model\UniswapV2TokenDayDataV2DTO[]
 ```
 
-GetTokensDayData (historical)
+TokensDayData (historical)
 
 Gets tokens day data.
 
@@ -954,7 +954,7 @@ No authorization required
 uniswapV2GetTokensHistorical($start_block, $end_block, $start_date, $end_date, $token_id): \OpenAPI\Client\Model\UniswapV2TokenV2DTO[]
 ```
 
-GetTokens (historical) 🔥
+Tokens (historical) 🔥
 
 Gets tokens.
 
@@ -1018,7 +1018,7 @@ No authorization required
 uniswapV2GetTransactionsHistorical($start_block, $end_block, $start_date, $end_date): \OpenAPI\Client\Model\UniswapV2TransactionV2DTO[]
 ```
 
-GetTransactions (historical)
+Transactions (historical)
 
 Gets transactions.
 
@@ -1080,7 +1080,7 @@ No authorization required
 uniswapV2GetUsersHistorical($start_block, $end_block, $start_date, $end_date): \OpenAPI\Client\Model\UniswapV2UserV2DTO[]
 ```
 
-GetUsers (historical)
+Users (historical)
 
 Gets users.
 

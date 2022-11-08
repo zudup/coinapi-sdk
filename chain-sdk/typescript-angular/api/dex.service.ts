@@ -112,7 +112,7 @@ export class DexService {
     }
 
     /**
-     * GetBatches (historical)
+     * Batches (historical)
      * Gets batches.
      * @param startBlock 
      * @param endBlock 
@@ -192,7 +192,7 @@ export class DexService {
     }
 
     /**
-     * GetDeposits (historical)
+     * Deposits (historical)
      * Gets deposits.
      * @param startBlock 
      * @param endBlock 
@@ -277,7 +277,7 @@ export class DexService {
     }
 
     /**
-     * GetOrders (historical)
+     * Orders (historical)
      * Gets orders.
      * @param startBlock 
      * @param endBlock 
@@ -362,7 +362,7 @@ export class DexService {
     }
 
     /**
-     * GetPrices (historical)
+     * Prices (historical)
      * Gets prices.
      * @param startBlock 
      * @param endBlock 
@@ -447,7 +447,7 @@ export class DexService {
     }
 
     /**
-     * GetSolutions (historical)
+     * Solutions (historical)
      * Gets solutions.
      * @param startBlock 
      * @param endBlock 
@@ -532,7 +532,7 @@ export class DexService {
     }
 
     /**
-     * GetStats (historical)
+     * Stats (historical)
      * Gets stats.
      * @param startBlock 
      * @param endBlock 
@@ -612,7 +612,7 @@ export class DexService {
     }
 
     /**
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      * Gets tokens.
      * @param startBlock 
      * @param endBlock 
@@ -697,7 +697,7 @@ export class DexService {
     }
 
     /**
-     * GetTrades (historical) 🔥
+     * Trades (historical) 🔥
      * Gets trades.
      * @param startBlock 
      * @param endBlock 
@@ -777,7 +777,7 @@ export class DexService {
     }
 
     /**
-     * GetUsers (historical)
+     * Users (historical)
      * Gets users.
      * @param startBlock 
      * @param endBlock 
@@ -857,7 +857,7 @@ export class DexService {
     }
 
     /**
-     * GetWithdraws (historical)
+     * Withdraws (historical)
      * Gets withdraws.
      * @param startBlock 
      * @param endBlock 
@@ -942,7 +942,7 @@ export class DexService {
     }
 
     /**
-     * GetWithdrawsRequests (historical)
+     * WithdrawsRequests (historical)
      * Gets withdraws requests.
      * @param startBlock 
      * @param endBlock 

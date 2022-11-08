@@ -102,7 +102,7 @@ export class UniswapV2Api {
 
     /**
      * Gets bundles.
-     * @summary GetBundles (historical)
+     * @summary Bundles (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -184,7 +184,7 @@ export class UniswapV2Api {
     }
     /**
      * Gets burns.
-     * @summary GetBurns (historical)
+     * @summary Burns (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -271,7 +271,7 @@ export class UniswapV2Api {
     }
     /**
      * Gets uniswapv2 day data.
-     * @summary GetDayData (historical)
+     * @summary DayData (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -353,7 +353,7 @@ export class UniswapV2Api {
     }
     /**
      * Gets factory.
-     * @summary GetFactory (historical)
+     * @summary Factory (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -435,7 +435,7 @@ export class UniswapV2Api {
     }
     /**
      * Gets liquidity positions.
-     * @summary GetLiquidityPositions (historical)
+     * @summary LiquidityPositions (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -522,7 +522,7 @@ export class UniswapV2Api {
     }
     /**
      * Gets liquidity positions snapshots.
-     * @summary GetLiquidityPositionsSnapshots (historical)
+     * @summary LiquidityPositionsSnapshots (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -609,7 +609,7 @@ export class UniswapV2Api {
     }
     /**
      * Gets mints.
-     * @summary GetMints (historical)
+     * @summary Mints (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -696,7 +696,7 @@ export class UniswapV2Api {
     }
     /**
      * Gets pools.
-     * @summary GetPools (current) 🔥
+     * @summary Pools (current) 🔥
      * @param filterPoolId 
      */
     public async uniswapV2GetPoolsCurrent (filterPoolId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2PairV2DTO>;  }> {
@@ -763,7 +763,7 @@ export class UniswapV2Api {
     }
     /**
      * Gets pools day data.
-     * @summary GetPoolsDayData (historical)
+     * @summary PoolsDayData (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -850,7 +850,7 @@ export class UniswapV2Api {
     }
     /**
      * Gets pools.
-     * @summary GetPools (historical) 🔥
+     * @summary Pools (historical) 🔥
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -937,7 +937,7 @@ export class UniswapV2Api {
     }
     /**
      * Gets pools tracked each our.
-     * @summary GetPoolsHourData (historical)
+     * @summary PoolsHourData (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -1024,7 +1024,7 @@ export class UniswapV2Api {
     }
     /**
      * Gets swaps.
-     * @summary GetSwaps (current) 🔥
+     * @summary Swaps (current) 🔥
      */
     public async uniswapV2GetSwapsCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2SwapV2DTO>;  }> {
         const localVarPath = this.basePath + '/dapps/uniswapv2/swaps/current';
@@ -1086,7 +1086,7 @@ export class UniswapV2Api {
     }
     /**
      * Gets swaps.
-     * @summary GetSwaps (historical) 🔥
+     * @summary Swaps (historical) 🔥
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -1173,7 +1173,7 @@ export class UniswapV2Api {
     }
     /**
      * Gets tokens.
-     * @summary GetTokens (current) 🔥
+     * @summary Tokens (current) 🔥
      */
     public async uniswapV2GetTokensCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2TokenV2DTO>;  }> {
         const localVarPath = this.basePath + '/dapps/uniswapv2/tokens/current';
@@ -1235,7 +1235,7 @@ export class UniswapV2Api {
     }
     /**
      * Gets tokens day data.
-     * @summary GetTokensDayData (historical)
+     * @summary TokensDayData (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -1322,7 +1322,7 @@ export class UniswapV2Api {
     }
     /**
      * Gets tokens.
-     * @summary GetTokens (historical) 🔥
+     * @summary Tokens (historical) 🔥
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -1409,7 +1409,7 @@ export class UniswapV2Api {
     }
     /**
      * Gets transactions.
-     * @summary GetTransactions (historical)
+     * @summary Transactions (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -1491,7 +1491,7 @@ export class UniswapV2Api {
     }
     /**
      * Gets users.
-     * @summary GetUsers (historical)
+     * @summary Users (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 

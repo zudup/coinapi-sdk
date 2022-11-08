@@ -1,7 +1,7 @@
 @isTest
 private class OASDexApiTest {
     /**
-     * GetBatches (historical)
+     * Batches (historical)
      *
      * Gets batches.
      */
@@ -50,7 +50,7 @@ private class OASDexApiTest {
     }
 
     /**
-     * GetDeposits (historical)
+     * Deposits (historical)
      *
      * Gets deposits.
      */
@@ -100,7 +100,7 @@ private class OASDexApiTest {
     }
 
     /**
-     * GetOrders (historical)
+     * Orders (historical)
      *
      * Gets orders.
      */
@@ -150,7 +150,7 @@ private class OASDexApiTest {
     }
 
     /**
-     * GetPrices (historical)
+     * Prices (historical)
      *
      * Gets prices.
      */
@@ -200,7 +200,7 @@ private class OASDexApiTest {
     }
 
     /**
-     * GetSolutions (historical)
+     * Solutions (historical)
      *
      * Gets solutions.
      */
@@ -250,7 +250,7 @@ private class OASDexApiTest {
     }
 
     /**
-     * GetStats (historical)
+     * Stats (historical)
      *
      * Gets stats.
      */
@@ -299,7 +299,7 @@ private class OASDexApiTest {
     }
 
     /**
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      *
      * Gets tokens.
      */
@@ -349,7 +349,7 @@ private class OASDexApiTest {
     }
 
     /**
-     * GetTrades (historical) 🔥
+     * Trades (historical) 🔥
      *
      * Gets trades.
      */
@@ -398,7 +398,7 @@ private class OASDexApiTest {
     }
 
     /**
-     * GetUsers (historical)
+     * Users (historical)
      *
      * Gets users.
      */
@@ -447,7 +447,7 @@ private class OASDexApiTest {
     }
 
     /**
-     * GetWithdraws (historical)
+     * Withdraws (historical)
      *
      * Gets withdraws.
      */
@@ -497,7 +497,7 @@ private class OASDexApiTest {
     }
 
     /**
-     * GetWithdrawsRequests (historical)
+     * WithdrawsRequests (historical)
      *
      * Gets withdraws requests.
      */

@@ -75,7 +75,7 @@ API.Client.CurveApi = function($http, $httpParamSerializer, $injector) {
 API.Client.CurveApi.$inject = ['$http', '$httpParamSerializer', '$injector'];
 
 /**
- * GetAccounts (historical)
+ * Accounts (historical)
  * Gets accounts.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -126,7 +126,7 @@ API.Client.CurveApi.prototype.curveGetAccountsHistorical = function(opt_startBlo
 }
 
 /**
- * GetAddLiquidityEvents (historical)
+ * AddLiquidityEvents (historical)
  * Gets add liquidity events.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -182,7 +182,7 @@ API.Client.CurveApi.prototype.curveGetAddLiquidityEventsHistorical = function(op
 }
 
 /**
- * GetAdminFeeChangeLogs (historical)
+ * AdminFeeChangeLogs (historical)
  * Gets admin fee change logs.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -238,7 +238,7 @@ API.Client.CurveApi.prototype.curveGetAdminFeeChangeLogsHistorical = function(op
 }
 
 /**
- * GetAmplificationCoeffChangeLogs (historical)
+ * AmplificationCoeffChangeLogs (historical)
  * Gets amplification coeff change logs.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -294,7 +294,7 @@ API.Client.CurveApi.prototype.curveGetAmplificationCoeffChangeLogsHistorical = f
 }
 
 /**
- * GetCoins (historical)
+ * Coins (historical)
  * Gets coins.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -350,7 +350,7 @@ API.Client.CurveApi.prototype.curveGetCoinsHistorical = function(opt_startBlock,
 }
 
 /**
- * GetContracts (historical)
+ * Contracts (historical)
  * Gets contracts.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -406,7 +406,7 @@ API.Client.CurveApi.prototype.curveGetContractsHistorical = function(opt_startBl
 }
 
 /**
- * GetContractsVersions (historical)
+ * ContractsVersions (historical)
  * Gets contracts versions.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -462,7 +462,7 @@ API.Client.CurveApi.prototype.curveGetContractsVersionsHistorical = function(opt
 }
 
 /**
- * GetDailyVolumes (historical)
+ * DailyVolumes (historical)
  * Gets daily volumes.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -518,7 +518,7 @@ API.Client.CurveApi.prototype.curveGetDailyVolumesHistorical = function(opt_star
 }
 
 /**
- * GetExchanges (historical) 🔥
+ * Exchanges (historical) 🔥
  * Gets exchanges.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -574,7 +574,7 @@ API.Client.CurveApi.prototype.curveGetExchangesHistorical = function(opt_startBl
 }
 
 /**
- * GetFeeChangeLogs (historical)
+ * FeeChangeLogs (historical)
  * Gets fee change logs.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -630,7 +630,7 @@ API.Client.CurveApi.prototype.curveGetFeeChangeLogsHistorical = function(opt_sta
 }
 
 /**
- * GetGaugesDeposits (historical)
+ * GaugesDeposits (historical)
  * Gets gauges deposits.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -681,7 +681,7 @@ API.Client.CurveApi.prototype.curveGetGaugesDepositsHistorical = function(opt_st
 }
 
 /**
- * GetGauges (historical)
+ * Gauges (historical)
  * Gets gauges.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -737,7 +737,7 @@ API.Client.CurveApi.prototype.curveGetGaugesHistorical = function(opt_startBlock
 }
 
 /**
- * GetGaugesLiquidity (historical)
+ * GaugesLiquidity (historical)
  * Gets gauges liquidity.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -788,7 +788,7 @@ API.Client.CurveApi.prototype.curveGetGaugesLiquidityHistorical = function(opt_s
 }
 
 /**
- * GetGaugesTotalWeights (historical)
+ * GaugesTotalWeights (historical)
  * Gets gauges total weights.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -839,7 +839,7 @@ API.Client.CurveApi.prototype.curveGetGaugesTotalWeightsHistorical = function(op
 }
 
 /**
- * GetGaugesTypes (historical)
+ * GaugesTypes (historical)
  * Gets gauges types.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -890,7 +890,7 @@ API.Client.CurveApi.prototype.curveGetGaugesTypesHistorical = function(opt_start
 }
 
 /**
- * GetGaugesTypesWeights (historical)
+ * GaugesTypesWeights (historical)
  * Gets gauges types weights.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -941,7 +941,7 @@ API.Client.CurveApi.prototype.curveGetGaugesTypesWeightsHistorical = function(op
 }
 
 /**
- * GetGaugesWeights (historical)
+ * GaugesWeights (historical)
  * Gets gauges weights.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -992,7 +992,7 @@ API.Client.CurveApi.prototype.curveGetGaugesWeightsHistorical = function(opt_sta
 }
 
 /**
- * GetGaugesWeightsVotes (historical)
+ * GaugesWeightsVotes (historical)
  * Gets gauges weights votes.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -1043,7 +1043,7 @@ API.Client.CurveApi.prototype.curveGetGaugesWeightsVotesHistorical = function(op
 }
 
 /**
- * GetGaugesWithdraw (historical)
+ * GaugesWithdraw (historical)
  * Gets gauges withdraws.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -1094,7 +1094,7 @@ API.Client.CurveApi.prototype.curveGetGaugesWithdrawHistorical = function(opt_st
 }
 
 /**
- * GetHourlyVolumes (historical)
+ * HourlyVolumes (historical)
  * Gets hourly volumes.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -1150,7 +1150,7 @@ API.Client.CurveApi.prototype.curveGetHourlyVolumesHistorical = function(opt_sta
 }
 
 /**
- * GetLpTokens (historical)
+ * LpTokens (historical)
  * Gets lp tokens.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -1206,7 +1206,7 @@ API.Client.CurveApi.prototype.curveGetLpTokensHistorical = function(opt_startBlo
 }
 
 /**
- * GetPools (historical) 🔥
+ * Pools (historical) 🔥
  * Gets pools.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -1262,7 +1262,7 @@ API.Client.CurveApi.prototype.curveGetPoolsHistorical = function(opt_startBlock,
 }
 
 /**
- * GetProposals (historical)
+ * Proposals (historical)
  * Gets proposals.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -1313,7 +1313,7 @@ API.Client.CurveApi.prototype.curveGetProposalsHistorical = function(opt_startBl
 }
 
 /**
- * GetProposalsVotes (historical)
+ * ProposalsVotes (historical)
  * Gets proposals votes.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -1364,7 +1364,7 @@ API.Client.CurveApi.prototype.curveGetProposalsVotesHistorical = function(opt_st
 }
 
 /**
- * GetRemoveLiquidityEvents (historical)
+ * RemoveLiquidityEvents (historical)
  * Gets remove liquidity events.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -1420,7 +1420,7 @@ API.Client.CurveApi.prototype.curveGetRemoveLiquidityEventsHistorical = function
 }
 
 /**
- * GetRemoveLiquidityOneEvents (historical)
+ * RemoveLiquidityOneEvents (historical)
  * Gets remove liquidity one events.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -1476,7 +1476,7 @@ API.Client.CurveApi.prototype.curveGetRemoveLiquidityOneEventsHistorical = funct
 }
 
 /**
- * GetSystemStates (historical)
+ * SystemStates (historical)
  * Gets system states.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -1527,7 +1527,7 @@ API.Client.CurveApi.prototype.curveGetSystemStatesHistorical = function(opt_star
 }
 
 /**
- * GetTokens (historical) 🔥
+ * Tokens (historical) 🔥
  * Gets tokens.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -1583,7 +1583,7 @@ API.Client.CurveApi.prototype.curveGetTokensHistorical = function(opt_startBlock
 }
 
 /**
- * GetTransferOwnershipEvents (historical)
+ * TransferOwnershipEvents (historical)
  * Gets transfer ownership events.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -1639,7 +1639,7 @@ API.Client.CurveApi.prototype.curveGetTransferOwnershipEventsHistorical = functi
 }
 
 /**
- * GetUnderlyingCoins (historical)
+ * UnderlyingCoins (historical)
  * Gets underlying coins.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -1695,7 +1695,7 @@ API.Client.CurveApi.prototype.curveGetUnderlyingCoinsHistorical = function(opt_s
 }
 
 /**
- * GetVotingApps (historical)
+ * VotingApps (historical)
  * Gets voting apps.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -1746,7 +1746,7 @@ API.Client.CurveApi.prototype.curveGetVotingAppsHistorical = function(opt_startB
 }
 
 /**
- * GetWeeklyVolumes (historical)
+ * WeeklyVolumes (historical)
  * Gets weekly volumes.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 

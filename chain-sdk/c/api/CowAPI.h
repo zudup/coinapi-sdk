@@ -12,7 +12,7 @@
 #include "../model/cow_user_dto.h"
 
 
-// GetOrders (historical)
+// Orders (historical)
 //
 // Gets orders.
 //
@@ -20,7 +20,7 @@ list_t*
 CowAPI_cowGetOrdersHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate );
 
 
-// GetSettlements (historical)
+// Settlements (historical)
 //
 // Gets settlements.
 //
@@ -28,7 +28,7 @@ list_t*
 CowAPI_cowGetSettlementsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate );
 
 
-// GetTokens (historical) 🔥
+// Tokens (historical) 🔥
 //
 // Gets tokens.
 //
@@ -36,7 +36,7 @@ list_t*
 CowAPI_cowGetTokensHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * tokenId );
 
 
-// GetTrades (historical) 🔥
+// Trades (historical) 🔥
 //
 // Gets trades.
 //
@@ -44,7 +44,7 @@ list_t*
 CowAPI_cowGetTradesHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate );
 
 
-// GetUsers (historical)
+// Users (historical)
 //
 // Gets users.
 //

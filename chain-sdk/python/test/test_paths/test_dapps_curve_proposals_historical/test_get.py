@@ -21,7 +21,7 @@ from .. import ApiTestMixin
 class TestDappsCurveProposalsHistorical(ApiTestMixin, unittest.TestCase):
     """
     DappsCurveProposalsHistorical unit test stubs
-        GetProposals (historical)  # noqa: E501
+        Proposals (historical)  # noqa: E501
     """
     _configuration = configuration.Configuration()
 

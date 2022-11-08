@@ -14,7 +14,7 @@ feature -- Test routines
 
 
     test_uniswap_v3_get_bundles_current
-            -- GetBundles (current)
+            -- Bundles (current)
             --
             -- Gets bundles.
         local
@@ -27,7 +27,7 @@ feature -- Test routines
         end
 
     test_uniswap_v3_get_bundles_historical
-            -- GetBundles (historical)
+            -- Bundles (historical)
             --
             -- Gets bundles.
         local
@@ -44,7 +44,7 @@ feature -- Test routines
         end
 
     test_uniswap_v3_get_burns_current
-            -- GetBurns (current)
+            -- Burns (current)
             --
             -- Gets burns.
         local
@@ -58,7 +58,7 @@ feature -- Test routines
         end
 
     test_uniswap_v3_get_burns_historical
-            -- GetBurns (historical)
+            -- Burns (historical)
             --
             -- Gets burns.
         local
@@ -76,7 +76,7 @@ feature -- Test routines
         end
 
     test_uniswap_v3_get_day_data_current
-            -- GetDayData (current)
+            -- DayData (current)
             --
             -- Gets uniswapv3 day data.
         local
@@ -89,7 +89,7 @@ feature -- Test routines
         end
 
     test_uniswap_v3_get_day_data_historical
-            -- GetDayData (historical)
+            -- DayData (historical)
             --
             -- Gets uniswapv3 day data.
         local
@@ -106,7 +106,7 @@ feature -- Test routines
         end
 
     test_uniswap_v3_get_factory_current
-            -- GetFactory (current)
+            -- Factory (current)
             --
             -- Gets factory.
         local
@@ -119,7 +119,7 @@ feature -- Test routines
         end
 
     test_uniswap_v3_get_factory_historical
-            -- GetFactory (historical)
+            -- Factory (historical)
             --
             -- Gets factory.
         local
@@ -136,7 +136,7 @@ feature -- Test routines
         end
 
     test_uniswap_v3_get_mints_current
-            -- GetMints (current)
+            -- Mints (current)
             --
             -- Gets mints.
         local
@@ -150,7 +150,7 @@ feature -- Test routines
         end
 
     test_uniswap_v3_get_mints_historical
-            -- GetMints (historical)
+            -- Mints (historical)
             --
             -- Gets mints.
         local
@@ -168,7 +168,7 @@ feature -- Test routines
         end
 
     test_uniswap_v3_get_pools_current
-            -- GetPools (current) 🔥
+            -- Pools (current) 🔥
             --
             -- Gets pools.
         local
@@ -182,7 +182,7 @@ feature -- Test routines
         end
 
     test_uniswap_v3_get_pools_day_data_current
-            -- GetPoolsDayData (current)
+            -- PoolsDayData (current)
             --
             -- Gets pools day data.
         local
@@ -196,7 +196,7 @@ feature -- Test routines
         end
 
     test_uniswap_v3_get_pools_day_data_historical
-            -- GetPoolsDayData (historical)
+            -- PoolsDayData (historical)
             --
             -- Gets pools day data.
         local
@@ -214,7 +214,7 @@ feature -- Test routines
         end
 
     test_uniswap_v3_get_pools_historical
-            -- GetPools (historical) 🔥
+            -- Pools (historical) 🔥
             --
             -- Gets pools.
         local
@@ -232,7 +232,7 @@ feature -- Test routines
         end
 
     test_uniswap_v3_get_pools_hour_data_current
-            -- GetPoolsHourData (current)
+            -- PoolsHourData (current)
             --
             -- Gets pools hour data.
         local
@@ -246,7 +246,7 @@ feature -- Test routines
         end
 
     test_uniswap_v3_get_pools_hour_data_historical
-            -- GetPoolsHourData (historical)
+            -- PoolsHourData (historical)
             --
             -- Gets pools hour data.
         local
@@ -264,7 +264,7 @@ feature -- Test routines
         end
 
     test_uniswap_v3_get_positions_current
-            -- GetPositions (current)
+            -- Positions (current)
             --
             -- Gets positions.
         local
@@ -278,7 +278,7 @@ feature -- Test routines
         end
 
     test_uniswap_v3_get_positions_historical
-            -- GetPositions (historical)
+            -- Positions (historical)
             --
             -- Gets positions.
         local
@@ -296,7 +296,7 @@ feature -- Test routines
         end
 
     test_uniswap_v3_get_positions_snaphots_historical
-            -- GetPositionsSnaphots (historical)
+            -- PositionsSnaphots (historical)
             --
             -- Gets positions snapshots.
         local
@@ -314,7 +314,7 @@ feature -- Test routines
         end
 
     test_uniswap_v3_get_positions_snapshots_current
-            -- GetPositionsSnapshots (current)
+            -- PositionsSnapshots (current)
             --
             -- Gets positions snapshots.
         local
@@ -328,7 +328,7 @@ feature -- Test routines
         end
 
     test_uniswap_v3_get_swaps_current
-            -- GetSwaps (current) 🔥
+            -- Swaps (current) 🔥
             --
             -- Gets swaps.
         local
@@ -342,7 +342,7 @@ feature -- Test routines
         end
 
     test_uniswap_v3_get_swaps_historical
-            -- GetSwaps (historical) 🔥
+            -- Swaps (historical) 🔥
             --
             -- Gets swaps.
         local
@@ -360,7 +360,7 @@ feature -- Test routines
         end
 
     test_uniswap_v3_get_ticks_current
-            -- GetTicks (current)
+            -- Ticks (current)
             --
             -- Gets ticks.
         local
@@ -374,7 +374,7 @@ feature -- Test routines
         end
 
     test_uniswap_v3_get_ticks_day_data_current
-            -- GetTicksDayData (current)
+            -- TicksDayData (current)
             --
             -- Gets ticks day data.
         local
@@ -388,7 +388,7 @@ feature -- Test routines
         end
 
     test_uniswap_v3_get_ticks_day_data_historical
-            -- GetTicksDayData (historical)
+            -- TicksDayData (historical)
             --
             -- Gets ticks day data.
         local
@@ -406,7 +406,7 @@ feature -- Test routines
         end
 
     test_uniswap_v3_get_ticks_historical
-            -- GetTicks (historical)
+            -- Ticks (historical)
             --
             -- Gets ticks.
         local
@@ -424,7 +424,7 @@ feature -- Test routines
         end
 
     test_uniswap_v3_get_tokens_current
-            -- GetTokens (current) 🔥
+            -- Tokens (current) 🔥
             --
             -- Gets tokens.
         local
@@ -438,7 +438,7 @@ feature -- Test routines
         end
 
     test_uniswap_v3_get_tokens_day_data_current
-            -- GetTokensDayData (current)
+            -- TokensDayData (current)
             --
             -- Gets tokens day data.
         local
@@ -452,7 +452,7 @@ feature -- Test routines
         end
 
     test_uniswap_v3_get_tokens_day_data_historical
-            -- GetTokensDayData (historical)
+            -- TokensDayData (historical)
             --
             -- Gets tokens day data.
         local
@@ -470,7 +470,7 @@ feature -- Test routines
         end
 
     test_uniswap_v3_get_tokens_historical
-            -- GetTokens (historical) 🔥
+            -- Tokens (historical) 🔥
             --
             -- Gets tokens.
         local
@@ -488,7 +488,7 @@ feature -- Test routines
         end
 
     test_uniswap_v3_get_tokens_hour_data_current
-            -- GetTokensHourData (current)
+            -- TokensHourData (current)
             --
             -- Gets tokens hour data.
         local
@@ -502,7 +502,7 @@ feature -- Test routines
         end
 
     test_uniswap_v3_get_tokens_hour_data_historical
-            -- GetTokensHourData (historical)
+            -- TokensHourData (historical)
             --
             -- Gets tokens hour data.
         local
@@ -520,7 +520,7 @@ feature -- Test routines
         end
 
     test_uniswap_v3_get_transactions_historical
-            -- GetTransactions (historical)
+            -- Transactions (historical)
             --
             -- Gets transactions.
         local

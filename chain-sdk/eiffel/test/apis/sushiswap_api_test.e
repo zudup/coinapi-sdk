@@ -14,7 +14,7 @@ feature -- Test routines
 
 
     test_curve_get_exchanges_current
-            -- GetExchanges (current) 🔥
+            -- Exchanges (current) 🔥
             --
             -- Gets exchanges.
         local
@@ -27,7 +27,7 @@ feature -- Test routines
         end
 
     test_dex_get_trades_current
-            -- GetTrades (current) 🔥
+            -- Trades (current) 🔥
             --
             -- Gets trades.
         local
@@ -40,7 +40,7 @@ feature -- Test routines
         end
 
     test_sushiswap_get_bundles_historical
-            -- GetBundles (historical)
+            -- Bundles (historical)
             --
             -- Gets bundles.
         local
@@ -57,7 +57,7 @@ feature -- Test routines
         end
 
     test_sushiswap_get_burns_historical
-            -- GetBurns (historical)
+            -- Burns (historical)
             --
             -- Gets burns.
         local
@@ -75,7 +75,7 @@ feature -- Test routines
         end
 
     test_sushiswap_get_day_data_historical
-            -- GetDayData (historical)
+            -- DayData (historical)
             --
             -- Gets day data.
         local
@@ -92,7 +92,7 @@ feature -- Test routines
         end
 
     test_sushiswap_get_factory_historical
-            -- GetFactory (historical)
+            -- Factory (historical)
             --
             -- Gets factory.
         local
@@ -109,7 +109,7 @@ feature -- Test routines
         end
 
     test_sushiswap_get_hour_data_historical
-            -- GetHourData (historical)
+            -- HourData (historical)
             --
             -- Gets hour data.
         local
@@ -126,7 +126,7 @@ feature -- Test routines
         end
 
     test_sushiswap_get_liquidity_position_historical
-            -- GetLiquidityPosition (historical)
+            -- LiquidityPosition (historical)
             --
             -- Gets liquidity position.
         local
@@ -144,7 +144,7 @@ feature -- Test routines
         end
 
     test_sushiswap_get_liquidity_position_snapshot_historical
-            -- GetLiquidityPositionSnapshot (historical)
+            -- LiquidityPositionSnapshot (historical)
             --
             -- Gets liquidity position snapshot.
         local
@@ -162,7 +162,7 @@ feature -- Test routines
         end
 
     test_sushiswap_get_mints_historical
-            -- GetMints (historical)
+            -- Mints (historical)
             --
             -- Gets mints.
         local
@@ -180,7 +180,7 @@ feature -- Test routines
         end
 
     test_sushiswap_get_pools_current
-            -- GetPools (current) 🔥
+            -- Pools (current) 🔥
             --
             -- Gets pools.
         local
@@ -193,7 +193,7 @@ feature -- Test routines
         end
 
     test_sushiswap_get_pools_day_data_historical
-            -- GetPoolsDayData (historical)
+            -- PoolsDayData (historical)
             --
             -- Gets pools day data.
         local
@@ -211,7 +211,7 @@ feature -- Test routines
         end
 
     test_sushiswap_get_pools_historical
-            -- GetPools (historical) 🔥
+            -- Pools (historical) 🔥
             --
             -- Gets list of pools for given filters.
         local
@@ -229,7 +229,7 @@ feature -- Test routines
         end
 
     test_sushiswap_get_pools_hour_data_historical
-            -- GetPoolsHourData (historical)
+            -- PoolsHourData (historical)
             --
             -- Gets pools tracked each our.
         local
@@ -247,7 +247,7 @@ feature -- Test routines
         end
 
     test_sushiswap_get_swaps_current
-            -- GetSwaps (current) 🔥
+            -- Swaps (current) 🔥
             --
             -- Gets swaps.
         local
@@ -260,7 +260,7 @@ feature -- Test routines
         end
 
     test_sushiswap_get_swaps_historical
-            -- GetSwaps (historical) 🔥
+            -- Swaps (historical) 🔥
             --
             -- Gets list of swaps for given filters.
         local
@@ -278,7 +278,7 @@ feature -- Test routines
         end
 
     test_sushiswap_get_tokens_current
-            -- GetTokens (current) 🔥
+            -- Tokens (current) 🔥
             --
             -- Gets tokens.
         local
@@ -291,7 +291,7 @@ feature -- Test routines
         end
 
     test_sushiswap_get_tokens_day_data_historical
-            -- GetTokensDayData (historical)
+            -- TokensDayData (historical)
             --
             -- Gets tokens day data.
         local
@@ -309,7 +309,7 @@ feature -- Test routines
         end
 
     test_sushiswap_get_tokens_historical
-            -- GetTokens (historical) 🔥
+            -- Tokens (historical) 🔥
             --
             -- Gets list of tokens for given filters.
         local
@@ -327,7 +327,7 @@ feature -- Test routines
         end
 
     test_sushiswap_get_transactions_historical
-            -- GetTransactions (historical)
+            -- Transactions (historical)
             --
             -- Gets transactions.
         local
@@ -344,7 +344,7 @@ feature -- Test routines
         end
 
     test_sushiswap_get_users_historical
-            -- GetUsers (historical)
+            -- Users (historical)
             --
             -- Gets users.
         local

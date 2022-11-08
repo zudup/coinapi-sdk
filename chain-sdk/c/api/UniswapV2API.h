@@ -22,7 +22,7 @@
 #include "../model/uniswap_v2_user_v2_dto.h"
 
 
-// GetBundles (historical)
+// Bundles (historical)
 //
 // Gets bundles.
 //
@@ -30,7 +30,7 @@ list_t*
 UniswapV2API_uniswapV2GetBundlesHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate );
 
 
-// GetBurns (historical)
+// Burns (historical)
 //
 // Gets burns.
 //
@@ -38,7 +38,7 @@ list_t*
 UniswapV2API_uniswapV2GetBurnsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
 
 
-// GetDayData (historical)
+// DayData (historical)
 //
 // Gets uniswapv2 day data.
 //
@@ -46,7 +46,7 @@ list_t*
 UniswapV2API_uniswapV2GetDayDataHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate );
 
 
-// GetFactory (historical)
+// Factory (historical)
 //
 // Gets factory.
 //
@@ -54,7 +54,7 @@ list_t*
 UniswapV2API_uniswapV2GetFactoryHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate );
 
 
-// GetLiquidityPositions (historical)
+// LiquidityPositions (historical)
 //
 // Gets liquidity positions.
 //
@@ -62,7 +62,7 @@ list_t*
 UniswapV2API_uniswapV2GetLiquidityPositionsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
 
 
-// GetLiquidityPositionsSnapshots (historical)
+// LiquidityPositionsSnapshots (historical)
 //
 // Gets liquidity positions snapshots.
 //
@@ -70,7 +70,7 @@ list_t*
 UniswapV2API_uniswapV2GetLiquidityPositionsSnapshotsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
 
 
-// GetMints (historical)
+// Mints (historical)
 //
 // Gets mints.
 //
@@ -78,7 +78,7 @@ list_t*
 UniswapV2API_uniswapV2GetMintsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
 
 
-// GetPools (current) 🔥
+// Pools (current) 🔥
 //
 // Gets pools.
 //
@@ -86,7 +86,7 @@ list_t*
 UniswapV2API_uniswapV2GetPoolsCurrent(apiClient_t *apiClient, char * filter_pool_id );
 
 
-// GetPoolsDayData (historical)
+// PoolsDayData (historical)
 //
 // Gets pools day data.
 //
@@ -94,7 +94,7 @@ list_t*
 UniswapV2API_uniswapV2GetPoolsDayDataHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
 
 
-// GetPools (historical) 🔥
+// Pools (historical) 🔥
 //
 // Gets pools.
 //
@@ -102,7 +102,7 @@ list_t*
 UniswapV2API_uniswapV2GetPoolsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
 
 
-// GetPoolsHourData (historical)
+// PoolsHourData (historical)
 //
 // Gets pools tracked each our.
 //
@@ -110,7 +110,7 @@ list_t*
 UniswapV2API_uniswapV2GetPoolsHourDataHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
 
 
-// GetSwaps (current) 🔥
+// Swaps (current) 🔥
 //
 // Gets swaps.
 //
@@ -118,7 +118,7 @@ list_t*
 UniswapV2API_uniswapV2GetSwapsCurrent(apiClient_t *apiClient);
 
 
-// GetSwaps (historical) 🔥
+// Swaps (historical) 🔥
 //
 // Gets swaps.
 //
@@ -126,7 +126,7 @@ list_t*
 UniswapV2API_uniswapV2GetSwapsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
 
 
-// GetTokens (current) 🔥
+// Tokens (current) 🔥
 //
 // Gets tokens.
 //
@@ -134,7 +134,7 @@ list_t*
 UniswapV2API_uniswapV2GetTokensCurrent(apiClient_t *apiClient);
 
 
-// GetTokensDayData (historical)
+// TokensDayData (historical)
 //
 // Gets tokens day data.
 //
@@ -142,7 +142,7 @@ list_t*
 UniswapV2API_uniswapV2GetTokensDayDataHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * tokenId );
 
 
-// GetTokens (historical) 🔥
+// Tokens (historical) 🔥
 //
 // Gets tokens.
 //
@@ -150,7 +150,7 @@ list_t*
 UniswapV2API_uniswapV2GetTokensHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * tokenId );
 
 
-// GetTransactions (historical)
+// Transactions (historical)
 //
 // Gets transactions.
 //
@@ -158,7 +158,7 @@ list_t*
 UniswapV2API_uniswapV2GetTransactionsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate );
 
 
-// GetUsers (historical)
+// Users (historical)
 //
 // Gets users.
 //

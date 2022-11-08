@@ -296,121 +296,121 @@ case $state in
   ops)
     # Operations
     _values "Operations" \
-            "cowGetOrdersHistorical[GetOrders (historical)]" \
-            "cowGetSettlementsHistorical[GetSettlements (historical)]" \
-            "cowGetTokensHistorical[GetTokens (historical) 🔥]" \
-            "cowGetTradesHistorical[GetTrades (historical) 🔥]" \
-            "cowGetUsersHistorical[GetUsers (historical)]"             "curveGetAccountsHistorical[GetAccounts (historical)]" \
-            "curveGetAddLiquidityEventsHistorical[GetAddLiquidityEvents (historical)]" \
-            "curveGetAdminFeeChangeLogsHistorical[GetAdminFeeChangeLogs (historical)]" \
-            "curveGetAmplificationCoeffChangeLogsHistorical[GetAmplificationCoeffChangeLogs (historical)]" \
-            "curveGetCoinsHistorical[GetCoins (historical)]" \
-            "curveGetContractsHistorical[GetContracts (historical)]" \
-            "curveGetContractsVersionsHistorical[GetContractsVersions (historical)]" \
-            "curveGetDailyVolumesHistorical[GetDailyVolumes (historical)]" \
-            "curveGetExchangesHistorical[GetExchanges (historical) 🔥]" \
-            "curveGetFeeChangeLogsHistorical[GetFeeChangeLogs (historical)]" \
-            "curveGetGaugesDepositsHistorical[GetGaugesDeposits (historical)]" \
-            "curveGetGaugesHistorical[GetGauges (historical)]" \
-            "curveGetGaugesLiquidityHistorical[GetGaugesLiquidity (historical)]" \
-            "curveGetGaugesTotalWeightsHistorical[GetGaugesTotalWeights (historical)]" \
-            "curveGetGaugesTypesHistorical[GetGaugesTypes (historical)]" \
-            "curveGetGaugesTypesWeightsHistorical[GetGaugesTypesWeights (historical)]" \
-            "curveGetGaugesWeightsHistorical[GetGaugesWeights (historical)]" \
-            "curveGetGaugesWeightsVotesHistorical[GetGaugesWeightsVotes (historical)]" \
-            "curveGetGaugesWithdrawHistorical[GetGaugesWithdraw (historical)]" \
-            "curveGetHourlyVolumesHistorical[GetHourlyVolumes (historical)]" \
-            "curveGetLpTokensHistorical[GetLpTokens (historical)]" \
-            "curveGetPoolsHistorical[GetPools (historical) 🔥]" \
-            "curveGetProposalsHistorical[GetProposals (historical)]" \
-            "curveGetProposalsVotesHistorical[GetProposalsVotes (historical)]" \
-            "curveGetRemoveLiquidityEventsHistorical[GetRemoveLiquidityEvents (historical)]" \
-            "curveGetRemoveLiquidityOneEventsHistorical[GetRemoveLiquidityOneEvents (historical)]" \
-            "curveGetSystemStatesHistorical[GetSystemStates (historical)]" \
-            "curveGetTokensHistorical[GetTokens (historical) 🔥]" \
-            "curveGetTransferOwnershipEventsHistorical[GetTransferOwnershipEvents (historical)]" \
-            "curveGetUnderlyingCoinsHistorical[GetUnderlyingCoins (historical)]" \
-            "curveGetVotingAppsHistorical[GetVotingApps (historical)]" \
-            "curveGetWeeklyVolumesHistorical[GetWeeklyVolumes (historical)]"             "dexGetBatchesHistorical[GetBatches (historical)]" \
-            "dexGetDepositsHistorical[GetDeposits (historical)]" \
-            "dexGetOrdersHistorical[GetOrders (historical)]" \
-            "dexGetPricesHistorical[GetPrices (historical)]" \
-            "dexGetSolutionsHistorical[GetSolutions (historical)]" \
-            "dexGetStatsHistorical[GetStats (historical)]" \
-            "dexGetTokensHistorical[GetTokens (historical) 🔥]" \
-            "dexGetTradesHistorical[GetTrades (historical) 🔥]" \
-            "dexGetUsersHistorical[GetUsers (historical)]" \
-            "dexGetWithdrawsHistorical[GetWithdraws (historical)]" \
-            "dexGetWithdrawsRequestsHistorical[GetWithdrawsRequests (historical)]"             "curveGetExchangesCurrent[GetExchanges (current) 🔥]" \
-            "dexGetTradesCurrent[GetTrades (current) 🔥]" \
-            "sushiswapGetBundlesHistorical[GetBundles (historical)]" \
-            "sushiswapGetBurnsHistorical[GetBurns (historical)]" \
-            "sushiswapGetDayDataHistorical[GetDayData (historical)]" \
-            "sushiswapGetFactoryHistorical[GetFactory (historical)]" \
-            "sushiswapGetHourDataHistorical[GetHourData (historical)]" \
-            "sushiswapGetLiquidityPositionHistorical[GetLiquidityPosition (historical)]" \
-            "sushiswapGetLiquidityPositionSnapshotHistorical[GetLiquidityPositionSnapshot (historical)]" \
-            "sushiswapGetMintsHistorical[GetMints (historical)]" \
-            "sushiswapGetPoolsCurrent[GetPools (current) 🔥]" \
-            "sushiswapGetPoolsDayDataHistorical[GetPoolsDayData (historical)]" \
-            "sushiswapGetPoolsHistorical[GetPools (historical) 🔥]" \
-            "sushiswapGetPoolsHourDataHistorical[GetPoolsHourData (historical)]" \
-            "sushiswapGetSwapsCurrent[GetSwaps (current) 🔥]" \
-            "sushiswapGetSwapsHistorical[GetSwaps (historical) 🔥]" \
-            "sushiswapGetTokensCurrent[GetTokens (current) 🔥]" \
-            "sushiswapGetTokensDayDataHistorical[GetTokensDayData (historical)]" \
-            "sushiswapGetTokensHistorical[GetTokens (historical) 🔥]" \
-            "sushiswapGetTransactionsHistorical[GetTransactions (historical)]" \
-            "sushiswapGetUsersHistorical[GetUsers (historical)]"             "uniswapV2GetBundlesHistorical[GetBundles (historical)]" \
-            "uniswapV2GetBurnsHistorical[GetBurns (historical)]" \
-            "uniswapV2GetDayDataHistorical[GetDayData (historical)]" \
-            "uniswapV2GetFactoryHistorical[GetFactory (historical)]" \
-            "uniswapV2GetLiquidityPositionsHistorical[GetLiquidityPositions (historical)]" \
-            "uniswapV2GetLiquidityPositionsSnapshotsHistorical[GetLiquidityPositionsSnapshots (historical)]" \
-            "uniswapV2GetMintsHistorical[GetMints (historical)]" \
-            "uniswapV2GetPoolsCurrent[GetPools (current) 🔥]" \
-            "uniswapV2GetPoolsDayDataHistorical[GetPoolsDayData (historical)]" \
-            "uniswapV2GetPoolsHistorical[GetPools (historical) 🔥]" \
-            "uniswapV2GetPoolsHourDataHistorical[GetPoolsHourData (historical)]" \
-            "uniswapV2GetSwapsCurrent[GetSwaps (current) 🔥]" \
-            "uniswapV2GetSwapsHistorical[GetSwaps (historical) 🔥]" \
-            "uniswapV2GetTokensCurrent[GetTokens (current) 🔥]" \
-            "uniswapV2GetTokensDayDataHistorical[GetTokensDayData (historical)]" \
-            "uniswapV2GetTokensHistorical[GetTokens (historical) 🔥]" \
-            "uniswapV2GetTransactionsHistorical[GetTransactions (historical)]" \
-            "uniswapV2GetUsersHistorical[GetUsers (historical)]"             "uniswapV3GetBundlesCurrent[GetBundles (current)]" \
-            "uniswapV3GetBundlesHistorical[GetBundles (historical)]" \
-            "uniswapV3GetBurnsCurrent[GetBurns (current)]" \
-            "uniswapV3GetBurnsHistorical[GetBurns (historical)]" \
-            "uniswapV3GetDayDataCurrent[GetDayData (current)]" \
-            "uniswapV3GetDayDataHistorical[GetDayData (historical)]" \
-            "uniswapV3GetFactoryCurrent[GetFactory (current)]" \
-            "uniswapV3GetFactoryHistorical[GetFactory (historical)]" \
-            "uniswapV3GetMintsCurrent[GetMints (current)]" \
-            "uniswapV3GetMintsHistorical[GetMints (historical)]" \
-            "uniswapV3GetPoolsCurrent[GetPools (current) 🔥]" \
-            "uniswapV3GetPoolsDayDataCurrent[GetPoolsDayData (current)]" \
-            "uniswapV3GetPoolsDayDataHistorical[GetPoolsDayData (historical)]" \
-            "uniswapV3GetPoolsHistorical[GetPools (historical) 🔥]" \
-            "uniswapV3GetPoolsHourDataCurrent[GetPoolsHourData (current)]" \
-            "uniswapV3GetPoolsHourDataHistorical[GetPoolsHourData (historical)]" \
-            "uniswapV3GetPositionsCurrent[GetPositions (current)]" \
-            "uniswapV3GetPositionsHistorical[GetPositions (historical)]" \
-            "uniswapV3GetPositionsSnaphotsHistorical[GetPositionsSnaphots (historical)]" \
-            "uniswapV3GetPositionsSnapshotsCurrent[GetPositionsSnapshots (current)]" \
-            "uniswapV3GetSwapsCurrent[GetSwaps (current) 🔥]" \
-            "uniswapV3GetSwapsHistorical[GetSwaps (historical) 🔥]" \
-            "uniswapV3GetTicksCurrent[GetTicks (current)]" \
-            "uniswapV3GetTicksDayDataCurrent[GetTicksDayData (current)]" \
-            "uniswapV3GetTicksDayDataHistorical[GetTicksDayData (historical)]" \
-            "uniswapV3GetTicksHistorical[GetTicks (historical)]" \
-            "uniswapV3GetTokensCurrent[GetTokens (current) 🔥]" \
-            "uniswapV3GetTokensDayDataCurrent[GetTokensDayData (current)]" \
-            "uniswapV3GetTokensDayDataHistorical[GetTokensDayData (historical)]" \
-            "uniswapV3GetTokensHistorical[GetTokens (historical) 🔥]" \
-            "uniswapV3GetTokensHourDataCurrent[GetTokensHourData (current)]" \
-            "uniswapV3GetTokensHourDataHistorical[GetTokensHourData (historical)]" \
-            "uniswapV3GetTransactionsHistorical[GetTransactions (historical)]" \
+            "cowGetOrdersHistorical[Orders (historical)]" \
+            "cowGetSettlementsHistorical[Settlements (historical)]" \
+            "cowGetTokensHistorical[Tokens (historical) 🔥]" \
+            "cowGetTradesHistorical[Trades (historical) 🔥]" \
+            "cowGetUsersHistorical[Users (historical)]"             "curveGetAccountsHistorical[Accounts (historical)]" \
+            "curveGetAddLiquidityEventsHistorical[AddLiquidityEvents (historical)]" \
+            "curveGetAdminFeeChangeLogsHistorical[AdminFeeChangeLogs (historical)]" \
+            "curveGetAmplificationCoeffChangeLogsHistorical[AmplificationCoeffChangeLogs (historical)]" \
+            "curveGetCoinsHistorical[Coins (historical)]" \
+            "curveGetContractsHistorical[Contracts (historical)]" \
+            "curveGetContractsVersionsHistorical[ContractsVersions (historical)]" \
+            "curveGetDailyVolumesHistorical[DailyVolumes (historical)]" \
+            "curveGetExchangesHistorical[Exchanges (historical) 🔥]" \
+            "curveGetFeeChangeLogsHistorical[FeeChangeLogs (historical)]" \
+            "curveGetGaugesDepositsHistorical[GaugesDeposits (historical)]" \
+            "curveGetGaugesHistorical[Gauges (historical)]" \
+            "curveGetGaugesLiquidityHistorical[GaugesLiquidity (historical)]" \
+            "curveGetGaugesTotalWeightsHistorical[GaugesTotalWeights (historical)]" \
+            "curveGetGaugesTypesHistorical[GaugesTypes (historical)]" \
+            "curveGetGaugesTypesWeightsHistorical[GaugesTypesWeights (historical)]" \
+            "curveGetGaugesWeightsHistorical[GaugesWeights (historical)]" \
+            "curveGetGaugesWeightsVotesHistorical[GaugesWeightsVotes (historical)]" \
+            "curveGetGaugesWithdrawHistorical[GaugesWithdraw (historical)]" \
+            "curveGetHourlyVolumesHistorical[HourlyVolumes (historical)]" \
+            "curveGetLpTokensHistorical[LpTokens (historical)]" \
+            "curveGetPoolsHistorical[Pools (historical) 🔥]" \
+            "curveGetProposalsHistorical[Proposals (historical)]" \
+            "curveGetProposalsVotesHistorical[ProposalsVotes (historical)]" \
+            "curveGetRemoveLiquidityEventsHistorical[RemoveLiquidityEvents (historical)]" \
+            "curveGetRemoveLiquidityOneEventsHistorical[RemoveLiquidityOneEvents (historical)]" \
+            "curveGetSystemStatesHistorical[SystemStates (historical)]" \
+            "curveGetTokensHistorical[Tokens (historical) 🔥]" \
+            "curveGetTransferOwnershipEventsHistorical[TransferOwnershipEvents (historical)]" \
+            "curveGetUnderlyingCoinsHistorical[UnderlyingCoins (historical)]" \
+            "curveGetVotingAppsHistorical[VotingApps (historical)]" \
+            "curveGetWeeklyVolumesHistorical[WeeklyVolumes (historical)]"             "dexGetBatchesHistorical[Batches (historical)]" \
+            "dexGetDepositsHistorical[Deposits (historical)]" \
+            "dexGetOrdersHistorical[Orders (historical)]" \
+            "dexGetPricesHistorical[Prices (historical)]" \
+            "dexGetSolutionsHistorical[Solutions (historical)]" \
+            "dexGetStatsHistorical[Stats (historical)]" \
+            "dexGetTokensHistorical[Tokens (historical) 🔥]" \
+            "dexGetTradesHistorical[Trades (historical) 🔥]" \
+            "dexGetUsersHistorical[Users (historical)]" \
+            "dexGetWithdrawsHistorical[Withdraws (historical)]" \
+            "dexGetWithdrawsRequestsHistorical[WithdrawsRequests (historical)]"             "curveGetExchangesCurrent[Exchanges (current) 🔥]" \
+            "dexGetTradesCurrent[Trades (current) 🔥]" \
+            "sushiswapGetBundlesHistorical[Bundles (historical)]" \
+            "sushiswapGetBurnsHistorical[Burns (historical)]" \
+            "sushiswapGetDayDataHistorical[DayData (historical)]" \
+            "sushiswapGetFactoryHistorical[Factory (historical)]" \
+            "sushiswapGetHourDataHistorical[HourData (historical)]" \
+            "sushiswapGetLiquidityPositionHistorical[LiquidityPosition (historical)]" \
+            "sushiswapGetLiquidityPositionSnapshotHistorical[LiquidityPositionSnapshot (historical)]" \
+            "sushiswapGetMintsHistorical[Mints (historical)]" \
+            "sushiswapGetPoolsCurrent[Pools (current) 🔥]" \
+            "sushiswapGetPoolsDayDataHistorical[PoolsDayData (historical)]" \
+            "sushiswapGetPoolsHistorical[Pools (historical) 🔥]" \
+            "sushiswapGetPoolsHourDataHistorical[PoolsHourData (historical)]" \
+            "sushiswapGetSwapsCurrent[Swaps (current) 🔥]" \
+            "sushiswapGetSwapsHistorical[Swaps (historical) 🔥]" \
+            "sushiswapGetTokensCurrent[Tokens (current) 🔥]" \
+            "sushiswapGetTokensDayDataHistorical[TokensDayData (historical)]" \
+            "sushiswapGetTokensHistorical[Tokens (historical) 🔥]" \
+            "sushiswapGetTransactionsHistorical[Transactions (historical)]" \
+            "sushiswapGetUsersHistorical[Users (historical)]"             "uniswapV2GetBundlesHistorical[Bundles (historical)]" \
+            "uniswapV2GetBurnsHistorical[Burns (historical)]" \
+            "uniswapV2GetDayDataHistorical[DayData (historical)]" \
+            "uniswapV2GetFactoryHistorical[Factory (historical)]" \
+            "uniswapV2GetLiquidityPositionsHistorical[LiquidityPositions (historical)]" \
+            "uniswapV2GetLiquidityPositionsSnapshotsHistorical[LiquidityPositionsSnapshots (historical)]" \
+            "uniswapV2GetMintsHistorical[Mints (historical)]" \
+            "uniswapV2GetPoolsCurrent[Pools (current) 🔥]" \
+            "uniswapV2GetPoolsDayDataHistorical[PoolsDayData (historical)]" \
+            "uniswapV2GetPoolsHistorical[Pools (historical) 🔥]" \
+            "uniswapV2GetPoolsHourDataHistorical[PoolsHourData (historical)]" \
+            "uniswapV2GetSwapsCurrent[Swaps (current) 🔥]" \
+            "uniswapV2GetSwapsHistorical[Swaps (historical) 🔥]" \
+            "uniswapV2GetTokensCurrent[Tokens (current) 🔥]" \
+            "uniswapV2GetTokensDayDataHistorical[TokensDayData (historical)]" \
+            "uniswapV2GetTokensHistorical[Tokens (historical) 🔥]" \
+            "uniswapV2GetTransactionsHistorical[Transactions (historical)]" \
+            "uniswapV2GetUsersHistorical[Users (historical)]"             "uniswapV3GetBundlesCurrent[Bundles (current)]" \
+            "uniswapV3GetBundlesHistorical[Bundles (historical)]" \
+            "uniswapV3GetBurnsCurrent[Burns (current)]" \
+            "uniswapV3GetBurnsHistorical[Burns (historical)]" \
+            "uniswapV3GetDayDataCurrent[DayData (current)]" \
+            "uniswapV3GetDayDataHistorical[DayData (historical)]" \
+            "uniswapV3GetFactoryCurrent[Factory (current)]" \
+            "uniswapV3GetFactoryHistorical[Factory (historical)]" \
+            "uniswapV3GetMintsCurrent[Mints (current)]" \
+            "uniswapV3GetMintsHistorical[Mints (historical)]" \
+            "uniswapV3GetPoolsCurrent[Pools (current) 🔥]" \
+            "uniswapV3GetPoolsDayDataCurrent[PoolsDayData (current)]" \
+            "uniswapV3GetPoolsDayDataHistorical[PoolsDayData (historical)]" \
+            "uniswapV3GetPoolsHistorical[Pools (historical) 🔥]" \
+            "uniswapV3GetPoolsHourDataCurrent[PoolsHourData (current)]" \
+            "uniswapV3GetPoolsHourDataHistorical[PoolsHourData (historical)]" \
+            "uniswapV3GetPositionsCurrent[Positions (current)]" \
+            "uniswapV3GetPositionsHistorical[Positions (historical)]" \
+            "uniswapV3GetPositionsSnaphotsHistorical[PositionsSnaphots (historical)]" \
+            "uniswapV3GetPositionsSnapshotsCurrent[PositionsSnapshots (current)]" \
+            "uniswapV3GetSwapsCurrent[Swaps (current) 🔥]" \
+            "uniswapV3GetSwapsHistorical[Swaps (historical) 🔥]" \
+            "uniswapV3GetTicksCurrent[Ticks (current)]" \
+            "uniswapV3GetTicksDayDataCurrent[TicksDayData (current)]" \
+            "uniswapV3GetTicksDayDataHistorical[TicksDayData (historical)]" \
+            "uniswapV3GetTicksHistorical[Ticks (historical)]" \
+            "uniswapV3GetTokensCurrent[Tokens (current) 🔥]" \
+            "uniswapV3GetTokensDayDataCurrent[TokensDayData (current)]" \
+            "uniswapV3GetTokensDayDataHistorical[TokensDayData (historical)]" \
+            "uniswapV3GetTokensHistorical[Tokens (historical) 🔥]" \
+            "uniswapV3GetTokensHourDataCurrent[TokensHourData (current)]" \
+            "uniswapV3GetTokensHourDataHistorical[TokensHourData (historical)]" \
+            "uniswapV3GetTransactionsHistorical[Transactions (historical)]" \
 
     _arguments "(--help)--help[Print information about operation]"
 

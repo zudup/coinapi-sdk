@@ -50,7 +50,7 @@ public class SushiswapApiTest {
     private final SushiswapApi api = new SushiswapApi();
 
     /**
-     * GetExchanges (current) 🔥
+     * Exchanges (current) 🔥
      *
      * Gets exchanges.
      *
@@ -63,7 +63,7 @@ public class SushiswapApiTest {
     }
 
     /**
-     * GetTrades (current) 🔥
+     * Trades (current) 🔥
      *
      * Gets trades.
      *
@@ -76,7 +76,7 @@ public class SushiswapApiTest {
     }
 
     /**
-     * GetBundles (historical)
+     * Bundles (historical)
      *
      * Gets bundles.
      *
@@ -93,7 +93,7 @@ public class SushiswapApiTest {
     }
 
     /**
-     * GetBurns (historical)
+     * Burns (historical)
      *
      * Gets burns.
      *
@@ -111,7 +111,7 @@ public class SushiswapApiTest {
     }
 
     /**
-     * GetDayData (historical)
+     * DayData (historical)
      *
      * Gets day data.
      *
@@ -128,7 +128,7 @@ public class SushiswapApiTest {
     }
 
     /**
-     * GetFactory (historical)
+     * Factory (historical)
      *
      * Gets factory.
      *
@@ -145,7 +145,7 @@ public class SushiswapApiTest {
     }
 
     /**
-     * GetHourData (historical)
+     * HourData (historical)
      *
      * Gets hour data.
      *
@@ -162,7 +162,7 @@ public class SushiswapApiTest {
     }
 
     /**
-     * GetLiquidityPosition (historical)
+     * LiquidityPosition (historical)
      *
      * Gets liquidity position.
      *
@@ -180,7 +180,7 @@ public class SushiswapApiTest {
     }
 
     /**
-     * GetLiquidityPositionSnapshot (historical)
+     * LiquidityPositionSnapshot (historical)
      *
      * Gets liquidity position snapshot.
      *
@@ -198,7 +198,7 @@ public class SushiswapApiTest {
     }
 
     /**
-     * GetMints (historical)
+     * Mints (historical)
      *
      * Gets mints.
      *
@@ -216,7 +216,7 @@ public class SushiswapApiTest {
     }
 
     /**
-     * GetPools (current) 🔥
+     * Pools (current) 🔥
      *
      * Gets pools.
      *
@@ -229,7 +229,7 @@ public class SushiswapApiTest {
     }
 
     /**
-     * GetPoolsDayData (historical)
+     * PoolsDayData (historical)
      *
      * Gets pools day data.
      *
@@ -247,7 +247,7 @@ public class SushiswapApiTest {
     }
 
     /**
-     * GetPools (historical) 🔥
+     * Pools (historical) 🔥
      *
      * Gets list of pools for given filters.
      *
@@ -265,7 +265,7 @@ public class SushiswapApiTest {
     }
 
     /**
-     * GetPoolsHourData (historical)
+     * PoolsHourData (historical)
      *
      * Gets pools tracked each our.
      *
@@ -283,7 +283,7 @@ public class SushiswapApiTest {
     }
 
     /**
-     * GetSwaps (current) 🔥
+     * Swaps (current) 🔥
      *
      * Gets swaps.
      *
@@ -296,7 +296,7 @@ public class SushiswapApiTest {
     }
 
     /**
-     * GetSwaps (historical) 🔥
+     * Swaps (historical) 🔥
      *
      * Gets list of swaps for given filters.
      *
@@ -314,7 +314,7 @@ public class SushiswapApiTest {
     }
 
     /**
-     * GetTokens (current) 🔥
+     * Tokens (current) 🔥
      *
      * Gets tokens.
      *
@@ -327,7 +327,7 @@ public class SushiswapApiTest {
     }
 
     /**
-     * GetTokensDayData (historical)
+     * TokensDayData (historical)
      *
      * Gets tokens day data.
      *
@@ -345,7 +345,7 @@ public class SushiswapApiTest {
     }
 
     /**
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      *
      * Gets list of tokens for given filters.
      *
@@ -363,7 +363,7 @@ public class SushiswapApiTest {
     }
 
     /**
-     * GetTransactions (historical)
+     * Transactions (historical)
      *
      * Gets transactions.
      *
@@ -380,7 +380,7 @@ public class SushiswapApiTest {
     }
 
     /**
-     * GetUsers (historical)
+     * Users (historical)
      *
      * Gets users.
      *

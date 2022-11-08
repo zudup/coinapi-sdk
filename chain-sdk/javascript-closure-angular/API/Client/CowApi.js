@@ -48,7 +48,7 @@ API.Client.CowApi = function($http, $httpParamSerializer, $injector) {
 API.Client.CowApi.$inject = ['$http', '$httpParamSerializer', '$injector'];
 
 /**
- * GetOrders (historical)
+ * Orders (historical)
  * Gets orders.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -99,7 +99,7 @@ API.Client.CowApi.prototype.cowGetOrdersHistorical = function(opt_startBlock, op
 }
 
 /**
- * GetSettlements (historical)
+ * Settlements (historical)
  * Gets settlements.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -150,7 +150,7 @@ API.Client.CowApi.prototype.cowGetSettlementsHistorical = function(opt_startBloc
 }
 
 /**
- * GetTokens (historical) 🔥
+ * Tokens (historical) 🔥
  * Gets tokens.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -206,7 +206,7 @@ API.Client.CowApi.prototype.cowGetTokensHistorical = function(opt_startBlock, op
 }
 
 /**
- * GetTrades (historical) 🔥
+ * Trades (historical) 🔥
  * Gets trades.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 
@@ -257,7 +257,7 @@ API.Client.CowApi.prototype.cowGetTradesHistorical = function(opt_startBlock, op
 }
 
 /**
- * GetUsers (historical)
+ * Users (historical)
  * Gets users.
  * @param {!number=} opt_startBlock 
  * @param {!number=} opt_endBlock 

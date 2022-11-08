@@ -4,22 +4,22 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**DexAPI_dexGetBatchesHistorical**](DexAPI.md#DexAPI_dexGetBatchesHistorical) | **GET** /dapps/dex/batches/historical | GetBatches (historical)
-[**DexAPI_dexGetDepositsHistorical**](DexAPI.md#DexAPI_dexGetDepositsHistorical) | **GET** /dapps/dex/deposits/historical | GetDeposits (historical)
-[**DexAPI_dexGetOrdersHistorical**](DexAPI.md#DexAPI_dexGetOrdersHistorical) | **GET** /dapps/dex/orders/historical | GetOrders (historical)
-[**DexAPI_dexGetPricesHistorical**](DexAPI.md#DexAPI_dexGetPricesHistorical) | **GET** /dapps/dex/prices/historical | GetPrices (historical)
-[**DexAPI_dexGetSolutionsHistorical**](DexAPI.md#DexAPI_dexGetSolutionsHistorical) | **GET** /dapps/dex/solutions/historical | GetSolutions (historical)
-[**DexAPI_dexGetStatsHistorical**](DexAPI.md#DexAPI_dexGetStatsHistorical) | **GET** /dapps/dex/stats/historical | GetStats (historical)
-[**DexAPI_dexGetTokensHistorical**](DexAPI.md#DexAPI_dexGetTokensHistorical) | **GET** /dapps/dex/tokens/historical | GetTokens (historical) 🔥
-[**DexAPI_dexGetTradesHistorical**](DexAPI.md#DexAPI_dexGetTradesHistorical) | **GET** /dapps/dex/trades/historical | GetTrades (historical) 🔥
-[**DexAPI_dexGetUsersHistorical**](DexAPI.md#DexAPI_dexGetUsersHistorical) | **GET** /dapps/dex/users/historical | GetUsers (historical)
-[**DexAPI_dexGetWithdrawsHistorical**](DexAPI.md#DexAPI_dexGetWithdrawsHistorical) | **GET** /dapps/dex/withdraws/historical | GetWithdraws (historical)
-[**DexAPI_dexGetWithdrawsRequestsHistorical**](DexAPI.md#DexAPI_dexGetWithdrawsRequestsHistorical) | **GET** /dapps/dex/withdrawsRequests/historical | GetWithdrawsRequests (historical)
+[**DexAPI_dexGetBatchesHistorical**](DexAPI.md#DexAPI_dexGetBatchesHistorical) | **GET** /dapps/dex/batches/historical | Batches (historical)
+[**DexAPI_dexGetDepositsHistorical**](DexAPI.md#DexAPI_dexGetDepositsHistorical) | **GET** /dapps/dex/deposits/historical | Deposits (historical)
+[**DexAPI_dexGetOrdersHistorical**](DexAPI.md#DexAPI_dexGetOrdersHistorical) | **GET** /dapps/dex/orders/historical | Orders (historical)
+[**DexAPI_dexGetPricesHistorical**](DexAPI.md#DexAPI_dexGetPricesHistorical) | **GET** /dapps/dex/prices/historical | Prices (historical)
+[**DexAPI_dexGetSolutionsHistorical**](DexAPI.md#DexAPI_dexGetSolutionsHistorical) | **GET** /dapps/dex/solutions/historical | Solutions (historical)
+[**DexAPI_dexGetStatsHistorical**](DexAPI.md#DexAPI_dexGetStatsHistorical) | **GET** /dapps/dex/stats/historical | Stats (historical)
+[**DexAPI_dexGetTokensHistorical**](DexAPI.md#DexAPI_dexGetTokensHistorical) | **GET** /dapps/dex/tokens/historical | Tokens (historical) 🔥
+[**DexAPI_dexGetTradesHistorical**](DexAPI.md#DexAPI_dexGetTradesHistorical) | **GET** /dapps/dex/trades/historical | Trades (historical) 🔥
+[**DexAPI_dexGetUsersHistorical**](DexAPI.md#DexAPI_dexGetUsersHistorical) | **GET** /dapps/dex/users/historical | Users (historical)
+[**DexAPI_dexGetWithdrawsHistorical**](DexAPI.md#DexAPI_dexGetWithdrawsHistorical) | **GET** /dapps/dex/withdraws/historical | Withdraws (historical)
+[**DexAPI_dexGetWithdrawsRequestsHistorical**](DexAPI.md#DexAPI_dexGetWithdrawsRequestsHistorical) | **GET** /dapps/dex/withdrawsRequests/historical | WithdrawsRequests (historical)
 
 
 # **DexAPI_dexGetBatchesHistorical**
 ```c
-// GetBatches (historical)
+// Batches (historical)
 //
 // Gets batches.
 //
@@ -53,7 +53,7 @@ No authorization required
 
 # **DexAPI_dexGetDepositsHistorical**
 ```c
-// GetDeposits (historical)
+// Deposits (historical)
 //
 // Gets deposits.
 //
@@ -88,7 +88,7 @@ No authorization required
 
 # **DexAPI_dexGetOrdersHistorical**
 ```c
-// GetOrders (historical)
+// Orders (historical)
 //
 // Gets orders.
 //
@@ -123,7 +123,7 @@ No authorization required
 
 # **DexAPI_dexGetPricesHistorical**
 ```c
-// GetPrices (historical)
+// Prices (historical)
 //
 // Gets prices.
 //
@@ -158,7 +158,7 @@ No authorization required
 
 # **DexAPI_dexGetSolutionsHistorical**
 ```c
-// GetSolutions (historical)
+// Solutions (historical)
 //
 // Gets solutions.
 //
@@ -193,7 +193,7 @@ No authorization required
 
 # **DexAPI_dexGetStatsHistorical**
 ```c
-// GetStats (historical)
+// Stats (historical)
 //
 // Gets stats.
 //
@@ -227,7 +227,7 @@ No authorization required
 
 # **DexAPI_dexGetTokensHistorical**
 ```c
-// GetTokens (historical) 🔥
+// Tokens (historical) 🔥
 //
 // Gets tokens.
 //
@@ -262,7 +262,7 @@ No authorization required
 
 # **DexAPI_dexGetTradesHistorical**
 ```c
-// GetTrades (historical) 🔥
+// Trades (historical) 🔥
 //
 // Gets trades.
 //
@@ -296,7 +296,7 @@ No authorization required
 
 # **DexAPI_dexGetUsersHistorical**
 ```c
-// GetUsers (historical)
+// Users (historical)
 //
 // Gets users.
 //
@@ -330,7 +330,7 @@ No authorization required
 
 # **DexAPI_dexGetWithdrawsHistorical**
 ```c
-// GetWithdraws (historical)
+// Withdraws (historical)
 //
 // Gets withdraws.
 //
@@ -365,7 +365,7 @@ No authorization required
 
 # **DexAPI_dexGetWithdrawsRequestsHistorical**
 ```c
-// GetWithdrawsRequests (historical)
+// WithdrawsRequests (historical)
 //
 // Gets withdraws requests.
 //

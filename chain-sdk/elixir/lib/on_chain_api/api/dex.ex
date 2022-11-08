@@ -10,7 +10,7 @@ defmodule OnChainAPI.Api.Dex do
   import OnChainAPI.RequestBuilder
 
   @doc """
-  GetBatches (historical)
+  Batches (historical)
   Gets batches.
 
   ### Parameters
@@ -51,7 +51,7 @@ defmodule OnChainAPI.Api.Dex do
   end
 
   @doc """
-  GetDeposits (historical)
+  Deposits (historical)
   Gets deposits.
 
   ### Parameters
@@ -94,7 +94,7 @@ defmodule OnChainAPI.Api.Dex do
   end
 
   @doc """
-  GetOrders (historical)
+  Orders (historical)
   Gets orders.
 
   ### Parameters
@@ -137,7 +137,7 @@ defmodule OnChainAPI.Api.Dex do
   end
 
   @doc """
-  GetPrices (historical)
+  Prices (historical)
   Gets prices.
 
   ### Parameters
@@ -180,7 +180,7 @@ defmodule OnChainAPI.Api.Dex do
   end
 
   @doc """
-  GetSolutions (historical)
+  Solutions (historical)
   Gets solutions.
 
   ### Parameters
@@ -223,7 +223,7 @@ defmodule OnChainAPI.Api.Dex do
   end
 
   @doc """
-  GetStats (historical)
+  Stats (historical)
   Gets stats.
 
   ### Parameters
@@ -264,7 +264,7 @@ defmodule OnChainAPI.Api.Dex do
   end
 
   @doc """
-  GetTokens (historical) 🔥
+  Tokens (historical) 🔥
   Gets tokens.
 
   ### Parameters
@@ -307,7 +307,7 @@ defmodule OnChainAPI.Api.Dex do
   end
 
   @doc """
-  GetTrades (historical) 🔥
+  Trades (historical) 🔥
   Gets trades.
 
   ### Parameters
@@ -348,7 +348,7 @@ defmodule OnChainAPI.Api.Dex do
   end
 
   @doc """
-  GetUsers (historical)
+  Users (historical)
   Gets users.
 
   ### Parameters
@@ -389,7 +389,7 @@ defmodule OnChainAPI.Api.Dex do
   end
 
   @doc """
-  GetWithdraws (historical)
+  Withdraws (historical)
   Gets withdraws.
 
   ### Parameters
@@ -432,7 +432,7 @@ defmodule OnChainAPI.Api.Dex do
   end
 
   @doc """
-  GetWithdrawsRequests (historical)
+  WithdrawsRequests (historical)
   Gets withdraws requests.
 
   ### Parameters

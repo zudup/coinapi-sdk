@@ -21,7 +21,7 @@ from .. import ApiTestMixin
 class TestDappsCurveAmplificationCoeffChangeLogsHistorical(ApiTestMixin, unittest.TestCase):
     """
     DappsCurveAmplificationCoeffChangeLogsHistorical unit test stubs
-        GetAmplificationCoeffChangeLogs (historical)  # noqa: E501
+        AmplificationCoeffChangeLogs (historical)  # noqa: E501
     """
     _configuration = configuration.Configuration()
 

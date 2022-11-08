@@ -16,7 +16,7 @@ class UniswapV2Api {
 
   final ApiClient apiClient;
 
-  /// GetBundles (historical)
+  /// Bundles (historical)
   ///
   /// Gets bundles.
   ///
@@ -73,7 +73,7 @@ class UniswapV2Api {
     );
   }
 
-  /// GetBundles (historical)
+  /// Bundles (historical)
   ///
   /// Gets bundles.
   ///
@@ -108,7 +108,7 @@ class UniswapV2Api {
     return null;
   }
 
-  /// GetBurns (historical)
+  /// Burns (historical)
   ///
   /// Gets burns.
   ///
@@ -171,7 +171,7 @@ class UniswapV2Api {
     );
   }
 
-  /// GetBurns (historical)
+  /// Burns (historical)
   ///
   /// Gets burns.
   ///
@@ -209,7 +209,7 @@ class UniswapV2Api {
     return null;
   }
 
-  /// GetDayData (historical)
+  /// DayData (historical)
   ///
   /// Gets uniswapv2 day data.
   ///
@@ -266,7 +266,7 @@ class UniswapV2Api {
     );
   }
 
-  /// GetDayData (historical)
+  /// DayData (historical)
   ///
   /// Gets uniswapv2 day data.
   ///
@@ -301,7 +301,7 @@ class UniswapV2Api {
     return null;
   }
 
-  /// GetFactory (historical)
+  /// Factory (historical)
   ///
   /// Gets factory.
   ///
@@ -358,7 +358,7 @@ class UniswapV2Api {
     );
   }
 
-  /// GetFactory (historical)
+  /// Factory (historical)
   ///
   /// Gets factory.
   ///
@@ -393,7 +393,7 @@ class UniswapV2Api {
     return null;
   }
 
-  /// GetLiquidityPositions (historical)
+  /// LiquidityPositions (historical)
   ///
   /// Gets liquidity positions.
   ///
@@ -456,7 +456,7 @@ class UniswapV2Api {
     );
   }
 
-  /// GetLiquidityPositions (historical)
+  /// LiquidityPositions (historical)
   ///
   /// Gets liquidity positions.
   ///
@@ -494,7 +494,7 @@ class UniswapV2Api {
     return null;
   }
 
-  /// GetLiquidityPositionsSnapshots (historical)
+  /// LiquidityPositionsSnapshots (historical)
   ///
   /// Gets liquidity positions snapshots.
   ///
@@ -557,7 +557,7 @@ class UniswapV2Api {
     );
   }
 
-  /// GetLiquidityPositionsSnapshots (historical)
+  /// LiquidityPositionsSnapshots (historical)
   ///
   /// Gets liquidity positions snapshots.
   ///
@@ -595,7 +595,7 @@ class UniswapV2Api {
     return null;
   }
 
-  /// GetMints (historical)
+  /// Mints (historical)
   ///
   /// Gets mints.
   ///
@@ -658,7 +658,7 @@ class UniswapV2Api {
     );
   }
 
-  /// GetMints (historical)
+  /// Mints (historical)
   ///
   /// Gets mints.
   ///
@@ -696,7 +696,7 @@ class UniswapV2Api {
     return null;
   }
 
-  /// GetPools (current) 🔥
+  /// Pools (current) 🔥
   ///
   /// Gets pools.
   ///
@@ -734,7 +734,7 @@ class UniswapV2Api {
     );
   }
 
-  /// GetPools (current) 🔥
+  /// Pools (current) 🔥
   ///
   /// Gets pools.
   ///
@@ -759,7 +759,7 @@ class UniswapV2Api {
     return null;
   }
 
-  /// GetPoolsDayData (historical)
+  /// PoolsDayData (historical)
   ///
   /// Gets pools day data.
   ///
@@ -822,7 +822,7 @@ class UniswapV2Api {
     );
   }
 
-  /// GetPoolsDayData (historical)
+  /// PoolsDayData (historical)
   ///
   /// Gets pools day data.
   ///
@@ -860,7 +860,7 @@ class UniswapV2Api {
     return null;
   }
 
-  /// GetPools (historical) 🔥
+  /// Pools (historical) 🔥
   ///
   /// Gets pools.
   ///
@@ -923,7 +923,7 @@ class UniswapV2Api {
     );
   }
 
-  /// GetPools (historical) 🔥
+  /// Pools (historical) 🔥
   ///
   /// Gets pools.
   ///
@@ -961,7 +961,7 @@ class UniswapV2Api {
     return null;
   }
 
-  /// GetPoolsHourData (historical)
+  /// PoolsHourData (historical)
   ///
   /// Gets pools tracked each our.
   ///
@@ -1024,7 +1024,7 @@ class UniswapV2Api {
     );
   }
 
-  /// GetPoolsHourData (historical)
+  /// PoolsHourData (historical)
   ///
   /// Gets pools tracked each our.
   ///
@@ -1062,7 +1062,7 @@ class UniswapV2Api {
     return null;
   }
 
-  /// GetSwaps (current) 🔥
+  /// Swaps (current) 🔥
   ///
   /// Gets swaps.
   ///
@@ -1092,7 +1092,7 @@ class UniswapV2Api {
     );
   }
 
-  /// GetSwaps (current) 🔥
+  /// Swaps (current) 🔥
   ///
   /// Gets swaps.
   Future<List<UniswapV2SwapV2DTO>?> uniswapV2GetSwapsCurrent() async {
@@ -1113,7 +1113,7 @@ class UniswapV2Api {
     return null;
   }
 
-  /// GetSwaps (historical) 🔥
+  /// Swaps (historical) 🔥
   ///
   /// Gets swaps.
   ///
@@ -1176,7 +1176,7 @@ class UniswapV2Api {
     );
   }
 
-  /// GetSwaps (historical) 🔥
+  /// Swaps (historical) 🔥
   ///
   /// Gets swaps.
   ///
@@ -1214,7 +1214,7 @@ class UniswapV2Api {
     return null;
   }
 
-  /// GetTokens (current) 🔥
+  /// Tokens (current) 🔥
   ///
   /// Gets tokens.
   ///
@@ -1244,7 +1244,7 @@ class UniswapV2Api {
     );
   }
 
-  /// GetTokens (current) 🔥
+  /// Tokens (current) 🔥
   ///
   /// Gets tokens.
   Future<List<UniswapV2TokenV2DTO>?> uniswapV2GetTokensCurrent() async {
@@ -1265,7 +1265,7 @@ class UniswapV2Api {
     return null;
   }
 
-  /// GetTokensDayData (historical)
+  /// TokensDayData (historical)
   ///
   /// Gets tokens day data.
   ///
@@ -1328,7 +1328,7 @@ class UniswapV2Api {
     );
   }
 
-  /// GetTokensDayData (historical)
+  /// TokensDayData (historical)
   ///
   /// Gets tokens day data.
   ///
@@ -1366,7 +1366,7 @@ class UniswapV2Api {
     return null;
   }
 
-  /// GetTokens (historical) 🔥
+  /// Tokens (historical) 🔥
   ///
   /// Gets tokens.
   ///
@@ -1429,7 +1429,7 @@ class UniswapV2Api {
     );
   }
 
-  /// GetTokens (historical) 🔥
+  /// Tokens (historical) 🔥
   ///
   /// Gets tokens.
   ///
@@ -1467,7 +1467,7 @@ class UniswapV2Api {
     return null;
   }
 
-  /// GetTransactions (historical)
+  /// Transactions (historical)
   ///
   /// Gets transactions.
   ///
@@ -1524,7 +1524,7 @@ class UniswapV2Api {
     );
   }
 
-  /// GetTransactions (historical)
+  /// Transactions (historical)
   ///
   /// Gets transactions.
   ///
@@ -1559,7 +1559,7 @@ class UniswapV2Api {
     return null;
   }
 
-  /// GetUsers (historical)
+  /// Users (historical)
   ///
   /// Gets users.
   ///
@@ -1616,7 +1616,7 @@ class UniswapV2Api {
     );
   }
 
-  /// GetUsers (historical)
+  /// Users (historical)
   ///
   /// Gets users.
   ///

@@ -61,7 +61,7 @@ public class CowApi {
   }
 
   /**
-  * GetOrders (historical)
+  * Orders (historical)
   * Gets orders.
    * @param startBlock 
    * @param endBlock 
@@ -125,7 +125,7 @@ public class CowApi {
   }
 
       /**
-   * GetOrders (historical)
+   * Orders (historical)
    * Gets orders.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate 
   */
@@ -189,7 +189,7 @@ public class CowApi {
     }
   }
   /**
-  * GetSettlements (historical)
+  * Settlements (historical)
   * Gets settlements.
    * @param startBlock 
    * @param endBlock 
@@ -253,7 +253,7 @@ public class CowApi {
   }
 
       /**
-   * GetSettlements (historical)
+   * Settlements (historical)
    * Gets settlements.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate 
   */
@@ -317,7 +317,7 @@ public class CowApi {
     }
   }
   /**
-  * GetTokens (historical) 🔥
+  * Tokens (historical) 🔥
   * Gets tokens.
    * @param startBlock 
    * @param endBlock 
@@ -383,7 +383,7 @@ public class CowApi {
   }
 
       /**
-   * GetTokens (historical) 🔥
+   * Tokens (historical) 🔥
    * Gets tokens.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param tokenId 
   */
@@ -448,7 +448,7 @@ public class CowApi {
     }
   }
   /**
-  * GetTrades (historical) 🔥
+  * Trades (historical) 🔥
   * Gets trades.
    * @param startBlock 
    * @param endBlock 
@@ -512,7 +512,7 @@ public class CowApi {
   }
 
       /**
-   * GetTrades (historical) 🔥
+   * Trades (historical) 🔥
    * Gets trades.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate 
   */
@@ -576,7 +576,7 @@ public class CowApi {
     }
   }
   /**
-  * GetUsers (historical)
+  * Users (historical)
   * Gets users.
    * @param startBlock 
    * @param endBlock 
@@ -640,7 +640,7 @@ public class CowApi {
   }
 
       /**
-   * GetUsers (historical)
+   * Users (historical)
    * Gets users.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate 
   */

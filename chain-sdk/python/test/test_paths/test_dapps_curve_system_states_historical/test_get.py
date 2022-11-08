@@ -21,7 +21,7 @@ from .. import ApiTestMixin
 class TestDappsCurveSystemStatesHistorical(ApiTestMixin, unittest.TestCase):
     """
     DappsCurveSystemStatesHistorical unit test stubs
-        GetSystemStates (historical)  # noqa: E501
+        SystemStates (historical)  # noqa: E501
     """
     _configuration = configuration.Configuration()
 

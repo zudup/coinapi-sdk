@@ -162,7 +162,7 @@ public class CowApi {
     }
 
     /**
-     * GetOrders (historical)
+     * Orders (historical)
      * Gets orders.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -182,7 +182,7 @@ public class CowApi {
     }
 
     /**
-     * GetOrders (historical)
+     * Orders (historical)
      * Gets orders.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -203,7 +203,7 @@ public class CowApi {
     }
 
     /**
-     * GetOrders (historical) (asynchronously)
+     * Orders (historical) (asynchronously)
      * Gets orders.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -309,7 +309,7 @@ public class CowApi {
     }
 
     /**
-     * GetSettlements (historical)
+     * Settlements (historical)
      * Gets settlements.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -329,7 +329,7 @@ public class CowApi {
     }
 
     /**
-     * GetSettlements (historical)
+     * Settlements (historical)
      * Gets settlements.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -350,7 +350,7 @@ public class CowApi {
     }
 
     /**
-     * GetSettlements (historical) (asynchronously)
+     * Settlements (historical) (asynchronously)
      * Gets settlements.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -461,7 +461,7 @@ public class CowApi {
     }
 
     /**
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      * Gets tokens.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -482,7 +482,7 @@ public class CowApi {
     }
 
     /**
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      * Gets tokens.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -504,7 +504,7 @@ public class CowApi {
     }
 
     /**
-     * GetTokens (historical) 🔥 (asynchronously)
+     * Tokens (historical) 🔥 (asynchronously)
      * Gets tokens.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -611,7 +611,7 @@ public class CowApi {
     }
 
     /**
-     * GetTrades (historical) 🔥
+     * Trades (historical) 🔥
      * Gets trades.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -631,7 +631,7 @@ public class CowApi {
     }
 
     /**
-     * GetTrades (historical) 🔥
+     * Trades (historical) 🔥
      * Gets trades.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -652,7 +652,7 @@ public class CowApi {
     }
 
     /**
-     * GetTrades (historical) 🔥 (asynchronously)
+     * Trades (historical) 🔥 (asynchronously)
      * Gets trades.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -758,7 +758,7 @@ public class CowApi {
     }
 
     /**
-     * GetUsers (historical)
+     * Users (historical)
      * Gets users.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -778,7 +778,7 @@ public class CowApi {
     }
 
     /**
-     * GetUsers (historical)
+     * Users (historical)
      * Gets users.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -799,7 +799,7 @@ public class CowApi {
     }
 
     /**
-     * GetUsers (historical) (asynchronously)
+     * Users (historical) (asynchronously)
      * Gets users.
      * @param startBlock  (optional)
      * @param endBlock  (optional)

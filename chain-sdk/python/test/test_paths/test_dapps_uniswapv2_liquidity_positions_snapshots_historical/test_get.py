@@ -21,7 +21,7 @@ from .. import ApiTestMixin
 class TestDappsUniswapv2LiquidityPositionsSnapshotsHistorical(ApiTestMixin, unittest.TestCase):
     """
     DappsUniswapv2LiquidityPositionsSnapshotsHistorical unit test stubs
-        GetLiquidityPositionsSnapshots (historical)  # noqa: E501
+        LiquidityPositionsSnapshots (historical)  # noqa: E501
     """
     _configuration = configuration.Configuration()
 

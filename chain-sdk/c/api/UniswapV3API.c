@@ -12,7 +12,7 @@
 }while(0)
 
 
-// GetBundles (current)
+// Bundles (current)
 //
 // Gets bundles.
 //
@@ -87,7 +87,7 @@ end:
 
 }
 
-// GetBundles (historical)
+// Bundles (historical)
 //
 // Gets bundles.
 //
@@ -242,7 +242,7 @@ end:
 
 }
 
-// GetBurns (current)
+// Burns (current)
 //
 // Gets burns.
 //
@@ -341,7 +341,7 @@ end:
 
 }
 
-// GetBurns (historical)
+// Burns (historical)
 //
 // Gets burns.
 //
@@ -520,7 +520,7 @@ end:
 
 }
 
-// GetDayData (current)
+// DayData (current)
 //
 // Gets uniswapv3 day data.
 //
@@ -595,7 +595,7 @@ end:
 
 }
 
-// GetDayData (historical)
+// DayData (historical)
 //
 // Gets uniswapv3 day data.
 //
@@ -750,7 +750,7 @@ end:
 
 }
 
-// GetFactory (current)
+// Factory (current)
 //
 // Gets factory.
 //
@@ -825,7 +825,7 @@ end:
 
 }
 
-// GetFactory (historical)
+// Factory (historical)
 //
 // Gets factory.
 //
@@ -980,7 +980,7 @@ end:
 
 }
 
-// GetMints (current)
+// Mints (current)
 //
 // Gets mints.
 //
@@ -1079,7 +1079,7 @@ end:
 
 }
 
-// GetMints (historical)
+// Mints (historical)
 //
 // Gets mints.
 //
@@ -1258,7 +1258,7 @@ end:
 
 }
 
-// GetPools (current) 🔥
+// Pools (current) 🔥
 //
 // Gets pools.
 //
@@ -1357,7 +1357,7 @@ end:
 
 }
 
-// GetPoolsDayData (current)
+// PoolsDayData (current)
 //
 // Gets pools day data.
 //
@@ -1456,7 +1456,7 @@ end:
 
 }
 
-// GetPoolsDayData (historical)
+// PoolsDayData (historical)
 //
 // Gets pools day data.
 //
@@ -1635,7 +1635,7 @@ end:
 
 }
 
-// GetPools (historical) 🔥
+// Pools (historical) 🔥
 //
 // Gets pools.
 //
@@ -1814,7 +1814,7 @@ end:
 
 }
 
-// GetPoolsHourData (current)
+// PoolsHourData (current)
 //
 // Gets pools hour data.
 //
@@ -1913,7 +1913,7 @@ end:
 
 }
 
-// GetPoolsHourData (historical)
+// PoolsHourData (historical)
 //
 // Gets pools hour data.
 //
@@ -2092,7 +2092,7 @@ end:
 
 }
 
-// GetPositions (current)
+// Positions (current)
 //
 // Gets positions.
 //
@@ -2191,7 +2191,7 @@ end:
 
 }
 
-// GetPositions (historical)
+// Positions (historical)
 //
 // Gets positions.
 //
@@ -2370,7 +2370,7 @@ end:
 
 }
 
-// GetPositionsSnaphots (historical)
+// PositionsSnaphots (historical)
 //
 // Gets positions snapshots.
 //
@@ -2549,7 +2549,7 @@ end:
 
 }
 
-// GetPositionsSnapshots (current)
+// PositionsSnapshots (current)
 //
 // Gets positions snapshots.
 //
@@ -2648,7 +2648,7 @@ end:
 
 }
 
-// GetSwaps (current) 🔥
+// Swaps (current) 🔥
 //
 // Gets swaps.
 //
@@ -2747,7 +2747,7 @@ end:
 
 }
 
-// GetSwaps (historical) 🔥
+// Swaps (historical) 🔥
 //
 // Gets swaps.
 //
@@ -2926,7 +2926,7 @@ end:
 
 }
 
-// GetTicks (current)
+// Ticks (current)
 //
 // Gets ticks.
 //
@@ -3025,7 +3025,7 @@ end:
 
 }
 
-// GetTicksDayData (current)
+// TicksDayData (current)
 //
 // Gets ticks day data.
 //
@@ -3124,7 +3124,7 @@ end:
 
 }
 
-// GetTicksDayData (historical)
+// TicksDayData (historical)
 //
 // Gets ticks day data.
 //
@@ -3303,7 +3303,7 @@ end:
 
 }
 
-// GetTicks (historical)
+// Ticks (historical)
 //
 // Gets ticks.
 //
@@ -3482,7 +3482,7 @@ end:
 
 }
 
-// GetTokens (current) 🔥
+// Tokens (current) 🔥
 //
 // Gets tokens.
 //
@@ -3581,7 +3581,7 @@ end:
 
 }
 
-// GetTokensDayData (current)
+// TokensDayData (current)
 //
 // Gets tokens day data.
 //
@@ -3680,7 +3680,7 @@ end:
 
 }
 
-// GetTokensDayData (historical)
+// TokensDayData (historical)
 //
 // Gets tokens day data.
 //
@@ -3859,7 +3859,7 @@ end:
 
 }
 
-// GetTokens (historical) 🔥
+// Tokens (historical) 🔥
 //
 // Gets tokens.
 //
@@ -4038,7 +4038,7 @@ end:
 
 }
 
-// GetTokensHourData (current)
+// TokensHourData (current)
 //
 // Gets tokens hour data.
 //
@@ -4137,7 +4137,7 @@ end:
 
 }
 
-// GetTokensHourData (historical)
+// TokensHourData (historical)
 //
 // Gets tokens hour data.
 //
@@ -4316,7 +4316,7 @@ end:
 
 }
 
-// GetTransactions (historical)
+// Transactions (historical)
 //
 // Gets transactions.
 //

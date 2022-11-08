@@ -4,45 +4,45 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**UniswapV3GetBundlesCurrent**](UniswapV3Api.md#UniswapV3GetBundlesCurrent) | **GET** /dapps/uniswapv3/bundles/current | GetBundles (current)
-[**UniswapV3GetBundlesHistorical**](UniswapV3Api.md#UniswapV3GetBundlesHistorical) | **GET** /dapps/uniswapv3/bundles/historical | GetBundles (historical)
-[**UniswapV3GetBurnsCurrent**](UniswapV3Api.md#UniswapV3GetBurnsCurrent) | **GET** /dapps/uniswapv3/burns/current | GetBurns (current)
-[**UniswapV3GetBurnsHistorical**](UniswapV3Api.md#UniswapV3GetBurnsHistorical) | **GET** /dapps/uniswapv3/burns/historical | GetBurns (historical)
-[**UniswapV3GetDayDataCurrent**](UniswapV3Api.md#UniswapV3GetDayDataCurrent) | **GET** /dapps/uniswapv3/dayData/current | GetDayData (current)
-[**UniswapV3GetDayDataHistorical**](UniswapV3Api.md#UniswapV3GetDayDataHistorical) | **GET** /dapps/uniswapv3/dayData/historical | GetDayData (historical)
-[**UniswapV3GetFactoryCurrent**](UniswapV3Api.md#UniswapV3GetFactoryCurrent) | **GET** /dapps/uniswapv3/factory/current | GetFactory (current)
-[**UniswapV3GetFactoryHistorical**](UniswapV3Api.md#UniswapV3GetFactoryHistorical) | **GET** /dapps/uniswapv3/factory/historical | GetFactory (historical)
-[**UniswapV3GetMintsCurrent**](UniswapV3Api.md#UniswapV3GetMintsCurrent) | **GET** /dapps/uniswapv3/mints/current | GetMints (current)
-[**UniswapV3GetMintsHistorical**](UniswapV3Api.md#UniswapV3GetMintsHistorical) | **GET** /dapps/uniswapv3/mints/historical | GetMints (historical)
-[**UniswapV3GetPoolsCurrent**](UniswapV3Api.md#UniswapV3GetPoolsCurrent) | **GET** /dapps/uniswapv3/pools/current | GetPools (current) 🔥
-[**UniswapV3GetPoolsDayDataCurrent**](UniswapV3Api.md#UniswapV3GetPoolsDayDataCurrent) | **GET** /dapps/uniswapv3/poolsDayData/current | GetPoolsDayData (current)
-[**UniswapV3GetPoolsDayDataHistorical**](UniswapV3Api.md#UniswapV3GetPoolsDayDataHistorical) | **GET** /dapps/uniswapv3/poolsDayData/historical | GetPoolsDayData (historical)
-[**UniswapV3GetPoolsHistorical**](UniswapV3Api.md#UniswapV3GetPoolsHistorical) | **GET** /dapps/uniswapv3/pools/historical | GetPools (historical) 🔥
-[**UniswapV3GetPoolsHourDataCurrent**](UniswapV3Api.md#UniswapV3GetPoolsHourDataCurrent) | **GET** /dapps/uniswapv3/poolsHourData/current | GetPoolsHourData (current)
-[**UniswapV3GetPoolsHourDataHistorical**](UniswapV3Api.md#UniswapV3GetPoolsHourDataHistorical) | **GET** /dapps/uniswapv3/poolsHourData/historical | GetPoolsHourData (historical)
-[**UniswapV3GetPositionsCurrent**](UniswapV3Api.md#UniswapV3GetPositionsCurrent) | **GET** /dapps/uniswapv3/positions/current | GetPositions (current)
-[**UniswapV3GetPositionsHistorical**](UniswapV3Api.md#UniswapV3GetPositionsHistorical) | **GET** /dapps/uniswapv3/positions/historical | GetPositions (historical)
-[**UniswapV3GetPositionsSnaphotsHistorical**](UniswapV3Api.md#UniswapV3GetPositionsSnaphotsHistorical) | **GET** /dapps/uniswapv3/positionsSnapshots/historical | GetPositionsSnaphots (historical)
-[**UniswapV3GetPositionsSnapshotsCurrent**](UniswapV3Api.md#UniswapV3GetPositionsSnapshotsCurrent) | **GET** /dapps/uniswapv3/positionSnapshots/current | GetPositionsSnapshots (current)
-[**UniswapV3GetSwapsCurrent**](UniswapV3Api.md#UniswapV3GetSwapsCurrent) | **GET** /dapps/uniswapv3/swaps/current | GetSwaps (current) 🔥
-[**UniswapV3GetSwapsHistorical**](UniswapV3Api.md#UniswapV3GetSwapsHistorical) | **GET** /dapps/uniswapv3/swaps/historical | GetSwaps (historical) 🔥
-[**UniswapV3GetTicksCurrent**](UniswapV3Api.md#UniswapV3GetTicksCurrent) | **GET** /dapps/uniswapv3/ticks/current | GetTicks (current)
-[**UniswapV3GetTicksDayDataCurrent**](UniswapV3Api.md#UniswapV3GetTicksDayDataCurrent) | **GET** /dapps/uniswapv3/ticksDayData/current | GetTicksDayData (current)
-[**UniswapV3GetTicksDayDataHistorical**](UniswapV3Api.md#UniswapV3GetTicksDayDataHistorical) | **GET** /dapps/uniswapv3/ticksDayData/historical | GetTicksDayData (historical)
-[**UniswapV3GetTicksHistorical**](UniswapV3Api.md#UniswapV3GetTicksHistorical) | **GET** /dapps/uniswapv3/ticks/historical | GetTicks (historical)
-[**UniswapV3GetTokensCurrent**](UniswapV3Api.md#UniswapV3GetTokensCurrent) | **GET** /dapps/uniswapv3/tokens/current | GetTokens (current) 🔥
-[**UniswapV3GetTokensDayDataCurrent**](UniswapV3Api.md#UniswapV3GetTokensDayDataCurrent) | **GET** /dapps/uniswapv3/tokensDayData/current | GetTokensDayData (current)
-[**UniswapV3GetTokensDayDataHistorical**](UniswapV3Api.md#UniswapV3GetTokensDayDataHistorical) | **GET** /dapps/uniswapv3/tokensDayData/historical | GetTokensDayData (historical)
-[**UniswapV3GetTokensHistorical**](UniswapV3Api.md#UniswapV3GetTokensHistorical) | **GET** /dapps/uniswapv3/tokens/historical | GetTokens (historical) 🔥
-[**UniswapV3GetTokensHourDataCurrent**](UniswapV3Api.md#UniswapV3GetTokensHourDataCurrent) | **GET** /dapps/uniswapv3/tokensHourData/current | GetTokensHourData (current)
-[**UniswapV3GetTokensHourDataHistorical**](UniswapV3Api.md#UniswapV3GetTokensHourDataHistorical) | **GET** /dapps/uniswapv3/tokensHourData/historical | GetTokensHourData (historical)
-[**UniswapV3GetTransactionsHistorical**](UniswapV3Api.md#UniswapV3GetTransactionsHistorical) | **GET** /dapps/uniswapv3/transactions/historical | GetTransactions (historical)
+[**UniswapV3GetBundlesCurrent**](UniswapV3Api.md#UniswapV3GetBundlesCurrent) | **GET** /dapps/uniswapv3/bundles/current | Bundles (current)
+[**UniswapV3GetBundlesHistorical**](UniswapV3Api.md#UniswapV3GetBundlesHistorical) | **GET** /dapps/uniswapv3/bundles/historical | Bundles (historical)
+[**UniswapV3GetBurnsCurrent**](UniswapV3Api.md#UniswapV3GetBurnsCurrent) | **GET** /dapps/uniswapv3/burns/current | Burns (current)
+[**UniswapV3GetBurnsHistorical**](UniswapV3Api.md#UniswapV3GetBurnsHistorical) | **GET** /dapps/uniswapv3/burns/historical | Burns (historical)
+[**UniswapV3GetDayDataCurrent**](UniswapV3Api.md#UniswapV3GetDayDataCurrent) | **GET** /dapps/uniswapv3/dayData/current | DayData (current)
+[**UniswapV3GetDayDataHistorical**](UniswapV3Api.md#UniswapV3GetDayDataHistorical) | **GET** /dapps/uniswapv3/dayData/historical | DayData (historical)
+[**UniswapV3GetFactoryCurrent**](UniswapV3Api.md#UniswapV3GetFactoryCurrent) | **GET** /dapps/uniswapv3/factory/current | Factory (current)
+[**UniswapV3GetFactoryHistorical**](UniswapV3Api.md#UniswapV3GetFactoryHistorical) | **GET** /dapps/uniswapv3/factory/historical | Factory (historical)
+[**UniswapV3GetMintsCurrent**](UniswapV3Api.md#UniswapV3GetMintsCurrent) | **GET** /dapps/uniswapv3/mints/current | Mints (current)
+[**UniswapV3GetMintsHistorical**](UniswapV3Api.md#UniswapV3GetMintsHistorical) | **GET** /dapps/uniswapv3/mints/historical | Mints (historical)
+[**UniswapV3GetPoolsCurrent**](UniswapV3Api.md#UniswapV3GetPoolsCurrent) | **GET** /dapps/uniswapv3/pools/current | Pools (current) 🔥
+[**UniswapV3GetPoolsDayDataCurrent**](UniswapV3Api.md#UniswapV3GetPoolsDayDataCurrent) | **GET** /dapps/uniswapv3/poolsDayData/current | PoolsDayData (current)
+[**UniswapV3GetPoolsDayDataHistorical**](UniswapV3Api.md#UniswapV3GetPoolsDayDataHistorical) | **GET** /dapps/uniswapv3/poolsDayData/historical | PoolsDayData (historical)
+[**UniswapV3GetPoolsHistorical**](UniswapV3Api.md#UniswapV3GetPoolsHistorical) | **GET** /dapps/uniswapv3/pools/historical | Pools (historical) 🔥
+[**UniswapV3GetPoolsHourDataCurrent**](UniswapV3Api.md#UniswapV3GetPoolsHourDataCurrent) | **GET** /dapps/uniswapv3/poolsHourData/current | PoolsHourData (current)
+[**UniswapV3GetPoolsHourDataHistorical**](UniswapV3Api.md#UniswapV3GetPoolsHourDataHistorical) | **GET** /dapps/uniswapv3/poolsHourData/historical | PoolsHourData (historical)
+[**UniswapV3GetPositionsCurrent**](UniswapV3Api.md#UniswapV3GetPositionsCurrent) | **GET** /dapps/uniswapv3/positions/current | Positions (current)
+[**UniswapV3GetPositionsHistorical**](UniswapV3Api.md#UniswapV3GetPositionsHistorical) | **GET** /dapps/uniswapv3/positions/historical | Positions (historical)
+[**UniswapV3GetPositionsSnaphotsHistorical**](UniswapV3Api.md#UniswapV3GetPositionsSnaphotsHistorical) | **GET** /dapps/uniswapv3/positionsSnapshots/historical | PositionsSnaphots (historical)
+[**UniswapV3GetPositionsSnapshotsCurrent**](UniswapV3Api.md#UniswapV3GetPositionsSnapshotsCurrent) | **GET** /dapps/uniswapv3/positionSnapshots/current | PositionsSnapshots (current)
+[**UniswapV3GetSwapsCurrent**](UniswapV3Api.md#UniswapV3GetSwapsCurrent) | **GET** /dapps/uniswapv3/swaps/current | Swaps (current) 🔥
+[**UniswapV3GetSwapsHistorical**](UniswapV3Api.md#UniswapV3GetSwapsHistorical) | **GET** /dapps/uniswapv3/swaps/historical | Swaps (historical) 🔥
+[**UniswapV3GetTicksCurrent**](UniswapV3Api.md#UniswapV3GetTicksCurrent) | **GET** /dapps/uniswapv3/ticks/current | Ticks (current)
+[**UniswapV3GetTicksDayDataCurrent**](UniswapV3Api.md#UniswapV3GetTicksDayDataCurrent) | **GET** /dapps/uniswapv3/ticksDayData/current | TicksDayData (current)
+[**UniswapV3GetTicksDayDataHistorical**](UniswapV3Api.md#UniswapV3GetTicksDayDataHistorical) | **GET** /dapps/uniswapv3/ticksDayData/historical | TicksDayData (historical)
+[**UniswapV3GetTicksHistorical**](UniswapV3Api.md#UniswapV3GetTicksHistorical) | **GET** /dapps/uniswapv3/ticks/historical | Ticks (historical)
+[**UniswapV3GetTokensCurrent**](UniswapV3Api.md#UniswapV3GetTokensCurrent) | **GET** /dapps/uniswapv3/tokens/current | Tokens (current) 🔥
+[**UniswapV3GetTokensDayDataCurrent**](UniswapV3Api.md#UniswapV3GetTokensDayDataCurrent) | **GET** /dapps/uniswapv3/tokensDayData/current | TokensDayData (current)
+[**UniswapV3GetTokensDayDataHistorical**](UniswapV3Api.md#UniswapV3GetTokensDayDataHistorical) | **GET** /dapps/uniswapv3/tokensDayData/historical | TokensDayData (historical)
+[**UniswapV3GetTokensHistorical**](UniswapV3Api.md#UniswapV3GetTokensHistorical) | **GET** /dapps/uniswapv3/tokens/historical | Tokens (historical) 🔥
+[**UniswapV3GetTokensHourDataCurrent**](UniswapV3Api.md#UniswapV3GetTokensHourDataCurrent) | **GET** /dapps/uniswapv3/tokensHourData/current | TokensHourData (current)
+[**UniswapV3GetTokensHourDataHistorical**](UniswapV3Api.md#UniswapV3GetTokensHourDataHistorical) | **GET** /dapps/uniswapv3/tokensHourData/historical | TokensHourData (historical)
+[**UniswapV3GetTransactionsHistorical**](UniswapV3Api.md#UniswapV3GetTransactionsHistorical) | **GET** /dapps/uniswapv3/transactions/historical | Transactions (historical)
 
 
 # **UniswapV3GetBundlesCurrent**
 > array[UniswapV3BundleV3DTO] UniswapV3GetBundlesCurrent()
 
-GetBundles (current)
+Bundles (current)
 
 Gets bundles.
 
@@ -50,7 +50,7 @@ Gets bundles.
 ```R
 library(openapi)
 
-# GetBundles (current)
+# Bundles (current)
 #
 
 api_instance <- UniswapV3Api$new()
@@ -84,7 +84,7 @@ No authorization required
 # **UniswapV3GetBundlesHistorical**
 > array[UniswapV3BundleV3DTO] UniswapV3GetBundlesHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date)
 
-GetBundles (historical)
+Bundles (historical)
 
 Gets bundles.
 
@@ -92,7 +92,7 @@ Gets bundles.
 ```R
 library(openapi)
 
-# GetBundles (historical)
+# Bundles (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -137,7 +137,7 @@ No authorization required
 # **UniswapV3GetBurnsCurrent**
 > array[UniswapV3BurnV3DTO] UniswapV3GetBurnsCurrent(filter_pool_id = var.filter_pool_id)
 
-GetBurns (current)
+Burns (current)
 
 Gets burns.
 
@@ -145,7 +145,7 @@ Gets burns.
 ```R
 library(openapi)
 
-# GetBurns (current)
+# Burns (current)
 #
 # prepare function argument(s)
 var_filter_pool_id <- "filter_pool_id_example" # character |  (Optional)
@@ -184,7 +184,7 @@ No authorization required
 # **UniswapV3GetBurnsHistorical**
 > array[UniswapV3BurnV3DTO] UniswapV3GetBurnsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
 
-GetBurns (historical)
+Burns (historical)
 
 Gets burns.
 
@@ -192,7 +192,7 @@ Gets burns.
 ```R
 library(openapi)
 
-# GetBurns (historical)
+# Burns (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -239,7 +239,7 @@ No authorization required
 # **UniswapV3GetDayDataCurrent**
 > array[UniswapV3UniswapDayDataV3DTO] UniswapV3GetDayDataCurrent()
 
-GetDayData (current)
+DayData (current)
 
 Gets uniswapv3 day data.
 
@@ -247,7 +247,7 @@ Gets uniswapv3 day data.
 ```R
 library(openapi)
 
-# GetDayData (current)
+# DayData (current)
 #
 
 api_instance <- UniswapV3Api$new()
@@ -281,7 +281,7 @@ No authorization required
 # **UniswapV3GetDayDataHistorical**
 > array[UniswapV3UniswapDayDataV3DTO] UniswapV3GetDayDataHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date)
 
-GetDayData (historical)
+DayData (historical)
 
 Gets uniswapv3 day data.
 
@@ -289,7 +289,7 @@ Gets uniswapv3 day data.
 ```R
 library(openapi)
 
-# GetDayData (historical)
+# DayData (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -334,7 +334,7 @@ No authorization required
 # **UniswapV3GetFactoryCurrent**
 > array[UniswapV3FactoryV3DTO] UniswapV3GetFactoryCurrent()
 
-GetFactory (current)
+Factory (current)
 
 Gets factory.
 
@@ -342,7 +342,7 @@ Gets factory.
 ```R
 library(openapi)
 
-# GetFactory (current)
+# Factory (current)
 #
 
 api_instance <- UniswapV3Api$new()
@@ -376,7 +376,7 @@ No authorization required
 # **UniswapV3GetFactoryHistorical**
 > array[UniswapV3FactoryV3DTO] UniswapV3GetFactoryHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date)
 
-GetFactory (historical)
+Factory (historical)
 
 Gets factory.
 
@@ -384,7 +384,7 @@ Gets factory.
 ```R
 library(openapi)
 
-# GetFactory (historical)
+# Factory (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -429,7 +429,7 @@ No authorization required
 # **UniswapV3GetMintsCurrent**
 > array[UniswapV3MintV3DTO] UniswapV3GetMintsCurrent(filter_pool_id = var.filter_pool_id)
 
-GetMints (current)
+Mints (current)
 
 Gets mints.
 
@@ -437,7 +437,7 @@ Gets mints.
 ```R
 library(openapi)
 
-# GetMints (current)
+# Mints (current)
 #
 # prepare function argument(s)
 var_filter_pool_id <- "filter_pool_id_example" # character |  (Optional)
@@ -476,7 +476,7 @@ No authorization required
 # **UniswapV3GetMintsHistorical**
 > array[UniswapV3MintV3DTO] UniswapV3GetMintsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
 
-GetMints (historical)
+Mints (historical)
 
 Gets mints.
 
@@ -484,7 +484,7 @@ Gets mints.
 ```R
 library(openapi)
 
-# GetMints (historical)
+# Mints (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -531,7 +531,7 @@ No authorization required
 # **UniswapV3GetPoolsCurrent**
 > array[UniswapV3PoolV3DTO] UniswapV3GetPoolsCurrent(filter_pool_id = var.filter_pool_id)
 
-GetPools (current) 🔥
+Pools (current) 🔥
 
 Gets pools.
 
@@ -539,7 +539,7 @@ Gets pools.
 ```R
 library(openapi)
 
-# GetPools (current) 🔥
+# Pools (current) 🔥
 #
 # prepare function argument(s)
 var_filter_pool_id <- "filter_pool_id_example" # character |  (Optional)
@@ -578,7 +578,7 @@ No authorization required
 # **UniswapV3GetPoolsDayDataCurrent**
 > array[UniswapV3PoolDayDataV3DTO] UniswapV3GetPoolsDayDataCurrent(filter_pool_id = var.filter_pool_id)
 
-GetPoolsDayData (current)
+PoolsDayData (current)
 
 Gets pools day data.
 
@@ -586,7 +586,7 @@ Gets pools day data.
 ```R
 library(openapi)
 
-# GetPoolsDayData (current)
+# PoolsDayData (current)
 #
 # prepare function argument(s)
 var_filter_pool_id <- "filter_pool_id_example" # character |  (Optional)
@@ -625,7 +625,7 @@ No authorization required
 # **UniswapV3GetPoolsDayDataHistorical**
 > array[UniswapV3PoolDayDataV3DTO] UniswapV3GetPoolsDayDataHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
 
-GetPoolsDayData (historical)
+PoolsDayData (historical)
 
 Gets pools day data.
 
@@ -633,7 +633,7 @@ Gets pools day data.
 ```R
 library(openapi)
 
-# GetPoolsDayData (historical)
+# PoolsDayData (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -680,7 +680,7 @@ No authorization required
 # **UniswapV3GetPoolsHistorical**
 > array[UniswapV3PoolV3DTO] UniswapV3GetPoolsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
 
-GetPools (historical) 🔥
+Pools (historical) 🔥
 
 Gets pools.
 
@@ -688,7 +688,7 @@ Gets pools.
 ```R
 library(openapi)
 
-# GetPools (historical) 🔥
+# Pools (historical) 🔥
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -735,7 +735,7 @@ No authorization required
 # **UniswapV3GetPoolsHourDataCurrent**
 > array[UniswapV3PoolHourDataV3DTO] UniswapV3GetPoolsHourDataCurrent(filter_pool_id = var.filter_pool_id)
 
-GetPoolsHourData (current)
+PoolsHourData (current)
 
 Gets pools hour data.
 
@@ -743,7 +743,7 @@ Gets pools hour data.
 ```R
 library(openapi)
 
-# GetPoolsHourData (current)
+# PoolsHourData (current)
 #
 # prepare function argument(s)
 var_filter_pool_id <- "filter_pool_id_example" # character |  (Optional)
@@ -782,7 +782,7 @@ No authorization required
 # **UniswapV3GetPoolsHourDataHistorical**
 > array[UniswapV3PoolHourDataV3DTO] UniswapV3GetPoolsHourDataHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
 
-GetPoolsHourData (historical)
+PoolsHourData (historical)
 
 Gets pools hour data.
 
@@ -790,7 +790,7 @@ Gets pools hour data.
 ```R
 library(openapi)
 
-# GetPoolsHourData (historical)
+# PoolsHourData (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -837,7 +837,7 @@ No authorization required
 # **UniswapV3GetPositionsCurrent**
 > array[UniswapV3PositionV3DTO] UniswapV3GetPositionsCurrent(filter_pool_id = var.filter_pool_id)
 
-GetPositions (current)
+Positions (current)
 
 Gets positions.
 
@@ -845,7 +845,7 @@ Gets positions.
 ```R
 library(openapi)
 
-# GetPositions (current)
+# Positions (current)
 #
 # prepare function argument(s)
 var_filter_pool_id <- "filter_pool_id_example" # character |  (Optional)
@@ -884,7 +884,7 @@ No authorization required
 # **UniswapV3GetPositionsHistorical**
 > array[UniswapV3PositionV3DTO] UniswapV3GetPositionsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
 
-GetPositions (historical)
+Positions (historical)
 
 Gets positions.
 
@@ -892,7 +892,7 @@ Gets positions.
 ```R
 library(openapi)
 
-# GetPositions (historical)
+# Positions (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -939,7 +939,7 @@ No authorization required
 # **UniswapV3GetPositionsSnaphotsHistorical**
 > array[UniswapV3PositionSnapshotV3DTO] UniswapV3GetPositionsSnaphotsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
 
-GetPositionsSnaphots (historical)
+PositionsSnaphots (historical)
 
 Gets positions snapshots.
 
@@ -947,7 +947,7 @@ Gets positions snapshots.
 ```R
 library(openapi)
 
-# GetPositionsSnaphots (historical)
+# PositionsSnaphots (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -994,7 +994,7 @@ No authorization required
 # **UniswapV3GetPositionsSnapshotsCurrent**
 > array[UniswapV3PositionSnapshotV3DTO] UniswapV3GetPositionsSnapshotsCurrent(filter_pool_id = var.filter_pool_id)
 
-GetPositionsSnapshots (current)
+PositionsSnapshots (current)
 
 Gets positions snapshots.
 
@@ -1002,7 +1002,7 @@ Gets positions snapshots.
 ```R
 library(openapi)
 
-# GetPositionsSnapshots (current)
+# PositionsSnapshots (current)
 #
 # prepare function argument(s)
 var_filter_pool_id <- "filter_pool_id_example" # character |  (Optional)
@@ -1041,7 +1041,7 @@ No authorization required
 # **UniswapV3GetSwapsCurrent**
 > array[UniswapV3SwapV3DTO] UniswapV3GetSwapsCurrent(filter_pool_id = var.filter_pool_id)
 
-GetSwaps (current) 🔥
+Swaps (current) 🔥
 
 Gets swaps.
 
@@ -1049,7 +1049,7 @@ Gets swaps.
 ```R
 library(openapi)
 
-# GetSwaps (current) 🔥
+# Swaps (current) 🔥
 #
 # prepare function argument(s)
 var_filter_pool_id <- "filter_pool_id_example" # character |  (Optional)
@@ -1088,7 +1088,7 @@ No authorization required
 # **UniswapV3GetSwapsHistorical**
 > array[UniswapV3SwapV3DTO] UniswapV3GetSwapsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
 
-GetSwaps (historical) 🔥
+Swaps (historical) 🔥
 
 Gets swaps.
 
@@ -1096,7 +1096,7 @@ Gets swaps.
 ```R
 library(openapi)
 
-# GetSwaps (historical) 🔥
+# Swaps (historical) 🔥
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -1143,7 +1143,7 @@ No authorization required
 # **UniswapV3GetTicksCurrent**
 > array[UniswapV3TickV3DTO] UniswapV3GetTicksCurrent(filter_pool_id = var.filter_pool_id)
 
-GetTicks (current)
+Ticks (current)
 
 Gets ticks.
 
@@ -1151,7 +1151,7 @@ Gets ticks.
 ```R
 library(openapi)
 
-# GetTicks (current)
+# Ticks (current)
 #
 # prepare function argument(s)
 var_filter_pool_id <- "filter_pool_id_example" # character |  (Optional)
@@ -1190,7 +1190,7 @@ No authorization required
 # **UniswapV3GetTicksDayDataCurrent**
 > array[UniswapV3TickDayDataV3DTO] UniswapV3GetTicksDayDataCurrent(filter_pool_id = var.filter_pool_id)
 
-GetTicksDayData (current)
+TicksDayData (current)
 
 Gets ticks day data.
 
@@ -1198,7 +1198,7 @@ Gets ticks day data.
 ```R
 library(openapi)
 
-# GetTicksDayData (current)
+# TicksDayData (current)
 #
 # prepare function argument(s)
 var_filter_pool_id <- "filter_pool_id_example" # character |  (Optional)
@@ -1237,7 +1237,7 @@ No authorization required
 # **UniswapV3GetTicksDayDataHistorical**
 > array[UniswapV3TickDayDataV3DTO] UniswapV3GetTicksDayDataHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
 
-GetTicksDayData (historical)
+TicksDayData (historical)
 
 Gets ticks day data.
 
@@ -1245,7 +1245,7 @@ Gets ticks day data.
 ```R
 library(openapi)
 
-# GetTicksDayData (historical)
+# TicksDayData (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -1292,7 +1292,7 @@ No authorization required
 # **UniswapV3GetTicksHistorical**
 > array[UniswapV3TickV3DTO] UniswapV3GetTicksHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
 
-GetTicks (historical)
+Ticks (historical)
 
 Gets ticks.
 
@@ -1300,7 +1300,7 @@ Gets ticks.
 ```R
 library(openapi)
 
-# GetTicks (historical)
+# Ticks (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -1347,7 +1347,7 @@ No authorization required
 # **UniswapV3GetTokensCurrent**
 > array[UniswapV3TokenV3DTO] UniswapV3GetTokensCurrent(filter_token_id = var.filter_token_id)
 
-GetTokens (current) 🔥
+Tokens (current) 🔥
 
 Gets tokens.
 
@@ -1355,7 +1355,7 @@ Gets tokens.
 ```R
 library(openapi)
 
-# GetTokens (current) 🔥
+# Tokens (current) 🔥
 #
 # prepare function argument(s)
 var_filter_token_id <- "filter_token_id_example" # character |  (Optional)
@@ -1394,7 +1394,7 @@ No authorization required
 # **UniswapV3GetTokensDayDataCurrent**
 > array[UniswapV3TokenV3DayDataDTO] UniswapV3GetTokensDayDataCurrent(filter_token_id = var.filter_token_id)
 
-GetTokensDayData (current)
+TokensDayData (current)
 
 Gets tokens day data.
 
@@ -1402,7 +1402,7 @@ Gets tokens day data.
 ```R
 library(openapi)
 
-# GetTokensDayData (current)
+# TokensDayData (current)
 #
 # prepare function argument(s)
 var_filter_token_id <- "filter_token_id_example" # character |  (Optional)
@@ -1441,7 +1441,7 @@ No authorization required
 # **UniswapV3GetTokensDayDataHistorical**
 > array[UniswapV3TokenV3DayDataDTO] UniswapV3GetTokensDayDataHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, token_id = var.token_id)
 
-GetTokensDayData (historical)
+TokensDayData (historical)
 
 Gets tokens day data.
 
@@ -1449,7 +1449,7 @@ Gets tokens day data.
 ```R
 library(openapi)
 
-# GetTokensDayData (historical)
+# TokensDayData (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -1496,7 +1496,7 @@ No authorization required
 # **UniswapV3GetTokensHistorical**
 > array[UniswapV3TokenV3DTO] UniswapV3GetTokensHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, token_id = var.token_id)
 
-GetTokens (historical) 🔥
+Tokens (historical) 🔥
 
 Gets tokens.
 
@@ -1504,7 +1504,7 @@ Gets tokens.
 ```R
 library(openapi)
 
-# GetTokens (historical) 🔥
+# Tokens (historical) 🔥
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -1551,7 +1551,7 @@ No authorization required
 # **UniswapV3GetTokensHourDataCurrent**
 > array[UniswapV3TokenHourDataV3DTO] UniswapV3GetTokensHourDataCurrent(filter_token_id = var.filter_token_id)
 
-GetTokensHourData (current)
+TokensHourData (current)
 
 Gets tokens hour data.
 
@@ -1559,7 +1559,7 @@ Gets tokens hour data.
 ```R
 library(openapi)
 
-# GetTokensHourData (current)
+# TokensHourData (current)
 #
 # prepare function argument(s)
 var_filter_token_id <- "filter_token_id_example" # character |  (Optional)
@@ -1598,7 +1598,7 @@ No authorization required
 # **UniswapV3GetTokensHourDataHistorical**
 > array[UniswapV3TokenHourDataV3DTO] UniswapV3GetTokensHourDataHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, token_id = var.token_id)
 
-GetTokensHourData (historical)
+TokensHourData (historical)
 
 Gets tokens hour data.
 
@@ -1606,7 +1606,7 @@ Gets tokens hour data.
 ```R
 library(openapi)
 
-# GetTokensHourData (historical)
+# TokensHourData (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -1653,7 +1653,7 @@ No authorization required
 # **UniswapV3GetTransactionsHistorical**
 > array[UniswapV3TransactionV3DTO] UniswapV3GetTransactionsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date)
 
-GetTransactions (historical)
+Transactions (historical)
 
 Gets transactions.
 
@@ -1661,7 +1661,7 @@ Gets transactions.
 ```R
 library(openapi)
 
-# GetTransactions (historical)
+# Transactions (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)

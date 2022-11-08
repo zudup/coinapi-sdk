@@ -48,7 +48,7 @@ export class SushiswapApi {
 
     /**
      * Gets exchanges.
-     * @summary GetExchanges (current) 🔥
+     * @summary Exchanges (current) 🔥
      */
     public curveGetExchangesCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.CurveExchangeDTO>;  },
@@ -106,7 +106,7 @@ export class SushiswapApi {
 
     /**
      * Gets trades.
-     * @summary GetTrades (current) 🔥
+     * @summary Trades (current) 🔥
      */
     public dexGetTradesCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.DexTradeDTO>;  },
@@ -164,7 +164,7 @@ export class SushiswapApi {
 
     /**
      * Gets bundles.
-     * @summary GetBundles (historical)
+     * @summary Bundles (historical)
      * @param startBlock AAAAAAAAAA
      * @param endBlock BBBBBBBBBBBB
      * @param startDate CCCCCCCCC
@@ -238,7 +238,7 @@ export class SushiswapApi {
 
     /**
      * Gets burns.
-     * @summary GetBurns (historical)
+     * @summary Burns (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -316,7 +316,7 @@ export class SushiswapApi {
 
     /**
      * Gets day data.
-     * @summary GetDayData (historical)
+     * @summary DayData (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -390,7 +390,7 @@ export class SushiswapApi {
 
     /**
      * Gets factory.
-     * @summary GetFactory (historical)
+     * @summary Factory (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -464,7 +464,7 @@ export class SushiswapApi {
 
     /**
      * Gets hour data.
-     * @summary GetHourData (historical)
+     * @summary HourData (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -538,7 +538,7 @@ export class SushiswapApi {
 
     /**
      * Gets liquidity position.
-     * @summary GetLiquidityPosition (historical)
+     * @summary LiquidityPosition (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -616,7 +616,7 @@ export class SushiswapApi {
 
     /**
      * Gets liquidity position snapshot.
-     * @summary GetLiquidityPositionSnapshot (historical)
+     * @summary LiquidityPositionSnapshot (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -694,7 +694,7 @@ export class SushiswapApi {
 
     /**
      * Gets mints.
-     * @summary GetMints (historical)
+     * @summary Mints (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -772,7 +772,7 @@ export class SushiswapApi {
 
     /**
      * Gets pools.
-     * @summary GetPools (current) 🔥
+     * @summary Pools (current) 🔥
      */
     public sushiswapGetPoolsCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.SushiswapPairDTO>;  },
@@ -830,7 +830,7 @@ export class SushiswapApi {
 
     /**
      * Gets pools day data.
-     * @summary GetPoolsDayData (historical)
+     * @summary PoolsDayData (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -908,7 +908,7 @@ export class SushiswapApi {
 
     /**
      * Gets list of pools for given filters.
-     * @summary GetPools (historical) 🔥
+     * @summary Pools (historical) 🔥
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -986,7 +986,7 @@ export class SushiswapApi {
 
     /**
      * Gets pools tracked each our.
-     * @summary GetPoolsHourData (historical)
+     * @summary PoolsHourData (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -1064,7 +1064,7 @@ export class SushiswapApi {
 
     /**
      * Gets swaps.
-     * @summary GetSwaps (current) 🔥
+     * @summary Swaps (current) 🔥
      */
     public sushiswapGetSwapsCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.SushiswapSwapDTO>;  },
@@ -1122,7 +1122,7 @@ export class SushiswapApi {
 
     /**
      * Gets list of swaps for given filters.
-     * @summary GetSwaps (historical) 🔥
+     * @summary Swaps (historical) 🔥
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -1200,7 +1200,7 @@ export class SushiswapApi {
 
     /**
      * Gets tokens.
-     * @summary GetTokens (current) 🔥
+     * @summary Tokens (current) 🔥
      */
     public sushiswapGetTokensCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.SushiswapTokenDTO>;  },
@@ -1258,7 +1258,7 @@ export class SushiswapApi {
 
     /**
      * Gets tokens day data.
-     * @summary GetTokensDayData (historical)
+     * @summary TokensDayData (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -1336,7 +1336,7 @@ export class SushiswapApi {
 
     /**
      * Gets list of tokens for given filters.
-     * @summary GetTokens (historical) 🔥
+     * @summary Tokens (historical) 🔥
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -1414,7 +1414,7 @@ export class SushiswapApi {
 
     /**
      * Gets transactions.
-     * @summary GetTransactions (historical)
+     * @summary Transactions (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -1488,7 +1488,7 @@ export class SushiswapApi {
 
     /**
      * Gets users.
-     * @summary GetUsers (historical)
+     * @summary Users (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 

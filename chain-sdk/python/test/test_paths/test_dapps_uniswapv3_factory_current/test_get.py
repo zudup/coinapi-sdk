@@ -21,7 +21,7 @@ from .. import ApiTestMixin
 class TestDappsUniswapv3FactoryCurrent(ApiTestMixin, unittest.TestCase):
     """
     DappsUniswapv3FactoryCurrent unit test stubs
-        GetFactory (current)  # noqa: E501
+        Factory (current)  # noqa: E501
     """
     _configuration = configuration.Configuration()
 

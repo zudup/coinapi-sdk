@@ -26,7 +26,7 @@ public class OASSushiswapApi {
     }
 
     /**
-     * GetExchanges (current) 🔥
+     * Exchanges (current) 🔥
      * Gets exchanges.
      * @return List<OASCurveExchangeDTO>
      * @throws OAS.ApiException if fails to make API call
@@ -47,7 +47,7 @@ public class OASSushiswapApi {
         );
     }
     /**
-     * GetTrades (current) 🔥
+     * Trades (current) 🔥
      * Gets trades.
      * @return List<OASDexTradeDTO>
      * @throws OAS.ApiException if fails to make API call
@@ -68,7 +68,7 @@ public class OASSushiswapApi {
         );
     }
     /**
-     * GetBundles (historical)
+     * Bundles (historical)
      * Gets bundles.
      * @param startBlock AAAAAAAAAA (optional)
      * @param endBlock BBBBBBBBBBBB (optional)
@@ -100,7 +100,7 @@ public class OASSushiswapApi {
         );
     }
     /**
-     * GetBurns (historical)
+     * Burns (historical)
      * Gets burns.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -134,7 +134,7 @@ public class OASSushiswapApi {
         );
     }
     /**
-     * GetDayData (historical)
+     * DayData (historical)
      * Gets day data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -166,7 +166,7 @@ public class OASSushiswapApi {
         );
     }
     /**
-     * GetFactory (historical)
+     * Factory (historical)
      * Gets factory.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -198,7 +198,7 @@ public class OASSushiswapApi {
         );
     }
     /**
-     * GetHourData (historical)
+     * HourData (historical)
      * Gets hour data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -230,7 +230,7 @@ public class OASSushiswapApi {
         );
     }
     /**
-     * GetLiquidityPosition (historical)
+     * LiquidityPosition (historical)
      * Gets liquidity position.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -264,7 +264,7 @@ public class OASSushiswapApi {
         );
     }
     /**
-     * GetLiquidityPositionSnapshot (historical)
+     * LiquidityPositionSnapshot (historical)
      * Gets liquidity position snapshot.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -298,7 +298,7 @@ public class OASSushiswapApi {
         );
     }
     /**
-     * GetMints (historical)
+     * Mints (historical)
      * Gets mints.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -332,7 +332,7 @@ public class OASSushiswapApi {
         );
     }
     /**
-     * GetPools (current) 🔥
+     * Pools (current) 🔥
      * Gets pools.
      * @return List<OASSushiswapPairDTO>
      * @throws OAS.ApiException if fails to make API call
@@ -353,7 +353,7 @@ public class OASSushiswapApi {
         );
     }
     /**
-     * GetPoolsDayData (historical)
+     * PoolsDayData (historical)
      * Gets pools day data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -387,7 +387,7 @@ public class OASSushiswapApi {
         );
     }
     /**
-     * GetPools (historical) 🔥
+     * Pools (historical) 🔥
      * Gets list of pools for given filters.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -421,7 +421,7 @@ public class OASSushiswapApi {
         );
     }
     /**
-     * GetPoolsHourData (historical)
+     * PoolsHourData (historical)
      * Gets pools tracked each our.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -455,7 +455,7 @@ public class OASSushiswapApi {
         );
     }
     /**
-     * GetSwaps (current) 🔥
+     * Swaps (current) 🔥
      * Gets swaps.
      * @return List<OASSushiswapSwapDTO>
      * @throws OAS.ApiException if fails to make API call
@@ -476,7 +476,7 @@ public class OASSushiswapApi {
         );
     }
     /**
-     * GetSwaps (historical) 🔥
+     * Swaps (historical) 🔥
      * Gets list of swaps for given filters.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -510,7 +510,7 @@ public class OASSushiswapApi {
         );
     }
     /**
-     * GetTokens (current) 🔥
+     * Tokens (current) 🔥
      * Gets tokens.
      * @return List<OASSushiswapTokenDTO>
      * @throws OAS.ApiException if fails to make API call
@@ -531,7 +531,7 @@ public class OASSushiswapApi {
         );
     }
     /**
-     * GetTokensDayData (historical)
+     * TokensDayData (historical)
      * Gets tokens day data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -565,7 +565,7 @@ public class OASSushiswapApi {
         );
     }
     /**
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      * Gets list of tokens for given filters.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -599,7 +599,7 @@ public class OASSushiswapApi {
         );
     }
     /**
-     * GetTransactions (historical)
+     * Transactions (historical)
      * Gets transactions.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -631,7 +631,7 @@ public class OASSushiswapApi {
         );
     }
     /**
-     * GetUsers (historical)
+     * Users (historical)
      * Gets users.
      * @param startBlock  (optional)
      * @param endBlock  (optional)

@@ -106,7 +106,7 @@
 
 
 (defn-spec cow-get-orders-historical-with-http-info any?
-  "GetOrders (historical)
+  "Orders (historical)
   Gets orders."
   ([] (cow-get-orders-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate]} (s/map-of keyword? any?)]
@@ -120,7 +120,7 @@
               :auth-names    []})))
 
 (defn-spec cow-get-orders-historical (s/coll-of cow/order-dto-spec)
-  "GetOrders (historical)
+  "Orders (historical)
   Gets orders."
   ([] (cow-get-orders-historical nil))
   ([optional-params any?]
@@ -131,7 +131,7 @@
 
 
 (defn-spec cow-get-settlements-historical-with-http-info any?
-  "GetSettlements (historical)
+  "Settlements (historical)
   Gets settlements."
   ([] (cow-get-settlements-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate]} (s/map-of keyword? any?)]
@@ -145,7 +145,7 @@
               :auth-names    []})))
 
 (defn-spec cow-get-settlements-historical (s/coll-of cow/settlement-dto-spec)
-  "GetSettlements (historical)
+  "Settlements (historical)
   Gets settlements."
   ([] (cow-get-settlements-historical nil))
   ([optional-params any?]
@@ -156,7 +156,7 @@
 
 
 (defn-spec cow-get-tokens-historical-with-http-info any?
-  "GetTokens (historical) 🔥
+  "Tokens (historical) 🔥
   Gets tokens."
   ([] (cow-get-tokens-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate tokenId]} (s/map-of keyword? any?)]
@@ -170,7 +170,7 @@
               :auth-names    []})))
 
 (defn-spec cow-get-tokens-historical (s/coll-of cow/token-dto-spec)
-  "GetTokens (historical) 🔥
+  "Tokens (historical) 🔥
   Gets tokens."
   ([] (cow-get-tokens-historical nil))
   ([optional-params any?]
@@ -181,7 +181,7 @@
 
 
 (defn-spec cow-get-trades-historical-with-http-info any?
-  "GetTrades (historical) 🔥
+  "Trades (historical) 🔥
   Gets trades."
   ([] (cow-get-trades-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate]} (s/map-of keyword? any?)]
@@ -195,7 +195,7 @@
               :auth-names    []})))
 
 (defn-spec cow-get-trades-historical (s/coll-of cow/trade-dto-spec)
-  "GetTrades (historical) 🔥
+  "Trades (historical) 🔥
   Gets trades."
   ([] (cow-get-trades-historical nil))
   ([optional-params any?]
@@ -206,7 +206,7 @@
 
 
 (defn-spec cow-get-users-historical-with-http-info any?
-  "GetUsers (historical)
+  "Users (historical)
   Gets users."
   ([] (cow-get-users-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate]} (s/map-of keyword? any?)]
@@ -220,7 +220,7 @@
               :auth-names    []})))
 
 (defn-spec cow-get-users-historical (s/coll-of cow/user-dto-spec)
-  "GetUsers (historical)
+  "Users (historical)
   Gets users."
   ([] (cow-get-users-historical nil))
   ([optional-params any?]

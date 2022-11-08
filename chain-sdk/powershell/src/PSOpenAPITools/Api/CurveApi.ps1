@@ -9,7 +9,7 @@
 <#
 .SYNOPSIS
 
-GetAccounts (historical)
+Accounts (historical)
 
 .DESCRIPTION
 
@@ -124,7 +124,7 @@ function Invoke-CurveGetAccountsHistorical {
 <#
 .SYNOPSIS
 
-GetAddLiquidityEvents (historical)
+AddLiquidityEvents (historical)
 
 .DESCRIPTION
 
@@ -249,7 +249,7 @@ function Invoke-CurveGetAddLiquidityEventsHistorical {
 <#
 .SYNOPSIS
 
-GetAdminFeeChangeLogs (historical)
+AdminFeeChangeLogs (historical)
 
 .DESCRIPTION
 
@@ -374,7 +374,7 @@ function Invoke-CurveGetAdminFeeChangeLogsHistorical {
 <#
 .SYNOPSIS
 
-GetAmplificationCoeffChangeLogs (historical)
+AmplificationCoeffChangeLogs (historical)
 
 .DESCRIPTION
 
@@ -499,7 +499,7 @@ function Invoke-CurveGetAmplificationCoeffChangeLogsHistorical {
 <#
 .SYNOPSIS
 
-GetCoins (historical)
+Coins (historical)
 
 .DESCRIPTION
 
@@ -624,7 +624,7 @@ function Invoke-CurveGetCoinsHistorical {
 <#
 .SYNOPSIS
 
-GetContractsVersions (historical)
+ContractsVersions (historical)
 
 .DESCRIPTION
 
@@ -749,7 +749,7 @@ function Invoke-CurveGetContractsVersionsHistorical {
 <#
 .SYNOPSIS
 
-GetContracts (historical)
+Contracts (historical)
 
 .DESCRIPTION
 
@@ -874,7 +874,7 @@ function Invoke-CurveGetContractsHistorical {
 <#
 .SYNOPSIS
 
-GetDailyVolumes (historical)
+DailyVolumes (historical)
 
 .DESCRIPTION
 
@@ -999,7 +999,7 @@ function Invoke-CurveGetDailyVolumesHistorical {
 <#
 .SYNOPSIS
 
-GetExchanges (historical) 🔥
+Exchanges (historical) 🔥
 
 .DESCRIPTION
 
@@ -1124,7 +1124,7 @@ function Invoke-CurveGetExchangesHistorical {
 <#
 .SYNOPSIS
 
-GetFeeChangeLogs (historical)
+FeeChangeLogs (historical)
 
 .DESCRIPTION
 
@@ -1249,7 +1249,7 @@ function Invoke-CurveGetFeeChangeLogsHistorical {
 <#
 .SYNOPSIS
 
-GetGaugesDeposits (historical)
+GaugesDeposits (historical)
 
 .DESCRIPTION
 
@@ -1364,7 +1364,7 @@ function Invoke-CurveGetGaugesDepositsHistorical {
 <#
 .SYNOPSIS
 
-GetGaugesLiquidity (historical)
+GaugesLiquidity (historical)
 
 .DESCRIPTION
 
@@ -1479,7 +1479,7 @@ function Invoke-CurveGetGaugesLiquidityHistorical {
 <#
 .SYNOPSIS
 
-GetGaugesTotalWeights (historical)
+GaugesTotalWeights (historical)
 
 .DESCRIPTION
 
@@ -1594,7 +1594,7 @@ function Invoke-CurveGetGaugesTotalWeightsHistorical {
 <#
 .SYNOPSIS
 
-GetGaugesTypesWeights (historical)
+GaugesTypesWeights (historical)
 
 .DESCRIPTION
 
@@ -1709,7 +1709,7 @@ function Invoke-CurveGetGaugesTypesWeightsHistorical {
 <#
 .SYNOPSIS
 
-GetGaugesTypes (historical)
+GaugesTypes (historical)
 
 .DESCRIPTION
 
@@ -1824,7 +1824,7 @@ function Invoke-CurveGetGaugesTypesHistorical {
 <#
 .SYNOPSIS
 
-GetGaugesWeightsVotes (historical)
+GaugesWeightsVotes (historical)
 
 .DESCRIPTION
 
@@ -1939,7 +1939,7 @@ function Invoke-CurveGetGaugesWeightsVotesHistorical {
 <#
 .SYNOPSIS
 
-GetGaugesWeights (historical)
+GaugesWeights (historical)
 
 .DESCRIPTION
 
@@ -2054,7 +2054,7 @@ function Invoke-CurveGetGaugesWeightsHistorical {
 <#
 .SYNOPSIS
 
-GetGaugesWithdraw (historical)
+GaugesWithdraw (historical)
 
 .DESCRIPTION
 
@@ -2169,7 +2169,7 @@ function Invoke-CurveGetGaugesWithdrawHistorical {
 <#
 .SYNOPSIS
 
-GetGauges (historical)
+Gauges (historical)
 
 .DESCRIPTION
 
@@ -2294,7 +2294,7 @@ function Invoke-CurveGetGaugesHistorical {
 <#
 .SYNOPSIS
 
-GetHourlyVolumes (historical)
+HourlyVolumes (historical)
 
 .DESCRIPTION
 
@@ -2419,7 +2419,7 @@ function Invoke-CurveGetHourlyVolumesHistorical {
 <#
 .SYNOPSIS
 
-GetLpTokens (historical)
+LpTokens (historical)
 
 .DESCRIPTION
 
@@ -2544,7 +2544,7 @@ function Invoke-CurveGetLpTokensHistorical {
 <#
 .SYNOPSIS
 
-GetPools (historical) 🔥
+Pools (historical) 🔥
 
 .DESCRIPTION
 
@@ -2669,7 +2669,7 @@ function Invoke-CurveGetPoolsHistorical {
 <#
 .SYNOPSIS
 
-GetProposalsVotes (historical)
+ProposalsVotes (historical)
 
 .DESCRIPTION
 
@@ -2784,7 +2784,7 @@ function Invoke-CurveGetProposalsVotesHistorical {
 <#
 .SYNOPSIS
 
-GetProposals (historical)
+Proposals (historical)
 
 .DESCRIPTION
 
@@ -2899,7 +2899,7 @@ function Invoke-CurveGetProposalsHistorical {
 <#
 .SYNOPSIS
 
-GetRemoveLiquidityEvents (historical)
+RemoveLiquidityEvents (historical)
 
 .DESCRIPTION
 
@@ -3024,7 +3024,7 @@ function Invoke-CurveGetRemoveLiquidityEventsHistorical {
 <#
 .SYNOPSIS
 
-GetRemoveLiquidityOneEvents (historical)
+RemoveLiquidityOneEvents (historical)
 
 .DESCRIPTION
 
@@ -3149,7 +3149,7 @@ function Invoke-CurveGetRemoveLiquidityOneEventsHistorical {
 <#
 .SYNOPSIS
 
-GetSystemStates (historical)
+SystemStates (historical)
 
 .DESCRIPTION
 
@@ -3264,7 +3264,7 @@ function Invoke-CurveGetSystemStatesHistorical {
 <#
 .SYNOPSIS
 
-GetTokens (historical) 🔥
+Tokens (historical) 🔥
 
 .DESCRIPTION
 
@@ -3389,7 +3389,7 @@ function Invoke-CurveGetTokensHistorical {
 <#
 .SYNOPSIS
 
-GetTransferOwnershipEvents (historical)
+TransferOwnershipEvents (historical)
 
 .DESCRIPTION
 
@@ -3514,7 +3514,7 @@ function Invoke-CurveGetTransferOwnershipEventsHistorical {
 <#
 .SYNOPSIS
 
-GetUnderlyingCoins (historical)
+UnderlyingCoins (historical)
 
 .DESCRIPTION
 
@@ -3639,7 +3639,7 @@ function Invoke-CurveGetUnderlyingCoinsHistorical {
 <#
 .SYNOPSIS
 
-GetVotingApps (historical)
+VotingApps (historical)
 
 .DESCRIPTION
 
@@ -3754,7 +3754,7 @@ function Invoke-CurveGetVotingAppsHistorical {
 <#
 .SYNOPSIS
 
-GetWeeklyVolumes (historical)
+WeeklyVolumes (historical)
 
 .DESCRIPTION
 

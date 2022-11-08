@@ -73,7 +73,7 @@ public class UniswapV3Api {
   }
 
   /**
-  * GetBundles (current)
+  * Bundles (current)
   * Gets bundles.
    * @return List<UniswapV3BundleV3DTO>
   */
@@ -129,7 +129,7 @@ public class UniswapV3Api {
   }
 
       /**
-   * GetBundles (current)
+   * Bundles (current)
    * Gets bundles.
 
   */
@@ -189,7 +189,7 @@ public class UniswapV3Api {
     }
   }
   /**
-  * GetBundles (historical)
+  * Bundles (historical)
   * Gets bundles.
    * @param startBlock 
    * @param endBlock 
@@ -253,7 +253,7 @@ public class UniswapV3Api {
   }
 
       /**
-   * GetBundles (historical)
+   * Bundles (historical)
    * Gets bundles.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate 
   */
@@ -317,7 +317,7 @@ public class UniswapV3Api {
     }
   }
   /**
-  * GetBurns (current)
+  * Burns (current)
   * Gets burns.
    * @param filterPoolId 
    * @return List<UniswapV3BurnV3DTO>
@@ -375,7 +375,7 @@ public class UniswapV3Api {
   }
 
       /**
-   * GetBurns (current)
+   * Burns (current)
    * Gets burns.
    * @param filterPoolId 
   */
@@ -436,7 +436,7 @@ public class UniswapV3Api {
     }
   }
   /**
-  * GetBurns (historical)
+  * Burns (historical)
   * Gets burns.
    * @param startBlock 
    * @param endBlock 
@@ -502,7 +502,7 @@ public class UniswapV3Api {
   }
 
       /**
-   * GetBurns (historical)
+   * Burns (historical)
    * Gets burns.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param poolId 
   */
@@ -567,7 +567,7 @@ public class UniswapV3Api {
     }
   }
   /**
-  * GetDayData (current)
+  * DayData (current)
   * Gets uniswapv3 day data.
    * @return List<UniswapV3UniswapDayDataV3DTO>
   */
@@ -623,7 +623,7 @@ public class UniswapV3Api {
   }
 
       /**
-   * GetDayData (current)
+   * DayData (current)
    * Gets uniswapv3 day data.
 
   */
@@ -683,7 +683,7 @@ public class UniswapV3Api {
     }
   }
   /**
-  * GetDayData (historical)
+  * DayData (historical)
   * Gets uniswapv3 day data.
    * @param startBlock 
    * @param endBlock 
@@ -747,7 +747,7 @@ public class UniswapV3Api {
   }
 
       /**
-   * GetDayData (historical)
+   * DayData (historical)
    * Gets uniswapv3 day data.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate 
   */
@@ -811,7 +811,7 @@ public class UniswapV3Api {
     }
   }
   /**
-  * GetFactory (current)
+  * Factory (current)
   * Gets factory.
    * @return List<UniswapV3FactoryV3DTO>
   */
@@ -867,7 +867,7 @@ public class UniswapV3Api {
   }
 
       /**
-   * GetFactory (current)
+   * Factory (current)
    * Gets factory.
 
   */
@@ -927,7 +927,7 @@ public class UniswapV3Api {
     }
   }
   /**
-  * GetFactory (historical)
+  * Factory (historical)
   * Gets factory.
    * @param startBlock 
    * @param endBlock 
@@ -991,7 +991,7 @@ public class UniswapV3Api {
   }
 
       /**
-   * GetFactory (historical)
+   * Factory (historical)
    * Gets factory.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate 
   */
@@ -1055,7 +1055,7 @@ public class UniswapV3Api {
     }
   }
   /**
-  * GetMints (current)
+  * Mints (current)
   * Gets mints.
    * @param filterPoolId 
    * @return List<UniswapV3MintV3DTO>
@@ -1113,7 +1113,7 @@ public class UniswapV3Api {
   }
 
       /**
-   * GetMints (current)
+   * Mints (current)
    * Gets mints.
    * @param filterPoolId 
   */
@@ -1174,7 +1174,7 @@ public class UniswapV3Api {
     }
   }
   /**
-  * GetMints (historical)
+  * Mints (historical)
   * Gets mints.
    * @param startBlock 
    * @param endBlock 
@@ -1240,7 +1240,7 @@ public class UniswapV3Api {
   }
 
       /**
-   * GetMints (historical)
+   * Mints (historical)
    * Gets mints.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param poolId 
   */
@@ -1305,7 +1305,7 @@ public class UniswapV3Api {
     }
   }
   /**
-  * GetPools (current) 🔥
+  * Pools (current) 🔥
   * Gets pools.
    * @param filterPoolId 
    * @return List<UniswapV3PoolV3DTO>
@@ -1363,7 +1363,7 @@ public class UniswapV3Api {
   }
 
       /**
-   * GetPools (current) 🔥
+   * Pools (current) 🔥
    * Gets pools.
    * @param filterPoolId 
   */
@@ -1424,7 +1424,7 @@ public class UniswapV3Api {
     }
   }
   /**
-  * GetPoolsDayData (current)
+  * PoolsDayData (current)
   * Gets pools day data.
    * @param filterPoolId 
    * @return List<UniswapV3PoolDayDataV3DTO>
@@ -1482,7 +1482,7 @@ public class UniswapV3Api {
   }
 
       /**
-   * GetPoolsDayData (current)
+   * PoolsDayData (current)
    * Gets pools day data.
    * @param filterPoolId 
   */
@@ -1543,7 +1543,7 @@ public class UniswapV3Api {
     }
   }
   /**
-  * GetPoolsDayData (historical)
+  * PoolsDayData (historical)
   * Gets pools day data.
    * @param startBlock 
    * @param endBlock 
@@ -1609,7 +1609,7 @@ public class UniswapV3Api {
   }
 
       /**
-   * GetPoolsDayData (historical)
+   * PoolsDayData (historical)
    * Gets pools day data.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param poolId 
   */
@@ -1674,7 +1674,7 @@ public class UniswapV3Api {
     }
   }
   /**
-  * GetPools (historical) 🔥
+  * Pools (historical) 🔥
   * Gets pools.
    * @param startBlock 
    * @param endBlock 
@@ -1740,7 +1740,7 @@ public class UniswapV3Api {
   }
 
       /**
-   * GetPools (historical) 🔥
+   * Pools (historical) 🔥
    * Gets pools.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param poolId 
   */
@@ -1805,7 +1805,7 @@ public class UniswapV3Api {
     }
   }
   /**
-  * GetPoolsHourData (current)
+  * PoolsHourData (current)
   * Gets pools hour data.
    * @param filterPoolId 
    * @return List<UniswapV3PoolHourDataV3DTO>
@@ -1863,7 +1863,7 @@ public class UniswapV3Api {
   }
 
       /**
-   * GetPoolsHourData (current)
+   * PoolsHourData (current)
    * Gets pools hour data.
    * @param filterPoolId 
   */
@@ -1924,7 +1924,7 @@ public class UniswapV3Api {
     }
   }
   /**
-  * GetPoolsHourData (historical)
+  * PoolsHourData (historical)
   * Gets pools hour data.
    * @param startBlock 
    * @param endBlock 
@@ -1990,7 +1990,7 @@ public class UniswapV3Api {
   }
 
       /**
-   * GetPoolsHourData (historical)
+   * PoolsHourData (historical)
    * Gets pools hour data.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param poolId 
   */
@@ -2055,7 +2055,7 @@ public class UniswapV3Api {
     }
   }
   /**
-  * GetPositions (current)
+  * Positions (current)
   * Gets positions.
    * @param filterPoolId 
    * @return List<UniswapV3PositionV3DTO>
@@ -2113,7 +2113,7 @@ public class UniswapV3Api {
   }
 
       /**
-   * GetPositions (current)
+   * Positions (current)
    * Gets positions.
    * @param filterPoolId 
   */
@@ -2174,7 +2174,7 @@ public class UniswapV3Api {
     }
   }
   /**
-  * GetPositions (historical)
+  * Positions (historical)
   * Gets positions.
    * @param startBlock 
    * @param endBlock 
@@ -2240,7 +2240,7 @@ public class UniswapV3Api {
   }
 
       /**
-   * GetPositions (historical)
+   * Positions (historical)
    * Gets positions.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param poolId 
   */
@@ -2305,7 +2305,7 @@ public class UniswapV3Api {
     }
   }
   /**
-  * GetPositionsSnaphots (historical)
+  * PositionsSnaphots (historical)
   * Gets positions snapshots.
    * @param startBlock 
    * @param endBlock 
@@ -2371,7 +2371,7 @@ public class UniswapV3Api {
   }
 
       /**
-   * GetPositionsSnaphots (historical)
+   * PositionsSnaphots (historical)
    * Gets positions snapshots.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param poolId 
   */
@@ -2436,7 +2436,7 @@ public class UniswapV3Api {
     }
   }
   /**
-  * GetPositionsSnapshots (current)
+  * PositionsSnapshots (current)
   * Gets positions snapshots.
    * @param filterPoolId 
    * @return List<UniswapV3PositionSnapshotV3DTO>
@@ -2494,7 +2494,7 @@ public class UniswapV3Api {
   }
 
       /**
-   * GetPositionsSnapshots (current)
+   * PositionsSnapshots (current)
    * Gets positions snapshots.
    * @param filterPoolId 
   */
@@ -2555,7 +2555,7 @@ public class UniswapV3Api {
     }
   }
   /**
-  * GetSwaps (current) 🔥
+  * Swaps (current) 🔥
   * Gets swaps.
    * @param filterPoolId 
    * @return List<UniswapV3SwapV3DTO>
@@ -2613,7 +2613,7 @@ public class UniswapV3Api {
   }
 
       /**
-   * GetSwaps (current) 🔥
+   * Swaps (current) 🔥
    * Gets swaps.
    * @param filterPoolId 
   */
@@ -2674,7 +2674,7 @@ public class UniswapV3Api {
     }
   }
   /**
-  * GetSwaps (historical) 🔥
+  * Swaps (historical) 🔥
   * Gets swaps.
    * @param startBlock 
    * @param endBlock 
@@ -2740,7 +2740,7 @@ public class UniswapV3Api {
   }
 
       /**
-   * GetSwaps (historical) 🔥
+   * Swaps (historical) 🔥
    * Gets swaps.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param poolId 
   */
@@ -2805,7 +2805,7 @@ public class UniswapV3Api {
     }
   }
   /**
-  * GetTicks (current)
+  * Ticks (current)
   * Gets ticks.
    * @param filterPoolId 
    * @return List<UniswapV3TickV3DTO>
@@ -2863,7 +2863,7 @@ public class UniswapV3Api {
   }
 
       /**
-   * GetTicks (current)
+   * Ticks (current)
    * Gets ticks.
    * @param filterPoolId 
   */
@@ -2924,7 +2924,7 @@ public class UniswapV3Api {
     }
   }
   /**
-  * GetTicksDayData (current)
+  * TicksDayData (current)
   * Gets ticks day data.
    * @param filterPoolId 
    * @return List<UniswapV3TickDayDataV3DTO>
@@ -2982,7 +2982,7 @@ public class UniswapV3Api {
   }
 
       /**
-   * GetTicksDayData (current)
+   * TicksDayData (current)
    * Gets ticks day data.
    * @param filterPoolId 
   */
@@ -3043,7 +3043,7 @@ public class UniswapV3Api {
     }
   }
   /**
-  * GetTicksDayData (historical)
+  * TicksDayData (historical)
   * Gets ticks day data.
    * @param startBlock 
    * @param endBlock 
@@ -3109,7 +3109,7 @@ public class UniswapV3Api {
   }
 
       /**
-   * GetTicksDayData (historical)
+   * TicksDayData (historical)
    * Gets ticks day data.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param poolId 
   */
@@ -3174,7 +3174,7 @@ public class UniswapV3Api {
     }
   }
   /**
-  * GetTicks (historical)
+  * Ticks (historical)
   * Gets ticks.
    * @param startBlock 
    * @param endBlock 
@@ -3240,7 +3240,7 @@ public class UniswapV3Api {
   }
 
       /**
-   * GetTicks (historical)
+   * Ticks (historical)
    * Gets ticks.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param poolId 
   */
@@ -3305,7 +3305,7 @@ public class UniswapV3Api {
     }
   }
   /**
-  * GetTokens (current) 🔥
+  * Tokens (current) 🔥
   * Gets tokens.
    * @param filterTokenId 
    * @return List<UniswapV3TokenV3DTO>
@@ -3363,7 +3363,7 @@ public class UniswapV3Api {
   }
 
       /**
-   * GetTokens (current) 🔥
+   * Tokens (current) 🔥
    * Gets tokens.
    * @param filterTokenId 
   */
@@ -3424,7 +3424,7 @@ public class UniswapV3Api {
     }
   }
   /**
-  * GetTokensDayData (current)
+  * TokensDayData (current)
   * Gets tokens day data.
    * @param filterTokenId 
    * @return List<UniswapV3TokenV3DayDataDTO>
@@ -3482,7 +3482,7 @@ public class UniswapV3Api {
   }
 
       /**
-   * GetTokensDayData (current)
+   * TokensDayData (current)
    * Gets tokens day data.
    * @param filterTokenId 
   */
@@ -3543,7 +3543,7 @@ public class UniswapV3Api {
     }
   }
   /**
-  * GetTokensDayData (historical)
+  * TokensDayData (historical)
   * Gets tokens day data.
    * @param startBlock 
    * @param endBlock 
@@ -3609,7 +3609,7 @@ public class UniswapV3Api {
   }
 
       /**
-   * GetTokensDayData (historical)
+   * TokensDayData (historical)
    * Gets tokens day data.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param tokenId 
   */
@@ -3674,7 +3674,7 @@ public class UniswapV3Api {
     }
   }
   /**
-  * GetTokens (historical) 🔥
+  * Tokens (historical) 🔥
   * Gets tokens.
    * @param startBlock 
    * @param endBlock 
@@ -3740,7 +3740,7 @@ public class UniswapV3Api {
   }
 
       /**
-   * GetTokens (historical) 🔥
+   * Tokens (historical) 🔥
    * Gets tokens.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param tokenId 
   */
@@ -3805,7 +3805,7 @@ public class UniswapV3Api {
     }
   }
   /**
-  * GetTokensHourData (current)
+  * TokensHourData (current)
   * Gets tokens hour data.
    * @param filterTokenId 
    * @return List<UniswapV3TokenHourDataV3DTO>
@@ -3863,7 +3863,7 @@ public class UniswapV3Api {
   }
 
       /**
-   * GetTokensHourData (current)
+   * TokensHourData (current)
    * Gets tokens hour data.
    * @param filterTokenId 
   */
@@ -3924,7 +3924,7 @@ public class UniswapV3Api {
     }
   }
   /**
-  * GetTokensHourData (historical)
+  * TokensHourData (historical)
   * Gets tokens hour data.
    * @param startBlock 
    * @param endBlock 
@@ -3990,7 +3990,7 @@ public class UniswapV3Api {
   }
 
       /**
-   * GetTokensHourData (historical)
+   * TokensHourData (historical)
    * Gets tokens hour data.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param tokenId 
   */
@@ -4055,7 +4055,7 @@ public class UniswapV3Api {
     }
   }
   /**
-  * GetTransactions (historical)
+  * Transactions (historical)
   * Gets transactions.
    * @param startBlock 
    * @param endBlock 
@@ -4119,7 +4119,7 @@ public class UniswapV3Api {
   }
 
       /**
-   * GetTransactions (historical)
+   * Transactions (historical)
    * Gets transactions.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate 
   */

@@ -14,7 +14,7 @@ feature -- Test routines
 
 
     test_dex_get_batches_historical
-            -- GetBatches (historical)
+            -- Batches (historical)
             --
             -- Gets batches.
         local
@@ -31,7 +31,7 @@ feature -- Test routines
         end
 
     test_dex_get_deposits_historical
-            -- GetDeposits (historical)
+            -- Deposits (historical)
             --
             -- Gets deposits.
         local
@@ -49,7 +49,7 @@ feature -- Test routines
         end
 
     test_dex_get_orders_historical
-            -- GetOrders (historical)
+            -- Orders (historical)
             --
             -- Gets orders.
         local
@@ -67,7 +67,7 @@ feature -- Test routines
         end
 
     test_dex_get_prices_historical
-            -- GetPrices (historical)
+            -- Prices (historical)
             --
             -- Gets prices.
         local
@@ -85,7 +85,7 @@ feature -- Test routines
         end
 
     test_dex_get_solutions_historical
-            -- GetSolutions (historical)
+            -- Solutions (historical)
             --
             -- Gets solutions.
         local
@@ -103,7 +103,7 @@ feature -- Test routines
         end
 
     test_dex_get_stats_historical
-            -- GetStats (historical)
+            -- Stats (historical)
             --
             -- Gets stats.
         local
@@ -120,7 +120,7 @@ feature -- Test routines
         end
 
     test_dex_get_tokens_historical
-            -- GetTokens (historical) 🔥
+            -- Tokens (historical) 🔥
             --
             -- Gets tokens.
         local
@@ -138,7 +138,7 @@ feature -- Test routines
         end
 
     test_dex_get_trades_historical
-            -- GetTrades (historical) 🔥
+            -- Trades (historical) 🔥
             --
             -- Gets trades.
         local
@@ -155,7 +155,7 @@ feature -- Test routines
         end
 
     test_dex_get_users_historical
-            -- GetUsers (historical)
+            -- Users (historical)
             --
             -- Gets users.
         local
@@ -172,7 +172,7 @@ feature -- Test routines
         end
 
     test_dex_get_withdraws_historical
-            -- GetWithdraws (historical)
+            -- Withdraws (historical)
             --
             -- Gets withdraws.
         local
@@ -190,7 +190,7 @@ feature -- Test routines
         end
 
     test_dex_get_withdraws_requests_historical
-            -- GetWithdrawsRequests (historical)
+            -- WithdrawsRequests (historical)
             --
             -- Gets withdraws requests.
         local

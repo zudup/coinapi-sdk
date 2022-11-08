@@ -4,23 +4,23 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**DexGetBatchesHistorical**](DexApi.md#DexGetBatchesHistorical) | **GET** /dapps/dex/batches/historical | GetBatches (historical)
-[**DexGetDepositsHistorical**](DexApi.md#DexGetDepositsHistorical) | **GET** /dapps/dex/deposits/historical | GetDeposits (historical)
-[**DexGetOrdersHistorical**](DexApi.md#DexGetOrdersHistorical) | **GET** /dapps/dex/orders/historical | GetOrders (historical)
-[**DexGetPricesHistorical**](DexApi.md#DexGetPricesHistorical) | **GET** /dapps/dex/prices/historical | GetPrices (historical)
-[**DexGetSolutionsHistorical**](DexApi.md#DexGetSolutionsHistorical) | **GET** /dapps/dex/solutions/historical | GetSolutions (historical)
-[**DexGetStatsHistorical**](DexApi.md#DexGetStatsHistorical) | **GET** /dapps/dex/stats/historical | GetStats (historical)
-[**DexGetTokensHistorical**](DexApi.md#DexGetTokensHistorical) | **GET** /dapps/dex/tokens/historical | GetTokens (historical) 🔥
-[**DexGetTradesHistorical**](DexApi.md#DexGetTradesHistorical) | **GET** /dapps/dex/trades/historical | GetTrades (historical) 🔥
-[**DexGetUsersHistorical**](DexApi.md#DexGetUsersHistorical) | **GET** /dapps/dex/users/historical | GetUsers (historical)
-[**DexGetWithdrawsHistorical**](DexApi.md#DexGetWithdrawsHistorical) | **GET** /dapps/dex/withdraws/historical | GetWithdraws (historical)
-[**DexGetWithdrawsRequestsHistorical**](DexApi.md#DexGetWithdrawsRequestsHistorical) | **GET** /dapps/dex/withdrawsRequests/historical | GetWithdrawsRequests (historical)
+[**DexGetBatchesHistorical**](DexApi.md#DexGetBatchesHistorical) | **GET** /dapps/dex/batches/historical | Batches (historical)
+[**DexGetDepositsHistorical**](DexApi.md#DexGetDepositsHistorical) | **GET** /dapps/dex/deposits/historical | Deposits (historical)
+[**DexGetOrdersHistorical**](DexApi.md#DexGetOrdersHistorical) | **GET** /dapps/dex/orders/historical | Orders (historical)
+[**DexGetPricesHistorical**](DexApi.md#DexGetPricesHistorical) | **GET** /dapps/dex/prices/historical | Prices (historical)
+[**DexGetSolutionsHistorical**](DexApi.md#DexGetSolutionsHistorical) | **GET** /dapps/dex/solutions/historical | Solutions (historical)
+[**DexGetStatsHistorical**](DexApi.md#DexGetStatsHistorical) | **GET** /dapps/dex/stats/historical | Stats (historical)
+[**DexGetTokensHistorical**](DexApi.md#DexGetTokensHistorical) | **GET** /dapps/dex/tokens/historical | Tokens (historical) 🔥
+[**DexGetTradesHistorical**](DexApi.md#DexGetTradesHistorical) | **GET** /dapps/dex/trades/historical | Trades (historical) 🔥
+[**DexGetUsersHistorical**](DexApi.md#DexGetUsersHistorical) | **GET** /dapps/dex/users/historical | Users (historical)
+[**DexGetWithdrawsHistorical**](DexApi.md#DexGetWithdrawsHistorical) | **GET** /dapps/dex/withdraws/historical | Withdraws (historical)
+[**DexGetWithdrawsRequestsHistorical**](DexApi.md#DexGetWithdrawsRequestsHistorical) | **GET** /dapps/dex/withdrawsRequests/historical | WithdrawsRequests (historical)
 
 
 # **DexGetBatchesHistorical**
 > array[DexBatchDTO] DexGetBatchesHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date)
 
-GetBatches (historical)
+Batches (historical)
 
 Gets batches.
 
@@ -28,7 +28,7 @@ Gets batches.
 ```R
 library(openapi)
 
-# GetBatches (historical)
+# Batches (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -73,7 +73,7 @@ No authorization required
 # **DexGetDepositsHistorical**
 > array[DexDepositDTO] DexGetDepositsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, token_id = var.token_id)
 
-GetDeposits (historical)
+Deposits (historical)
 
 Gets deposits.
 
@@ -81,7 +81,7 @@ Gets deposits.
 ```R
 library(openapi)
 
-# GetDeposits (historical)
+# Deposits (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -128,7 +128,7 @@ No authorization required
 # **DexGetOrdersHistorical**
 > array[DexOrderDTO] DexGetOrdersHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, token_id = var.token_id)
 
-GetOrders (historical)
+Orders (historical)
 
 Gets orders.
 
@@ -136,7 +136,7 @@ Gets orders.
 ```R
 library(openapi)
 
-# GetOrders (historical)
+# Orders (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -183,7 +183,7 @@ No authorization required
 # **DexGetPricesHistorical**
 > array[DexPriceDTO] DexGetPricesHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, token_id = var.token_id)
 
-GetPrices (historical)
+Prices (historical)
 
 Gets prices.
 
@@ -191,7 +191,7 @@ Gets prices.
 ```R
 library(openapi)
 
-# GetPrices (historical)
+# Prices (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -238,7 +238,7 @@ No authorization required
 # **DexGetSolutionsHistorical**
 > array[DexSolutionDTO] DexGetSolutionsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, token_id = var.token_id)
 
-GetSolutions (historical)
+Solutions (historical)
 
 Gets solutions.
 
@@ -246,7 +246,7 @@ Gets solutions.
 ```R
 library(openapi)
 
-# GetSolutions (historical)
+# Solutions (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -293,7 +293,7 @@ No authorization required
 # **DexGetStatsHistorical**
 > array[DexStatsDTO] DexGetStatsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date)
 
-GetStats (historical)
+Stats (historical)
 
 Gets stats.
 
@@ -301,7 +301,7 @@ Gets stats.
 ```R
 library(openapi)
 
-# GetStats (historical)
+# Stats (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -346,7 +346,7 @@ No authorization required
 # **DexGetTokensHistorical**
 > array[DexTokenDTO] DexGetTokensHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, token_id = var.token_id)
 
-GetTokens (historical) 🔥
+Tokens (historical) 🔥
 
 Gets tokens.
 
@@ -354,7 +354,7 @@ Gets tokens.
 ```R
 library(openapi)
 
-# GetTokens (historical) 🔥
+# Tokens (historical) 🔥
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -401,7 +401,7 @@ No authorization required
 # **DexGetTradesHistorical**
 > array[DexTradeDTO] DexGetTradesHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date)
 
-GetTrades (historical) 🔥
+Trades (historical) 🔥
 
 Gets trades.
 
@@ -409,7 +409,7 @@ Gets trades.
 ```R
 library(openapi)
 
-# GetTrades (historical) 🔥
+# Trades (historical) 🔥
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -454,7 +454,7 @@ No authorization required
 # **DexGetUsersHistorical**
 > array[DexUserDTO] DexGetUsersHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date)
 
-GetUsers (historical)
+Users (historical)
 
 Gets users.
 
@@ -462,7 +462,7 @@ Gets users.
 ```R
 library(openapi)
 
-# GetUsers (historical)
+# Users (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -507,7 +507,7 @@ No authorization required
 # **DexGetWithdrawsHistorical**
 > array[DexWithdrawDTO] DexGetWithdrawsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, token_id = var.token_id)
 
-GetWithdraws (historical)
+Withdraws (historical)
 
 Gets withdraws.
 
@@ -515,7 +515,7 @@ Gets withdraws.
 ```R
 library(openapi)
 
-# GetWithdraws (historical)
+# Withdraws (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -562,7 +562,7 @@ No authorization required
 # **DexGetWithdrawsRequestsHistorical**
 > array[DexWithdrawRequestDTO] DexGetWithdrawsRequestsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, token_id = var.token_id)
 
-GetWithdrawsRequests (historical)
+WithdrawsRequests (historical)
 
 Gets withdraws requests.
 
@@ -570,7 +570,7 @@ Gets withdraws requests.
 ```R
 library(openapi)
 
-# GetWithdrawsRequests (historical)
+# WithdrawsRequests (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)

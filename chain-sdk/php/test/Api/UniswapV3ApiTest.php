@@ -75,7 +75,7 @@ class UniswapV3ApiTest extends TestCase
     /**
      * Test case for uniswapV3GetBundlesCurrent
      *
-     * GetBundles (current).
+     * Bundles (current).
      *
      */
     public function testUniswapV3GetBundlesCurrent()
@@ -87,7 +87,7 @@ class UniswapV3ApiTest extends TestCase
     /**
      * Test case for uniswapV3GetBundlesHistorical
      *
-     * GetBundles (historical).
+     * Bundles (historical).
      *
      */
     public function testUniswapV3GetBundlesHistorical()
@@ -99,7 +99,7 @@ class UniswapV3ApiTest extends TestCase
     /**
      * Test case for uniswapV3GetBurnsCurrent
      *
-     * GetBurns (current).
+     * Burns (current).
      *
      */
     public function testUniswapV3GetBurnsCurrent()
@@ -111,7 +111,7 @@ class UniswapV3ApiTest extends TestCase
     /**
      * Test case for uniswapV3GetBurnsHistorical
      *
-     * GetBurns (historical).
+     * Burns (historical).
      *
      */
     public function testUniswapV3GetBurnsHistorical()
@@ -123,7 +123,7 @@ class UniswapV3ApiTest extends TestCase
     /**
      * Test case for uniswapV3GetDayDataCurrent
      *
-     * GetDayData (current).
+     * DayData (current).
      *
      */
     public function testUniswapV3GetDayDataCurrent()
@@ -135,7 +135,7 @@ class UniswapV3ApiTest extends TestCase
     /**
      * Test case for uniswapV3GetDayDataHistorical
      *
-     * GetDayData (historical).
+     * DayData (historical).
      *
      */
     public function testUniswapV3GetDayDataHistorical()
@@ -147,7 +147,7 @@ class UniswapV3ApiTest extends TestCase
     /**
      * Test case for uniswapV3GetFactoryCurrent
      *
-     * GetFactory (current).
+     * Factory (current).
      *
      */
     public function testUniswapV3GetFactoryCurrent()
@@ -159,7 +159,7 @@ class UniswapV3ApiTest extends TestCase
     /**
      * Test case for uniswapV3GetFactoryHistorical
      *
-     * GetFactory (historical).
+     * Factory (historical).
      *
      */
     public function testUniswapV3GetFactoryHistorical()
@@ -171,7 +171,7 @@ class UniswapV3ApiTest extends TestCase
     /**
      * Test case for uniswapV3GetMintsCurrent
      *
-     * GetMints (current).
+     * Mints (current).
      *
      */
     public function testUniswapV3GetMintsCurrent()
@@ -183,7 +183,7 @@ class UniswapV3ApiTest extends TestCase
     /**
      * Test case for uniswapV3GetMintsHistorical
      *
-     * GetMints (historical).
+     * Mints (historical).
      *
      */
     public function testUniswapV3GetMintsHistorical()
@@ -195,7 +195,7 @@ class UniswapV3ApiTest extends TestCase
     /**
      * Test case for uniswapV3GetPoolsCurrent
      *
-     * GetPools (current) 🔥.
+     * Pools (current) 🔥.
      *
      */
     public function testUniswapV3GetPoolsCurrent()
@@ -207,7 +207,7 @@ class UniswapV3ApiTest extends TestCase
     /**
      * Test case for uniswapV3GetPoolsDayDataCurrent
      *
-     * GetPoolsDayData (current).
+     * PoolsDayData (current).
      *
      */
     public function testUniswapV3GetPoolsDayDataCurrent()
@@ -219,7 +219,7 @@ class UniswapV3ApiTest extends TestCase
     /**
      * Test case for uniswapV3GetPoolsDayDataHistorical
      *
-     * GetPoolsDayData (historical).
+     * PoolsDayData (historical).
      *
      */
     public function testUniswapV3GetPoolsDayDataHistorical()
@@ -231,7 +231,7 @@ class UniswapV3ApiTest extends TestCase
     /**
      * Test case for uniswapV3GetPoolsHistorical
      *
-     * GetPools (historical) 🔥.
+     * Pools (historical) 🔥.
      *
      */
     public function testUniswapV3GetPoolsHistorical()
@@ -243,7 +243,7 @@ class UniswapV3ApiTest extends TestCase
     /**
      * Test case for uniswapV3GetPoolsHourDataCurrent
      *
-     * GetPoolsHourData (current).
+     * PoolsHourData (current).
      *
      */
     public function testUniswapV3GetPoolsHourDataCurrent()
@@ -255,7 +255,7 @@ class UniswapV3ApiTest extends TestCase
     /**
      * Test case for uniswapV3GetPoolsHourDataHistorical
      *
-     * GetPoolsHourData (historical).
+     * PoolsHourData (historical).
      *
      */
     public function testUniswapV3GetPoolsHourDataHistorical()
@@ -267,7 +267,7 @@ class UniswapV3ApiTest extends TestCase
     /**
      * Test case for uniswapV3GetPositionsCurrent
      *
-     * GetPositions (current).
+     * Positions (current).
      *
      */
     public function testUniswapV3GetPositionsCurrent()
@@ -279,7 +279,7 @@ class UniswapV3ApiTest extends TestCase
     /**
      * Test case for uniswapV3GetPositionsHistorical
      *
-     * GetPositions (historical).
+     * Positions (historical).
      *
      */
     public function testUniswapV3GetPositionsHistorical()
@@ -291,7 +291,7 @@ class UniswapV3ApiTest extends TestCase
     /**
      * Test case for uniswapV3GetPositionsSnaphotsHistorical
      *
-     * GetPositionsSnaphots (historical).
+     * PositionsSnaphots (historical).
      *
      */
     public function testUniswapV3GetPositionsSnaphotsHistorical()
@@ -303,7 +303,7 @@ class UniswapV3ApiTest extends TestCase
     /**
      * Test case for uniswapV3GetPositionsSnapshotsCurrent
      *
-     * GetPositionsSnapshots (current).
+     * PositionsSnapshots (current).
      *
      */
     public function testUniswapV3GetPositionsSnapshotsCurrent()
@@ -315,7 +315,7 @@ class UniswapV3ApiTest extends TestCase
     /**
      * Test case for uniswapV3GetSwapsCurrent
      *
-     * GetSwaps (current) 🔥.
+     * Swaps (current) 🔥.
      *
      */
     public function testUniswapV3GetSwapsCurrent()
@@ -327,7 +327,7 @@ class UniswapV3ApiTest extends TestCase
     /**
      * Test case for uniswapV3GetSwapsHistorical
      *
-     * GetSwaps (historical) 🔥.
+     * Swaps (historical) 🔥.
      *
      */
     public function testUniswapV3GetSwapsHistorical()
@@ -339,7 +339,7 @@ class UniswapV3ApiTest extends TestCase
     /**
      * Test case for uniswapV3GetTicksCurrent
      *
-     * GetTicks (current).
+     * Ticks (current).
      *
      */
     public function testUniswapV3GetTicksCurrent()
@@ -351,7 +351,7 @@ class UniswapV3ApiTest extends TestCase
     /**
      * Test case for uniswapV3GetTicksDayDataCurrent
      *
-     * GetTicksDayData (current).
+     * TicksDayData (current).
      *
      */
     public function testUniswapV3GetTicksDayDataCurrent()
@@ -363,7 +363,7 @@ class UniswapV3ApiTest extends TestCase
     /**
      * Test case for uniswapV3GetTicksDayDataHistorical
      *
-     * GetTicksDayData (historical).
+     * TicksDayData (historical).
      *
      */
     public function testUniswapV3GetTicksDayDataHistorical()
@@ -375,7 +375,7 @@ class UniswapV3ApiTest extends TestCase
     /**
      * Test case for uniswapV3GetTicksHistorical
      *
-     * GetTicks (historical).
+     * Ticks (historical).
      *
      */
     public function testUniswapV3GetTicksHistorical()
@@ -387,7 +387,7 @@ class UniswapV3ApiTest extends TestCase
     /**
      * Test case for uniswapV3GetTokensCurrent
      *
-     * GetTokens (current) 🔥.
+     * Tokens (current) 🔥.
      *
      */
     public function testUniswapV3GetTokensCurrent()
@@ -399,7 +399,7 @@ class UniswapV3ApiTest extends TestCase
     /**
      * Test case for uniswapV3GetTokensDayDataCurrent
      *
-     * GetTokensDayData (current).
+     * TokensDayData (current).
      *
      */
     public function testUniswapV3GetTokensDayDataCurrent()
@@ -411,7 +411,7 @@ class UniswapV3ApiTest extends TestCase
     /**
      * Test case for uniswapV3GetTokensDayDataHistorical
      *
-     * GetTokensDayData (historical).
+     * TokensDayData (historical).
      *
      */
     public function testUniswapV3GetTokensDayDataHistorical()
@@ -423,7 +423,7 @@ class UniswapV3ApiTest extends TestCase
     /**
      * Test case for uniswapV3GetTokensHistorical
      *
-     * GetTokens (historical) 🔥.
+     * Tokens (historical) 🔥.
      *
      */
     public function testUniswapV3GetTokensHistorical()
@@ -435,7 +435,7 @@ class UniswapV3ApiTest extends TestCase
     /**
      * Test case for uniswapV3GetTokensHourDataCurrent
      *
-     * GetTokensHourData (current).
+     * TokensHourData (current).
      *
      */
     public function testUniswapV3GetTokensHourDataCurrent()
@@ -447,7 +447,7 @@ class UniswapV3ApiTest extends TestCase
     /**
      * Test case for uniswapV3GetTokensHourDataHistorical
      *
-     * GetTokensHourData (historical).
+     * TokensHourData (historical).
      *
      */
     public function testUniswapV3GetTokensHourDataHistorical()
@@ -459,7 +459,7 @@ class UniswapV3ApiTest extends TestCase
     /**
      * Test case for uniswapV3GetTransactionsHistorical
      *
-     * GetTransactions (historical).
+     * Transactions (historical).
      *
      */
     public function testUniswapV3GetTransactionsHistorical()

@@ -4,11 +4,11 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Invoke-CowGetOrdersHistorical**](CowApi.md#Invoke-CowGetOrdersHistorical) | **GET** /dapps/cow/orders/historical | GetOrders (historical)
-[**Invoke-CowGetSettlementsHistorical**](CowApi.md#Invoke-CowGetSettlementsHistorical) | **GET** /dapps/cow/settlements/historical | GetSettlements (historical)
-[**Invoke-CowGetTokensHistorical**](CowApi.md#Invoke-CowGetTokensHistorical) | **GET** /dapps/cow/tokens/historical | GetTokens (historical) 🔥
-[**Invoke-CowGetTradesHistorical**](CowApi.md#Invoke-CowGetTradesHistorical) | **GET** /dapps/cow/trades/historical | GetTrades (historical) 🔥
-[**Invoke-CowGetUsersHistorical**](CowApi.md#Invoke-CowGetUsersHistorical) | **GET** /dapps/cow/users/historical | GetUsers (historical)
+[**Invoke-CowGetOrdersHistorical**](CowApi.md#Invoke-CowGetOrdersHistorical) | **GET** /dapps/cow/orders/historical | Orders (historical)
+[**Invoke-CowGetSettlementsHistorical**](CowApi.md#Invoke-CowGetSettlementsHistorical) | **GET** /dapps/cow/settlements/historical | Settlements (historical)
+[**Invoke-CowGetTokensHistorical**](CowApi.md#Invoke-CowGetTokensHistorical) | **GET** /dapps/cow/tokens/historical | Tokens (historical) 🔥
+[**Invoke-CowGetTradesHistorical**](CowApi.md#Invoke-CowGetTradesHistorical) | **GET** /dapps/cow/trades/historical | Trades (historical) 🔥
+[**Invoke-CowGetUsersHistorical**](CowApi.md#Invoke-CowGetUsersHistorical) | **GET** /dapps/cow/users/historical | Users (historical)
 
 
 <a name="Invoke-CowGetOrdersHistorical"></a>
@@ -19,7 +19,7 @@ Method | HTTP request | Description
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 
-GetOrders (historical)
+Orders (historical)
 
 Gets orders.
 
@@ -30,7 +30,7 @@ $EndBlock = 789 # Int64 |  (optional)
 $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 
-# GetOrders (historical)
+# Orders (historical)
 try {
     $Result = Invoke-CowGetOrdersHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
 } catch {
@@ -71,7 +71,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 
-GetSettlements (historical)
+Settlements (historical)
 
 Gets settlements.
 
@@ -82,7 +82,7 @@ $EndBlock = 789 # Int64 |  (optional)
 $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 
-# GetSettlements (historical)
+# Settlements (historical)
 try {
     $Result = Invoke-CowGetSettlementsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
 } catch {
@@ -124,7 +124,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-TokenId] <String><br>
 
-GetTokens (historical) 🔥
+Tokens (historical) 🔥
 
 Gets tokens.
 
@@ -136,7 +136,7 @@ $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 $TokenId = "MyTokenId" # String |  (optional)
 
-# GetTokens (historical) 🔥
+# Tokens (historical) 🔥
 try {
     $Result = Invoke-CowGetTokensHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -TokenId $TokenId
 } catch {
@@ -178,7 +178,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 
-GetTrades (historical) 🔥
+Trades (historical) 🔥
 
 Gets trades.
 
@@ -189,7 +189,7 @@ $EndBlock = 789 # Int64 |  (optional)
 $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 
-# GetTrades (historical) 🔥
+# Trades (historical) 🔥
 try {
     $Result = Invoke-CowGetTradesHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
 } catch {
@@ -230,7 +230,7 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 
-GetUsers (historical)
+Users (historical)
 
 Gets users.
 
@@ -241,7 +241,7 @@ $EndBlock = 789 # Int64 |  (optional)
 $StartDate = (Get-Date) # System.DateTime |  (optional)
 $EndDate = (Get-Date) # System.DateTime |  (optional)
 
-# GetUsers (historical)
+# Users (historical)
 try {
     $Result = Invoke-CowGetUsersHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate
 } catch {

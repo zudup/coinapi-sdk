@@ -154,7 +154,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetBundles (current)
+     * Bundles (current)
      * Gets bundles.
      * @return List&lt;UniswapV3BundleV3DTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -170,7 +170,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetBundles (current)
+     * Bundles (current)
      * Gets bundles.
      * @return ApiResponse&lt;List&lt;UniswapV3BundleV3DTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -187,7 +187,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetBundles (current) (asynchronously)
+     * Bundles (current) (asynchronously)
      * Gets bundles.
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
@@ -289,7 +289,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetBundles (historical)
+     * Bundles (historical)
      * Gets bundles.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -309,7 +309,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetBundles (historical)
+     * Bundles (historical)
      * Gets bundles.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -330,7 +330,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetBundles (historical) (asynchronously)
+     * Bundles (historical) (asynchronously)
      * Gets bundles.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -421,7 +421,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetBurns (current)
+     * Burns (current)
      * Gets burns.
      * @param filterPoolId  (optional)
      * @return List&lt;UniswapV3BurnV3DTO&gt;
@@ -438,7 +438,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetBurns (current)
+     * Burns (current)
      * Gets burns.
      * @param filterPoolId  (optional)
      * @return ApiResponse&lt;List&lt;UniswapV3BurnV3DTO&gt;&gt;
@@ -456,7 +456,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetBurns (current) (asynchronously)
+     * Burns (current) (asynchronously)
      * Gets burns.
      * @param filterPoolId  (optional)
      * @param _callback The callback to be executed when the API call finishes
@@ -564,7 +564,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetBurns (historical)
+     * Burns (historical)
      * Gets burns.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -585,7 +585,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetBurns (historical)
+     * Burns (historical)
      * Gets burns.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -607,7 +607,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetBurns (historical) (asynchronously)
+     * Burns (historical) (asynchronously)
      * Gets burns.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -694,7 +694,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetDayData (current)
+     * DayData (current)
      * Gets uniswapv3 day data.
      * @return List&lt;UniswapV3UniswapDayDataV3DTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -710,7 +710,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetDayData (current)
+     * DayData (current)
      * Gets uniswapv3 day data.
      * @return ApiResponse&lt;List&lt;UniswapV3UniswapDayDataV3DTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -727,7 +727,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetDayData (current) (asynchronously)
+     * DayData (current) (asynchronously)
      * Gets uniswapv3 day data.
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
@@ -829,7 +829,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetDayData (historical)
+     * DayData (historical)
      * Gets uniswapv3 day data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -849,7 +849,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetDayData (historical)
+     * DayData (historical)
      * Gets uniswapv3 day data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -870,7 +870,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetDayData (historical) (asynchronously)
+     * DayData (historical) (asynchronously)
      * Gets uniswapv3 day data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -956,7 +956,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetFactory (current)
+     * Factory (current)
      * Gets factory.
      * @return List&lt;UniswapV3FactoryV3DTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -972,7 +972,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetFactory (current)
+     * Factory (current)
      * Gets factory.
      * @return ApiResponse&lt;List&lt;UniswapV3FactoryV3DTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -989,7 +989,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetFactory (current) (asynchronously)
+     * Factory (current) (asynchronously)
      * Gets factory.
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
@@ -1091,7 +1091,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetFactory (historical)
+     * Factory (historical)
      * Gets factory.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1111,7 +1111,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetFactory (historical)
+     * Factory (historical)
      * Gets factory.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1132,7 +1132,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetFactory (historical) (asynchronously)
+     * Factory (historical) (asynchronously)
      * Gets factory.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1223,7 +1223,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetMints (current)
+     * Mints (current)
      * Gets mints.
      * @param filterPoolId  (optional)
      * @return List&lt;UniswapV3MintV3DTO&gt;
@@ -1240,7 +1240,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetMints (current)
+     * Mints (current)
      * Gets mints.
      * @param filterPoolId  (optional)
      * @return ApiResponse&lt;List&lt;UniswapV3MintV3DTO&gt;&gt;
@@ -1258,7 +1258,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetMints (current) (asynchronously)
+     * Mints (current) (asynchronously)
      * Gets mints.
      * @param filterPoolId  (optional)
      * @param _callback The callback to be executed when the API call finishes
@@ -1366,7 +1366,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetMints (historical)
+     * Mints (historical)
      * Gets mints.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1387,7 +1387,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetMints (historical)
+     * Mints (historical)
      * Gets mints.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1409,7 +1409,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetMints (historical) (asynchronously)
+     * Mints (historical) (asynchronously)
      * Gets mints.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1501,7 +1501,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetPools (current) 🔥
+     * Pools (current) 🔥
      * Gets pools.
      * @param filterPoolId  (optional)
      * @return List&lt;UniswapV3PoolV3DTO&gt;
@@ -1518,7 +1518,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetPools (current) 🔥
+     * Pools (current) 🔥
      * Gets pools.
      * @param filterPoolId  (optional)
      * @return ApiResponse&lt;List&lt;UniswapV3PoolV3DTO&gt;&gt;
@@ -1536,7 +1536,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetPools (current) 🔥 (asynchronously)
+     * Pools (current) 🔥 (asynchronously)
      * Gets pools.
      * @param filterPoolId  (optional)
      * @param _callback The callback to be executed when the API call finishes
@@ -1624,7 +1624,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetPoolsDayData (current)
+     * PoolsDayData (current)
      * Gets pools day data.
      * @param filterPoolId  (optional)
      * @return List&lt;UniswapV3PoolDayDataV3DTO&gt;
@@ -1641,7 +1641,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetPoolsDayData (current)
+     * PoolsDayData (current)
      * Gets pools day data.
      * @param filterPoolId  (optional)
      * @return ApiResponse&lt;List&lt;UniswapV3PoolDayDataV3DTO&gt;&gt;
@@ -1659,7 +1659,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetPoolsDayData (current) (asynchronously)
+     * PoolsDayData (current) (asynchronously)
      * Gets pools day data.
      * @param filterPoolId  (optional)
      * @param _callback The callback to be executed when the API call finishes
@@ -1767,7 +1767,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetPoolsDayData (historical)
+     * PoolsDayData (historical)
      * Gets pools day data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1788,7 +1788,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetPoolsDayData (historical)
+     * PoolsDayData (historical)
      * Gets pools day data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1810,7 +1810,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetPoolsDayData (historical) (asynchronously)
+     * PoolsDayData (historical) (asynchronously)
      * Gets pools day data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1922,7 +1922,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetPools (historical) 🔥
+     * Pools (historical) 🔥
      * Gets pools.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1943,7 +1943,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetPools (historical) 🔥
+     * Pools (historical) 🔥
      * Gets pools.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1965,7 +1965,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetPools (historical) 🔥 (asynchronously)
+     * Pools (historical) 🔥 (asynchronously)
      * Gets pools.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2057,7 +2057,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetPoolsHourData (current)
+     * PoolsHourData (current)
      * Gets pools hour data.
      * @param filterPoolId  (optional)
      * @return List&lt;UniswapV3PoolHourDataV3DTO&gt;
@@ -2074,7 +2074,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetPoolsHourData (current)
+     * PoolsHourData (current)
      * Gets pools hour data.
      * @param filterPoolId  (optional)
      * @return ApiResponse&lt;List&lt;UniswapV3PoolHourDataV3DTO&gt;&gt;
@@ -2092,7 +2092,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetPoolsHourData (current) (asynchronously)
+     * PoolsHourData (current) (asynchronously)
      * Gets pools hour data.
      * @param filterPoolId  (optional)
      * @param _callback The callback to be executed when the API call finishes
@@ -2200,7 +2200,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetPoolsHourData (historical)
+     * PoolsHourData (historical)
      * Gets pools hour data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2221,7 +2221,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetPoolsHourData (historical)
+     * PoolsHourData (historical)
      * Gets pools hour data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2243,7 +2243,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetPoolsHourData (historical) (asynchronously)
+     * PoolsHourData (historical) (asynchronously)
      * Gets pools hour data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2335,7 +2335,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetPositions (current)
+     * Positions (current)
      * Gets positions.
      * @param filterPoolId  (optional)
      * @return List&lt;UniswapV3PositionV3DTO&gt;
@@ -2352,7 +2352,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetPositions (current)
+     * Positions (current)
      * Gets positions.
      * @param filterPoolId  (optional)
      * @return ApiResponse&lt;List&lt;UniswapV3PositionV3DTO&gt;&gt;
@@ -2370,7 +2370,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetPositions (current) (asynchronously)
+     * Positions (current) (asynchronously)
      * Gets positions.
      * @param filterPoolId  (optional)
      * @param _callback The callback to be executed when the API call finishes
@@ -2478,7 +2478,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetPositions (historical)
+     * Positions (historical)
      * Gets positions.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2499,7 +2499,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetPositions (historical)
+     * Positions (historical)
      * Gets positions.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2521,7 +2521,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetPositions (historical) (asynchronously)
+     * Positions (historical) (asynchronously)
      * Gets positions.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2633,7 +2633,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetPositionsSnaphots (historical)
+     * PositionsSnaphots (historical)
      * Gets positions snapshots.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2654,7 +2654,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetPositionsSnaphots (historical)
+     * PositionsSnaphots (historical)
      * Gets positions snapshots.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2676,7 +2676,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetPositionsSnaphots (historical) (asynchronously)
+     * PositionsSnaphots (historical) (asynchronously)
      * Gets positions snapshots.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -2768,7 +2768,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetPositionsSnapshots (current)
+     * PositionsSnapshots (current)
      * Gets positions snapshots.
      * @param filterPoolId  (optional)
      * @return List&lt;UniswapV3PositionSnapshotV3DTO&gt;
@@ -2785,7 +2785,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetPositionsSnapshots (current)
+     * PositionsSnapshots (current)
      * Gets positions snapshots.
      * @param filterPoolId  (optional)
      * @return ApiResponse&lt;List&lt;UniswapV3PositionSnapshotV3DTO&gt;&gt;
@@ -2803,7 +2803,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetPositionsSnapshots (current) (asynchronously)
+     * PositionsSnapshots (current) (asynchronously)
      * Gets positions snapshots.
      * @param filterPoolId  (optional)
      * @param _callback The callback to be executed when the API call finishes
@@ -2891,7 +2891,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetSwaps (current) 🔥
+     * Swaps (current) 🔥
      * Gets swaps.
      * @param filterPoolId  (optional)
      * @return List&lt;UniswapV3SwapV3DTO&gt;
@@ -2908,7 +2908,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetSwaps (current) 🔥
+     * Swaps (current) 🔥
      * Gets swaps.
      * @param filterPoolId  (optional)
      * @return ApiResponse&lt;List&lt;UniswapV3SwapV3DTO&gt;&gt;
@@ -2926,7 +2926,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetSwaps (current) 🔥 (asynchronously)
+     * Swaps (current) 🔥 (asynchronously)
      * Gets swaps.
      * @param filterPoolId  (optional)
      * @param _callback The callback to be executed when the API call finishes
@@ -3034,7 +3034,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetSwaps (historical) 🔥
+     * Swaps (historical) 🔥
      * Gets swaps.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -3055,7 +3055,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetSwaps (historical) 🔥
+     * Swaps (historical) 🔥
      * Gets swaps.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -3077,7 +3077,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetSwaps (historical) 🔥 (asynchronously)
+     * Swaps (historical) 🔥 (asynchronously)
      * Gets swaps.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -3169,7 +3169,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetTicks (current)
+     * Ticks (current)
      * Gets ticks.
      * @param filterPoolId  (optional)
      * @return List&lt;UniswapV3TickV3DTO&gt;
@@ -3186,7 +3186,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetTicks (current)
+     * Ticks (current)
      * Gets ticks.
      * @param filterPoolId  (optional)
      * @return ApiResponse&lt;List&lt;UniswapV3TickV3DTO&gt;&gt;
@@ -3204,7 +3204,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetTicks (current) (asynchronously)
+     * Ticks (current) (asynchronously)
      * Gets ticks.
      * @param filterPoolId  (optional)
      * @param _callback The callback to be executed when the API call finishes
@@ -3292,7 +3292,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetTicksDayData (current)
+     * TicksDayData (current)
      * Gets ticks day data.
      * @param filterPoolId  (optional)
      * @return List&lt;UniswapV3TickDayDataV3DTO&gt;
@@ -3309,7 +3309,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetTicksDayData (current)
+     * TicksDayData (current)
      * Gets ticks day data.
      * @param filterPoolId  (optional)
      * @return ApiResponse&lt;List&lt;UniswapV3TickDayDataV3DTO&gt;&gt;
@@ -3327,7 +3327,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetTicksDayData (current) (asynchronously)
+     * TicksDayData (current) (asynchronously)
      * Gets ticks day data.
      * @param filterPoolId  (optional)
      * @param _callback The callback to be executed when the API call finishes
@@ -3435,7 +3435,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetTicksDayData (historical)
+     * TicksDayData (historical)
      * Gets ticks day data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -3456,7 +3456,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetTicksDayData (historical)
+     * TicksDayData (historical)
      * Gets ticks day data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -3478,7 +3478,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetTicksDayData (historical) (asynchronously)
+     * TicksDayData (historical) (asynchronously)
      * Gets ticks day data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -3590,7 +3590,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetTicks (historical)
+     * Ticks (historical)
      * Gets ticks.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -3611,7 +3611,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetTicks (historical)
+     * Ticks (historical)
      * Gets ticks.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -3633,7 +3633,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetTicks (historical) (asynchronously)
+     * Ticks (historical) (asynchronously)
      * Gets ticks.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -3725,7 +3725,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetTokens (current) 🔥
+     * Tokens (current) 🔥
      * Gets tokens.
      * @param filterTokenId  (optional)
      * @return List&lt;UniswapV3TokenV3DTO&gt;
@@ -3742,7 +3742,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetTokens (current) 🔥
+     * Tokens (current) 🔥
      * Gets tokens.
      * @param filterTokenId  (optional)
      * @return ApiResponse&lt;List&lt;UniswapV3TokenV3DTO&gt;&gt;
@@ -3760,7 +3760,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetTokens (current) 🔥 (asynchronously)
+     * Tokens (current) 🔥 (asynchronously)
      * Gets tokens.
      * @param filterTokenId  (optional)
      * @param _callback The callback to be executed when the API call finishes
@@ -3848,7 +3848,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetTokensDayData (current)
+     * TokensDayData (current)
      * Gets tokens day data.
      * @param filterTokenId  (optional)
      * @return List&lt;UniswapV3TokenV3DayDataDTO&gt;
@@ -3865,7 +3865,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetTokensDayData (current)
+     * TokensDayData (current)
      * Gets tokens day data.
      * @param filterTokenId  (optional)
      * @return ApiResponse&lt;List&lt;UniswapV3TokenV3DayDataDTO&gt;&gt;
@@ -3883,7 +3883,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetTokensDayData (current) (asynchronously)
+     * TokensDayData (current) (asynchronously)
      * Gets tokens day data.
      * @param filterTokenId  (optional)
      * @param _callback The callback to be executed when the API call finishes
@@ -3991,7 +3991,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetTokensDayData (historical)
+     * TokensDayData (historical)
      * Gets tokens day data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -4012,7 +4012,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetTokensDayData (historical)
+     * TokensDayData (historical)
      * Gets tokens day data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -4034,7 +4034,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetTokensDayData (historical) (asynchronously)
+     * TokensDayData (historical) (asynchronously)
      * Gets tokens day data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -4146,7 +4146,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      * Gets tokens.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -4167,7 +4167,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      * Gets tokens.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -4189,7 +4189,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetTokens (historical) 🔥 (asynchronously)
+     * Tokens (historical) 🔥 (asynchronously)
      * Gets tokens.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -4281,7 +4281,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetTokensHourData (current)
+     * TokensHourData (current)
      * Gets tokens hour data.
      * @param filterTokenId  (optional)
      * @return List&lt;UniswapV3TokenHourDataV3DTO&gt;
@@ -4298,7 +4298,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetTokensHourData (current)
+     * TokensHourData (current)
      * Gets tokens hour data.
      * @param filterTokenId  (optional)
      * @return ApiResponse&lt;List&lt;UniswapV3TokenHourDataV3DTO&gt;&gt;
@@ -4316,7 +4316,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetTokensHourData (current) (asynchronously)
+     * TokensHourData (current) (asynchronously)
      * Gets tokens hour data.
      * @param filterTokenId  (optional)
      * @param _callback The callback to be executed when the API call finishes
@@ -4424,7 +4424,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetTokensHourData (historical)
+     * TokensHourData (historical)
      * Gets tokens hour data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -4445,7 +4445,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetTokensHourData (historical)
+     * TokensHourData (historical)
      * Gets tokens hour data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -4467,7 +4467,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetTokensHourData (historical) (asynchronously)
+     * TokensHourData (historical) (asynchronously)
      * Gets tokens hour data.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -4574,7 +4574,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetTransactions (historical)
+     * Transactions (historical)
      * Gets transactions.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -4594,7 +4594,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetTransactions (historical)
+     * Transactions (historical)
      * Gets transactions.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -4615,7 +4615,7 @@ public class UniswapV3Api {
     }
 
     /**
-     * GetTransactions (historical) (asynchronously)
+     * Transactions (historical) (asynchronously)
      * Gets transactions.
      * @param startBlock  (optional)
      * @param endBlock  (optional)

@@ -33,7 +33,7 @@ describe 'CowApi' do
   end
 
   # unit tests for cow_get_orders__historical
-  # GetOrders (historical)
+  # Orders (historical)
   # Gets orders.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -48,7 +48,7 @@ describe 'CowApi' do
   end
 
   # unit tests for cow_get_settlements__historical
-  # GetSettlements (historical)
+  # Settlements (historical)
   # Gets settlements.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -63,7 +63,7 @@ describe 'CowApi' do
   end
 
   # unit tests for cow_get_tokens__historical
-  # GetTokens (historical) 🔥
+  # Tokens (historical) 🔥
   # Gets tokens.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -79,7 +79,7 @@ describe 'CowApi' do
   end
 
   # unit tests for cow_get_trades__historical
-  # GetTrades (historical) 🔥
+  # Trades (historical) 🔥
   # Gets trades.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -94,7 +94,7 @@ describe 'CowApi' do
   end
 
   # unit tests for cow_get_users__historical
-  # GetUsers (historical)
+  # Users (historical)
   # Gets users.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 

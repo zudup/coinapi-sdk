@@ -18,7 +18,7 @@
 #include "../model/dex_withdraw_request_dto.h"
 
 
-// GetBatches (historical)
+// Batches (historical)
 //
 // Gets batches.
 //
@@ -26,7 +26,7 @@ list_t*
 DexAPI_dexGetBatchesHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate );
 
 
-// GetDeposits (historical)
+// Deposits (historical)
 //
 // Gets deposits.
 //
@@ -34,7 +34,7 @@ list_t*
 DexAPI_dexGetDepositsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * tokenId );
 
 
-// GetOrders (historical)
+// Orders (historical)
 //
 // Gets orders.
 //
@@ -42,7 +42,7 @@ list_t*
 DexAPI_dexGetOrdersHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * tokenId );
 
 
-// GetPrices (historical)
+// Prices (historical)
 //
 // Gets prices.
 //
@@ -50,7 +50,7 @@ list_t*
 DexAPI_dexGetPricesHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * tokenId );
 
 
-// GetSolutions (historical)
+// Solutions (historical)
 //
 // Gets solutions.
 //
@@ -58,7 +58,7 @@ list_t*
 DexAPI_dexGetSolutionsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * tokenId );
 
 
-// GetStats (historical)
+// Stats (historical)
 //
 // Gets stats.
 //
@@ -66,7 +66,7 @@ list_t*
 DexAPI_dexGetStatsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate );
 
 
-// GetTokens (historical) 🔥
+// Tokens (historical) 🔥
 //
 // Gets tokens.
 //
@@ -74,7 +74,7 @@ list_t*
 DexAPI_dexGetTokensHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * tokenId );
 
 
-// GetTrades (historical) 🔥
+// Trades (historical) 🔥
 //
 // Gets trades.
 //
@@ -82,7 +82,7 @@ list_t*
 DexAPI_dexGetTradesHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate );
 
 
-// GetUsers (historical)
+// Users (historical)
 //
 // Gets users.
 //
@@ -90,7 +90,7 @@ list_t*
 DexAPI_dexGetUsersHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate );
 
 
-// GetWithdraws (historical)
+// Withdraws (historical)
 //
 // Gets withdraws.
 //
@@ -98,7 +98,7 @@ list_t*
 DexAPI_dexGetWithdrawsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * tokenId );
 
 
-// GetWithdrawsRequests (historical)
+// WithdrawsRequests (historical)
 //
 // Gets withdraws requests.
 //

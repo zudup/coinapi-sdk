@@ -4,16 +4,16 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CowAPI_cowGetOrdersHistorical**](CowAPI.md#CowAPI_cowGetOrdersHistorical) | **GET** /dapps/cow/orders/historical | GetOrders (historical)
-[**CowAPI_cowGetSettlementsHistorical**](CowAPI.md#CowAPI_cowGetSettlementsHistorical) | **GET** /dapps/cow/settlements/historical | GetSettlements (historical)
-[**CowAPI_cowGetTokensHistorical**](CowAPI.md#CowAPI_cowGetTokensHistorical) | **GET** /dapps/cow/tokens/historical | GetTokens (historical) 🔥
-[**CowAPI_cowGetTradesHistorical**](CowAPI.md#CowAPI_cowGetTradesHistorical) | **GET** /dapps/cow/trades/historical | GetTrades (historical) 🔥
-[**CowAPI_cowGetUsersHistorical**](CowAPI.md#CowAPI_cowGetUsersHistorical) | **GET** /dapps/cow/users/historical | GetUsers (historical)
+[**CowAPI_cowGetOrdersHistorical**](CowAPI.md#CowAPI_cowGetOrdersHistorical) | **GET** /dapps/cow/orders/historical | Orders (historical)
+[**CowAPI_cowGetSettlementsHistorical**](CowAPI.md#CowAPI_cowGetSettlementsHistorical) | **GET** /dapps/cow/settlements/historical | Settlements (historical)
+[**CowAPI_cowGetTokensHistorical**](CowAPI.md#CowAPI_cowGetTokensHistorical) | **GET** /dapps/cow/tokens/historical | Tokens (historical) 🔥
+[**CowAPI_cowGetTradesHistorical**](CowAPI.md#CowAPI_cowGetTradesHistorical) | **GET** /dapps/cow/trades/historical | Trades (historical) 🔥
+[**CowAPI_cowGetUsersHistorical**](CowAPI.md#CowAPI_cowGetUsersHistorical) | **GET** /dapps/cow/users/historical | Users (historical)
 
 
 # **CowAPI_cowGetOrdersHistorical**
 ```c
-// GetOrders (historical)
+// Orders (historical)
 //
 // Gets orders.
 //
@@ -47,7 +47,7 @@ No authorization required
 
 # **CowAPI_cowGetSettlementsHistorical**
 ```c
-// GetSettlements (historical)
+// Settlements (historical)
 //
 // Gets settlements.
 //
@@ -81,7 +81,7 @@ No authorization required
 
 # **CowAPI_cowGetTokensHistorical**
 ```c
-// GetTokens (historical) 🔥
+// Tokens (historical) 🔥
 //
 // Gets tokens.
 //
@@ -116,7 +116,7 @@ No authorization required
 
 # **CowAPI_cowGetTradesHistorical**
 ```c
-// GetTrades (historical) 🔥
+// Trades (historical) 🔥
 //
 // Gets trades.
 //
@@ -150,7 +150,7 @@ No authorization required
 
 # **CowAPI_cowGetUsersHistorical**
 ```c
-// GetUsers (historical)
+// Users (historical)
 //
 // Gets users.
 //

@@ -62,7 +62,7 @@ import qualified Prelude as P
 
 -- | @GET \/dapps\/uniswapv2\/bundles\/historical@
 -- 
--- GetBundles (historical)
+-- Bundles (historical)
 -- 
 -- Gets bundles.
 -- 
@@ -105,7 +105,7 @@ instance Produces UniswapV2GetBundlesHistorical MimePlainText
 
 -- | @GET \/dapps\/uniswapv2\/burns\/historical@
 -- 
--- GetBurns (historical)
+-- Burns (historical)
 -- 
 -- Gets burns.
 -- 
@@ -153,7 +153,7 @@ instance Produces UniswapV2GetBurnsHistorical MimePlainText
 
 -- | @GET \/dapps\/uniswapv2\/dayData\/historical@
 -- 
--- GetDayData (historical)
+-- DayData (historical)
 -- 
 -- Gets uniswapv2 day data.
 -- 
@@ -196,7 +196,7 @@ instance Produces UniswapV2GetDayDataHistorical MimePlainText
 
 -- | @GET \/dapps\/uniswapv2\/factory\/historical@
 -- 
--- GetFactory (historical)
+-- Factory (historical)
 -- 
 -- Gets factory.
 -- 
@@ -239,7 +239,7 @@ instance Produces UniswapV2GetFactoryHistorical MimePlainText
 
 -- | @GET \/dapps\/uniswapv2\/liquidityPositions\/historical@
 -- 
--- GetLiquidityPositions (historical)
+-- LiquidityPositions (historical)
 -- 
 -- Gets liquidity positions.
 -- 
@@ -287,7 +287,7 @@ instance Produces UniswapV2GetLiquidityPositionsHistorical MimePlainText
 
 -- | @GET \/dapps\/uniswapv2\/liquidityPositionsSnapshots\/historical@
 -- 
--- GetLiquidityPositionsSnapshots (historical)
+-- LiquidityPositionsSnapshots (historical)
 -- 
 -- Gets liquidity positions snapshots.
 -- 
@@ -335,7 +335,7 @@ instance Produces UniswapV2GetLiquidityPositionsSnapshotsHistorical MimePlainTex
 
 -- | @GET \/dapps\/uniswapv2\/mints\/historical@
 -- 
--- GetMints (historical)
+-- Mints (historical)
 -- 
 -- Gets mints.
 -- 
@@ -383,7 +383,7 @@ instance Produces UniswapV2GetMintsHistorical MimePlainText
 
 -- | @GET \/dapps\/uniswapv2\/pools\/current@
 -- 
--- GetPools (current) 🔥
+-- Pools (current) 🔥
 -- 
 -- Gets pools.
 -- 
@@ -409,7 +409,7 @@ instance Produces UniswapV2GetPoolsCurrent MimePlainText
 
 -- | @GET \/dapps\/uniswapv2\/poolsDayData\/historical@
 -- 
--- GetPoolsDayData (historical)
+-- PoolsDayData (historical)
 -- 
 -- Gets pools day data.
 -- 
@@ -457,7 +457,7 @@ instance Produces UniswapV2GetPoolsDayDataHistorical MimePlainText
 
 -- | @GET \/dapps\/uniswapv2\/pools\/historical@
 -- 
--- GetPools (historical) 🔥
+-- Pools (historical) 🔥
 -- 
 -- Gets pools.
 -- 
@@ -505,7 +505,7 @@ instance Produces UniswapV2GetPoolsHistorical MimePlainText
 
 -- | @GET \/dapps\/uniswapv2\/poolsHourData\/historical@
 -- 
--- GetPoolsHourData (historical)
+-- PoolsHourData (historical)
 -- 
 -- Gets pools tracked each our.
 -- 
@@ -553,7 +553,7 @@ instance Produces UniswapV2GetPoolsHourDataHistorical MimePlainText
 
 -- | @GET \/dapps\/uniswapv2\/swaps\/current@
 -- 
--- GetSwaps (current) 🔥
+-- Swaps (current) 🔥
 -- 
 -- Gets swaps.
 -- 
@@ -576,7 +576,7 @@ instance Produces UniswapV2GetSwapsCurrent MimePlainText
 
 -- | @GET \/dapps\/uniswapv2\/swaps\/historical@
 -- 
--- GetSwaps (historical) 🔥
+-- Swaps (historical) 🔥
 -- 
 -- Gets swaps.
 -- 
@@ -624,7 +624,7 @@ instance Produces UniswapV2GetSwapsHistorical MimePlainText
 
 -- | @GET \/dapps\/uniswapv2\/tokens\/current@
 -- 
--- GetTokens (current) 🔥
+-- Tokens (current) 🔥
 -- 
 -- Gets tokens.
 -- 
@@ -647,7 +647,7 @@ instance Produces UniswapV2GetTokensCurrent MimePlainText
 
 -- | @GET \/dapps\/uniswapv2\/tokensDayData\/historical@
 -- 
--- GetTokensDayData (historical)
+-- TokensDayData (historical)
 -- 
 -- Gets tokens day data.
 -- 
@@ -695,7 +695,7 @@ instance Produces UniswapV2GetTokensDayDataHistorical MimePlainText
 
 -- | @GET \/dapps\/uniswapv2\/tokens\/historical@
 -- 
--- GetTokens (historical) 🔥
+-- Tokens (historical) 🔥
 -- 
 -- Gets tokens.
 -- 
@@ -743,7 +743,7 @@ instance Produces UniswapV2GetTokensHistorical MimePlainText
 
 -- | @GET \/dapps\/uniswapv2\/transactions\/historical@
 -- 
--- GetTransactions (historical)
+-- Transactions (historical)
 -- 
 -- Gets transactions.
 -- 
@@ -786,7 +786,7 @@ instance Produces UniswapV2GetTransactionsHistorical MimePlainText
 
 -- | @GET \/dapps\/uniswapv2\/users\/historical@
 -- 
--- GetUsers (historical)
+-- Users (historical)
 -- 
 -- Gets users.
 -- 

@@ -9,45 +9,45 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**uniswapV3GetBundlesCurrent**](UniswapV3Api.md#uniswapv3getbundlescurrent) | **GET** /dapps/uniswapv3/bundles/current | GetBundles (current)
-[**uniswapV3GetBundlesHistorical**](UniswapV3Api.md#uniswapv3getbundleshistorical) | **GET** /dapps/uniswapv3/bundles/historical | GetBundles (historical)
-[**uniswapV3GetBurnsCurrent**](UniswapV3Api.md#uniswapv3getburnscurrent) | **GET** /dapps/uniswapv3/burns/current | GetBurns (current)
-[**uniswapV3GetBurnsHistorical**](UniswapV3Api.md#uniswapv3getburnshistorical) | **GET** /dapps/uniswapv3/burns/historical | GetBurns (historical)
-[**uniswapV3GetDayDataCurrent**](UniswapV3Api.md#uniswapv3getdaydatacurrent) | **GET** /dapps/uniswapv3/dayData/current | GetDayData (current)
-[**uniswapV3GetDayDataHistorical**](UniswapV3Api.md#uniswapv3getdaydatahistorical) | **GET** /dapps/uniswapv3/dayData/historical | GetDayData (historical)
-[**uniswapV3GetFactoryCurrent**](UniswapV3Api.md#uniswapv3getfactorycurrent) | **GET** /dapps/uniswapv3/factory/current | GetFactory (current)
-[**uniswapV3GetFactoryHistorical**](UniswapV3Api.md#uniswapv3getfactoryhistorical) | **GET** /dapps/uniswapv3/factory/historical | GetFactory (historical)
-[**uniswapV3GetMintsCurrent**](UniswapV3Api.md#uniswapv3getmintscurrent) | **GET** /dapps/uniswapv3/mints/current | GetMints (current)
-[**uniswapV3GetMintsHistorical**](UniswapV3Api.md#uniswapv3getmintshistorical) | **GET** /dapps/uniswapv3/mints/historical | GetMints (historical)
-[**uniswapV3GetPoolsCurrent**](UniswapV3Api.md#uniswapv3getpoolscurrent) | **GET** /dapps/uniswapv3/pools/current | GetPools (current) 🔥
-[**uniswapV3GetPoolsDayDataCurrent**](UniswapV3Api.md#uniswapv3getpoolsdaydatacurrent) | **GET** /dapps/uniswapv3/poolsDayData/current | GetPoolsDayData (current)
-[**uniswapV3GetPoolsDayDataHistorical**](UniswapV3Api.md#uniswapv3getpoolsdaydatahistorical) | **GET** /dapps/uniswapv3/poolsDayData/historical | GetPoolsDayData (historical)
-[**uniswapV3GetPoolsHistorical**](UniswapV3Api.md#uniswapv3getpoolshistorical) | **GET** /dapps/uniswapv3/pools/historical | GetPools (historical) 🔥
-[**uniswapV3GetPoolsHourDataCurrent**](UniswapV3Api.md#uniswapv3getpoolshourdatacurrent) | **GET** /dapps/uniswapv3/poolsHourData/current | GetPoolsHourData (current)
-[**uniswapV3GetPoolsHourDataHistorical**](UniswapV3Api.md#uniswapv3getpoolshourdatahistorical) | **GET** /dapps/uniswapv3/poolsHourData/historical | GetPoolsHourData (historical)
-[**uniswapV3GetPositionsCurrent**](UniswapV3Api.md#uniswapv3getpositionscurrent) | **GET** /dapps/uniswapv3/positions/current | GetPositions (current)
-[**uniswapV3GetPositionsHistorical**](UniswapV3Api.md#uniswapv3getpositionshistorical) | **GET** /dapps/uniswapv3/positions/historical | GetPositions (historical)
-[**uniswapV3GetPositionsSnaphotsHistorical**](UniswapV3Api.md#uniswapv3getpositionssnaphotshistorical) | **GET** /dapps/uniswapv3/positionsSnapshots/historical | GetPositionsSnaphots (historical)
-[**uniswapV3GetPositionsSnapshotsCurrent**](UniswapV3Api.md#uniswapv3getpositionssnapshotscurrent) | **GET** /dapps/uniswapv3/positionSnapshots/current | GetPositionsSnapshots (current)
-[**uniswapV3GetSwapsCurrent**](UniswapV3Api.md#uniswapv3getswapscurrent) | **GET** /dapps/uniswapv3/swaps/current | GetSwaps (current) 🔥
-[**uniswapV3GetSwapsHistorical**](UniswapV3Api.md#uniswapv3getswapshistorical) | **GET** /dapps/uniswapv3/swaps/historical | GetSwaps (historical) 🔥
-[**uniswapV3GetTicksCurrent**](UniswapV3Api.md#uniswapv3gettickscurrent) | **GET** /dapps/uniswapv3/ticks/current | GetTicks (current)
-[**uniswapV3GetTicksDayDataCurrent**](UniswapV3Api.md#uniswapv3getticksdaydatacurrent) | **GET** /dapps/uniswapv3/ticksDayData/current | GetTicksDayData (current)
-[**uniswapV3GetTicksDayDataHistorical**](UniswapV3Api.md#uniswapv3getticksdaydatahistorical) | **GET** /dapps/uniswapv3/ticksDayData/historical | GetTicksDayData (historical)
-[**uniswapV3GetTicksHistorical**](UniswapV3Api.md#uniswapv3gettickshistorical) | **GET** /dapps/uniswapv3/ticks/historical | GetTicks (historical)
-[**uniswapV3GetTokensCurrent**](UniswapV3Api.md#uniswapv3gettokenscurrent) | **GET** /dapps/uniswapv3/tokens/current | GetTokens (current) 🔥
-[**uniswapV3GetTokensDayDataCurrent**](UniswapV3Api.md#uniswapv3gettokensdaydatacurrent) | **GET** /dapps/uniswapv3/tokensDayData/current | GetTokensDayData (current)
-[**uniswapV3GetTokensDayDataHistorical**](UniswapV3Api.md#uniswapv3gettokensdaydatahistorical) | **GET** /dapps/uniswapv3/tokensDayData/historical | GetTokensDayData (historical)
-[**uniswapV3GetTokensHistorical**](UniswapV3Api.md#uniswapv3gettokenshistorical) | **GET** /dapps/uniswapv3/tokens/historical | GetTokens (historical) 🔥
-[**uniswapV3GetTokensHourDataCurrent**](UniswapV3Api.md#uniswapv3gettokenshourdatacurrent) | **GET** /dapps/uniswapv3/tokensHourData/current | GetTokensHourData (current)
-[**uniswapV3GetTokensHourDataHistorical**](UniswapV3Api.md#uniswapv3gettokenshourdatahistorical) | **GET** /dapps/uniswapv3/tokensHourData/historical | GetTokensHourData (historical)
-[**uniswapV3GetTransactionsHistorical**](UniswapV3Api.md#uniswapv3gettransactionshistorical) | **GET** /dapps/uniswapv3/transactions/historical | GetTransactions (historical)
+[**uniswapV3GetBundlesCurrent**](UniswapV3Api.md#uniswapv3getbundlescurrent) | **GET** /dapps/uniswapv3/bundles/current | Bundles (current)
+[**uniswapV3GetBundlesHistorical**](UniswapV3Api.md#uniswapv3getbundleshistorical) | **GET** /dapps/uniswapv3/bundles/historical | Bundles (historical)
+[**uniswapV3GetBurnsCurrent**](UniswapV3Api.md#uniswapv3getburnscurrent) | **GET** /dapps/uniswapv3/burns/current | Burns (current)
+[**uniswapV3GetBurnsHistorical**](UniswapV3Api.md#uniswapv3getburnshistorical) | **GET** /dapps/uniswapv3/burns/historical | Burns (historical)
+[**uniswapV3GetDayDataCurrent**](UniswapV3Api.md#uniswapv3getdaydatacurrent) | **GET** /dapps/uniswapv3/dayData/current | DayData (current)
+[**uniswapV3GetDayDataHistorical**](UniswapV3Api.md#uniswapv3getdaydatahistorical) | **GET** /dapps/uniswapv3/dayData/historical | DayData (historical)
+[**uniswapV3GetFactoryCurrent**](UniswapV3Api.md#uniswapv3getfactorycurrent) | **GET** /dapps/uniswapv3/factory/current | Factory (current)
+[**uniswapV3GetFactoryHistorical**](UniswapV3Api.md#uniswapv3getfactoryhistorical) | **GET** /dapps/uniswapv3/factory/historical | Factory (historical)
+[**uniswapV3GetMintsCurrent**](UniswapV3Api.md#uniswapv3getmintscurrent) | **GET** /dapps/uniswapv3/mints/current | Mints (current)
+[**uniswapV3GetMintsHistorical**](UniswapV3Api.md#uniswapv3getmintshistorical) | **GET** /dapps/uniswapv3/mints/historical | Mints (historical)
+[**uniswapV3GetPoolsCurrent**](UniswapV3Api.md#uniswapv3getpoolscurrent) | **GET** /dapps/uniswapv3/pools/current | Pools (current) 🔥
+[**uniswapV3GetPoolsDayDataCurrent**](UniswapV3Api.md#uniswapv3getpoolsdaydatacurrent) | **GET** /dapps/uniswapv3/poolsDayData/current | PoolsDayData (current)
+[**uniswapV3GetPoolsDayDataHistorical**](UniswapV3Api.md#uniswapv3getpoolsdaydatahistorical) | **GET** /dapps/uniswapv3/poolsDayData/historical | PoolsDayData (historical)
+[**uniswapV3GetPoolsHistorical**](UniswapV3Api.md#uniswapv3getpoolshistorical) | **GET** /dapps/uniswapv3/pools/historical | Pools (historical) 🔥
+[**uniswapV3GetPoolsHourDataCurrent**](UniswapV3Api.md#uniswapv3getpoolshourdatacurrent) | **GET** /dapps/uniswapv3/poolsHourData/current | PoolsHourData (current)
+[**uniswapV3GetPoolsHourDataHistorical**](UniswapV3Api.md#uniswapv3getpoolshourdatahistorical) | **GET** /dapps/uniswapv3/poolsHourData/historical | PoolsHourData (historical)
+[**uniswapV3GetPositionsCurrent**](UniswapV3Api.md#uniswapv3getpositionscurrent) | **GET** /dapps/uniswapv3/positions/current | Positions (current)
+[**uniswapV3GetPositionsHistorical**](UniswapV3Api.md#uniswapv3getpositionshistorical) | **GET** /dapps/uniswapv3/positions/historical | Positions (historical)
+[**uniswapV3GetPositionsSnaphotsHistorical**](UniswapV3Api.md#uniswapv3getpositionssnaphotshistorical) | **GET** /dapps/uniswapv3/positionsSnapshots/historical | PositionsSnaphots (historical)
+[**uniswapV3GetPositionsSnapshotsCurrent**](UniswapV3Api.md#uniswapv3getpositionssnapshotscurrent) | **GET** /dapps/uniswapv3/positionSnapshots/current | PositionsSnapshots (current)
+[**uniswapV3GetSwapsCurrent**](UniswapV3Api.md#uniswapv3getswapscurrent) | **GET** /dapps/uniswapv3/swaps/current | Swaps (current) 🔥
+[**uniswapV3GetSwapsHistorical**](UniswapV3Api.md#uniswapv3getswapshistorical) | **GET** /dapps/uniswapv3/swaps/historical | Swaps (historical) 🔥
+[**uniswapV3GetTicksCurrent**](UniswapV3Api.md#uniswapv3gettickscurrent) | **GET** /dapps/uniswapv3/ticks/current | Ticks (current)
+[**uniswapV3GetTicksDayDataCurrent**](UniswapV3Api.md#uniswapv3getticksdaydatacurrent) | **GET** /dapps/uniswapv3/ticksDayData/current | TicksDayData (current)
+[**uniswapV3GetTicksDayDataHistorical**](UniswapV3Api.md#uniswapv3getticksdaydatahistorical) | **GET** /dapps/uniswapv3/ticksDayData/historical | TicksDayData (historical)
+[**uniswapV3GetTicksHistorical**](UniswapV3Api.md#uniswapv3gettickshistorical) | **GET** /dapps/uniswapv3/ticks/historical | Ticks (historical)
+[**uniswapV3GetTokensCurrent**](UniswapV3Api.md#uniswapv3gettokenscurrent) | **GET** /dapps/uniswapv3/tokens/current | Tokens (current) 🔥
+[**uniswapV3GetTokensDayDataCurrent**](UniswapV3Api.md#uniswapv3gettokensdaydatacurrent) | **GET** /dapps/uniswapv3/tokensDayData/current | TokensDayData (current)
+[**uniswapV3GetTokensDayDataHistorical**](UniswapV3Api.md#uniswapv3gettokensdaydatahistorical) | **GET** /dapps/uniswapv3/tokensDayData/historical | TokensDayData (historical)
+[**uniswapV3GetTokensHistorical**](UniswapV3Api.md#uniswapv3gettokenshistorical) | **GET** /dapps/uniswapv3/tokens/historical | Tokens (historical) 🔥
+[**uniswapV3GetTokensHourDataCurrent**](UniswapV3Api.md#uniswapv3gettokenshourdatacurrent) | **GET** /dapps/uniswapv3/tokensHourData/current | TokensHourData (current)
+[**uniswapV3GetTokensHourDataHistorical**](UniswapV3Api.md#uniswapv3gettokenshourdatahistorical) | **GET** /dapps/uniswapv3/tokensHourData/historical | TokensHourData (historical)
+[**uniswapV3GetTransactionsHistorical**](UniswapV3Api.md#uniswapv3gettransactionshistorical) | **GET** /dapps/uniswapv3/transactions/historical | Transactions (historical)
 
 
 # **uniswapV3GetBundlesCurrent**
 > List<UniswapV3BundleV3DTO> uniswapV3GetBundlesCurrent()
 
-GetBundles (current)
+Bundles (current)
 
 Gets bundles.
 
@@ -86,7 +86,7 @@ No authorization required
 # **uniswapV3GetBundlesHistorical**
 > List<UniswapV3BundleV3DTO> uniswapV3GetBundlesHistorical(startBlock, endBlock, startDate, endDate)
 
-GetBundles (historical)
+Bundles (historical)
 
 Gets bundles.
 
@@ -135,7 +135,7 @@ No authorization required
 # **uniswapV3GetBurnsCurrent**
 > List<UniswapV3BurnV3DTO> uniswapV3GetBurnsCurrent(filterPoolId)
 
-GetBurns (current)
+Burns (current)
 
 Gets burns.
 
@@ -178,7 +178,7 @@ No authorization required
 # **uniswapV3GetBurnsHistorical**
 > List<UniswapV3BurnV3DTO> uniswapV3GetBurnsHistorical(startBlock, endBlock, startDate, endDate, poolId)
 
-GetBurns (historical)
+Burns (historical)
 
 Gets burns.
 
@@ -229,7 +229,7 @@ No authorization required
 # **uniswapV3GetDayDataCurrent**
 > List<UniswapV3UniswapDayDataV3DTO> uniswapV3GetDayDataCurrent()
 
-GetDayData (current)
+DayData (current)
 
 Gets uniswapv3 day data.
 
@@ -268,7 +268,7 @@ No authorization required
 # **uniswapV3GetDayDataHistorical**
 > List<UniswapV3UniswapDayDataV3DTO> uniswapV3GetDayDataHistorical(startBlock, endBlock, startDate, endDate)
 
-GetDayData (historical)
+DayData (historical)
 
 Gets uniswapv3 day data.
 
@@ -317,7 +317,7 @@ No authorization required
 # **uniswapV3GetFactoryCurrent**
 > List<UniswapV3FactoryV3DTO> uniswapV3GetFactoryCurrent()
 
-GetFactory (current)
+Factory (current)
 
 Gets factory.
 
@@ -356,7 +356,7 @@ No authorization required
 # **uniswapV3GetFactoryHistorical**
 > List<UniswapV3FactoryV3DTO> uniswapV3GetFactoryHistorical(startBlock, endBlock, startDate, endDate)
 
-GetFactory (historical)
+Factory (historical)
 
 Gets factory.
 
@@ -405,7 +405,7 @@ No authorization required
 # **uniswapV3GetMintsCurrent**
 > List<UniswapV3MintV3DTO> uniswapV3GetMintsCurrent(filterPoolId)
 
-GetMints (current)
+Mints (current)
 
 Gets mints.
 
@@ -448,7 +448,7 @@ No authorization required
 # **uniswapV3GetMintsHistorical**
 > List<UniswapV3MintV3DTO> uniswapV3GetMintsHistorical(startBlock, endBlock, startDate, endDate, poolId)
 
-GetMints (historical)
+Mints (historical)
 
 Gets mints.
 
@@ -499,7 +499,7 @@ No authorization required
 # **uniswapV3GetPoolsCurrent**
 > List<UniswapV3PoolV3DTO> uniswapV3GetPoolsCurrent(filterPoolId)
 
-GetPools (current) 🔥
+Pools (current) 🔥
 
 Gets pools.
 
@@ -542,7 +542,7 @@ No authorization required
 # **uniswapV3GetPoolsDayDataCurrent**
 > List<UniswapV3PoolDayDataV3DTO> uniswapV3GetPoolsDayDataCurrent(filterPoolId)
 
-GetPoolsDayData (current)
+PoolsDayData (current)
 
 Gets pools day data.
 
@@ -585,7 +585,7 @@ No authorization required
 # **uniswapV3GetPoolsDayDataHistorical**
 > List<UniswapV3PoolDayDataV3DTO> uniswapV3GetPoolsDayDataHistorical(startBlock, endBlock, startDate, endDate, poolId)
 
-GetPoolsDayData (historical)
+PoolsDayData (historical)
 
 Gets pools day data.
 
@@ -636,7 +636,7 @@ No authorization required
 # **uniswapV3GetPoolsHistorical**
 > List<UniswapV3PoolV3DTO> uniswapV3GetPoolsHistorical(startBlock, endBlock, startDate, endDate, poolId)
 
-GetPools (historical) 🔥
+Pools (historical) 🔥
 
 Gets pools.
 
@@ -687,7 +687,7 @@ No authorization required
 # **uniswapV3GetPoolsHourDataCurrent**
 > List<UniswapV3PoolHourDataV3DTO> uniswapV3GetPoolsHourDataCurrent(filterPoolId)
 
-GetPoolsHourData (current)
+PoolsHourData (current)
 
 Gets pools hour data.
 
@@ -730,7 +730,7 @@ No authorization required
 # **uniswapV3GetPoolsHourDataHistorical**
 > List<UniswapV3PoolHourDataV3DTO> uniswapV3GetPoolsHourDataHistorical(startBlock, endBlock, startDate, endDate, poolId)
 
-GetPoolsHourData (historical)
+PoolsHourData (historical)
 
 Gets pools hour data.
 
@@ -781,7 +781,7 @@ No authorization required
 # **uniswapV3GetPositionsCurrent**
 > List<UniswapV3PositionV3DTO> uniswapV3GetPositionsCurrent(filterPoolId)
 
-GetPositions (current)
+Positions (current)
 
 Gets positions.
 
@@ -824,7 +824,7 @@ No authorization required
 # **uniswapV3GetPositionsHistorical**
 > List<UniswapV3PositionV3DTO> uniswapV3GetPositionsHistorical(startBlock, endBlock, startDate, endDate, poolId)
 
-GetPositions (historical)
+Positions (historical)
 
 Gets positions.
 
@@ -875,7 +875,7 @@ No authorization required
 # **uniswapV3GetPositionsSnaphotsHistorical**
 > List<UniswapV3PositionSnapshotV3DTO> uniswapV3GetPositionsSnaphotsHistorical(startBlock, endBlock, startDate, endDate, poolId)
 
-GetPositionsSnaphots (historical)
+PositionsSnaphots (historical)
 
 Gets positions snapshots.
 
@@ -926,7 +926,7 @@ No authorization required
 # **uniswapV3GetPositionsSnapshotsCurrent**
 > List<UniswapV3PositionSnapshotV3DTO> uniswapV3GetPositionsSnapshotsCurrent(filterPoolId)
 
-GetPositionsSnapshots (current)
+PositionsSnapshots (current)
 
 Gets positions snapshots.
 
@@ -969,7 +969,7 @@ No authorization required
 # **uniswapV3GetSwapsCurrent**
 > List<UniswapV3SwapV3DTO> uniswapV3GetSwapsCurrent(filterPoolId)
 
-GetSwaps (current) 🔥
+Swaps (current) 🔥
 
 Gets swaps.
 
@@ -1012,7 +1012,7 @@ No authorization required
 # **uniswapV3GetSwapsHistorical**
 > List<UniswapV3SwapV3DTO> uniswapV3GetSwapsHistorical(startBlock, endBlock, startDate, endDate, poolId)
 
-GetSwaps (historical) 🔥
+Swaps (historical) 🔥
 
 Gets swaps.
 
@@ -1063,7 +1063,7 @@ No authorization required
 # **uniswapV3GetTicksCurrent**
 > List<UniswapV3TickV3DTO> uniswapV3GetTicksCurrent(filterPoolId)
 
-GetTicks (current)
+Ticks (current)
 
 Gets ticks.
 
@@ -1106,7 +1106,7 @@ No authorization required
 # **uniswapV3GetTicksDayDataCurrent**
 > List<UniswapV3TickDayDataV3DTO> uniswapV3GetTicksDayDataCurrent(filterPoolId)
 
-GetTicksDayData (current)
+TicksDayData (current)
 
 Gets ticks day data.
 
@@ -1149,7 +1149,7 @@ No authorization required
 # **uniswapV3GetTicksDayDataHistorical**
 > List<UniswapV3TickDayDataV3DTO> uniswapV3GetTicksDayDataHistorical(startBlock, endBlock, startDate, endDate, poolId)
 
-GetTicksDayData (historical)
+TicksDayData (historical)
 
 Gets ticks day data.
 
@@ -1200,7 +1200,7 @@ No authorization required
 # **uniswapV3GetTicksHistorical**
 > List<UniswapV3TickV3DTO> uniswapV3GetTicksHistorical(startBlock, endBlock, startDate, endDate, poolId)
 
-GetTicks (historical)
+Ticks (historical)
 
 Gets ticks.
 
@@ -1251,7 +1251,7 @@ No authorization required
 # **uniswapV3GetTokensCurrent**
 > List<UniswapV3TokenV3DTO> uniswapV3GetTokensCurrent(filterTokenId)
 
-GetTokens (current) 🔥
+Tokens (current) 🔥
 
 Gets tokens.
 
@@ -1294,7 +1294,7 @@ No authorization required
 # **uniswapV3GetTokensDayDataCurrent**
 > List<UniswapV3TokenV3DayDataDTO> uniswapV3GetTokensDayDataCurrent(filterTokenId)
 
-GetTokensDayData (current)
+TokensDayData (current)
 
 Gets tokens day data.
 
@@ -1337,7 +1337,7 @@ No authorization required
 # **uniswapV3GetTokensDayDataHistorical**
 > List<UniswapV3TokenV3DayDataDTO> uniswapV3GetTokensDayDataHistorical(startBlock, endBlock, startDate, endDate, tokenId)
 
-GetTokensDayData (historical)
+TokensDayData (historical)
 
 Gets tokens day data.
 
@@ -1388,7 +1388,7 @@ No authorization required
 # **uniswapV3GetTokensHistorical**
 > List<UniswapV3TokenV3DTO> uniswapV3GetTokensHistorical(startBlock, endBlock, startDate, endDate, tokenId)
 
-GetTokens (historical) 🔥
+Tokens (historical) 🔥
 
 Gets tokens.
 
@@ -1439,7 +1439,7 @@ No authorization required
 # **uniswapV3GetTokensHourDataCurrent**
 > List<UniswapV3TokenHourDataV3DTO> uniswapV3GetTokensHourDataCurrent(filterTokenId)
 
-GetTokensHourData (current)
+TokensHourData (current)
 
 Gets tokens hour data.
 
@@ -1482,7 +1482,7 @@ No authorization required
 # **uniswapV3GetTokensHourDataHistorical**
 > List<UniswapV3TokenHourDataV3DTO> uniswapV3GetTokensHourDataHistorical(startBlock, endBlock, startDate, endDate, tokenId)
 
-GetTokensHourData (historical)
+TokensHourData (historical)
 
 Gets tokens hour data.
 
@@ -1533,7 +1533,7 @@ No authorization required
 # **uniswapV3GetTransactionsHistorical**
 > List<UniswapV3TransactionV3DTO> uniswapV3GetTransactionsHistorical(startBlock, endBlock, startDate, endDate)
 
-GetTransactions (historical)
+Transactions (historical)
 
 Gets transactions.
 

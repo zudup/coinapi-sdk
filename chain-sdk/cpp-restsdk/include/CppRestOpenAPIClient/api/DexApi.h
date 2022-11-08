@@ -55,7 +55,7 @@ public:
     virtual ~DexApi();
 
     /// <summary>
-    /// GetBatches (historical)
+    /// Batches (historical)
     /// </summary>
     /// <remarks>
     /// Gets batches.
@@ -71,7 +71,7 @@ public:
         boost::optional<utility::datetime> endDate
     ) const;
     /// <summary>
-    /// GetDeposits (historical)
+    /// Deposits (historical)
     /// </summary>
     /// <remarks>
     /// Gets deposits.
@@ -89,7 +89,7 @@ public:
         boost::optional<utility::string_t> tokenId
     ) const;
     /// <summary>
-    /// GetOrders (historical)
+    /// Orders (historical)
     /// </summary>
     /// <remarks>
     /// Gets orders.
@@ -107,7 +107,7 @@ public:
         boost::optional<utility::string_t> tokenId
     ) const;
     /// <summary>
-    /// GetPrices (historical)
+    /// Prices (historical)
     /// </summary>
     /// <remarks>
     /// Gets prices.
@@ -125,7 +125,7 @@ public:
         boost::optional<utility::string_t> tokenId
     ) const;
     /// <summary>
-    /// GetSolutions (historical)
+    /// Solutions (historical)
     /// </summary>
     /// <remarks>
     /// Gets solutions.
@@ -143,7 +143,7 @@ public:
         boost::optional<utility::string_t> tokenId
     ) const;
     /// <summary>
-    /// GetStats (historical)
+    /// Stats (historical)
     /// </summary>
     /// <remarks>
     /// Gets stats.
@@ -159,7 +159,7 @@ public:
         boost::optional<utility::datetime> endDate
     ) const;
     /// <summary>
-    /// GetTokens (historical) 🔥
+    /// Tokens (historical) 🔥
     /// </summary>
     /// <remarks>
     /// Gets tokens.
@@ -177,7 +177,7 @@ public:
         boost::optional<utility::string_t> tokenId
     ) const;
     /// <summary>
-    /// GetTrades (historical) 🔥
+    /// Trades (historical) 🔥
     /// </summary>
     /// <remarks>
     /// Gets trades.
@@ -193,7 +193,7 @@ public:
         boost::optional<utility::datetime> endDate
     ) const;
     /// <summary>
-    /// GetUsers (historical)
+    /// Users (historical)
     /// </summary>
     /// <remarks>
     /// Gets users.
@@ -209,7 +209,7 @@ public:
         boost::optional<utility::datetime> endDate
     ) const;
     /// <summary>
-    /// GetWithdrawsRequests (historical)
+    /// WithdrawsRequests (historical)
     /// </summary>
     /// <remarks>
     /// Gets withdraws requests.
@@ -227,7 +227,7 @@ public:
         boost::optional<utility::string_t> tokenId
     ) const;
     /// <summary>
-    /// GetWithdraws (historical)
+    /// Withdraws (historical)
     /// </summary>
     /// <remarks>
     /// Gets withdraws.

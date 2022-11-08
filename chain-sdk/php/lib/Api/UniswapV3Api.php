@@ -222,7 +222,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetBundlesCurrent
      *
-     * GetBundles (current)
+     * Bundles (current)
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetBundlesCurrent'] to see the possible values for this operation
      *
@@ -239,7 +239,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetBundlesCurrentWithHttpInfo
      *
-     * GetBundles (current)
+     * Bundles (current)
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetBundlesCurrent'] to see the possible values for this operation
      *
@@ -338,7 +338,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetBundlesCurrentAsync
      *
-     * GetBundles (current)
+     * Bundles (current)
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetBundlesCurrent'] to see the possible values for this operation
      *
@@ -358,7 +358,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetBundlesCurrentAsyncWithHttpInfo
      *
-     * GetBundles (current)
+     * Bundles (current)
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetBundlesCurrent'] to see the possible values for this operation
      *
@@ -485,7 +485,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetBundlesHistorical
      *
-     * GetBundles (historical)
+     * Bundles (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -506,7 +506,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetBundlesHistoricalWithHttpInfo
      *
-     * GetBundles (historical)
+     * Bundles (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -609,7 +609,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetBundlesHistoricalAsync
      *
-     * GetBundles (historical)
+     * Bundles (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -633,7 +633,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetBundlesHistoricalAsyncWithHttpInfo
      *
-     * GetBundles (historical)
+     * Bundles (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -808,7 +808,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetBurnsCurrent
      *
-     * GetBurns (current)
+     * Burns (current)
      *
      * @param  string $filter_pool_id filter_pool_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetBurnsCurrent'] to see the possible values for this operation
@@ -826,7 +826,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetBurnsCurrentWithHttpInfo
      *
-     * GetBurns (current)
+     * Burns (current)
      *
      * @param  string $filter_pool_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetBurnsCurrent'] to see the possible values for this operation
@@ -926,7 +926,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetBurnsCurrentAsync
      *
-     * GetBurns (current)
+     * Burns (current)
      *
      * @param  string $filter_pool_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetBurnsCurrent'] to see the possible values for this operation
@@ -947,7 +947,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetBurnsCurrentAsyncWithHttpInfo
      *
-     * GetBurns (current)
+     * Burns (current)
      *
      * @param  string $filter_pool_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetBurnsCurrent'] to see the possible values for this operation
@@ -1086,7 +1086,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetBurnsHistorical
      *
-     * GetBurns (historical)
+     * Burns (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -1108,7 +1108,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetBurnsHistoricalWithHttpInfo
      *
-     * GetBurns (historical)
+     * Burns (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -1212,7 +1212,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetBurnsHistoricalAsync
      *
-     * GetBurns (historical)
+     * Burns (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -1237,7 +1237,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetBurnsHistoricalAsyncWithHttpInfo
      *
-     * GetBurns (historical)
+     * Burns (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -1424,7 +1424,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetDayDataCurrent
      *
-     * GetDayData (current)
+     * DayData (current)
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetDayDataCurrent'] to see the possible values for this operation
      *
@@ -1441,7 +1441,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetDayDataCurrentWithHttpInfo
      *
-     * GetDayData (current)
+     * DayData (current)
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetDayDataCurrent'] to see the possible values for this operation
      *
@@ -1540,7 +1540,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetDayDataCurrentAsync
      *
-     * GetDayData (current)
+     * DayData (current)
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetDayDataCurrent'] to see the possible values for this operation
      *
@@ -1560,7 +1560,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetDayDataCurrentAsyncWithHttpInfo
      *
-     * GetDayData (current)
+     * DayData (current)
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetDayDataCurrent'] to see the possible values for this operation
      *
@@ -1687,7 +1687,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetDayDataHistorical
      *
-     * GetDayData (historical)
+     * DayData (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -1708,7 +1708,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetDayDataHistoricalWithHttpInfo
      *
-     * GetDayData (historical)
+     * DayData (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -1811,7 +1811,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetDayDataHistoricalAsync
      *
-     * GetDayData (historical)
+     * DayData (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -1835,7 +1835,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetDayDataHistoricalAsyncWithHttpInfo
      *
-     * GetDayData (historical)
+     * DayData (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -2010,7 +2010,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetFactoryCurrent
      *
-     * GetFactory (current)
+     * Factory (current)
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetFactoryCurrent'] to see the possible values for this operation
      *
@@ -2027,7 +2027,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetFactoryCurrentWithHttpInfo
      *
-     * GetFactory (current)
+     * Factory (current)
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetFactoryCurrent'] to see the possible values for this operation
      *
@@ -2126,7 +2126,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetFactoryCurrentAsync
      *
-     * GetFactory (current)
+     * Factory (current)
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetFactoryCurrent'] to see the possible values for this operation
      *
@@ -2146,7 +2146,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetFactoryCurrentAsyncWithHttpInfo
      *
-     * GetFactory (current)
+     * Factory (current)
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetFactoryCurrent'] to see the possible values for this operation
      *
@@ -2273,7 +2273,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetFactoryHistorical
      *
-     * GetFactory (historical)
+     * Factory (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -2294,7 +2294,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetFactoryHistoricalWithHttpInfo
      *
-     * GetFactory (historical)
+     * Factory (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -2397,7 +2397,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetFactoryHistoricalAsync
      *
-     * GetFactory (historical)
+     * Factory (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -2421,7 +2421,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetFactoryHistoricalAsyncWithHttpInfo
      *
-     * GetFactory (historical)
+     * Factory (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -2596,7 +2596,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetMintsCurrent
      *
-     * GetMints (current)
+     * Mints (current)
      *
      * @param  string $filter_pool_id filter_pool_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetMintsCurrent'] to see the possible values for this operation
@@ -2614,7 +2614,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetMintsCurrentWithHttpInfo
      *
-     * GetMints (current)
+     * Mints (current)
      *
      * @param  string $filter_pool_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetMintsCurrent'] to see the possible values for this operation
@@ -2714,7 +2714,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetMintsCurrentAsync
      *
-     * GetMints (current)
+     * Mints (current)
      *
      * @param  string $filter_pool_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetMintsCurrent'] to see the possible values for this operation
@@ -2735,7 +2735,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetMintsCurrentAsyncWithHttpInfo
      *
-     * GetMints (current)
+     * Mints (current)
      *
      * @param  string $filter_pool_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetMintsCurrent'] to see the possible values for this operation
@@ -2874,7 +2874,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetMintsHistorical
      *
-     * GetMints (historical)
+     * Mints (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -2896,7 +2896,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetMintsHistoricalWithHttpInfo
      *
-     * GetMints (historical)
+     * Mints (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -3000,7 +3000,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetMintsHistoricalAsync
      *
-     * GetMints (historical)
+     * Mints (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -3025,7 +3025,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetMintsHistoricalAsyncWithHttpInfo
      *
-     * GetMints (historical)
+     * Mints (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -3212,7 +3212,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetPoolsCurrent
      *
-     * GetPools (current) 🔥
+     * Pools (current) 🔥
      *
      * @param  string $filter_pool_id filter_pool_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPoolsCurrent'] to see the possible values for this operation
@@ -3230,7 +3230,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetPoolsCurrentWithHttpInfo
      *
-     * GetPools (current) 🔥
+     * Pools (current) 🔥
      *
      * @param  string $filter_pool_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPoolsCurrent'] to see the possible values for this operation
@@ -3330,7 +3330,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetPoolsCurrentAsync
      *
-     * GetPools (current) 🔥
+     * Pools (current) 🔥
      *
      * @param  string $filter_pool_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPoolsCurrent'] to see the possible values for this operation
@@ -3351,7 +3351,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetPoolsCurrentAsyncWithHttpInfo
      *
-     * GetPools (current) 🔥
+     * Pools (current) 🔥
      *
      * @param  string $filter_pool_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPoolsCurrent'] to see the possible values for this operation
@@ -3490,7 +3490,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetPoolsDayDataCurrent
      *
-     * GetPoolsDayData (current)
+     * PoolsDayData (current)
      *
      * @param  string $filter_pool_id filter_pool_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPoolsDayDataCurrent'] to see the possible values for this operation
@@ -3508,7 +3508,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetPoolsDayDataCurrentWithHttpInfo
      *
-     * GetPoolsDayData (current)
+     * PoolsDayData (current)
      *
      * @param  string $filter_pool_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPoolsDayDataCurrent'] to see the possible values for this operation
@@ -3608,7 +3608,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetPoolsDayDataCurrentAsync
      *
-     * GetPoolsDayData (current)
+     * PoolsDayData (current)
      *
      * @param  string $filter_pool_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPoolsDayDataCurrent'] to see the possible values for this operation
@@ -3629,7 +3629,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetPoolsDayDataCurrentAsyncWithHttpInfo
      *
-     * GetPoolsDayData (current)
+     * PoolsDayData (current)
      *
      * @param  string $filter_pool_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPoolsDayDataCurrent'] to see the possible values for this operation
@@ -3768,7 +3768,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetPoolsDayDataHistorical
      *
-     * GetPoolsDayData (historical)
+     * PoolsDayData (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -3790,7 +3790,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetPoolsDayDataHistoricalWithHttpInfo
      *
-     * GetPoolsDayData (historical)
+     * PoolsDayData (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -3894,7 +3894,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetPoolsDayDataHistoricalAsync
      *
-     * GetPoolsDayData (historical)
+     * PoolsDayData (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -3919,7 +3919,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetPoolsDayDataHistoricalAsyncWithHttpInfo
      *
-     * GetPoolsDayData (historical)
+     * PoolsDayData (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -4106,7 +4106,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetPoolsHistorical
      *
-     * GetPools (historical) 🔥
+     * Pools (historical) 🔥
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -4128,7 +4128,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetPoolsHistoricalWithHttpInfo
      *
-     * GetPools (historical) 🔥
+     * Pools (historical) 🔥
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -4232,7 +4232,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetPoolsHistoricalAsync
      *
-     * GetPools (historical) 🔥
+     * Pools (historical) 🔥
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -4257,7 +4257,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetPoolsHistoricalAsyncWithHttpInfo
      *
-     * GetPools (historical) 🔥
+     * Pools (historical) 🔥
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -4444,7 +4444,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetPoolsHourDataCurrent
      *
-     * GetPoolsHourData (current)
+     * PoolsHourData (current)
      *
      * @param  string $filter_pool_id filter_pool_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPoolsHourDataCurrent'] to see the possible values for this operation
@@ -4462,7 +4462,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetPoolsHourDataCurrentWithHttpInfo
      *
-     * GetPoolsHourData (current)
+     * PoolsHourData (current)
      *
      * @param  string $filter_pool_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPoolsHourDataCurrent'] to see the possible values for this operation
@@ -4562,7 +4562,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetPoolsHourDataCurrentAsync
      *
-     * GetPoolsHourData (current)
+     * PoolsHourData (current)
      *
      * @param  string $filter_pool_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPoolsHourDataCurrent'] to see the possible values for this operation
@@ -4583,7 +4583,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetPoolsHourDataCurrentAsyncWithHttpInfo
      *
-     * GetPoolsHourData (current)
+     * PoolsHourData (current)
      *
      * @param  string $filter_pool_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPoolsHourDataCurrent'] to see the possible values for this operation
@@ -4722,7 +4722,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetPoolsHourDataHistorical
      *
-     * GetPoolsHourData (historical)
+     * PoolsHourData (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -4744,7 +4744,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetPoolsHourDataHistoricalWithHttpInfo
      *
-     * GetPoolsHourData (historical)
+     * PoolsHourData (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -4848,7 +4848,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetPoolsHourDataHistoricalAsync
      *
-     * GetPoolsHourData (historical)
+     * PoolsHourData (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -4873,7 +4873,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetPoolsHourDataHistoricalAsyncWithHttpInfo
      *
-     * GetPoolsHourData (historical)
+     * PoolsHourData (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -5060,7 +5060,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetPositionsCurrent
      *
-     * GetPositions (current)
+     * Positions (current)
      *
      * @param  string $filter_pool_id filter_pool_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPositionsCurrent'] to see the possible values for this operation
@@ -5078,7 +5078,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetPositionsCurrentWithHttpInfo
      *
-     * GetPositions (current)
+     * Positions (current)
      *
      * @param  string $filter_pool_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPositionsCurrent'] to see the possible values for this operation
@@ -5178,7 +5178,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetPositionsCurrentAsync
      *
-     * GetPositions (current)
+     * Positions (current)
      *
      * @param  string $filter_pool_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPositionsCurrent'] to see the possible values for this operation
@@ -5199,7 +5199,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetPositionsCurrentAsyncWithHttpInfo
      *
-     * GetPositions (current)
+     * Positions (current)
      *
      * @param  string $filter_pool_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPositionsCurrent'] to see the possible values for this operation
@@ -5338,7 +5338,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetPositionsHistorical
      *
-     * GetPositions (historical)
+     * Positions (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -5360,7 +5360,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetPositionsHistoricalWithHttpInfo
      *
-     * GetPositions (historical)
+     * Positions (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -5464,7 +5464,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetPositionsHistoricalAsync
      *
-     * GetPositions (historical)
+     * Positions (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -5489,7 +5489,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetPositionsHistoricalAsyncWithHttpInfo
      *
-     * GetPositions (historical)
+     * Positions (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -5676,7 +5676,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetPositionsSnaphotsHistorical
      *
-     * GetPositionsSnaphots (historical)
+     * PositionsSnaphots (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -5698,7 +5698,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetPositionsSnaphotsHistoricalWithHttpInfo
      *
-     * GetPositionsSnaphots (historical)
+     * PositionsSnaphots (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -5802,7 +5802,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetPositionsSnaphotsHistoricalAsync
      *
-     * GetPositionsSnaphots (historical)
+     * PositionsSnaphots (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -5827,7 +5827,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetPositionsSnaphotsHistoricalAsyncWithHttpInfo
      *
-     * GetPositionsSnaphots (historical)
+     * PositionsSnaphots (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -6014,7 +6014,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetPositionsSnapshotsCurrent
      *
-     * GetPositionsSnapshots (current)
+     * PositionsSnapshots (current)
      *
      * @param  string $filter_pool_id filter_pool_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPositionsSnapshotsCurrent'] to see the possible values for this operation
@@ -6032,7 +6032,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetPositionsSnapshotsCurrentWithHttpInfo
      *
-     * GetPositionsSnapshots (current)
+     * PositionsSnapshots (current)
      *
      * @param  string $filter_pool_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPositionsSnapshotsCurrent'] to see the possible values for this operation
@@ -6132,7 +6132,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetPositionsSnapshotsCurrentAsync
      *
-     * GetPositionsSnapshots (current)
+     * PositionsSnapshots (current)
      *
      * @param  string $filter_pool_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPositionsSnapshotsCurrent'] to see the possible values for this operation
@@ -6153,7 +6153,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetPositionsSnapshotsCurrentAsyncWithHttpInfo
      *
-     * GetPositionsSnapshots (current)
+     * PositionsSnapshots (current)
      *
      * @param  string $filter_pool_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPositionsSnapshotsCurrent'] to see the possible values for this operation
@@ -6292,7 +6292,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetSwapsCurrent
      *
-     * GetSwaps (current) 🔥
+     * Swaps (current) 🔥
      *
      * @param  string $filter_pool_id filter_pool_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetSwapsCurrent'] to see the possible values for this operation
@@ -6310,7 +6310,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetSwapsCurrentWithHttpInfo
      *
-     * GetSwaps (current) 🔥
+     * Swaps (current) 🔥
      *
      * @param  string $filter_pool_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetSwapsCurrent'] to see the possible values for this operation
@@ -6410,7 +6410,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetSwapsCurrentAsync
      *
-     * GetSwaps (current) 🔥
+     * Swaps (current) 🔥
      *
      * @param  string $filter_pool_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetSwapsCurrent'] to see the possible values for this operation
@@ -6431,7 +6431,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetSwapsCurrentAsyncWithHttpInfo
      *
-     * GetSwaps (current) 🔥
+     * Swaps (current) 🔥
      *
      * @param  string $filter_pool_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetSwapsCurrent'] to see the possible values for this operation
@@ -6570,7 +6570,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetSwapsHistorical
      *
-     * GetSwaps (historical) 🔥
+     * Swaps (historical) 🔥
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -6592,7 +6592,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetSwapsHistoricalWithHttpInfo
      *
-     * GetSwaps (historical) 🔥
+     * Swaps (historical) 🔥
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -6696,7 +6696,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetSwapsHistoricalAsync
      *
-     * GetSwaps (historical) 🔥
+     * Swaps (historical) 🔥
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -6721,7 +6721,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetSwapsHistoricalAsyncWithHttpInfo
      *
-     * GetSwaps (historical) 🔥
+     * Swaps (historical) 🔥
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -6908,7 +6908,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTicksCurrent
      *
-     * GetTicks (current)
+     * Ticks (current)
      *
      * @param  string $filter_pool_id filter_pool_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTicksCurrent'] to see the possible values for this operation
@@ -6926,7 +6926,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTicksCurrentWithHttpInfo
      *
-     * GetTicks (current)
+     * Ticks (current)
      *
      * @param  string $filter_pool_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTicksCurrent'] to see the possible values for this operation
@@ -7026,7 +7026,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTicksCurrentAsync
      *
-     * GetTicks (current)
+     * Ticks (current)
      *
      * @param  string $filter_pool_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTicksCurrent'] to see the possible values for this operation
@@ -7047,7 +7047,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTicksCurrentAsyncWithHttpInfo
      *
-     * GetTicks (current)
+     * Ticks (current)
      *
      * @param  string $filter_pool_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTicksCurrent'] to see the possible values for this operation
@@ -7186,7 +7186,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTicksDayDataCurrent
      *
-     * GetTicksDayData (current)
+     * TicksDayData (current)
      *
      * @param  string $filter_pool_id filter_pool_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTicksDayDataCurrent'] to see the possible values for this operation
@@ -7204,7 +7204,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTicksDayDataCurrentWithHttpInfo
      *
-     * GetTicksDayData (current)
+     * TicksDayData (current)
      *
      * @param  string $filter_pool_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTicksDayDataCurrent'] to see the possible values for this operation
@@ -7304,7 +7304,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTicksDayDataCurrentAsync
      *
-     * GetTicksDayData (current)
+     * TicksDayData (current)
      *
      * @param  string $filter_pool_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTicksDayDataCurrent'] to see the possible values for this operation
@@ -7325,7 +7325,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTicksDayDataCurrentAsyncWithHttpInfo
      *
-     * GetTicksDayData (current)
+     * TicksDayData (current)
      *
      * @param  string $filter_pool_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTicksDayDataCurrent'] to see the possible values for this operation
@@ -7464,7 +7464,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTicksDayDataHistorical
      *
-     * GetTicksDayData (historical)
+     * TicksDayData (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -7486,7 +7486,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTicksDayDataHistoricalWithHttpInfo
      *
-     * GetTicksDayData (historical)
+     * TicksDayData (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -7590,7 +7590,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTicksDayDataHistoricalAsync
      *
-     * GetTicksDayData (historical)
+     * TicksDayData (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -7615,7 +7615,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTicksDayDataHistoricalAsyncWithHttpInfo
      *
-     * GetTicksDayData (historical)
+     * TicksDayData (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -7802,7 +7802,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTicksHistorical
      *
-     * GetTicks (historical)
+     * Ticks (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -7824,7 +7824,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTicksHistoricalWithHttpInfo
      *
-     * GetTicks (historical)
+     * Ticks (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -7928,7 +7928,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTicksHistoricalAsync
      *
-     * GetTicks (historical)
+     * Ticks (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -7953,7 +7953,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTicksHistoricalAsyncWithHttpInfo
      *
-     * GetTicks (historical)
+     * Ticks (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -8140,7 +8140,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTokensCurrent
      *
-     * GetTokens (current) 🔥
+     * Tokens (current) 🔥
      *
      * @param  string $filter_token_id filter_token_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTokensCurrent'] to see the possible values for this operation
@@ -8158,7 +8158,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTokensCurrentWithHttpInfo
      *
-     * GetTokens (current) 🔥
+     * Tokens (current) 🔥
      *
      * @param  string $filter_token_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTokensCurrent'] to see the possible values for this operation
@@ -8258,7 +8258,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTokensCurrentAsync
      *
-     * GetTokens (current) 🔥
+     * Tokens (current) 🔥
      *
      * @param  string $filter_token_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTokensCurrent'] to see the possible values for this operation
@@ -8279,7 +8279,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTokensCurrentAsyncWithHttpInfo
      *
-     * GetTokens (current) 🔥
+     * Tokens (current) 🔥
      *
      * @param  string $filter_token_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTokensCurrent'] to see the possible values for this operation
@@ -8418,7 +8418,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTokensDayDataCurrent
      *
-     * GetTokensDayData (current)
+     * TokensDayData (current)
      *
      * @param  string $filter_token_id filter_token_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTokensDayDataCurrent'] to see the possible values for this operation
@@ -8436,7 +8436,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTokensDayDataCurrentWithHttpInfo
      *
-     * GetTokensDayData (current)
+     * TokensDayData (current)
      *
      * @param  string $filter_token_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTokensDayDataCurrent'] to see the possible values for this operation
@@ -8536,7 +8536,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTokensDayDataCurrentAsync
      *
-     * GetTokensDayData (current)
+     * TokensDayData (current)
      *
      * @param  string $filter_token_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTokensDayDataCurrent'] to see the possible values for this operation
@@ -8557,7 +8557,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTokensDayDataCurrentAsyncWithHttpInfo
      *
-     * GetTokensDayData (current)
+     * TokensDayData (current)
      *
      * @param  string $filter_token_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTokensDayDataCurrent'] to see the possible values for this operation
@@ -8696,7 +8696,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTokensDayDataHistorical
      *
-     * GetTokensDayData (historical)
+     * TokensDayData (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -8718,7 +8718,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTokensDayDataHistoricalWithHttpInfo
      *
-     * GetTokensDayData (historical)
+     * TokensDayData (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -8822,7 +8822,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTokensDayDataHistoricalAsync
      *
-     * GetTokensDayData (historical)
+     * TokensDayData (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -8847,7 +8847,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTokensDayDataHistoricalAsyncWithHttpInfo
      *
-     * GetTokensDayData (historical)
+     * TokensDayData (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -9034,7 +9034,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTokensHistorical
      *
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -9056,7 +9056,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTokensHistoricalWithHttpInfo
      *
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -9160,7 +9160,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTokensHistoricalAsync
      *
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -9185,7 +9185,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTokensHistoricalAsyncWithHttpInfo
      *
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -9372,7 +9372,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTokensHourDataCurrent
      *
-     * GetTokensHourData (current)
+     * TokensHourData (current)
      *
      * @param  string $filter_token_id filter_token_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTokensHourDataCurrent'] to see the possible values for this operation
@@ -9390,7 +9390,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTokensHourDataCurrentWithHttpInfo
      *
-     * GetTokensHourData (current)
+     * TokensHourData (current)
      *
      * @param  string $filter_token_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTokensHourDataCurrent'] to see the possible values for this operation
@@ -9490,7 +9490,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTokensHourDataCurrentAsync
      *
-     * GetTokensHourData (current)
+     * TokensHourData (current)
      *
      * @param  string $filter_token_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTokensHourDataCurrent'] to see the possible values for this operation
@@ -9511,7 +9511,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTokensHourDataCurrentAsyncWithHttpInfo
      *
-     * GetTokensHourData (current)
+     * TokensHourData (current)
      *
      * @param  string $filter_token_id (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTokensHourDataCurrent'] to see the possible values for this operation
@@ -9650,7 +9650,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTokensHourDataHistorical
      *
-     * GetTokensHourData (historical)
+     * TokensHourData (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -9672,7 +9672,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTokensHourDataHistoricalWithHttpInfo
      *
-     * GetTokensHourData (historical)
+     * TokensHourData (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -9776,7 +9776,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTokensHourDataHistoricalAsync
      *
-     * GetTokensHourData (historical)
+     * TokensHourData (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -9801,7 +9801,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTokensHourDataHistoricalAsyncWithHttpInfo
      *
-     * GetTokensHourData (historical)
+     * TokensHourData (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -9988,7 +9988,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTransactionsHistorical
      *
-     * GetTransactions (historical)
+     * Transactions (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -10009,7 +10009,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTransactionsHistoricalWithHttpInfo
      *
-     * GetTransactions (historical)
+     * Transactions (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -10112,7 +10112,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTransactionsHistoricalAsync
      *
-     * GetTransactions (historical)
+     * Transactions (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)
@@ -10136,7 +10136,7 @@ class UniswapV3Api
     /**
      * Operation uniswapV3GetTransactionsHistoricalAsyncWithHttpInfo
      *
-     * GetTransactions (historical)
+     * Transactions (historical)
      *
      * @param  int $start_block  (optional)
      * @param  int $end_block  (optional)

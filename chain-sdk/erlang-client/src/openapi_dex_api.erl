@@ -14,7 +14,7 @@
 
 -define(BASE_URL, <<"">>).
 
-%% @doc GetBatches (historical)
+%% @doc Batches (historical)
 %% Gets batches.
 -spec dex_get_batches_(historical)(ctx:ctx()) -> {ok, [openapi_dex_batch_dto:openapi_dex_batch_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dex_get_batches_(historical)(Ctx) ->
@@ -35,7 +35,7 @@ dex_get_batches_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc GetDeposits (historical)
+%% @doc Deposits (historical)
 %% Gets deposits.
 -spec dex_get_deposits_(historical)(ctx:ctx()) -> {ok, [openapi_dex_deposit_dto:openapi_dex_deposit_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dex_get_deposits_(historical)(Ctx) ->
@@ -56,7 +56,7 @@ dex_get_deposits_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc GetOrders (historical)
+%% @doc Orders (historical)
 %% Gets orders.
 -spec dex_get_orders_(historical)(ctx:ctx()) -> {ok, [openapi_dex_order_dto:openapi_dex_order_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dex_get_orders_(historical)(Ctx) ->
@@ -77,7 +77,7 @@ dex_get_orders_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc GetPrices (historical)
+%% @doc Prices (historical)
 %% Gets prices.
 -spec dex_get_prices_(historical)(ctx:ctx()) -> {ok, [openapi_dex_price_dto:openapi_dex_price_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dex_get_prices_(historical)(Ctx) ->
@@ -98,7 +98,7 @@ dex_get_prices_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc GetSolutions (historical)
+%% @doc Solutions (historical)
 %% Gets solutions.
 -spec dex_get_solutions_(historical)(ctx:ctx()) -> {ok, [openapi_dex_solution_dto:openapi_dex_solution_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dex_get_solutions_(historical)(Ctx) ->
@@ -119,7 +119,7 @@ dex_get_solutions_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc GetStats (historical)
+%% @doc Stats (historical)
 %% Gets stats.
 -spec dex_get_stats_(historical)(ctx:ctx()) -> {ok, [openapi_dex_stats_dto:openapi_dex_stats_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dex_get_stats_(historical)(Ctx) ->
@@ -140,7 +140,7 @@ dex_get_stats_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc GetTokens (historical) 🔥
+%% @doc Tokens (historical) 🔥
 %% Gets tokens.
 -spec dex_get_tokens_(historical)(ctx:ctx()) -> {ok, [openapi_dex_token_dto:openapi_dex_token_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dex_get_tokens_(historical)(Ctx) ->
@@ -161,7 +161,7 @@ dex_get_tokens_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc GetTrades (historical) 🔥
+%% @doc Trades (historical) 🔥
 %% Gets trades.
 -spec dex_get_trades_(historical)(ctx:ctx()) -> {ok, [openapi_dex_trade_dto:openapi_dex_trade_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dex_get_trades_(historical)(Ctx) ->
@@ -182,7 +182,7 @@ dex_get_trades_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc GetUsers (historical)
+%% @doc Users (historical)
 %% Gets users.
 -spec dex_get_users_(historical)(ctx:ctx()) -> {ok, [openapi_dex_user_dto:openapi_dex_user_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dex_get_users_(historical)(Ctx) ->
@@ -203,7 +203,7 @@ dex_get_users_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc GetWithdraws (historical)
+%% @doc Withdraws (historical)
 %% Gets withdraws.
 -spec dex_get_withdraws_(historical)(ctx:ctx()) -> {ok, [openapi_dex_withdraw_dto:openapi_dex_withdraw_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dex_get_withdraws_(historical)(Ctx) ->
@@ -224,7 +224,7 @@ dex_get_withdraws_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc GetWithdrawsRequests (historical)
+%% @doc WithdrawsRequests (historical)
 %% Gets withdraws requests.
 -spec dex_get_withdraws_requests_(historical)(ctx:ctx()) -> {ok, [openapi_dex_withdraw_request_dto:openapi_dex_withdraw_request_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
 dex_get_withdraws_requests_(historical)(Ctx) ->

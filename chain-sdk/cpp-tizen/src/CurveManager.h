@@ -55,7 +55,7 @@ public:
 	CurveManager();
 	virtual ~CurveManager();
 
-/*! \brief GetAccounts (historical). *Synchronous*
+/*! \brief Accounts (historical). *Synchronous*
  *
  * Gets accounts.
  * \param startBlock 
@@ -71,7 +71,7 @@ bool curveGetAccounts (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.AccountDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetAccounts (historical). *Asynchronous*
+/*! \brief Accounts (historical). *Asynchronous*
  *
  * Gets accounts.
  * \param startBlock 
@@ -88,7 +88,7 @@ bool curveGetAccounts (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetAddLiquidityEvents (historical). *Synchronous*
+/*! \brief AddLiquidityEvents (historical). *Synchronous*
  *
  * Gets add liquidity events.
  * \param startBlock 
@@ -105,7 +105,7 @@ bool curveGetAddLiquidityEvents (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.AddLiquidityEventDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetAddLiquidityEvents (historical). *Asynchronous*
+/*! \brief AddLiquidityEvents (historical). *Asynchronous*
  *
  * Gets add liquidity events.
  * \param startBlock 
@@ -123,7 +123,7 @@ bool curveGetAddLiquidityEvents (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetAdminFeeChangeLogs (historical). *Synchronous*
+/*! \brief AdminFeeChangeLogs (historical). *Synchronous*
  *
  * Gets admin fee change logs.
  * \param startBlock 
@@ -140,7 +140,7 @@ bool curveGetAdminFeeChangeLogs (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.AdminFeeChangeLogDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetAdminFeeChangeLogs (historical). *Asynchronous*
+/*! \brief AdminFeeChangeLogs (historical). *Asynchronous*
  *
  * Gets admin fee change logs.
  * \param startBlock 
@@ -158,7 +158,7 @@ bool curveGetAdminFeeChangeLogs (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetAmplificationCoeffChangeLogs (historical). *Synchronous*
+/*! \brief AmplificationCoeffChangeLogs (historical). *Synchronous*
  *
  * Gets amplification coeff change logs.
  * \param startBlock 
@@ -175,7 +175,7 @@ bool curveGetAmplificationCoeffChangeLogs (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.AmplificationCoeffChangeLogDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetAmplificationCoeffChangeLogs (historical). *Asynchronous*
+/*! \brief AmplificationCoeffChangeLogs (historical). *Asynchronous*
  *
  * Gets amplification coeff change logs.
  * \param startBlock 
@@ -193,7 +193,7 @@ bool curveGetAmplificationCoeffChangeLogs (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetCoins (historical). *Synchronous*
+/*! \brief Coins (historical). *Synchronous*
  *
  * Gets coins.
  * \param startBlock 
@@ -210,7 +210,7 @@ bool curveGetCoins (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.CoinDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetCoins (historical). *Asynchronous*
+/*! \brief Coins (historical). *Asynchronous*
  *
  * Gets coins.
  * \param startBlock 
@@ -228,7 +228,7 @@ bool curveGetCoins (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetContracts (historical). *Synchronous*
+/*! \brief Contracts (historical). *Synchronous*
  *
  * Gets contracts.
  * \param startBlock 
@@ -245,7 +245,7 @@ bool curveGetContracts (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.ContractDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetContracts (historical). *Asynchronous*
+/*! \brief Contracts (historical). *Asynchronous*
  *
  * Gets contracts.
  * \param startBlock 
@@ -263,7 +263,7 @@ bool curveGetContracts (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetContractsVersions (historical). *Synchronous*
+/*! \brief ContractsVersions (historical). *Synchronous*
  *
  * Gets contracts versions.
  * \param startBlock 
@@ -280,7 +280,7 @@ bool curveGetContractsVersions (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.ContractVersionDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetContractsVersions (historical). *Asynchronous*
+/*! \brief ContractsVersions (historical). *Asynchronous*
  *
  * Gets contracts versions.
  * \param startBlock 
@@ -298,7 +298,7 @@ bool curveGetContractsVersions (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetDailyVolumes (historical). *Synchronous*
+/*! \brief DailyVolumes (historical). *Synchronous*
  *
  * Gets daily volumes.
  * \param startBlock 
@@ -315,7 +315,7 @@ bool curveGetDailyVolumes (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.DailyVolumeDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetDailyVolumes (historical). *Asynchronous*
+/*! \brief DailyVolumes (historical). *Asynchronous*
  *
  * Gets daily volumes.
  * \param startBlock 
@@ -333,7 +333,7 @@ bool curveGetDailyVolumes (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetExchanges (historical) 🔥. *Synchronous*
+/*! \brief Exchanges (historical) 🔥. *Synchronous*
  *
  * Gets exchanges.
  * \param startBlock 
@@ -350,7 +350,7 @@ bool curveGetExchanges (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.ExchangeDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetExchanges (historical) 🔥. *Asynchronous*
+/*! \brief Exchanges (historical) 🔥. *Asynchronous*
  *
  * Gets exchanges.
  * \param startBlock 
@@ -368,7 +368,7 @@ bool curveGetExchanges (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetFeeChangeLogs (historical). *Synchronous*
+/*! \brief FeeChangeLogs (historical). *Synchronous*
  *
  * Gets fee change logs.
  * \param startBlock 
@@ -385,7 +385,7 @@ bool curveGetFeeChangeLogs (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.FeeChangeLogDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetFeeChangeLogs (historical). *Asynchronous*
+/*! \brief FeeChangeLogs (historical). *Asynchronous*
  *
  * Gets fee change logs.
  * \param startBlock 
@@ -403,7 +403,7 @@ bool curveGetFeeChangeLogs (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetGauges (historical). *Synchronous*
+/*! \brief Gauges (historical). *Synchronous*
  *
  * Gets gauges.
  * \param startBlock 
@@ -420,7 +420,7 @@ bool curveGetGauges (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.GaugeDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetGauges (historical). *Asynchronous*
+/*! \brief Gauges (historical). *Asynchronous*
  *
  * Gets gauges.
  * \param startBlock 
@@ -438,7 +438,7 @@ bool curveGetGauges (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetGaugesDeposits (historical). *Synchronous*
+/*! \brief GaugesDeposits (historical). *Synchronous*
  *
  * Gets gauges deposits.
  * \param startBlock 
@@ -454,7 +454,7 @@ bool curveGetGaugesDeposits (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.GaugeDepositDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetGaugesDeposits (historical). *Asynchronous*
+/*! \brief GaugesDeposits (historical). *Asynchronous*
  *
  * Gets gauges deposits.
  * \param startBlock 
@@ -471,7 +471,7 @@ bool curveGetGaugesDeposits (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetGaugesLiquidity (historical). *Synchronous*
+/*! \brief GaugesLiquidity (historical). *Synchronous*
  *
  * Gets gauges liquidity.
  * \param startBlock 
@@ -487,7 +487,7 @@ bool curveGetGaugesLiquidity (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.GaugeLiquidityDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetGaugesLiquidity (historical). *Asynchronous*
+/*! \brief GaugesLiquidity (historical). *Asynchronous*
  *
  * Gets gauges liquidity.
  * \param startBlock 
@@ -504,7 +504,7 @@ bool curveGetGaugesLiquidity (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetGaugesTotalWeights (historical). *Synchronous*
+/*! \brief GaugesTotalWeights (historical). *Synchronous*
  *
  * Gets gauges total weights.
  * \param startBlock 
@@ -520,7 +520,7 @@ bool curveGetGaugesTotalWeights (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.GaugeTotalWeightDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetGaugesTotalWeights (historical). *Asynchronous*
+/*! \brief GaugesTotalWeights (historical). *Asynchronous*
  *
  * Gets gauges total weights.
  * \param startBlock 
@@ -537,7 +537,7 @@ bool curveGetGaugesTotalWeights (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetGaugesTypes (historical). *Synchronous*
+/*! \brief GaugesTypes (historical). *Synchronous*
  *
  * Gets gauges types.
  * \param startBlock 
@@ -553,7 +553,7 @@ bool curveGetGaugesTypes (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.GaugeTypeDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetGaugesTypes (historical). *Asynchronous*
+/*! \brief GaugesTypes (historical). *Asynchronous*
  *
  * Gets gauges types.
  * \param startBlock 
@@ -570,7 +570,7 @@ bool curveGetGaugesTypes (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetGaugesTypesWeights (historical). *Synchronous*
+/*! \brief GaugesTypesWeights (historical). *Synchronous*
  *
  * Gets gauges types weights.
  * \param startBlock 
@@ -586,7 +586,7 @@ bool curveGetGaugesTypesWeights (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.GaugeTypeWeightDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetGaugesTypesWeights (historical). *Asynchronous*
+/*! \brief GaugesTypesWeights (historical). *Asynchronous*
  *
  * Gets gauges types weights.
  * \param startBlock 
@@ -603,7 +603,7 @@ bool curveGetGaugesTypesWeights (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetGaugesWeights (historical). *Synchronous*
+/*! \brief GaugesWeights (historical). *Synchronous*
  *
  * Gets gauges weights.
  * \param startBlock 
@@ -619,7 +619,7 @@ bool curveGetGaugesWeights (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.GaugeWeightDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetGaugesWeights (historical). *Asynchronous*
+/*! \brief GaugesWeights (historical). *Asynchronous*
  *
  * Gets gauges weights.
  * \param startBlock 
@@ -636,7 +636,7 @@ bool curveGetGaugesWeights (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetGaugesWeightsVotes (historical). *Synchronous*
+/*! \brief GaugesWeightsVotes (historical). *Synchronous*
  *
  * Gets gauges weights votes.
  * \param startBlock 
@@ -652,7 +652,7 @@ bool curveGetGaugesWeightsVotes (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.GaugeWeightVoteDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetGaugesWeightsVotes (historical). *Asynchronous*
+/*! \brief GaugesWeightsVotes (historical). *Asynchronous*
  *
  * Gets gauges weights votes.
  * \param startBlock 
@@ -669,7 +669,7 @@ bool curveGetGaugesWeightsVotes (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetGaugesWithdraw (historical). *Synchronous*
+/*! \brief GaugesWithdraw (historical). *Synchronous*
  *
  * Gets gauges withdraws.
  * \param startBlock 
@@ -685,7 +685,7 @@ bool curveGetGaugesWithdraw (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.GaugeWithdrawDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetGaugesWithdraw (historical). *Asynchronous*
+/*! \brief GaugesWithdraw (historical). *Asynchronous*
  *
  * Gets gauges withdraws.
  * \param startBlock 
@@ -702,7 +702,7 @@ bool curveGetGaugesWithdraw (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetHourlyVolumes (historical). *Synchronous*
+/*! \brief HourlyVolumes (historical). *Synchronous*
  *
  * Gets hourly volumes.
  * \param startBlock 
@@ -719,7 +719,7 @@ bool curveGetHourlyVolumes (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.HourlyVolumeDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetHourlyVolumes (historical). *Asynchronous*
+/*! \brief HourlyVolumes (historical). *Asynchronous*
  *
  * Gets hourly volumes.
  * \param startBlock 
@@ -737,7 +737,7 @@ bool curveGetHourlyVolumes (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetLpTokens (historical). *Synchronous*
+/*! \brief LpTokens (historical). *Synchronous*
  *
  * Gets lp tokens.
  * \param startBlock 
@@ -754,7 +754,7 @@ bool curveGetLpTokens (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.LpTokenDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetLpTokens (historical). *Asynchronous*
+/*! \brief LpTokens (historical). *Asynchronous*
  *
  * Gets lp tokens.
  * \param startBlock 
@@ -772,7 +772,7 @@ bool curveGetLpTokens (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetPools (historical) 🔥. *Synchronous*
+/*! \brief Pools (historical) 🔥. *Synchronous*
  *
  * Gets pools.
  * \param startBlock 
@@ -789,7 +789,7 @@ bool curveGetPools (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.PoolDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetPools (historical) 🔥. *Asynchronous*
+/*! \brief Pools (historical) 🔥. *Asynchronous*
  *
  * Gets pools.
  * \param startBlock 
@@ -807,7 +807,7 @@ bool curveGetPools (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetProposals (historical). *Synchronous*
+/*! \brief Proposals (historical). *Synchronous*
  *
  * Gets proposals.
  * \param startBlock 
@@ -823,7 +823,7 @@ bool curveGetProposals (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.ProposalDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetProposals (historical). *Asynchronous*
+/*! \brief Proposals (historical). *Asynchronous*
  *
  * Gets proposals.
  * \param startBlock 
@@ -840,7 +840,7 @@ bool curveGetProposals (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetProposalsVotes (historical). *Synchronous*
+/*! \brief ProposalsVotes (historical). *Synchronous*
  *
  * Gets proposals votes.
  * \param startBlock 
@@ -856,7 +856,7 @@ bool curveGetProposalsVotes (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.ProposalVoteDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetProposalsVotes (historical). *Asynchronous*
+/*! \brief ProposalsVotes (historical). *Asynchronous*
  *
  * Gets proposals votes.
  * \param startBlock 
@@ -873,7 +873,7 @@ bool curveGetProposalsVotes (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetRemoveLiquidityEvents (historical). *Synchronous*
+/*! \brief RemoveLiquidityEvents (historical). *Synchronous*
  *
  * Gets remove liquidity events.
  * \param startBlock 
@@ -890,7 +890,7 @@ bool curveGetRemoveLiquidityEvents (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.RemoveLiquidityEventDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetRemoveLiquidityEvents (historical). *Asynchronous*
+/*! \brief RemoveLiquidityEvents (historical). *Asynchronous*
  *
  * Gets remove liquidity events.
  * \param startBlock 
@@ -908,7 +908,7 @@ bool curveGetRemoveLiquidityEvents (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetRemoveLiquidityOneEvents (historical). *Synchronous*
+/*! \brief RemoveLiquidityOneEvents (historical). *Synchronous*
  *
  * Gets remove liquidity one events.
  * \param startBlock 
@@ -925,7 +925,7 @@ bool curveGetRemoveLiquidityOneEvents (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.RemoveLiquidityOneEventDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetRemoveLiquidityOneEvents (historical). *Asynchronous*
+/*! \brief RemoveLiquidityOneEvents (historical). *Asynchronous*
  *
  * Gets remove liquidity one events.
  * \param startBlock 
@@ -943,7 +943,7 @@ bool curveGetRemoveLiquidityOneEvents (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetSystemStates (historical). *Synchronous*
+/*! \brief SystemStates (historical). *Synchronous*
  *
  * Gets system states.
  * \param startBlock 
@@ -959,7 +959,7 @@ bool curveGetSystemStates (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.SystemStateDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetSystemStates (historical). *Asynchronous*
+/*! \brief SystemStates (historical). *Asynchronous*
  *
  * Gets system states.
  * \param startBlock 
@@ -976,7 +976,7 @@ bool curveGetSystemStates (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetTokens (historical) 🔥. *Synchronous*
+/*! \brief Tokens (historical) 🔥. *Synchronous*
  *
  * Gets tokens.
  * \param startBlock 
@@ -993,7 +993,7 @@ bool curveGetTokens (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.TokenDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetTokens (historical) 🔥. *Asynchronous*
+/*! \brief Tokens (historical) 🔥. *Asynchronous*
  *
  * Gets tokens.
  * \param startBlock 
@@ -1011,7 +1011,7 @@ bool curveGetTokens (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetTransferOwnershipEvents (historical). *Synchronous*
+/*! \brief TransferOwnershipEvents (historical). *Synchronous*
  *
  * Gets transfer ownership events.
  * \param startBlock 
@@ -1028,7 +1028,7 @@ bool curveGetTransferOwnershipEvents (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.TransferOwnershipEventDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetTransferOwnershipEvents (historical). *Asynchronous*
+/*! \brief TransferOwnershipEvents (historical). *Asynchronous*
  *
  * Gets transfer ownership events.
  * \param startBlock 
@@ -1046,7 +1046,7 @@ bool curveGetTransferOwnershipEvents (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetUnderlyingCoins (historical). *Synchronous*
+/*! \brief UnderlyingCoins (historical). *Synchronous*
  *
  * Gets underlying coins.
  * \param startBlock 
@@ -1063,7 +1063,7 @@ bool curveGetUnderlyingCoins (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.UnderlyingCoinDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetUnderlyingCoins (historical). *Asynchronous*
+/*! \brief UnderlyingCoins (historical). *Asynchronous*
  *
  * Gets underlying coins.
  * \param startBlock 
@@ -1081,7 +1081,7 @@ bool curveGetUnderlyingCoins (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetVotingApps (historical). *Synchronous*
+/*! \brief VotingApps (historical). *Synchronous*
  *
  * Gets voting apps.
  * \param startBlock 
@@ -1097,7 +1097,7 @@ bool curveGetVotingApps (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.VotingAppDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetVotingApps (historical). *Asynchronous*
+/*! \brief VotingApps (historical). *Asynchronous*
  *
  * Gets voting apps.
  * \param startBlock 
@@ -1114,7 +1114,7 @@ bool curveGetVotingApps (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetWeeklyVolumes (historical). *Synchronous*
+/*! \brief WeeklyVolumes (historical). *Synchronous*
  *
  * Gets weekly volumes.
  * \param startBlock 
@@ -1131,7 +1131,7 @@ bool curveGetWeeklyVolumes (historical)Sync(char * accessToken,
 	void(* handler)(std::list<Curve.WeeklyVolumeDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetWeeklyVolumes (historical). *Asynchronous*
+/*! \brief WeeklyVolumes (historical). *Asynchronous*
  *
  * Gets weekly volumes.
  * \param startBlock 

@@ -4,39 +4,39 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**UniswapV3GetBundlesCurrent**](UniswapV3Api.md#uniswapv3getbundlescurrent) | **GET** /dapps/uniswapv3/bundles/current | GetBundles (current)
-[**UniswapV3GetBundlesHistorical**](UniswapV3Api.md#uniswapv3getbundleshistorical) | **GET** /dapps/uniswapv3/bundles/historical | GetBundles (historical)
-[**UniswapV3GetBurnsCurrent**](UniswapV3Api.md#uniswapv3getburnscurrent) | **GET** /dapps/uniswapv3/burns/current | GetBurns (current)
-[**UniswapV3GetBurnsHistorical**](UniswapV3Api.md#uniswapv3getburnshistorical) | **GET** /dapps/uniswapv3/burns/historical | GetBurns (historical)
-[**UniswapV3GetDayDataCurrent**](UniswapV3Api.md#uniswapv3getdaydatacurrent) | **GET** /dapps/uniswapv3/dayData/current | GetDayData (current)
-[**UniswapV3GetDayDataHistorical**](UniswapV3Api.md#uniswapv3getdaydatahistorical) | **GET** /dapps/uniswapv3/dayData/historical | GetDayData (historical)
-[**UniswapV3GetFactoryCurrent**](UniswapV3Api.md#uniswapv3getfactorycurrent) | **GET** /dapps/uniswapv3/factory/current | GetFactory (current)
-[**UniswapV3GetFactoryHistorical**](UniswapV3Api.md#uniswapv3getfactoryhistorical) | **GET** /dapps/uniswapv3/factory/historical | GetFactory (historical)
-[**UniswapV3GetMintsCurrent**](UniswapV3Api.md#uniswapv3getmintscurrent) | **GET** /dapps/uniswapv3/mints/current | GetMints (current)
-[**UniswapV3GetMintsHistorical**](UniswapV3Api.md#uniswapv3getmintshistorical) | **GET** /dapps/uniswapv3/mints/historical | GetMints (historical)
-[**UniswapV3GetPoolsCurrent**](UniswapV3Api.md#uniswapv3getpoolscurrent) | **GET** /dapps/uniswapv3/pools/current | GetPools (current) 🔥
-[**UniswapV3GetPoolsDayDataCurrent**](UniswapV3Api.md#uniswapv3getpoolsdaydatacurrent) | **GET** /dapps/uniswapv3/poolsDayData/current | GetPoolsDayData (current)
-[**UniswapV3GetPoolsDayDataHistorical**](UniswapV3Api.md#uniswapv3getpoolsdaydatahistorical) | **GET** /dapps/uniswapv3/poolsDayData/historical | GetPoolsDayData (historical)
-[**UniswapV3GetPoolsHistorical**](UniswapV3Api.md#uniswapv3getpoolshistorical) | **GET** /dapps/uniswapv3/pools/historical | GetPools (historical) 🔥
-[**UniswapV3GetPoolsHourDataCurrent**](UniswapV3Api.md#uniswapv3getpoolshourdatacurrent) | **GET** /dapps/uniswapv3/poolsHourData/current | GetPoolsHourData (current)
-[**UniswapV3GetPoolsHourDataHistorical**](UniswapV3Api.md#uniswapv3getpoolshourdatahistorical) | **GET** /dapps/uniswapv3/poolsHourData/historical | GetPoolsHourData (historical)
-[**UniswapV3GetPositionsCurrent**](UniswapV3Api.md#uniswapv3getpositionscurrent) | **GET** /dapps/uniswapv3/positions/current | GetPositions (current)
-[**UniswapV3GetPositionsHistorical**](UniswapV3Api.md#uniswapv3getpositionshistorical) | **GET** /dapps/uniswapv3/positions/historical | GetPositions (historical)
-[**UniswapV3GetPositionsSnaphotsHistorical**](UniswapV3Api.md#uniswapv3getpositionssnaphotshistorical) | **GET** /dapps/uniswapv3/positionsSnapshots/historical | GetPositionsSnaphots (historical)
-[**UniswapV3GetPositionsSnapshotsCurrent**](UniswapV3Api.md#uniswapv3getpositionssnapshotscurrent) | **GET** /dapps/uniswapv3/positionSnapshots/current | GetPositionsSnapshots (current)
-[**UniswapV3GetSwapsCurrent**](UniswapV3Api.md#uniswapv3getswapscurrent) | **GET** /dapps/uniswapv3/swaps/current | GetSwaps (current) 🔥
-[**UniswapV3GetSwapsHistorical**](UniswapV3Api.md#uniswapv3getswapshistorical) | **GET** /dapps/uniswapv3/swaps/historical | GetSwaps (historical) 🔥
-[**UniswapV3GetTicksCurrent**](UniswapV3Api.md#uniswapv3gettickscurrent) | **GET** /dapps/uniswapv3/ticks/current | GetTicks (current)
-[**UniswapV3GetTicksDayDataCurrent**](UniswapV3Api.md#uniswapv3getticksdaydatacurrent) | **GET** /dapps/uniswapv3/ticksDayData/current | GetTicksDayData (current)
-[**UniswapV3GetTicksDayDataHistorical**](UniswapV3Api.md#uniswapv3getticksdaydatahistorical) | **GET** /dapps/uniswapv3/ticksDayData/historical | GetTicksDayData (historical)
-[**UniswapV3GetTicksHistorical**](UniswapV3Api.md#uniswapv3gettickshistorical) | **GET** /dapps/uniswapv3/ticks/historical | GetTicks (historical)
-[**UniswapV3GetTokensCurrent**](UniswapV3Api.md#uniswapv3gettokenscurrent) | **GET** /dapps/uniswapv3/tokens/current | GetTokens (current) 🔥
-[**UniswapV3GetTokensDayDataCurrent**](UniswapV3Api.md#uniswapv3gettokensdaydatacurrent) | **GET** /dapps/uniswapv3/tokensDayData/current | GetTokensDayData (current)
-[**UniswapV3GetTokensDayDataHistorical**](UniswapV3Api.md#uniswapv3gettokensdaydatahistorical) | **GET** /dapps/uniswapv3/tokensDayData/historical | GetTokensDayData (historical)
-[**UniswapV3GetTokensHistorical**](UniswapV3Api.md#uniswapv3gettokenshistorical) | **GET** /dapps/uniswapv3/tokens/historical | GetTokens (historical) 🔥
-[**UniswapV3GetTokensHourDataCurrent**](UniswapV3Api.md#uniswapv3gettokenshourdatacurrent) | **GET** /dapps/uniswapv3/tokensHourData/current | GetTokensHourData (current)
-[**UniswapV3GetTokensHourDataHistorical**](UniswapV3Api.md#uniswapv3gettokenshourdatahistorical) | **GET** /dapps/uniswapv3/tokensHourData/historical | GetTokensHourData (historical)
-[**UniswapV3GetTransactionsHistorical**](UniswapV3Api.md#uniswapv3gettransactionshistorical) | **GET** /dapps/uniswapv3/transactions/historical | GetTransactions (historical)
+[**UniswapV3GetBundlesCurrent**](UniswapV3Api.md#uniswapv3getbundlescurrent) | **GET** /dapps/uniswapv3/bundles/current | Bundles (current)
+[**UniswapV3GetBundlesHistorical**](UniswapV3Api.md#uniswapv3getbundleshistorical) | **GET** /dapps/uniswapv3/bundles/historical | Bundles (historical)
+[**UniswapV3GetBurnsCurrent**](UniswapV3Api.md#uniswapv3getburnscurrent) | **GET** /dapps/uniswapv3/burns/current | Burns (current)
+[**UniswapV3GetBurnsHistorical**](UniswapV3Api.md#uniswapv3getburnshistorical) | **GET** /dapps/uniswapv3/burns/historical | Burns (historical)
+[**UniswapV3GetDayDataCurrent**](UniswapV3Api.md#uniswapv3getdaydatacurrent) | **GET** /dapps/uniswapv3/dayData/current | DayData (current)
+[**UniswapV3GetDayDataHistorical**](UniswapV3Api.md#uniswapv3getdaydatahistorical) | **GET** /dapps/uniswapv3/dayData/historical | DayData (historical)
+[**UniswapV3GetFactoryCurrent**](UniswapV3Api.md#uniswapv3getfactorycurrent) | **GET** /dapps/uniswapv3/factory/current | Factory (current)
+[**UniswapV3GetFactoryHistorical**](UniswapV3Api.md#uniswapv3getfactoryhistorical) | **GET** /dapps/uniswapv3/factory/historical | Factory (historical)
+[**UniswapV3GetMintsCurrent**](UniswapV3Api.md#uniswapv3getmintscurrent) | **GET** /dapps/uniswapv3/mints/current | Mints (current)
+[**UniswapV3GetMintsHistorical**](UniswapV3Api.md#uniswapv3getmintshistorical) | **GET** /dapps/uniswapv3/mints/historical | Mints (historical)
+[**UniswapV3GetPoolsCurrent**](UniswapV3Api.md#uniswapv3getpoolscurrent) | **GET** /dapps/uniswapv3/pools/current | Pools (current) 🔥
+[**UniswapV3GetPoolsDayDataCurrent**](UniswapV3Api.md#uniswapv3getpoolsdaydatacurrent) | **GET** /dapps/uniswapv3/poolsDayData/current | PoolsDayData (current)
+[**UniswapV3GetPoolsDayDataHistorical**](UniswapV3Api.md#uniswapv3getpoolsdaydatahistorical) | **GET** /dapps/uniswapv3/poolsDayData/historical | PoolsDayData (historical)
+[**UniswapV3GetPoolsHistorical**](UniswapV3Api.md#uniswapv3getpoolshistorical) | **GET** /dapps/uniswapv3/pools/historical | Pools (historical) 🔥
+[**UniswapV3GetPoolsHourDataCurrent**](UniswapV3Api.md#uniswapv3getpoolshourdatacurrent) | **GET** /dapps/uniswapv3/poolsHourData/current | PoolsHourData (current)
+[**UniswapV3GetPoolsHourDataHistorical**](UniswapV3Api.md#uniswapv3getpoolshourdatahistorical) | **GET** /dapps/uniswapv3/poolsHourData/historical | PoolsHourData (historical)
+[**UniswapV3GetPositionsCurrent**](UniswapV3Api.md#uniswapv3getpositionscurrent) | **GET** /dapps/uniswapv3/positions/current | Positions (current)
+[**UniswapV3GetPositionsHistorical**](UniswapV3Api.md#uniswapv3getpositionshistorical) | **GET** /dapps/uniswapv3/positions/historical | Positions (historical)
+[**UniswapV3GetPositionsSnaphotsHistorical**](UniswapV3Api.md#uniswapv3getpositionssnaphotshistorical) | **GET** /dapps/uniswapv3/positionsSnapshots/historical | PositionsSnaphots (historical)
+[**UniswapV3GetPositionsSnapshotsCurrent**](UniswapV3Api.md#uniswapv3getpositionssnapshotscurrent) | **GET** /dapps/uniswapv3/positionSnapshots/current | PositionsSnapshots (current)
+[**UniswapV3GetSwapsCurrent**](UniswapV3Api.md#uniswapv3getswapscurrent) | **GET** /dapps/uniswapv3/swaps/current | Swaps (current) 🔥
+[**UniswapV3GetSwapsHistorical**](UniswapV3Api.md#uniswapv3getswapshistorical) | **GET** /dapps/uniswapv3/swaps/historical | Swaps (historical) 🔥
+[**UniswapV3GetTicksCurrent**](UniswapV3Api.md#uniswapv3gettickscurrent) | **GET** /dapps/uniswapv3/ticks/current | Ticks (current)
+[**UniswapV3GetTicksDayDataCurrent**](UniswapV3Api.md#uniswapv3getticksdaydatacurrent) | **GET** /dapps/uniswapv3/ticksDayData/current | TicksDayData (current)
+[**UniswapV3GetTicksDayDataHistorical**](UniswapV3Api.md#uniswapv3getticksdaydatahistorical) | **GET** /dapps/uniswapv3/ticksDayData/historical | TicksDayData (historical)
+[**UniswapV3GetTicksHistorical**](UniswapV3Api.md#uniswapv3gettickshistorical) | **GET** /dapps/uniswapv3/ticks/historical | Ticks (historical)
+[**UniswapV3GetTokensCurrent**](UniswapV3Api.md#uniswapv3gettokenscurrent) | **GET** /dapps/uniswapv3/tokens/current | Tokens (current) 🔥
+[**UniswapV3GetTokensDayDataCurrent**](UniswapV3Api.md#uniswapv3gettokensdaydatacurrent) | **GET** /dapps/uniswapv3/tokensDayData/current | TokensDayData (current)
+[**UniswapV3GetTokensDayDataHistorical**](UniswapV3Api.md#uniswapv3gettokensdaydatahistorical) | **GET** /dapps/uniswapv3/tokensDayData/historical | TokensDayData (historical)
+[**UniswapV3GetTokensHistorical**](UniswapV3Api.md#uniswapv3gettokenshistorical) | **GET** /dapps/uniswapv3/tokens/historical | Tokens (historical) 🔥
+[**UniswapV3GetTokensHourDataCurrent**](UniswapV3Api.md#uniswapv3gettokenshourdatacurrent) | **GET** /dapps/uniswapv3/tokensHourData/current | TokensHourData (current)
+[**UniswapV3GetTokensHourDataHistorical**](UniswapV3Api.md#uniswapv3gettokenshourdatahistorical) | **GET** /dapps/uniswapv3/tokensHourData/historical | TokensHourData (historical)
+[**UniswapV3GetTransactionsHistorical**](UniswapV3Api.md#uniswapv3gettransactionshistorical) | **GET** /dapps/uniswapv3/transactions/historical | Transactions (historical)
 
 
 
@@ -44,7 +44,7 @@ Method | HTTP request | Description
 
 > List&lt;UniswapV3BundleV3DTO&gt; UniswapV3GetBundlesCurrent ()
 
-GetBundles (current)
+Bundles (current)
 
 Gets bundles.
 
@@ -68,7 +68,7 @@ namespace Example
 
             try
             {
-                // GetBundles (current)
+                // Bundles (current)
                 List<UniswapV3BundleV3DTO> result = apiInstance.UniswapV3GetBundlesCurrent();
                 Debug.WriteLine(result);
             }
@@ -116,7 +116,7 @@ No authorization required
 
 > List&lt;UniswapV3BundleV3DTO&gt; UniswapV3GetBundlesHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
 
-GetBundles (historical)
+Bundles (historical)
 
 Gets bundles.
 
@@ -144,7 +144,7 @@ namespace Example
 
             try
             {
-                // GetBundles (historical)
+                // Bundles (historical)
                 List<UniswapV3BundleV3DTO> result = apiInstance.UniswapV3GetBundlesHistorical(startBlock, endBlock, startDate, endDate);
                 Debug.WriteLine(result);
             }
@@ -198,7 +198,7 @@ No authorization required
 
 > List&lt;UniswapV3BurnV3DTO&gt; UniswapV3GetBurnsCurrent (string filterPoolId = null)
 
-GetBurns (current)
+Burns (current)
 
 Gets burns.
 
@@ -223,7 +223,7 @@ namespace Example
 
             try
             {
-                // GetBurns (current)
+                // Burns (current)
                 List<UniswapV3BurnV3DTO> result = apiInstance.UniswapV3GetBurnsCurrent(filterPoolId);
                 Debug.WriteLine(result);
             }
@@ -274,7 +274,7 @@ No authorization required
 
 > List&lt;UniswapV3BurnV3DTO&gt; UniswapV3GetBurnsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
 
-GetBurns (historical)
+Burns (historical)
 
 Gets burns.
 
@@ -303,7 +303,7 @@ namespace Example
 
             try
             {
-                // GetBurns (historical)
+                // Burns (historical)
                 List<UniswapV3BurnV3DTO> result = apiInstance.UniswapV3GetBurnsHistorical(startBlock, endBlock, startDate, endDate, poolId);
                 Debug.WriteLine(result);
             }
@@ -358,7 +358,7 @@ No authorization required
 
 > List&lt;UniswapV3UniswapDayDataV3DTO&gt; UniswapV3GetDayDataCurrent ()
 
-GetDayData (current)
+DayData (current)
 
 Gets uniswapv3 day data.
 
@@ -382,7 +382,7 @@ namespace Example
 
             try
             {
-                // GetDayData (current)
+                // DayData (current)
                 List<UniswapV3UniswapDayDataV3DTO> result = apiInstance.UniswapV3GetDayDataCurrent();
                 Debug.WriteLine(result);
             }
@@ -430,7 +430,7 @@ No authorization required
 
 > List&lt;UniswapV3UniswapDayDataV3DTO&gt; UniswapV3GetDayDataHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
 
-GetDayData (historical)
+DayData (historical)
 
 Gets uniswapv3 day data.
 
@@ -458,7 +458,7 @@ namespace Example
 
             try
             {
-                // GetDayData (historical)
+                // DayData (historical)
                 List<UniswapV3UniswapDayDataV3DTO> result = apiInstance.UniswapV3GetDayDataHistorical(startBlock, endBlock, startDate, endDate);
                 Debug.WriteLine(result);
             }
@@ -512,7 +512,7 @@ No authorization required
 
 > List&lt;UniswapV3FactoryV3DTO&gt; UniswapV3GetFactoryCurrent ()
 
-GetFactory (current)
+Factory (current)
 
 Gets factory.
 
@@ -536,7 +536,7 @@ namespace Example
 
             try
             {
-                // GetFactory (current)
+                // Factory (current)
                 List<UniswapV3FactoryV3DTO> result = apiInstance.UniswapV3GetFactoryCurrent();
                 Debug.WriteLine(result);
             }
@@ -584,7 +584,7 @@ No authorization required
 
 > List&lt;UniswapV3FactoryV3DTO&gt; UniswapV3GetFactoryHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
 
-GetFactory (historical)
+Factory (historical)
 
 Gets factory.
 
@@ -612,7 +612,7 @@ namespace Example
 
             try
             {
-                // GetFactory (historical)
+                // Factory (historical)
                 List<UniswapV3FactoryV3DTO> result = apiInstance.UniswapV3GetFactoryHistorical(startBlock, endBlock, startDate, endDate);
                 Debug.WriteLine(result);
             }
@@ -666,7 +666,7 @@ No authorization required
 
 > List&lt;UniswapV3MintV3DTO&gt; UniswapV3GetMintsCurrent (string filterPoolId = null)
 
-GetMints (current)
+Mints (current)
 
 Gets mints.
 
@@ -691,7 +691,7 @@ namespace Example
 
             try
             {
-                // GetMints (current)
+                // Mints (current)
                 List<UniswapV3MintV3DTO> result = apiInstance.UniswapV3GetMintsCurrent(filterPoolId);
                 Debug.WriteLine(result);
             }
@@ -742,7 +742,7 @@ No authorization required
 
 > List&lt;UniswapV3MintV3DTO&gt; UniswapV3GetMintsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
 
-GetMints (historical)
+Mints (historical)
 
 Gets mints.
 
@@ -771,7 +771,7 @@ namespace Example
 
             try
             {
-                // GetMints (historical)
+                // Mints (historical)
                 List<UniswapV3MintV3DTO> result = apiInstance.UniswapV3GetMintsHistorical(startBlock, endBlock, startDate, endDate, poolId);
                 Debug.WriteLine(result);
             }
@@ -826,7 +826,7 @@ No authorization required
 
 > List&lt;UniswapV3PoolV3DTO&gt; UniswapV3GetPoolsCurrent (string filterPoolId = null)
 
-GetPools (current) 🔥
+Pools (current) 🔥
 
 Gets pools.
 
@@ -851,7 +851,7 @@ namespace Example
 
             try
             {
-                // GetPools (current) 🔥
+                // Pools (current) 🔥
                 List<UniswapV3PoolV3DTO> result = apiInstance.UniswapV3GetPoolsCurrent(filterPoolId);
                 Debug.WriteLine(result);
             }
@@ -902,7 +902,7 @@ No authorization required
 
 > List&lt;UniswapV3PoolDayDataV3DTO&gt; UniswapV3GetPoolsDayDataCurrent (string filterPoolId = null)
 
-GetPoolsDayData (current)
+PoolsDayData (current)
 
 Gets pools day data.
 
@@ -927,7 +927,7 @@ namespace Example
 
             try
             {
-                // GetPoolsDayData (current)
+                // PoolsDayData (current)
                 List<UniswapV3PoolDayDataV3DTO> result = apiInstance.UniswapV3GetPoolsDayDataCurrent(filterPoolId);
                 Debug.WriteLine(result);
             }
@@ -978,7 +978,7 @@ No authorization required
 
 > List&lt;UniswapV3PoolDayDataV3DTO&gt; UniswapV3GetPoolsDayDataHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
 
-GetPoolsDayData (historical)
+PoolsDayData (historical)
 
 Gets pools day data.
 
@@ -1007,7 +1007,7 @@ namespace Example
 
             try
             {
-                // GetPoolsDayData (historical)
+                // PoolsDayData (historical)
                 List<UniswapV3PoolDayDataV3DTO> result = apiInstance.UniswapV3GetPoolsDayDataHistorical(startBlock, endBlock, startDate, endDate, poolId);
                 Debug.WriteLine(result);
             }
@@ -1062,7 +1062,7 @@ No authorization required
 
 > List&lt;UniswapV3PoolV3DTO&gt; UniswapV3GetPoolsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
 
-GetPools (historical) 🔥
+Pools (historical) 🔥
 
 Gets pools.
 
@@ -1091,7 +1091,7 @@ namespace Example
 
             try
             {
-                // GetPools (historical) 🔥
+                // Pools (historical) 🔥
                 List<UniswapV3PoolV3DTO> result = apiInstance.UniswapV3GetPoolsHistorical(startBlock, endBlock, startDate, endDate, poolId);
                 Debug.WriteLine(result);
             }
@@ -1146,7 +1146,7 @@ No authorization required
 
 > List&lt;UniswapV3PoolHourDataV3DTO&gt; UniswapV3GetPoolsHourDataCurrent (string filterPoolId = null)
 
-GetPoolsHourData (current)
+PoolsHourData (current)
 
 Gets pools hour data.
 
@@ -1171,7 +1171,7 @@ namespace Example
 
             try
             {
-                // GetPoolsHourData (current)
+                // PoolsHourData (current)
                 List<UniswapV3PoolHourDataV3DTO> result = apiInstance.UniswapV3GetPoolsHourDataCurrent(filterPoolId);
                 Debug.WriteLine(result);
             }
@@ -1222,7 +1222,7 @@ No authorization required
 
 > List&lt;UniswapV3PoolHourDataV3DTO&gt; UniswapV3GetPoolsHourDataHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
 
-GetPoolsHourData (historical)
+PoolsHourData (historical)
 
 Gets pools hour data.
 
@@ -1251,7 +1251,7 @@ namespace Example
 
             try
             {
-                // GetPoolsHourData (historical)
+                // PoolsHourData (historical)
                 List<UniswapV3PoolHourDataV3DTO> result = apiInstance.UniswapV3GetPoolsHourDataHistorical(startBlock, endBlock, startDate, endDate, poolId);
                 Debug.WriteLine(result);
             }
@@ -1306,7 +1306,7 @@ No authorization required
 
 > List&lt;UniswapV3PositionV3DTO&gt; UniswapV3GetPositionsCurrent (string filterPoolId = null)
 
-GetPositions (current)
+Positions (current)
 
 Gets positions.
 
@@ -1331,7 +1331,7 @@ namespace Example
 
             try
             {
-                // GetPositions (current)
+                // Positions (current)
                 List<UniswapV3PositionV3DTO> result = apiInstance.UniswapV3GetPositionsCurrent(filterPoolId);
                 Debug.WriteLine(result);
             }
@@ -1382,7 +1382,7 @@ No authorization required
 
 > List&lt;UniswapV3PositionV3DTO&gt; UniswapV3GetPositionsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
 
-GetPositions (historical)
+Positions (historical)
 
 Gets positions.
 
@@ -1411,7 +1411,7 @@ namespace Example
 
             try
             {
-                // GetPositions (historical)
+                // Positions (historical)
                 List<UniswapV3PositionV3DTO> result = apiInstance.UniswapV3GetPositionsHistorical(startBlock, endBlock, startDate, endDate, poolId);
                 Debug.WriteLine(result);
             }
@@ -1466,7 +1466,7 @@ No authorization required
 
 > List&lt;UniswapV3PositionSnapshotV3DTO&gt; UniswapV3GetPositionsSnaphotsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
 
-GetPositionsSnaphots (historical)
+PositionsSnaphots (historical)
 
 Gets positions snapshots.
 
@@ -1495,7 +1495,7 @@ namespace Example
 
             try
             {
-                // GetPositionsSnaphots (historical)
+                // PositionsSnaphots (historical)
                 List<UniswapV3PositionSnapshotV3DTO> result = apiInstance.UniswapV3GetPositionsSnaphotsHistorical(startBlock, endBlock, startDate, endDate, poolId);
                 Debug.WriteLine(result);
             }
@@ -1550,7 +1550,7 @@ No authorization required
 
 > List&lt;UniswapV3PositionSnapshotV3DTO&gt; UniswapV3GetPositionsSnapshotsCurrent (string filterPoolId = null)
 
-GetPositionsSnapshots (current)
+PositionsSnapshots (current)
 
 Gets positions snapshots.
 
@@ -1575,7 +1575,7 @@ namespace Example
 
             try
             {
-                // GetPositionsSnapshots (current)
+                // PositionsSnapshots (current)
                 List<UniswapV3PositionSnapshotV3DTO> result = apiInstance.UniswapV3GetPositionsSnapshotsCurrent(filterPoolId);
                 Debug.WriteLine(result);
             }
@@ -1626,7 +1626,7 @@ No authorization required
 
 > List&lt;UniswapV3SwapV3DTO&gt; UniswapV3GetSwapsCurrent (string filterPoolId = null)
 
-GetSwaps (current) 🔥
+Swaps (current) 🔥
 
 Gets swaps.
 
@@ -1651,7 +1651,7 @@ namespace Example
 
             try
             {
-                // GetSwaps (current) 🔥
+                // Swaps (current) 🔥
                 List<UniswapV3SwapV3DTO> result = apiInstance.UniswapV3GetSwapsCurrent(filterPoolId);
                 Debug.WriteLine(result);
             }
@@ -1702,7 +1702,7 @@ No authorization required
 
 > List&lt;UniswapV3SwapV3DTO&gt; UniswapV3GetSwapsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
 
-GetSwaps (historical) 🔥
+Swaps (historical) 🔥
 
 Gets swaps.
 
@@ -1731,7 +1731,7 @@ namespace Example
 
             try
             {
-                // GetSwaps (historical) 🔥
+                // Swaps (historical) 🔥
                 List<UniswapV3SwapV3DTO> result = apiInstance.UniswapV3GetSwapsHistorical(startBlock, endBlock, startDate, endDate, poolId);
                 Debug.WriteLine(result);
             }
@@ -1786,7 +1786,7 @@ No authorization required
 
 > List&lt;UniswapV3TickV3DTO&gt; UniswapV3GetTicksCurrent (string filterPoolId = null)
 
-GetTicks (current)
+Ticks (current)
 
 Gets ticks.
 
@@ -1811,7 +1811,7 @@ namespace Example
 
             try
             {
-                // GetTicks (current)
+                // Ticks (current)
                 List<UniswapV3TickV3DTO> result = apiInstance.UniswapV3GetTicksCurrent(filterPoolId);
                 Debug.WriteLine(result);
             }
@@ -1862,7 +1862,7 @@ No authorization required
 
 > List&lt;UniswapV3TickDayDataV3DTO&gt; UniswapV3GetTicksDayDataCurrent (string filterPoolId = null)
 
-GetTicksDayData (current)
+TicksDayData (current)
 
 Gets ticks day data.
 
@@ -1887,7 +1887,7 @@ namespace Example
 
             try
             {
-                // GetTicksDayData (current)
+                // TicksDayData (current)
                 List<UniswapV3TickDayDataV3DTO> result = apiInstance.UniswapV3GetTicksDayDataCurrent(filterPoolId);
                 Debug.WriteLine(result);
             }
@@ -1938,7 +1938,7 @@ No authorization required
 
 > List&lt;UniswapV3TickDayDataV3DTO&gt; UniswapV3GetTicksDayDataHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
 
-GetTicksDayData (historical)
+TicksDayData (historical)
 
 Gets ticks day data.
 
@@ -1967,7 +1967,7 @@ namespace Example
 
             try
             {
-                // GetTicksDayData (historical)
+                // TicksDayData (historical)
                 List<UniswapV3TickDayDataV3DTO> result = apiInstance.UniswapV3GetTicksDayDataHistorical(startBlock, endBlock, startDate, endDate, poolId);
                 Debug.WriteLine(result);
             }
@@ -2022,7 +2022,7 @@ No authorization required
 
 > List&lt;UniswapV3TickV3DTO&gt; UniswapV3GetTicksHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
 
-GetTicks (historical)
+Ticks (historical)
 
 Gets ticks.
 
@@ -2051,7 +2051,7 @@ namespace Example
 
             try
             {
-                // GetTicks (historical)
+                // Ticks (historical)
                 List<UniswapV3TickV3DTO> result = apiInstance.UniswapV3GetTicksHistorical(startBlock, endBlock, startDate, endDate, poolId);
                 Debug.WriteLine(result);
             }
@@ -2106,7 +2106,7 @@ No authorization required
 
 > List&lt;UniswapV3TokenV3DTO&gt; UniswapV3GetTokensCurrent (string filterTokenId = null)
 
-GetTokens (current) 🔥
+Tokens (current) 🔥
 
 Gets tokens.
 
@@ -2131,7 +2131,7 @@ namespace Example
 
             try
             {
-                // GetTokens (current) 🔥
+                // Tokens (current) 🔥
                 List<UniswapV3TokenV3DTO> result = apiInstance.UniswapV3GetTokensCurrent(filterTokenId);
                 Debug.WriteLine(result);
             }
@@ -2182,7 +2182,7 @@ No authorization required
 
 > List&lt;UniswapV3TokenV3DayDataDTO&gt; UniswapV3GetTokensDayDataCurrent (string filterTokenId = null)
 
-GetTokensDayData (current)
+TokensDayData (current)
 
 Gets tokens day data.
 
@@ -2207,7 +2207,7 @@ namespace Example
 
             try
             {
-                // GetTokensDayData (current)
+                // TokensDayData (current)
                 List<UniswapV3TokenV3DayDataDTO> result = apiInstance.UniswapV3GetTokensDayDataCurrent(filterTokenId);
                 Debug.WriteLine(result);
             }
@@ -2258,7 +2258,7 @@ No authorization required
 
 > List&lt;UniswapV3TokenV3DayDataDTO&gt; UniswapV3GetTokensDayDataHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string tokenId = null)
 
-GetTokensDayData (historical)
+TokensDayData (historical)
 
 Gets tokens day data.
 
@@ -2287,7 +2287,7 @@ namespace Example
 
             try
             {
-                // GetTokensDayData (historical)
+                // TokensDayData (historical)
                 List<UniswapV3TokenV3DayDataDTO> result = apiInstance.UniswapV3GetTokensDayDataHistorical(startBlock, endBlock, startDate, endDate, tokenId);
                 Debug.WriteLine(result);
             }
@@ -2342,7 +2342,7 @@ No authorization required
 
 > List&lt;UniswapV3TokenV3DTO&gt; UniswapV3GetTokensHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string tokenId = null)
 
-GetTokens (historical) 🔥
+Tokens (historical) 🔥
 
 Gets tokens.
 
@@ -2371,7 +2371,7 @@ namespace Example
 
             try
             {
-                // GetTokens (historical) 🔥
+                // Tokens (historical) 🔥
                 List<UniswapV3TokenV3DTO> result = apiInstance.UniswapV3GetTokensHistorical(startBlock, endBlock, startDate, endDate, tokenId);
                 Debug.WriteLine(result);
             }
@@ -2426,7 +2426,7 @@ No authorization required
 
 > List&lt;UniswapV3TokenHourDataV3DTO&gt; UniswapV3GetTokensHourDataCurrent (string filterTokenId = null)
 
-GetTokensHourData (current)
+TokensHourData (current)
 
 Gets tokens hour data.
 
@@ -2451,7 +2451,7 @@ namespace Example
 
             try
             {
-                // GetTokensHourData (current)
+                // TokensHourData (current)
                 List<UniswapV3TokenHourDataV3DTO> result = apiInstance.UniswapV3GetTokensHourDataCurrent(filterTokenId);
                 Debug.WriteLine(result);
             }
@@ -2502,7 +2502,7 @@ No authorization required
 
 > List&lt;UniswapV3TokenHourDataV3DTO&gt; UniswapV3GetTokensHourDataHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string tokenId = null)
 
-GetTokensHourData (historical)
+TokensHourData (historical)
 
 Gets tokens hour data.
 
@@ -2531,7 +2531,7 @@ namespace Example
 
             try
             {
-                // GetTokensHourData (historical)
+                // TokensHourData (historical)
                 List<UniswapV3TokenHourDataV3DTO> result = apiInstance.UniswapV3GetTokensHourDataHistorical(startBlock, endBlock, startDate, endDate, tokenId);
                 Debug.WriteLine(result);
             }
@@ -2586,7 +2586,7 @@ No authorization required
 
 > List&lt;UniswapV3TransactionV3DTO&gt; UniswapV3GetTransactionsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
 
-GetTransactions (historical)
+Transactions (historical)
 
 Gets transactions.
 
@@ -2614,7 +2614,7 @@ namespace Example
 
             try
             {
-                // GetTransactions (historical)
+                // Transactions (historical)
                 List<UniswapV3TransactionV3DTO> result = apiInstance.UniswapV3GetTransactionsHistorical(startBlock, endBlock, startDate, endDate);
                 Debug.WriteLine(result);
             }

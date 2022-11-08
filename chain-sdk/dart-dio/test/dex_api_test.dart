@@ -7,7 +7,7 @@ void main() {
   final instance = Openapi().getDexApi();
 
   group(DexApi, () {
-    // GetBatches (historical)
+    // Batches (historical)
     //
     // Gets batches.
     //
@@ -16,7 +16,7 @@ void main() {
       // TODO
     });
 
-    // GetDeposits (historical)
+    // Deposits (historical)
     //
     // Gets deposits.
     //
@@ -25,7 +25,7 @@ void main() {
       // TODO
     });
 
-    // GetOrders (historical)
+    // Orders (historical)
     //
     // Gets orders.
     //
@@ -34,7 +34,7 @@ void main() {
       // TODO
     });
 
-    // GetPrices (historical)
+    // Prices (historical)
     //
     // Gets prices.
     //
@@ -43,7 +43,7 @@ void main() {
       // TODO
     });
 
-    // GetSolutions (historical)
+    // Solutions (historical)
     //
     // Gets solutions.
     //
@@ -52,7 +52,7 @@ void main() {
       // TODO
     });
 
-    // GetStats (historical)
+    // Stats (historical)
     //
     // Gets stats.
     //
@@ -61,7 +61,7 @@ void main() {
       // TODO
     });
 
-    // GetTokens (historical) 🔥
+    // Tokens (historical) 🔥
     //
     // Gets tokens.
     //
@@ -70,7 +70,7 @@ void main() {
       // TODO
     });
 
-    // GetTrades (historical) 🔥
+    // Trades (historical) 🔥
     //
     // Gets trades.
     //
@@ -79,7 +79,7 @@ void main() {
       // TODO
     });
 
-    // GetUsers (historical)
+    // Users (historical)
     //
     // Gets users.
     //
@@ -88,7 +88,7 @@ void main() {
       // TODO
     });
 
-    // GetWithdraws (historical)
+    // Withdraws (historical)
     //
     // Gets withdraws.
     //
@@ -97,7 +97,7 @@ void main() {
       // TODO
     });
 
-    // GetWithdrawsRequests (historical)
+    // WithdrawsRequests (historical)
     //
     // Gets withdraws requests.
     //

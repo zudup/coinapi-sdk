@@ -33,7 +33,7 @@ describe 'SushiswapApi' do
   end
 
   # unit tests for curve_get_exchanges__current
-  # GetExchanges (current) 🔥
+  # Exchanges (current) 🔥
   # Gets exchanges.
   # @param [Hash] opts the optional parameters
   # @return [Array<CurveExchangeDTO>]
@@ -44,7 +44,7 @@ describe 'SushiswapApi' do
   end
 
   # unit tests for dex_get_trades__current
-  # GetTrades (current) 🔥
+  # Trades (current) 🔥
   # Gets trades.
   # @param [Hash] opts the optional parameters
   # @return [Array<DexTradeDTO>]
@@ -55,7 +55,7 @@ describe 'SushiswapApi' do
   end
 
   # unit tests for sushiswap_get_bundles__historical
-  # GetBundles (historical)
+  # Bundles (historical)
   # Gets bundles.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block AAAAAAAAAA
@@ -70,7 +70,7 @@ describe 'SushiswapApi' do
   end
 
   # unit tests for sushiswap_get_burns__historical
-  # GetBurns (historical)
+  # Burns (historical)
   # Gets burns.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -86,7 +86,7 @@ describe 'SushiswapApi' do
   end
 
   # unit tests for sushiswap_get_day_data__historical
-  # GetDayData (historical)
+  # DayData (historical)
   # Gets day data.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -101,7 +101,7 @@ describe 'SushiswapApi' do
   end
 
   # unit tests for sushiswap_get_factory__historical
-  # GetFactory (historical)
+  # Factory (historical)
   # Gets factory.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -116,7 +116,7 @@ describe 'SushiswapApi' do
   end
 
   # unit tests for sushiswap_get_hour_data__historical
-  # GetHourData (historical)
+  # HourData (historical)
   # Gets hour data.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -131,7 +131,7 @@ describe 'SushiswapApi' do
   end
 
   # unit tests for sushiswap_get_liquidity_position__historical
-  # GetLiquidityPosition (historical)
+  # LiquidityPosition (historical)
   # Gets liquidity position.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -147,7 +147,7 @@ describe 'SushiswapApi' do
   end
 
   # unit tests for sushiswap_get_liquidity_position_snapshot__historical
-  # GetLiquidityPositionSnapshot (historical)
+  # LiquidityPositionSnapshot (historical)
   # Gets liquidity position snapshot.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -163,7 +163,7 @@ describe 'SushiswapApi' do
   end
 
   # unit tests for sushiswap_get_mints__historical
-  # GetMints (historical)
+  # Mints (historical)
   # Gets mints.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -179,7 +179,7 @@ describe 'SushiswapApi' do
   end
 
   # unit tests for sushiswap_get_pools__current
-  # GetPools (current) 🔥
+  # Pools (current) 🔥
   # Gets pools.
   # @param [Hash] opts the optional parameters
   # @return [Array<SushiswapPairDTO>]
@@ -190,7 +190,7 @@ describe 'SushiswapApi' do
   end
 
   # unit tests for sushiswap_get_pools__historical
-  # GetPools (historical) 🔥
+  # Pools (historical) 🔥
   # Gets list of pools for given filters.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -206,7 +206,7 @@ describe 'SushiswapApi' do
   end
 
   # unit tests for sushiswap_get_pools_day_data__historical
-  # GetPoolsDayData (historical)
+  # PoolsDayData (historical)
   # Gets pools day data.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -222,7 +222,7 @@ describe 'SushiswapApi' do
   end
 
   # unit tests for sushiswap_get_pools_hour_data__historical
-  # GetPoolsHourData (historical)
+  # PoolsHourData (historical)
   # Gets pools tracked each our.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -238,7 +238,7 @@ describe 'SushiswapApi' do
   end
 
   # unit tests for sushiswap_get_swaps__current
-  # GetSwaps (current) 🔥
+  # Swaps (current) 🔥
   # Gets swaps.
   # @param [Hash] opts the optional parameters
   # @return [Array<SushiswapSwapDTO>]
@@ -249,7 +249,7 @@ describe 'SushiswapApi' do
   end
 
   # unit tests for sushiswap_get_swaps__historical
-  # GetSwaps (historical) 🔥
+  # Swaps (historical) 🔥
   # Gets list of swaps for given filters.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -265,7 +265,7 @@ describe 'SushiswapApi' do
   end
 
   # unit tests for sushiswap_get_tokens__current
-  # GetTokens (current) 🔥
+  # Tokens (current) 🔥
   # Gets tokens.
   # @param [Hash] opts the optional parameters
   # @return [Array<SushiswapTokenDTO>]
@@ -276,7 +276,7 @@ describe 'SushiswapApi' do
   end
 
   # unit tests for sushiswap_get_tokens__historical
-  # GetTokens (historical) 🔥
+  # Tokens (historical) 🔥
   # Gets list of tokens for given filters.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -292,7 +292,7 @@ describe 'SushiswapApi' do
   end
 
   # unit tests for sushiswap_get_tokens_day_data__historical
-  # GetTokensDayData (historical)
+  # TokensDayData (historical)
   # Gets tokens day data.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -308,7 +308,7 @@ describe 'SushiswapApi' do
   end
 
   # unit tests for sushiswap_get_transactions__historical
-  # GetTransactions (historical)
+  # Transactions (historical)
   # Gets transactions.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 
@@ -323,7 +323,7 @@ describe 'SushiswapApi' do
   end
 
   # unit tests for sushiswap_get_users__historical
-  # GetUsers (historical)
+  # Users (historical)
   # Gets users.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block 

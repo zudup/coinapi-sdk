@@ -21,7 +21,7 @@ from .. import ApiTestMixin
 class TestDappsDexDepositsHistorical(ApiTestMixin, unittest.TestCase):
     """
     DappsDexDepositsHistorical unit test stubs
-        GetDeposits (historical)  # noqa: E501
+        Deposits (historical)  # noqa: E501
     """
     _configuration = configuration.Configuration()
 

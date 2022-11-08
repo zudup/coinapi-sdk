@@ -4,11 +4,11 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**cowGetOrdersHistorical**](CowApi.md#cowGetOrdersHistorical) | **GET** /dapps/cow/orders/historical | GetOrders (historical)
-[**cowGetSettlementsHistorical**](CowApi.md#cowGetSettlementsHistorical) | **GET** /dapps/cow/settlements/historical | GetSettlements (historical)
-[**cowGetTokensHistorical**](CowApi.md#cowGetTokensHistorical) | **GET** /dapps/cow/tokens/historical | GetTokens (historical) 🔥
-[**cowGetTradesHistorical**](CowApi.md#cowGetTradesHistorical) | **GET** /dapps/cow/trades/historical | GetTrades (historical) 🔥
-[**cowGetUsersHistorical**](CowApi.md#cowGetUsersHistorical) | **GET** /dapps/cow/users/historical | GetUsers (historical)
+[**cowGetOrdersHistorical**](CowApi.md#cowGetOrdersHistorical) | **GET** /dapps/cow/orders/historical | Orders (historical)
+[**cowGetSettlementsHistorical**](CowApi.md#cowGetSettlementsHistorical) | **GET** /dapps/cow/settlements/historical | Settlements (historical)
+[**cowGetTokensHistorical**](CowApi.md#cowGetTokensHistorical) | **GET** /dapps/cow/tokens/historical | Tokens (historical) 🔥
+[**cowGetTradesHistorical**](CowApi.md#cowGetTradesHistorical) | **GET** /dapps/cow/trades/historical | Trades (historical) 🔥
+[**cowGetUsersHistorical**](CowApi.md#cowGetUsersHistorical) | **GET** /dapps/cow/users/historical | Users (historical)
 
 
 
@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 > [CowOrderDTO] cowGetOrdersHistorical(opts)
 
-GetOrders (historical)
+Orders (historical)
 
 Gets orders.
 
@@ -69,7 +69,7 @@ No authorization required
 
 > [CowSettlementDTO] cowGetSettlementsHistorical(opts)
 
-GetSettlements (historical)
+Settlements (historical)
 
 Gets settlements.
 
@@ -122,7 +122,7 @@ No authorization required
 
 > [CowTokenDTO] cowGetTokensHistorical(opts)
 
-GetTokens (historical) 🔥
+Tokens (historical) 🔥
 
 Gets tokens.
 
@@ -177,7 +177,7 @@ No authorization required
 
 > [CowTradeDTO] cowGetTradesHistorical(opts)
 
-GetTrades (historical) 🔥
+Trades (historical) 🔥
 
 Gets trades.
 
@@ -230,7 +230,7 @@ No authorization required
 
 > [CowUserDTO] cowGetUsersHistorical(opts)
 
-GetUsers (historical)
+Users (historical)
 
 Gets users.
 

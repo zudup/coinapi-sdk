@@ -14,7 +14,7 @@
 #'
 #' @section Methods:
 #' \describe{
-#' \strong{ CurveGetExchangesCurrent } \emph{ GetExchanges (current) 🔥 }
+#' \strong{ CurveGetExchangesCurrent } \emph{ Exchanges (current) 🔥 }
 #' Gets exchanges.
 #'
 #' \itemize{
@@ -30,7 +30,7 @@
 #' }
 #' }
 #'
-#' \strong{ DexGetTradesCurrent } \emph{ GetTrades (current) 🔥 }
+#' \strong{ DexGetTradesCurrent } \emph{ Trades (current) 🔥 }
 #' Gets trades.
 #'
 #' \itemize{
@@ -46,7 +46,7 @@
 #' }
 #' }
 #'
-#' \strong{ SushiswapGetBundlesHistorical } \emph{ GetBundles (historical) }
+#' \strong{ SushiswapGetBundlesHistorical } \emph{ Bundles (historical) }
 #' Gets bundles.
 #'
 #' \itemize{
@@ -66,7 +66,7 @@
 #' }
 #' }
 #'
-#' \strong{ SushiswapGetBurnsHistorical } \emph{ GetBurns (historical) }
+#' \strong{ SushiswapGetBurnsHistorical } \emph{ Burns (historical) }
 #' Gets burns.
 #'
 #' \itemize{
@@ -87,7 +87,7 @@
 #' }
 #' }
 #'
-#' \strong{ SushiswapGetDayDataHistorical } \emph{ GetDayData (historical) }
+#' \strong{ SushiswapGetDayDataHistorical } \emph{ DayData (historical) }
 #' Gets day data.
 #'
 #' \itemize{
@@ -107,7 +107,7 @@
 #' }
 #' }
 #'
-#' \strong{ SushiswapGetFactoryHistorical } \emph{ GetFactory (historical) }
+#' \strong{ SushiswapGetFactoryHistorical } \emph{ Factory (historical) }
 #' Gets factory.
 #'
 #' \itemize{
@@ -127,7 +127,7 @@
 #' }
 #' }
 #'
-#' \strong{ SushiswapGetHourDataHistorical } \emph{ GetHourData (historical) }
+#' \strong{ SushiswapGetHourDataHistorical } \emph{ HourData (historical) }
 #' Gets hour data.
 #'
 #' \itemize{
@@ -147,7 +147,7 @@
 #' }
 #' }
 #'
-#' \strong{ SushiswapGetLiquidityPositionHistorical } \emph{ GetLiquidityPosition (historical) }
+#' \strong{ SushiswapGetLiquidityPositionHistorical } \emph{ LiquidityPosition (historical) }
 #' Gets liquidity position.
 #'
 #' \itemize{
@@ -168,7 +168,7 @@
 #' }
 #' }
 #'
-#' \strong{ SushiswapGetLiquidityPositionSnapshotHistorical } \emph{ GetLiquidityPositionSnapshot (historical) }
+#' \strong{ SushiswapGetLiquidityPositionSnapshotHistorical } \emph{ LiquidityPositionSnapshot (historical) }
 #' Gets liquidity position snapshot.
 #'
 #' \itemize{
@@ -189,7 +189,7 @@
 #' }
 #' }
 #'
-#' \strong{ SushiswapGetMintsHistorical } \emph{ GetMints (historical) }
+#' \strong{ SushiswapGetMintsHistorical } \emph{ Mints (historical) }
 #' Gets mints.
 #'
 #' \itemize{
@@ -210,7 +210,7 @@
 #' }
 #' }
 #'
-#' \strong{ SushiswapGetPoolsCurrent } \emph{ GetPools (current) 🔥 }
+#' \strong{ SushiswapGetPoolsCurrent } \emph{ Pools (current) 🔥 }
 #' Gets pools.
 #'
 #' \itemize{
@@ -226,7 +226,7 @@
 #' }
 #' }
 #'
-#' \strong{ SushiswapGetPoolsDayDataHistorical } \emph{ GetPoolsDayData (historical) }
+#' \strong{ SushiswapGetPoolsDayDataHistorical } \emph{ PoolsDayData (historical) }
 #' Gets pools day data.
 #'
 #' \itemize{
@@ -247,7 +247,7 @@
 #' }
 #' }
 #'
-#' \strong{ SushiswapGetPoolsHistorical } \emph{ GetPools (historical) 🔥 }
+#' \strong{ SushiswapGetPoolsHistorical } \emph{ Pools (historical) 🔥 }
 #' Gets list of pools for given filters.
 #'
 #' \itemize{
@@ -268,7 +268,7 @@
 #' }
 #' }
 #'
-#' \strong{ SushiswapGetPoolsHourDataHistorical } \emph{ GetPoolsHourData (historical) }
+#' \strong{ SushiswapGetPoolsHourDataHistorical } \emph{ PoolsHourData (historical) }
 #' Gets pools tracked each our.
 #'
 #' \itemize{
@@ -289,7 +289,7 @@
 #' }
 #' }
 #'
-#' \strong{ SushiswapGetSwapsCurrent } \emph{ GetSwaps (current) 🔥 }
+#' \strong{ SushiswapGetSwapsCurrent } \emph{ Swaps (current) 🔥 }
 #' Gets swaps.
 #'
 #' \itemize{
@@ -305,7 +305,7 @@
 #' }
 #' }
 #'
-#' \strong{ SushiswapGetSwapsHistorical } \emph{ GetSwaps (historical) 🔥 }
+#' \strong{ SushiswapGetSwapsHistorical } \emph{ Swaps (historical) 🔥 }
 #' Gets list of swaps for given filters.
 #'
 #' \itemize{
@@ -326,7 +326,7 @@
 #' }
 #' }
 #'
-#' \strong{ SushiswapGetTokensCurrent } \emph{ GetTokens (current) 🔥 }
+#' \strong{ SushiswapGetTokensCurrent } \emph{ Tokens (current) 🔥 }
 #' Gets tokens.
 #'
 #' \itemize{
@@ -342,7 +342,7 @@
 #' }
 #' }
 #'
-#' \strong{ SushiswapGetTokensDayDataHistorical } \emph{ GetTokensDayData (historical) }
+#' \strong{ SushiswapGetTokensDayDataHistorical } \emph{ TokensDayData (historical) }
 #' Gets tokens day data.
 #'
 #' \itemize{
@@ -363,7 +363,7 @@
 #' }
 #' }
 #'
-#' \strong{ SushiswapGetTokensHistorical } \emph{ GetTokens (historical) 🔥 }
+#' \strong{ SushiswapGetTokensHistorical } \emph{ Tokens (historical) 🔥 }
 #' Gets list of tokens for given filters.
 #'
 #' \itemize{
@@ -384,7 +384,7 @@
 #' }
 #' }
 #'
-#' \strong{ SushiswapGetTransactionsHistorical } \emph{ GetTransactions (historical) }
+#' \strong{ SushiswapGetTransactionsHistorical } \emph{ Transactions (historical) }
 #' Gets transactions.
 #'
 #' \itemize{
@@ -404,7 +404,7 @@
 #' }
 #' }
 #'
-#' \strong{ SushiswapGetUsersHistorical } \emph{ GetUsers (historical) }
+#' \strong{ SushiswapGetUsersHistorical } \emph{ Users (historical) }
 #' Gets users.
 #'
 #' \itemize{
@@ -433,7 +433,7 @@
 #'
 #' library(openapi)
 #'
-#' #GetExchanges (current) 🔥
+#' #Exchanges (current) 🔥
 #' api_instance <- SushiswapApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -446,7 +446,7 @@
 #'
 #' library(openapi)
 #'
-#' #GetTrades (current) 🔥
+#' #Trades (current) 🔥
 #' api_instance <- SushiswapApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -463,7 +463,7 @@
 #' var_start_date <- "start_date_example" # character | CCCCCCCCC (Optional)
 #' var_end_date <- "end_date_example" # character | DDDDDDDDDDD (Optional)
 #'
-#' #GetBundles (historical)
+#' #Bundles (historical)
 #' api_instance <- SushiswapApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -481,7 +481,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
-#' #GetBurns (historical)
+#' #Burns (historical)
 #' api_instance <- SushiswapApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -498,7 +498,7 @@
 #' var_start_date <- "start_date_example" # character |  (Optional)
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #'
-#' #GetDayData (historical)
+#' #DayData (historical)
 #' api_instance <- SushiswapApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -515,7 +515,7 @@
 #' var_start_date <- "start_date_example" # character |  (Optional)
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #'
-#' #GetFactory (historical)
+#' #Factory (historical)
 #' api_instance <- SushiswapApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -532,7 +532,7 @@
 #' var_start_date <- "start_date_example" # character |  (Optional)
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #'
-#' #GetHourData (historical)
+#' #HourData (historical)
 #' api_instance <- SushiswapApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -550,7 +550,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
-#' #GetLiquidityPosition (historical)
+#' #LiquidityPosition (historical)
 #' api_instance <- SushiswapApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -568,7 +568,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
-#' #GetLiquidityPositionSnapshot (historical)
+#' #LiquidityPositionSnapshot (historical)
 #' api_instance <- SushiswapApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -586,7 +586,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
-#' #GetMints (historical)
+#' #Mints (historical)
 #' api_instance <- SushiswapApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -599,7 +599,7 @@
 #'
 #' library(openapi)
 #'
-#' #GetPools (current) 🔥
+#' #Pools (current) 🔥
 #' api_instance <- SushiswapApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -617,7 +617,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
-#' #GetPoolsDayData (historical)
+#' #PoolsDayData (historical)
 #' api_instance <- SushiswapApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -635,7 +635,7 @@
 #' var_end_date <- "end_date_example" # character | The end date of timeframe (Optional)
 #' var_pool_id <- "pool_id_example" # character | The pool address. (Optional)
 #'
-#' #GetPools (historical) 🔥
+#' #Pools (historical) 🔥
 #' api_instance <- SushiswapApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -653,7 +653,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_pool_id <- "pool_id_example" # character |  (Optional)
 #'
-#' #GetPoolsHourData (historical)
+#' #PoolsHourData (historical)
 #' api_instance <- SushiswapApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -666,7 +666,7 @@
 #'
 #' library(openapi)
 #'
-#' #GetSwaps (current) 🔥
+#' #Swaps (current) 🔥
 #' api_instance <- SushiswapApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -684,7 +684,7 @@
 #' var_end_date <- "end_date_example" # character | The end date of timeframe (Optional)
 #' var_pool_id <- "pool_id_example" # character | The pool address. (Optional)
 #'
-#' #GetSwaps (historical) 🔥
+#' #Swaps (historical) 🔥
 #' api_instance <- SushiswapApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -697,7 +697,7 @@
 #'
 #' library(openapi)
 #'
-#' #GetTokens (current) 🔥
+#' #Tokens (current) 🔥
 #' api_instance <- SushiswapApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -715,7 +715,7 @@
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #' var_token_id <- "token_id_example" # character |  (Optional)
 #'
-#' #GetTokensDayData (historical)
+#' #TokensDayData (historical)
 #' api_instance <- SushiswapApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -733,7 +733,7 @@
 #' var_end_date <- "end_date_example" # character | The end date of timeframe (Optional)
 #' var_token_id <- "token_id_example" # character | The token address. (Optional)
 #'
-#' #GetTokens (historical) 🔥
+#' #Tokens (historical) 🔥
 #' api_instance <- SushiswapApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -750,7 +750,7 @@
 #' var_start_date <- "start_date_example" # character |  (Optional)
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #'
-#' #GetTransactions (historical)
+#' #Transactions (historical)
 #' api_instance <- SushiswapApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -767,7 +767,7 @@
 #' var_start_date <- "start_date_example" # character |  (Optional)
 #' var_end_date <- "end_date_example" # character |  (Optional)
 #'
-#' #GetUsers (historical)
+#' #Users (historical)
 #' api_instance <- SushiswapApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
@@ -798,10 +798,10 @@ SushiswapApi <- R6::R6Class(
         self$api_client <- ApiClient$new()
       }
     },
-    #' GetExchanges (current) 🔥
+    #' Exchanges (current) 🔥
     #'
     #' @description
-    #' GetExchanges (current) 🔥
+    #' Exchanges (current) 🔥
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
@@ -819,10 +819,10 @@ SushiswapApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetExchanges (current) 🔥
+    #' Exchanges (current) 🔥
     #'
     #' @description
-    #' GetExchanges (current) 🔥
+    #' Exchanges (current) 🔥
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
@@ -884,10 +884,10 @@ SushiswapApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetTrades (current) 🔥
+    #' Trades (current) 🔥
     #'
     #' @description
-    #' GetTrades (current) 🔥
+    #' Trades (current) 🔥
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
@@ -905,10 +905,10 @@ SushiswapApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetTrades (current) 🔥
+    #' Trades (current) 🔥
     #'
     #' @description
-    #' GetTrades (current) 🔥
+    #' Trades (current) 🔥
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
@@ -970,10 +970,10 @@ SushiswapApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetBundles (historical)
+    #' Bundles (historical)
     #'
     #' @description
-    #' GetBundles (historical)
+    #' Bundles (historical)
     #'
     #' @param start_block (optional) AAAAAAAAAA
     #' @param end_block (optional) BBBBBBBBBBBB
@@ -995,10 +995,10 @@ SushiswapApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetBundles (historical)
+    #' Bundles (historical)
     #'
     #' @description
-    #' GetBundles (historical)
+    #' Bundles (historical)
     #'
     #' @param start_block (optional) AAAAAAAAAA
     #' @param end_block (optional) BBBBBBBBBBBB
@@ -1076,10 +1076,10 @@ SushiswapApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetBurns (historical)
+    #' Burns (historical)
     #'
     #' @description
-    #' GetBurns (historical)
+    #' Burns (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -1102,10 +1102,10 @@ SushiswapApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetBurns (historical)
+    #' Burns (historical)
     #'
     #' @description
-    #' GetBurns (historical)
+    #' Burns (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -1187,10 +1187,10 @@ SushiswapApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetDayData (historical)
+    #' DayData (historical)
     #'
     #' @description
-    #' GetDayData (historical)
+    #' DayData (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -1212,10 +1212,10 @@ SushiswapApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetDayData (historical)
+    #' DayData (historical)
     #'
     #' @description
-    #' GetDayData (historical)
+    #' DayData (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -1293,10 +1293,10 @@ SushiswapApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetFactory (historical)
+    #' Factory (historical)
     #'
     #' @description
-    #' GetFactory (historical)
+    #' Factory (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -1318,10 +1318,10 @@ SushiswapApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetFactory (historical)
+    #' Factory (historical)
     #'
     #' @description
-    #' GetFactory (historical)
+    #' Factory (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -1399,10 +1399,10 @@ SushiswapApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetHourData (historical)
+    #' HourData (historical)
     #'
     #' @description
-    #' GetHourData (historical)
+    #' HourData (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -1424,10 +1424,10 @@ SushiswapApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetHourData (historical)
+    #' HourData (historical)
     #'
     #' @description
-    #' GetHourData (historical)
+    #' HourData (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -1505,10 +1505,10 @@ SushiswapApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetLiquidityPosition (historical)
+    #' LiquidityPosition (historical)
     #'
     #' @description
-    #' GetLiquidityPosition (historical)
+    #' LiquidityPosition (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -1531,10 +1531,10 @@ SushiswapApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetLiquidityPosition (historical)
+    #' LiquidityPosition (historical)
     #'
     #' @description
-    #' GetLiquidityPosition (historical)
+    #' LiquidityPosition (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -1616,10 +1616,10 @@ SushiswapApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetLiquidityPositionSnapshot (historical)
+    #' LiquidityPositionSnapshot (historical)
     #'
     #' @description
-    #' GetLiquidityPositionSnapshot (historical)
+    #' LiquidityPositionSnapshot (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -1642,10 +1642,10 @@ SushiswapApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetLiquidityPositionSnapshot (historical)
+    #' LiquidityPositionSnapshot (historical)
     #'
     #' @description
-    #' GetLiquidityPositionSnapshot (historical)
+    #' LiquidityPositionSnapshot (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -1727,10 +1727,10 @@ SushiswapApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetMints (historical)
+    #' Mints (historical)
     #'
     #' @description
-    #' GetMints (historical)
+    #' Mints (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -1753,10 +1753,10 @@ SushiswapApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetMints (historical)
+    #' Mints (historical)
     #'
     #' @description
-    #' GetMints (historical)
+    #' Mints (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -1838,10 +1838,10 @@ SushiswapApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetPools (current) 🔥
+    #' Pools (current) 🔥
     #'
     #' @description
-    #' GetPools (current) 🔥
+    #' Pools (current) 🔥
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
@@ -1859,10 +1859,10 @@ SushiswapApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetPools (current) 🔥
+    #' Pools (current) 🔥
     #'
     #' @description
-    #' GetPools (current) 🔥
+    #' Pools (current) 🔥
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
@@ -1924,10 +1924,10 @@ SushiswapApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetPoolsDayData (historical)
+    #' PoolsDayData (historical)
     #'
     #' @description
-    #' GetPoolsDayData (historical)
+    #' PoolsDayData (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -1950,10 +1950,10 @@ SushiswapApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetPoolsDayData (historical)
+    #' PoolsDayData (historical)
     #'
     #' @description
-    #' GetPoolsDayData (historical)
+    #' PoolsDayData (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -2035,10 +2035,10 @@ SushiswapApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetPools (historical) 🔥
+    #' Pools (historical) 🔥
     #'
     #' @description
-    #' GetPools (historical) 🔥
+    #' Pools (historical) 🔥
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2061,10 +2061,10 @@ SushiswapApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetPools (historical) 🔥
+    #' Pools (historical) 🔥
     #'
     #' @description
-    #' GetPools (historical) 🔥
+    #' Pools (historical) 🔥
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2146,10 +2146,10 @@ SushiswapApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetPoolsHourData (historical)
+    #' PoolsHourData (historical)
     #'
     #' @description
-    #' GetPoolsHourData (historical)
+    #' PoolsHourData (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -2172,10 +2172,10 @@ SushiswapApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetPoolsHourData (historical)
+    #' PoolsHourData (historical)
     #'
     #' @description
-    #' GetPoolsHourData (historical)
+    #' PoolsHourData (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -2257,10 +2257,10 @@ SushiswapApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetSwaps (current) 🔥
+    #' Swaps (current) 🔥
     #'
     #' @description
-    #' GetSwaps (current) 🔥
+    #' Swaps (current) 🔥
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
@@ -2278,10 +2278,10 @@ SushiswapApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetSwaps (current) 🔥
+    #' Swaps (current) 🔥
     #'
     #' @description
-    #' GetSwaps (current) 🔥
+    #' Swaps (current) 🔥
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
@@ -2343,10 +2343,10 @@ SushiswapApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetSwaps (historical) 🔥
+    #' Swaps (historical) 🔥
     #'
     #' @description
-    #' GetSwaps (historical) 🔥
+    #' Swaps (historical) 🔥
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2369,10 +2369,10 @@ SushiswapApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetSwaps (historical) 🔥
+    #' Swaps (historical) 🔥
     #'
     #' @description
-    #' GetSwaps (historical) 🔥
+    #' Swaps (historical) 🔥
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2454,10 +2454,10 @@ SushiswapApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetTokens (current) 🔥
+    #' Tokens (current) 🔥
     #'
     #' @description
-    #' GetTokens (current) 🔥
+    #' Tokens (current) 🔥
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
@@ -2475,10 +2475,10 @@ SushiswapApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetTokens (current) 🔥
+    #' Tokens (current) 🔥
     #'
     #' @description
-    #' GetTokens (current) 🔥
+    #' Tokens (current) 🔥
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
@@ -2540,10 +2540,10 @@ SushiswapApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetTokensDayData (historical)
+    #' TokensDayData (historical)
     #'
     #' @description
-    #' GetTokensDayData (historical)
+    #' TokensDayData (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -2566,10 +2566,10 @@ SushiswapApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetTokensDayData (historical)
+    #' TokensDayData (historical)
     #'
     #' @description
-    #' GetTokensDayData (historical)
+    #' TokensDayData (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -2651,10 +2651,10 @@ SushiswapApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetTokens (historical) 🔥
+    #' Tokens (historical) 🔥
     #'
     #' @description
-    #' GetTokens (historical) 🔥
+    #' Tokens (historical) 🔥
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2677,10 +2677,10 @@ SushiswapApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetTokens (historical) 🔥
+    #' Tokens (historical) 🔥
     #'
     #' @description
-    #' GetTokens (historical) 🔥
+    #' Tokens (historical) 🔥
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2762,10 +2762,10 @@ SushiswapApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetTransactions (historical)
+    #' Transactions (historical)
     #'
     #' @description
-    #' GetTransactions (historical)
+    #' Transactions (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -2787,10 +2787,10 @@ SushiswapApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetTransactions (historical)
+    #' Transactions (historical)
     #'
     #' @description
-    #' GetTransactions (historical)
+    #' Transactions (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -2868,10 +2868,10 @@ SushiswapApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GetUsers (historical)
+    #' Users (historical)
     #'
     #' @description
-    #' GetUsers (historical)
+    #' Users (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 
@@ -2893,10 +2893,10 @@ SushiswapApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GetUsers (historical)
+    #' Users (historical)
     #'
     #' @description
-    #' GetUsers (historical)
+    #' Users (historical)
     #'
     #' @param start_block (optional) 
     #' @param end_block (optional) 

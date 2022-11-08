@@ -64,7 +64,7 @@ public class CurveApiTest {
     private final CurveApi api = new CurveApi();
 
     /**
-     * GetAccounts (historical)
+     * Accounts (historical)
      *
      * Gets accounts.
      *
@@ -81,7 +81,7 @@ public class CurveApiTest {
     }
 
     /**
-     * GetAddLiquidityEvents (historical)
+     * AddLiquidityEvents (historical)
      *
      * Gets add liquidity events.
      *
@@ -99,7 +99,7 @@ public class CurveApiTest {
     }
 
     /**
-     * GetAdminFeeChangeLogs (historical)
+     * AdminFeeChangeLogs (historical)
      *
      * Gets admin fee change logs.
      *
@@ -117,7 +117,7 @@ public class CurveApiTest {
     }
 
     /**
-     * GetAmplificationCoeffChangeLogs (historical)
+     * AmplificationCoeffChangeLogs (historical)
      *
      * Gets amplification coeff change logs.
      *
@@ -135,7 +135,7 @@ public class CurveApiTest {
     }
 
     /**
-     * GetCoins (historical)
+     * Coins (historical)
      *
      * Gets coins.
      *
@@ -153,7 +153,7 @@ public class CurveApiTest {
     }
 
     /**
-     * GetContracts (historical)
+     * Contracts (historical)
      *
      * Gets contracts.
      *
@@ -171,7 +171,7 @@ public class CurveApiTest {
     }
 
     /**
-     * GetContractsVersions (historical)
+     * ContractsVersions (historical)
      *
      * Gets contracts versions.
      *
@@ -189,7 +189,7 @@ public class CurveApiTest {
     }
 
     /**
-     * GetDailyVolumes (historical)
+     * DailyVolumes (historical)
      *
      * Gets daily volumes.
      *
@@ -207,7 +207,7 @@ public class CurveApiTest {
     }
 
     /**
-     * GetExchanges (historical) 🔥
+     * Exchanges (historical) 🔥
      *
      * Gets exchanges.
      *
@@ -225,7 +225,7 @@ public class CurveApiTest {
     }
 
     /**
-     * GetFeeChangeLogs (historical)
+     * FeeChangeLogs (historical)
      *
      * Gets fee change logs.
      *
@@ -243,7 +243,7 @@ public class CurveApiTest {
     }
 
     /**
-     * GetGaugesDeposits (historical)
+     * GaugesDeposits (historical)
      *
      * Gets gauges deposits.
      *
@@ -260,7 +260,7 @@ public class CurveApiTest {
     }
 
     /**
-     * GetGauges (historical)
+     * Gauges (historical)
      *
      * Gets gauges.
      *
@@ -278,7 +278,7 @@ public class CurveApiTest {
     }
 
     /**
-     * GetGaugesLiquidity (historical)
+     * GaugesLiquidity (historical)
      *
      * Gets gauges liquidity.
      *
@@ -295,7 +295,7 @@ public class CurveApiTest {
     }
 
     /**
-     * GetGaugesTotalWeights (historical)
+     * GaugesTotalWeights (historical)
      *
      * Gets gauges total weights.
      *
@@ -312,7 +312,7 @@ public class CurveApiTest {
     }
 
     /**
-     * GetGaugesTypes (historical)
+     * GaugesTypes (historical)
      *
      * Gets gauges types.
      *
@@ -329,7 +329,7 @@ public class CurveApiTest {
     }
 
     /**
-     * GetGaugesTypesWeights (historical)
+     * GaugesTypesWeights (historical)
      *
      * Gets gauges types weights.
      *
@@ -346,7 +346,7 @@ public class CurveApiTest {
     }
 
     /**
-     * GetGaugesWeights (historical)
+     * GaugesWeights (historical)
      *
      * Gets gauges weights.
      *
@@ -363,7 +363,7 @@ public class CurveApiTest {
     }
 
     /**
-     * GetGaugesWeightsVotes (historical)
+     * GaugesWeightsVotes (historical)
      *
      * Gets gauges weights votes.
      *
@@ -380,7 +380,7 @@ public class CurveApiTest {
     }
 
     /**
-     * GetGaugesWithdraw (historical)
+     * GaugesWithdraw (historical)
      *
      * Gets gauges withdraws.
      *
@@ -397,7 +397,7 @@ public class CurveApiTest {
     }
 
     /**
-     * GetHourlyVolumes (historical)
+     * HourlyVolumes (historical)
      *
      * Gets hourly volumes.
      *
@@ -415,7 +415,7 @@ public class CurveApiTest {
     }
 
     /**
-     * GetLpTokens (historical)
+     * LpTokens (historical)
      *
      * Gets lp tokens.
      *
@@ -433,7 +433,7 @@ public class CurveApiTest {
     }
 
     /**
-     * GetPools (historical) 🔥
+     * Pools (historical) 🔥
      *
      * Gets pools.
      *
@@ -451,7 +451,7 @@ public class CurveApiTest {
     }
 
     /**
-     * GetProposals (historical)
+     * Proposals (historical)
      *
      * Gets proposals.
      *
@@ -468,7 +468,7 @@ public class CurveApiTest {
     }
 
     /**
-     * GetProposalsVotes (historical)
+     * ProposalsVotes (historical)
      *
      * Gets proposals votes.
      *
@@ -485,7 +485,7 @@ public class CurveApiTest {
     }
 
     /**
-     * GetRemoveLiquidityEvents (historical)
+     * RemoveLiquidityEvents (historical)
      *
      * Gets remove liquidity events.
      *
@@ -503,7 +503,7 @@ public class CurveApiTest {
     }
 
     /**
-     * GetRemoveLiquidityOneEvents (historical)
+     * RemoveLiquidityOneEvents (historical)
      *
      * Gets remove liquidity one events.
      *
@@ -521,7 +521,7 @@ public class CurveApiTest {
     }
 
     /**
-     * GetSystemStates (historical)
+     * SystemStates (historical)
      *
      * Gets system states.
      *
@@ -538,7 +538,7 @@ public class CurveApiTest {
     }
 
     /**
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      *
      * Gets tokens.
      *
@@ -556,7 +556,7 @@ public class CurveApiTest {
     }
 
     /**
-     * GetTransferOwnershipEvents (historical)
+     * TransferOwnershipEvents (historical)
      *
      * Gets transfer ownership events.
      *
@@ -574,7 +574,7 @@ public class CurveApiTest {
     }
 
     /**
-     * GetUnderlyingCoins (historical)
+     * UnderlyingCoins (historical)
      *
      * Gets underlying coins.
      *
@@ -592,7 +592,7 @@ public class CurveApiTest {
     }
 
     /**
-     * GetVotingApps (historical)
+     * VotingApps (historical)
      *
      * Gets voting apps.
      *
@@ -609,7 +609,7 @@ public class CurveApiTest {
     }
 
     /**
-     * GetWeeklyVolumes (historical)
+     * WeeklyVolumes (historical)
      *
      * Gets weekly volumes.
      *

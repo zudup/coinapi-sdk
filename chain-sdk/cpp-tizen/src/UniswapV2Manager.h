@@ -38,7 +38,7 @@ public:
 	UniswapV2Manager();
 	virtual ~UniswapV2Manager();
 
-/*! \brief GetBundles (historical). *Synchronous*
+/*! \brief Bundles (historical). *Synchronous*
  *
  * Gets bundles.
  * \param startBlock 
@@ -54,7 +54,7 @@ bool uniswapV2GetBundles (historical)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV2.BundleV2DTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetBundles (historical). *Asynchronous*
+/*! \brief Bundles (historical). *Asynchronous*
  *
  * Gets bundles.
  * \param startBlock 
@@ -71,7 +71,7 @@ bool uniswapV2GetBundles (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetBurns (historical). *Synchronous*
+/*! \brief Burns (historical). *Synchronous*
  *
  * Gets burns.
  * \param startBlock 
@@ -88,7 +88,7 @@ bool uniswapV2GetBurns (historical)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV2.BurnV2DTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetBurns (historical). *Asynchronous*
+/*! \brief Burns (historical). *Asynchronous*
  *
  * Gets burns.
  * \param startBlock 
@@ -106,7 +106,7 @@ bool uniswapV2GetBurns (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetDayData (historical). *Synchronous*
+/*! \brief DayData (historical). *Synchronous*
  *
  * Gets uniswapv2 day data.
  * \param startBlock 
@@ -122,7 +122,7 @@ bool uniswapV2GetDayData (historical)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV2.UniswapDayDataV2DTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetDayData (historical). *Asynchronous*
+/*! \brief DayData (historical). *Asynchronous*
  *
  * Gets uniswapv2 day data.
  * \param startBlock 
@@ -139,7 +139,7 @@ bool uniswapV2GetDayData (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetFactory (historical). *Synchronous*
+/*! \brief Factory (historical). *Synchronous*
  *
  * Gets factory.
  * \param startBlock 
@@ -155,7 +155,7 @@ bool uniswapV2GetFactory (historical)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV2.UniswapFactoryV2DTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetFactory (historical). *Asynchronous*
+/*! \brief Factory (historical). *Asynchronous*
  *
  * Gets factory.
  * \param startBlock 
@@ -172,7 +172,7 @@ bool uniswapV2GetFactory (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetLiquidityPositions (historical). *Synchronous*
+/*! \brief LiquidityPositions (historical). *Synchronous*
  *
  * Gets liquidity positions.
  * \param startBlock 
@@ -189,7 +189,7 @@ bool uniswapV2GetLiquidityPositions (historical)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV2.LiquidityPositionV2DTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetLiquidityPositions (historical). *Asynchronous*
+/*! \brief LiquidityPositions (historical). *Asynchronous*
  *
  * Gets liquidity positions.
  * \param startBlock 
@@ -207,7 +207,7 @@ bool uniswapV2GetLiquidityPositions (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetLiquidityPositionsSnapshots (historical). *Synchronous*
+/*! \brief LiquidityPositionsSnapshots (historical). *Synchronous*
  *
  * Gets liquidity positions snapshots.
  * \param startBlock 
@@ -224,7 +224,7 @@ bool uniswapV2GetLiquidityPositionsSnapshots (historical)Sync(char * accessToken
 	void(* handler)(std::list<UniswapV2.LiquidityPositionSnapshotV2DTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetLiquidityPositionsSnapshots (historical). *Asynchronous*
+/*! \brief LiquidityPositionsSnapshots (historical). *Asynchronous*
  *
  * Gets liquidity positions snapshots.
  * \param startBlock 
@@ -242,7 +242,7 @@ bool uniswapV2GetLiquidityPositionsSnapshots (historical)Async(char * accessToke
 	, void* userData);
 
 
-/*! \brief GetMints (historical). *Synchronous*
+/*! \brief Mints (historical). *Synchronous*
  *
  * Gets mints.
  * \param startBlock 
@@ -259,7 +259,7 @@ bool uniswapV2GetMints (historical)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV2.MintV2DTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetMints (historical). *Asynchronous*
+/*! \brief Mints (historical). *Asynchronous*
  *
  * Gets mints.
  * \param startBlock 
@@ -277,7 +277,7 @@ bool uniswapV2GetMints (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetPools (current) 🔥. *Synchronous*
+/*! \brief Pools (current) 🔥. *Synchronous*
  *
  * Gets pools.
  * \param filterPoolId 
@@ -290,7 +290,7 @@ bool uniswapV2GetPools (current)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV2.PairV2DTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetPools (current) 🔥. *Asynchronous*
+/*! \brief Pools (current) 🔥. *Asynchronous*
  *
  * Gets pools.
  * \param filterPoolId 
@@ -304,7 +304,7 @@ bool uniswapV2GetPools (current)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetPools (historical) 🔥. *Synchronous*
+/*! \brief Pools (historical) 🔥. *Synchronous*
  *
  * Gets pools.
  * \param startBlock 
@@ -321,7 +321,7 @@ bool uniswapV2GetPools (historical)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV2.PairV2DTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetPools (historical) 🔥. *Asynchronous*
+/*! \brief Pools (historical) 🔥. *Asynchronous*
  *
  * Gets pools.
  * \param startBlock 
@@ -339,7 +339,7 @@ bool uniswapV2GetPools (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetPoolsDayData (historical). *Synchronous*
+/*! \brief PoolsDayData (historical). *Synchronous*
  *
  * Gets pools day data.
  * \param startBlock 
@@ -356,7 +356,7 @@ bool uniswapV2GetPoolsDayData (historical)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV2.PairDayDataV2DTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetPoolsDayData (historical). *Asynchronous*
+/*! \brief PoolsDayData (historical). *Asynchronous*
  *
  * Gets pools day data.
  * \param startBlock 
@@ -374,7 +374,7 @@ bool uniswapV2GetPoolsDayData (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetPoolsHourData (historical). *Synchronous*
+/*! \brief PoolsHourData (historical). *Synchronous*
  *
  * Gets pools tracked each our.
  * \param startBlock 
@@ -391,7 +391,7 @@ bool uniswapV2GetPoolsHourData (historical)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV2.PairHourDataV2DTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetPoolsHourData (historical). *Asynchronous*
+/*! \brief PoolsHourData (historical). *Asynchronous*
  *
  * Gets pools tracked each our.
  * \param startBlock 
@@ -409,7 +409,7 @@ bool uniswapV2GetPoolsHourData (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetSwaps (current) 🔥. *Synchronous*
+/*! \brief Swaps (current) 🔥. *Synchronous*
  *
  * Gets swaps.
  * \param handler The callback function to be invoked on completion. *Required*
@@ -421,7 +421,7 @@ bool uniswapV2GetSwaps (current)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV2.SwapV2DTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetSwaps (current) 🔥. *Asynchronous*
+/*! \brief Swaps (current) 🔥. *Asynchronous*
  *
  * Gets swaps.
  * \param handler The callback function to be invoked on completion. *Required*
@@ -434,7 +434,7 @@ bool uniswapV2GetSwaps (current)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetSwaps (historical) 🔥. *Synchronous*
+/*! \brief Swaps (historical) 🔥. *Synchronous*
  *
  * Gets swaps.
  * \param startBlock 
@@ -451,7 +451,7 @@ bool uniswapV2GetSwaps (historical)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV2.SwapV2DTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetSwaps (historical) 🔥. *Asynchronous*
+/*! \brief Swaps (historical) 🔥. *Asynchronous*
  *
  * Gets swaps.
  * \param startBlock 
@@ -469,7 +469,7 @@ bool uniswapV2GetSwaps (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetTokens (current) 🔥. *Synchronous*
+/*! \brief Tokens (current) 🔥. *Synchronous*
  *
  * Gets tokens.
  * \param handler The callback function to be invoked on completion. *Required*
@@ -481,7 +481,7 @@ bool uniswapV2GetTokens (current)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV2.TokenV2DTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetTokens (current) 🔥. *Asynchronous*
+/*! \brief Tokens (current) 🔥. *Asynchronous*
  *
  * Gets tokens.
  * \param handler The callback function to be invoked on completion. *Required*
@@ -494,7 +494,7 @@ bool uniswapV2GetTokens (current)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetTokens (historical) 🔥. *Synchronous*
+/*! \brief Tokens (historical) 🔥. *Synchronous*
  *
  * Gets tokens.
  * \param startBlock 
@@ -511,7 +511,7 @@ bool uniswapV2GetTokens (historical)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV2.TokenV2DTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetTokens (historical) 🔥. *Asynchronous*
+/*! \brief Tokens (historical) 🔥. *Asynchronous*
  *
  * Gets tokens.
  * \param startBlock 
@@ -529,7 +529,7 @@ bool uniswapV2GetTokens (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetTokensDayData (historical). *Synchronous*
+/*! \brief TokensDayData (historical). *Synchronous*
  *
  * Gets tokens day data.
  * \param startBlock 
@@ -546,7 +546,7 @@ bool uniswapV2GetTokensDayData (historical)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV2.TokenDayDataV2DTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetTokensDayData (historical). *Asynchronous*
+/*! \brief TokensDayData (historical). *Asynchronous*
  *
  * Gets tokens day data.
  * \param startBlock 
@@ -564,7 +564,7 @@ bool uniswapV2GetTokensDayData (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetTransactions (historical). *Synchronous*
+/*! \brief Transactions (historical). *Synchronous*
  *
  * Gets transactions.
  * \param startBlock 
@@ -580,7 +580,7 @@ bool uniswapV2GetTransactions (historical)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV2.TransactionV2DTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetTransactions (historical). *Asynchronous*
+/*! \brief Transactions (historical). *Asynchronous*
  *
  * Gets transactions.
  * \param startBlock 
@@ -597,7 +597,7 @@ bool uniswapV2GetTransactions (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief GetUsers (historical). *Synchronous*
+/*! \brief Users (historical). *Synchronous*
  *
  * Gets users.
  * \param startBlock 
@@ -613,7 +613,7 @@ bool uniswapV2GetUsers (historical)Sync(char * accessToken,
 	void(* handler)(std::list<UniswapV2.UserV2DTO>, Error, void* )
 	, void* userData);
 
-/*! \brief GetUsers (historical). *Asynchronous*
+/*! \brief Users (historical). *Asynchronous*
  *
  * Gets users.
  * \param startBlock 

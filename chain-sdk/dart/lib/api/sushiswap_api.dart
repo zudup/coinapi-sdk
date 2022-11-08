@@ -16,7 +16,7 @@ class SushiswapApi {
 
   final ApiClient apiClient;
 
-  /// GetExchanges (current) 🔥
+  /// Exchanges (current) 🔥
   ///
   /// Gets exchanges.
   ///
@@ -46,7 +46,7 @@ class SushiswapApi {
     );
   }
 
-  /// GetExchanges (current) 🔥
+  /// Exchanges (current) 🔥
   ///
   /// Gets exchanges.
   Future<List<CurveExchangeDTO>?> curveGetExchangesCurrent() async {
@@ -67,7 +67,7 @@ class SushiswapApi {
     return null;
   }
 
-  /// GetTrades (current) 🔥
+  /// Trades (current) 🔥
   ///
   /// Gets trades.
   ///
@@ -97,7 +97,7 @@ class SushiswapApi {
     );
   }
 
-  /// GetTrades (current) 🔥
+  /// Trades (current) 🔥
   ///
   /// Gets trades.
   Future<List<DexTradeDTO>?> dexGetTradesCurrent() async {
@@ -118,7 +118,7 @@ class SushiswapApi {
     return null;
   }
 
-  /// GetBundles (historical)
+  /// Bundles (historical)
   ///
   /// Gets bundles.
   ///
@@ -175,7 +175,7 @@ class SushiswapApi {
     );
   }
 
-  /// GetBundles (historical)
+  /// Bundles (historical)
   ///
   /// Gets bundles.
   ///
@@ -210,7 +210,7 @@ class SushiswapApi {
     return null;
   }
 
-  /// GetBurns (historical)
+  /// Burns (historical)
   ///
   /// Gets burns.
   ///
@@ -273,7 +273,7 @@ class SushiswapApi {
     );
   }
 
-  /// GetBurns (historical)
+  /// Burns (historical)
   ///
   /// Gets burns.
   ///
@@ -311,7 +311,7 @@ class SushiswapApi {
     return null;
   }
 
-  /// GetDayData (historical)
+  /// DayData (historical)
   ///
   /// Gets day data.
   ///
@@ -368,7 +368,7 @@ class SushiswapApi {
     );
   }
 
-  /// GetDayData (historical)
+  /// DayData (historical)
   ///
   /// Gets day data.
   ///
@@ -403,7 +403,7 @@ class SushiswapApi {
     return null;
   }
 
-  /// GetFactory (historical)
+  /// Factory (historical)
   ///
   /// Gets factory.
   ///
@@ -460,7 +460,7 @@ class SushiswapApi {
     );
   }
 
-  /// GetFactory (historical)
+  /// Factory (historical)
   ///
   /// Gets factory.
   ///
@@ -495,7 +495,7 @@ class SushiswapApi {
     return null;
   }
 
-  /// GetHourData (historical)
+  /// HourData (historical)
   ///
   /// Gets hour data.
   ///
@@ -552,7 +552,7 @@ class SushiswapApi {
     );
   }
 
-  /// GetHourData (historical)
+  /// HourData (historical)
   ///
   /// Gets hour data.
   ///
@@ -587,7 +587,7 @@ class SushiswapApi {
     return null;
   }
 
-  /// GetLiquidityPosition (historical)
+  /// LiquidityPosition (historical)
   ///
   /// Gets liquidity position.
   ///
@@ -650,7 +650,7 @@ class SushiswapApi {
     );
   }
 
-  /// GetLiquidityPosition (historical)
+  /// LiquidityPosition (historical)
   ///
   /// Gets liquidity position.
   ///
@@ -688,7 +688,7 @@ class SushiswapApi {
     return null;
   }
 
-  /// GetLiquidityPositionSnapshot (historical)
+  /// LiquidityPositionSnapshot (historical)
   ///
   /// Gets liquidity position snapshot.
   ///
@@ -751,7 +751,7 @@ class SushiswapApi {
     );
   }
 
-  /// GetLiquidityPositionSnapshot (historical)
+  /// LiquidityPositionSnapshot (historical)
   ///
   /// Gets liquidity position snapshot.
   ///
@@ -789,7 +789,7 @@ class SushiswapApi {
     return null;
   }
 
-  /// GetMints (historical)
+  /// Mints (historical)
   ///
   /// Gets mints.
   ///
@@ -852,7 +852,7 @@ class SushiswapApi {
     );
   }
 
-  /// GetMints (historical)
+  /// Mints (historical)
   ///
   /// Gets mints.
   ///
@@ -890,7 +890,7 @@ class SushiswapApi {
     return null;
   }
 
-  /// GetPools (current) 🔥
+  /// Pools (current) 🔥
   ///
   /// Gets pools.
   ///
@@ -920,7 +920,7 @@ class SushiswapApi {
     );
   }
 
-  /// GetPools (current) 🔥
+  /// Pools (current) 🔥
   ///
   /// Gets pools.
   Future<List<SushiswapPairDTO>?> sushiswapGetPoolsCurrent() async {
@@ -941,7 +941,7 @@ class SushiswapApi {
     return null;
   }
 
-  /// GetPoolsDayData (historical)
+  /// PoolsDayData (historical)
   ///
   /// Gets pools day data.
   ///
@@ -1004,7 +1004,7 @@ class SushiswapApi {
     );
   }
 
-  /// GetPoolsDayData (historical)
+  /// PoolsDayData (historical)
   ///
   /// Gets pools day data.
   ///
@@ -1042,7 +1042,7 @@ class SushiswapApi {
     return null;
   }
 
-  /// GetPools (historical) 🔥
+  /// Pools (historical) 🔥
   ///
   /// Gets list of pools for given filters.
   ///
@@ -1105,7 +1105,7 @@ class SushiswapApi {
     );
   }
 
-  /// GetPools (historical) 🔥
+  /// Pools (historical) 🔥
   ///
   /// Gets list of pools for given filters.
   ///
@@ -1143,7 +1143,7 @@ class SushiswapApi {
     return null;
   }
 
-  /// GetPoolsHourData (historical)
+  /// PoolsHourData (historical)
   ///
   /// Gets pools tracked each our.
   ///
@@ -1206,7 +1206,7 @@ class SushiswapApi {
     );
   }
 
-  /// GetPoolsHourData (historical)
+  /// PoolsHourData (historical)
   ///
   /// Gets pools tracked each our.
   ///
@@ -1244,7 +1244,7 @@ class SushiswapApi {
     return null;
   }
 
-  /// GetSwaps (current) 🔥
+  /// Swaps (current) 🔥
   ///
   /// Gets swaps.
   ///
@@ -1274,7 +1274,7 @@ class SushiswapApi {
     );
   }
 
-  /// GetSwaps (current) 🔥
+  /// Swaps (current) 🔥
   ///
   /// Gets swaps.
   Future<List<SushiswapSwapDTO>?> sushiswapGetSwapsCurrent() async {
@@ -1295,7 +1295,7 @@ class SushiswapApi {
     return null;
   }
 
-  /// GetSwaps (historical) 🔥
+  /// Swaps (historical) 🔥
   ///
   /// Gets list of swaps for given filters.
   ///
@@ -1358,7 +1358,7 @@ class SushiswapApi {
     );
   }
 
-  /// GetSwaps (historical) 🔥
+  /// Swaps (historical) 🔥
   ///
   /// Gets list of swaps for given filters.
   ///
@@ -1396,7 +1396,7 @@ class SushiswapApi {
     return null;
   }
 
-  /// GetTokens (current) 🔥
+  /// Tokens (current) 🔥
   ///
   /// Gets tokens.
   ///
@@ -1426,7 +1426,7 @@ class SushiswapApi {
     );
   }
 
-  /// GetTokens (current) 🔥
+  /// Tokens (current) 🔥
   ///
   /// Gets tokens.
   Future<List<SushiswapTokenDTO>?> sushiswapGetTokensCurrent() async {
@@ -1447,7 +1447,7 @@ class SushiswapApi {
     return null;
   }
 
-  /// GetTokensDayData (historical)
+  /// TokensDayData (historical)
   ///
   /// Gets tokens day data.
   ///
@@ -1510,7 +1510,7 @@ class SushiswapApi {
     );
   }
 
-  /// GetTokensDayData (historical)
+  /// TokensDayData (historical)
   ///
   /// Gets tokens day data.
   ///
@@ -1548,7 +1548,7 @@ class SushiswapApi {
     return null;
   }
 
-  /// GetTokens (historical) 🔥
+  /// Tokens (historical) 🔥
   ///
   /// Gets list of tokens for given filters.
   ///
@@ -1611,7 +1611,7 @@ class SushiswapApi {
     );
   }
 
-  /// GetTokens (historical) 🔥
+  /// Tokens (historical) 🔥
   ///
   /// Gets list of tokens for given filters.
   ///
@@ -1649,7 +1649,7 @@ class SushiswapApi {
     return null;
   }
 
-  /// GetTransactions (historical)
+  /// Transactions (historical)
   ///
   /// Gets transactions.
   ///
@@ -1706,7 +1706,7 @@ class SushiswapApi {
     );
   }
 
-  /// GetTransactions (historical)
+  /// Transactions (historical)
   ///
   /// Gets transactions.
   ///
@@ -1741,7 +1741,7 @@ class SushiswapApi {
     return null;
   }
 
-  /// GetUsers (historical)
+  /// Users (historical)
   ///
   /// Gets users.
   ///
@@ -1798,7 +1798,7 @@ class SushiswapApi {
     );
   }
 
-  /// GetUsers (historical)
+  /// Users (historical)
   ///
   /// Gets users.
   ///

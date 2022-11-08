@@ -19,7 +19,7 @@ module OpenapiClient
     def initialize(api_client = ApiClient.default)
       @api_client = api_client
     end
-    # GetOrders (historical)
+    # Orders (historical)
     # Gets orders.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -32,7 +32,7 @@ module OpenapiClient
       data
     end
 
-    # GetOrders (historical)
+    # Orders (historical)
     # Gets orders.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -88,7 +88,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetSettlements (historical)
+    # Settlements (historical)
     # Gets settlements.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -101,7 +101,7 @@ module OpenapiClient
       data
     end
 
-    # GetSettlements (historical)
+    # Settlements (historical)
     # Gets settlements.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -157,7 +157,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetTokens (historical) 🔥
+    # Tokens (historical) 🔥
     # Gets tokens.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -171,7 +171,7 @@ module OpenapiClient
       data
     end
 
-    # GetTokens (historical) 🔥
+    # Tokens (historical) 🔥
     # Gets tokens.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -229,7 +229,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetTrades (historical) 🔥
+    # Trades (historical) 🔥
     # Gets trades.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -242,7 +242,7 @@ module OpenapiClient
       data
     end
 
-    # GetTrades (historical) 🔥
+    # Trades (historical) 🔥
     # Gets trades.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -298,7 +298,7 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GetUsers (historical)
+    # Users (historical)
     # Gets users.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
@@ -311,7 +311,7 @@ module OpenapiClient
       data
     end
 
-    # GetUsers (historical)
+    # Users (historical)
     # Gets users.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 

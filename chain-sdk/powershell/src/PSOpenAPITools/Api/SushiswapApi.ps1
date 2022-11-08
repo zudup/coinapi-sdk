@@ -9,7 +9,7 @@
 <#
 .SYNOPSIS
 
-GetExchanges (current) 🔥
+Exchanges (current) 🔥
 
 .DESCRIPTION
 
@@ -84,7 +84,7 @@ function Invoke-CurveGetExchangesCurrent {
 <#
 .SYNOPSIS
 
-GetTrades (current) 🔥
+Trades (current) 🔥
 
 .DESCRIPTION
 
@@ -159,7 +159,7 @@ function Invoke-DexGetTradesCurrent {
 <#
 .SYNOPSIS
 
-GetBundles (historical)
+Bundles (historical)
 
 .DESCRIPTION
 
@@ -274,7 +274,7 @@ function Invoke-SushiswapGetBundlesHistorical {
 <#
 .SYNOPSIS
 
-GetBurns (historical)
+Burns (historical)
 
 .DESCRIPTION
 
@@ -399,7 +399,7 @@ function Invoke-SushiswapGetBurnsHistorical {
 <#
 .SYNOPSIS
 
-GetDayData (historical)
+DayData (historical)
 
 .DESCRIPTION
 
@@ -514,7 +514,7 @@ function Invoke-SushiswapGetDayDataHistorical {
 <#
 .SYNOPSIS
 
-GetFactory (historical)
+Factory (historical)
 
 .DESCRIPTION
 
@@ -629,7 +629,7 @@ function Invoke-SushiswapGetFactoryHistorical {
 <#
 .SYNOPSIS
 
-GetHourData (historical)
+HourData (historical)
 
 .DESCRIPTION
 
@@ -744,7 +744,7 @@ function Invoke-SushiswapGetHourDataHistorical {
 <#
 .SYNOPSIS
 
-GetLiquidityPositionSnapshot (historical)
+LiquidityPositionSnapshot (historical)
 
 .DESCRIPTION
 
@@ -869,7 +869,7 @@ function Invoke-SushiswapGetLiquidityPositionSnapshotHistorical {
 <#
 .SYNOPSIS
 
-GetLiquidityPosition (historical)
+LiquidityPosition (historical)
 
 .DESCRIPTION
 
@@ -994,7 +994,7 @@ function Invoke-SushiswapGetLiquidityPositionHistorical {
 <#
 .SYNOPSIS
 
-GetMints (historical)
+Mints (historical)
 
 .DESCRIPTION
 
@@ -1119,7 +1119,7 @@ function Invoke-SushiswapGetMintsHistorical {
 <#
 .SYNOPSIS
 
-GetPoolsDayData (historical)
+PoolsDayData (historical)
 
 .DESCRIPTION
 
@@ -1244,7 +1244,7 @@ function Invoke-SushiswapGetPoolsDayDataHistorical {
 <#
 .SYNOPSIS
 
-GetPoolsHourData (historical)
+PoolsHourData (historical)
 
 .DESCRIPTION
 
@@ -1369,7 +1369,7 @@ function Invoke-SushiswapGetPoolsHourDataHistorical {
 <#
 .SYNOPSIS
 
-GetPools (current) 🔥
+Pools (current) 🔥
 
 .DESCRIPTION
 
@@ -1444,7 +1444,7 @@ function Invoke-SushiswapGetPoolsCurrent {
 <#
 .SYNOPSIS
 
-GetPools (historical) 🔥
+Pools (historical) 🔥
 
 .DESCRIPTION
 
@@ -1569,7 +1569,7 @@ function Invoke-SushiswapGetPoolsHistorical {
 <#
 .SYNOPSIS
 
-GetSwaps (current) 🔥
+Swaps (current) 🔥
 
 .DESCRIPTION
 
@@ -1644,7 +1644,7 @@ function Invoke-SushiswapGetSwapsCurrent {
 <#
 .SYNOPSIS
 
-GetSwaps (historical) 🔥
+Swaps (historical) 🔥
 
 .DESCRIPTION
 
@@ -1769,7 +1769,7 @@ function Invoke-SushiswapGetSwapsHistorical {
 <#
 .SYNOPSIS
 
-GetTokensDayData (historical)
+TokensDayData (historical)
 
 .DESCRIPTION
 
@@ -1894,7 +1894,7 @@ function Invoke-SushiswapGetTokensDayDataHistorical {
 <#
 .SYNOPSIS
 
-GetTokens (current) 🔥
+Tokens (current) 🔥
 
 .DESCRIPTION
 
@@ -1969,7 +1969,7 @@ function Invoke-SushiswapGetTokensCurrent {
 <#
 .SYNOPSIS
 
-GetTokens (historical) 🔥
+Tokens (historical) 🔥
 
 .DESCRIPTION
 
@@ -2094,7 +2094,7 @@ function Invoke-SushiswapGetTokensHistorical {
 <#
 .SYNOPSIS
 
-GetTransactions (historical)
+Transactions (historical)
 
 .DESCRIPTION
 
@@ -2209,7 +2209,7 @@ function Invoke-SushiswapGetTransactionsHistorical {
 <#
 .SYNOPSIS
 
-GetUsers (historical)
+Users (historical)
 
 .DESCRIPTION
 

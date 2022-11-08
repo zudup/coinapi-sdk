@@ -26,7 +26,7 @@ public class OASCowApi {
     }
 
     /**
-     * GetOrders (historical)
+     * Orders (historical)
      * Gets orders.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -58,7 +58,7 @@ public class OASCowApi {
         );
     }
     /**
-     * GetSettlements (historical)
+     * Settlements (historical)
      * Gets settlements.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -90,7 +90,7 @@ public class OASCowApi {
         );
     }
     /**
-     * GetTokens (historical) 🔥
+     * Tokens (historical) 🔥
      * Gets tokens.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -124,7 +124,7 @@ public class OASCowApi {
         );
     }
     /**
-     * GetTrades (historical) 🔥
+     * Trades (historical) 🔥
      * Gets trades.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -156,7 +156,7 @@ public class OASCowApi {
         );
     }
     /**
-     * GetUsers (historical)
+     * Users (historical)
      * Gets users.
      * @param startBlock  (optional)
      * @param endBlock  (optional)

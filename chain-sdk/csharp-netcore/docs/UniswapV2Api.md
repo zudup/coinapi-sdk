@@ -4,30 +4,30 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**UniswapV2GetBundlesHistorical**](UniswapV2Api.md#uniswapv2getbundleshistorical) | **GET** /dapps/uniswapv2/bundles/historical | GetBundles (historical) |
-| [**UniswapV2GetBurnsHistorical**](UniswapV2Api.md#uniswapv2getburnshistorical) | **GET** /dapps/uniswapv2/burns/historical | GetBurns (historical) |
-| [**UniswapV2GetDayDataHistorical**](UniswapV2Api.md#uniswapv2getdaydatahistorical) | **GET** /dapps/uniswapv2/dayData/historical | GetDayData (historical) |
-| [**UniswapV2GetFactoryHistorical**](UniswapV2Api.md#uniswapv2getfactoryhistorical) | **GET** /dapps/uniswapv2/factory/historical | GetFactory (historical) |
-| [**UniswapV2GetLiquidityPositionsHistorical**](UniswapV2Api.md#uniswapv2getliquiditypositionshistorical) | **GET** /dapps/uniswapv2/liquidityPositions/historical | GetLiquidityPositions (historical) |
-| [**UniswapV2GetLiquidityPositionsSnapshotsHistorical**](UniswapV2Api.md#uniswapv2getliquiditypositionssnapshotshistorical) | **GET** /dapps/uniswapv2/liquidityPositionsSnapshots/historical | GetLiquidityPositionsSnapshots (historical) |
-| [**UniswapV2GetMintsHistorical**](UniswapV2Api.md#uniswapv2getmintshistorical) | **GET** /dapps/uniswapv2/mints/historical | GetMints (historical) |
-| [**UniswapV2GetPoolsCurrent**](UniswapV2Api.md#uniswapv2getpoolscurrent) | **GET** /dapps/uniswapv2/pools/current | GetPools (current) 🔥 |
-| [**UniswapV2GetPoolsDayDataHistorical**](UniswapV2Api.md#uniswapv2getpoolsdaydatahistorical) | **GET** /dapps/uniswapv2/poolsDayData/historical | GetPoolsDayData (historical) |
-| [**UniswapV2GetPoolsHistorical**](UniswapV2Api.md#uniswapv2getpoolshistorical) | **GET** /dapps/uniswapv2/pools/historical | GetPools (historical) 🔥 |
-| [**UniswapV2GetPoolsHourDataHistorical**](UniswapV2Api.md#uniswapv2getpoolshourdatahistorical) | **GET** /dapps/uniswapv2/poolsHourData/historical | GetPoolsHourData (historical) |
-| [**UniswapV2GetSwapsCurrent**](UniswapV2Api.md#uniswapv2getswapscurrent) | **GET** /dapps/uniswapv2/swaps/current | GetSwaps (current) 🔥 |
-| [**UniswapV2GetSwapsHistorical**](UniswapV2Api.md#uniswapv2getswapshistorical) | **GET** /dapps/uniswapv2/swaps/historical | GetSwaps (historical) 🔥 |
-| [**UniswapV2GetTokensCurrent**](UniswapV2Api.md#uniswapv2gettokenscurrent) | **GET** /dapps/uniswapv2/tokens/current | GetTokens (current) 🔥 |
-| [**UniswapV2GetTokensDayDataHistorical**](UniswapV2Api.md#uniswapv2gettokensdaydatahistorical) | **GET** /dapps/uniswapv2/tokensDayData/historical | GetTokensDayData (historical) |
-| [**UniswapV2GetTokensHistorical**](UniswapV2Api.md#uniswapv2gettokenshistorical) | **GET** /dapps/uniswapv2/tokens/historical | GetTokens (historical) 🔥 |
-| [**UniswapV2GetTransactionsHistorical**](UniswapV2Api.md#uniswapv2gettransactionshistorical) | **GET** /dapps/uniswapv2/transactions/historical | GetTransactions (historical) |
-| [**UniswapV2GetUsersHistorical**](UniswapV2Api.md#uniswapv2getusershistorical) | **GET** /dapps/uniswapv2/users/historical | GetUsers (historical) |
+| [**UniswapV2GetBundlesHistorical**](UniswapV2Api.md#uniswapv2getbundleshistorical) | **GET** /dapps/uniswapv2/bundles/historical | Bundles (historical) |
+| [**UniswapV2GetBurnsHistorical**](UniswapV2Api.md#uniswapv2getburnshistorical) | **GET** /dapps/uniswapv2/burns/historical | Burns (historical) |
+| [**UniswapV2GetDayDataHistorical**](UniswapV2Api.md#uniswapv2getdaydatahistorical) | **GET** /dapps/uniswapv2/dayData/historical | DayData (historical) |
+| [**UniswapV2GetFactoryHistorical**](UniswapV2Api.md#uniswapv2getfactoryhistorical) | **GET** /dapps/uniswapv2/factory/historical | Factory (historical) |
+| [**UniswapV2GetLiquidityPositionsHistorical**](UniswapV2Api.md#uniswapv2getliquiditypositionshistorical) | **GET** /dapps/uniswapv2/liquidityPositions/historical | LiquidityPositions (historical) |
+| [**UniswapV2GetLiquidityPositionsSnapshotsHistorical**](UniswapV2Api.md#uniswapv2getliquiditypositionssnapshotshistorical) | **GET** /dapps/uniswapv2/liquidityPositionsSnapshots/historical | LiquidityPositionsSnapshots (historical) |
+| [**UniswapV2GetMintsHistorical**](UniswapV2Api.md#uniswapv2getmintshistorical) | **GET** /dapps/uniswapv2/mints/historical | Mints (historical) |
+| [**UniswapV2GetPoolsCurrent**](UniswapV2Api.md#uniswapv2getpoolscurrent) | **GET** /dapps/uniswapv2/pools/current | Pools (current) 🔥 |
+| [**UniswapV2GetPoolsDayDataHistorical**](UniswapV2Api.md#uniswapv2getpoolsdaydatahistorical) | **GET** /dapps/uniswapv2/poolsDayData/historical | PoolsDayData (historical) |
+| [**UniswapV2GetPoolsHistorical**](UniswapV2Api.md#uniswapv2getpoolshistorical) | **GET** /dapps/uniswapv2/pools/historical | Pools (historical) 🔥 |
+| [**UniswapV2GetPoolsHourDataHistorical**](UniswapV2Api.md#uniswapv2getpoolshourdatahistorical) | **GET** /dapps/uniswapv2/poolsHourData/historical | PoolsHourData (historical) |
+| [**UniswapV2GetSwapsCurrent**](UniswapV2Api.md#uniswapv2getswapscurrent) | **GET** /dapps/uniswapv2/swaps/current | Swaps (current) 🔥 |
+| [**UniswapV2GetSwapsHistorical**](UniswapV2Api.md#uniswapv2getswapshistorical) | **GET** /dapps/uniswapv2/swaps/historical | Swaps (historical) 🔥 |
+| [**UniswapV2GetTokensCurrent**](UniswapV2Api.md#uniswapv2gettokenscurrent) | **GET** /dapps/uniswapv2/tokens/current | Tokens (current) 🔥 |
+| [**UniswapV2GetTokensDayDataHistorical**](UniswapV2Api.md#uniswapv2gettokensdaydatahistorical) | **GET** /dapps/uniswapv2/tokensDayData/historical | TokensDayData (historical) |
+| [**UniswapV2GetTokensHistorical**](UniswapV2Api.md#uniswapv2gettokenshistorical) | **GET** /dapps/uniswapv2/tokens/historical | Tokens (historical) 🔥 |
+| [**UniswapV2GetTransactionsHistorical**](UniswapV2Api.md#uniswapv2gettransactionshistorical) | **GET** /dapps/uniswapv2/transactions/historical | Transactions (historical) |
+| [**UniswapV2GetUsersHistorical**](UniswapV2Api.md#uniswapv2getusershistorical) | **GET** /dapps/uniswapv2/users/historical | Users (historical) |
 
 <a name="uniswapv2getbundleshistorical"></a>
 # **UniswapV2GetBundlesHistorical**
 > List&lt;UniswapV2BundleV2DTO&gt; UniswapV2GetBundlesHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
 
-GetBundles (historical)
+Bundles (historical)
 
 Gets bundles.
 
@@ -55,7 +55,7 @@ namespace Example
 
             try
             {
-                // GetBundles (historical)
+                // Bundles (historical)
                 List<UniswapV2BundleV2DTO> result = apiInstance.UniswapV2GetBundlesHistorical(startBlock, endBlock, startDate, endDate);
                 Debug.WriteLine(result);
             }
@@ -76,7 +76,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // GetBundles (historical)
+    // Bundles (historical)
     ApiResponse<List<UniswapV2BundleV2DTO>> response = apiInstance.UniswapV2GetBundlesHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -124,7 +124,7 @@ No authorization required
 # **UniswapV2GetBurnsHistorical**
 > List&lt;UniswapV2BurnV2DTO&gt; UniswapV2GetBurnsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
 
-GetBurns (historical)
+Burns (historical)
 
 Gets burns.
 
@@ -153,7 +153,7 @@ namespace Example
 
             try
             {
-                // GetBurns (historical)
+                // Burns (historical)
                 List<UniswapV2BurnV2DTO> result = apiInstance.UniswapV2GetBurnsHistorical(startBlock, endBlock, startDate, endDate, poolId);
                 Debug.WriteLine(result);
             }
@@ -174,7 +174,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // GetBurns (historical)
+    // Burns (historical)
     ApiResponse<List<UniswapV2BurnV2DTO>> response = apiInstance.UniswapV2GetBurnsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -223,7 +223,7 @@ No authorization required
 # **UniswapV2GetDayDataHistorical**
 > List&lt;UniswapV2UniswapDayDataV2DTO&gt; UniswapV2GetDayDataHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
 
-GetDayData (historical)
+DayData (historical)
 
 Gets uniswapv2 day data.
 
@@ -251,7 +251,7 @@ namespace Example
 
             try
             {
-                // GetDayData (historical)
+                // DayData (historical)
                 List<UniswapV2UniswapDayDataV2DTO> result = apiInstance.UniswapV2GetDayDataHistorical(startBlock, endBlock, startDate, endDate);
                 Debug.WriteLine(result);
             }
@@ -272,7 +272,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // GetDayData (historical)
+    // DayData (historical)
     ApiResponse<List<UniswapV2UniswapDayDataV2DTO>> response = apiInstance.UniswapV2GetDayDataHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -320,7 +320,7 @@ No authorization required
 # **UniswapV2GetFactoryHistorical**
 > List&lt;UniswapV2UniswapFactoryV2DTO&gt; UniswapV2GetFactoryHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
 
-GetFactory (historical)
+Factory (historical)
 
 Gets factory.
 
@@ -348,7 +348,7 @@ namespace Example
 
             try
             {
-                // GetFactory (historical)
+                // Factory (historical)
                 List<UniswapV2UniswapFactoryV2DTO> result = apiInstance.UniswapV2GetFactoryHistorical(startBlock, endBlock, startDate, endDate);
                 Debug.WriteLine(result);
             }
@@ -369,7 +369,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // GetFactory (historical)
+    // Factory (historical)
     ApiResponse<List<UniswapV2UniswapFactoryV2DTO>> response = apiInstance.UniswapV2GetFactoryHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -417,7 +417,7 @@ No authorization required
 # **UniswapV2GetLiquidityPositionsHistorical**
 > List&lt;UniswapV2LiquidityPositionV2DTO&gt; UniswapV2GetLiquidityPositionsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
 
-GetLiquidityPositions (historical)
+LiquidityPositions (historical)
 
 Gets liquidity positions.
 
@@ -446,7 +446,7 @@ namespace Example
 
             try
             {
-                // GetLiquidityPositions (historical)
+                // LiquidityPositions (historical)
                 List<UniswapV2LiquidityPositionV2DTO> result = apiInstance.UniswapV2GetLiquidityPositionsHistorical(startBlock, endBlock, startDate, endDate, poolId);
                 Debug.WriteLine(result);
             }
@@ -467,7 +467,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // GetLiquidityPositions (historical)
+    // LiquidityPositions (historical)
     ApiResponse<List<UniswapV2LiquidityPositionV2DTO>> response = apiInstance.UniswapV2GetLiquidityPositionsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -516,7 +516,7 @@ No authorization required
 # **UniswapV2GetLiquidityPositionsSnapshotsHistorical**
 > List&lt;UniswapV2LiquidityPositionSnapshotV2DTO&gt; UniswapV2GetLiquidityPositionsSnapshotsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
 
-GetLiquidityPositionsSnapshots (historical)
+LiquidityPositionsSnapshots (historical)
 
 Gets liquidity positions snapshots.
 
@@ -545,7 +545,7 @@ namespace Example
 
             try
             {
-                // GetLiquidityPositionsSnapshots (historical)
+                // LiquidityPositionsSnapshots (historical)
                 List<UniswapV2LiquidityPositionSnapshotV2DTO> result = apiInstance.UniswapV2GetLiquidityPositionsSnapshotsHistorical(startBlock, endBlock, startDate, endDate, poolId);
                 Debug.WriteLine(result);
             }
@@ -566,7 +566,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // GetLiquidityPositionsSnapshots (historical)
+    // LiquidityPositionsSnapshots (historical)
     ApiResponse<List<UniswapV2LiquidityPositionSnapshotV2DTO>> response = apiInstance.UniswapV2GetLiquidityPositionsSnapshotsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -615,7 +615,7 @@ No authorization required
 # **UniswapV2GetMintsHistorical**
 > List&lt;UniswapV2MintV2DTO&gt; UniswapV2GetMintsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
 
-GetMints (historical)
+Mints (historical)
 
 Gets mints.
 
@@ -644,7 +644,7 @@ namespace Example
 
             try
             {
-                // GetMints (historical)
+                // Mints (historical)
                 List<UniswapV2MintV2DTO> result = apiInstance.UniswapV2GetMintsHistorical(startBlock, endBlock, startDate, endDate, poolId);
                 Debug.WriteLine(result);
             }
@@ -665,7 +665,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // GetMints (historical)
+    // Mints (historical)
     ApiResponse<List<UniswapV2MintV2DTO>> response = apiInstance.UniswapV2GetMintsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -714,7 +714,7 @@ No authorization required
 # **UniswapV2GetPoolsCurrent**
 > List&lt;UniswapV2PairV2DTO&gt; UniswapV2GetPoolsCurrent (string filterPoolId = null)
 
-GetPools (current) 🔥
+Pools (current) 🔥
 
 Gets pools.
 
@@ -739,7 +739,7 @@ namespace Example
 
             try
             {
-                // GetPools (current) 🔥
+                // Pools (current) 🔥
                 List<UniswapV2PairV2DTO> result = apiInstance.UniswapV2GetPoolsCurrent(filterPoolId);
                 Debug.WriteLine(result);
             }
@@ -760,7 +760,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // GetPools (current) 🔥
+    // Pools (current) 🔥
     ApiResponse<List<UniswapV2PairV2DTO>> response = apiInstance.UniswapV2GetPoolsCurrentWithHttpInfo(filterPoolId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -805,7 +805,7 @@ No authorization required
 # **UniswapV2GetPoolsDayDataHistorical**
 > List&lt;UniswapV2PairDayDataV2DTO&gt; UniswapV2GetPoolsDayDataHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
 
-GetPoolsDayData (historical)
+PoolsDayData (historical)
 
 Gets pools day data.
 
@@ -834,7 +834,7 @@ namespace Example
 
             try
             {
-                // GetPoolsDayData (historical)
+                // PoolsDayData (historical)
                 List<UniswapV2PairDayDataV2DTO> result = apiInstance.UniswapV2GetPoolsDayDataHistorical(startBlock, endBlock, startDate, endDate, poolId);
                 Debug.WriteLine(result);
             }
@@ -855,7 +855,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // GetPoolsDayData (historical)
+    // PoolsDayData (historical)
     ApiResponse<List<UniswapV2PairDayDataV2DTO>> response = apiInstance.UniswapV2GetPoolsDayDataHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -904,7 +904,7 @@ No authorization required
 # **UniswapV2GetPoolsHistorical**
 > List&lt;UniswapV2PairV2DTO&gt; UniswapV2GetPoolsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
 
-GetPools (historical) 🔥
+Pools (historical) 🔥
 
 Gets pools.
 
@@ -933,7 +933,7 @@ namespace Example
 
             try
             {
-                // GetPools (historical) 🔥
+                // Pools (historical) 🔥
                 List<UniswapV2PairV2DTO> result = apiInstance.UniswapV2GetPoolsHistorical(startBlock, endBlock, startDate, endDate, poolId);
                 Debug.WriteLine(result);
             }
@@ -954,7 +954,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // GetPools (historical) 🔥
+    // Pools (historical) 🔥
     ApiResponse<List<UniswapV2PairV2DTO>> response = apiInstance.UniswapV2GetPoolsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -1003,7 +1003,7 @@ No authorization required
 # **UniswapV2GetPoolsHourDataHistorical**
 > List&lt;UniswapV2PairHourDataV2DTO&gt; UniswapV2GetPoolsHourDataHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
 
-GetPoolsHourData (historical)
+PoolsHourData (historical)
 
 Gets pools tracked each our.
 
@@ -1032,7 +1032,7 @@ namespace Example
 
             try
             {
-                // GetPoolsHourData (historical)
+                // PoolsHourData (historical)
                 List<UniswapV2PairHourDataV2DTO> result = apiInstance.UniswapV2GetPoolsHourDataHistorical(startBlock, endBlock, startDate, endDate, poolId);
                 Debug.WriteLine(result);
             }
@@ -1053,7 +1053,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // GetPoolsHourData (historical)
+    // PoolsHourData (historical)
     ApiResponse<List<UniswapV2PairHourDataV2DTO>> response = apiInstance.UniswapV2GetPoolsHourDataHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -1102,7 +1102,7 @@ No authorization required
 # **UniswapV2GetSwapsCurrent**
 > List&lt;UniswapV2SwapV2DTO&gt; UniswapV2GetSwapsCurrent ()
 
-GetSwaps (current) 🔥
+Swaps (current) 🔥
 
 Gets swaps.
 
@@ -1126,7 +1126,7 @@ namespace Example
 
             try
             {
-                // GetSwaps (current) 🔥
+                // Swaps (current) 🔥
                 List<UniswapV2SwapV2DTO> result = apiInstance.UniswapV2GetSwapsCurrent();
                 Debug.WriteLine(result);
             }
@@ -1147,7 +1147,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // GetSwaps (current) 🔥
+    // Swaps (current) 🔥
     ApiResponse<List<UniswapV2SwapV2DTO>> response = apiInstance.UniswapV2GetSwapsCurrentWithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -1188,7 +1188,7 @@ No authorization required
 # **UniswapV2GetSwapsHistorical**
 > List&lt;UniswapV2SwapV2DTO&gt; UniswapV2GetSwapsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
 
-GetSwaps (historical) 🔥
+Swaps (historical) 🔥
 
 Gets swaps.
 
@@ -1217,7 +1217,7 @@ namespace Example
 
             try
             {
-                // GetSwaps (historical) 🔥
+                // Swaps (historical) 🔥
                 List<UniswapV2SwapV2DTO> result = apiInstance.UniswapV2GetSwapsHistorical(startBlock, endBlock, startDate, endDate, poolId);
                 Debug.WriteLine(result);
             }
@@ -1238,7 +1238,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // GetSwaps (historical) 🔥
+    // Swaps (historical) 🔥
     ApiResponse<List<UniswapV2SwapV2DTO>> response = apiInstance.UniswapV2GetSwapsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -1287,7 +1287,7 @@ No authorization required
 # **UniswapV2GetTokensCurrent**
 > List&lt;UniswapV2TokenV2DTO&gt; UniswapV2GetTokensCurrent ()
 
-GetTokens (current) 🔥
+Tokens (current) 🔥
 
 Gets tokens.
 
@@ -1311,7 +1311,7 @@ namespace Example
 
             try
             {
-                // GetTokens (current) 🔥
+                // Tokens (current) 🔥
                 List<UniswapV2TokenV2DTO> result = apiInstance.UniswapV2GetTokensCurrent();
                 Debug.WriteLine(result);
             }
@@ -1332,7 +1332,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // GetTokens (current) 🔥
+    // Tokens (current) 🔥
     ApiResponse<List<UniswapV2TokenV2DTO>> response = apiInstance.UniswapV2GetTokensCurrentWithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -1373,7 +1373,7 @@ No authorization required
 # **UniswapV2GetTokensDayDataHistorical**
 > List&lt;UniswapV2TokenDayDataV2DTO&gt; UniswapV2GetTokensDayDataHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string tokenId = null)
 
-GetTokensDayData (historical)
+TokensDayData (historical)
 
 Gets tokens day data.
 
@@ -1402,7 +1402,7 @@ namespace Example
 
             try
             {
-                // GetTokensDayData (historical)
+                // TokensDayData (historical)
                 List<UniswapV2TokenDayDataV2DTO> result = apiInstance.UniswapV2GetTokensDayDataHistorical(startBlock, endBlock, startDate, endDate, tokenId);
                 Debug.WriteLine(result);
             }
@@ -1423,7 +1423,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // GetTokensDayData (historical)
+    // TokensDayData (historical)
     ApiResponse<List<UniswapV2TokenDayDataV2DTO>> response = apiInstance.UniswapV2GetTokensDayDataHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, tokenId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -1472,7 +1472,7 @@ No authorization required
 # **UniswapV2GetTokensHistorical**
 > List&lt;UniswapV2TokenV2DTO&gt; UniswapV2GetTokensHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string tokenId = null)
 
-GetTokens (historical) 🔥
+Tokens (historical) 🔥
 
 Gets tokens.
 
@@ -1501,7 +1501,7 @@ namespace Example
 
             try
             {
-                // GetTokens (historical) 🔥
+                // Tokens (historical) 🔥
                 List<UniswapV2TokenV2DTO> result = apiInstance.UniswapV2GetTokensHistorical(startBlock, endBlock, startDate, endDate, tokenId);
                 Debug.WriteLine(result);
             }
@@ -1522,7 +1522,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // GetTokens (historical) 🔥
+    // Tokens (historical) 🔥
     ApiResponse<List<UniswapV2TokenV2DTO>> response = apiInstance.UniswapV2GetTokensHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, tokenId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -1571,7 +1571,7 @@ No authorization required
 # **UniswapV2GetTransactionsHistorical**
 > List&lt;UniswapV2TransactionV2DTO&gt; UniswapV2GetTransactionsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
 
-GetTransactions (historical)
+Transactions (historical)
 
 Gets transactions.
 
@@ -1599,7 +1599,7 @@ namespace Example
 
             try
             {
-                // GetTransactions (historical)
+                // Transactions (historical)
                 List<UniswapV2TransactionV2DTO> result = apiInstance.UniswapV2GetTransactionsHistorical(startBlock, endBlock, startDate, endDate);
                 Debug.WriteLine(result);
             }
@@ -1620,7 +1620,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // GetTransactions (historical)
+    // Transactions (historical)
     ApiResponse<List<UniswapV2TransactionV2DTO>> response = apiInstance.UniswapV2GetTransactionsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -1668,7 +1668,7 @@ No authorization required
 # **UniswapV2GetUsersHistorical**
 > List&lt;UniswapV2UserV2DTO&gt; UniswapV2GetUsersHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
 
-GetUsers (historical)
+Users (historical)
 
 Gets users.
 
@@ -1696,7 +1696,7 @@ namespace Example
 
             try
             {
-                // GetUsers (historical)
+                // Users (historical)
                 List<UniswapV2UserV2DTO> result = apiInstance.UniswapV2GetUsersHistorical(startBlock, endBlock, startDate, endDate);
                 Debug.WriteLine(result);
             }
@@ -1717,7 +1717,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // GetUsers (historical)
+    // Users (historical)
     ApiResponse<List<UniswapV2UserV2DTO>> response = apiInstance.UniswapV2GetUsersHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);

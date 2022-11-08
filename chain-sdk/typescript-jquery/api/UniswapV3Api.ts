@@ -48,7 +48,7 @@ export class UniswapV3Api {
 
     /**
      * Gets bundles.
-     * @summary GetBundles (current)
+     * @summary Bundles (current)
      */
     public uniswapV3GetBundlesCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.UniswapV3BundleV3DTO>;  },
@@ -106,7 +106,7 @@ export class UniswapV3Api {
 
     /**
      * Gets bundles.
-     * @summary GetBundles (historical)
+     * @summary Bundles (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -180,7 +180,7 @@ export class UniswapV3Api {
 
     /**
      * Gets burns.
-     * @summary GetBurns (current)
+     * @summary Burns (current)
      * @param filterPoolId 
      */
     public uniswapV3GetBurnsCurrent(filterPoolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
@@ -242,7 +242,7 @@ export class UniswapV3Api {
 
     /**
      * Gets burns.
-     * @summary GetBurns (historical)
+     * @summary Burns (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -320,7 +320,7 @@ export class UniswapV3Api {
 
     /**
      * Gets uniswapv3 day data.
-     * @summary GetDayData (current)
+     * @summary DayData (current)
      */
     public uniswapV3GetDayDataCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.UniswapV3UniswapDayDataV3DTO>;  },
@@ -378,7 +378,7 @@ export class UniswapV3Api {
 
     /**
      * Gets uniswapv3 day data.
-     * @summary GetDayData (historical)
+     * @summary DayData (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -452,7 +452,7 @@ export class UniswapV3Api {
 
     /**
      * Gets factory.
-     * @summary GetFactory (current)
+     * @summary Factory (current)
      */
     public uniswapV3GetFactoryCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.UniswapV3FactoryV3DTO>;  },
@@ -510,7 +510,7 @@ export class UniswapV3Api {
 
     /**
      * Gets factory.
-     * @summary GetFactory (historical)
+     * @summary Factory (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -584,7 +584,7 @@ export class UniswapV3Api {
 
     /**
      * Gets mints.
-     * @summary GetMints (current)
+     * @summary Mints (current)
      * @param filterPoolId 
      */
     public uniswapV3GetMintsCurrent(filterPoolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
@@ -646,7 +646,7 @@ export class UniswapV3Api {
 
     /**
      * Gets mints.
-     * @summary GetMints (historical)
+     * @summary Mints (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -724,7 +724,7 @@ export class UniswapV3Api {
 
     /**
      * Gets pools.
-     * @summary GetPools (current) 🔥
+     * @summary Pools (current) 🔥
      * @param filterPoolId 
      */
     public uniswapV3GetPoolsCurrent(filterPoolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
@@ -786,7 +786,7 @@ export class UniswapV3Api {
 
     /**
      * Gets pools day data.
-     * @summary GetPoolsDayData (current)
+     * @summary PoolsDayData (current)
      * @param filterPoolId 
      */
     public uniswapV3GetPoolsDayDataCurrent(filterPoolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
@@ -848,7 +848,7 @@ export class UniswapV3Api {
 
     /**
      * Gets pools day data.
-     * @summary GetPoolsDayData (historical)
+     * @summary PoolsDayData (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -926,7 +926,7 @@ export class UniswapV3Api {
 
     /**
      * Gets pools.
-     * @summary GetPools (historical) 🔥
+     * @summary Pools (historical) 🔥
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -1004,7 +1004,7 @@ export class UniswapV3Api {
 
     /**
      * Gets pools hour data.
-     * @summary GetPoolsHourData (current)
+     * @summary PoolsHourData (current)
      * @param filterPoolId 
      */
     public uniswapV3GetPoolsHourDataCurrent(filterPoolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
@@ -1066,7 +1066,7 @@ export class UniswapV3Api {
 
     /**
      * Gets pools hour data.
-     * @summary GetPoolsHourData (historical)
+     * @summary PoolsHourData (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -1144,7 +1144,7 @@ export class UniswapV3Api {
 
     /**
      * Gets positions.
-     * @summary GetPositions (current)
+     * @summary Positions (current)
      * @param filterPoolId 
      */
     public uniswapV3GetPositionsCurrent(filterPoolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
@@ -1206,7 +1206,7 @@ export class UniswapV3Api {
 
     /**
      * Gets positions.
-     * @summary GetPositions (historical)
+     * @summary Positions (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -1284,7 +1284,7 @@ export class UniswapV3Api {
 
     /**
      * Gets positions snapshots.
-     * @summary GetPositionsSnaphots (historical)
+     * @summary PositionsSnaphots (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -1362,7 +1362,7 @@ export class UniswapV3Api {
 
     /**
      * Gets positions snapshots.
-     * @summary GetPositionsSnapshots (current)
+     * @summary PositionsSnapshots (current)
      * @param filterPoolId 
      */
     public uniswapV3GetPositionsSnapshotsCurrent(filterPoolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
@@ -1424,7 +1424,7 @@ export class UniswapV3Api {
 
     /**
      * Gets swaps.
-     * @summary GetSwaps (current) 🔥
+     * @summary Swaps (current) 🔥
      * @param filterPoolId 
      */
     public uniswapV3GetSwapsCurrent(filterPoolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
@@ -1486,7 +1486,7 @@ export class UniswapV3Api {
 
     /**
      * Gets swaps.
-     * @summary GetSwaps (historical) 🔥
+     * @summary Swaps (historical) 🔥
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -1564,7 +1564,7 @@ export class UniswapV3Api {
 
     /**
      * Gets ticks.
-     * @summary GetTicks (current)
+     * @summary Ticks (current)
      * @param filterPoolId 
      */
     public uniswapV3GetTicksCurrent(filterPoolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
@@ -1626,7 +1626,7 @@ export class UniswapV3Api {
 
     /**
      * Gets ticks day data.
-     * @summary GetTicksDayData (current)
+     * @summary TicksDayData (current)
      * @param filterPoolId 
      */
     public uniswapV3GetTicksDayDataCurrent(filterPoolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
@@ -1688,7 +1688,7 @@ export class UniswapV3Api {
 
     /**
      * Gets ticks day data.
-     * @summary GetTicksDayData (historical)
+     * @summary TicksDayData (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -1766,7 +1766,7 @@ export class UniswapV3Api {
 
     /**
      * Gets ticks.
-     * @summary GetTicks (historical)
+     * @summary Ticks (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -1844,7 +1844,7 @@ export class UniswapV3Api {
 
     /**
      * Gets tokens.
-     * @summary GetTokens (current) 🔥
+     * @summary Tokens (current) 🔥
      * @param filterTokenId 
      */
     public uniswapV3GetTokensCurrent(filterTokenId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
@@ -1906,7 +1906,7 @@ export class UniswapV3Api {
 
     /**
      * Gets tokens day data.
-     * @summary GetTokensDayData (current)
+     * @summary TokensDayData (current)
      * @param filterTokenId 
      */
     public uniswapV3GetTokensDayDataCurrent(filterTokenId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
@@ -1968,7 +1968,7 @@ export class UniswapV3Api {
 
     /**
      * Gets tokens day data.
-     * @summary GetTokensDayData (historical)
+     * @summary TokensDayData (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -2046,7 +2046,7 @@ export class UniswapV3Api {
 
     /**
      * Gets tokens.
-     * @summary GetTokens (historical) 🔥
+     * @summary Tokens (historical) 🔥
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -2124,7 +2124,7 @@ export class UniswapV3Api {
 
     /**
      * Gets tokens hour data.
-     * @summary GetTokensHourData (current)
+     * @summary TokensHourData (current)
      * @param filterTokenId 
      */
     public uniswapV3GetTokensHourDataCurrent(filterTokenId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
@@ -2186,7 +2186,7 @@ export class UniswapV3Api {
 
     /**
      * Gets tokens hour data.
-     * @summary GetTokensHourData (historical)
+     * @summary TokensHourData (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -2264,7 +2264,7 @@ export class UniswapV3Api {
 
     /**
      * Gets transactions.
-     * @summary GetTransactions (historical)
+     * @summary Transactions (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 

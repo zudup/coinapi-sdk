@@ -4,17 +4,17 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**CowGetOrdersHistorical**](CowApi.md#cowgetordershistorical) | **GET** /dapps/cow/orders/historical | GetOrders (historical) |
-| [**CowGetSettlementsHistorical**](CowApi.md#cowgetsettlementshistorical) | **GET** /dapps/cow/settlements/historical | GetSettlements (historical) |
-| [**CowGetTokensHistorical**](CowApi.md#cowgettokenshistorical) | **GET** /dapps/cow/tokens/historical | GetTokens (historical) 🔥 |
-| [**CowGetTradesHistorical**](CowApi.md#cowgettradeshistorical) | **GET** /dapps/cow/trades/historical | GetTrades (historical) 🔥 |
-| [**CowGetUsersHistorical**](CowApi.md#cowgetusershistorical) | **GET** /dapps/cow/users/historical | GetUsers (historical) |
+| [**CowGetOrdersHistorical**](CowApi.md#cowgetordershistorical) | **GET** /dapps/cow/orders/historical | Orders (historical) |
+| [**CowGetSettlementsHistorical**](CowApi.md#cowgetsettlementshistorical) | **GET** /dapps/cow/settlements/historical | Settlements (historical) |
+| [**CowGetTokensHistorical**](CowApi.md#cowgettokenshistorical) | **GET** /dapps/cow/tokens/historical | Tokens (historical) 🔥 |
+| [**CowGetTradesHistorical**](CowApi.md#cowgettradeshistorical) | **GET** /dapps/cow/trades/historical | Trades (historical) 🔥 |
+| [**CowGetUsersHistorical**](CowApi.md#cowgetusershistorical) | **GET** /dapps/cow/users/historical | Users (historical) |
 
 <a name="cowgetordershistorical"></a>
 # **CowGetOrdersHistorical**
 > List&lt;CowOrderDTO&gt; CowGetOrdersHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
 
-GetOrders (historical)
+Orders (historical)
 
 Gets orders.
 
@@ -42,7 +42,7 @@ namespace Example
 
             try
             {
-                // GetOrders (historical)
+                // Orders (historical)
                 List<CowOrderDTO> result = apiInstance.CowGetOrdersHistorical(startBlock, endBlock, startDate, endDate);
                 Debug.WriteLine(result);
             }
@@ -63,7 +63,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // GetOrders (historical)
+    // Orders (historical)
     ApiResponse<List<CowOrderDTO>> response = apiInstance.CowGetOrdersHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -111,7 +111,7 @@ No authorization required
 # **CowGetSettlementsHistorical**
 > List&lt;CowSettlementDTO&gt; CowGetSettlementsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
 
-GetSettlements (historical)
+Settlements (historical)
 
 Gets settlements.
 
@@ -139,7 +139,7 @@ namespace Example
 
             try
             {
-                // GetSettlements (historical)
+                // Settlements (historical)
                 List<CowSettlementDTO> result = apiInstance.CowGetSettlementsHistorical(startBlock, endBlock, startDate, endDate);
                 Debug.WriteLine(result);
             }
@@ -160,7 +160,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // GetSettlements (historical)
+    // Settlements (historical)
     ApiResponse<List<CowSettlementDTO>> response = apiInstance.CowGetSettlementsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -208,7 +208,7 @@ No authorization required
 # **CowGetTokensHistorical**
 > List&lt;CowTokenDTO&gt; CowGetTokensHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string tokenId = null)
 
-GetTokens (historical) 🔥
+Tokens (historical) 🔥
 
 Gets tokens.
 
@@ -237,7 +237,7 @@ namespace Example
 
             try
             {
-                // GetTokens (historical) 🔥
+                // Tokens (historical) 🔥
                 List<CowTokenDTO> result = apiInstance.CowGetTokensHistorical(startBlock, endBlock, startDate, endDate, tokenId);
                 Debug.WriteLine(result);
             }
@@ -258,7 +258,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // GetTokens (historical) 🔥
+    // Tokens (historical) 🔥
     ApiResponse<List<CowTokenDTO>> response = apiInstance.CowGetTokensHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, tokenId);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -307,7 +307,7 @@ No authorization required
 # **CowGetTradesHistorical**
 > List&lt;CowTradeDTO&gt; CowGetTradesHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
 
-GetTrades (historical) 🔥
+Trades (historical) 🔥
 
 Gets trades.
 
@@ -335,7 +335,7 @@ namespace Example
 
             try
             {
-                // GetTrades (historical) 🔥
+                // Trades (historical) 🔥
                 List<CowTradeDTO> result = apiInstance.CowGetTradesHistorical(startBlock, endBlock, startDate, endDate);
                 Debug.WriteLine(result);
             }
@@ -356,7 +356,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // GetTrades (historical) 🔥
+    // Trades (historical) 🔥
     ApiResponse<List<CowTradeDTO>> response = apiInstance.CowGetTradesHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
@@ -404,7 +404,7 @@ No authorization required
 # **CowGetUsersHistorical**
 > List&lt;CowUserDTO&gt; CowGetUsersHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
 
-GetUsers (historical)
+Users (historical)
 
 Gets users.
 
@@ -432,7 +432,7 @@ namespace Example
 
             try
             {
-                // GetUsers (historical)
+                // Users (historical)
                 List<CowUserDTO> result = apiInstance.CowGetUsersHistorical(startBlock, endBlock, startDate, endDate);
                 Debug.WriteLine(result);
             }
@@ -453,7 +453,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // GetUsers (historical)
+    // Users (historical)
     ApiResponse<List<CowUserDTO>> response = apiInstance.CowGetUsersHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);

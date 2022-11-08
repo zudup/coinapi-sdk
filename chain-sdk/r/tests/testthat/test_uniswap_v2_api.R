@@ -8,7 +8,7 @@ api_instance <- UniswapV2Api$new()
 test_that("UniswapV2GetBundlesHistorical", {
   # tests for UniswapV2GetBundlesHistorical
   # base path: https://onchain.coinapi.io
-  # GetBundles (historical)
+  # Bundles (historical)
   # Gets bundles.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -23,7 +23,7 @@ test_that("UniswapV2GetBundlesHistorical", {
 test_that("UniswapV2GetBurnsHistorical", {
   # tests for UniswapV2GetBurnsHistorical
   # base path: https://onchain.coinapi.io
-  # GetBurns (historical)
+  # Burns (historical)
   # Gets burns.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -39,7 +39,7 @@ test_that("UniswapV2GetBurnsHistorical", {
 test_that("UniswapV2GetDayDataHistorical", {
   # tests for UniswapV2GetDayDataHistorical
   # base path: https://onchain.coinapi.io
-  # GetDayData (historical)
+  # DayData (historical)
   # Gets uniswapv2 day data.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -54,7 +54,7 @@ test_that("UniswapV2GetDayDataHistorical", {
 test_that("UniswapV2GetFactoryHistorical", {
   # tests for UniswapV2GetFactoryHistorical
   # base path: https://onchain.coinapi.io
-  # GetFactory (historical)
+  # Factory (historical)
   # Gets factory.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -69,7 +69,7 @@ test_that("UniswapV2GetFactoryHistorical", {
 test_that("UniswapV2GetLiquidityPositionsHistorical", {
   # tests for UniswapV2GetLiquidityPositionsHistorical
   # base path: https://onchain.coinapi.io
-  # GetLiquidityPositions (historical)
+  # LiquidityPositions (historical)
   # Gets liquidity positions.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -85,7 +85,7 @@ test_that("UniswapV2GetLiquidityPositionsHistorical", {
 test_that("UniswapV2GetLiquidityPositionsSnapshotsHistorical", {
   # tests for UniswapV2GetLiquidityPositionsSnapshotsHistorical
   # base path: https://onchain.coinapi.io
-  # GetLiquidityPositionsSnapshots (historical)
+  # LiquidityPositionsSnapshots (historical)
   # Gets liquidity positions snapshots.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -101,7 +101,7 @@ test_that("UniswapV2GetLiquidityPositionsSnapshotsHistorical", {
 test_that("UniswapV2GetMintsHistorical", {
   # tests for UniswapV2GetMintsHistorical
   # base path: https://onchain.coinapi.io
-  # GetMints (historical)
+  # Mints (historical)
   # Gets mints.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -117,7 +117,7 @@ test_that("UniswapV2GetMintsHistorical", {
 test_that("UniswapV2GetPoolsCurrent", {
   # tests for UniswapV2GetPoolsCurrent
   # base path: https://onchain.coinapi.io
-  # GetPools (current) 🔥
+  # Pools (current) 🔥
   # Gets pools.
   # @param filter_pool_id character  (optional)
   # @return [array[UniswapV2PairV2DTO]]
@@ -129,7 +129,7 @@ test_that("UniswapV2GetPoolsCurrent", {
 test_that("UniswapV2GetPoolsDayDataHistorical", {
   # tests for UniswapV2GetPoolsDayDataHistorical
   # base path: https://onchain.coinapi.io
-  # GetPoolsDayData (historical)
+  # PoolsDayData (historical)
   # Gets pools day data.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -145,7 +145,7 @@ test_that("UniswapV2GetPoolsDayDataHistorical", {
 test_that("UniswapV2GetPoolsHistorical", {
   # tests for UniswapV2GetPoolsHistorical
   # base path: https://onchain.coinapi.io
-  # GetPools (historical) 🔥
+  # Pools (historical) 🔥
   # Gets pools.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -161,7 +161,7 @@ test_that("UniswapV2GetPoolsHistorical", {
 test_that("UniswapV2GetPoolsHourDataHistorical", {
   # tests for UniswapV2GetPoolsHourDataHistorical
   # base path: https://onchain.coinapi.io
-  # GetPoolsHourData (historical)
+  # PoolsHourData (historical)
   # Gets pools tracked each our.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -177,7 +177,7 @@ test_that("UniswapV2GetPoolsHourDataHistorical", {
 test_that("UniswapV2GetSwapsCurrent", {
   # tests for UniswapV2GetSwapsCurrent
   # base path: https://onchain.coinapi.io
-  # GetSwaps (current) 🔥
+  # Swaps (current) 🔥
   # Gets swaps.
   # @return [array[UniswapV2SwapV2DTO]]
 
@@ -188,7 +188,7 @@ test_that("UniswapV2GetSwapsCurrent", {
 test_that("UniswapV2GetSwapsHistorical", {
   # tests for UniswapV2GetSwapsHistorical
   # base path: https://onchain.coinapi.io
-  # GetSwaps (historical) 🔥
+  # Swaps (historical) 🔥
   # Gets swaps.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -204,7 +204,7 @@ test_that("UniswapV2GetSwapsHistorical", {
 test_that("UniswapV2GetTokensCurrent", {
   # tests for UniswapV2GetTokensCurrent
   # base path: https://onchain.coinapi.io
-  # GetTokens (current) 🔥
+  # Tokens (current) 🔥
   # Gets tokens.
   # @return [array[UniswapV2TokenV2DTO]]
 
@@ -215,7 +215,7 @@ test_that("UniswapV2GetTokensCurrent", {
 test_that("UniswapV2GetTokensDayDataHistorical", {
   # tests for UniswapV2GetTokensDayDataHistorical
   # base path: https://onchain.coinapi.io
-  # GetTokensDayData (historical)
+  # TokensDayData (historical)
   # Gets tokens day data.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -231,7 +231,7 @@ test_that("UniswapV2GetTokensDayDataHistorical", {
 test_that("UniswapV2GetTokensHistorical", {
   # tests for UniswapV2GetTokensHistorical
   # base path: https://onchain.coinapi.io
-  # GetTokens (historical) 🔥
+  # Tokens (historical) 🔥
   # Gets tokens.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -247,7 +247,7 @@ test_that("UniswapV2GetTokensHistorical", {
 test_that("UniswapV2GetTransactionsHistorical", {
   # tests for UniswapV2GetTransactionsHistorical
   # base path: https://onchain.coinapi.io
-  # GetTransactions (historical)
+  # Transactions (historical)
   # Gets transactions.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
@@ -262,7 +262,7 @@ test_that("UniswapV2GetTransactionsHistorical", {
 test_that("UniswapV2GetUsersHistorical", {
   # tests for UniswapV2GetUsersHistorical
   # base path: https://onchain.coinapi.io
-  # GetUsers (historical)
+  # Users (historical)
   # Gets users.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)

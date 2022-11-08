@@ -21,7 +21,7 @@ from .. import ApiTestMixin
 class TestDappsDexBatchesHistorical(ApiTestMixin, unittest.TestCase):
     """
     DappsDexBatchesHistorical unit test stubs
-        GetBatches (historical)  # noqa: E501
+        Batches (historical)  # noqa: E501
     """
     _configuration = configuration.Configuration()
 

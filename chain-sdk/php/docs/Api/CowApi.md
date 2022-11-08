@@ -4,11 +4,11 @@ All URIs are relative to https://onchain.coinapi.io, except if the operation def
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**cowGetOrdersHistorical()**](CowApi.md#cowGetOrdersHistorical) | **GET** /dapps/cow/orders/historical | GetOrders (historical) |
-| [**cowGetSettlementsHistorical()**](CowApi.md#cowGetSettlementsHistorical) | **GET** /dapps/cow/settlements/historical | GetSettlements (historical) |
-| [**cowGetTokensHistorical()**](CowApi.md#cowGetTokensHistorical) | **GET** /dapps/cow/tokens/historical | GetTokens (historical) 🔥 |
-| [**cowGetTradesHistorical()**](CowApi.md#cowGetTradesHistorical) | **GET** /dapps/cow/trades/historical | GetTrades (historical) 🔥 |
-| [**cowGetUsersHistorical()**](CowApi.md#cowGetUsersHistorical) | **GET** /dapps/cow/users/historical | GetUsers (historical) |
+| [**cowGetOrdersHistorical()**](CowApi.md#cowGetOrdersHistorical) | **GET** /dapps/cow/orders/historical | Orders (historical) |
+| [**cowGetSettlementsHistorical()**](CowApi.md#cowGetSettlementsHistorical) | **GET** /dapps/cow/settlements/historical | Settlements (historical) |
+| [**cowGetTokensHistorical()**](CowApi.md#cowGetTokensHistorical) | **GET** /dapps/cow/tokens/historical | Tokens (historical) 🔥 |
+| [**cowGetTradesHistorical()**](CowApi.md#cowGetTradesHistorical) | **GET** /dapps/cow/trades/historical | Trades (historical) 🔥 |
+| [**cowGetUsersHistorical()**](CowApi.md#cowGetUsersHistorical) | **GET** /dapps/cow/users/historical | Users (historical) |
 
 
 ## `cowGetOrdersHistorical()`
@@ -17,7 +17,7 @@ All URIs are relative to https://onchain.coinapi.io, except if the operation def
 cowGetOrdersHistorical($start_block, $end_block, $start_date, $end_date): \OpenAPI\Client\Model\CowOrderDTO[]
 ```
 
-GetOrders (historical)
+Orders (historical)
 
 Gets orders.
 
@@ -79,7 +79,7 @@ No authorization required
 cowGetSettlementsHistorical($start_block, $end_block, $start_date, $end_date): \OpenAPI\Client\Model\CowSettlementDTO[]
 ```
 
-GetSettlements (historical)
+Settlements (historical)
 
 Gets settlements.
 
@@ -141,7 +141,7 @@ No authorization required
 cowGetTokensHistorical($start_block, $end_block, $start_date, $end_date, $token_id): \OpenAPI\Client\Model\CowTokenDTO[]
 ```
 
-GetTokens (historical) 🔥
+Tokens (historical) 🔥
 
 Gets tokens.
 
@@ -205,7 +205,7 @@ No authorization required
 cowGetTradesHistorical($start_block, $end_block, $start_date, $end_date): \OpenAPI\Client\Model\CowTradeDTO[]
 ```
 
-GetTrades (historical) 🔥
+Trades (historical) 🔥
 
 Gets trades.
 
@@ -267,7 +267,7 @@ No authorization required
 cowGetUsersHistorical($start_block, $end_block, $start_date, $end_date): \OpenAPI\Client\Model\CowUserDTO[]
 ```
 
-GetUsers (historical)
+Users (historical)
 
 Gets users.
 

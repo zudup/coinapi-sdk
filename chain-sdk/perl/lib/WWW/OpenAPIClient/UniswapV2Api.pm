@@ -51,7 +51,7 @@ sub new {
 #
 # uniswap_v2_get_bundles__historical
 #
-# GetBundles (historical)
+# Bundles (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -81,7 +81,7 @@ sub new {
     },
     };
     __PACKAGE__->method_documentation->{ 'uniswap_v2_get_bundles__historical' } = {
-        summary => 'GetBundles (historical)',
+        summary => 'Bundles (historical)',
         params => $params,
         returns => 'ARRAY[UniswapV2BundleV2DTO]',
         };
@@ -144,7 +144,7 @@ sub uniswap_v2_get_bundles__historical {
 #
 # uniswap_v2_get_burns__historical
 #
-# GetBurns (historical)
+# Burns (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -180,7 +180,7 @@ sub uniswap_v2_get_bundles__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'uniswap_v2_get_burns__historical' } = {
-        summary => 'GetBurns (historical)',
+        summary => 'Burns (historical)',
         params => $params,
         returns => 'ARRAY[UniswapV2BurnV2DTO]',
         };
@@ -248,7 +248,7 @@ sub uniswap_v2_get_burns__historical {
 #
 # uniswap_v2_get_day_data__historical
 #
-# GetDayData (historical)
+# DayData (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -278,7 +278,7 @@ sub uniswap_v2_get_burns__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'uniswap_v2_get_day_data__historical' } = {
-        summary => 'GetDayData (historical)',
+        summary => 'DayData (historical)',
         params => $params,
         returns => 'ARRAY[UniswapV2UniswapDayDataV2DTO]',
         };
@@ -341,7 +341,7 @@ sub uniswap_v2_get_day_data__historical {
 #
 # uniswap_v2_get_factory__historical
 #
-# GetFactory (historical)
+# Factory (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -371,7 +371,7 @@ sub uniswap_v2_get_day_data__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'uniswap_v2_get_factory__historical' } = {
-        summary => 'GetFactory (historical)',
+        summary => 'Factory (historical)',
         params => $params,
         returns => 'ARRAY[UniswapV2UniswapFactoryV2DTO]',
         };
@@ -434,7 +434,7 @@ sub uniswap_v2_get_factory__historical {
 #
 # uniswap_v2_get_liquidity_positions__historical
 #
-# GetLiquidityPositions (historical)
+# LiquidityPositions (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -470,7 +470,7 @@ sub uniswap_v2_get_factory__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'uniswap_v2_get_liquidity_positions__historical' } = {
-        summary => 'GetLiquidityPositions (historical)',
+        summary => 'LiquidityPositions (historical)',
         params => $params,
         returns => 'ARRAY[UniswapV2LiquidityPositionV2DTO]',
         };
@@ -538,7 +538,7 @@ sub uniswap_v2_get_liquidity_positions__historical {
 #
 # uniswap_v2_get_liquidity_positions_snapshots__historical
 #
-# GetLiquidityPositionsSnapshots (historical)
+# LiquidityPositionsSnapshots (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -574,7 +574,7 @@ sub uniswap_v2_get_liquidity_positions__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'uniswap_v2_get_liquidity_positions_snapshots__historical' } = {
-        summary => 'GetLiquidityPositionsSnapshots (historical)',
+        summary => 'LiquidityPositionsSnapshots (historical)',
         params => $params,
         returns => 'ARRAY[UniswapV2LiquidityPositionSnapshotV2DTO]',
         };
@@ -642,7 +642,7 @@ sub uniswap_v2_get_liquidity_positions_snapshots__historical {
 #
 # uniswap_v2_get_mints__historical
 #
-# GetMints (historical)
+# Mints (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -678,7 +678,7 @@ sub uniswap_v2_get_liquidity_positions_snapshots__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'uniswap_v2_get_mints__historical' } = {
-        summary => 'GetMints (historical)',
+        summary => 'Mints (historical)',
         params => $params,
         returns => 'ARRAY[UniswapV2MintV2DTO]',
         };
@@ -746,7 +746,7 @@ sub uniswap_v2_get_mints__historical {
 #
 # uniswap_v2_get_pools__current
 #
-# GetPools (current) 🔥
+# Pools (current) 🔥
 #
 # @param string $filter_pool_id  (optional)
 {
@@ -758,7 +758,7 @@ sub uniswap_v2_get_mints__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'uniswap_v2_get_pools__current' } = {
-        summary => 'GetPools (current) 🔥',
+        summary => 'Pools (current) 🔥',
         params => $params,
         returns => 'ARRAY[UniswapV2PairV2DTO]',
         };
@@ -806,7 +806,7 @@ sub uniswap_v2_get_pools__current {
 #
 # uniswap_v2_get_pools__historical
 #
-# GetPools (historical) 🔥
+# Pools (historical) 🔥
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -842,7 +842,7 @@ sub uniswap_v2_get_pools__current {
     },
     };
     __PACKAGE__->method_documentation->{ 'uniswap_v2_get_pools__historical' } = {
-        summary => 'GetPools (historical) 🔥',
+        summary => 'Pools (historical) 🔥',
         params => $params,
         returns => 'ARRAY[UniswapV2PairV2DTO]',
         };
@@ -910,7 +910,7 @@ sub uniswap_v2_get_pools__historical {
 #
 # uniswap_v2_get_pools_day_data__historical
 #
-# GetPoolsDayData (historical)
+# PoolsDayData (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -946,7 +946,7 @@ sub uniswap_v2_get_pools__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'uniswap_v2_get_pools_day_data__historical' } = {
-        summary => 'GetPoolsDayData (historical)',
+        summary => 'PoolsDayData (historical)',
         params => $params,
         returns => 'ARRAY[UniswapV2PairDayDataV2DTO]',
         };
@@ -1014,7 +1014,7 @@ sub uniswap_v2_get_pools_day_data__historical {
 #
 # uniswap_v2_get_pools_hour_data__historical
 #
-# GetPoolsHourData (historical)
+# PoolsHourData (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -1050,7 +1050,7 @@ sub uniswap_v2_get_pools_day_data__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'uniswap_v2_get_pools_hour_data__historical' } = {
-        summary => 'GetPoolsHourData (historical)',
+        summary => 'PoolsHourData (historical)',
         params => $params,
         returns => 'ARRAY[UniswapV2PairHourDataV2DTO]',
         };
@@ -1118,13 +1118,13 @@ sub uniswap_v2_get_pools_hour_data__historical {
 #
 # uniswap_v2_get_swaps__current
 #
-# GetSwaps (current) 🔥
+# Swaps (current) 🔥
 #
 {
     my $params = {
     };
     __PACKAGE__->method_documentation->{ 'uniswap_v2_get_swaps__current' } = {
-        summary => 'GetSwaps (current) 🔥',
+        summary => 'Swaps (current) 🔥',
         params => $params,
         returns => 'ARRAY[UniswapV2SwapV2DTO]',
         };
@@ -1167,7 +1167,7 @@ sub uniswap_v2_get_swaps__current {
 #
 # uniswap_v2_get_swaps__historical
 #
-# GetSwaps (historical) 🔥
+# Swaps (historical) 🔥
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -1203,7 +1203,7 @@ sub uniswap_v2_get_swaps__current {
     },
     };
     __PACKAGE__->method_documentation->{ 'uniswap_v2_get_swaps__historical' } = {
-        summary => 'GetSwaps (historical) 🔥',
+        summary => 'Swaps (historical) 🔥',
         params => $params,
         returns => 'ARRAY[UniswapV2SwapV2DTO]',
         };
@@ -1271,13 +1271,13 @@ sub uniswap_v2_get_swaps__historical {
 #
 # uniswap_v2_get_tokens__current
 #
-# GetTokens (current) 🔥
+# Tokens (current) 🔥
 #
 {
     my $params = {
     };
     __PACKAGE__->method_documentation->{ 'uniswap_v2_get_tokens__current' } = {
-        summary => 'GetTokens (current) 🔥',
+        summary => 'Tokens (current) 🔥',
         params => $params,
         returns => 'ARRAY[UniswapV2TokenV2DTO]',
         };
@@ -1320,7 +1320,7 @@ sub uniswap_v2_get_tokens__current {
 #
 # uniswap_v2_get_tokens__historical
 #
-# GetTokens (historical) 🔥
+# Tokens (historical) 🔥
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -1356,7 +1356,7 @@ sub uniswap_v2_get_tokens__current {
     },
     };
     __PACKAGE__->method_documentation->{ 'uniswap_v2_get_tokens__historical' } = {
-        summary => 'GetTokens (historical) 🔥',
+        summary => 'Tokens (historical) 🔥',
         params => $params,
         returns => 'ARRAY[UniswapV2TokenV2DTO]',
         };
@@ -1424,7 +1424,7 @@ sub uniswap_v2_get_tokens__historical {
 #
 # uniswap_v2_get_tokens_day_data__historical
 #
-# GetTokensDayData (historical)
+# TokensDayData (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -1460,7 +1460,7 @@ sub uniswap_v2_get_tokens__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'uniswap_v2_get_tokens_day_data__historical' } = {
-        summary => 'GetTokensDayData (historical)',
+        summary => 'TokensDayData (historical)',
         params => $params,
         returns => 'ARRAY[UniswapV2TokenDayDataV2DTO]',
         };
@@ -1528,7 +1528,7 @@ sub uniswap_v2_get_tokens_day_data__historical {
 #
 # uniswap_v2_get_transactions__historical
 #
-# GetTransactions (historical)
+# Transactions (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -1558,7 +1558,7 @@ sub uniswap_v2_get_tokens_day_data__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'uniswap_v2_get_transactions__historical' } = {
-        summary => 'GetTransactions (historical)',
+        summary => 'Transactions (historical)',
         params => $params,
         returns => 'ARRAY[UniswapV2TransactionV2DTO]',
         };
@@ -1621,7 +1621,7 @@ sub uniswap_v2_get_transactions__historical {
 #
 # uniswap_v2_get_users__historical
 #
-# GetUsers (historical)
+# Users (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -1651,7 +1651,7 @@ sub uniswap_v2_get_transactions__historical {
     },
     };
     __PACKAGE__->method_documentation->{ 'uniswap_v2_get_users__historical' } = {
-        summary => 'GetUsers (historical)',
+        summary => 'Users (historical)',
         params => $params,
         returns => 'ARRAY[UniswapV2UserV2DTO]',
         };
