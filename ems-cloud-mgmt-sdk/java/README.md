@@ -2,7 +2,7 @@
 
 EMS - REST API
 - API version: v1
-  - Build date: 2022-11-14T11:27:44.736765Z[Etc/UTC]
+  - Build date: 2022-11-14T15:01:58.888113Z[Etc/UTC]
 
 This section will provide necessary information about the `CoinAPI EMS REST API` protocol.
 <br/>
